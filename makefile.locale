@@ -1,0 +1,43 @@
+vpath GIT-VERSION-FILE . ..
+
+MAN_FILTER = $(wildcard *.txt)
+HTML_FILTER = $(patsubst %.txt,%.html,$(MAN_FILTER))
+
+
+ifeq ($(wildcard ../../build-docdep.perl),../../buid-docdep.perl)
+
+vpath %conf . .. ../..
+vpath %in . .. ../..
+vpath %xsl . .. ../..
+
+
+ifdef mandir
+tmp_mandir := $(mandir)
+mandir = $(temp_mandir)/$(lang)
+else
+mandir = $(prefix)/share/man/$(lang)
+endif
+
+include ../../Makefile
+ASCIIDOC_EXTRA += -I../..
+XMLTO_EXTRA += --searchpath ../..
+
+else
+$(HTML_FILTER): %.html: %.txt
+	asciidoctor -b xhtml5 -d manpage $<
+
+MANPAGES=$(patsubst %.txt,%.1,$(MAN_FILTER))
+$(MANPAGES): %.1: %.txt
+	asciidoctor -b manpage -d manpage -o $@ $<
+
+man: $(MANPAGES)
+html: $(HTML_FILTER)
+
+all: man html
+
+clean:
+	rm -f *.1 *.html
+
+mrclean: clean
+	rm -f *.txt
+endif
