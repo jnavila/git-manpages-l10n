@@ -1,0 +1,16 @@
+language: ruby
+sudo: false
+cache: bundler
+before_install:
+ - git clone https://github.com/jnavila/po4a.git
+ - cd po4a && git checkout git_doc && cd ..
+script:
+ - sh ci/build.sh
+addons:
+  apt:
+    packages:
+      - libunicode-linebreak-perl
+notifications:
+  email:
+    on_success: never
+    on_failure: always
