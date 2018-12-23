@@ -22,6 +22,15 @@ include ../../Makefile
 ASCIIDOC_EXTRA += -I../..
 XMLTO_EXTRA += --searchpath ../..
 
+install-l10n:
+	$(INSTALL) -d -m 755 $(DESTDIR)$(man1dir)
+	$(INSTALL) -d -m 755 $(DESTDIR)$(man5dir)
+	$(INSTALL) -d -m 755 $(DESTDIR)$(man7dir)
+	[ ! -z $(DOC_MAN1) ] && $(INSTALL) -m 644 $(DOC_MAN1) $(DESTDIR)$(man1dir)
+	[ ! -z $(DOC_MAN5) ] && $(INSTALL) -m 644 $(DOC_MAN5) $(DESTDIR)$(man5dir)
+	[ ! -z $(DOC_MAN7) ] && $(INSTALL) -m 644 $(DOC_MAN7) $(DESTDIR)$(man7dir)
+
+
 else
 $(HTML_FILTER): %.html: %.txt
 	asciidoctor -b xhtml5 -d manpage $<
@@ -33,11 +42,11 @@ $(MANPAGES): %.1: %.txt
 man: $(MANPAGES)
 html: $(HTML_FILTER)
 
-all: man html
+all doc-l10n: man html
 
 clean:
 	rm -f *.1 *.html
 
-mrclean: clean
+mrproper: clean
 	rm -f *.txt
 endif

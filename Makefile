@@ -2,7 +2,7 @@ EN_SOURCES = $(wildcard en/*.txt)
 LANGUAGE_PO = $(wildcard po/*.po)
 ALL_LANGUAGES = $(subst po/documentation.,,$(subst .po,,$(LANGUAGE_PO)))
 
-TARGETS = all man html clean install
+TARGETS = all man html clean install doc-l10n install-l10n mrproper
 
 ifneq ($(findstring $(MAKEFLAGS),s),s)
 ifndef V
@@ -43,3 +43,8 @@ endef
 
 
 $(foreach target, $(TARGETS), $(eval $(call MAKE_TARGET,$(target))))
+
+mrproper: mrproper-local
+
+mrproper-local:
+	rm -f po4a-stamp
