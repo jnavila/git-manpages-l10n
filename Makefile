@@ -27,7 +27,7 @@ po4a.conf: create_po4a_conf.sh sources.txt
 	./create_po4a_conf.sh
 
 po4a-stamp: po4a.conf $(EN_SOURCES) $(LANGUAGE_PO) Makefile
-	$(QUIET_PO4A)po4a -v po4a.conf
+	$(QUIET_PO4A)PERL5LIB=./po4a/lib po4a/po4a -v po4a.conf
 	@touch $@
 
 update-sources:
@@ -36,7 +36,7 @@ update-sources:
 define MAKE_TARGET
 
 $(1)_$(2):
-	@echo $lang; cd $(2) && $(MAKE) -f ../makefile.locale $(1) lang=$(2)
+	@echo $lang;bundle exec $(MAKE) -C $(2) -f ../makefile.locale $(1) lang=$(2)
 
 $(1): $(1)_$(2)
 
