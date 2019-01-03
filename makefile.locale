@@ -32,12 +32,17 @@ install-l10n:
 
 
 else
+ifndef V
+	QUIET_PO4A      = @echo '   ' PO4A $(lang) $@;
+	QUIET_ASCIIDOC	= @echo '   ' ASCIIDOC $(lang) $@;
+endif
+
 $(HTML_FILTER): %.html: %.txt
-	asciidoctor -b xhtml5 -d manpage $<
+	$(QUIET_ASCIIDOC)asciidoctor -b xhtml5 -d manpage $<
 
 MANPAGES=$(patsubst %.txt,%.1,$(MAN_FILTER))
 $(MANPAGES): %.1: %.txt
-	asciidoctor -b manpage -d manpage -o $@ $<
+	$(QUIET_ASCIIDOC)asciidoctor -b manpage -d manpage -o $@ $<
 
 man: $(MANPAGES)
 html: $(HTML_FILTER)
