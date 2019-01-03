@@ -35,14 +35,20 @@ update-sources:
 
 define MAKE_TARGET
 
+$(1)_$(2):
+	@echo $lang; cd $(2) && $(MAKE) -f ../makefile.locale $(1) lang=$(2)
 
-$(1): po4a-stamp
-	$(foreach lang,$(ALL_LANGUAGES),@echo $lang; cd $(lang) && $(MAKE) -f ../makefile.locale $(1) lang=$(lang))
+$(1): $(1)_$(2)
+
+.PHONY: $(1)_$(2)
 
 endef
 
+.PHONY: $(TARGETS)
 
-$(foreach target, $(TARGETS), $(eval $(call MAKE_TARGET,$(target))))
+man all html : po4a-stamp
+
+$(foreach lang,$(ALL_LANGUAGES),$(foreach target, $(TARGETS), $(eval $(call MAKE_TARGET,$(target),$(lang)))))
 
 mrproper: mrproper-local
 
