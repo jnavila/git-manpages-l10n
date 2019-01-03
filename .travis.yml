@@ -2,8 +2,7 @@ language: ruby
 sudo: false
 cache: bundler
 before_install:
- - git clone https://github.com/jnavila/po4a.git
- - cd po4a && git checkout git_doc && cd ..
+ - sh ci/install_po4a.sh
 script:
  - sh ci/build.sh
 addons:
