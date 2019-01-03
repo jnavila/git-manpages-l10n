@@ -53,4 +53,4 @@ $(foreach lang,$(ALL_LANGUAGES),$(foreach target, $(TARGETS), $(eval $(call MAKE
 mrproper: mrproper-local
 
 mrproper-local:
-	rm -f po4a-stamp
+	rm -f po4a-stamp po4a.conf
