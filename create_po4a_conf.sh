@@ -1,7 +1,7 @@
 #!/bin/bash
 
 (cat <<EOF
-[po4a_langs] fr
+[po4a_langs] fr de
 [po4a_paths] po/documentation.pot \$lang:po/documentation.\$lang.po
 [options] opt: " -k 80"
 
