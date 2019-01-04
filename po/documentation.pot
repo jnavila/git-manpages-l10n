@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-01-03 17:18+0100\n"
+"POT-Creation-Date: 2019-01-03 23:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16811,16 +16811,19 @@ msgid ""
 "limit to the number of references and objects that may be packaged."
 msgstr ""
 
+#. type: Labeled list
+#: en/git-bundle.txt:71
+#, no-wrap
+msgid "[<refname>...]"
+msgstr ""
+
 #. type: Plain text
 #: en/git-bundle.txt:77
-#, no-wrap
 msgid ""
-"[<refname>...]::\n"
-"\tA list of references used to limit the references reported as\n"
-"\tavailable. This is principally of use to 'git fetch', which\n"
-"\texpects to receive only those references asked for and not\n"
-"\tnecessarily everything in the pack (in this case, 'git bundle' acts\n"
-"\tlike 'git fetch-pack').\n"
+"A list of references used to limit the references reported as "
+"available. This is principally of use to 'git fetch', which expects to "
+"receive only those references asked for and not necessarily everything in "
+"the pack (in this case, 'git bundle' acts like 'git fetch-pack')."
 msgstr ""
 
 #. type: Title -
@@ -22710,42 +22713,53 @@ msgid ""
 "will search for configuration options:"
 msgstr ""
 
+#. type: Labeled list
+#: en/git-config.txt:238
+#, no-wrap
+msgid "$(prefix)/etc/gitconfig"
+msgstr ""
+
 #. type: Plain text
 #: en/git-config.txt:240
+msgid "System-wide configuration file."
+msgstr ""
+
+#. type: Labeled list
+#: en/git-config.txt:241
 #, no-wrap
-msgid ""
-"$(prefix)/etc/gitconfig::\n"
-"\tSystem-wide configuration file.\n"
+msgid "$XDG_CONFIG_HOME/git/config"
 msgstr ""
 
 #. type: Plain text
 #: en/git-config.txt:248
-#, no-wrap
 msgid ""
-"$XDG_CONFIG_HOME/git/config::\n"
-"\tSecond user-specific configuration file. If $XDG_CONFIG_HOME is not set\n"
-"\tor empty, `$HOME/.config/git/config` will be used. Any single-valued\n"
-"\tvariable set in this file will be overwritten by whatever is in\n"
-"\t`~/.gitconfig`.  It is a good idea not to create this file if\n"
-"\tyou sometimes use older versions of Git, as support for this\n"
-"\tfile was added fairly recently.\n"
+"Second user-specific configuration file. If $XDG_CONFIG_HOME is not set or "
+"empty, `$HOME/.config/git/config` will be used. Any single-valued variable "
+"set in this file will be overwritten by whatever is in `~/.gitconfig`.  It "
+"is a good idea not to create this file if you sometimes use older versions "
+"of Git, as support for this file was added fairly recently."
+msgstr ""
+
+#. type: Labeled list
+#: en/git-config.txt:249
+#, no-wrap
+msgid "~/.gitconfig"
 msgstr ""
 
 #. type: Plain text
 #: en/git-config.txt:252
+msgid "User-specific configuration file. Also called \"global\" configuration file."
+msgstr ""
+
+#. type: Labeled list
+#: en/git-config.txt:253
 #, no-wrap
-msgid ""
-"~/.gitconfig::\n"
-"\tUser-specific configuration file. Also called \"global\"\n"
-"\tconfiguration file.\n"
+msgid "$GIT_DIR/config"
 msgstr ""
 
 #. type: Plain text
 #: en/git-config.txt:255
-#, no-wrap
-msgid ""
-"$GIT_DIR/config::\n"
-"\tRepository specific configuration file.\n"
+msgid "Repository specific configuration file."
 msgstr ""
 
 #. type: Plain text
@@ -23380,24 +23394,31 @@ msgid ""
 "git-credential-store will search for credentials in order of precedence:"
 msgstr ""
 
+#. type: Labeled list
+#: en/git-credential-store.txt:50
+#, no-wrap
+msgid "~/.git-credentials"
+msgstr ""
+
 #. type: Plain text
 #: en/git-credential-store.txt:52
+msgid "User-specific credentials file."
+msgstr ""
+
+#. type: Labeled list
+#: en/git-credential-store.txt:53
 #, no-wrap
-msgid ""
-"~/.git-credentials::\n"
-"\tUser-specific credentials file.\n"
+msgid "$XDG_CONFIG_HOME/git/credentials"
 msgstr ""
 
 #. type: Plain text
 #: en/git-credential-store.txt:59
-#, no-wrap
 msgid ""
-"$XDG_CONFIG_HOME/git/credentials::\n"
-"\tSecond user-specific credentials file. If '$XDG_CONFIG_HOME' is not set\n"
-"\tor empty, `$HOME/.config/git/credentials` will be used. Any credentials\n"
-"\tstored in this file will not be used if `~/.git-credentials` has a\n"
-"\tmatching credential as well. It is a good idea not to create this file\n"
-"\tif you sometimes use older versions of Git that do not support it.\n"
+"Second user-specific credentials file. If '$XDG_CONFIG_HOME' is not set or "
+"empty, `$HOME/.config/git/credentials` will be used. Any credentials stored "
+"in this file will not be used if `~/.git-credentials` has a matching "
+"credential as well. It is a good idea not to create this file if you "
+"sometimes use older versions of Git that do not support it."
 msgstr ""
 
 #. type: Plain text
@@ -24959,25 +24980,64 @@ msgstr ""
 msgid "In `dbDriver` and `dbUser` you can use the following variables:"
 msgstr ""
 
+#. type: Labeled list
+#: en/git-cvsserver.txt:293
+#, no-wrap
+msgid "%G"
+msgstr ""
+
+#. type: Plain text
+#: en/git-cvsserver.txt:295
+msgid "Git directory name"
+msgstr ""
+
+#. type: Labeled list
+#: en/git-cvsserver.txt:295
+#, no-wrap
+msgid "%g"
+msgstr ""
+
+#. type: Plain text
+#: en/git-cvsserver.txt:300
+msgid ""
+"Git directory name, where all characters except for alpha-numeric ones, `.`, "
+"and `-` are replaced with `_` (this should make it easier to use the "
+"directory name in a filename if wanted)"
+msgstr ""
+
+#. type: Labeled list
+#: en/git-cvsserver.txt:300
+#, no-wrap
+msgid "%m"
+msgstr ""
+
+#. type: Plain text
+#: en/git-cvsserver.txt:302
+msgid "CVS module/Git head name"
+msgstr ""
+
+#. type: Labeled list
+#: en/git-cvsserver.txt:302
+#, no-wrap
+msgid "%a"
+msgstr ""
+
+#. type: Plain text
+#: en/git-cvsserver.txt:304
+msgid "access method (one of \"ext\" or \"pserver\")"
+msgstr ""
+
+#. type: Labeled list
+#: en/git-cvsserver.txt:304
+#, no-wrap
+msgid "%u"
+msgstr ""
+
 #. type: Plain text
 #: en/git-cvsserver.txt:308
-#, no-wrap
 msgid ""
-"%G::\n"
-"\tGit directory name\n"
-"%g::\n"
-"\tGit directory name, where all characters except for\n"
-"\talpha-numeric ones, `.`, and `-` are replaced with\n"
-"\t`_` (this should make it easier to use the directory\n"
-"\tname in a filename if wanted)\n"
-"%m::\n"
-"\tCVS module/Git head name\n"
-"%a::\n"
-"\taccess method (one of \"ext\" or \"pserver\")\n"
-"%u::\n"
-"\tName of the user running 'git-cvsserver'.\n"
-"\tIf no name can be determined, the\n"
-"\tnumeric uid is used.\n"
+"Name of the user running 'git-cvsserver'.  If no name can be determined, the "
+"numeric uid is used."
 msgstr ""
 
 #. type: Plain text
@@ -27593,16 +27653,19 @@ msgid ""
 "specified."
 msgstr ""
 
+#. type: Labeled list
+#: en/git-fast-export.txt:117
+#, no-wrap
+msgid "[<git-rev-list-args>...]"
+msgstr ""
+
 #. type: Plain text
 #: en/git-fast-export.txt:123
-#, no-wrap
 msgid ""
-"[<git-rev-list-args>...]::\n"
-"\tA list of arguments, acceptable to 'git rev-parse' and\n"
-"\t'git rev-list', that specifies the specific objects and references\n"
-"\tto export.  For example, `master~10..master` causes the\n"
-"\tcurrent master reference to be exported along with all objects\n"
-"\tadded since its 10th ancestor commit.\n"
+"A list of arguments, acceptable to 'git rev-parse' and 'git rev-list', that "
+"specifies the specific objects and references to export.  For example, "
+"`master~10..master` causes the current master reference to be exported along "
+"with all objects added since its 10th ancestor commit."
 msgstr ""
 
 #. type: delimited block -
@@ -38405,15 +38468,18 @@ msgid ""
 "linkgit:gitrevisions[7]."
 msgstr ""
 
+#. type: Labeled list
+#: en/git-log.txt:86 en/git-shortlog.txt:72
+#, no-wrap
+msgid "[\\--] <path>..."
+msgstr ""
+
 #. type: Plain text
 #: en/git-log.txt:91
-#, no-wrap
 msgid ""
-"[\\--] <path>...::\n"
-"\tShow only commits that are enough to explain how the files\n"
-"\tthat match the specified paths came to be.  See 'History\n"
-"\tSimplification' below for details and other simplification\n"
-"\tmodes.\n"
+"Show only commits that are enough to explain how the files that match the "
+"specified paths came to be.  See 'History Simplification' below for details "
+"and other simplification modes."
 msgstr ""
 
 #. type: Plain text
@@ -39406,14 +39472,18 @@ msgid ""
 "--full-name."
 msgstr ""
 
+#. type: Labeled list
+#: en/git-ls-tree.txt:76
+#, no-wrap
+msgid "[<path>...]"
+msgstr ""
+
 #. type: Plain text
 #: en/git-ls-tree.txt:80
-#, no-wrap
 msgid ""
-"[<path>...]::\n"
-"\tWhen paths are given, show them (note that this isn't really raw\n"
-"\tpathnames, but rather a list of patterns to match).  Otherwise\n"
-"\timplicitly uses the root level of the tree as the sole path argument.\n"
+"When paths are given, show them (note that this isn't really raw pathnames, "
+"but rather a list of patterns to match).  Otherwise implicitly uses the root "
+"level of the tree as the sole path argument."
 msgstr ""
 
 #. type: Title -
@@ -54596,11 +54666,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-shortlog.txt:75
-#, no-wrap
 msgid ""
-"[\\--] <path>...::\n"
-"\tConsider only commits that are enough to explain how the files\n"
-"\tthat match the specified paths came to be.\n"
+"Consider only commits that are enough to explain how the files that match "
+"the specified paths came to be."
 msgstr ""
 
 #. type: Plain text
@@ -59871,16 +59939,19 @@ msgid ""
 "reset) branches-maxRev and/or tags-maxRev as appropriate."
 msgstr ""
 
+#. type: Labeled list
+#: en/git-svn.txt:1119
+#, no-wrap
+msgid "$GIT_DIR/svn/\\*\\*/.rev_map.*"
+msgstr ""
+
 #. type: Plain text
 #: en/git-svn.txt:1125
-#, no-wrap
 msgid ""
-"$GIT_DIR/svn/\\*\\*/.rev_map.*::\n"
-"\tMapping between Subversion revision numbers and Git commit\n"
-"\tnames.  In a repository where the noMetadata option is not set,\n"
-"\tthis can be rebuilt from the git-svn-id: lines that are at the\n"
-"\tend of every commit (see the 'svn.noMetadata' section above for\n"
-"\tdetails).\n"
+"Mapping between Subversion revision numbers and Git commit names.  In a "
+"repository where the noMetadata option is not set, this can be rebuilt from "
+"the git-svn-id: lines that are at the end of every commit (see the "
+"'svn.noMetadata' section above for details)."
 msgstr ""
 
 #. type: Plain text
@@ -66505,76 +66576,71 @@ msgstr ""
 
 #. type: Plain text
 #: en/mergetools-merge.txt:12
-msgid "guiffy"
-msgstr ""
-
-#. type: Plain text
-#: en/mergetools-merge.txt:13
 msgid "gvimdiff"
 msgstr ""
 
 #. type: Plain text
-#: en/mergetools-merge.txt:14
+#: en/mergetools-merge.txt:13
 msgid "gvimdiff2"
 msgstr ""
 
 #. type: Plain text
-#: en/mergetools-merge.txt:15
+#: en/mergetools-merge.txt:14
 msgid "gvimdiff3"
 msgstr ""
 
 #. type: Plain text
-#: en/mergetools-merge.txt:16
+#: en/mergetools-merge.txt:15
 msgid "kdiff3"
 msgstr ""
 
 #. type: Plain text
-#: en/mergetools-merge.txt:17
+#: en/mergetools-merge.txt:16
 msgid "meld"
 msgstr ""
 
 #. type: Plain text
-#: en/mergetools-merge.txt:18
+#: en/mergetools-merge.txt:17
 msgid "opendiff"
 msgstr ""
 
 #. type: Plain text
-#: en/mergetools-merge.txt:19
+#: en/mergetools-merge.txt:18
 msgid "p4merge"
 msgstr ""
 
 #. type: Plain text
-#: en/mergetools-merge.txt:20
+#: en/mergetools-merge.txt:19
 msgid "tkdiff"
 msgstr ""
 
 #. type: Plain text
-#: en/mergetools-merge.txt:21
+#: en/mergetools-merge.txt:20
 msgid "tortoisemerge"
 msgstr ""
 
 #. type: Plain text
-#: en/mergetools-merge.txt:22
+#: en/mergetools-merge.txt:21
 msgid "vimdiff"
 msgstr ""
 
 #. type: Plain text
-#: en/mergetools-merge.txt:23
+#: en/mergetools-merge.txt:22
 msgid "vimdiff2"
 msgstr ""
 
 #. type: Plain text
-#: en/mergetools-merge.txt:24
+#: en/mergetools-merge.txt:23
 msgid "vimdiff3"
 msgstr ""
 
 #. type: Plain text
-#: en/mergetools-merge.txt:25
+#: en/mergetools-merge.txt:24
 msgid "winmerge"
 msgstr ""
 
 #. type: Plain text
-#: en/mergetools-merge.txt:25
+#: en/mergetools-merge.txt:24
 msgid "xxdiff"
 msgstr ""
 
