@@ -4,7 +4,7 @@ MAN_FILTER = $(wildcard git-*.txt)
 HTML_FILTER = $(patsubst %.txt,%.html,$(MAN_FILTER))
 
 
-ifeq ($(wildcard ../../build-docdep.perl),../../buid-docdep.perl)
+ifeq ($(wildcard ../../build-docdep.perl),../../build-docdep.perl)
 
 vpath %conf . .. ../..
 vpath %in . .. ../..
@@ -22,13 +22,15 @@ include ../../Makefile
 ASCIIDOC_EXTRA += -I../..
 XMLTO_EXTRA += --searchpath ../..
 
+doc-l10n: all
+
 install-l10n:
 	$(INSTALL) -d -m 755 $(DESTDIR)$(man1dir)
 	$(INSTALL) -d -m 755 $(DESTDIR)$(man5dir)
 	$(INSTALL) -d -m 755 $(DESTDIR)$(man7dir)
-	[ ! -z $(DOC_MAN1) ] && $(INSTALL) -m 644 $(DOC_MAN1) $(DESTDIR)$(man1dir)
-	[ ! -z $(DOC_MAN5) ] && $(INSTALL) -m 644 $(DOC_MAN5) $(DESTDIR)$(man5dir)
-	[ ! -z $(DOC_MAN7) ] && $(INSTALL) -m 644 $(DOC_MAN7) $(DESTDIR)$(man7dir)
+	if [ ! -z "$(DOC_MAN1)" ]; then $(INSTALL) -m 644 $(DOC_MAN1) $(DESTDIR)$(man1dir); fi
+	if [ ! -z "$(DOC_MAN5)" ]; then $(INSTALL) -m 644 $(DOC_MAN5) $(DESTDIR)$(man5dir); fi
+	if [ ! -z "$(DOC_MAN7)" ]; then $(INSTALL) -m 644 $(DOC_MAN7) $(DESTDIR)$(man7dir); fi
 
 
 else
@@ -49,9 +51,10 @@ html: $(HTML_FILTER)
 
 all doc-l10n: man html
 
+endif
+
 clean:
 	rm -f *.1 *.html
 
 mrproper: clean
 	rm -f *.txt
-endif

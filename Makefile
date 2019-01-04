@@ -46,7 +46,7 @@ endef
 
 .PHONY: $(TARGETS)
 
-man all html : po4a-stamp
+man all html doc-l10n : po4a-stamp
 
 $(foreach lang,$(ALL_LANGUAGES),$(foreach target, $(TARGETS), $(eval $(call MAKE_TARGET,$(target),$(lang)))))
 
