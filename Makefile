@@ -2,7 +2,9 @@ EN_SOURCES = $(wildcard en/*.txt)
 LANGUAGE_PO = $(wildcard po/*.po)
 ALL_LANGUAGES = $(subst po/documentation.,,$(subst .po,,$(LANGUAGE_PO)))
 
-TARGETS = all man html clean install doc-l10n install-l10n mrproper
+L10N_BUILD_TARGETS = all man html install doc-l10n install-l10n
+L10N_CLEAN_TARGETS = clean mrproper
+L10N_TARGETS = $(L10N_CLEAN_TARGETS) $(L10N_BUILD_TARGETS)
 
 ifneq ($(findstring $(MAKEFLAGS),s),s)
 ifndef V
@@ -44,11 +46,17 @@ $(1): $(1)_$(2)
 
 endef
 
-.PHONY: $(TARGETS)
+define DEPEND_PO4A
+ $(1)_$(2): po4a-stamp
+endef
+
+.PHONY: $(L10N_BUILD_TARGETS) $(L10N_CLEAN_TARGETS)
 
 man all html doc-l10n : po4a-stamp
 
-$(foreach lang,$(ALL_LANGUAGES),$(foreach target, $(TARGETS), $(eval $(call MAKE_TARGET,$(target),$(lang)))))
+$(foreach lang,$(ALL_LANGUAGES),$(foreach target,$(L10N_TARGETS),$(eval $(call MAKE_TARGET,$(target),$(lang),DEPEND_PO4A))))
+
+$(foreach lang,$(ALL_LANGUAGES),$(foreach target,$(L10N_BUILD_TARGETS),$(eval $(call DEPEND_PO4A,$(target),$(lang)))))
 
 mrproper: mrproper-local
 
