@@ -19,8 +19,9 @@ mandir = $(prefix)/share/man/$(lang)
 endif
 
 include ../../Makefile
-ASCIIDOC_EXTRA += -I../..
+
 XMLTO_EXTRA += --searchpath ../..
+ASCIIDOC_CONF = -f ../../asciidoc.conf
 
 doc-l10n: all
 
