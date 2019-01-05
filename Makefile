@@ -6,21 +6,11 @@ L10N_BUILD_TARGETS = all man html install doc-l10n install-l10n
 L10N_CLEAN_TARGETS = clean mrproper
 L10N_TARGETS = $(L10N_CLEAN_TARGETS) $(L10N_BUILD_TARGETS)
 
+QUIET_LANG  = +$(MAKE) -C # space to separate -C and subdir
+
 ifneq ($(findstring $(MAKEFLAGS),s),s)
 ifndef V
-	QUIET_PO4A      = @echo '   ' PO4A $@;
-	QUIET_ASCIIDOC	= @echo '   ' ASCIIDOC $@;
-	QUIET_XMLTO	= @echo '   ' XMLTO $@;
-	QUIET_DB2TEXI	= @echo '   ' DB2TEXI $@;
-	QUIET_MAKEINFO	= @echo '   ' MAKEINFO $@;
-	QUIET_DBLATEX	= @echo '   ' DBLATEX $@;
-	QUIET_XSLTPROC	= @echo '   ' XSLTPROC $@;
-	QUIET_GEN	= @echo '   ' GEN $@;
-	QUIET_LINT	= @echo '   ' LINT $@;
-	QUIET_STDERR	= 2> /dev/null
-	QUIET_SUBDIR0	= +@subdir=
-	QUIET_SUBDIR1	= ;$(NO_SUBDIR) echo '   ' SUBDIR $$subdir; \
-			  $(MAKE) $(PRINT_DIR) -C $$subdir
+	QUIET_LANG = +@echo '   ' LANG $(2);$(MAKE) --no-print-directory -C
 	export V
 endif
 endif
@@ -38,7 +28,7 @@ update-sources:
 define MAKE_TARGET
 
 $(1)_$(2):
-	+$(MAKE) -C $(2) -f ../makefile.locale $(1) lang=$(2)
+	$(QUIET_LANG) $(2) -f ../makefile.locale $(1) lang=$(2)
 
 $(1): $(1)_$(2)
 
