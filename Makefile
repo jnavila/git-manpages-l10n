@@ -38,7 +38,7 @@ update-sources:
 define MAKE_TARGET
 
 $(1)_$(2):
-	@echo $lang;bundle exec $(MAKE) -C $(2) -f ../makefile.locale $(1) lang=$(2)
+	+$(MAKE) -C $(2) -f ../makefile.locale $(1) lang=$(2)
 
 $(1): $(1)_$(2)
 
