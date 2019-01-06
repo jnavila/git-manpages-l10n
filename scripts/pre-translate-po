@@ -1,0 +1,22 @@
+#!/usr/bin/python3
+
+import polib
+import re
+import sys
+
+def main (f):
+    po = polib.pofile(f)
+
+    for entry in po:
+        if (re.fullmatch(r'-[-a-z0-9[\]]+', entry.msgid)) \
+           or re.fullmatch(r'((linkgit:)?git-[-a-z0-9[\]]+(\[1\]|\(1\))(\n| )?)+', entry.msgid) \
+           or re.fullmatch(r'`[A-Z-_]+`|(core|branch|diff)\.[a-zA-Z]+', entry.msgid):
+            entry.msgstr = entry.msgid
+            if 'fuzzy' in entry.flags:
+                entry.flags.remove('fuzzy')
+                entry.previous_msgid = None
+    po.save(f)
+
+if __name__ == '__main__':
+    if len(sys.argv)>1:
+        main(sys.argv[1])
