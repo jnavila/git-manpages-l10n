@@ -12,7 +12,8 @@ def main (f):
            or re.fullmatch(r'((linkgit:)?git-[-a-z0-9[\]]+(\[1\]|\(1\))(\n| )?)+', entry.msgid) \
            or re.fullmatch(r'`[a-zA-Z-_]+`|(user|transfer|submodule|stash|status|splitIndex|showbranch|sendemail|repack|remote|receive|push|mergetool|mailinfo|log|interactive|instaweb|i18n|help|gui|gitweb|fastimport|format|fetch|difftool|credential|commit|column|core|branch|diff|apply|color)\.[a-zA-Z_.]+', entry.msgid):
             entry.msgstr = entry.msgid
-            entry.flags.append("ignore-translated")
+            if not 'ignore-translated' in entry.flags:
+                entry.flags.append("ignore-translated")
             flags = set(entry.flags)
             entry.flags = list(flags)
             if 'fuzzy' in entry.flags:
