@@ -28,6 +28,7 @@ update-sources:
 define MAKE_TARGET
 
 $(1)_$(2):
+	@mkdir -p $(2)
 	$(QUIET_LANG) $(2) -f ../makefile.locale $(1) lang=$(2)
 
 $(1): $(1)_$(2)
