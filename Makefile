@@ -15,8 +15,8 @@ ifndef V
 endif
 endif
 
-po4a.conf: scripts/create_po4a_conf.sh sources.txt
-	./scripts/create_po4a_conf.sh
+po4a.conf: scripts/create_po4a_conf.sh sources.txt $(LANGUAGE_PO)
+	@./scripts/create_po4a_conf.sh
 
 po4a-stamp: po4a.conf $(EN_SOURCES) $(LANGUAGE_PO) Makefile
 	$(QUIET_PO4A)PERL5LIB=./po4a/lib po4a/po4a -v po4a.conf
