@@ -97,15 +97,15 @@ Initializing a documentation.XX.po file
 If your language XX does not have translated message file
 documentation.XX.po yet, you add a translation for the first time by
 
- * editing the file create_po4a_conf.sh and adding your language code
-   to the first line, e.g. "[po4a_langs] fr XX", where XX is the
-   locale, such as "de", "is", "pt_BR", "zh_CN", etc.
- * running in the root directory of the project
-
-     make all
+ * initializing the translation po file by running:
+       msginit --local=XX
+   in the po/directory, where XX is the locale, e.g. "de", "is", "pt_BR",
+   "zh_CN", etc.
+ * pre-translating the file for unchanged strings by running:
+       scripts/pre-translate-po po/documentation.XX.po
 
 A file po/documentation.XX.po was created, corresponding
-to the newly created translation.
+to the newly created translation and is ready for your translations.
 
 Then edit the automatically generated copyright info in your new
 documentation.XX.po to be correct, e.g. for Icelandic:
@@ -126,8 +126,7 @@ just "Git Documentation":
     Documentation/' documentation.XX.po
 
 Once you are done testing the translation (see below), commit the
-create_po4a_conf.sh and documentation.XX.po files and ask the l10n coordinator
-to pull from you.
+documentation.XX.po files and ask the l10n coordinator to pull from you.
 
 Updating a documentation.XX.po file
 -----------------------------------
@@ -140,7 +139,7 @@ file.
 
 If there's an existing documentation.XX.po file for your language, but
 the repository of the l10n coordinator has newer documentation.pot
-file, chances are the new documentation.XX.po already includes the
+file, chances are the upstreamed documentation.XX.po already includes the
 changes of the new version.
 
 Once you are done testing the translation (see below), commit the result
