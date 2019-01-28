@@ -10,7 +10,8 @@ def main (f):
     for entry in po:
         if (re.fullmatch(r'-[-a-z0-9[\]]+', entry.msgid)) \
            or re.fullmatch(r'((linkgit:)?(git[-a-z0-9[\]]+|mail)(\[[157]\]|\([157]\))(,|;)?(\n| )?)+', entry.msgid) \
-           or re.fullmatch(r'`[a-zA-Z-_]+`|(user|transfer|submodule|stash|status|splitIndex|showbranch|sendemail|repack|remote|receive|push|merge(tool)?|mailinfo|log|interactive|instaweb|i18n|help|gui|gitweb|fastimport|format|fetch|diff(tool)?|credential|commit|column|core|branch|apply|color|git-p4)\.[a-zA-Z_.]+', entry.msgid):
+           or re.fullmatch(r'`[a-zA-Z-_]+`|(user|transfer|submodule|stash|status|splitIndex|showbranch|sendemail|repack|remote|receive|push|merge(tool)?|mailinfo|log|interactive|instaweb|i18n|help|gui|gitweb|fastimport|format|fetch|diff(tool)?|credential|commit|column|core|branch|apply|color|git-p4)\.[a-zA-Z_.]+', entry.msgid)\
+           or re.fullmatch(r'`?GIT_[A-Z_]+`?', entry.msgid):
             entry.msgstr = entry.msgid
             entry.flags.append("ignore-same")
             flags = set(entry.flags)
