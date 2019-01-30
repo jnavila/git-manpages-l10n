@@ -14,7 +14,7 @@ def main (f):
            or re.fullmatch(r'`?GIT_[A-Z_]+`?', entry.msgid):
             entry.msgstr = entry.msgid
             entry.flags.append("ignore-same")
-            flags = set(entry.flags)
+            flags = sorted(set(entry.flags))
             entry.flags = list(flags)
             if 'fuzzy' in entry.flags:
                 entry.flags.remove('fuzzy')
