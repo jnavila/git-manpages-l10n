@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: git documentation\n"
 "POT-Creation-Date: 2019-01-26 17:40+0100\n"
-"PO-Revision-Date: 2019-01-28 14:48+0000\n"
+"PO-Revision-Date: 2019-02-02 13:22+0100\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.5-dev\n"
+"X-Generator: Poedit 2.1.1\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:525 en/git-instaweb.txt:44
@@ -12661,8 +12661,8 @@ msgstr ""
 "Cette commande met à jour l'index en utilisant le contenu actuel trouvé dans"
 " l'arbre de travail, pour préparer le contenu de la prochaine validation. "
 "Typiquement, elle ajoute intégralement le contenu actuel des chemins "
-"existant, mais peut aussi n'ajouter que certaines parties des modifications "
-"au moyen d'options ou soustraire certains chemins qui n'existent plus dans "
+"existants, mais peut aussi n'ajouter que certaines parties des modifications"
+" au moyen d'options ou soustraire certains chemins qui n'existent plus dans "
 "l'arbre de travail."
 
 #. type: Plain text
@@ -12716,8 +12716,8 @@ msgstr ""
 "Par défaut, la commande `git add` n'ajoute pas les fichiers ignorés.  Si des"
 " fichiers ignorés sont spécifiés explicitement en ligne de commande, `git "
 "add` échouera avec la liste des fichiers ignorés. Les fichiers ignorés "
-"atteint via la récursion de répertoires ou les patrons de fichiers gérés par"
-" Git (les patrons doivent alors être échappés du shell par des quotes)  "
+"atteints via la récursion de répertoires ou les patrons de fichiers gérés "
+"par Git (les patrons doivent alors être échappés du shell par des quotes)  "
 "seront ignorés silencieusement. La commande `git add` peut tout de même "
 "ajouter des fichiers ignorés avec l'option `-f` (force)."
 
@@ -12800,7 +12800,7 @@ msgid ""
 "files but ignore removed ones."
 msgstr ""
 "Fichiers dont le contenu doit être ajouté. Les patrons (ex : `*.c`) "
-"permettent de restreindre à tous les fichiers correspondant. Un nom de "
+"permettent de restreindre à tous les fichiers correspondants. Un nom de "
 "répertoire (ex : `rep` pour ajouter `rep/fichier1` et `rep/fichier2`) permet"
 " d'ajouter récursivement tous les fichiers d'un répertoire (par exemple "
 "spécifier `rep` n'enregistrera pas seulement le fichier modifié dans l'arbre"
@@ -12862,7 +12862,8 @@ msgid ""
 msgstr ""
 "Choisir de manière interactive les sections de patch entre l'index et la "
 "copie de travail et les ajouter à l'index. Cela permet à l'utilisateur de "
-"réviser les différences avec d'ajouter le contenu modifié à l'index."
+"passer en revue les différences avant d'ajouter le contenu modifié à "
+"l'index."
 
 #. type: Plain text
 #: en/git-add.txt:95
@@ -12943,10 +12944,10 @@ msgid ""
 " entire working tree are updated (old versions of Git used to limit the "
 "update to the current directory and its subdirectories)."
 msgstr ""
-"Si aucun <chemin> n'est spécifié, quand l'option `-u` est utilisée, tous les"
-" fichiers suivis dans la totalité de l'arbre de travail sont mis à jour (les"
-" versions anciennes de Git limitaient la mise à jour au répertoire courant "
-"et ses sous-répertoires)."
+"Si aucun <chemin> n'est spécifié quand l'option `-u` est utilisée, tous les "
+"fichiers suivis dans la totalité de l'arbre de travail sont mis à jour (les "
+"versions anciennes de Git limitaient la mise à jour au répertoire courant et"
+" ses sous-répertoires)."
 
 #. type: Labeled list
 #: en/git-add.txt:119 en/git-repack.txt:44 en/git-svn.txt:402
@@ -13180,7 +13181,7 @@ msgid ""
 "subdirectories:"
 msgstr ""
 "Ajouter le contenu de tous les fichiers `*.txt` sous le répertoire "
-"`Documentation` et ses sous répertoires :"
+"`Documentation` et ses sous-répertoires :"
 
 #. type: delimited block -
 #: en/git-add.txt:196
@@ -13291,11 +13292,11 @@ msgid ""
 "you could stage further before `git commit` using `git add`) for each path."
 "  A sample output looks like this:"
 msgstr ""
-"Affiche les modifications entre HEAD et l'index (c-à-d ce qui serait validé "
-"si vous lanciez `git commit`), et entre l'index et les fichiers de la copie "
-"de travail (c-à-d ce que vous pourriez indexer au moyen de `git add` avant "
-"de lancer `git commit`) pour chaque chemin. Un exemple d'affichage ressemble"
-" à ceci :"
+"Ceci affiche les modifications entre HEAD et l'index (c-à-d ce qui serait "
+"validé si vous lanciez `git commit`), et entre l'index et les fichiers de la"
+" copie de travail (c-à-d ce que vous pourriez indexer au moyen de `git add` "
+"avant de lancer `git commit`) pour chaque chemin. Un exemple d'affichage "
+"ressemble à ceci :"
 
 #. type: delimited block -
 #: en/git-add.txt:247
@@ -13320,13 +13321,14 @@ msgid ""
 "commit what is in the index, but working tree file has further modifications"
 " (one addition and one deletion)."
 msgstr ""
-"foo.png contient des différences avec HEAD (mais c'est un format binaire "
-"donc le nombre de lignes ne peut pas être affiché) et il n'y a pas "
-"différence entre la copie indexée et la copie de travail (si la copie de "
-"travail avait été aussi différente, 'binary' aurait été affiché à la place "
-"de 'nothing'). L'autre fichier, git-add{litdd}interactive.perl, a 430 lignes"
-" ajoutées et 35 effacées si vous validez ce qui est dans l'index, mais la "
-"copie de travail contient d'autres modifications (un ajout et un retrait)."
+"Cela montre que foo.png contient des différences avec HEAD (mais c'est un "
+"format binaire donc le nombre de lignes ne peut pas être affiché) et qu'il "
+"n'y a pas de différence entre la copie indexée et la copie de travail (si la"
+" copie de travail aussi avait été différente, 'binary' aurait été affiché à "
+"la place de 'nothing'). L'autre fichier, git-add{litdd}interactive.perl, a "
+"430 lignes ajoutées et 35 effacées si vous validez ce qui est dans l'index, "
+"mais la copie de travail contient d'autres modifications (un ajout et un "
+"retrait)."
 
 #. type: Labeled list
 #: en/git-add.txt:259 en/git-update-ref.txt:94
@@ -13344,8 +13346,8 @@ msgid ""
 " is omitted, all remaining patches are taken.  E.g. \"7-\" to choose 7,8,9 "
 "from the list.  You can say '*' to choose everything."
 msgstr ""
-"Affiche l'information d'état et un prompt \"Update>>\". Quand le prompt se "
-"termine par un double '>', vous pouvez sélectionner plus d'une option, "
+"Ceci affiche l'information d'état et une invite \"Update>>\". Quand l'invite"
+" se termine par un double '>', vous pouvez sélectionner plus d'une option, "
 "concaténées avec des espaces ou des virgules. Vous pouvez aussi indiquer des"
 " intervalles.  Par exemple \"2-5 7,9\" pour choisir 2, 3, 4, 5, 7 et 9 dans "
 "la liste. Si le second nombre d'un intervalle est absent, tous les patchs "
@@ -13355,7 +13357,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-add.txt:271
 msgid "What you chose are then highlighted with '*', like this:"
-msgstr "Tout ce qui a été sélectionné est indiqué par une '*', comme ceci :"
+msgstr "Tout ce qui a été sélectionné est indiqué par un '*', comme ceci :"
 
 #. type: delimited block -
 #: en/git-add.txt:276
@@ -13402,9 +13404,9 @@ msgid ""
 "selected paths are reverted to that of the HEAD version.  Reverting new "
 "paths makes them untracked."
 msgstr ""
-"Ceci présente une interface d'utilisation similaire à 'update', et le "
-"contenu indexé des chemins sélectionnés sont ramenés à la version HEAD. "
-"Inverser des chemins nouveaux les rend non-suivis."
+"Ceci présente une interface d'utilisation similaire à 'update', et les "
+"informations indexées des chemins sélectionnés sont ramenées à la version "
+"HEAD. Restaurer des chemins nouveaux les rend non-suivis."
 
 #. type: Labeled list
 #: en/git-add.txt:294
@@ -13437,9 +13439,9 @@ msgid ""
 msgstr ""
 "Ceci permet de choisir un chemin depuis une sélection similaire à 'status'. "
 "Après le choix du chemin, la différence entre l'index et le fichier dans "
-"l'arbre de travail est présenté et vous demande si vous souhaitez indexer "
-"chaque section de modification. Vous pouvez sélectionner une des options "
-"suivantes et taper entrée :"
+"l'arbre de travail est présentée et il vous est demandé si vous souhaitez "
+"indexer chaque section de modification. Vous pouvez sélectionner une des "
+"options suivantes et taper entrée :"
 
 #. type: Plain text
 #: en/git-add.txt:321
@@ -13511,7 +13513,7 @@ msgstr ""
 #: en/git-add.txt:335
 #, no-wrap
 msgid "EDITING PATCHES"
-msgstr "ÉDITER LES RUSTINES"
+msgstr "ÉDITER LES CORRECTIFS"
 
 #. type: Plain text
 #: en/git-add.txt:345
@@ -13526,14 +13528,14 @@ msgid ""
 "and which editing operations make sense on them."
 msgstr ""
 "Invoquer `git add -e` ou sélectionner `e` depuis le sélecteur interactif de "
-"sections ouvre un patch dans votre éditeur ; après avoir quitté l'éditeur, "
-"le résultat est appliqué à l'index. Vous êtes libre de modifier en tout "
-"point le patch, mais notez cependant que certaines modifications provoquent "
-"des résultats inattendus ou même créent des patchs inapplicables. Si vous "
-"souhaitez abandonner complètement l'opération (c'est-à-dire ne rien ajouter "
-"à l'index), effacez toutes les lignes du patch. La liste ci-dessous décrit "
-"des formes habituelles dans les patchs et quelles opérations d'édition "
-"peuvent être réalisées."
+"sections ouvre un correctif dans votre éditeur ; après avoir quitté "
+"l'éditeur, le résultat est appliqué à l'index. Vous êtes libre de modifier "
+"en tout point le correctif, mais notez cependant que certaines modifications"
+" provoquent des résultats inattendus ou même créent des correctifs "
+"inapplicables. Si vous souhaitez abandonner complètement l'opération (c'est-"
+"à-dire ne rien ajouter à l'index), effacez toutes les lignes du correctif. "
+"La liste ci-dessous décrit des formes habituelles dans les correctifs et "
+"quelles opérations d'édition peuvent être réalisées."
 
 #. type: Labeled list
 #: en/git-add.txt:347
@@ -13599,12 +13601,13 @@ msgid ""
 "nor the working tree will stage the new line for commit, but the line will "
 "appear to be reverted in the working tree."
 msgstr ""
-"Il existe aussi des opérations plus complexes. Méfiez-vous : quand le patch "
-"n'est appliqué que dans l'index et pas dans l'arbre de travail, l'arbre de "
-"travail semblera « défaire » les modifications de l'index. Par exemple, "
-"l'introduction dans l'index d'une nouvelle ligne qui n'apparait ni dans HEAD"
-" ni dans l'arbre de travail indexera la nouvelle ligne pour validation, mais"
-" cette ligne semblera être supprimée dans l'arbre de travail."
+"Il existe aussi des opérations plus complexes qui peuvent être réalisées. "
+"Méfiez-vous : quand le correctif n'est appliqué que dans l'index et pas dans"
+" l'arbre de travail, l'arbre de travail semblera « défaire » les "
+"modifications de l'index. Par exemple, l'introduction dans l'index d'une "
+"nouvelle ligne qui n’apparaît ni dans HEAD ni dans l'arbre de travail "
+"indexera la nouvelle ligne pour validation, mais cette ligne semblera être "
+"supprimée dans l'arbre de travail."
 
 #. type: Plain text
 #: en/git-add.txt:374
@@ -13669,7 +13672,7 @@ msgid ""
 "in the working tree."
 msgstr ""
 "Vous pouvez aussi ajouter du contenu nouveau qui n'existe pas dans le "
-"patch ; ajoutez simplement des nouvelles lignes, chacune commençant par "
+"correctif ; ajoutez simplement des nouvelles lignes, chacune commençant par "
 "\"{plus}\". L'ajout semblera annulé dans l'arbre de travail."
 
 #. type: Plain text
@@ -13679,12 +13682,12 @@ msgid ""
 "will make the patch impossible to apply:"
 msgstr ""
 "Il existe aussi quelques opérations à éviter complètement car celles-ci "
-"rendent le patch inapplicable :"
+"rendent le correctif inapplicable :"
 
 #. type: Plain text
 #: en/git-add.txt:402
 msgid "adding context (\" \") or removal (\"-\") lines"
-msgstr "ajout de context (\" \") ou lignes de suppression (\"-\")"
+msgstr "ajout de contexte (\" \") ou lignes de suppression (\"-\")"
 
 #. type: Plain text
 #: en/git-add.txt:403
@@ -19479,7 +19482,7 @@ msgid ""
 "that is to say, the branch is not reset/created unless \"git checkout\" is "
 "successful."
 msgstr ""
-"Ce qui veut dire que la branche n'est pas créée ou réinitialisée à moins que"
+"ce qui veut dire que la branche n'est pas créée ou réinitialisée à moins que"
 " « git checkout » soit réussie."
 
 #. type: Labeled list
@@ -20321,7 +20324,7 @@ msgstr ""
 msgid ""
 "creates a new tag 'foo', which refers to commit 'f', leaving HEAD detached."
 msgstr ""
-"Crée une nouvelle étiquette 'foo' qui fait référence au commit 'f', en "
+"crée une nouvelle étiquette 'foo' qui fait référence au commit 'f', en "
 "laissant HEAD détachée."
 
 #. type: Plain text
@@ -28043,7 +28046,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-diff-index.txt:31
 msgid "do not consider the on-disk file at all"
-msgstr "Ne pas considérer le fichier sur disque"
+msgstr "ne pas considérer le fichier sur disque"
 
 #. type: Plain text
 #: en/git-diff-index.txt:37
@@ -50384,7 +50387,7 @@ msgstr ""
 #: en/git-receive-pack.txt:118
 #, no-wrap
 msgid "update Hook"
-msgstr "Crochet update"
+msgstr "crochet update"
 
 #. type: Plain text
 #: en/git-receive-pack.txt:121
@@ -50517,7 +50520,7 @@ msgstr ""
 #: en/git-receive-pack.txt:200
 #, no-wrap
 msgid "post-update Hook"
-msgstr "Crochet post-update"
+msgstr "crochet post-update"
 
 #. type: Plain text
 #: en/git-receive-pack.txt:205
@@ -72316,7 +72319,7 @@ msgstr ""
 #: en/urls.txt:24
 msgid "An alternative scp-like syntax may also be used with the ssh protocol:"
 msgstr ""
-"une syntaxe alternative de type scp peut aussi être utilisée pour le "
+"Une syntaxe alternative de type scp peut aussi être utilisée pour le "
 "protocole ssh :"
 
 #. type: Plain text
@@ -72477,7 +72480,7 @@ msgid ""
 "rewritten in any context that takes a URL to be "
 "\"git://git.host.xz/repo.git\"."
 msgstr ""
-"Une URL comme « travail:depot.git » ou « host.xz:/chemin/vers/depot.git » "
+"une URL comme « travail:depot.git » ou « host.xz:/chemin/vers/depot.git » "
 "sera réécrite dans tout contexte qui requiert une URL en "
 "« git://git.host.xz/depot.git »."
 
@@ -72517,7 +72520,7 @@ msgid ""
 "\"ssh://example.org/path/to/repo.git\" for pushes, but pulls will still use "
 "the original URL."
 msgstr ""
-"Une URL telle que « git://exemple.org/chemin/vers/le/depot.git » sera "
+"une URL telle que « git://exemple.org/chemin/vers/le/depot.git » sera "
 "réécrite en « ssh://exemple.org/chemin/vers/le/depot.git » pour les "
 "poussées, mais les tirages utiliseront encore l'URL originale."
 
