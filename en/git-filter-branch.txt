@@ -8,13 +8,13 @@ git-filter-branch - Rewrite branches
 SYNOPSIS
 --------
 [verse]
-'git filter-branch' [--env-filter <command>] [--tree-filter <command>]
+'git filter-branch' [--setup <command>] [--subdirectory-filter <directory>]
+	[--env-filter <command>] [--tree-filter <command>]
 	[--index-filter <command>] [--parent-filter <command>]
 	[--msg-filter <command>] [--commit-filter <command>]
-	[--tag-name-filter <command>] [--subdirectory-filter <directory>]
-	[--prune-empty]
+	[--tag-name-filter <command>] [--prune-empty]
 	[--original <namespace>] [-d <directory>] [-f | --force]
-	[--] [<rev-list options>...]
+	[--state-branch <branch>] [--] [<rev-list options>...]
 
 DESCRIPTION
 -----------
@@ -82,12 +82,23 @@ multiple commits.
 OPTIONS
 -------
 
+--setup <command>::
+	This is not a real filter executed for each commit but a one
+	time setup just before the loop. Therefore no commit-specific
+	variables are defined yet.  Functions or variables defined here
+	can be used or modified in the following filter steps except
+	the commit filter, for technical reasons.
+
+--subdirectory-filter <directory>::
+	Only look at the history which touches the given subdirectory.
+	The result will contain that directory (and only that) as its
+	project root. Implies <<Remap_to_ancestor>>.
+
 --env-filter <command>::
 	This filter may be used if you only need to modify the environment
 	in which the commit will be performed.  Specifically, you might
 	want to rewrite the author/committer name/email/time environment
-	variables (see linkgit:git-commit-tree[1] for details).  Do not forget
-	to re-export the variables.
+	variables (see linkgit:git-commit-tree[1] for details).
 
 --tree-filter <command>::
 	This is the filter for rewriting the tree and its contents.
@@ -161,11 +172,6 @@ be removed, buyer beware. There is also no support for changing the
 author or timestamp (or the tag message for that matter). Tags which point
 to other tags will be rewritten to point to the underlying commit.
 
---subdirectory-filter <directory>::
-	Only look at the history which touches the given subdirectory.
-	The result will contain that directory (and only that) as its
-	project root. Implies <<Remap_to_ancestor>>.
-
 --prune-empty::
 	Some filters will generate empty commits that leave the tree untouched.
 	This option instructs git-filter-branch to remove such commits if they
@@ -192,6 +198,12 @@ to other tags will be rewritten to point to the underlying commit.
 	directory or when there are already refs starting with
 	'refs/original/', unless forced.
 
+--state-branch <branch>::
+	This option will cause the mapping from old to new objects to
+	be loaded from named branch upon startup and saved as a new
+	commit to that branch upon exit, enabling incremental of large
+	trees. If '<branch>' does not exist it will be created.
+
 <rev-list options>...::
 	Arguments for 'git rev-list'.  All positive refs included by
 	these options are rewritten.  You may also specify options
@@ -210,7 +222,15 @@ this purpose, they are instead rewritten to point at the nearest ancestor that
 was not excluded.
 
 
-Examples
+EXIT STATUS
+-----------
+
+On success, the exit status is `0`.  If the filter can't find any commits to
+rewrite, the exit status is `2`.  On any other error, the exit status may be
+any other non-zero value.
+
+
+EXAMPLES
 --------
 
 Suppose you want to remove a file (containing confidential information
@@ -268,7 +288,7 @@ git filter-branch --parent-filter \
 or even simpler:
 
 -----------------------------------------------
-echo "$commit-id $graft-id" >> .git/info/grafts
+git replace --graft $commit-id $graft-id
 git filter-branch $graft-id..HEAD
 -----------------------------------------------
 
@@ -340,12 +360,10 @@ git filter-branch --env-filter '
 	if test "$GIT_AUTHOR_EMAIL" = "root@localhost"
 	then
 		GIT_AUTHOR_EMAIL=john@example.com
-		export GIT_AUTHOR_EMAIL
 	fi
 	if test "$GIT_COMMITTER_EMAIL" = "root@localhost"
 	then
 		GIT_COMMITTER_EMAIL=john@example.com
-		export GIT_COMMITTER_EMAIL
 	fi
 ' -- --all
 --------------------------------------------------------
@@ -388,7 +406,7 @@ git filter-branch --index-filter \
 
 
 
-Checklist for Shrinking a Repository
+CHECKLIST FOR SHRINKING A REPOSITORY
 ------------------------------------
 
 git-filter-branch can be used to get rid of a subset of files,
@@ -427,7 +445,7 @@ warned.
   (or if your git-gc is not new enough to support arguments to
   `--prune`, use `git repack -ad; git prune` instead).
 
-Notes
+NOTES
 -----
 
 git-filter-branch allows you to make complex shell-scripted rewrites
