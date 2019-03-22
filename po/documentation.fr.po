@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: git documentation\n"
 "POT-Creation-Date: 2019-02-13 20:53+0100\n"
-"PO-Revision-Date: 2019-03-14 22:27+0100\n"
+"PO-Revision-Date: 2019-03-22 18:15+0100\n"
 "Last-Translator: Adrien Ollier <adr.ollier@hotmail.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -4349,7 +4349,7 @@ msgstr ""
 #: en/diff-options.txt:453 en/git-status.txt:143
 #, no-wrap
 msgid "--find-renames[=<n>]"
-msgstr ""
+msgstr "--find-renames[=<n>]"
 
 #. type: Plain text
 #: en/diff-options.txt:456
@@ -4906,7 +4906,7 @@ msgstr ""
 #: en/diff-options.txt:702 en/git-status.txt:85
 #, no-wrap
 msgid "--ignore-submodules[=<when>]"
-msgstr ""
+msgstr "--ignore-submodules[=<quand>]"
 
 #. type: Plain text
 #: en/diff-options.txt:714
@@ -5680,7 +5680,7 @@ msgstr "git-add(1)"
 #: en/git-whatchanged.txt:5 en/git-worktree.txt:5 en/git-write-tree.txt:5
 #, no-wrap
 msgid "NAME"
-msgstr "NAME"
+msgstr "NOM"
 
 #. type: Plain text
 #: en/git-add.txt:7
@@ -10443,7 +10443,7 @@ msgstr ""
 #: en/git-branch.txt:141 en/git-status.txt:126 en/git-tag.txt:127
 #, no-wrap
 msgid "--column[=<options>]"
-msgstr ""
+msgstr "--column[=<options>]"
 
 #. type: Labeled list
 #: en/git-branch.txt:142 en/git-status.txt:127 en/git-tag.txt:128
@@ -11588,7 +11588,7 @@ msgstr ""
 #: en/git-update-server-info.txt:32
 #, no-wrap
 msgid "OUTPUT"
-msgstr ""
+msgstr "SORTIE"
 
 #. type: Plain text
 #: en/git-cat-file.txt:179
@@ -54186,13 +54186,13 @@ msgstr "git-status(1)"
 #. type: Plain text
 #: en/git-status.txt:7
 msgid "git-status - Show the working tree status"
-msgstr ""
+msgstr "git-status - Montrer le statut de l'arbre de travail"
 
 #. type: Plain text
 #: en/git-status.txt:13
 #, no-wrap
 msgid "'git status' [<options>...] [--] [<pathspec>...]\n"
-msgstr ""
+msgstr "'git status' [<options>...] [--] [<spécificateur de chemin>...]\n"
 
 #. type: Plain text
 #: en/git-status.txt:23
@@ -54204,6 +54204,13 @@ msgid ""
 "commit by running `git commit`; the second and third are what you _could_ "
 "commit by running 'git add' before running `git commit`."
 msgstr ""
+"Montre les chemins qui ont des différences entre le fichier d'index et le "
+"commit HEAD courant, les chemins qui ont des différences entre l'arbre de "
+"travail et de fichier d'index, et les chemins dans l'arbre de travail qui ne"
+" sont pas suivis par Git (et qui ne sont pas ignorés par "
+"linkgit:gitignore[5]). Les premiers sont ce que vous _valideriez_ en lançant"
+" `git commit` ; les seconds et les troisièmes sont ce que vous _pourriez_ "
+"valider en lançant `git add` avant de lancer `git commit`."
 
 #. type: Plain text
 #: en/git-status.txt:30
@@ -54219,13 +54226,13 @@ msgstr "--show-stash"
 #. type: Plain text
 #: en/git-status.txt:37
 msgid "Show the number of entries currently stashed away."
-msgstr ""
+msgstr "Montrer le nombre d'entrées actuellement remisées."
 
 #. type: Labeled list
 #: en/git-status.txt:38
 #, no-wrap
 msgid "--porcelain[=<version>]"
-msgstr ""
+msgstr "--porcelain[=<version>]"
 
 #. type: Plain text
 #: en/git-status.txt:43
@@ -54234,6 +54241,10 @@ msgid ""
 "the short output, but will remain stable across Git versions and regardless "
 "of user configuration. See below for details."
 msgstr ""
+"Donner la sortie dans un format facile à analyser par script. Ceci est "
+"similaire à la sortie courte, mais restera stable à travers les versions de "
+"Git et sans tenir compte de la configuration utilisateur. Voir ci-dessous "
+"pour de plus amples détails."
 
 #. type: Plain text
 #: en/git-status.txt:46
@@ -54241,6 +54252,9 @@ msgid ""
 "The version parameter is used to specify the format version.  This is "
 "optional and defaults to the original version 'v1' format."
 msgstr ""
+"Le paramètre de version est utilisé pour spécifier la version de format. "
+"Ceci est optionnel et utilise par défaut le format 'v1' de la version "
+"d'origine."
 
 #. type: Plain text
 #: en/git-status.txt:49
@@ -54256,6 +54270,11 @@ msgid ""
 " in the working tree that have not yet been staged (i.e., like the output of"
 " `git diff`)."
 msgstr ""
+"En plus des noms de fichiers qui ont été changés, montrer aussi les "
+"changements textuels qui sont indexés pour validation (c.-à-d., comme la "
+"sortie de `git diff --cached`). Si `-v` est spécifié deux fois, alors "
+"montrer également les modifications dans l'arbre de travail qui n'ont pas "
+"encore été indexées (c.-à-d., comme la sortie de `git diff`)."
 
 #. type: Plain text
 #: en/git-status.txt:65
@@ -54264,6 +54283,9 @@ msgid ""
 "is optional: it defaults to 'all', and if specified, it must be stuck to the"
 " option (e.g. `-uno`, but not `-u no`)."
 msgstr ""
+"Le paramètre mode est utilisé pour spécifier le traitement des fichiers non-"
+"suivis. C'est optionnel : il vaut par défaut 'all', et si spécifié, il doit "
+"être collé à l'option (par exemple, `-uno`, mais pas `-u no`)."
 
 #. type: Plain text
 #: en/git-status.txt:69
@@ -54289,6 +54311,16 @@ msgid ""
 "Otherwise you can use `no` to have `git status` return more quickly without "
 "showing untracked files."
 msgstr ""
+"Quand l'option `-u` n'est pas utilisée, les fichiers non-suivis et les "
+"dossiers sont montrés (c.-à-d. comme en spécifiant `normal`), pour vous "
+"aider à éviter d'oublier d'ajouter des fichiers nouvellement créés. Étant "
+"donné que la recherche de fichiers non-suivis dans le système de fichiers "
+"nécessite un travail supplémentaire, ce mode peut prendre un certain temps "
+"dans un grand arbre de travail. Pensez à activer le cache non suivi et "
+"l'index fractionné, le cas échéant (voyez `git update-index --untracked-"
+"cache` et `git update-index --split-index`), sinon vous pouvez utiliser `no`"
+" pour que `git status` revienne plus rapidement sans afficher les fichiers "
+"non-suivis."
 
 #. type: Plain text
 #: en/git-status.txt:99
@@ -54307,30 +54339,43 @@ msgid ""
 " the output of submodule summaries when the config option "
 "`status.submoduleSummary` is set)."
 msgstr ""
+"Ignorer les modifications apportées aux sous-modules lors de la recherche de"
+" modifications. <quand> peut être \"none\", \"untracked\", \"dirty\" ou "
+"\"all\", qui est la valeur par défaut. Utiliser \"none\" considérera le "
+"sous-module comme modifié lorsqu'il contient des fichiers non suivis ou "
+"modifiés ou que sa HEAD diffère de la validation enregistrée dans le super-"
+"projet et peut être utilisé pour remplacer les paramètres de l'option "
+"'ignore' dans linkgit: git-config[1] ou linkgit: gitmodules[5]. Lorsque "
+"\"untracked\" est utilisé, les sous-modules ne sont pas considérés comme "
+"sales lorsqu'ils contiennent uniquement du contenu non suivi (mais ils sont "
+"toujours analysés pour rechercher le contenu modifié). L'utilisation de "
+"\"dirty\" ignore toutes les modifications apportées à l'arborescence de "
+"travail des sous-modules ; seules les modifications des validations stockées"
+" dans le super-projet sont affichées (il s'agissait du comportement avant la"
+" version 1.7.0). L'utilisation de \"all\" masque toutes les modifications "
+"apportées aux sous-modules (et supprime la sortie des résumés de sous-"
+"modules lorsque l'option de configuration `status.submoduleSummary` est "
+"définie)."
 
 #. type: Labeled list
 #: en/git-status.txt:100
-#, fuzzy, no-wrap
-#| msgid "--untracked-files[=<mode>]"
+#, no-wrap
 msgid "--ignored[=<mode>]"
-msgstr "--untracked-files[=<mode>]"
+msgstr "--ignored[=<mode>]"
 
 #. type: Plain text
 #: en/git-status.txt:102
 msgid "Show ignored files as well."
-msgstr "Montrer les aussi fichiers ignorés."
+msgstr "Montrer aussi les fichiers ignorés."
 
 #. type: Plain text
 #: en/git-status.txt:105
-#, fuzzy
 msgid ""
 "The mode parameter is used to specify the handling of ignored files.  It is "
 "optional: it defaults to 'traditional'."
 msgstr ""
-"Le paramètre de mode est optionnel (par défaut, 'all') et sert à spécifier "
-"la gestion des fichiers non suivis ; quand -u n'est pas utilisé, le mode par"
-" défaut est 'normal', c'est-à-dire montrer les fichiers et les dossiers non-"
-"suivis."
+"Le paramètre mode est utilisé pour spécifier le traitement des fichiers "
+"ignorés. Il est optionnel est vaut par défaut 'traditional'."
 
 #. type: Plain text
 #: en/git-status.txt:109
@@ -54346,24 +54391,28 @@ msgid ""
 "individual files in ignored directories are\n"
 "displayed.\n"
 msgstr ""
+"--untracked-files=all soit spécifié, auquel cas\n"
+"les fichiers individuels dans les dossiers ignorés sont\n"
+"affichés.\n"
 
 #. type: Plain text
 #: en/git-status.txt:113
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "'no'\t        - Show no ignored files.\n"
-msgstr "'no'     - Ne montrer aucun fichier non-suivi\n"
+msgstr "'no'\t       - Ne montrer aucun fichier ignoré.\n"
 
 #. type: Plain text
 #: en/git-status.txt:114
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "'matching'    - Shows ignored files and directories matching an\n"
-msgstr "'normal' - Montrer les fichiers et les dossiers non-suivis\n"
+msgstr ""
+"'matching' - Montre les fichiers et les dossiers ignorés correspondants à\n"
 
 #. type: Plain text
 #: en/git-status.txt:115
 #, no-wrap
 msgid "ignore pattern.\n"
-msgstr "ignore le motif.\n"
+msgstr "un motif à ignorer.\n"
 
 #. type: Plain text
 #: en/git-status.txt:121
@@ -54374,6 +54423,12 @@ msgid ""
 " not match an ignore pattern, but all contents are ignored, then the "
 "directory is not shown, but all contents are shown."
 msgstr ""
+"Quand le mode 'matching' est spécifié, les chemins qui correspondent "
+"explicitement à un motif à ignorer sont affichés. Si un dossier correspond à"
+" un motif à ignorer, alors il est affiché, mais pas les chemins contenus "
+"dans celui-ci. Si un dossier ne correspond pas à un motif à ignorer, mais "
+"que tout son contenu est ignoré, alors le dossier n'est pas affiché, mais "
+"tout son contenu est affiché."
 
 #. type: Plain text
 #: en/git-status.txt:125
@@ -54381,6 +54436,8 @@ msgid ""
 "Terminate entries with NUL, instead of LF.  This implies the "
 "`--porcelain=v1` output format if no other format is given."
 msgstr ""
+"Terminer les entrées avec NUL au lieu de LF. Cela implique le format de "
+"sortie `--porcelain=v1` si aucun autre format n'est fourni."
 
 #. type: Plain text
 #: en/git-status.txt:132
@@ -54389,6 +54446,10 @@ msgid ""
 " for option syntax.`--column` and `--no-column` without options are "
 "equivalent to 'always' and 'never' respectively."
 msgstr ""
+"Afficher les fichiers non suivis en colonnes. Voir la variable de "
+"configuration column.status pour la syntaxe de l'option. `--column` et "
+"`--no-column` sans options sont équivalents à 'always' et 'never' "
+"respectivement."
 
 #. type: Labeled list
 #: en/git-status.txt:133
@@ -54408,6 +54469,8 @@ msgid ""
 "Display or do not display detailed ahead/behind counts for the branch "
 "relative to its upstream branch.  Defaults to true."
 msgstr ""
+"Afficher ou ne pas afficher les comptes détaillés devant/derrière pour la "
+"branche par rapport à sa branche amont. La valeur par défaut est true."
 
 #. type: Labeled list
 #: en/git-status.txt:138
@@ -54421,6 +54484,8 @@ msgid ""
 "Turn on/off rename detection regardless of user configuration.  See also "
 "linkgit:git-diff[1] `--no-renames`."
 msgstr ""
+"Activer ou désactiver la détection de renommage sans tenir compte de la "
+"configuration utilisateur. Voir aussi linkgit:git-diff[1] `--no-renames`."
 
 #. type: Plain text
 #: en/git-status.txt:147
@@ -54428,11 +54493,13 @@ msgid ""
 "Turn on rename detection, optionally setting the similarity threshold.  See "
 "also linkgit:git-diff[1] `--find-renames`."
 msgstr ""
+"Activer la détection de renommage, en définissant de manière optionnelle le "
+"seuil de similarité. Voir aussi linkgit:git-diff[1] `--find-renames`."
 
 #. type: Plain text
 #: en/git-status.txt:150
 msgid "See the 'pathspec' entry in linkgit:gitglossary[7]."
-msgstr ""
+msgstr "Voir l'entrée 'spécificateur de chemin' dans linkgit:gitglossary[7]."
 
 #. type: Plain text
 #: en/git-status.txt:158
@@ -54442,6 +54509,10 @@ msgid ""
 "verbose and descriptive.  Its contents and format are subject to change at "
 "any time."
 msgstr ""
+"La sortie de cette commande est conçue pour être utilisée comme modèle de "
+"message de validation. La valeur par défaut, format long, est conçue pour "
+"être lisible par un humain, commentée et descriptive. Son contenu et son "
+"format sont susceptibles de changer à tout moment."
 
 #. type: Plain text
 #: en/git-status.txt:163
@@ -54451,6 +54522,11 @@ msgid ""
 " is on purpose, to help cutting and pasting). See the status.relativePaths "
 "config option below."
 msgstr ""
+"Les chemins mentionnés dans la sortie, contrairement à beaucoup d'autres "
+"commandes Git, sont relatifs au répertoire courant si vous êtes en train de "
+"travailler dans un sous-répertoire (ceci est à dessein, pour aider le "
+"couper-coller). Voir l'option de configuration status.relativePaths ci-"
+"dessous."
 
 #. type: Title ~
 #: en/git-status.txt:165
@@ -54463,6 +54539,8 @@ msgstr "Format court"
 msgid ""
 "In the short-format, the status of each path is shown as one of these forms"
 msgstr ""
+"Dans le format court, le statut de chaque chemin est affiché selon une de "
+"ces formes"
 
 #. type: Plain text
 #: en/git-status.txt:172
@@ -54471,6 +54549,8 @@ msgid ""
 "\tXY PATH\n"
 "\tXY ORIG_PATH -> PATH\n"
 msgstr ""
+"\tXY CHEMIN\n"
+"\tXY CHEMIN_ORIGINE -> CHEMIN\n"
 
 #. type: Plain text
 #: en/git-status.txt:176
@@ -54479,6 +54559,9 @@ msgid ""
 "`ORIG_PATH` is only shown when the entry is renamed or copied. The `XY` is a"
 " two-letter status code."
 msgstr ""
+"où `CHEMIN_ORIGINE` est l'origine du contenu renommé/copié. `CHEMIN_ORIGINE`"
+" n'est montré que lorsque l'entrée est renommée ou copiée. Le `XY` est un "
+"code de statut à deux lettres."
 
 #. type: Plain text
 #: en/git-status.txt:182
@@ -54489,6 +54572,11 @@ msgid ""
 " ASCII double quote (34) characters, and with interior special characters "
 "backslash-escaped."
 msgstr ""
+"Les champs (incluant le `->`) sont séparés les uns des autres par un seul "
+"espace. Si un nom de fichier contient des espaces ou d'autres caractères non"
+" imprimables, ce champ sera cité à la manière d'un littéral de chaîne C : "
+"entouré par des caractères de guillemets ASCII (34), et avec les caractères "
+"spéciaux à l'intérieur échappés par la barre oblique inversée."
 
 #. type: Plain text
 #: en/git-status.txt:188
@@ -54499,41 +54587,46 @@ msgid ""
 "For untracked paths, `XY` are `??`.  Other status codes can be interpreted "
 "as follows:"
 msgstr ""
+"Pour les chemins avec des conflits de fusion, `X` et `Y` montrent les états "
+"de modification de chaque côté de la fusion. Pour les chemins qui n'ont pas "
+"de conflit de fusion, `X` montre le statut de l'index, et `Y` montre le "
+"statut de l'arbre de travail. Pour les chemins non suivis, `XY` sont `??`. "
+"Les autres codes de statut peuvent être interprétés comme :"
 
 #. type: Plain text
 #: en/git-status.txt:190
 msgid "' ' = unmodified"
-msgstr ""
+msgstr "' ' = non modifié"
 
 #. type: Plain text
 #: en/git-status.txt:191
 msgid "'M' = modified"
-msgstr ""
+msgstr "'M' = modifié"
 
 #. type: Plain text
 #: en/git-status.txt:192
 msgid "'A' = added"
-msgstr ""
+msgstr "'A' = ajouté"
 
 #. type: Plain text
 #: en/git-status.txt:193
 msgid "'D' = deleted"
-msgstr ""
+msgstr "'D' = supprimé ('Deleted')"
 
 #. type: Plain text
 #: en/git-status.txt:194
 msgid "'R' = renamed"
-msgstr ""
+msgstr "'R' = renommé"
 
 #. type: Plain text
 #: en/git-status.txt:195
 msgid "'C' = copied"
-msgstr ""
+msgstr "'C' = copié"
 
 #. type: Plain text
 #: en/git-status.txt:196
 msgid "'U' = updated but unmerged"
-msgstr ""
+msgstr "'U' = mis à jour ('Updated') mais non fusionné"
 
 #. type: Plain text
 #: en/git-status.txt:199
@@ -54541,6 +54634,8 @@ msgid ""
 "Ignored files are not listed, unless `--ignored` option is in effect, in "
 "which case `XY` are `!!`."
 msgstr ""
+"Les fichiers ignorés ne sont pas listés, à moins que l'option `--ignored` "
+"soit effective, auquel cas `XY` sont `!!`."
 
 #. type: delimited block .
 #: en/git-status.txt:226
@@ -54572,6 +54667,31 @@ msgid ""
 "!           !    ignored\n"
 "-------------------------------------------------\n"
 msgstr ""
+"X          Y     Signification\n"
+"---------------------------------------------------------\n"
+"\t [AMD]   non mis à jour\n"
+"M        [ MD]   mis à jour dans l'index\n"
+"A        [ MD]   ajouté à l'index\n"
+"D                supprimé de l'index\n"
+"R        [ MD]   renommé dans l'index\n"
+"C        [ MD]   copié dans l'index\n"
+"[MARC]           l'index et l'arbre de travail correspondent\n"
+"[ MARC]     M    arbre de travail modifié depuis l'index\n"
+"[ MARC]     D    supprimé dans l'arbre de travail\n"
+"[ D]        R    renommé dans l'arbre de travail\n"
+"[ D]        C    copié dans l'arbre de travail\n"
+"---------------------------------------------------------\n"
+"D           D    non fusionné, les deux l'ont supprimé\n"
+"A           U    non fusionné, ajouté par nous\n"
+"U           D    non fusionné, supprimé par eux\n"
+"U           A    non fusionné, ajouté par eux\n"
+"D           U    non fusionné, supprimé par nous\n"
+"A           A    non fusionné, les deux l'ont ajouté\n"
+"U           U    non fusionné, les deux l'ont modifié\n"
+"---------------------------------------------------------\n"
+"?           ?    non suivi\n"
+"!           !    ignoré\n"
+"---------------------------------------------------------\n"
 
 #. type: Plain text
 #: en/git-status.txt:235
@@ -54585,6 +54705,13 @@ msgid ""
 "since modified content or untracked files in a submodule cannot be added\n"
 "via `git add` in the superproject to prepare a commit.\n"
 msgstr ""
+"Les sous-modules ont plus d'états et indiquent à la place\n"
+"\t\tM    le sous-module a une HEAD différente de\n"
+"\t\t     celle enregistrée dans l'index\n"
+"\t\tm    le sous-module a un contenu modifié\n"
+"\t\t?    le sous-module a des fichiers non suivis\n"
+"puisque le contenu modifié ou les fichiers non suivis dans un sous-module ne peuvent pas être ajoutés\n"
+"via `git add` dans le super-projet pour préparer une validation.\n"
 
 #. type: Plain text
 #: en/git-status.txt:238
@@ -54592,23 +54719,27 @@ msgid ""
 "'m' and '?' are applied recursively. For example if a nested submodule in a "
 "submodule contains an untracked file, this is reported as '?' as well."
 msgstr ""
+"'m' et '?' sont appliqués récursivement. Par exemple, si un sous-module "
+"niché dans un sous-module contient un fichier non suivi, ceci sera aussi "
+"indiqué par '?'."
 
 #. type: Plain text
 #: en/git-status.txt:240
 msgid "If -b is used the short-format status is preceded by a line"
 msgstr ""
+"Si -b est utilisé, le statut en format court est précédé par une ligne"
 
 #. type: Plain text
 #: en/git-status.txt:242
 #, no-wrap
 msgid "    ## branchname tracking info\n"
-msgstr ""
+msgstr "    ## information de suivi de branche\n"
 
 #. type: Title ~
 #: en/git-status.txt:244
 #, no-wrap
 msgid "Porcelain Format Version 1"
-msgstr ""
+msgstr "Format de Porcelaine Version 1"
 
 #. type: Plain text
 #: en/git-status.txt:251
@@ -54619,6 +54750,12 @@ msgid ""
 "description of the short format above also describes the porcelain format, "
 "with a few exceptions:"
 msgstr ""
+"Le format de porcelaine de la version 1 est similaire au format court, mais "
+"il est garanti qu'il ne changera pas de manière incompatible avec les "
+"versions antérieures entre les versions de Git ou en fonction de la "
+"configuration de l'utilisateur. Cela le rend idéal pour l'analyse par "
+"script. La description du format court ci-dessus décrit également le format "
+"porcelaine, avec quelques exceptions :"
 
 #. type: Plain text
 #: en/git-status.txt:254
@@ -54626,6 +54763,8 @@ msgid ""
 "The user's color.status configuration is not respected; color will always be"
 " off."
 msgstr ""
+"La configuration color.status de l'utilisateur n'est pas respectée ; la "
+"couleur sera toujours éteinte."
 
 #. type: Plain text
 #: en/git-status.txt:257
@@ -54633,6 +54772,8 @@ msgid ""
 "The user's status.relativePaths configuration is not respected; paths shown "
 "will always be relative to the repository root."
 msgstr ""
+"La configuration status.relativePaths de l'utilisateur n'est pas respectée ;"
+" les chemins affichés seront toujours relatifs à la racine du dépôt."
 
 #. type: Plain text
 #: en/git-status.txt:267
@@ -54646,6 +54787,16 @@ msgid ""
 "first filename).  Third, filenames containing special characters are not "
 "specially formatted; no quoting or backslash-escaping is performed."
 msgstr ""
+"Il y a aussi un format alternatif -z recommandé pour l'analyse par la "
+"machine. Dans ce format, le champ de statut est le même, mais d'autres "
+"choses changent. Premièrement, le '\\->' est omis pour les entrées renommées"
+" et l'ordre des champs est inversé (par exemple, 'de \\-> à' devient 'à "
+"de'). Deuxièmement, un NUL (ASCII 0) suit chaque nom de fichier, remplaçant "
+"l'espace comme séparateur de champ et la nouvelle ligne de fin (mais un "
+"espace sépare toujours le champ de statut du premier nom de fichier). "
+"Troisièmement, les noms de fichier contenant des caractères spéciaux ne sont"
+" pas spécialement formatés ; aucune mise entre guillemets ni échappement par"
+" barre oblique inversée n'est effectué."
 
 #. type: Plain text
 #: en/git-status.txt:269
@@ -54653,12 +54804,14 @@ msgid ""
 "Any submodule changes are reported as modified `M` instead of `m` or single "
 "`?`."
 msgstr ""
+"N'importe quelle modification dans un sous-module est indiquée comme "
+"modifiée par `M` au lieu de `m` ou un `?` seul."
 
 #. type: Title ~
 #: en/git-status.txt:271
 #, no-wrap
 msgid "Porcelain Format Version 2"
-msgstr ""
+msgstr "Format de Porcelaine Version 2"
 
 #. type: Plain text
 #: en/git-status.txt:276
@@ -54667,6 +54820,9 @@ msgid ""
 "worktree and changed items.  Version 2 also defines an extensible set of "
 "easy to parse optional headers."
 msgstr ""
+"Le format version 2 ajoute des informations détaillées sur l'état de l'arbre"
+" de travail et les éléments modifiés. La version 2 définit également un "
+"ensemble extensible d'en-têtes optionnels faciles à analyser."
 
 #. type: Plain text
 #: en/git-status.txt:280
@@ -54674,11 +54830,14 @@ msgid ""
 "Header lines start with \"#\" and are added in response to specific command "
 "line arguments.  Parsers should ignore headers they don't recognize."
 msgstr ""
+"Les lignes d'en-tête commencent par \"#\" et sont ajoutées en réponse à des "
+"arguments spécifiques en ligne de commande. Les analyseurs syntaxiques "
+"doivent ignorer les en-têtes qu'ils ne reconnaissent pas."
 
 #. type: Plain text
 #: en/git-status.txt:282
 msgid "### Branch Headers"
-msgstr ""
+msgstr "### En-têtes de branche"
 
 #. type: Plain text
 #: en/git-status.txt:285
@@ -54686,6 +54845,8 @@ msgid ""
 "If `--branch` is given, a series of header lines are printed with "
 "information about the current branch."
 msgstr ""
+"Si `--branch` est fourni, une série de lignes d'en-tête est affichée avec "
+"des informations sur la branche actuelle."
 
 #. type: delimited block .
 #: en/git-status.txt:295
@@ -54700,11 +54861,19 @@ msgid ""
 "\t\t\t\t\t the commit is present.\n"
 "------------------------------------------------------------\n"
 msgstr ""
+"Ligne                                    Notes\n"
+"------------------------------------------------------------\n"
+"# branch.oid <commit> | (initial)        Commit courant.\n"
+"# branch.head <branche> | (detached)     Branche courante.\n"
+"# branch.upstream <branche_amont>        Si l'amont est défini.\n"
+"# branch.ab +<devant> -<derrière>        Si l'amont est défini et\n"
+"\t\t\t\t\t le commit est présent.\n"
+"------------------------------------------------------------\n"
 
 #. type: Plain text
 #: en/git-status.txt:298
 msgid "### Changed Tracked Entries"
-msgstr ""
+msgstr "### Entrées suivies modifiées"
 
 #. type: Plain text
 #: en/git-status.txt:304
@@ -54715,6 +54884,11 @@ msgid ""
 "undefined order; parsers should allow for a mixture of the 3 line types in "
 "any order."
 msgstr ""
+"Après les en-têtes, une série de lignes est affichée pour les entrées "
+"suivies. Un des trois différents formats de ligne peut être utilisé pour "
+"décrire une entrée en fonction du type de changement. Les entrées suivies "
+"sont affichées dans un ordre indéfini ; les analyseurs syntaxiques doivent "
+"autoriser un mélange des 3 types de lignes dans n'importe quel ordre."
 
 #. type: Plain text
 #: en/git-status.txt:306
@@ -54725,7 +54899,7 @@ msgstr "Les entrées modifiées normales ont le format suivant :"
 #: en/git-status.txt:308
 #, no-wrap
 msgid "    1 <XY> <sub> <mH> <mI> <mW> <hH> <hI> <path>\n"
-msgstr ""
+msgstr "    1 <XY> <sous> <mH> <mI> <mW> <hH> <hI> <chemin>\n"
 
 #. type: Plain text
 #: en/git-status.txt:310
@@ -54738,6 +54912,8 @@ msgstr "Les entrées renommées ou copiées ont le format suivant :"
 msgid ""
 "    2 <XY> <sub> <mH> <mI> <mW> <hH> <hI> <X><score> <path><sep><origPath>\n"
 msgstr ""
+"    2 <XY> <sous> <mH> <mI> <mW> <hH> <hI> <X><score> "
+"<chemin><sep><cheminOrig>\n"
 
 #. type: delimited block .
 #: en/git-status.txt:343
@@ -54773,6 +54949,34 @@ msgid ""
 "\t    tells where the renamed/copied contents came from.\n"
 "--------------------------------------------------------\n"
 msgstr ""
+"Champ       Signification\n"
+"--------------------------------------------------------\n"
+"<XY>\t\tUn champ à 2 caractères contenant les valeurs XY\n"
+"\t\tindexées et non indexées décrites dans le format court,\n"
+"\t\tavec non-modifié indiqué par un \".\" plutôt qu'un espace.\n"
+"<sous>\t\tUn champ à 4 caractères décrivant l'état du sous-module.\n"
+"\t\t\"N...\" quand l'entrée n'est pas un sous-module.\n"
+"\t\t\"S<c><m><u>\" quand l'entrée est un sous-module.\n"
+"\t\t<c> vaut \"C\" si le commit a changé ; autrement \".\".\n"
+"\t\t<m> vaut \"M\" s'il a des modifications suivies ; autrement \".\".\n"
+"\t\t<u> vaut \"U\" s'il y a des modifications non-suivies ; autrement \".\".\n"
+"<mH>\t\tLe mode octal du fichier dans HEAD.\n"
+"<mI>\t\tLe mode octal du fichier dans l'index.\n"
+"<mW>\t\tLe mode octal du fichier dans l'arbre de travail.\n"
+"<hH>\t\tLe nom de l'objet dans HEAD.\n"
+"<hI>\t\tLe nom de l'objet dans l'index.\n"
+"<X><score>\tLe score de renommage ou de copie (indiquant le pourcentage\n"
+"\t\tde similarité entre la source et la cible du\n"
+"\t\tdéplacement ou de la copie). Par exemple, \"R100\" ou \"C75\".\n"
+"<chemin>\tLe nom du chemin. Dans une entrée renommée/copiée, c'est\n"
+"\t\tle chemin cible.\n"
+"<sep>\t\tQuand l'option `-z` est utilisée, les 2 noms de chemin sont separés\n"
+"\t\tpar un octet NUL (ASCII 0x00) ; autrement, un octet tabulation (ASCII 0x09)\n"
+"\t\tles sépare.\n"
+"<cheminOrig>\tLe nom du chemin dans le commit de HEAD ou dans l'index.\n"
+"\t\tC'est présent que dans une entrée renommée/copiée, et\n"
+"\t\tindique d'où le contenu renommé/copié vient.\n"
+"--------------------------------------------------------\n"
 
 #. type: Plain text
 #: en/git-status.txt:347
@@ -54780,12 +54984,14 @@ msgid ""
 "Unmerged entries have the following format; the first character is a \"u\" "
 "to distinguish from ordinary changed entries."
 msgstr ""
+"Les entrées non fusionnées ont le format suivant ; le premier caractère est "
+"un \"u\" pour les différencier des entrées ordinaires modifiées."
 
 #. type: Plain text
 #: en/git-status.txt:349
 #, no-wrap
 msgid "    u <xy> <sub> <m1> <m2> <m3> <mW> <h1> <h2> <h3> <path>\n"
-msgstr ""
+msgstr "    u <xy> <sous> <m1> <m2> <m3> <mW> <h1> <h2> <h3> <chemin>\n"
 
 #. type: delimited block .
 #: en/git-status.txt:366
@@ -54807,11 +55013,26 @@ msgid ""
 "<path>      The pathname.\n"
 "--------------------------------------------------------\n"
 msgstr ""
+"Champ\t\tSignification\n"
+"--------------------------------------------------------\n"
+"<XY>\t\tUn champ à 2 caractères décrivant le type de conflit\n"
+"\t\tcomme décrit dans le format court.\n"
+"<sous>\t\tUn champ à 4 caractères décrivant l'état du sous-module\n"
+"\t\tcomme décrit ci-dessus.\n"
+"<m1>\t\tLe mode octal du fichier dans l'étape 1.\n"
+"<m2>\t\tLe mode octal du fichier dans l'étape 2.\n"
+"<m3>\t\tLe mode octal du fichier dans l'étape 3.\n"
+"<mW>\t\tLe mode octal du fichier dans l'arbre de travail.\n"
+"<h1>\t\tLe nom de l'objet dans l'étape 1.\n"
+"<h2>\t\tLe nom de l'objet dans l'étape 2.\n"
+"<h3>\t\tLe nom de l'objet dans l'étape 3.\n"
+"<chemin>\tLe nom du chemin.\n"
+"--------------------------------------------------------\n"
 
 #. type: Plain text
 #: en/git-status.txt:369
 msgid "### Other Items"
-msgstr ""
+msgstr "### Autres éléments"
 
 #. type: Plain text
 #: en/git-status.txt:373
@@ -54819,6 +55040,9 @@ msgid ""
 "Following the tracked entries (and if requested), a series of lines will be "
 "printed for untracked and then ignored items found in the worktree."
 msgstr ""
+"Après les entrées suivies (et si demandé), une série de lignes sera affichée"
+" pour les éléments non suivis, puis ignorés, trouvés dans l'arbre de "
+"travail."
 
 #. type: Plain text
 #: en/git-status.txt:375
@@ -54829,7 +55053,7 @@ msgstr "Les entrées non-suivies ont le format suivant :"
 #: en/git-status.txt:377
 #, no-wrap
 msgid "    ? <path>\n"
-msgstr ""
+msgstr "    ? <chemin>\n"
 
 #. type: Plain text
 #: en/git-status.txt:379
@@ -54840,12 +55064,12 @@ msgstr "Les entrées ignorées ont le format suivant :"
 #: en/git-status.txt:381
 #, no-wrap
 msgid "    ! <path>\n"
-msgstr ""
+msgstr "    ! <chemin>\n"
 
 #. type: Plain text
 #: en/git-status.txt:383
 msgid "### Pathname Format Notes and -z"
-msgstr ""
+msgstr "### Notes de format du nom de chemin et -z"
 
 #. type: Plain text
 #: en/git-status.txt:387
@@ -54853,6 +55077,9 @@ msgid ""
 "When the `-z` option is given, pathnames are printed as is and without any "
 "quoting and lines are terminated with a NUL (ASCII 0x00)  byte."
 msgstr ""
+"Quand l'option `-z` est fournie, les noms de chemin sont affichés tels quels"
+" et sans guillemets et les lignes sont terminées par un octet NUL (ASCII "
+"0x00)."
 
 #. type: Plain text
 #: en/git-status.txt:391
@@ -54872,6 +55099,10 @@ msgid ""
 "thing and the latter is kept for backward compatibility) and "
 "`color.status.<slot>` configuration variables to colorize its output."
 msgstr ""
+"La commande honore les variables de configuration `color.status` (ou "
+"`status.color` -- elles signifient la même chose et la dernière est "
+"conservée pour la compatibilité descendante) et `color.status.<slot>` pour "
+"colorer sa sortie."
 
 #. type: Plain text
 #: en/git-status.txt:404
@@ -54880,6 +55111,9 @@ msgid ""
 "paths shown are relative to the repository root, not to the current "
 "directory."
 msgstr ""
+"Si la variable de configuration `status.relativePaths` est définie à "
+"'false', alors tous les chemins affichés sont relatifs à la racine du dépôt,"
+" et non pas au répertoire courant."
 
 #. type: Plain text
 #: en/git-status.txt:415
@@ -54895,12 +55129,23 @@ msgid ""
 " line option or the 'git submodule summary' command, which shows a similar "
 "output but does not honor these settings."
 msgstr ""
+"Si `status.submoduleSummary` est défini sur un nombre non nul ou vrai "
+"(identique à -1 ou à un nombre illimité), le résumé du sous-module sera "
+"activé pour le format long et un résumé des validations pour les sous-"
+"modules modifiés sera affiché (voir l'option --summary-limit de linkgit:git-"
+"submodule[1]). Veuillez noter que la sortie récapitulative de la commande "
+"status sera supprimée pour tous les sous-modules lorsque "
+"`diff.ignoreSubmodules` est réglé sur 'all' ou uniquement pour les sous-"
+"modules où `submodule.<Name>.ignore = all`. Pour afficher également le "
+"résumé des sous-modules ignorés, vous pouvez utiliser l'option de ligne de "
+"commande --ignore-submodules=dirty ou la commande 'git submodule summary', "
+"qui affiche une sortie similaire mais ne respecte pas ces paramètres."
 
 #. type: Title -
 #: en/git-status.txt:417
 #, no-wrap
 msgid "BACKGROUND REFRESH"
-msgstr ""
+msgstr "RAFRAÎCHISSEMENT DE FOND"
 
 #. type: Plain text
 #: en/git-status.txt:428
@@ -54915,6 +55160,16 @@ msgid ""
 "running `status` in the background should consider using `git --no-optional-"
 "locks status` (see linkgit:git[1] for details)."
 msgstr ""
+"Par défaut, `git status` actualisera automatiquement l'index, mettant à jour"
+" les informations statistiques mises en cache à partir de l'arbre de travail"
+" et écrivant le résultat. Écrire l'index mis à jour est une optimisation qui"
+" n'est pas strictement nécessaire (`status` calcule les valeurs pour lui-"
+"même, mais les écrire ne sert qu'à épargner les programmes suivants de "
+"répéter nos calculs). Lorsque `status` est exécuté en arrière-plan, le "
+"verrou maintenu pendant l'écriture peut entrer en conflit avec d'autres "
+"processus simultanés, entraînant leur échec. Les scripts exécutant `status` "
+"en arrière-plan devraient envisager d'utiliser `git --no-optional-locks "
+"status` (voir linkgit: git[1] pour plus de détails)."
 
 #. type: Title =
 #: en/git-stripspace.txt:2
