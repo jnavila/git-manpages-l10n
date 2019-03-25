@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: git documentation\n"
 "POT-Creation-Date: 2019-02-13 20:53+0100\n"
-"PO-Revision-Date: 2019-03-27 12:31+0100\n"
+"PO-Revision-Date: 2019-03-29 12:14+0100\n"
 "Last-Translator: Adrien Ollier <adr.ollier@hotmail.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -33250,6 +33250,9 @@ msgid ""
 "\t  [--separate-git-dir <git dir>]\n"
 "\t  [--shared[=<permissions>]] [directory]\n"
 msgstr ""
+"'git init' [-q | --quiet] [--bare] [--template=<répertoire_modèle>]\n"
+"\t  [--separate-git-dir <répertoire git>]\n"
+"\t  [--shared[=<permissions>]] [dossier]\n"
 
 #. type: Plain text
 #: en/git-init.txt:24
@@ -33259,6 +33262,10 @@ msgid ""
 "files.  An initial `HEAD` file that references the HEAD of the master branch"
 " is also created."
 msgstr ""
+"Cette commande crée un dépôt Git vide - essentiellement un répertoire `.git`"
+" avec des sous-répertoires pour les fichiers `objects`, `refs/heads`, "
+"`refs/tags` et les fichiers de modèle. Un fichier `HEAD` initial qui fait "
+"référence à la tête de la branche principale (master) est également créé."
 
 #. type: Plain text
 #: en/git-init.txt:27
@@ -33266,6 +33273,8 @@ msgid ""
 "If the `$GIT_DIR` environment variable is set then it specifies a path to "
 "use instead of `./.git` for the base of the repository."
 msgstr ""
+"Si la variable d'environnement `$GIT_DIR` est définie, alors elle spécifie "
+"un chemin à utiliser au lieu de `./.git` comme base du dépôt."
 
 #. type: Plain text
 #: en/git-init.txt:32
@@ -33274,6 +33283,10 @@ msgid ""
 " environment variable then the sha1 directories are created underneath - "
 "otherwise the default `$GIT_DIR/objects` directory is used."
 msgstr ""
+"Si le répertoire de stockage d'objets est spécifié via la variable "
+"d'environnement `$GIT_OBJECT_DIRECTORY`, alors les répertoires sha1 sont "
+"créés dedans - sinon le répertoire par défaut `$GIT_DIR/objects` est "
+"utilisé."
 
 #. type: Plain text
 #: en/git-init.txt:37
@@ -33283,12 +33296,18 @@ msgid ""
 "is to pick up newly added templates (or to move the repository to another "
 "place if --separate-git-dir is given)."
 msgstr ""
+"Exécuter 'git init' dans un dépôt existant est sécurisé. Cela n'écrasera pas"
+" des choses qui sont déjà dedans. La raison principale de ré-exécuter 'git "
+"init' est de récupérer les modèles récemment ajoutés (ou de déplacer le "
+"dépôt ailleurs si --separate-git-dir est fourni)."
 
 #. type: Plain text
 #: en/git-init.txt:45
 msgid ""
 "Only print error and warning messages; all other output will be suppressed."
 msgstr ""
+"N'afficher que les messages d'erreur et d'alerte ; toutes les autres sorties"
+" seront supprimées."
 
 #. type: Plain text
 #: en/git-init.txt:50
@@ -33296,6 +33315,8 @@ msgid ""
 "Create a bare repository. If `GIT_DIR` environment is not set, it is set to "
 "the current working directory."
 msgstr ""
+"Créer un dépôt nu. Si l'environnement `GIT_DIR` n'est pas défini, alors il "
+"est défini au répertoire de travail courant."
 
 #. type: Plain text
 #: en/git-init.txt:55
@@ -33303,6 +33324,8 @@ msgid ""
 "Specify the directory from which templates will be used.  (See the "
 "\"TEMPLATE DIRECTORY\" section below.)"
 msgstr ""
+"Spécifier le dossier depuis lequel les modèles seront utilisés (Voyez la "
+"section « DOSSIER MODÈLE » ci-dessous.)"
 
 #. type: Plain text
 #: en/git-init.txt:62
@@ -33312,6 +33335,10 @@ msgid ""
 "repository.  This file acts as filesystem-agnostic Git symbolic link to the "
 "repository."
 msgstr ""
+"Au lieu d'initialiser le dépôt en tant que répertoire dans soit `$GIT_DIR` "
+"soit `./.git`, y créer un fichier texte contenant le chemin du dépôt réel. "
+"Ce fichier agit comme un lien symbolique Git indépendant du système de "
+"fichier vers le dépôt."
 
 #. type: Plain text
 #: en/git-init.txt:64
@@ -33319,12 +33346,14 @@ msgid ""
 "If this is reinitialization, the repository will be moved to the specified "
 "path."
 msgstr ""
+"Si c'est une réinitialisation, le dépôt sera déplacé vers le chemin "
+"spécifié."
 
 #. type: Labeled list
 #: en/git-init.txt:65
 #, no-wrap
 msgid "--shared[=(false|true|umask|group|all|world|everybody|0xxx)]"
-msgstr ""
+msgstr "--shared[=(false|true|umask|group|all|world|everybody|0xxx)]"
 
 #. type: Plain text
 #: en/git-init.txt:73
@@ -33336,6 +33365,13 @@ msgid ""
 "permissions.  When not specified, Git will use permissions reported by "
 "umask(2)."
 msgstr ""
+"Spécifier que le dépôt Git doit être partagé entre plusieurs utilisateurs. "
+"Ceci permet à des utilisateurs faisant partie du même groupe de pousser dans"
+" ce dépôt. Lorsque que cette option est spécifiée, la variable de "
+"configuration \"core.sharedRepository\" est définie de telle sorte que les "
+"fichiers et les dossiers sous `$GIT_DIR` sont créés avec les permissions "
+"demandées. Lorsqu'elle n'est pas spécifiée, Git utilisera les permissions "
+"rapportées par umask(2)."
 
 #. type: Plain text
 #: en/git-init.txt:76
@@ -33343,12 +33379,14 @@ msgid ""
 "The option can have the following values, defaulting to 'group' if no value "
 "is given:"
 msgstr ""
+"L'option peut avoir les valeurs suivantes, prenant par défaut la valeur "
+"'group' si aucune valeur n'est renseignée :"
 
 #. type: Labeled list
 #: en/git-init.txt:78
 #, no-wrap
 msgid "'umask' (or 'false')"
-msgstr ""
+msgstr "'umask' (ou 'false')"
 
 #. type: Plain text
 #: en/git-init.txt:82
@@ -33356,12 +33394,14 @@ msgid ""
 "Use permissions reported by umask(2). The default, when `--shared` is not "
 "specified."
 msgstr ""
+"Utiliser les permissions rapportées par umask(2). Valeur par défaut, quand "
+"`--shared` n'est pas spécifié."
 
 #. type: Labeled list
 #: en/git-init.txt:83
 #, no-wrap
 msgid "'group' (or 'true')"
-msgstr ""
+msgstr "'group' (ou 'true')"
 
 #. type: Plain text
 #: en/git-init.txt:91
@@ -33373,23 +33413,32 @@ msgid ""
 "remove read privileges from other (non-group) users). See '0xxx' for how to "
 "exactly specify the repository permissions."
 msgstr ""
+"Rendre le dépôt modifiable par groupe (et g+sx, puisque le groupe git peut "
+"ne pas être le groupe principal de tous les utilisateurs). Ceci est utilisé "
+"pour assouplir les permissions d'une valeur umask(2) par ailleurs sûre. "
+"Notez que umask s'applique toujours aux autres bits d'autorisation (par "
+"exemple, si umask est défini sur '0022', l'utilisation de 'group' ne "
+"supprime pas les privilèges de lecture des autres utilisateurs (non membres "
+"du groupe)). Voir '0xxx' pour savoir comment spécifier exactement les "
+"autorisations du dépôt."
 
 #. type: Labeled list
 #: en/git-init.txt:92
 #, no-wrap
 msgid "'all' (or 'world' or 'everybody')"
-msgstr ""
+msgstr "'all' (ou 'world' ou 'everybody')"
 
 #. type: Plain text
 #: en/git-init.txt:95
 msgid "Same as 'group', but make the repository readable by all users."
 msgstr ""
+"Comme 'group', mais rendre le dépôt lisible par tous les utilisateurs."
 
 #. type: Labeled list
 #: en/git-init.txt:96
 #, no-wrap
 msgid "'0xxx'"
-msgstr ""
+msgstr "'0xxx'"
 
 #. type: Plain text
 #: en/git-init.txt:103
@@ -33401,6 +33450,12 @@ msgid ""
 "that is readable and writable to the current user and group, but "
 "inaccessible to others."
 msgstr ""
+"'0xxx' est un nombre octal et chaque fichier aura le mode '0xxx'. '0xxx' "
+"surchargera la valeur umask(2) des utilisateurs (en plus d'assouplir les "
+"permissions comme 'group' et 'all' le font). '0640' créera un dépôt qui est "
+"lisible par groupe, mais pas modifiable par groupe ni accessible aux autres."
+" '0660' créera un dépôt lisible et modifiable par l'utilisateur et le groupe"
+" courants, mais inaccessible aux autres."
 
 #. type: Plain text
 #: en/git-init.txt:108
@@ -33409,6 +33464,9 @@ msgid ""
 "in shared repositories, so that you cannot force a non fast-forwarding push "
 "into it."
 msgstr ""
+"Par défaut, l'option de configuration `receive.denyNonFastForwards` est "
+"activée dans les dépôts partagés, de telle sorte que vous ne pouvez pas "
+"forcer une poussée qui ne serait pas en avance rapide."
 
 #. type: Plain text
 #: en/git-init.txt:111
@@ -33416,12 +33474,14 @@ msgid ""
 "If you provide a 'directory', the command is run inside it. If this "
 "directory does not exist, it will be created."
 msgstr ""
+"Si vous renseignez un 'dossier', la commande est exécutée à l'intérieur de "
+"celui-ci. Si ce dossier n'existe pas, il sera créé."
 
 #. type: Title -
 #: en/git-init.txt:113
 #, no-wrap
 msgid "TEMPLATE DIRECTORY"
-msgstr ""
+msgstr "DOSSIER MODÈLE"
 
 #. type: Plain text
 #: en/git-init.txt:117
@@ -33429,31 +33489,33 @@ msgid ""
 "Files and directories in the template directory whose name do not start with"
 " a dot will be copied to the `$GIT_DIR` after it is created."
 msgstr ""
+"Les fichiers et les dossiers dans le dossier modèle dont le nom ne commence "
+"pas par un point seront copiés dans le `$GIT_DIR` après qu'il sera créé."
 
 #. type: Plain text
 #: en/git-init.txt:119
 msgid "The template directory will be one of the following (in order):"
-msgstr ""
+msgstr "Le dossier modèle sera l'un des suivants (dans l'ordre) :"
 
 #. type: Plain text
 #: en/git-init.txt:121
 msgid "the argument given with the `--template` option;"
-msgstr ""
+msgstr "l'argument fourni avec l'option `--template` ;"
 
 #. type: Plain text
 #: en/git-init.txt:123
 msgid "the contents of the `$GIT_TEMPLATE_DIR` environment variable;"
-msgstr ""
+msgstr "le contenu de la variable d'environnement `$GIT_TEMPLATE_DIR` ;"
 
 #. type: Plain text
 #: en/git-init.txt:125
 msgid "the `init.templateDir` configuration variable; or"
-msgstr ""
+msgstr "la variable de configuration `init.templateDir` ; ou"
 
 #. type: Plain text
 #: en/git-init.txt:127
 msgid "the default template directory: `/usr/share/git-core/templates`."
-msgstr ""
+msgstr "le dossier modèle par défaut : `/usr/share/git-core/templates`."
 
 #. type: Plain text
 #: en/git-init.txt:130
@@ -33461,6 +33523,9 @@ msgid ""
 "The default template directory includes some directory structure, suggested "
 "\"exclude patterns\" (see linkgit:gitignore[5]), and sample hook files."
 msgstr ""
+"Le dossier modèle par défaut inclut une certaine structure de dossier, des "
+"\"modèles d'exclusions\" suggérés (voir linkgit:gitignore[5]), et des "
+"exemples de fichiers crochet."
 
 #. type: Plain text
 #: en/git-init.txt:133
@@ -33468,17 +33533,21 @@ msgid ""
 "The sample hooks are all disabled by default. To enable one of the sample "
 "hooks rename it by removing its `.sample` suffix."
 msgstr ""
+"Les exemples de crochets sont tous désactivés par défaut. Pour activer l'un "
+"des exemples de crochets, renommez-le en enlevant le suffixe `.sample`."
 
 #. type: Plain text
 #: en/git-init.txt:135
 msgid "See linkgit:githooks[5] for more general info on hook execution."
 msgstr ""
+"Voir linkgit:githooks[5] pour des informations plus générales sur "
+"l'exécution d'un crochet."
 
 #. type: Labeled list
 #: en/git-init.txt:139
 #, no-wrap
 msgid "Start a new Git repository for an existing code base"
-msgstr ""
+msgstr "Démarrer un nouveau dépôt Git pour une base de code existante"
 
 #. type: delimited block -
 #: en/git-init.txt:146
@@ -33489,11 +33558,15 @@ msgid ""
 "$ git add .     <2>\n"
 "$ git commit    <3>\n"
 msgstr ""
+"$ cd /chemin/vers/mon/code/de/base\n"
+"$ git init      <1>\n"
+"$ git add .     <2>\n"
+"$ git commit    <3>\n"
 
 #. type: Plain text
 #: en/git-init.txt:149
 msgid "Create a /path/to/my/codebase/.git directory."
-msgstr ""
+msgstr "Créer un dossier /chemin/vers/mon/code/de/base/.git."
 
 #. type: Plain text
 #: en/git-init.txt:150
@@ -33504,6 +33577,7 @@ msgstr "Ajouter tous les fichiers existants à l'index."
 #: en/git-init.txt:151
 msgid "Record the pristine state as the first commit in the history."
 msgstr ""
+"Enregistrer l'état d'origine comme le premier commit dans l'historique."
 
 #. type: Title =
 #: en/git-instaweb.txt:2
