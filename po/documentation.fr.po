@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: git documentation\n"
 "POT-Creation-Date: 2019-02-13 20:53+0100\n"
-"PO-Revision-Date: 2019-03-22 18:15+0100\n"
+"PO-Revision-Date: 2019-03-27 12:31+0100\n"
 "Last-Translator: Adrien Ollier <adr.ollier@hotmail.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -17059,15 +17059,17 @@ msgstr "'no'     - Ne montrer aucun fichier non-suivi\n"
 #: en/git-commit.txt:293
 #, no-wrap
 msgid "'normal' - Shows untracked files and directories\n"
-msgstr "'normal' - Montrer les fichiers et les dossiers non-suivis\n"
+msgstr ""
+"'normal' - Montrer les fichiers non-suivis et les dossiers dont le contenu "
+"est non-suivi\n"
 
 #. type: Plain text
 #: en/git-commit.txt:294 en/git-status.txt:71
 #, no-wrap
 msgid "'all'    - Also shows individual files in untracked directories.\n"
 msgstr ""
-"'all'    - Montrer aussi les fichiers individuels dans les dossiers non-"
-"suivis.\n"
+"'all'    - Montrer aussi les fichiers dans les dossiers dont le contenu "
+"n'est pas suivi.\n"
 
 #. type: Plain text
 #: en/git-commit.txt:297 en/git-status.txt:84
@@ -54205,7 +54207,7 @@ msgid ""
 "commit by running 'git add' before running `git commit`."
 msgstr ""
 "Montre les chemins qui ont des différences entre le fichier d'index et le "
-"commit HEAD courant, les chemins qui ont des différences entre l'arbre de "
+"commit HEAD actuel, les chemins qui ont des différences entre l'arbre de "
 "travail et de fichier d'index, et les chemins dans l'arbre de travail qui ne"
 " sont pas suivis par Git (et qui ne sont pas ignorés par "
 "linkgit:gitignore[5]). Les premiers sont ce que vous _valideriez_ en lançant"
@@ -54297,7 +54299,7 @@ msgstr "'no'     - Ne montrer aucun fichier non-suivi.\n"
 #: en/git-status.txt:70
 #, no-wrap
 msgid "'normal' - Shows untracked files and directories.\n"
-msgstr "'normal' - Montrer les fichiers et les dossiers non-suivis.\n"
+msgstr "'normal' - Montrer les fichiers non-suivis et les dossiers.\n"
 
 #. type: Plain text
 #: en/git-status.txt:81
@@ -54381,7 +54383,8 @@ msgstr ""
 #: en/git-status.txt:109
 msgid "'traditional' - Shows ignored files and directories, unless"
 msgstr ""
-"'traditional' - Montrer les fichiers et les dossiers non-suivis, à moins que"
+"'traditional' - Montrer les fichiers non-suivis et les dossiers dont le "
+"contenu n'est pas suivi, à moins que"
 
 #. type: Plain text
 #: en/git-status.txt:112
@@ -54522,10 +54525,10 @@ msgid ""
 " is on purpose, to help cutting and pasting). See the status.relativePaths "
 "config option below."
 msgstr ""
-"Les chemins mentionnés dans la sortie, contrairement à beaucoup d'autres "
-"commandes Git, sont relatifs au répertoire courant si vous êtes en train de "
-"travailler dans un sous-répertoire (ceci est à dessein, pour aider le "
-"couper-coller). Voir l'option de configuration status.relativePaths ci-"
+"Contrairement au comportement de beaucoup d'autres commandes Git qui "
+"référencent la racine de l'arbre de travail, les chemins mentionnés dans la "
+"sortie sont relatifs au répertoire courant (ceci est à dessein, pour aider "
+"le couper-coller). Voir l'option de configuration status.relativePaths ci-"
 "dessous."
 
 #. type: Title ~
@@ -54739,7 +54742,7 @@ msgstr "    ## information de suivi de branche\n"
 #: en/git-status.txt:244
 #, no-wrap
 msgid "Porcelain Format Version 1"
-msgstr "Format de Porcelaine Version 1"
+msgstr "Format de porcelaine version 1"
 
 #. type: Plain text
 #: en/git-status.txt:251
@@ -54751,11 +54754,10 @@ msgid ""
 "with a few exceptions:"
 msgstr ""
 "Le format de porcelaine de la version 1 est similaire au format court, mais "
-"il est garanti qu'il ne changera pas de manière incompatible avec les "
-"versions antérieures entre les versions de Git ou en fonction de la "
-"configuration de l'utilisateur. Cela le rend idéal pour l'analyse par "
-"script. La description du format court ci-dessus décrit également le format "
-"porcelaine, avec quelques exceptions :"
+"le maintien de compatibilité est garanti au fil des versions et "
+"indépendamment de la configuration utilisateur. Cela le rend idéal pour "
+"l'analyse par script. La description du format court ci-dessus décrit "
+"également le format porcelaine, avec quelques exceptions :"
 
 #. type: Plain text
 #: en/git-status.txt:254
@@ -54811,7 +54813,7 @@ msgstr ""
 #: en/git-status.txt:271
 #, no-wrap
 msgid "Porcelain Format Version 2"
-msgstr "Format de Porcelaine Version 2"
+msgstr "Format de porcelaine version 2"
 
 #. type: Plain text
 #: en/git-status.txt:276
@@ -54970,7 +54972,7 @@ msgstr ""
 "\t\tdéplacement ou de la copie). Par exemple, \"R100\" ou \"C75\".\n"
 "<chemin>\tLe nom du chemin. Dans une entrée renommée/copiée, c'est\n"
 "\t\tle chemin cible.\n"
-"<sep>\t\tQuand l'option `-z` est utilisée, les 2 noms de chemin sont separés\n"
+"<sep>\t\tQuand l'option `-z` est utilisée, les 2 noms de chemin sont séparés\n"
 "\t\tpar un octet NUL (ASCII 0x00) ; autrement, un octet tabulation (ASCII 0x09)\n"
 "\t\tles sépare.\n"
 "<cheminOrig>\tLe nom du chemin dans le commit de HEAD ou dans l'index.\n"
@@ -55101,7 +55103,7 @@ msgid ""
 msgstr ""
 "La commande honore les variables de configuration `color.status` (ou "
 "`status.color` -- elles signifient la même chose et la dernière est "
-"conservée pour la compatibilité descendante) et `color.status.<slot>` pour "
+"conservée pour la compatibilité ascendante) et `color.status.<slot>` pour "
 "colorer sa sortie."
 
 #. type: Plain text
@@ -55145,7 +55147,7 @@ msgstr ""
 #: en/git-status.txt:417
 #, no-wrap
 msgid "BACKGROUND REFRESH"
-msgstr "RAFRAÎCHISSEMENT DE FOND"
+msgstr "RAFRAÎCHISSEMENT EN TÂCHE DE FOND"
 
 #. type: Plain text
 #: en/git-status.txt:428
@@ -55168,8 +55170,8 @@ msgstr ""
 "répéter nos calculs). Lorsque `status` est exécuté en arrière-plan, le "
 "verrou maintenu pendant l'écriture peut entrer en conflit avec d'autres "
 "processus simultanés, entraînant leur échec. Les scripts exécutant `status` "
-"en arrière-plan devraient envisager d'utiliser `git --no-optional-locks "
-"status` (voir linkgit: git[1] pour plus de détails)."
+"en arrière-plan doivent envisager d'utiliser `git --no-optional-locks "
+"status` (voir linkgit:git[1] pour plus de détails)."
 
 #. type: Title =
 #: en/git-stripspace.txt:2
