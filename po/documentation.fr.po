@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: git documentation\n"
 "POT-Creation-Date: 2019-02-13 20:53+0100\n"
-"PO-Revision-Date: 2019-03-29 12:14+0100\n"
+"PO-Revision-Date: 2019-05-04 18:14+0200\n"
 "Last-Translator: Adrien Ollier <adr.ollier@hotmail.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -21751,7 +21751,7 @@ msgstr ""
 msgid ""
 "'git diff-files' [-q] [-0|-1|-2|-3|-c|--cc] [<common diff options>] "
 "[<path>...]\n"
-msgstr ""
+msgstr "'git diff-files' [-q] [-0|-1|-2|-3|-c|--cc] [<options diff communes>] [<chemin>...]\n"
 
 #. type: Plain text
 #: en/git-diff-files.txt:20
@@ -21760,32 +21760,32 @@ msgid ""
 "specified, compares only those named paths.  Otherwise all entries in the "
 "index are compared.  The output format is the same as for 'git diff-index' "
 "and 'git diff-tree'."
-msgstr ""
+msgstr "Compare les fichiers dans l'arbre de travail et l'index. Quand les chemins sont spécifiés, compare seulement ces chemins nommés. Autrement, toutes les entrées dans l'index sont comparées. Le format de sortie est identique à celle de 'git diff-index' et 'git diff-tree'."
 
 #. type: Labeled list
 #: en/git-diff-files.txt:25 en/git-diff.txt:100
 #, no-wrap
 msgid "-1 --base"
-msgstr ""
+msgstr "-1 --base"
 
 #. type: Labeled list
 #: en/git-diff-files.txt:26 en/git-diff.txt:101
 #, no-wrap
 msgid "-2 --ours"
-msgstr ""
+msgstr "-2 --ours"
 
 #. type: Labeled list
 #: en/git-diff-files.txt:27 en/git-diff.txt:102
 #, no-wrap
 msgid "-3 --theirs"
-msgstr ""
+msgstr "-3 --theirs"
 
 #. type: Plain text
 #: en/git-diff-files.txt:32
 msgid ""
 "Diff against the \"base\" version, \"our branch\" or \"their branch\" "
 "respectively.  With these options, diffs for merged entries are not shown."
-msgstr ""
+msgstr "Différencier par rapport aux versions « base », « notre branche », « leur branche » respectivement. Avec ces options, les différences pour des entrées fusionnées ne sont pas affichées."
 
 #. type: Plain text
 #: en/git-diff-files.txt:36
@@ -21793,7 +21793,7 @@ msgid ""
 "The default is to diff against our branch (-2) and the cleanly resolved "
 "paths.  The option -0 can be given to omit diff output for unmerged entries "
 "and just show \"Unmerged\"."
-msgstr ""
+msgstr "Par défaut, la différence est calculée contre notre branche (-2) et les chemins résolus proprement. L'option -0 peut être fournie pour omettre la sortie pour les entrées non fusionnées et afficher juste « non fusionné »."
 
 #. type: Labeled list
 #: en/git-diff-files.txt:38 en/git-diff-tree.txt:98
@@ -21808,12 +21808,12 @@ msgid ""
 "This compares stage 2 (our branch), stage 3 (their branch) and the working "
 "tree file and outputs a combined diff, similar to the way 'diff-tree' shows "
 "a merge commit with these flags."
-msgstr ""
+msgstr "Ceci compare le stage 2 (notre branche), le stage 3 (leur branche) et l'arbre de travail et affiche la diff combinée, similaire à la manière dont 'diff-tree' affiche un commit de fusion avec ces options."
 
 #. type: Plain text
 #: en/git-diff-files.txt:46
 msgid "Remain silent even on nonexistent files"
-msgstr ""
+msgstr "Rester silencieux même avec des fichiers non-existant"
 
 #. type: Title =
 #: en/git-diff-index.txt:2
@@ -22411,7 +22411,7 @@ msgstr ""
 #: en/git-diff-tree.txt:32 en/git-diff.txt:114 en/git-submodule.txt:410
 #, no-wrap
 msgid "<path>..."
-msgstr ""
+msgstr "<chemin>..."
 
 #. type: Plain text
 #: en/git-diff-tree.txt:35
@@ -22546,7 +22546,7 @@ msgstr "git-diff(1)"
 #. type: Plain text
 #: en/git-diff.txt:7
 msgid "git-diff - Show changes between commits, commit and working tree, etc"
-msgstr ""
+msgstr "git-diff - Affiche les modifications entre les commits, un commit et l'arbre de travail, etc"
 
 #. type: Plain text
 #: en/git-diff.txt:17
@@ -22558,6 +22558,11 @@ msgid ""
 "'git diff' [<options>] <blob> <blob>\n"
 "'git diff' [<options>] --no-index [--] <path> <path>\n"
 msgstr ""
+"'git diff' [<options>] [<commit>] [--] [<chemin>...]\n"
+"'git diff' [<options>] --cached [<commit>] [--] [<chemin>...]\n"
+"'git diff' [<options>] <commit> <commit> [--] [<chemin>...]\n"
+"'git diff' [<options>] <blob> <blob>\n"
+"'git diff' [<options>] --no-index [--] <chemin> <chemin>\n"
 
 #. type: Plain text
 #: en/git-diff.txt:23
@@ -22565,13 +22570,13 @@ msgid ""
 "Show changes between the working tree and the index or a tree, changes "
 "between the index and a tree, changes between two trees, changes between two"
 " blob objects, or changes between two files on disk."
-msgstr ""
+msgstr "Affiche les modifications entre l'arbre de travail et l'index ou un arbre, les modifications entre l'index et un arbre, les modifications entre deux arbres, les modifications entre deux objets blobs ou les modifications entre deux fichiers sur disque."
 
 #. type: Labeled list
 #: en/git-diff.txt:24
 #, no-wrap
 msgid "'git diff' [<options>] [--] [<path>...]"
-msgstr ""
+msgstr "'git diff' [<options>] [--] [<chemin>...]"
 
 #. type: Plain text
 #: en/git-diff.txt:31
@@ -22580,13 +22585,13 @@ msgid ""
 "area for the next commit).  In other words, the differences are what you "
 "_could_ tell Git to further add to the index but you still haven't.  You can"
 " stage these changes by using linkgit:git-add[1]."
-msgstr ""
+msgstr "Cette forme sert à visualiser les modifications que vous avez faites par rapport à l'index (la zone de préparation du prochain commit). En d'autres termes, les différences sont ce que vous _pourriez_ indiquer à Git d'ajouter à l'index mais que vous n'avez pas encore ajouté. Vous pouvez préparer ces modifications en utilisant linkgit:git-add[1]."
 
 #. type: Labeled list
 #: en/git-diff.txt:32
 #, no-wrap
 msgid "'git diff' [<options>] --no-index [--] <path> <path>"
-msgstr ""
+msgstr "'git diff' [<options>] --no-index [--] <chemin> <chemin>"
 
 #. type: Plain text
 #: en/git-diff.txt:40
@@ -22595,13 +22600,13 @@ msgid ""
 " the `--no-index` option when running the command in a working tree "
 "controlled by Git and at least one of the paths points outside the working "
 "tree, or when running the command outside a working tree controlled by Git."
-msgstr ""
+msgstr "Cette forme sert à comparer les deux chemins indiqués sur le système de fichiers. Vous pouvez omettre l'option `--no-index` si la commande est lancée dans un arbre de travail contrôlé par Git et qu'au moins un des chemins pointe hors de l'arbre de travail ou si la commande est lancée hors d'un arbre de travail contrôlé par Git."
 
 #. type: Labeled list
 #: en/git-diff.txt:41
 #, no-wrap
 msgid "'git diff' [<options>] --cached [<commit>] [--] [<path>...]"
-msgstr ""
+msgstr "'git diff' [<options>] --cached [<commit>] [--] [<chemin>...]"
 
 #. type: Plain text
 #: en/git-diff.txt:50
@@ -22611,13 +22616,13 @@ msgid ""
 "commit, so if you do not give <commit>, it defaults to HEAD.  If HEAD does "
 "not exist (e.g. unborn branches) and <commit> is not given, it shows all "
 "staged changes.  --staged is a synonym of --cached."
-msgstr ""
+msgstr "Cette forme sert à visualiser les modifications que vous avez indexées pour la prochaine validation vis-à-vis du <commit> nommé. Typiquement, vous voudriez comparer avec le commit le plus récent (HEAD), ce qui est fait automatiquement si vous ne spécifiez pas <commit>. Si HEAD n'existe pas (par exemple, sur un branche non-née) et si <commit> est fourni, les modifications indexées sont affichées. --staged est synonyme de --cached."
 
 #. type: Labeled list
 #: en/git-diff.txt:51
 #, no-wrap
 msgid "'git diff' [<options>] <commit> [--] [<path>...]"
-msgstr ""
+msgstr "'git diff' [<options>] <commit> [--] [<chemin>...]"
 
 #. type: Plain text
 #: en/git-diff.txt:58
@@ -22625,37 +22630,37 @@ msgid ""
 "This form is to view the changes you have in your working tree relative to "
 "the named <commit>.  You can use HEAD to compare it with the latest commit, "
 "or a branch name to compare with the tip of a different branch."
-msgstr ""
+msgstr "Cette forme sert à visualiser les modifications présentes dans l'arbre de travail par rapport au <commit> indiqué. Vous pouvez utiliser HEAD pour le comparer au commit le plus récent ou un nom de branche pour le comparer avec le sommet d'une branche différente."
 
 #. type: Labeled list
 #: en/git-diff.txt:59
 #, no-wrap
 msgid "'git diff' [<options>] <commit> <commit> [--] [<path>...]"
-msgstr ""
+msgstr "'git diff' [<options>] <commit> <commit> [--] [<chemin>...]"
 
 #. type: Plain text
 #: en/git-diff.txt:63
 msgid "This is to view the changes between two arbitrary <commit>."
-msgstr ""
+msgstr "Ceci sert à visualiser les modifications entre deux <commit> arbitraires."
 
 #. type: Labeled list
 #: en/git-diff.txt:64
 #, no-wrap
 msgid "'git diff' [<options>] <commit>..<commit> [--] [<path>...]"
-msgstr ""
+msgstr "'git diff' [<options>] <commit>..<commit> [--] [<chemin>...]"
 
 #. type: Plain text
 #: en/git-diff.txt:69
 msgid ""
 "This is synonymous to the previous form.  If <commit> on one side is "
 "omitted, it will have the same effect as using HEAD instead."
-msgstr ""
+msgstr "Cette forme est synonyme de la forme précédente. Si <commit> est omis d'un côté, cela aura le même effet que de spécifier HEAD à la place."
 
 #. type: Labeled list
 #: en/git-diff.txt:70
 #, no-wrap
 msgid "'git diff' [<options>] <commit>\\...<commit> [--] [<path>...]"
-msgstr ""
+msgstr "'git diff' [<options>] <commit>\\...<commit> [--] [<chemin>...]"
 
 #. type: Plain text
 #: en/git-diff.txt:77
@@ -22664,7 +22669,7 @@ msgid ""
 "second <commit>, starting at a common ancestor of both <commit>.  \"git diff"
 " A\\...B\" is equivalent to \"git diff $(git merge-base A B) B\".  You can "
 "omit any one of <commit>, which has the same effect as using HEAD instead."
-msgstr ""
+msgstr "Cette forme sert à visualiser les modifications sur la branche contenante et jusqusqu'au second <commit>, en débutant à l'ancêtre commun au deux <commit>. \"git diff A\\...B\" est équivalent à \"git diff $(git merge-base A B) B\". Vous pouvez omettre l'un ou l'autre <commit>, ce qui a le même effet que de spécifier HEAD à la place."
 
 #. type: Plain text
 #: en/git-diff.txt:82
@@ -22672,7 +22677,7 @@ msgid ""
 "Just in case you are doing something exotic, it should be noted that all of "
 "the <commit> in the above description, except in the last two forms that use"
 " \"..\" notations, can be any <tree>."
-msgstr ""
+msgstr "Juste au cas où vous feriez quelque chose d'exotique, il doit être noté que tous les <commit> dans la description ci-dessus, excepté dans les deux dernières formes qui utilisent les notations \"..\", peuvent être toute sorte de <tree>."
 
 #. type: Plain text
 #: en/git-diff.txt:89
@@ -22682,20 +22687,20 @@ msgid ""
 "comparing two _endpoints_, not ranges, and the range notations "
 "(\"<commit>..<commit>\" and \"<commit>\\...<commit>\") do not mean a range "
 "as defined in the \"SPECIFYING RANGES\" section in linkgit:gitrevisions[7]."
-msgstr ""
+msgstr "Pour une liste plus complète des moyens de spécifier <commit>, voir la section « SPÉCIFIER LES RÉVISIONS » dans linkgit:gitrevisions[7]. Cependant, \"diff\" concerne la comparaison de deux _point finaux_, et non d'intervalles et les notations d'intervalle (\"<commit>..<commit>\" et \"<commit>\\...<commit>\") ne réfèrent pas un intervalle tel que défini dans la section « SPÉCIFIER LES RÉVISIONS » de linkgit:gitrevisions[7]."
 
 #. type: Labeled list
 #: en/git-diff.txt:90
 #, no-wrap
 msgid "'git diff' [<options>] <blob> <blob>"
-msgstr ""
+msgstr "'git diff' [<options>] <blob> <blob>"
 
 #. type: Plain text
 #: en/git-diff.txt:94
 msgid ""
 "This form is to view the differences between the raw contents of two blob "
 "objects."
-msgstr ""
+msgstr "Cette forme sert à visualiser la différence entre les contenus bruts de deux objets blob."
 
 #. type: Plain text
 #: en/git-diff.txt:108
@@ -22704,27 +22709,27 @@ msgid ""
 "branch\" (stage #2) or \"their branch\" (stage #3).  The index contains "
 "these stages only for unmerged entries i.e.  while resolving conflicts.  See"
 " linkgit:git-read-tree[1] section \"3-Way Merge\" for detailed information."
-msgstr ""
+msgstr "Comparer l'arbre de travail avec la version de « base »\" (étape #1), « notre branche » (étape #2) ou « leur branche » (étape #3). L'index contient ces étapes seulement pour les entrées non-fusionnées, c'est-à-dire lors de la résolution de conflits. Voir la section « Fusion à 3 points » de linkgit:git-read-tree[1] pour de plus amples informations."
 
 #. type: Plain text
 #: en/git-diff.txt:113
 msgid ""
 "Omit diff output for unmerged entries and just show \"Unmerged\".  Can be "
 "used only when comparing the working tree with the index."
-msgstr ""
+msgstr "Omettre la sortie de diff pour les entrées non-fusionnées et affiche juste « Non fusionné ». Ne peut être utilisé que lors de comparaison de l'arbre de travail avec l'index."
 
 #. type: Plain text
 #: en/git-diff.txt:118
 msgid ""
 "The <paths> parameters, when given, are used to limit the diff to the named "
 "paths (you can give directory names and get diff for all files under them)."
-msgstr ""
+msgstr "Les paramètres <chemin>, quand spécifiés, sont utilisés pour limiter la différence aux chemins indiqués (vous pouvez indiquer des noms de répertoire et visualiser les différences pour tous les fichiers qu'ils contiennent)."
 
 #. type: Labeled list
 #: en/git-diff.txt:125
 #, no-wrap
 msgid "Various ways to check your working tree"
-msgstr ""
+msgstr "Différents moyens de vérifier votre arbre de travail"
 
 #. type: delimited block -
 #: en/git-diff.txt:131
@@ -22734,6 +22739,9 @@ msgid ""
 "$ git diff --cached   <2>\n"
 "$ git diff HEAD       <3>\n"
 msgstr ""
+"$ git diff            <1>\n"
+"$ git diff --cached   <2>\n"
+"$ git diff HEAD       <3>\n"
 
 #. type: Plain text
 #: en/git-diff.txt:134
@@ -22747,20 +22755,20 @@ msgstr ""
 msgid ""
 "Changes between the index and your last commit; what you would be committing"
 " if you run \"git commit\" without \"-a\" option."
-msgstr ""
+msgstr "Modifications entre l'index et votre dernier commit ; ce que vous valideriez si vous lanciez \"git commit\" sans l'option \"-a\"."
 
 #. type: Plain text
 #: en/git-diff.txt:138
 msgid ""
 "Changes in the working tree since your last commit; what you would be "
 "committing if you run \"git commit -a\""
-msgstr ""
+msgstr "Modifications dans l'arbre de travail depuis votre dernier commit ; ce que vous valideriez si vous lanciez \"git commit -a\""
 
 #. type: Labeled list
 #: en/git-diff.txt:139
 #, no-wrap
 msgid "Comparing with arbitrary commits"
-msgstr ""
+msgstr "Comparaison de deux commits arbitraires"
 
 #. type: delimited block -
 #: en/git-diff.txt:145
@@ -22770,31 +22778,34 @@ msgid ""
 "$ git diff HEAD -- ./test  <2>\n"
 "$ git diff HEAD^ HEAD      <3>\n"
 msgstr ""
+"$ git diff test            <1>\n"
+"$ git diff HEAD -- ./test  <2>\n"
+"$ git diff HEAD^ HEAD      <3>\n"
 
 #. type: Plain text
 #: en/git-diff.txt:149
 msgid ""
 "Instead of using the tip of the current branch, compare with the tip of "
 "\"test\" branch."
-msgstr ""
+msgstr "Au lieu d'utiliser le sommet de la branche actuelle, compare avec le sommet de la branche « test »."
 
 #. type: Plain text
 #: en/git-diff.txt:152
 msgid ""
 "Instead of comparing with the tip of \"test\" branch, compare with the tip "
 "of the current branch, but limit the comparison to the file \"test\"."
-msgstr ""
+msgstr "Au lieu de comparer avec le sommet de la branche « test », compare avec le sommet de la branche actuelle, mais limite la comparaison au fichier « test »."
 
 #. type: Plain text
 #: en/git-diff.txt:153
 msgid "Compare the version before the last commit and the last commit."
-msgstr ""
+msgstr "Compare la version précédant le dernier commit et le dernier commit."
 
 #. type: Labeled list
 #: en/git-diff.txt:154
 #, no-wrap
 msgid "Comparing branches"
-msgstr ""
+msgstr "Comparaison de branches"
 
 #. type: delimited block -
 #: en/git-diff.txt:160
@@ -22804,30 +22815,33 @@ msgid ""
 "$ git diff topic..master   <2>\n"
 "$ git diff topic...master  <3>\n"
 msgstr ""
+"$ git diff sujet master    <1>\n"
+"$ git diff sujet..master   <2>\n"
+"$ git diff sujet...master  <3>\n"
 
 #. type: Plain text
 #: en/git-diff.txt:163
 msgid "Changes between the tips of the topic and the master branches."
-msgstr ""
+msgstr "Modifications entre les sommets des branches sujet et master."
 
 #. type: Plain text
 #: en/git-diff.txt:164 en/git-remote-fd.txt:44 en/git-remote-fd.txt:52
 #: en/git-web--browse.txt:52
 msgid "Same as above."
-msgstr ""
+msgstr "Identique à ci-dessus."
 
 #. type: Plain text
 #: en/git-diff.txt:166
 msgid ""
 "Changes that occurred on the master branch since when the topic branch was "
 "started off it."
-msgstr ""
+msgstr "Modifications présentes sur la branche master depuis que la branche sujet en a divergé."
 
 #. type: Labeled list
 #: en/git-diff.txt:167
 #, no-wrap
 msgid "Limiting the diff output"
-msgstr ""
+msgstr "Limitation de la sortie du diff"
 
 #. type: delimited block -
 #: en/git-diff.txt:173
@@ -22837,28 +22851,31 @@ msgid ""
 "$ git diff --name-status                <2>\n"
 "$ git diff arch/i386 include/asm-i386   <3>\n"
 msgstr ""
+"$ git diff --diff-filter=MRC            <1>\n"
+"$ git diff --name-status                <2>\n"
+"$ git diff arch/i386 include/asm-i386   <3>\n"
 
 #. type: Plain text
 #: en/git-diff.txt:177
 msgid ""
 "Show only modification, rename, and copy, but not addition or deletion."
-msgstr ""
+msgstr "Ne montre que les modifications, les renommages et les copies, mais pas les additions ou les suppressions."
 
 #. type: Plain text
 #: en/git-diff.txt:179
 msgid "Show only names and the nature of change, but not actual diff output."
-msgstr ""
+msgstr "Ne montre que les noms et la nature de la modification, mais pas la sortie de diff."
 
 #. type: Plain text
 #: en/git-diff.txt:180
 msgid "Limit diff output to named subtrees."
-msgstr ""
+msgstr "Limite la sortie de diff aux sous-arbres indiqués."
 
 #. type: Labeled list
 #: en/git-diff.txt:181
 #, no-wrap
 msgid "Munging the diff output"
-msgstr ""
+msgstr "Bricoler la sortie diff"
 
 #. type: delimited block -
 #: en/git-diff.txt:186
@@ -22867,18 +22884,20 @@ msgid ""
 "$ git diff --find-copies-harder -B -C  <1>\n"
 "$ git diff -R                          <2>\n"
 msgstr ""
+"$ git diff --find-copies-harder -B -C  <1>\n"
+"$ git diff -R                          <2>\n"
 
 #. type: Plain text
 #: en/git-diff.txt:190
 msgid ""
 "Spend extra cycles to find renames, copies and complete rewrites (very "
 "expensive)."
-msgstr ""
+msgstr "Dépense des cycles supplémentaires de CPU pour trouver les renommages, les copies ou les réécritures complètes (très cher)."
 
 #. type: Plain text
 #: en/git-diff.txt:191
 msgid "Output diff in reverse."
-msgstr ""
+msgstr "Affiche les diff renversés."
 
 #. type: Plain text
 #: en/git-diff.txt:200
