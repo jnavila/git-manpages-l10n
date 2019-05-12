@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: git documentation\n"
 "POT-Creation-Date: 2019-02-13 20:53+0100\n"
-"PO-Revision-Date: 2019-05-04 18:14+0200\n"
+"PO-Revision-Date: 2019-05-12 22:22+0200\n"
 "Last-Translator: Adrien Ollier <adr.ollier@hotmail.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:646 en/git-instaweb.txt:45
@@ -22585,7 +22585,12 @@ msgid ""
 "area for the next commit).  In other words, the differences are what you "
 "_could_ tell Git to further add to the index but you still haven't.  You can"
 " stage these changes by using linkgit:git-add[1]."
-msgstr "Cette forme sert à visualiser les modifications que vous avez faites par rapport à l'index (la zone de préparation du prochain commit). En d'autres termes, les différences sont ce que vous _pourriez_ indiquer à Git d'ajouter à l'index mais que vous n'avez pas encore ajouté. Vous pouvez préparer ces modifications en utilisant linkgit:git-add[1]."
+msgstr ""
+"Cette forme sert à visualiser les modifications que vous avez faites par "
+"rapport à l'index (la zone de préparation du prochain commit). En d'autres "
+"termes, les différences sont ce que vous _pourriez_ indiquer à Git d'ajouter"
+" à l'index mais que vous n'avez pas encore ajoutées. Vous pouvez indexer ces"
+" modifications en utilisant linkgit:git-add[1]."
 
 #. type: Labeled list
 #: en/git-diff.txt:32
@@ -22616,7 +22621,13 @@ msgid ""
 "commit, so if you do not give <commit>, it defaults to HEAD.  If HEAD does "
 "not exist (e.g. unborn branches) and <commit> is not given, it shows all "
 "staged changes.  --staged is a synonym of --cached."
-msgstr "Cette forme sert à visualiser les modifications que vous avez indexées pour la prochaine validation vis-à-vis du <commit> nommé. Typiquement, vous voudriez comparer avec le commit le plus récent (HEAD), ce qui est fait automatiquement si vous ne spécifiez pas <commit>. Si HEAD n'existe pas (par exemple, sur un branche non-née) et si <commit> est fourni, les modifications indexées sont affichées. --staged est synonyme de --cached."
+msgstr ""
+"Cette forme sert à visualiser les modifications que vous avez indexées pour "
+"la prochaine validation vis-à-vis du <commit> nommé. Typiquement, vous "
+"voudriez comparer avec le commit le plus récent (HEAD), ce qui est fait "
+"automatiquement si vous ne spécifiez pas <commit>. Si HEAD n'existe pas (par"
+" exemple, des branches à naître) et si <commit> n'est pas fourni, les "
+"modifications indexées sont affichées. --staged est synonyme de --cached."
 
 #. type: Labeled list
 #: en/git-diff.txt:51
@@ -22654,7 +22665,9 @@ msgstr "'git diff' [<options>] <commit>..<commit> [--] [<chemin>...]"
 msgid ""
 "This is synonymous to the previous form.  If <commit> on one side is "
 "omitted, it will have the same effect as using HEAD instead."
-msgstr "Cette forme est synonyme de la forme précédente. Si <commit> est omis d'un côté, cela aura le même effet que de spécifier HEAD à la place."
+msgstr ""
+"Cette forme est synonyme de la précédente. Si <commit> est omis d'un côté, "
+"cela aura le même effet que de spécifier HEAD à la place."
 
 #. type: Labeled list
 #: en/git-diff.txt:70
@@ -22669,7 +22682,12 @@ msgid ""
 "second <commit>, starting at a common ancestor of both <commit>.  \"git diff"
 " A\\...B\" is equivalent to \"git diff $(git merge-base A B) B\".  You can "
 "omit any one of <commit>, which has the same effect as using HEAD instead."
-msgstr "Cette forme sert à visualiser les modifications sur la branche contenante et jusqusqu'au second <commit>, en débutant à l'ancêtre commun au deux <commit>. \"git diff A\\...B\" est équivalent à \"git diff $(git merge-base A B) B\". Vous pouvez omettre l'un ou l'autre <commit>, ce qui a le même effet que de spécifier HEAD à la place."
+msgstr ""
+"Cette forme sert à visualiser les modifications sur la branche contenant et "
+"jusqu'au second <commit>, en débutant à l'ancêtre commun au deux <commit>. "
+"\"git diff A\\...B\" est équivalent à \"git diff $(git merge-base A B) B\". "
+"Vous pouvez omettre l'un ou l'autre <commit>, ce qui a le même effet que de "
+"spécifier HEAD à la place."
 
 #. type: Plain text
 #: en/git-diff.txt:82
@@ -22677,7 +22695,11 @@ msgid ""
 "Just in case you are doing something exotic, it should be noted that all of "
 "the <commit> in the above description, except in the last two forms that use"
 " \"..\" notations, can be any <tree>."
-msgstr "Juste au cas où vous feriez quelque chose d'exotique, il doit être noté que tous les <commit> dans la description ci-dessus, excepté dans les deux dernières formes qui utilisent les notations \"..\", peuvent être toute sorte de <tree>."
+msgstr ""
+"Juste au cas où vous feriez quelque chose d'exotique, il doit être noté que "
+"tous les <commit> dans la description ci-dessus, excepté dans les deux "
+"dernières formes qui utilisent les notations \"..\", peuvent être n'importe "
+"quel <tree>."
 
 #. type: Plain text
 #: en/git-diff.txt:89
@@ -22687,7 +22709,13 @@ msgid ""
 "comparing two _endpoints_, not ranges, and the range notations "
 "(\"<commit>..<commit>\" and \"<commit>\\...<commit>\") do not mean a range "
 "as defined in the \"SPECIFYING RANGES\" section in linkgit:gitrevisions[7]."
-msgstr "Pour une liste plus complète des moyens de spécifier <commit>, voir la section « SPÉCIFIER LES RÉVISIONS » dans linkgit:gitrevisions[7]. Cependant, \"diff\" concerne la comparaison de deux _point finaux_, et non d'intervalles et les notations d'intervalle (\"<commit>..<commit>\" et \"<commit>\\...<commit>\") ne réfèrent pas un intervalle tel que défini dans la section « SPÉCIFIER LES RÉVISIONS » de linkgit:gitrevisions[7]."
+msgstr ""
+"Pour une liste plus complète des moyens de spécifier <commit>, voir la "
+"section « SPÉCIFIER LES RÉVISIONS » dans linkgit:gitrevisions[7]. Cependant,"
+" \"diff\" concerne la comparaison de deux _point finaux_, et non "
+"d'intervalles, et les notations d'intervalle (\"<commit>..<commit>\" et "
+"\"<commit>\\...<commit>\") ne réfèrent pas un intervalle tel que défini dans"
+" la section « SPÉCIFIER LES RÉVISIONS » de linkgit:gitrevisions[7]."
 
 #. type: Labeled list
 #: en/git-diff.txt:90
@@ -22709,7 +22737,12 @@ msgid ""
 "branch\" (stage #2) or \"their branch\" (stage #3).  The index contains "
 "these stages only for unmerged entries i.e.  while resolving conflicts.  See"
 " linkgit:git-read-tree[1] section \"3-Way Merge\" for detailed information."
-msgstr "Comparer l'arbre de travail avec la version de « base »\" (étape #1), « notre branche » (étape #2) ou « leur branche » (étape #3). L'index contient ces étapes seulement pour les entrées non-fusionnées, c'est-à-dire lors de la résolution de conflits. Voir la section « Fusion à 3 points » de linkgit:git-read-tree[1] pour de plus amples informations."
+msgstr ""
+"Comparer l'arbre de travail avec la version de « base » (étape #1), « notre "
+"branche » (étape #2) ou « leur branche » (étape #3). L'index contient ces "
+"étapes seulement pour les entrées non-fusionnées, c'est-à-dire lors de la "
+"résolution de conflits. Voir la section « Fusion à 3 points » de "
+"linkgit:git-read-tree[1] pour de plus amples informations."
 
 #. type: Plain text
 #: en/git-diff.txt:113
@@ -22897,7 +22930,7 @@ msgstr "Dépense des cycles supplémentaires de CPU pour trouver les renommages,
 #. type: Plain text
 #: en/git-diff.txt:191
 msgid "Output diff in reverse."
-msgstr "Affiche les diff renversés."
+msgstr "Affiche les diff inversés."
 
 #. type: Plain text
 #: en/git-diff.txt:200
