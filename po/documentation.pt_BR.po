@@ -7,13 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-02-13 20:53+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2019-05-17 20:56+0000\n"
+"Last-Translator: Priscila Gutierres <priscila.gutierres@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.7-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:646 en/git-instaweb.txt:45
@@ -43,6 +45,8 @@ msgid ""
 "Do not treat root commits as boundaries.  This can also be controlled via "
 "the `blame.showRoot` config option."
 msgstr ""
+"Não trate commits raíz como fronteiras. Isso pode ser controlado via a opção "
+"de configuração `blame.showRoot` ."
 
 #. type: Labeled list
 #: en/blame-options.txt:9
@@ -53,19 +57,19 @@ msgstr "--show-stats"
 #. type: Plain text
 #: en/blame-options.txt:11
 msgid "Include additional statistics at the end of blame output."
-msgstr ""
+msgstr "Inclui estatísticas adicionais no fim da saída do comando blame."
 
 #. type: Labeled list
 #: en/blame-options.txt:12
 #, no-wrap
 msgid "-L <start>,<end>"
-msgstr ""
+msgstr "-L <começo>,<fim>"
 
 #. type: Labeled list
 #: en/blame-options.txt:13
 #, no-wrap
 msgid "-L :<funcname>"
-msgstr ""
+msgstr "-L :<nome da função>"
 
 #. type: Plain text
 #: en/blame-options.txt:16
@@ -73,6 +77,8 @@ msgid ""
 "Annotate only the given line range. May be specified multiple times.  "
 "Overlapping ranges are allowed."
 msgstr ""
+"Anota apenas a variação da linha dada. Pode ser espeficado várias vezes. É "
+"permitido sobrepor as variações."
 
 #. type: Plain text
 #: en/blame-options.txt:19
@@ -80,6 +86,9 @@ msgid ""
 "<start> and <end> are optional. ``-L <start>'' or ``-L <start>,'' spans from"
 " <start> to end of file. ``-L ,<end>'' spans from start of file to <end>."
 msgstr ""
+"<começo> e <fim> são opcionais. ``-L <começo>\" ou ``-L <começo>,\" toma do "
+"<começo> até o fim do arquivo. ``-L <fim>\" toma do começo do arquivo até "
+"<fim>."
 
 #. type: Labeled list
 #: en/blame-options.txt:22 en/git-archive.txt:43 en/git-branch.txt:157
@@ -93,7 +102,7 @@ msgstr "-l"
 #. type: Plain text
 #: en/blame-options.txt:24
 msgid "Show long rev (Default: off)."
-msgstr ""
+msgstr "Mostra o rev longo (Padrão: desligado)."
 
 #. type: Labeled list
 #: en/blame-options.txt:25 en/fetch-options.txt:137 en/git-branch.txt:185
@@ -107,25 +116,26 @@ msgstr "-t"
 #. type: Plain text
 #: en/blame-options.txt:27
 msgid "Show raw timestamp (Default: off)."
-msgstr ""
+msgstr "Mostra o tempo de forma crua (Padrão: desligado)."
 
 #. type: Labeled list
 #: en/blame-options.txt:28
 #, no-wrap
 msgid "-S <revs-file>"
-msgstr ""
+msgstr "-S <arquivo-revs>"
 
 #. type: Plain text
 #: en/blame-options.txt:30
 msgid ""
 "Use revisions from revs-file instead of calling linkgit:git-rev-list[1]."
 msgstr ""
+"Use revisões do arquivo-revs no lugar de chamar  linkgit:git-rev-list[1]."
 
 #. type: Labeled list
 #: en/blame-options.txt:31
 #, no-wrap
 msgid "--reverse <rev>..<rev>"
-msgstr ""
+msgstr "--reverse <rev>..<rev>"
 
 #. type: Plain text
 #: en/blame-options.txt:38
@@ -158,7 +168,7 @@ msgstr "--porcelain"
 #. type: Plain text
 #: en/blame-options.txt:42
 msgid "Show in a format designed for machine consumption."
-msgstr ""
+msgstr "Mostra em um formato designado para o consumo de máquina."
 
 #. type: Labeled list
 #: en/blame-options.txt:43
@@ -172,6 +182,9 @@ msgid ""
 "Show the porcelain format, but output commit information for each line, not "
 "just the first time a commit is referenced.  Implies --porcelain."
 msgstr ""
+"Mostra o formato porcelain, mas a informação de saída do commit para cada "
+"linha, não apenas a primeira vez que o commit é referenciado. Implica "
+"--porcelain."
 
 #. type: Labeled list
 #: en/blame-options.txt:48 en/git-pack-objects.txt:138 en/git-svn.txt:373
@@ -184,12 +197,14 @@ msgstr "--incremental"
 msgid ""
 "Show the result incrementally in a format designed for machine consumption."
 msgstr ""
+"Mostra o resultado incrementadamente em um formado designado para o consumo "
+"de máquina."
 
 #. type: Labeled list
 #: en/blame-options.txt:52 en/git-mailinfo.txt:62 en/pretty-options.txt:35
 #, no-wrap
 msgid "--encoding=<encoding>"
-msgstr ""
+msgstr "--encoding=<codificação>"
 
 #. type: Plain text
 #: en/blame-options.txt:58
@@ -199,12 +214,16 @@ msgid ""
 "information see the discussion about encoding in the linkgit:git-log[1] "
 "manual page."
 msgstr ""
+"Especifica o encoding usado para a saída dos nomes dos autores e sumários de "
+"commit. Setando isso para `none` faz com que a saída do blame (culpa) não "
+"seja convertida. Para maior informação, veja a discussão sobre encoding na "
+"página de manual  linkgit:git-log[1]."
 
 #. type: Labeled list
 #: en/blame-options.txt:59
 #, no-wrap
 msgid "--contents <file>"
-msgstr ""
+msgstr "--contents <arquivo>"
 
 #. type: Plain text
 #: en/blame-options.txt:65
@@ -214,12 +233,16 @@ msgid ""
 "as if the working tree copy has the contents of the named file (specify `-` "
 "to make the command read from the standard input)."
 msgstr ""
+"Quando <rev> não é especificado, o comando anota as mudanças começando para "
+"trás da cópia da árvore de trabalho. Essa flag faz com que o comando pareça "
+"estar trabalhando na cópia da árvore de trabalho  que tem os conteúdos do "
+"arquivo nomeado (especifique `-` para fazer o comando ler da entrada padrão)."
 
 #. type: Labeled list
 #: en/blame-options.txt:66
 #, no-wrap
 msgid "--date <format>"
-msgstr ""
+msgstr "--date <formato>"
 
 #. type: Plain text
 #: en/blame-options.txt:72
@@ -247,9 +270,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/blame-options.txt:80
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "-M[<num>]"
-msgstr ""
+msgstr "-M[<num>]"
 
 #. type: Plain text
 #: en/blame-options.txt:90
@@ -270,12 +293,15 @@ msgid ""
 "characters that Git must detect as moving/copying within a file for it to "
 "associate those lines with the parent commit. The default value is 20."
 msgstr ""
+"<num> é opcional mas é o limite inferior do número de caracteres alfa "
+"numéricos que o Gif tem que detectar como movendo/copiando em um arquivo o "
+"qual ele associa essas linhas ao commit principal. O valor padrão é 20."
 
 #. type: Labeled list
 #: en/blame-options.txt:96
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "-C[<num>]"
-msgstr ""
+msgstr "-C[<num>]"
 
 #. type: Plain text
 #: en/blame-options.txt:105
@@ -297,6 +323,11 @@ msgid ""
 "If there are more than one `-C` options given, the <num> argument of the "
 "last `-C` will take effect."
 msgstr ""
+"<num> é opcional mas ele é o limite inferior no número de caracteres alfa "
+"numéricos que o Git tem que detectar como se movendo/copiando entre arquivos "
+"para que ele associe essas linha no commit principal. E o valor padrão é 40. "
+"Se mais opções que `-C` são dadas, o argumento <num> do último `-C` terá "
+"efeito."
 
 #. type: Labeled list
 #: en/blame-options.txt:113 en/git-archimport.txt:71 en/git-cvsimport.txt:184
@@ -308,7 +339,7 @@ msgstr "-h"
 #. type: Plain text
 #: en/blame-options.txt:114
 msgid "Show help message."
-msgstr ""
+msgstr "Mostra a mensagem de ajuda."
 
 #. type: Plain text
 #: en/cmds-ancillaryinterrogators.txt:1 en/git-blame.txt:232
@@ -319,7 +350,7 @@ msgstr "linkgit:git-annotate[1]"
 #. type: Plain text
 #: en/cmds-ancillaryinterrogators.txt:3
 msgid "Annotate file lines with commit information."
-msgstr ""
+msgstr "Anota as linhas de informação do commit."
 
 #. type: Plain text
 #: en/cmds-ancillaryinterrogators.txt:4 en/git-annotate.txt:30
@@ -331,6 +362,7 @@ msgstr "linkgit:git-blame[1]"
 #: en/cmds-ancillaryinterrogators.txt:6
 msgid "Show what revision and author last modified each line of a file."
 msgstr ""
+"Mostra que revisão e autor modificaram por último cada linha de um arquivo."
 
 #. type: Labeled list
 #: en/cmds-ancillaryinterrogators.txt:7
@@ -341,7 +373,7 @@ msgstr "linkgit:git-count-objects[1]"
 #. type: Plain text
 #: en/cmds-ancillaryinterrogators.txt:9
 msgid "Count unpacked number of objects and their disk consumption."
-msgstr ""
+msgstr "Conta o número de objetos não empacotados e seu consumo de disco."
 
 #. type: Labeled list
 #: en/cmds-ancillaryinterrogators.txt:10
@@ -352,7 +384,7 @@ msgstr "linkgit:git-difftool[1]"
 #. type: Plain text
 #: en/cmds-ancillaryinterrogators.txt:12
 msgid "Show changes using common diff tools."
-msgstr ""
+msgstr "Mostra mudanças usando ferramentas comuns de diff."
 
 #. type: Labeled list
 #: en/cmds-ancillaryinterrogators.txt:13
@@ -363,7 +395,7 @@ msgstr "linkgit:git-fsck[1]"
 #. type: Plain text
 #: en/cmds-ancillaryinterrogators.txt:15 en/git-fsck.txt:20
 msgid "Verifies the connectivity and validity of the objects in the database."
-msgstr ""
+msgstr "Verifica a conectividade e validade dos objetos em um banco de dados."
 
 #. type: Labeled list
 #: en/cmds-ancillaryinterrogators.txt:16
@@ -374,7 +406,7 @@ msgstr "linkgit:git-help[1]"
 #. type: Plain text
 #: en/cmds-ancillaryinterrogators.txt:18
 msgid "Display help information about Git."
-msgstr ""
+msgstr "Mostra informação de ajuda sobre o Git."
 
 #. type: Labeled list
 #: en/cmds-ancillaryinterrogators.txt:19
@@ -385,7 +417,7 @@ msgstr "linkgit:git-instaweb[1]"
 #. type: Plain text
 #: en/cmds-ancillaryinterrogators.txt:21
 msgid "Instantly browse your working repository in gitweb."
-msgstr ""
+msgstr "Procura instantaneamente em seu repositório de trabalho na gitweb."
 
 #. type: Labeled list
 #: en/cmds-ancillaryinterrogators.txt:22
@@ -407,7 +439,7 @@ msgstr "linkgit:git-rerere[1]"
 #. type: Plain text
 #: en/cmds-ancillaryinterrogators.txt:27
 msgid "Reuse recorded resolution of conflicted merges."
-msgstr ""
+msgstr "Resua uma resolução gravada de merges em conflito."
 
 #. type: Labeled list
 #: en/cmds-ancillaryinterrogators.txt:28
@@ -418,7 +450,7 @@ msgstr "linkgit:git-show-branch[1]"
 #. type: Plain text
 #: en/cmds-ancillaryinterrogators.txt:30
 msgid "Show branches and their commits."
-msgstr ""
+msgstr "Mostra banches e seus commits."
 
 #. type: Labeled list
 #: en/cmds-ancillaryinterrogators.txt:31
@@ -429,7 +461,7 @@ msgstr "linkgit:git-verify-commit[1]"
 #. type: Plain text
 #: en/cmds-ancillaryinterrogators.txt:33
 msgid "Check the GPG signature of commits."
-msgstr ""
+msgstr "Mostra a assinatura GPG dos commits."
 
 #. type: Labeled list
 #: en/cmds-ancillaryinterrogators.txt:34
@@ -440,7 +472,7 @@ msgstr "linkgit:git-verify-tag[1]"
 #. type: Plain text
 #: en/cmds-ancillaryinterrogators.txt:36
 msgid "Check the GPG signature of tags."
-msgstr ""
+msgstr "Mostra a assinatura GPG de tags."
 
 #. type: Labeled list
 #: en/cmds-ancillaryinterrogators.txt:37
@@ -451,7 +483,7 @@ msgstr "linkgit:git-whatchanged[1]"
 #. type: Plain text
 #: en/cmds-ancillaryinterrogators.txt:39
 msgid "Show logs with difference each commit introduces."
-msgstr ""
+msgstr "Mostra logs com a diferença entre a introdução de cada commit."
 
 #. type: Plain text
 #: en/cmds-ancillaryinterrogators.txt:40 en/git-instaweb.txt:91
@@ -462,7 +494,7 @@ msgstr "linkgit:gitweb[1]"
 #. type: Plain text
 #: en/cmds-ancillaryinterrogators.txt:42
 msgid "Git web interface (web frontend to Git repositories)."
-msgstr ""
+msgstr "Interface web Git (frontend web para repositórios Git)."
 
 #. type: Labeled list
 #: en/cmds-ancillarymanipulators.txt:1 en/git-difftool.txt:142
@@ -473,7 +505,7 @@ msgstr "linkgit:git-config[1]"
 #. type: Plain text
 #: en/cmds-ancillarymanipulators.txt:3
 msgid "Get and set repository or global options."
-msgstr ""
+msgstr "Obtém e seta repositórios ou opções globais."
 
 #. type: Plain text
 #: en/cmds-ancillarymanipulators.txt:4 en/git-fast-import.txt:1489
@@ -484,7 +516,7 @@ msgstr "linkgit:git-fast-export[1]"
 #. type: Plain text
 #: en/cmds-ancillarymanipulators.txt:6
 msgid "Git data exporter."
-msgstr ""
+msgstr "tipo: Texto plano"
 
 #. type: Plain text
 #: en/cmds-ancillarymanipulators.txt:7 en/git-fast-export.txt:236
@@ -495,7 +527,7 @@ msgstr "linkgit:git-fast-import[1]"
 #. type: Plain text
 #: en/cmds-ancillarymanipulators.txt:9
 msgid "Backend for fast Git data importers."
-msgstr ""
+msgstr "Backend para importadores de dados rápidos Git"
 
 #. type: Labeled list
 #: en/cmds-ancillarymanipulators.txt:10
@@ -506,7 +538,7 @@ msgstr "linkgit:git-filter-branch[1]"
 #. type: Plain text
 #: en/cmds-ancillarymanipulators.txt:12
 msgid "Rewrite branches."
-msgstr ""
+msgstr "Reescreve branches."
 
 #. type: Labeled list
 #: en/cmds-ancillarymanipulators.txt:13 en/git-difftool.txt:139
@@ -518,6 +550,8 @@ msgstr "linkgit:git-mergetool[1]"
 #: en/cmds-ancillarymanipulators.txt:15
 msgid "Run merge conflict resolution tools to resolve merge conflicts."
 msgstr ""
+"Executa as ferramentas de  resolução de conflito de merge para resolver "
+"conflitos de merge."
 
 #. type: Labeled list
 #: en/cmds-ancillarymanipulators.txt:16
@@ -550,7 +584,7 @@ msgstr "linkgit:git-reflog[1]"
 #. type: Plain text
 #: en/cmds-ancillarymanipulators.txt:24
 msgid "Manage reflog information."
-msgstr ""
+msgstr "Gerencia a informação de reflog."
 
 #. type: Labeled list
 #: en/cmds-ancillarymanipulators.txt:25
@@ -583,7 +617,7 @@ msgstr "linkgit:git-replace[1]"
 #. type: Plain text
 #: en/cmds-ancillarymanipulators.txt:33
 msgid "Create, list, delete refs to replace objects."
-msgstr ""
+msgstr "Cria, lista, deleta refs para substituir objetos."
 
 #. type: Labeled list
 #: en/cmds-foreignscminterface.txt:1
@@ -594,7 +628,7 @@ msgstr "linkgit:git-archimport[1]"
 #. type: Plain text
 #: en/cmds-foreignscminterface.txt:3
 msgid "Import a GNU Arch repository into Git."
-msgstr ""
+msgstr "Importa um repositório GNU Arch no Git."
 
 #. type: Labeled list
 #: en/cmds-foreignscminterface.txt:4
