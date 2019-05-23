@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-02-13 20:53+0100\n"
 "PO-Revision-Date: 2019-05-24 13:49+0000\n"
-"Last-Translator: Priscila Gutierres <priscila.gutierres@gmail.com>\n"
+"Last-Translator: Elizabete Dutra Valle <beteduvalle@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -31,6 +31,8 @@ msgid ""
 "Show blank SHA-1 for boundary commits.  This can also be controlled via the "
 "`blame.blankboundary` config option."
 msgstr ""
+"Mostrar SHA-1 em branco para confirmações de commits. Isso também pode ser "
+"controlado através da opção de configuração 'blame.blankboundary'."
 
 #. type: Labeled list
 #: en/blame-options.txt:5 en/git-diff-tree.txt:42 en/git-format-patch.txt:314
@@ -146,6 +148,11 @@ msgid ""
 " blame exists in START.  `git blame --reverse START` is taken as `git blame "
 "--reverse START..HEAD` for convenience."
 msgstr ""
+"Caminhe para a frente em vez de para trás. Em vez de mostrar a revisão em "
+"que uma linha apareceu, isso mostra a última revisão em que uma linha "
+"existiu. Isso requer um intervalo de revisão como START..END, onde o path "
+"responsável  existe em START. --'git blame --reverse START' is taken as 'git "
+"blame --reverse START..HEAD' por conveniência."
 
 #. type: Labeled list
 #: en/blame-options.txt:39 en/diff-options.txt:16 en/diff-options.txt:22
@@ -293,6 +300,14 @@ msgid ""
 "A) to the child commit.  With this option, both groups of lines are blamed "
 "on the parent by running extra passes of inspection."
 msgstr ""
+"Detectar linhas movidas ou copiadas dentro de um arquivo. Quando um commit "
+"move ou copia um bloco de linhas (por exemplo, o arquivo original tem A e B, "
+"e o commit muda para B e depois para A), o algoritmo tradicional de 'culpa' "
+"percebe apenas metade do movimento e geralmente culpa as linhas que foram "
+"movidas para cima (i.e. B) ao pai e atribui a culpa às linhas que foram "
+"movidas para baixo (i.e. A) para o commit filho. Com essa opção os dois "
+"grupos de linhas são culpados pelos pais executando passagens extras de "
+"inspeção."
 
 #. type: Plain text
 #: en/blame-options.txt:95
@@ -2051,6 +2066,7 @@ msgstr ""
 
 #. type: Plain text
 #: en/config.txt:72
+#, fuzzy
 msgid ""
 "A line that defines a value can be continued to the next line by ending it "
 "with a `\\`; the backquote and the end-of-line are stripped.  Leading "
@@ -2059,6 +2075,12 @@ msgid ""
 "discarded unless they are enclosed in double quotes.  Internal whitespaces "
 "within the value are retained verbatim."
 msgstr ""
+"Uma linha que define um valor pode ser continuada para a próxima linha "
+"finalizando-a com um `\\`; o backquote e o fim-de-linha são despojados. Os "
+"principais espaços em branco após 'name =', o restante da linha após o "
+"primeiro caractere de comentário '#' ou ';' e espaços em branco à direita da "
+"linha são descartados, a menos que estejam entre aspas duplas. Os espaços "
+"internos dentro do valor são retidos na íntegra."
 
 #. type: Plain text
 #: en/config.txt:75
@@ -2071,39 +2093,56 @@ msgstr ""
 
 #. type: Plain text
 #: en/config.txt:80
+#, fuzzy
 msgid ""
 "The following escape sequences (beside `\\\"` and `\\\\`) are recognized: "
 "`\\n` for newline character (NL), `\\t` for horizontal tabulation (HT, TAB)"
 "  and `\\b` for backspace (BS).  Other char escape sequences (including "
 "octal escape sequences) are invalid."
 msgstr ""
+"A seguintes sequências de escape (ao lado de `\\\"` e `\\\\`) são "
+"reconhecidas: `\\n"
+"` para caracteres de nova linha (NL), `\\t` para tabulção horizontal (HT, "
+"TAB) e `\\b` para backspace (BS). Outras sequências de escape de caracteres ("
+"incluindo sequências de escape octal) são inválidas."
 
 #. type: Title ~
 #: en/config.txt:83
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Includes"
-msgstr ""
+msgstr "Inclui"
 
 #. type: Plain text
 #: en/config.txt:90
+#, fuzzy
 msgid ""
 "The `include` and `includeIf` sections allow you to include config "
 "directives from another source. These sections behave identically to each "
 "other with the exception that `includeIf` sections may be ignored if their "
 "condition does not evaluate to true; see \"Conditional includes\" below."
 msgstr ""
+"As seções `include` e `includeIf` permitem incluir diretivas de configuração "
+"de outra fonte. Essas seções se comportam de maneira idêntica, com a exceção "
+"de que as seções `includeIf` podem ser ignoradas se sua condição não for "
+"avaliada como verdadeira; veja \"Inclui condicional\" abaixo."
 
 #. type: Plain text
 #: en/config.txt:95
+#, fuzzy
 msgid ""
 "You can include a config file from another by setting the special "
 "`include.path` (or `includeIf.*.path`) variable to the name of the file to "
 "be included. The variable takes a pathname as its value, and is subject to "
 "tilde expansion. These variables can be given multiple times."
 msgstr ""
+"Você pode incluir um arquivo de configuração de outro, definindo a variável "
+"especial `include.path`  (ou `includeIf.*.path`) para o nome do arquivo a "
+"ser incluído. A variável usa um nome-path como seu valor e está sujeita à "
+"expansão de til. essas variáveis podem ser dadas várias vezes."
 
 #. type: Plain text
 #: en/config.txt:101
+#, fuzzy
 msgid ""
 "The contents of the included file are inserted immediately, as if they had "
 "been found at the location of the include directive. If the value of the "
@@ -2111,12 +2150,17 @@ msgid ""
 "configuration file in which the include directive was found.  See below for "
 "examples."
 msgstr ""
+"O conteúdo do arquivo incluído é inserido imediatamente, como se eles "
+"tivessem sido encontrados no local da diretiva include. Se o valor da "
+"variável for um path relativo, o path será considerado relativo ao arquivo "
+"de configuração no qual a diretiva de inclusão foi localizada. Veja abaixo "
+"exemplos."
 
 #. type: Title ~
 #: en/config.txt:103
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Conditional includes"
-msgstr ""
+msgstr "Inclui condicional"
 
 #. type: Plain text
 #: en/config.txt:108
