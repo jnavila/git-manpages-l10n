@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-02-13 20:53+0100\n"
-"PO-Revision-Date: 2019-05-24 13:49+0000\n"
-"Last-Translator: Elizabete Dutra Valle <beteduvalle@gmail.com>\n"
+"PO-Revision-Date: 2019-05-27 11:50+0000\n"
+"Last-Translator: Priscila Gutierres <priscila.gutierres@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -2066,7 +2066,6 @@ msgstr ""
 
 #. type: Plain text
 #: en/config.txt:72
-#, fuzzy
 msgid ""
 "A line that defines a value can be continued to the next line by ending it "
 "with a `\\`; the backquote and the end-of-line are stripped.  Leading "
@@ -2075,8 +2074,8 @@ msgid ""
 "discarded unless they are enclosed in double quotes.  Internal whitespaces "
 "within the value are retained verbatim."
 msgstr ""
-"Uma linha que define um valor pode ser continuada para a próxima linha "
-"finalizando-a com um `\\`; o backquote e o fim-de-linha são despojados. Os "
+"Uma linha que define um valor pode ser continuada na próxima linha "
+"finalizando-a com um `\\`; o backquote e o fim-de-linha são tirados. Os "
 "principais espaços em branco após 'name =', o restante da linha após o "
 "primeiro caractere de comentário '#' ou ';' e espaços em branco à direita da "
 "linha são descartados, a menos que estejam entre aspas duplas. Os espaços "
@@ -2114,7 +2113,6 @@ msgstr "Inclui"
 
 #. type: Plain text
 #: en/config.txt:90
-#, fuzzy
 msgid ""
 "The `include` and `includeIf` sections allow you to include config "
 "directives from another source. These sections behave identically to each "
@@ -2128,7 +2126,6 @@ msgstr ""
 
 #. type: Plain text
 #: en/config.txt:95
-#, fuzzy
 msgid ""
 "You can include a config file from another by setting the special "
 "`include.path` (or `includeIf.*.path`) variable to the name of the file to "
@@ -2142,7 +2139,6 @@ msgstr ""
 
 #. type: Plain text
 #: en/config.txt:101
-#, fuzzy
 msgid ""
 "The contents of the included file are inserted immediately, as if they had "
 "been found at the location of the include directive. If the value of the "
@@ -2158,7 +2154,7 @@ msgstr ""
 
 #. type: Title ~
 #: en/config.txt:103
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Conditional includes"
 msgstr "Inclui condicional"
 
@@ -2169,6 +2165,9 @@ msgid ""
 "`includeIf.<condition>.path` variable to the name of the file to be "
 "included."
 msgstr ""
+"Você pode incluir um arquivo de configuração de outro condicionalmente "
+"setando uma variável `includeIf.<condition>.path` para o nome do arquivo a "
+"ser incluído."
 
 #. type: Plain text
 #: en/config.txt:112
@@ -2176,6 +2175,9 @@ msgid ""
 "The condition starts with a keyword followed by a colon and some data whose "
 "format and meaning depends on the keyword. Supported keywords are:"
 msgstr ""
+"A condição começa quando uma palavra-chave seguida de dois pontos e alguns "
+"dados cujo formato e significado depende da palavra-chave. Palavras-chave "
+"suportadas são:"
 
 #. type: Labeled list
 #: en/config.txt:113
@@ -2190,6 +2192,9 @@ msgid ""
 "the location of the .git directory matches the pattern, the include "
 "condition is met."
 msgstr ""
+"O dado que seguem a palavra chave `gitdir:` é usado como um padrão global. "
+"Se a localização do diretório .git casa com o padrão, a condição incluída é "
+"encontrada."
 
 #. type: Plain text
 #: en/config.txt:123
@@ -2199,12 +2204,16 @@ msgid ""
 "(e.g. from submodules, or a linked worktree), the .git location would be the"
 " final location where the .git directory is, not where the"
 msgstr ""
+"A localização de .git pode ser auto-descoberta, ou vir da variável de "
+"ambiente `$GIT_DIR`. Se o repositório é auto descoberto via um arquivo. git ("
+"e.x. de submódulos ou linkado a uma árvore de trabalho), a localização de "
+".git pode ser a localização final onde o diretório. git é, não onde o"
 
 #. type: Block title
 #: en/config.txt:123
 #, no-wrap
 msgid "git file is."
-msgstr ""
+msgstr "o arquivo git é."
 
 #. type: Plain text
 #: en/config.txt:128
@@ -2220,6 +2229,8 @@ msgid ""
 "If the pattern starts with `~/`, `~` will be substituted with the content of"
 " the environment variable `HOME`."
 msgstr ""
+"Se o padrão começa com `~/`, `~` será substituído com o conteúdo da variável "
+"de ambiente `HOME`."
 
 #. type: Plain text
 #: en/config.txt:134
@@ -2227,6 +2238,8 @@ msgid ""
 "If the pattern starts with `./`, it is replaced with the directory "
 "containing the current config file."
 msgstr ""
+"Se o padrão começa com `./`, então ele é substituído com o diretório "
+"contendo o arquivo de configuração corrente."
 
 #. type: Plain text
 #: en/config.txt:138
@@ -2248,7 +2261,7 @@ msgstr ""
 #: en/config.txt:143
 #, no-wrap
 msgid "`gitdir/i`"
-msgstr ""
+msgstr "`gitdir/i`"
 
 #. type: Plain text
 #: en/config.txt:146
@@ -2256,16 +2269,18 @@ msgid ""
 "This is the same as `gitdir` except that matching is done case-insensitively"
 " (e.g. on case-insensitive file sytems)"
 msgstr ""
+"Isto é o mesmo que `gitdir`exceto que casa ignorando mudança de caixa (e.x. "
+"em sistemas de arquivo que ignoram mudança de caixa)"
 
 #. type: Plain text
 #: en/config.txt:148
 msgid "A few more notes on matching via `gitdir` and `gitdir/i`:"
-msgstr ""
+msgstr "Algumas poucas notas em casar via `gitdir` e `gitdir/i`:"
 
 #. type: Plain text
 #: en/config.txt:150
 msgid "Symlinks in `$GIT_DIR` are not resolved before matching."
-msgstr ""
+msgstr "Sumlinks em `$GIT_DIR` não são resolvidos sem casar."
 
 #. type: Plain text
 #: en/config.txt:155
@@ -2290,12 +2305,14 @@ msgid ""
 "Note that \"../\" is not special and will match literally, which is unlikely"
 " what you want."
 msgstr ""
+"Note que \"../\" não é especial e não irá casar literalmente, o que não é o "
+"que você quer."
 
 #. type: Title ~
 #: en/config.txt:165 en/git-rev-parse.txt:359 en/git-rev-parse.txt:415
 #, no-wrap
 msgid "Example"
-msgstr ""
+msgstr "Exemplo"
 
 #. type: Plain text
 #: en/config.txt:171
@@ -2388,7 +2405,7 @@ msgstr ""
 #: en/config.txt:210
 #, no-wrap
 msgid "Values"
-msgstr ""
+msgstr "Valores"
 
 #. type: Plain text
 #: en/config.txt:215
@@ -2397,12 +2414,15 @@ msgid ""
 "variables that take values of specific types and there are rules as to how "
 "to spell them."
 msgstr ""
+"Valores de várias variáveis são tratados como string simples, mas sempre "
+"existem variáveis que pegam valores de tipos específicos e existem regras de "
+"como os soletrar."
 
 #. type: Labeled list
 #: en/config.txt:216
 #, no-wrap
 msgid "boolean"
-msgstr ""
+msgstr "booleano"
 
 #. type: Plain text
 #: en/config.txt:221
@@ -2410,17 +2430,19 @@ msgid ""
 "When a variable is said to take a boolean value, many synonyms are accepted "
 "for 'true' and 'false'; these are all case-insensitive."
 msgstr ""
+"Quando uma variável pega um valor booleano, muitos sinônimos são aceitos "
+"para 'true' e 'false', esses são todos insensíveis a mudança de caixa."
 
 #. type: Labeled list
 #: en/config.txt:222
 #, no-wrap
 msgid "true"
-msgstr ""
+msgstr "verdadeiro"
 
 #. type: Plain text
 #: en/config.txt:223
 msgid "Boolean true literals are `yes`, `on`, `true`,"
-msgstr ""
+msgstr "Literais booleanos verdades são `yes`,`on`,`true`,"
 
 #. type: Plain text
 #: en/config.txt:225
@@ -2434,18 +2456,18 @@ msgstr ""
 #: en/config.txt:226
 #, no-wrap
 msgid "false"
-msgstr ""
+msgstr "falso"
 
 #. type: Plain text
 #: en/config.txt:227
 msgid "Boolean false literals are `no`, `off`, `false`,"
-msgstr ""
+msgstr "Falsos literais booleanos são `no`, `off`, `false`,"
 
 #. type: Plain text
 #: en/config.txt:228
 #, no-wrap
 msgid "`0` and the empty string.\n"
-msgstr ""
+msgstr "`0` e a string vazia.\n"
 
 #. type: Plain text
 #: en/config.txt:232
@@ -2454,12 +2476,15 @@ msgid ""
 "specifier, 'git config' will ensure that the output is \"true\" or \"false\""
 " (spelled in lowercase)."
 msgstr ""
+"Quando converter um valor a sua forma canônica usando o tipo de "
+"especificação `--type=bool`, 'git config' se assegurará que a saída é 'true' "
+"ou \"false\" (em caixa baixa)."
 
 #. type: Labeled list
 #: en/config.txt:233
 #, no-wrap
 msgid "integer"
-msgstr ""
+msgstr "inteiro"
 
 #. type: Plain text
 #: en/config.txt:237
@@ -2467,12 +2492,15 @@ msgid ""
 "The value for many variables that specify various sizes can be suffixed with"
 " `k`, `M`,... to mean \"scale the number by 1024\", \"by 1024x1024\", etc."
 msgstr ""
+"O valor de muitas variáveis que especificam vários tamanhos podem ter como "
+"sufixo `k`,`M`, para dizer \"escale o número por 1024\", \"por 1024x1024\", "
+"etc."
 
 #. type: Labeled list
 #: en/config.txt:238 en/diff-options.txt:339 en/git-for-each-ref.txt:177
 #, no-wrap
 msgid "color"
-msgstr ""
+msgstr "cor"
 
 #. type: Plain text
 #: en/config.txt:242
@@ -2481,6 +2509,9 @@ msgid ""
 "two, one for foreground and one for background)  and attributes (as many as "
 "you want), separated by spaces."
 msgstr ""
+"O valor de uma variável que pega uma cor de uma lista de cores (ao menos "
+"duas, uma para o foreground e outra para o background) e atributos (quantos "
+"você quiser), separados por espaços."
 
 #. type: Plain text
 #: en/config.txt:246
