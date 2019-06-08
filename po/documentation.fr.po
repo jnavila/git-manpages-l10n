@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: git documentation\n"
-"POT-Creation-Date: 2019-06-02 21:46+0200\n"
-"PO-Revision-Date: 2019-06-04 22:46+0200\n"
+"POT-Creation-Date: 2019-02-13 20:53+0100\n"
+"PO-Revision-Date: 2019-06-08 19:13+0200\n"
 "Last-Translator: Adrien Ollier <adr.ollier@hotmail.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -2531,7 +2531,7 @@ msgstr ""
 #: en/diff-format.txt:2
 #, no-wrap
 msgid "Raw output format"
-msgstr ""
+msgstr "Format brut de sortie"
 
 #. type: Plain text
 #: en/diff-format.txt:6
@@ -2539,12 +2539,16 @@ msgid ""
 "The raw output format from \"git-diff-index\", \"git-diff-tree\", \"git-diff-"
 "files\" and \"git diff --raw\" are very similar."
 msgstr ""
+"Les formats bruts de sortie de \"git-diff-index\", \"git-diff-tree\", \"git-"
+"diff-files\" et \"git diff --raw\" sont très similaires."
 
 #. type: Plain text
 #: en/diff-format.txt:9
 msgid ""
 "These commands all compare two sets of things; what is compared differs:"
 msgstr ""
+"Ces commandes comparent toutes deux ensembles de choses ; ce qui est comparé "
+"varie :"
 
 #. type: Labeled list
 #: en/diff-format.txt:10
@@ -2572,23 +2576,23 @@ msgstr "compare l'<arbre-esque> et l'index."
 #: en/diff-format.txt:16
 #, no-wrap
 msgid "git-diff-tree [-r] <tree-ish-1> <tree-ish-2> [<pattern>...]"
-msgstr ""
+msgstr "git-diff-tree [-r] <arbre-esque-1> <arbre-esque-2> [<motif>...]"
 
 #. type: Plain text
 #: en/diff-format.txt:18
 msgid "compares the trees named by the two arguments."
-msgstr ""
+msgstr "Compare les arbres nommés par les deux arguments."
 
 #. type: Labeled list
 #: en/diff-format.txt:19
 #, no-wrap
 msgid "git-diff-files [<pattern>...]"
-msgstr ""
+msgstr "git-diff-files [<motif>...]"
 
 #. type: Plain text
 #: en/diff-format.txt:21
 msgid "compares the index and the files on the filesystem."
-msgstr ""
+msgstr "compare l'index et les fichiers sur le système de fichier."
 
 #. type: Plain text
 #: en/diff-format.txt:25
@@ -2597,11 +2601,14 @@ msgid ""
 "is being compared. After that, all the commands print one output line per "
 "changed file."
 msgstr ""
+"La commande \"git-diff-tree\" débute sa sortie par l'empreinte de ce qui est "
+"comparé. Ensuite, toutes les commandes affichent une ligne par fichier "
+"modifié."
 
 #. type: Plain text
 #: en/diff-format.txt:27
 msgid "An output line is formatted this way:"
-msgstr ""
+msgstr "une ligne affichée est formatée de la manière suivante :"
 
 #. type: delimited block -
 #: en/diff-format.txt:35
@@ -2614,6 +2621,12 @@ msgid ""
 "delete         :100644 000000 1234567 0000000 D file5\n"
 "unmerged       :000000 000000 0000000 0000000 U file6\n"
 msgstr ""
+"in-place edit  :100644 100644 bcd1234 0123456 M fichier0\n"
+"copy-edit      :100644 100644 abcd123 1234567 C68 fichier1 fichier2\n"
+"rename-edit    :100644 100644 abcd123 1234567 R86 fichier1 fichier3\n"
+"create         :000000 100644 0000000 1234567 A fichier4\n"
+"delete         :100644 000000 1234567 0000000 D fichier5\n"
+"unmerged       :000000 000000 0000000 0000000 U fichier6\n"
 
 #. type: Plain text
 #: en/diff-format.txt:38
@@ -2623,84 +2636,90 @@ msgstr "C'est-à-dire, de gauche à droite :"
 #. type: Plain text
 #: en/diff-format.txt:40
 msgid "a colon."
-msgstr ""
+msgstr "deux points."
 
 #. type: Plain text
 #: en/diff-format.txt:41
 msgid "mode for \"src\"; 000000 if creation or unmerged."
-msgstr ""
+msgstr "le mode pour \"src\" ; 000000 si c'est une création ou non fusionné."
 
 #. type: Plain text
 #: en/diff-format.txt:42 en/diff-format.txt:44 en/diff-format.txt:46
 #: en/diff-format.txt:48
 msgid "a space."
-msgstr ""
+msgstr "un espace."
 
 #. type: Plain text
 #: en/diff-format.txt:43
 msgid "mode for \"dst\"; 000000 if deletion or unmerged."
-msgstr ""
+msgstr "mode pour \"dst\" ; 000000 si suppression ou non-fusionné."
 
 #. type: Plain text
 #: en/diff-format.txt:45
 msgid "sha1 for \"src\"; 0\\{40\\} if creation or unmerged."
-msgstr ""
+msgstr "sha1 de \"src\", 0\\{40\\} si création ou non fusionné."
 
 #. type: Plain text
 #: en/diff-format.txt:47
 msgid ""
 "sha1 for \"dst\"; 0\\{40\\} if creation, unmerged or \"look at work tree\"."
 msgstr ""
+"sha1 de \"dst\", 0\\{40\\} si création, non fusionné ou \"recherche dans "
+"l'arbre de travail\"."
 
 #. type: Plain text
 #: en/diff-format.txt:49
 msgid "status, followed by optional \"score\" number."
-msgstr ""
+msgstr "status, suivi optionnellement d'un nombre score."
 
 #. type: Plain text
 #: en/diff-format.txt:50
 msgid "a tab or a NUL when `-z` option is used."
-msgstr ""
+msgstr "une tabulation ou un caractère NUL si l'option `-z` est utilisée."
 
 #. type: Plain text
 #: en/diff-format.txt:51
 msgid "path for \"src\""
-msgstr ""
+msgstr "chemin pour \"src\""
 
 #. type: Plain text
 #: en/diff-format.txt:52
 msgid "a tab or a NUL when `-z` option is used; only exists for C or R."
 msgstr ""
+"une tabulation ou un caractère NUL si l'option `-z` est utilisée ; n'existe "
+"que pour C ou R."
 
 #. type: Plain text
 #: en/diff-format.txt:53
 msgid "path for \"dst\"; only exists for C or R."
-msgstr ""
+msgstr "chemin pour \"dst\" ; n'existe que pour C ou R."
 
 #. type: Plain text
 #: en/diff-format.txt:54
 msgid "an LF or a NUL when `-z` option is used, to terminate the record."
 msgstr ""
+"un caractère LF ou NUL si l'option `-z` est utilisée, pour terminer "
+"l'enregistrement."
 
 #. type: Plain text
 #: en/diff-format.txt:56
 msgid "Possible status letters are:"
-msgstr ""
+msgstr "Les lettres de statut possibles sont :"
 
 #. type: Plain text
 #: en/diff-format.txt:58
 msgid "A: addition of a file"
-msgstr ""
+msgstr "A : addition d'un fichier"
 
 #. type: Plain text
 #: en/diff-format.txt:59
 msgid "C: copy of a file into a new one"
-msgstr ""
+msgstr "C : copie d'un fichier en un autre"
 
 #. type: Plain text
 #: en/diff-format.txt:60
 msgid "D: deletion of a file"
-msgstr ""
+msgstr "D : suppression (deletion) d'un fichier"
 
 #. type: Plain text
 #: en/diff-format.txt:61
@@ -2710,23 +2729,27 @@ msgstr "M : modification de contenu ou du mode d'un fichier"
 #. type: Plain text
 #: en/diff-format.txt:62
 msgid "R: renaming of a file"
-msgstr ""
+msgstr "R : renommage d'un fichier"
 
 #. type: Plain text
 #: en/diff-format.txt:63
 msgid "T: change in the type of the file"
-msgstr ""
+msgstr "T : modification du type d'un fichier"
 
 #. type: Plain text
 #: en/diff-format.txt:65
 msgid ""
 "U: file is unmerged (you must complete the merge before it can be committed)"
 msgstr ""
+"U : le fichier est non-fusionné (unmerged) (vous devez finir la fusion avant "
+"de le valider)"
 
 #. type: Plain text
 #: en/diff-format.txt:66
 msgid "X: \"unknown\" change type (most probably a bug, please report it)"
 msgstr ""
+"X : type de modification \"inconnue\" (probablement un bug, veuillez le "
+"signaler)"
 
 #. type: Plain text
 #: en/diff-format.txt:71
@@ -2736,6 +2759,10 @@ msgid ""
 "copy).  Status letter M may be followed by a score (denoting the percentage "
 "of dissimilarity) for file rewrites."
 msgstr ""
+"Les lettres de statut C et R sont toujours suivies d'un score (indiquant le "
+"pourcentage de similarité entre la source et la cible du déplacement ou de "
+"la copie). La lettre de statut M peut être suivie d'un score (indiquant le "
+"pourcentage de dissimilarité) pour une réécriture de fichier."
 
 #. type: Plain text
 #: en/diff-format.txt:74
@@ -2743,19 +2770,21 @@ msgid ""
 "<sha1> is shown as all 0's if a file is new on the filesystem and it is out "
 "of sync with the index."
 msgstr ""
+"Le <sha1> est tout à zéro si le fichier est nouveau sur le système de "
+"fichiers et est désynchronisé avec l'index."
 
 #. type: Labeled list
 #: en/diff-format.txt:76 en/diff-format.txt:101 en/git-svn.txt:499
 #: en/git-svn.txt:539
 #, no-wrap
 msgid "Example:"
-msgstr ""
+msgstr "Exemple :"
 
 #. type: delimited block -
 #: en/diff-format.txt:79
 #, no-wrap
 msgid ":100644 100644 5be4a4a 0000000 M file.c\n"
-msgstr ""
+msgstr ":100644 100644 5be4a4a 0000000 M fichier.c\n"
 
 #. type: Plain text
 #: en/diff-format.txt:85 en/git-ls-files.txt:210 en/git-ls-tree.txt:101
@@ -2765,12 +2794,16 @@ msgid ""
 "config[1]).  Using `-z` the filename is output verbatim and the line is "
 "terminated by a NUL byte."
 msgstr ""
+"Sans l'option `-z`, les noms de chemin avec des caractères « inhabituels » "
+"sont cités comme expliqué pour la variable de configuration `core.quotePath` "
+"(voir linkgit:git-config[1]). Lors de l'utilisation de `-z` le fichier est "
+"affiché verbatim et la ligne est terminée par un octet NUL."
 
 #. type: Title -
 #: en/diff-format.txt:87
 #, no-wrap
 msgid "diff format for merges"
-msgstr ""
+msgstr "format diff pour les fusions"
 
 #. type: Plain text
 #: en/diff-format.txt:93
@@ -2779,37 +2812,42 @@ msgid ""
 "or `--cc` option to generate diff output also for merge commits.  The output "
 "differs from the format described above in the following way:"
 msgstr ""
+"\"git-diff-tree\", \"git-diff-files\" et \"git diff --raw\" peuvent prendre "
+"une option `-c` ou `--cc` pour générer une sortie diff pour les commits de "
+"fusion. La sortie diffère du format décrit ci-dessus sur les points "
+"suivants :"
 
 #. type: Plain text
 #: en/diff-format.txt:95
 msgid "there is a colon for each parent"
-msgstr ""
+msgstr "il y a un caractère deux points pour chaque parent"
 
 #. type: Plain text
 #: en/diff-format.txt:96
 msgid "there are more \"src\" modes and \"src\" sha1"
-msgstr ""
+msgstr "il y a plus de modes \"src\" et de sha1 \"src\""
 
 #. type: Plain text
 #: en/diff-format.txt:97
 msgid "status is concatenated status characters for each parent"
 msgstr ""
+"les statut est la concaténation des caractères de statut de chaque parent"
 
 #. type: Plain text
 #: en/diff-format.txt:98
 msgid "no optional \"score\" number"
-msgstr ""
+msgstr "pas de nombre optionnel de \"score\""
 
 #. type: Plain text
 #: en/diff-format.txt:99
 msgid "single path, only for \"dst\""
-msgstr ""
+msgstr "un seul chemin, seulement pour \"dst\""
 
 #. type: delimited block -
 #: en/diff-format.txt:104
 #, no-wrap
 msgid "::100644 100644 100644 fabadb8 cc95eb0 4866510 MM\tdescribe.c\n"
-msgstr ""
+msgstr "::100644 100644 100644 fabadb8 cc95eb0 4866510 MM\tdescription.c\n"
 
 #. type: Plain text
 #: en/diff-format.txt:108
@@ -2817,6 +2855,8 @@ msgid ""
 "Note that 'combined diff' lists only files which were modified from all "
 "parents."
 msgstr ""
+"Notez que le 'diff combiné' ne liste que les fichiers qui ont été modifiés "
+"depuis tous leurs parents."
 
 #. type: Title -
 #: en/diff-format.txt:114
@@ -2832,6 +2872,10 @@ msgid ""
 "options can be combined with other options, such as `-p`, and are meant for "
 "human consumption."
 msgstr ""
+"L'option `--summary` décrit les fichiers nouvellement additionnés, "
+"supprimés, renommés et copiés. L'option `--stat` ajoute un graphe "
+"diffstat(1) à la sortie. Ces options peuvent être combinées avec d'autres "
+"options, telles que `-p` et sont destinées à une consommation humaine."
 
 #. type: Plain text
 #: en/diff-format.txt:125
@@ -2841,19 +2885,24 @@ msgid ""
 "pathnames.  For example, a change that moves `arch/i386/Makefile` to `arch/"
 "x86/Makefile` while modifying 4 lines will be shown like this:"
 msgstr ""
+"Lors de l'affichage d'une modification qui comprend un renommage ou une "
+"copie, la sortie de `--stat` formate de manière compacte les noms de chemins "
+"en combinant les préfixes et suffixes communs des noms de chemins. Par "
+"exemple, une modification qui déplace `arch/i386/Makefile` vers `arch/x86/"
+"Makefile` en modifiant 4 lignes seront affichées comme ceci :"
 
 #. type: delimited block -
 #: en/diff-format.txt:128
 #, no-wrap
 msgid "arch/{i386 => x86}/Makefile    |   4 +--\n"
-msgstr ""
+msgstr "arch/{i386 => x86}/Makefile    |   4 +--\n"
 
 #. type: Plain text
 #: en/diff-format.txt:133
 msgid ""
 "The `--numstat` option gives the diffstat(1) information but is designed for "
 "easier machine consumption.  An entry in `--numstat` output looks like this:"
-msgstr ""
+msgstr "L'option `--numstat` donne l'information diffstat(1) mais est organisée pour un meilleur traitement automatique. Une entrée dans `--numstat` ressemble à ceci :"
 
 #. type: delimited block -
 #: en/diff-format.txt:137
@@ -2862,42 +2911,44 @@ msgid ""
 "1\t2\tREADME\n"
 "3\t1\tarch/{i386 => x86}/Makefile\n"
 msgstr ""
+"1\t2\tREADME\n"
+"3\t1\tarch/{i386 => x86}/Makefile\n"
 
 #. type: Plain text
 #: en/diff-format.txt:140
 msgid "That is, from left to right:"
-msgstr ""
+msgstr "Soit, de gauche à droite :"
 
 #. type: Plain text
 #: en/diff-format.txt:142 en/diff-format.txt:158
 msgid "the number of added lines;"
-msgstr ""
+msgstr "le nombre de lignes ajoutées ;"
 
 #. type: Plain text
 #: en/diff-format.txt:143 en/diff-format.txt:145 en/diff-format.txt:159
 #: en/diff-format.txt:161
 msgid "a tab;"
-msgstr ""
+msgstr "une tabulation ;"
 
 #. type: Plain text
 #: en/diff-format.txt:144 en/diff-format.txt:160
 msgid "the number of deleted lines;"
-msgstr ""
+msgstr "le nombre de lignes supprimées ;"
 
 #. type: Plain text
 #: en/diff-format.txt:146
 msgid "pathname (possibly with rename/copy information);"
-msgstr ""
+msgstr "nom de chemin (avec potentiellement une information de renommage/copie) ;"
 
 #. type: Plain text
 #: en/diff-format.txt:147
 msgid "a newline."
-msgstr ""
+msgstr "une retour à la ligne."
 
 #. type: Plain text
 #: en/diff-format.txt:149
 msgid "When `-z` output option is in effect, the output is formatted this way:"
-msgstr ""
+msgstr "Quand l'option de sortie `-z` est active, la sortie est formatée comme ceci :"
 
 #. type: delimited block -
 #: en/diff-format.txt:153
@@ -2906,31 +2957,33 @@ msgid ""
 "1\t2\tREADME NUL\n"
 "3\t1\tNUL arch/i386/Makefile NUL arch/x86/Makefile NUL\n"
 msgstr ""
+"1\t2\tREADME NUL\n"
+"3\t1\tNUL arch/i386/Makefile NUL arch/x86/Makefile NUL\n"
 
 #. type: Plain text
 #: en/diff-format.txt:156
 msgid "That is:"
-msgstr ""
+msgstr "Soit :"
 
 #. type: Plain text
 #: en/diff-format.txt:162 en/diff-format.txt:164
 msgid "a NUL (only exists if renamed/copied);"
-msgstr ""
+msgstr "un caractère NUL (n'existe que si renommé/copié) ;"
 
 #. type: Plain text
 #: en/diff-format.txt:163
 msgid "pathname in preimage;"
-msgstr ""
+msgstr "le nom de chemin dans preimage ;"
 
 #. type: Plain text
 #: en/diff-format.txt:165
 msgid "pathname in postimage (only exists if renamed/copied);"
-msgstr ""
+msgstr "le nom de chemin dans postimage (n'existe que si renommé/copié) ;"
 
 #. type: Plain text
 #: en/diff-format.txt:166
 msgid "a NUL."
-msgstr ""
+msgstr "un caractère NUL."
 
 #. type: Plain text
 #: en/diff-format.txt:171
@@ -2940,13 +2993,13 @@ msgid ""
 "path record or a rename/copy record without reading ahead.  After reading "
 "added and deleted lines, reading up to `NUL` would yield the pathname, but "
 "if that is `NUL`, the record will show two paths."
-msgstr ""
+msgstr "Le caractère `NUL` supplémentaire avant le chemin de préimage dans le cas de renommage permet aux scripts qui lisent la sortie de détecter si l'enregistrement actuellement lu est un enregistrement de chemin unique ou un enregistrement de renommage/copie sans avoir besoin de lire plus loin. Après lecture des lignes ajoutées et supprimées, une lecture jusqu'au caractère `NUL` fournit le nom de chemin, mais si c'est `NUL`, l'enregistrement fournit deux chemins."
 
 #. type: Title -
 #: en/diff-generate-patch.txt:2
 #, no-wrap
 msgid "Generating patches with -p"
-msgstr ""
+msgstr "Génération de rustines avec -p"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:10
@@ -2957,25 +3010,25 @@ msgid ""
 "instead they produce a patch file.  You can customize the creation of such "
 "patches via the `GIT_EXTERNAL_DIFF` and the `GIT_DIFF_OPTS` environment "
 "variables."
-msgstr ""
+msgstr "Quand \"git-diff-index\", \"git-diff-tree\", ou \"git-diff-files\" sont lancées avec l'option `-p`, \"git diff\" sans l'option `--raw`, ou \"git log\" avec l'option \"-p\", elles ne produisent pas la sortie décrite ci-dessus ; au lieu de cela, elles produisent un fichier rustine. Vous pouvez personnaliser la création de telles rustines via les variables d'environnement `GIT_EXTERNAL_DIFF` et `GIT_DIFF_OPTS`."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:13
 msgid ""
 "What the -p option produces is slightly different from the traditional diff "
 "format:"
-msgstr ""
+msgstr "L'option produit quelque chose légèrement différent du format diff traditionnel :"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:15
 msgid "It is preceded with a \"git diff\" header that looks like this:"
-msgstr ""
+msgstr "Il est précédé d'un entête \"git diff\" qui ressemble à ceci :"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:17
 #, no-wrap
 msgid "diff --git a/file1 b/file2\n"
-msgstr ""
+msgstr "diff --git a/fichier1 b/fichier2\n"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:21
@@ -2983,7 +3036,7 @@ msgid ""
 "The `a/` and `b/` filenames are the same unless rename/copy is involved.  "
 "Especially, even for a creation or a deletion, `/dev/null` is _not_ used in "
 "place of the `a/` or `b/` filenames."
-msgstr ""
+msgstr "les noms de fichiers sous `a/` et `b/` sont identiques à moins qu'il y ait eu un renommage ou une copie, même pour un création ou une suppression, `/dev/null` _n'est pas_ utilisé à la place des noms de fichier `a/` ou`b/`."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:25
@@ -2991,12 +3044,12 @@ msgid ""
 "When rename/copy is involved, `file1` and `file2` show the name of the "
 "source file of the rename/copy and the name of the file that rename/copy "
 "produces, respectively."
-msgstr ""
+msgstr "Quand un renommage ou un copie est décrit, `fichier1` et `fichier2` indiquent les noms du fichier source et du fichier cible, respectivement."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:27
 msgid "It is followed by one or more extended header lines:"
-msgstr ""
+msgstr "Suivent un ligne ou plus d'entête étendu :"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:39
@@ -3014,19 +3067,30 @@ msgid ""
 "dissimilarity index <number>\n"
 "index <hash>..<hash> <mode>\n"
 msgstr ""
+"old mode <mode>\n"
+"new mode <mode>\n"
+"deleted file mode <mode>\n"
+"new file mode <mode>\n"
+"copy from <chemin>\n"
+"copy to <chemin>\n"
+"rename from <chemin>\n"
+"rename to <chemin>\n"
+"similarity index <nombre>\n"
+"dissimilarity index <nombre>\n"
+"index <empreinte>..<empreinte> <mode>\n"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:42
 msgid ""
 "File modes are printed as 6-digit octal numbers including the file type and "
 "file permission bits."
-msgstr ""
+msgstr "Les modes de fichier sont affichés comme des nombres à 6 chiffres en octal incluant le type de fichier et les bits de permission."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:44
 msgid ""
 "Path names in extended headers do not include the `a/` and `b/` prefixes."
-msgstr ""
+msgstr "Les noms de chemin dans les entêtes étendus n'incluent pas les préfixes `a/` et `b/`."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:51
@@ -3036,7 +3100,7 @@ msgid ""
 "down integer, followed by a percent sign.  The similarity index value of "
 "100% is thus reserved for two equal files, while 100% dissimilarity means "
 "that no line from the old file made it into the new one."
-msgstr ""
+msgstr "L'index de similarité et le pourcentage de lignes inchangées et l'index de dissimilarité est le pourcentage de lignes changées. Il est arrondi à l'entier inférieur, suivi du signe pourcent. Une valeur d'index de similarité à 100 % correspond donc à deux fichiers identiques, tandis qu'un index de dissimilarité de 100 % signifie qu'aucune ligne de l'ancien fichier ne se retrouve dans le nouveau fichier."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:55
@@ -3044,7 +3108,7 @@ msgid ""
 "The index line includes the SHA-1 checksum before and after the change.  The "
 "<mode> is included if the file mode does not change; otherwise, separate "
 "lines indicate the old and the new mode."
-msgstr ""
+msgstr "La ligne d'index inclut l'empreinte SHA-1 avant et après la modification. Le <mode> est inclus si le mode du fichier n'est pas modifié ; sinon, des lignes séparées indiquent l'ancien et le nouveau mode."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:59
@@ -3063,7 +3127,7 @@ msgid ""
 "all the `file2` files refer to files after the commit.  It is incorrect to "
 "apply each change to each file sequentially.  For example, this patch will "
 "swap a and b:"
-msgstr ""
+msgstr "Tous les fichiers `fichier1` de la sortie font référence à des fichiers avant la validation, et tous les fichiers `fichier2` font référence aux fichiers après la validation. Il est incorrect d'appliquer chaque modification à chaque fichier séquentiellement. Par exemple, cette rustine échange a et b :"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:71
@@ -3076,6 +3140,12 @@ msgid ""
 "rename from b\n"
 "rename to a\n"
 msgstr ""
+"diff --git a/a b/b\n"
+"rename from a\n"
+"rename to b\n"
+"diff --git a/b b/a\n"
+"rename from b\n"
+"rename to a\n"
 
 #. type: Title -
 #: en/diff-generate-patch.txt:74
@@ -3091,12 +3161,12 @@ msgid ""
 "showing merges with linkgit:git-diff[1] or linkgit:git-show[1]. Note also "
 "that you can give the `-m` option to any of these commands to force "
 "generation of diffs with individual parents of a merge."
-msgstr ""
+msgstr "Toute commande générant un diff accepte l'option `-c` ou `-cc` pour produire un 'diff combiné' lors de l'affichage d'une fusion. C'est le format par défaut pour afficher les fusions avec linkgit:git-diff[1] ou linkgit:git-show[1]. Notez aussi que vous pouvez ajouter l'option `-m` à toutes ces commandes pour forcer la génération des diffs avec un parent individuel d'une fusion."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:84
 msgid "A 'combined diff' format looks like this:"
-msgstr ""
+msgstr "Un format de 'diff combiné' ressemble à ceci :"
 
 #. type: delimited block -
 #: en/diff-generate-patch.txt:93
@@ -3110,6 +3180,13 @@ msgid ""
 "\treturn (a_date > b_date) ? -1 : (a_date == b_date) ? 0 : 1;\n"
 "  }\n"
 msgstr ""
+"diff --combined describe.c\n"
+"index fabadb8,cc95eb0..4866510\n"
+"--- a/describe.c\n"
+"+++ b/describe.c\n"
+"@@@ -98,20 -98,12 +98,20 @@@\n"
+"\treturn (a_date > b_date) ? -1 : (a_date == b_date) ? 0 : 1;\n"
+"  }\n"
 
 #. type: delimited block -
 #: en/diff-generate-patch.txt:103
@@ -3125,6 +3202,15 @@ msgid ""
 "\tstatic int initialized = 0;\n"
 "\tstruct commit_name *n;\n"
 msgstr ""
+"- static void describe(char *arg)\n"
+" -static void describe(struct commit *cmit, int last_one)\n"
+"++static void describe(char *arg, int last_one)\n"
+"  {\n"
+" +\tunsigned char sha1[20];\n"
+" +\tstruct commit *cmit;\n"
+"\tstruct commit_list *list;\n"
+"\tstatic int initialized = 0;\n"
+"\tstruct commit_name *n;\n"
 
 #. type: delimited block -
 #: en/diff-generate-patch.txt:113
@@ -3140,37 +3226,46 @@ msgid ""
 "\t\tinitialized = 1;\n"
 "\t\tfor_each_ref(get_name);\n"
 msgstr ""
+" +\tif (get_sha1(arg, sha1) < 0)\n"
+" +\t\tusage(describe_usage);\n"
+" +\tcmit = lookup_commit_reference(sha1);\n"
+" +\tif (!cmit)\n"
+" +\t\tusage(describe_usage);\n"
+" +\n"
+"\tif (!initialized) {\n"
+"\t\tinitialized = 1;\n"
+"\t\tfor_each_ref(get_name);\n"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:117
 msgid ""
 "It is preceded with a \"git diff\" header, that looks like this (when `-c` "
 "option is used):"
-msgstr ""
+msgstr "Il est précédé d'un entête \"git diff\", qui ressemble à ceci (quand l'option `-c` est utilisée) :"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:119
 #, no-wrap
 msgid "diff --combined file\n"
-msgstr ""
+msgstr "diff --combined file\n"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:121
 msgid "or like this (when `--cc` option is used):"
-msgstr ""
+msgstr "ou à ceci (lorsque l'option `--cc` est utilisée) :"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:123
 #, no-wrap
 msgid "       diff --cc file\n"
-msgstr ""
+msgstr "       diff --cc file\n"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:126
 msgid ""
 "It is followed by one or more extended header lines (this example shows a "
 "merge with two parents):"
-msgstr ""
+msgstr "Il est suivi par une ligne d'entête étendu ou plus (cet exemple montre une fusion avec deux parents) :"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:131
@@ -3181,6 +3276,10 @@ msgid ""
 "new file mode <mode>\n"
 "deleted file mode <mode>,<mode>\n"
 msgstr ""
+"index <empreinte>,<empreinte>..<empreinte>\n"
+"mode <mode>,<mode>..<mode>\n"
+"new file mode <mode>\n"
+"deleted file mode <mode>,<mode>\n"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:137
@@ -3189,29 +3288,29 @@ msgid ""
 "<mode> is different from the rest. Extended headers with information about "
 "detected contents movement (renames and copying detection) are designed to "
 "work with diff of two <tree-ish> and are not used by combined diff format."
-msgstr ""
+msgstr "La ligne `mode <mode>,<mode>..<mode>` n'apparaît que si au moins un des modes est différent du reste. Les entêtes étendus avec l'information à propos des déplacements détectés de contenu (détection de renommages et de copies) sont conçus pour fonctionner avec le diff de deux <arbre-esques> et ne sont pas utilisés dans le format de diff combiné."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:139
 msgid "It is followed by two-line from-file/to-file header"
-msgstr ""
+msgstr "Il est suivi par un entête de deux lignes fichier-source/fichier-cible"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:141
 msgid "a/file"
-msgstr ""
+msgstr "a/fichier"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:142
 msgid "b/file"
-msgstr ""
+msgstr "b/fichier"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:146
 msgid ""
 "Similar to two-line header for traditional 'unified' diff format, `/dev/"
 "null` is used to signal created or deleted files."
-msgstr ""
+msgstr "Similaire à l'entête à deux lignes pour le format diff unifié traditionnel, `/dev/null` est utilisé pour indiquer un fichier créé ou supprimé."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:152
@@ -3220,20 +3319,20 @@ msgid ""
 "it to `patch -p1`. Combined diff format was created for review of merge "
 "commit changes, and was not meant for apply. The change is similar to the "
 "change in the extended 'index' header:"
-msgstr ""
+msgstr "Le format d'entête de section est modifié pour empêcher l'utilisation accidentelle avec `patch -p1`. Le format de diff combiné a été créé pour les revues des modifications de commits de fusions, et n'était pas destiné à être appliqué. La modification est similaire à la modification dans l'entête étendu d'index :"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:154
 #, no-wrap
 msgid "@@@ <from-file-range> <from-file-range> <to-file-range> @@@\n"
-msgstr ""
+msgstr "@@@ <intervalle-de-fichier-source> <intervalle-de-fichier-source> <intervalle-de-fichier-cible> @@@\n"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:157
 msgid ""
 "There are (number of parents + 1) `@` characters in the chunk header for "
 "combined diff format."
-msgstr ""
+msgstr "Il y a (nombre de parents + 1) caractères `@` dans l'entête de section pour le format de diff combiné."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:166
@@ -3245,7 +3344,7 @@ msgid ""
 "file X, and shows how X differs from each of fileN.  One column for each of "
 "fileN is prepended to the output line to note how X's line is different from "
 "it."
-msgstr ""
+msgstr "À la différence du format diff 'unifié' traditionnel qui montre deux fichiers A et B avec une seule colonne qui a un préfixe `-` (moins -- apparaît dans A mais supprimé dans B), `+` (plus -- manquant dans A mais ajouté dans B), ou `\" \"` (espace -- non modifié), ce format compare un fichier ou plus fichier1, fichier2,… avec un fichier X, et affiche comment X diffère de chaque fichierN. Une colonne pour chaque fichierN est insérée dans la sortie pour montrer comment la ligne de X est différente de la ligne correspondante de celui-ci."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:172
@@ -3254,7 +3353,7 @@ msgid ""
 "does not appear in the result.  A `+` character in the column N means that "
 "the line appears in the result, and fileN does not have that line (in other "
 "words, the line was added, from the point of view of that parent)."
-msgstr ""
+msgstr "Un caractère `-` dans la colonne N signifie que la ligne apparaît dans fichierN mais pas dans le résultat. Un caractère `+` dans la colonne N signifie que la ligne apparaît dans le résultat, et fichierN ne l'a pas (en d'autres termes, la ligne a été ajoutée du point de vue de ce parent)."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:178
@@ -3264,7 +3363,7 @@ msgid ""
 "one line that was added does not appear in either file1 or file2).  Also "
 "eight other lines are the same from file1 but do not appear in file2 (hence "
 "prefixed with `+`)."
-msgstr ""
+msgstr "Dans l'exemple de sortie ci-dessus, la signature de la fonction a été changée depuis les deux fichiers (d'où les deux suppressions `-` depuis fichier1 et fichier2, plus `++` pour signifier qu'une ligne qui a été ajoutée n'apparaît ni dans fichier1 ni dans fichier2). De plus, huit autres lignes sont identiques depuis fichier1 mais n'apparaissent pas dans fichier2 (et sont donc préfixées par `+`)."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:184
@@ -3274,7 +3373,7 @@ msgid ""
 "`git diff-files -c`, it compares the two unresolved merge parents with the "
 "working tree file (i.e. file1 is stage 2 aka \"our version\", file2 is stage "
 "3 aka \"their version\")."
-msgstr ""
+msgstr "Quand affiché par `git diff-tree -c`, les parents du commit de fusion sont comparés avec le résultat de fusion (c-à-d fichier1..fichierN sont les parents) ; Quand affiché par `git diff-files -c`, les deux parents de fusion non résolue sont comparés avec le fichier dans l'arbre de travail (c-à-d fichier1 est stage 2, « notre version », fichier2 est stage 3, « leur version »)."
 
 #. type: Labeled list
 #: en/diff-options.txt:17 en/git-rebase.txt:322 en/merge-options.txt:74
@@ -3336,7 +3435,9 @@ msgstr "--no-patch"
 msgid ""
 "Suppress diff output. Useful for commands like `git show` that show the "
 "patch by default, or to cancel the effect of `--patch`."
-msgstr "Supprimer la sortie diff. Utile pour les commandes telles que `git show` qui affichent la rustine par défaut, ou pour supprimer l'effet de `--patch`."
+msgstr ""
+"Supprimer la sortie diff. Utile pour les commandes telles que `git show` qui "
+"affichent la rustine par défaut, ou pour supprimer l'effet de `--patch`."
 
 #. type: Labeled list
 #: en/diff-options.txt:36
@@ -3542,9 +3643,7 @@ msgstr "`histogram`"
 msgid ""
 "This algorithm extends the patience algorithm to \"support low-occurrence "
 "common elements\"."
-msgstr ""
-"Cet algorithme étend l'algorithme patience pour « supporter les éléments "
-"communs de faible fréquence ». "
+msgstr "Cet algorithme étend l'algorithme patience pour « supporter les éléments communs de faible fréquence »."
 
 #. type: Plain text
 #: en/diff-options.txt:112
@@ -3668,7 +3767,13 @@ msgid ""
 "comma separated list of parameters.  The defaults are controlled by the "
 "`diff.dirstat` configuration variable (see linkgit:git-config[1]).  The "
 "following parameters are available:"
-msgstr "Afficher la distribution de la quantité relative de modifications pour chaque sous-répertoire. Le comportement de `--dirstat` peut être personnalisé en lui passant une liste de paramètres séparés par des virgules. Les valeurs par défaut sont contrôlées par la variable de configuration `diff.dirstat` (voir linkgit:git-config[1]). Les paramètres suivants sont disponibles :"
+msgstr ""
+"Afficher la distribution de la quantité relative de modifications pour "
+"chaque sous-répertoire. Le comportement de `--dirstat` peut être "
+"personnalisé en lui passant une liste de paramètres séparés par des "
+"virgules. Les valeurs par défaut sont contrôlées par la variable de "
+"configuration `diff.dirstat` (voir linkgit:git-config[1]). Les paramètres "
+"suivants sont disponibles :"
 
 #. type: Labeled list
 #: en/diff-options.txt:160
@@ -3708,7 +3813,15 @@ msgid ""
 "does count rearranged lines within a file as much as other changes. The "
 "resulting output is consistent with what you get from the other `--*stat` "
 "options."
-msgstr "Calculer les valeurs dirstat en faisant l'analyse diff normal par ligne, et en additionnant les totaux de lignes ajoutées/supprimées. (Pour les fichiers binaires, compter plutôt les sections de 64 octets, puisque les fichiers binaires n'ont pas de concept de ligne). C'est un comportement de `--dirstat` plus onéreux que le comportement `changes`, mais il ne compte pas les lignes réarrangées dans un fichier autant que les autres modifications. La sortie résultante est consistante avec ce que vous obtiendriez avec d'autres options `--*stat`."
+msgstr ""
+"Calculer les valeurs dirstat en faisant l'analyse diff normal par ligne, et "
+"en additionnant les totaux de lignes ajoutées/supprimées. (Pour les fichiers "
+"binaires, compter plutôt les sections de 64 octets, puisque les fichiers "
+"binaires n'ont pas de concept de ligne). C'est un comportement de `--"
+"dirstat` plus onéreux que le comportement `changes`, mais il ne compte pas "
+"les lignes réarrangées dans un fichier autant que les autres modifications. "
+"La sortie résultante est consistante avec ce que vous obtiendriez avec "
+"d'autres options `--*stat`."
 
 #. type: Labeled list
 #: en/diff-options.txt:174
@@ -3723,7 +3836,11 @@ msgid ""
 "changed file counts equally in the dirstat analysis. This is the "
 "computationally cheapest `--dirstat` behavior, since it does not have to "
 "look at the file contents at all."
-msgstr "Calculer les valeurs dirstat en comptant le nombre de fichiers changés. Chaque fichier modifié compte également dans l'analyse dirstat. C'est le comportement `--dirstat` le moins cher en termes de calcul, puisqu'il n'a pas du tout besoin d'analyser le contenu du fichier."
+msgstr ""
+"Calculer les valeurs dirstat en comptant le nombre de fichiers changés. "
+"Chaque fichier modifié compte également dans l'analyse dirstat. C'est le "
+"comportement `--dirstat` le moins cher en termes de calcul, puisqu'il n'a "
+"pas du tout besoin d'analyser le contenu du fichier."
 
 #. type: Labeled list
 #: en/diff-options.txt:179
@@ -3768,7 +3885,11 @@ msgid ""
 "with less than 10% of the total amount of changed files, and accumulating "
 "child directory counts in the parent directories: `--dirstat=files,10,"
 "cumulative`."
-msgstr "Exemple : ce qui suit va compter les fichiers modifiés, tout en ignorant les répertoires qui contiennent moins de 10 % de la quantité totale de fichiers modifiés et en accumulant les totaux des répertoires enfants dans les répertoires parents : `--dirstat=files,10,cumulative`."
+msgstr ""
+"Exemple : ce qui suit va compter les fichiers modifiés, tout en ignorant les "
+"répertoires qui contiennent moins de 10 % de la quantité totale de fichiers "
+"modifiés et en accumulant les totaux des répertoires enfants dans les "
+"répertoires parents : `--dirstat=files,10,cumulative`."
 
 #. type: Labeled list
 #: en/diff-options.txt:195 en/git-apply.txt:52 en/git-shortlog.txt:35
@@ -3866,7 +3987,10 @@ msgstr "--name-status"
 msgid ""
 "Show only names and status of changed files. See the description of the `--"
 "diff-filter` option on what the status letters mean."
-msgstr "N'afficher que les noms et statuts des fichiers modifiés. Voir la description de loption `--diff-filter` pour la signification des lettres de statut."
+msgstr ""
+"N'afficher que les noms et statuts des fichiers modifiés. Voir la "
+"description de loption `--diff-filter` pour la signification des lettres de "
+"statut."
 
 #. type: Labeled list
 #: en/diff-options.txt:229
@@ -3886,7 +4010,17 @@ msgid ""
 "used.  This format shows an inline diff of the changes in the submodule "
 "contents between the commit range.  Defaults to `diff.submodule` or the "
 "'short' format if the config option is unset."
-msgstr "Spécifier comment les différences dans les sous-modules sont affichées. Spécifier `--submodule=short` utilise le format 'short' « court ». Ce format n'affiche le nom des commits du début et de la fin de la plage. Quand `--submodule` or `--submodule=log` est spécifié, le format « log » (journal) est utilisé. Ce format liste les commits dans la plage comme le fait `summary` de linkgit:git-submodule[1]. Quand `--submodule=diff` est spécifié, le format 'diff' est utilisé. Ce format affiche une diff en ligne des modifications dans le sous-module pour la plage de commits. Par défaut `diff.submodule` ou le format 'short' si l'option de configuration n'est pas renseignée."
+msgstr ""
+"Spécifier comment les différences dans les sous-modules sont affichées. "
+"Spécifier `--submodule=short` utilise le format 'short' « court ». Ce format "
+"n'affiche le nom des commits du début et de la fin de la plage. Quand `--"
+"submodule` or `--submodule=log` est spécifié, le format « log » (journal) "
+"est utilisé. Ce format liste les commits dans la plage comme le fait "
+"`summary` de linkgit:git-submodule[1]. Quand `--submodule=diff` est "
+"spécifié, le format 'diff' est utilisé. Ce format affiche une diff en ligne "
+"des modifications dans le sous-module pour la plage de commits. Par défaut "
+"`diff.submodule` ou le format 'short' si l'option de configuration n'est pas "
+"renseignée."
 
 #. type: Labeled list
 #: en/diff-options.txt:241 en/git-branch.txt:127 en/git-for-each-ref.txt:60
@@ -4082,7 +4216,10 @@ msgstr "--no-color-moved"
 msgid ""
 "Turn off move detection. This can be used to override configuration "
 "settings. It is the same as `--color-moved=no`."
-msgstr "Désactiver la détection de déplacement. Ce peut être utilisé pour outrepasser les réglages de configuration. C'est identique comme `--color-moved=no`."
+msgstr ""
+"Désactiver la détection de déplacement. Ce peut être utilisé pour "
+"outrepasser les réglages de configuration. C'est identique comme `--color-"
+"moved=no`."
 
 #. type: Labeled list
 #: en/diff-options.txt:300
@@ -4204,7 +4341,11 @@ msgid ""
 "Show a word diff, using the <mode> to delimit changed words.  By default, "
 "words are delimited by whitespace; see `--word-diff-regex` below.  The "
 "<mode> defaults to 'plain', and must be one of:"
-msgstr "Afficher un diff par mot, en utilisant le <mode> pour délimiter les mots modififiés. Par défaut, les mots sont délimités par des espaces ; voir `--word-diff-regex` ci-dessous. Le <mode> vaut par défaut 'plain', et peut valoir :"
+msgstr ""
+"Afficher un diff par mot, en utilisant le <mode> pour délimiter les mots "
+"modififiés. Par défaut, les mots sont délimités par des espaces ; voir `--"
+"word-diff-regex` ci-dessous. Le <mode> vaut par défaut 'plain', et peut "
+"valoir :"
 
 #. type: Plain text
 #: en/diff-options.txt:341
@@ -4218,7 +4359,10 @@ msgstr ""
 msgid ""
 "Show words as `[-removed-]` and `{+added+}`.  Makes no attempts to escape "
 "the delimiters if they appear in the input, so the output may be ambiguous."
-msgstr "Afficher les mots comme `[-supprimé-]` et `{+ajouté+}`. Ne pas tenter d'échapper ces délimiteurs s'ils apparaissent dans l'entrée, donc la sortie peut être ambigüe."
+msgstr ""
+"Afficher les mots comme `[-supprimé-]` et `{+ajouté+}`. Ne pas tenter "
+"d'échapper ces délimiteurs s'ils apparaissent dans l'entrée, donc la sortie "
+"peut être ambigüe."
 
 #. type: Labeled list
 #: en/diff-options.txt:345
@@ -4344,7 +4488,9 @@ msgstr "--no-renames"
 msgid ""
 "Turn off rename detection, even when the configuration file gives the "
 "default to do so."
-msgstr "Désactiver la détection de renommage, même si le fichier de configuration indique de le faire par défaut."
+msgstr ""
+"Désactiver la détection de renommage, même si le fichier de configuration "
+"indique de le faire par défaut."
 
 #. type: Labeled list
 #: en/diff-options.txt:390 en/git-apply.txt:58
@@ -4444,7 +4590,13 @@ msgid ""
 "is independent of the `--full-index` option above, which controls the diff-"
 "patch output format.  Non default number of digits can be specified with `--"
 "abbrev=<n>`."
-msgstr "Au lieu de montrer le nom de l'objet avec les 40 caractères hexadécimaux dans le format de diff brut et les lignes d'entête de l'arbre de diff, ne montrer que des préfixes partiels. C'est indépendant de l'option `--full-index` ci-dessus, qui contrôle le format de sortie de la rustine diff. Un nombre de chiffres différent du défaut peut être spécifié avec `--abbrev=<n>`."
+msgstr ""
+"Au lieu de montrer le nom de l'objet avec les 40 caractères hexadécimaux "
+"dans le format de diff brut et les lignes d'entête de l'arbre de diff, ne "
+"montrer que des préfixes partiels. C'est indépendant de l'option `--full-"
+"index` ci-dessus, qui contrôle le format de sortie de la rustine diff. Un "
+"nombre de chiffres différent du défaut peut être spécifié avec `--"
+"abbrev=<n>`."
 
 #. type: Labeled list
 #: en/diff-options.txt:429
@@ -4478,7 +4630,17 @@ msgid ""
 "specifies that less than 30% of the original should remain in the result for "
 "Git to consider it a total rewrite (i.e. otherwise the resulting patch will "
 "be a series of deletion and insertion mixed together with context lines)."
-msgstr "Ceci affecte la manière dont une modification qui correspond à une réécriture complète d'un fichier apparaît comme une série de suppressions et d'insertions entrelacées avec quelques lignes qui tombent comme un contexte, mais comme une seule suppression de la totalité ancienne suivie d'une insertion unique de la totalité nouvelle, et le nombre `m` contrôle cet aspect de l'option -B (par défaut 60 %). `-B/70%` spécifie que moins de 30 % du contenu original devrait rester dans le résultat pour le considérer comme une réécriture complète (c-à-d sinon, la rustine résultante sera une série de suppressions et d'insertions entrelacées avec quelques lignes de contexte)."
+msgstr ""
+"Ceci affecte la manière dont une modification qui correspond à une "
+"réécriture complète d'un fichier apparaît comme une série de suppressions et "
+"d'insertions entrelacées avec quelques lignes qui tombent comme un contexte, "
+"mais comme une seule suppression de la totalité ancienne suivie d'une "
+"insertion unique de la totalité nouvelle, et le nombre `m` contrôle cet "
+"aspect de l'option -B (par défaut 60 %). `-B/70%` spécifie que moins de 30 % "
+"du contenu original devrait rester dans le résultat pour le considérer comme "
+"une réécriture complète (c-à-d sinon, la rustine résultante sera une série "
+"de suppressions et d'insertions entrelacées avec quelques lignes de "
+"contexte)."
 
 #. type: Plain text
 #: en/diff-options.txt:451
@@ -4486,9 +4648,9 @@ msgid ""
 "When used with -M, a totally-rewritten file is also considered as the source "
 "of a rename (usually -M only considers a file that disappeared as the source "
 "of a rename), and the number `n` controls this aspect of the -B option "
-"(defaults to 50%). `-B20%` specifies that changes with addition and deletion "
-"compared to 20% or more of the file's size are eligible for being picked up "
-"as a possible source of a rename to another file."
+"(defaults to 50%). `-B20%` specifies that a change with addition and "
+"deletion compared to 20% or more of the file's size are eligible for being "
+"picked up as a possible source of a rename to another file."
 msgstr ""
 "Utilisé avec -M, un fichier complètement réécrit est aussi considéré comme "
 "la source d'un renommage (habituellement -M ne considère que les fichiers "
@@ -4616,7 +4778,14 @@ msgid ""
 "just concentrate on reviewing the text after the change. In addition, the "
 "output obviously lacks enough information to apply such a patch in reverse, "
 "even manually, hence the name of the option."
-msgstr "Omettre la pré-image pour des suppressions, c-à-d n'afficher que l'entête mais pas la diff entre la pré-image et `/dev/null`. La rustine résultante n'est pas destinée à être appliquée avec `patch` ou `git apply`  ; C'est seulement pour les personnes qui veulent juste se concentrer sur une revue des modifications. De plus, la sortie manque clairement d'assez d'information pour appliquer la rustine en inverse, même manuellement, d'où le nom de l'option."
+msgstr ""
+"Omettre la pré-image pour des suppressions, c-à-d n'afficher que l'entête "
+"mais pas la diff entre la pré-image et `/dev/null`. La rustine résultante "
+"n'est pas destinée à être appliquée avec `patch` ou `git apply`  ; C'est "
+"seulement pour les personnes qui veulent juste se concentrer sur une revue "
+"des modifications. De plus, la sortie manque clairement d'assez "
+"d'information pour appliquer la rustine en inverse, même manuellement, d'où "
+"le nom de l'option."
 
 #. type: Plain text
 #: en/diff-options.txt:498
@@ -4640,7 +4809,11 @@ msgid ""
 "number of potential rename/copy targets.  This option prevents rename/copy "
 "detection from running if the number of rename/copy targets exceeds the "
 "specified number."
-msgstr "Les options `-M` et `-C` nécessitent un temps de traitement en O(n²) où n est le nombre de cibles potentielles renommage/copie. Cette option empêche l'utilisation de la détection de renommage/copie si le nombre de cibles de renommage/copie excède le nombre indiqué."
+msgstr ""
+"Les options `-M` et `-C` nécessitent un temps de traitement en O(n²) où n "
+"est le nombre de cibles potentielles renommage/copie. Cette option empêche "
+"l'utilisation de la détection de renommage/copie si le nombre de cibles de "
+"renommage/copie excède le nombre indiqué."
 
 #. type: Labeled list
 #: en/diff-options.txt:507
@@ -4659,7 +4832,16 @@ msgid ""
 "the combination, all paths are selected if there is any file that matches "
 "other criteria in the comparison; if there is no file that matches other "
 "criteria, nothing is selected."
-msgstr "Sélectionner seulement les fichiers qui sont Ajoutés (`A`), Copiés (`C`), supprimés (Deleted `D`), Modifiés (`M`), Renommés (`R`), ont eu un changement de Type (`T`) (c-à-d fichier normal, lien symbolique, sous-module …), sont non fusionnés (Unmerged `U`), sont inconnus (Unknown `X`) ou ont eu leur appairage cassé (Broken `B`). Toute combinaison de caractères de filtre (incluant aucun) peut être utilisée). Quand `*` (Tout-ou-rien) est ajouté à la combinaison, tous les chemins sont sélectionnés s'il y a des fichiers qui correspondent aux autres critères dans la comparaison ; s'il n'y a aucun fichier qui correspond aux autres critères, rien n'est sélectionné."
+msgstr ""
+"Sélectionner seulement les fichiers qui sont Ajoutés (`A`), Copiés (`C`), "
+"supprimés (Deleted `D`), Modifiés (`M`), Renommés (`R`), ont eu un "
+"changement de Type (`T`) (c-à-d fichier normal, lien symbolique, sous-module "
+"…), sont non fusionnés (Unmerged `U`), sont inconnus (Unknown `X`) ou ont eu "
+"leur appairage cassé (Broken `B`). Toute combinaison de caractères de filtre "
+"(incluant aucun) peut être utilisée). Quand `*` (Tout-ou-rien) est ajouté à "
+"la combinaison, tous les chemins sont sélectionnés s'il y a des fichiers qui "
+"correspondent aux autres critères dans la comparaison ; s'il n'y a aucun "
+"fichier qui correspond aux autres critères, rien n'est sélectionné."
 
 #. type: Plain text
 #: en/diff-options.txt:521
@@ -4823,7 +5005,10 @@ msgstr "--pickaxe-all"
 msgid ""
 "When `-S` or `-G` finds a change, show all the changes in that changeset, "
 "not just the files that contain the change in <string>."
-msgstr "Quand `-S` ou `-G` trouvent une modification, afficher toutes les modifications dans l'ensemble de modifications, pas seulement les fichiers qui contiennent la modification dans <chaîne>."
+msgstr ""
+"Quand `-S` ou `-G` trouvent une modification, afficher toutes les "
+"modifications dans l'ensemble de modifications, pas seulement les fichiers "
+"qui contiennent la modification dans <chaîne>."
 
 #. type: Labeled list
 #: en/diff-options.txt:579
@@ -4868,16 +5053,7 @@ msgid ""
 "pattern at the end of the file.  If multiple pathnames have the same rank "
 "(they match the same pattern but no earlier patterns), their output order "
 "relative to each other is the normal order."
-msgstr ""
-"L'ordre en sortie est déterminé par l'ordre des motifs glob dans <fichier-d-"
-"ordre>. Tous les fichiers dont le nom de chemin correspond au premier motif "
-"sont affichés en premier, tous les fichiers dont le nom de chemin correspond "
-"au second motif (mais pas au premier) sont affichés ensuite, et ainsi de "
-"suite. Tous les fichiers dont les noms de chemin qui ne correspondent à "
-"aucun motif sont affichés en dernier, comme s'il y avait un motif ramasse-"
-"tout à la fin du fichier. Si de multiples noms de chemin ont le même rang "
-"(ils correspondent avec le même motif mais pas de motifs antérieurs), leur "
-"ordre relatif d'affichage est l'ordre normal. "
+msgstr "L'ordre en sortie est déterminé par l'ordre des motifs glob dans <fichier-d-ordre>. Tous les fichiers dont le nom de chemin correspond au premier motif sont affichés en premier, tous les fichiers dont le nom de chemin correspond au second motif (mais pas au premier) sont affichés ensuite, et ainsi de suite. Tous les fichiers dont les noms de chemin qui ne correspondent à aucun motif sont affichés en dernier, comme s'il y avait un motif ramasse-tout à la fin du fichier. Si de multiples noms de chemin ont le même rang (ils correspondent avec le même motif mais pas de motifs antérieurs), leur ordre relatif d'affichage est l'ordre normal."
 
 #. type: Plain text
 #: en/diff-options.txt:604
@@ -5123,11 +5299,7 @@ msgid ""
 "Allow an external diff helper to be executed. If you set an external diff "
 "driver with linkgit:gitattributes[5], you need to use this option with "
 "linkgit:git-log[1] and friends."
-msgstr ""
-"Permettre l'exécution d'un assistant externe de différence. Si vous "
-"positionnez un pilote externe de différence avec linkgit:gitattributes[5], "
-"vous avez besoin d'utiliser cette option avec linkgit:git-log[1] et "
-"compagnie. "
+msgstr "Permettre l'exécution d'un assistant externe de différence. Si vous positionnez un pilote externe de différence avec linkgit:gitattributes[5], vous avez besoin d'utiliser cette option avec linkgit:git-log[1] et compagnie."
 
 #. type: Labeled list
 #: en/diff-options.txt:688
@@ -5192,7 +5364,21 @@ msgid ""
 "ignores all changes to the work tree of submodules, only changes to the "
 "commits stored in the superproject are shown (this was the behavior until "
 "1.7.0). Using \"all\" hides all changes to submodules."
-msgstr "Ignorer les modifications à des sous-modules lors de la génération du diff. <quand> peut valoir \"none\" (aucun), \"untracked\" (non-suivi), \"dirty\" (sale) ou \"all\" (tout) qui est la valeur par défaut. L'utilisation de \"none\" va considérer comme modifiés les sous-modules quand ils contiennent soit des fichiers non-suivis ou modifiés, ou si sa HEAD diffère du commit enregistré dans le super-projet, et peut être utilisé pour passer outre tout réglage de l'option 'ignore' dans linkgit:git-config[1] ou linkgit:gitmodules[5]. Quand \"untracked\" est utilisé, les sous-modules ne sont pas considérés sales quand ils ne contiennent que du contenu non suivi (mais ils sont quand même scannés pour trouver du contenu modifié). L'utilisation de \"dirty\" ignore toutes les modifications à l'arbre de travail des sous-modules, seuls les modifications aux commits stockés dans le super-projet sont affichées (c'était le comportement jusqu'à 1.7.0). La valeur \"all\" cache toutes les modifications des sous-modules."
+msgstr ""
+"Ignorer les modifications à des sous-modules lors de la génération du diff. "
+"<quand> peut valoir \"none\" (aucun), \"untracked\" (non-suivi), \"dirty"
+"\" (sale) ou \"all\" (tout) qui est la valeur par défaut. L'utilisation de "
+"\"none\" va considérer comme modifiés les sous-modules quand ils contiennent "
+"soit des fichiers non-suivis ou modifiés, ou si sa HEAD diffère du commit "
+"enregistré dans le super-projet, et peut être utilisé pour passer outre tout "
+"réglage de l'option 'ignore' dans linkgit:git-config[1] ou linkgit:"
+"gitmodules[5]. Quand \"untracked\" est utilisé, les sous-modules ne sont pas "
+"considérés sales quand ils ne contiennent que du contenu non suivi (mais ils "
+"sont quand même scannés pour trouver du contenu modifié). L'utilisation de "
+"\"dirty\" ignore toutes les modifications à l'arbre de travail des sous-"
+"modules, seuls les modifications aux commits stockés dans le super-projet "
+"sont affichées (c'était le comportement jusqu'à 1.7.0). La valeur \"all\" "
+"cache toutes les modifications des sous-modules."
 
 #. type: Labeled list
 #: en/diff-options.txt:715
@@ -21940,9 +22126,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-diff-files.txt:13
 #, no-wrap
-msgid ""
-"'git diff-files' [-q] [-0|-1|-2|-3|-c|--cc] [<common diff options>] "
-"[<path>...]\n"
+msgid "'git diff-files' [-q] [-0|-1|-2|-3|-c|--cc] [<common diff options>] [<path>...]\n"
 msgstr "'git diff-files' [-q] [-0|-1|-2|-3|-c|--cc] [<options diff communes>] [<chemin>...]\n"
 
 #. type: Plain text
@@ -21952,7 +22136,11 @@ msgid ""
 "specified, compares only those named paths.  Otherwise all entries in the "
 "index are compared.  The output format is the same as for 'git diff-index' "
 "and 'git diff-tree'."
-msgstr "Compare les fichiers dans l'arbre de travail et l'index. Quand les chemins sont spécifiés, compare seulement ces chemins nommés. Autrement, toutes les entrées dans l'index sont comparées. Le format de sortie est identique à celle de 'git diff-index' et 'git diff-tree'."
+msgstr ""
+"Compare les fichiers dans l'arbre de travail et l'index. Quand les chemins "
+"sont spécifiés, compare seulement ces chemins nommés. Autrement, toutes les "
+"entrées dans l'index sont comparées. Le format de sortie est identique à "
+"celle de 'git diff-index' et 'git diff-tree'."
 
 #. type: Labeled list
 #: en/git-diff-files.txt:25 en/git-diff.txt:100
@@ -21977,7 +22165,10 @@ msgstr "-3 --theirs"
 msgid ""
 "Diff against the \"base\" version, \"our branch\" or \"their branch\" "
 "respectively.  With these options, diffs for merged entries are not shown."
-msgstr "Différencier par rapport aux versions « base », « notre branche », « leur branche » respectivement. Avec ces options, les différences pour des entrées fusionnées ne sont pas affichées."
+msgstr ""
+"Différencier par rapport aux versions « base », « notre branche », « leur "
+"branche » respectivement. Avec ces options, les différences pour des entrées "
+"fusionnées ne sont pas affichées."
 
 #. type: Plain text
 #: en/git-diff-files.txt:36
@@ -21985,7 +22176,10 @@ msgid ""
 "The default is to diff against our branch (-2) and the cleanly resolved "
 "paths.  The option -0 can be given to omit diff output for unmerged entries "
 "and just show \"Unmerged\"."
-msgstr "Par défaut, la différence est calculée contre notre branche (-2) et les chemins résolus proprement. L'option -0 peut être fournie pour omettre la sortie pour les entrées non fusionnées et afficher juste « non fusionné »."
+msgstr ""
+"Par défaut, la différence est calculée contre notre branche (-2) et les "
+"chemins résolus proprement. L'option -0 peut être fournie pour omettre la "
+"sortie pour les entrées non fusionnées et afficher juste « non fusionné »."
 
 #. type: Labeled list
 #: en/git-diff-files.txt:38 en/git-diff-tree.txt:98 en/rev-list-options.txt:957
@@ -21999,7 +22193,10 @@ msgid ""
 "This compares stage 2 (our branch), stage 3 (their branch) and the working "
 "tree file and outputs a combined diff, similar to the way 'diff-tree' shows "
 "a merge commit with these flags."
-msgstr "Ceci compare le stage 2 (notre branche), le stage 3 (leur branche) et l'arbre de travail et affiche la diff combinée, similaire à la manière dont 'diff-tree' affiche un commit de fusion avec ces options."
+msgstr ""
+"Ceci compare le stage 2 (notre branche), le stage 3 (leur branche) et "
+"l'arbre de travail et affiche la diff combinée, similaire à la manière dont "
+"'diff-tree' affiche un commit de fusion avec ces options."
 
 #. type: Plain text
 #: en/git-diff-files.txt:46
@@ -22735,7 +22932,9 @@ msgstr "git-diff(1)"
 #. type: Plain text
 #: en/git-diff.txt:7
 msgid "git-diff - Show changes between commits, commit and working tree, etc"
-msgstr "git-diff - Affiche les modifications entre les commits, un commit et l'arbre de travail, etc"
+msgstr ""
+"git-diff - Affiche les modifications entre les commits, un commit et l'arbre "
+"de travail, etc"
 
 #. type: Plain text
 #: en/git-diff.txt:17
@@ -22757,9 +22956,13 @@ msgstr ""
 #: en/git-diff.txt:23
 msgid ""
 "Show changes between the working tree and the index or a tree, changes "
-"between the index and a tree, changes between two trees, changes between two"
-" blob objects, or changes between two files on disk."
-msgstr "Affiche les modifications entre l'arbre de travail et l'index ou un arbre, les modifications entre l'index et un arbre, les modifications entre deux arbres, les modifications entre deux objets blobs ou les modifications entre deux fichiers sur disque."
+"between the index and a tree, changes between two trees, changes between two "
+"blob objects, or changes between two files on disk."
+msgstr ""
+"Affiche les modifications entre l'arbre de travail et l'index ou un arbre, "
+"les modifications entre l'index et un arbre, les modifications entre deux "
+"arbres, les modifications entre deux objets blobs ou les modifications entre "
+"deux fichiers sur disque."
 
 #. type: Labeled list
 #: en/git-diff.txt:24
@@ -22777,9 +22980,9 @@ msgid ""
 msgstr ""
 "Cette forme sert à visualiser les modifications que vous avez faites par "
 "rapport à l'index (la zone de préparation du prochain commit). En d'autres "
-"termes, les différences sont ce que vous _pourriez_ indiquer à Git d'ajouter"
-" à l'index mais que vous n'avez pas encore ajoutées. Vous pouvez indexer ces"
-" modifications en utilisant linkgit:git-add[1]."
+"termes, les différences sont ce que vous _pourriez_ indiquer à Git d'ajouter "
+"à l'index mais que vous n'avez pas encore ajoutées. Vous pouvez indexer ces "
+"modifications en utilisant linkgit:git-add[1]."
 
 #. type: Labeled list
 #: en/git-diff.txt:32
@@ -22794,7 +22997,12 @@ msgid ""
 "the `--no-index` option when running the command in a working tree "
 "controlled by Git and at least one of the paths points outside the working "
 "tree, or when running the command outside a working tree controlled by Git."
-msgstr "Cette forme sert à comparer les deux chemins indiqués sur le système de fichiers. Vous pouvez omettre l'option `--no-index` si la commande est lancée dans un arbre de travail contrôlé par Git et qu'au moins un des chemins pointe hors de l'arbre de travail ou si la commande est lancée hors d'un arbre de travail contrôlé par Git."
+msgstr ""
+"Cette forme sert à comparer les deux chemins indiqués sur le système de "
+"fichiers. Vous pouvez omettre l'option `--no-index` si la commande est "
+"lancée dans un arbre de travail contrôlé par Git et qu'au moins un des "
+"chemins pointe hors de l'arbre de travail ou si la commande est lancée hors "
+"d'un arbre de travail contrôlé par Git."
 
 #. type: Labeled list
 #: en/git-diff.txt:41
@@ -22814,8 +23022,8 @@ msgstr ""
 "Cette forme sert à visualiser les modifications que vous avez indexées pour "
 "la prochaine validation vis-à-vis du <commit> nommé. Typiquement, vous "
 "voudriez comparer avec le commit le plus récent (HEAD), ce qui est fait "
-"automatiquement si vous ne spécifiez pas <commit>. Si HEAD n'existe pas (par"
-" exemple, des branches à naître) et si <commit> n'est pas fourni, les "
+"automatiquement si vous ne spécifiez pas <commit>. Si HEAD n'existe pas (par "
+"exemple, des branches à naître) et si <commit> n'est pas fourni, les "
 "modifications indexées sont affichées. --staged est synonyme de --cached."
 
 #. type: Labeled list
@@ -22830,7 +23038,11 @@ msgid ""
 "This form is to view the changes you have in your working tree relative to "
 "the named <commit>.  You can use HEAD to compare it with the latest commit, "
 "or a branch name to compare with the tip of a different branch."
-msgstr "Cette forme sert à visualiser les modifications présentes dans l'arbre de travail par rapport au <commit> indiqué. Vous pouvez utiliser HEAD pour le comparer au commit le plus récent ou un nom de branche pour le comparer avec le sommet d'une branche différente."
+msgstr ""
+"Cette forme sert à visualiser les modifications présentes dans l'arbre de "
+"travail par rapport au <commit> indiqué. Vous pouvez utiliser HEAD pour le "
+"comparer au commit le plus récent ou un nom de branche pour le comparer avec "
+"le sommet d'une branche différente."
 
 #. type: Labeled list
 #: en/git-diff.txt:59
@@ -22841,7 +23053,8 @@ msgstr "'git diff' [<options>] <commit> <commit> [--] [<chemin>...]"
 #. type: Plain text
 #: en/git-diff.txt:63
 msgid "This is to view the changes between two arbitrary <commit>."
-msgstr "Ceci sert à visualiser les modifications entre deux <commit> arbitraires."
+msgstr ""
+"Ceci sert à visualiser les modifications entre deux <commit> arbitraires."
 
 #. type: Labeled list
 #: en/git-diff.txt:64
@@ -22900,11 +23113,11 @@ msgid ""
 "the \"SPECIFYING RANGES\" section in linkgit:gitrevisions[7]."
 msgstr ""
 "Pour une liste plus complète des moyens de spécifier <commit>, voir la "
-"section « SPÉCIFIER LES RÉVISIONS » dans linkgit:gitrevisions[7]. Cependant,"
-" \"diff\" concerne la comparaison de deux _point finaux_, et non "
+"section « SPÉCIFIER LES RÉVISIONS » dans linkgit:gitrevisions[7]. Cependant, "
+"\"diff\" concerne la comparaison de deux _point finaux_, et non "
 "d'intervalles, et les notations d'intervalle (\"<commit>..<commit>\" et "
-"\"<commit>\\...<commit>\") ne réfèrent pas un intervalle tel que défini dans"
-" la section « SPÉCIFIER LES RÉVISIONS » de linkgit:gitrevisions[7]."
+"\"<commit>\\...<commit>\") ne réfèrent pas un intervalle tel que défini dans "
+"la section « SPÉCIFIER LES RÉVISIONS » de linkgit:gitrevisions[7]."
 
 #. type: Labeled list
 #: en/git-diff.txt:90
@@ -22917,7 +23130,9 @@ msgstr "'git diff' [<options>] <blob> <blob>"
 msgid ""
 "This form is to view the differences between the raw contents of two blob "
 "objects."
-msgstr "Cette forme sert à visualiser la différence entre les contenus bruts de deux objets blob."
+msgstr ""
+"Cette forme sert à visualiser la différence entre les contenus bruts de deux "
+"objets blob."
 
 #. type: Plain text
 #: en/git-diff.txt:108
@@ -22930,22 +23145,28 @@ msgstr ""
 "Comparer l'arbre de travail avec la version de « base » (étape #1), « notre "
 "branche » (étape #2) ou « leur branche » (étape #3). L'index contient ces "
 "étapes seulement pour les entrées non-fusionnées, c'est-à-dire lors de la "
-"résolution de conflits. Voir la section « Fusion à 3 points » de "
-"linkgit:git-read-tree[1] pour de plus amples informations."
+"résolution de conflits. Voir la section « Fusion à 3 points » de linkgit:git-"
+"read-tree[1] pour de plus amples informations."
 
 #. type: Plain text
 #: en/git-diff.txt:113
 msgid ""
 "Omit diff output for unmerged entries and just show \"Unmerged\".  Can be "
 "used only when comparing the working tree with the index."
-msgstr "Omettre la sortie de diff pour les entrées non-fusionnées et affiche juste « Non fusionné ». Ne peut être utilisé que lors de comparaison de l'arbre de travail avec l'index."
+msgstr ""
+"Omettre la sortie de diff pour les entrées non-fusionnées et affiche juste "
+"« Non fusionné ». Ne peut être utilisé que lors de comparaison de l'arbre de "
+"travail avec l'index."
 
 #. type: Plain text
 #: en/git-diff.txt:118
 msgid ""
 "The <paths> parameters, when given, are used to limit the diff to the named "
 "paths (you can give directory names and get diff for all files under them)."
-msgstr "Les paramètres <chemin>, quand spécifiés, sont utilisés pour limiter la différence aux chemins indiqués (vous pouvez indiquer des noms de répertoire et visualiser les différences pour tous les fichiers qu'ils contiennent)."
+msgstr ""
+"Les paramètres <chemin>, quand spécifiés, sont utilisés pour limiter la "
+"différence aux chemins indiqués (vous pouvez indiquer des noms de répertoire "
+"et visualiser les différences pour tous les fichiers qu'ils contiennent)."
 
 #. type: Labeled list
 #: en/git-diff.txt:125
@@ -22975,16 +23196,20 @@ msgstr ""
 #. type: Plain text
 #: en/git-diff.txt:136
 msgid ""
-"Changes between the index and your last commit; what you would be committing"
-" if you run \"git commit\" without \"-a\" option."
-msgstr "Modifications entre l'index et votre dernier commit ; ce que vous valideriez si vous lanciez \"git commit\" sans l'option \"-a\"."
+"Changes between the index and your last commit; what you would be committing "
+"if you run \"git commit\" without \"-a\" option."
+msgstr ""
+"Modifications entre l'index et votre dernier commit ; ce que vous valideriez "
+"si vous lanciez \"git commit\" sans l'option \"-a\"."
 
 #. type: Plain text
 #: en/git-diff.txt:138
 msgid ""
 "Changes in the working tree since your last commit; what you would be "
 "committing if you run \"git commit -a\""
-msgstr "Modifications dans l'arbre de travail depuis votre dernier commit ; ce que vous valideriez si vous lanciez \"git commit -a\""
+msgstr ""
+"Modifications dans l'arbre de travail depuis votre dernier commit ; ce que "
+"vous valideriez si vous lanciez \"git commit -a\""
 
 #. type: Labeled list
 #: en/git-diff.txt:139
@@ -23009,14 +23234,19 @@ msgstr ""
 msgid ""
 "Instead of using the tip of the current branch, compare with the tip of "
 "\"test\" branch."
-msgstr "Au lieu d'utiliser le sommet de la branche actuelle, compare avec le sommet de la branche « test »."
+msgstr ""
+"Au lieu d'utiliser le sommet de la branche actuelle, compare avec le sommet "
+"de la branche « test »."
 
 #. type: Plain text
 #: en/git-diff.txt:152
 msgid ""
 "Instead of comparing with the tip of \"test\" branch, compare with the tip "
 "of the current branch, but limit the comparison to the file \"test\"."
-msgstr "Au lieu de comparer avec le sommet de la branche « test », compare avec le sommet de la branche actuelle, mais limite la comparaison au fichier « test »."
+msgstr ""
+"Au lieu de comparer avec le sommet de la branche « test », compare avec le "
+"sommet de la branche actuelle, mais limite la comparaison au fichier "
+"« test »."
 
 #. type: Plain text
 #: en/git-diff.txt:153
@@ -23057,7 +23287,9 @@ msgstr "Identique à ci-dessus."
 msgid ""
 "Changes that occurred on the master branch since when the topic branch was "
 "started off it."
-msgstr "Modifications présentes sur la branche master depuis que la branche sujet en a divergé."
+msgstr ""
+"Modifications présentes sur la branche master depuis que la branche sujet en "
+"a divergé."
 
 #. type: Labeled list
 #: en/git-diff.txt:167
@@ -23079,14 +23311,17 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-diff.txt:177
-msgid ""
-"Show only modification, rename, and copy, but not addition or deletion."
-msgstr "Ne montre que les modifications, les renommages et les copies, mais pas les additions ou les suppressions."
+msgid "Show only modification, rename, and copy, but not addition or deletion."
+msgstr ""
+"Ne montre que les modifications, les renommages et les copies, mais pas les "
+"additions ou les suppressions."
 
 #. type: Plain text
 #: en/git-diff.txt:179
 msgid "Show only names and the nature of change, but not actual diff output."
-msgstr "Ne montre que les noms et la nature de la modification, mais pas la sortie de diff."
+msgstr ""
+"Ne montre que les noms et la nature de la modification, mais pas la sortie "
+"de diff."
 
 #. type: Plain text
 #: en/git-diff.txt:180
@@ -23114,7 +23349,9 @@ msgstr ""
 msgid ""
 "Spend extra cycles to find renames, copies and complete rewrites (very "
 "expensive)."
-msgstr "Dépense des cycles supplémentaires de CPU pour trouver les renommages, les copies ou les réécritures complètes (très cher)."
+msgstr ""
+"Dépense des cycles supplémentaires de CPU pour trouver les renommages, les "
+"copies ou les réécritures complètes (très cher)."
 
 #. type: Plain text
 #: en/git-diff.txt:191
@@ -45119,9 +45356,8 @@ msgstr ""
 #. type: Plain text
 #: en/git-rebase.txt:539
 #, fuzzy
-#| msgid "--preserve-merges"
 msgid "--preserve-merges and --interactive"
-msgstr "--preserve-merges"
+msgstr "--preserve-merges et --interactive"
 
 #. type: Plain text
 #: en/git-rebase.txt:540
