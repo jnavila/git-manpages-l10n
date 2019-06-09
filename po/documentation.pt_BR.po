@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-02-13 20:53+0100\n"
-"PO-Revision-Date: 2019-06-09 10:57+0000\n"
+"PO-Revision-Date: 2019-06-13 09:26+0000\n"
 "Last-Translator: Elizabete Dutra Valle <beteduvalle@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
@@ -19546,6 +19546,8 @@ msgid ""
 "Default behavior is to replace at most one line. This replaces all lines "
 "matching the key (and optionally the value_regex)."
 msgstr ""
+"O comportamento padrão é substituir no máximo uma linha. Isso substitui "
+"todas as linhas que correspondem à chave (e, opcionalmente, ao valor_regex)."
 
 #. type: Labeled list
 #: en/git-config.txt:78 en/git-update-index.txt:44
@@ -19559,6 +19561,8 @@ msgid ""
 "Adds a new line to the option without altering any existing values.  This is"
 " the same as providing '^$' as the value_regex in `--replace-all`."
 msgstr ""
+"Adiciona uma nova linha à opção sem alterar nenhum valor existente.  Isto é "
+"o mesmo que fornecer '^$' como o value_regex em `--replace-all`."
 
 #. type: Labeled list
 #: en/git-config.txt:83
@@ -19573,6 +19577,10 @@ msgid ""
 "value). Returns error code 1 if the key was not found and the last value if "
 "multiple key values were found."
 msgstr ""
+"Obtenha o valor para uma determinada chave (opcionalmente filtrada por uma "
+"expressão regular correspondente ao valor). Retorna o código de erro 1 se a "
+"chave não foi encontrada e o último valor se vários valores de chave foram "
+"encontrados."
 
 #. type: Labeled list
 #: en/git-config.txt:88
@@ -19584,6 +19592,7 @@ msgstr "--get-all"
 #: en/git-config.txt:90
 msgid "Like get, but returns all values for a multi-valued key."
 msgstr ""
+"Como get, mas retorna todos os valores para uma chave com vários valores."
 
 #. type: Labeled list
 #: en/git-config.txt:91
@@ -19599,12 +19608,17 @@ msgid ""
 "and done against a canonicalized version of the key in which section and "
 "variable names are lowercased, but subsection names are not."
 msgstr ""
+"Como --get-all, mas interpreta o nome como uma expressão regular e escreve "
+"os nomes das chaves. \n"
+" A correspondência de expressão regular é sensível a maiúsculas e minúsculas "
+"e é feita contra uma versão canonicalizada da chave na qual a seção e os "
+"nomes de variáveis são minúsculos, mas os nomes das subseções não são."
 
 #. type: Labeled list
 #: en/git-config.txt:98
 #, no-wrap
 msgid "--get-urlmatch name URL"
-msgstr ""
+msgstr "--get-urlmatch nome URL"
 
 #. type: Plain text
 #: en/git-config.txt:105
@@ -19615,6 +19629,12 @@ msgid ""
 "just the section as name, do so for all the keys in the section and list "
 "them.  Returns error code 1 if no value is found."
 msgstr ""
+"Quando é dado um nome de duas partes section.key, o valor para a seção. <url>"
+".key cuja parte <url> corresponde à melhor para a URL fornecida é retornada ("
+"se não houver essa chave, o valor para section.key é usado como um fallback)"
+".  Quando for dada apenas a seção como nome, faça isso para todas as chaves "
+"na seção e liste-as. Retorna o código de erro 1 se nenhum valor for "
+"encontrado."
 
 #. type: Labeled list
 #: en/git-config.txt:106
@@ -19629,6 +19649,9 @@ msgid ""
 "repository `.git/config`, write to `$XDG_CONFIG_HOME/git/config` file if "
 "this file exists and the `~/.gitconfig` file doesn't."
 msgstr ""
+"Para escrever opções: escreva para o arquivo global `~/.gitconfig` em vez do "
+"repositório `.git/config`, escreva para o arquivo `$XDG_CONFIG_HOME/git/"
+"config` se este arquivo existir e o arquivo `~/.gitconfig` não faz."
 
 #. type: Plain text
 #: en/git-config.txt:114
@@ -19636,12 +19659,14 @@ msgid ""
 "For reading options: read only from global `~/.gitconfig` and from "
 "`$XDG_CONFIG_HOME/git/config` rather than from all available files."
 msgstr ""
+"Para opções de leitura: leia somente do global  `~/.gitconfig` e de` $"
+"XDG_CONFIG_HOME/git/config` ao invés de todos os arquivos disponíveis."
 
 #. type: Plain text
 #: en/git-config.txt:116 en/git-config.txt:126 en/git-config.txt:135
 #: en/git-config.txt:332
 msgid "See also <<FILES>>."
-msgstr ""
+msgstr "Veja também << FILES >>."
 
 #. type: Labeled list
 #: en/git-config.txt:117
@@ -19655,6 +19680,8 @@ msgid ""
 "For writing options: write to system-wide `$(prefix)/etc/gitconfig` rather "
 "than the repository `.git/config`."
 msgstr ""
+"Para opções de escrita: escreva para o `$(prefixo)/etc/gitconfig` do sistema "
+"em vez do repositório `.git/config`."
 
 #. type: Plain text
 #: en/git-config.txt:124
@@ -19662,6 +19689,8 @@ msgid ""
 "For reading options: read only from system-wide `$(prefix)/etc/gitconfig` "
 "rather than from all available files."
 msgstr ""
+"Para opções de leitura: leia somente do `$(prefixo)/etc/gitconfig` em todo o "
+"sistema, e não de todos os arquivos disponíveis."
 
 #. type: Plain text
 #: en/git-config.txt:130
@@ -19669,6 +19698,8 @@ msgid ""
 "For writing options: write to the repository `.git/config` file.  This "
 "is\tthe default behavior."
 msgstr ""
+"Para opções de escrita: escreva para o arquivo de repositório `.git/config`"
+".  Este é\to comportamento padrão."
 
 #. type: Plain text
 #: en/git-config.txt:133
@@ -19676,6 +19707,8 @@ msgid ""
 "For reading options: read only from the repository `.git/config` rather than"
 " from all available files."
 msgstr ""
+"Para opções de leitura: leia somente no repositório  `.git/config` em vez de "
+"em todos os arquivos disponíveis."
 
 #. type: Labeled list
 #: en/git-config.txt:136
@@ -19690,23 +19723,28 @@ msgid ""
 "written to if `extensions.worktreeConfig` is present. If not it's the same "
 "as `--local`."
 msgstr ""
+"Semelhante a `--local`, exceto que `.git/config.worktree` é lido ou escrito "
+"em if `extensions.worktreeConfig` está presente. Se não, é o mesmo que "
+"`--local`."
 
 #. type: Labeled list
 #: en/git-config.txt:141
 #, no-wrap
 msgid "-f config-file"
-msgstr ""
+msgstr "-f config-arquivo"
 
 #. type: Labeled list
 #: en/git-config.txt:142
 #, no-wrap
 msgid "--file config-file"
-msgstr ""
+msgstr "--arquivo config-arquivo"
 
 #. type: Plain text
 #: en/git-config.txt:144
 msgid "Use the given config file instead of the one specified by GIT_CONFIG."
 msgstr ""
+"Use o arquivo de configuração fornecido em vez daquele especificado por "
+"GIT_CONFIG."
 
 #. type: Labeled list
 #: en/git-config.txt:145
@@ -19723,6 +19761,11 @@ msgid ""
 "linkgit:gitrevisions[7] for a more complete list of ways to spell blob "
 "names."
 msgstr ""
+"Semelhante ao `--file`, mas usa o blob fornecido em vez de um arquivo.  Por "
+"exemplo.  você pode usar 'mestre: .gitmodules' para ler valores do arquivo "
+"'.gitmodules' no ramo mestre. Veja a seção \"ESPECIFICANDO REVISÕES\" em "
+"linkgit:gitrevisions[7] para uma lista mais completa de maneiras de soletrar "
+"nomes de blobs."
 
 #. type: Labeled list
 #: en/git-config.txt:152
@@ -19733,7 +19776,7 @@ msgstr "--remove-section"
 #. type: Plain text
 #: en/git-config.txt:154
 msgid "Remove the given section from the configuration file."
-msgstr ""
+msgstr "Remova a seção dada do arquivo de configuração."
 
 #. type: Labeled list
 #: en/git-config.txt:155
@@ -19744,7 +19787,7 @@ msgstr "--rename-section"
 #. type: Plain text
 #: en/git-config.txt:157
 msgid "Rename the given section to a new name."
-msgstr ""
+msgstr "Renomeie a seção dada para um novo nome."
 
 #. type: Labeled list
 #: en/git-config.txt:158
@@ -19755,7 +19798,7 @@ msgstr "--unset"
 #. type: Plain text
 #: en/git-config.txt:160
 msgid "Remove the line matching the key from config file."
-msgstr ""
+msgstr "Remova a linha correspondente à chave do arquivo de configuração."
 
 #. type: Labeled list
 #: en/git-config.txt:161
@@ -19767,17 +19810,20 @@ msgstr "--unset-all"
 #: en/git-config.txt:163
 msgid "Remove all lines matching the key from config file."
 msgstr ""
+"Remova todas as linhas que correspondam à chave do arquivo de configuração."
 
 #. type: Plain text
 #: en/git-config.txt:167
 msgid "List all variables set in config file, along with their values."
 msgstr ""
+"Lista todas as variáveis definidas no arquivo de configuração, junto com "
+"seus valores."
 
 #. type: Labeled list
 #: en/git-config.txt:168
 #, no-wrap
 msgid "--type <type>"
-msgstr ""
+msgstr "--tipo <tipo>"
 
 #. type: Plain text
 #: en/git-config.txt:172
@@ -19786,16 +19832,19 @@ msgid ""
 "type constraint(s), and will canonicalize outgoing values in `<type>`'s "
 "canonical form."
 msgstr ""
+"'git config' irá assegurar que qualquer entrada ou saída é válida sob a(s) "
+"restrição(ões) de tipo dada, e irá canonicalizar os valores de saída na "
+"forma canônica do `<tipo>`'s."
 
 #. type: Plain text
 #: en/git-config.txt:174
 msgid "Valid `<type>`'s include:"
-msgstr ""
+msgstr "Os `<tipo>`'s válidos incluem:"
 
 #. type: Plain text
 #: en/git-config.txt:176
 msgid "'bool': canonicalize values as either \"true\" or \"false\"."
-msgstr ""
+msgstr "'bool': canoniza valores como \"true\" ou \"false\"."
 
 #. type: Plain text
 #: en/git-config.txt:179
@@ -19804,6 +19853,9 @@ msgid ""
 "'k', 'm', or 'g' will cause the value to be multiplied by 1024, 1048576, or "
 "1073741824 upon input."
 msgstr ""
+"'int': canoniza valores como números decimais simples. Um sufixo opcional de "
+"'k', 'm' ou 'g' fará com que o valor seja multiplicado por 1024, 1048576 ou "
+"1073741824 na entrada."
 
 #. type: Plain text
 #: en/git-config.txt:181
@@ -19811,6 +19863,7 @@ msgid ""
 "'bool-or-int': canonicalize according to either 'bool' or 'int', as "
 "described above."
 msgstr ""
+"'bool-or-int': canoniza de acordo com 'bool' ou 'int', como descrito acima."
 
 #. type: Plain text
 #: en/git-config.txt:185
@@ -19820,6 +19873,10 @@ msgid ""
 "effect when setting the value (but you can use `git config section.variable "
 "~/` from the command line to let your shell do the expansion.)"
 msgstr ""
+"'path': canonicalize adicionando um `~` ao valor de` $HOME` e `~ user` no "
+"diretório home do usuário especificado. Este especificador não tem efeito ao "
+"definir o valor (mas você pode usar o `git config section.variable ~ /` a "
+"partir da linha de comando para permitir que o seu shell faça a expansão.)"
 
 #. type: Plain text
 #: en/git-config.txt:187
@@ -19827,6 +19884,9 @@ msgid ""
 "'expiry-date': canonicalize by converting from a fixed or relative date-"
 "string to a timestamp. This specifier has no effect when setting the value."
 msgstr ""
+"'data de expiração': canoniza convertendo de uma cadeia de data fixa ou "
+"relativa para um registro de data e hora. Este especificador não tem efeito "
+"ao definir o valor."
 
 #. type: Plain text
 #: en/git-config.txt:191
@@ -19836,6 +19896,10 @@ msgid ""
 " that the given value is canonicalize-able as an ANSI color, but it is "
 "written as-is."
 msgstr ""
+"'color': Ao obter um valor, canonize convertendo para uma sequência de "
+"escape de cor ANSI. Ao definir um valor, uma verificação de sanidade é "
+"executada para garantir que o valor fornecido seja canonizável como uma cor "
+"ANSI, mas está escrito como está."
 
 #. type: Labeled list
 #: en/git-config.txt:193
@@ -19873,6 +19937,8 @@ msgid ""
 "Historical options for selecting a type specifier. Prefer instead `--type` "
 "(see above)."
 msgstr ""
+"Opções históricas para selecionar um especificador de tipo. Prefira, em vez "
+"disso, `--type` (veja acima)."
 
 #. type: Labeled list
 #: en/git-config.txt:201
@@ -19887,6 +19953,10 @@ msgid ""
 "option requests that 'git config' not canonicalize the retrieved variable.  "
 "`--no-type` has no effect without `--type=<type>` or `--<type>`."
 msgstr ""
+"Desfaz o especificador de tipo definido anteriormente (se um tiver sido "
+"configurado anteriormente). Esta opção solicita que 'git config' não "
+"canonize a variável recuperada.  `--não-tipo` não tem efeito sem` "
+"--tipo=<tipo> `ou` - <tipo> `."
 
 #. type: Plain text
 #: en/git-config.txt:214
@@ -19896,12 +19966,18 @@ msgid ""
 "between key and value. This allows for secure parsing of the output without "
 "getting confused e.g. by values that contain line breaks."
 msgstr ""
+"Para todas as opções que geram valores e/ou chaves, sempre finalizar valores "
+"com o caractere nulo (em vez de uma nova linha). Use a nova linha como um "
+"delimitador entre chave e valor. Isto permite uma análise segura da saída "
+"sem se confundir, e. por valores que contêm quebras de linha."
 
 #. type: Plain text
 #: en/git-config.txt:218
 msgid ""
 "Output only the names of config variables for `--list` or `--get-regexp`."
 msgstr ""
+"Saída apenas os nomes das variáveis de configuração para `--list` ou` --get-"
+"regexp`."
 
 #. type: Labeled list
 #: en/git-config.txt:219
@@ -19916,12 +19992,15 @@ msgid ""
 " standard input, blob, command line) and the actual origin (config file "
 "path, ref, or blob id if applicable)."
 msgstr ""
+"Aumente a saída de todas as opções de configuração consultadas com o tipo de "
+"origem (arquivo, entrada padrão, blob, linha de comando) e a origem real ("
+"caminho do arquivo de configuração, ref ou ID do blob, se aplicável)."
 
 #. type: Labeled list
 #: en/git-config.txt:225
 #, no-wrap
 msgid "--get-colorbool name [stdout-is-tty]"
-msgstr ""
+msgstr "--get-colorbool nome [stdout-é-tty]"
 
 #. type: Plain text
 #: en/git-config.txt:235
@@ -19934,12 +20013,19 @@ msgid ""
 "When the color setting for `name` is undefined, the command uses `color.ui` "
 "as fallback."
 msgstr ""
+"Encontre a configuração de cor para `nome` (por exemplo,` color.diff`) e a "
+"saída \"true\" ou \"false\". \n"
+" `stdout-é-tty` deve ser\" true \"ou\" false \", e é levado em conta quando "
+"a configuração diz\" auto \".  Se stdout-é-tty está faltando, então verifica "
+"a saída padrão do próprio comando e sai com o status 0 se a cor for usada ou "
+"sai com o status 1 caso contrário.  Quando a configuração de cor para `nome` "
+"é indefinida, o comando usa` color.ui` como fallback."
 
 #. type: Labeled list
 #: en/git-config.txt:236
 #, no-wrap
 msgid "--get-color name [default]"
-msgstr ""
+msgstr "--get-color nome [padrão]"
 
 #. type: Plain text
 #: en/git-config.txt:242
@@ -19949,11 +20035,15 @@ msgid ""
 "`default` parameter is used instead, if there is no color configured for "
 "`name`."
 msgstr ""
+"Encontre a cor configurada para `nome` (por exemplo,` color.diff.new`) e "
+"imprima-a como a sequência de escape de cor ANSI para a saída padrão.  O "
+"parâmetro opcional `padrão` é usado em vez disso, se não houver cor "
+"configurada para` nome`."
 
 #. type: Plain text
 #: en/git-config.txt:244
 msgid "`--type=color [--default=<default>]` is preferred over `--get-color`."
-msgstr ""
+msgstr "`--tipo=color [--padrão=<padrão>]` é preferível `--get-color`."
 
 #. type: Plain text
 #: en/git-config.txt:249
@@ -19961,6 +20051,8 @@ msgid ""
 "Opens an editor to modify the specified config file; either `--system`, "
 "`--global`, or repository (default)."
 msgstr ""
+"Abre um editor para modificar o arquivo de configuração especificado; ou "
+"`--sistema`,` --global` ou repositório (padrão)."
 
 #. type: Labeled list
 #: en/git-config.txt:250
@@ -19975,12 +20067,16 @@ msgid ""
 "Defaults to `off` when a specific file is given (e.g., using `--file`, "
 "`--global`, etc) and `on` when searching all config files."
 msgstr ""
+"Respeite as diretivas `include.*` Nos arquivos de configuração ao procurar "
+"valores. O padrão é `off` quando um arquivo específico é dado (por exemplo, "
+"usando` --file`, `--global`, etc) e` on` ao procurar todos os arquivos de "
+"configuração."
 
 #. type: Labeled list
 #: en/git-config.txt:256
 #, no-wrap
 msgid "--default <value>"
-msgstr ""
+msgstr "--padrão <valor>"
 
 #. type: Plain text
 #: en/git-config.txt:259
@@ -19988,6 +20084,8 @@ msgid ""
 "When using `--get`, and the requested variable is not found, behave as if "
 "<value> were the value assigned to the that variable."
 msgstr ""
+"Ao usar `--get` e a variável solicitada não for encontrada, comportar-se "
+"como se <valor> fosse o valor atribuído à variável."
 
 #. type: Plain text
 #: en/git-config.txt:265
@@ -19996,6 +20094,9 @@ msgid ""
 "using `--list` or any of the `--get-*` which may return multiple results.  "
 "The default is to use a pager."
 msgstr ""
+"O `pager.config` é somente respeitado ao listar a configuração, ou seja, ao "
+"usar` --list` ou qualquer um dos `--get-*` que pode retornar múltiplos "
+"resultados. O padrão é usar um pager."
 
 #. type: Plain text
 #: en/git-config.txt:272
@@ -20003,17 +20104,19 @@ msgid ""
 "If not set explicitly with `--file`, there are four files where 'git config'"
 " will search for configuration options:"
 msgstr ""
+"Se não for definido explicitamente com `--file`, existem quatro arquivos em "
+"que 'git config' procurará opções de configuração:"
 
 #. type: Labeled list
 #: en/git-config.txt:273
 #, no-wrap
 msgid "$(prefix)/etc/gitconfig"
-msgstr ""
+msgstr "$(prefixo)/etc/gitconfig"
 
 #. type: Plain text
 #: en/git-config.txt:275
 msgid "System-wide configuration file."
-msgstr ""
+msgstr "Arquivo de configuração do sistema."
 
 #. type: Labeled list
 #: en/git-config.txt:276
@@ -20030,6 +20133,12 @@ msgid ""
 "is a good idea not to create this file if you sometimes use older versions "
 "of Git, as support for this file was added fairly recently."
 msgstr ""
+"Segundo arquivo de configuração específico do usuário. Se $ XDG_CONFIG_HOME "
+"não estiver definido ou vazio, o `$HOME/.config/git/config` será usado. "
+"Qualquer variável de valor único definida neste arquivo será sobrescrita "
+"pelo que estiver em `~/.gitconfig`.  É uma boa ideia não criar este arquivo "
+"se você, às vezes, usa versões mais antigas do Git, já que o suporte para "
+"esse arquivo foi adicionado recentemente."
 
 #. type: Labeled list
 #: en/git-config.txt:284
@@ -20042,6 +20151,8 @@ msgstr ""
 msgid ""
 "User-specific configuration file. Also called \"global\" configuration file."
 msgstr ""
+"Arquivo de configuração específico do usuário. Também chamado de arquivo de "
+"configuração \"global\"."
 
 #. type: Labeled list
 #: en/git-config.txt:288
@@ -20052,13 +20163,13 @@ msgstr ""
 #. type: Plain text
 #: en/git-config.txt:290
 msgid "Repository specific configuration file."
-msgstr ""
+msgstr "Arquivo de configuração específico do repositório."
 
 #. type: Labeled list
 #: en/git-config.txt:291
 #, no-wrap
 msgid "$GIT_DIR/config.worktree"
-msgstr ""
+msgstr "$GIT_DIR/config.árvore-de-trabalho"
 
 #. type: Plain text
 #: en/git-config.txt:294
@@ -20066,6 +20177,8 @@ msgid ""
 "This is optional and is only searched when `extensions.worktreeConfig` is "
 "present in $GIT_DIR/config."
 msgstr ""
+"Isso é opcional e só é pesquisado quando o arquivo "
+"`extensions.worktreeConfig` está presente em $GIT_DIR/config."
 
 #. type: Plain text
 #: en/git-config.txt:300
@@ -20076,6 +20189,12 @@ msgid ""
 " file is not available or readable, 'git config' will exit with a non-zero "
 "error code. However, in neither case will an error message be issued."
 msgstr ""
+"Se nenhuma outra opção for fornecida, todas as opções de leitura lerão todos "
+"esses arquivos disponíveis. Se o arquivo de configuração global ou do "
+"sistema não estiver disponível, eles serão ignorados. Se o arquivo de "
+"configuração do repositório não estiver disponível ou legível, o 'git "
+"config' será encerrado com um código de erro diferente de zero. No entanto, "
+"em nenhum dos casos, será emitida uma mensagem de erro."
 
 #. type: Plain text
 #: en/git-config.txt:304
@@ -20084,6 +20203,10 @@ msgid ""
 "precedence over values read earlier.  When multiple values are taken then "
 "all values of a key from all files will be used."
 msgstr ""
+"Os arquivos são lidos na ordem dada acima, com o último valor encontrado "
+"tendo precedência sobre os valores lidos anteriormente.  Quando vários "
+"valores são obtidos, todos os valores de uma chave de todos os arquivos "
+"serão usados."
 
 #. type: Plain text
 #: en/git-config.txt:307
@@ -20091,6 +20214,8 @@ msgid ""
 "You may override individual configuration parameters when running any git "
 "command by using the `-c` option. See linkgit:git[1] for details."
 msgstr ""
+"Você pode sobrescrever parâmetros de configuração individuais ao executar "
+"qualquer comando git usando a opção `-c`. Veja linkgit:git[1] para detalhes."
 
 #. type: Plain text
 #: en/git-config.txt:311
@@ -20099,6 +20224,9 @@ msgid ""
 "configuration file. Note that this also affects options like `--replace-all`"
 " and `--unset`. *'git config' will only ever change one file at a time*."
 msgstr ""
+"Todas as opções de gravação por padrão gravarão no arquivo de configuração "
+"específico do repositório. Note que isto também afeta opções como `--replace-"
+"all` e` --unset`. *'git config' sempre mudará apenas um arquivo de cada vez*."
 
 #. type: Plain text
 #: en/git-config.txt:317
@@ -20109,13 +20237,19 @@ msgid ""
 "respectively.  The `GIT_CONFIG` environment variable has a similar effect, "
 "but you can specify any filename you want."
 msgstr ""
+"Você pode substituir essas regras por opções de linha de comando ou por "
+"variáveis de ambiente. As opções `--global`,` --system` e `--árvore de "
+"trabalho` limitarão o arquivo usado para o arquivo global, em todo o sistema "
+"ou por árvore de trabalho, respectivamente.  A variável de ambiente "
+"`GIT_CONFIG` tem um efeito similar, mas você pode especificar qualquer nome "
+"de arquivo desejado."
 
 #. type: Title -
 #: en/git-config.txt:320 en/git-cvsserver.txt:310 en/git-daemon.txt:332
 #: en/git-http-backend.txt:243 en/git-notes.txt:373
 #, no-wrap
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "MEIO AMBIENTE"
 
 #. type: Labeled list
 #: en/git-config.txt:322
@@ -20130,6 +20264,9 @@ msgid ""
 "the \"--global\" option forces this to ~/.gitconfig. Using the \"--system\" "
 "option forces this to $(prefix)/etc/gitconfig."
 msgstr ""
+"Pegue a configuração do arquivo fornecido em vez de .git/config. Usar a "
+"opção \"--global\" força isso para ~/.gitconfig. Usar a opção \"--system\" "
+"força isso para $(prefixo)/etc/gitconfig."
 
 #. type: Labeled list
 #: en/git-config.txt:327
@@ -20143,11 +20280,13 @@ msgid ""
 "Whether to skip reading settings from the system-wide "
 "$(prefix)/etc/gitconfig file. See linkgit:git[1] for details."
 msgstr ""
+"Se deve ignorar as configurações de leitura do arquivo $/etc/gitconfig do "
+"sistema (prefixo). Veja linkgit:git[1] para detalhes."
 
 #. type: Plain text
 #: en/git-config.txt:339
 msgid "Given a .git/config like this:"
-msgstr ""
+msgstr "Dado um .git/config como este:"
 
 #. type: Plain text
 #: en/git-config.txt:345
