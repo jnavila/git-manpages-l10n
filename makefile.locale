@@ -9,7 +9,7 @@ ifeq ($(wildcard ../../build-docdep.perl),../../build-docdep.perl)
 vpath %conf . .. ../..
 vpath %in . .. ../..
 vpath %xsl . .. ../..
-
+vpath %rb  . .. ../..
 
 ifdef mandir
 tmp_mandir := $(mandir)
@@ -21,8 +21,11 @@ endif
 include ../../Makefile
 
 XMLTO_EXTRA += --searchpath ../..
+ifdef USE_ASCIIDOCTOR
+ASCIIDOC_EXTRA += -I../..
+else
 ASCIIDOC_CONF = -f ../../asciidoc.conf
-
+endif
 doc-l10n: all
 
 install-l10n:
