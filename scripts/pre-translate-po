@@ -5,7 +5,7 @@ import re
 import sys
 
 def main (f):
-    po = polib.pofile(f)
+    po = polib.pofile(f, wrapwidth=0)
 
     for entry in po:
         if (re.fullmatch(r'-[-a-z0-9[\]]+', entry.msgid)) \
@@ -19,6 +19,7 @@ def main (f):
             if 'fuzzy' in entry.flags:
                 entry.flags.remove('fuzzy')
                 entry.previous_msgid = None
+
     po.save(f)
 
 if __name__ == '__main__':
