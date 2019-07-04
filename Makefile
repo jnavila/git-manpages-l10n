@@ -2,7 +2,7 @@ EN_SOURCES = $(wildcard en/*.txt)
 LANGUAGE_PO = $(wildcard po/*.po)
 ALL_LANGUAGES = $(subst po/documentation.,,$(subst .po,,$(LANGUAGE_PO)))
 
-L10N_BUILD_TARGETS = all man html install doc-l10n install-l10n
+L10N_BUILD_TARGETS = all man html install doc-l10n install-l10n install-txt
 L10N_CLEAN_TARGETS = clean mrproper
 L10N_TARGETS = $(L10N_CLEAN_TARGETS) $(L10N_BUILD_TARGETS)
 

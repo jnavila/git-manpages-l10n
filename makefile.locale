@@ -13,7 +13,7 @@ vpath %rb  . .. ../..
 
 ifdef mandir
 tmp_mandir := $(mandir)
-mandir = $(temp_mandir)/$(lang)
+mandir = $(tmp_mandir)/$(lang)
 else
 mandir = $(prefix)/share/man/$(lang)
 endif
@@ -54,6 +54,10 @@ man: $(MANPAGES)
 html: $(HTML_FILTER)
 
 all doc-l10n: man html
+
+install-txt:
+	install -d -m 755 $(prefix)/$(lang)
+	install *.txt -m 644 $(prefix)/$(lang)
 
 clean:
 	rm -f *.1 *.html
