@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: git documentation\n"
 "POT-Creation-Date: 2019-02-13 20:53+0100\n"
-"PO-Revision-Date: 2019-06-08 19:13+0200\n"
+"PO-Revision-Date: 2019-08-06 20:48+0200\n"
 "Last-Translator: Adrien Ollier <adr.ollier@hotmail.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -37095,7 +37095,7 @@ msgstr "git-reset(1)"
 #. type: Plain text
 #: en/git-reset.txt:7
 msgid "git-reset - Reset current HEAD to the specified state"
-msgstr ""
+msgstr "git-reset - Réinitialise la HEAD actuelle à l'état spécifié"
 
 #. type: Plain text
 #: en/git-reset.txt:14
@@ -37105,45 +37105,46 @@ msgid ""
 "'git reset' (--patch | -p) [<tree-ish>] [--] [<paths>...]\n"
 "'git reset' [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [<commit>]\n"
 msgstr ""
+"'git reset' [-q] [<arbre-esque>] [--] <chemins>...\n"
+"'git reset' (--patch | -p) [<arbre-esque>] [--] [<chemins>...]\n"
+"'git reset' [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [<commit>]\n"
 
 #. type: Plain text
 #: en/git-reset.txt:21
 msgid "In the first and second form, copy entries from `<tree-ish>` to the index.  In the third form, set the current branch head (`HEAD`) to `<commit>`, optionally modifying index and working tree to match.  The `<tree-ish>`/`<commit>` defaults to `HEAD` in all forms."
-msgstr ""
+msgstr "Dans la première et la deuxième forme, copier les entrées depuis `<arbre-esque>` vers l'index. Dans la troisième forme, amener le sommet de la branche actuelle (`HEAD`) à `<commit>`, optionnellement en modifiant l'index et l'arbre de travail en correspondance. L'`<arbre-esque>`/`<commit>` vaut par défaut `HEAD` dans toutes les formes."
 
 #. type: Labeled list
 #: en/git-reset.txt:22
 #, no-wrap
 msgid "'git reset' [-q] [<tree-ish>] [--] <paths>..."
-msgstr ""
+msgstr "'git reset' [-q] [<arbre-esque>] [--] <chemins>..."
 
 #. type: Plain text
 #: en/git-reset.txt:26
 msgid "This form resets the index entries for all `<paths>` to their state at `<tree-ish>`.  (It does not affect the working tree or the current branch.)"
-msgstr ""
+msgstr "Cette forme réinitialise les entrées d'index pour tous les `<chemins>` à leur état de `<arbre-esque>` (ceci n'affecte pas l'arbre de travail ou la branche actuelle)."
 
 #. type: Plain text
 #: en/git-reset.txt:29
 msgid "This means that `git reset <paths>` is the opposite of `git add <paths>`."
-msgstr ""
+msgstr "Cela signifie que `git reset <chemins>` est l'opposé de `git add <chemins>`."
 
 #. type: Plain text
 #: en/git-reset.txt:36
 msgid "After running `git reset <paths>` to update the index entry, you can use linkgit:git-checkout[1] to check the contents out of the index to the working tree.  Alternatively, using linkgit:git-checkout[1] and specifying a commit, you can copy the contents of a path out of a commit to the index and to the working tree in one go."
-msgstr ""
+msgstr "Après avoir lancé `git reset <chemins>` pour mettre à jour l'entrée d'index, vous pouvez linkgit:git-checkout[1] pour extraire le contenu de l'index dans l'arbre de travail. Alternativement, en utilisant linkgit:git-checkout[1] et en spécifiant un commit, vous pouvez copier le contenu d'un chemin d'un commit vers l'index et l'arbre de travail d'une seule traite."
 
 #. type: Labeled list
 #: en/git-reset.txt:37
 #, no-wrap
 msgid "'git reset' (--patch | -p) [<tree-ish>] [--] [<paths>...]"
-msgstr ""
+msgstr "'git reset' (--patch | -p) [<arbre-esque>] [--] [<chemins>...]"
 
 #. type: Plain text
 #: en/git-reset.txt:41
-#, fuzzy
-#| msgid "Interactively select hunks in the difference between the <tree-ish> (or the index, if unspecified) and the working tree.  The chosen hunks are then applied in reverse to the working tree (and if a <tree-ish> was specified, the index)."
 msgid "Interactively select hunks in the difference between the index and `<tree-ish>` (defaults to `HEAD`).  The chosen hunks are applied in reverse to the index."
-msgstr "Sélectionner interactivement les sections dans la différence entre l'<arbre-esque> (ou l'index, si non spécifié) et l'arbre de travail. Les sections choisies sont ensuite appliquées en ordre inversé à l'arbre de travail (et si un <arbre-esque> a été spécifié, à l'index)."
+msgstr "Sélectionner interactivement les sections dans la différence entre  l'index et l'<arbre-esque> (par défaut `HEAD`). Les sections choisies sont ensuite appliquées en ordre inversé à l'index."
 
 #. type: Plain text
 #: en/git-reset.txt:45
@@ -37159,7 +37160,7 @@ msgstr "'git reset' [<mode>] [<commit>]"
 #. type: Plain text
 #: en/git-reset.txt:51
 msgid "This form resets the current branch head to `<commit>` and possibly updates the index (resetting it to the tree of `<commit>`) and the working tree depending on `<mode>`. If `<mode>` is omitted, defaults to `--mixed`. The `<mode>` must be one of the following:"
-msgstr ""
+msgstr "Cette forme réinitialise le sommet de la branche courante à `<commit>` et met à jour l'index éventuellement (en le réinitialisant à l'arbre de `<commit>`) et l'arbre de travail en fonction de `<mode>`. Si `<mode>` est omis, l'option par défaut est `--mixed`. Le mode est une valeur parmi :"
 
 #. type: Labeled list
 #: en/git-reset.txt:53
@@ -37170,7 +37171,7 @@ msgstr "--soft"
 #. type: Plain text
 #: en/git-reset.txt:58
 msgid "Does not touch the index file or the working tree at all (but resets the head to `<commit>`, just like all modes do). This leaves all your changed files \"Changes to be committed\", as `git status` would put it."
-msgstr ""
+msgstr "Ne touche pas pas du tout le fichier d'index ou l'arbre de travail (mais réinitialise le sommet à `<commit>`, juste comme le font tous les modes). Cela laisse tous vos fichiers modifiés « Modifications qui seront validées », comme l'indiquerait `git status`."
 
 #. type: Labeled list
 #: en/git-reset.txt:59
@@ -37181,12 +37182,12 @@ msgstr "--mixed"
 #. type: Plain text
 #: en/git-reset.txt:63
 msgid "Resets the index but not the working tree (i.e., the changed files are preserved but not marked for commit) and reports what has not been updated. This is the default action."
-msgstr ""
+msgstr "Réinitialise l'index mais pas l'arbre de travail (c'est-à-dire, les fichiers modifiés sont préservés mais marqués pour la validation) et affiche ce qui n'a pas été mis à jour. C'est l'action par défaut."
 
 #. type: Plain text
 #: en/git-reset.txt:66
 msgid "If `-N` is specified, removed paths are marked as intent-to-add (see linkgit:git-add[1])."
-msgstr ""
+msgstr "Si `-N` est spécifié, les chemins supprimés sont marqués comme « à ajouter » (voir linkgit:git-add[1])."
 
 #. type: Labeled list
 #: en/git-reset.txt:67
@@ -37197,27 +37198,27 @@ msgstr "--hard"
 #. type: Plain text
 #: en/git-reset.txt:70
 msgid "Resets the index and working tree. Any changes to tracked files in the working tree since `<commit>` are discarded."
-msgstr ""
+msgstr "Réinitialise l'index et l'arbre de travail. Toute modification sur les fichiers suivis dans l'arbre de travail depuis `<commit>` est supprimée."
 
 #. type: Plain text
 #: en/git-reset.txt:78
 msgid "Resets the index and updates the files in the working tree that are different between `<commit>` and `HEAD`, but keeps those which are different between the index and working tree (i.e. which have changes which have not been added).  If a file that is different between `<commit>` and the index has unstaged changes, reset is aborted."
-msgstr ""
+msgstr "Réinitialise l'index et met à jour les fichiers de l'arbre de travail qui sont différents entre `<commit>` et `HEAD`, mais conserve ceux qui sont différents entre l'index et l'arbre de travail (c-à-d qui ont des modifications qui n'ont pas été indexés). Si un fichier qui est différent entre `<commit>` et l'index a des modifications non indexées, la réinitialisation est annulée."
 
 #. type: Plain text
 #: en/git-reset.txt:81
 msgid "In other words, `--merge` does something like a `git read-tree -u -m <commit>`, but carries forward unmerged index entries."
-msgstr ""
+msgstr "En d'autres termes, `--merge` fait quelque chose comme `git read-tree -u -m <commit>`, mais transfère les entrées d'index non indexées."
 
 #. type: Plain text
 #: en/git-reset.txt:87
 msgid "Resets index entries and updates files in the working tree that are different between `<commit>` and `HEAD`.  If a file that is different between `<commit>` and `HEAD` has local changes, reset is aborted."
-msgstr ""
+msgstr "Réinitialise les entrées d'index et met à jour les fichiers dans l'arbre de travail qui sont différents entre `<commit>` et `HEAD`. Si un fichier qui est différent entre `<commit>` et `HEAD` a des modifications locales, la réinitialisation est annulée."
 
 #. type: Plain text
 #: en/git-reset.txt:91
 msgid "If you want to undo a commit other than the latest on a branch, linkgit:git-revert[1] is your friend."
-msgstr ""
+msgstr "Si vous souhaitez défaire un commit autre que le dernier sur la branche, linkgit:git-revert[1] est votre ami."
 
 #. type: Labeled list
 #: en/git-reset.txt:98
@@ -37228,13 +37229,13 @@ msgstr "--no-quiet"
 #. type: Plain text
 #: en/git-reset.txt:102
 msgid "Be quiet, only report errors. The default behavior is set by the `reset.quiet` config option. `--quiet` and `--no-quiet` will override the default behavior."
-msgstr ""
+msgstr "Mode silencieux, ne reporter que les erreurs. Le comportement par défaut est géré par l'option de configuration `reset.quiet`. `--quiet` et `--no-quiet` outrepasse le comportement par défaut."
 
 #. type: Labeled list
 #: en/git-reset.txt:107
 #, no-wrap
 msgid "Undo add"
-msgstr ""
+msgstr "Défaire l'ajout"
 
 #. type: delimited block -
 #: en/git-reset.txt:115
@@ -37246,32 +37247,37 @@ msgid ""
 "$ git reset                                <3>\n"
 "$ git pull git://info.example.com/ nitfol  <4>\n"
 msgstr ""
+"$ edit                                     <1>\n"
+"$ git add frotz.c filfre.c\n"
+"$ mailx                                    <2>\n"
+"$ git reset                                <3>\n"
+"$ git pull git://info.example.com/ nitfol  <4>\n"
 
 #. type: Plain text
 #: en/git-reset.txt:121
 msgid "You are happily working on something, and find the changes in these files are in good order.  You do not want to see them when you run `git diff`, because you plan to work on other files and changes with these files are distracting."
-msgstr ""
+msgstr "Vous travaillez joyeusement sur quelque chose, et trouvez que les modifications dans ces fichiers sont prêtes. Vous en voulez pas les voir lorsque vous lancez `git diff`, parce que vous allez travailler sur d'autres fichiers et les modifications à ces fichiers vous distrairaient de votre travail."
 
 #. type: Plain text
 #: en/git-reset.txt:122
 msgid "Somebody asks you to pull, and the changes sound worthy of merging."
-msgstr ""
+msgstr "Quelqu'un vous demande de tirer, et les modifications paraissent valoir le coup d'être fusionnées."
 
 #. type: Plain text
 #: en/git-reset.txt:127
 msgid "However, you already dirtied the index (i.e. your index does not match the `HEAD` commit).  But you know the pull you are going to make does not affect `frotz.c` or `filfre.c`, so you revert the index changes for these two files.  Your changes in working tree remain there."
-msgstr ""
+msgstr "Cependant, vous avez déjà sali l'index (c-à-d votre index ne correspond pas au commit `HEAD`). Mais vous savez que le tirage que vous allez faire n'affecte pas `frotz.c` ou `filfre.c`, donc vous rembobinez les modifications de l'index pour ces deux fichiers. Vos modifications dans l'arbre de travail reste là."
 
 #. type: Plain text
 #: en/git-reset.txt:129
 msgid "Then you can pull and merge, leaving `frotz.c` and `filfre.c` changes still in the working tree."
-msgstr ""
+msgstr "Puis vous pouvez tirer et fusionner, en laissant les modifications à `frotz.c` et `filfre.c` dans l'arbre de travail."
 
 #. type: Labeled list
 #: en/git-reset.txt:130
 #, no-wrap
 msgid "Undo a commit and redo"
-msgstr ""
+msgstr "Défait un commit et refaire"
 
 #. type: delimited block -
 #: en/git-reset.txt:137
@@ -37282,11 +37288,15 @@ msgid ""
 "$ edit                        <2>\n"
 "$ git commit -a -c ORIG_HEAD  <3>\n"
 msgstr ""
+"$ git commit ...\n"
+"$ git reset --soft HEAD^      <1>\n"
+"$ éditer                      <2>\n"
+"$ git commit -a -c ORIG_HEAD  <3>\n"
 
 #. type: Plain text
 #: en/git-reset.txt:142
 msgid "This is most often done when you remembered what you just committed is incomplete, or you misspelled your commit message, or both.  Leaves working tree as it was before \"reset\"."
-msgstr ""
+msgstr "C'est le plus souvent fait que vous vous êtes souvenu que ce que vous avez validé est incomplet, ou que vous avez mal orthographié votre message de validation, ou les deux. Cela laisse l'arbre de travail comme il était avant « reset »."
 
 #. type: Plain text
 #: en/git-reset.txt:143
@@ -37296,20 +37306,18 @@ msgstr "Corriger les fichiers de l'arbre de travail."
 #. type: Plain text
 #: en/git-reset.txt:146
 msgid "\"reset\" copies the old head to `.git/ORIG_HEAD`; redo the commit by starting with its log message.  If you do not need to edit the message further, you can give `-C` option instead."
-msgstr ""
+msgstr "\"reset\" copie l'ancienne HEAD vers `.git/ORIG_HEAD` ; refait le commit en démarrant par son message de validation. Si vous n'avez pas besoin d'éditer plus le message, vous pouvez plutôt passer l'option `-C`."
 
 #. type: Plain text
 #: en/git-reset.txt:148
-#, fuzzy
-#| msgid "Pass the `--local` option to 'git pack-objects'. See linkgit:git-pack-objects[1]."
 msgid "See also the `--amend` option to linkgit:git-commit[1]."
-msgstr "Passer l'option `--local` à 'git pack-objects'. Voir linkgit:git-pack-objects[1]."
+msgstr "Voir aussi l'option `--amend` de linkgit:git-commit[1]."
 
 #. type: Labeled list
 #: en/git-reset.txt:149
 #, no-wrap
 msgid "Undo a commit, making it a topic branch"
-msgstr ""
+msgstr "Défait le commit, en le transformant en branche thématique"
 
 #. type: delimited block -
 #: en/git-reset.txt:155
@@ -37319,27 +37327,30 @@ msgid ""
 "$ git reset --hard HEAD~3  <2>\n"
 "$ git checkout topic/wip   <3>\n"
 msgstr ""
+"$ git branch theme/wip     <1>\n"
+"$ git reset --hard HEAD~3  <2>\n"
+"$ git checkout theme/wip   <3>\n"
 
 #. type: Plain text
 #: en/git-reset.txt:161
 msgid "You have made some commits, but realize they were premature to be in the `master` branch.  You want to continue polishing them in a topic branch, so create `topic/wip` branch off of the current `HEAD`."
-msgstr ""
+msgstr "Vous avez fait des commits, mais vous vous êtes aperçu qu'ils étaient prématurés dans la branche `master`. Vous voulez continuer à le polir dans une branche thématique, donc vous créez la branche `theme/wip` de la `HEAD` actuelle."
 
 #. type: Plain text
 #: en/git-reset.txt:162
 msgid "Rewind the master branch to get rid of those three commits."
-msgstr ""
+msgstr "Rembobinez la branche `master` pour en éliminer ces trois commits."
 
 #. type: Plain text
 #: en/git-reset.txt:163
 msgid "Switch to `topic/wip` branch and keep working."
-msgstr ""
+msgstr "Basculez sur la branche `theme/wip` et continuez à travailler."
 
 #. type: Labeled list
 #: en/git-reset.txt:164
 #, no-wrap
 msgid "Undo commits permanently"
-msgstr ""
+msgstr "Défaire des commit de manière permanente"
 
 #. type: delimited block -
 #: en/git-reset.txt:169
@@ -37348,17 +37359,19 @@ msgid ""
 "$ git commit ...\n"
 "$ git reset --hard HEAD~3   <1>\n"
 msgstr ""
+"$ git commit ...\n"
+"$ git reset --hard HEAD~3   <1>\n"
 
 #. type: Plain text
 #: en/git-reset.txt:176
 msgid "The last three commits (`HEAD`, `HEAD^`, and `HEAD~2`) were bad and you do not want to ever see them again.  Do *not* do this if you have already given these commits to somebody else.  (See the \"RECOVERING FROM UPSTREAM REBASE\" section in linkgit:git-rebase[1] for the implications of doing so.)"
-msgstr ""
+msgstr "Les trois derniers commits (`HEAD`, `HEAD^` et `HEAD~2`) étaient mauvais et vous ne plus jamais les voir. *Ne faites pas* ceci si vous avez déjà fourni ces commits à quelqu'un d'autre. (Voir la section « RÉPARER UN REBASAGE AMONT » dans linkgit:git-rebase[1] pour les implications d'une telle action)."
 
 #. type: Labeled list
 #: en/git-reset.txt:177
 #, no-wrap
 msgid "Undo a merge or pull"
-msgstr ""
+msgstr "Défaire une fusion ou un tirage"
 
 #. type: delimited block -
 #: en/git-reset.txt:189
@@ -37374,16 +37387,24 @@ msgid ""
 "Fast-forward\n"
 "$ git reset --hard ORIG_HEAD       <4>\n"
 msgstr ""
+"$ git pull                         <1>\n"
+"Auto-fusion nitfol\n"
+"CONFLIT (contenu): Conflit de fusion dans nitfol\n"
+"La fusion automatique a échoué ; réglez les conflits et validez le résultat.\n"
+"$ git reset --hard                 <2>\n"
+"$ git pull . theme/branche         <3>\n"
+"Avance rapide de  41223... sur 13134...\n"
+"$ git reset --hard ORIG_HEAD       <4>\n"
 
 #. type: Plain text
 #: en/git-reset.txt:194
 msgid "Try to update from the upstream resulted in a lot of conflicts; you were not ready to spend a lot of time merging right now, so you decide to do that later."
-msgstr ""
+msgstr "L'essai de mettre à jour depuis l'amont a apporté beaucoup de conflits ; vous n'êtes pas prêt à passer beaucoup de temps à les fusionner maintenant, donc vous décidez de le faire plus tard."
 
 #. type: Plain text
 #: en/git-reset.txt:197
 msgid "\"pull\" has not made merge commit, so `git reset --hard` which is a synonym for `git reset --hard HEAD` clears the mess from the index file and the working tree."
-msgstr ""
+msgstr "\"pull\" n'a pas créé de commit de fusion, donc `git reset --hard` qui est synonyme de `git reset --hard HEAD` nettoie le bazar dans l'index et l'arbre de travail."
 
 #. type: Plain text
 #: en/git-reset.txt:199
