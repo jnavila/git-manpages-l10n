@@ -4,8 +4,11 @@ import polib
 import re
 import sys
 
-def main (f):
+def main (f,d=None):
     po = polib.pofile(f, wrapwidth=0)
+
+    if not d is None:
+            pod=polib.pofile(d)
 
     for entry in po:
         if (re.fullmatch(r'-[-a-z0-9[\]]+', entry.msgid)) \
@@ -16,12 +19,23 @@ def main (f):
             entry.flags.append("ignore-same")
             flags = sorted(set(entry.flags))
             entry.flags = list(flags)
+            remove_fuzzy(entry)
+        elif not d is None:
+            for entryd in pod:
+                if re.fullmatch(entryd.msgid, entry.msgid):
+                    entry.msgstr = re.sub(entryd.msgid, entryd.msgstr, entry.msgid)
+                    remove_fuzzy(entry)
+
+    po.save(f)
+
+def remove_fuzzy (entry):
             if 'fuzzy' in entry.flags:
                 entry.flags.remove('fuzzy')
                 entry.previous_msgid = None
 
-    po.save(f)
 
 if __name__ == '__main__':
-    if len(sys.argv)>1:
+    if len(sys.argv)>2:
+        main(sys.argv[1], sys.argv[2])
+    elif len(sys.argv)>1:
         main(sys.argv[1])
