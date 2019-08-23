@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: git documentation\n"
 "POT-Creation-Date: 2019-02-13 20:53+0100\n"
-"PO-Revision-Date: 2019-08-15 16:55+0200\n"
+"PO-Revision-Date: 2019-08-23 19:14+0200\n"
 "Last-Translator: Adrien Ollier <adr.ollier@hotmail.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -6966,7 +6966,7 @@ msgstr ""
 #: en/git-apply.txt:265 en/git-mv.txt:48 en/git-rm.txt:138
 #, no-wrap, priority:280
 msgid "SUBMODULES"
-msgstr ""
+msgstr "SOUS-MODULES"
 
 #. type: Plain text
 #: en/git-apply.txt:268
@@ -15280,7 +15280,7 @@ msgstr ""
 #: en/git-config.txt:469 en/git-describe.txt:198 en/git-fetch.txt:285 en/git-mv.txt:56 en/git-pack-refs.txt:64 en/git-pull.txt:248 en/git-rebase.txt:1025 en/git-replace.txt:139 en/git-rm.txt:175 en/git-svn.txt:1064 en/git-worktree.txt:375
 #, no-wrap, priority:280
 msgid "BUGS"
-msgstr ""
+msgstr "BOGUES"
 
 #. type: Plain text
 #: en/git-config.txt:474
@@ -43047,25 +43047,25 @@ msgstr "git-rm - Supprime des fichiers de l'arbre de travail et de l'index"
 #: en/git-rm.txt:12
 #, no-wrap, priority:280
 msgid "'git rm' [-f | --force] [-n] [-r] [--cached] [--ignore-unmatch] [--quiet] [--] <file>...\n"
-msgstr ""
+msgstr "'git rm' [-f | --force] [-n] [-r] [--cached] [--ignore-unmatch] [--quiet] [--] <fichier>...\n"
 
 #. type: Plain text
 #: en/git-rm.txt:25
 #, priority:280
 msgid "Remove files from the index, or from the working tree and the index.  `git rm` will not remove a file from just your working directory.  (There is no option to remove a file only from the working tree and yet keep it in the index; use `/bin/rm` if you want to do that.)  The files being removed have to be identical to the tip of the branch, and no updates to their contents can be staged in the index, though that default behavior can be overridden with the `-f` option.  When `--cached` is given, the staged content has to match either the tip of the branch or the file on disk, allowing the file to be removed from just the index."
-msgstr ""
+msgstr "Supprime les fichiers de l'index, ou de l'arbre de travail et de l'index. `git rm` va supprimer un fichier seulement depuis votre répertoire de travail (il n'y a aucune option pour supprimer un fichier seulement depuis l'arbre de travail et le conserver l'index ; utilisez `/bin/rm` si c'est ce que vous souhaitez faire). Les fichiers à supprimer doivent être identiques à ceux du sommet de la branche, et avec aucune mise à jour indexée, mais ce comportement par défaut peut être outrepassé avec l'option `-f`. Quand `--cache` est fourni, le contenu indexé doit correspondre soit au sommet de la branche soit au fichier sur disque, de sorte que le fichier puisse n'être supprimé que de l'index."
 
 #. type: Plain text
 #: en/git-rm.txt:38
 #, priority:280
 msgid "Files to remove.  Fileglobs (e.g. `*.c`) can be given to remove all matching files.  If you want Git to expand file glob characters, you may need to shell-escape them.  A leading directory name (e.g. `dir` to remove `dir/file1` and `dir/file2`) can be given to remove all files in the directory, and recursively all sub-directories, but this requires the `-r` option to be explicitly given."
-msgstr ""
+msgstr "Fichiers à supprimer. Les patrons de fichiers (par exemple, `*.c`) peuvent être fournis pour supprimer tous les fichiers correspondants. Si vous souhaitez que Git étende les caractères de patrons de fichier, vous devrez peut-être les échapper de l'interpréteur de commande. Un nom de répertoire en préfixe (par exemple pour supprimer `rép/fichier1` et `rép/fichier2`) peut être indiqué pour supprimer tous les fichiers dans un répertoire, et récursivement dans tous ses sous-répertoires, mais cela nécessite explicitement l'option `-r`."
 
 #. type: Plain text
 #: en/git-rm.txt:42
 #, priority:280
 msgid "Override the up-to-date check."
-msgstr "Surcharger la vérification de synchronisation."
+msgstr "Outrepasser la vérification de synchronisation."
 
 #. type: Plain text
 #: en/git-rm.txt:48
@@ -43077,13 +43077,13 @@ msgstr "Ne pas supprimer réellement les fichiers. À la place, montrer juste s'
 #: en/git-rm.txt:52
 #, priority:280
 msgid "Allow recursive removal when a leading directory name is given."
-msgstr ""
+msgstr "Permettre la suppression récursive quand un répertoire est fourni."
 
 #. type: Plain text
 #: en/git-rm.txt:62
 #, priority:280
 msgid "Use this option to unstage and remove paths only from the index.  Working tree files, whether modified or not, will be left alone."
-msgstr ""
+msgstr "Utilisez cette option pour désindexer et supprimer les chemins seulement depuis l'index. Les fichiers de l'arbre de travail, qu'ils soient modifiés ou non sont préservés."
 
 #. type: Labeled list
 #: en/git-rm.txt:63
@@ -43093,39 +43093,39 @@ msgstr "--ignore-unmatch"
 
 #. type: Plain text
 #: en/git-rm.txt:65
-#, fuzzy, priority:280
+#, priority:280
 msgid "Exit with a zero status even if no files matched."
-msgstr "sortir avec un état zéro même si rien ne correspondait"
+msgstr "Sortir avec un état zéro même si rien ne correspondait."
 
 #. type: Plain text
 #: en/git-rm.txt:70
 #, priority:280
 msgid "`git rm` normally outputs one line (in the form of an `rm` command)  for each file removed. This option suppresses that output."
-msgstr ""
+msgstr "`git rm` affiche normalement une ligne (en forme de commande `rm`) pour chaque fichier supprimé. Cette option élimine cet affichage."
 
 #. type: Plain text
 #: en/git-rm.txt:79
 #, priority:280
 msgid "The <file> list given to the command can be exact pathnames, file glob patterns, or leading directory names.  The command removes only the paths that are known to Git.  Giving the name of a file that you have not told Git about does not remove that file."
-msgstr ""
+msgstr "La liste de <fichier> fournie à la commande doit être faite de chemins exacts, de motifs de fichiers, ou de répertoires en entêtes. La commande supprime seulement les fichiers connus de Git. Fournir le nom d'un fichier qui n'est pas pas reconnu par Git ne supprime pas ce fichier."
 
 #. type: Plain text
 #: en/git-rm.txt:84
 #, priority:280
 msgid "File globbing matches across directory boundaries.  Thus, given two directories `d` and `d2`, there is a difference between using `git rm 'd*'` and `git rm 'd/*'`, as the former will also remove all of directory `d2`."
-msgstr ""
+msgstr "La correspondance de motifs de fichiers fonctionne à travers les limites de répertoires. Ainsi, étant donnés deux répertoires `r` et `r2`, il y a une différence entre utiliser `git rm 'r*'` et `git rm 'r/*'`, car la première forme supprime aussi le répertoire `r2`."
 
 #. type: Title -
 #: en/git-rm.txt:86
 #, no-wrap, priority:280
 msgid "REMOVING FILES THAT HAVE DISAPPEARED FROM THE FILESYSTEM"
-msgstr ""
+msgstr "SUPPRESSION DE FICHIERS QUI ONT DISPARU DU SYSTÈME DE FICHIERS"
 
 #. type: Plain text
 #: en/git-rm.txt:91
 #, priority:280
 msgid "There is no option for `git rm` to remove from the index only the paths that have disappeared from the filesystem. However, depending on the use case, there are several ways that can be done."
-msgstr ""
+msgstr "Il n'y a aucune option de `git rm` pour ne supprimer de l'index que les chemins qui ont disparu du système de fichier. Cependant, en fonction des cas, il y divers moyen d'y arriver."
 
 #. type: Title ~
 #: en/git-rm.txt:93
@@ -43137,7 +43137,7 @@ msgstr "En utilisant ``git commit -a''"
 #: en/git-rm.txt:100
 #, priority:280
 msgid "If you intend that your next commit should record all modifications of tracked files in the working tree and record all removals of files that have been removed from the working tree with `rm` (as opposed to `git rm`), use `git commit -a`, as it will automatically notice and record all removals.  You can also have a similar effect without committing by using `git add -u`."
-msgstr ""
+msgstr "Si votre objectif est que le prochain commit enregistre toutes les modifications des fichiers suivis dans l'arbre de travail et enregistre toutes les suppressions de fichiers qui ont été supprimés de l'arbre de travail avec `rm` (par opposition à `git rm`), utilisez `git commit -a`, qui va automatiquement détecter et enregistrer toutes les suppressions. Vous pouvez aussi obtenir un effet similaire sans valider en utilisant `git add -u`."
 
 #. type: Title ~
 #: en/git-rm.txt:102
@@ -43149,31 +43149,31 @@ msgstr "En utilisant ``git add -A''"
 #: en/git-rm.txt:106
 #, priority:280
 msgid "When accepting a new code drop for a vendor branch, you probably want to record both the removal of paths and additions of new paths as well as modifications of existing paths."
-msgstr ""
+msgstr "Pour accepter une nouvelle livraison de code d'une branche de vendeur, vous souhaiterez probablement enregistrer à la fois les suppressions de chemins et les ajouts de nouveaux chemins ainsi que les modifications de chemins existants."
 
 #. type: Plain text
 #: en/git-rm.txt:109
 #, priority:280
 msgid "Typically you would first remove all tracked files from the working tree using this command:"
-msgstr ""
+msgstr "Typiquement, vous supprimeriez tous les fichiers suivis de l'arbre de travail en utilisant la commande :"
 
 #. type: delimited block -
 #: en/git-rm.txt:112
 #, no-wrap, priority:280
 msgid "git ls-files -z | xargs -0 rm -f\n"
-msgstr ""
+msgstr "git ls-files -z | xargs -0 rm -f\n"
 
 #. type: Plain text
 #: en/git-rm.txt:116
 #, priority:280
 msgid "and then untar the new code in the working tree. Alternately you could 'rsync' the changes into the working tree."
-msgstr ""
+msgstr "Ensuite, vous décompresseriez le nouveau code dans l'arbre de travail. D'une autre manière, vous pourriez utiliser `rsync` dans votre arbre de travail."
 
 #. type: Plain text
 #: en/git-rm.txt:119
 #, priority:280
 msgid "After that, the easiest way to record all removals, additions, and modifications in the working tree is:"
-msgstr ""
+msgstr "Après cela, le moyen le plus simple d'enregistrer toutes les suppressions, les ajouts et les modifications dans l'arbre de travail consiste à :"
 
 #. type: delimited block -
 #: en/git-rm.txt:122
@@ -43183,45 +43183,45 @@ msgstr "git add -A\n"
 
 #. type: Plain text
 #: en/git-rm.txt:125
-#, fuzzy, priority:280
+#, priority:280
 msgid "See linkgit:git-add[1]."
-msgstr "linkgit:git-add[1]"
+msgstr "Voir linkgit:git-add[1]."
 
 #. type: Title ~
 #: en/git-rm.txt:127
 #, no-wrap, priority:280
 msgid "Other ways"
-msgstr ""
+msgstr "Autres moyens"
 
 #. type: Plain text
 #: en/git-rm.txt:132
 #, priority:280
 msgid "If all you really want to do is to remove from the index the files that are no longer present in the working tree (perhaps because your working tree is dirty so that you cannot use `git commit -a`), use the following command:"
-msgstr ""
+msgstr "Si tout ce que vous voulez vraiment faire, c'est de supprimer de l'index les fichiers qui ne sont plus présents dans l'arbre de travail (peut-être parce que votre arbre de travail est sale, donc vous ne pouvez pas utiliser `git commit -a`), utilisez la commande suivante :"
 
 #. type: delimited block -
 #: en/git-rm.txt:135
 #, no-wrap, priority:280
 msgid "git diff --name-only --diff-filter=D -z | xargs -0 git rm --cached\n"
-msgstr ""
+msgstr "git diff --name-only --diff-filter=D -z | xargs -0 git rm --cached\n"
 
 #. type: Plain text
 #: en/git-rm.txt:148
 #, priority:280
 msgid "Only submodules using a gitfile (which means they were cloned with a Git version 1.7.8 or newer) will be removed from the work tree, as their repository lives inside the .git directory of the superproject. If a submodule (or one of those nested inside it)  still uses a .git directory, `git rm` will move the submodules git directory into the superprojects git directory to protect the submodule's history. If it exists the submodule.<name> section in the linkgit:gitmodules[5] file will also be removed and that file will be staged (unless --cached or -n are used)."
-msgstr ""
+msgstr "Seuls les sous-modules utilisant un gitfile (ce qui signifie qu'ils ont été clonés avec Git version 1.7.8 ou plus récent) seront supprimés de l'arbre de travail, car leur dépôt réside dans le répertoire `.git` du superprojet. Si un sous-module (ou un sous-module de celui-ci) utilise encore un répertoire `.git`, `git rm` va déplacer le répertoire git du sous-module pour protéger l'historique du sous-module. Si elle existe, la section `submodule.<nom>` dans le fichier linkgit:gitmodules[5] sera aussi supprimée et ce fichier sera indexé (à moins que --cached ou -n ne soient utilisés)."
 
 #. type: Plain text
 #: en/git-rm.txt:154
 #, priority:280
 msgid "A submodule is considered up to date when the HEAD is the same as recorded in the index, no tracked files are modified and no untracked files that aren't ignored are present in the submodules work tree.  Ignored files are deemed expendable and won't stop a submodule's work tree from being removed."
-msgstr ""
+msgstr "Un sous-module est considéré à jour quand la HEAD est identique à ce qui est enregistré dans l'index, qu'aucun fichier suivi n'est modifié ni qu'aucun fichier non suivi non ignoré n'est présent dans l'arbre de travail du sous-module. Les fichiers ignorés sont considérés jetables et n'empêchent pas un sous-module d'être supprimé."
 
 #. type: Plain text
 #: en/git-rm.txt:158
 #, priority:280
 msgid "If you only want to remove the local checkout of a submodule from your work tree without committing the removal, use linkgit:git-submodule[1] `deinit` instead. Also see linkgit:gitsubmodules[7] for details on submodule removal."
-msgstr ""
+msgstr "Si vous voulez seulement supprimer une extraction locale d'un sous-module de votre arbre de travail sans valider la suppression, utilisez linkgit:git-submodules[1] `deinit` à la place. Voir aussi linkgit:gitsubmodules[7] pour des détails sur la suppression de sous-modules."
 
 #. type: Labeled list
 #: en/git-rm.txt:161
@@ -43251,13 +43251,13 @@ msgstr "`git rm -f git-*.sh`"
 #: en/git-rm.txt:173
 #, priority:280
 msgid "Because this example lets the shell expand the asterisk (i.e. you are listing the files explicitly), it does not remove `subdir/git-foo.sh`."
-msgstr "Comme cet exemple laisse le shell réaliser l'expansion de l'astérisque (c'est-à-dire que vous listez explicitement les fichiers du répertoire), il ne supprime pas `subdir/git-foo.sh`."
+msgstr "Comme cet exemple laisse le shell réaliser l'expansion de l'astérisque (c'est-à-dire que vous listez explicitement les fichiers du répertoire), il ne supprime pas `sous-répertoire/git-toto.sh`."
 
 #. type: Plain text
 #: en/git-rm.txt:182
 #, priority:280
 msgid "Each time a superproject update removes a populated submodule (e.g. when switching between commits before and after the removal) a stale submodule checkout will remain in the old location. Removing the old directory is only safe when it uses a gitfile, as otherwise the history of the submodule will be deleted too. This step will be obsolete when recursive submodule update has been implemented."
-msgstr ""
+msgstr "Chaque fois qu'une mise à jour du super-projet supprime un sous-module peuplé (par exemple, lors d'un basculement d'un commit précédent la suppression à un commit postérieur), une extraction périmée du sous-module restera à l'ancien place. La suppression de l'ancien répertoire n'est sécurisée que lorsque le sous-module utilise un gitfile, car sinon l'historique du sous-module serait aussi supprimé. Cette étape sera obsolète lorsque la mise à jour récursive de sous-modules sera implantée."
 
 #. type: Title =
 #: en/git-send-email.txt:2
@@ -47576,11 +47576,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-submodule.txt:386
-#, fuzzy, no-wrap, priority:220
+#, no-wrap, priority:220
 msgid "*NOTE*: see the NOTE for the `--reference` option.\n"
-msgstr ""
-"*NOTE* : voir NOTE pour l'option `--shared`, et aussi\n"
-"l'option `--dissociate`.\n"
+msgstr "*NOTE* : voir NOTE pour l'option `--reference`.\n"
 
 #. type: Plain text
 #: en/git-submodule.txt:392
