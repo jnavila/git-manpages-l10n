@@ -13,8 +13,7 @@ SYNOPSIS
 	[-s <strategy>] [-X <strategy-option>] [-S[<keyid>]]
 	[--[no-]allow-unrelated-histories]
 	[--[no-]rerere-autoupdate] [-m <msg>] [-F <file>] [<commit>...]
-'git merge' --abort
-'git merge' --continue
+'git merge' (--continue | --abort | --quit)
 
 DESCRIPTION
 -----------
@@ -83,9 +82,15 @@ invocations. The automated message can include the branch description.
 If `--log` is specified, a shortlog of the commits being merged
 will be appended to the specified message.
 
---[no-]rerere-autoupdate::
+--rerere-autoupdate::
+--no-rerere-autoupdate::
 	Allow the rerere mechanism to update the index with the
 	result of auto-conflict resolution if possible.
+
+--overwrite-ignore::
+--no-overwrite-ignore::
+	Silently overwrite ignored files from the merge result. This
+	is the default behavior. Use `--no-overwrite-ignore` to abort.
 
 --abort::
 	Abort the current conflict resolution process, and
@@ -98,6 +103,10 @@ commit or stash your changes before running 'git merge'.
 +
 'git merge --abort' is equivalent to 'git reset --merge' when
 `MERGE_HEAD` is present.
+
+--quit::
+	Forget about the current merge in progress. Leave the index
+	and the working tree as-is.
 
 --continue::
 	After a 'git merge' stops due to conflicts you can conclude the

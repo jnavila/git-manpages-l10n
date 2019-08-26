@@ -388,6 +388,7 @@ change to the project.
 	original-oid?
 	('author' (SP <name>)? SP LT <email> GT SP <when> LF)?
 	'committer' (SP <name>)? SP LT <email> GT SP <when> LF
+	('encoding' SP <encoding>)?
 	data
 	('from' SP <commit-ish> LF)?
 	('merge' SP <commit-ish> LF)?
@@ -422,7 +423,12 @@ However it is recommended that a `filedeleteall` command precede
 all `filemodify`, `filecopy`, `filerename` and `notemodify` commands in
 the same commit, as `filedeleteall` wipes the branch clean (see below).
 
-The `LF` after the command is optional (it used to be required).
+The `LF` after the command is optional (it used to be required).  Note
+that for reasons of backward compatibility, if the commit ends with a
+`data` command (i.e. it has no `from`, `merge`, `filemodify`,
+`filedelete`, `filecopy`, `filerename`, `filedeleteall` or
+`notemodify` commands) then two `LF` commands may appear at the end of
+the command instead of just one.
 
 `author`
 ^^^^^^^^
@@ -449,6 +455,12 @@ The time of the change is specified by `<when>` using the date format
 that was selected by the --date-format=<fmt> command-line option.
 See ``Date Formats'' above for the set of supported formats, and
 their syntax.
+
+`encoding`
+^^^^^^^^^^
+The optional `encoding` command indicates the encoding of the commit
+message.  Most commits are UTF-8 and the encoding is omitted, but this
+allows importing commit messages into git without first reencoding them.
 
 `from`
 ^^^^^^
@@ -966,10 +978,6 @@ might want to refer to in their commit messages.
 	'get-mark' SP ':' <idnum> LF
 ....
 
-This command can be used anywhere in the stream that comments are
-accepted.  In particular, the `get-mark` command can be used in the
-middle of a commit but not in the middle of a `data` command.
-
 See ``Responses To Commands'' below for details about how to read
 this output safely.
 
@@ -996,9 +1004,10 @@ Output uses the same format as `git cat-file --batch`:
 	<contents> LF
 ====
 
-This command can be used anywhere in the stream that comments are
-accepted.  In particular, the `cat-blob` command can be used in the
-middle of a commit but not in the middle of a `data` command.
+This command can be used where a `filemodify` directive can appear,
+allowing it to be used in the middle of a commit.  For a `filemodify`
+using an inline directive, it can also appear right before the `data`
+directive.
 
 See ``Responses To Commands'' below for details about how to read
 this output safely.
@@ -1011,8 +1020,8 @@ printing a blob from the active commit (with `cat-blob`) or copying a
 blob or tree from a previous commit for use in the current one (with
 `filemodify`).
 
-The `ls` command can be used anywhere in the stream that comments are
-accepted, including the middle of a commit.
+The `ls` command can also be used where a `filemodify` directive can
+appear, allowing it to be used in the middle of a commit.
 
 Reading from the active commit::
 	This form can only be used in the middle of a `commit`.
@@ -1396,6 +1405,13 @@ deltas are suboptimal (see above) then also adding the `-f` option
 to force recomputation of all deltas can significantly reduce the
 final packfile size (30-50% smaller can be quite typical).
 
+Instead of running `git repack` you can also run `git gc
+--aggressive`, which will also optimize other things after an import
+(e.g. pack loose refs). As noted in the "AGGRESSIVE" section in
+linkgit:git-gc[1] the `--aggressive` option will find new deltas with
+the `-f` option to linkgit:git-repack[1]. For the reasons elaborated
+on above using `--aggressive` after a fast-import is one of the few
+cases where it's known to be worthwhile.
 
 MEMORY UTILIZATION
 ------------------
