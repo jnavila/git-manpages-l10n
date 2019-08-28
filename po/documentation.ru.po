@@ -4,14 +4,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Git Documentation\n"
+"Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2019-08-26 23:13+0200\n"
-"PO-Revision-Date: 2019-08-09 21:34+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2019-08-29 20:24+0000\n"
+"Last-Translator: Artem Buslov <buslov.artem@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:666 en/git-instaweb.txt:45 en/git-mailinfo.txt:47 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -6160,6 +6164,8 @@ msgstr ""
 #, priority:300
 msgid "After deciding the fate for all hunks, if there is any hunk that was chosen, the index is updated with the selected hunks."
 msgstr ""
+"После решения судьбы всех фрагментов патча выбранные фрагменты добавляются в "
+"индекс."
 
 #. type: Plain text
 #: en/git-add.txt:335
@@ -6183,49 +6189,69 @@ msgstr ""
 #: en/git-add.txt:343
 #, no-wrap, priority:300
 msgid "EDITING PATCHES"
-msgstr ""
+msgstr "РЕДАКТИРОВАНИЕ ПАТЧЕЙ"
 
 #. type: Plain text
 #: en/git-add.txt:353
 #, priority:300
 msgid "Invoking `git add -e` or selecting `e` from the interactive hunk selector will open a patch in your editor; after the editor exits, the result is applied to the index. You are free to make arbitrary changes to the patch, but note that some changes may have confusing results, or even result in a patch that cannot be applied.  If you want to abort the operation entirely (i.e., stage nothing new in the index), simply delete all lines of the patch. The list below describes some common things you may see in a patch, and which editing operations make sense on them."
 msgstr ""
+"Вызов `git add -e` или выбор `e` при интерактивном выборе фрагментов откроет "
+"патч в вашем редакторе; после закрытия редактора результат добавляется в "
+"индекс. Вы вольны вносить в патч любые изменения, но помните, что некоторые "
+"изменения могут привести к неожиданным результатам или даже к невозможности "
+"применения патча. Если вы хотите прервать операцию (т.е. не добавлять в "
+"индекс ничего нового), просто удалите все строки из патча. Приведенный ниже "
+"список описывает общие вещи, которые вы можете увидеть в патче, и как их "
+"можно редактировать."
 
 #. type: Labeled list
 #: en/git-add.txt:355
 #, no-wrap, priority:300
 msgid "added content"
-msgstr "добавленный контент"
+msgstr "добавляемое содержимое"
 
 #. type: Plain text
 #: en/git-add.txt:359
 #, priority:300
 msgid "Added content is represented by lines beginning with \"{plus}\". You can prevent staging any addition lines by deleting them."
 msgstr ""
+"Добавляемое содержимое представляется в виде строк со знаком \"{plus}\" в "
+"начале каждой строки. Вы можете предотвратить добавление строк посредством "
+"их удаления."
 
 #. type: Labeled list
 #: en/git-add.txt:360
 #, no-wrap, priority:300
 msgid "removed content"
-msgstr "удаленный контент"
+msgstr "удаляемое содержимое"
 
 #. type: Plain text
 #: en/git-add.txt:364
 #, priority:300
 msgid "Removed content is represented by lines beginning with \"-\". You can prevent staging their removal by converting the \"-\" to a \" \" (space)."
 msgstr ""
+"Удаляемое содержимое представляется в виде строк, начинающихся со знака \"-\""
+". Вы можете предотвратить внесение их в индекс, заменив \"-\" на \" \" "
+"(пробел)."
 
 #. type: Labeled list
 #: en/git-add.txt:365
 #, no-wrap, priority:300
 msgid "modified content"
-msgstr "измененный контент"
+msgstr "изменяемое содержимое"
 
 #. type: Plain text
 #: en/git-add.txt:372
 #, priority:300
 msgid "Modified content is represented by \"-\" lines (removing the old content)  followed by \"{plus}\" lines (adding the replacement content). You can prevent staging the modification by converting \"-\" lines to \" \", and removing \"{plus}\" lines. Beware that modifying only half of the pair is likely to introduce confusing changes to the index."
 msgstr ""
+"Изменяемое содержимое представляется в виде строк со знаком \"-\" (удаляемые "
+"старые строки) и следующих за ними строк со знаком \"{plus}\" (заменяющие "
+"строки). Вы можете предотвратить добавление данного фрагмента в индекс, "
+"заменив знак \"-\" на \" \" в первых строках и удалив вторые строки. "
+"Помните, что изменение только половины пары (\"-\" и \"{plus}\"), может "
+"привести к непонятным изменениям в индексе."
 
 #. type: Plain text
 #: en/git-add.txt:380
