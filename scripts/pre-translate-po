@@ -4,27 +4,31 @@ import polib
 import re
 import sys
 
-def main (f,d=None):
+def main (f, d=None):
     po = polib.pofile(f, wrapwidth=0)
-
+    option_re = re.compile(r'-[-a-z0-9[\]]+')
+    linkgit_re = re.compile(r'((linkgit:)?(git[-a-z0-9[\]]+|mail)(\[[157]\]|\([157]\))(,|;)?(\n| )?)+')
+    quoted_re = re.compile(r'`[a-zA-Z-_]+`|(user|transfer|submodule|stash|status|splitIndex|showbranch|sendemail|repack|remote|receive|push|merge(tool)?|mailinfo|log|interactive|instaweb|i18n|help|gui|gitweb|fastimport|format|fetch|diff(tool)?|credential|commit|column|core|branch|apply|color|git-p4)\.[a-zA-Z_.]+|araxis|bc3?|codecompare|deltawalker|guiffy|meld|diff(use|merge)|ec?merge|(exam|g?vim|t?k|open|xx)?diff[23]?|(p4|tortoise|win)merge')
+    env_var_re = re.compile(r'`?GIT_[A-Z_]+`?')
     if not d is None:
-            pod=polib.pofile(d)
-
+            po_file=polib.pofile(d)
+            pod = [(re.compile(entry.msgid), entry.msgstr) for entry in po_file]
     for entry in po:
-        if (re.fullmatch(r'-[-a-z0-9[\]]+', entry.msgid)) \
-           or re.fullmatch(r'((linkgit:)?(git[-a-z0-9[\]]+|mail)(\[[157]\]|\([157]\))(,|;)?(\n| )?)+', entry.msgid) \
-           or re.fullmatch(r'`[a-zA-Z-_]+`|(user|transfer|submodule|stash|status|splitIndex|showbranch|sendemail|repack|remote|receive|push|merge(tool)?|mailinfo|log|interactive|instaweb|i18n|help|gui|gitweb|fastimport|format|fetch|diff(tool)?|credential|commit|column|core|branch|apply|color|git-p4)\.[a-zA-Z_.]+|araxis|bc3?|codecompare|deltawalker|guiffy|meld|diff(use|merge)|ec?merge|(exam|g?vim|t?k|open|xx)?diff[23]?|(p4|tortoise|win)merge', entry.msgid)\
-           or re.fullmatch(r'`?GIT_[A-Z_]+`?', entry.msgid):
+        if option_re.fullmatch(entry.msgid) \
+           or linkgit_re.fullmatch(entry.msgid) \
+           or quoted_re.fullmatch(entry.msgid) \
+           or env_var_re.fullmatch(entry.msgid):
             entry.msgstr = entry.msgid
             entry.flags.append("ignore-same")
             flags = sorted(set(entry.flags))
             entry.flags = list(flags)
             remove_fuzzy(entry)
         elif not d is None:
-            for entryd in pod:
-                if re.fullmatch(entryd.msgid, entry.msgid):
-                    entry.msgstr = re.sub(entryd.msgid, entryd.msgstr, entry.msgid)
+            for (entryre, entryrep) in pod:
+                if entryre.fullmatch(entry.msgid):
+                    entry.msgstr = entryre.sub(entryrep, entry.msgid)
                     remove_fuzzy(entry)
+                    break
 
     po.save(f)
 
