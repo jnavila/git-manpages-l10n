@@ -29,7 +29,8 @@ def main (f, d=None):
                     entry.msgstr = entryre.sub(entryrep, entry.msgid)
                     remove_fuzzy(entry)
                     break
-
+        if "..." in entry.msgid:
+            entry.flags = list(sorted(set(entry.flags + ["ignore-ellipsis"])))
     po.save(f)
 
 def remove_fuzzy (entry):
