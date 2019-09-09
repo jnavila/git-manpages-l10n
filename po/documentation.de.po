@@ -6080,7 +6080,7 @@ msgstr "Dieses Beispiel läßt dem Befehlsprozessor (shell) die Erweiterung des 
 #: en/git-add.txt:221 en/git-rebase.txt:591
 #, no-wrap, priority:300
 msgid "INTERACTIVE MODE"
-msgstr ""
+msgstr "INTERAKTIVER MODUS"
 
 #. type: Plain text
 #: en/git-add.txt:225
@@ -6103,17 +6103,16 @@ msgid ""
 "      5: patch        6: diff         7: quit         8: help\n"
 "    What now> 1\n"
 msgstr ""
-"    *** Commands ***\n"
+"    *** Befehle ***\n"
 "      1: status       2: update       3: revert       4: add untracked\n"
-"      5: patch\t6: diff\t 7: quit\t 8: help\n"
-"    What now> 1\n"
+"      5: patch        6: diff         7: quit         8: help\n"
+"    Was nun> 1\n"
 
 #. type: Plain text
 #: en/git-add.txt:240
-#, fuzzy, priority:300
-#| msgid "You also could say \"s\" or \"sta\" or \"status\" above as long as the choice is unique."
+#, priority:300
 msgid "You also could say `s` or `sta` or `status` above as long as the choice is unique."
-msgstr "Man kann weiters \"s\" oder \"sta\" oder \"status\" eingeben, solange die Auswahl eindeutig ist."
+msgstr "Man kann auch `s` oder `sta` oder `status` eingeben, solange die Auswahl eindeutig ist."
 
 #. type: Plain text
 #: en/git-add.txt:242
@@ -6123,16 +6122,15 @@ msgstr "Die Hauptbefehlsschleife hat 6 Unterbefehle (sowie zusätzlich 'help' un
 
 #. type: Labeled list
 #: en/git-add.txt:243
-#, no-wrap, priority:300
+#, no-wrap, ignore-same, priority:300
 msgid "status"
 msgstr "status"
 
 #. type: Plain text
 #: en/git-add.txt:250
-#, fuzzy, priority:300
-#| msgid "This shows the change between HEAD and index (i.e. what will be committed if you say \"git commit\"), and between index and working tree files (i.e. what you could stage further before \"git commit\" using \"git-add\") for each path.  A sample output looks like this:"
+#, priority:300
 msgid "This shows the change between HEAD and index (i.e. what will be committed if you say `git commit`), and between index and working tree files (i.e. what you could stage further before `git commit` using `git add`) for each path.  A sample output looks like this:"
-msgstr "Zeigt den Unterschied zwischen HEAD und dem Index (also was eingetragen wird wenn man \"git commit\" ausführt), sowie zwischen dem Index und den Dateien im Arbeitsbereich (also was man vor einem \"git-commit\" mittels \"git-add\" hinzufügen könnte) für jeden Pfad.  Eine Beispielausgabe:"
+msgstr "Zeigt den Unterschied zwischen HEAD und dem Index (also was committet wird wenn man `git commit` ausführt), sowie zwischen dem Index und den Dateien im Arbeitsbereich (also was man vor einem `git commit` mittels `git-add` hinzufügen könnte) für jeden Pfad.  Eine Beispielausgabe:"
 
 #. type: delimited block -
 #: en/git-add.txt:255
@@ -6142,16 +6140,15 @@ msgid ""
 "     1:       binary      nothing foo.png\n"
 "     2:     +403/-35        +1/-1 git-add--interactive.perl\n"
 msgstr ""
-"\t      staged     unstaged path\n"
-"     1:       binary      nothing foo.png\n"
-"     2:     +403/-35\t+1/-1 git-add--interactive.perl\n"
+"     zur Staging-Area hinzugefügt aus Staging-Area entfernt Pfad\n"
+"     1:                     Binär                    Nichts foo.png\n"
+"     2:                  +403/-35                     +1/-1 git-add--interactive.perl\n"
 
 #. type: Plain text
 #: en/git-add.txt:266
-#, fuzzy, priority:300
-#| msgid "It shows that foo.png has differences from HEAD (but that is binary so line count cannot be shown) and there is no difference between indexed copy and the working tree version (if the working tree version were also different, 'binary' would have been shown in place of 'nothing').  The other file, git-add--interactive.perl, has 403 lines added and 35 lines deleted if you commit what is in the index, but working tree file has further modifications (one addition and one deletion)."
+#, priority:300
 msgid "It shows that foo.png has differences from HEAD (but that is binary so line count cannot be shown) and there is no difference between indexed copy and the working tree version (if the working tree version were also different, 'binary' would have been shown in place of 'nothing').  The other file, git-add{litdd}interactive.perl, has 403 lines added and 35 lines deleted if you commit what is in the index, but working tree file has further modifications (one addition and one deletion)."
-msgstr "Es zeigt sich, daß foo.png im Vergleich mit dem HEAD geändert wurde, (da es sich um eine Binärdatei handelt wird keine Zeilenanzahl gezeigt), und daß kein Unterschied zwischen dem Index und der Version im Arbeitsbereich besteht (Wäre diese ebenfalls unterschiedlich, würde 'binary' anstatt 'nothing' angezeigt werden).  Die andere Datei, git-add--interactive.perl, hat 403 hinzugefügte und 35 gelöschte Zeilen wenn man das einträgt (commited) was sich aktuell im Index befindet, und im Arbeitsbereich befinden sich weitere Änderungen (1 Zeile hinzugefügt, 1 Zeile gelöscht)."
+msgstr "Es zeigt sich, dass foo.png im Vergleich mit dem HEAD geändert wurde, (da es sich um eine Binärdatei handelt wird keine Zeilenanzahl gezeigt), und daß kein Unterschied zwischen dem Index und der Version im Arbeitsbereich besteht (Wäre diese ebenfalls unterschiedlich, würde 'binary' anstatt 'nothing' angezeigt werden).  Die andere Datei, git-add{litdd}interactive.perl, hat 403 hinzugefügte und 35 gelöschte Zeilen wenn man das commited was sich aktuell im Index befindet, und im Arbeitsbereich befinden sich weitere Änderungen (1 Zeile hinzugefügt, 1 Zeile gelöscht)."
 
 #. type: Labeled list
 #: en/git-add.txt:267 en/git-update-ref.txt:94
@@ -6161,8 +6158,7 @@ msgstr "update"
 
 #. type: Plain text
 #: en/git-add.txt:276
-#, fuzzy, priority:300
-#| msgid "This shows the status information and gives prompt \"Update>>\".  When the prompt ends with double '>>', you can make more than one selection, concatenated with whitespace or comma.  Also you can say ranges.  E.g. \"2-5 7,9\" to choose 2,3,4,5,7,9 from the list.  If the second number in a range is omitted, all remaining patches are taken.  E.g. \"7-\" to choose 7,8,9 from the list.  You can say '*' to choose everything."
+#, priority:300
 msgid "This shows the status information and issues an \"Update>>\" prompt.  When the prompt ends with double '>>', you can make more than one selection, concatenated with whitespace or comma.  Also you can say ranges.  E.g. \"2-5 7,9\" to choose 2,3,4,5,7,9 from the list.  If the second number in a range is omitted, all remaining patches are taken.  E.g. \"7-\" to choose 7,8,9 from the list.  You can say '*' to choose everything."
 msgstr "Zeigt die Status Information und wartet mit der Meldung \"Update>>\" auf weitere Eingaben. Wenn die Meldung mit doppelten '>>' endet, kann man, getrennt durch Leerzeichen oder Beistriche, mehrere Operationen auswählen. Man kann auch ganze Bereiche angeben, z.B.  \"2-5 7,9\" um 2,3,4,5,7,9 aus der Liste auszuwählen. Wird die zweite Nummer eines Bereichs nicht angegeben, reicht dieser bis an das Ende der Liste, zB \"7-\" um 7,8,9 aus der Liste auszuwählen.  Durch '*' werden alle Listeneinträge ausgewählt."
 
@@ -6180,9 +6176,10 @@ msgid ""
 "  1:       binary      nothing foo.png\n"
 "* 2:     +403/-35        +1/-1 git-add--interactive.perl\n"
 msgstr ""
-"\t   staged     unstaged path\n"
-"  1:       binary     nothing foo.png\n"
-"* 2:     +403/-35     +1/-1 git-add--interactive.perl\n"
+"     zur Staging-Area hinzugefügt aus Staging-Area entfernt Pfad\n"
+"     1:                     Binär                    Nichts foo.png\n"
+"*    2:                  +403/-35                     +1/-1 git-add--interactive.perl\n"
+
 
 #. type: Plain text
 #: en/git-add.txt:288
@@ -6192,7 +6189,7 @@ msgstr "Ein '-' vor der Option macht die Auswahl wieder rückgängig:"
 
 #. type: delimited block -
 #: en/git-add.txt:291
-#, no-wrap, priority:300
+#, no-wrap, ignore-same, priority:300
 msgid "Update>> -2\n"
 msgstr "Update>> -2\n"
 
@@ -6204,7 +6201,7 @@ msgstr "Nachdem die Auwahl getroffen wurde kann durch Eingabe einer Leerzeile de
 
 #. type: Labeled list
 #: en/git-add.txt:296
-#, no-wrap, priority:300
+#, no-wrap, ignore-same, priority:300
 msgid "revert"
 msgstr "revert"
 
@@ -6216,7 +6213,7 @@ msgstr "Diese Option ist sehr ähnlich zu 'update', nur wird die im Index gespei
 
 #. type: Labeled list
 #: en/git-add.txt:302
-#, no-wrap, priority:300
+#, no-wrap, ignore-same, priority:300
 msgid "add untracked"
 msgstr "add untracked"
 
@@ -6228,7 +6225,7 @@ msgstr "Mit einer zu 'update' und 'revert' sehr ähnlichen Bedienweise können m
 
 #. type: Labeled list
 #: en/git-add.txt:307
-#, no-wrap, priority:300
+#, no-wrap, ignore-same, priority:300
 msgid "patch"
 msgstr "patch"
 
@@ -6258,20 +6255,20 @@ msgid ""
 "e - manually edit the current hunk\n"
 "? - print help\n"
 msgstr ""
-"y - stage this hunk\n"
-"n - do not stage this hunk\n"
-"q - quit; do not stage this hunk or any of the remaining ones\n"
-"a - stage this hunk and all later hunks in the file\n"
-"d - do not stage this hunk or any of the later hunks in the file\n"
-"g - select a hunk to go to\n"
-"/ - search for a hunk matching the given regex\n"
-"j - leave this hunk undecided, see next undecided hunk\n"
-"J - leave this hunk undecided, see next hunk\n"
-"k - leave this hunk undecided, see previous undecided hunk\n"
-"K - leave this hunk undecided, see previous hunk\n"
-"s - split the current hunk into smaller hunks\n"
-"e - manually edit the current hunk\n"
-"? - print help\n"
+"y - diesen Patch-Block zum Commit vormerken\n"
+"n - diesen Patch-Block nicht zum Commit vormerken\n"
+"q - Beenden; diesen oder alle verbleibenden Patch-Blöcke nicht zum Commit vormerken\n"
+"a - diesen und alle weiteren Patch-Blöcke dieser Datei zum Commit vormerken\n"
+"d - diesen oder alle weiteren Patch-Blöcke in dieser Datei nicht zum Commit vormerken\n"
+"g - Patch-Block zum Hinspringen auswählen\n"
+"/ - nach Patch-Block suchen, der gegebenem regulärem Ausdruck entspricht\n"
+"j - diesen Patch-Block unbestimmt lassen, nächsten unbestimmten Patch-Block anzeigen\n"
+"J - diesen Patch-Block unbestimmt lassen, nächsten Patch-Block anzeigen\n"
+"k - diesen Patch-Block unbestimmt lassen, vorherigen unbestimmten Patch-Block anzeigen\n"
+"K - diesen Patch-Block unbestimmt lassen, vorherigen Patch-Block anzeigen\n"
+"s - aktuellen Patch-Block in kleinere Patch-Blöcke aufteilen\n"
+"e - aktuellen Patch-Block manuell editieren\n"
+"? - Hilfe anzeigen\n"
 
 #. type: Plain text
 #: en/git-add.txt:332
@@ -6283,7 +6280,7 @@ msgstr "Nachdem zumindest ein Source Brocken ausgewählt wurde werden die ausgew
 #: en/git-add.txt:335
 #, priority:300
 msgid "You can omit having to type return here, by setting the configuration variable `interactive.singleKey` to `true`."
-msgstr ""
+msgstr "Sie können die Konfigurationsvariable `interactive.singleKey` auf `true` setzen um hier nicht Enter drücken zu müssen."
 
 #. type: Labeled list
 #: en/git-add.txt:336
@@ -6295,13 +6292,13 @@ msgstr "diff"
 #: en/git-add.txt:340
 #, priority:300
 msgid "This lets you review what will be committed (i.e. between HEAD and index)."
-msgstr "Teigt jene Änderungen an die eingetragen (commited) werden würden (also zwischen HEAD und Index)."
+msgstr "Zeigt die Änderungen an die commited werden würden (also zwischen HEAD und Index)."
 
 #. type: Title -
 #: en/git-add.txt:343
 #, no-wrap, priority:300
 msgid "EDITING PATCHES"
-msgstr ""
+msgstr "PATCHES EDITIEREN"
 
 #. type: Plain text
 #: en/git-add.txt:353
