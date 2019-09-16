@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2019-08-26 23:13+0200\n"
-"PO-Revision-Date: 2019-09-12 17:24+0000\n"
+"PO-Revision-Date: 2019-09-20 14:27+0000\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -18978,12 +18978,22 @@ msgstr ""
 #, priority:260
 msgid "If multiple tags were found during the walk then the tag which has the fewest commits different from the input commit-ish will be selected and output.  Here fewest commits different is defined as the number of commits which would be shown by `git log tag..input` will be the smallest number of commits possible."
 msgstr ""
+"Si plusieurs étiquettes ont été trouvées pendant la marche, alors "
+"l'étiquette qui a le moins de commits différents du commit-esque d'entrée "
+"sera sélectionnée et affichée.  Ici, le moins de commits différents est "
+"défini comme le nombre de commits qui seraient affichés par `git log "
+"étiquette..commit-esque' soit le plus petit nombre de commits possible."
 
 #. type: Plain text
 #: en/git-describe.txt:204
 #, priority:260
 msgid "Tree objects as well as tag objects not pointing at commits, cannot be described.  When describing blobs, the lightweight tags pointing at blobs are ignored, but the blob is still described as <committ-ish>:<path> despite the lightweight tag being favorable."
 msgstr ""
+"Les objets d'arbre ainsi que les objets d'étiquette ne pointant pas vers des "
+"commits, ne peuvent pas être décrits.  Lors de la description des blobs, les "
+"étiquettes légères pointant vers les blobs sont ignorées, mais le blob est "
+"toujours décrit comme <commit-esque>: <chemin> bien que l'étiquette légère "
+"soit plus juste."
 
 #. type: Title =
 #: en/git-diff-files.txt:2
@@ -19698,6 +19708,11 @@ msgstr "--combined-all-paths"
 #, priority:260
 msgid "This flag causes combined diffs (used for merge commits) to list the name of the file from all parents.  It thus only has effect when -c or --cc are specified, and is likely only useful if filename changes are detected (i.e. when either rename or copy detection have been requested)."
 msgstr ""
+"Cet indicateur fait en sorte que les diffs combinés (utilisés pour les "
+"commits de fusion) listent le nom du fichier de tous les parents.  Il n'a "
+"donc d'effet que lorsque -c ou --cc sont spécifiés, et n'est probablement "
+"utile que si des changements de nom de fichier sont détectés (c.-à-d. "
+"lorsque la détection de renommage ou de copie a été demandée)."
 
 #. type: Plain text
 #: en/git-diff-tree.txt:118
@@ -26676,7 +26691,7 @@ msgstr ""
 #: en/git-grep.txt:158 en/rev-list-options.txt:82
 #, no-wrap, priority:260
 msgid "-E"
-msgstr ""
+msgstr "-E"
 
 #. type: Labeled list
 #: en/git-grep.txt:159 en/rev-list-options.txt:83
@@ -26719,12 +26734,15 @@ msgstr ""
 #, priority:260
 msgid "Support for these types of regular expressions is an optional compile-time dependency. If Git wasn't compiled with support for them providing this option will cause it to die."
 msgstr ""
+"La prise en charge de ces types d'expressions régulières est une dépendance "
+"optionnelle à la compilation. Si Git n'a pas été compilé avec ce support et "
+"que cette option est activée, la commande se termine immédiatement."
 
 #. type: Labeled list
 #: en/git-grep.txt:173 en/git-repack.txt:74 en/rev-list-options.txt:87
 #, no-wrap, priority:260
 msgid "-F"
-msgstr ""
+msgstr "-F"
 
 #. type: Labeled list
 #: en/git-grep.txt:174 en/rev-list-options.txt:88
@@ -29929,7 +29947,7 @@ msgstr "git-log(1)"
 #: en/git-log.txt:7
 #, priority:260
 msgid "git-log - Show commit logs"
-msgstr ""
+msgstr "git-log - Afficher les journaux de validation"
 
 #. type: Plain text
 #: en/git-log.txt:13
@@ -29941,13 +29959,17 @@ msgstr "'git log' [<options>] [<plage de révision>] [[--] <chemin>...]\n"
 #: en/git-log.txt:17
 #, priority:260
 msgid "Shows the commit logs."
-msgstr ""
+msgstr "Affiche les journaux de validation."
 
 #. type: Plain text
 #: en/git-log.txt:22
 #, priority:260
 msgid "The command takes options applicable to the `git rev-list` command to control what is shown and how, and options applicable to the `git diff-*` commands to control how the changes each commit introduces are shown."
 msgstr ""
+"La commande prend les options applicables à la commande 'git rev-list' pour "
+"contrôler ce qui est montré et comment, et les options applicables aux "
+"commandes 'git diff'' pour contrôler la façon dont les modifications que "
+"chaque validation introduit sont affichées."
 
 #. type: Labeled list
 #: en/git-log.txt:27
@@ -29960,6 +29982,8 @@ msgstr "--follow"
 #, priority:260
 msgid "Continue listing the history of a file beyond renames (works only for a single file)."
 msgstr ""
+"Continuer à lister l'historique d'un fichier au-delà des renommages (ne "
+"fonctionne que pour un seul fichier)."
 
 #. type: Labeled list
 #: en/git-log.txt:31
@@ -29971,13 +29995,20 @@ msgstr "--no-decorate"
 #: en/git-log.txt:32
 #, no-wrap, priority:260
 msgid "--decorate[=short|full|auto|no]"
-msgstr ""
+msgstr "--decorate[=short|full|auto|no]"
 
 #. type: Plain text
 #: en/git-log.txt:40
 #, priority:260
 msgid "Print out the ref names of any commits that are shown. If 'short' is specified, the ref name prefixes 'refs/heads/', 'refs/tags/' and 'refs/remotes/' will not be printed. If 'full' is specified, the full ref name (including prefix) will be printed. If 'auto' is specified, then if the output is going to a terminal, the ref names are shown as if 'short' were given, otherwise no ref names are shown. The default option is 'short'."
 msgstr ""
+"Imprimer les noms de réference des commits affichés. Si 'short' est "
+"spécifié, les préfixes des noms de référence 'refs/heads/', 'refs/tags/' et '"
+"refs/remotes/' ne seront pas affichés. Si 'full' est spécifié, le nom "
+"complet de la référence (y compris le préfixe) sera imprimé. Si 'auto' est "
+"spécifié, alors si la sortie va à un terminal, les noms de référence sont "
+"affichés comme si 'short' ont été donné, sinon aucun nom de référence n'est "
+"affiché. L'option par défaut est 'short'."
 
 #. type: Labeled list
 #: en/git-log.txt:41
@@ -29996,6 +30027,10 @@ msgstr "--decorate-refs-exclude=<motif>"
 #, priority:260
 msgid "If no `--decorate-refs` is given, pretend as if all refs were included.  For each candidate, do not use it for decoration if it matches any patterns given to `--decorate-refs-exclude` or if it doesn't match any of the patterns given to `--decorate-refs`."
 msgstr ""
+"Si aucun `--decorate-refs' n'est donné, faire comme si tous les refs étaient "
+"inclus.  Pour chaque candidat, ne pas l'utiliser pour la décoration s'il "
+"correspond à un motif fourni à `--decorate-refs-exclude' ou s'il ne "
+"correspond à aucun des motifs fournis à `--decorate-refs'."
 
 #. type: Labeled list
 #: en/git-log.txt:48
@@ -30008,6 +30043,8 @@ msgstr "--source"
 #, priority:260
 msgid "Print out the ref name given on the command line by which each commit was reached."
 msgstr ""
+"Imprimer le nom de la référence donné sur la ligne de commande par lequel "
+"chaque commit a été atteint."
 
 #. type: Labeled list
 #: en/git-log.txt:52
@@ -30020,6 +30057,9 @@ msgstr "--[no-]use-mailmap"
 #, priority:260
 msgid "Use mailmap file to map author and committer names and email addresses to canonical real names and email addresses. See linkgit:git-shortlog[1]."
 msgstr ""
+"Utiliser le fichier mailmap pour mapper les noms d'auteurs et de validateurs "
+"et les adresses email avec les vrais noms et adresses email canoniques. Voir "
+"linkgit:git-shortlog[1]."
 
 #. type: Labeled list
 #: en/git-log.txt:57
@@ -30032,12 +30072,19 @@ msgstr "--full-diff"
 #, priority:260
 msgid "Without this flag, `git log -p <path>...` shows commits that touch the specified paths, and diffs about the same specified paths.  With this, the full diff is shown for commits that touch the specified paths; this means that \"<path>...\" limits only commits, and doesn't limit diff for those commits."
 msgstr ""
+"Sans ce drapeau, `git log -p <p <chemin>...` affiche les commits qui "
+"touchent les chemins spécifiés, et diffs sur les mêmes chemins spécifiés.  "
+"Avec ceci, le diff complet est affiché pour les commits qui touchent les "
+"chemins spécifiés ; cela signifie que \"<chemin>...\" limite seulement les "
+"commits, et ne limite pas le diff pour ces commits."
 
 #. type: Plain text
 #: en/git-log.txt:66
 #, priority:260
 msgid "Note that this affects all diff-based output types, e.g. those produced by `--stat`, etc."
 msgstr ""
+"Notez que cela affecte tous les types de sortie basés sur le diff, par "
+"exemple ceux produits par '---stat', etc."
 
 #. type: Labeled list
 #: en/git-log.txt:67
@@ -30050,36 +30097,53 @@ msgstr "--log-size"
 #, priority:260
 msgid "Include a line ``log size <number>'' in the output for each commit, where <number> is the length of that commit's message in bytes.  Intended to speed up tools that read log messages from `git log` output by allowing them to allocate space in advance."
 msgstr ""
+"Inclure une ligne ''log size <nombre>'' dans la sortie pour chaque commit, "
+"où <nombre> est la longueur du message de ce commit en octets.  Destiné à "
+"accélérer les outils qui lisent les messages de journal de la sortie 'git "
+"log' en leur permettant d'allouer de l'espace à l'avance."
 
 #. type: Labeled list
 #: en/git-log.txt:73
 #, no-wrap, priority:260
 msgid "-L <start>,<end>:<file>"
-msgstr ""
+msgstr "-L <début>,<fin>:<fichier>"
 
 #. type: Labeled list
 #: en/git-log.txt:74
 #, no-wrap, priority:260
 msgid "-L :<funcname>:<file>"
-msgstr ""
+msgstr "-L :<nom-de-fonction>:<fichier>"
 
 #. type: Plain text
 #: en/git-log.txt:81
 #, priority:260
 msgid "Trace the evolution of the line range given by \"<start>,<end>\" (or the function name regex <funcname>) within the <file>.  You may not give any pathspec limiters.  This is currently limited to a walk starting from a single revision, i.e., you may only give zero or one positive revision arguments.  You can specify this option more than once."
 msgstr ""
+"Tracer l'évolution de la plage de lignes donnée par \"<début>,<fin>\" (ou la "
+"regex de nom de la fonction <nom-de-fonction>) dans le fichier <fichier>.  "
+"Vous ne pouvez pas donner de limiteurs de spécificateur de chemin.  Ceci est "
+"actuellement limité à une marche à partir d'une seule révision, c'est-à-dire "
+"que vous ne pouvez donner qu'aucun ou un seul argument de révision.  Vous "
+"pouvez spécifier cette option plusieurs fois."
 
 #. type: Labeled list
 #: en/git-log.txt:84 en/git-shortlog.txt:63
 #, no-wrap, priority:260
 msgid "<revision range>"
-msgstr ""
+msgstr "<plage de révisions>"
 
 #. type: Plain text
 #: en/git-log.txt:92
 #, priority:260
 msgid "Show only commits in the specified revision range.  When no <revision range> is specified, it defaults to `HEAD` (i.e. the whole history leading to the current commit).  `origin..HEAD` specifies all the commits reachable from the current commit (i.e. `HEAD`), but not from `origin`. For a complete list of ways to spell <revision range>, see the 'Specifying Ranges' section of linkgit:gitrevisions[7]."
 msgstr ""
+"Afficher uniquement les commits dans la plage de révision spécifiée.  "
+"Lorsqu'aucune <plage-de-révision> n'est spécifiée, elle vaut par défaut "
+"`HEAD` (c'est-à-dire tout l'historique menant au commit actuel).  "
+"`origin...HEAD` spécifie tous les commits accessibles depuis le commit "
+"courant (c-à-d `HEAD`), mais pas depuis `origin`. Pour une liste complète "
+"des façons d'épeler <plage-de-révision>, voir la section'Spécification des "
+"plages' de linkgit:gitrevisions[7]."
 
 #. type: Labeled list
 #: en/git-log.txt:93 en/git-shortlog.txt:72
@@ -30092,144 +30156,176 @@ msgstr "[--] <chemin>..."
 #, priority:260
 msgid "Show only commits that are enough to explain how the files that match the specified paths came to be.  See 'History Simplification' below for details and other simplification modes."
 msgstr ""
+"Afficher uniquement les commits qui sont suffisants pour expliquer comment "
+"les fichiers qui correspondent aux chemins spécifiés sont venus à exister.  "
+"Voir 'Simplification de l'historique' ci-dessous pour plus de détails et "
+"d'autres modes de simplification."
 
 #. type: Plain text
 #: en/git-log.txt:101 en/git-shortlog.txt:78
 #, priority:260
 msgid "Paths may need to be prefixed with `--` to separate them from options or the revision range, when confusion arises."
 msgstr ""
+"Les chemins peuvent avoir besoin d'être préfixés avec `--` pour les séparer "
+"des options ou de la plage de révision, en cas de confusion."
 
 #. type: Title -
 #: en/git-log.txt:107 en/git-show.txt:49
 #, no-wrap, priority:260
 msgid "COMMON DIFF OPTIONS"
-msgstr ""
+msgstr "OPTIONS COMMUNES DE DIFF"
 
 #. type: Labeled list
 #: en/git-log.txt:116
 #, no-wrap, priority:260
 msgid "`git log --no-merges`"
-msgstr ""
+msgstr "`git log --no-merges`"
 
 #. type: Plain text
 #: en/git-log.txt:119
 #, priority:260
 msgid "Show the whole commit history, but skip any merges"
-msgstr ""
+msgstr "Affiche tout l'historique des commits, mais saute toutes les fusions"
 
 #. type: Labeled list
 #: en/git-log.txt:120
 #, no-wrap, priority:260
 msgid "`git log v2.6.12.. include/scsi drivers/scsi`"
-msgstr ""
+msgstr "`git log v2.6.12.. include/scsi drivers/scsi`"
 
 #. type: Plain text
 #: en/git-log.txt:124
 #, priority:260
 msgid "Show all commits since version 'v2.6.12' that changed any file in the `include/scsi` or `drivers/scsi` subdirectories"
 msgstr ""
+"Affiche tous les commits depuis la version 'v2.6.12' qui a modifié n'importe "
+"quel fichier dans les sous-directeurs 'include/scsi' ou 'drivers/scsi'"
 
 #. type: Labeled list
 #: en/git-log.txt:125
 #, no-wrap, priority:260
 msgid "`git log --since=\"2 weeks ago\" -- gitk`"
-msgstr ""
+msgstr "`git log --since=\"2 weeks ago\" -- gitk`"
 
 #. type: Plain text
 #: en/git-log.txt:130
 #, priority:260
 msgid "Show the changes during the last two weeks to the file 'gitk'.  The `--` is necessary to avoid confusion with the *branch* named 'gitk'"
 msgstr ""
+"Affiche les modifications au cours des deux dernières semaines au fichier "
+"'gitk'.  Le '--' est nécessaire pour éviter toute confusion avec la branche "
+"'nommée 'gitk'"
 
 #. type: Labeled list
 #: en/git-log.txt:131
 #, no-wrap, priority:260
 msgid "`git log --name-status release..test`"
-msgstr ""
+msgstr "`git log --name-status release..test`"
 
 #. type: Plain text
 #: en/git-log.txt:136
 #, priority:260
 msgid "Show the commits that are in the \"test\" branch but not yet in the \"release\" branch, along with the list of paths each commit modifies."
 msgstr ""
+"Affiche les commits qui se trouvent dans la branche \"test\" mais pas encore "
+"dans la branche \"libération\", ainsi que la liste des chemins que chaque "
+"commit modifie."
 
 #. type: Labeled list
 #: en/git-log.txt:137
 #, no-wrap, priority:260
 msgid "`git log --follow builtin/rev-list.c`"
-msgstr ""
+msgstr "`git log --follow builtin/rev-list.c`"
 
 #. type: Plain text
 #: en/git-log.txt:142
 #, priority:260
 msgid "Shows the commits that changed `builtin/rev-list.c`, including those commits that occurred before the file was given its present name."
 msgstr ""
+"Affiche les commits qui ont changé 'builtin/rev-list.c', y compris les "
+"commits qui se sont produits avant que le fichier ne soit appelé par son nom "
+"actuel."
 
 #. type: Labeled list
 #: en/git-log.txt:143
 #, no-wrap, priority:260
 msgid "`git log --branches --not --remotes=origin`"
-msgstr ""
+msgstr "`git log --branches --not --remotes=origin`"
 
 #. type: Plain text
 #: en/git-log.txt:148
 #, priority:260
 msgid "Shows all commits that are in any of local branches but not in any of remote-tracking branches for 'origin' (what you have that origin doesn't)."
 msgstr ""
+"Affiche tous les commits qui sont dans l'une des branches locales, mais pas "
+"dans l'une des branches de suivi à distance pour « origin » (ce que vous "
+"avez que cette origine n'est pas)."
 
 #. type: Labeled list
 #: en/git-log.txt:149
 #, no-wrap, priority:260
 msgid "`git log master --not --remotes=*/master`"
-msgstr ""
+msgstr "`git log master --not --remotes=*/master`"
 
 #. type: Plain text
 #: en/git-log.txt:153
 #, priority:260
 msgid "Shows all commits that are in local master but not in any remote repository master branches."
 msgstr ""
+"Affiche tous les commits qui sont dans la branche master locale mais pas "
+"dans les branches master du dépôt distant."
 
 #. type: Labeled list
 #: en/git-log.txt:154
 #, no-wrap, priority:260
 msgid "`git log -p -m --first-parent`"
-msgstr ""
+msgstr "`git log -p -m --first-parent`"
 
 #. type: Plain text
 #: en/git-log.txt:161
 #, priority:260
 msgid "Shows the history including change diffs, but only from the ``main branch'' perspective, skipping commits that come from merged branches, and showing full diffs of changes introduced by the merges.  This makes sense only when following a strict policy of merging all topic branches when staying on a single integration branch."
 msgstr ""
+"Affiche l'historique, y compris les diffs de changement, mais seulement du "
+"point de vue de la « branche principale », en sautant les commits qui "
+"proviennent de branches fusionnées, et en montrant des diffs complets des "
+"changements introduits par les fusions.  Cela n'a de sens que lorsqu'il "
+"s'agit de suivre une politique stricte de fusion de toutes les branches "
+"thématiques lorsqu'on reste sur une seule branche d'intégration."
 
 #. type: Labeled list
 #: en/git-log.txt:162
 #, no-wrap, priority:260
 msgid "`git log -L '/int main/',/^}/:main.c`"
-msgstr ""
+msgstr "`git log -L '/int main/',/^}/:main.c`"
 
 #. type: Plain text
 #: en/git-log.txt:166
 #, priority:260
 msgid "Shows how the function `main()` in the file `main.c` evolved over time."
 msgstr ""
+"Montre comment la fonction 'main()' dans le fichier 'main.c'a évolué au fil "
+"du temps."
 
 #. type: Labeled list
 #: en/git-log.txt:167
 #, no-wrap, priority:260
 msgid "`git log -3`"
-msgstr ""
+msgstr "`git log -3`"
 
 #. type: Plain text
 #: en/git-log.txt:170
-#, fuzzy, priority:260
+#, 260, priority
 msgid "Limits the number of commits to show to 3."
-msgstr "Limite le nombre de commits dans la sortie."
+msgstr "Limite le nombre de commits à afficher à 3."
 
 #. type: Plain text
 #: en/git-log.txt:181
 #, priority:260
 msgid "See linkgit:git-config[1] for core variables and linkgit:git-diff[1] for settings related to diff generation."
 msgstr ""
+"Voir linkgit:git-config[1] pour les variables de base et linkgit:git-diff[1] "
+"pour les paramètres liés à la génération diff."
 
 #. type: Labeled list
 #: en/git-log.txt:182
@@ -30242,6 +30338,8 @@ msgstr "format.pretty"
 #, priority:260
 msgid "Default for the `--format` option.  (See 'Pretty Formats' above.)  Defaults to `medium`."
 msgstr ""
+"La valeur par défaut de l 'option `- -format`.(voir ci-dessus « Mise en "
+"forme ») par défaut `medium`."
 
 #. type: Labeled list
 #: en/git-log.txt:186
@@ -30254,6 +30352,9 @@ msgstr "i18n.logOutputEncoding"
 #, priority:260
 msgid "Encoding to use when displaying logs.  (See 'Discussion' above.)  Defaults to the value of `i18n.commitEncoding` if set, and UTF-8 otherwise."
 msgstr ""
+"Encodage à utiliser lors de l'affichage des journaux.  (Voir 'Discussion' ci-"
+"dessus.)  Par défaut à la valeur de 'i18n.commitEncoding' si elle est fixée, "
+"et UTF-8 autrement."
 
 #. type: Labeled list
 #: en/git-log.txt:191
@@ -30266,12 +30367,18 @@ msgstr "log.date"
 #, priority:260
 msgid "Default format for human-readable dates.  (Compare the `--date` option.)  Defaults to \"default\", which means to write dates like `Sat May 8 19:35:34 2010 -0500`."
 msgstr ""
+"Format par défaut pour les dates humainement lisibles.  (Compare l'option '--"
+"date'.)  Par défaut à \"défaut\", ce qui signifie écrire des dates comme `"
+"Sat May 8 19:35:34 2010 -0500`."
 
 #. type: Plain text
 #: en/git-log.txt:199
 #, priority:260
 msgid "If the format is set to \"auto:foo\" and the pager is in use, format \"foo\" will be the used for the date format. Otherwise \"default\" will be used."
 msgstr ""
+"Si le format est réglé sur \"auto:foo\" et que le paginateur est utilisé, le "
+"format \"foo\" sera utilisé pour le format de date. Sinon, \"default\" sera "
+"utilisé."
 
 #. type: Labeled list
 #: en/git-log.txt:200
@@ -30284,6 +30391,10 @@ msgstr "log.follow"
 #, priority:260
 msgid "If `true`, `git log` will act as if the `--follow` option was used when a single <path> is given.  This has the same limitations as `--follow`, i.e. it cannot be used to follow multiple files and does not work well on non-linear history."
 msgstr ""
+"Si `true`, `git log` agira comme si l'option `--follow' était utilisée "
+"lorsqu'un seul <chemin> est donné.  Ceci a les mêmes limitations que `--"
+"follow', c'est-à-dire qu'il ne peut pas être utilisé pour suivre plusieurs "
+"fichiers et ne fonctionne pas bien sur un historique non linéaire."
 
 #. type: Labeled list
 #: en/git-log.txt:206
@@ -30296,6 +30407,10 @@ msgstr "log.showRoot"
 #, priority:260
 msgid "If `false`, `git log` and related commands will not treat the initial commit as a big creation event.  Any root commits in `git log -p` output would be shown without a diff attached.  The default is `true`."
 msgstr ""
+"Si `false`, `git log` et les commandes associées ne traiteront pas le commit "
+"initial comme un grand événement de création.  Tout commit racine dans la "
+"sortie `git log -p` serait affiché sans diff attaché.  La valeur par défaut "
+"est `true`."
 
 #. type: Labeled list
 #: en/git-log.txt:212
@@ -30308,42 +30423,55 @@ msgstr "log.showSignature"
 #, priority:260
 msgid "If `true`, `git log` and related commands will act as if the `--show-signature` option was passed to them."
 msgstr ""
+"Si `true`, `git log` et les commandes associées agiront comme si l'option "
+"`--show-signature` leur était passée."
 
 #. type: Labeled list
 #: en/git-log.txt:216
 #, no-wrap, priority:260
 msgid "mailmap.*"
-msgstr ""
+msgstr "mailmap.*"
 
 #. type: Plain text
 #: en/git-log.txt:218
-#, fuzzy, priority:260
+#, 260, priority
 msgid "See linkgit:git-shortlog[1]."
-msgstr "linkgit:git-shortlog[1]"
+msgstr "Voir linkgit:git-shortlog[1]."
 
 #. type: Labeled list
 #: en/git-log.txt:219 en/git-notes.txt:333
 #, no-wrap, priority:260
 msgid "notes.displayRef"
-msgstr ""
+msgstr "notes.displayRef"
 
 #. type: Plain text
 #: en/git-log.txt:224
 #, priority:260
 msgid "Which refs, in addition to the default set by `core.notesRef` or `GIT_NOTES_REF`, to read notes from when showing commit messages with the `log` family of commands.  See linkgit:git-notes[1]."
 msgstr ""
+"Quelles refs, en plus de la définition par défaut par `core.notesRef` ou "
+"`GIT-NOTES-REF`, depuis lequelles lire les notes lors de l'affichage des "
+"messages de validation avec la famille de commandes `log`.  Voir linkgit:git-"
+"notes[1]."
 
 #. type: Plain text
 #: en/git-log.txt:228
 #, priority:260
 msgid "May be an unabbreviated ref name or a glob and may be specified multiple times.  A warning will be issued for refs that do not exist, but a glob that does not match any refs is silently ignored."
 msgstr ""
+"Peut être un nom de référence non abrégé ou un glob et peut être spécifié "
+"plusieurs fois.  Un avertissement sera émis pour les références qui "
+"n'existent pas, mais un glob qui ne correspond à aucune référence est ignoré "
+"en silence."
 
 #. type: Plain text
 #: en/git-log.txt:232
 #, priority:260
 msgid "This setting can be disabled by the `--no-notes` option, overridden by the `GIT_NOTES_DISPLAY_REF` environment variable, and overridden by the `--notes=<ref>` option."
 msgstr ""
+"Ce paramètre peut être désactivé par l'option `--no-notes`, remplacé par la "
+"variable d'environnement `GIT_NOTES_DISPLAY_REF`, et remplacé par l'option "
+"`--notes=<ref>`."
 
 #. type: Title =
 #: en/git-ls-files.txt:2
@@ -35514,13 +35642,15 @@ msgstr ""
 #: en/git-pack-objects.txt:266 en/rev-list-options.txt:767
 #, no-wrap, priority:260
 msgid "--missing=<missing-action>"
-msgstr ""
+msgstr "--missing=<action-manquante>"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:269 en/rev-list-options.txt:770
 #, priority:260
 msgid "A debug option to help with future \"partial clone\" development.  This option specifies how missing objects are handled."
 msgstr ""
+"Une option de débogage pour aider au développement futur de \"clones "
+"partiels\".  Cette option spécifie comment les objets manquants sont traités."
 
 #. type: Plain text
 #: en/git-pack-objects.txt:272
@@ -35533,6 +35663,9 @@ msgstr ""
 #, priority:260
 msgid "The form '--missing=allow-any' will allow object traversal to continue if a missing object is encountered.  Missing objects will silently be omitted from the results."
 msgstr ""
+"La forme '--missing=allow-any' permet de continuer le parcours d'objet si un "
+"objet manquant est rencontré.  Les objets manquants seront silencieusement "
+"omis des résultats."
 
 #. type: Plain text
 #: en/git-pack-objects.txt:280
@@ -40406,7 +40539,7 @@ msgstr ""
 #: en/git-remote-ext.txt:31 en/pretty-formats.txt:107
 #, no-wrap, priority:260
 msgid "'%%'"
-msgstr ""
+msgstr "'%%'"
 
 #. type: Plain text
 #: en/git-remote-ext.txt:33
@@ -40418,7 +40551,7 @@ msgstr ""
 #: en/git-remote-ext.txt:34 en/pretty-formats.txt:189
 #, no-wrap, priority:260
 msgid "'%s'"
-msgstr ""
+msgstr "'%s'"
 
 #. type: Plain text
 #: en/git-remote-ext.txt:37
@@ -40430,7 +40563,7 @@ msgstr ""
 #: en/git-remote-ext.txt:38 en/pretty-formats.txt:186
 #, no-wrap, priority:260
 msgid "'%S'"
-msgstr ""
+msgstr "'%S'"
 
 #. type: Plain text
 #: en/git-remote-ext.txt:42
@@ -43658,12 +43791,23 @@ msgstr "--exclude=<motif-glob>"
 #, priority:260
 msgid "Do not include refs matching '<glob-pattern>' that the next `--all`, `--branches`, `--tags`, `--remotes`, or `--glob` would otherwise consider. Repetitions of this option accumulate exclusion patterns up to the next `--all`, `--branches`, `--tags`, `--remotes`, or `--glob` option (other options or arguments do not clear accumulated patterns)."
 msgstr ""
+"Ne pas inclure les références correspondant à'<glob-pattern>' que les `--all`"
+", `--branches`, `--tags`, `--remotes`, ou `--glob` suivantes considéreraient "
+"autrement. Les répétitions de cette option accumulent les motifs d'exclusion "
+"jusqu'à la prochaine option `--all`, `--branches`, `--tags`, `--tags`, "
+"`--remotes` ou `--glob` (les autres options ou arguments n'éliminent pas les "
+"motifs accumulés)."
 
 #. type: Plain text
 #: en/git-rev-parse.txt:195 en/rev-list-options.txt:180
 #, priority:260
 msgid "The patterns given should not begin with `refs/heads`, `refs/tags`, or `refs/remotes` when applied to `--branches`, `--tags`, or `--remotes`, respectively, and they must begin with `refs/` when applied to `--glob` or `--all`. If a trailing '/{asterisk}' is intended, it must be given explicitly."
 msgstr ""
+"Les motifs donnés ne doivent pas commencer par `refs/heads`, `refs/tags`, ou "
+"`refs/remotes` lorsqu'ils sont appliqués à `--branches`, `--tags`, ou "
+"`--remotes`, respectivement, et ils doivent commencer par `refs/` lorsqu'ils "
+"sont appliqués à `--glob` ou `--all`. Si un'/{asterisk}' final est "
+"intentionnel, il doit être donné explicitement."
 
 #. type: Labeled list
 #: en/git-rev-parse.txt:196
@@ -45857,7 +46001,7 @@ msgstr "git-shortlog(1)"
 #: en/git-shortlog.txt:7
 #, priority:260
 msgid "git-shortlog - Summarize 'git log' output"
-msgstr ""
+msgstr "git-shortlog - Résume 'git log' sortie"
 
 #. type: Plain text
 #: en/git-shortlog.txt:13
@@ -45866,36 +46010,48 @@ msgid ""
 "'git shortlog' [<options>] [<revision range>] [[--] <path>...]\n"
 "git log --pretty=short | 'git shortlog' [<options>]\n"
 msgstr ""
+"'git shortlog' [<options>] [<intervalle de révision>] [[--] <chemin>...]\n"
+"git log --pretty=short | 'git shortlog' [<options>]\n"
 
 #. type: Plain text
 #: en/git-shortlog.txt:18
 #, priority:260
 msgid "Summarizes 'git log' output in a format suitable for inclusion in release announcements. Each commit will be grouped by author and title."
 msgstr ""
+"Récapitule la sortie du « git log » dans un format adapté à l'inclusion dans "
+"les annonces de version. Chaque commit sera regroupé par auteur et titre."
 
 #. type: Plain text
 #: en/git-shortlog.txt:20
 #, priority:260
 msgid "Additionally, \"[PATCH]\" will be stripped from the commit description."
-msgstr ""
+msgstr "En outre, \"[PATCH]\" sera supprimé de la description de validation."
 
 #. type: Plain text
 #: en/git-shortlog.txt:25
 #, priority:260
 msgid "If no revisions are passed on the command line and either standard input is not a terminal or there is no current branch, 'git shortlog' will output a summary of the log read from standard input, without reference to the current repository."
 msgstr ""
+"Si aucune révision n'est passée sur la ligne de commande et que soit "
+"l'entrée standard n'est pas un terminal, soit il n'y a pas de branche "
+"courante,'git shortlog' affichera un résumé du journal lu depuis l'entrée "
+"standard, sans référence au référentiel courant."
 
 #. type: Plain text
 #: en/git-shortlog.txt:33
 #, priority:260
 msgid "Sort output according to the number of commits per author instead of author alphabetic order."
 msgstr ""
+"Trier la sortie en fonction du nombre de livraisons par auteur au lieu de "
+"l'ordre alphabétique des auteurs."
 
 #. type: Plain text
 #: en/git-shortlog.txt:37
 #, priority:260
 msgid "Suppress commit description and provide a commit count summary only."
 msgstr ""
+"Supprimer la description des commits et fournir un résumé du décompte des "
+"validations seulement."
 
 #. type: Labeled list
 #: en/git-shortlog.txt:39
@@ -45905,9 +46061,9 @@ msgstr "--email"
 
 #. type: Plain text
 #: en/git-shortlog.txt:41
-#, fuzzy, priority:260
+#, 260, priority
 msgid "Show the email address of each author."
-msgstr "Afficher l'adresse courriel de chaque auteur"
+msgstr "Afficher l'adresse courriel de chaque auteur."
 
 #. type: Labeled list
 #: en/git-shortlog.txt:42
@@ -45920,12 +46076,16 @@ msgstr "--format[=<format>]"
 #, priority:260
 msgid "Instead of the commit subject, use some other information to describe each commit.  '<format>' can be any string accepted by the `--format` option of 'git log', such as '* [%h] %s'.  (See the \"PRETTY FORMATS\" section of linkgit:git-log[1].)"
 msgstr ""
+"Au lieu du sujet du commit, utiliser d'autres informations pour décrire "
+"chaque commit.  <format>' peut être n'importe quelle chaîne acceptée par "
+"l'option `--format' de'git log', telle que'*[%h] %s'.  (Voir la section \""
+"MISES EN FORME\" de linkgit:git-log[1].)"
 
 #. type: Plain text
 #: en/git-shortlog.txt:49
 #, priority:260
 msgid "Each pretty-printed commit will be rewrapped before it is shown."
-msgstr ""
+msgstr "Chaque commit mis en forme sera reformaté avant d'être affiché."
 
 #. type: Labeled list
 #: en/git-shortlog.txt:51
@@ -45937,43 +46097,61 @@ msgstr "--committer"
 #: en/git-shortlog.txt:53
 #, priority:260
 msgid "Collect and show committer identities instead of authors."
-msgstr ""
+msgstr "Collecter et montrer les identités des validateurs au lieu des auteurs."
 
 #. type: Labeled list
 #: en/git-shortlog.txt:54
 #, no-wrap, priority:260
 msgid "-w[<width>[,<indent1>[,<indent2>]]]"
-msgstr ""
+msgstr "-w[<largeur>[,<indent1>[,<indent2>]]]"
 
 #. type: Plain text
 #: en/git-shortlog.txt:59
 #, priority:260
 msgid "Linewrap the output by wrapping each line at `width`.  The first line of each entry is indented by `indent1` spaces, and the second and subsequent lines are indented by `indent2` spaces. `width`, `indent1`, and `indent2` default to 76, 6 and 9 respectively."
 msgstr ""
+"Formater la sortie en coupant chaque ligne à la longueur  `largeur`.  La "
+"première ligne de chaque entrée est indentée à `indent1` espaces, et la "
+"deuxième ligne et les suivantes sont indentées à `indent2` espaces. `largeur`"
+", `indent1` et `indent2` valent par défaut à 76, 6 et 9 respectivement."
 
 #. type: Plain text
 #: en/git-shortlog.txt:62
 #, priority:260
 msgid "If width is `0` (zero) then indent the lines of the output without wrapping them."
 msgstr ""
+"Si la largeur est `0` (zéro) alors indenter les lignes de la sortie sans les "
+"recouper."
 
 #. type: Plain text
 #: en/git-shortlog.txt:71
 #, priority:260
 msgid "Show only commits in the specified revision range.  When no <revision range> is specified, it defaults to `HEAD` (i.e. the whole history leading to the current commit).  `origin..HEAD` specifies all the commits reachable from the current commit (i.e. `HEAD`), but not from `origin`. For a complete list of ways to spell <revision range>, see the \"Specifying Ranges\" section of linkgit:gitrevisions[7]."
 msgstr ""
+"Afficher uniquement les commits dans la plage de révision spécifiée.  "
+"Lorsqu'aucune <plage de révision> n'est spécifiée, elle vaut par défaut à "
+"`HEAD` (c'est-à-dire tout l'historique menant au commit actuel). `origin.. "
+"HEAD` spécifie tous les commits accessibles à partir du commit actuel "
+"(c'est-à-dire `HEAD`), mais pas de `origin`. Pour une liste complète des "
+"moyens d'épeler une <plage de révision>, consultez la section « "
+"Spécification de plage » de linkgit:gitrevisions[7]."
 
 #. type: Plain text
 #: en/git-shortlog.txt:75
 #, priority:260
 msgid "Consider only commits that are enough to explain how the files that match the specified paths came to be."
 msgstr ""
+"Ne considérer que les commits qui sont suffisants pour expliquer comment les "
+"fichiers qui correspondent aux chemins spécifiés ont été créés."
 
 #. type: Plain text
 #: en/git-shortlog.txt:85
 #, priority:260
 msgid "The `.mailmap` feature is used to coalesce together commits by the same person in the shortlog, where their name and/or email address was spelled differently."
 msgstr ""
+"La fonctionnalité `.mailmap' est utilisée pour regrouper les commits d'une "
+"même personne dans le shortlog, où son nom et/ou son adresse email ont été "
+"épelés différemment."
 
 #. type: Title =
 #: en/git-show-branch.txt:2
@@ -46640,19 +46818,19 @@ msgstr "git-show(1)"
 #: en/git-show.txt:7
 #, priority:260
 msgid "git-show - Show various types of objects"
-msgstr ""
+msgstr "git-show - Afficher différents types d'objets"
 
 #. type: Plain text
 #: en/git-show.txt:13
-#, fuzzy, no-wrap, priority:260
+#, 260, no-wrap, priority
 msgid "'git show' [<options>] [<object>...]\n"
-msgstr "git show [<options>] <objet>..."
+msgstr "'git show' [<options>] [<objet>...]\n"
 
 #. type: Plain text
 #: en/git-show.txt:17
 #, priority:260
 msgid "Shows one or more objects (blobs, trees, tags and commits)."
-msgstr ""
+msgstr "Affiche un ou plusieurs objets (blobs, arbres, étiquettes et commits)."
 
 #. type: Plain text
 #: en/git-show.txt:21
