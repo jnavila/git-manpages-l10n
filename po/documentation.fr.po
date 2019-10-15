@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2019-08-26 23:13+0200\n"
-"PO-Revision-Date: 2019-10-14 11:52+0000\n"
+"PO-Revision-Date: 2019-10-16 07:35+0000\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9-dev\n"
+"X-Generator: Weblate 3.9\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:666 en/git-instaweb.txt:45 en/git-mailinfo.txt:47 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -60407,30 +60407,41 @@ msgstr "\tI  A  B  N  D  O  P  Q\n"
 #, priority:260
 msgid "`M` was excluded because it is TREESAME to both parents.  `E`, `C` and `B` were all walked, but only `B` was !TREESAME, so the others do not appear."
 msgstr ""
+"`M` a été exclu parce qu'il s'agit d'un MEMEARBRE pour les deux parents.  `E`"
+", `C` et `B` ont tous été parcourus, mais seul `B` était un !MEMEARBRE, donc "
+"les autres n'apparaissent pas."
 
 #. type: Plain text
 #: en/rev-list-options.txt:454
 #, priority:260
 msgid "Note that without parent rewriting, it is not really possible to talk about the parent/child relationships between the commits, so we show them disconnected."
 msgstr ""
+"Notez que sans réécriture des parents, il n'est pas vraiment possible de "
+"parler des relations parent/enfant entre les commits, donc nous les montrons "
+"déconnectés."
 
 #. type: Labeled list
 #: en/rev-list-options.txt:455
 #, no-wrap, priority:260
 msgid "--full-history with parent rewriting"
-msgstr ""
+msgstr "--full-history sans réécriture des parents"
 
 #. type: Plain text
 #: en/rev-list-options.txt:458
 #, priority:260
 msgid "Ordinary commits are only included if they are !TREESAME (though this can be changed, see `--sparse` below)."
 msgstr ""
+"Les commits ordinaires ne sont inclus que s'ils le sont !MEMEARBRE (bien que "
+"cela puisse être changé, voir `--sparse` ci-dessous)."
 
 #. type: Plain text
 #: en/rev-list-options.txt:462
 #, priority:260
 msgid "Merges are always included.  However, their parent list is rewritten: Along each parent, prune away commits that are not included themselves.  This results in"
 msgstr ""
+"Les fusions sont toujours incluses.  Cependant, leur liste de parents est "
+"réécrite : à côté de chaque parent, élaguer les commits qui ne sont pas "
+"inclus eux-mêmes.  Il en résulte"
 
 #. type: delimited block -
 #: en/rev-list-options.txt:469
@@ -60442,72 +60453,102 @@ msgid ""
 "\t \\   /   /   /   /\n"
 "\t  `-------------'\n"
 msgstr ""
+"\t  .-A---M---N---O---P---Q\n"
+"\t /     /   /   /   /\n"
+"\tI     B   /   D   /\n"
+"\t \\   /   /   /   /\n"
+"\t  `-------------'\n"
 
 #. type: Plain text
 #: en/rev-list-options.txt:475
 #, priority:260
 msgid "Compare to `--full-history` without rewriting above.  Note that `E` was pruned away because it is TREESAME, but the parent list of P was rewritten to contain `E`'s parent `I`.  The same happened for `C` and `N`, and `X`, `Y` and `Q`."
 msgstr ""
+"À comparer avec `--full-history` sans réécrire ci-dessus.  Notez que `E` a "
+"été élagué parce que c'est MEMEARBRE, mais la liste parent de P a été "
+"réécrite pour contenir le parent `I` de `E`.  Il en a été de même pour `C` "
+"et `N`, et `X`, `Y` et `Q`."
 
 #. type: Plain text
 #: en/rev-list-options.txt:478
 #, priority:260
 msgid "In addition to the above settings, you can change whether TREESAME affects inclusion:"
 msgstr ""
+"En plus des paramètres ci-dessus, vous pouvez modifier si MEMEARBRE affecte "
+"l'inclusion :"
 
 #. type: Plain text
 #: en/rev-list-options.txt:482
 #, priority:260
 msgid "Commits that are walked are included if they are not TREESAME to any parent."
 msgstr ""
+"Les commits qui sont parcourus sont inclus s'ils ne sont pas MEMEARBRE pour "
+"aucun parent."
 
 #. type: Plain text
 #: en/rev-list-options.txt:485
 #, priority:260
 msgid "All commits that are walked are included."
-msgstr ""
+msgstr "Tous les commits qui sont parcourus sont inclus."
 
 #. type: Plain text
 #: en/rev-list-options.txt:489
 #, priority:260
 msgid "Note that without `--full-history`, this still simplifies merges: if one of the parents is TREESAME, we follow only that one, so the other sides of the merge are never walked."
 msgstr ""
+"Notez que sans `--full-history`, cela simplifie encore les fusions : si l'un "
+"des parents est MEMEARBRE, nous ne suivons que celui-là, donc les autres "
+"côtés de la fusion ne sont jamais parcourus."
 
 #. type: Plain text
 #: en/rev-list-options.txt:493
 #, priority:260
 msgid "First, build a history graph in the same way that `--full-history` with parent rewriting does (see above)."
 msgstr ""
+"Tout d'abord, construire un graphe d'historique de la même manière que "
+"`--full-history` avec la réécriture des parents (voir ci-dessus)."
 
 #. type: Plain text
 #: en/rev-list-options.txt:496
 #, priority:260
 msgid "Then simplify each commit `C` to its replacement `C'` in the final history according to the following rules:"
 msgstr ""
+"Puis simplifier chaque commit `C` à son remplacement `C'` dans l'historique "
+"final selon les règles suivantes :"
 
 #. type: Plain text
 #: en/rev-list-options.txt:499
 #, priority:260
 msgid "Set `C'` to `C`."
-msgstr ""
+msgstr "Définir `C'` sur `C`."
 
 #. type: Plain text
 #: en/rev-list-options.txt:504
 #, priority:260
 msgid "Replace each parent `P` of `C'` with its simplification `P'`.  In the process, drop parents that are ancestors of other parents or that are root commits TREESAME to an empty tree, and remove duplicates, but take care to never drop all parents that we are TREESAME to."
 msgstr ""
+"Remplacer chaque parent `P` de `C'` par sa simplification `P'`.  Dans le "
+"processus, déposer les parents qui sont les ancêtres d'autres parents ou qui "
+"sont des commits racines MEMEARBRE à un arbre vide, et supprimer les "
+"doublons, mais prendre soin de ne jamais laisser tomber tous les parents "
+"auxquels nous sommes MEMEARBRE."
 
 #. type: Plain text
 #: en/rev-list-options.txt:508
 #, priority:260
 msgid "If after this parent rewriting, `C'` is a root or merge commit (has zero or >1 parents), a boundary commit, or !TREESAME, it remains.  Otherwise, it is replaced with its only parent."
 msgstr ""
+"Si après cette réécriture des parents, `C'` est un commit racine ou de "
+"fusion (qui a zéro ou >1 parents), un commit limite, ou !MEMEARBRE, il est "
+"conservé.  Sinon, il est remplacé par son seul parent."
 
 #. type: Plain text
 #: en/rev-list-options.txt:512
 #, priority:260
 msgid "The effect of this is best shown by way of comparing to `--full-history` with parent rewriting.  The example turns into:"
 msgstr ""
+"L'effet de ceci est mieux montré en comparant avec `--full-history` avec la "
+"réécriture des parents.  L'exemple se transforme en :"
 
 #. type: delimited block -
 #: en/rev-list-options.txt:519
@@ -60519,48 +60560,67 @@ msgid ""
 "\t \\   /       /\n"
 "\t  `---------'\n"
 msgstr ""
+"\t  .-A---M---N---O\n"
+"\t /     /       /\n"
+"\tI     B       D\n"
+"\t \\   /       /\n"
+"\t  `---------'\n"
 
 #. type: Plain text
 #: en/rev-list-options.txt:522
 #, priority:260
 msgid "Note the major differences in `N`, `P`, and `Q` over `--full-history`:"
 msgstr ""
+"Notez les principales différences entre `N`, `P` et `Q` par rapport à "
+"`--full-history` :"
 
 #. type: Plain text
 #: en/rev-list-options.txt:526
 #, priority:260
 msgid "`N`'s parent list had `I` removed, because it is an ancestor of the other parent `M`.  Still, `N` remained because it is !TREESAME."
 msgstr ""
+"'La liste des parents de `N` a été supprimée, parce qu'elle est un ancêtre "
+"de l'autre parent `M`.  Pourtant, `N` est resté parce qu'il est !MEMEARBRE."
 
 #. type: Plain text
 #: en/rev-list-options.txt:529
 #, priority:260
 msgid "`P`'s parent list similarly had `I` removed.  `P` was then removed completely, because it had one parent and is TREESAME."
 msgstr ""
+"De même, la liste des parents de `P` a eu `I` supprimé.  `P` a ensuite été "
+"complètement enlevé, parce qu'il avait un parent et qu'il est MEMEARBRE."
 
 #. type: Plain text
 #: en/rev-list-options.txt:533
 #, priority:260
 msgid "`Q`'s parent list had `Y` simplified to `X`. `X` was then removed, because it was a TREESAME root. `Q` was then removed completely, because it had one parent and is TREESAME."
 msgstr ""
+"La liste des parents de `Q` a rendu `Y` simplifié en `X`. `X` a ensuite été "
+"supprimé, parce que c'était une racine MEMEARBRE. `Q` a ensuite été "
+"complètement supprimée, parce qu'elle avait un parent et qu'il  est "
+"MEMEARBRE."
 
 #. type: Plain text
 #: en/rev-list-options.txt:536
 #, priority:260
 msgid "Finally, there is a fifth simplification mode available:"
-msgstr ""
+msgstr "Enfin, il existe un cinquième mode de simplification :"
 
 #. type: Plain text
 #: en/rev-list-options.txt:542
 #, priority:260
 msgid "Limit the displayed commits to those directly on the ancestry chain between the ``from'' and ``to'' commits in the given commit range. I.e. only display commits that are ancestor of the ``to'' commit and descendants of the ``from'' commit."
 msgstr ""
+"Limiter les commits affichés à ceux qui se trouvent directement sur la "
+"chaîne des ancêtres entre les commits \"from\" et \"to\" dans la plage de "
+"commit donnée. C'est-à-dire n'afficher que les commits qui sont l'ancêtre du "
+"commit \"to\" et les descendants du commit \"from\"."
 
 #. type: Plain text
 #: en/rev-list-options.txt:544
 #, priority:260
 msgid "As an example use case, consider the following commit history:"
-msgstr ""
+msgstr "À titre d'exemple, considérons l'historique de commits suivant :"
 
 #. type: delimited block -
 #: en/rev-list-options.txt:551
@@ -60572,18 +60632,34 @@ msgid ""
 "\t /                     \\\n"
 "\tA-------K---------------L--M\n"
 msgstr ""
+"\t    D---E-------F\n"
+"\t   /     \\       \\\n"
+"\t  B---C---G---H---I---J\n"
+"\t /                     \\\n"
+"\tA-------K---------------L--M\n"
 
 #. type: Plain text
 #: en/rev-list-options.txt:559
 #, priority:260
 msgid "A regular 'D..M' computes the set of commits that are ancestors of `M`, but excludes the ones that are ancestors of `D`. This is useful to see what happened to the history leading to `M` since `D`, in the sense that ``what does `M` have that did not exist in `D`''. The result in this example would be all the commits, except `A` and `B` (and `D` itself, of course)."
 msgstr ""
+"Un 'D..M' régulier calcule l'ensemble des commits qui sont les ancêtres de "
+"`M`, mais exclut ceux qui sont les ancêtres de `D`. C'est utile pour voir ce "
+"qui s'est passé dans l'historique qui a mené à `M` depuis le `D`, au sens de "
+"« ce que `M` a qui n'existait pas dans `D` ». Le résultat dans cet exemple "
+"serait tous les commits, sauf `A` et `B` (et `D` lui-même, bien sûr)."
 
 #. type: Plain text
 #: en/rev-list-options.txt:565
 #, priority:260
 msgid "When we want to find out what commits in `M` are contaminated with the bug introduced by `D` and need fixing, however, we might want to view only the subset of 'D..M' that are actually descendants of `D`, i.e.  excluding `C` and `K`. This is exactly what the `--ancestry-path` option does. Applied to the 'D..M' range, it results in:"
 msgstr ""
+"Quand nous voulons savoir quels commits dans `M` sont contaminés par le "
+"bogue introduit par `D` et ont besoin d'être corrigés, cependant, nous "
+"pourrions vouloir voir seulement le sous-ensemble de 'D..M' qui sont en fait "
+"des descendants de `D`, c'est-à-dire en excluant `C` et `K`. C'est "
+"exactement ce que fait l'option `--ancestry-path`. Appliqué à l'intervalle "
+"'D..M', il se traduit en :"
 
 #. type: delimited block -
 #: en/rev-list-options.txt:572
@@ -60595,6 +60671,11 @@ msgid ""
 "\t\t\t       \\\n"
 "\t\t\t\tL--M\n"
 msgstr ""
+"\t\tE-------F\n"
+"\t\t \\       \\\n"
+"\t\t  G---H---I---J\n"
+"\t\t\t       \\\n"
+"\t\t\t\tL--M\n"
 
 #. type: Plain text
 #: en/rev-list-options.txt:581
