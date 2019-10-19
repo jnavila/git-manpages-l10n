@@ -5647,11 +5647,9 @@ msgid ""
 "\t  [--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]\n"
 "\t  [--chmod=(+|-)x] [--] [<pathspec>...]\n"
 msgstr ""
-"'git add' [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | "
-"-i] [--patch | -p]\n"
+"'git add' [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]\n"
 "\t  [--edit | -e] [--[no-]all | --[no-]ignore-removal | [--update | -u]]\n"
-"\t  [--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] "
-"[--renormalize]\n"
+"\t  [--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]\n"
 "\t  [--chmod=(+|-)x] [--] [<ruta>...]\n"
 
 #. type: Title -
@@ -5664,62 +5662,37 @@ msgstr "DESCRIPCIÓN"
 #: en/git-add.txt:24
 #, priority:300
 msgid "This command updates the index using the current content found in the working tree, to prepare the content staged for the next commit.  It typically adds the current content of existing paths as a whole, but with some options it can also be used to add content with only part of the changes made to the working tree files applied, or remove paths that do not exist in the working tree anymore."
-msgstr ""
-"Este comando actualiza el índice con el contenido del directorio de trabajo, "
-"preparándolo para el siguiente commit. Normalmente incluye todo el contenido "
-"de la ruta actual, pero pueden usarse algunas opciones para incluir sólo una "
-"parte de los cambios realizados en los archivos, o para eliminar rutas que "
-"ya no existen en el directorio de trabajo."
+msgstr "Este comando actualiza el índice con el contenido del directorio de trabajo, preparándolo para el siguiente commit. Normalmente incluye todo el contenido de la ruta actual, pero pueden usarse algunas opciones para incluir sólo una parte de los cambios realizados en los archivos, o para eliminar rutas que ya no existen en el directorio de trabajo."
 
 #. type: Plain text
 #: en/git-add.txt:30
 #, priority:300
 msgid "The \"index\" holds a snapshot of the content of the working tree, and it is this snapshot that is taken as the contents of the next commit.  Thus after making any changes to the working tree, and before running the commit command, you must use the `add` command to add any new or modified files to the index."
-msgstr ""
-"El \"índice\" contiene una instantánea del contenido del directorio de "
-"trabajo y es esta imagen la que se confirmará en el siguiente commit. Por "
-"eso después de cualquier cambio en el directorio de trabajo, y antes de "
-"realizar el commit debe usar 'add' para añadir al índice cualquier "
-"modificación o nuevo archivo."
+msgstr "El \"índice\" contiene una instantánea del contenido del directorio de trabajo y es esta imagen la que se confirmará en el siguiente commit. Por eso después de cualquier cambio en el directorio de trabajo, y antes de realizar el commit debe usar 'add' para añadir al índice cualquier modificación o nuevo archivo."
 
 #. type: Plain text
 #: en/git-add.txt:35
 #, priority:300
 msgid "This command can be performed multiple times before a commit.  It only adds the content of the specified file(s) at the time the add command is run; if you want subsequent changes included in the next commit, then you must run `git add` again to add the new content to the index."
-msgstr ""
-"Este comando puede ser ejecutado varias veces antes de un commit. Solamente "
-"añadirá el contenido del archivo o archivos especificados en el momento de "
-"ejecutar el comando; si usted quiere incluir cambios posteriores en el "
-"siguiente commit deberá ejecutar otra vez 'git add' para añadir el nuevo "
-"contenido al índice."
+msgstr "Este comando puede ser ejecutado varias veces antes de un commit. Solamente añadirá el contenido del archivo o archivos especificados en el momento de ejecutar el comando; si usted quiere incluir cambios posteriores en el siguiente commit deberá ejecutar otra vez 'git add' para añadir el nuevo contenido al índice."
 
 #. type: Plain text
 #: en/git-add.txt:38
 #, priority:300
 msgid "The `git status` command can be used to obtain a summary of which files have changes that are staged for the next commit."
-msgstr ""
-"El comando 'git status' puede usarse para obtener un resumen de qué archivos "
-"han cambiado y cuales están preparados para el siguiente commit."
+msgstr "El comando 'git status' puede usarse para obtener un resumen de qué archivos han cambiado y cuales están preparados para el siguiente commit."
 
 #. type: Plain text
 #: en/git-add.txt:45
 #, 300, fuzzy, priority
 msgid "The `git add` command will not add ignored files by default.  If any ignored files were explicitly specified on the command line, `git add` will fail with a list of ignored files.  Ignored files reached by directory recursion or filename globbing performed by Git (quote your globs before the shell) will be silently ignored.  The 'git add' command can be used to add ignored files with the `-f` (force) option."
-msgstr ""
-"Por defecto, el comando 'git add' no incluirá los archivos ignorados.  Si se "
-"especifica un archivo ignorado explícitamente en la línea de comandos, 'git "
-"add' fallará dando una lista de los mismos. Los archivos ignorados mediante "
-"recursión o uso de patrones (globbing) por Git (quote your globs before the "
-"shell) serán ignorados silenciosamene. El comando 'git add' puede usarse "
-"para incluir archivos ignorados mediante la opción '-f' (force)."
+msgstr "Por defecto, el comando 'git add' no incluirá los archivos ignorados.  Si se especifica un archivo ignorado explícitamente en la línea de comandos, 'git add' fallará dando una lista de los mismos. Los archivos ignorados mediante recursión o uso de patrones (globbing) por Git (quote your globs before the shell) serán ignorados silenciosamene. El comando 'git add' puede usarse para incluir archivos ignorados mediante la opción '-f' (force)."
 
 #. type: Plain text
 #: en/git-add.txt:48
 #, priority:300
 msgid "Please see linkgit:git-commit[1] for alternative ways to add content to a commit."
-msgstr ""
-"Véase linkgit:git-commit[1] para otras formas de añadir contenido a un "
-"commit."
+msgstr "Véase linkgit:git-commit[1] para otras formas de añadir contenido a un commit."
 
 #. type: Title -
 #: en/git-add.txt:51 en/git-am.txt:28 en/git-annotate.txt:24 en/git-apply.txt:36 en/git-archimport.txt:69 en/git-archive.txt:34 en/git-bisect.txt:356 en/git-blame.txt:50 en/git-branch.txt:96 en/git-bundle.txt:34 en/git-cat-file.txt:30 en/git-check-attr.txt:21 en/git-check-ignore.txt:27 en/git-check-mailmap.txt:25 en/git-checkout-index.txt:24 en/git-checkout.txt:107 en/git-check-ref-format.txt:100 en/git-cherry-pick.txt:42 en/git-cherry.txt:28 en/git-clean.txt:27 en/git-clone.txt:43 en/git-column.txt:22 en/git-commit-tree.txt:46 en/git-commit.txt:63 en/git-config.txt:72 en/git-count-objects.txt:20 en/git-credential-cache.txt:27 en/git-credential-store.txt:30 en/git-cvsexportcommit.txt:35 en/git-cvsimport.txt:51 en/git-cvsserver.txt:28 en/git-daemon.txt:48 en/git-describe.txt:36 en/git-diff-files.txt:22 en/git-diff-index.txt:23 en/git-difftool.txt:21 en/git-diff-tree.txt:26 en/git-diff.txt:96 en/git-fast-export.txt:25 en/git-fast-import.txt:35 en/git-fetch-pack.txt:34 en/git-fetch.txt:46 en/git-filter-branch.txt:83 en/git-fmt-merge-msg.txt:25 en/git-for-each-ref.txt:28 en/git-format-patch.txt:85 en/git-fsck.txt:22 en/git-gc.txt:35 en/git-grep.txt:74 en/git-hash-object.txt:24 en/git-help.txt:44 en/git-http-fetch.txt:23 en/git-http-push.txt:24 en/git-imap-send.txt:30 en/git-index-pack.txt:26 en/git-init.txt:39 en/git-instaweb.txt:21 en/git-interpret-trailers.txt:73 en/git-log.txt:25 en/git-ls-files.txt:34 en/git-ls-remote.txt:23 en/git-ls-tree.txt:37 en/git-mailinfo.txt:26 en/git-mailsplit.txt:23 en/git-merge-base.txt:70 en/git-merge-file.txt:53 en/git-merge-index.txt:22 en/git-mergetool.txt:26 en/git-merge.txt:63 en/git-mktree.txt:22 en/git-mv.txt:30 en/git-name-rev.txt:22 en/git-notes.txt:126 en/git-p4.txt:199 en/git-pack-objects.txt:50 en/git-pack-redundant.txt:29 en/git-pack-refs.txt:46 en/git-patch-id.txt:31 en/git-prune-packed.txt:30 en/git-prune.txt:34 en/git-pull.txt:75 en/git-quiltimport.txt:32 en/git-read-tree.txt:33 en/git-rebase.txt:209 en/git-receive-pack.txt:40 en/git-reflog.txt:61 en/git-remote.txt:33 en/git-repack.txt:29 en/git-replace.txt:59 en/git-request-pull.txt:28 en/git-reset.txt:95 en/git-restore.txt:34 en/git-revert.txt:35 en/git-rev-list.txt:115 en/git-rev-parse.txt:26 en/git-rm.txt:28 en/git-send-email.txt:43 en/git-send-pack.txt:27 en/git-shortlog.txt:27 en/git-show-branch.txt:32 en/git-show-ref.txt:34 en/git-show.txt:36 en/git-stash.txt:47 en/git-status.txt:25 en/git-stripspace.txt:37 en/git-submodule.txt:253 en/git-svn.txt:575 en/git-switch.txt:35 en/git-symbolic-ref.txt:33 en/git-tag.txt:59 en/git.txt:41 en/git-unpack-file.txt:22 en/git-unpack-objects.txt:29 en/git-update-index.txt:43 en/git-upload-archive.txt:56 en/git-upload-pack.txt:26 en/git-var.txt:19 en/git-verify-commit.txt:18 en/git-verify-pack.txt:22 en/git-verify-tag.txt:18 en/git-web--browse.txt:43 en/git-worktree.txt:117 en/git-write-tree.txt:29
@@ -5737,25 +5710,13 @@ msgstr ""
 #: en/git-add.txt:64
 #, priority:300
 msgid "Files to add content from.  Fileglobs (e.g. `*.c`) can be given to add all matching files.  Also a leading directory name (e.g. `dir` to add `dir/file1` and `dir/file2`) can be given to update the index to match the current state of the directory as a whole (e.g.  specifying `dir` will record not just a file `dir/file1` modified in the working tree, a file `dir/file2` added to the working tree, but also a file `dir/file3` removed from the working tree). Note that older versions of Git used to ignore removed files; use `--no-all` option if you want to add modified or new files but ignore removed ones."
-msgstr ""
-"Ruta de los archivos desde los que añadir el contenido. Pueden usarse "
-"comodines (p.e. '*.c') para incluir todos los archivos coincidentes con el "
-"patrón. También puede indicarse el nombre del directorio padre (p.e. 'dir' "
-"para agregar 'dir/archivo1' y 'dir/archivo2') para actualizar el índice con "
-"el estado actual de todo el directorio (p.e. especificar 'dir' no sólo "
-"grabará la modificación de  'dir/archivo1' y la creación de 'dir/archivo2', "
-"sino también el borrado de 'dir/archivo3'). Nótese que en versiones "
-"anteriores Git ignoraba los archivos eliminados; utilice la opción '--no-"
-"all' si desea añadir los archivos nuevos o modificados pero ignorar los "
-"eliminados."
+msgstr "Ruta de los archivos desde los que añadir el contenido. Pueden usarse comodines (p.e. '*.c') para incluir todos los archivos coincidentes con el patrón. También puede indicarse el nombre del directorio padre (p.e. 'dir' para agregar 'dir/archivo1' y 'dir/archivo2') para actualizar el índice con el estado actual de todo el directorio (p.e. especificar 'dir' no sólo grabará la modificación de  'dir/archivo1' y la creación de 'dir/archivo2', sino también el borrado de 'dir/archivo3'). Nótese que en versiones anteriores Git ignoraba los archivos eliminados; utilice la opción '--no-all' si desea añadir los archivos nuevos o modificados pero ignorar los eliminados."
 
 #. type: Plain text
 #: en/git-add.txt:67 en/git-grep.txt:314
 #, priority:300
 msgid "For more details about the <pathspec> syntax, see the 'pathspec' entry in linkgit:gitglossary[7]."
-msgstr ""
-"Véase 'pathspec' en linkgit:gitglossary[7] para más información sobre la "
-"sintaxis de <pathspec>."
+msgstr "Véase 'pathspec' en linkgit:gitglossary[7] para más información sobre la sintaxis de <pathspec>."
 
 #. type: Plain text
 #: en/git-add.txt:72
@@ -46113,9 +46074,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-sh-setup.txt:36
-#, no-wrap, priority:100
+#, ignore-same, no-wrap, priority:100
 msgid "die"
-msgstr ""
+msgstr "die"
 
 #. type: Plain text
 #: en/git-sh-setup.txt:39
@@ -46125,9 +46086,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-sh-setup.txt:40
-#, no-wrap, priority:100
+#, ignore-same, no-wrap, priority:100
 msgid "usage"
-msgstr ""
+msgstr "usage"
 
 #. type: Plain text
 #: en/git-sh-setup.txt:42
@@ -46137,9 +46098,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-sh-setup.txt:43
-#, no-wrap, priority:100
+#, ignore-same, no-wrap, priority:100
 msgid "set_reflog_action"
-msgstr ""
+msgstr "set_reflog_action"
 
 #. type: Plain text
 #: en/git-sh-setup.txt:49
@@ -46149,9 +46110,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-sh-setup.txt:50
-#, no-wrap, priority:100
+#, ignore-same, no-wrap, priority:100
 msgid "git_editor"
-msgstr ""
+msgstr "git_editor"
 
 #. type: Plain text
 #: en/git-sh-setup.txt:54
@@ -46173,9 +46134,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-sh-setup.txt:60
-#, no-wrap, priority:100
+#, ignore-same, no-wrap, priority:100
 msgid "cd_to_toplevel"
-msgstr ""
+msgstr "cd_to_toplevel"
 
 #. type: Plain text
 #: en/git-sh-setup.txt:62
@@ -46185,9 +46146,9 @@ msgstr "No se puede aplicar chdir a $cdup, el nivel máximo del árbol de trabaj
 
 #. type: Labeled list
 #: en/git-sh-setup.txt:63
-#, no-wrap, priority:100
+#, ignore-same, no-wrap, priority:100
 msgid "require_work_tree"
-msgstr ""
+msgstr "require_work_tree"
 
 #. type: Plain text
 #: en/git-sh-setup.txt:66
@@ -46197,9 +46158,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-sh-setup.txt:67
-#, no-wrap, priority:100
+#, ignore-same, no-wrap, priority:100
 msgid "require_work_tree_exists"
-msgstr ""
+msgstr "require_work_tree_exists"
 
 #. type: Plain text
 #: en/git-sh-setup.txt:72
@@ -46227,9 +46188,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-sh-setup.txt:83
-#, no-wrap, priority:100
+#, ignore-same, no-wrap, priority:100
 msgid "get_author_ident_from_commit"
-msgstr ""
+msgstr "get_author_ident_from_commit"
 
 #. type: Plain text
 #: en/git-sh-setup.txt:86
@@ -46239,9 +46200,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-sh-setup.txt:87
-#, no-wrap, priority:100
+#, ignore-same, no-wrap, priority:100
 msgid "create_virtual_base"
-msgstr ""
+msgstr "create_virtual_base"
 
 #. type: Plain text
 #: en/git-sh-setup.txt:92
