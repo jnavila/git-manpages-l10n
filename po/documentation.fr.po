@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2019-08-26 23:13+0200\n"
-"PO-Revision-Date: 2019-10-16 07:35+0000\n"
+"PO-Revision-Date: 2019-10-24 20:53+0000\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9\n"
+"X-Generator: Weblate 3.9.1-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:666 en/git-instaweb.txt:45 en/git-mailinfo.txt:47 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -60682,30 +60682,44 @@ msgstr ""
 #, priority:260
 msgid "The `--simplify-by-decoration` option allows you to view only the big picture of the topology of the history, by omitting commits that are not referenced by tags.  Commits are marked as !TREESAME (in other words, kept after history simplification rules described above) if (1) they are referenced by tags, or (2) they change the contents of the paths given on the command line.  All other commits are marked as TREESAME (subject to be simplified away)."
 msgstr ""
+"L'option `--simplify-by-decoration` vous donne une vue d'ensemble de la "
+"topologie de l'historique, en omettant les commits qui ne sont pas "
+"référencés par des étiquettes.  Les commits sont marqués comme !MEMEARBRE(en "
+"d'autres termes, conservés après les règles de simplification de "
+"l'historique décrites ci-dessus) si (1) ils sont référencés par des "
+"étiquettes, ou (2) ils changent le contenu des chemins donnés sur la ligne "
+"de commande.  Tous les autres commits sont marqués comme MEMEARBRE (soumis à "
+"une possible simplification)."
 
 #. type: Title ~
 #: en/rev-list-options.txt:584
 #, no-wrap, priority:260
 msgid "Bisection Helpers"
-msgstr ""
+msgstr "Aides à la bisection"
 
 #. type: Plain text
 #: en/rev-list-options.txt:593
 #, priority:260
 msgid "Limit output to the one commit object which is roughly halfway between included and excluded commits. Note that the bad bisection ref `refs/bisect/bad` is added to the included commits (if it exists) and the good bisection refs `refs/bisect/good-*` are added to the excluded commits (if they exist). Thus, supposing there are no refs in `refs/bisect/`, if"
 msgstr ""
+"Limiter la sortie à l'objet commit qui est à peu près à mi-chemin entre les "
+"commits inclus et les commits exclus. Notez que la référence mauvaise de "
+"bissection  `refs/bisect/bad` est ajoutée aux commits inclus (si elle existe)"
+" et la référence bonne de bissection `refs/bisect/good-*` est ajoutée aux "
+"commits exclus (s'ils existent). Ainsi, en supposant qu'il n'y ait pas de "
+"références dans `refs/bisect/`, si"
 
 #. type: delimited block -
 #: en/rev-list-options.txt:596
 #, no-wrap, priority:260
 msgid "\t$ git rev-list --bisect foo ^bar ^baz\n"
-msgstr ""
+msgstr "\t$ git rev-list --bisect foo ^bar ^baz\n"
 
 #. type: Plain text
 #: en/rev-list-options.txt:599
 #, priority:260
 msgid "outputs 'midpoint', the output of the two commands"
-msgstr ""
+msgstr "affiche 'midpoint', la sortie des deux commandes"
 
 #. type: delimited block -
 #: en/rev-list-options.txt:603
@@ -60714,12 +60728,18 @@ msgid ""
 "\t$ git rev-list foo ^midpoint\n"
 "\t$ git rev-list midpoint ^bar ^baz\n"
 msgstr ""
+"\t$ git rev-list foo ^midpoint\n"
+"\t$ git rev-list midpoint ^bar ^baz\n"
 
 #. type: Plain text
 #: en/rev-list-options.txt:609
 #, priority:260
 msgid "would be of roughly the same length.  Finding the change which introduces a regression is thus reduced to a binary search: repeatedly generate and test new 'midpoint's until the commit chain is of length one. Cannot be combined with --first-parent."
 msgstr ""
+"seraientt à peu près de la même longueur.  Trouver le changement qui "
+"introduit une régression se réduit donc à une recherche binaire : générer et "
+"tester à plusieurs reprises de nouveaux 'midpoint' jusqu'à ce que la chaîne "
+"de commits soit de longueur un. Ne peut pas être combiné avec --first-parent."
 
 #. type: Labeled list
 #: en/rev-list-options.txt:610
