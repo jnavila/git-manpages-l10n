@@ -55,7 +55,7 @@ def main (f):
     priorities = dict((source, section) for section in SECTIONS for source in SECTIONS[section])
     for entry in po:
       if not entry.obsolete:
-        flags = [f for f in entry.flags if not f.startswith("priority:")]
+        flags = [f for f in entry.flags if not (f.startswith("priority") or f.isdigit()) ]
         p = max(priorities.get(filename) or 100 for (filename,_) in entry.occurrences)
         flags.append("priority:{}".format(p))
         entry.flags = flags

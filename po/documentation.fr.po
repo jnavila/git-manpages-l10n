@@ -3672,7 +3672,7 @@ msgstr "--unified=<n>"
 
 #. type: Plain text
 #: en/diff-options.txt:40
-#, 280, priority
+#, priority:280
 msgid "Generate diffs with <n> lines of context instead of the usual three. Implies `--patch`."
 msgstr "Générer des diffs avec <n> lignes de contexte au lieu des trois habituelles. Implique `--patch`."
 
@@ -4048,7 +4048,7 @@ msgstr "--cumulative"
 
 #. type: Plain text
 #: en/diff-options.txt:208
-#, 280, priority
+#, priority:280
 msgid "Synonym for --dirstat=cumulative"
 msgstr "Synonyme de --dirstat=cumulative"
 
@@ -4572,7 +4572,7 @@ msgstr "--binary"
 
 #. type: Plain text
 #: en/diff-options.txt:440
-#, 280, priority
+#, priority:280
 msgid "In addition to `--full-index`, output a binary diff that can be applied with `git-apply`. Implies `--patch`."
 msgstr "En addition à `--full-index`, afficher un diff binaire qui peut être appliqué avec `git-apply`. Implique `--patch`."
 
@@ -8885,7 +8885,7 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-blame.txt:88 en/git-describe.txt:65
-#, 260, no-wrap, priority
+#, no-wrap, priority:260
 msgid "--abbrev=<n>"
 msgstr "--abbrev=<n>"
 
@@ -13430,7 +13430,7 @@ msgstr "git-clone - Clone un dépôt dans un nouveau répertoire"
 
 #. type: Plain text
 #: en/git-clone.txt:20
-#, 300, no-wrap, priority
+#, no-wrap, priority:300
 msgid ""
 "'git clone' [--template=<template_directory>]\n"
 "\t  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]\n"
@@ -13452,7 +13452,7 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-clone.txt:29
-#, 300, priority
+#, priority:300
 msgid "Clones a repository into a newly created directory, creates remote-tracking branches for each branch in the cloned repository (visible using `git branch --remotes`), and creates and checks out an initial branch that is forked from the cloned repository's currently active branch."
 msgstr "Clone un dépôt dans un répertoire nouvellement créé, crée une branche de suivi à distance pour chaque branche du dépôt cloné (visible en utilisant `git branch --remotes`) et crée et extrait une branche initiale qui est dupliquée depuis la branche active actuelle du dépôt cloné."
 
@@ -13536,13 +13536,13 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-clone.txt:89
-#, 300, priority
+#, priority:300
 msgid "Note that running `git repack` without the `--local` option in a repository cloned with `--shared` will copy objects from the source repository into a pack in the cloned repository, removing the disk space savings of `clone --shared`.  It is safe, however, to run `git gc`, which uses the `--local` option by default."
 msgstr "Notez que lancer `git repack` sans l'option `--local` dans un dépôt cloné avec `--shared` va copier les objets depuis le dépôt source dans un paquet dans le répertoire cloné, éliminant de ce fait les économies d'espace disque de `clone --shared`. Par contre, il est possible de lancer `git gc`, qui utilise l'option `--local` par défaut."
 
 #. type: Plain text
 #: en/git-clone.txt:93
-#, 300, priority
+#, priority:300
 msgid "If you want to break the dependency of a repository cloned with `--shared` on its source repository, you can simply run `git repack -a` to copy all objects from the source repository into a pack in the cloned repository."
 msgstr "Si vous souhaitez casser la dépendance d'un dépôt cloné avec `--shared` à son dépôt source, vous pouvez simplement lancer `git repack -a` pour copier tous les objets depuis le dépôt source dans un paquet dans le dépôt cloné."
 
@@ -13594,7 +13594,7 @@ msgstr "Mode verbeux. N'agit pas sur l'affichage de l'état d'avancement sur le 
 
 #. type: Plain text
 #: en/git-clone.txt:134
-#, 300, priority
+#, priority:300
 msgid "Progress status is reported on the standard error stream by default when it is attached to a terminal, unless `--quiet` is specified. This flag forces progress status even if the standard error stream is not directed to a terminal."
 msgstr "L'état d'avancement est affiché sur la sortie d'erreur standard quand elle est attachée à un terminal, à moins que `--quiet` soit spécifié. Ce drapeau force l'état d'avancement même si le flux d'erreur standard n'est pas dirigé vers un terminal."
 
@@ -13612,7 +13612,7 @@ msgstr "--bare"
 
 #. type: Plain text
 #: en/git-clone.txt:158
-#, 300, priority
+#, priority:300
 msgid "Make a 'bare' Git repository.  That is, instead of creating `<directory>` and placing the administrative files in `<directory>/.git`, make the `<directory>` itself the `$GIT_DIR`. This obviously implies the `--no-checkout` because there is nowhere to check out the working tree.  Also the branch heads at the remote are copied directly to corresponding local branch heads, without mapping them to `refs/remotes/origin/`.  When this option is used, neither remote-tracking branches nor the related configuration variables are created."
 msgstr "Créer un dépôt Git « nu ». Cela signifie qu'au lieu de créer `<répertoire>` et de placer les fichiers administratifs dans `<répertoire>/.git`, faire de `<répertoire>` lui-même le `$GIT_DIR`. Cela implique évidemment l'option `--no-checkout` parce qu'il n'y a nulle part où extraire l'arbre de travail. De plus, les têtes de branches distantes sont également copiées directement dans les têtes de branches locales correspondantes, sans les préfixer de `refs/remotes/origin/`. Lorsque cette option est utilisée, ni les branches de suivi à distance ni les variables de configuration s'y rattachant ne sont créées."
 
@@ -14905,7 +14905,7 @@ msgstr "Quand des chemins sont fournis sur la ligne de commande, la commande val
 
 #. type: Plain text
 #: en/git-commit.txt:369
-#, 280, priority
+#, priority:280
 msgid "When recording your own work, the contents of modified files in your working tree are temporarily stored to a staging area called the \"index\" with 'git add'.  A file can be reverted back, only in the index but not in the working tree, to that of the last commit with `git restore --staged <file>`, which effectively reverts 'git add' and prevents the changes to this file from participating in the next commit.  After building the state to be committed incrementally with these commands, `git commit` (without any pathname parameter) is used to record what has been staged so far.  This is the most basic form of the command.  An example:"
 msgstr "Lors de l'enregistrement de votre propre travail, le contenu des fichiers modifiés dans votre arbre de travail est temporairement stocké au moyen de `git add` dans une zone de stockage intermédiaire appelée « l'index ». Un fichier peut n'être ramené à son contenu correspondant au dernier commit seulement dans l'index mais pas dans l'arbre de travail grâce à `git restore --staged <fichier>`, ce qui inverse effectivement le 'git add' et empêche les modifications de ce fichier de participer à la prochaine validation. Après avoir construit l'état à valider de manière incrémentale avec ces commandes, `git commit` (sans aucun nom de chemin en paramètre) sert à enregistrer ce qui a été préparé jusqu'ici. C'est la forme la plus simple de la commande. Par exemple :"
 
@@ -18501,7 +18501,7 @@ msgstr "git-describe(1)"
 
 #. type: Plain text
 #: en/git-describe.txt:7
-#, 260, priority
+#, priority:260
 msgid "git-describe - Give an object a human readable name based on an available ref"
 msgstr "git-describe - Baptiser un objet avec un nom lisible à partir d'une référence disponible"
 
@@ -18669,7 +18669,7 @@ msgstr "--always"
 
 #. type: Plain text
 #: en/git-describe.txt:120 en/git-name-rev.txt:63
-#, 260, priority
+#, priority:260
 msgid "Show uniquely abbreviated commit object as fallback."
 msgstr "Afficher les objets commits abrégés en dernier recours."
 
@@ -30043,7 +30043,7 @@ msgstr "`git log -3`"
 
 #. type: Plain text
 #: en/git-log.txt:170
-#, 260, priority
+#, priority:260
 msgid "Limits the number of commits to show to 3."
 msgstr "Limite le nombre de commits à afficher à 3."
 
@@ -30139,7 +30139,7 @@ msgstr "mailmap.*"
 
 #. type: Plain text
 #: en/git-log.txt:218
-#, 260, priority
+#, priority:260
 msgid "See linkgit:git-shortlog[1]."
 msgstr "Voir linkgit:git-shortlog[1]."
 
@@ -32678,7 +32678,7 @@ msgstr "git-mv(1)"
 
 #. type: Plain text
 #: en/git-mv.txt:7
-#, 280, priority
+#, priority:280
 msgid "git-mv - Move or rename a file, a directory, or a symlink"
 msgstr "git-mv - Déplace ou renomme un fichier, un répertoire, ou un lien symbolique"
 
@@ -32690,7 +32690,7 @@ msgstr "'git mv' <options>... <args>...\n"
 
 #. type: Plain text
 #: en/git-mv.txt:17
-#, 280, priority
+#, priority:280
 msgid "Move or rename a file, directory or symlink."
 msgstr "Déplace ou renomme un fichier, un répertoire ou un symlink."
 
@@ -41770,7 +41770,7 @@ msgstr "Cela signifie que `git reset <chemins>` est l'opposé de `git add <chemi
 
 #. type: Plain text
 #: en/git-reset.txt:37
-#, 280, priority
+#, priority:280
 msgid "After running `git reset <paths>` to update the index entry, you can use linkgit:git-restore[1] to check the contents out of the index to the working tree. Alternatively, using linkgit:git-restore[1] and specifying a commit with `--source`, you can copy the contents of a path out of a commit to the index and to the working tree in one go."
 msgstr "Après avoir lancé `git reset <chemins>` pour mettre à jour l'entrée d'index, vous pouvez linkgit:git-restore[1] pour extraire le contenu de l'index dans l'arbre de travail. Alternativement, en utilisant linkgit:git-restore[1] et en spécifiant un commit avec `--source`, vous pouvez copier le contenu d'un chemin d'un commit vers l'index et l'arbre de travail d'une seule traite."
 
@@ -41980,7 +41980,7 @@ msgstr "Défaire le commit, en le transformant en branche thématique"
 
 #. type: delimited block -
 #: en/git-reset.txt:156
-#, 280, no-wrap, priority
+#, no-wrap, priority:280
 msgid ""
 "$ git branch topic/wip          <1>\n"
 "$ git reset --hard HEAD~3       <2>\n"
@@ -42134,7 +42134,7 @@ msgstr "Supposons que vous êtes interrompu par une demande urgente de correctif
 
 #. type: delimited block -
 #: en/git-reset.txt:245
-#, 280, no-wrap, priority
+#, no-wrap, priority:280
 msgid ""
 "$ git switch feature  ;# you were working in \"feature\" branch and\n"
 "$ work work work      ;# got interrupted\n"
@@ -42262,7 +42262,7 @@ msgstr "Ceci valide vos premières éditions dans `branche1`."
 
 #. type: Plain text
 #: en/git-reset.txt:296
-#, 280, priority
+#, priority:280
 msgid "In the ideal world, you could have realized that the earlier commit did not belong to the new topic when you created and switched to `branch2` (i.e. `git switch -c branch2 start`), but nobody is perfect."
 msgstr "Dans un monde idéal, vous pourriez avoir réalisé que le commit précédent n'appartenait pas au nouveau sujet quand vous avez créé et avez basculé sur `branche2` (c-à-d `git switch -c branche2 debut`), mais personne n'est parfait."
 
@@ -42500,7 +42500,7 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-reset.txt:438
-#, 280, priority
+#, priority:280
 msgid "`reset --merge` is meant to be used when resetting out of a conflicted merge. Any mergy operation guarantees that the working tree file that is involved in the merge does not have a local change with respect to the index before it starts, and that it writes the result out to the working tree. So if we see some difference between the index and the target and also between the index and the working tree, then it means that we are not resetting out from a state that a mergy operation left after failing with a conflict. That is why we disallow `--merge` option in this case."
 msgstr "`reset --merge` est fait pour être utilisé lors de la réinitialisation d'une fusion conflictuelle. Toute opération de type fusion garantit que le fichier de l'arbre de travail qui est impliqué dans une fusion ne subit pas de modification locale par rapport à l'index avant son démarrage, et qu'elle écrit le résultat dans l'arbre de travail. Donc si nous voyons des différences entre l'index et la cible et aussi entre l'index et l'arbre de travail, alors cela signifie que nous ne réinitialisons pas depuis un état qu'une opération de type fusion a laissé après un échec de conflit. C'est pourquoi l'option `--merge` est interdite dans ce cas."
 
@@ -42538,7 +42538,7 @@ msgstr ""
 
 #. type: delimited block .
 #: en/git-reset.txt:469
-#, 280, no-wrap, priority
+#, no-wrap, priority:280
 msgid ""
 "working index HEAD target         working index HEAD\n"
 "----------------------------------------------------\n"
@@ -45678,7 +45678,7 @@ msgstr "--email"
 
 #. type: Plain text
 #: en/git-shortlog.txt:41
-#, 260, priority
+#, priority:260
 msgid "Show the email address of each author."
 msgstr "Afficher l'adresse courriel de chaque auteur."
 
@@ -47596,7 +47596,7 @@ msgstr "Les lignes d'en-tête commencent par \"#\" et sont ajoutées en réponse
 
 #. type: Title ^
 #: en/git-status.txt:282
-#, 280, no-wrap, priority
+#, no-wrap, priority:280
 msgid "Branch Headers"
 msgstr "En-têtes de branche"
 
@@ -47630,7 +47630,7 @@ msgstr ""
 
 #. type: Title ^
 #: en/git-status.txt:299
-#, 280, no-wrap, priority
+#, no-wrap, priority:280
 msgid "Changed Tracked Entries"
 msgstr "Entrées suivies modifiées"
 
@@ -47778,7 +47778,7 @@ msgstr ""
 
 #. type: Title ^
 #: en/git-status.txt:371
-#, 280, no-wrap, priority
+#, no-wrap, priority:280
 msgid "Other Items"
 msgstr "Autres éléments"
 
@@ -47814,7 +47814,7 @@ msgstr "    ! <chemin>\n"
 
 #. type: Title ^
 #: en/git-status.txt:386
-#, 280, no-wrap, priority
+#, no-wrap, priority:280
 msgid "Pathname Format Notes and -z"
 msgstr "Notes de format du nom de chemin et -z"
 
@@ -56883,7 +56883,7 @@ msgstr "'%n'"
 
 #. type: Plain text
 #: en/pretty-formats.txt:107
-#, 260, priority
+#, priority:260
 msgid "newline"
 msgstr "retour à la ligne"
 
@@ -56949,13 +56949,13 @@ msgstr "passe la couleur au bleu"
 
 #. type: Labeled list
 #: en/pretty-formats.txt:114
-#, 260, ignore-same, no-wrap, priority
+#, ignore-same, no-wrap, priority:260
 msgid "'%Creset'"
 msgstr "'%Creset'"
 
 #. type: Plain text
 #: en/pretty-formats.txt:115
-#, 260, priority
+#, priority:260
 msgid "reset color"
 msgstr "réinitialise la couleur"
 
@@ -57015,7 +57015,7 @@ msgstr "'%<(<N>[,tronq|tronqg|tronqm])'"
 
 #. type: Plain text
 #: en/pretty-formats.txt:133
-#, 260, priority
+#, priority:260
 msgid "make the next placeholder take at"
 msgstr "faire le prochain espace réservé prendre"
 
@@ -57111,19 +57111,19 @@ msgstr "'%H'"
 
 #. type: Plain text
 #: en/pretty-formats.txt:155
-#, 260, priority
+#, priority:260
 msgid "commit hash"
 msgstr "empreinte du commit"
 
 #. type: Labeled list
 #: en/pretty-formats.txt:155
-#, 260, ignore-same, no-wrap, priority
+#, ignore-same, no-wrap, priority:260
 msgid "'%h'"
 msgstr "'%h'"
 
 #. type: Plain text
 #: en/pretty-formats.txt:156
-#, 260, priority
+#, priority:260
 msgid "abbreviated commit hash"
 msgstr "empreinte abrégée du commit"
 
@@ -57135,7 +57135,7 @@ msgstr "'%T'"
 
 #. type: Plain text
 #: en/pretty-formats.txt:157
-#, 260, priority
+#, priority:260
 msgid "tree hash"
 msgstr "empreinte de l'arbre"
 
@@ -57159,7 +57159,7 @@ msgstr "'%P'"
 
 #. type: Plain text
 #: en/pretty-formats.txt:159
-#, 260, priority
+#, priority:260
 msgid "parent hashes"
 msgstr "empreintes des parents"
 
@@ -57183,7 +57183,7 @@ msgstr "'%an'"
 
 #. type: Plain text
 #: en/pretty-formats.txt:161
-#, 260, priority
+#, priority:260
 msgid "author name"
 msgstr "nom de l'auteur"
 
@@ -57201,7 +57201,7 @@ msgstr "nom de l'auteur (en respectant .mailmap, voir linkgit:git-shortlog[1]"
 
 #. type: Plain text
 #: en/pretty-formats.txt:163 en/pretty-formats.txt:166
-#, 260, priority
+#, priority:260
 msgid "or linkgit:git-blame[1])"
 msgstr "ou linkgit:git-blame[1])"
 
@@ -57213,7 +57213,7 @@ msgstr "'%ae'"
 
 #. type: Plain text
 #: en/pretty-formats.txt:164
-#, 260, priority
+#, priority:260
 msgid "author email"
 msgstr "e-mail de l'auteur"
 
@@ -57261,7 +57261,7 @@ msgstr "'%ar'"
 
 #. type: Plain text
 #: en/pretty-formats.txt:169
-#, 260, priority
+#, priority:260
 msgid "author date, relative"
 msgstr "date de l'auteur, date relative"
 
@@ -57309,7 +57309,7 @@ msgstr "'%cn'"
 
 #. type: Plain text
 #: en/pretty-formats.txt:173
-#, 260, priority
+#, priority:260
 msgid "committer name"
 msgstr "nom du validateur"
 
@@ -57327,7 +57327,7 @@ msgstr "nom du validateur (en respectant .mailmap, voir"
 
 #. type: Plain text
 #: en/pretty-formats.txt:175 en/pretty-formats.txt:178 en/pretty-formats.txt:221 en/pretty-formats.txt:224
-#, 260, priority
+#, priority:260
 msgid "linkgit:git-shortlog[1] or linkgit:git-blame[1])"
 msgstr "linkgit:git-shortlog[1] ou linkgit:git-blame[1])"
 
@@ -57339,7 +57339,7 @@ msgstr "'%ce'"
 
 #. type: Plain text
 #: en/pretty-formats.txt:176
-#, 260, priority
+#, priority:260
 msgid "committer email"
 msgstr "e-mail du validateur"
 
@@ -57369,7 +57369,7 @@ msgstr "date de validation (le format respecte l'option --date=)"
 
 #. type: Labeled list
 #: en/pretty-formats.txt:179
-#, 260, ignore-same, no-wrap, priority
+#, ignore-same, no-wrap, priority:260
 msgid "'%cD'"
 msgstr "'%cD'"
 
@@ -57387,7 +57387,7 @@ msgstr "'%cr'"
 
 #. type: Plain text
 #: en/pretty-formats.txt:181
-#, 260, priority
+#, priority:260
 msgid "committer date, relative"
 msgstr "date de validation, date relative"
 
@@ -57435,7 +57435,7 @@ msgstr "'%d'"
 
 #. type: Plain text
 #: en/pretty-formats.txt:185
-#, 260, priority
+#, priority:260
 msgid "ref names, like the --decorate option of linkgit:git-log[1]"
 msgstr "les noms de ref, comme l'option --decorate de linkgit:git-log[1]."
 
@@ -57477,7 +57477,7 @@ msgstr "encodage"
 
 #. type: Plain text
 #: en/pretty-formats.txt:190
-#, 260, priority
+#, priority:260
 msgid "subject"
 msgstr "titre"
 
@@ -57525,7 +57525,7 @@ msgstr "'%N'"
 
 #. type: Plain text
 #: en/pretty-formats.txt:195
-#, 260, priority
+#, priority:260
 msgid "commit notes"
 msgstr "notes du commit"
 
@@ -57579,7 +57579,7 @@ msgstr "'%GK'"
 
 #. type: Plain text
 #: en/pretty-formats.txt:207
-#, 260, priority
+#, priority:260
 msgid "show the key used to sign a signed commit"
 msgstr "afficher la clé utilisée pour signer un commit signé"
 
@@ -57609,7 +57609,7 @@ msgstr "afficher l'empreinte digitale de la clé primaire dont la sous-clé a é
 
 #. type: Plain text
 #: en/pretty-formats.txt:210
-#, 260, priority
+#, priority:260
 msgid "to sign a signed commit"
 msgstr "pour signer un commit signé"
 
@@ -57905,7 +57905,7 @@ msgstr "Les objets commit enregistrent l'encodage utilisé pour le message de lo
 
 #. type: Labeled list
 #: en/pretty-options.txt:45
-#, 260, no-wrap, priority
+#, no-wrap, priority:260
 msgid "--expand-tabs=<n>"
 msgstr "--expand-tabs=<n>"
 
@@ -58776,7 +58776,7 @@ msgstr "--since=<date>"
 
 #. type: Labeled list
 #: en/rev-list-options.txt:25
-#, 260, no-wrap, priority
+#, no-wrap, priority:260
 msgid "--after=<date>"
 msgstr "--after=<date>"
 
@@ -60754,7 +60754,7 @@ msgstr "<transport>::<adresse>"
 
 #. type: Plain text
 #: en/urls.txt:66
-#, 300, priority
+#, priority:300
 msgid "where <address> may be a path, a server and path, or an arbitrary URL-like string recognized by the specific remote helper being invoked. See linkgit:gitremote-helpers[7] for details."
 msgstr "où <adresse> peut être un chemin, un serveur et chemin, ou une chaîne URL arbitraire reconnue par l'assistant de gestion de distant invoqué. Voir linkgit:gitremote-helpers[7] pour plus de détails."
 
