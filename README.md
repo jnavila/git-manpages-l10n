@@ -1,4 +1,5 @@
-GIT Documentation Translations
+# GIT Documentation Translations
+
 =====================
 
 This project holds the translations for the documentation of Git. This
@@ -9,7 +10,8 @@ The two character language translation codes are defined by ISO_639-1,
 as stated in the gettext(1) full manual, appendix A.1, Usual Language
 Codes.
 
-Contributing to an existing translation
+## Contributing to an existing translation
+
 ---------------------------------------
 
 As a contributor for a language XX, you should first check TEAMS file
@@ -23,7 +25,8 @@ Git distributions (such as from Ubuntu, etc.) have their own l10n
 workflow.  For this case, wrong translations should be reported and
 fixed through their workflows.
 
-Creating a new language translation (direct translation)
+## Creating a new language translation (direct translation)
+
 --------------------------------------------------------
 
 If you are the first contributor for the language XX, please fork this
@@ -37,7 +40,8 @@ language, so that the l10n coordinator only needs to interact with one
 person per language.
 
 
-Creating a new language translation (direct translation)
+## Creating a new language translation (direct translation)
+
 --------------------------------------------------------
 
 Alternatively, you can start translating in your own language by
@@ -45,7 +49,8 @@ registering to Weblate and starting a new language translation at
 
 https://hosted.weblate.org/projects/git-manpages/translations/
 
-Translation Process Flow
+## Translation Process Flow
+
 ------------------------
 
 The overall data-flow looks like this:
@@ -71,7 +76,8 @@ The overall data-flow looks like this:
  * L10n coordinator pulls from Language team (3)
  * L10n coordinator asks the result to be integrated (4).
 
-Maintaining the documentation.pot file
+## Maintaining the documentation.pot file
+
 --------------------------------------
 
 (This is done by the documentation l10n coordinator).
@@ -89,7 +95,8 @@ Language contributors use this file to prepare translations for their
 language, but they are not expected to modify it.
 
 
-Initializing a documentation.XX.po file
+## Initializing a documentation.XX.po file
+
 ---------------------------------------
 
 (This is done by the language teams).
@@ -128,7 +135,8 @@ just "Git Documentation":
 Once you are done testing the translation (see below), commit the
 documentation.XX.po files and ask the l10n coordinator to pull from you.
 
-Updating a documentation.XX.po file
+## Updating a documentation.XX.po file
+
 -----------------------------------
 
 (This is done by the language teams).
@@ -145,7 +153,8 @@ changes of the new version.
 Once you are done testing the translation (see below), commit the result
 and ask the l10n coordinator to pull from you.
 
-Testing your changes
+## Testing your changes
+
 --------------------
 
 (This is done by the language teams, after creating or updating
@@ -155,12 +164,16 @@ documentation.XX.po file).
 Before being able to compile the documents, you need to have a working
 compilation toolchain which you can get by running:
 
+```sh
     $ sh ci/install_po4a.sh # install a patched version of po4a
     $ bundle install        # install  asciidoctor
+```
 
 Before you submit your changes do:
 
+```sh
     $ bundle exec make all
+```
 
 On systems with GNU gettext (i.e. not Solaris) and po4a this will try
 to merge translations with the source asciidoc files into translated
@@ -169,6 +182,8 @@ asciidoc files and compile them to manpages.
 Then you can check the translated manpages, for instance for `git add`
 in French:
 
+```sh
     $ man -l fr/git-add.1
+```
 
 and verify how your translated manpage is rendered.
