@@ -22,7 +22,7 @@ include ../../Makefile
 
 XMLTO_EXTRA += --searchpath ../..
 ifdef USE_ASCIIDOCTOR
-ASCIIDOC_EXTRA += -I../..
+ASCIIDOC_EXTRA += -I../.. -I. -rasciidoctor-extensions
 else
 ASCIIDOC_CONF = -f ../../asciidoc.conf
 endif
@@ -43,12 +43,17 @@ ifndef V
 	QUIET_ASCIIDOC	= @echo '   ' ASCIIDOC $(lang) $@;
 endif
 
+-include ../GIT-VERSION-FILE
+
 $(HTML_FILTER): %.html: %.txt
-	$(QUIET_ASCIIDOC)asciidoctor -b xhtml5 -d manpage $<
+	$(QUIET_ASCIIDOC)asciidoctor -b xhtml5 -d manpage -d manpage -I.. -I. -rasciidoctor-extensions \
+        -amanversion=$(GIT_VERSION) -amanmanual='Git Manual' -amansource='Git  $(GIT_VERSION)' $<
 
 MANPAGES=$(patsubst %.txt,%.1,$(MAN_FILTER))
 $(MANPAGES): %.1: %.txt
-	$(QUIET_ASCIIDOC)asciidoctor -b manpage -d manpage -o $@ $<
+	$(QUIET_ASCIIDOC)asciidoctor -b manpage -d manpage -o $@ \
+        -I. -I.. -rasciidoctor-extensions \
+        -amanmanual='Git Manual' -amansource='Git $(GIT_VERSION)' $<
 
 man: $(MANPAGES)
 html: $(HTML_FILTER)
