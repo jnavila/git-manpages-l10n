@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2019-12-08 16:35+0100\n"
-"PO-Revision-Date: 2020-01-19 21:51+0100\n"
+"PO-Revision-Date: 2020-01-20 21:38+0100\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.10\n"
+"X-Generator: Weblate 3.11-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:666 en/git-instaweb.txt:45 en/git-mailinfo.txt:47 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -2524,6 +2524,13 @@ msgstr "merge.conflictStyle"
 #, priority:240
 msgid "Specify the style in which conflicted hunks are written out to working tree files upon merge.  The default is \"merge\", which shows a `<<<<<<<` conflict marker, changes made by one side, a `=======` marker, changes made by the other side, and then a `>>>>>>>` marker.  An alternate style, \"diff3\", adds a `|||||||` marker and the original text before the `=======` marker."
 msgstr ""
+"Spécifier le style dans lequel les sections en conflit sont écrites dans les "
+"fichiers de l'arbre de travail lors de la fusion.  La valeur par défaut est "
+"\"merge\", qui affiche un marqueur de conflit `<<<<<<<<`, les modifications "
+"faites par un côté, un marqueur `==========, les modifications faites par "
+"l'autre côté, et ensuite un marqueur `>>>>>>>>>>`.  Un style alternatif, \""
+"diff3\", ajoute un marqueur `|||||||` et le texte original avant le marqueur "
+"`========`."
 
 #. type: Labeled list
 #: en/config/merge.txt:9
@@ -2536,6 +2543,14 @@ msgstr "merge.defaultToUpstream"
 #, priority:240
 msgid "If merge is called without any commit argument, merge the upstream branches configured for the current branch by using their last observed values stored in their remote-tracking branches.  The values of the `branch.<current branch>.merge` that name the branches at the remote named by `branch.<current branch>.remote` are consulted, and then they are mapped via `remote.<remote>.fetch` to their corresponding remote-tracking branches, and the tips of these tracking branches are merged."
 msgstr ""
+"Si la fusion est appelée sans aucun argument de commit, fusionner les "
+"branches amont configurées pour la branche courante en utilisant leurs "
+"dernières valeurs observées stockées dans leurs branches de suivi à "
+"distance.  Les valeurs de `branch.<branche courante>.merge` qui nomment les "
+"branches distantes nommées par `branch.<branche courante>.remote` sont "
+"consultées, puis elles sont mappées via `remote.<distant>.fetch` vers leurs "
+"branches de suivi à distance correspondantes, et les extrémités de ces "
+"branches de suivi sont fusionnées."
 
 #. type: Labeled list
 #: en/config/merge.txt:19
@@ -2548,6 +2563,14 @@ msgstr "merge.ff"
 #, priority:240
 msgid "By default, Git does not create an extra merge commit when merging a commit that is a descendant of the current commit. Instead, the tip of the current branch is fast-forwarded. When set to `false`, this variable tells Git to create an extra merge commit in such a case (equivalent to giving the `--no-ff` option from the command line). When set to `only`, only such fast-forward merges are allowed (equivalent to giving the `--ff-only` option from the command line)."
 msgstr ""
+"Par défaut, Git ne crée pas de commit de fusion supplémentaire lors de la "
+"fusion d'un commit descendant du commit courant. Au lieu de cela, le sommet "
+"de la branche courante est avancé rapidement. Quand elle est définie à "
+"`false`, cette variable indique à Git de créer un commit de fusion "
+"supplémentaire dans un tel cas (équivalent à donner l'option `--no-ff` de la "
+"ligne de commande). Lorsqu'il est défini à `only`, seules ces fusions en "
+"avance rapide sont autorisées (ce qui équivaut à donner l'option `--ff-only` "
+"depuis la ligne de commande)."
 
 #. type: Labeled list
 #: en/config/merge.txt:29
@@ -2557,10 +2580,11 @@ msgstr "merge.verifySignatures"
 
 #. type: Plain text
 #: en/config/merge.txt:32
-#, fuzzy, priority:240
-#| msgid "These two syntaxes are mostly equivalent, except when cloning, when the former implies --local option. See linkgit:git-clone[1] for details."
+#, priority:240
 msgid "If true, this is equivalent to the --verify-signatures command line option. See linkgit:git-merge[1] for details."
-msgstr "Ces deux syntaxes sont à peu près équivalentes, à part lors d'un clonage, où la première implique l'option `--local`. Voir linkgit:git-clone[1] pour plus de détails."
+msgstr ""
+"Si vrai, c'est équivalent à l'option de ligne de commande --verify-"
+"signatures. Voir linkgit:git-merge[1] pour plus de détails."
 
 #. type: Labeled list
 #: en/config/merge.txt:35
@@ -2573,6 +2597,10 @@ msgstr "merge.renameLimit"
 #, priority:240
 msgid "The number of files to consider when performing rename detection during a merge; if not specified, defaults to the value of diff.renameLimit. This setting has no effect if rename detection is turned off."
 msgstr ""
+"Le nombre de fichiers à prendre en compte lors de la détection de renommage "
+"lors d'une fusion ; s'il n'est pas spécifié, la valeur par défaut est "
+"diff.renameLimit. Ce réglage n'a aucun effet si la détection de renommage "
+"est désactivée."
 
 #. type: Labeled list
 #: en/config/merge.txt:41
@@ -13841,10 +13869,13 @@ msgstr "--[no-]remote-submodules"
 
 #. type: Plain text
 #: en/git-clone.txt:269
-#, fuzzy, priority:300
-#| msgid "All submodules which are cloned will use the status of the submodule’s remote-tracking branch to update the submodule, rather than the superproject’s recorded SHA-1. Equivalent to passing `--remote` to `git submodule update`."
+#, priority:300
 msgid "All submodules which are cloned will use the status of the submodule's remote-tracking branch to update the submodule, rather than the superproject's recorded SHA-1. Equivalent to passing `--remote` to `git submodule update`."
-msgstr "Tous les sous-modules clonés utiliseront l'état de la branche de suivi à distance du sous-module pour mettre à jour le sous-module, plutôt que le SHA-1 enregistré par le superprojet. Équivalent à passer `--remote` à `git submodule update`."
+msgstr ""
+"Tous les sous-modules clonés utiliseront l'état de la branche de suivi à "
+"distance du sous-module pour mettre à jour le sous-module, plutôt que le SHA-"
+"1 enregistré par le superprojet. Équivalent à passer `--remote` à `git "
+"submodule update`."
 
 #. type: Labeled list
 #: en/git-clone.txt:270 en/git-init.txt:56
@@ -60602,7 +60633,7 @@ msgstr "pas de deux points entre les heures et les minutes du fuseau horaire"
 
 #. type: Plain text
 #: en/rev-list-options.txt:859
-#, fuzzy, priority:260
+#, priority:260
 msgid "`--date=iso-strict` (or `--date=iso8601-strict`) shows timestamps in strict ISO 8601 format."
 msgstr ""
 "`--date=iso-strict` (ou `--date=iso8601-strict`) affiche les horodatages au "
@@ -60642,36 +60673,54 @@ msgstr ""
 #, priority:260
 msgid "`--date=human` shows the timezone if the timezone does not match the current time-zone, and doesn't print the whole date if that matches (ie skip printing year for dates that are \"this year\", but also skip the whole date itself if it's in the last few days and we can just say what weekday it was).  For older dates the hour and minute is also omitted."
 msgstr ""
+"`--date=human` montre le fuseau horaire si le fuseau horaire ne correspond "
+"pas au fuseau horaire actuel, et n'affiche pas la date complète s'il y a "
+"correspondance (c'est-à-dire ne pas afficher l'année pour les dates qui sont "
+"\"cette année\", mais aussi sauter la date complète elle-même si elle est "
+"dans les derniers jours et que nous pouvons juste indiquer le jour de la "
+"semaine passée).  Pour les dates plus anciennes, l'heure et la minute sont "
+"également omises."
 
 #. type: Plain text
 #: en/rev-list-options.txt:884
 #, priority:260
 msgid "`--date=unix` shows the date as a Unix epoch timestamp (seconds since 1970).  As with `--raw`, this is always in UTC and therefore `-local` has no effect."
 msgstr ""
+"`--date=unix` affiche la date sous forme d'un horodatage d'époque Unix ("
+"secondes depuis 1970).  Comme dans le cas de \" --raw \", c'est toujours en "
+"UTC et donc \" --local \" n'a aucun effet."
 
 #. type: Plain text
 #: en/rev-list-options.txt:891
 #, ignore-ellipsis, priority:260
 msgid "`--date=format:...` feeds the format `...` to your system `strftime`, except for %z and %Z, which are handled internally.  Use `--date=format:%c` to show the date in your system locale's preferred format.  See the `strftime` manual for a complete list of format placeholders. When using `-local`, the correct syntax is `--date=format-local:...`."
 msgstr ""
+"`--date=format :...` alimente le format `...` vers `strftime` de votre "
+"système , sauf pour %z et %Z, qui sont gérés en interne.  Utilisez "
+"`--date=format:%c` pour afficher la date dans le format préféré de la locale "
+"de votre système.  Voir le manuel de `strftime` pour une liste complète des "
+"espaces réservés de format. Quand on utilise `-local`, la syntaxe correcte "
+"est `--date=format-local :...`."
 
 #. type: Plain text
 #: en/rev-list-options.txt:894
 #, priority:260
 msgid "`--date=default` is the default format, and is similar to `--date=rfc2822`, with a few exceptions:"
 msgstr ""
+"`--date=default` est le format par défaut, et est similaire à "
+"`--date=rfc2822`, avec quelques exceptions :"
 
 #. type: Plain text
 #: en/rev-list-options.txt:896
 #, priority:260
 msgid "there is no comma after the day-of-week"
-msgstr ""
+msgstr "il n'y a pas de virgule après le jour de la semaine"
 
 #. type: Plain text
 #: en/rev-list-options.txt:898
 #, priority:260
 msgid "the time zone is omitted when the local time zone is used"
-msgstr ""
+msgstr "le fuseau horaire est omis lorsque le fuseau horaire local est utilisé"
 
 #. type: Labeled list
 #: en/rev-list-options.txt:900
@@ -60684,12 +60733,17 @@ msgstr "--header"
 #, priority:260
 msgid "Print the contents of the commit in raw-format; each record is separated with a NUL character."
 msgstr ""
+"Afficher le contenu du commit en format brut ; chaque enregistrement est "
+"séparé par un caractère NUL."
 
 #. type: Plain text
 #: en/rev-list-options.txt:908
 #, ignore-ellipsis, priority:260
 msgid "Print also the parents of the commit (in the form \"commit parent...\").  Also enables parent rewriting, see 'History Simplification' above."
 msgstr ""
+"Afficher aussi les parents du commit (sous la forme \"parent du commit...\")"
+".  Permet également la réécriture des parents, voir \" Simplification de "
+"l'historique \" ci-dessus."
 
 #. type: Labeled list
 #: en/rev-list-options.txt:909
@@ -60702,6 +60756,9 @@ msgstr "--children"
 #, ignore-ellipsis, priority:260
 msgid "Print also the children of the commit (in the form \"commit child...\").  Also enables parent rewriting, see 'History Simplification' above."
 msgstr ""
+"Afficher aussi les enfants du commit (sous la forme \"commit child...\").  "
+"Permet également la réécriture des parents, voir \" Simplification de "
+"l'historique \" ci-dessus."
 
 #. type: Labeled list
 #: en/rev-list-options.txt:914
@@ -60713,7 +60770,7 @@ msgstr "--timestamp"
 #: en/rev-list-options.txt:916
 #, priority:260
 msgid "Print the raw commit timestamp."
-msgstr ""
+msgstr "Imprimer l'horodatage brut du commit."
 
 #. type: Labeled list
 #: en/rev-list-options.txt:918
@@ -60726,12 +60783,15 @@ msgstr "--left-right"
 #, priority:260
 msgid "Mark which side of a symmetric difference a commit is reachable from.  Commits from the left side are prefixed with `<` and those from the right with `>`.  If combined with `--boundary`, those commits are prefixed with `-`."
 msgstr ""
+"Indiquer de quel côté d'une différence symétrique un commit est accessible.  "
+"Les commits de gauche sont préfixés par \" < \" et ceux de  droite par \" > "
+"\".  Si on combine avec `--boundary`, ces commits sont préfixés par `-`."
 
 #. type: Plain text
 #: en/rev-list-options.txt:925
 #, priority:260
 msgid "For example, if you have this topology:"
-msgstr ""
+msgstr "Par exemple, si vous avez cette topologie :"
 
 #. type: delimited block -
 #: en/rev-list-options.txt:932
@@ -60743,18 +60803,23 @@ msgid ""
 "\t  /   / \\\n"
 "\t o---x---a---a  branch A\n"
 msgstr ""
+"\t     y---b---b  branche B\n"
+"\t    / \\ /\n"
+"\t   /   .\n"
+"\t  /   / \\\n"
+"\t o---x---a---a  branche A\n"
 
 #. type: Plain text
 #: en/rev-list-options.txt:935
 #, priority:260
 msgid "you would get an output like this:"
-msgstr ""
+msgstr "vous obtiendriez une sortie comme celle-ci :"
 
 #. type: delimited block -
 #: en/rev-list-options.txt:938
 #, ignore-ellipsis, no-wrap, priority:260
 msgid "\t$ git rev-list --left-right --boundary --pretty=oneline A...B\n"
-msgstr ""
+msgstr "\t$ git rev-list --left-right --boundary --pretty=oneline A...B\n"
 
 #. type: delimited block -
 #: en/rev-list-options.txt:945
@@ -60767,6 +60832,12 @@ msgid ""
 "\t-yyyyyyy... 1st on b\n"
 "\t-xxxxxxx... 1st on a\n"
 msgstr ""
+"\t>bbbbbbb... 3rd on b\n"
+"\t>bbbbbbb... 2nd on b\n"
+"\t<aaaaaaa... 3rd on a\n"
+"\t<aaaaaaa... 2nd on a\n"
+"\t-yyyyyyy... 1st on b\n"
+"\t-xxxxxxx... 1st on a\n"
 
 #. type: Labeled list
 #: en/rev-list-options.txt:947
@@ -60779,36 +60850,55 @@ msgstr "--graph"
 #, priority:260
 msgid "Draw a text-based graphical representation of the commit history on the left hand side of the output.  This may cause extra lines to be printed in between commits, in order for the graph history to be drawn properly.  Cannot be combined with `--no-walk`."
 msgstr ""
+"Dessiner une représentation graphique en texte de l'historique du commit sur "
+"la gauche de la sortie.  Cela peut entraîner l'impression de lignes "
+"supplémentaires entre les validations, afin que l'historique du graphique "
+"soit correctement tracé.  Ne peut pas être combiné avec `--no-walk`."
 
 #. type: Plain text
 #: en/rev-list-options.txt:955
 #, priority:260
 msgid "This enables parent rewriting, see 'History Simplification' above."
 msgstr ""
+"Cela permet la réécriture des parents, voir « Simplification de l'historique "
+"» ci-dessus."
 
 #. type: Plain text
 #: en/rev-list-options.txt:958
 #, priority:260
 msgid "This implies the `--topo-order` option by default, but the `--date-order` option may also be specified."
 msgstr ""
+"Cela implique l'option `--topo-order` par défaut, mais l'option `--date-"
+"order` peut aussi être spécifiée."
 
 #. type: Labeled list
 #: en/rev-list-options.txt:959
 #, no-wrap, priority:260
 msgid "--show-linear-break[=<barrier>]"
-msgstr ""
+msgstr "--show-linear-break [=<barrière>]"
 
 #. type: Plain text
 #: en/rev-list-options.txt:965
 #, priority:260
 msgid "When --graph is not used, all history branches are flattened which can make it hard to see that the two consecutive commits do not belong to a linear branch. This option puts a barrier in between them in that case. If `<barrier>` is specified, it is the string that will be shown instead of the default one."
 msgstr ""
+"Lorsque --graph n'est pas utilisé, toutes les branches de l'historique sont "
+"aplaties, ce qui peut rendre difficile de voir que les deux commits "
+"consécutifs n'appartiennent pas à une branche linéaire. Dans ce cas, cette "
+"option met une barrière entre les deux. Si `<barrière>` est spécifié, c'est "
+"la chaîne de caractères qui sera affichée à la place de celle par défaut."
 
 #. type: Plain text
 #: en/rev-list-options.txt:975
 #, priority:260
 msgid "Print a number stating how many commits would have been listed, and suppress all other output.  When used together with `--left-right`, instead print the counts for left and right commits, separated by a tab. When used together with `--cherry-mark`, omit patch equivalent commits from these counts and print the count for equivalent commits separated by a tab."
 msgstr ""
+"Imprimer un nombre indiquant combien de commits auraient été listés, et "
+"supprimer toutes les autres sorties.  Lorsqu'il est utilisé avec `--left-"
+"right`, imprimer à la place les comptes des commits gauche et droite, "
+"séparés par une tabulation. Lorsqu'utilisé avec `--cherry-mark`, omettre les "
+"commits équivalents de rustines de ces comptes et imprimer le compte des "
+"commits équivalents séparés par une tabulation."
 
 #. type: Title ~
 #: en/rev-list-options.txt:979
@@ -60821,36 +60911,55 @@ msgstr "Formatage des diffs"
 #, priority:260
 msgid "Listed below are options that control the formatting of diff output.  Some of them are specific to linkgit:git-rev-list[1], however other diff options may be given. See linkgit:git-diff-files[1] for more options."
 msgstr ""
+"Voici la liste des options qui permettent de contrôler la mise en forme de "
+"la sortie de la commande diff. Certaines d'entre elles sont spécifiques à "
+"linkgit:git-rev-list[1], mais d'autres options de diff peuvent être "
+"spécifiées. Voir linkgit:git-diff-files[1] pour plus d'options."
 
 #. type: Plain text
 #: en/rev-list-options.txt:991
 #, priority:260
 msgid "With this option, diff output for a merge commit shows the differences from each of the parents to the merge result simultaneously instead of showing pairwise diff between a parent and the result one at a time. Furthermore, it lists only files which were modified from all parents."
 msgstr ""
+"Avec cette option, la sortie de diff pour un commit de fusion montre les "
+"différences de chacun des parents vers le résultat de la fusion "
+"simultanément au lieu de montrer une à une les différences par paires entre "
+"un parent et le résultat. De plus, il ne répertorie que les fichiers qui ont "
+"été modifiés par tous les parents."
 
 #. type: Plain text
 #: en/rev-list-options.txt:997
 #, priority:260
 msgid "This flag implies the `-c` option and further compresses the patch output by omitting uninteresting hunks whose contents in the parents have only two variants and the merge result picks one of them without modification."
 msgstr ""
+"Ce drapeau implique l'option `-c` et compresse davantage la sortie du patch "
+"en omettant les morceaux inintéressants dont le contenu dans les parents n'a "
+"que deux variantes et le résultat de la fusion choisit l'une d'entre elles "
+"sans modification."
 
 #. type: Plain text
 #: en/rev-list-options.txt:1012
 #, priority:260
 msgid "This flag makes the merge commits show the full diff like regular commits; for each merge parent, a separate log entry and diff is generated. An exception is that only diff against the first parent is shown when `--first-parent` option is given; in that case, the output represents the changes the merge brought _into_ the then-current branch."
 msgstr ""
+"Ce drapeau fait que les commits de fusion montrent la différence complète "
+"comme les commits réguliers ; pour chaque parent de la fusion, une entrée de "
+"journal et une différence séparées sont générées. Une exception est que "
+"seule la différence par rapport au premier parent est affichée quand "
+"l'option `--first-parent` est donnée ; dans ce cas, la sortie représente les "
+"modifications que la fusion a apportées _dans_ la branche alors courante."
 
 #. type: Plain text
 #: en/rev-list-options.txt:1015
 #, priority:260
 msgid "Show recursive diffs."
-msgstr ""
+msgstr "Afficher les différences récursives."
 
 #. type: Plain text
 #: en/rev-list-options.txt:1018
 #, priority:260
 msgid "Show the tree objects in the diff output. This implies `-r`."
-msgstr ""
+msgstr "Afficher les objets arbres dans la sortie diff. Cela implique `-r`."
 
 #. type: Plain text
 #: en/sequencer.txt:5
