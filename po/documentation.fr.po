@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-01-28 19:39+0100\n"
-"PO-Revision-Date: 2020-01-30 16:50+0000\n"
+"PO-Revision-Date: 2020-02-01 22:50+0000\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -9272,7 +9272,7 @@ msgstr "git-branch(1)"
 #: en/git-branch.txt:7
 #, priority:240
 msgid "git-branch - List, create, or delete branches"
-msgstr ""
+msgstr "git-branch - Liste, crée, ou supprime des branches"
 
 #. type: Plain text
 #: en/git-branch.txt:26
@@ -9294,24 +9294,50 @@ msgid ""
 "'git branch' (-d | -D) [-r] <branchname>...\n"
 "'git branch' --edit-description [<branchname>]\n"
 msgstr ""
+"'git branch' [--color[=<when>] | --no-color] [--show-current]\n"
+"\t[-v [--abbrev=<longueur> | --no-abbrev]]\n"
+"\t[--column[=<options>] | --no-column] [--sort=<key>]\n"
+"\t[(--merged | --no-merged) [<commit>]]\n"
+"\t[--contains [<commit]] [--no-contains [<commit>]]\n"
+"\t[--points-at <objet>] [--format=<format>]\n"
+"\t[(-r | --remotes) | (-a | --all)]\n"
+"\t[--list] [<motif>...]\n"
+"'git branch' [--track | --no-track] [-f] <nom-de-branche> [<start-point>]\n"
+"'git branch' (--set-upstream-to=<amont> | -u <amont>) [<nom-de-branche>]\n"
+"'git branch' --unset-upstream [<nom-de-branche>]\n"
+"'git branch' (-m | -M) [<anciennebranche>] <nouvellebranche>\n"
+"'git branch' (-c | -C) [<anciennebranche>] <nouvellebranche>\n"
+"'git branch' (-d | -D) [-r] <nom-de-branche>...\n"
+"'git branch' --edit-description [<nom-de-branche>]\n"
 
 #. type: Plain text
 #: en/git-branch.txt:36
 #, priority:240
 msgid "If `--list` is given, or if there are no non-option arguments, existing branches are listed; the current branch will be highlighted in green and marked with an asterisk.  Any branches checked out in linked worktrees will be highlighted in cyan and marked with a plus sign. Option `-r` causes the remote-tracking branches to be listed, and option `-a` shows both local and remote branches."
 msgstr ""
+"Si `--list` est donné, ou s'il n'y a pas d'arguments sans option, les "
+"branches existantes sont listées ; la branche actuelle sera surlignée en "
+"vert et marquée d'un astérisque. Toutes les branches extraites dans les "
+"arbres de travail liés seront mis en évidence en cyan et marqués d'un signe "
+"plus. L'option `-r` ajoute la liste des branches de suivi à distance et "
+"l'option` -a` affiche les branches locales et distantes."
 
 #. type: Plain text
 #: en/git-branch.txt:41
 #, priority:240
 msgid "If a `<pattern>` is given, it is used as a shell wildcard to restrict the output to matching branches. If multiple patterns are given, a branch is shown if it matches any of the patterns."
 msgstr ""
+"Si un `<motif>` est donné, il est utilisé comme joker du shell pour "
+"restreindre la sortie aux branches correspondantes. Si plusieurs motifs sont "
+"donnés, une branche est affichée si elle correspond à l'un des motifs."
 
 #. type: Plain text
 #: en/git-branch.txt:45
 #, priority:240
 msgid "Note that when providing a `<pattern>`, you must use `--list`; otherwise the command may be interpreted as branch creation."
 msgstr ""
+"Notez que lorsque vous fournissez un `<motif> `, vous devez utiliser `--list`"
+" ; sinon, la commande peut être interprétée comme une création de branche."
 
 #. type: Plain text
 #: en/git-branch.txt:54
@@ -57324,10 +57350,17 @@ msgstr "FORMATS AUTOMATIQUES"
 
 #. type: Plain text
 #: en/pretty-formats.txt:13
-#, fuzzy, priority:260
-#| msgid "If the commit is a merge, and if the pretty-format is not 'oneline', 'email' or 'raw', an additional line is inserted before the 'Author:' line.  This line begins with \"Merge: \" and the sha1s of ancestral commits are printed, separated by spaces.  Note that the listed commits may not necessarily be the list of the *direct* parent commits if you have limited your view of history: for example, if you are only interested in changes related to a certain directory or file."
+#, priority:260
 msgid "If the commit is a merge, and if the pretty-format is not 'oneline', 'email' or 'raw', an additional line is inserted before the 'Author:' line.  This line begins with \"Merge: \" and the hashes of ancestral commits are printed, separated by spaces.  Note that the listed commits may not necessarily be the list of the *direct* parent commits if you have limited your view of history: for example, if you are only interested in changes related to a certain directory or file."
-msgstr "Si le commit est une fusion, et si la mise en forme n'est pas 'oneline', 'email' ou 'raw', une ligne supplémentaire est insérée avant la ligne 'Author:'.  Cette ligne commence par \"Merge:\" et les sha1s des commits ancêtres sont affichés, séparés par des espaces.  Notez que les commits énumérés ne sont pas nécessairement la liste des commits parents *directs* si vous avez limité votre vue de l'histoire : par exemple, si vous n'êtes intéressé que par les modifications liées à un certain répertoire ou fichier."
+msgstr ""
+"Si le commit est une fusion, et si la mise en forme n'est pas 'oneline', "
+"'email' ou 'raw', une ligne supplémentaire est insérée avant la ligne "
+"'Author:'.  Cette ligne commence par \"Merge:\" et les empreintes des "
+"commits ancêtres sont affichées, séparées par des espaces.  Notez que les "
+"commits énumérés ne sont pas nécessairement la liste des commits parents "
+"*directs* si vous avez limité votre vue de l'histoire : par exemple, si vous "
+"n'êtes intéressé que par les modifications liées à un certain répertoire ou "
+"fichier."
 
 #. type: Plain text
 #: en/pretty-formats.txt:20
