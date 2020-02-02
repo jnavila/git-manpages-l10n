@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-01-28 19:39+0100\n"
-"PO-Revision-Date: 2020-02-01 22:50+0000\n"
+"PO-Revision-Date: 2020-02-04 12:38+0000\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -9344,37 +9344,70 @@ msgstr ""
 #, priority:240
 msgid "With `--contains`, shows only the branches that contain the named commit (in other words, the branches whose tip commits are descendants of the named commit), `--no-contains` inverts it. With `--merged`, only branches merged into the named commit (i.e. the branches whose tip commits are reachable from the named commit) will be listed.  With `--no-merged` only branches not merged into the named commit will be listed.  If the <commit> argument is missing it defaults to `HEAD` (i.e. the tip of the current branch)."
 msgstr ""
+"Avec `--contains`, montrer seulement les branches qui contiennent le commit "
+"indiqué (en d'autres termes, les branches dont les commits sommets sont des "
+"descendants du commit indiqué), avec `--no-contains` inverser. Avec "
+"`--merged`, seules les branches fusionnées dans le commit indiqué (c'est-à-"
+"dire les branches dont les commits sommets sont accessibles depuis le commit "
+"indiqué) seront listées.  Avec `--no-merged`, seules les branches non "
+"fusionnées dans le commit indiqué seront listées.  Si l'argument <commit> "
+"est manquant, il prend par défaut la valeur \"HEAD\" (c'est-à-dire le sommet "
+"de la branche courante)."
 
 #. type: Plain text
 #: en/git-branch.txt:61
-#, fuzzy, ignore-ellipsis, priority:240
-#| msgid "As a special case, you may use `\"A...B\"` as a shortcut for the merge base of `A` and `B` if there is exactly one merge base. You can leave out at most one of `A` and `B`, in which case it defaults to `HEAD`."
+#, ignore-ellipsis, priority:240
 msgid "The command's second form creates a new branch head named <branchname> which points to the current `HEAD`, or <start-point> if given. As a special case, for <start-point>, you may use `\"A...B\"` as a shortcut for the merge base of `A` and `B` if there is exactly one merge base. You can leave out at most one of `A` and `B`, in which case it defaults to `HEAD`."
-msgstr "Autre cas spécial supplémentaire, vous pouvez utiliser « A...B » comme raccourci pour la base de fusion de `A` et `B` s'il y a exactement une seule base de fusion. Vous pouvez ne pas spécifier `A` ou `B`, auquel cas ce sera `HEAD` par défaut."
+msgstr ""
+"La deuxième forme de la commande crée une nouvelle tête de branche nommée "
+"<nom-de-branche> qui pointe vers la `HEAD` actuelle, ou <point-de-départ> si "
+"elle est fournie. Dans un cas particulier, pour le <point-de-départ>, vous "
+"pouvez utiliser `\"A...B\"` comme raccourci pour la base de fusion de `A` et "
+"`B` s'il y a exactement une base de fusion. Vous pouvez omettre tout au plus "
+"un des `A` et `B`, auquel cas il s'agit par défaut de `HEAD`."
 
 #. type: Plain text
 #: en/git-branch.txt:65
 #, priority:240
 msgid "Note that this will create the new branch, but it will not switch the working tree to it; use \"git switch <newbranch>\" to switch to the new branch."
 msgstr ""
+"Notez que cela créera la nouvelle branche, mais ne fera pas passer l'arbre "
+"de travail sur celle-ci ; utilisez \"git switch <nouvelle-branche>\" pour "
+"passer sur la nouvelle branche."
 
 #. type: Plain text
 #: en/git-branch.txt:73
 #, priority:240
 msgid "When a local branch is started off a remote-tracking branch, Git sets up the branch (specifically the `branch.<name>.remote` and `branch.<name>.merge` configuration entries) so that 'git pull' will appropriately merge from the remote-tracking branch. This behavior may be changed via the global `branch.autoSetupMerge` configuration flag. That setting can be overridden by using the `--track` and `--no-track` options, and changed later using `git branch --set-upstream-to`."
 msgstr ""
+"Lorsqu'une branche locale est démarrée à partir d'une branche de suivi à "
+"distance, Git configure la branche (plus précisément les entrées de "
+"configuration `branch.<nom>.remote` et `branch.<nom>.merge`) de façon à ce "
+"que 'git pull' fusionne correctement avec la branche de suivi à distance. Ce "
+"comportement peut être modifié via le drapeau de configuration global "
+"`branch.autoSetupMerge`. Ce paramètre peut être modifié en utilisant les "
+"options `---track` et `--no-track`, et changé plus tard en utilisant `git "
+"branch --set-upstream-to`."
 
 #. type: Plain text
 #: en/git-branch.txt:79
 #, priority:240
 msgid "With a `-m` or `-M` option, <oldbranch> will be renamed to <newbranch>.  If <oldbranch> had a corresponding reflog, it is renamed to match <newbranch>, and a reflog entry is created to remember the branch renaming. If <newbranch> exists, -M must be used to force the rename to happen."
 msgstr ""
+"Avec une option `-m` ou `-M`, <ancienne-branche> sera renommée en <nouvelle-"
+"branche>.  Si <ancienne-branche> avait un reflog correspondant, il est "
+"renommé pour correspondre à <nouvelle-branche>, et une entrée de reflog est "
+"créée pour se souvenir du renommage de la branche. Si <nouvelle-branche> "
+"existe déjà, -M doit être utilisé pour forcer le changement de nom."
 
 #. type: Plain text
 #: en/git-branch.txt:83
 #, priority:240
 msgid "The `-c` and `-C` options have the exact same semantics as `-m` and `-M`, except instead of the branch being renamed it along with its config and reflog will be copied to a new name."
 msgstr ""
+"Les options `-c` et `-C` ont exactement la même sémantique que `-m` et `-M`, "
+"sauf qu'au lieu de renommer la branche, on la copie sous un nouveau nom avec "
+"sa configuration et son reflog."
 
 #. type: Plain text
 #: en/git-branch.txt:87
@@ -9387,6 +9420,12 @@ msgstr ""
 #, priority:240
 msgid "Use `-r` together with `-d` to delete remote-tracking branches. Note, that it only makes sense to delete remote-tracking branches if they no longer exist in the remote repository or if 'git fetch' was configured not to fetch them again. See also the 'prune' subcommand of linkgit:git-remote[1] for a way to clean up all obsolete remote-tracking branches."
 msgstr ""
+"Utilisez `-r` avec `-d` pour supprimer les branches de suivi à distance. "
+"Notez qu'il est logique de supprimer les branches de suivi à distance "
+"uniquement si elles n'existent plus dans le dépôt distant ou si \"git fetch\""
+" a été configuré pour ne pas les récupérer à nouveau. Voir aussi la sous-"
+"commande « prune » de linkgit:git-remote[1] pour une méthode de nettoyage "
+"toutes les branches obsolètes de suivi à distance."
 
 #. type: Labeled list
 #: en/git-branch.txt:97 en/git-clean.txt:28 en/git-cvsexportcommit.txt:49 en/git-difftool.txt:22 en/git-http-push.txt:44 en/git-instaweb.txt:27 en/git-ls-files.txt:39 en/git-ls-tree.txt:41 en/git-push.txt:181 en/git-repack.txt:60 en/git-replace.txt:65 en/git-show-ref.txt:47 en/git-switch.txt:81 en/git-symbolic-ref.txt:35 en/git-tag.txt:83
@@ -9405,12 +9444,15 @@ msgstr "--delete"
 #, priority:240
 msgid "Delete a branch. The branch must be fully merged in its upstream branch, or in `HEAD` if no upstream was set with `--track` or `--set-upstream-to`."
 msgstr ""
+"Supprimer une branche. La branche doit être entièrement fusionnée dans sa "
+"branche amont, ou dans `HEAD` si aucune branche amont n'a été fixée avec "
+"`--track` ou `--set-upstream-to`."
 
 #. type: Plain text
 #: en/git-branch.txt:105
 #, priority:240
 msgid "Shortcut for `--delete --force`."
-msgstr ""
+msgstr "Raccourci pour `--delete --force`."
 
 #. type: Labeled list
 #: en/git-branch.txt:106 en/git-tag.txt:190
