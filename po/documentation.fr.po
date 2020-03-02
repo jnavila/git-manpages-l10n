@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-02-11 22:37+0100\n"
-"PO-Revision-Date: 2020-02-05 13:50+0000\n"
+"PO-Revision-Date: 2020-03-01 22:33+0000\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.11-dev\n"
+"X-Generator: Weblate 4.0-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:666 en/git-instaweb.txt:45 en/git-mailinfo.txt:47 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -9350,12 +9350,26 @@ msgstr "--create-reflog"
 #, priority:240
 msgid "Create the branch's reflog.  This activates recording of all changes made to the branch ref, enabling use of date based sha1 expressions such as \"<branchname>@\\{yesterday}\".  Note that in non-bare repositories, reflogs are usually enabled by default by the `core.logAllRefUpdates` config option.  The negated form `--no-create-reflog` only overrides an earlier `--create-reflog`, but currently does not negate the setting of `core.logAllRefUpdates`."
 msgstr ""
+"Créer le reflog de la branche.  Cela active l'enregistrement de toutes les "
+"modifications apportées à la branche ref, permettant l'utilisation "
+"d'expressions sha1 basées sur la date telles que \"<nom-de-branche>@\\"
+"{yesterday}\".  Notez que dans les dépôts non-nus, les reflogs sont "
+"généralement activés par défaut par l'option de configuration "
+"`core.logAllRefUpdates`.  La forme négative `--no-create-reflog` ne fait que "
+"remplacer un `--create-reflog` précédent, mais n'annule pas actuellement le "
+"paramètre `core.logAllRefUpdates`."
 
 #. type: Plain text
 #: en/git-branch.txt:124
 #, priority:240
 msgid "Reset <branchname> to <startpoint>, even if <branchname> exists already. Without `-f`, 'git branch' refuses to change an existing branch.  In combination with `-d` (or `--delete`), allow deleting the branch irrespective of its merged status. In combination with `-m` (or `--move`), allow renaming the branch even if the new branch name already exists, the same applies for `-c` (or `--copy`)."
 msgstr ""
+"Réinitialiser <branche> à <point de départ>, même si <branche> existe déjà. "
+"Sans `-f`, \"git branch\" refuse de changer une branche existante.  En "
+"combinaison avec `-d` (ou `--delete`), permettre la suppression de la "
+"branche indépendamment de son statut de fusion. En combinaison avec `-m` (ou "
+"`--move`), il est possible de renommer la branche même si le nouveau nom de "
+"la branche existe déjà, il en va de même pour `-c` (ou `--copy`)."
 
 #. type: Labeled list
 #: en/git-branch.txt:126
@@ -9367,7 +9381,7 @@ msgstr "--move"
 #: en/git-branch.txt:128
 #, priority:240
 msgid "Move/rename a branch and the corresponding reflog."
-msgstr ""
+msgstr "Déplacer/renommer une branche et le reflog correspondant."
 
 #. type: Labeled list
 #: en/git-branch.txt:129 en/git-fast-export.txt:53 en/git-p4.txt:317
@@ -9391,7 +9405,7 @@ msgstr "--copy"
 #: en/git-branch.txt:135
 #, priority:240
 msgid "Copy a branch and the corresponding reflog."
-msgstr ""
+msgstr "Copier une branche et le reflog correspondant."
 
 #. type: Plain text
 #: en/git-branch.txt:136 en/git-fast-export.txt:54 en/git-rebase.txt:547
@@ -9410,12 +9424,18 @@ msgstr "Raccourci pour `--copy-force`."
 #, priority:240
 msgid "Color branches to highlight current, local, and remote-tracking branches.  The value must be always (the default), never, or auto."
 msgstr ""
+"Colorier les branches pour mettre en évidence les branches actuelles, "
+"locales et de suivi à distance.  La valeur doit être « always » (c-à-d "
+"toujours) (valeur par défaut), « never » (c-à-d jamais) ou « auto »."
 
 #. type: Plain text
 #: en/git-branch.txt:148
 #, priority:240
 msgid "Turn off branch colors, even when the configuration file gives the default to color output.  Same as `--color=never`."
 msgstr ""
+"Désactiver les couleurs des branches, même lorsque le fichier de "
+"configuration donne la sortie en couleur par défaut.  Même chose que "
+"`--color=never`."
 
 #. type: Labeled list
 #: en/git-branch.txt:150 en/git-for-each-ref.txt:95 en/git-grep.txt:113 en/git-tag.txt:131
@@ -9425,9 +9445,9 @@ msgstr "--ignore-case"
 
 #. type: Plain text
 #: en/git-branch.txt:152
-#, fuzzy, priority:240
+#, priority:240
 msgid "Sorting and filtering branches are case insensitive."
-msgstr "le tri et le filtrage sont non-sensibles à la casse"
+msgstr "Le tri et le filtrage de branches sont non-sensibles à la casse."
 
 #. type: Labeled list
 #: en/git-branch.txt:153 en/git-status.txt:130 en/git-tag.txt:134
@@ -9443,15 +9463,18 @@ msgstr "--no-column"
 
 #. type: Plain text
 #: en/git-branch.txt:158
-#, fuzzy, priority:240
+#, priority:240
 msgid "Display branch listing in columns. See configuration variable column.branch for option syntax.`--column` and `--no-column` without options are equivalent to 'always' and 'never' respectively."
-msgstr "Afficher les fichiers non suivis en colonnes. Voir la variable de configuration column.status pour la syntaxe de l'option. `--column` et `--no-column` sans options sont équivalents à 'always' et 'never' respectivement."
+msgstr ""
+"Afficher la liste des branches en colonnes. Voir la variable de "
+"configuration column.branch pour la syntaxe des options.`-- column` et `--no-"
+"column` sans options équivalent respectivement à 'always' et 'never'."
 
 #. type: Plain text
 #: en/git-branch.txt:160
 #, priority:240
 msgid "This option is only applicable in non-verbose mode."
-msgstr ""
+msgstr "Cette option ne s’applique qu’en mode non verbeux."
 
 #. type: Labeled list
 #: en/git-branch.txt:162 en/git-show-branch.txt:44
@@ -9464,18 +9487,26 @@ msgstr "--remotes"
 #, priority:240
 msgid "List or delete (if used with -d) the remote-tracking branches.  Combine with `--list` to match the optional pattern(s)."
 msgstr ""
+"Énumérer ou supprimer (si utilisé avec -d) les branches de suivi à "
+"distance.  Combiner avec `-list` pour faire correspondre le(s) motif(s) "
+"optionnel(s)."
 
 #. type: Plain text
 #: en/git-branch.txt:170
-#, fuzzy, priority:240
+#, priority:240
 msgid "List both remote-tracking branches and local branches.  Combine with `--list` to match optional pattern(s)."
-msgstr "afficher à la fois les branches de suivi et les branches locales"
+msgstr ""
+"Afficher à la fois les branches de suivi et les branches locales. Combiner "
+"avec `--list` pour faire correspondre un ou des motifs optionnels."
 
 #. type: Plain text
 #: en/git-branch.txt:176
 #, ignore-ellipsis, priority:240
 msgid "List branches.  With optional `<pattern>...`, e.g. `git branch --list 'maint-*'`, list only the branches that match the pattern(s)."
 msgstr ""
+"Listes les branches.  Avec l'option `<pattern>...`, par exemple `git branch "
+"--list 'maint-*'`, ne lister que les branches qui correspondent au(x) "
+"motif(s)."
 
 #. type: Labeled list
 #: en/git-branch.txt:177
@@ -9488,6 +9519,8 @@ msgstr "--show-current"
 #, priority:240
 msgid "Print the name of the current branch. In detached HEAD state, nothing is printed."
 msgstr ""
+"Afficher le nom de la branche actuelle. En état de HEAD détachée, rien n'est "
+"affiché."
 
 #. type: Labeled list
 #: en/git-branch.txt:182
@@ -9500,24 +9533,35 @@ msgstr "-vv"
 #, priority:240
 msgid "When in list mode, show sha1 and commit subject line for each head, along with relationship to upstream branch (if any). If given twice, print the path of the linked worktree (if any) and the name of the upstream branch, as well (see also `git remote show <remote>`).  Note that the current worktree's HEAD will not have its path printed (it will always be your current directory)."
 msgstr ""
+"En mode liste, afficher le sha1 et valider le sujet pour chaque tête, ainsi "
+"que la relation avec la branche amont (le cas échéant). S'il est donné deux "
+"fois, imprimer le chemin de l'arbre de travail lié (le cas échéant) ainsi "
+"que le nom de la branche amont (voir aussi `git remote show <remote>`).  "
+"Notez que la HEAD de l'arbre de travail actuel n'aura pas son chemin d'accès "
+"affiché (il s'agira toujours de votre répertoire actuel)."
 
 #. type: Plain text
 #: en/git-branch.txt:196
 #, priority:240
 msgid "Be more quiet when creating or deleting a branch, suppressing non-error messages."
 msgstr ""
+"Être plus discret lors de la création ou la destruction d'une branche, en "
+"supprimant les messages qui ne sont pas des erreurs."
 
 #. type: Labeled list
 #: en/git-branch.txt:197
 #, no-wrap, priority:240
 msgid "--abbrev=<length>"
-msgstr ""
+msgstr "--abbrev=<longueur>"
 
 #. type: Plain text
 #: en/git-branch.txt:201
 #, priority:240
 msgid "Alter the sha1's minimum display length in the output listing.  The default value is 7 and can be overridden by the `core.abbrev` config option."
 msgstr ""
+"Modifier la longueur minimale d'affichage du sha1 dans la liste de sortie.  "
+"La valeur par défaut est 7 et peut être remplacée par l'option de "
+"configuration `core.abbrev`."
 
 #. type: Labeled list
 #: en/git-branch.txt:202
@@ -9530,6 +9574,8 @@ msgstr "--no-abbrev"
 #, priority:240
 msgid "Display the full sha1s in the output listing rather than abbreviating them."
 msgstr ""
+"Afficher les sha1s complets dans la liste des résultats plutôt que de les "
+"abréger."
 
 #. type: Labeled list
 #: en/git-branch.txt:206 en/git-checkout.txt:158 en/git-switch.txt:152
@@ -9542,6 +9588,12 @@ msgstr "--track"
 #, priority:240
 msgid "When creating a new branch, set up `branch.<name>.remote` and `branch.<name>.merge` configuration entries to mark the start-point branch as \"upstream\" from the new branch. This configuration will tell git to show the relationship between the two branches in `git status` and `git branch -v`. Furthermore, it directs `git pull` without arguments to pull from the upstream when the new branch is checked out."
 msgstr ""
+"Lors de la création d'une nouvelle branche, configurer les entrées de "
+"configuration `branch.<nom>.remote` et `branch.<nom>.merge` pour marquer la "
+"branche de départ comme étant \"en amont\" de la nouvelle branche. Cette "
+"configuration indiquera à git de montrer la relation entre les deux branches "
+"dans \"git status\" et \"git branch -v\". En outre, il règle `git pull` sans "
+"arguments de tirer depuis l'amont lorsque la nouvelle branche est extraite."
 
 #. type: Plain text
 #: en/git-branch.txt:220
