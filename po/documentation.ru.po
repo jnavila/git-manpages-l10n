@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-02-11 22:37+0100\n"
-"PO-Revision-Date: 2020-03-09 13:32+0000\n"
+"PO-Revision-Date: 2020-03-10 04:42+0000\n"
 "Last-Translator: Dexter Morganov <dexter.morganov@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -15207,7 +15207,7 @@ msgstr "--remove-section"
 #: en/git-config.txt:154
 #, priority:100
 msgid "Remove the given section from the configuration file."
-msgstr ""
+msgstr "Удалить из конфигурационного файла указанную секцию."
 
 #. type: Labeled list
 #: en/git-config.txt:155
@@ -15219,7 +15219,7 @@ msgstr "--rename-section"
 #: en/git-config.txt:157
 #, priority:100
 msgid "Rename the given section to a new name."
-msgstr ""
+msgstr "Переименовать указанную секцию."
 
 #. type: Labeled list
 #: en/git-config.txt:158
@@ -15232,6 +15232,7 @@ msgstr "--unset"
 #, priority:100
 msgid "Remove the line matching the key from config file."
 msgstr ""
+"Удалить из конфигурационного файла строку, соответствующую заданному ключу."
 
 #. type: Labeled list
 #: en/git-config.txt:161
@@ -15243,19 +15244,21 @@ msgstr "--unset-all"
 #: en/git-config.txt:163
 #, priority:100
 msgid "Remove all lines matching the key from config file."
-msgstr ""
+msgstr "Удалить из конфигурационного файла все строки, соответствующие ключу."
 
 #. type: Plain text
 #: en/git-config.txt:167
 #, priority:100
 msgid "List all variables set in config file, along with their values."
 msgstr ""
+"Перечислить все переменные и их значения, установленные в конфигурационном "
+"файле."
 
 #. type: Labeled list
 #: en/git-config.txt:168
 #, no-wrap, priority:100
 msgid "--type <type>"
-msgstr ""
+msgstr "--type <тип>"
 
 #. type: Plain text
 #: en/git-config.txt:172
@@ -15267,7 +15270,7 @@ msgstr ""
 #: en/git-config.txt:174
 #, priority:100
 msgid "Valid `<type>`'s include:"
-msgstr ""
+msgstr "Валидным `<тип>`ом являются:"
 
 #. type: Plain text
 #: en/git-config.txt:176
@@ -15412,6 +15415,8 @@ msgstr ""
 #, priority:100
 msgid "Opens an editor to modify the specified config file; either `--system`, `--global`, or repository (default)."
 msgstr ""
+"Открывает редактор для изменения указанного файла конфигурации; `--system`, "
+"`--global` или для репозитория (по умолчанию)."
 
 #. type: Labeled list
 #: en/git-config.txt:252
@@ -15429,7 +15434,7 @@ msgstr ""
 #: en/git-config.txt:258
 #, no-wrap, priority:100
 msgid "--default <value>"
-msgstr ""
+msgstr "--default <значение>"
 
 #. type: Plain text
 #: en/git-config.txt:261
@@ -15448,36 +15453,44 @@ msgstr ""
 #, priority:100
 msgid "If not set explicitly with `--file`, there are four files where 'git config' will search for configuration options:"
 msgstr ""
+"Если файл не указан явно с помощью `--file`, 'git config' ищет параметры "
+"конфигурации в следующих четырёх файлах:"
 
 #. type: Labeled list
 #: en/git-config.txt:275
 #, no-wrap, priority:100
 msgid "$(prefix)/etc/gitconfig"
-msgstr ""
+msgstr "$(prefix)/etc/gitconfig"
 
 #. type: Plain text
 #: en/git-config.txt:277
 #, priority:100
 msgid "System-wide configuration file."
-msgstr ""
+msgstr "Системный файл конфигурации."
 
 #. type: Labeled list
 #: en/git-config.txt:278
 #, no-wrap, priority:100
 msgid "$XDG_CONFIG_HOME/git/config"
-msgstr ""
+msgstr "$XDG_CONFIG_HOME/git/config"
 
 #. type: Plain text
 #: en/git-config.txt:285
 #, priority:100
 msgid "Second user-specific configuration file. If $XDG_CONFIG_HOME is not set or empty, `$HOME/.config/git/config` will be used. Any single-valued variable set in this file will be overwritten by whatever is in `~/.gitconfig`.  It is a good idea not to create this file if you sometimes use older versions of Git, as support for this file was added fairly recently."
 msgstr ""
+"Второй пользовательский файл конфигурации. Если переменная $XDG_CONFIG_HOME "
+"не задана или пуста, используется `$HOME/.config/git/config`.  Любая "
+"переменная с одним значением будет перезаписана аналогичной переменной, "
+"заданной в файле `~/.gitconfig`.  Рекомендуется не создавать этот файл, если "
+"время от времени используются более старые версии Git, так как поддержка "
+"этого файла была добавлена не так давно."
 
 #. type: Labeled list
 #: en/git-config.txt:286
 #, no-wrap, priority:100
 msgid "~/.gitconfig"
-msgstr ""
+msgstr "~/.gitconfig"
 
 #. type: Plain text
 #: en/git-config.txt:289
@@ -15489,7 +15502,7 @@ msgstr ""
 #: en/git-config.txt:290
 #, no-wrap, priority:100
 msgid "$GIT_DIR/config"
-msgstr ""
+msgstr "$GIT_DIR/config"
 
 #. type: Plain text
 #: en/git-config.txt:292
@@ -15501,7 +15514,7 @@ msgstr ""
 #: en/git-config.txt:293
 #, no-wrap, priority:100
 msgid "$GIT_DIR/config.worktree"
-msgstr ""
+msgstr "$GIT_DIR/config.worktree"
 
 #. type: Plain text
 #: en/git-config.txt:296
@@ -23554,12 +23567,15 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-filter-branch.txt:395
-#, no-wrap, priority:100
+#, fuzzy, no-wrap, priority:100
 msgid ""
 "     D--E--F--G--H\n"
 "    /     /\n"
 "A--B-----C\n"
 msgstr ""
+"     D--E--F--G--H\n"
+"    /     /\n"
+"A--B-----C\n"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:398
@@ -23581,11 +23597,13 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-filter-branch.txt:408
-#, ignore-ellipsis, no-wrap, priority:100
+#, fuzzy, ignore-ellipsis, no-wrap, priority:100
 msgid ""
 "git filter-branch ... C..H --not D\n"
 "git filter-branch ... D..H --not C\n"
 msgstr ""
+"git filter-branch ... C..H --not D\n"
+"git filter-branch ... D..H --not C\n"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:411
@@ -36323,11 +36341,13 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-pull.txt:220
-#, no-wrap, priority:220
+#, fuzzy, no-wrap, priority:220
 msgid ""
 "$ git pull\n"
 "$ git pull origin\n"
 msgstr ""
+"$ git pull\n"
+"$ git pull origin\n"
 
 #. type: Plain text
 #: en/git-pull.txt:225
@@ -36343,9 +36363,9 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-pull.txt:230
-#, no-wrap, priority:220
+#, fuzzy, no-wrap, priority:220
 msgid "$ git pull origin next\n"
-msgstr ""
+msgstr "$ git pull origin next\n"
 
 #. type: Plain text
 #: en/git-pull.txt:235
@@ -36360,6 +36380,8 @@ msgid ""
 "$ git fetch origin\n"
 "$ git merge origin/next\n"
 msgstr ""
+"$ git fetch origin\n"
+"$ git merge origin/next\n"
 
 #. type: Plain text
 #: en/git-pull.txt:244
@@ -36381,9 +36403,9 @@ msgstr "git-push(1)"
 
 #. type: Plain text
 #: en/git-push.txt:7
-#, fuzzy, priority:220
+#, priority:220
 msgid "git-push - Update remote refs along with associated objects"
-msgstr "Обновление внешних ссылок и связанных объектов"
+msgstr "git-push - Обновление внешних ссылок и связанных объектов"
 
 #. type: Plain text
 #: en/git-push.txt:18
