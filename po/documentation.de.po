@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-02-11 22:37+0100\n"
-"PO-Revision-Date: 2020-04-03 07:46+0000\n"
+"PO-Revision-Date: 2020-04-03 22:30+0000\n"
 "Last-Translator: Dieter Ziller <max123kl@ziller.de>\n"
 "Language-Team: Matthias Aßhauer <mha1993@live.de>\n"
 "Language: de\n"
@@ -53680,48 +53680,88 @@ msgstr "Mehr Details zum den folgenden Themen sind im link:user-manual.html#git-
 #, priority:100
 msgid "A Git project normally consists of a working directory with a \".git\" subdirectory at the top level.  The .git directory contains, among other things, a compressed object database representing the complete history of the project, an \"index\" file which links that history to the current contents of the working tree, and named pointers into that history such as tags and branch heads."
 msgstr ""
+"Ein Git-Projekt besteht normalerweise aus einem Arbeitsverzeichnis mit einem "
+"„.git“-Unterverzeichnis auf der obersten Ebene. Das „.git“-Verzeichnis "
+"enthält unter anderem eine komprimierte Objektdatenbank, die den "
+"vollständigen Projektverlauf wiedergibt, eine „Index“-Datei, die diesen "
+"Verlauf mit dem aktuellen Inhalt des Arbeitsbereichs verknüpft und Pointer "
+"in diesem Verlauf benennt, wie z.B. Tags und Branch-Heads."
 
 #. type: Plain text
 #: en/git.txt:860
 #, priority:100
 msgid "The object database contains objects of three main types: blobs, which hold file data; trees, which point to blobs and other trees to build up directory hierarchies; and commits, which each reference a single tree and some number of parent commits."
-msgstr "Die Objektdatenbank enthält drei Hauptarten von Objekten: Blobs, die Dateiinformationen enthalte; Trees, die auf Blobs und andere Trees verweisen um Verzeichnisstrukturen abzubilden; und Commits, die jeweils auf einen einzelnen tree und eine gewisse Anzahl Eltern-Commits verweisen."
+msgstr ""
+"Die Objektdatenbank enthält drei Hauptarten von Objekten: Blobs, die "
+"Dateiinformationen enthalten; Trees, die auf Blobs und andere Trees "
+"verweisen, um Verzeichnisstrukturen abzubilden; und Commits, die jeweils auf "
+"einen einzelnen Tree und eine gewisse Anzahl Eltern-Commits verweisen."
 
 #. type: Plain text
 #: en/git.txt:865
 #, priority:100
 msgid "The commit, equivalent to what other systems call a \"changeset\" or \"version\", represents a step in the project's history, and each parent represents an immediately preceding step.  Commits with more than one parent represent merges of independent lines of development."
-msgstr "Der Commit, in anderen Systemen auch \"Changeset\" oder \"Version\" genannt, stellt einen Schritt in der Projekthistorie dar und jeder Elterncommit stellt einen direkt vorhergehenden Schritt dar. Commits mit mehr als einem Elterncommit stellen Zusammenführungen verschiedener Entwicklungslinien dar."
+msgstr ""
+"Der Commit, in anderen Systemen auch „Changeset“ oder „Version“ genannt, "
+"stellt einen Schritt in der Projekthistorie dar und jeder Eltern-Commit "
+"stellt einen direkt vorhergehenden Schritt dar. Commits mit mehr als einem "
+"Eltern-Commit stellen Zusammenführungen verschiedener Entwicklungslinien dar."
 
 #. type: Plain text
 #: en/git.txt:871
 #, priority:100
 msgid "All objects are named by the SHA-1 hash of their contents, normally written as a string of 40 hex digits.  Such names are globally unique.  The entire history leading up to a commit can be vouched for by signing just that commit.  A fourth object type, the tag, is provided for this purpose."
-msgstr "Alle Objekte werden mit dem SHA1-Hash ihres Inhalts bezeichnet. Dieser wird normalerweise als 40-stellige Hexadezimalzahl angegeben. Diese Bezeichnungen sind eindeutig. Ein einzelner signierter signierter Commit kann die ganze Historie bis zu diesem Commit verifizieren. Zu diesem Zweck wird eine vierte Objektart, die Markierung angeboten."
+msgstr ""
+"Alle Objekte werden mit dem SHA1-Hash ihres Inhalts bezeichnet. Dieser wird "
+"normalerweise als 40-stellige Hexadezimalzahl angegeben. Diese Bezeichnungen "
+"sind eindeutig. Ein einzelner signierter Commit kann die gesamte Historie "
+"bis zu diesem Commit verifizieren. Zu diesem Zweck wird eine vierte "
+"Objektart, die Markierung angeboten."
 
 #. type: Plain text
 #: en/git.txt:874
 #, priority:100
 msgid "When first created, objects are stored in individual files, but for efficiency may later be compressed together into \"pack files\"."
-msgstr "Beim Erstellen werden Objekte in individuellen Dateien gespeichert, können aber aus Effizienzgründen später in sogenannten Packdateien zusammenkomprimiert werden."
+msgstr ""
+"Beim Erstellen werden Objekte in individuellen Dateien gespeichert, können "
+"aber aus Effizienzgründen später zusammen in sogenannten Packdateien "
+"komprimiert werden."
 
 #. type: Plain text
 #: en/git.txt:881
 #, priority:100
 msgid "Named pointers called refs mark interesting points in history.  A ref may contain the SHA-1 name of an object or the name of another ref.  Refs with names beginning `ref/head/` contain the SHA-1 name of the most recent commit (or \"head\") of a branch under development.  SHA-1 names of tags of interest are stored under `ref/tags/`.  A special ref named `HEAD` contains the name of the currently checked-out branch."
-msgstr "Benannte Zeiger, die Referenzen genannt werden, markieren interessante Punkte in der Historie. Eine Referenz kann auf ein Objekt oder eine andere Referenz verweisen. Referenzen deren Bezeichnung mit `ref/head/` beginnt enthalten die SHA1-Bezeichnung de letzten Commits  (der \"Spitze\") eines Entwicklungszweigs. SHA1-Bezeichnungen interessanter Markierungen werden  unter `ref/tags/` gespeichert. Eine besondere Referenz namens `HEAD` verweist auf die Bezeichnung des momnentan ausgecheckten Entwicklungszweigs."
+msgstr ""
+"Benannte Zeiger, die Referenzen genannt werden, markieren interessante "
+"Punkte in der Historie. Eine Referenz kann auf ein Objekt oder eine andere "
+"Referenz verweisen. Referenzen deren Bezeichnung mit `ref/head/` beginnt "
+"enthalten die SHA1-Bezeichnung de letzten Commits  (der „Spitze“) eines "
+"Entwicklungszweigs. SHA1-Bezeichnungen interessanter Markierungen werden  "
+"unter `ref/tags/` gespeichert. Eine besondere Referenz namens `HEAD` "
+"verweist auf die Bezeichnung des momnentan ausgecheckten Entwicklungszweigs."
 
 #. type: Plain text
 #: en/git.txt:890
 #, priority:100
 msgid "The index file is initialized with a list of all paths and, for each path, a blob object and a set of attributes.  The blob object represents the contents of the file as of the head of the current branch.  The attributes (last modified time, size, etc.) are taken from the corresponding file in the working tree.  Subsequent changes to the working tree can be found by comparing these attributes.  The index may be updated with new content, and new commits may be created from the content stored in the index."
-msgstr "Die Indexdatei wird mit einer Liste aller Pfade, sowie pro Pfad einem Blob-Objekt und einer Reihe von Attributen initialisiert. Das Blob-Objekt repräsentiert die Inhalte der Datei gemäß der Spitze des aktuellen Entwicklungszweigs. Die Attribute (zuletzt geändert, Größe, etc.) werden von der entsprechenden Datei im Arbeitsverzeichnis genommen. Spätere Änderungen am Arbeitsverzeichnis können durch Vergleichen dieser Attribute ermittelt werden.Der Index kann mit neuen Inhalten aktualisiert werden und aus dem Inhalt des Indexes können neue Commits erstellt werden."
+msgstr ""
+"Die Indexdatei wird mit einer Liste aller Pfade, sowie pro Pfad einem Blob-"
+"Objekt und einer Reihe von Attributen initialisiert. Das Blob-Objekt "
+"repräsentiert die Inhalte der Datei gemäß der Spitze des aktuellen "
+"Entwicklungszweigs. Die Attribute (zuletzt geändert, Größe, etc.) werden von "
+"der entsprechenden Datei im Arbeitsverzeichnis genommen. Spätere Änderungen "
+"am Arbeitsverzeichnis können durch Vergleichen dieser Attribute ermittelt "
+"werden. Der Index kann mit neuen Inhalten aktualisiert werden und aus dem "
+"Inhalt des Indexes können neue Commits erstellt werden."
 
 #. type: Plain text
 #: en/git.txt:894
 #, priority:100
 msgid "The index is also capable of storing multiple entries (called \"stages\")  for a given pathname.  These stages are used to hold the various unmerged version of a file when a merge is in progress."
-msgstr "Der Index kann auch mehrere Einträge (genannt \"Stages\") eines bestimmten Pfads enthalten. Diese Stages enthalten verschiedene noch nicht zusammengeführte Versionen einer Datei während eines Merges."
+msgstr ""
+"Der Index kann auch mehrere Einträge (genannt „Stages“) eines bestimmten "
+"Pfads enthalten. Diese Stages enthalten verschiedene noch nicht "
+"zusammengeführte Versionen einer Datei während eines Merges."
 
 #. type: Title -
 #: en/git.txt:896
@@ -53733,13 +53773,19 @@ msgstr "WEITERE DOKUMENTATION"
 #: en/git.txt:901
 #, priority:100
 msgid "See the references in the \"description\" section to get started using Git.  The following is probably more detail than necessary for a first-time user."
-msgstr "Siehe die Verweise im Abschnitt \"Beschreibung\" um mit der Verwendung von Git zu beginnen. Nachfolgend finden Sie vermutlich mehr Details als für einen erstmaligen Benutzer nötig ist."
+msgstr ""
+"Siehe die Verweise im Abschnitt „Beschreibung“ um mit der Verwendung von Git "
+"zu beginnen. Nachfolgend finden Sie vermutlich mehr Details als es für einen "
+"erstmaligen Benutzer nötig ist."
 
 #. type: Plain text
 #: en/git.txt:905
 #, priority:100
 msgid "The link:user-manual.html#git-concepts[Git concepts chapter of the user-manual] and linkgit:gitcore-tutorial[7] both provide introductions to the underlying Git architecture."
-msgstr "Das link:user-manual.html#git-concepts[Kapitel \"Git concepts\" des Benutzerhandbuchs] und linkgit:gitcore-tutorial[7] stellen eine Einführung in die zugrundeliegende Git-Architektur zur Verfügung."
+msgstr ""
+"Das link:user-manual.html#git-concepts[Kapitel „Git concepts“ des "
+"Benutzerhandbuchs] und linkgit:gitcore-tutorial[7] stellen eine Einführung "
+"in die zugrundeliegende Git-Architektur zur Verfügung."
 
 #. type: Plain text
 #: en/git.txt:907
