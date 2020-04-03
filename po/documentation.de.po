@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-02-11 22:37+0100\n"
-"PO-Revision-Date: 2020-03-16 21:35+0000\n"
-"Last-Translator: krueschi <krueschi@t-online.de>\n"
+"PO-Revision-Date: 2020-04-03 07:46+0000\n"
+"Last-Translator: Dieter Ziller <max123kl@ziller.de>\n"
 "Language-Team: Matthias Aßhauer <mha1993@live.de>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -5608,6 +5608,12 @@ msgstr "--server-option=<Option>"
 #, priority:300
 msgid "Transmit the given string to the server when communicating using protocol version 2.  The given string must not contain a NUL or LF character.  The server's handling of server options, including unknown ones, is server-specific.  When multiple `--server-option=<option>` are given, they are all sent to the other side in the order listed on the command line."
 msgstr ""
+"Übertragen Sie die angegebene Zeichenfolge an den Server, wenn Sie mit "
+"Protokollversion 2 arbeiten. Die übergebene Zeichenfolge darf kein NUL- oder "
+"LF-Zeichen enthalten. Die Verarbeitung von Server-Optionen, einschließlich "
+"unbekannter Optionen, durch den Server ist serverspezifisch. Wenn mehrere "
+"`--server-option=<option>` übergeben werden, werden sie alle, nacheinander, "
+"wie in der Befehlszeile angegeben, an die andere Seite gesendet."
 
 #. type: Labeled list
 #: en/fetch-options.txt:244
@@ -9213,7 +9219,15 @@ msgstr "Beachten Sie, dass dies einen neuen Branch anlegt, aber der aktuelle Arb
 #: en/git-branch.txt:73
 #, priority:240
 msgid "When a local branch is started off a remote-tracking branch, Git sets up the branch (specifically the `branch.<name>.remote` and `branch.<name>.merge` configuration entries) so that 'git pull' will appropriately merge from the remote-tracking branch. This behavior may be changed via the global `branch.autoSetupMerge` configuration flag. That setting can be overridden by using the `--track` and `--no-track` options, and changed later using `git branch --set-upstream-to`."
-msgstr "Wird ein lokaler Branch von einem Remote-Tracking-Branch abgeleitet setzt Git diesen (insbesondere die Konfigurationseinträge `branch.<Name>.remote` und `branch.<Name>.merge`) so auf, dass 'git pull' einen ordnungsgemäßen Merge vom Remote-Tracking-Branch durchführen kann. Dieses Verhalten kann global durch das 'branch.autosetupmerge' Konfigurationsflag geändert werden.  Diese Option kann durch Verwendung der Optionen '--track' und '--no-track' überschrieben und durch `git branch --set-upstream-to` nachträglich geändert werden."
+msgstr ""
+"Wird ein lokaler Branch von einem Remote-Tracking-Branch abgeleitet setzt "
+"Git diesen (insbesondere die Konfigurationseinträge `branch.<Name>.remote` "
+"und `branch.<Name>.merge`) so auf, dass 'git pull' einen ordnungsgemäßen "
+"Merge vom Remote-Tracking-Branch durchführen kann. Dieses Verhalten kann "
+"global durch das 'branch.autosetupmerge' Konfigurationsflag geändert werden. "
+"Diese Option kann durch Verwendung der Optionen '--track' und '--no-track' "
+"überschrieben und durch `git branch --set-upstream-to` nachträglich geändert "
+"werden."
 
 #. type: Plain text
 #: en/git-branch.txt:79
@@ -9631,7 +9645,9 @@ msgstr "<Neuer-Branch>"
 #: en/git-branch.txt:280
 #, priority:240
 msgid "The new name for an existing branch. The same restrictions as for <branchname> apply."
-msgstr "Der neue Name für einen existierenden Branch.  Es gelten die gleichen Einschränkungen wie für <branchname>."
+msgstr ""
+"Der neue Name für einen existierenden Branch. Es gelten die gleichen "
+"Einschränkungen wie für <branchname>."
 
 #. type: Labeled list
 #: en/git-branch.txt:281 en/git-for-each-ref.txt:40 en/git-ls-remote.txt:63 en/git-tag.txt:112
@@ -11625,7 +11641,11 @@ msgstr "--no-progress"
 #: en/git-checkout.txt:117 en/git-restore.txt:75 en/git-switch.txt:150
 #, priority:240
 msgid "Progress status is reported on the standard error stream by default when it is attached to a terminal, unless `--quiet` is specified. This flag enables progress reporting even if not attached to a terminal, regardless of `--quiet`."
-msgstr "Der Fortschritt wird standardmäßig auf der Standardfehlerausgabe angezeigt, wenn diese an ein Terminal angebunden ist, außer wenn `--quiet` angegeben ist. Dieses Flag erlaubt die Fortschrittsanzeige auch ohne Terminalanbindung, ohne  `--quiet` zu berücksichtigen."
+msgstr ""
+"Der Fortschritt wird standardmäßig auf der Standardfehlerausgabe angezeigt, "
+"wenn diese an ein Terminal angebunden ist, außer wenn `--quiet` angegeben "
+"ist. Dieses Flag erlaubt die Fortschrittsanzeige auch ohne "
+"Terminalanbindung, ohne `--quiet` zu berücksichtigen."
 
 #. type: Plain text
 #: en/git-checkout.txt:123
@@ -13457,7 +13477,12 @@ msgstr ""
 #: en/git-clone.txt:29
 #, priority:300
 msgid "Clones a repository into a newly created directory, creates remote-tracking branches for each branch in the cloned repository (visible using `git branch --remotes`), and creates and checks out an initial branch that is forked from the cloned repository's currently active branch."
-msgstr "Klont ein Repository in ein neu erzeugtes Verzeichnis, erzeugt Remote-Tracking-Branches zum Nachverfolgen aller Branches des geklonten Repositories (sichtbar durch `git branch --remotes`).  Zusätzlich wird der gerade aktive Branch des geklonten Projektarchivs lokal angelegt und dessen Inhalte geholt."
+msgstr ""
+"Klont ein Repository in ein neu erzeugtes Verzeichnis, erzeugt Remote-"
+"Tracking-Branches zum Nachverfolgen aller Branches des geklonten "
+"Repositories (sichtbar durch `git branch --remotes`). Zusätzlich wird der "
+"gerade aktive Branch des geklonten Projektarchivs lokal angelegt und dessen "
+"Inhalte geholt."
 
 #. type: Plain text
 #: en/git-clone.txt:35
@@ -15254,7 +15279,9 @@ msgstr "--replace-all"
 #: en/git-config.txt:77
 #, priority:100
 msgid "Default behavior is to replace at most one line. This replaces all lines matching the key (and optionally the value_regex)."
-msgstr "Das Standardverhalten ist, höchstens eine Zeile zu ersetzen.  Dies ersetzt alle Zeilen, die dem Schlüssel entsprechen (und eventuell der Wert_Regex)."
+msgstr ""
+"Das Standardverhalten ist, höchstens eine Zeile zu ersetzen. Dies ersetzt "
+"alle Zeilen, die dem Schlüssel entsprechen (und eventuell der Wert_Regex)."
 
 #. type: Labeled list
 #: en/git-config.txt:78 en/git-update-index.txt:45
@@ -52347,7 +52374,11 @@ msgstr "--glob-pathspecs"
 #: en/git.txt:154
 #, priority:100
 msgid "Add \"glob\" magic to all pathspec. This is equivalent to setting the `GIT_GLOB_PATHSPECS` environment variable to `1`. Disabling globbing on individual pathspecs can be done using pathspec magic \":(literal)\""
-msgstr "Fügt die Pfadspezifikationsangabe \"glob\" zu allen Pfadspezifikationen hinzu. Dies entspricht dem Setzen der Umgebungsvariable `GIT_GLOB_PATHSPECS` auf 1. Globbing kann für einzelne  Pfadspezifikationen mit der Pfadspezifikationsangabe \":(literal)\" deaktiviert werden"
+msgstr ""
+"Fügt die Pfadspezifikationsangabe \"glob\" zu allen Pfadspezifikationen "
+"hinzu. Dies entspricht dem Setzen der Umgebungsvariable `GIT_GLOB_PATHSPECS` "
+"auf 1. Globbing kann für einzelne Pfadspezifikationen mit der "
+"Pfadspezifikationsangabe \":(literal)\" deaktiviert werden"
 
 #. type: Labeled list
 #: en/git.txt:155
@@ -52359,7 +52390,11 @@ msgstr "--noglob-pathspecs"
 #: en/git.txt:160
 #, priority:100
 msgid "Add \"literal\" magic to all pathspec. This is equivalent to setting the `GIT_NOGLOB_PATHSPECS` environment variable to `1`. Enabling globbing on individual pathspecs can be done using pathspec magic \":(glob)\""
-msgstr "Fügt die Pfadspezifikationsangabe \"literal\" zu allen Pfadspezifikationen hinzu. Dies entspricht dem Setzen der Umgebungsvariable `GIT_NOGLOB_PATHSPECS` auf 1. Globbing kann für einzelne  Pfadspezifikationen mit der Pfadspezifikationsangabe \":(glob)\" aktiviert werden"
+msgstr ""
+"Fügt die Pfadspezifikationsangabe \"literal\" zu allen Pfadspezifikationen "
+"hinzu. Dies entspricht dem Setzen der Umgebungsvariable "
+"`GIT_NOGLOB_PATHSPECS` auf 1. Globbing kann für einzelne Pfadspezifikationen "
+"mit der Pfadspezifikationsangabe \":(glob)\" aktiviert werden"
 
 #. type: Labeled list
 #: en/git.txt:161
@@ -52395,7 +52430,15 @@ msgstr "--list-cmds=Gruppe[,Gruppe...]"
 #: en/git.txt:178
 #, priority:100
 msgid "List commands by group. This is an internal/experimental option and may change or be removed in the future. Supported groups are: builtins, parseopt (builtin commands that use parse-options), main (all commands in libexec directory), others (all other commands in `$PATH` that have git- prefix), list-<category> (see categories in command-list.txt), nohelpers (exclude helper commands), alias and config (retrieve command list from config variable completion.commands)"
-msgstr "Befehle nach Gruppe auflisten. Dies ist eine interne/experimentelle Option und könnte in zukunft geändert oder entfernt werden. Unterstützt folgende Gruppen: builtins (Integrierte Befehle), parseopt (Integrierte Befehle,  die Parse-Optionen verwenden), main (Alle Befehle im Verzeichnis libexec), others (Alle anderen Befehle in `$PATH` mit Präfix git-), list-<Kategorie> (siehe Kategorien in command-list.txt), nohelpers (Hilfsbefehle ausschließen), alias and config (Befehlsliste aus Konfigurationsvariable completion.commands)"
+msgstr ""
+"Befehle nach Gruppe auflisten. Dies ist eine interne/experimentelle Option "
+"und könnte in zukunft geändert oder entfernt werden. Unterstützt folgende "
+"Gruppen: builtins (Integrierte Befehle), parseopt (Integrierte Befehle, die "
+"Parse-Optionen verwenden), main (Alle Befehle im Verzeichnis libexec), "
+"others (Alle anderen Befehle in `$PATH` mit Präfix git-), list-<Kategorie> ("
+"siehe Kategorien in command-list.txt), nohelpers (Hilfsbefehle ausschließen)"
+", alias and config (Befehlsliste aus Konfigurationsvariable "
+"completion.commands)"
 
 #. type: Title -
 #: en/git.txt:180
@@ -52698,7 +52741,9 @@ msgstr "<Markierung>"
 #: en/git.txt:368
 #, priority:100
 msgid "a valid tag 'name' (i.e. a `refs/tags/<tag>` reference)."
-msgstr "Eine gültige Markierungsbezeichnung (d.h. ein  `refs/tags/<Markierung>` Verweis)."
+msgstr ""
+"Eine gültige Markierungsbezeichnung (d.h. ein `refs/tags/<Markierung>` "
+"Verweis)."
 
 #. type: Plain text
 #: en/git.txt:372
@@ -53161,7 +53206,11 @@ msgstr "`GIT_SSH_VARIANT`"
 #: en/git.txt:581
 #, priority:100
 msgid "If this environment variable is set, it overrides Git's autodetection whether `GIT_SSH`/`GIT_SSH_COMMAND`/`core.sshCommand` refer to OpenSSH, plink or tortoiseplink. This variable overrides the config setting `ssh.variant` that serves the same purpose."
-msgstr "Wenn diese Umgebungsvariable gesetzt ist, überschreibt sie Git's automatische Erkennung ob sich `GIT_SSH`/`GIT_SSH_COMMAND`/`core.sshCommand` auf OpenSSH, plink oder tortoiseplink bezieht. Diese Variable überschreibt sie  die Konfigurationseinstellung `ssh.variant` die den selben Zweck erfüllt."
+msgstr ""
+"Wenn diese Umgebungsvariable gesetzt ist, überschreibt sie Git's "
+"automatische Erkennung ob sich `GIT_SSH`/`GIT_SSH_COMMAND`/`core.sshCommand` "
+"auf OpenSSH, plink oder tortoiseplink bezieht. Diese Variable überschreibt "
+"sie die Konfigurationseinstellung `ssh.variant` die den selben Zweck erfüllt."
 
 #. type: Labeled list
 #: en/git.txt:582
@@ -53587,7 +53636,14 @@ msgstr "`GIT_REDIRECT_STDERR`"
 #: en/git.txt:827
 #, priority:100
 msgid "Windows-only: allow redirecting the standard input/output/error handles to paths specified by the environment variables. This is particularly useful in multi-threaded applications where the canonical way to pass standard handles via `CreateProcess()` is not an option because it would require the handles to be marked inheritable (and consequently *every* spawned process would inherit them, possibly blocking regular Git operations). The primary intended use case is to use named pipes for communication (e.g. `\\\\.\\pipe\\my-git-stdin-123`)."
-msgstr "Nur unter Windows: Erlaubt es die Standardeingabe/-ausgabe/-fehlerausgabe auf die in diesen Umgebungsvariablen angegebenen Pfade umzuleiten. Dies ist besonders  hilfreich bei Multithreading-Anwendungen bei denen die Standardmethode diese Datenströme mit `CreateProcess()` keine Option ist, da das bewirken würde, dass alle weiteren Prozesse diese erben, was reguläre Git-Operationen blockieren kann. Der Hauptanwendungsfall ist die Verwendung von benannten Pipes (z.B. `\\\\.\\pipe\\my-git-stdin-123`)."
+msgstr ""
+"Nur unter Windows: Erlaubt es die Standardeingabe/-ausgabe/-fehlerausgabe "
+"auf die in diesen Umgebungsvariablen angegebenen Pfade umzuleiten. Dies ist "
+"besonders hilfreich bei Multithreading-Anwendungen bei denen die "
+"Standardmethode diese Datenströme mit `CreateProcess()` keine Option ist, da "
+"das bewirken würde, dass alle weiteren Prozesse diese erben, was reguläre "
+"Git-Operationen blockieren kann. Der Hauptanwendungsfall ist die Verwendung "
+"von benannten Pipes (z.B. `\\\\.\\pipe\\my-git-stdin-123`)."
 
 #. type: Plain text
 #: en/git.txt:832
@@ -55447,7 +55503,7 @@ msgstr "'git verify-tag' [--format=<Format>] <Markierung>...\n"
 #: en/git-verify-tag.txt:16
 #, priority:100
 msgid "Validates the gpg signature created by 'git tag'."
-msgstr "Überprüft die  von 'git tag' erstellte GPG-Signatur."
+msgstr "Überprüft die von 'git tag' erstellte GPG-Signatur."
 
 #. type: Plain text
 #: en/git-verify-tag.txt:26
