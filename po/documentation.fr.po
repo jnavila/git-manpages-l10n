@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-02-11 22:37+0100\n"
-"PO-Revision-Date: 2020-03-19 21:36+0000\n"
+"PO-Revision-Date: 2020-04-03 02:31+0000\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -9644,6 +9644,12 @@ msgstr ""
 #, priority:240
 msgid "This behavior is the default when the start point is a remote-tracking branch.  Set the branch.autoSetupMerge configuration variable to `false` if you want `git switch`, `git checkout` and `git branch` to always behave as if `--no-track` were given. Set it to `always` if you want this behavior when the start-point is either a local or remote-tracking branch."
 msgstr ""
+"Ce comportement est le défaut lorsque le point de départ est une branche de "
+"suivi à distance.  Définissez la variable de configuration "
+"branch.autoSetupMerge à `false` si vous voulez `git switch`, `git checkout` "
+"et `git branch` pour toujours se comporter comme si `--no-track` a été "
+"donné. Réglez-le `always` si vous voulez ce comportement lorsque le point de "
+"départ est soit une branche locale ou de suivi à distance."
 
 #. type: Labeled list
 #: en/git-branch.txt:221 en/git-checkout.txt:172 en/git-switch.txt:167
@@ -9662,24 +9668,29 @@ msgstr "Ne pas renseigner la configuration « amont », même si la configurat
 #, priority:240
 msgid "As this option had confusing syntax, it is no longer supported.  Please use `--track` or `--set-upstream-to` instead."
 msgstr ""
+"Comme cette option avait une syntaxe confuse, elle n'est plus supportée.  "
+"Veuillez utiliser `--track` ou `--set-upstream-to` à la place."
 
 #. type: Labeled list
 #: en/git-branch.txt:229
 #, no-wrap, priority:240
 msgid "-u <upstream>"
-msgstr ""
+msgstr "-u <amont>"
 
 #. type: Labeled list
 #: en/git-branch.txt:230
 #, no-wrap, priority:240
 msgid "--set-upstream-to=<upstream>"
-msgstr ""
+msgstr "--set-upstream-to=<amont>"
 
 #. type: Plain text
 #: en/git-branch.txt:234
 #, priority:240
 msgid "Set up <branchname>'s tracking information so <upstream> is considered <branchname>'s upstream branch. If no <branchname> is specified, then it defaults to the current branch."
 msgstr ""
+"Configurer les informations de suivi de <nome-de-branche> pour que <amont> "
+"soit considéré comme la branche amont de <nome-de-branche>. Si aucun <nom-de-"
+"branche> n'est spécifié, alors la branche actuelle est utilisée par défaut."
 
 #. type: Labeled list
 #: en/git-branch.txt:235
@@ -9692,6 +9703,8 @@ msgstr "--unset-upstream"
 #, priority:240
 msgid "Remove the upstream information for <branchname>. If no branch is specified it defaults to the current branch."
 msgstr ""
+"Supprimer les informations en amont pour <nom-de-branche>. Si aucune branche "
+"n'est spécifiée, la branche actuelle est utilisée par défaut."
 
 #. type: Labeled list
 #: en/git-branch.txt:239
@@ -9704,6 +9717,10 @@ msgstr "--edit-description"
 #, priority:240
 msgid "Open an editor and edit the text to explain what the branch is for, to be used by various other commands (e.g. `format-patch`, `request-pull`, and `merge` (if enabled)). Multi-line explanations may be used."
 msgstr ""
+"Ouvrir un éditeur et éditer le texte pour expliquer à quoi sert la branche, "
+"qui sera utilisée par diverses autres commandes (par exemple `format-patch`, "
+"`pull-request` et `merge` (si activé)). Des explications sur plusieurs "
+"lignes peuvent être utilisées."
 
 #. type: Labeled list
 #: en/git-branch.txt:245 en/git-tag.txt:142
@@ -9716,6 +9733,8 @@ msgstr "--contains [<commit>]"
 #, priority:240
 msgid "Only list branches which contain the specified commit (HEAD if not specified). Implies `--list`."
 msgstr ""
+"N'indiquer que les branches qui contiennent le commit spécifié (HEAD si non "
+"spécifié). Implique `--list`."
 
 #. type: Labeled list
 #: en/git-branch.txt:249 en/git-tag.txt:146
@@ -9728,6 +9747,8 @@ msgstr "--no-contains [<commit>]"
 #, priority:240
 msgid "Only list branches which don't contain the specified commit (HEAD if not specified). Implies `--list`."
 msgstr ""
+"N'indiquer que les branches qui contiennent le commit spécifié (HEAD si non "
+"spécifié). Implique `--list`."
 
 #. type: Labeled list
 #: en/git-branch.txt:253 en/git-tag.txt:150
@@ -9740,30 +9761,40 @@ msgstr "--merged [<commit>]"
 #, priority:240
 msgid "Only list branches whose tips are reachable from the specified commit (HEAD if not specified). Implies `--list`, incompatible with `--no-merged`."
 msgstr ""
+"N'indiquer que les branches dont les sommets sont accessibles depuis le "
+"commit spécifié (HEAD si non spécifié). Implique `--list`, incompatible avec "
+"`--no-merged`."
 
 #. type: Labeled list
 #: en/git-branch.txt:258 en/git-tag.txt:154
 #, no-wrap, priority:240
 msgid "--no-merged [<commit>]"
-msgstr ""
+msgstr "--no-merged [<commit>]"
 
 #. type: Plain text
 #: en/git-branch.txt:262
 #, priority:240
 msgid "Only list branches whose tips are not reachable from the specified commit (HEAD if not specified). Implies `--list`, incompatible with `--merged`."
 msgstr ""
+"N'indiquer que les branches dont les sommets sont accessibles depuis le "
+"commit spécifié (HEAD si non spécifié). Implique `--list`, incompatible avec "
+"`--no-merged`."
 
 #. type: Labeled list
 #: en/git-branch.txt:263
 #, no-wrap, priority:240
 msgid "<branchname>"
-msgstr ""
+msgstr "<nom-de-branche>"
 
 #. type: Plain text
 #: en/git-branch.txt:268
 #, priority:240
 msgid "The name of the branch to create or delete.  The new branch name must pass all checks defined by linkgit:git-check-ref-format[1].  Some of these checks may restrict the characters allowed in a branch name."
 msgstr ""
+"Le nom de la branche à créer ou à supprimer.  Le nouveau nom de la branche "
+"doit passer tous les contrôles définis par linkgit:git-check-ref-format[1].  "
+"Certains de ces contrôles peuvent restreindre les caractères autorisés dans "
+"un nom de branche."
 
 #. type: Labeled list
 #: en/git-branch.txt:269 en/git-switch.txt:42
@@ -9776,6 +9807,9 @@ msgstr "<point_de_départ>"
 #, priority:240
 msgid "The new branch head will point to this commit.  It may be given as a branch name, a commit-id, or a tag.  If this option is omitted, the current HEAD will be used instead."
 msgstr ""
+"La nouvelle tête de branche pointera sur ce commit.  Il peut être donné sous "
+"la forme d'un nom de branche, d'un id de commit ou d'une étiquette.  Si "
+"cette option est omise, la HEAD actuelle sera utilisée à la place."
 
 #. type: Labeled list
 #: en/git-branch.txt:274
@@ -9787,7 +9821,7 @@ msgstr "<anciennebranche>"
 #: en/git-branch.txt:276
 #, priority:240
 msgid "The name of an existing branch to rename."
-msgstr ""
+msgstr "Nom d'une branche existante à renommer."
 
 #. type: Labeled list
 #: en/git-branch.txt:277
@@ -9800,12 +9834,14 @@ msgstr "<nouvelle_branche>"
 #, priority:240
 msgid "The new name for an existing branch. The same restrictions as for <branchname> apply."
 msgstr ""
+"Le nouveau nom d'une branche existante. Les mêmes restrictions que pour <nom-"
+"de-branche> s'appliquent."
 
 #. type: Labeled list
 #: en/git-branch.txt:281 en/git-for-each-ref.txt:40 en/git-ls-remote.txt:63 en/git-tag.txt:112
 #, no-wrap, priority:240
 msgid "--sort=<key>"
-msgstr ""
+msgstr "--sort=<clé>"
 
 #. type: Plain text
 #: en/git-branch.txt:291
