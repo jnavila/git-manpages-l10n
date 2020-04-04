@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
-"POT-Creation-Date: 2020-04-04 19:04+0200\n"
+"POT-Creation-Date: 2020-04-04 19:51+0200\n"
 "PO-Revision-Date: 2020-04-03 02:31+0000\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
@@ -8431,7 +8431,7 @@ msgid "If, in the middle of a bisect session, you know that the suggested revisi
 msgstr ""
 
 #. type: Plain text
-#: en/git-bisect.txt:245 en/git-tag.txt:373
+#: en/git-bisect.txt:245 en/git-tag.txt:373 en/git-bisect-lk2009.txt:914 en/git-bisect-lk2009.txt:1136 en/git-bisect-lk2009.txt:1152 en/git-bisect-lk2009.txt:1175
 #, priority:240
 msgid "For example:"
 msgstr "Par exemple :"
@@ -24768,7 +24768,7 @@ msgid "An example directly producing formatted text.  Show the most recent 3 tag
 msgstr ""
 
 #. type: delimited block -
-#: en/git-for-each-ref.txt:280 en/git-for-each-ref.txt:296 en/git-for-each-ref.txt:310
+#: en/git-for-each-ref.txt:280 en/git-for-each-ref.txt:296 en/git-for-each-ref.txt:310 en/git-bisect-lk2009.txt:933
 #, no-wrap, priority:100
 msgid "#!/bin/sh\n"
 msgstr ""
@@ -63099,6 +63099,2089 @@ msgstr ""
 #, priority:300
 msgid "a URL like \"git://example.org/path/to/repo.git\" will be rewritten to \"ssh://example.org/path/to/repo.git\" for pushes, but pulls will still use the original URL."
 msgstr "une URL telle que « git://exemple.org/chemin/vers/le/depot.git » sera réécrite en « ssh://exemple.org/chemin/vers/le/depot.git » pour les poussées, mais les tirages utiliseront encore l'URL originale."
+
+#. type: Title =
+#: en/git-bisect-lk2009.txt:2
+#, no-wrap, priority:100
+msgid "Fighting regressions with git bisect"
+msgstr ""
+
+#. type: Title -
+#: en/git-bisect-lk2009.txt:8
+#, no-wrap, priority:100
+msgid "Abstract"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:17
+#, priority:100
+msgid "\"git bisect\" enables software users and developers to easily find the commit that introduced a regression. We show why it is important to have good tools to fight regressions. We describe how \"git bisect\" works from the outside and the algorithms it uses inside. Then we explain how to take advantage of \"git bisect\" to improve current practices. And we discuss how \"git bisect\" could improve in the future."
+msgstr ""
+
+#. type: Title -
+#: en/git-bisect-lk2009.txt:20
+#, no-wrap, priority:100
+msgid "Introduction to \"git bisect\""
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:24
+#, priority:100
+msgid "Git is a Distributed Version Control system (DVCS) created by Linus Torvalds and maintained by Junio Hamano."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:30
+#, priority:100
+msgid "In Git like in many other Version Control Systems (VCS), the different states of the data that is managed by the system are called commits. And, as VCS are mostly used to manage software source code, sometimes \"interesting\" changes of behavior in the software are introduced in some commits."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:37
+#, priority:100
+msgid "In fact people are specially interested in commits that introduce a \"bad\" behavior, called a bug or a regression. They are interested in these commits because a commit (hopefully) contains a very small set of source code changes. And it's much easier to understand and properly fix a problem when you only need to check a very small set of changes, than when you don't know where look in the first place."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:45
+#, priority:100
+msgid "So to help people find commits that introduce a \"bad\" behavior, the \"git bisect\" set of commands was invented. And it follows of course that in \"git bisect\" parlance, commits where the \"interesting behavior\" is present are called \"bad\" commits, while other commits are called \"good\" commits. And a commit that introduce the behavior we are interested in is called a \"first bad commit\". Note that there could be more than one \"first bad commit\" in the commit space we are searching."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:48
+#, priority:100
+msgid "So \"git bisect\" is designed to help find a \"first bad commit\". And to be as efficient as possible, it tries to perform a binary search."
+msgstr ""
+
+#. type: Title -
+#: en/git-bisect-lk2009.txt:51
+#, no-wrap, priority:100
+msgid "Fighting regressions overview"
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:54
+#, no-wrap, priority:100
+msgid "Regressions: a big problem"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:58
+#, priority:100
+msgid "Regressions are a big problem in the software industry. But it's difficult to put some real numbers behind that claim."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:61
+#, priority:100
+msgid "There are some numbers about bugs in general, like a NIST study in 2002 <<1>> that said:"
+msgstr ""
+
+#. type: delimited block _
+#: en/git-bisect-lk2009.txt:78
+#, priority:100
+msgid "Software bugs, or errors, are so prevalent and so detrimental that they cost the U.S. economy an estimated $59.5 billion annually, or about 0.6 percent of the gross domestic product, according to a newly released study commissioned by the Department of Commerce's National Institute of Standards and Technology (NIST). At the national level, over half of the costs are borne by software users and the remainder by software developers/vendors.  The study also found that, although all errors cannot be removed, more than a third of these costs, or an estimated $22.2 billion, could be eliminated by an improved testing infrastructure that enables earlier and more effective identification and removal of software defects. These are the savings associated with finding an increased percentage (but not 100 percent) of errors closer to the development stages in which they are introduced. Currently, over half of all errors are not found until \"downstream\" in the development process or during post-sale software use."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:81
+#, priority:100
+msgid "And then:"
+msgstr ""
+
+#. type: delimited block _
+#: en/git-bisect-lk2009.txt:87
+#, priority:100
+msgid "Software developers already spend approximately 80 percent of development costs on identifying and correcting defects, and yet few products of any type other than software are shipped with such high levels of errors."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:90
+#, priority:100
+msgid "Eventually the conclusion started with:"
+msgstr ""
+
+#. type: delimited block _
+#: en/git-bisect-lk2009.txt:94
+#, priority:100
+msgid "The path to higher software quality is significantly improved software testing."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:98
+#, priority:100
+msgid "There are other estimates saying that 80% of the cost related to software is about maintenance <<2>>."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:100
+#, priority:100
+msgid "Though, according to Wikipedia <<3>>:"
+msgstr ""
+
+#. type: delimited block _
+#: en/git-bisect-lk2009.txt:108
+#, priority:100
+msgid "A common perception of maintenance is that it is merely fixing bugs. However, studies and surveys over the years have indicated that the majority, over 80%, of the maintenance effort is used for non-corrective actions (Pigosky 1997). This perception is perpetuated by users submitting problem reports that in reality are functionality enhancements to the system."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:113
+#, priority:100
+msgid "But we can guess that improving on existing software is very costly because you have to watch out for regressions. At least this would make the above studies consistent among themselves."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:121
+#, priority:100
+msgid "Of course some kind of software is developed, then used during some time without being improved on much, and then finally thrown away. In this case, of course, regressions may not be a big problem. But on the other hand, there is a lot of big software that is continually developed and maintained during years or even tens of years by a lot of people. And as there are often many people who depend (sometimes critically) on such software, regressions are a really big problem."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:128
+#, priority:100
+msgid "One such software is the Linux kernel. And if we look at the Linux kernel, we can see that a lot of time and effort is spent to fight regressions. The release cycle start with a 2 weeks long merge window. Then the first release candidate (rc) version is tagged. And after that about 7 or 8 more rc versions will appear with around one week between each of them, before the final release."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:134
+#, priority:100
+msgid "The time between the first rc release and the final release is supposed to be used to test rc versions and fight bugs and especially regressions. And this time is more than 80% of the release cycle time. But this is not the end of the fight yet, as of course it continues after the release."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:137
+#, priority:100
+msgid "And then this is what Ingo Molnar (a well known Linux kernel developer) says about his use of git bisect:"
+msgstr ""
+
+#. type: delimited block _
+#: en/git-bisect-lk2009.txt:143
+#, priority:100
+msgid "I most actively use it during the merge window (when a lot of trees get merged upstream and when the influx of bugs is the highest) - and yes, there have been cases that i used it multiple times a day. My average is roughly once a day."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:149
+#, priority:100
+msgid "So regressions are fought all the time by developers, and indeed it is well known that bugs should be fixed as soon as possible, so as soon as they are found. That's why it is interesting to have good tools for this purpose."
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:151
+#, no-wrap, priority:100
+msgid "Other tools to fight regressions"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:156
+#, priority:100
+msgid "So what are the tools used to fight regressions? They are nearly the same as those used to fight regular bugs. The only specific tools are test suites and tools similar as \"git bisect\"."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:162
+#, priority:100
+msgid "Test suites are very nice. But when they are used alone, they are supposed to be used so that all the tests are checked after each commit. This means that they are not very efficient, because many tests are run for no interesting result, and they suffer from combinatorial explosion."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:167
+#, priority:100
+msgid "In fact the problem is that big software often has many different configuration options and that each test case should pass for each configuration after each commit. So if you have for each release: N configurations, M commits and T test cases, you should perform:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:170
+#, no-wrap, priority:100
+msgid "N * M * T tests\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:173
+#, priority:100
+msgid "where N, M and T are all growing with the size your software."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:175
+#, priority:100
+msgid "So very soon it will not be possible to completely test everything."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:182
+#, priority:100
+msgid "And if some bugs slip through your test suite, then you can add a test to your test suite. But if you want to use your new improved test suite to find where the bug slipped in, then you will either have to emulate a bisection process or you will perhaps bluntly test each commit backward starting from the \"bad\" commit you have which may be very wasteful."
+msgstr ""
+
+#. type: Title -
+#: en/git-bisect-lk2009.txt:184
+#, fuzzy, no-wrap, priority:100
+#| msgid "git bisect terms\n"
+msgid "\"git bisect\" overview"
+msgstr "git bisect terms\n"
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:187
+#, no-wrap, priority:100
+msgid "Starting a bisection"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:194
+#, priority:100
+msgid "The first \"git bisect\" subcommand to use is \"git bisect start\" to start the search. Then bounds must be set to limit the commit space. This is done usually by giving one \"bad\" and at least one \"good\" commit. They can be passed in the initial call to \"git bisect start\" like this:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:197
+#, ignore-ellipsis, no-wrap, priority:100
+msgid "$ git bisect start [BAD [GOOD...]]\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:200
+#, priority:100
+msgid "or they can be set using:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:203
+#, fuzzy, no-wrap, priority:100
+#| msgid "$ git bisect bad\n"
+msgid "$ git bisect bad [COMMIT]\n"
+msgstr "$ git bisect bad\n"
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:206
+#, priority:100
+msgid "and:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:209
+#, fuzzy, ignore-ellipsis, no-wrap, priority:100
+#| msgid "$ git bisect good\n"
+msgid "$ git bisect good [COMMIT...]\n"
+msgstr "$ git bisect good\n"
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:213
+#, priority:100
+msgid "where BAD, GOOD and COMMIT are all names that can be resolved to a commit."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:216
+#, priority:100
+msgid "Then \"git bisect\" will checkout a commit of its choosing and ask the user to test it, like this:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:221
+#, no-wrap, priority:100
+msgid ""
+"$ git bisect start v2.6.27 v2.6.25\n"
+"Bisecting: 10928 revisions left to test after this (roughly 14 steps)\n"
+"[2ec65f8b89ea003c27ff7723525a2ee335a2b393] x86: clean up using max_low_pfn on 32-bit\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:229
+#, priority:100
+msgid "Note that the example that we will use is really a toy example, we will be looking for the first commit that has a version like \"2.6.26-something\", that is the commit that has a \"SUBLEVEL = 26\" line in the top level Makefile. This is a toy example because there are better ways to find this commit with Git than using \"git bisect\" (for example \"git blame\" or \"git log -S<string>\")."
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:231
+#, no-wrap, priority:100
+msgid "Driving a bisection manually"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:236
+#, priority:100
+msgid "At this point there are basically 2 ways to drive the search. It can be driven manually by the user or it can be driven automatically by a script or a command."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:241
+#, priority:100
+msgid "If the user is driving it, then at each step of the search, the user will have to test the current commit and say if it is \"good\" or \"bad\" using the \"git bisect good\" or \"git bisect bad\" commands respectively that have been described above. For example:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:246
+#, no-wrap, priority:100
+msgid ""
+"$ git bisect bad\n"
+"Bisecting: 5480 revisions left to test after this (roughly 13 steps)\n"
+"[66c0b394f08fd89236515c1c84485ea712a157be] KVM: kill file->f_count abuse in kvm\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:250
+#, priority:100
+msgid "And after a few more steps like that, \"git bisect\" will eventually find a first bad commit:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:257
+#, no-wrap, priority:100
+msgid ""
+"$ git bisect bad\n"
+"2ddcca36c8bcfa251724fe342c8327451988be0d is the first bad commit\n"
+"commit 2ddcca36c8bcfa251724fe342c8327451988be0d\n"
+"Author: Linus Torvalds <torvalds@linux-foundation.org>\n"
+"Date:   Sat May 3 11:59:44 2008 -0700\n"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:259 en/git-bisect-lk2009.txt:273 en/git-bisect-lk2009.txt:333
+#, no-wrap, priority:100
+msgid "    Linux 2.6.26-rc1\n"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:261
+#, ignore-ellipsis, no-wrap, priority:100
+msgid ":100644 100644 5cf82581... 4492984e... M      Makefile\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:265
+#, priority:100
+msgid "At this point we can see what the commit does, check it out (if it's not already checked out) or tinker with it, for example:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:271
+#, no-wrap, priority:100
+msgid ""
+"$ git show HEAD\n"
+"commit 2ddcca36c8bcfa251724fe342c8327451988be0d\n"
+"Author: Linus Torvalds <torvalds@linux-foundation.org>\n"
+"Date:   Sat May 3 11:59:44 2008 -0700\n"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:286
+#, no-wrap, priority:100
+msgid ""
+"diff --git a/Makefile b/Makefile\n"
+"index 5cf8258..4492984 100644\n"
+"--- a/Makefile\n"
+"+++ b/Makefile\n"
+"@@ -1,7 +1,7 @@\n"
+" VERSION = 2\n"
+" PATCHLEVEL = 6\n"
+"-SUBLEVEL = 25\n"
+"-EXTRAVERSION =\n"
+"+SUBLEVEL = 26\n"
+"+EXTRAVERSION = -rc1\n"
+" NAME = Funky Weasel is Jiggy wit it\n"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:288
+#, no-wrap, priority:100
+msgid " # *DOCUMENTATION*\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:292
+#, priority:100
+msgid "And when we are finished we can use \"git bisect reset\" to go back to the branch we were in before we started bisecting:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:298
+#, ignore-ellipsis, no-wrap, priority:100
+msgid ""
+"$ git bisect reset\n"
+"Checking out files: 100% (21549/21549), done.\n"
+"Previous HEAD position was 2ddcca3... Linux 2.6.26-rc1\n"
+"Switched to branch 'master'\n"
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:301
+#, no-wrap, priority:100
+msgid "Driving a bisection automatically"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:307
+#, priority:100
+msgid "The other way to drive the bisection process is to tell \"git bisect\" to launch a script or command at each bisection step to know if the current commit is \"good\" or \"bad\". To do that, we use the \"git bisect run\" command. For example:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:331
+#, ignore-ellipsis, no-wrap, priority:100
+msgid ""
+"$ git bisect start v2.6.27 v2.6.25\n"
+"Bisecting: 10928 revisions left to test after this (roughly 14 steps)\n"
+"[2ec65f8b89ea003c27ff7723525a2ee335a2b393] x86: clean up using max_low_pfn on 32-bit\n"
+"$\n"
+"$ git bisect run grep '^SUBLEVEL = 25' Makefile\n"
+"running grep ^SUBLEVEL = 25 Makefile\n"
+"Bisecting: 5480 revisions left to test after this (roughly 13 steps)\n"
+"[66c0b394f08fd89236515c1c84485ea712a157be] KVM: kill file->f_count abuse in kvm\n"
+"running grep ^SUBLEVEL = 25 Makefile\n"
+"SUBLEVEL = 25\n"
+"Bisecting: 2740 revisions left to test after this (roughly 12 steps)\n"
+"[671294719628f1671faefd4882764886f8ad08cb] V4L/DVB(7879): Adding cx18 Support for mxl5005s\n"
+"...\n"
+"...\n"
+"running grep ^SUBLEVEL = 25 Makefile\n"
+"Bisecting: 0 revisions left to test after this (roughly 0 steps)\n"
+"[2ddcca36c8bcfa251724fe342c8327451988be0d] Linux 2.6.26-rc1\n"
+"running grep ^SUBLEVEL = 25 Makefile\n"
+"2ddcca36c8bcfa251724fe342c8327451988be0d is the first bad commit\n"
+"commit 2ddcca36c8bcfa251724fe342c8327451988be0d\n"
+"Author: Linus Torvalds <torvalds@linux-foundation.org>\n"
+"Date:   Sat May 3 11:59:44 2008 -0700\n"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:336
+#, ignore-ellipsis, no-wrap, priority:100
+msgid ""
+":100644 100644 5cf82581... 4492984e... M      Makefile\n"
+"bisect run success\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:345
+#, priority:100
+msgid "In this example, we passed \"grep '^SUBLEVEL = 25' Makefile\" as parameter to \"git bisect run\". This means that at each step, the grep command we passed will be launched. And if it exits with code 0 (that means success) then git bisect will mark the current state as \"good\". If it exits with code 1 (or any code between 1 and 127 included, except the special code 125), then the current state will be marked as \"bad\"."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:350
+#, priority:100
+msgid "Exit code between 128 and 255 are special to \"git bisect run\". They make it stop immediately the bisection process. This is useful for example if the command passed takes too long to complete, because you can kill it with a signal and it will stop the bisection process."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:353
+#, priority:100
+msgid "It can also be useful in scripts passed to \"git bisect run\" to \"exit 255\" if some very abnormal situation is detected."
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:355
+#, fuzzy, no-wrap, priority:100
+#| msgid "Avoiding testing a commit"
+msgid "Avoiding untestable commits"
+msgstr "Éviter le test d'un commit"
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:362
+#, priority:100
+msgid "Sometimes it happens that the current state cannot be tested, for example if it does not compile because there was a bug preventing it at that time. This is what the special exit code 125 is for. It tells \"git bisect run\" that the current commit should be marked as untestable and that another one should be chosen and checked out."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:366
+#, priority:100
+msgid "If the bisection process is driven manually, you can use \"git bisect skip\" to do the same thing. (In fact the special exit code 125 makes \"git bisect run\" use \"git bisect skip\" in the background.)"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:371
+#, priority:100
+msgid "Or if you want more control, you can inspect the current state using for example \"git bisect visualize\". It will launch gitk (or \"git log\" if the `DISPLAY` environment variable is not set) to help you find a better bisection point."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:376
+#, priority:100
+msgid "Either way, if you have a string of untestable commits, it might happen that the regression you are looking for has been introduced by one of these untestable commits. In this case it's not possible to tell for sure which commit introduced the regression."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:379
+#, priority:100
+msgid "So if you used \"git bisect skip\" (or the run script exited with special code 125) you could get a result like this:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:388
+#, no-wrap, priority:100
+msgid ""
+"There are only 'skip'ped commits left to test.\n"
+"The first bad commit could be any of:\n"
+"15722f2fa328eaba97022898a305ffc8172db6b1\n"
+"78e86cf3e850bd755bb71831f42e200626fbd1e0\n"
+"e15b73ad3db9b48d7d1ade32f8cd23a751fe0ace\n"
+"070eab2303024706f2924822bfec8b9847e4ac1b\n"
+"We cannot bisect more!\n"
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:391
+#, no-wrap, priority:100
+msgid "Saving a log and replaying it"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:395
+#, priority:100
+msgid "If you want to show other people your bisection process, you can get a log using for example:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:398
+#, fuzzy, no-wrap, priority:100
+#| msgid "$ git bisect log\n"
+msgid "$ git bisect log > bisect_log.txt\n"
+msgstr "$ git bisect log\n"
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:401
+#, priority:100
+msgid "And it is possible to replay it using:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:404
+#, fuzzy, no-wrap, priority:100
+#| msgid "$ git bisect reset\n"
+msgid "$ git bisect replay bisect_log.txt\n"
+msgstr "$ git bisect reset\n"
+
+#. type: Title -
+#: en/git-bisect-lk2009.txt:408
+#, fuzzy, no-wrap, priority:100
+#| msgid "git bisect terms\n"
+msgid "\"git bisect\" details"
+msgstr "git bisect terms\n"
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:411
+#, fuzzy, no-wrap, priority:100
+#| msgid "Bisection Helpers"
+msgid "Bisection algorithm"
+msgstr "Aides à la bisection"
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:417
+#, priority:100
+msgid "As the Git commits form a directed acyclic graph (DAG), finding the best bisection commit to test at each step is not so simple. Anyway Linus found and implemented a \"truly stupid\" algorithm, later improved by Junio Hamano, that works quite well."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:420
+#, priority:100
+msgid "So the algorithm used by \"git bisect\" to find the best bisection commit when there are no skipped commits is the following:"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:422
+#, priority:100
+msgid "keep only the commits that:"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:424
+#, priority:100
+msgid "are ancestor of the \"bad\" commit (including the \"bad\" commit itself),"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:425
+#, priority:100
+msgid "are not ancestor of a \"good\" commit (excluding the \"good\" commits)."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:427
+#, priority:100
+msgid "This means that we get rid of the uninteresting commits in the DAG."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:429
+#, fuzzy, priority:100
+#| msgid "For example, in a commit history like this:"
+msgid "For example if we start with a graph like this:"
+msgstr "Par exemple, dans un historique de commit comme celui-ci :"
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:438
+#, no-wrap, priority:100
+msgid ""
+"G-Y-G-W-W-W-X-X-X-X\n"
+"\t   \\ /\n"
+"\t    W-W-B\n"
+"\t   /\n"
+"Y---G-W---W\n"
+" \\ /   \\\n"
+"Y-Y     X-X-X-X\n"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:440
+#, no-wrap, priority:100
+msgid "-> time goes this way ->\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:445
+#, priority:100
+msgid "where B is the \"bad\" commit, \"G\" are \"good\" commits and W, X, and Y are other commits, we will get the following graph after this first step:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:452
+#, no-wrap, priority:100
+msgid ""
+"W-W-W\n"
+"     \\\n"
+"      W-W-B\n"
+"     /\n"
+"W---W\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:457
+#, priority:100
+msgid "So only the W and B commits will be kept. Because commits X and Y will have been removed by rules a) and b) respectively, and because commits G are removed by rule b) too."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:460
+#, priority:100
+msgid "Note for Git users, that it is equivalent as keeping only the commit given by:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:463
+#, ignore-ellipsis, no-wrap, priority:100
+msgid "git rev-list BAD --not GOOD1 GOOD2...\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:468
+#, priority:100
+msgid "Also note that we don't require the commits that are kept to be descendants of a \"good\" commit. So in the following example, commits W and Z will be kept:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:473
+#, no-wrap, priority:100
+msgid ""
+"G-W-W-W-B\n"
+"   /\n"
+"Z-Z\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:477
+#, priority:100
+msgid "starting from the \"good\" ends of the graph, associate to each commit the number of ancestors it has plus one"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:480
+#, priority:100
+msgid "For example with the following graph where H is the \"bad\" commit and A and D are some parents of some \"good\" commits:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:487
+#, no-wrap, priority:100
+msgid ""
+"A-B-C\n"
+"     \\\n"
+"      F-G-H\n"
+"     /\n"
+"D---E\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:490
+#, priority:100
+msgid "this will give:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:498
+#, no-wrap, priority:100
+msgid ""
+"1 2 3\n"
+"A-B-C\n"
+"     \\6 7 8\n"
+"      F-G-H\n"
+"1   2/\n"
+"D---E\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:501
+#, priority:100
+msgid "associate to each commit: min(X, N - X)"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:504
+#, priority:100
+msgid "where X is the value associated to the commit in step 2) and N is the total number of commits in the graph."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:506
+#, priority:100
+msgid "In the above example we have N = 8, so this will give:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:514
+#, no-wrap, priority:100
+msgid ""
+"1 2 3\n"
+"A-B-C\n"
+"     \\2 1 0\n"
+"      F-G-H\n"
+"1   2/\n"
+"D---E\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:518
+#, priority:100
+msgid "the best bisection point is the commit with the highest associated number"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:520
+#, priority:100
+msgid "So in the above example the best bisection point is commit C."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:522
+#, priority:100
+msgid "note that some shortcuts are implemented to speed up the algorithm"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:528
+#, priority:100
+msgid "As we know N from the beginning, we know that min(X, N - X) can't be greater than N/2. So during steps 2) and 3), if we would associate N/2 to a commit, then we know this is the best bisection point. So in this case we can just stop processing any other commit and return the current commit."
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:530
+#, no-wrap, priority:100
+msgid "Bisection algorithm debugging"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:534
+#, priority:100
+msgid "For any commit graph, you can see the number associated with each commit using \"git rev-list --bisect-all\"."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:536
+#, priority:100
+msgid "For example, for the above graph, a command like:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:539
+#, fuzzy, no-wrap, priority:100
+#| msgid "\t$ git rev-list --bisect foo ^bar ^baz\n"
+msgid "$ git rev-list --bisect-all BAD --not GOOD1 GOOD2\n"
+msgstr "\t$ git rev-list --bisect foo ^bar ^baz\n"
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:542
+#, priority:100
+msgid "would output something like:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:552
+#, no-wrap, priority:100
+msgid ""
+"e15b73ad3db9b48d7d1ade32f8cd23a751fe0ace (dist=3)\n"
+"15722f2fa328eaba97022898a305ffc8172db6b1 (dist=2)\n"
+"78e86cf3e850bd755bb71831f42e200626fbd1e0 (dist=2)\n"
+"a1939d9a142de972094af4dde9a544e577ddef0e (dist=2)\n"
+"070eab2303024706f2924822bfec8b9847e4ac1b (dist=1)\n"
+"a3864d4f32a3bf5ed177ddef598490a08760b70d (dist=1)\n"
+"a41baa717dd74f1180abf55e9341bc7a0bb9d556 (dist=1)\n"
+"9e622a6dad403b71c40979743bb9d5be17b16bd6 (dist=0)\n"
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:555
+#, no-wrap, priority:100
+msgid "Bisection algorithm discussed"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:561
+#, priority:100
+msgid "First let's define \"best bisection point\". We will say that a commit X is a best bisection point or a best bisection commit if knowing its state (\"good\" or \"bad\") gives as much information as possible whether the state of the commit happens to be \"good\" or \"bad\"."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:564
+#, priority:100
+msgid "This means that the best bisection commits are the commits where the following function is maximum:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:567
+#, no-wrap, priority:100
+msgid "f(X) = min(information_if_good(X), information_if_bad(X))\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:571
+#, priority:100
+msgid "where information_if_good(X) is the information we get if X is good and information_if_bad(X) is the information we get if X is bad."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:580
+#, priority:100
+msgid "Now we will suppose that there is only one \"first bad commit\". This means that all its descendants are \"bad\" and all the other commits are \"good\". And we will suppose that all commits have an equal probability of being good or bad, or of being the first bad commit, so knowing the state of c commits gives always the same amount of information wherever these c commits are on the graph and whatever c is. (So we suppose that these commits being for example on a branch or near a good or a bad commit does not give more or less information)."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:582
+#, priority:100
+msgid "Let's also suppose that we have a cleaned up graph like one after step"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:585
+#, priority:100
+msgid "in the bisection algorithm above. This means that we can measure the information we get in terms of number of commit we can remove from the graph.."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:587
+#, priority:100
+msgid "And let's take a commit X in the graph."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:590
+#, priority:100
+msgid "If X is found to be \"good\", then we know that its ancestors are all \"good\", so we want to say that:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:593
+#, no-wrap, priority:100
+msgid "information_if_good(X) = number_of_ancestors(X)  (TRUE)\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:597
+#, priority:100
+msgid "And this is true because at step 1) b) we remove the ancestors of the \"good\" commits."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:600
+#, priority:100
+msgid "If X is found to be \"bad\", then we know that its descendants are all \"bad\", so we want to say that:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:603
+#, no-wrap, priority:100
+msgid "information_if_bad(X) = number_of_descendants(X)  (WRONG)\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:612
+#, priority:100
+msgid "But this is wrong because at step 1) a) we keep only the ancestors of the bad commit. So we get more information when a commit is marked as \"bad\", because we also know that the ancestors of the previous \"bad\" commit that are not ancestors of the new \"bad\" commit are not the first bad commit. We don't know if they are good or bad, but we know that they are not the first bad commit because they are not ancestor of the new \"bad\" commit."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:616
+#, priority:100
+msgid "So when a commit is marked as \"bad\" we know we can remove all the commits in the graph except those that are ancestors of the new \"bad\" commit. This means that:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:619
+#, no-wrap, priority:100
+msgid "information_if_bad(X) = N - number_of_ancestors(X)  (TRUE)\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:622
+#, priority:100
+msgid "where N is the number of commits in the (cleaned up) graph."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:625
+#, priority:100
+msgid "So in the end this means that to find the best bisection commits we should maximize the function:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:628
+#, no-wrap, priority:100
+msgid "f(X) = min(number_of_ancestors(X), N - number_of_ancestors(X))\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:632
+#, priority:100
+msgid "And this is nice because at step 2) we compute number_of_ancestors(X)  and so at step 3) we compute f(X)."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:634
+#, priority:100
+msgid "Let's take the following graph as an example:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:641
+#, no-wrap, priority:100
+msgid ""
+"            G-H-I-J\n"
+"           /       \\\n"
+"A-B-C-D-E-F         O\n"
+"           \\       /\n"
+"            K-L-M-N\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:644
+#, fuzzy, priority:100
+#| msgid "are incompatible with the following options:"
+msgid "If we compute the following non optimal function on it:"
+msgstr "sont incompatibles avec les options suivantes :"
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:647
+#, no-wrap, priority:100
+msgid "g(X) = min(number_of_ancestors(X), number_of_descendants(X))\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:650
+#, priority:100
+msgid "we get:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:659
+#, no-wrap, priority:100
+msgid ""
+"            4 3 2 1\n"
+"            G-H-I-J\n"
+"1 2 3 4 5 6/       \\0\n"
+"A-B-C-D-E-F         O\n"
+"           \\       /\n"
+"            K-L-M-N\n"
+"            4 3 2 1\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:662
+#, priority:100
+msgid "but with the algorithm used by git bisect we get:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:671
+#, no-wrap, priority:100
+msgid ""
+"            7 7 6 5\n"
+"            G-H-I-J\n"
+"1 2 3 4 5 6/       \\0\n"
+"A-B-C-D-E-F         O\n"
+"           \\       /\n"
+"            K-L-M-N\n"
+"            7 7 6 5\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:678
+#, priority:100
+msgid "So we chose G, H, K or L as the best bisection point, which is better than F. Because if for example L is bad, then we will know not only that L, M and N are bad but also that G, H, I and J are not the first bad commit (since we suppose that there is only one first bad commit and it must be an ancestor of L)."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:681
+#, priority:100
+msgid "So the current algorithm seems to be the best possible given what we initially supposed."
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:683
+#, no-wrap, priority:100
+msgid "Skip algorithm"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:688
+#, priority:100
+msgid "When some commits have been skipped (using \"git bisect skip\"), then the bisection algorithm is the same for step 1) to 3). But then we use roughly the following steps:"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:690
+#, priority:100
+msgid "sort the commit by decreasing associated value"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:693
+#, priority:100
+msgid "if the first commit has not been skipped, we can return it and stop here"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:695
+#, priority:100
+msgid "otherwise filter out all the skipped commits in the sorted list"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:698
+#, priority:100
+msgid "use a pseudo random number generator (PRNG) to generate a random number between 0 and 1"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:701
+#, priority:100
+msgid "multiply this random number with its square root to bias it toward 0"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:704
+#, priority:100
+msgid "multiply the result by the number of commits in the filtered list to get an index into this list"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:706
+#, priority:100
+msgid "return the commit at the computed index"
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:708
+#, no-wrap, priority:100
+msgid "Skip algorithm discussed"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:715
+#, priority:100
+msgid "After step 7) (in the skip algorithm), we could check if the second commit has been skipped and return it if it is not the case. And in fact that was the algorithm we used from when \"git bisect skip\" was developed in Git version 1.5.4 (released on February 1st 2008) until Git version 1.6.4 (released July 29th 2009)."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:721
+#, priority:100
+msgid "But Ingo Molnar and H. Peter Anvin (another well known linux kernel developer) both complained that sometimes the best bisection points all happened to be in an area where all the commits are untestable. And in this case the user was asked to test many untestable commits, which could be very inefficient."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:725
+#, priority:100
+msgid "Indeed untestable commits are often untestable because a breakage was introduced at one time, and that breakage was fixed only after many other commits were introduced."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:729
+#, priority:100
+msgid "This breakage is of course most of the time unrelated to the breakage we are trying to locate in the commit graph. But it prevents us to know if the interesting \"bad behavior\" is present or not."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:733
+#, priority:100
+msgid "So it is a fact that commits near an untestable commit have a high probability of being untestable themselves. And the best bisection commits are often found together too (due to the bisection algorithm)."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:736
+#, priority:100
+msgid "This is why it is a bad idea to just chose the next best unskipped bisection commit when the first one has been skipped."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:741
+#, priority:100
+msgid "We found that most commits on the graph may give quite a lot of information when they are tested. And the commits that will not on average give a lot of information are the one near the good and bad commits."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:744
+#, priority:100
+msgid "So using a PRNG with a bias to favor commits away from the good and bad commits looked like a good choice."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:751
+#, priority:100
+msgid "One obvious improvement to this algorithm would be to look for a commit that has an associated value near the one of the best bisection commit, and that is on another branch, before using the PRNG. Because if such a commit exists, then it is not very likely to be untestable too, so it will probably give more information than a nearly randomly chosen one."
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:753
+#, no-wrap, priority:100
+msgid "Checking merge bases"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:757
+#, priority:100
+msgid "There is another tweak in the bisection algorithm that has not been described in the \"bisection algorithm\" above."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:761
+#, priority:100
+msgid "We supposed in the previous examples that the \"good\" commits were ancestors of the \"bad\" commit. But this is not a requirement of \"git bisect\"."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:769
+#, priority:100
+msgid "Of course the \"bad\" commit cannot be an ancestor of a \"good\" commit, because the ancestors of the good commits are supposed to be \"good\". And all the \"good\" commits must be related to the bad commit.  They cannot be on a branch that has no link with the branch of the \"bad\" commit. But it is possible for a good commit to be related to a bad commit and yet not be neither one of its ancestor nor one of its descendants."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:772
+#, priority:100
+msgid "For example, there can be a \"main\" branch, and a \"dev\" branch that was forked of the main branch at a commit named \"D\" like this:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:777
+#, no-wrap, priority:100
+msgid ""
+"A-B-C-D-E-F-G  <--main\n"
+"       \\\n"
+"        H-I-J  <--dev\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:781
+#, priority:100
+msgid "The commit \"D\" is called a \"merge base\" for branch \"main\" and \"dev\" because it's the best common ancestor for these branches for a merge."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:785
+#, priority:100
+msgid "Now let's suppose that commit J is bad and commit G is good and that we apply the bisection algorithm like it has been previously described."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:789
+#, priority:100
+msgid "As described in step 1) b) of the bisection algorithm, we remove all the ancestors of the good commits because they are supposed to be good too."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:791
+#, priority:100
+msgid "So we would be left with only:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:794
+#, no-wrap, priority:100
+msgid "H-I-J\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:798
+#, priority:100
+msgid "But what happens if the first bad commit is \"B\" and if it has been fixed in the \"main\" branch by commit \"F\"?"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:801
+#, priority:100
+msgid "The result of such a bisection would be that we would find that H is the first bad commit, when in fact it's B. So that would be wrong!"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:807
+#, priority:100
+msgid "And yes it can happen in practice that people working on one branch are not aware that people working on another branch fixed a bug! It could also happen that F fixed more than one bug or that it is a revert of some big development effort that was not ready to be released."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:813
+#, priority:100
+msgid "In fact development teams often maintain both a development branch and a maintenance branch, and it would be quite easy for them if \"git bisect\" just worked when they want to bisect a regression on the development branch that is not on the maintenance branch. They should be able to start bisecting using:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:816
+#, fuzzy, no-wrap, priority:100
+#| msgid "$ git bisect bad\n"
+msgid "$ git bisect start dev main\n"
+msgstr "$ git bisect bad\n"
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:823
+#, priority:100
+msgid "To enable that additional nice feature, when a bisection is started and when some good commits are not ancestors of the bad commit, we first compute the merge bases between the bad and the good commits and we chose these merge bases as the first commits that will be checked out and tested."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:826
+#, priority:100
+msgid "If it happens that one merge base is bad, then the bisection process is stopped with a message like:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:830
+#, ignore-ellipsis, no-wrap, priority:100
+msgid ""
+"The merge base BBBBBB is bad.\n"
+"This means the bug has been fixed between BBBBBB and [GGGGGG,...].\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:834
+#, ignore-ellipsis, priority:100
+msgid "where BBBBBB is the sha1 hash of the bad merge base and [GGGGGG,...] is a comma separated list of the sha1 of the good commits."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:838
+#, priority:100
+msgid "If some of the merge bases are skipped, then the bisection process continues, but the following message is printed for each skipped merge base:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:843
+#, ignore-ellipsis, no-wrap, priority:100
+msgid ""
+"Warning: the merge base between BBBBBB and [GGGGGG,...] must be skipped.\n"
+"So we cannot be sure the first bad commit is between MMMMMM and BBBBBB.\n"
+"We continue anyway.\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:848
+#, ignore-ellipsis, priority:100
+msgid "where BBBBBB is the sha1 hash of the bad commit, MMMMMM is the sha1 hash of the merge base that is skipped and [GGGGGG,...] is a comma separated list of the sha1 of the good commits."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:851
+#, priority:100
+msgid "So if there is no bad merge base, the bisection process continues as usual after this step."
+msgstr ""
+
+#. type: Title -
+#: en/git-bisect-lk2009.txt:853
+#, no-wrap, priority:100
+msgid "Best bisecting practices"
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:856
+#, no-wrap, priority:100
+msgid "Using test suites and git bisect together"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:863
+#, priority:100
+msgid "If you both have a test suite and use git bisect, then it becomes less important to check that all tests pass after each commit. Though of course it is probably a good idea to have some checks to avoid breaking too many things because it could make bisecting other bugs more difficult."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:868
+#, priority:100
+msgid "You can focus your efforts to check at a few points (for example rc and beta releases) that all the T test cases pass for all the N configurations. And when some tests don't pass you can use \"git bisect\" (or better \"git bisect run\"). So you should perform roughly:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:871
+#, no-wrap, priority:100
+msgid "c * N * T + b * M * log2(M) tests\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:875
+#, priority:100
+msgid "where c is the number of rounds of test (so a small constant) and b is the ratio of bug per commit (hopefully a small constant too)."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:878
+#, priority:100
+msgid "So of course it's much better as it's O(N * T) vs O(N * T * M) if you would test everything after each commit."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:883
+#, priority:100
+msgid "This means that test suites are good to prevent some bugs from being committed and they are also quite good to tell you that you have some bugs. But they are not so good to tell you where some bugs have been introduced. To tell you that efficiently, git bisect is needed."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:890
+#, priority:100
+msgid "The other nice thing with test suites, is that when you have one, you already know how to test for bad behavior. So you can use this knowledge to create a new test case for \"git bisect\" when it appears that there is a regression. So it will be easier to bisect the bug and fix it. And then you can add the test case you just created to your test suite."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:893
+#, priority:100
+msgid "So if you know how to create test cases and how to bisect, you will be subject to a virtuous circle:"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:895
+#, priority:100
+msgid "more tests => easier to create tests => easier to bisect => more tests"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:898
+#, priority:100
+msgid "So test suites and \"git bisect\" are complementary tools that are very powerful and efficient when used together."
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:900
+#, no-wrap, priority:100
+msgid "Bisecting build failures"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:904
+#, priority:100
+msgid "You can very easily automatically bisect broken builds using something like:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:908
+#, no-wrap, priority:100
+msgid ""
+"$ git bisect start BAD GOOD\n"
+"$ git bisect run make\n"
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:911
+#, no-wrap, priority:100
+msgid "Passing sh -c \"some commands\" to \"git bisect run\""
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:917
+#, no-wrap, priority:100
+msgid "$ git bisect run sh -c \"make || exit 125; ./my_app | grep 'good output'\"\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:921
+#, priority:100
+msgid "On the other hand if you do this often, then it can be worth having scripts to avoid too much typing."
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:923
+#, no-wrap, priority:100
+msgid "Finding performance regressions"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:927
+#, priority:100
+msgid "Here is an example script that comes slightly modified from a real world script used by Junio Hamano <<4>>."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:930
+#, priority:100
+msgid "This script can be passed to \"git bisect run\" to find the commit that introduced a performance regression:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:936
+#, no-wrap, priority:100
+msgid ""
+"# Build errors are not what I am interested in.\n"
+"make my_app || exit 255\n"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:939
+#, ignore-ellipsis, no-wrap, priority:100
+msgid ""
+"# We are checking if it stops in a reasonable amount of time, so\n"
+"# let it run in the background...\n"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:941
+#, no-wrap, priority:100
+msgid "./my_app >log 2>&1 &\n"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:944
+#, ignore-ellipsis, no-wrap, priority:100
+msgid ""
+"# ... and grab its process ID.\n"
+"pid=$!\n"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:947
+#, ignore-ellipsis, no-wrap, priority:100
+msgid ""
+"# ... and then wait for sufficiently long.\n"
+"sleep $NORMAL_TIME\n"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:959
+#, ignore-ellipsis, no-wrap, priority:100
+msgid ""
+"# ... and then see if the process is still there.\n"
+"if kill -0 $pid\n"
+"then\n"
+"\t# It is still running -- that is bad.\n"
+"\tkill $pid; sleep 1; kill $pid;\n"
+"\texit 1\n"
+"else\n"
+"\t# It has already finished (the $pid process was no more),\n"
+"\t# and we are happy.\n"
+"\texit 0\n"
+"fi\n"
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:962
+#, no-wrap, priority:100
+msgid "Following general best practices"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:967
+#, priority:100
+msgid "It is obviously a good idea not to have commits with changes that knowingly break things, even if some other commits later fix the breakage."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:970
+#, priority:100
+msgid "It is also a good idea when using any VCS to have only one small logical change in each commit."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:975
+#, priority:100
+msgid "The smaller the changes in your commit, the most effective \"git bisect\" will be. And you will probably need \"git bisect\" less in the first place, as small changes are easier to review even if they are only reviewed by the committer."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:978
+#, priority:100
+msgid "Another good idea is to have good commit messages. They can be very helpful to understand why some changes were made."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:980
+#, priority:100
+msgid "These general best practices are very helpful if you bisect often."
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:982
+#, no-wrap, priority:100
+msgid "Avoiding bug prone merges"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:988
+#, priority:100
+msgid "First merges by themselves can introduce some regressions even when the merge needs no source code conflict resolution. This is because a semantic change can happen in one branch while the other branch is not aware of it."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:991
+#, priority:100
+msgid "For example one branch can change the semantic of a function while the other branch add more calls to the same function."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:998
+#, priority:100
+msgid "This is made much worse if many files have to be fixed to resolve conflicts. That's why such merges are called \"evil merges\". They can make regressions very difficult to track down. It can even be misleading to know the first bad commit if it happens to be such a merge, because people might think that the bug comes from bad conflict resolution when it comes from a semantic change in one branch."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1004
+#, priority:100
+msgid "Anyway \"git rebase\" can be used to linearize history. This can be used either to avoid merging in the first place. Or it can be used to bisect on a linear history instead of the non linear one, as this should give more information in case of a semantic change in one branch."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1007
+#, priority:100
+msgid "Merges can be also made simpler by using smaller branches or by using many topic branches instead of only long version related branches."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1010
+#, priority:100
+msgid "And testing can be done more often in special integration branches like linux-next for the linux kernel."
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:1012
+#, no-wrap, priority:100
+msgid "Adapting your work-flow"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1015
+#, priority:100
+msgid "A special work-flow to process regressions can give great results."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1017
+#, priority:100
+msgid "Here is an example of a work-flow used by Andreas Ericsson:"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1019
+#, priority:100
+msgid "write, in the test suite, a test script that exposes the regression"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1020
+#, fuzzy, priority:100
+#| msgid "Use binary search to find the commit that introduced a bug."
+msgid "use \"git bisect run\" to find the commit that introduced it"
+msgstr "Trouver par recherche binaire la modification qui a introduit un bogue."
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1021
+#, priority:100
+msgid "fix the bug that is often made obvious by the previous step"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1022
+#, priority:100
+msgid "commit both the fix and the test script (and if needed more tests)"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1024
+#, priority:100
+msgid "And here is what Andreas said about this work-flow <<5>>:"
+msgstr ""
+
+#. type: delimited block _
+#: en/git-bisect-lk2009.txt:1034
+#, priority:100
+msgid "To give some hard figures, we used to have an average report-to-fix cycle of 142.6 hours (according to our somewhat weird bug-tracker which just measures wall-clock time). Since we moved to Git, we've lowered that to 16.2 hours. Primarily because we can stay on top of the bug fixing now, and because everyone's jockeying to get to fix bugs (we're quite proud of how lazy we are to let Git find the bugs for us). Each new release results in ~40% fewer bugs (almost certainly due to how we now feel about writing tests)."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1039
+#, priority:100
+msgid "Clearly this work-flow uses the virtuous circle between test suites and \"git bisect\". In fact it makes it the standard procedure to deal with regression."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1044
+#, ignore-ellipsis, priority:100
+msgid "In other messages Andreas says that they also use the \"best practices\" described above: small logical commits, topic branches, no evil merge,... These practices all improve the bisectability of the commit graph, by making it easier and more useful to bisect."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1047
+#, priority:100
+msgid "So a good work-flow should be designed around the above points. That is making bisecting easier, more useful and standard."
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:1049
+#, no-wrap, priority:100
+msgid "Involving QA people and if possible end users"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1055
+#, priority:100
+msgid "One nice about \"git bisect\" is that it is not only a developer tool. It can effectively be used by QA people or even end users (if they have access to the source code or if they can get access to all the builds)."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1059
+#, priority:100
+msgid "There was a discussion at one point on the linux kernel mailing list of whether it was ok to always ask end user to bisect, and very good points were made to support the point of view that it is ok."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1061
+#, priority:100
+msgid "For example David Miller wrote <<6>>:"
+msgstr ""
+
+#. type: delimited block _
+#: en/git-bisect-lk2009.txt:1068
+#, priority:100
+msgid "What people don't get is that this is a situation where the \"end node principle\" applies. When you have limited resources (here: developers)  you don't push the bulk of the burden upon them. Instead you push things out to the resource you have a lot of, the end nodes (here: users), so that the situation actually scales."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1072
+#, priority:100
+msgid "This means that it is often \"cheaper\" if QA people or end users can do it."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1079
+#, priority:100
+msgid "What is interesting too is that end users that are reporting bugs (or QA people that reproduced a bug) have access to the environment where the bug happens. So they can often more easily reproduce a regression. And if they can bisect, then more information will be extracted from the environment where the bug happens, which means that it will be easier to understand and then fix the bug."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1083
+#, priority:100
+msgid "For open source projects it can be a good way to get more useful contributions from end users, and to introduce them to QA and development activities."
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:1085
+#, no-wrap, priority:100
+msgid "Using complex scripts"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1089
+#, priority:100
+msgid "In some cases like for kernel development it can be worth developing complex scripts to be able to fully automate bisecting."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1091
+#, priority:100
+msgid "Here is what Ingo Molnar says about that <<7>>:"
+msgstr ""
+
+#. type: delimited block _
+#: en/git-bisect-lk2009.txt:1101
+#, priority:100
+msgid "i have a fully automated bootup-hang bisection script. It is based on \"git-bisect run\". I run the script, it builds and boots kernels fully automatically, and when the bootup fails (the script notices that via the serial log, which it continuously watches - or via a timeout, if the system does not come up within 10 minutes it's a \"bad\" kernel), the script raises my attention via a beep and i power cycle the test box. (yeah, i should make use of a managed power outlet to 100% automate it)"
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:1104
+#, no-wrap, priority:100
+msgid "Combining test suites, git bisect and other systems together"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1109
+#, priority:100
+msgid "We have seen that test suites and git bisect are very powerful when used together. It can be even more powerful if you can combine them with other systems."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1116
+#, priority:100
+msgid "For example some test suites could be run automatically at night with some unusual (or even random) configurations. And if a regression is found by a test suite, then \"git bisect\" can be automatically launched, and its result can be emailed to the author of the first bad commit found by \"git bisect\", and perhaps other people too. And a new entry in the bug tracking system could be automatically created too."
+msgstr ""
+
+#. type: Title -
+#: en/git-bisect-lk2009.txt:1119
+#, no-wrap, priority:100
+msgid "The future of bisecting"
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:1122
+#, fuzzy, no-wrap, priority:100
+#| msgid "git-replace(1)"
+msgid "\"git replace\""
+msgstr "git-replace(1)"
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1128
+#, priority:100
+msgid "We saw earlier that \"git bisect skip\" is now using a PRNG to try to avoid areas in the commit graph where commits are untestable. The problem is that sometimes the first bad commit will be in an untestable area."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1134
+#, priority:100
+msgid "To simplify the discussion we will suppose that the untestable area is a simple string of commits and that it was created by a breakage introduced by one commit (let's call it BBC for bisect breaking commit) and later fixed by another one (let's call it BFC for bisect fixing commit)."
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:1139
+#, ignore-ellipsis, no-wrap, priority:100
+msgid "...-Y-BBC-X1-X2-X3-X4-X5-X6-BFC-Z-...\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1143
+#, priority:100
+msgid "where we know that Y is good and BFC is bad, and where BBC and X1 to X6 are untestable."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1150
+#, priority:100
+msgid "In this case if you are bisecting manually, what you can do is create a special branch that starts just before the BBC. The first commit in this branch should be the BBC with the BFC squashed into it. And the other commits in the branch should be the commits between BBC and BFC rebased on the first commit of the branch and then the commit after BFC also rebased on."
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:1157
+#, ignore-ellipsis, no-wrap, priority:100
+msgid ""
+"      (BBC+BFC)-X1'-X2'-X3'-X4'-X5'-X6'-Z'\n"
+"     /\n"
+"...-Y-BBC-X1-X2-X3-X4-X5-X6-BFC-Z-...\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1160
+#, priority:100
+msgid "where commits quoted with ' have been rebased."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1162
+#, priority:100
+msgid "You can easily create such a branch with Git using interactive rebase."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1164
+#, fuzzy, priority:100
+#| msgid "For example:"
+msgid "For example using:"
+msgstr "Par exemple :"
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:1167
+#, fuzzy, no-wrap, priority:100
+#| msgid "$ git restore .\n"
+msgid "$ git rebase -i Y Z\n"
+msgstr "$ git restore .\n"
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1170
+#, priority:100
+msgid "and then moving BFC after BBC and squashing it."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1173
+#, priority:100
+msgid "After that you can start bisecting as usual in the new branch and you should eventually find the first bad commit."
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:1178
+#, fuzzy, no-wrap, priority:100
+#| msgid "$ git bisect reset\n"
+msgid "$ git bisect start Z' Y\n"
+msgstr "$ git bisect reset\n"
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1189
+#, priority:100
+msgid "If you are using \"git bisect run\", you can use the same manual fix up as above, and then start another \"git bisect run\" in the special branch. Or as the \"git bisect\" man page says, the script passed to \"git bisect run\" can apply a patch before it compiles and test the software <<8>>. The patch should turn a current untestable commits into a testable one. So the testing will result in \"good\" or \"bad\" and \"git bisect\" will be able to find the first bad commit. And the script should not forget to remove the patch once the testing is done before exiting from the script."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1194
+#, priority:100
+msgid "(Note that instead of a patch you can use \"git cherry-pick BFC\" to apply the fix, and in this case you should use \"git reset --hard HEAD^\" to revert the cherry-pick after testing and before returning from the script.)"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1202
+#, priority:100
+msgid "But the above ways to work around untestable areas are a little bit clunky. Using special branches is nice because these branches can be shared by developers like usual branches, but the risk is that people will get many such branches. And it disrupts the normal \"git bisect\" work-flow. So, if you want to use \"git bisect run\" completely automatically, you have to add special code in your script to restart bisection in the special branches."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1207
+#, priority:100
+msgid "Anyway one can notice in the above special branch example that the Z' and Z commits should point to the same source code state (the same \"tree\" in git parlance). That's because Z' result from applying the same changes as Z just in a slightly different order."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1211
+#, priority:100
+msgid "So if we could just \"replace\" Z by Z' when we bisect, then we would not need to add anything to a script. It would just work for anyone in the project sharing the special branches and the replacements."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1213
+#, priority:100
+msgid "With the example above that would give:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-bisect-lk2009.txt:1218
+#, ignore-ellipsis, no-wrap, priority:100
+msgid ""
+"      (BBC+BFC)-X1'-X2'-X3'-X4'-X5'-X6'-Z'-...\n"
+"     /\n"
+"...-Y-BBC-X1-X2-X3-X4-X5-X6-BFC-Z\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1225
+#, priority:100
+msgid "That's why the \"git replace\" command was created. Technically it stores replacements \"refs\" in the \"refs/replace/\" hierarchy. These \"refs\" are like branches (that are stored in \"refs/heads/\") or tags (that are stored in \"refs/tags\"), and that means that they can automatically be shared like branches or tags among developers."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1230
+#, priority:100
+msgid "\"git replace\" is a very powerful mechanism. It can be used to fix commits in already released history, for example to change the commit message or the author. And it can also be used instead of git \"grafts\" to link a repository with another old repository."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1234
+#, priority:100
+msgid "In fact it's this last feature that \"sold\" it to the Git community, so it is now in the \"master\" branch of Git's Git repository and it should be released in Git 1.6.5 in October or November 2009."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1241
+#, priority:100
+msgid "One problem with \"git replace\" is that currently it stores all the replacements refs in \"refs/replace/\", but it would be perhaps better if the replacement refs that are useful only for bisecting would be in \"refs/replace/bisect/\". This way the replacement refs could be used only for bisecting, while other refs directly in \"refs/replace/\" would be used nearly all the time."
+msgstr ""
+
+#. type: Title ~
+#: en/git-bisect-lk2009.txt:1243
+#, fuzzy, no-wrap, priority:100
+#| msgid "Bisection Helpers"
+msgid "Bisecting sporadic bugs"
+msgstr "Aides à la bisection"
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1248
+#, priority:100
+msgid "Another possible improvement to \"git bisect\" would be to optionally add some redundancy to the tests performed so that it would be more reliable when tracking sporadic bugs."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1252
+#, priority:100
+msgid "This has been requested by some kernel developers because some bugs called sporadic bugs do not appear in all the kernel builds because they are very dependent on the compiler output."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1261
+#, priority:100
+msgid "The idea is that every 3 test for example, \"git bisect\" could ask the user to test a commit that has already been found to be \"good\" or \"bad\" (because one of its descendants or one of its ancestors has been found to be \"good\" or \"bad\" respectively). If it happens that a commit has been previously incorrectly classified then the bisection can be aborted early, hopefully before too many mistakes have been made. Then the user will have to look at what happened and then restart the bisection using a fixed bisect log."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1265
+#, priority:100
+msgid "There is already a project called BBChop created by Ealdwulf Wuffinga on Github that does something like that using Bayesian Search Theory <<9>>:"
+msgstr ""
+
+#. type: delimited block _
+#: en/git-bisect-lk2009.txt:1272
+#, priority:100
+msgid "BBChop is like 'git bisect' (or equivalent), but works when your bug is intermittent. That is, it works in the presence of false negatives (when a version happens to work this time even though it contains the bug). It assumes that there are no false positives (in principle, the same approach would work, but adding it may be non-trivial)."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1276
+#, priority:100
+msgid "But BBChop is independent of any VCS and it would be easier for Git users to have something integrated in Git."
+msgstr ""
+
+#. type: Title -
+#: en/git-bisect-lk2009.txt:1278
+#, no-wrap, priority:100
+msgid "Conclusion"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1285
+#, priority:100
+msgid "We have seen that regressions are an important problem, and that \"git bisect\" has nice features that complement very well practices and other tools, especially test suites, that are generally used to fight regressions. But it might be needed to change some work-flows and (bad) habits to get the most out of it."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1292
+#, priority:100
+msgid "Some improvements to the algorithms inside \"git bisect\" are possible and some new features could help in some cases, but overall \"git bisect\" works already very well, is used a lot, and is already very useful. To back up that last claim, let's give the final word to Ingo Molnar when he was asked by the author how much time does he think \"git bisect\" saves him when he uses it:"
+msgstr ""
+
+#. type: delimited block _
+#: en/git-bisect-lk2009.txt:1295
+#, priority:100
+msgid "a _lot_."
+msgstr ""
+
+#. type: delimited block _
+#: en/git-bisect-lk2009.txt:1300
+#, priority:100
+msgid "About ten years ago did i do my first 'bisection' of a Linux patch queue. That was prior the Git (and even prior the BitKeeper) days. I literally days spent sorting out patches, creating what in essence were standalone commits that i guessed to be related to that bug."
+msgstr ""
+
+#. type: delimited block _
+#: en/git-bisect-lk2009.txt:1303
+#, priority:100
+msgid "It was a tool of absolute last resort. I'd rather spend days looking at printk output than do a manual 'patch bisection'."
+msgstr ""
+
+#. type: delimited block _
+#: en/git-bisect-lk2009.txt:1308
+#, priority:100
+msgid "With Git bisect it's a breeze: in the best case i can get a ~15 step kernel bisection done in 20-30 minutes, in an automated way. Even with manual help or when bisecting multiple, overlapping bugs, it's rarely more than an hour."
+msgstr ""
+
+#. type: delimited block _
+#: en/git-bisect-lk2009.txt:1314
+#, priority:100
+msgid "In fact it's invaluable because there are bugs i would never even _try_ to debug if it wasn't for git bisect. In the past there were bug patterns that were immediately hopeless for me to debug - at best i could send the crash/bug signature to lkml and hope that someone else can think of something."
+msgstr ""
+
+#. type: delimited block _
+#: en/git-bisect-lk2009.txt:1318
+#, priority:100
+msgid "And even if a bisection fails today it tells us something valuable about the bug: that it's non-deterministic - timing or kernel image layout dependent."
+msgstr ""
+
+#. type: delimited block _
+#: en/git-bisect-lk2009.txt:1321
+#, priority:100
+msgid "So git bisect is unconditional goodness - and feel free to quote that ;-)"
+msgstr ""
+
+#. type: Title -
+#: en/git-bisect-lk2009.txt:1324
+#, no-wrap, priority:100
+msgid "Acknowledgments"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1330
+#, priority:100
+msgid "Many thanks to Junio Hamano for his help in reviewing this paper, for reviewing the patches I sent to the Git mailing list, for discussing some ideas and helping me improve them, for improving \"git bisect\" a lot and for his awesome work in maintaining and developing Git."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1335
+#, priority:100
+msgid "Many thanks to Ingo Molnar for giving me very useful information that appears in this paper, for commenting on this paper, for his suggestions to improve \"git bisect\" and for evangelizing \"git bisect\" on the linux kernel mailing lists."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1338
+#, priority:100
+msgid "Many thanks to Linus Torvalds for inventing, developing and evangelizing \"git bisect\", Git and Linux."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1343
+#, priority:100
+msgid "Many thanks to the many other great people who helped one way or another when I worked on Git, especially to Andreas Ericsson, Johannes Schindelin, H. Peter Anvin, Daniel Barkalow, Bill Lear, John Hawley, Shawn O. Pierce, Jeff King, Sam Vilain, Jon Seymour."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1346
+#, priority:100
+msgid "Many thanks to the Linux-Kongress program committee for choosing the author to given a talk and for publishing this paper."
+msgstr ""
+
+#. type: Title -
+#: en/git-bisect-lk2009.txt:1348
+#, fuzzy, no-wrap, priority:100
+#| msgid "'reference'"
+msgid "References"
+msgstr "'reference'"
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1351
+#, priority:100
+msgid "[[[1]]] https://www.nist.gov/sites/default/files/documents/director/planning/report02-3.pdf['The Economic Impacts of Inadequate Infratructure for Software Testing'.  Nist Planning Report 02-3], see Executive Summary and Chapter 8."
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1352
+#, priority:100
+msgid "[[[2]]] http://www.oracle.com/technetwork/java/codeconvtoc-136057.html['Code Conventions for the Java Programming Language'. Sun Microsystems.]"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1353
+#, priority:100
+msgid "[[[3]]] https://en.wikipedia.org/wiki/Software_maintenance['Software maintenance'. Wikipedia.]"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1354
+#, priority:100
+msgid "[[[4]]] https://lore.kernel.org/git/7vps5xsbwp.fsf_-_@assigned-by-dhcp.cox.net/[Junio C Hamano. 'Automated bisect success story'.]"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1355
+#, priority:100
+msgid "[[[5]]] https://lwn.net/Articles/317154/[Christian Couder. 'Fully automated bisecting with \"git bisect run\"'. LWN.net.]"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1356
+#, priority:100
+msgid "[[[6]]] https://lwn.net/Articles/277872/[Jonathan Corbet. 'Bisection divides users and developers'. LWN.net.]"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1357
+#, priority:100
+msgid "[[[7]]] https://lore.kernel.org/lkml/20071207113734.GA14598@elte.hu/[Ingo Molnar. 'Re: BUG 2.6.23-rc3 can't see sd partitions on Alpha'. Linux-kernel mailing list.]"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1358
+#, priority:100
+msgid "[[[8]]] https://www.kernel.org/pub/software/scm/git/docs/git-bisect.html[Junio C Hamano and the git-list. 'git-bisect(1) Manual Page'. Linux Kernel Archives.]"
+msgstr ""
+
+#. type: Plain text
+#: en/git-bisect-lk2009.txt:1358
+#, priority:100
+msgid "[[[9]]] https://github.com/Ealdwulf/bbchop[Ealdwulf. 'bbchop'. GitHub.]"
+msgstr ""
 
 #, ignore-ellipsis
 #~ msgid "<file>..."
