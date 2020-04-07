@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-04-04 19:51+0200\n"
-"PO-Revision-Date: 2020-04-03 02:31+0000\n"
+"PO-Revision-Date: 2020-04-09 10:09+0000\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -4802,26 +4802,24 @@ msgstr "Pour illustrer la différence entre `-S<regex> --pickaxe-regex` et `-G<r
 
 #. type: delimited block -
 #: en/diff-options.txt:573
-#, fuzzy, ignore-ellipsis, no-wrap, priority:280
-#| msgid ""
-#| "+    return !regexec(regexp, two->ptr, 1, &regmatch, 0);\n"
-#| "...\n"
-#| "-    hit = !regexec(regexp, mf2.ptr, 1, &regmatch, 0);\n"
+#, ignore-ellipsis, no-wrap, priority:280
 msgid ""
 "+    return frotz(nitfol, two->ptr, 1, 0);\n"
 "...\n"
 "-    hit = frotz(nitfol, mf2.ptr, 1, 0);\n"
 msgstr ""
-"+    return !regexec(regexp, two->ptr, 1, &regmatch, 0);\n"
+"+    return frotz(nitfol, two->ptr, 1, 0);\n"
 "...\n"
-"-    hit = !regexec(regexp, mf2.ptr, 1, &regmatch, 0);\n"
+"-    hit = frotz(nitfol, mf2.ptr, 1, 0);\n"
 
 #. type: Plain text
 #: en/diff-options.txt:578
-#, fuzzy, priority:280
-#| msgid "While `git log -G\"regexec\\(regexp\"` will show this commit, `git log -S\"regexec\\(regexp\" --pickaxe-regex` will not (because the number of occurrences of that string did not change)."
+#, priority:280
 msgid "While `git log -G\"frotz\\(nitfol\"` will show this commit, `git log -S\"frotz\\(nitfol\" --pickaxe-regex` will not (because the number of occurrences of that string did not change)."
-msgstr "Alors que `git log -G\"regexec\\(regexp\"` affichera ce commit, `git log -S\"regexec\\(regexp\" --pickaxe-regex` ne l'affichera pas (parce que le nombre d'occurrences de cette chaîne n'a pas changé)."
+msgstr ""
+"Alors que `git log -G\"frotz\\(nitfol\"` affichera ce commit, `git log -S\""
+"frotz\\(nitfol\" --pickaxe-regex` ne l'affichera pas (parce que le nombre "
+"d'occurrences de cette chaîne n'a pas changé)."
 
 #. type: Plain text
 #: en/diff-options.txt:581
@@ -6523,16 +6521,7 @@ msgstr "git-am - Appliquer une série de rustines depuis des fichiers mailbox"
 
 #. type: Plain text
 #: en/git-am.txt:20
-#, fuzzy, ignore-ellipsis, no-wrap, priority:100
-#| msgid ""
-#| "'git am' [--signoff] [--keep] [--[no-]keep-cr] [--[no-]utf8]\n"
-#| "\t [--[no-]3way] [--interactive] [--committer-date-is-author-date]\n"
-#| "\t [--ignore-date] [--ignore-space-change | --ignore-whitespace]\n"
-#| "\t [--whitespace=<option>] [-C<n>] [-p<n>] [--directory=<dir>]\n"
-#| "\t [--exclude=<path>] [--include=<path>] [--reject] [-q | --quiet]\n"
-#| "\t [--[no-]scissors] [-S[<keyid>]] [--patch-format=<format>]\n"
-#| "\t [(<mbox> | <Maildir>)...]\n"
-#| "'git am' (--continue | --skip | --abort | --quit | --show-current-patch)\n"
+#, ignore-ellipsis, no-wrap, priority:100
 msgid ""
 "'git am' [--signoff] [--keep] [--[no-]keep-cr] [--[no-]utf8]\n"
 "\t [--[no-]3way] [--interactive] [--committer-date-is-author-date]\n"
@@ -6550,7 +6539,8 @@ msgstr ""
 "\t [--exclude=<path>] [--include=<path>] [--reject] [-q | --quiet]\n"
 "\t [--[no-]scissors] [-S[<idclé>]] [--patch-format=<format>]\n"
 "\t [(<mbox> | <Maildir>)...]\n"
-"'git am' (--continue | --skip | --abort | --quit | --show-current-patch)\n"
+"'git am' (--continue | --skip | --abort | --quit | --show-current-"
+"patch[=(diff|raw)])\n"
 
 #. type: Plain text
 #: en/git-am.txt:26
@@ -6942,10 +6932,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-am.txt:179
-#, fuzzy, no-wrap, priority:100
-#| msgid "--show-current-patch"
+#, no-wrap, priority:100
 msgid "--show-current-patch[=(diff|raw)]"
-msgstr "--show-current-patch"
+msgstr "--show-current-patch[=(diff|raw)]"
 
 #. type: Plain text
 #: en/git-am.txt:184
@@ -9728,18 +9717,27 @@ msgstr "--sort=<clé>"
 #, ignore-ellipsis, priority:240
 msgid "Sort based on the key given. Prefix `-` to sort in descending order of the value. You may use the --sort=<key> option multiple times, in which case the last key becomes the primary key. The keys supported are the same as those in `git for-each-ref`. Sort order defaults to the value configured for the `branch.sort` variable if exists, or to sorting based on the full refname (including `refs/...` prefix). This lists detached HEAD (if present) first, then local branches and finally remote-tracking branches. See linkgit:git-config[1]."
 msgstr ""
+"Trier en fonction de la clé donnée. Préfixer par `-` pour trier par ordre "
+"décroissant de la valeur. Vous pouvez utiliser l'option --sort=<clé> "
+"plusieurs fois, auquel cas la dernière clé devient la clé primaire. Les clés "
+"supportées sont les mêmes que celles de `git for-each-ref`. L'ordre de tri "
+"est par défaut la valeur configurée pour la variable `branch.sort` si elle "
+"existe, ou le tri basé sur le nom de référence complet (y compris le préfixe "
+"`refs/...`). Cela liste d'abord les HEAD détachées (si présentes), puis les "
+"branches locales et enfin les branches de suivi à distance. Voir linkgit:git-"
+"config[1]."
 
 #. type: Labeled list
 #: en/git-branch.txt:293 en/git-tag.txt:158
 #, no-wrap, priority:240
 msgid "--points-at <object>"
-msgstr ""
+msgstr "--points-at <objet>"
 
 #. type: Plain text
 #: en/git-branch.txt:295
 #, priority:240
 msgid "Only list branches of the given object."
-msgstr ""
+msgstr "N'indiquer que les branches de l'objet donné."
 
 #. type: Labeled list
 #: en/git-branch.txt:296
@@ -9752,18 +9750,24 @@ msgstr "--format <format>"
 #, priority:240
 msgid "A string that interpolates `%(fieldname)` from a branch ref being shown and the object it points at.  The format is the same as that of linkgit:git-for-each-ref[1]."
 msgstr ""
+"Une chaîne qui interpole `%(fieldame)` à partir d’une référence de branche "
+"montrée et l’objet vers lequel elle pointe.  Le format est le même que celui "
+"de linkgit:git-for-each-ref[1]."
 
 #. type: Plain text
 #: en/git-branch.txt:306
 #, priority:240
 msgid "`pager.branch` is only respected when listing branches, i.e., when `--list` is used or implied. The default is to use a pager.  See linkgit:git-config[1]."
 msgstr ""
+"Le terme `pager.branch` n'est respecté que lorsqu'il s'agit d'énumérer des "
+"branches, c'est-à-dire lorsque `--list` est utilisé ou sous-entendu. La "
+"valeur par défaut est d'utiliser un pager.  Voir linkgit:git-config[1]."
 
 #. type: Labeled list
 #: en/git-branch.txt:310
 #, no-wrap, priority:240
 msgid "Start development from a known tag"
-msgstr ""
+msgstr "Démarrer le développement à partir d'une balise connue"
 
 #. type: delimited block -
 #: en/git-branch.txt:317
@@ -9784,12 +9788,14 @@ msgstr ""
 #, priority:240
 msgid "This step and the next one could be combined into a single step with \"checkout -b my2.6.14 v2.6.14\"."
 msgstr ""
+"Cette étape et la suivante pourraient être combinées en une seule étape avec "
+"\"checkout -b my2.6.14 v2.6.14\"."
 
 #. type: Labeled list
 #: en/git-branch.txt:322
 #, no-wrap, priority:240
 msgid "Delete an unneeded branch"
-msgstr ""
+msgstr "Supprimer une branche inutile"
 
 #. type: delimited block -
 #: en/git-branch.txt:329
@@ -9800,24 +9806,34 @@ msgid ""
 "$ git branch -d -r origin/todo origin/html origin/man   <1>\n"
 "$ git branch -D test                                    <2>\n"
 msgstr ""
+"$ git clone git://git.kernel.org/.../git.git my.git\n"
+"$ cd my.git\n"
+"$ git branch -d -r origin/todo origin/html origin/man   <1>\n"
+"$ git branch -D test                                    <2>\n"
 
 #. type: Plain text
 #: en/git-branch.txt:334
 #, priority:240
 msgid "Delete the remote-tracking branches \"todo\", \"html\" and \"man\". The next 'fetch' or 'pull' will create them again unless you configure them not to.  See linkgit:git-fetch[1]."
 msgstr ""
+"Supprimer les branches de suivi à distance \"todo\", \"html\" et \"man\". La "
+"prochaine opération de récupération ou de tirage les créera à nouveau, à "
+"moins que vous ne les configuriez autrement.  Voir linkgit:git-fetch[1]."
 
 #. type: Plain text
 #: en/git-branch.txt:336
 #, priority:240
 msgid "Delete the \"test\" branch even if the \"master\" branch (or whichever branch is currently checked out) does not have all commits from the test branch."
 msgstr ""
+"Supprimer la branche \"test\" même si la branche \"master\" (ou n'importe "
+"quelle branche actuellement extraite) n'a pas tous les commits de la branche "
+"test."
 
 #. type: Labeled list
 #: en/git-branch.txt:337
 #, no-wrap, priority:240
 msgid "Listing branches from a specific remote"
-msgstr ""
+msgstr "Lister les branches d'un distant spécifique"
 
 #. type: delimited block -
 #: en/git-branch.txt:342
@@ -9826,18 +9842,24 @@ msgid ""
 "$ git branch -r -l '<remote>/<pattern>'                 <1>\n"
 "$ git for-each-ref 'refs/remotes/<remote>/<pattern>'    <2>\n"
 msgstr ""
+"$ git branch -r -l '<distant>/<motif>'                 <1>\n"
+"$ git for-each-ref 'refs/remotes/<distant>/<motif>'    <2>\n"
 
 #. type: Plain text
 #: en/git-branch.txt:346
 #, priority:240
 msgid "Using `-a` would conflate <remote> with any local branches you happen to have been prefixed with the same <remote> pattern."
 msgstr ""
+"L'utilisation de `-a` associerait <distant> avec toutes les branches locales "
+"dont le préfixe est le même que celui de <distant>."
 
 #. type: Plain text
 #: en/git-branch.txt:347
 #, priority:240
 msgid "`for-each-ref` can take a wide range of options. See linkgit:git-for-each-ref[1]"
 msgstr ""
+"`for-each-ref` accepte un large éventail d'options. Voir linkgit:git-for-"
+"each-ref[1]"
 
 #. type: Plain text
 #: en/git-branch.txt:349
@@ -15113,16 +15135,17 @@ msgstr "Comme dans le cas de la validation de vos propres modifications, vous po
 
 #. type: Title -
 #: en/git-commit.txt:464
-#, fuzzy, no-wrap, priority:280
-#| msgid "BASE TREE INFORMATION"
+#, no-wrap, priority:280
 msgid "COMMIT INFORMATION"
-msgstr "INFORMATION D'ARBRE DE BASE"
+msgstr "INFORMATION DE VALIDATION"
 
 #. type: Plain text
 #: en/git-commit.txt:468
 #, priority:280
 msgid "Author and committer information is taken from the following environment variables, if set:"
 msgstr ""
+"Les informations sur les auteurs et les validateurs sont tirées des "
+"variables d'environnement suivantes, si elles sont définies :"
 
 #. type: Plain text
 #: en/git-commit.txt:475
@@ -15135,36 +15158,64 @@ msgid ""
 "\tGIT_COMMITTER_EMAIL\n"
 "\tGIT_COMMITTER_DATE\n"
 msgstr ""
+"\tGIT_AUTHOR_NAME\n"
+"\tGIT_AUTHOR_EMAIL\n"
+"\tGIT_AUTHOR_DATE\n"
+"\tGIT_COMMITTER_NAME\n"
+"\tGIT_COMMITTER_EMAIL\n"
+"\tGIT_COMMITTER_DATE\n"
 
 #. type: Plain text
 #: en/git-commit.txt:477
 #, priority:280
 msgid "(nb \"<\", \">\" and \"\\n\"s are stripped)"
 msgstr ""
+"(nota bene \"<\", \">\" et \"\\n"
+"\"s sont supprimés)"
 
 #. type: Plain text
 #: en/git-commit.txt:483
 #, priority:280
 msgid "The author and committer names are by convention some form of a personal name (that is, the name by which other humans refer to you), although Git does not enforce or require any particular form. Arbitrary Unicode may be used, subject to the constraints listed above. This name has no effect on authentication; for that, see the `credential.username` variable in linkgit:git-config[1]."
 msgstr ""
+"Les noms de l'auteur et du validateur sont par convention une forme de nom "
+"personnel (c'est-à-dire le nom par lequel les autres humains vous désignent)"
+", bien que Git n'impose ou n'exige aucune forme particulière. N'importe quel "
+"unicode peut être utilisé, sous réserve des contraintes énumérées ci-dessus. "
+"Ce nom n'a aucun effet sur l'authentification ; pour cela, voir la variable "
+"`credential.username` dans linkgit:git-config[1]."
 
 #. type: Plain text
 #: en/git-commit.txt:490
 #, priority:280
 msgid "In case (some of) these environment variables are not set, the information is taken from the configuration items `user.name` and `user.email`, or, if not present, the environment variable EMAIL, or, if that is not set, system user name and the hostname used for outgoing mail (taken from `/etc/mailname` and falling back to the fully qualified hostname when that file does not exist)."
 msgstr ""
+"Dans le cas où (certaines de) ces variables d’environnement ne sont pas "
+"définies, les informations sont prises à partir des éléments de "
+"configuration `user.name` et `user.email`, ou, si elle n’est pas présente, "
+"la variable d’environnement EMAIL, ou, si ce n’est pas réglé, le nom d’"
+"utilisateur du système et le nom d’hôte utilisé pour le courrier sortant ("
+"pris depuis `/etc/mailname` et ou par défaut le nom d’hôte entièrement "
+"qualifié lorsque ce fichier n’existe pas)."
 
 #. type: Plain text
 #: en/git-commit.txt:494
 #, priority:280
 msgid "The `author.name` and `committer.name` and their corresponding email options override `user.name` and `user.email` if set and are overridden themselves by the environment variables."
 msgstr ""
+"Les options `author.name` et `committer.name` et leurs options de courrier "
+"électronique correspondantes remplacent les options `user.name` et "
+"`user.email` si elles sont définies et sont elles-mêmes remplacées par les "
+"variables d'environnement."
 
 #. type: Plain text
 #: en/git-commit.txt:497
 #, priority:280
 msgid "The typical usage is to set just the `user.name` and `user.email` variables; the other options are provided for more complex use cases."
 msgstr ""
+"L'utilisation typique consiste à définir uniquement les variables `user.name`"
+" et `user.email` ; les autres options sont fournies pour les cas "
+"d'utilisation plus complexes."
 
 #. type: Plain text
 #: en/git-commit.txt:511
@@ -39227,10 +39278,9 @@ msgstr "--exec"
 
 #. type: Plain text
 #: en/git-rebase.txt:592
-#, fuzzy, priority:100
-#| msgid "--empty"
+#, priority:100
 msgid "--empty="
-msgstr "--empty"
+msgstr "--empty="
 
 #. type: Plain text
 #: en/git-rebase.txt:594
@@ -39264,10 +39314,9 @@ msgstr "--preserve-merges et --rebase-merges"
 
 #. type: Plain text
 #: en/git-rebase.txt:601
-#, fuzzy, priority:100
-#| msgid "--preserve-merges and --interactive"
+#, priority:100
 msgid "--preserve-merges and --empty="
-msgstr "--preserve-merges et --interactive"
+msgstr "--preserve-merges et --empty="
 
 #. type: Plain text
 #: en/git-rebase.txt:602
@@ -44719,33 +44768,47 @@ msgstr "git-rm - Supprime des fichiers de l'arbre de travail et de l'index"
 
 #. type: Plain text
 #: en/git-rm.txt:14
-#, fuzzy, ignore-ellipsis, no-wrap, priority:280
-#| msgid "'git rm' [-f | --force] [-n] [-r] [--cached] [--ignore-unmatch] [--quiet] [--] <file>...\n"
+#, ignore-ellipsis, no-wrap, priority:280
 msgid ""
 "'git rm' [-f | --force] [-n] [-r] [--cached] [--ignore-unmatch]\n"
 "\t  [--quiet] [--pathspec-from-file=<file> [--pathspec-file-nul]]\n"
 "\t  [--] [<pathspec>...]\n"
-msgstr "'git rm' [-f | --force] [-n] [-r] [--cached] [--ignore-unmatch] [--quiet] [--] <fichier>...\n"
+msgstr ""
+"'git rm' [-f | --force] [-n] [-r] [--cached] [--ignore-unmatch]\n"
+"\t  [--quiet] [--pathspec-from-file=<fichier> [--pathspec-file-nul]]\n"
+"\t  [--] [<spec-de-fichier>...]\n"
 
 #. type: Plain text
 #: en/git-rm.txt:27
-#, fuzzy, priority:280
-#| msgid "Remove files from the index, or from the working tree and the index.  `git rm` will not remove a file from just your working directory.  (There is no option to remove a file only from the working tree and yet keep it in the index; use `/bin/rm` if you want to do that.)  The files being removed have to be identical to the tip of the branch, and no updates to their contents can be staged in the index, though that default behavior can be overridden with the `-f` option.  When `--cached` is given, the staged content has to match either the tip of the branch or the file on disk, allowing the file to be removed from just the index."
+#, priority:280
 msgid "Remove files matching pathspec from the index, or from the working tree and the index. `git rm` will not remove a file from just your working directory. (There is no option to remove a file only from the working tree and yet keep it in the index; use `/bin/rm` if you want to do that.) The files being removed have to be identical to the tip of the branch, and no updates to their contents can be staged in the index, though that default behavior can be overridden with the `-f` option.  When `--cached` is given, the staged content has to match either the tip of the branch or the file on disk, allowing the file to be removed from just the index."
-msgstr "Supprime les fichiers de l'index, ou de l'arbre de travail et de l'index. `git rm` ne supprimera pas un fichier seulement de votre répertoire de travail (il n'y a aucune option pour supprimer un fichier seulement depuis l'arbre de travail et le conserver dans l'index ; utilisez `/bin/rm` si c'est ce que vous souhaitez faire). Les fichiers à supprimer doivent être identiques à ceux du sommet de la branche, et avec aucune mise à jour indexée, mais ce comportement par défaut peut être outrepassé avec l'option `-f`. Quand `--cached` est fourni, le contenu indexé doit correspondre soit au sommet de la branche soit au fichier sur disque, de sorte que le fichier puisse n'être supprimé que de l'index."
+msgstr ""
+"Supprime les fichiers correspondant à spec-de-fichier de l'index, ou de "
+"l'arbre de travail et de l'index. `git rm` ne supprimera pas un fichier "
+"seulement de votre répertoire de travail (il n'y a aucune option pour "
+"supprimer un fichier seulement depuis l'arbre de travail et le conserver "
+"dans l'index ; utilisez `/bin/rm` si c'est ce que vous souhaitez faire). Les "
+"fichiers à supprimer doivent être identiques à ceux du sommet de la branche, "
+"et avec aucune mise à jour indexée, mais ce comportement par défaut peut "
+"être outrepassé avec l'option `-f`. Quand `--cached` est fourni, le contenu "
+"indexé doit correspondre soit au sommet de la branche soit au fichier sur "
+"disque, de sorte que le fichier puisse n'être supprimé que de l'index."
 
 #. type: Plain text
 #: en/git-rm.txt:36
-#, fuzzy, priority:280
-#| msgid "Files to remove.  Fileglobs (e.g. `*.c`) can be given to remove all matching files.  If you want Git to expand file glob characters, you may need to shell-escape them.  A leading directory name (e.g. `dir` to remove `dir/file1` and `dir/file2`) can be given to remove all files in the directory, and recursively all sub-directories, but this requires the `-r` option to be explicitly given."
+#, priority:280
 msgid "Files to remove.  A leading directory name (e.g. `dir` to remove `dir/file1` and `dir/file2`) can be given to remove all files in the directory, and recursively all sub-directories, but this requires the `-r` option to be explicitly given."
-msgstr "Fichiers à supprimer. Les patrons de fichiers (par exemple, `*.c`) peuvent être fournis pour supprimer tous les fichiers correspondants. Si vous souhaitez que Git étende les caractères de patrons de fichier, vous devrez peut-être les échapper de l'interpréteur de commande. Un nom de répertoire en préfixe (par exemple `rép` pour supprimer `rép/fichier1` et `rép/fichier2`) peut être indiqué pour supprimer tous les fichiers dans un répertoire, et récursivement dans tous ses sous-répertoires, mais cela nécessite explicitement l'option `-r`."
+msgstr ""
+"Fichiers à supprimer. Un nom de répertoire en préfixe (par exemple `rép` "
+"pour supprimer `rép/fichier1` et `rép/fichier2`) peut être indiqué pour "
+"supprimer tous les fichiers dans un répertoire, et récursivement dans tous "
+"ses sous-répertoires, mais cela nécessite explicitement l'option `-r`."
 
 #. type: Plain text
 #: en/git-rm.txt:38
 #, priority:280
 msgid "The command removes only the paths that are known to Git."
-msgstr ""
+msgstr "La commande ne supprime que les chemins qui sont connus de Git."
 
 #. type: Plain text
 #: en/git-rm.txt:43
@@ -47738,10 +47801,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-stash.txt:200 en/git-stash.txt:210 en/git-stash.txt:224 en/git-stash.txt:229
-#, fuzzy, priority:240
-#| msgid "This option is only applicable in non-verbose mode."
+#, priority:240
 msgid "This option is only valid for `push` command."
-msgstr "Cette option ne s’applique qu’en mode non verbeux."
+msgstr "Cette option n'est valide que pour la commande `push`."
 
 #. type: Plain text
 #: en/git-stash.txt:219
@@ -52537,10 +52599,12 @@ msgstr "--git-dir=<chemin>"
 
 #. type: Plain text
 #: en/git.txt:116
-#, fuzzy, priority:100
-#| msgid "Set the path to the repository. This can also be controlled by setting the `GIT_DIR` environment variable. It can be an absolute path or relative path to current working directory."
+#, priority:100
 msgid "Set the path to the repository (\".git\" directory). This can also be controlled by setting the `GIT_DIR` environment variable. It can be an absolute path or relative path to current working directory."
-msgstr "Règle le chemin vers le dépôt. Ceci peut aussi être contrôlé en réglant la variable d'environnement `GIT_DIR`. Ce peut être un chemin absolu ou relatif au répertoire de travail actuel."
+msgstr ""
+"Règle le chemin vers le dépôt (répertoire \".git\"). Ceci peut aussi être "
+"contrôlé en réglant la variable d'environnement `GIT_DIR`. Ce peut être un "
+"chemin absolu ou relatif au répertoire de travail actuel."
 
 #. type: Plain text
 #: en/git.txt:127
@@ -52618,7 +52682,10 @@ msgstr "--literal-pathspecs"
 #: en/git.txt:162
 #, priority:100
 msgid "Treat pathspecs literally (i.e. no globbing, no pathspec magic).  This is equivalent to setting the `GIT_LITERAL_PATHSPECS` environment variable to `1`."
-msgstr "Traier les spécificateurs de chemins littéralement (c-à-d sans jokers ni magie de pathspec). Ceci est équivalent à régler la variable d'environnement `GIT_LITERAL_PATHSPECS` à `1`. "
+msgstr ""
+"Traier les spécificateurs de chemins littéralement (c-à-d sans jokers ni "
+"magie de pathspec). Ceci est équivalent à régler la variable d'environnement "
+"`GIT_LITERAL_PATHSPECS` à `1`."
 
 #. type: Labeled list
 #: en/git.txt:163
@@ -59840,10 +59907,10 @@ msgstr "'%GT'"
 
 #. type: Plain text
 #: en/pretty-formats.txt:230
-#, fuzzy, priority:260
-#| msgid "show the fingerprint of the key used to sign a signed commit"
+#, priority:260
 msgid "show the trust level for the key used to sign a signed commit"
-msgstr "afficher l'empreinte digitale de la clé utilisée pour signer un commit signé"
+msgstr ""
+"afficher le niveau de rouille de la clé utilisée pour signer un commit signé"
 
 #. type: Labeled list
 #: en/pretty-formats.txt:230
@@ -63318,10 +63385,9 @@ msgstr ""
 
 #. type: Title -
 #: en/git-bisect-lk2009.txt:184
-#, fuzzy, no-wrap, priority:100
-#| msgid "git bisect terms\n"
+#, no-wrap, priority:100
 msgid "\"git bisect\" overview"
-msgstr "git bisect terms\n"
+msgstr "Survol \"git bisect\""
 
 #. type: Title ~
 #: en/git-bisect-lk2009.txt:187
@@ -63349,10 +63415,9 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-bisect-lk2009.txt:203
-#, fuzzy, no-wrap, priority:100
-#| msgid "$ git bisect bad\n"
+#, no-wrap, priority:100
 msgid "$ git bisect bad [COMMIT]\n"
-msgstr "$ git bisect bad\n"
+msgstr "$ git bisect bad [COMMIT]\n"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:206
@@ -63362,10 +63427,9 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-bisect-lk2009.txt:209
-#, fuzzy, ignore-ellipsis, no-wrap, priority:100
-#| msgid "$ git bisect good\n"
+#, ignore-ellipsis, no-wrap, priority:100
 msgid "$ git bisect good [COMMIT...]\n"
-msgstr "$ git bisect good\n"
+msgstr "$ git bisect good [COMMIT...]\n"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:213
@@ -63574,10 +63638,9 @@ msgstr ""
 
 #. type: Title ~
 #: en/git-bisect-lk2009.txt:355
-#, fuzzy, no-wrap, priority:100
-#| msgid "Avoiding testing a commit"
+#, no-wrap, priority:100
 msgid "Avoiding untestable commits"
-msgstr "Éviter le test d'un commit"
+msgstr "Éviter les commits intestables"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:362
@@ -63636,10 +63699,9 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-bisect-lk2009.txt:398
-#, fuzzy, no-wrap, priority:100
-#| msgid "$ git bisect log\n"
+#, no-wrap, priority:100
 msgid "$ git bisect log > bisect_log.txt\n"
-msgstr "$ git bisect log\n"
+msgstr "$ git bisect log > bisect_log.txt\n"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:401
@@ -63649,24 +63711,21 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-bisect-lk2009.txt:404
-#, fuzzy, no-wrap, priority:100
-#| msgid "$ git bisect reset\n"
+#, no-wrap, priority:100
 msgid "$ git bisect replay bisect_log.txt\n"
-msgstr "$ git bisect reset\n"
+msgstr "$ git bisect replay bisect_log.txt\n"
 
 #. type: Title -
 #: en/git-bisect-lk2009.txt:408
-#, fuzzy, no-wrap, priority:100
-#| msgid "git bisect terms\n"
+#, no-wrap, priority:100
 msgid "\"git bisect\" details"
-msgstr "git bisect terms\n"
+msgstr "Détails de \"git bisect\""
 
 #. type: Title ~
 #: en/git-bisect-lk2009.txt:411
-#, fuzzy, no-wrap, priority:100
-#| msgid "Bisection Helpers"
+#, no-wrap, priority:100
 msgid "Bisection algorithm"
-msgstr "Aides à la bisection"
+msgstr "Algorithme de bisection"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:417
@@ -63706,10 +63765,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:429
-#, fuzzy, priority:100
-#| msgid "For example, in a commit history like this:"
+#, priority:100
 msgid "For example if we start with a graph like this:"
-msgstr "Par exemple, dans un historique de commit comme celui-ci :"
+msgstr "Par exemple, nous démarrons avec un graphe comme celui-ci :"
 
 #. type: delimited block -
 #: en/git-bisect-lk2009.txt:438
@@ -63895,10 +63953,9 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-bisect-lk2009.txt:539
-#, fuzzy, no-wrap, priority:100
-#| msgid "\t$ git rev-list --bisect foo ^bar ^baz\n"
+#, no-wrap, priority:100
 msgid "$ git rev-list --bisect-all BAD --not GOOD1 GOOD2\n"
-msgstr "\t$ git rev-list --bisect foo ^bar ^baz\n"
+msgstr "$ git rev-list --bisect-all MAUVAIS --not BON1 BON2\n"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:542
@@ -64065,10 +64122,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:644
-#, fuzzy, priority:100
-#| msgid "are incompatible with the following options:"
+#, priority:100
 msgid "If we compute the following non optimal function on it:"
-msgstr "sont incompatibles avec les options suivantes :"
+msgstr "Si nous calculons la fonction non optimale suivante dessus :"
 
 #. type: delimited block -
 #: en/git-bisect-lk2009.txt:647
@@ -64335,10 +64391,9 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-bisect-lk2009.txt:816
-#, fuzzy, no-wrap, priority:100
-#| msgid "$ git bisect bad\n"
+#, no-wrap, priority:100
 msgid "$ git bisect start dev main\n"
-msgstr "$ git bisect bad\n"
+msgstr "$ git bisect start dev main\n"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:823
@@ -64680,10 +64735,10 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:1020
-#, fuzzy, priority:100
-#| msgid "Use binary search to find the commit that introduced a bug."
+#, priority:100
 msgid "use \"git bisect run\" to find the commit that introduced it"
-msgstr "Trouver par recherche binaire la modification qui a introduit un bogue."
+msgstr ""
+"utiliser\"git bisect run\" pour rechercher la modification qui l'a introduite"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:1021
@@ -64825,10 +64880,9 @@ msgstr ""
 
 #. type: Title ~
 #: en/git-bisect-lk2009.txt:1122
-#, fuzzy, no-wrap, priority:100
-#| msgid "git-replace(1)"
+#, no-wrap, priority:100
 msgid "\"git replace\""
-msgstr "git-replace(1)"
+msgstr "\"git replace\""
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:1128
@@ -64883,17 +64937,15 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:1164
-#, fuzzy, priority:100
-#| msgid "For example:"
+#, priority:100
 msgid "For example using:"
-msgstr "Par exemple :"
+msgstr "Par exemple en utilisant :"
 
 #. type: delimited block -
 #: en/git-bisect-lk2009.txt:1167
-#, fuzzy, no-wrap, priority:100
-#| msgid "$ git restore .\n"
+#, no-wrap, priority:100
 msgid "$ git rebase -i Y Z\n"
-msgstr "$ git restore .\n"
+msgstr "$ git rebase -i Y Z\n"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:1170
@@ -64909,10 +64961,9 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-bisect-lk2009.txt:1178
-#, fuzzy, no-wrap, priority:100
-#| msgid "$ git bisect reset\n"
+#, no-wrap, priority:100
 msgid "$ git bisect start Z' Y\n"
-msgstr "$ git bisect reset\n"
+msgstr "$ git bisect start Z' Y\n"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:1189
@@ -64985,10 +65036,9 @@ msgstr ""
 
 #. type: Title ~
 #: en/git-bisect-lk2009.txt:1243
-#, fuzzy, no-wrap, priority:100
-#| msgid "Bisection Helpers"
+#, no-wrap, priority:100
 msgid "Bisecting sporadic bugs"
-msgstr "Aides à la bisection"
+msgstr "Bisection de bugs sporatiques"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:1248
@@ -65124,10 +65174,9 @@ msgstr ""
 
 #. type: Title -
 #: en/git-bisect-lk2009.txt:1348
-#, fuzzy, no-wrap, priority:100
-#| msgid "'reference'"
+#, no-wrap, priority:100
 msgid "References"
-msgstr "'reference'"
+msgstr "Références"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:1351
