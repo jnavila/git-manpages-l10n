@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-04-04 19:51+0200\n"
-"PO-Revision-Date: 2020-04-10 21:38+0000\n"
+"PO-Revision-Date: 2020-04-13 20:11+0000\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -32547,48 +32547,88 @@ msgstr "'git mergetool' [--tool=<outil>] [-y | --[no-]prompt] [<fichier>...]\n"
 #, priority:240
 msgid "Use `git mergetool` to run one of several merge utilities to resolve merge conflicts.  It is typically run after 'git merge'."
 msgstr ""
+"Utilisez `git mergetool` pour lancer l'un des nombreux utilitaires de fusion "
+"afin de résoudre les conflits de fusion.  Il est généralement lancé après "
+"'git merge'."
 
 #. type: Plain text
 #: en/git-mergetool.txt:24
 #, priority:240
 msgid "If one or more <file> parameters are given, the merge tool program will be run to resolve differences on each file (skipping those without conflicts).  Specifying a directory will include all unresolved files in that path.  If no <file> names are specified, 'git mergetool' will run the merge tool program on every file with merge conflicts."
 msgstr ""
+"Si un ou plusieurs paramètres <fichier> sont donnés, le programme outil de "
+"fusion sera exécuté pour résoudre les différences sur chaque fichier (en "
+"sautant ceux qui n'ont pas de conflit).  La spécification d'un répertoire "
+"inclura tous les fichiers non résolus dans ce chemin.  Si aucun <fichier> "
+"nom n'est spécifié, 'git mergetool' lancera le programme de fusion sur "
+"chaque fichier ayant des conflits de fusion."
 
 #. type: Plain text
 #: en/git-mergetool.txt:33
 #, priority:240
 msgid "Use the merge resolution program specified by <tool>.  Valid values include emerge, gvimdiff, kdiff3, meld, vimdiff, and tortoisemerge. Run `git mergetool --tool-help` for the list of valid <tool> settings."
 msgstr ""
+"Utiliser le programme de résolution de fusion spécifié par <outil>.  Les "
+"valeurs valides comprennent emerge, gvimdiff, kdiff3, meld, vimdiff et "
+"tortoisemerge. Lancez `git mergetool --tool-help` pour obtenir la liste des "
+"paramètres <outil> valides."
 
 #. type: Plain text
 #: en/git-mergetool.txt:38
 #, priority:240
 msgid "If a merge resolution program is not specified, 'git mergetool' will use the configuration variable `merge.tool`.  If the configuration variable `merge.tool` is not set, 'git mergetool' will pick a suitable default."
 msgstr ""
+"Si un programme de résolution de fusion n'est pas spécifié, 'git mergetool' "
+"utilisera la variable de configuration `merge.tool`.  Si la variable de "
+"configuration `merge.tool` n'est pas définie, 'git mergetool' choisira une "
+"valeur par défaut appropriée."
 
 #. type: Plain text
 #: en/git-mergetool.txt:44
 #, priority:240
 msgid "You can explicitly provide a full path to the tool by setting the configuration variable `mergetool.<tool>.path`. For example, you can configure the absolute path to kdiff3 by setting `mergetool.kdiff3.path`. Otherwise, 'git mergetool' assumes the tool is available in PATH."
 msgstr ""
+"Vous pouvez explicitement fournir un chemin complet vers l'outil en "
+"définissant la variable de configuration `mergetool.<outil>.path`. Par "
+"exemple, vous pouvez configurer le chemin absolu vers kdiff3 en définissant "
+"`mergetool.kdiff3.path`. Sinon, 'git mergetool' suppose que l'outil est "
+"disponible dans PATH."
 
 #. type: Plain text
 #: en/git-mergetool.txt:49
 #, priority:240
 msgid "Instead of running one of the known merge tool programs, 'git mergetool' can be customized to run an alternative program by specifying the command line to invoke in a configuration variable `mergetool.<tool>.cmd`."
 msgstr ""
+"Au lieu d'exécuter un des programmes connus de l'outil de fusion, 'git "
+"mergetool' peut être personnalisé pour exécuter un programme alternatif en "
+"spécifiant la ligne de commande à invoquer dans une variable de "
+"configuration `mergetool.<outil>.cmd`."
 
 #. type: Plain text
 #: en/git-mergetool.txt:60
 #, priority:240
 msgid "When 'git mergetool' is invoked with this tool (either through the `-t` or `--tool` option or the `merge.tool` configuration variable) the configured command line will be invoked with `$BASE` set to the name of a temporary file containing the common base for the merge, if available; `$LOCAL` set to the name of a temporary file containing the contents of the file on the current branch; `$REMOTE` set to the name of a temporary file containing the contents of the file to be merged, and `$MERGED` set to the name of the file to which the merge tool should write the result of the merge resolution."
 msgstr ""
+"Lorsque 'git mergetool' est invoqué avec cet outil (soit par l'option `-t` "
+"ou `--tool` ou par la variable de configuration `merge.tool`) la ligne de "
+"commande configurée sera invoquée avec `$BASE` défini au nom d'un fichier "
+"temporaire contenant la base commune pour la fusion, si disponible ; `$LOCAL`"
+" défini au nom d'un fichier temporaire contenant le contenu du fichier sur "
+"la branche courante ; `$REMOTE` défini au nom d'un fichier temporaire "
+"contenant le contenu du fichier à fusionner, et `$MERGED` défini au nom du "
+"fichier dans lequel l'outil de fusion doit écrire le résultat de la "
+"résolution de la fusion."
 
 #. type: Plain text
 #: en/git-mergetool.txt:66
 #, priority:240
 msgid "If the custom merge tool correctly indicates the success of a merge resolution with its exit code, then the configuration variable `mergetool.<tool>.trustExitCode` can be set to `true`.  Otherwise, 'git mergetool' will prompt the user to indicate the success of the resolution after the custom tool has exited."
 msgstr ""
+"Si l'outil de fusion personnalisé indique correctement le succès d'une "
+"résolution de fusion dans son code de sortie, alors la variable de "
+"configuration `mergetool.<outil>.trustExitCode` peut être définie à `true`.  "
+"Sinon, 'git mergetool' demandera à l'utilisateur d'indiquer le succès de la "
+"résolution après que l'outil personnalisé soit sorti."
 
 #. type: Plain text
 #: en/git-mergetool.txt:69
@@ -32601,12 +32641,18 @@ msgstr "Afficher une liste des outils de fusion utilisables avec `--tool`."
 #, priority:240
 msgid "Don't prompt before each invocation of the merge resolution program.  This is the default if the merge resolution program is explicitly specified with the `--tool` option or with the `merge.tool` configuration variable."
 msgstr ""
+"Ne pas demander avant chaque invocation du programme de résolution de "
+"fusion.  C'est la valeur par défaut si le programme de résolution de fusion "
+"est explicitement spécifié avec l'option `--tool` ou avec la variable de "
+"configuration `merge.tool`."
 
 #. type: Plain text
 #: en/git-mergetool.txt:81
 #, priority:240
 msgid "Prompt before each invocation of the merge resolution program to give the user a chance to skip the path."
 msgstr ""
+"Demander avant chaque invocation du programme de résolution de fusion pour "
+"donner à l'utilisateur une chance de sauter le chemin."
 
 #. type: Labeled list
 #: en/git-mergetool.txt:83
@@ -32619,6 +32665,10 @@ msgstr "--gui"
 #, priority:240
 msgid "When 'git-mergetool' is invoked with the `-g` or `--gui` option the default merge tool will be read from the configured `merge.guitool` variable instead of `merge.tool`. If `merge.guitool` is not set, we will fallback to the tool configured under `merge.tool`."
 msgstr ""
+"Lorsque 'git-mergetool' est invoqué avec l'option `-g` ou `--gui`, l'outil "
+"de fusion par défaut sera lu à partir de la variable `merge.guitool` "
+"configurée au lieu de `merge.tool`. Si `merge.guitool` n'est pas défini, "
+"nous reviendrons à l'outil configuré sous `merge.tool`."
 
 #. type: Labeled list
 #: en/git-mergetool.txt:90
@@ -32631,30 +32681,43 @@ msgstr "--no-gui"
 #, priority:240
 msgid "This overrides a previous `-g` or `--gui` setting and reads the default merge tool will be read from the configured `merge.tool` variable."
 msgstr ""
+"Ceci prend le pas sur un réglage précédent de `-g` ou `--gui` et lit que "
+"l'outil de fusion par défaut à partir de la variable `merge.tool` configurée."
 
 #. type: Plain text
 #: en/git-mergetool.txt:101
 #, priority:240
 msgid "Process files in the order specified in the <orderfile>, which has one shell glob pattern per line.  This overrides the `diff.orderFile` configuration variable (see linkgit:git-config[1]).  To cancel `diff.orderFile`, use `-O/dev/null`."
 msgstr ""
+"Traiter les fichiers dans l'ordre spécifié dans le <fichier d'ordre>, qui a "
+"un motif glob shell par ligne.  Ceci remplace la variable de configuration "
+"`diff.orderFile` (voir linkgit:git-config[1]).  Pour annuler `diff.orderFile`"
+", utilisez `-O/dev/null`."
 
 #. type: Title -
 #: en/git-mergetool.txt:103
 #, no-wrap, priority:240
 msgid "TEMPORARY FILES"
-msgstr ""
+msgstr "FICHIERS TEMPORAIRES"
 
 #. type: Plain text
 #: en/git-mergetool.txt:107
 #, priority:240
 msgid "`git mergetool` creates `*.orig` backup files while resolving merges.  These are safe to remove once a file has been merged and its `git mergetool` session has completed."
 msgstr ""
+"`git mergetool` crée des fichiers de sauvegarde `*.orig` lors de la "
+"résolution des fusions.  Il est possible de les supprimer en toute sécurité "
+"une fois qu'un fichier a été fusionné et que sa session `git mergetool` est "
+"terminée."
 
 #. type: Plain text
 #: en/git-mergetool.txt:111
 #, priority:240
 msgid "Setting the `mergetool.keepBackup` configuration variable to `false` causes `git mergetool` to automatically remove the backup as files are successfully merged."
 msgstr ""
+"Définir la variable de configuration `mergetool.keepBackup` sur` false` fait "
+"que `git mergetool` supprime automatiquement la sauvegarde lorsque les "
+"fichiers sont correctement fusionnés."
 
 #. type: Title =
 #: en/git-merge-tree.txt:2
@@ -32708,18 +32771,30 @@ msgid ""
 "\t[--[no-]rerere-autoupdate] [-m <msg>] [-F <file>] [<commit>...]\n"
 "'git merge' (--continue | --abort | --quit)\n"
 msgstr ""
+"'git merge' [-n] [--stat] [--no-commit] [--squash] [--[no-]edit]\n"
+"\t[--no-verify] [-s <strategie>] [-X <option-de-strategie>] [-S[<id-clé>]]\n"
+"\t[--[no-]allow-unrelated-histories]\n"
+"\t[--[no-]rerere-autoupdate] [-m <msg>] [-F <fichier>] [<commit>...]\n"
+"'git merge' (--continue | --abort | --quit)\n"
 
 #. type: Plain text
 #: en/git-merge.txt:25
 #, priority:240
 msgid "Incorporates changes from the named commits (since the time their histories diverged from the current branch) into the current branch.  This command is used by 'git pull' to incorporate changes from another repository and can be used by hand to merge changes from one branch into another."
 msgstr ""
+"Intègre les modifications des commits nommés (depuis le moment où leur "
+"histoire a divergé de la branche actuelle) dans la branche actuelle.  Cette "
+"commande est utilisée par 'git pull' pour incorporer les modifications d'un "
+"autre dépôt et peut être utilisée à la main pour fusionner les modifications "
+"d'une branche dans une autre."
 
 #. type: Plain text
 #: en/git-merge.txt:28 en/git-pull.txt:40
 #, priority:240
 msgid "Assume the following history exists and the current branch is \"`master`\":"
 msgstr ""
+"Supposons que l'histoire suivante existe et que la branche actuelle est "
+"`master` :"
 
 #. type: delimited block -
 #: en/git-merge.txt:33
@@ -32729,12 +32804,20 @@ msgid ""
 "\t /\n"
 "    D---E---F---G master\n"
 msgstr ""
+"\t  A---B---C theme\n"
+"\t /\n"
+"    D---E---F---G master\n"
 
 #. type: Plain text
 #: en/git-merge.txt:40
 #, priority:240
 msgid "Then \"`git merge topic`\" will replay the changes made on the `topic` branch since it diverged from `master` (i.e., `E`) until its current commit (`C`) on top of `master`, and record the result in a new commit along with the names of the two parent commits and a log message from the user describing the changes."
 msgstr ""
+"Alors, \"`git merge theme`\" rejouera les modifications apportées à la "
+"branche \"theme\" puisqu’elle s’est écartée de `master` (c’est-à-dire `E`) "
+"jusqu’à son commit actuel (`C`) par dessus `master`, et enregistrera le "
+"résultat dans un nouveau commit comprenant les noms des deux parents et un "
+"message de validation de l’utilisateur décrivant les modifications."
 
 #. type: delimited block -
 #: en/git-merge.txt:45
@@ -32744,12 +32827,22 @@ msgid ""
 "\t /         \\\n"
 "    D---E---F---G---H master\n"
 msgstr ""
+"\t  A---B---C theme\n"
+"\t /         \\\n"
+"    D---E---F---G---H master\n"
 
 #. type: Plain text
 #: en/git-merge.txt:54
 #, priority:240
 msgid "The second syntax (\"`git merge --abort`\") can only be run after the merge has resulted in conflicts. 'git merge --abort' will abort the merge process and try to reconstruct the pre-merge state. However, if there were uncommitted changes when the merge started (and especially if those changes were further modified after the merge was started), 'git merge --abort' will in some cases be unable to reconstruct the original (pre-merge) changes. Therefore:"
 msgstr ""
+"La seconde syntaxe (\"`git merge --abort`\") ne peut être exécutée qu'après "
+"que la fusion ait entraîné des conflits. 'git merge --abort' annulera le "
+"processus de fusion et tentera de reconstruire l'état antérieur à la fusion. "
+"Cependant, s'il y a eu des changements non validés au début de la fusion (et "
+"surtout si ces changements ont été modifiés après le début de la fusion), "
+"'git merge --abort' sera dans certains cas incapable de reconstruire les "
+"modifications originales (avant la fusion). Par conséquent :"
 
 #. type: Plain text
 #: en/git-merge.txt:58
@@ -32759,60 +32852,86 @@ msgid ""
 "discouraged: while possible, it may leave you in a state that is hard to\n"
 "back out of in the case of a conflict.\n"
 msgstr ""
+"*Attention* : l'exécution de 'git merge' avec des modifications non "
+"triviales non validées est\n"
+"découragée : bien que possible, elle peut vous laisser dans un état duquel "
+"il est difficile de revenir en arrière\n"
+"en cas de conflit.\n"
 
 #. type: Plain text
 #: en/git-merge.txt:61
 #, priority:240
 msgid "The third syntax (\"`git merge --continue`\") can only be run after the merge has resulted in conflicts."
 msgstr ""
+"La troisième syntaxe (\"`git merge --continue`\") ne peut être exécutée "
+"qu'après que la fusion ait entraîné des conflits."
 
 #. type: Plain text
 #: en/git-merge.txt:69
 #, priority:240
 msgid "Set the commit message to be used for the merge commit (in case one is created)."
 msgstr ""
+"Définir le message de commit à utiliser pour le commit de fusion (dans le "
+"cas où un commit est créé)."
 
 #. type: Plain text
 #: en/git-merge.txt:72 en/git-merge.txt:84
 #, priority:240
 msgid "If `--log` is specified, a shortlog of the commits being merged will be appended to the specified message."
 msgstr ""
+"Si `--log` est spécifié, un journal court des commits en cours de fusion "
+"sera ajouté au message spécifié."
 
 #. type: Plain text
 #: en/git-merge.txt:76
 #, priority:240
 msgid "The 'git fmt-merge-msg' command can be used to give a good default for automated 'git merge' invocations. The automated message can include the branch description."
 msgstr ""
+"La commande 'git fmt-merge-msg' peut être utilisée pour donner une bonne "
+"valeur par défaut pour les invocations automatisées de 'git merge'. Le "
+"message automatisé peut inclure la description de la branche."
 
 #. type: Plain text
 #: en/git-merge.txt:81
 #, priority:240
 msgid "Read the commit message to be used for the merge commit (in case one is created)."
 msgstr ""
+"Lire le message de commit à utiliser pour le commit de fusion (dans le cas "
+"où un commit est créé)."
 
 #. type: Plain text
 #: en/git-merge.txt:94
 #, priority:240
 msgid "Silently overwrite ignored files from the merge result. This is the default behavior. Use `--no-overwrite-ignore` to abort."
 msgstr ""
+"Écraser silencieusement les fichiers ignorés du résultat de la fusion. C'est "
+"le comportement par défaut. Utilisez `--no overwrite-ignore` pour abandonner."
 
 #. type: Plain text
 #: en/git-merge.txt:98
 #, priority:240
 msgid "Abort the current conflict resolution process, and try to reconstruct the pre-merge state."
 msgstr ""
+"Abandonner le processus actuel de résolution des conflits, et essayer de "
+"reconstruire l'état antérieur à la fusion."
 
 #. type: Plain text
 #: en/git-merge.txt:103
 #, priority:240
 msgid "If there were uncommitted worktree changes present when the merge started, 'git merge --abort' will in some cases be unable to reconstruct these changes. It is therefore recommended to always commit or stash your changes before running 'git merge'."
 msgstr ""
+"S'il y avait des modifications non validées dans l'arbre de travail lorsque "
+"la fusion a commencé, `git merge --abort` sera dans certains cas incapable "
+"de reconstruire ces changements. Il est donc recommandé de toujours valider "
+"ou remiser vos modifications avant de lancer 'git merge'."
 
 #. type: Plain text
 #: en/git-merge.txt:106
 #, priority:240
 msgid "'git merge --abort' is equivalent to 'git reset --merge' when `MERGE_HEAD` is present."
 msgstr ""
+"'git merge --abort' est équivalent à 'git reset --merge' quand `MERGE_HEAD` "
+"est présent."
 
 #. type: Plain text
 #: en/git-merge.txt:110
@@ -32825,150 +32944,224 @@ msgstr "Oublier la fusion en cours. Laisser l'index et l'arbre de travail en l'�
 #, priority:240
 msgid "After a 'git merge' stops due to conflicts you can conclude the merge by running 'git merge --continue' (see \"HOW TO RESOLVE CONFLICTS\" section below)."
 msgstr ""
+"Après l'arrêt d'un 'git merge' en raison de conflits, vous pouvez conclure "
+"la fusion en lançant 'git merge --continue' (voir la section \"COMMENT "
+"RÉSOUDRE LES CONFLITS\" ci-dessous)."
 
 #. type: Plain text
 #: en/git-merge.txt:120
 #, priority:240
 msgid "Commits, usually other branch heads, to merge into our branch.  Specifying more than one commit will create a merge with more than two parents (affectionately called an Octopus merge)."
 msgstr ""
+"Les commits, généralement les sommets des autres branches, à fusionner avec "
+"notre branche.  En spécifiant plus d'un commit, on crée une fusion avec plus "
+"de deux parents (affectueusement appelée fusion Octopus)."
 
 #. type: Plain text
 #: en/git-merge.txt:124
 #, priority:240
 msgid "If no commit is given from the command line, merge the remote-tracking branches that the current branch is configured to use as its upstream.  See also the configuration section of this manual page."
 msgstr ""
+"Si aucun commit n'est donné sur la ligne de commande, fusionner les branches "
+"de suivi à distance que la branche actuelle est configurée pour utiliser "
+"comme sa branche amont.  Voir aussi la section configuration de cette page "
+"de manuel."
 
 #. type: Plain text
 #: en/git-merge.txt:128
 #, priority:240
 msgid "When `FETCH_HEAD` (and no other commit) is specified, the branches recorded in the `.git/FETCH_HEAD` file by the previous invocation of `git fetch` for merging are merged to the current branch."
 msgstr ""
+"Lorsque `FETCH_HEAD` (et aucun autre commit) est spécifié, les branches "
+"enregistrées dans le fichier `.git/FETCH_HEAD` par l'invocation précédente "
+"de `git fetch` pour la fusion sont fusionnées à la branche courante."
 
 #. type: Title -
 #: en/git-merge.txt:131
 #, no-wrap, priority:240
 msgid "PRE-MERGE CHECKS"
-msgstr ""
+msgstr "VÉRIFICATIONS AVANT LA FUSION"
 
 #. type: Plain text
 #: en/git-merge.txt:139
 #, priority:240
 msgid "Before applying outside changes, you should get your own work in good shape and committed locally, so it will not be clobbered if there are conflicts.  See also linkgit:git-stash[1].  'git pull' and 'git merge' will stop without doing anything when local uncommitted changes overlap with files that 'git pull'/'git merge' may need to update."
 msgstr ""
+"Avant d'appliquer des modifications extérieures, vous devez faire en sorte "
+"que votre propre travail soit en bon état et validé localement, afin qu'il "
+"ne soit pas écrasé en cas de conflits.  Voir aussi linkgit:git-stash[1]. "
+"'git pull' et 'git merge' s'arrêteront sans rien faire lorsque des "
+"modifications locales non validées chevaucheront des fichiers que 'git pull'/"
+"'git merge' devront mettre à jour."
 
 #. type: Plain text
 #: en/git-merge.txt:145
 #, priority:240
 msgid "To avoid recording unrelated changes in the merge commit, 'git pull' and 'git merge' will also abort if there are any changes registered in the index relative to the `HEAD` commit.  (Special narrow exceptions to this rule may exist depending on which merge strategy is in use, but generally, the index must match HEAD.)"
 msgstr ""
+"Pour éviter d'enregistrer des modifications sans rapport dans le commit de "
+"fusion, 'git pull' et 'git merge' seront également annulés s'il y a des "
+"modifications enregistrées dans l'index par rapport au commit `HEAD`.  (Des "
+"exceptions rares à cette règle peuvent exister selon la stratégie de fusion "
+"utilisée, mais en général, l'index doit correspondre à HEAD)."
 
 #. type: Plain text
 #: en/git-merge.txt:148
 #, priority:240
 msgid "If all named commits are already ancestors of `HEAD`, 'git merge' will exit early with the message \"Already up to date.\""
 msgstr ""
+"Si tous les commit nommés sont déjà des ancêtres de `HEAD`, 'git merge' "
+"sortira plus tôt avec le message « Déjà à jour »."
 
 #. type: Title -
 #: en/git-merge.txt:150
 #, no-wrap, priority:240
 msgid "FAST-FORWARD MERGE"
-msgstr ""
+msgstr "FUSION EN AVANCE RAPIDE"
 
 #. type: Plain text
 #: en/git-merge.txt:160
 #, priority:240
 msgid "Often the current branch head is an ancestor of the named commit.  This is the most common case especially when invoked from 'git pull': you are tracking an upstream repository, you have committed no local changes, and now you want to update to a newer upstream revision.  In this case, a new commit is not needed to store the combined history; instead, the `HEAD` (along with the index) is updated to point at the named commit, without creating an extra merge commit."
 msgstr ""
+"Souvent, le sommet de la branche actuelle est un ancêtre du commit nommé.  "
+"C'est le cas le plus courant, surtout lorsqu'il est invoqué depuis 'git "
+"pull' : vous suivez un dépôt amont, vous n'avez pas validé de modifications "
+"locales, et vous voulez maintenant mettre à jour vers une révision amont "
+"plus récente.  Dans ce cas, un nouveau commit n'est pas nécessaire pour "
+"stocker l'historique combiné ; à la place, la `HEAD` (avec l'index) est mise "
+"à jour pour pointer vers le commit nommé, sans créer un commit de fusion "
+"supplémentaire."
 
 #. type: Plain text
 #: en/git-merge.txt:162
 #, priority:240
 msgid "This behavior can be suppressed with the `--no-ff` option."
-msgstr ""
+msgstr "Ce comportement peut être supprimé avec l'option `--no-off`."
 
 #. type: Title -
 #: en/git-merge.txt:164
 #, no-wrap, priority:240
 msgid "TRUE MERGE"
-msgstr ""
+msgstr "VÉRITABLE FUSION"
 
 #. type: Plain text
 #: en/git-merge.txt:169
 #, priority:240
 msgid "Except in a fast-forward merge (see above), the branches to be merged must be tied together by a merge commit that has both of them as its parents."
 msgstr ""
+"Sauf dans le cas d'une fusion en avance rapide (voir ci-dessus), les "
+"branches à fusionner doivent être liées par un commit de fusion qui a pour "
+"parents les deux branches."
 
 #. type: Plain text
 #: en/git-merge.txt:174
 #, priority:240
 msgid "A merged version reconciling the changes from all branches to be merged is committed, and your `HEAD`, index, and working tree are updated to it.  It is possible to have modifications in the working tree as long as they do not overlap; the update will preserve them."
 msgstr ""
+"Une version fusionnée réconciliant les changements de toutes les branches à "
+"fusionner est validées, et votre `HEAD`, votre index et votre arbre de "
+"travail sont mis à jour en conséquence.  Il est possible d'avoir des "
+"modifications dans l'arbre de travail tant qu'elles ne se chevauchent pas ; "
+"la mise à jour les préservera."
 
 #. type: Plain text
 #: en/git-merge.txt:177
 #, priority:240
 msgid "When it is not obvious how to reconcile the changes, the following happens:"
 msgstr ""
+"Lorsqu'il n'est pas évident de réconcilier les modifications, voici ce qui "
+"se passe :"
 
 #. type: Plain text
 #: en/git-merge.txt:179
 #, priority:240
 msgid "The `HEAD` pointer stays the same."
-msgstr ""
+msgstr "Le pointeur `HEAD` reste le même."
 
 #. type: Plain text
 #: en/git-merge.txt:180
 #, priority:240
 msgid "The `MERGE_HEAD` ref is set to point to the other branch head."
 msgstr ""
+"La référence `MERGE_HEAD` est définie pour pointer vers l'autre tête de "
+"branche."
 
 #. type: Plain text
 #: en/git-merge.txt:182
 #, priority:240
 msgid "Paths that merged cleanly are updated both in the index file and in your working tree."
 msgstr ""
+"Les chemins qui ont été fusionnés proprement sont mis à jour à la fois dans "
+"le fichier d'index et dans votre arbre de travail."
 
 #. type: Plain text
 #: en/git-merge.txt:188
 #, priority:240
 msgid "For conflicting paths, the index file records up to three versions: stage 1 stores the version from the common ancestor, stage 2 from `HEAD`, and stage 3 from `MERGE_HEAD` (you can inspect the stages with `git ls-files -u`).  The working tree files contain the result of the \"merge\" program; i.e. 3-way merge results with familiar conflict markers `<<<` `===` `>>>`."
 msgstr ""
+"En cas de conflit de chemins, le fichier d'index enregistre jusqu'à trois "
+"versions : l'étape 1 stocke la version de l'ancêtre commun, l'étape 2 de "
+"`HEAD`, et l'étape 3 de `MERGE_HEAD` (vous pouvez inspecter les étapes avec `"
+"git ls-files -u`).  Les fichiers de l'arbre de travail contiennent le "
+"résultat du programme \"merge\", c'est-à-dire les résultats de la fusion à 3 "
+"points avec les marqueurs de conflit familiers `<<<` `===` `>>>`."
 
 #. type: Plain text
 #: en/git-merge.txt:192
 #, priority:240
 msgid "No other changes are made.  In particular, the local modifications you had before you started merge will stay the same and the index entries for them stay as they were, i.e. matching `HEAD`."
 msgstr ""
+"Aucune autre modification n'est apportée.  En particulier, les modifications "
+"locales que vous aviez avant de commencer la fusion resteront les mêmes et "
+"les entrées de l'index qui les concernent resteront telles quelles, c'est-à-"
+"dire correspondant à `HEAD`."
 
 #. type: Plain text
 #: en/git-merge.txt:195
 #, priority:240
 msgid "If you tried a merge which resulted in complex conflicts and want to start over, you can recover with `git merge --abort`."
 msgstr ""
+"Si vous avez essayé une fusion qui a donné lieu à des conflits complexes et "
+"que vous voulez recommencer, vous pouvez vous remettre à zéro avec `git "
+"merge --abort`."
 
 #. type: Title -
 #: en/git-merge.txt:197
 #, no-wrap, priority:240
 msgid "MERGING TAG"
-msgstr ""
+msgstr "LA FUSION D'ÉTIQUETTE"
 
 #. type: Plain text
 #: en/git-merge.txt:204
 #, priority:240
 msgid "When merging an annotated (and possibly signed) tag, Git always creates a merge commit even if a fast-forward merge is possible, and the commit message template is prepared with the tag message.  Additionally, if the tag is signed, the signature check is reported as a comment in the message template. See also linkgit:git-tag[1]."
 msgstr ""
+"Lors de la fusion d'une étiquette annotée (et éventuellement signée), Git "
+"crée toujours un commit de fusion même si une fusion en avance rapide est "
+"possible, et le modèle de message de validation est préparé avec le message "
+"de l'étiquette.  De plus, si l'étiquette est signée, la vérification de la "
+"signature est signalée sous forme de commentaire dans le modèle de message. "
+"Voir aussi linkgit:git-tag[1]."
 
 #. type: Plain text
 #: en/git-merge.txt:208
 #, priority:240
 msgid "When you want to just integrate with the work leading to the commit that happens to be tagged, e.g. synchronizing with an upstream release point, you may not want to make an unnecessary merge commit."
 msgstr ""
+"Lorsque vous souhaitez simplement intégrer le travail menant au commit qui "
+"se trouve être étiqueté, par exemple lors de la synchronisation avec un "
+"point de publication en amont, vous ne voudrez peut-être pas faire un commit "
+"de fusion inutile."
 
 #. type: Plain text
 #: en/git-merge.txt:212
 #, priority:240
 msgid "In such a case, you can \"unwrap\" the tag yourself before feeding it to `git merge`, or pass `--ff-only` when you do not have any work on your own. e.g."
 msgstr ""
+"Dans ce cas, vous pouvez \"déballer\" l'étiquette vous-même avant de la "
+"donner à `git merge`, ou passer `--ff only` lorsque vous n'avez pas de "
+"travail à faire vous-même par exemple"
 
 #. type: delimited block -
 #: en/git-merge.txt:217
@@ -32978,24 +33171,39 @@ msgid ""
 "git merge v1.2.3^0\n"
 "git merge --ff-only v1.2.3\n"
 msgstr ""
+"git fetch origin\n"
+"git merge v1.2.3^0\n"
+"git merge --ff-only v1.2.3\n"
 
 #. type: Title -
 #: en/git-merge.txt:221
 #, no-wrap, priority:240
 msgid "HOW CONFLICTS ARE PRESENTED"
-msgstr ""
+msgstr "COMMENT LES CONFLITS SONT PRÉSENTÉS"
 
 #. type: Plain text
 #: en/git-merge.txt:230
 #, priority:240
 msgid "During a merge, the working tree files are updated to reflect the result of the merge.  Among the changes made to the common ancestor's version, non-overlapping ones (that is, you changed an area of the file while the other side left that area intact, or vice versa) are incorporated in the final result verbatim.  When both sides made changes to the same area, however, Git cannot randomly pick one side over the other, and asks you to resolve it by leaving what both sides did to that area."
 msgstr ""
+"Lors d'une fusion, les fichiers de l'arbre de travail sont mis à jour pour "
+"refléter le résultat de la fusion.  Parmi les modifications apportées à la "
+"version de l'ancêtre commun, celles qui ne se chevauchent pas (c'est-à-dire "
+"que vous avez modifié une zone du fichier alors que l'autre côté a laissé "
+"cette zone intacte, ou vice versa) sont incorporées directement dans le "
+"résultat final.  Cependant, lorsque les deux côtés ont apporté des "
+"modifications à la même zone, Git ne peut pas choisir au hasard un côté par "
+"rapport à l'autre, et vous demande de résoudre le problème en laissant ce "
+"que les deux côtés ont fait à cette zone."
 
 #. type: Plain text
 #: en/git-merge.txt:233
 #, priority:240
 msgid "By default, Git uses the same style as the one used by the \"merge\" program from the RCS suite to present such a conflicted hunk, like this:"
 msgstr ""
+"Par défaut, Git utilise le même style que celui utilisé par le programme \""
+"merge\" de la suite RCS pour présenter une telle section conflictuelle, "
+"comme ceci :"
 
 #. type: delimited block -
 #: en/git-merge.txt:244
@@ -33011,24 +33219,46 @@ msgid ""
 ">>>>>>> theirs:sample.txt\n"
 "And here is another line that is cleanly resolved or unmodified.\n"
 msgstr ""
+"Voici des lignes qui sont soit inchangées par rapport à l'ancêtre\n"
+"commun, ou résolues proprement car un seul côté a changé.\n"
+"<<<<<<< yours : exemple.txt\n"
+"La résolution des conflits est difficile ;\n"
+"allons faire du shopping.\n"
+"=======\n"
+"Git facilite la résolution des conflits.\n"
+">>>>>>> theirs : exemple.txt\n"
+"Et voici une autre ligne qui est résolue proprement ou non modifiée.\n"
 
 #. type: Plain text
 #: en/git-merge.txt:249
 #, priority:240
 msgid "The area where a pair of conflicting changes happened is marked with markers `<<<<<<<`, `=======`, and `>>>>>>>`.  The part before the `=======` is typically your side, and the part afterwards is typically their side."
 msgstr ""
+"La zone où une paire de modifications contradictoires s'est produite est "
+"marquée par les marqueurs `<<<<<<<`, `========`, et `>>>>>>>>>>``.  La "
+"partie qui précède le `=======` est généralement votre côté, et la partie "
+"qui suit est généralement leur côté."
 
 #. type: Plain text
 #: en/git-merge.txt:255
 #, priority:240
 msgid "The default format does not show what the original said in the conflicting area.  You cannot tell how many lines are deleted and replaced with Barbie's remark on your side.  The only thing you can tell is that your side wants to say it is hard and you'd prefer to go shopping, while the other side wants to claim it is easy."
 msgstr ""
+"Le format par défaut ne montre pas ce que l'original a dit dans la zone de "
+"conflit.  Vous ne pouvez pas savoir combien de lignes sont supprimées et "
+"remplacées par la remarque de Barbie à votre côté.  La seule chose que vous "
+"pouvez dire, c'est que votre côté veut dire que c'est difficile et que vous "
+"préférez faire du shopping, alors que l'autre côté veut prétendre que c'est "
+"facile."
 
 #. type: Plain text
 #: en/git-merge.txt:259
 #, priority:240
 msgid "An alternative style can be used by setting the \"merge.conflictStyle\" configuration variable to \"diff3\".  In \"diff3\" style, the above conflict may look like this:"
 msgstr ""
+"Un autre style peut être utilisé en réglant la variable de configuration \""
+"merge.conflictStyle\" sur \"diff3\".  Dans le style \"diff3\", le conflit ci-"
+"dessus peut ressembler à ceci :"
 
 #. type: delimited block -
 #: en/git-merge.txt:272
@@ -33046,96 +33276,139 @@ msgid ""
 ">>>>>>> theirs:sample.txt\n"
 "And here is another line that is cleanly resolved or unmodified.\n"
 msgstr ""
+"Voici les lignes qui sont soit inchangées par rapport à l'ancêtre\n"
+"commun, ou proprement résolu parce qu'un seul côté a changé.\n"
+"<<<<<<<< yours:exemple.txt\n"
+"La résolution des conflits est difficile ;\n"
+"Allons faire du shopping.\n"
+"|||||||\n"
+"La résolution des conflits est difficile.\n"
+"=======\n"
+"Git facilite la résolution des conflits.\n"
+">>>>>>> theirs:exemple.txt\n"
+"Et voici une autre ligne qui est proprement résolue ou non modifiée.\n"
 
 #. type: Plain text
 #: en/git-merge.txt:280
 #, priority:240
 msgid "In addition to the `<<<<<<<`, `=======`, and `>>>>>>>` markers, it uses another `|||||||` marker that is followed by the original text.  You can tell that the original just stated a fact, and your side simply gave in to that statement and gave up, while the other side tried to have a more positive attitude.  You can sometimes come up with a better resolution by viewing the original."
 msgstr ""
+"En plus des marqueurs `<<<<<<<<`, `=======`, et `>>>>>>>>>>>, il utilise un "
+"autre marqueur `||||||||` qui est suivi par le texte original.  Vous pouvez "
+"voir que l'original ne faisait qu'énoncer un fait, et que votre camp a "
+"simplement cédé à cette déclaration et a abandonné, tandis que l'autre camp "
+"a essayé d'avoir une attitude plus positive.  Vous pouvez parfois aboutir à "
+"une meilleure résolution en regardant l'original."
 
 #. type: Title -
 #: en/git-merge.txt:283
 #, no-wrap, priority:240
 msgid "HOW TO RESOLVE CONFLICTS"
-msgstr ""
+msgstr "COMMENT RÉSOUDRE LES CONFLITS"
 
 #. type: Plain text
 #: en/git-merge.txt:286
 #, priority:240
 msgid "After seeing a conflict, you can do two things:"
-msgstr ""
+msgstr "Après avoir vu un conflit, vous pouvez faire deux choses :"
 
 #. type: Plain text
 #: en/git-merge.txt:291
 #, priority:240
 msgid "Decide not to merge.  The only clean-ups you need are to reset the index file to the `HEAD` commit to reverse 2. and to clean up working tree changes made by 2. and 3.; `git merge --abort` can be used for this."
 msgstr ""
+"Décider de ne pas fusionner.  Les seuls nettoyages dont vous avez besoin "
+"sont de réinitialiser le fichier index au commit `HEAD` à inverser 2. et "
+"pour nettoyer les modification d’arbre de travail effectuées par 2. et 3.  ; "
+"`git merge --abort` peut être utilisé pour cela."
 
 #. type: Plain text
 #: en/git-merge.txt:298
 #, priority:240
 msgid "Resolve the conflicts.  Git will mark the conflicts in the working tree.  Edit the files into shape and 'git add' them to the index.  Use 'git commit' or 'git merge --continue' to seal the deal. The latter command checks whether there is a (interrupted) merge in progress before calling 'git commit'."
 msgstr ""
+"Résoudre les conflits.  Git marquera les conflits dans l’arbre de travail.  "
+"Modifier les fichiers en forme et les «git add» à l’index.  Utiliser 'git "
+"commit' ou 'git merge --continue' pour sceller l’affaire. Cette dernière "
+"commande vérifie s’il y a une fusion (interrompue) en cours avant d’appeler "
+"'git commit'."
 
 #. type: Plain text
 #: en/git-merge.txt:300
 #, priority:240
 msgid "You can work through the conflict with a number of tools:"
-msgstr ""
+msgstr "Vous pouvez résoudre le conflit à l'aide d'un certain nombre d'outils :"
 
 #. type: Plain text
 #: en/git-merge.txt:303
 #, priority:240
 msgid "Use a mergetool.  `git mergetool` to launch a graphical mergetool which will work you through the merge."
 msgstr ""
+"Utiliser un mergetool.  `git mergetool` pour lancer un outil de fusion "
+"graphique qui vous permettra de travailler sur la fusion."
 
 #. type: Plain text
 #: en/git-merge.txt:307
 #, priority:240
 msgid "Look at the diffs.  `git diff` will show a three-way diff, highlighting changes from both the `HEAD` and `MERGE_HEAD` versions."
 msgstr ""
+"Regarder les différences. ` git diff` affichera une différence à trois "
+"points, en mettant en évidence les modifications apportées par les versions "
+"`HEAD` et `MERGE_HEAD`."
 
 #. type: Plain text
 #: en/git-merge.txt:311
 #, priority:240
 msgid "Look at the diffs from each branch. `git log --merge -p <path>` will show diffs first for the `HEAD` version and then the `MERGE_HEAD` version."
 msgstr ""
+"Regarder les différences de chaque branche. `git log --merge -p <chemin>` "
+"montrera les différences d'abord pour la version `HEAD` et ensuite pour la "
+"version `MERGE_HEAD`."
 
 #. type: Plain text
 #: en/git-merge.txt:316
 #, priority:240
 msgid "Look at the originals.  `git show :1:filename` shows the common ancestor, `git show :2:filename` shows the `HEAD` version, and `git show :3:filename` shows the `MERGE_HEAD` version."
 msgstr ""
+"Regarder les originaux.  `git show :1:nom-de-fichier` montre l'ancêtre "
+"commun, `git show :2:nom-de-fichier` montre la version `HEAD`, et `git show "
+":3:nom-de-fichier` montre la version `MERGE_HEAD`."
 
 #. type: Plain text
 #: en/git-merge.txt:323
 #, priority:240
 msgid "Merge branches `fixes` and `enhancements` on top of the current branch, making an octopus merge:"
 msgstr ""
+"Fusionner les branches `corrections` et \"améliorations` par dessus la "
+"branche actuelle, en faisant une fusion octopus :"
 
 #. type: delimited block -
 #: en/git-merge.txt:326
 #, no-wrap, priority:240
 msgid "$ git merge fixes enhancements\n"
-msgstr ""
+msgstr "$ git merge corrections améliorations\n"
 
 #. type: Plain text
 #: en/git-merge.txt:330
 #, priority:240
 msgid "Merge branch `obsolete` into the current branch, using `ours` merge strategy:"
 msgstr ""
+"Fusionner la branche `obsolète` dans la branche actuelle, en utilisant la "
+"stratégie de fusion `ours` :"
 
 #. type: delimited block -
 #: en/git-merge.txt:333
 #, no-wrap, priority:240
 msgid "$ git merge -s ours obsolete\n"
-msgstr ""
+msgstr "$ git merge -s ours obsolète\n"
 
 #. type: Plain text
 #: en/git-merge.txt:337
 #, priority:240
 msgid "Merge branch `maint` into the current branch, but do not make a new commit automatically:"
 msgstr ""
+"Fusionner la branche `maint` dans la branche actuelle, mais ne pas faire un "
+"nouveau commit automatiquement :"
 
 #. type: delimited block -
 #: en/git-merge.txt:340
@@ -33148,24 +33421,35 @@ msgstr "$ git merge --no-commit maint\n"
 #, priority:240
 msgid "This can be used when you want to include further changes to the merge, or want to write your own merge commit message."
 msgstr ""
+"Ceci peut être utilisé lorsque vous souhaitez inclure d'autres modifications "
+"à la fusion ou lorsque vous souhaitez rédiger votre propre message de "
+"validation de la fusion."
 
 #. type: Plain text
 #: en/git-merge.txt:348
 #, priority:240
 msgid "You should refrain from abusing this option to sneak substantial changes into a merge commit.  Small fixups like bumping release/version name would be acceptable."
 msgstr ""
+"Vous devriez vous abstenir d'abuser de cette possibilité pour introduire en "
+"douce des modifications substantielles dans un commit de fusion.  De petites "
+"corrections comme le remplacement du nom de la version ou de la livraison "
+"seraient acceptables."
 
 #. type: Labeled list
 #: en/git-merge.txt:356
 #, no-wrap, priority:240
 msgid "branch.<name>.mergeOptions"
-msgstr ""
+msgstr "branch.<nom>.mergeOptions"
 
 #. type: Plain text
 #: en/git-merge.txt:360
 #, priority:240
 msgid "Sets default options for merging into branch <name>. The syntax and supported options are the same as those of 'git merge', but option values containing whitespace characters are currently not supported."
 msgstr ""
+"Définir les options par défaut pour la fusion dans la branche <nom>. La "
+"syntaxe et les options prises en charge sont les mêmes que celles de 'git "
+"merge', mais les valeurs d'options contenant des espaces ne sont "
+"actuellement pas prises en charge."
 
 #. type: Plain text
 #: en/git-merge.txt:369
@@ -33789,7 +34073,7 @@ msgstr ""
 #: en/git-notes.txt:183 en/git-rebase.txt:328 en/merge-options.txt:116
 #, no-wrap, priority:240
 msgid "-s <strategy>"
-msgstr ""
+msgstr "-s <stratégie>"
 
 #. type: Plain text
 #: en/git-notes.txt:191
@@ -36428,7 +36712,7 @@ msgstr "Afficher l'avancement."
 #: en/git-prune.txt:48 en/git-worktree.txt:192
 #, no-wrap, priority:240
 msgid "--expire <time>"
-msgstr ""
+msgstr "--expire <date>"
 
 #. type: Plain text
 #: en/git-prune.txt:50
@@ -47592,60 +47876,110 @@ msgid ""
 "'git stash' create [<message>]\n"
 "'git stash' store [-m|--message <message>] [-q|--quiet] <commit>\n"
 msgstr ""
+"'git stash' list [<options>]\n"
+"'git stash' show [<options>] [<remisage>]\n"
+"'git stash' drop [-q|--quiet] [<remisage>]\n"
+"'git stash' ( pop | apply ) [--index] [-q|--quiet] [<remisage>]\n"
+"'git stash' branch <nom-de-branche> [<remisage>]\n"
+"'git stash' [push [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]\n"
+"\t     [-u|--include-untracked] [-a|--all] [-m|--message <message>]\n"
+"\t     [--pathspec-from-file=<fichier> [--pathspec-file-nul]]\n"
+"\t     [--] [<spéc-de-chemin>...]]\n"
+"'git stash' clear\n"
+"'git stash' create [<message>]\n"
+"'git stash' store [-m|--message <message>] [-q|--quiet] <commit>\n"
 
 #. type: Plain text
 #: en/git-stash.txt:31
 #, priority:240
 msgid "Use `git stash` when you want to record the current state of the working directory and the index, but want to go back to a clean working directory.  The command saves your local modifications away and reverts the working directory to match the `HEAD` commit."
 msgstr ""
+"Utilisez `git stash` lorsque vous voulez enregistrer l'état actuel du "
+"répertoire de travail et de l'index, mais que vous voulez revenir à un "
+"répertoire de travail propre.  La commande enregistre vos modifications "
+"locales et rétablit le répertoire de travail pour qu'il corresponde au "
+"commit `HEAD`."
 
 #. type: Plain text
 #: en/git-stash.txt:39
 #, ignore-ellipsis, priority:240
 msgid "The modifications stashed away by this command can be listed with `git stash list`, inspected with `git stash show`, and restored (potentially on top of a different commit) with `git stash apply`.  Calling `git stash` without any arguments is equivalent to `git stash push`.  A stash is by default listed as \"WIP on 'branchname' ...\", but you can give a more descriptive message on the command line when you create one."
 msgstr ""
+"Les modifications remisées par cette commande peuvent être listées avec `git "
+"stash list`, inspectées avec `git stash show`, et restaurées ("
+"potentiellement au dessus d'un commit différent) avec `git stash apply`.  "
+"Appeler `git stash` sans aucun argument est équivalent à `git stash push`.  "
+"Un remisage est par défaut listé comme \"WIP sur 'nom-de-branche' ...\", "
+"mais vous pouvez donner un message plus descriptif sur la ligne de commande "
+"lorsque vous en créez un."
 
 #. type: Plain text
 #: en/git-stash.txt:46
 #, priority:240
 msgid "The latest stash you created is stored in `refs/stash`; older stashes are found in the reflog of this reference and can be named using the usual reflog syntax (e.g. `stash@{0}` is the most recently created stash, `stash@{1}` is the one before it, `stash@{2.hours.ago}` is also possible). Stashes may also be referenced by specifying just the stash index (e.g. the integer `n` is equivalent to `stash@{n}`)."
 msgstr ""
+"Le dernier remisage que vous avez créé est stocké dans `refs/stash` ; les "
+"anciens remisages se trouvent dans le reflog de cette référence et peuvent "
+"être nommés en utilisant la syntaxe habituelle du reflog (par exemple "
+"`stash@{0}` est le dernier remisage créé, `stash@{1}` est celui qui le "
+"précède, `stash@{2.hours.ago}` est également possible). On peut également "
+"référencer les remisages en spécifiant uniquement l'index du remisage (par "
+"exemple, l'entier `n` est équivalent à `stash@{n}`)."
 
 #. type: Labeled list
 #: en/git-stash.txt:50
 #, ignore-ellipsis, no-wrap, priority:240
 msgid "push [-p|--patch] [-k|--[no-]keep-index] [-u|--include-untracked] [-a|--all] [-q|--quiet] [-m|--message <message>] [--pathspec-from-file=<file> [--pathspec-file-nul]] [--] [<pathspec>...]"
 msgstr ""
+"push [-p|--patch] [-k|--[no-]keep-index] [-u|--include-untracked] [-a|--all] "
+"[-q|--quiet] [-m|--message <message>] [--pathspec-from-file=<fichier> "
+"[--pathspec-file-nul]] [--] [<spéc-de-chemin>...]"
 
 #. type: Plain text
 #: en/git-stash.txt:56
 #, priority:240
 msgid "Save your local modifications to a new 'stash entry' and roll them back to HEAD (in the working tree and in the index).  The <message> part is optional and gives the description along with the stashed state."
 msgstr ""
+"Enregistre vos modifications locales dans une nouvelle \"entrée de remisage\""
+" et les ramène dans HEAD (dans l'arbre de travail et dans l'index).  La "
+"partie <message> est facultative et donne la description ainsi que l'état du "
+"remisage."
 
 #. type: Plain text
 #: en/git-stash.txt:62
 #, priority:240
 msgid "For quickly making a snapshot, you can omit \"push\".  In this mode, non-option arguments are not allowed to prevent a misspelled subcommand from making an unwanted stash entry.  The two exceptions to this are `stash -p` which acts as alias for `stash push -p` and pathspec elements, which are allowed after a double hyphen `--` for disambiguation."
 msgstr ""
+"Pour faire rapidement un instantané, vous pouvez omettre \"push\".  Dans ce "
+"mode, les arguments de non-optionnels ne sont pas autorisés pour empêcher "
+"une sous-commande mal orthographiée de faire une entrée indésirable dans le "
+"remisage.  Les deux exceptions sont `stash -p` qui agit comme alias pour `"
+"push -p` et les éléments spéc-de-chemin, qui sont autorisés après un double "
+"trait d'union `--` pour la désambiguïsation."
 
 #. type: Labeled list
 #: en/git-stash.txt:63
 #, no-wrap, priority:240
 msgid "save [-p|--patch] [-k|--[no-]keep-index] [-u|--include-untracked] [-a|--all] [-q|--quiet] [<message>]"
 msgstr ""
+"save [-p|--patch] [-k|--[no-]keep-index] [-u|--include-untracked] [-a|--all] "
+"[-q|--quiet] [<message>]"
 
 #. type: Plain text
 #: en/git-stash.txt:69
 #, priority:240
 msgid "This option is deprecated in favour of 'git stash push'.  It differs from \"stash push\" in that it cannot take pathspec.  Instead, all non-option arguments are concatenated to form the stash message."
 msgstr ""
+"Cette option est déconseillée au profit de l'option 'git stash push\".  Elle "
+"diffère de \"stash push\" en ce qu'elle ne peut pas prendre de spéc-de-"
+"chemin.  Au lieu de cela, tous les arguments non liés à une option sont "
+"concaténés pour former le message de remisage."
 
 #. type: Labeled list
 #: en/git-stash.txt:70
 #, no-wrap, priority:240
 msgid "list [<options>]"
-msgstr ""
+msgstr "list [<options>]"
 
 #. type: Plain text
 #: en/git-stash.txt:77
@@ -59041,7 +59375,7 @@ msgid ""
 "Commit:     <committer>\n"
 "CommitDate: <committer date>\n"
 msgstr ""
-"commit <epreinte>\n"
+"commit <empreinte>\n"
 "Author:     <auteur>\n"
 "AuthorDate: <date d'auteur>\n"
 "Commit:     <validateur>\n"
