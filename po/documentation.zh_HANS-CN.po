@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-04-04 19:51+0200\n"
 "PO-Revision-Date: 2020-04-20 08:29+0000\n"
-"Last-Translator: 冉 <ranto2012@163.com>\n"
+"Last-Translator: Yifan Gu <gyf304@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: zh_HANS-CN\n"
 "MIME-Version: 1.0\n"
@@ -6335,9 +6335,9 @@ msgstr "删除的内容以“-”开头的行表示。您可以通过将“-”�
 # 译者：末尾两个字节可能被删减，如果翻译为中文标点会出现半个汉字
 #. type: Labeled list
 #: en/git-add.txt:379
-#, fuzzy, no-wrap, priority:300
+#, no-wrap, priority:300
 msgid "modified content"
-msgstr ", "
+msgstr "修改的内容"
 
 #. type: Plain text
 #: en/git-add.txt:386
@@ -13717,7 +13717,7 @@ msgstr "创建浅克隆，只包含指定的时间之后的历史记录。"
 #: en/git-clone.txt:228
 #, priority:300
 msgid "Create a shallow clone with a history, excluding commits reachable from a specified remote branch or tag.  This option can be specified multiple times."
-msgstr ""
+msgstr "创建一个有历史的浅克隆，不包含可以被指定远程分支或标签访问的提交。本选项可以使用多次。"
 
 #. type: Labeled list
 #: en/git-clone.txt:229 en/git-submodule.txt:433
@@ -13730,36 +13730,49 @@ msgstr "--[no-]single-branch"
 #, priority:300
 msgid "Clone only the history leading to the tip of a single branch, either specified by the `--branch` option or the primary branch remote's `HEAD` points at.  Further fetches into the resulting repository will only update the remote-tracking branch for the branch this option was used for the initial cloning.  If the HEAD at the remote did not point at any branch when `--single-branch` clone was made, no remote-tracking branch is created."
 msgstr ""
+"仅克隆直到单一分支末尾的历史，该分支被 `--branch` 选项或主分支远程 `HEAD` "
+"指定。被创建仓库之后的抓取将只更新在克隆时被指定的远程跟踪分支。如果在 `--single-branch` 克隆时，远程 HEAD "
+"未指向任何分支，则不会创建远程跟踪分支。"
 
 #. type: Plain text
 #: en/git-clone.txt:245
 #, priority:300
 msgid "Don't clone any tags, and set `remote.<remote>.tagOpt=--no-tags` in the config, ensuring that future `git pull` and `git fetch` operations won't follow any tags. Subsequent explicit tag fetches will still work, (see linkgit:git-fetch[1])."
 msgstr ""
+"不克隆任何标签，并在配置中设置 `remote.<remote>.tagOpt=--no-tags` ，确保将来的`git pull`和`git "
+"fetch`操作不会跟随任何标签。随后的显式标签抓取仍将起作用（参阅 linkgit：git-fetch [1]）。"
 
 #. type: Plain text
 #: en/git-clone.txt:250
 #, priority:300
 msgid "Can be used in conjunction with `--single-branch` to clone and maintain a branch with no references other than a single cloned branch. This is useful e.g. to maintain minimal clones of the default branch of some repository for search indexing."
 msgstr ""
+"可以与 `--single-branch` "
+"结合使用，以克隆和维护除单个克隆分支外没有其他引用的分支。这在例如维护某些仓库的默认分支的最小克隆以进行搜索索引时有用。"
 
 #. type: Labeled list
 #: en/git-clone.txt:251
 #, no-wrap, priority:300
 msgid "--recurse-submodules[=<pathspec]"
-msgstr ""
+msgstr "--recurse-submodules[=<路径规范]"
 
 #. type: Plain text
 #: en/git-clone.txt:259
 #, priority:300
 msgid "After the clone is created, initialize and clone submodules within based on the provided pathspec.  If no pathspec is provided, all submodules are initialized and cloned.  This option can be given multiple times for pathspecs consisting of multiple entries.  The resulting clone has `submodule.active` set to the provided pathspec, or \".\" (meaning all submodules) if no pathspec is provided."
 msgstr ""
+"创建克隆后，根据提供的路径规范初始化并克隆其中的子模块。如果未提供路径规范，则将初始化并克隆所有子模块。对于由多个条目组成的路径规范，可以多次赋予此选项。"
+"生成的克隆将把 `submodule.active` 设为提供的路径规范。如果未提供路径规范，生成的克隆将把 `submodule.active` 设为 "
+"\".\" （表示所有子模块）。"
 
 #. type: Plain text
 #: en/git-clone.txt:266
 #, priority:300
 msgid "Submodules are initialized and cloned using their default settings. This is equivalent to running `git submodule update --init --recursive <pathspec>` immediately after the clone is finished. This option is ignored if the cloned repository does not have a worktree/checkout (i.e. if any of `--no-checkout`/`-n`, `--bare`, or `--mirror` is given)"
 msgstr ""
+"子模块使用其默认设置进行初始化和克隆。这等效于克隆完成后立即运行 `git submodule update --init --recursive "
+"<路径规范>`。如果克隆的仓库没有工作区/检出（即给出了 `--no-checkout`/`-n`，`--bare` 或 "
+"`--mirror`中的任何一个选项），则忽略此选项。"
 
 #. type: Labeled list
 #: en/git-clone.txt:267
@@ -13771,7 +13784,7 @@ msgstr "--[no-]shallow-submodules"
 #: en/git-clone.txt:269
 #, priority:300
 msgid "All submodules which are cloned will be shallow with a depth of 1."
-msgstr ""
+msgstr "所有克隆的子模块都将是浅克隆，深度为1。"
 
 #. type: Labeled list
 #: en/git-clone.txt:270
@@ -13784,66 +13797,71 @@ msgstr "--[no-]remote-submodules"
 #, priority:300
 msgid "All submodules which are cloned will use the status of the submodule's remote-tracking branch to update the submodule, rather than the superproject's recorded SHA-1. Equivalent to passing `--remote` to `git submodule update`."
 msgstr ""
+"克隆的所有子模块将使用子模块的远程跟踪分支的状态来更新子模块，而不是超级项目的已记录SHA-1。等同于将`--remote` 传递给 `git "
+"submodule update`。"
 
 #. type: Labeled list
 #: en/git-clone.txt:276 en/git-init.txt:56
 #, no-wrap, priority:300
 msgid "--separate-git-dir=<git dir>"
-msgstr ""
+msgstr "--separate-git-dir=<git目录>"
 
 #. type: Plain text
 #: en/git-clone.txt:282
 #, priority:300
 msgid "Instead of placing the cloned repository where it is supposed to be, place the cloned repository at the specified directory, then make a filesystem-agnostic Git symbolic link to there.  The result is Git repository can be separated from working tree."
 msgstr ""
+"不将克隆的存储库放置在原处，而是将克隆的存储库放置在指定的目录中，然后在此处建立与文件系统无关的Git符号链接。这可以将Git仓库与工作区分离。"
 
 #. type: Labeled list
 #: en/git-clone.txt:283 en/git-submodule.txt:427
 #, no-wrap, priority:300
 msgid "-j <n>"
-msgstr ""
+msgstr "-j <n>"
 
 #. type: Labeled list
 #: en/git-clone.txt:284 en/git-submodule.txt:428
 #, no-wrap, priority:300
 msgid "--jobs <n>"
-msgstr ""
+msgstr "--jobs <n>"
 
 #. type: Plain text
 #: en/git-clone.txt:287
 #, priority:300
 msgid "The number of submodules fetched at the same time.  Defaults to the `submodule.fetchJobs` option."
-msgstr ""
+msgstr "同时抓取的子模块数。默认为 `submodule.fetchJobs` 选项。"
 
 #. type: Labeled list
 #: en/git-clone.txt:288 en/git-fetch-pack.txt:114 en/git-ls-remote.txt:83 en/git-push.txt:50 en/pull-fetch-param.txt:1
 #, no-wrap, priority:300
 msgid "<repository>"
-msgstr ""
+msgstr "<仓库>"
 
 #. type: Plain text
 #: en/git-clone.txt:292
 #, priority:300
 msgid "The (possibly remote) repository to clone from.  See the <<URLS,GIT URLS>> section below for more information on specifying repositories."
-msgstr ""
+msgstr "要克隆的（可能是远程的）仓库。有关指定仓库的更多信息，参阅下面的 <<URLS,GIT URLS>> 部分。"
 
 #. type: Labeled list
 #: en/git-clone.txt:293 en/git-cvsserver.txt:53 en/git-daemon.txt:220 en/git-receive-pack.txt:41 en/git-send-pack.txt:95 en/git-upload-archive.txt:57 en/git-upload-pack.txt:44
 #, no-wrap, priority:300
 msgid "<directory>"
-msgstr ""
+msgstr "<目录>"
 
 #. type: Plain text
 #: en/git-clone.txt:299
 #, priority:300
 msgid "The name of a new directory to clone into.  The \"humanish\" part of the source repository is used if no directory is explicitly given (`repo` for `/path/to/repo.git` and `foo` for `host.xz:foo/.git`).  Cloning into an existing directory is only allowed if the directory is empty."
 msgstr ""
+"要克隆到的新目录的名称。如果未明确指定目录，则使用源仓库中的“人性化”部分（对于 `/path/to/repo.git` 而言，为 `repo`；对于 "
+"`host.xz:foo/.git` 而言，为 `foo`）。仅当目录为空时才允许克隆到现有目录。"
 
 #. type: Plain text
 #: en/git-clone.txt:307
 #, priority:300
 msgid "Clone from upstream:"
-msgstr ""
+msgstr "从上游克隆："
 
 #. type: delimited block -
 #: en/git-clone.txt:312
@@ -13853,12 +13871,15 @@ msgid ""
 "$ cd my-linux\n"
 "$ make\n"
 msgstr ""
+"$ git clone git://git.kernel.org/pub/scm/.../linux.git my-linux\n"
+"$ cd my-linux\n"
+"$ make\n"
 
 #. type: Plain text
 #: en/git-clone.txt:316
 #, priority:300
 msgid "Make a local clone that borrows from the current directory, without checking things out:"
-msgstr ""
+msgstr "制作一个从当前目录借用的本地克隆，而无需进行检出："
 
 #. type: delimited block -
 #: en/git-clone.txt:321
@@ -13868,12 +13889,15 @@ msgid ""
 "$ cd ../copy\n"
 "$ git show-branch\n"
 msgstr ""
+"$ git clone -l -s -n . ../copy\n"
+"$ cd ../copy\n"
+"$ git show-branch\n"
 
 #. type: Plain text
 #: en/git-clone.txt:325
 #, priority:300
 msgid "Clone from upstream while borrowing from an existing local directory:"
-msgstr ""
+msgstr "从上游克隆时借用本地目录："
 
 #. type: delimited block -
 #: en/git-clone.txt:331
@@ -13884,18 +13908,22 @@ msgid ""
 "\tmy-linux\n"
 "$ cd my-linux\n"
 msgstr ""
+"$ git clone --reference /git/linux.git \\\n"
+"\tgit://git.kernel.org/pub/scm/.../linux.git \\\n"
+"\tmy-linux\n"
+"$ cd my-linux\n"
 
 #. type: Plain text
 #: en/git-clone.txt:335
 #, priority:300
 msgid "Create a bare repository to publish your changes to the public:"
-msgstr ""
+msgstr "创建一个裸仓库，以将您的更改发布给公众："
 
 #. type: delimited block -
 #: en/git-clone.txt:338
 #, no-wrap, priority:300
 msgid "$ git clone --bare -l /home/proj/.git /pub/scm/proj.git\n"
-msgstr ""
+msgstr "$ git clone --bare -l /home/proj/.git /pub/scm/proj.git\n"
 
 #. type: Title =
 #: en/git-column.txt:2
@@ -28966,18 +28994,23 @@ msgid ""
 "\t  [--separate-git-dir <git dir>]\n"
 "\t  [--shared[=<permissions>]] [directory]\n"
 msgstr ""
+"'git init' [-q | --quiet] [--bare] [--template=<模板目录>]\n"
+"\t  [--separate-git-dir <git 目录>]\n"
+"\t  [--shared[=<权限>]] [目录]\n"
 
 #. type: Plain text
 #: en/git-init.txt:24
 #, priority:300
 msgid "This command creates an empty Git repository - basically a `.git` directory with subdirectories for `objects`, `refs/heads`, `refs/tags`, and template files.  An initial `HEAD` file that references the HEAD of the master branch is also created."
 msgstr ""
+"该命令创建一个空的Git存储库 - 本质上是一个 `.git` 目录，其中包含 `objects`、`refs/heads`、`refs/"
+"tags`和模板文件的子目录。还将创建一个引用master分支 HEAD 的初始 `HEAD` 文件。"
 
 #. type: Plain text
 #: en/git-init.txt:27
-#, priority:300
+#, fuzzy, priority:300
 msgid "If the `$GIT_DIR` environment variable is set then it specifies a path to use instead of `./.git` for the base of the repository."
-msgstr ""
+msgstr "如果设置了 `$GIT_DIR` 环境变量，那么它将指定用于仓库基础的路径，而不是 `./.git` ."
 
 #. type: Plain text
 #: en/git-init.txt:32
