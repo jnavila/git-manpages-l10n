@@ -44,16 +44,20 @@ ifndef V
 endif
 
 -include ../GIT-VERSION-FILE
+ASCIIDOC_EXTRA = -d manpage -I.. -I. -rasciidoctor-extensions
+ASCIIDOC_EXTRA += -amanmanual='Git Manual' \
+                  -amansource='Git $(GIT_VERSION)' \
+                  -amanversion=$(GIT_VERSION)
+ASCIIDOC_EXTRA += -alitdd='\--'
 
 $(HTML_FILTER): %.html: %.txt
-	$(QUIET_ASCIIDOC)asciidoctor -b xhtml5 -d manpage -d manpage -I.. -I. -rasciidoctor-extensions \
-        -amanversion=$(GIT_VERSION) -amanmanual='Git Manual' -amansource='Git  $(GIT_VERSION)' $<
+	$(QUIET_ASCIIDOC)asciidoctor -b xhtml5 \
+        $(ASCIIDOC_EXTRA) $<
 
 MANPAGES=$(patsubst %.txt,%.1,$(MAN_FILTER))
 $(MANPAGES): %.1: %.txt
-	$(QUIET_ASCIIDOC)asciidoctor -b manpage -d manpage -o $@ \
-        -I. -I.. -rasciidoctor-extensions \
-        -amanmanual='Git Manual' -amansource='Git $(GIT_VERSION)' $<
+	$(QUIET_ASCIIDOC)asciidoctor -b manpage -o $@ \
+        $(ASCIIDOC_EXTRA) $<
 
 man: $(MANPAGES)
 html: $(HTML_FILTER)
