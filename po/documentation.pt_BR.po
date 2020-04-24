@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-04-04 19:51+0200\n"
-"PO-Revision-Date: 2020-04-23 20:25+0000\n"
+"PO-Revision-Date: 2020-04-24 08:30+0000\n"
 "Last-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
@@ -381,7 +381,7 @@ msgstr "linkgit:git-instaweb[1]"
 #: en/cmds-ancillaryinterrogators.txt:21
 #, priority:100
 msgid "Instantly browse your working repository in gitweb."
-msgstr "Procura instantaneamente em seu repositório de trabalho na gitweb."
+msgstr "Navegue instantaneamente no seu repositório de trabalho com o gitweb."
 
 #. type: Labeled list
 #: en/cmds-ancillaryinterrogators.txt:22
@@ -393,7 +393,7 @@ msgstr "linkgit:git-merge-tree[1]"
 #: en/cmds-ancillaryinterrogators.txt:24
 #, priority:100
 msgid "Show three-way merge without touching index."
-msgstr "Mostra as três vias de merge sem mexer no index."
+msgstr "exibe as três maneira de mesclagem sem mexer no índice."
 
 #. type: Labeled list
 #: en/cmds-ancillaryinterrogators.txt:25
@@ -5610,10 +5610,14 @@ msgstr "--refmap=<refspec>"
 
 #. type: Plain text
 #: en/fetch-options.txt:147
-#, fuzzy, priority:220
-#| msgid "When fetching refs listed on the command line, use the specified refspec (can be given more than once) to map the refs to remote-tracking branches, instead of the values of `remote.*.fetch` configuration variables for the remote repository.  See section on \"Configured Remote-tracking Branches\" for details."
+#, priority:220
 msgid "When fetching refs listed on the command line, use the specified refspec (can be given more than once) to map the refs to remote-tracking branches, instead of the values of `remote.*.fetch` configuration variables for the remote repository.  Providing an empty `<refspec>` to the `--refmap` option causes Git to ignore the configured refspecs and rely entirely on the refspecs supplied as command-line arguments. See section on \"Configured Remote-tracking Branches\" for details."
-msgstr "Ao buscar refs listadas na linha de comando, use o refspec especificado (pode ser fornecido mais de uma vez) para mapear os refs para filiais de rastreamento remoto, em vez dos valores das variáveis de configuração `remote.*.Fetch` para o repositório remoto. Consulte a seção \"Ramificações de rastreamento remoto configuradas\" para detalhes."
+msgstr ""
+"Ao buscar refs listadas na linha de comando, use o refspec especificado ("
+"pode ser fornecido mais de uma vez) para mapear os refs para filiais de "
+"rastreamento remoto, em vez dos valores das variáveis de configuração "
+"`remote.*.Fetch` para o repositório remoto. Consulte a seção \"Ramificações "
+"de rastreamento remoto configuradas\" para detalhes."
 
 #. type: Labeled list
 #: en/fetch-options.txt:149 en/git-describe.txt:55 en/git-fsck.txt:41 en/git-ls-remote.txt:27 en/git-name-rev.txt:24 en/git-push.txt:186 en/git-show-ref.txt:41
@@ -14395,8 +14399,8 @@ msgstr "--template=<template_directory>"
 #, priority:300
 msgid "Specify the directory from which templates will be used; (See the \"TEMPLATE DIRECTORY\" section of linkgit:git-init[1].)"
 msgstr ""
-"Especifique o diretório a partir do qual os modelos serão usados; (Consulte "
-"a seção \"MODELO DE DIRETÓRIO\" do linkgit:git-init[1].)"
+"Informe o diretório de onde os modelos serão usados; (Consulte a seção \""
+"DIRETÓRIO MODELO\" do linkgit:git-init[1].)"
 
 #. type: Labeled list
 #: en/git-clone.txt:197
@@ -30052,19 +30056,23 @@ msgstr "git-init-db(1)"
 #: en/git-init-db.txt:7
 #, priority:100
 msgid "git-init-db - Creates an empty Git repository"
-msgstr ""
+msgstr "git-init-db - Cria um repositório Git vazio"
 
 #. type: Plain text
 #: en/git-init-db.txt:13
 #, no-wrap, priority:100
 msgid "'git init-db' [-q | --quiet] [--bare] [--template=<template_directory>] [--separate-git-dir <git dir>] [--shared[=<permissions>]]\n"
 msgstr ""
+"'git init-db' [-q | --quiet] [--bare] [--template=<diretório_modelo>] "
+"[--separate-git-dir <git dir>] [--shared[=<permissões>]]\n"
 
 #. type: Plain text
 #: en/git-init-db.txt:20
 #, priority:100
 msgid "This is a synonym for linkgit:git-init[1].  Please refer to the documentation of that command."
 msgstr ""
+"Este é um sinônimo para linkgit:git-init[1].  Para referências deste "
+"comando, favor consultar a documentação."
 
 #. type: Title =
 #: en/git-init.txt:2
@@ -30151,8 +30159,8 @@ msgstr ""
 #, priority:300
 msgid "Specify the directory from which templates will be used.  (See the \"TEMPLATE DIRECTORY\" section below.)"
 msgstr ""
-"Especifique o diretório de onde os modelos serão usados.  (Consulte a seção "
-"\"MODELO DE DIRETÓRIO\" abaixo.)"
+"Informe o diretório de onde os modelos serão usados.  (Consulte a seção \""
+"DIRETÓRIO MODELO\" abaixo.)"
 
 #. type: Plain text
 #: en/git-init.txt:62
@@ -30273,51 +30281,53 @@ msgstr ""
 #: en/git-init.txt:113
 #, no-wrap, priority:300
 msgid "TEMPLATE DIRECTORY"
-msgstr ""
+msgstr "DIRETÓRIO MODELO"
 
 #. type: Plain text
 #: en/git-init.txt:117
 #, priority:300
 msgid "Files and directories in the template directory whose name do not start with a dot will be copied to the `$GIT_DIR` after it is created."
 msgstr ""
+"Os arquivos e diretórios no diretório modelo cujo nome não começa com um "
+"ponto serão copiados para o `$GIT_DIR` após a sua criação."
 
 #. type: Plain text
 #: en/git-init.txt:119
 #, priority:300
 msgid "The template directory will be one of the following (in order):"
-msgstr ""
+msgstr "O diretório modelo será um dos seguintes (em ordem):"
 
 #. type: Plain text
 #: en/git-init.txt:121
 #, priority:300
 msgid "the argument given with the `--template` option;"
-msgstr ""
+msgstr "o argumento fornecido com a opção `--template`;"
 
 #. type: Plain text
 #: en/git-init.txt:123
 #, priority:300
 msgid "the contents of the `$GIT_TEMPLATE_DIR` environment variable;"
-msgstr ""
+msgstr "o conteúdo da variável de ambiente `$GIT_TEMPLATE_DIR`;"
 
 #. type: Plain text
 #: en/git-init.txt:125
 #, priority:300
 msgid "the `init.templateDir` configuration variable; or"
-msgstr ""
+msgstr "a variável de configuração `init.templateDir`; ou"
 
 #. type: Plain text
 #: en/git-init.txt:127
 #, priority:300
 msgid "the default template directory: `/usr/share/git-core/templates`."
-msgstr ""
+msgstr "A predefinição do diretório modelo: `/usr/share/git-core/templates`."
 
 #. type: Plain text
 #: en/git-init.txt:130
 #, priority:300
 msgid "The default template directory includes some directory structure, suggested \"exclude patterns\" (see linkgit:gitignore[5]), and sample hook files."
 msgstr ""
-"O diretório de modelos predefinidos inclui alguma estrutura de diretórios, "
-"sugeridos em \"padrões de exclusão\" (consulte linkgit:gitignore[5]) e os "
+"A predefinição do diretório modelo inclui alguma estrutura de diretórios, \""
+"padrões de exclusão\" sugeridos (consulte linkgit:gitignore[5]) e os "
 "arquivos gancho de amostra."
 
 #. type: Plain text
@@ -30325,6 +30335,8 @@ msgstr ""
 #, priority:300
 msgid "The sample hooks are all disabled by default. To enable one of the sample hooks rename it by removing its `.sample` suffix."
 msgstr ""
+"Por predefinição os ganchos de amostra estão todos desativados. Para ativar "
+"um dos ganchos de amostra, renomeie-o removendo o sufixo `.sample`."
 
 #. type: Plain text
 #: en/git-init.txt:135
@@ -30337,7 +30349,7 @@ msgstr ""
 #: en/git-init.txt:139
 #, no-wrap, priority:300
 msgid "Start a new Git repository for an existing code base"
-msgstr ""
+msgstr "Inicie um novo repositório Git para uma base de código já existente"
 
 #. type: delimited block -
 #: en/git-init.txt:146
@@ -30348,24 +30360,28 @@ msgid ""
 "$ git add .     <2>\n"
 "$ git commit    <3>\n"
 msgstr ""
+"$ cd /path/to/my/codebase\n"
+"$ git init      <1>\n"
+"$ git add .     <2>\n"
+"$ git commit    <3>\n"
 
 #. type: Plain text
 #: en/git-init.txt:149
 #, priority:300
 msgid "Create a /path/to/my/codebase/.git directory."
-msgstr ""
+msgstr "Cria um diretório /path/to/my/codebase/.git."
 
 #. type: Plain text
 #: en/git-init.txt:150
 #, priority:300
 msgid "Add all existing files to the index."
-msgstr ""
+msgstr "Adicione todos os arquivos existentes ao índice."
 
 #. type: Plain text
 #: en/git-init.txt:151
 #, priority:300
 msgid "Record the pristine state as the first commit in the history."
-msgstr ""
+msgstr "Registre o estado intocado como o primeiro commit no histórico."
 
 #. type: Title =
 #: en/git-instaweb.txt:2
@@ -30378,6 +30394,8 @@ msgstr "git-instaweb(1)"
 #, priority:100
 msgid "git-instaweb - Instantly browse your working repository in gitweb"
 msgstr ""
+"git-instaweb - Navegue instantaneamente no seu repositório de trabalho com o "
+"gitweb"
 
 #. type: Plain text
 #: en/git-instaweb.txt:14
@@ -30387,18 +30405,23 @@ msgid ""
 "               [--browser=<browser>]\n"
 "'git instaweb' [--start] [--stop] [--restart]\n"
 msgstr ""
+"'git instaweb' [--local] [--httpd=<httpd>] [--port=<port>]\n"
+"               [--browser=<browser>]\n"
+"'git instaweb' [--start] [--stop] [--restart]\n"
 
 #. type: Plain text
 #: en/git-instaweb.txt:19
 #, priority:100
 msgid "A simple script to set up `gitweb` and a web server for browsing the local repository."
 msgstr ""
+"Um script simples para configurar o `gitweb` e um servidor da web para "
+"navegar no repositório local."
 
 #. type: Plain text
 #: en/git-instaweb.txt:26
 #, priority:100
 msgid "Only bind the web server to the local IP (127.0.0.1)."
-msgstr ""
+msgstr "Amarre o servidor da web apenas ao endereço IP local (127.0.0.1)."
 
 #. type: Labeled list
 #: en/git-instaweb.txt:28
@@ -30411,6 +30434,11 @@ msgstr "--httpd"
 #, priority:100
 msgid "The HTTP daemon command-line that will be executed.  Command-line options may be specified here, and the configuration file will be added at the end of the command-line.  Currently apache2, lighttpd, mongoose, plackup, python and webrick are supported.  (Default: lighttpd)"
 msgstr ""
+"A linha de comando do daemon HTTP que será executado.  As opções da linha de "
+"comando podem ser informadas aqui e o arquivo de configuração será "
+"adicionado no final da linha de comando.  Atualmente são compatíveis, "
+"apache2, lighttpd, mongoose, plackup, python e webrick.  (Predefinição: "
+"lighttpd)"
 
 #. type: Labeled list
 #: en/git-instaweb.txt:37
@@ -30423,6 +30451,8 @@ msgstr "--module-path"
 #, priority:100
 msgid "The module path (only needed if httpd is Apache).  (Default: /usr/lib/apache2/modules)"
 msgstr ""
+"O caminho do módulo (é apenas necessário caso o httpd seja o Apache).  "
+"(Predefinição: /usr/lib/apache2/modules)"
 
 #. type: Labeled list
 #: en/git-instaweb.txt:42
@@ -30434,7 +30464,7 @@ msgstr "--port"
 #: en/git-instaweb.txt:44
 #, priority:100
 msgid "The port number to bind the httpd to.  (Default: 1234)"
-msgstr ""
+msgstr "O número da porta que será associada ao httpd.  (Predefinição: 1234)"
 
 #. type: Labeled list
 #: en/git-instaweb.txt:46
@@ -30456,7 +30486,7 @@ msgstr ""
 #: en/git-instaweb.txt:53
 #, no-wrap, priority:100
 msgid "start"
-msgstr ""
+msgstr "start"
 
 #. type: Labeled list
 #: en/git-instaweb.txt:54
@@ -30469,12 +30499,14 @@ msgstr "--start"
 #, priority:100
 msgid "Start the httpd instance and exit.  Regenerate configuration files as necessary for spawning a new instance."
 msgstr ""
+"Inicie o servidor httpd e encerre.  Gere novamente os arquivos de "
+"configuração para gerar uma nova instância conforme seja necessário."
 
 #. type: Labeled list
 #: en/git-instaweb.txt:58
 #, no-wrap, priority:100
 msgid "stop"
-msgstr ""
+msgstr "stop"
 
 #. type: Labeled list
 #: en/git-instaweb.txt:59
@@ -30487,12 +30519,14 @@ msgstr "--stop"
 #, priority:100
 msgid "Stop the httpd instance and exit.  This does not generate any of the configuration files for spawning a new instance, nor does it close the browser."
 msgstr ""
+"Pare o servidor httpd e encerre.  Isso não gera nenhum dos arquivos de "
+"configuração para gerar uma nova instância, nem fecha o navegador."
 
 #. type: Labeled list
 #: en/git-instaweb.txt:64
 #, no-wrap, priority:100
 msgid "restart"
-msgstr ""
+msgstr "restart"
 
 #. type: Labeled list
 #: en/git-instaweb.txt:65
@@ -30505,12 +30539,14 @@ msgstr "--restart"
 #, priority:100
 msgid "Restart the httpd instance and exit.  Regenerate configuration files as necessary for spawning a new instance."
 msgstr ""
+"Reinicia o servidor httpd e encerre.  Gere novamente os arquivos de "
+"configuração para gerar uma nova instância conforme seja necessário."
 
 #. type: Plain text
 #: en/git-instaweb.txt:73
 #, priority:100
 msgid "You may specify configuration in your .git/config"
-msgstr ""
+msgstr "Você pode definir a sua configuração em seu `.git/config`"
 
 #. type: delimited block -
 #: en/git-instaweb.txt:81
@@ -30523,6 +30559,12 @@ msgid ""
 "\tbrowser = konqueror\n"
 "\tmodulePath = /usr/lib/apache2/modules\n"
 msgstr ""
+"[instaweb]\n"
+"\tlocal = true\n"
+"\thttpd = apache2 -f\n"
+"\tport = 4321\n"
+"\tbrowser = konqueror\n"
+"\tmodulePath = /usr/lib/apache2/modules\n"
 
 #. type: Plain text
 #: en/git-instaweb.txt:87
@@ -30555,72 +30597,117 @@ msgid ""
 "'git interpret-trailers' [<options>] [(--trailer <token>[(=|:)<value>])...] [<file>...]\n"
 "'git interpret-trailers' [<options>] [--parse] [<file>...]\n"
 msgstr ""
+"'git interpret-trailers' [<opções>] [(--trailer <token>[(=|:)<valor>])...] "
+"[<arquivo>...]\n"
+"'git interpret-trailers' [<opções>] [--parse] [<arquivo>...]\n"
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:19
 #, priority:100
 msgid "Help parsing or adding 'trailers' lines, that look similar to RFC 822 e-mail headers, at the end of the otherwise free-form part of a commit message."
 msgstr ""
+"Ajuda a analisar ou adicionar linhas 'trailers' que se parecem com os "
+"cabeçalhos de e-mail segundo a norma RFC 822 no final ou na parte livre de "
+"uma mensagem de commit."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:23
 #, priority:100
 msgid "This command reads some patches or commit messages from either the <file> arguments or the standard input if no <file> is specified. If `--parse` is specified, the output consists of the parsed trailers."
 msgstr ""
+"Este comando lê alguns patches ou faz o commit das mensagens dos argumentos "
+"<file> ou da entrada predefinida se nenhum <file> seja definido. Caso "
+"`--parse` seja definido a saída consistirá nos trailers analisados."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:27
 #, priority:100
 msgid "Otherwise, this command applies the arguments passed using the `--trailer` option, if any, to the commit message part of each input file. The result is emitted on the standard output."
 msgstr ""
+"Caso contrário, este comando aplica os argumentos passados usando a opção "
+"`trailer`, caso exista, à parte da mensagem de commit de cada arquivo de "
+"entrada. O resultado é emitido na saída predefinida."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:32
 #, priority:100
 msgid "Some configuration variables control the way the `--trailer` arguments are applied to each commit message and the way any existing trailer in the commit message is changed. They also make it possible to automatically add some trailers."
 msgstr ""
+"Algumas variáveis de configuração controlam a maneira como os argumentos do "
+"`--trailer` são aplicados a cada mensagem de commit e a maneira como "
+"qualquer `trailer` existente na mensagem de commit é alterado. Eles também "
+"possibilitam adicionar automaticamente alguns `trailers`."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:39
 #, priority:100
 msgid "By default, a '<token>=<value>' or '<token>:<value>' argument given using `--trailer` will be appended after the existing trailers only if the last trailer has a different (<token>, <value>) pair (or if there is no existing trailer). The <token> and <value> parts will be trimmed to remove starting and trailing whitespace, and the resulting trimmed <token> and <value> will appear in the message like this:"
 msgstr ""
+"É predefinido que um argumento informado '<token>=<value>' ou "
+"'<token>:<value>' usando `trailer` será anexado após os trailers existentes "
+"caso o último trailer tenha um par (<token>, <value>), (ou caso não exista "
+"nenhum `trailer`). As partes <token> e <value> serão aparados para remover "
+"os espaços em branco iniciais e finais, o aparado resultante aparecerá na "
+"mensagem da seguinte maneira:"
 
 #. type: delimited block -
 #: en/git-interpret-trailers.txt:42
 #, no-wrap, priority:100
 msgid "token: value\n"
-msgstr ""
+msgstr "token: value\n"
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:46
 #, priority:100
 msgid "This means that the trimmed <token> and <value> will be separated by `': '` (one colon followed by one space)."
 msgstr ""
+"Significa que o <token> e o <value> aparado e será separado por `': '` (um "
+"cólon seguido por um espaço)."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:52
 #, priority:100
 msgid "By default the new trailer will appear at the end of all the existing trailers. If there is no existing trailer, the new trailer will appear after the commit message part of the output, and, if there is no line with only spaces at the end of the commit message part, one blank line will be added before the new trailer."
 msgstr ""
+"É predefinido que o novo `trailer` aparecerá no final de todos os `trailers` "
+"existentes. Caso não exista, o novo `trailer` aparecerá na saída após a "
+"parte da mensagem do commit, caso não haja uma linha com apenas espaços no "
+"final da parte da mensagem do commit, uma linha em branco será adicionada "
+"antes do novo `trailer`."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:62
 #, priority:100
 msgid "Existing trailers are extracted from the input message by looking for a group of one or more lines that (i) is all trailers, or (ii) contains at least one Git-generated or user-configured trailer and consists of at least 25% trailers.  The group must be preceded by one or more empty (or whitespace-only) lines.  The group must either be at the end of the message or be the last non-whitespace lines before a line that starts with '---' (followed by a space or the end of the line). Such three minus signs start the patch part of the message. See also `--no-divider` below."
 msgstr ""
+"Os `trailers` existentes são extraídos da mensagem de entrada ao procurar um "
+"grupo de uma ou mais linhas que (i) são todos os `trailers` ou (ii) contenha "
+"pelo menos um `trailer` gerado pelo Git ou configurado pelo usuário e "
+"consiste em pelo menos 25% dos `trailers`.  O grupo deve ser precedido por "
+"uma ou mais linhas vazias (ou somente com espaço em branco).  O grupo deve "
+"estar no final da mensagem ou ser as últimas linhas que não sejam espaços em "
+"branco antes de uma linha que começa com '---' (seguida por um espaço ou o "
+"final da linha).  Esses três sinais de menos iniciam a parte do patch da "
+"mensagem. Consulte também a opção `--no-divider` abaixo."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:67
 #, priority:100
 msgid "When reading trailers, there can be whitespaces after the token, the separator and the value. There can also be whitespaces inside the token and the value. The value may be split over multiple lines with each subsequent line starting with whitespace, like the \"folding\" in RFC 822."
 msgstr ""
+"Ao ler `trailers` pode haver espaços em branco após o token, o separador e o "
+"valor. Também pode haver espaços em branco no token e no valor. O valor pode "
+"ser dividido em várias linhas, com cada linha subsequente começando com um "
+"espaço em branco, como a descrição \"folding\" (dobra) na norma RFC 822."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:71
 #, priority:100
 msgid "Note that 'trailers' do not follow and are not intended to follow many rules for RFC 822 headers. For example they do not follow the encoding rules and probably many other rules."
 msgstr ""
+"Observe que 'trailers' não seguem e não se destinam a seguir muitas regras "
+"para os cabeçalhos da norma RFC 822. Por exemplo, eles não seguem as normas "
+"de codificação e muito provavelmente quaisquer outras normas."
 
 #. type: Labeled list
 #: en/git-interpret-trailers.txt:74
@@ -30632,7 +30719,7 @@ msgstr "--in-place"
 #: en/git-interpret-trailers.txt:76
 #, priority:100
 msgid "Edit the files in place."
-msgstr ""
+msgstr "Edite os arquivos no local."
 
 #. type: Labeled list
 #: en/git-interpret-trailers.txt:77
@@ -30645,24 +30732,29 @@ msgstr "--trim-empty"
 #, priority:100
 msgid "If the <value> part of any trailer contains only whitespace, the whole trailer will be removed from the resulting message.  This applies to existing trailers as well as new trailers."
 msgstr ""
+"Caso o <valor> da parte de qualquer `trailer` contenha apenas espaços em "
+"branco, o `trailer` inteiro será removido da mensagem resultante.  Isso se "
+"aplica a `trailers` existentes, bem como aos `trailers`  novos."
 
 #. type: Labeled list
 #: en/git-interpret-trailers.txt:82
 #, no-wrap, priority:100
 msgid "--trailer <token>[(=|:)<value>]"
-msgstr ""
+msgstr "--trailer <token>[(=|:)<valor>]"
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:86
 #, priority:100
 msgid "Specify a (<token>, <value>) pair that should be applied as a trailer to the input messages. See the description of this command."
 msgstr ""
+"Especifique um par (<token>, <value>) que deve ser aplicado como um `trailer`"
+" nas mensagens de entrada. Veja a descrição deste comando."
 
 #. type: Labeled list
 #: en/git-interpret-trailers.txt:87
 #, no-wrap, priority:100
 msgid "--where <placement>"
-msgstr ""
+msgstr "--where <placement>"
 
 #. type: Labeled list
 #: en/git-interpret-trailers.txt:88
@@ -30675,12 +30767,17 @@ msgstr "--no-where"
 #, priority:100
 msgid "Specify where all new trailers will be added.  A setting provided with '--where' overrides all configuration variables and applies to all '--trailer' options until the next occurrence of '--where' or '--no-where'. Possible values are `after`, `before`, `end` or `start`."
 msgstr ""
+"Especifique onde todos os novos `trailers` serão adicionados.  Uma "
+"configuração fornecida com '--where' substitui todas as variáveis de "
+"configuração e se aplica a todas as opções de `--trailer` até a próxima "
+"ocorrência de '--where' ou '--no-where'. Os valores válidos são `after`, "
+"`before`, `end` or `start`."
 
 #. type: Labeled list
 #: en/git-interpret-trailers.txt:95
 #, no-wrap, priority:100
 msgid "--if-exists <action>"
-msgstr ""
+msgstr "--if-exists <action>"
 
 #. type: Labeled list
 #: en/git-interpret-trailers.txt:96
@@ -30693,12 +30790,18 @@ msgstr "--no-if-exists"
 #, priority:100
 msgid "Specify what action will be performed when there is already at least one trailer with the same <token> in the message.  A setting provided with '--if-exists' overrides all configuration variables and applies to all '--trailer' options until the next occurrence of '--if-exists' or '--no-if-exists'. Possible actions are `addIfDifferent`, `addIfDifferentNeighbor`, `add`, `replace` and `doNothing`."
 msgstr ""
+"Especifique qual ação será executada quando já houver pelo menos um `trailer`"
+" com o mesmo <token> na mensagem.  Uma configuração fornecida com '--if-"
+"exists' substitui todas as variáveis de configuração e se aplica a todas as "
+"opções `--trailer` até a próxima ocorrência do '--if-exists' ou '--no-if-"
+"exists'. As possíveis ações são `addIfDifferent`, `addIfDifferentNeighbor`, "
+"`add`, `replace` and `doNothing`."
 
 #. type: Labeled list
 #: en/git-interpret-trailers.txt:104
 #, no-wrap, priority:100
 msgid "--if-missing <action>"
-msgstr ""
+msgstr "--if-missing <action>"
 
 #. type: Labeled list
 #: en/git-interpret-trailers.txt:105
@@ -30711,6 +30814,11 @@ msgstr "--no-if-missing"
 #, priority:100
 msgid "Specify what action will be performed when there is no other trailer with the same <token> in the message.  A setting provided with '--if-missing' overrides all configuration variables and applies to all '--trailer' options until the next occurrence of '--if-missing' or '--no-if-missing'. Possible actions are `doNothing` or `add`."
 msgstr ""
+"Especifique qual ação será executada quando não houver outro trailer com o "
+"mesmo <token> na mensagem.  Uma configuração fornecida com `--if-missing` "
+"substitui todas as variáveis de configuração e se aplica a todas as opções "
+"`--trailer` até a próxima ocorrência de `--if-missing` or `--no-if-missing`. "
+"As possíveis ações são `doNothing` ou `add`."
 
 #. type: Labeled list
 #: en/git-interpret-trailers.txt:113
@@ -30722,7 +30830,7 @@ msgstr "--only-trailers"
 #: en/git-interpret-trailers.txt:115
 #, priority:100
 msgid "Output only the trailers, not any other parts of the input."
-msgstr ""
+msgstr "Exibe apenas os `trailers` e não quaisquer outras partes da entrada."
 
 #. type: Labeled list
 #: en/git-interpret-trailers.txt:116
@@ -30735,6 +30843,8 @@ msgstr "--only-input"
 #, priority:100
 msgid "Output only trailers that exist in the input; do not add any from the command-line or by following configured `trailer.*` rules."
 msgstr ""
+"Exibe apenas os `trailers` que existam na entrada; não adicione qualquer "
+"outra linha de comando ou siga as regras `trailer.*` configuradas."
 
 #. type: Labeled list
 #: en/git-interpret-trailers.txt:121
@@ -30747,6 +30857,8 @@ msgstr "--unfold"
 #, priority:100
 msgid "Remove any whitespace-continuation in trailers, so that each trailer appears on a line by itself with its full content."
 msgstr ""
+"Remova qualquer continuação de espaço em branco nos `trailers` para que cada "
+"`trailer` apareça em uma linha por si só, com seu conteúdo completo."
 
 #. type: Labeled list
 #: en/git-interpret-trailers.txt:125
@@ -30759,6 +30871,8 @@ msgstr "--parse"
 #, priority:100
 msgid "A convenience alias for `--only-trailers --only-input --unfold`."
 msgstr ""
+"É um atalho conveniente para os comandos `--only-trailers --only-input "
+"--unfold`."
 
 #. type: Labeled list
 #: en/git-interpret-trailers.txt:129
@@ -30771,120 +30885,159 @@ msgstr "--no-divider"
 #, priority:100
 msgid "Do not treat `---` as the end of the commit message. Use this when you know your input contains just the commit message itself (and not an email or the output of `git format-patch`)."
 msgstr ""
+"Não trate `---` como o final da mensagem de commit. Use isso quando souber "
+"que a sua entrada contenha apenas a própria mensagem de commit (e não um e-"
+"mail ou saída do `git format-patch`)."
 
 #. type: Labeled list
 #: en/git-interpret-trailers.txt:137
 #, no-wrap, priority:100
 msgid "trailer.separators"
-msgstr ""
+msgstr "trailer.separators"
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:142
 #, priority:100
 msgid "This option tells which characters are recognized as trailer separators. By default only ':' is recognized as a trailer separator, except that '=' is always accepted on the command line for compatibility with other git commands."
 msgstr ""
+"É predefinido que apenas `:` seja reconhecido como um separador `trailer`, a "
+"menos que `=` seja sempre aceito na linha de comandos por questões de "
+"compatibilidade com os outros comandos git."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:146
 #, priority:100
 msgid "The first character given by this option will be the default character used when another separator is not specified in the config for this trailer."
 msgstr ""
+"O primeiro caractere fornecido por esta opção será o caractere predefinido a "
+"ser usado quando um outro separador não for especificado na configuração "
+"deste `trailer`."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:153
 #, priority:100
 msgid "For example, if the value for this option is \"%=$\", then only lines using the format '<token><sep><value>' with <sep> containing '%', '=' or '$' and then spaces will be considered trailers. And '%' will be the default separator used, so by default trailers will appear like: '<token>% <value>' (one percent sign and one space will appear between the token and the value)."
 msgstr ""
+"Por exemplo, caso o valor dessa opção seja \"%=$\", apenas as linhas que "
+"usam o formato '<token><sep><value>' com <sep> contendo '%', '=' ou '$' e os "
+"espaços, serão considerados `trailers`. É predefinido que o sinal '%' será "
+"usado como um separador; portanto, assim os trailers aparecerão como: "
+"'<token>% <value>' (um sinal de porcentagem e um espaço aparecerão entre "
+"token e o valor)."
 
 #. type: Labeled list
 #: en/git-interpret-trailers.txt:154
 #, no-wrap, priority:100
 msgid "trailer.where"
-msgstr ""
+msgstr "trailer.where"
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:156
 #, priority:100
 msgid "This option tells where a new trailer will be added."
-msgstr ""
+msgstr "Esta opção informa onde um novo trailer será adicionado."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:158
 #, priority:100
 msgid "This can be `end`, which is the default, `start`, `after` or `before`."
-msgstr ""
+msgstr "Pode ser `end` (predefinido),` start`, `after` ou` before`."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:161
 #, priority:100
 msgid "If it is `end`, then each new trailer will appear at the end of the existing trailers."
 msgstr ""
+"Caso seja `end`, então cada novo trailer aparecerá no final dos trailers "
+"existentes."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:164
 #, priority:100
 msgid "If it is `start`, then each new trailer will appear at the start, instead of the end, of the existing trailers."
 msgstr ""
+"Caso seja `start ', cada novo trailer aparecerá no início, e não no final, "
+"dos trailers existentes."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:167
 #, priority:100
 msgid "If it is `after`, then each new trailer will appear just after the last trailer with the same <token>."
 msgstr ""
+"Caso seja \"depois\", cada novo trailer aparecerá logo após o último trailer "
+"com o mesmo <token>."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:170
 #, priority:100
 msgid "If it is `before`, then each new trailer will appear just before the first trailer with the same <token>."
 msgstr ""
+"Caso seja \"depois\", então cada novo trailer aparecerá logo no começo do "
+"primeiro trailer com o mesmo <token>."
 
 #. type: Labeled list
 #: en/git-interpret-trailers.txt:171
 #, no-wrap, priority:100
 msgid "trailer.ifexists"
-msgstr ""
+msgstr "trailer.ifexists"
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:175
 #, priority:100
 msgid "This option makes it possible to choose what action will be performed when there is already at least one trailer with the same <token> in the message."
 msgstr ""
+"Essa opção permite escolher qual ação será executada quando já houver pelo "
+"menos um trailer com o mesmo <token> na mensagem."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:178
 #, priority:100
 msgid "The valid values for this option are: `addIfDifferentNeighbor` (this is the default), `addIfDifferent`, `add`, `replace` or `doNothing`."
 msgstr ""
+"Os valores válidos para esta opção são: `addIfDifferentNeighbor` "
+"(predefinido), `addIfDifferent`, `add`, `replace` ou `doNothing`."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:182
 #, priority:100
 msgid "With `addIfDifferentNeighbor`, a new trailer will be added only if no trailer with the same (<token>, <value>) pair is above or below the line where the new trailer will be added."
 msgstr ""
+"Com `addIfDifferentNeighbor`, um novo trailer será adicionado apenas caso "
+"nenhum trailer com o mesmo par (<token>,<value>) esteja acima ou abaixo da "
+"linha em que o novo trailer será adicionado."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:185
 #, priority:100
 msgid "With `addIfDifferent`, a new trailer will be added only if no trailer with the same (<token>, <value>) pair is already in the message."
 msgstr ""
+"Com `addIfDifferent`, um novo trailer será adicionado apenas caso nenhum "
+"trailer com o mesmo par (<token>,<value>) já esteja na mensagem."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:188
 #, priority:100
 msgid "With `add`, a new trailer will be added, even if some trailers with the same (<token>, <value>) pair are already in the message."
 msgstr ""
+"Com `add`, um novo trailer será adicionado mesmo que alguns trailers com o "
+"mesmo par (<token>,<value>) já estejam na mensagem."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:193
 #, priority:100
 msgid "With `replace`, an existing trailer with the same <token> will be deleted and the new trailer will be added. The deleted trailer will be the closest one (with the same <token>) to the place where the new one will be added."
 msgstr ""
+"Com `replace`, um trailer existente com a mesmo <token> será excluído e o "
+"novo trailer será adicionado. O trailer excluído será o mais próximo (com o "
+"mesmo <token>) do local onde o novo será adicionado."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:196
 #, priority:100
 msgid "With `doNothing`, nothing will be done; that is no new trailer will be added if there is already one with the same <token> in the message."
 msgstr ""
+"Com `doNothing`, nada será feito; isso é, nenhum novo trailer será "
+"adicionado caso já haja um com o mesmo <token> na mensagem."
 
 #. type: Labeled list
 #: en/git-interpret-trailers.txt:197
@@ -64381,7 +64534,7 @@ msgstr ""
 #: en/urls.txt:2
 #, no-wrap, priority:300
 msgid "GIT URLS[[URLS]]"
-msgstr ""
+msgstr "GIT URLS[[URLS]]"
 
 #. type: Plain text
 #: en/urls.txt:8
