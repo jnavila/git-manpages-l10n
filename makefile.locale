@@ -49,6 +49,7 @@ ASCIIDOC_EXTRA += -amanmanual='Git Manual' \
                   -amansource='Git $(GIT_VERSION)' \
                   -amanversion=$(GIT_VERSION)
 ASCIIDOC_EXTRA += -alitdd='\--'
+ASCIIDOC_EXTRA += -acompat-mode -atabsize=8
 
 $(HTML_FILTER): %.html: %.txt
 	$(QUIET_ASCIIDOC)asciidoctor -b xhtml5 \
