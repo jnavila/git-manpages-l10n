@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-04-04 19:51+0200\n"
-"PO-Revision-Date: 2020-04-26 07:27+0000\n"
+"PO-Revision-Date: 2020-04-28 14:59+0000\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.0.2-dev\n"
+"X-Generator: Weblate 4.0.2\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:666 en/git-instaweb.txt:45 en/git-mailinfo.txt:47 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -37803,72 +37803,126 @@ msgstr ""
 #, priority:220
 msgid "I.e. a fast-forward of commits and tags outside `refs/{tags,heads}/*` is allowed, even in cases where what's being fast-forwarded is not a commit, but a tag object which happens to point to a new commit which is a fast-forward of the commit the last tag (or commit) it's replacing. Replacing a tag with an entirely different tag is also allowed, if it points to the same commit, as well as pushing a peeled tag, i.e. pushing the commit that existing tag object points to, or a new tag object which an existing commit points to."
 msgstr ""
+"C'est-à-dire qu'une avance rapide des commits et des étiquettes en dehors de "
+"`refs/{tags,heads}/*` est autorisée, même dans les cas où ce qui est avancé "
+"rapidement n'est pas un commit, mais un objet étiquette qui pointe vers un "
+"nouveau commit qui est une avance rapide de la dernière étiquette (ou commit)"
+" qu'il remplace. Le remplacement d'une étiquette par une étiquette "
+"entièrement différente est également autorisé, si elle pointe vers le même "
+"commit, ainsi que le fait de pousser une étiquette pelée, c'est-à-dire de "
+"pousser le commit vers lequel l'objet étiquette existant pointe, ou un "
+"nouvel objet étiquette vers lequel un commit existant pointe."
 
 #. type: Plain text
 #: en/git-push.txt:126
 #, priority:220
 msgid "Tree and blob objects outside of `refs/{tags,heads}/*` will be treated the same way as if they were inside `refs/tags/*`, any update of them will be rejected."
 msgstr ""
+"Les objets d'arbre et de blob à l'extérieur de `refs/{tags,heads}/*` seront "
+"traités de la même manière que s'ils étaient à l'intérieur de `refs/tags/*`, "
+"toute mise à jour de ceux-ci sera rejetée."
 
 #. type: Plain text
 #: en/git-push.txt:135
 #, priority:220
 msgid "All of the rules described above about what's not allowed as an update can be overridden by adding an the optional leading `+` to a refspec (or using `--force` command line option). The only exception to this is that no amount of forcing will make the `refs/heads/*` namespace accept a non-commit object. Hooks and configuration can also override or amend these rules, see e.g. `receive.denyNonFastForwards` in linkgit:git-config[1] and `pre-receive` and `update` in linkgit:githooks[5]."
 msgstr ""
+"Toutes les règles décrites ci-dessus sur ce qui n'est pas autorisé en tant "
+"que mise à jour peuvent être passées outre en ajoutant le caractère "
+"facultatif `+` à une spéc-de-réf (ou en utilisant l'option de ligne de "
+"commande `--force`). La seule exception à cela est qu'aucune quantité de "
+"forçage ne fera que l'espace de noms `refs/heads/*` acceptera un objet non-"
+"commit. Les crochets et la configuration peuvent également remplacer ou "
+"modifier ces règles, voir par ex. `receive.denyNonFastForwards` dans linkgit"
+":git-config[1] et `pre-receive` et `update` dans linkgit:githooks[5]."
 
 #. type: Plain text
 #: en/git-push.txt:141
 #, priority:220
 msgid "Pushing an empty <src> allows you to delete the <dst> ref from the remote repository. Deletions are always accepted without a leading `+` in the refspec (or `--force`), except when forbidden by configuration or hooks. See `receive.denyDeletes` in linkgit:git-config[1] and `pre-receive` and `update` in linkgit:githooks[5]."
 msgstr ""
+"Pousser un <src> vide vous permet de supprimer la référence <dst> du dépôt "
+"distant. Les suppressions sont toujours acceptées sans signe `+` dans la "
+"spéc-de-réf (ou `--force`), sauf lorsque la configuration ou les crochets "
+"l'interdisent. Voir `receive.denyDeletes` dans linkgit:git-config[1] et `pre-"
+"receive` et `update` dans linkgit:githooks[5]."
 
 #. type: Plain text
 #: en/git-push.txt:146
 #, priority:220
 msgid "The special refspec `:` (or `+:` to allow non-fast-forward updates)  directs Git to push \"matching\" branches: for every branch that exists on the local side, the remote side is updated if a branch of the same name already exists on the remote side."
 msgstr ""
+"La spéc-de-réf spéciale `:` (ou `+:` pour permettre des mises à jour pas en "
+"avance rapide) ordonne à Git de pousser les branches \"correspondantes\" : "
+"pour chaque branche qui existe du côté local, le côté distant est mis à jour "
+"si une branche du même nom existe déjà du côté distant."
 
 #. type: Plain text
 #: en/git-push.txt:148
 #, priority:220
 msgid "`tag <tag>` means the same as `refs/tags/<tag>:refs/tags/<tag>`."
 msgstr ""
+"`tag <étiquette>` signifie la même chose que `refs/tags/<étiquette>:refs/"
+"tags/<étiquette>`."
 
 #. type: Plain text
 #: en/git-push.txt:152
 #, priority:220
 msgid "Push all branches (i.e. refs under `refs/heads/`); cannot be used with other <refspec>."
 msgstr ""
+"Pousser toutes les branches (c'est-à-dire les références sous `refs/heads/`) "
+"; ne peut pas être utilisé avec d'autres <spéc-de-réf>."
 
 #. type: Plain text
 #: en/git-push.txt:160
 #, priority:220
 msgid "Remove remote branches that don't have a local counterpart. For example a remote branch `tmp` will be removed if a local branch with the same name doesn't exist any more. This also respects refspecs, e.g.  `git push --prune remote refs/heads/*:refs/tmp/*` would make sure that remote `refs/tmp/foo` will be removed if `refs/heads/foo` doesn't exist."
 msgstr ""
+"Supprimer les branches distantes qui n'ont pas d'équivalent local. Par "
+"exemple, une branche distante `tmp` sera supprimée si une branche locale du "
+"même nom n'existe plus. Cela respecte également les spécificateurs de "
+"référence, par exemple `git push --prune remote refs/heads/*:refs/tmp/*` "
+"s'assurera que la branche distante `refs/tmp/foo` sera supprimée si `refs/"
+"heads/foo` n'existe plus."
 
 #. type: Plain text
 #: en/git-push.txt:171
 #, priority:220
 msgid "Instead of naming each ref to push, specifies that all refs under `refs/` (which includes but is not limited to `refs/heads/`, `refs/remotes/`, and `refs/tags/`)  be mirrored to the remote repository.  Newly created local refs will be pushed to the remote end, locally updated refs will be force updated on the remote end, and deleted refs will be removed from the remote end.  This is the default if the configuration option `remote.<remote>.mirror` is set."
 msgstr ""
+"Au lieu de nommer chaque réf à pousser, spécifier que toutes les réfs sous `"
+"refs/` (ce qui inclut mais n'est pas limité à `refs/heads/`, `refs/remotes/`"
+", et `refs/tags/`) soient reflétées dans le dépôt distant.  Les réfs locales "
+"nouvellement créées seront poussées vers l'autre extrémité, les réfs mises à "
+"jour localement seront mises à jour de force sur l'extrémité distante, et "
+"les réfs supprimées seront supprimées de l'extrémité distante.  C'est la "
+"valeur par défaut si l'option de configuration `remote.<distant>.mirror` est "
+"définie."
 
 #. type: Plain text
 #: en/git-push.txt:180
 #, priority:220
 msgid "Produce machine-readable output.  The output status line for each ref will be tab-separated and sent to stdout instead of stderr.  The full symbolic names of the refs will be given."
 msgstr ""
+"Produire une sortie lisible par machine. La ligne d'état de sortie pour "
+"chaque référence sera séparée par des tabulations et envoyée à stdout au "
+"lieu de stderr. Les noms symboliques complets des réfs seront donnés."
 
 #. type: Plain text
 #: en/git-push.txt:185
 #, priority:220
 msgid "All listed refs are deleted from the remote repository. This is the same as prefixing all refs with a colon."
 msgstr ""
+"Toutes les références listées sont supprimées du dépôt distant. Cela revient "
+"à préfixer toutes les références par deux points."
 
 #. type: Plain text
 #: en/git-push.txt:190
 #, priority:220
 msgid "All refs under `refs/tags` are pushed, in addition to refspecs explicitly listed on the command line."
 msgstr ""
+"Toutes les références sous `refs/tags` sont poussées, en plus des spéc-de-"
+"réfs explicitement listés sur la ligne de commande."
 
 #. type: Labeled list
 #: en/git-push.txt:191
@@ -37881,6 +37935,12 @@ msgstr "--follow-tags"
 #, priority:220
 msgid "Push all the refs that would be pushed without this option, and also push annotated tags in `refs/tags` that are missing from the remote but are pointing at commit-ish that are reachable from the refs being pushed.  This can also be specified with configuration variable `push.followTags`.  For more information, see `push.followTags` in linkgit:git-config[1]."
 msgstr ""
+"Pousser tous les réfs qui seraient poussées sans cette option, et pousser "
+"aussi les étiquettes annotées dans `refs/tags` qui sont manquantes du "
+"distant mais qui pointent vers le commit-esque qui sont accessibles depuis "
+"les réfs poussées.  Cela peut également être spécifié avec la variable de "
+"configuration `push.followTags`.  Pour plus d'informations, voir "
+"`push.followTags` dans linkgit:git-config[1]."
 
 #. type: Labeled list
 #: en/git-push.txt:199 en/git-send-pack.txt:73
@@ -37892,13 +37952,21 @@ msgstr "--[no-]signed"
 #: en/git-push.txt:200 en/git-send-pack.txt:74
 #, no-wrap, priority:220
 msgid "--signed=(true|false|if-asked)"
-msgstr ""
+msgstr "--signed=(true|false|if-asked)"
 
 #. type: Plain text
 #: en/git-push.txt:209 en/git-send-pack.txt:83
 #, priority:220
 msgid "GPG-sign the push request to update refs on the receiving side, to allow it to be checked by the hooks and/or be logged.  If `false` or `--no-signed`, no signing will be attempted.  If `true` or `--signed`, the push will fail if the server does not support signed pushes.  If set to `if-asked`, sign if and only if the server supports signed pushes.  The push will also fail if the actual call to `gpg --sign` fails.  See linkgit:git-receive-pack[1] for the details on the receiving end."
 msgstr ""
+"Signer avec GPG la demande de poussée pour mettre à jour les références du "
+"côté réception, pour lui permettre d'être vérifié par les crochets et/ou "
+"d'être enregistrée. Si `false` ou `--no-signed`, aucune signature ne sera "
+"tentée. Si `true` ou` --signed`, la poussée échouera si le serveur ne prend "
+"pas en charge les poussées signées. S'il est défini sur `if-asked`, signer "
+"si et seulement si le serveur prend en charge les poussées signées. La "
+"poussée échouera également si l'appel réel à `gpg --sign` échoue. Voir "
+"linkgit:git-receive-pack[1] pour les détails sur l'extrémité réceptrice."
 
 #. type: Labeled list
 #: en/git-push.txt:210
