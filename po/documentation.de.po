@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-04-04 19:51+0200\n"
-"PO-Revision-Date: 2020-04-23 20:24+0000\n"
+"PO-Revision-Date: 2020-04-28 14:59+0000\n"
 "Last-Translator: Dieter Ziller <max123kl@ziller.de>\n"
 "Language-Team: Matthias Aßhauer <mha1993@live.de>\n"
 "Language: de\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.0.2-dev\n"
+"X-Generator: Weblate 4.0.2\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:666 en/git-instaweb.txt:45 en/git-mailinfo.txt:47 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -5047,7 +5047,7 @@ msgstr ""
 #: en/diff-options.txt:722 en/git-status.txt:87
 #, no-wrap, priority:280
 msgid "--ignore-submodules[=<when>]"
-msgstr ""
+msgstr "--ignore-submodules[=<wenn>]"
 
 #. type: Plain text
 #: en/diff-options.txt:734
@@ -6417,114 +6417,159 @@ msgstr "PATCHES EDITIEREN"
 #, priority:300
 msgid "Invoking `git add -e` or selecting `e` from the interactive hunk selector will open a patch in your editor; after the editor exits, the result is applied to the index. You are free to make arbitrary changes to the patch, but note that some changes may have confusing results, or even result in a patch that cannot be applied.  If you want to abort the operation entirely (i.e., stage nothing new in the index), simply delete all lines of the patch. The list below describes some common things you may see in a patch, and which editing operations make sense on them."
 msgstr ""
+"Der Aufruf von `git add -e` oder die Auswahl von `e` aus dem interaktiven "
+"Hunk-Selector öffnet einen Patch in Ihrem Editor. Nach Verlassen des Editors "
+"wird das Ergebnis in den Index übernommen. Es ist Ihre Entscheidung, "
+"beliebige Änderungen an dem Patch vorzunehmen, aber beachten Sie, dass "
+"einige Änderungen irreführende Ergebnisse haben oder sogar zu einem Patch "
+"führen können, der nicht angewendet werden kann.  Wenn Sie die Operation "
+"vollständig abbrechen wollen (d.h. nichts Neues in den Index stagen), "
+"löschen Sie einfach alle Zeilen des Patches. Die folgende Liste beschreibt "
+"einige gängige Elemente, die Sie in einem Patch sehen können, und welche "
+"Bearbeitungsvorgänge bei ihnen sinnvoll sind."
 
 #. type: Labeled list
 #: en/git-add.txt:369
 #, no-wrap, priority:300
 msgid "added content"
-msgstr ""
+msgstr "hinzugefügter Inhalt"
 
 #. type: Plain text
 #: en/git-add.txt:373
 #, priority:300
 msgid "Added content is represented by lines beginning with \"{plus}\". You can prevent staging any addition lines by deleting them."
 msgstr ""
+"Hinzugefügter Inhalt wird durch Zeilen dargestellt, die mit \"{plus}\" "
+"beginnen. Sie können das Staging von hinzugefügten Zeilen verhindern, indem "
+"Sie diese löschen."
 
 #. type: Labeled list
 #: en/git-add.txt:374
 #, no-wrap, priority:300
 msgid "removed content"
-msgstr ""
+msgstr "entfernter, gelöschter Inhalt"
 
 #. type: Plain text
 #: en/git-add.txt:378
 #, priority:300
 msgid "Removed content is represented by lines beginning with \"-\". You can prevent staging their removal by converting the \"-\" to a \" \" (space)."
 msgstr ""
+"Entfernter Inhalt wird durch Zeilen dargestellt, die mit \"-\" beginnen. Sie "
+"können die Entfernung aus der Staging Area verhindern, indem Sie das \"-\" "
+"in ein \" \" (Leerzeichen) umwandeln."
 
 #. type: Labeled list
 #: en/git-add.txt:379
 #, no-wrap, priority:300
 msgid "modified content"
-msgstr ""
+msgstr "geänderter Inhalt"
 
 #. type: Plain text
 #: en/git-add.txt:386
 #, priority:300
 msgid "Modified content is represented by \"-\" lines (removing the old content)  followed by \"{plus}\" lines (adding the replacement content). You can prevent staging the modification by converting \"-\" lines to \" \", and removing \"{plus}\" lines. Beware that modifying only half of the pair is likely to introduce confusing changes to the index."
 msgstr ""
+"Geänderter Inhalt wird durch \"-\" Zeilen (entfernen des alten Inhalts), "
+"gefolgt von \"{plus}\" Zeilen (hinzufügen des Ersatzinhalts) dargestellt. "
+"Sie können das Staging der Änderung verhindern, indem Sie \"-\" Zeilen in \" "
+"\" konvertieren und \"{plus}\"-Zeilen entfernen. Achten Sie darauf, dass die "
+"Änderung von nur der Hälfte des Paares wahrscheinlich irreführende "
+"Änderungen am Index mit sich bringt."
 
 #. type: Plain text
 #: en/git-add.txt:394
 #, priority:300
 msgid "There are also more complex operations that can be performed. But beware that because the patch is applied only to the index and not the working tree, the working tree will appear to \"undo\" the change in the index.  For example, introducing a new line into the index that is in neither the HEAD nor the working tree will stage the new line for commit, but the line will appear to be reverted in the working tree."
 msgstr ""
+"Es gibt auch komplexere Operationen, die durchgeführt werden könnten. Aber "
+"Vorsicht: Da der Patch nur auf den Index und nicht auf den Arbeitsbereich "
+"angewendet wird, scheint es, als würde der Arbeitsbereich die Änderung im "
+"Index \"rückgängig machen\".  Wenn zum Beispiel eine neue Zeile in den Index "
+"eingefügt wird, die sich weder im HEAD noch im Arbeitsbereich befindet, wird "
+"sie für einen Commit bereitgestellt, aber diese Zeile erscheint im "
+"Arbeitsbereich als zurückgesetzt."
 
 #. type: Plain text
 #: en/git-add.txt:396
 #, priority:300
 msgid "Avoid using these constructs, or do so with extreme caution."
 msgstr ""
+"Vermeiden Sie diese Konstrukte oder gehen Sie mit äußerster Vorsicht vor."
 
 #. type: Labeled list
 #: en/git-add.txt:398
 #, no-wrap, priority:300
 msgid "removing untouched content"
-msgstr ""
+msgstr "entfernen von unverändertem Inhalt"
 
 #. type: Plain text
 #: en/git-add.txt:404
 #, priority:300
 msgid "Content which does not differ between the index and working tree may be shown on context lines, beginning with a \" \" (space).  You can stage context lines for removal by converting the space to a \"-\". The resulting working tree file will appear to re-add the content."
 msgstr ""
+"Inhalt, der nicht zwischen Index und Arbeitsbereich differiert, kann in "
+"Kontextzeilen angezeigt werden, die mit einem \" \" (Leerzeichen) beginnen.  "
+"Sie können Kontextzeilen zum Entfernen vorsehen, indem Sie das Leerzeichen "
+"in ein \"-\" umwandeln. Die resultierende Datei des Arbeitsbereichs wird "
+"angezeigt, um den Inhalt erneut hinzuzufügen."
 
 #. type: Labeled list
 #: en/git-add.txt:405
 #, no-wrap, priority:300
 msgid "modifying existing content"
-msgstr ""
+msgstr "ändern von vorhandenem Inhalt"
 
 #. type: Plain text
 #: en/git-add.txt:412
 #, priority:300
 msgid "One can also modify context lines by staging them for removal (by converting \" \" to \"-\") and adding a \"{plus}\" line with the new content.  Similarly, one can modify \"{plus}\" lines for existing additions or modifications. In all cases, the new modification will appear reverted in the working tree."
 msgstr ""
+"Man kann auch Kontextzeilen modifizieren, indem man sie zur Entfernung "
+"bereitstellt (man wandelt \" \" in \"-\" um) und eine \"{plus}\" Zeile mit "
+"dem neuen Inhalt hinzufügt.  In ähnlicher Weise kann man \"{plus}\" Zeilen "
+"für bestehende Erweiterungen oder Modifikationen verändern. In allen Fällen "
+"erscheint die neue Modifikation im Arbeitsbereich als zurückgesetzt."
 
 #. type: Labeled list
 #: en/git-add.txt:413
 #, no-wrap, priority:300
 msgid "new content"
-msgstr ""
+msgstr "neuer Inhalt"
 
 #. type: Plain text
 #: en/git-add.txt:418
 #, priority:300
 msgid "You may also add new content that does not exist in the patch; simply add new lines, each starting with \"{plus}\". The addition will appear reverted in the working tree."
 msgstr ""
+"Man kann auch Inhalt neu hinzufügen, der im Patch nicht vorhanden ist. Dazu "
+"einfach neue Zeilen einfügen, die jeweils mit \"{plus}\" beginnen. Die "
+"Erweiterung erscheint dann im Arbeitsbereich als zurückgesetzt."
 
 #. type: Plain text
 #: en/git-add.txt:422
 #, priority:300
 msgid "There are also several operations which should be avoided entirely, as they will make the patch impossible to apply:"
 msgstr ""
+"Es gibt auch einige Operationen, die ganz vermieden werden sollten, da sie "
+"die Anwendung des Patches unmöglich machen würden:"
 
 #. type: Plain text
 #: en/git-add.txt:424
 #, priority:300
 msgid "adding context (\" \") or removal (\"-\") lines"
-msgstr ""
+msgstr "Hinzufügen von Kontext (\" \") oder Entfernen (\"-\") von Zeilen"
 
 #. type: Plain text
 #: en/git-add.txt:425
 #, priority:300
 msgid "deleting context or removal lines"
-msgstr ""
+msgstr "Löschen von Kontext oder Entfernen von Zeilen"
 
 #. type: Plain text
 #: en/git-add.txt:426
 #, priority:300
 msgid "modifying the contents of context or removal lines"
-msgstr ""
+msgstr "Ändern des Inhalts von Kontextzeilen oder entfernen von Zeilen"
 
 #. type: Title -
 #: en/git-add.txt:428 en/git-am.txt:242 en/git-annotate.txt:28 en/git-apply.txt:280 en/git-archive.txt:192 en/git-bisect.txt:493 en/git-blame.txt:231 en/git-branch.txt:374 en/git-check-attr.txt:115 en/git-check-ignore.txt:119 en/git-checkout.txt:596 en/git-cherry-pick.txt:238 en/git-cherry.txt:140 en/git-clean.txt:137 en/git-commit-tree.txt:97 en/git-commit.txt:538 en/git-difftool.txt:137 en/git-diff.txt:193 en/git-fast-export.txt:250 en/git-fast-import.txt:1541 en/git-fetch-pack.txt:127 en/git-fetch.txt:294 en/git-fmt-merge-msg.txt:73 en/git-for-each-ref.txt:389 en/git-format-patch.txt:706 en/git-gc.txt:153 en/git-gui.txt:103 en/git-imap-send.txt:135 en/git-instaweb.txt:89 en/git-interpret-trailers.txt:385 en/git-ls-files.txt:245 en/git-ls-remote.txt:116 en/git-merge.txt:362 en/git-pack-objects.txt:399 en/git-pack-redundant.txt:43 en/git-prune-packed.txt:41 en/git-prune.txt:81 en/git-pull.txt:258 en/git-read-tree.txt:437 en/git-receive-pack.txt:251 en/git-remote-ext.txt:120 en/git-remote-fd.txt:54 en/git-remote.txt:249 en/git-repack.txt:182 en/git-replace.txt:149 en/git-restore.txt:201 en/git-revert.txt:137 en/git-rm.txt:191 en/git-send-email.txt:521 en/git-shell.txt:99 en/git-show-ref.txt:178 en/git-stash.txt:349 en/git-status.txt:438 en/git-submodule.txt:451 en/git-svn.txt:1170 en/git-switch.txt:267 en/git-tag.txt:381 en/git.txt:979 en/git-update-index.txt:569 en/git-upload-pack.txt:48 en/git-var.txt:63 en/gitglossary.txt:18
