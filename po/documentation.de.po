@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-04-04 19:51+0200\n"
-"PO-Revision-Date: 2020-04-28 14:59+0000\n"
+"PO-Revision-Date: 2020-05-05 10:11+0000\n"
 "Last-Translator: Dieter Ziller <max123kl@ziller.de>\n"
 "Language-Team: Matthias Aßhauer <mha1993@live.de>\n"
 "Language: de\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.0.2\n"
+"X-Generator: Weblate 4.1-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:666 en/git-instaweb.txt:45 en/git-mailinfo.txt:47 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -3566,7 +3566,7 @@ msgstr "--no-stat"
 #: en/diff-options.txt:19
 #, priority:280
 msgid "Generate plain patches without any diffstats."
-msgstr ""
+msgstr "Generiert einfache Patches ohne irgendwelche Diffstats."
 
 #. type: Labeled list
 #: en/diff-options.txt:23 en/fetch-options.txt:205 en/git-add.txt:112 en/git-am.txt:77 en/git-checkout-index.txt:25 en/git-cvsexportcommit.txt:64 en/git-cvsimport.txt:98 en/git-ls-files.txt:70 en/git-mailinfo.txt:52 en/git-push.txt:348 en/git-read-tree.txt:45 en/git-stash.txt:161
@@ -5708,7 +5708,7 @@ msgstr ""
 "\t  [--edit | -e] [--[no-]all | --[no-]ignore-removal | [--update | -u]]\n"
 "\t  [--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] "
 "[--renormalize]\n"
-"\t  [--chmod=(+|-)x] [--pathspec-from-file=<file> [--pathspec-file-nul]]\n"
+"\t  [--chmod=(+|-)x] [--pathspec-from-file=<Datei> [--pathspec-file-nul]]\n"
 "\t  [--] [<Pfadspezifikation>...]\n"
 
 #. type: Title -
@@ -5971,9 +5971,9 @@ msgstr ""
 msgid "This option is primarily to help users who are used to older versions of Git, whose \"git add <pathspec>...\" was a synonym for \"git add --no-all <pathspec>...\", i.e. ignored removed files."
 msgstr ""
 "Diese Option soll in erster Linie Benutzern helfen, die mit älteren "
-"Versionen von Git vertraut sind und deren \"git add <pathspec>...\" ein "
-"Synonym für \"git add --no-all <pathspec>...\" war, d.h. gelöschte Dateien "
-"ignoriert haben."
+"Versionen von Git vertraut sind und deren \"git add <Pfadspezifikation>...\" "
+"ein Synonym für \"git add --no-all <Pfadspezifikation>...\" war, d.h. "
+"gelöschte Dateien ignoriert haben."
 
 #. type: Labeled list
 #: en/git-add.txt:147 en/git-format-patch.txt:103 en/git-submodule.txt:351
@@ -6096,8 +6096,8 @@ msgstr "--pathspec-from-file=<Datei>"
 #, priority:300
 msgid "Pathspec is passed in `<file>` instead of commandline args. If `<file>` is exactly `-` then standard input is used. Pathspec elements are separated by LF or CR/LF. Pathspec elements can be quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1]). See also `--pathspec-file-nul` and global `--literal-pathspecs`."
 msgstr ""
-"Die Pfadangabe wird in `<file>` statt über Befehlszeilen-Argumente "
-"übergeben. Wenn `<file>` genau `-` ist, wird die Standardeingabe verwendet. "
+"Die Pfadangabe wird in `<Datei>` statt über Befehlszeilen-Argumente "
+"übergeben. Wenn `<Datei>` genau `-` ist, wird die Standardeingabe verwendet. "
 "Pfadspezifische Elemente werden durch LF oder CR/LF getrennt. Pathspec-"
 "Elemente können in Anführungszeichen gesetzt werden, wie für die "
 "Konfigurationsvariable `core.quotePath` beschrieben (siehe linkgit:git-"
@@ -7536,7 +7536,7 @@ msgstr ""
 #: en/git-apply.txt:254 en/git-archive.txt:98 en/git-branch.txt:302 en/git-config.txt:268 en/git-cvsexportcommit.txt:86 en/git-fmt-merge-msg.txt:53 en/git-format-patch.txt:354 en/git-fsck.txt:108 en/git-gc.txt:107 en/git-grep.txt:42 en/git-imap-send.txt:52 en/git-instaweb.txt:70 en/git-log.txt:181 en/git-merge.txt:353 en/git-notes.txt:311 en/git-rebase.txt:204 en/git-send-email.txt:444 en/git-status.txt:402 en/git-svn.txt:1084 en/git-tag.txt:215 en/git-update-index.txt:525
 #, no-wrap, priority:280
 msgid "CONFIGURATION"
-msgstr ""
+msgstr "KONFIGURATION"
 
 #. type: Labeled list
 #: en/git-apply.txt:256
@@ -9514,7 +9514,7 @@ msgstr ""
 #: en/git-branch.txt:153 en/git-status.txt:130 en/git-tag.txt:134
 #, no-wrap, priority:280
 msgid "--column[=<options>]"
-msgstr ""
+msgstr "--column[=<Optionen>]"
 
 #. type: Labeled list
 #: en/git-branch.txt:154 en/git-status.txt:131 en/git-tag.txt:135
@@ -19313,22 +19313,21 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-diff-files.txt:25 en/git-diff.txt:100
-#, fuzzy, no-wrap, priority:280
-#| msgid "--bare"
+#, no-wrap, priority:280
 msgid "-1 --base"
-msgstr "--bare"
+msgstr "-1 --base"
 
 #. type: Labeled list
 #: en/git-diff-files.txt:26 en/git-diff.txt:101
 #, no-wrap, priority:280
 msgid "-2 --ours"
-msgstr ""
+msgstr "-2 --ours"
 
 #. type: Labeled list
 #: en/git-diff-files.txt:27 en/git-diff.txt:102
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "-3 --theirs"
-msgstr ""
+msgstr "-3 --theirs"
 
 #. type: Plain text
 #: en/git-diff-files.txt:32
@@ -19909,7 +19908,7 @@ msgstr "SHA1 eines git-Markierungobjektes."
 #: en/git-diff-tree.txt:32 en/git-diff.txt:114 en/git-submodule.txt:437
 #, ignore-ellipsis, no-wrap, priority:280
 msgid "<path>..."
-msgstr "<path>..."
+msgstr "<Pfad>..."
 
 #. type: Plain text
 #: en/git-diff-tree.txt:35
@@ -20029,7 +20028,9 @@ msgstr "git-diff(1)"
 #: en/git-diff.txt:7
 #, priority:280
 msgid "git-diff - Show changes between commits, commit and working tree, etc"
-msgstr "git-diff - Zeige Unterschiede zwischen Eintragungen (commits), Eintragung und Arbeitsbereich, etc"
+msgstr ""
+"git-diff – Zeigt die Unterschiede zwischen Commits, Commit und "
+"Arbeitsbereich usw."
 
 #. type: Plain text
 #: en/git-diff.txt:17
@@ -20041,113 +20042,145 @@ msgid ""
 "'git diff' [<options>] <blob> <blob>\n"
 "'git diff' [<options>] --no-index [--] <path> <path>\n"
 msgstr ""
+"'git diff' [<Optionen>] [<Commit>] [--] [<Pfad>...]\n"
+"'git diff' [<Optionen>] --cached [<Commit>] [--] [<Pfad>...]\n"
+"'git diff' [<Optionen>] <Commit> <Commit> [--] [<Pfad>...]\n"
+"'git diff' [<Optionen>] <Blob> <Blob>\n"
+"'git diff' [<Optionen>] --no-index [--] <Pfad> <Pfad>\n"
 
 #. type: Plain text
 #: en/git-diff.txt:23
 #, priority:280
 msgid "Show changes between the working tree and the index or a tree, changes between the index and a tree, changes between two trees, changes between two blob objects, or changes between two files on disk."
 msgstr ""
+"Zeigt die Veränderungen an, die a) zwischen dem Arbeitsbaum und dem Index "
+"oder einem Verzeichnisbaum, b) zwischen dem Index und einem Verzeichnisbaum, "
+"c) zwischen zwei Verzeichnisbäumen, d) zwischen zwei Blob-Objekten oder e) "
+"zwischen zwei Dateien auf der Festplatte bestehen."
 
 #. type: Labeled list
 #: en/git-diff.txt:24
-#, fuzzy, ignore-ellipsis, no-wrap, priority:280
-#| msgid "'git diff' [--options] [--] [<path>...]"
+#, ignore-ellipsis, no-wrap, priority:280
 msgid "'git diff' [<options>] [--] [<path>...]"
-msgstr "'git diff' [--options] [--] [<path>...]"
+msgstr "'git diff' [<Optionen>] [--] [<Pfad>...]"
 
 #. type: Plain text
 #: en/git-diff.txt:31
-#, fuzzy, priority:280
-#| msgid "This form is to view the changes you made relative to the index (staging area for the next commit).  In other words, the differences are what you _could_ tell git to further add to the index but you still haven't.  You can stage these changes by using linkgit:git-add[1]."
+#, priority:280
 msgid "This form is to view the changes you made relative to the index (staging area for the next commit).  In other words, the differences are what you _could_ tell Git to further add to the index but you still haven't.  You can stage these changes by using linkgit:git-add[1]."
-msgstr "Zeige die Unterschiede zwischen dem Arbeitsbereich und dem Index (Bereich in dem die nächste Eintragung (commit)  vorbereitet wird). Mit andern Worten, alle Änderungen im Arbeitsbereich die man noch nicht mit 'git add' oder 'git rm' hinzugefügt hat, aber noch hinzufügen könnte."
+msgstr ""
+"Mit dieser Befehlssyntax können die Änderungen angezeigt werden, die Sie "
+"relativ zum Index vorgenommen haben (Staging-Area für den nächsten Commit).  "
+"Mit anderen Worten, die Unterschiede sind das, was Sie Git mitteilen "
+"_könnten_, um es später zum Index hinzuzufügen, aber Sie haben es immer noch "
+"nicht getan.  Sie können diese Änderungen mit linkgit:git-add[1] "
+"bereitstellen (stagen)."
 
 #. type: Labeled list
 #: en/git-diff.txt:32
-#, fuzzy, no-wrap, priority:280
-#| msgid "'git diff' [--options] [--] [<path>...]"
+#, no-wrap, priority:280
 msgid "'git diff' [<options>] --no-index [--] <path> <path>"
-msgstr "'git diff' [--options] [--] [<path>...]"
+msgstr "'git diff' [<Optionen>] --no-index [--] <Pfad> <Pfad>"
 
 #. type: Plain text
 #: en/git-diff.txt:40
 #, priority:280
 msgid "This form is to compare the given two paths on the filesystem.  You can omit the `--no-index` option when running the command in a working tree controlled by Git and at least one of the paths points outside the working tree, or when running the command outside a working tree controlled by Git. This form implies `--exit-code`."
 msgstr ""
+"Diese Form dient dem Vergleich der beiden angegebenen Pfade auf dem "
+"Dateisystem.  Sie können die Option `--no-index` weglassen, wenn Sie den "
+"Befehl in einem von Git kontrollierten Arbeitsbereich ausführen und "
+"mindestens einer der Pfade außerhalb des Arbeitsbereichs liegt oder wenn Sie "
+"den Befehl außerhalb eines von Git kontrollierten Arbeitsbereichs ausführen. "
+"Diese Form impliziert die Option `--exit-code`."
 
 #. type: Labeled list
 #: en/git-diff.txt:41
-#, fuzzy, ignore-ellipsis, no-wrap, priority:280
-#| msgid "'git diff' [--options] --cached [<commit>] [--] [<path>...]"
+#, ignore-ellipsis, no-wrap, priority:280
 msgid "'git diff' [<options>] --cached [<commit>] [--] [<path>...]"
-msgstr "'git diff' [--options] --cached [<commit>] [--] [<path>...]"
+msgstr "'git diff' [<Optionen>] --cached [<Commit>] [--] [<Pfad>...]"
 
 #. type: Plain text
 #: en/git-diff.txt:50
-#, fuzzy, priority:280
-#| msgid "This form is to view the changes you staged for the next commit relative to the named <commit>.  Typically you would want comparison with the latest commit, so if you do not give <commit>, it defaults to HEAD."
+#, priority:280
 msgid "This form is to view the changes you staged for the next commit relative to the named <commit>.  Typically you would want comparison with the latest commit, so if you do not give <commit>, it defaults to HEAD.  If HEAD does not exist (e.g. unborn branches) and <commit> is not given, it shows all staged changes.  --staged is a synonym of --cached."
-msgstr "Mit --cached zeigt git die Änderungen die für die nächste Eintragung (commit) vorbereitet wurden verglichen mit dem angegebenen <commit>. Typischerweise soll mit der letzten Eintragung verglichen werden, wird also kein <commit> angegeben, so wird HEAD verwendet."
+msgstr ""
+"Auf diese Art können Sie sich die Änderungen ansehen, die Sie für den "
+"nächsten Commit, relativ zu dem angegebenen <Commit>, vorgenommen haben.  "
+"Normalerweise werden Sie einen Vergleich mit dem letzten Commit sehen "
+"wollen. Wenn Sie also den <Commit> nicht angeben, wird standardmäßig HEAD "
+"verwendet.  Wenn HEAD nicht existiert (z.B. wegen noch nicht erstelltem "
+"Branch) und <Commit> nicht angegeben wird, zeigt dies alle Änderungen in der "
+"Staging-Area an.  --staged ist ein Synonym für --cached."
 
 #. type: Labeled list
 #: en/git-diff.txt:51
-#, fuzzy, ignore-ellipsis, no-wrap, priority:280
-#| msgid "'git diff' [--options] <commit> [--] [<path>...]"
+#, ignore-ellipsis, no-wrap, priority:280
 msgid "'git diff' [<options>] <commit> [--] [<path>...]"
-msgstr "'git diff' [--options] <commit> [--] [<path>...]"
+msgstr "'git diff' [<Optionen>] <Commit> [--] [<Pfad>...]"
 
 #. type: Plain text
 #: en/git-diff.txt:58
 #, priority:280
 msgid "This form is to view the changes you have in your working tree relative to the named <commit>.  You can use HEAD to compare it with the latest commit, or a branch name to compare with the tip of a different branch."
-msgstr "Zeige die Unterschiede zwischen dem Arbeitsbereich und dem angegebenen <commit> (Eintragung). Man kann auch HEAD verwenden um mit der letzten Eintragung zu vergleichen, oder den Namen eines Versionszweiges (branch) um mit der letzten Version dieses Zweiges zu vergleichen."
+msgstr ""
+"Zeigt die Unterschiede zwischen dem Arbeitsbereich und dem angegebenen "
+"<Commit> an.  Sie können HEAD verwenden, um ihn mit dem letzten Commit zu "
+"vergleichen oder den Namen eines Branchs, um ihn mit der Spitze eines "
+"anderen Branchs zu vergleichen."
 
 #. type: Labeled list
 #: en/git-diff.txt:59
-#, fuzzy, ignore-ellipsis, no-wrap, priority:280
-#| msgid "'git diff' [--options] <commit> <commit> [--] [<path>...]"
+#, ignore-ellipsis, no-wrap, priority:280
 msgid "'git diff' [<options>] <commit> <commit> [--] [<path>...]"
-msgstr "'git diff' [--options] <commit> <commit> [--] [<path>...]"
+msgstr "'git diff' [<Optionen>] <Commit> <Commit> [--] [<Pfad>...]"
 
 #. type: Plain text
 #: en/git-diff.txt:63
 #, priority:280
 msgid "This is to view the changes between two arbitrary <commit>."
-msgstr "Zeige die Änderungen zwischen zwei Eintragungen (commits)."
+msgstr "Zeigt die Änderungen zwischen zwei beliebigen <Commit>s an."
 
 #. type: Labeled list
 #: en/git-diff.txt:64
-#, fuzzy, ignore-ellipsis, no-wrap, priority:280
-#| msgid "'git diff' [--options] <commit>..<commit> [--] [<path>...]"
+#, ignore-ellipsis, no-wrap, priority:280
 msgid "'git diff' [<options>] <commit>..<commit> [--] [<path>...]"
-msgstr "'git diff' [--options] <commit>..<commit> [--] [<path>...]"
+msgstr "'git diff' [<Optionen>] <Commit>..<Commit> [--] [<Pfad>...]"
 
 #. type: Plain text
 #: en/git-diff.txt:69
 #, priority:280
 msgid "This is synonymous to the previous form.  If <commit> on one side is omitted, it will have the same effect as using HEAD instead."
-msgstr "Dieser Aufruf bewirkt das Gleiche wie der vorige. Wird <commit> an einer Seite weggelassen, so wird HEAD genommen."
+msgstr ""
+"Dieser Aufruf bewirkt das Gleiche wie der vorherige. Wird <Commit> auf einer "
+"Seite weggelassen, so wird HEAD genommen."
 
 #. type: Labeled list
 #: en/git-diff.txt:70
-#, fuzzy, ignore-ellipsis, no-wrap, priority:280
-#| msgid "'git diff' [--options] <commit>\\...<commit> [--] [<path>...]"
+#, ignore-ellipsis, no-wrap, priority:280
 msgid "'git diff' [<options>] <commit>\\...<commit> [--] [<path>...]"
-msgstr "'git diff' [--options] <commit>\\...<commit> [--] [<path>...]"
+msgstr "'git diff' [<Optionen>] <Commit>\\...<Commit> [--] [<Pfad>...]"
 
 #. type: Plain text
 #: en/git-diff.txt:77
-#, fuzzy, ignore-ellipsis, priority:280
-#| msgid "This form is to view the changes on the branch containing and up to the second <commit>, starting at a common ancestor of both <commit>.  \"git diff A\\...B\" is equivalent to \"git diff $(git-merge-base A B) B\".  You can omit any one of <commit>, which has the same effect as using HEAD instead."
+#, ignore-ellipsis, priority:280
 msgid "This form is to view the changes on the branch containing and up to the second <commit>, starting at a common ancestor of both <commit>.  \"git diff A\\...B\" is equivalent to \"git diff $(git merge-base A B) B\".  You can omit any one of <commit>, which has the same effect as using HEAD instead."
-msgstr "Zeige die Änderungen im Arbeitszweig (branch) der die zweite Eintragung (commit) enthält, ausgehend vom gemeinsamen Ursprung beider <commit>. \"git diff A\\...B\" ist somit equivalent zu \"git diff $(git-merge-base A B) B\". Bleibt einer der beiden <commit> unerwähnt, wird statt dessen HEAD verwendet."
+msgstr ""
+"Dieser Befehl zeigt die Änderungen auf dem Branch an, der den zweiten "
+"<Commit> enthält, beginnend mit einem gemeinsamen Vorfahren beider <Commit>"
+"s, bis zum zweiten <Commit>.  \"git diff A\\...B\" ist äquivalent zu \"git "
+"diff $(git merge-base A B) B\".  Sie können einen der beiden <Commit>s "
+"weglassen, wodurch stattdessen HEAD eingesetzt wird."
 
 #. type: Plain text
 #: en/git-diff.txt:82
-#, fuzzy, priority:280
-#| msgid "Just in case if you are doing something exotic, it should be noted that all of the <commit> in the above description, except for the last two forms that use \"..\" notations, can be any <tree-ish>."
+#, priority:280
 msgid "Just in case you are doing something exotic, it should be noted that all of the <commit> in the above description, except in the last two forms that use \"..\" notations, can be any <tree>."
-msgstr "Für alle exotischen Anwendungsfälle sei erwähnt, daß alle <commit> in der obigen Beschreibung (ausgenommen die letzten beiden mit der \"..\" Notation) auch baumartig (<tree-ish> verwendet werden können."
+msgstr ""
+"Für alle exotischen Anwendungsfälle, weisen wir darauf hin, dass alle "
+"<Commit>s in den vorstehenden Beschreibungen, mit Ausnahme der letzten "
+"beiden Varianten, die die \"...\"-Notationen verwenden, beliebige "
+"<„Verzeichnis-Bäume“> sein können."
 
 #. type: Plain text
 #: en/git-diff.txt:89
