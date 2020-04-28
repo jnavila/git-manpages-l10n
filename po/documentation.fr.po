@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-04-04 19:51+0200\n"
-"PO-Revision-Date: 2020-04-25 12:31+0000\n"
+"PO-Revision-Date: 2020-04-28 14:59+0000\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.0.2-dev\n"
+"X-Generator: Weblate 4.0.2\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:666 en/git-instaweb.txt:45 en/git-mailinfo.txt:47 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -2592,7 +2592,18 @@ msgstr "merge.directoryRenames"
 #: en/config/merge.txt:58
 #, priority:240
 msgid "Whether Git detects directory renames, affecting what happens at merge time to new files added to a directory on one side of history when that directory was renamed on the other side of history.  If merge.directoryRenames is set to \"false\", directory rename detection is disabled, meaning that such new files will be left behind in the old directory.  If set to \"true\", directory rename detection is enabled, meaning that such new files will be moved into the new directory.  If set to \"conflict\", a conflict will be reported for such paths.  If merge.renames is false, merge.directoryRenames is ignored and treated as false.  Defaults to \"conflict\"."
-msgstr "Indique si Git doit détecter les noms de répertoire, affectant ce qui se arrive lors d'une fusion à de nouveaux fichiers ajoutés à un répertoire d'un côté de l'historique lorsque ce répertoire a été renommé de l'autre côté de l'histoire.  Si merge.directoryRenames est réglé à \"false\", la détection du répertoire est désactivée, ce qui signifie que ces nouveaux fichiers seront laissés dans l'ancien répertoire.  S'il est réglé sur \"true\", la détection du répertoire est activée, ce qui signifie que ces nouveaux fichiers seront transférés dans le nouveau répertoire.  S'il est réglé pour \"conflict\", un conflit sera signalé pour de tels chemins.  Si merge.renames est faux, merge.directoryRenames est ignoré et traité comme faux.   Par défaut, la valeur est \"conflict\"."
+msgstr ""
+"Indique si Git doit détecter les noms de répertoire, affectant ce qui se "
+"arrive lors d'une fusion à de nouveaux fichiers ajoutés à un répertoire d'un "
+"côté de l'historique lorsque ce répertoire a été renommé de l'autre côté de "
+"l'historique.  Si merge.directoryRenames est réglé à \"false\", la détection "
+"du répertoire est désactivée, ce qui signifie que ces nouveaux fichiers "
+"seront laissés dans l'ancien répertoire.  S'il est réglé sur \"true\", la "
+"détection du répertoire est activée, ce qui signifie que ces nouveaux "
+"fichiers seront transférés dans le nouveau répertoire.  S'il est réglé pour "
+"\"conflict\", un conflit sera signalé pour de tels chemins.  Si "
+"merge.renames est faux, merge.directoryRenames est ignoré et traité comme "
+"faux.   Par défaut, la valeur est \"conflict\"."
 
 #. type: Labeled list
 #: en/config/merge.txt:59
@@ -23568,7 +23579,7 @@ msgstr "`-`"
 #: en/git-fetch.txt:216
 #, priority:220
 msgid "for a successfully pruned ref;"
-msgstr "pour une ref. élaguée avec succès;"
+msgstr "pour une ref. élaguée avec succès ;"
 
 #. type: Labeled list
 #: en/git-fetch.txt:216
@@ -33093,7 +33104,8 @@ msgstr "git-merge(1)"
 #: en/git-merge.txt:7
 #, priority:240
 msgid "git-merge - Join two or more development histories together"
-msgstr "git-merge - Fusionner deux ou plusieurs historiques de développement ensemble"
+msgstr ""
+"git-merge - Fusionne deux ou plusieurs historiques de développement ensemble"
 
 #. type: Plain text
 #: en/git-merge.txt:17
@@ -33117,17 +33129,17 @@ msgstr ""
 msgid "Incorporates changes from the named commits (since the time their histories diverged from the current branch) into the current branch.  This command is used by 'git pull' to incorporate changes from another repository and can be used by hand to merge changes from one branch into another."
 msgstr ""
 "Intègre les modifications des commits nommés (depuis le moment où leur "
-"histoire a divergé de la branche actuelle) dans la branche actuelle.  Cette "
-"commande est utilisée par 'git pull' pour incorporer les modifications d'un "
-"autre dépôt et peut être utilisée à la main pour fusionner les modifications "
-"d'une branche dans une autre."
+"historique a divergé de la branche actuelle) dans la branche actuelle.  "
+"Cette commande est utilisée par 'git pull' pour incorporer les modifications "
+"d'un autre dépôt et peut être utilisée à la main pour fusionner les "
+"modifications d'une branche dans une autre."
 
 #. type: Plain text
 #: en/git-merge.txt:28 en/git-pull.txt:40
 #, priority:240
 msgid "Assume the following history exists and the current branch is \"`master`\":"
 msgstr ""
-"Supposons que l'histoire suivante existe et que la branche actuelle est "
+"Supposons que l'historique suivant existe et que la branche actuelle est "
 "`master` :"
 
 #. type: delimited block -
@@ -37791,72 +37803,126 @@ msgstr ""
 #, priority:220
 msgid "I.e. a fast-forward of commits and tags outside `refs/{tags,heads}/*` is allowed, even in cases where what's being fast-forwarded is not a commit, but a tag object which happens to point to a new commit which is a fast-forward of the commit the last tag (or commit) it's replacing. Replacing a tag with an entirely different tag is also allowed, if it points to the same commit, as well as pushing a peeled tag, i.e. pushing the commit that existing tag object points to, or a new tag object which an existing commit points to."
 msgstr ""
+"C'est-à-dire qu'une avance rapide des commits et des étiquettes en dehors de "
+"`refs/{tags,heads}/*` est autorisée, même dans les cas où ce qui est avancé "
+"rapidement n'est pas un commit, mais un objet étiquette qui pointe vers un "
+"nouveau commit qui est une avance rapide de la dernière étiquette (ou commit)"
+" qu'il remplace. Le remplacement d'une étiquette par une étiquette "
+"entièrement différente est également autorisé, si elle pointe vers le même "
+"commit, ainsi que le fait de pousser une étiquette pelée, c'est-à-dire de "
+"pousser le commit vers lequel l'objet étiquette existant pointe, ou un "
+"nouvel objet étiquette vers lequel un commit existant pointe."
 
 #. type: Plain text
 #: en/git-push.txt:126
 #, priority:220
 msgid "Tree and blob objects outside of `refs/{tags,heads}/*` will be treated the same way as if they were inside `refs/tags/*`, any update of them will be rejected."
 msgstr ""
+"Les objets d'arbre et de blob à l'extérieur de `refs/{tags,heads}/*` seront "
+"traités de la même manière que s'ils étaient à l'intérieur de `refs/tags/*`, "
+"toute mise à jour de ceux-ci sera rejetée."
 
 #. type: Plain text
 #: en/git-push.txt:135
 #, priority:220
 msgid "All of the rules described above about what's not allowed as an update can be overridden by adding an the optional leading `+` to a refspec (or using `--force` command line option). The only exception to this is that no amount of forcing will make the `refs/heads/*` namespace accept a non-commit object. Hooks and configuration can also override or amend these rules, see e.g. `receive.denyNonFastForwards` in linkgit:git-config[1] and `pre-receive` and `update` in linkgit:githooks[5]."
 msgstr ""
+"Toutes les règles décrites ci-dessus sur ce qui n'est pas autorisé en tant "
+"que mise à jour peuvent être passées outre en ajoutant le caractère "
+"facultatif `+` à une spéc-de-réf (ou en utilisant l'option de ligne de "
+"commande `--force`). La seule exception à cela est qu'aucune quantité de "
+"forçage ne fera que l'espace de noms `refs/heads/*` acceptera un objet non-"
+"commit. Les crochets et la configuration peuvent également remplacer ou "
+"modifier ces règles, voir par ex. `receive.denyNonFastForwards` dans linkgit"
+":git-config[1] et `pre-receive` et `update` dans linkgit:githooks[5]."
 
 #. type: Plain text
 #: en/git-push.txt:141
 #, priority:220
 msgid "Pushing an empty <src> allows you to delete the <dst> ref from the remote repository. Deletions are always accepted without a leading `+` in the refspec (or `--force`), except when forbidden by configuration or hooks. See `receive.denyDeletes` in linkgit:git-config[1] and `pre-receive` and `update` in linkgit:githooks[5]."
 msgstr ""
+"Pousser un <src> vide vous permet de supprimer la référence <dst> du dépôt "
+"distant. Les suppressions sont toujours acceptées sans signe `+` dans la "
+"spéc-de-réf (ou `--force`), sauf lorsque la configuration ou les crochets "
+"l'interdisent. Voir `receive.denyDeletes` dans linkgit:git-config[1] et `pre-"
+"receive` et `update` dans linkgit:githooks[5]."
 
 #. type: Plain text
 #: en/git-push.txt:146
 #, priority:220
 msgid "The special refspec `:` (or `+:` to allow non-fast-forward updates)  directs Git to push \"matching\" branches: for every branch that exists on the local side, the remote side is updated if a branch of the same name already exists on the remote side."
 msgstr ""
+"La spéc-de-réf spéciale `:` (ou `+:` pour permettre des mises à jour pas en "
+"avance rapide) ordonne à Git de pousser les branches \"correspondantes\" : "
+"pour chaque branche qui existe du côté local, le côté distant est mis à jour "
+"si une branche du même nom existe déjà du côté distant."
 
 #. type: Plain text
 #: en/git-push.txt:148
 #, priority:220
 msgid "`tag <tag>` means the same as `refs/tags/<tag>:refs/tags/<tag>`."
 msgstr ""
+"`tag <étiquette>` signifie la même chose que `refs/tags/<étiquette>:refs/"
+"tags/<étiquette>`."
 
 #. type: Plain text
 #: en/git-push.txt:152
 #, priority:220
 msgid "Push all branches (i.e. refs under `refs/heads/`); cannot be used with other <refspec>."
 msgstr ""
+"Pousser toutes les branches (c'est-à-dire les références sous `refs/heads/`) "
+"; ne peut pas être utilisé avec d'autres <spéc-de-réf>."
 
 #. type: Plain text
 #: en/git-push.txt:160
 #, priority:220
 msgid "Remove remote branches that don't have a local counterpart. For example a remote branch `tmp` will be removed if a local branch with the same name doesn't exist any more. This also respects refspecs, e.g.  `git push --prune remote refs/heads/*:refs/tmp/*` would make sure that remote `refs/tmp/foo` will be removed if `refs/heads/foo` doesn't exist."
 msgstr ""
+"Supprimer les branches distantes qui n'ont pas d'équivalent local. Par "
+"exemple, une branche distante `tmp` sera supprimée si une branche locale du "
+"même nom n'existe plus. Cela respecte également les spécificateurs de "
+"référence, par exemple `git push --prune remote refs/heads/*:refs/tmp/*` "
+"s'assurera que la branche distante `refs/tmp/foo` sera supprimée si `refs/"
+"heads/foo` n'existe plus."
 
 #. type: Plain text
 #: en/git-push.txt:171
 #, priority:220
 msgid "Instead of naming each ref to push, specifies that all refs under `refs/` (which includes but is not limited to `refs/heads/`, `refs/remotes/`, and `refs/tags/`)  be mirrored to the remote repository.  Newly created local refs will be pushed to the remote end, locally updated refs will be force updated on the remote end, and deleted refs will be removed from the remote end.  This is the default if the configuration option `remote.<remote>.mirror` is set."
 msgstr ""
+"Au lieu de nommer chaque réf à pousser, spécifier que toutes les réfs sous `"
+"refs/` (ce qui inclut mais n'est pas limité à `refs/heads/`, `refs/remotes/`"
+", et `refs/tags/`) soient reflétées dans le dépôt distant.  Les réfs locales "
+"nouvellement créées seront poussées vers l'autre extrémité, les réfs mises à "
+"jour localement seront mises à jour de force sur l'extrémité distante, et "
+"les réfs supprimées seront supprimées de l'extrémité distante.  C'est la "
+"valeur par défaut si l'option de configuration `remote.<distant>.mirror` est "
+"définie."
 
 #. type: Plain text
 #: en/git-push.txt:180
 #, priority:220
 msgid "Produce machine-readable output.  The output status line for each ref will be tab-separated and sent to stdout instead of stderr.  The full symbolic names of the refs will be given."
 msgstr ""
+"Produire une sortie lisible par machine. La ligne d'état de sortie pour "
+"chaque référence sera séparée par des tabulations et envoyée à stdout au "
+"lieu de stderr. Les noms symboliques complets des réfs seront donnés."
 
 #. type: Plain text
 #: en/git-push.txt:185
 #, priority:220
 msgid "All listed refs are deleted from the remote repository. This is the same as prefixing all refs with a colon."
 msgstr ""
+"Toutes les références listées sont supprimées du dépôt distant. Cela revient "
+"à préfixer toutes les références par deux points."
 
 #. type: Plain text
 #: en/git-push.txt:190
 #, priority:220
 msgid "All refs under `refs/tags` are pushed, in addition to refspecs explicitly listed on the command line."
 msgstr ""
+"Toutes les références sous `refs/tags` sont poussées, en plus des spéc-de-"
+"réfs explicitement listés sur la ligne de commande."
 
 #. type: Labeled list
 #: en/git-push.txt:191
@@ -37869,6 +37935,12 @@ msgstr "--follow-tags"
 #, priority:220
 msgid "Push all the refs that would be pushed without this option, and also push annotated tags in `refs/tags` that are missing from the remote but are pointing at commit-ish that are reachable from the refs being pushed.  This can also be specified with configuration variable `push.followTags`.  For more information, see `push.followTags` in linkgit:git-config[1]."
 msgstr ""
+"Pousser tous les réfs qui seraient poussées sans cette option, et pousser "
+"aussi les étiquettes annotées dans `refs/tags` qui sont manquantes du "
+"distant mais qui pointent vers le commit-esque qui sont accessibles depuis "
+"les réfs poussées.  Cela peut également être spécifié avec la variable de "
+"configuration `push.followTags`.  Pour plus d'informations, voir "
+"`push.followTags` dans linkgit:git-config[1]."
 
 #. type: Labeled list
 #: en/git-push.txt:199 en/git-send-pack.txt:73
@@ -37880,13 +37952,21 @@ msgstr "--[no-]signed"
 #: en/git-push.txt:200 en/git-send-pack.txt:74
 #, no-wrap, priority:220
 msgid "--signed=(true|false|if-asked)"
-msgstr ""
+msgstr "--signed=(true|false|if-asked)"
 
 #. type: Plain text
 #: en/git-push.txt:209 en/git-send-pack.txt:83
 #, priority:220
 msgid "GPG-sign the push request to update refs on the receiving side, to allow it to be checked by the hooks and/or be logged.  If `false` or `--no-signed`, no signing will be attempted.  If `true` or `--signed`, the push will fail if the server does not support signed pushes.  If set to `if-asked`, sign if and only if the server supports signed pushes.  The push will also fail if the actual call to `gpg --sign` fails.  See linkgit:git-receive-pack[1] for the details on the receiving end."
 msgstr ""
+"Signer avec GPG la demande de poussée pour mettre à jour les références du "
+"côté réception, pour lui permettre d'être vérifié par les crochets et/ou "
+"d'être enregistrée. Si `false` ou `--no-signed`, aucune signature ne sera "
+"tentée. Si `true` ou` --signed`, la poussée échouera si le serveur ne prend "
+"pas en charge les poussées signées. S'il est défini sur `if-asked`, signer "
+"si et seulement si le serveur prend en charge les poussées signées. La "
+"poussée échouera également si l'appel réel à `gpg --sign` échoue. Voir "
+"linkgit:git-receive-pack[1] pour les détails sur l'extrémité réceptrice."
 
 #. type: Labeled list
 #: en/git-push.txt:210
@@ -56703,7 +56783,7 @@ msgstr ""
 #: en/git-upload-archive.txt:24 en/transfer-data-leaks.txt:2
 #, no-wrap, priority:220
 msgid "SECURITY"
-msgstr ""
+msgstr "SÉCURITÉ"
 
 #. type: Plain text
 #: en/git-upload-archive.txt:32
@@ -60573,7 +60653,15 @@ msgstr "FORMATS AUTOMATIQUES"
 #: en/pretty-formats.txt:13
 #, priority:260
 msgid "If the commit is a merge, and if the pretty-format is not 'oneline', 'email' or 'raw', an additional line is inserted before the 'Author:' line.  This line begins with \"Merge: \" and the hashes of ancestral commits are printed, separated by spaces.  Note that the listed commits may not necessarily be the list of the *direct* parent commits if you have limited your view of history: for example, if you are only interested in changes related to a certain directory or file."
-msgstr "Si le commit est une fusion, et si la mise en forme n'est pas 'oneline', 'email' ou 'raw', une ligne supplémentaire est insérée avant la ligne 'Author:'.  Cette ligne commence par \"Merge:\" et les empreintes des commits ancêtres sont affichées, séparées par des espaces.  Notez que les commits énumérés ne sont pas nécessairement la liste des commits parents *directs* si vous avez limité votre vue de l'histoire : par exemple, si vous n'êtes intéressé que par les modifications liées à un certain répertoire ou fichier."
+msgstr ""
+"Si le commit est une fusion, et si la mise en forme n'est pas 'oneline', "
+"'email' ou 'raw', une ligne supplémentaire est insérée avant la ligne "
+"'Author:'.  Cette ligne commence par \"Merge:\" et les empreintes des "
+"commits ancêtres sont affichées, séparées par des espaces.  Notez que les "
+"commits énumérés ne sont pas nécessairement la liste des commits parents "
+"*directs* si vous avez limité votre vue de l'historique : par exemple, si "
+"vous n'êtes intéressé que par les modifications liées à un certain "
+"répertoire ou fichier."
 
 #. type: Plain text
 #: en/pretty-formats.txt:20
@@ -61977,12 +62065,16 @@ msgstr "Vérifier la validité d'un objet commit signé en passant la signature 
 #, priority:220
 msgid "The \"remote\" repository that is the source of a fetch or pull operation.  This parameter can be either a URL (see the section <<URLS,GIT URLS>> below) or the name of a remote (see the section <<REMOTES,REMOTES>> below)."
 msgstr ""
+"Le dépôt \"distant\" qui est la source d'une opération de récupération ou de "
+"tirage.  Ce paramètre peut être soit une URL (voir la section <<URLS, URLS "
+"GIT>> ci-dessous) soit le nom d'un remote (voir la section "
+"<<REMOTES,DISTANTS>> ci-dessous)."
 
 #. type: Labeled list
 #: en/pull-fetch-param.txt:8
 #, no-wrap, priority:220
 msgid "<group>"
-msgstr ""
+msgstr "<groupe>"
 
 #. type: Plain text
 #: en/pull-fetch-param.txt:12
@@ -62001,78 +62093,146 @@ msgstr "<spécificateur-de-référence>"
 #, priority:220
 msgid "Specifies which refs to fetch and which local refs to update.  When no <refspec>s appear on the command line, the refs to fetch are read from `remote.<repository>.fetch` variables instead"
 msgstr ""
+"Préciser les références à récupérer et les références locales à mettre à "
+"jour.  Lorsqu'aucun <spéc-de-réf> n'apparaît sur la ligne de commande, les "
+"références à récupérer sont lues à partir des variables "
+"`remote.<dépôt>.fetch` à la place"
 
 #. type: Plain text
 #: en/pull-fetch-param.txt:20
 #, no-wrap, priority:220
 msgid "\t(see <<CRTB,CONFIGURED REMOTE-TRACKING BRANCHES>> below).\n"
 msgstr ""
+"\t(voir <<CRTB,BRANCHES DE SUIVI À DISTANCE CONFIGURÉES>> ci-dessous).\n"
 
 #. type: Plain text
 #: en/pull-fetch-param.txt:23
 #, no-wrap, priority:220
 msgid "\t(see linkgit:git-fetch[1]).\n"
-msgstr ""
+msgstr "\t(voir linkgit:git-fetch[1]).\n"
 
 #. type: Plain text
 #: en/pull-fetch-param.txt:31
 #, priority:220
 msgid "The format of a <refspec> parameter is an optional plus `+`, followed by the source <src>, followed by a colon `:`, followed by the destination ref <dst>.  The colon can be omitted when <dst> is empty.  <src> is typically a ref, but it can also be a fully spelled hex object name."
 msgstr ""
+"Le format d'un paramètre <spéc-de-réf> est un plus `+` optionnel, suivi de "
+"la source <src>, suivi de deux points `:`, suivi de la destination ref <dst>"
+".  Les deux points peuvent être omis lorsque <dst> est vide.  <src> est "
+"typiquement une réf, mais cela peut aussi être un nom d'objet hexadécimal "
+"entier."
 
 #. type: Plain text
 #: en/pull-fetch-param.txt:34
 #, priority:220
 msgid "`tag <tag>` means the same as `refs/tags/<tag>:refs/tags/<tag>`; it requests fetching everything up to the given tag."
 msgstr ""
+"`tag <étiquette>` signifie la même chose que `refs/tags/<tag>:refs/tags/"
+"<tag>` ; cela demande de tout récupérer jusqu'à l'étiquette donnée."
 
 #. type: Plain text
 #: en/pull-fetch-param.txt:38
 #, priority:220
 msgid "The remote ref that matches <src> is fetched, and if <dst> is not an empty string, an attempt is made to update the local ref that matches it."
 msgstr ""
+"La référence distante qui correspond à <src> est récupérée, et si <dst> "
+"n'est pas une chaîne vide, une tentative est faite pour mettre à jour la "
+"référence locale qui lui correspond."
 
 #. type: Plain text
 #: en/pull-fetch-param.txt:45
 #, ignore-ellipsis, priority:220
 msgid "Whether that update is allowed without `--force` depends on the ref namespace it's being fetched to, the type of object being fetched, and whether the update is considered to be a fast-forward. Generally, the same rules apply for fetching as when pushing, see the `<refspec>...` section of linkgit:git-push[1] for what those are. Exceptions to those rules particular to 'git fetch' are noted below."
 msgstr ""
+"Le fait que cette mise à jour soit autorisée sans `---force` dépend de "
+"l'espace de noms de référence vers lequel elle est récupérée, du type "
+"d'objet récupéré, et si la mise à jour est considérée comme une avance "
+"rapide. Généralement, les mêmes règles s'appliquent pour la récupération que "
+"pour la poussée, voir la section `<spéc-de-réf>...` de linkgit:git-push[1] "
+"pour les connaître. Les exceptions à ces règles particulières à 'git fetch' "
+"sont notées ci-dessous."
 
 #. type: Plain text
 #: en/pull-fetch-param.txt:53
 #, priority:220
 msgid "Until Git version 2.20, and unlike when pushing with linkgit:git-push[1], any updates to `refs/tags/*` would be accepted without `+` in the refspec (or `--force`). When fetching, we promiscuously considered all tag updates from a remote to be forced fetches.  Since Git version 2.20, fetching to update `refs/tags/*` works the same way as when pushing. I.e. any updates will be rejected without `+` in the refspec (or `--force`)."
 msgstr ""
+"Jusqu'à la version 2.20 de Git, et contrairement à ce qui se passe avec "
+"linkgit:git-push[1], toute mise à jour de `refs/tags/*` serait acceptée sans "
+"`+` dans la spéc-de-réf (ou `--force`). Lors de la récupération, nous "
+"considérons sans distinction toutes les mises à jour d'étiquettes depuis un "
+"dépôt distance comme des récupérations forcées.  Depuis la version 2.20 de "
+"Git, la récupération pour mettre à jour les `refs/tags/*` fonctionne de la "
+"même manière que lors de la poussée. C'est-à-dire que toute mise à jour sera "
+"rejetée sans \"+\" dans le spécificateur de référence (ou `--force`)."
 
 #. type: Plain text
 #: en/pull-fetch-param.txt:59
 #, priority:220
 msgid "Unlike when pushing with linkgit:git-push[1], any updates outside of `refs/{tags,heads}/*` will be accepted without `+` in the refspec (or `--force`), whether that's swapping e.g. a tree object for a blob, or a commit for another commit that's doesn't have the previous commit as an ancestor etc."
 msgstr ""
+"Contrairement à une poussée avec linkgit:git-push[1], toute mise à jour en "
+"dehors de `refs/{tags,heads}/*` sera acceptée sans `+` dans le spéc-de-réf ("
+"ou `--force`), que ce soit en échangeant par exemple un objet arbre pour un "
+"blob, ou un commit pour un autre commit qui n'a pas le commit précédent "
+"comme ancêtre etc."
 
 #. type: Plain text
 #: en/pull-fetch-param.txt:63
 #, priority:220
 msgid "Unlike when pushing with linkgit:git-push[1], there is no configuration which'll amend these rules, and nothing like a `pre-fetch` hook analogous to the `pre-receive` hook."
 msgstr ""
+"Contrairement à une poussée avec linkgit:git-push[1], il n'y a pas de "
+"configuration qui modifie ces règles, et rien de tel qu'un crochet pré-"
+"récupération `pre-fetch` analogue à celui de pré-réception`pre-receive`."
 
 #. type: Plain text
 #: en/pull-fetch-param.txt:70
 #, priority:220
 msgid "As with pushing with linkgit:git-push[1], all of the rules described above about what's not allowed as an update can be overridden by adding an the optional leading `+` to a refspec (or using `--force` command line option). The only exception to this is that no amount of forcing will make the `refs/heads/*` namespace accept a non-commit object."
 msgstr ""
+"Comme pour la poussée avec linkgit:git-push[1], toutes les règles décrites "
+"ci-dessus concernant ce qui n'est pas autorisé comme une mise à jour, "
+"peuvent être annulées en ajoutant un \"+\" optionnel à un spécificateur de "
+"référence (ou en utilisant l'option de ligne de commande `--force`). La "
+"seule exception à cette règle est qu'aucun forçage ne fera accepter à "
+"l'espace de noms `refs/heads/*` un objet non commit."
 
 #. type: Plain text
 #: en/pull-fetch-param.txt:82
 #, priority:220
 msgid "When the remote branch you want to fetch is known to be rewound and rebased regularly, it is expected that its new tip will not be descendant of its previous tip (as stored in your remote-tracking branch the last time you fetched).  You would want to use the `+` sign to indicate non-fast-forward updates will be needed for such branches.  There is no way to determine or declare that a branch will be made available in a repository with this behavior; the pulling user simply must know this is the expected usage pattern for a branch."
 msgstr ""
+"Lorsque la branche distante que vous voulez récupérer est connue pour être "
+"régulièrement rembobinée et rebasée, on s'attend à ce que son nouveau sommet "
+"ne soit  pas un descendant de son sommet précédent (telle qu'il était stocké "
+"dans votre branche de suivi à distance la dernière fois que vous l'avez "
+"récupéré).  Vous pouvez utiliser le signe \"+\" pour indiquer que des mises "
+"à jour non en avance rapide seront nécessaires pour ces branches.  Il n'y a "
+"aucun moyen de déterminer ou de déclarer qu'une branche sera rendue "
+"disponible dans un dépôt avec ce comportement ; l'utilisateur qui tire doit "
+"simplement savoir que c'est le modèle d'utilisation attendu pour une branche."
 
 #. type: Plain text
 #: en/pull-fetch-param.txt:102
 #, priority:220
 msgid "There is a difference between listing multiple <refspec> directly on 'git pull' command line and having multiple `remote.<repository>.fetch` entries in your configuration for a <repository> and running a 'git pull' command without any explicit <refspec> parameters.  <refspec>s listed explicitly on the command line are always merged into the current branch after fetching.  In other words, if you list more than one remote ref, 'git pull' will create an Octopus merge.  On the other hand, if you do not list any explicit <refspec> parameter on the command line, 'git pull' will fetch all the <refspec>s it finds in the `remote.<repository>.fetch` configuration and merge only the first <refspec> found into the current branch.  This is because making an Octopus from remote refs is rarely done, while keeping track of multiple remote heads in one-go by fetching more than one is often useful."
 msgstr ""
+"Il y a une différence entre le fait de lister plusieurs <spéc-de-réf> "
+"directement sur la ligne de commande 'git pull' et le fait d'avoir plusieurs "
+"entrées `remote.<dépôt>.fetch` dans votre configuration pour un <dépôt> et "
+"d'exécuter une commande 'git pull' sans aucun paramètre <spéc-de-réf> "
+"explicite.  Les <spéc-de-réf>s listés explicitement sur la ligne de commande "
+"sont toujours fusionnés dans la branche actuelle après avoir été "
+"récupérées.  En d'autres termes, si vous listez plus d'une référence "
+"distante, 'git pull' créera une fusion Octopus.  D'un autre côté, si vous "
+"n'indiquez aucun paramètre <spéc-de-réf> explicite sur la ligne de commande, "
+"'git pull' récupérera tous les <spéc-de-réf>s qu'il trouve dans la "
+"configuration `remote.<dépôt>.fetch` et fusionnera seulement le premier <réf-"
+"de-spéc> trouvé dans la branche actuelle.  C'est parce que faire un Octopus "
+"à partir de références distantes est rarement fait, alors que garder la "
+"trace de plusieurs têtes distantes en un seul coup en en récupérant "
+"plusieurs est souvent utile."
 
 #. type: Title -
 #: en/revisions.txt:2
@@ -63159,7 +63319,11 @@ msgstr "--cherry"
 #: en/rev-list-options.txt:263
 #, ignore-ellipsis, priority:260
 msgid "A synonym for `--right-only --cherry-mark --no-merges`; useful to limit the output to the commits on our side and mark those that have been applied to the other side of a forked history with `git log --cherry upstream...mybranch`, similar to `git cherry upstream mybranch`."
-msgstr "Un synonyme pour `--right-only --cherry-mark --no-merges` ; utile pour limiter la sortie aux commits de notre côté et marquer ceux qui ont été appliqués de l'autre côté d'une histoire en fourche avec `git log --cherry amont...mabranche', similaire à `git cherry upstream mabranche`."
+msgstr ""
+"Un synonyme pour `--right-only --cherry-mark --no-merges` ; utile pour "
+"limiter la sortie aux commits de notre côté et marquer ceux qui ont été "
+"appliqués de l'autre côté d'un historique en fourche avec `git log --cherry "
+"amont...mabranche', similaire à `git cherry upstream mabranche`."
 
 #. type: Labeled list
 #: en/rev-list-options.txt:265
@@ -63267,7 +63431,12 @@ msgstr "Simplification de l'historique"
 #: en/rev-list-options.txt:326
 #, priority:260
 msgid "Sometimes you are only interested in parts of the history, for example the commits modifying a particular <path>. But there are two parts of 'History Simplification', one part is selecting the commits and the other is how to do it, as there are various strategies to simplify the history."
-msgstr "Parfois vous n'êtes intéressé que par certaines parties de l'historique, par exemple les commits qui modifient un <chemin> particulier. Mais il y a deux parties dans la 'Simplification de l'historique', une partie est la sélection des commits et l'autre la manière de le faire, car il existe différentes stratégies pour simplifier l'histoire."
+msgstr ""
+"Parfois vous n'êtes intéressé que par certaines parties de l'historique, par "
+"exemple les commits qui modifient un <chemin> particulier. Mais il y a deux "
+"parties dans la 'Simplification de l'historique', une partie est la "
+"sélection des commits et l'autre la manière de le faire, car il existe "
+"différentes stratégies pour simplifier l'historique."
 
 #. type: Plain text
 #: en/rev-list-options.txt:328
@@ -63415,7 +63584,9 @@ msgstr ""
 #: en/rev-list-options.txt:385
 #, priority:260
 msgid "The horizontal line of history A---Q is taken to be the first parent of each merge.  The commits are:"
-msgstr "La ligne horizontale de l'histoire A---Q est prise pour être le premier parent de chaque fusion.  Les commits sont :"
+msgstr ""
+"La ligne horizontale de l'historique A---Q est prise pour être le premier "
+"parent de chaque fusion.  Les commits sont :"
 
 #. type: Plain text
 #: en/rev-list-options.txt:389
@@ -64460,72 +64631,110 @@ msgstr ""
 #, priority:220
 msgid "The fetch and push protocols are not designed to prevent one side from stealing data from the other repository that was not intended to be shared. If you have private data that you need to protect from a malicious peer, your best option is to store it in another repository. This applies to both clients and servers. In particular, namespaces on a server are not effective for read access control; you should only grant read access to a namespace to clients that you would trust with read access to the entire repository."
 msgstr ""
+"Les protocoles \"fetch\" et \"push\" ne sont pas conçus pour empêcher un "
+"tiers de voler des données de l'autre dépôt qui n'étaient pas destinées à "
+"être partagées. Si vous avez des données privées que vous devez protéger "
+"contre un tiers malveillant, la meilleure solution est de les stocker dans "
+"un autre dépôt. Cela s'applique aussi bien aux clients qu'aux serveurs. En "
+"particulier, les espaces de noms sur un serveur ne sont pas efficaces pour "
+"le contrôle de l'accès en lecture ; vous ne devez accorder l'accès en "
+"lecture à un espace de noms qu'aux clients auxquels vous feriez confiance "
+"pour l'accès en lecture à l'ensemble du dépôt."
 
 #. type: Plain text
 #: en/transfer-data-leaks.txt:13
 #, priority:220
 msgid "The known attack vectors are as follows:"
-msgstr ""
+msgstr "Les vecteurs d'attaque connus sont les suivants :"
 
 #. type: Plain text
 #: en/transfer-data-leaks.txt:26
 #, priority:220
 msgid "The victim sends \"have\" lines advertising the IDs of objects it has that are not explicitly intended to be shared but can be used to optimize the transfer if the peer also has them. The attacker chooses an object ID X to steal and sends a ref to X, but isn't required to send the content of X because the victim already has it. Now the victim believes that the attacker has X, and it sends the content of X back to the attacker later. (This attack is most straightforward for a client to perform on a server, by creating a ref to X in the namespace the client has access to and then fetching it. The most likely way for a server to perform it on a client is to \"merge\" X into a public branch and hope that the user does additional work on this branch and pushes it back to the server without noticing the merge.)"
 msgstr ""
+"La victime envoie des lignes \"have\" annonçant les identifiants des objets "
+"qu'elle possède et qui ne sont pas explicitement destinés à être partagés, "
+"mais qui peuvent être utilisés pour optimiser le transfert si le pair les "
+"possède également. L'attaquant choisit un ID d'objet X à voler et envoie une "
+"référence à X, mais n'est pas obligé d'envoyer le contenu de X parce que la "
+"victime l'a déjà. La victime croit maintenant que l'attaquant a X, et elle "
+"lui renvoie le contenu de X plus tard. (Cette attaque est la plus simple à "
+"réaliser pour un client sur un serveur, en créant une référence à X dans "
+"l'espace de noms auquel le client a accès et en la récupérant ensuite. La "
+"façon la plus probable pour un serveur de l'exécuter sur un client est de \""
+"fusionner\" X dans une branche publique et d'espérer que l'utilisateur fasse "
+"un travail supplémentaire sur cette branche et la repousse vers le serveur "
+"sans remarquer la fusion)."
 
 #. type: Plain text
 #: en/transfer-data-leaks.txt:30
 #, priority:220
 msgid "As in #1, the attacker chooses an object ID X to steal. The victim sends an object Y that the attacker already has, and the attacker falsely claims to have X and not Y, so the victim sends Y as a delta against X.  The delta reveals regions of X that are similar to Y to the attacker."
 msgstr ""
+"Comme en n°1, l'attaquant choisit un objet ID X à voler. La victime envoie "
+"un objet Y que l'attaquant possède déjà, et l'attaquant prétend faussement "
+"avoir X et non Y, de sorte que la victime envoie Y comme delta contre X. Le "
+"delta révèle à l'attaquant des régions de X qui sont similaires à Y."
 
 #. type: Title -
 #: en/urls-remotes.txt:4
 #, no-wrap, priority:220
 msgid "REMOTES[[REMOTES]]"
-msgstr ""
+msgstr "DISTANTS[[REMOTES]]"
 
 #. type: Plain text
 #: en/urls-remotes.txt:8
 #, priority:220
 msgid "The name of one of the following can be used instead of a URL as `<repository>` argument:"
 msgstr ""
+"Le nom de l'un des éléments suivants peut être utilisé à la place d'une URL "
+"en tant qu'argument `<dépôt>` :"
 
 #. type: Plain text
 #: en/urls-remotes.txt:10
 #, priority:220
 msgid "a remote in the Git configuration file: `$GIT_DIR/config`,"
-msgstr ""
+msgstr "un distant dans le fichier de configuration Git : `$GIT_DIR/config`,"
 
 #. type: Plain text
 #: en/urls-remotes.txt:11
 #, priority:220
 msgid "a file in the `$GIT_DIR/remotes` directory, or"
-msgstr ""
+msgstr "un fichier dans le répertoire `$GIT_DIR/remotes`, ou"
 
 #. type: Plain text
 #: en/urls-remotes.txt:12
 #, priority:220
 msgid "a file in the `$GIT_DIR/branches` directory."
-msgstr ""
+msgstr "un fichier dans le répertoire `$GIT_DIR/branches`."
 
 #. type: Plain text
 #: en/urls-remotes.txt:15
 #, priority:220
 msgid "All of these also allow you to omit the refspec from the command line because they each contain a refspec which git will use by default."
 msgstr ""
+"Toutes ces options vous permettent également d'omettre le spécificateur de "
+"référence de la ligne de commande car elles contiennent chacune un "
+"spécificateur de référence que git utilisera par défaut."
 
 #. type: Title ~
 #: en/urls-remotes.txt:17
 #, no-wrap, priority:220
 msgid "Named remote in configuration file"
-msgstr ""
+msgstr "distant nommé dans le fichier de configuration"
 
 #. type: Plain text
 #: en/urls-remotes.txt:26
 #, priority:220
 msgid "You can choose to provide the name of a remote which you had previously configured using linkgit:git-remote[1], linkgit:git-config[1] or even by a manual edit to the `$GIT_DIR/config` file.  The URL of this remote will be used to access the repository.  The refspec of this remote will be used by default when you do not provide a refspec on the command line.  The entry in the config file would appear like this:"
 msgstr ""
+"Vous pouvez choisir de fournir le nom d'un distant que vous aviez "
+"précédemment configuré en utilisant linkgit:git-remote[1], linkgit:git-"
+"config[1] ou même par une modification manuelle du fichier `$GIT_DIR/config`"
+".  L'URL de ce distant sera utilisée pour accéder au dépôt.  Le "
+"spécificateur de référence de ce distant sera utilisé par défaut lorsque "
+"vous ne fournissez pas de spécificateur de référence sur la ligne de "
+"commande.  L'entrée dans le fichier de configuration apparaîtra comme ceci :"
 
 #. type: delimited block -
 #: en/urls-remotes.txt:33
@@ -64537,24 +64746,36 @@ msgid ""
 "\t\tpush = <refspec>\n"
 "\t\tfetch = <refspec>\n"
 msgstr ""
+"\t[remote \"<nom>\"]\n"
+"\t\turl = <url>\n"
+"\t\tpushurl = <url-poussée>\n"
+"\t\tpush = <spéc-de-réf>\n"
+"\t\tfetch = <spéc-de-réf>\n"
 
 #. type: Plain text
 #: en/urls-remotes.txt:37
 #, priority:220
 msgid "The `<pushurl>` is used for pushes only. It is optional and defaults to `<url>`."
 msgstr ""
+"Le `<url-poussée>` n'est utilisé que pour les poussées. Il est facultatif et "
+"sa valeur par défaut est `<url>`."
 
 #. type: Title ~
 #: en/urls-remotes.txt:39
 #, no-wrap, priority:220
 msgid "Named file in `$GIT_DIR/remotes`"
-msgstr ""
+msgstr "Fichier nommé dans `$GIT_DIR/remotes`"
 
 #. type: Plain text
 #: en/urls-remotes.txt:47
 #, priority:220
 msgid "You can choose to provide the name of a file in `$GIT_DIR/remotes`.  The URL in this file will be used to access the repository.  The refspec in this file will be used as default when you do not provide a refspec on the command line.  This file should have the following format:"
 msgstr ""
+"Vous pouvez choisir de fournir le nom d'un fichier dans `$GIT_DIR/remotes`.  "
+"L'URL dans ce fichier sera utilisée pour accéder au dépôt.  Le spécificateur "
+"de référence dans ce fichier sera utilisé par défaut lorsque vous ne "
+"fournissez pas de spécificateur de référence sur la ligne de commande.  Ce "
+"fichier doit avoir le format suivant :"
 
 #. type: delimited block -
 #: en/urls-remotes.txt:52
@@ -64564,66 +64785,80 @@ msgid ""
 "\tPush: <refspec>\n"
 "\tPull: <refspec>\n"
 msgstr ""
+"\tURL: un des format d'URL ci-dessus\n"
+"\tPush: <spéc-de-réf>\n"
+"\tPull: <spéc-de-réf>\n"
 
 #. type: Plain text
 #: en/urls-remotes.txt:59
 #, priority:220
 msgid "`Push:` lines are used by 'git push' and `Pull:` lines are used by 'git pull' and 'git fetch'.  Multiple `Push:` and `Pull:` lines may be specified for additional branch mappings."
 msgstr ""
+"Les lignes `Push:`\" sont utilisées par 'git push' et les lignes `Pull:` "
+"sont utilisées par 'git pull' et 'git fetch'.  Des lignes `Push:` et `Pull:` "
+"multiples peuvent être spécifiées pour des mappages  supplémentaires de "
+"branches."
 
 #. type: Title ~
 #: en/urls-remotes.txt:61
 #, no-wrap, priority:220
 msgid "Named file in `$GIT_DIR/branches`"
-msgstr ""
+msgstr "Fichier nommé dans `$GIT-DIR/branches`"
 
 #. type: Plain text
 #: en/urls-remotes.txt:67
 #, priority:220
 msgid "You can choose to provide the name of a file in `$GIT_DIR/branches`.  The URL in this file will be used to access the repository.  This file should have the following format:"
 msgstr ""
+"Vous pouvez choisir de fournir le nom d'un fichier dans `$GIT_DIR/branches`"
+".  L'URL de ce fichier sera utilisée pour accéder au dépôt.  Ce fichier doit "
+"avoir le format suivant :"
 
 #. type: delimited block -
 #: en/urls-remotes.txt:71
 #, no-wrap, priority:220
 msgid "\t<url>#<head>\n"
-msgstr ""
+msgstr "\t<url>#<tête>\n"
 
 #. type: Plain text
 #: en/urls-remotes.txt:74
 #, priority:220
 msgid "`<url>` is required; `#<head>` is optional."
-msgstr ""
+msgstr "`<url>` est obligatoire ; `#<tête>` est facultatif."
 
 #. type: Plain text
 #: en/urls-remotes.txt:79
 #, priority:220
 msgid "Depending on the operation, git will use one of the following refspecs, if you don't provide one on the command line.  `<branch>` is the name of this file in `$GIT_DIR/branches` and `<head>` defaults to `master`."
 msgstr ""
+"En fonction de l'opération, git utilisera l'un des spécificateurs de "
+"référence suivants, si vous n'en fournissez pas un en ligne de commande.  "
+"`<branche>` est le nom de ce fichier dans `$GIT_DIR/branches` et `<tête>` "
+"vaut par défaut `master`."
 
 #. type: Plain text
 #: en/urls-remotes.txt:81
 #, priority:220
 msgid "git fetch uses:"
-msgstr ""
+msgstr "git fetch utilise :"
 
 #. type: delimited block -
 #: en/urls-remotes.txt:84
 #, no-wrap, priority:220
 msgid "\trefs/heads/<head>:refs/heads/<branch>\n"
-msgstr ""
+msgstr "\trefs/heads/<tête>:refs/heads/<branche>\n"
 
 #. type: Plain text
 #: en/urls-remotes.txt:87
 #, priority:220
 msgid "git push uses:"
-msgstr ""
+msgstr "git push utilise :"
 
 #. type: delimited block -
 #: en/urls-remotes.txt:90
 #, no-wrap, priority:220
 msgid "\tHEAD:refs/heads/<head>\n"
-msgstr ""
+msgstr "\tHEAD:refs/heads/<tête>\n"
 
 #. type: Title -
 #: en/urls.txt:2
