@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-04-04 19:51+0200\n"
-"PO-Revision-Date: 2020-04-28 14:59+0000\n"
+"PO-Revision-Date: 2020-05-05 10:11+0000\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.0.2\n"
+"X-Generator: Weblate 4.1-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:666 en/git-instaweb.txt:45 en/git-mailinfo.txt:47 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -37979,6 +37979,10 @@ msgstr "--[no-]atomic"
 #, priority:220
 msgid "Use an atomic transaction on the remote side if available.  Either all refs are updated, or on error, no refs are updated.  If the server does not support atomic pushes the push will fail."
 msgstr ""
+"Utiliser une transaction atomique à distance, si possible.  Soit toutes les "
+"références sont mises à jour, soit, en cas d'erreur, aucune référence n'est "
+"mise à jour.  Si le serveur ne prend pas en charge les poussées atomiques, "
+"la poussée échouera."
 
 #. type: Labeled list
 #: en/git-push.txt:216
@@ -37991,6 +37995,13 @@ msgstr "--push-option=<option>"
 #, priority:220
 msgid "Transmit the given string to the server, which passes them to the pre-receive as well as the post-receive hook. The given string must not contain a NUL or LF character.  When multiple `--push-option=<option>` are given, they are all sent to the other side in the order listed on the command line.  When no `--push-option=<option>` is given from the command line, the values of configuration variable `push.pushOption` are used instead."
 msgstr ""
+"Transmettre la chaîne donnée au serveur, qui les transmet au crochet pre-"
+"receive ainsi qu'au crochet post-receive. La chaîne donnée ne doit pas "
+"contenir de caractère NUL ou LF.  Lorsque plusieurs `--push-option=<option>` "
+"sont donnés, ils sont tous envoyés de l'autre côté dans l'ordre indiqué sur "
+"la ligne de commande.  Lorsqu'aucun `--push-option=<option>` n'est donné en "
+"ligne de commande, les valeurs de la variable de configuration "
+"`push.pushOption` sont utilisées à la place."
 
 #. type: Labeled list
 #: en/git-push.txt:227 en/git-send-pack.txt:28
@@ -38009,6 +38020,9 @@ msgstr "--exec=<git-receive-pack>"
 #, priority:220
 msgid "Path to the 'git-receive-pack' program on the remote end.  Sometimes useful when pushing to a remote repository over ssh, and you do not have the program in a directory on the default $PATH."
 msgstr ""
+"Chemin d'accès au programme 'git-receive-pack' sur l'extrémité distante.  "
+"Parfois utile lorsque vous poussez vers un dépôt distant via ssh, et que "
+"vous n'avez pas le programme dans un répertoire sur le $PATH par défaut."
 
 #. type: Labeled list
 #: en/git-push.txt:234
@@ -38020,85 +38034,138 @@ msgstr "--[no-]force-with-lease"
 #: en/git-push.txt:235
 #, no-wrap, priority:220
 msgid "--force-with-lease=<refname>"
-msgstr ""
+msgstr "--force-with-lease=<nom-de-réf>"
 
 #. type: Labeled list
 #: en/git-push.txt:236
 #, no-wrap, priority:220
 msgid "--force-with-lease=<refname>:<expect>"
-msgstr ""
+msgstr "--force-with-lease=<nom-de-réf>:<attendu>"
 
 #. type: Plain text
 #: en/git-push.txt:239
 #, priority:220
 msgid "Usually, \"git push\" refuses to update a remote ref that is not an ancestor of the local ref used to overwrite it."
 msgstr ""
+"Habituellement, \"git push\" refuse de mettre à jour une référence distante "
+"qui n'est pas un ancêtre de la référence locale utilisée pour la remplacer."
 
 #. type: Plain text
 #: en/git-push.txt:242
 #, priority:220
 msgid "This option overrides this restriction if the current value of the remote ref is the expected value.  \"git push\" fails otherwise."
 msgstr ""
+"Cette option passe outre cette restriction si la valeur actuelle de la "
+"référence distante est la valeur attendue. \"git push\" échoue sinon."
 
 #. type: Plain text
 #: en/git-push.txt:249
 #, priority:220
 msgid "Imagine that you have to rebase what you have already published.  You will have to bypass the \"must fast-forward\" rule in order to replace the history you originally published with the rebased history.  If somebody else built on top of your original history while you are rebasing, the tip of the branch at the remote may advance with her commit, and blindly pushing with `--force` will lose her work."
 msgstr ""
+"Imaginez que vous devez rebaser ce que vous avez déjà publié. Vous devrez "
+"contourner la règle \"doit avancer rapidement\" afin de remplacer "
+"l'historique que vous avez initialement publié par l'historique rebasé. Si "
+"quelqu'un d'autre a construit sur votre historique d'origine pendant que "
+"vous rebasez, le sommet de la branche distante peut avoir avancé avec son "
+"commit, et pousser aveuglément avec `--force` éliminera son travail."
 
 #. type: Plain text
 #: en/git-push.txt:256
 #, priority:220
 msgid "This option allows you to say that you expect the history you are updating is what you rebased and want to replace. If the remote ref still points at the commit you specified, you can be sure that no other people did anything to the ref. It is like taking a \"lease\" on the ref without explicitly locking it, and the remote ref is updated only if the \"lease\" is still valid."
 msgstr ""
+"Cette option vous permet de dire que vous vous attendez à ce que "
+"l'historique que vous mettez à jour est ce que vous avez rebasé et que vous "
+"souhaitez remplacer. Si la référence distante pointe toujours sur le commit "
+"que vous avez spécifié, vous pouvez être sûr qu'aucune autre personne n'a "
+"fait quoi que ce soit à la référence. C'est comme prendre un \"contrat\" sur "
+"la référence sans la verrouiller explicitement, et la référence distante "
+"n'est mise à jour que si le \"contrat\" est toujours valide."
 
 #. type: Plain text
 #: en/git-push.txt:261
 #, priority:220
 msgid "`--force-with-lease` alone, without specifying the details, will protect all remote refs that are going to be updated by requiring their current value to be the same as the remote-tracking branch we have for them."
 msgstr ""
+"Seul `--force-with-lease`, sans préciser les détails, protégera toutes les "
+"références distantes qui vont être mises à jour en exigeant leur valeur "
+"actuelle à être la même que la branche de suivi à distance que nous avons "
+"pour eux."
 
 #. type: Plain text
 #: en/git-push.txt:266
 #, priority:220
 msgid "`--force-with-lease=<refname>`, without specifying the expected value, will protect the named ref (alone), if it is going to be updated, by requiring its current value to be the same as the remote-tracking branch we have for it."
 msgstr ""
+"`--force-with-lease=<nom-de-réf>`, sans spécifier la valeur attendue, "
+"protégera (seulement) la référence nommée, si elle va être mise à jour, en "
+"exigeant que sa valeur actuelle soit la même que la branche de suivi à "
+"distance que nous avons pour elle."
 
 #. type: Plain text
 #: en/git-push.txt:274
 #, priority:220
 msgid "`--force-with-lease=<refname>:<expect>` will protect the named ref (alone), if it is going to be updated, by requiring its current value to be the same as the specified value `<expect>` (which is allowed to be different from the remote-tracking branch we have for the refname, or we do not even have to have such a remote-tracking branch when this form is used).  If `<expect>` is the empty string, then the named ref must not already exist."
 msgstr ""
+"`--force-with-lease = <nom-de-réf>: <attendu>` protégera (seulement) la "
+"référence nommée, si elle va être mise à jour, en exigeant que sa valeur "
+"actuelle soit la même que la valeur spécifiée `<attendu > `(qui peut être "
+"différente de la branche de suivi à distance que nous avons pour le nom de "
+"référence, ou si nous n'avons même pas besoin d'avoir une telle branche de "
+"suivi à distance lorsque cette forme est utilisée). Si `<attendu>` est la "
+"chaîne vide, alors la référence nommée ne doit pas déjà exister."
 
 #. type: Plain text
 #: en/git-push.txt:279
 #, priority:220
 msgid "Note that all forms other than `--force-with-lease=<refname>:<expect>` that specifies the expected current value of the ref explicitly are still experimental and their semantics may change as we gain experience with this feature."
 msgstr ""
+"Notez que toutes les formes autres que `--force-with-lease=<nom-de-"
+"réf>:<attendu>` qui spécifie explicitement la valeur actuelle attendue de la "
+"référence sont toujours expérimentales et leur sémantique peut changer à "
+"mesure que nous acquérons de l'expérience avec cette fonctionnalité."
 
 #. type: Plain text
 #: en/git-push.txt:282
 #, priority:220
 msgid "\"--no-force-with-lease\" will cancel all the previous --force-with-lease on the command line."
 msgstr ""
+"\"--no-force-with-lease\" annulera tous les précédents --force-with-lease "
+"sur la ligne de commande."
 
 #. type: Plain text
 #: en/git-push.txt:288
 #, priority:220
 msgid "A general note on safety: supplying this option without an expected value, i.e. as `--force-with-lease` or `--force-with-lease=<refname>` interacts very badly with anything that implicitly runs `git fetch` on the remote to be pushed to in the background, e.g. `git fetch origin` on your repository in a cronjob."
 msgstr ""
+"Une note générale sur la sécurité : fournir cette option sans valeur "
+"attendue, c'est-à-dire que `--force-with-lease` ou `--force-with-lease=<nom-"
+"de-réf>` interagit très mal avec tout ce qui exécute implicitement `git "
+"fetch` sur le distant pour être poussé en arrière-plan, par exemple `git "
+"fetch origin` sur votre dépôt dans un job cron."
 
 #. type: Plain text
 #: en/git-push.txt:295
 #, priority:220
 msgid "The protection it offers over `--force` is ensuring that subsequent changes your work wasn't based on aren't clobbered, but this is trivially defeated if some background process is updating refs in the background. We don't have anything except the remote tracking info to go by as a heuristic for refs you're expected to have seen & are willing to clobber."
 msgstr ""
+"La protection qu'il offre par rapport à `--force` est d'assurer que les "
+"modifications ultérieures sur lesquelles votre travail n'était pas basé ne "
+"sont pas supprimées, mais elle est trivialement réduite à néant si un "
+"processus de mise à jour des références est effectué en arrière-plan. Nous "
+"n'avons rien d'autre que les informations de suivi à distance à utiliser "
+"comme heuristique pour les références que vous êtes censé avoir vues et que "
+"vous êtes prêt à supprimer."
 
 #. type: Plain text
 #: en/git-push.txt:299
 #, priority:220
 msgid "If your editor or some other system is running `git fetch` in the background for you a way to mitigate this is to simply set up another remote:"
 msgstr ""
+"Si votre éditeur ou un autre système exécute `git fetch` en arrière-plan "
+"pour vous, un moyen d'atténuer cela est simplement de configurer un autre "
+"distant :"
 
 #. type: Plain text
 #: en/git-push.txt:302
@@ -38107,24 +38174,33 @@ msgid ""
 "\tgit remote add origin-push $(git config remote.origin.url)\n"
 "\tgit fetch origin-push\n"
 msgstr ""
+"\tgit remote add origin-push $(git config remote.origin.url)\n"
+"\tgit fetch origin-push\n"
 
 #. type: Plain text
 #: en/git-push.txt:305
 #, priority:220
 msgid "Now when the background process runs `git fetch origin` the references on `origin-push` won't be updated, and thus commands like:"
 msgstr ""
+"Maintenant, lorsque le processus d'arrière-plan exécute `git fetch origin`, "
+"les références sur` origin-push` ne seront pas mises à jour, et donc des "
+"commandes comme :"
 
 #. type: Plain text
 #: en/git-push.txt:307
 #, no-wrap, priority:220
 msgid "\tgit push --force-with-lease origin-push\n"
-msgstr ""
+msgstr "\tgit push --force-with-lease origin-push\n"
 
 #. type: Plain text
 #: en/git-push.txt:312
 #, priority:220
 msgid "Will fail unless you manually run `git fetch origin-push`. This method is of course entirely defeated by something that runs `git fetch --all`, in that case you'd need to either disable it or do something more tedious like:"
 msgstr ""
+"Échouera à moins que vous ne lanciez manuellement `git fetch origin-push`. "
+"Cette méthode est bien sûr entièrement contrecarrée par quelque chose qui "
+"lance `git fetch --all`, auquel cas vous devrez soit la désactiver soit "
+"faire quelque chose de plus fastidieux comme :"
 
 #. type: Plain text
 #: en/git-push.txt:317
@@ -38135,48 +38211,79 @@ msgid ""
 "\tgit rebase -i master   # rewrite some commits\n"
 "\tgit push --force-with-lease=master:base master:master\n"
 msgstr ""
+"\tgit fetch              # mettre à jour 'master' depuis le distant\n"
+"\tgit tag base master    # étiqueter notre point de base\n"
+"\tgit rebase -i master   # réécrire quelques commits\n"
+"\tgit push --force-with-lease=master:base master:master\n"
 
 #. type: Plain text
 #: en/git-push.txt:323
 #, priority:220
 msgid "I.e. create a `base` tag for versions of the upstream code that you've seen and are willing to overwrite, then rewrite history, and finally force push changes to `master` if the remote version is still at `base`, regardless of what your local `remotes/origin/master` has been updated to in the background."
 msgstr ""
+"C'est-à-dire créer une étiquette `base` pour les versions du code amont que "
+"vous avez vues et que vous êtes prêt à écraser, puis réécrire l'historique, "
+"et enfin forcer la poussée des modification vers `master` si la version "
+"distante est toujours à `base`, indépendamment de ce que votre `remotes/"
+"origin/master` local a été mis à jour en arrière-plan."
 
 #. type: Plain text
 #: en/git-push.txt:331
 #, priority:220
 msgid "Usually, the command refuses to update a remote ref that is not an ancestor of the local ref used to overwrite it.  Also, when `--force-with-lease` option is used, the command refuses to update a remote ref whose current value does not match what is expected."
 msgstr ""
+"Habituellement, la commande refuse de mettre à jour une référence distante "
+"qui n'est pas un ancêtre de la référence locale utilisée pour la remplacer. "
+"De plus, lorsque l'option `--force-with-lease` est utilisée, la commande "
+"refuse de mettre à jour une référence distante dont la valeur actuelle ne "
+"correspond pas à ce qui est attendu."
 
 #. type: Plain text
 #: en/git-push.txt:334
 #, priority:220
 msgid "This flag disables these checks, and can cause the remote repository to lose commits; use it with care."
 msgstr ""
+"Ce drapeau désactive ces contrôles et peut entraîner la perte de commits du "
+"dépôt distant ; utilisez-le avec précaution."
 
 #. type: Plain text
 #: en/git-push.txt:343
 #, ignore-ellipsis, priority:220
 msgid "Note that `--force` applies to all the refs that are pushed, hence using it with `push.default` set to `matching` or with multiple push destinations configured with `remote.*.push` may overwrite refs other than the current branch (including local refs that are strictly behind their remote counterpart).  To force a push to only one branch, use a `+` in front of the refspec to push (e.g `git push origin +master` to force a push to the `master` branch). See the `<refspec>...` section above for details."
 msgstr ""
+"Notez que `--force` s'applique à toutes les refs qui sont poussées, donc "
+"l'utiliser avec `push.default` réglé sur `matching` ou avec plusieurs "
+"destinations de poussée configurées avec `remote.*.push` peut écraser les "
+"refs autres que la branche courante (y compris les refs locales qui sont "
+"strictement derrière leur homologue distante).  Pour forcer un push vers une "
+"seule branche, utilisez un \" + \" devant le spécificateur de référence à "
+"pousser (par exemple `git push origin +master` pour forcer une poussée vers "
+"la branche `master`). Voir la section `<spéc-de -réf>...` ci-dessus pour "
+"plus de détails."
 
 #. type: Labeled list
 #: en/git-push.txt:344
 #, no-wrap, priority:220
 msgid "--repo=<repository>"
-msgstr ""
+msgstr "--repo=<dépôt>"
 
 #. type: Plain text
 #: en/git-push.txt:347
 #, priority:220
 msgid "This option is equivalent to the <repository> argument. If both are specified, the command-line argument takes precedence."
 msgstr ""
+"Cette option est équivalente à l'argument <dépôt>. Si les deux sont "
+"spécifiés, l'argument de la ligne de commande a la priorité."
 
 #. type: Plain text
 #: en/git-push.txt:354
 #, priority:220
 msgid "For every branch that is up to date or successfully pushed, add upstream (tracking) reference, used by argument-less linkgit:git-pull[1] and other commands. For more information, see `branch.<name>.merge` in linkgit:git-config[1]."
 msgstr ""
+"Pour chaque branche qui est à jour ou poussée avec succès, ajoutet une "
+"référence de suivi amont, utilisée par les commandes sans argument linkgit"
+":git-pull[1] et autres. Pour plus d'informations, voir `branch.<nom>.merge` "
+"dans linkgit:git-config[1]."
 
 #. type: Labeled list
 #: en/git-push.txt:355
@@ -38189,12 +38296,19 @@ msgstr "--[no-]thin"
 #, priority:220
 msgid "These options are passed to linkgit:git-send-pack[1]. A thin transfer significantly reduces the amount of sent data when the sender and receiver share many of the same objects in common. The default is `--thin`."
 msgstr ""
+"Ces options sont passées à linkgit:git-send-pack[1]. Un transfert fin réduit "
+"considérablement la quantité de données envoyées lorsque l'expéditeur et le "
+"destinataire ont de nombreux objets identiques en commun. La valeur par "
+"défaut est `--thin`."
 
 #. type: Plain text
 #: en/git-push.txt:366
 #, priority:220
 msgid "Suppress all output, including the listing of updated refs, unless an error occurs. Progress is not reported to the standard error stream."
 msgstr ""
+"Supprimer toutes les sorties, y compris la liste des références mises à "
+"jour, à moins qu'une erreur ne se produise. Les progrès ne sont pas signalés "
+"dans le flux d'erreurs standard."
 
 #. type: Labeled list
 #: en/git-push.txt:378
