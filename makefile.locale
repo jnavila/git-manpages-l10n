@@ -1,6 +1,11 @@
 vpath GIT-VERSION-FILE . ..
 
-MAN_FILTER = $(wildcard git*.txt)
+MAN1_SOURCE = $(wildcard git-*.txt)
+MAN1_SOURCE += $(wildcard git.txt*)
+
+MAN7_SOURCE = $(wildcard gitglossary.txt*)
+
+MAN_FILTER = $(MAN1_SOURCE) $(MAN7_SOURCE)
 HTML_FILTER = $(patsubst %.txt,%.html,$(MAN_FILTER))
 
 
@@ -55,10 +60,23 @@ $(HTML_FILTER): %.html: %.txt
 	$(QUIET_ASCIIDOC)asciidoctor -b xhtml5 \
         $(ASCIIDOC_EXTRA) $<
 
-MANPAGES=$(patsubst %.txt,%.1,$(MAN_FILTER))
-$(MANPAGES): %.1: %.txt
+MAN1_PAGES=$(patsubst %.txt,%.1,$(MAN1_SOURCE))
+MAN5_PAGES=$(patsubst %.txt,%.5,$(MAN5_SOURCE))
+MAN7_PAGES=$(patsubst %.txt,%.7,$(MAN7_SOURCE))
+
+MANPAGES=$(MAN1_PAGES) $(MAN5_PAGES) $(MAN7_PAGES)
+
+$(MAN1_PAGES): %.1: %.txt
 	$(QUIET_ASCIIDOC)asciidoctor -b manpage -o $@ \
-        $(ASCIIDOC_EXTRA) $<
+        $(ASCIIDOC_EXTRA)  -amanvolnum=1 $<
+
+$(MAN5_PAGES): %.5: %.txt
+	$(QUIET_ASCIIDOC)asciidoctor -b manpage -o $@ \
+        $(ASCIIDOC_EXTRA)  -amanvolnum=5 $<
+
+$(MAN7_PAGES): %.7: %.txt
+	$(QUIET_ASCIIDOC)asciidoctor -b manpage -o $@ \
+        $(ASCIIDOC_EXTRA)  -amanvolnum=7 $<
 
 man: $(MANPAGES)
 html: $(HTML_FILTER)
@@ -71,7 +89,7 @@ install-txt:
 	[ -z "$$(ls *.html 2>/dev/null)" ] || install *.html -m 644 $(prefix)/$(lang)
 
 clean:
-	rm -f *.1 *.html
+	rm -f *.1 *.5 *7 *.html
 
 endif
 
