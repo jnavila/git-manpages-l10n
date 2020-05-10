@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-04-04 19:51+0200\n"
-"PO-Revision-Date: 2020-05-07 21:44+0000\n"
+"PO-Revision-Date: 2020-05-10 12:37+0000\n"
 "Last-Translator: 冉 <ranto2012@163.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: zh_HANS-CN\n"
@@ -3257,7 +3257,7 @@ msgstr "完整路径名；"
 
 #. type: Plain text
 #: en/diff-format.txt:179
-#, fuzzy, priority:280
+#, priority:280
 msgid "pathname in postimage (only exists if renamed/copied);"
 msgstr "完整路径名（仅在重命名/复制时存在）；"
 
@@ -3269,9 +3269,12 @@ msgstr "NUL。"
 
 #. type: Plain text
 #: en/diff-format.txt:185
-#, priority:280
+#, fuzzy, priority:280
 msgid "The extra `NUL` before the preimage path in renamed case is to allow scripts that read the output to tell if the current record being read is a single-path record or a rename/copy record without reading ahead.  After reading added and deleted lines, reading up to `NUL` would yield the pathname, but if that is `NUL`, the record will show two paths."
 msgstr ""
+"在重命名的情况下，完整路径前多出的 `NUL` "
+"为了让读取输出的脚本能够判断，当前被读取的记录是单路径记录还是重命名/复制记录，而不需要提前读取。在读完增删行数后，读至 `NUL` 会得到路径名，"
+"但如果先读到 `NUL`，记录将显示两个路径。"
 
 #. type: Title -
 #: en/diff-generate-patch.txt:2
@@ -3581,7 +3584,7 @@ msgstr "--no-stat"
 #: en/diff-options.txt:19
 #, priority:280
 msgid "Generate plain patches without any diffstats."
-msgstr ""
+msgstr "生成普通的补丁，不显示差异状态（diffstats）。"
 
 #. type: Labeled list
 #: en/diff-options.txt:23 en/fetch-options.txt:205 en/git-add.txt:112 en/git-am.txt:77 en/git-checkout-index.txt:25 en/git-cvsexportcommit.txt:64 en/git-cvsimport.txt:98 en/git-ls-files.txt:70 en/git-mailinfo.txt:52 en/git-push.txt:348 en/git-read-tree.txt:45 en/git-stash.txt:161
@@ -3599,13 +3602,13 @@ msgstr "--patch"
 #: en/diff-options.txt:26
 #, priority:280
 msgid "Generate patch (see section on generating patches)."
-msgstr ""
+msgstr "生成补丁（参阅生成补丁的相关章节）。"
 
 #. type: Plain text
 #: en/diff-options.txt:28 en/diff-options.txt:60
 #, no-wrap, priority:280
 msgid "\tThis is the default.\n"
-msgstr ""
+msgstr "\t这是默认设置。\n"
 
 #. type: Labeled list
 #: en/diff-options.txt:30 en/git-am.txt:34 en/git-blame.txt:75 en/git-cat-file.txt:40 en/git-cherry-pick.txt:105 en/git-clone.txt:66 en/git-commit.txt:166 en/git-diff-tree.txt:72 en/git-format-patch.txt:119 en/git-ls-files.txt:59 en/git-revert.txt:97 en/git-shortlog.txt:34 en/git-show-ref.txt:53 en/git-status.txt:27 en/git-stripspace.txt:38 en/git-svn.txt:46 en/git-tag.txt:64 en/git-verify-pack.txt:31
@@ -3623,67 +3626,67 @@ msgstr "--no-patch"
 #: en/diff-options.txt:34
 #, priority:280
 msgid "Suppress diff output. Useful for commands like `git show` that show the patch by default, or to cancel the effect of `--patch`."
-msgstr ""
+msgstr "不输出差异（diff）。对于显示修补程序的 `git show` 等命令是默认选项，也用于取消选项 `--patch` 的效果。"
 
 #. type: Labeled list
 #: en/diff-options.txt:36
 #, no-wrap, priority:280
 msgid "-U<n>"
-msgstr ""
+msgstr "-U<n>"
 
 #. type: Labeled list
 #: en/diff-options.txt:37
 #, no-wrap, priority:280
 msgid "--unified=<n>"
-msgstr ""
+msgstr "--unified=<n>"
 
 #. type: Plain text
 #: en/diff-options.txt:40
 #, priority:280
 msgid "Generate diffs with <n> lines of context instead of the usual three. Implies `--patch`."
-msgstr ""
+msgstr "生成带有 <n> 行上下文的差异，而不是通常的 3 行。暗含 `--patch` 选项。"
 
 #. type: Plain text
 #: en/diff-options.txt:42
 #, no-wrap, priority:280
 msgid "\tImplies `-p`.\n"
-msgstr ""
+msgstr "\t暗含 `-p` 选项。\n"
 
 #. type: Labeled list
 #: en/diff-options.txt:44 en/git-archive.txt:55
 #, no-wrap, priority:280
 msgid "--output=<file>"
-msgstr ""
+msgstr "--output=<文件>"
 
 #. type: Plain text
 #: en/diff-options.txt:46
 #, priority:280
 msgid "Output to a specific file instead of stdout."
-msgstr ""
+msgstr "输出到一个特定的文件，而不是标准输出。"
 
 #. type: Labeled list
 #: en/diff-options.txt:47
 #, no-wrap, priority:280
 msgid "--output-indicator-new=<char>"
-msgstr ""
+msgstr "--output-indicator-new=<字符>"
 
 #. type: Labeled list
 #: en/diff-options.txt:48
 #, no-wrap, priority:280
 msgid "--output-indicator-old=<char>"
-msgstr ""
+msgstr "--output-indicator-old=<字符>"
 
 #. type: Labeled list
 #: en/diff-options.txt:49
 #, no-wrap, priority:280
 msgid "--output-indicator-context=<char>"
-msgstr ""
+msgstr "--output-indicator-context=<字符>"
 
 #. type: Plain text
 #: en/diff-options.txt:53
 #, priority:280
 msgid "Specify the character used to indicate new, old or context lines in the generated patch. Normally they are '+', '-' and ' ' respectively."
-msgstr ""
+msgstr "指定在生成的补丁中用来表示新、旧或上下文行的字符。通常它们分别是 '+'、'-' 和 ' '（空格）。"
 
 #. type: Labeled list
 #: en/diff-options.txt:55 en/git-replace.txt:78 en/git-verify-commit.txt:19 en/git-verify-tag.txt:19
@@ -3695,7 +3698,7 @@ msgstr "--raw"
 #: en/diff-options.txt:58
 #, no-wrap, priority:280
 msgid "\tGenerate the diff in raw format.\n"
-msgstr ""
+msgstr "\t生成原始格式的差异。\n"
 
 #. type: Plain text
 #: en/diff-options.txt:68
@@ -3707,6 +3710,11 @@ msgid ""
 "\titself in raw format, which you can achieve with\n"
 "\t`--format=raw`.\n"
 msgstr ""
+"\t对于每一个提交，使用原始的差异格式\n"
+"\t请参见 linkgit:git-diff[1] 中\n"
+"\t\"原始输出格式\" 一节 。\n"
+"\t这与显示日志中的本身的原始格式不同\n"
+"\t你可以用 `--format=raw` 来实现。\n"
 
 #. type: Labeled list
 #: en/diff-options.txt:72
