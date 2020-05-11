@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-04-04 19:51+0200\n"
-"PO-Revision-Date: 2020-05-10 12:37+0000\n"
+"PO-Revision-Date: 2020-05-14 20:41+0000\n"
 "Last-Translator: 冉 <ranto2012@163.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: zh_HANS-CN\n"
@@ -2750,8 +2750,8 @@ msgstr "Git 内部格式"
 #, fuzzy, priority:280
 msgid "It is `<unix timestamp> <time zone offset>`, where `<unix timestamp>` is the number of seconds since the UNIX epoch.  `<time zone offset>` is a positive or negative offset from UTC.  For example CET (which is 1 hour ahead of UTC) is `+0100`."
 msgstr ""
-"`<unix  时间戳> <时区偏移量>`，其中<unix 时间戳>是自 UNIX epoch 以来的秒数。 `<时区偏移量>` 是相对于 UTC "
-"的正或负偏移量。例如，CET（比 UTC 提前1小时）为 `+0100`。"
+"`<unix  时间戳> <时区偏移量>`，其中 `<unix 时间戳>` 是自 UNIX epoch 以来的秒数。 `<时区偏移量>` 是相对于 "
+"UTC 的正或负偏移量。例如，CET（比 UTC 提前1小时）为 `+0100`。"
 
 #. type: Labeled list
 #: en/date-formats.txt:16
@@ -3738,7 +3738,7 @@ msgstr "--indent-heuristic"
 #: en/diff-options.txt:79
 #, priority:280
 msgid "Enable the heuristic that shifts diff hunk boundaries to make patches easier to read. This is the default."
-msgstr ""
+msgstr "启用启发式的缩进区块的方法，使得补丁更易读。这是默认选项。"
 
 #. type: Labeled list
 #: en/diff-options.txt:80
@@ -3750,7 +3750,7 @@ msgstr "--no-indent-heuristic"
 #: en/diff-options.txt:82
 #, priority:280
 msgid "Disable the indent heuristic."
-msgstr ""
+msgstr "禁用启发式缩进。"
 
 #. type: Labeled list
 #: en/diff-options.txt:83
@@ -3762,7 +3762,7 @@ msgstr "--minimal"
 #: en/diff-options.txt:86 en/diff-options.txt:112
 #, priority:280
 msgid "Spend extra time to make sure the smallest possible diff is produced."
-msgstr ""
+msgstr "花费额外的时间以确保生成尽可能小的差异。"
 
 #. type: Labeled list
 #: en/diff-options.txt:87
@@ -3792,7 +3792,7 @@ msgstr " \"histogram diff\" "
 #: en/diff-options.txt:93
 #, no-wrap, priority:280
 msgid "--anchored=<text>"
-msgstr ""
+msgstr "--anchored=<文本>"
 
 #. type: Plain text
 #: en/diff-options.txt:95
@@ -3804,13 +3804,15 @@ msgstr " \"anchored diff\" "
 #: en/diff-options.txt:97
 #, priority:280
 msgid "This option may be specified more than once."
-msgstr ""
+msgstr "这个选项可以被指定多次。"
 
 #. type: Plain text
 #: en/diff-options.txt:102
-#, priority:280
+#, fuzzy, priority:280
 msgid "If a line exists in both the source and destination, exists only once, and starts with this text, this algorithm attempts to prevent it from appearing as a deletion or addition in the output. It uses the \"patience diff\" algorithm internally."
 msgstr ""
+"如果某一个行同时存在于来源和目标中，各只出现一次，以这个文本开头，这个算法试图防止它在输出中以删除或添加的形式出现。它在内部使用了 \"patience "
+"diff\" 算法。"
 
 #. type: Labeled list
 #: en/diff-options.txt:103
@@ -3822,7 +3824,7 @@ msgstr "diff-algorithm=[patience|minimal|histogram|myers]"
 #: en/diff-options.txt:105
 #, priority:280
 msgid "Choose a diff algorithm. The variants are as follows:"
-msgstr ""
+msgstr "选择差异算法。有如下可选项："
 
 #. type: Labeled list
 #: en/diff-options.txt:107
@@ -3834,7 +3836,7 @@ msgstr "`default`, `myers`"
 #: en/diff-options.txt:109
 #, priority:280
 msgid "The basic greedy diff algorithm. Currently, this is the default."
-msgstr ""
+msgstr "基本的贪婪差异算法。当前是默认设置。"
 
 #. type: Labeled list
 #: en/diff-options.txt:109
@@ -3850,9 +3852,9 @@ msgstr "`patience`"
 
 #. type: Plain text
 #: en/diff-options.txt:114
-#, priority:280
+#, fuzzy, priority:280
 msgid "Use \"patience diff\" algorithm when generating patches."
-msgstr ""
+msgstr "使用 \"patience diff\" 算法时产生的补丁。"
 
 #. type: Labeled list
 #: en/diff-options.txt:114
@@ -3862,15 +3864,17 @@ msgstr "`histogram`"
 
 #. type: Plain text
 #: en/diff-options.txt:117
-#, priority:280
+#, fuzzy, priority:280
 msgid "This algorithm extends the patience algorithm to \"support low-occurrence common elements\"."
-msgstr ""
+msgstr "该算法将耐心算法扩展为“支持低发生率的常见元素”。"
 
 #. type: Plain text
 #: en/diff-options.txt:122
 #, priority:280
 msgid "For instance, if you configured the `diff.algorithm` variable to a non-default value and want to use the default one, then you have to use `--diff-algorithm=default` option."
 msgstr ""
+"例如，如果你将 `diff.algorithm` 变量配置为非默认值，但希望使用默认值，那么你必须使用 `--diff-"
+"algorithm=default` 选项。"
 
 #. type: Labeled list
 #: en/diff-options.txt:123
@@ -3880,15 +3884,21 @@ msgstr "<>[,<>[,<>]]"
 
 #. type: Plain text
 #: en/diff-options.txt:137
-#, ignore-ellipsis, priority:280
+#, fuzzy, ignore-ellipsis, priority:280
 msgid "Generate a diffstat. By default, as much space as necessary will be used for the filename part, and the rest for the graph part. Maximum width defaults to terminal width, or 80 columns if not connected to a terminal, and can be overridden by `<width>`. The width of the filename part can be limited by giving another width `<name-width>` after a comma. The width of the graph part can be limited by using `--stat-graph-width=<width>` (affects all commands generating a stat graph) or by setting `diff.statGraphWidth=<width>` (does not affect `git format-patch`).  By giving a third parameter `<count>`, you can limit the output to the first `<count>` lines, followed by `...` if there are more."
 msgstr ""
+"生成一个差异状态。默认情况下，文件名部分将尽可能多地使用空间，其余的空间用于图形部分。最大宽度默认为终端宽度，如果没有连接到终端，最大宽度为80列。"
+"可以用 `<宽度>` 覆盖。文件名部分的宽度可以通过在逗号后加一个参数 `<名称宽度>` 来限制。图形部分的宽度可以通过使用 `--stat-graph-"
+"width=<宽度>` 来限制（影响所有生成状态图的命令），或者通过设置 `diff.statGraphWidth=<宽度>`（不影响 `git "
+"format-patch`）。通过给第三个参数 `<数量>`，你可以把输出限制在第一个`<count>` 行。如果有更多的行，后面是 `...`。"
 
 #. type: Plain text
 #: en/diff-options.txt:140
 #, priority:280
 msgid "These parameters can also be set individually with `--stat-width=<width>`, `--stat-name-width=<name-width>` and `--stat-count=<count>`."
 msgstr ""
+"这些参数也可以用 `--stat-width=<宽度>`，`--stat-name-width=<名称宽度>` 和 `--stat-count=<数量>`"
+" 单独设置。"
 
 #. type: Labeled list
 #: en/diff-options.txt:141
@@ -3901,6 +3911,8 @@ msgstr "--compact-summary"
 #, priority:280
 msgid "Output a condensed summary of extended header information such as file creations or deletions (\"new\" or \"gone\", optionally \"+l\" if it's a symlink) and mode changes (\"+x\" or \"-x\" for adding or removing executable bit respectively) in diffstat. The information is put between the filename part and the graph part. Implies `--stat`."
 msgstr ""
+"在差异状态中输出扩展头信息的压缩摘要，如文件的创建或删除（\"new \" 或 \"good\"。如果是符号链接，则为 \"+l\"）和模式变化（\"+"
+"x\" 或 \"-x\" 分别用于添加或删除可执行位）。这些信息被放在文件名部分和图形部分之间。暗含 `--stat` 选项。"
 
 #. type: Labeled list
 #: en/diff-options.txt:149 en/git-apply.txt:45
