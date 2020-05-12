@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-04-04 19:51+0200\n"
-"PO-Revision-Date: 2020-05-08 13:32+0000\n"
+"PO-Revision-Date: 2020-05-14 20:41+0000\n"
 "Last-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
@@ -20744,8 +20744,8 @@ msgstr "upload-pack"
 msgid "This serves 'git fetch-pack' and 'git ls-remote' clients.  It is enabled by default, but a repository can disable it by setting `daemon.uploadpack` configuration item to `false`."
 msgstr ""
 "Isso serve aos clientes 'git fetch-pack' e 'git ls-remote'.  A predefinição "
-"é estar sempre ativo, porém um repositório pode desativá-lo definindo o item "
-"de configuração `daemon.uploadpack` como `false`."
+"é estar sempre ativo, porém um repositório pode desativá-lo ao definir o "
+"item de configuração `daemon.uploadpack` como `false`."
 
 #. type: Labeled list
 #: en/git-daemon.txt:241
@@ -26385,24 +26385,40 @@ msgstr "por entrada de arquivo ativa"
 #, priority:100
 msgid "Files (and pointers to subtrees) within active trees require 52 or 64 bytes (32/64 bit platforms) per entry.  To conserve space, file and tree names are pooled in a common string table, allowing the filename ``Makefile'' to use just 16 bytes (after including the string header overhead) no matter how many times it occurs within the project."
 msgstr ""
+"Os arquivos (e os ponteiros para as subárvores) nas árvores ativas requerem "
+"52 ou 64 bytes (plataformas de 32/64 bits) por entrada.  Para economizar "
+"espaço, os nomes dos arquivos e as árvores são agrupados em uma tabela de "
+"cadeias comuns, permitindo que o nome do arquivo ``Makefile'' use apenas 16 "
+"bytes (depois de incluir a sobrecarga do cabeçalho da cadeia), não importa "
+"quantas vezes isso ocorra no projeto."
 
 #. type: Plain text
 #: en/git-fast-import.txt:1531
 #, priority:100
 msgid "The active branch LRU, when coupled with the filename string pool and lazy loading of subtrees, allows fast-import to efficiently import projects with 2,000+ branches and 45,114+ files in a very limited memory footprint (less than 2.7 MiB per active branch)."
 msgstr ""
+"O LRU da ramificação ativa, quando associado ao conjunto da cadeia de "
+"caracteres do nome do arquivo e ao carregamento lento das subárvores, "
+"permite que a importação rápida dos projetos eficientes com mais de 2.000 "
+"ramificações e mais de 45.114 arquivos em um espaço de memória muito "
+"limitado (menos de 2,7 MiB por ramificação ativa)."
 
 #. type: Title -
 #: en/git-fast-import.txt:1533
 #, no-wrap, priority:100
 msgid "SIGNALS"
-msgstr ""
+msgstr "SINAIS"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1539
 #, priority:100
 msgid "Sending *SIGUSR1* to the 'git fast-import' process ends the current packfile early, simulating a `checkpoint` command.  The impatient operator can use this facility to peek at the objects and refs from an import in progress, at the cost of some added running time and worse compression."
 msgstr ""
+"Enviar um *SIGUSR1* para o processo 'git fast-import' encerra antes o "
+"arquivo do pacote atual, simulando um comando `checkpoint`.  O operador mais "
+"impaciente pode usar esse recurso para espiar os objetos e as referências de "
+"uma importação em andamento, ao custo de um tempo de execução adicional e de "
+"uma pior compactação."
 
 #. type: Title =
 #: en/git-fetch-pack.txt:2
@@ -26414,7 +26430,7 @@ msgstr "git-fetch-pack(1)"
 #: en/git-fetch-pack.txt:7
 #, priority:100
 msgid "git-fetch-pack - Receive missing objects from another repository"
-msgstr ""
+msgstr "git-fetch-pack - Recebe os objetos ausentes vindos de outro repositório"
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:16
@@ -26425,6 +26441,10 @@ msgid ""
 "\t[--depth=<n>] [--no-progress]\n"
 "\t[-v] <repository> [<refs>...]\n"
 msgstr ""
+"'git fetch-pack' [--all] [--quiet|-q] [--keep|-k] [--thin] [--include-tag]\n"
+"\t[--upload-pack=<git-upload-pack>]\n"
+"\t[--depth=<n>] [--no-progress]\n"
+"\t[-v] <repositório> [<refs>...]\n"
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:21
@@ -26438,42 +26458,61 @@ msgstr ""
 #, priority:100
 msgid "Invokes 'git-upload-pack' on a possibly remote repository and asks it to send objects missing from this repository, to update the named heads.  The list of commits available locally is found out by scanning the local refs/ hierarchy and sent to 'git-upload-pack' running on the other end."
 msgstr ""
+"Invoca o 'git-upload-pack' em um repositório possivelmente remoto e solicita "
+"que ele envie os objetos ausentes deste repositório, para atualizar "
+"determinados `heads`.  A lista dos commits disponíveis localmente é "
+"descoberta examinando os 'refs/' da hierarquia local e enviada para o 'git-"
+"upload-pack' durante a execução na outra extremidade."
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:31
 #, priority:100
 msgid "This command degenerates to download everything to complete the asked refs from the remote side when the local side does not have a common ancestor commit."
 msgstr ""
+"Este comando deteriora durante o download de tudo para concluir os `refs` "
+"solicitados do lado remoto quando o lado local não possui um commit com um "
+"ancestral comum."
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:37
 #, priority:100
 msgid "Fetch all remote refs."
-msgstr ""
+msgstr "Busque todas os `refs` remotos."
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:43 en/git-send-pack.txt:46
 #, priority:100
 msgid "Take the list of refs from stdin, one per line. If there are refs specified on the command line in addition to this option, then the refs from stdin are processed after those on the command line."
 msgstr ""
+"Pegue a lista dos `refs` do stdin, um por linha. Caso haja `refs` usados na "
+"linha de comando, além desta opção, os `refs` do stdin serão processados "
+"após as da linha de comando."
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:47 en/git-send-pack.txt:50
 #, priority:100
 msgid "If `--stateless-rpc` is specified together with this option then the list of refs must be in packet format (pkt-line). Each ref must be in a separate packet, and the list must end with a flush packet."
 msgstr ""
+"Caso `--stateless-rpc` seja usado junto com esta opção, a lista de "
+"referências deverá estar no formato do pacote (linha-pkt). Cada `ref` deve "
+"estar em um pacote separado e a lista deve terminar com um pacote liberado."
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:52
 #, priority:100
 msgid "Pass `-q` flag to 'git unpack-objects'; this makes the cloning process less verbose."
 msgstr ""
+"Passe o flag `-q` para o 'git unpack-objects'; isso torna o processo de "
+"clonagem menos detalhado."
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:59
 #, priority:100
 msgid "Do not invoke 'git unpack-objects' on received data, but create a single packfile out of it instead, and store it in the object database. If provided twice then the pack is locked against repacking."
 msgstr ""
+"Não invoque o 'git unpack-objects' nos dados recebidos, porém crie um único "
+"arquivo do pacote a partir dele e armazene-o no banco de dados do objeto. "
+"Caso seja usado duas vezes, o pacote será bloqueado contra a reembalagem."
 
 #. type: Labeled list
 #: en/git-fetch-pack.txt:60 en/git-pack-objects.txt:208 en/git-send-pack.txt:64
@@ -26486,6 +26525,9 @@ msgstr "--thin"
 #, priority:100
 msgid "Fetch a \"thin\" pack, which records objects in deltified form based on objects not included in the pack to reduce network traffic."
 msgstr ""
+"Busque um pacote \"thin\", que registra os objetos em um formato \""
+"deltificado\" com base nos objetos não inclusos no pacote para reduzir o "
+"tráfego de rede."
 
 #. type: Labeled list
 #: en/git-fetch-pack.txt:64 en/git-pack-objects.txt:83
@@ -26498,36 +26540,51 @@ msgstr "--include-tag"
 #, priority:100
 msgid "If the remote side supports it, annotated tags objects will be downloaded on the same connection as the other objects if the object the tag references is downloaded.  The caller must otherwise determine the tags this option made available."
 msgstr ""
+"Caso haja compatibilidade com o lado remoto, os objetos das tags anotadas "
+"serão baixados na mesma conexão que os outros objetos, caso o objeto ao qual "
+"a tag faça referência seja baixado.  Caso contrário, aquele que chama deve "
+"determinar as tags que esta opção deixou disponível."
 
 #. type: Labeled list
 #: en/git-fetch-pack.txt:70
 #, no-wrap, priority:100
 msgid "--upload-pack=<git-upload-pack>"
-msgstr ""
+msgstr "--upload-pack=<git-upload-pack>"
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:81
 #, priority:100
 msgid "Use this to specify the path to 'git-upload-pack' on the remote side, if is not found on your $PATH.  Installations of sshd ignores the user's environment setup scripts for login shells (e.g. .bash_profile) and your privately installed git may not be found on the system default $PATH.  Another workaround suggested is to set up your $PATH in \".bashrc\", but this flag is for people who do not want to pay the overhead for non-interactive shells by having a lean .bashrc file (they set most of the things up in .bash_profile)."
 msgstr ""
+"Use para informar o caminho para 'git-upload-pack' no lado remoto, caso não "
+"seja encontrado no seu $PATH.  As instalações do sshd ignoram os scripts de "
+"configuração do ambiente do usuário para logins nas shells (.bash_profile "
+"por exemplo) e o a instalação do seu git pode não ser encontrado no $PATH "
+"predefinido do sistema.  A outra solução sugerida é configurar o seu $PATH "
+"em \".bashrc\", mas este flag são para pessoas que não desejam pagar o preço "
+"da sobrecarga em shells não interativos com um arquivo \".bashrc\" enxuto ("
+"eles definem a maioria das coisas em .bash_profile)."
 
 #. type: Labeled list
 #: en/git-fetch-pack.txt:82
 #, no-wrap, priority:100
 msgid "--exec=<git-upload-pack>"
-msgstr ""
+msgstr "--exec=<git-upload-pack>"
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:84
 #, priority:100
 msgid "Same as --upload-pack=<git-upload-pack>."
-msgstr ""
+msgstr "O mesmo que --upload-pack=<git-upload-pack>."
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:89
 #, priority:100
 msgid "Limit fetching to ancestor-chains not longer than n.  'git-upload-pack' treats the special depth 2147483647 as infinite even if there is an ancestor-chain that long."
 msgstr ""
+"Limite a busca para as cadeias de ancestrais não maiores que n.  O 'git-"
+"upload-pack' trata a profundidade especial \"2147483647\" como infinita, "
+"mesmo que exista uma cadeia de ancestrais tão antiga."
 
 #. type: Labeled list
 #: en/git-fetch-pack.txt:99
@@ -26540,12 +26597,14 @@ msgstr "--deepen-relative"
 #, priority:100
 msgid "Argument --depth specifies the number of commits from the current shallow boundary instead of from the tip of each remote branch history."
 msgstr ""
+"O argumento `--depth` determina a quantidade de commits do limite atual da "
+"superfície em vez da ponta de cada histórico da ramificação remota."
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:106
 #, priority:100
 msgid "Do not show the progress."
-msgstr ""
+msgstr "Não exiba o progresso."
 
 #. type: Labeled list
 #: en/git-fetch-pack.txt:107 en/git-index-pack.txt:77
@@ -26558,36 +26617,44 @@ msgstr "--check-self-contained-and-connected"
 #, priority:100
 msgid "Output \"connectivity-ok\" if the received pack is self-contained and connected."
 msgstr ""
+"Exiba \"connectivity-ok\" caso o pacote recebido seja independente e "
+"conectado."
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:113 en/git-push.txt:370 en/git-send-pack.txt:63
 #, priority:220
 msgid "Run verbosely."
-msgstr ""
+msgstr "Rode de forma loquaz."
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:116
 #, priority:100
 msgid "The URL to the remote repository."
-msgstr ""
+msgstr "A URL para o repositório remoto."
 
 #. type: Labeled list
 #: en/git-fetch-pack.txt:117 en/git-ls-remote.txt:88
 #, ignore-ellipsis, no-wrap, priority:100
 msgid "<refs>..."
-msgstr ""
+msgstr "<refs>..."
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:121
 #, priority:100
 msgid "The remote heads to update from. This is relative to $GIT_DIR (e.g. \"HEAD\", \"refs/heads/master\").  When unspecified, update from all heads the remote side has."
 msgstr ""
+"Os cabeçalhos remotos que serão atualizados. Isso é relativo ao $GIT_DIR (\""
+"HEAD\", \"refs/heads/master\" por exemplo).  Quando não especificado, receba "
+"a atualização de todos os cabeçalhos que o lado tiver."
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:125
 #, priority:100
 msgid "If the remote has enabled the options `uploadpack.allowTipSHA1InWant`, `uploadpack.allowReachableSHA1InWant`, or `uploadpack.allowAnySHA1InWant`, they may alternatively be 40-hex sha1s present on the remote."
 msgstr ""
+"Caso o lado remoto tenha as opções `uploadpack.allowTipSHA1InWant`, "
+"`uploadpack.allowReachableSHA1InWant`, ou `uploadpack.allowAnySHA1InWant` "
+"ativadas, eles poderão alternativamente ser sha1 com 40-hex."
 
 #. type: Title =
 #: en/git-fetch.txt:2
@@ -26599,7 +26666,7 @@ msgstr "git-fetch(1)"
 #: en/git-fetch.txt:7
 #, priority:220
 msgid "git-fetch - Download objects and refs from another repository"
-msgstr ""
+msgstr "git-fetch - Faz o download dos objetos e `refs` do outro repositório"
 
 #. type: Plain text
 #: en/git-fetch.txt:16
@@ -26620,12 +26687,24 @@ msgstr ""
 #, priority:220
 msgid "Fetch branches and/or tags (collectively, \"refs\") from one or more other repositories, along with the objects necessary to complete their histories.  Remote-tracking branches are updated (see the description of <refspec> below for ways to control this behavior)."
 msgstr ""
+"Busque as ramificações ou as tags (coletivamente, \"refs\") de um ou mais "
+"repositórios, juntamente com os objetos necessários para completar seus "
+"históricos.  As ramificações de rastreamento remoto são atualizadas ("
+"consulte a descrição de `<refspec>` abaixo para conhecer maneiras de "
+"controlar esse comportamento)."
 
 #. type: Plain text
 #: en/git-fetch.txt:32
 #, priority:220
 msgid "By default, any tag that points into the histories being fetched is also fetched; the effect is to fetch tags that point at branches that you are interested in.  This default behavior can be changed by using the --tags or --no-tags options or by configuring remote.<name>.tagOpt.  By using a refspec that fetches tags explicitly, you can fetch tags that do not point into branches you are interested in as well."
 msgstr ""
+"É predefinido que qualquer tag que aponte para os históricos que estão sendo "
+"buscados também sejam buscados; o efeito é buscar as tags que apontem para "
+"os ramos nos quais você está interessado.  Este comportamento predefinido "
+"pode ser alterado usando as opções `--tags`, `--no-tags` ou configurando "
+"`remote.<nome>.tagOpt`.  Usando um `refspec` de forma explicita, é possível "
+"que você busque as tags que não apontam para as ramificações nas quais você "
+"também está interessado."
 
 #. type: Plain text
 #: en/git-fetch.txt:37
@@ -26642,30 +26721,40 @@ msgstr ""
 #, priority:220
 msgid "When no remote is specified, by default the `origin` remote will be used, unless there's an upstream branch configured for the current branch."
 msgstr ""
+"Por predefinição quando nenhum ponto remoto é usado, o `origin` será usado, "
+"a menos que haja um ramo `upstream` configurado para o ramo atual."
 
 #. type: Plain text
 #: en/git-fetch.txt:44
 #, priority:220
 msgid "The names of refs that are fetched, together with the object names they point at, are written to `.git/FETCH_HEAD`.  This information may be used by scripts or other git commands, such as linkgit:git-pull[1]."
 msgstr ""
+"Os nomes dos `refs` que são buscados, juntamente com os nomes dos objetos "
+"para os quais eles apontam, são gravados em `.git/FETCH_HEAD`.  Essa "
+"informação pode ser usada por scripts ou outros comandos git, como linkgit"
+":git-pull[1]."
 
 #. type: Title -
 #: en/git-fetch.txt:55
 #, no-wrap, priority:220
 msgid "CONFIGURED REMOTE-TRACKING BRANCHES[[CRTB]]"
-msgstr ""
+msgstr "RAMOS COM RASTREAMENTO REMOTO CONFIGURADO [[CRTB]]"
 
 #. type: Plain text
 #: en/git-fetch.txt:61
 #, priority:220
 msgid "You often interact with the same remote repository by regularly and repeatedly fetching from it.  In order to keep track of the progress of such a remote repository, `git fetch` allows you to configure `remote.<repository>.fetch` configuration variables."
 msgstr ""
+"Você costuma interagir com o mesmo repositório remoto, buscando-o "
+"regularmente e repetidamente.  Para acompanhar o progresso de um repositório "
+"remoto, o `git fetch` permite que você configure variáveis de configuração "
+"`remote.<repositório>.fetch`."
 
 #. type: Plain text
 #: en/git-fetch.txt:63
 #, priority:220
 msgid "Typically such a variable may look like this:"
-msgstr ""
+msgstr "Normalmente, essa variável pode ser assim:"
 
 #. type: delimited block -
 #: en/git-fetch.txt:67
@@ -26674,54 +26763,88 @@ msgid ""
 "[remote \"origin\"]\n"
 "\tfetch = +refs/heads/*:refs/remotes/origin/*\n"
 msgstr ""
+"[remote \"origin\"]\n"
+"\tfetch = +refs/heads/*:refs/remotes/origin/*\n"
 
 #. type: Plain text
 #: en/git-fetch.txt:70
 #, priority:220
 msgid "This configuration is used in two ways:"
-msgstr ""
+msgstr "Essa configuração é usada de duas maneiras:"
 
 #. type: Plain text
 #: en/git-fetch.txt:80
 #, priority:220
 msgid "When `git fetch` is run without specifying what branches and/or tags to fetch on the command line, e.g. `git fetch origin` or `git fetch`, `remote.<repository>.fetch` values are used as the refspecs--they specify which refs to fetch and which local refs to update.  The example above will fetch all branches that exist in the `origin` (i.e. any ref that matches the left-hand side of the value, `refs/heads/*`) and update the corresponding remote-tracking branches in the `refs/remotes/origin/*` hierarchy."
 msgstr ""
+"Quando o `git fetch` é executado informar quais as ramificações ou tags "
+"buscar na linha de comando, por exemplo, os valores `git fetch origin` ou `"
+"git fetch`, `remote.<repository>.fetch` são usados como `refspecs` eles "
+"especificam quais os `refs` buscar e quais as `refs` locais atualizar.  O "
+"exemplo acima buscará todas as ramificações que existem em `origin` (ou "
+"seja, qualquer `ref` que coincida ao lado esquerdo do valor, `refs/heads/*`) "
+"e atualizará as ramificações de rastreamento remoto correspondentes na "
+"hierarquia `refs/remotes/origem/*`."
 
 #. type: Plain text
 #: en/git-fetch.txt:97
 #, priority:220
 msgid "When `git fetch` is run with explicit branches and/or tags to fetch on the command line, e.g. `git fetch origin master`, the <refspec>s given on the command line determine what are to be fetched (e.g. `master` in the example, which is a short-hand for `master:`, which in turn means \"fetch the 'master' branch but I do not explicitly say what remote-tracking branch to update with it from the command line\"), and the example command will fetch _only_ the 'master' branch.  The `remote.<repository>.fetch` values determine which remote-tracking branch, if any, is updated.  When used in this way, the `remote.<repository>.fetch` values do not have any effect in deciding _what_ gets fetched (i.e. the values are not used as refspecs when the command-line lists refspecs); they are only used to decide _where_ the refs that are fetched are stored by acting as a mapping."
 msgstr ""
+"Quando o `git fetch` é executado especificamente com as ramificações ou tags "
+"usando a linha de comando como `git fetch origin master` por exemplo, os "
+"`<refspec>` usados determinam uma ordem de busca, o quê deve ser capturado ("
+"o `master` no exemplo é uma abreviação de `master:`, que por sua vez "
+"significa \"capture a ramificação 'master', por exemplo), assim o comando no "
+"exemplo buscará _apenas_ a ramificação 'master'.  Os valores "
+"`remote.<repositório>.fetch` determinam qual a ramificação remota rastreada, "
+"caso exista, será atualizada.  Quando usados desta maneira, os valores "
+"`remote.<repository>.fetch` não têm nenhum efeito na decisão do _quê_ é "
+"capturado (ou seja, os valores não são usados como `refspecs` quando a linha "
+"de comando lista `refspecs`); eles são usados apenas para decidir _onde_ os "
+"`refs` que estão sendo buscados estão sendo armazenados e agem como um "
+"mapeamento."
 
 #. type: Plain text
 #: en/git-fetch.txt:101
 #, priority:220
 msgid "The latter use of the `remote.<repository>.fetch` values can be overridden by giving the `--refmap=<refspec>` parameter(s) on the command line."
 msgstr ""
+"O último valores do `remote.<repositório>.fetch` podem ser substituídos, ao "
+"usar os parâmetros `--refmap=<refspec>` na linha de comando."
 
 #. type: Title -
 #: en/git-fetch.txt:103
 #, no-wrap, priority:220
 msgid "PRUNING"
-msgstr ""
+msgstr "PODA"
 
 #. type: Plain text
 #: en/git-fetch.txt:108
 #, priority:220
 msgid "Git has a default disposition of keeping data unless it's explicitly thrown away; this extends to holding onto local references to branches on remotes that have themselves deleted those branches."
 msgstr ""
+"A disposição predefinida do Git se organiza de forma a manter os dados a "
+"menos que sejam descartados de forma explicita; isso se estende a manter "
+"referências locais nas ramificações remotas que elas mesmas excluíram."
 
 #. type: Plain text
 #: en/git-fetch.txt:114
 #, priority:220
 msgid "If left to accumulate, these stale references might make performance worse on big and busy repos that have a lot of branch churn, and e.g. make the output of commands like `git branch -a --contains <commit>` needlessly verbose, as well as impacting anything else that'll work with the complete set of known references."
 msgstr ""
+"Se desassistidas, essas referências obsoletas podem piorar o desempenho em "
+"repositórios grandes e ocupados aonde apresentam muita rotatividade e por "
+"exemplo, façam uso de comandos como `git branch -a --contains <commit>` cuja "
+"saída é desnecessariamente detalhada, causando impacto de desempenho em "
+"qualquer outra referência de trabalho conhecida."
 
 #. type: Plain text
 #: en/git-fetch.txt:117
 #, priority:220
 msgid "These remote-tracking references can be deleted as a one-off with either of:"
 msgstr ""
+"Estas referências de rastreamento remoto podem ser excluídas com um único:"
 
 #. type: delimited block -
 #: en/git-fetch.txt:121
@@ -26740,36 +26863,58 @@ msgid ""
 "# Only prune, don't fetch\n"
 "$ git remote prune <name>\n"
 msgstr ""
+"# Exclua apenas, não busque nada\n"
+"$ git remote prune <nome>\n"
 
 #. type: Plain text
 #: en/git-fetch.txt:130
 #, priority:220
 msgid "To prune references as part of your normal workflow without needing to remember to run that, set `fetch.prune` globally, or `remote.<name>.prune` per-remote in the config. See linkgit:git-config[1]."
 msgstr ""
+"Para remover as referências como parte do seu fluxo de trabalho normal sem "
+"precisar se lembrar de executá-lo, defina `fetch.prune` globalmente ou com a "
+"configuração ` remote.<nome>.prune` por ramo remoto. Consulte linkgit:git-"
+"config[1]."
 
 #. type: Plain text
 #: en/git-fetch.txt:135
 #, priority:220
 msgid "Here's where things get tricky and more specific. The pruning feature doesn't actually care about branches, instead it'll prune local <-> remote-references as a function of the refspec of the remote (see `<refspec>` and <<CRTB,CONFIGURED REMOTE-TRACKING BRANCHES>> above)."
 msgstr ""
+"Aqui é onde as coisas ficam complicadas e bem específicas. O recurso de "
+"remoção não se importa muito com as ramificações; em vez disso, remove as "
+"referências locais <-> remotas como uma função do `refspec` remoto (consulte "
+"`<refspec>` e <<RAMOS COM RASTREAMENTO REMOTO CONFIGURADO, CRTB>> acima)."
 
 #. type: Plain text
 #: en/git-fetch.txt:141
 #, priority:220
 msgid "Therefore if the refspec for the remote includes e.g. `refs/tags/*:refs/tags/*`, or you manually run e.g. `git fetch --prune <name> \"refs/tags/*:refs/tags/*\"` it won't be stale remote tracking branches that are deleted, but any local tag that doesn't exist on the remote."
 msgstr ""
+"Portanto, caso o `refspec` remoto inclua `refs/tags/*:refs/tags/*` por "
+"exemplo ou caso execute manualmente `git fetch --prune <nome> \"refs/tags/*:"
+"refs/tags/*\"` por exemplo. As ramificações remotas rastreadas que forem "
+"excluídas não expirarão, a não ser qualquer outra tag local que não exista "
+"remotamente."
 
 #. type: Plain text
 #: en/git-fetch.txt:146
 #, priority:220
 msgid "This might not be what you expect, i.e. you want to prune remote `<name>`, but also explicitly fetch tags from it, so when you fetch from it you delete all your local tags, most of which may not have come from the `<name>` remote in the first place."
 msgstr ""
+"Senão for o que você deseja, caso queira remover remotamente o `<name>` por "
+"exemplo e também buscar explicitamente as tags a partir dele; primeiramente, "
+"ao recolher dele você exclui todas as tags locais, a maioria das quais podem "
+"não terem vindo do `<nome>` remoto."
 
 #. type: Plain text
 #: en/git-fetch.txt:150
 #, priority:220
 msgid "So be careful when using this with a refspec like `refs/tags/*:refs/tags/*`, or any other refspec which might map references from multiple remotes to the same local namespace."
 msgstr ""
+"Assim, tenha cuidado ao utilizar isso com um `refspec` como `refs/tags/*:"
+"refs/tags/*` ou qualquer outro `refspec` que possa mapear as referências de "
+"diferentes pontos remotos para o mesmo `namespace` local."
 
 #. type: Plain text
 #: en/git-fetch.txt:157
@@ -26788,6 +26933,9 @@ msgstr ""
 #, priority:220
 msgid "The `--prune-tags` option is equivalent to having `refs/tags/*:refs/tags/*` declared in the refspecs of the remote. This can lead to some seemingly strange interactions:"
 msgstr ""
+"A opção `--prune-tags` é equivalente a ter o `refs/tags/*:refs/tags/*` "
+"declarado nos `refspecs` remotos. Isso pode ocasionar algumas interações "
+"estranhas:"
 
 #. type: delimited block -
 #: en/git-fetch.txt:166
@@ -26806,18 +26954,29 @@ msgstr ""
 #, priority:220
 msgid "The reason it doesn't error out when provided without `--prune` or its config versions is for flexibility of the configured versions, and to maintain a 1=1 mapping between what the command line flags do, and what the configuration versions do."
 msgstr ""
+"O motivo pelo qual não ocorre um erro durante o uso sem a opção `--prune` ou "
+"suas versões de configuração é a flexibilidade das versões configuradas e a "
+"manutenção de um mapeamento 1=1 entre o que as \"flags\", a linha de comando "
+"e o que as versões de configuração fazem."
 
 #. type: Plain text
 #: en/git-fetch.txt:177
 #, priority:220
 msgid "It's reasonable to e.g. configure `fetch.pruneTags=true` in `~/.gitconfig` to have tags pruned whenever `git fetch --prune` is run, without making every invocation of `git fetch` without `--prune` an error."
 msgstr ""
+"É razoável que a configuração `fetch.pruneTags=true` em `~/.gitconfig` que "
+"as tags sejam removidas sempre que o comando `git fetch --prune` seja "
+"executado, sem fazer com que todas as invocações do comando `git fetch` sem "
+"a opção `--prune` cause um erro."
 
 #. type: Plain text
 #: en/git-fetch.txt:181
 #, priority:220
 msgid "Pruning tags with `--prune-tags` also works when fetching a URL instead of a named remote. These will all prune tags not found on origin:"
 msgstr ""
+"A remoção de tags com `--prune-tags` também funciona durante o resgate de "
+"uma URL em vez de um determinado nome remoto. Todas essas tags de remoção "
+"serão encontradas em `origin`:"
 
 #. type: delimited block -
 #: en/git-fetch.txt:187
@@ -26838,66 +26997,80 @@ msgstr ""
 #, priority:220
 msgid "The output of \"git fetch\" depends on the transport method used; this section describes the output when fetching over the Git protocol (either locally or via ssh) and Smart HTTP protocol."
 msgstr ""
+"A saída do comando \"git fetch\" depende do método de transporte utilizado; "
+"Esta seção descreve a saída durante a utilização da busca ao utilizar o "
+"protocolo Git (localmente ou via ssh) e o protocolo inteligente \"Smart "
+"HTTP\"."
 
 #. type: Plain text
 #: en/git-fetch.txt:198
 #, priority:220
 msgid "The status of the fetch is output in tabular form, with each line representing the status of a single ref. Each line is of the form:"
 msgstr ""
+"A condição da saída durante a busca é gerado em forma de tabela, com cada "
+"linha representando a condição de uma única referência. Cada linha é uma "
+"forma de:"
 
 #. type: delimited block -
 #: en/git-fetch.txt:201
 #, no-wrap, priority:220
 msgid " <flag> <summary> <from> -> <to> [<reason>]\n"
-msgstr ""
+msgstr " <flag> <resumo> <de> -> <para> [<motivo>]\n"
 
 #. type: Plain text
 #: en/git-fetch.txt:205
 #, priority:220
 msgid "The status of up-to-date refs is shown only if the --verbose option is used."
 msgstr ""
+"A condição das referências atualizadas é exibido caso a opção --verbose seja "
+"utilizada."
 
 #. type: Plain text
 #: en/git-fetch.txt:210
 #, priority:220
 msgid "In compact output mode, specified with configuration variable fetch.output, if either entire `<from>` or `<to>` is found in the other string, it will be substituted with `*` in the other string. For example, `master -> origin/master` becomes `master -> origin/*`."
 msgstr ""
+"O modo de saída compacta é definida com a variável de configuração "
+"`fetch.output`, caso `<de>` ou `<para>` seja inteiramente encontrada em "
+"outra cadeia de caracteres, esta será substituída por `*` na outra cadeia de "
+"caracteres. `master -> origin/master` se torna `master -> origin/*` por "
+"exemplo."
 
 #. type: Labeled list
 #: en/git-fetch.txt:211 en/git-push.txt:431
 #, no-wrap, priority:220
 msgid "flag"
-msgstr ""
+msgstr "flag"
 
 #. type: Plain text
 #: en/git-fetch.txt:213 en/git-push.txt:433
 #, priority:220
 msgid "A single character indicating the status of the ref:"
-msgstr ""
+msgstr "Um único caractere indicando a condição da referência:"
 
 #. type: Labeled list
 #: en/git-fetch.txt:213 en/git-push.txt:433
 #, no-wrap, priority:220
 msgid "(space)"
-msgstr ""
+msgstr "(space)"
 
 #. type: Plain text
 #: en/git-fetch.txt:214
 #, priority:220
 msgid "for a successfully fetched fast-forward;"
-msgstr ""
+msgstr "para um avanço rápido bem sucedido;"
 
 #. type: Labeled list
 #: en/git-fetch.txt:214 en/git-push.txt:434
 #, no-wrap, priority:220
 msgid "`+`"
-msgstr ""
+msgstr "`+`"
 
 #. type: Plain text
 #: en/git-fetch.txt:215 en/git-push.txt:435
 #, priority:220
 msgid "for a successful forced update;"
-msgstr ""
+msgstr "para uma imposição de atualização bem sucedida;"
 
 #. type: Labeled list
 #: en/git-fetch.txt:215 en/git-push.txt:435
@@ -26909,7 +27082,7 @@ msgstr "`-`"
 #: en/git-fetch.txt:216
 #, priority:220
 msgid "for a successfully pruned ref;"
-msgstr ""
+msgstr "para uma eliminação da referência bem sucedida;"
 
 #. type: Labeled list
 #: en/git-fetch.txt:216
@@ -26921,61 +27094,67 @@ msgstr "`t`"
 #: en/git-fetch.txt:217
 #, priority:220
 msgid "for a successful tag update;"
-msgstr ""
+msgstr "para uma atualização da tag bem sucedida;"
 
 #. type: Labeled list
 #: en/git-fetch.txt:217 en/git-push.txt:436
 #, no-wrap, priority:220
 msgid "`*`"
-msgstr ""
+msgstr "`*`"
 
 #. type: Plain text
 #: en/git-fetch.txt:218
 #, priority:220
 msgid "for a successfully fetched new ref;"
-msgstr ""
+msgstr "para a busca de uma nova referência bem sucedida;"
 
 #. type: Labeled list
 #: en/git-fetch.txt:218 en/git-push.txt:437
 #, no-wrap, priority:220
 msgid "`!`"
-msgstr ""
+msgstr "`!`"
 
 #. type: Plain text
 #: en/git-fetch.txt:219
 #, priority:220
 msgid "for a ref that was rejected or failed to update; and"
 msgstr ""
+"para uma referência que foi rejeitada ou a sua atualização tenha falhado; e"
 
 #. type: Labeled list
 #: en/git-fetch.txt:219 en/git-push.txt:438
 #, no-wrap, priority:220
 msgid "`=`"
-msgstr ""
+msgstr "`=`"
 
 #. type: Plain text
 #: en/git-fetch.txt:220
 #, priority:220
 msgid "for a ref that was up to date and did not need fetching."
 msgstr ""
+"para uma referência que estava atualizada e não precisou de nenhuma busca."
 
 #. type: Labeled list
 #: en/git-fetch.txt:221 en/git-push.txt:440
 #, no-wrap, priority:220
 msgid "summary"
-msgstr ""
+msgstr "resumo"
 
 #. type: Plain text
 #: en/git-fetch.txt:226
 #, ignore-ellipsis, priority:220
 msgid "For a successfully fetched ref, the summary shows the old and new values of the ref in a form suitable for using as an argument to `git log` (this is `<old>..<new>` in most cases, and `<old>...<new>` for forced non-fast-forward updates)."
 msgstr ""
+"Para a a busca de uma referência bem sucedida, o resumo exibe os valores "
+"antigos e novos em um formato adequado para a utilização como argumento para "
+"o comando `git log` (`<antigo>..<novo>` na maioria dos casos, e "
+"`<antigo>...<novo>` para atualizações de avanço rápido que forem impostas)."
 
 #. type: Labeled list
 #: en/git-fetch.txt:227 en/git-push.txt:468
 #, no-wrap, priority:220
 msgid "from"
-msgstr ""
+msgstr "de"
 
 #. type: Plain text
 #: en/git-fetch.txt:231
@@ -26989,7 +27168,7 @@ msgstr ""
 #: en/git-fetch.txt:232 en/git-push.txt:473 en/git-rebase.txt:1200
 #, no-wrap, priority:220
 msgid "to"
-msgstr ""
+msgstr "para"
 
 #. type: Plain text
 #: en/git-fetch.txt:235
@@ -27002,49 +27181,59 @@ msgstr ""
 #: en/git-fetch.txt:236 en/git-push.txt:477
 #, no-wrap, priority:220
 msgid "reason"
-msgstr ""
+msgstr "motivo"
 
 #. type: Plain text
 #: en/git-fetch.txt:240
 #, priority:220
 msgid "A human-readable explanation. In the case of successfully fetched refs, no explanation is needed. For a failed ref, the reason for failure is described."
 msgstr ""
+"Uma explicação legível para humanos. No caso de referências buscadas com "
+"sucesso, nenhuma explicação é necessária. Para uma referência com falha, o "
+"motivo será explanado."
 
 #. type: Plain text
 #: en/git-fetch.txt:245
 #, priority:220
 msgid "Update the remote-tracking branches:"
-msgstr ""
+msgstr "Atualize as ramificações de rastreamento remoto:"
 
 #. type: delimited block -
 #: en/git-fetch.txt:248
 #, no-wrap, priority:220
 msgid "$ git fetch origin\n"
-msgstr ""
+msgstr "$ git fetch origin\n"
 
 #. type: Plain text
 #: en/git-fetch.txt:254
 #, priority:220
 msgid "The above command copies all branches from the remote refs/heads/ namespace and stores them to the local refs/remotes/origin/ namespace, unless the branch.<name>.fetch option is used to specify a non-default refspec."
 msgstr ""
+"O comando acima copia todas as ramificações do `refs/heads/` do \"namespace\""
+" remoto e as armazena em `refs/remotes/origin/` com um \"namespace\" local, "
+"a menos que a opção `branch.<nome>.fetch` seja utilizada para definir um "
+"`refspec` fora do que já vem predefinido."
 
 #. type: Plain text
 #: en/git-fetch.txt:256
 #, priority:220
 msgid "Using refspecs explicitly:"
-msgstr ""
+msgstr "Utilizando `refspecs` de forma explicita:"
 
 #. type: delimited block -
 #: en/git-fetch.txt:259
 #, no-wrap, priority:220
 msgid "$ git fetch origin +pu:pu maint:tmp\n"
-msgstr ""
+msgstr "$ git fetch origin +pu:pu maint:tmp\n"
 
 #. type: Plain text
 #: en/git-fetch.txt:264
 #, priority:220
 msgid "This updates (or creates, as necessary) branches `pu` and `tmp` in the local repository by fetching from the branches (respectively)  `pu` and `maint` from the remote repository."
 msgstr ""
+"Faz a atualização (ou cria, conforme seja necessário) as ramificações `pu` e`"
+" tmp` no repositório local, buscando as ramificações (respectivamente) `pu` "
+"e` maint` no repositório remoto."
 
 #. type: Plain text
 #: en/git-fetch.txt:267
@@ -27057,6 +27246,8 @@ msgstr ""
 #, priority:220
 msgid "Peek at a remote's branch, without configuring the remote in your local repository:"
 msgstr ""
+"Dê uma olhada no ramo remoto sem a configuração remota do seu repositório "
+"local:"
 
 #. type: delimited block -
 #: en/git-fetch.txt:274
@@ -27065,6 +27256,8 @@ msgid ""
 "$ git fetch git://git.kernel.org/pub/scm/git/git.git maint\n"
 "$ git log FETCH_HEAD\n"
 msgstr ""
+"$ git fetch git://git.kernel.org/pub/scm/git/git.git maint\n"
+"$ git log FETCH_HEAD\n"
 
 #. type: Plain text
 #: en/git-fetch.txt:281
@@ -27234,48 +27427,72 @@ msgstr "Filtros"
 #, priority:100
 msgid "The filters are applied in the order as listed below.  The <command> argument is always evaluated in the shell context using the 'eval' command (with the notable exception of the commit filter, for technical reasons).  Prior to that, the `$GIT_COMMIT` environment variable will be set to contain the id of the commit being rewritten.  Also, GIT_AUTHOR_NAME, GIT_AUTHOR_EMAIL, GIT_AUTHOR_DATE, GIT_COMMITTER_NAME, GIT_COMMITTER_EMAIL, and GIT_COMMITTER_DATE are taken from the current commit and exported to the environment, in order to affect the author and committer identities of the replacement commit created by linkgit:git-commit-tree[1] after the filters have run."
 msgstr ""
+"Os filtros são aplicados na ordem listada abaixo.  O argumento <comando> é "
+"sempre avaliado no shell utilizando o comando 'eval' como contexto (exceto o "
+"filtro do commit, devido a uma mera tecnicalidade).  Antes disso, a variável "
+"do ambiente `$ GIT_COMMIT` será configurada para conter o ID do commit que "
+"está sendo reescrito.  Além disso as variáveis `GIT_AUTHOR_NAME`, "
+"`GIT_AUTHOR_EMAIL`, `GIT_AUTHOR_DATE`, `GIT_COMMITTER_NAME`, "
+"`GIT_COMMITTER_EMAIL` e `GIT_COMMITTER_DATE` são retirados do commit atual e "
+"exportados para o ambiente, a fim de afetar as identidades autor e de quem "
+"fez o commit do commit que está sendo criado por linkgit:git-commit-tree[1] "
+"após a execução dos filtros."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:87
 #, priority:100
 msgid "If any evaluation of <command> returns a non-zero exit status, the whole operation will be aborted."
 msgstr ""
+"Caso qualquer avaliação do <comando> retorne uma condição diferente de zero "
+"na saída, toda a operação será abortada."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:93
 #, priority:100
 msgid "A 'map' function is available that takes an \"original sha1 id\" argument and outputs a \"rewritten sha1 id\" if the commit has been already rewritten, and \"original sha1 id\" otherwise; the 'map' function can return several ids on separate lines if your commit filter emitted multiple commits."
 msgstr ""
+"Está disponível uma função chamada 'map' que pega um argumento \"id do sha1 "
+"original\" e gera um \"id do sha1 reescrito\" caso o commit seja reescrito e "
+"caso contrário \"sha1 id original\"; a função 'map' pode retornar vários IDs "
+"em linhas separadas caso o filtro do commit emita vários commits."
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:98
 #, no-wrap, priority:100
 msgid "--setup <command>"
-msgstr ""
+msgstr "--setup <comando>"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:104
 #, priority:100
 msgid "This is not a real filter executed for each commit but a one time setup just before the loop. Therefore no commit-specific variables are defined yet.  Functions or variables defined here can be used or modified in the following filter steps except the commit filter, for technical reasons."
 msgstr ""
+"Este não é um filtro real executado para cada commit, porém uma configuração "
+"única antes do loop. Portanto, nenhuma variável específica do commit será "
+"definida ainda.  As funções ou variáveis definidas aqui, podem ser "
+"utilizadas ou modificadas nas seguintes etapas do filtro, exceto o filtro do "
+"commit por uma mera tecnicalidade."
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:105
 #, no-wrap, priority:100
 msgid "--subdirectory-filter <directory>"
-msgstr ""
+msgstr "--subdirectory-filter <diretório>"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:109
 #, priority:100
 msgid "Only look at the history which touches the given subdirectory.  The result will contain that directory (and only that) as its project root. Implies <<Remap_to_ancestor>>."
 msgstr ""
+"Veja apenas a história que toca o subdiretório especificado.  O resultado "
+"contemplar este diretório (e somente isso) como a raiz do projeto. Implica "
+"no uso de <<Remap_to_ancestor>>."
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:110
 #, no-wrap, priority:100
 msgid "--env-filter <command>"
-msgstr ""
+msgstr "--env-filter <comando>"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:115
@@ -27291,19 +27508,25 @@ msgstr ""
 #: en/git-filter-branch.txt:116
 #, no-wrap, priority:100
 msgid "--tree-filter <command>"
-msgstr ""
+msgstr "--tree-filter <comando>"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:123
 #, priority:100
 msgid "This is the filter for rewriting the tree and its contents.  The argument is evaluated in shell with the working directory set to the root of the checked out tree.  The new tree is then used as-is (new files are auto-added, disappeared files are auto-removed - neither .gitignore files nor any other ignore rules *HAVE ANY EFFECT*!)."
 msgstr ""
+"Este filtro serve para reescrever a árvore e o seu conteúdo.  O argumento é "
+"avaliado no shell com o diretório de trabalho definido como a raiz da árvore "
+"verificada.  A nova árvore é então utilizada como está (os novos arquivos "
+"serão adicionados automaticamente, os arquivos desaparecidos serão removidos "
+"automaticamente - nem os arquivos `.gitignore` nem nenhuma outra regra de "
+"ignorar *TEM QUALQUER EFEITO*!)."
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:124
 #, no-wrap, priority:100
 msgid "--index-filter <command>"
-msgstr ""
+msgstr "--index-filter <comando>"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:130
@@ -27327,72 +27550,116 @@ msgstr "--parent-filter <comando>"
 #, ignore-ellipsis, priority:100
 msgid "This is the filter for rewriting the commit's parent list.  It will receive the parent string on stdin and shall output the new parent string on stdout.  The parent string is in the format described in linkgit:git-commit-tree[1]: empty for the initial commit, \"-p parent\" for a normal commit and \"-p parent1 -p parent2 -p parent3 ...\" for a merge commit."
 msgstr ""
+"Este filtro serve para reescrever a lista das matrizes de quem fez o "
+"commit.  Ele receberá a cadeia de caracteres matriz no stdin e produzirá a "
+"um nova cadeia de caracteres matriz no stdout.  A cadeia de caracteres "
+"matriz está no formato descrito em linkgit:git-commit-tree[1]: o commit "
+"inicial é vazio, \"-p parent\" para uma confirmação normal e \"-p parent1 -p "
+"parent2 -p parent3 ...\" para uma consolidação dos commits."
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:139
 #, no-wrap, priority:100
 msgid "--msg-filter <command>"
-msgstr ""
+msgstr "--msg-filter <comando>"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:144
 #, priority:100
 msgid "This is the filter for rewriting the commit messages.  The argument is evaluated in the shell with the original commit message on standard input; its standard output is used as the new commit message."
 msgstr ""
+"Este filtro serve para reescrever as mensagens dos commits.  O argumento é "
+"avaliado no shell com a mensagem original do commit em sua entrada "
+"predefinida; já a sua saída predefinida é utilizada como uma nova mensagem "
+"do commit."
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:145
 #, no-wrap, priority:100
 msgid "--commit-filter <command>"
-msgstr ""
+msgstr "--commit-filter <comando>"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:151
 #, ignore-ellipsis, priority:100
 msgid "This is the filter for performing the commit.  If this filter is specified, it will be called instead of the 'git commit-tree' command, with arguments of the form \"<TREE_ID> [(-p <PARENT_COMMIT_ID>)...]\" and the log message on stdin.  The commit id is expected on stdout."
 msgstr ""
+"Este filtro serve para apresentar o commit.  Caso este filtro seja "
+"utilizado, ele será chamado em vez do comando 'git commit-tree', com os "
+"argumentos no formato \"<TREE_ID> [(-p <PARENT_COMMIT_ID>)...]\" e a "
+"mensagem do registro log no stdin.  O ID do commit é esperado no stdout."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:155
 #, priority:100
 msgid "As a special extension, the commit filter may emit multiple commit ids; in that case, the rewritten children of the original commit will have all of them as parents."
 msgstr ""
+"Como uma extensão especial, o filtro do commit pode emitir vários IDs para "
+"os commits; nesse caso, os herdeiros do commit original que foram "
+"reescritos, terão todos eles como matrizes."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:160
 #, priority:100
 msgid "You can use the 'map' convenience function in this filter, and other convenience functions, too.  For example, calling 'skip_commit \"$@\"' will leave out the current commit (but not its changes! If you want that, use 'git rebase' instead)."
 msgstr ""
+"Você pode utilizar a função 'map' como uma conveniência neste filtro assim "
+"como nas outras funções também.  Ao chamar 'skip_commit \"$@\"' por exemplo, "
+"deixará de fora o commit atual (mas as alterações não! Caso queira usar "
+"dessa maneira, utilize então o comando 'git rebase')."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:164
 #, priority:100
 msgid "You can also use the `git_commit_non_empty_tree \"$@\"` instead of `git commit-tree \"$@\"` if you don't wish to keep commits with a single parent and that makes no change to the tree."
 msgstr ""
+"É possível também utilizar `git_commit_non_empty_tree \"$@\"` em vez de `git "
+"commit-tree \"$@\"` caso não queira mais manter os commit com uma única "
+"matriz, isso não faz qualquer alteração na árvore."
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:165
 #, no-wrap, priority:100
 msgid "--tag-name-filter <command>"
-msgstr ""
+msgstr "--tag-name-filter <comando>"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:171
 #, priority:100
 msgid "This is the filter for rewriting tag names. When passed, it will be called for every tag ref that points to a rewritten object (or to a tag object which points to a rewritten object).  The original tag name is passed via standard input, and the new tag name is expected on standard output."
 msgstr ""
+"Este filtro serve para reescrever os nomes das tags. Quando aprovada, será "
+"chamada para cada tag de referência que aponte para um objeto reescrito (ou "
+"para um objeto tag que aponte para um objeto reescrito).  O nome da tag "
+"original é passado através da entrada predefinida e seu novo nome é esperado "
+"na saída predefinida."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:176
 #, priority:100
 msgid "The original tags are not deleted, but can be overwritten; use \"--tag-name-filter cat\" to simply update the tags.  In this case, be very careful and make sure you have the old tags backed up in case the conversion has run afoul."
 msgstr ""
+"As tags originais não são excluídas, mas podem ser substituídas; use a opção "
+"\"--tag-name-filter cat\" para atualizar as tags.  Nesse caso, tenha muito "
+"cuidado e certifique-se de fazer o backup das tags antigas, caso ocorra "
+"algum problema durante a conversão."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:187
 #, priority:100
 msgid "Nearly proper rewriting of tag objects is supported. If the tag has a message attached, a new tag object will be created with the same message, author, and timestamp. If the tag has a signature attached, the signature will be stripped. It is by definition impossible to preserve signatures. The reason this is \"nearly\" proper, is because ideally if the tag did not change (points to the same object, has the same name, etc.)  it should retain any signature. That is not the case, signatures will always be removed, buyer beware. There is also no support for changing the author or timestamp (or the tag message for that matter). Tags which point to other tags will be rewritten to point to the underlying commit."
 msgstr ""
+"A reescrita quase apropriada dos objetos tag são suportados. Caso a tag "
+"tenha uma mensagem anexada, um novo objeto tag será criado com a mesma "
+"mensagem, autor e registro de data e hora. Caso a tag tenha uma assinatura "
+"anexada, a assinatura será removida. Devido a predefinição é impossível "
+"preservar as assinaturas. O motivo do \"quase\" apropriado, significa que "
+"idealmente caso uma tag não mude (aponta para o mesmo objeto, tem o mesmo "
+"nome etc.), ela deve manter qualquer assinatura. Não é este o caso, as "
+"assinaturas sempre serão removidas, portanto cuidado. Também não há "
+"compatibilidade para alterar o autor ou o registro de data e hora (ou a "
+"mensagem da tag). As tags que apontem para as outras tags, serão reescritas "
+"para apontar para o commit subjacente."
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:188
@@ -27405,24 +27672,32 @@ msgstr "--prune-empty"
 #, priority:100
 msgid "Some filters will generate empty commits that leave the tree untouched.  This option instructs git-filter-branch to remove such commits if they have exactly one or zero non-pruned parents; merge commits will therefore remain intact.  This option cannot be used together with `--commit-filter`, though the same effect can be achieved by using the provided `git_commit_non_empty_tree` function in a commit filter."
 msgstr ""
+"Alguns filtros geram commits vazios que deixam a árvore intocada.  Essa "
+"opção instrui o comando `git-filter-branch` para remover tais commits caso "
+"elas tenham exatamente um ou zero matrizes sem poda; os commits mesclados "
+"permanecerão intactos.  Esta opção não pode ser usada em conjunto com "
+"`--commit-filter`, embora o mesmo efeito possa ser alcançado usando a função "
+"`git_commit_non_empty_tree` em um filtro do commit."
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:196
 #, no-wrap, priority:100
 msgid "--original <namespace>"
-msgstr ""
+msgstr "--original <namespace>"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:199
 #, priority:100
 msgid "Use this option to set the namespace where the original commits will be stored. The default value is 'refs/original'."
 msgstr ""
+"Use esta opção para definir o `namespace` em que os commits originais serão "
+"armazenados. O valor predefinido é 'refs/original'."
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:200
 #, no-wrap, priority:100
 msgid "-d <directory>"
-msgstr ""
+msgstr "-d <diretório>"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:207
@@ -27435,120 +27710,167 @@ msgstr ""
 #, priority:100
 msgid "'git filter-branch' refuses to start with an existing temporary directory or when there are already refs starting with 'refs/original/', unless forced."
 msgstr ""
+"O comando 'git filter-branch' não será iniciado caso um diretório temporário "
+"existenta ou quando já existem referências começando com 'refs/original/' ou "
+"a menos que seja imposto."
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:214
 #, no-wrap, priority:100
 msgid "--state-branch <branch>"
-msgstr ""
+msgstr "--state-branch <ramo>"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:219
 #, priority:100
 msgid "This option will cause the mapping from old to new objects to be loaded from named branch upon startup and saved as a new commit to that branch upon exit, enabling incremental of large trees. If '<branch>' does not exist it will be created."
 msgstr ""
+"Essa opção fará com que o mapeamento dos objetos antigos para os novos seja "
+"carregado da ramificação chamada na inicialização e salvo como um novo "
+"commit para essa ramificação ao encerrar, permitindo o incremento de grandes "
+"árvores. Se o '<ramo>' não existir, ele será criado."
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:220
 #, ignore-ellipsis, no-wrap, priority:100
 msgid "<rev-list options>..."
-msgstr ""
+msgstr "<rev-list options>..."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:225
 #, priority:100
 msgid "Arguments for 'git rev-list'.  All positive refs included by these options are rewritten.  You may also specify options such as `--all`, but you must use `--` to separate them from the 'git filter-branch' options. Implies <<Remap_to_ancestor>>."
 msgstr ""
+"Argumentos para o 'git rev-list'.  Todas as referências positivas incluídas "
+"por estas opções serão reescritas.  Você também pode usar as opções como "
+"`--all`, porém deve utilizar `--` para separá-las das opções 'git filter-"
+"branch'. Implica no uso de <<Remap_to_ancestor>>."
 
 #. type: Title ~
 #: en/git-filter-branch.txt:229
 #, no-wrap, priority:100
 msgid "Remap to ancestor"
-msgstr ""
+msgstr "Remapear para o ancestral"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:236
 #, priority:100
 msgid "By using linkgit:git-rev-list[1] arguments, e.g., path limiters, you can limit the set of revisions which get rewritten. However, positive refs on the command line are distinguished: we don't let them be excluded by such limiters. For this purpose, they are instead rewritten to point at the nearest ancestor that was not excluded."
 msgstr ""
+"Ao usar argumentos linkgit:git-rev-list[1] como limitadores de caminho por "
+"exemplo, você pode limitar o conjunto das revisões que serão reescritas. No "
+"entanto, referências positivas na linha de comando são diferenciadas: nós "
+"não permitimos que sejam excluídas através destes limitadores. Para esse "
+"fim, eles são reescritos para apontar para o ancestral mais próximo que não "
+"tenha sido excluído."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:244
 #, priority:100
 msgid "On success, the exit status is `0`.  If the filter can't find any commits to rewrite, the exit status is `2`.  On any other error, the exit status may be any other non-zero value."
 msgstr ""
+"Se bem sucedido, a condição da saída se encerra com `0`.  Caso o o filtro "
+"não encontre nenhum commit para reescrever, a condição da saída se encerra "
+"com `2`.  Em qualquer outro erro, a condição da saída saída pode ser "
+"qualquer outro valor diferente de zero."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:251
 #, priority:100
 msgid "Suppose you want to remove a file (containing confidential information or copyright violation) from all commits:"
 msgstr ""
+"Suponha que você queira remover um arquivo (contendo informações "
+"confidenciais ou de violação de direitos autorais) de todos os commit:"
 
 #. type: delimited block -
 #: en/git-filter-branch.txt:254
 #, no-wrap, priority:100
 msgid "git filter-branch --tree-filter 'rm filename' HEAD\n"
-msgstr ""
+msgstr "git filter-branch --tree-filter 'rm nome-do-arquivo' HEAD\n"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:259
 #, priority:100
 msgid "However, if the file is absent from the tree of some commit, a simple `rm filename` will fail for that tree and commit.  Thus you may instead want to use `rm -f filename` as the script."
 msgstr ""
+"No entanto, caso o arquivo do commit esteja ausente da árvore, um simples `"
+"rm filename` falhará para aquela árvore e o commit.  Portanto, pode ser "
+"interessante usar `rm -f filename` como script."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:265
 #, priority:100
 msgid "Using `--index-filter` with 'git rm' yields a significantly faster version.  Like with using `rm filename`, `git rm --cached filename` will fail if the file is absent from the tree of a commit.  If you want to \"completely forget\" a file, it does not matter when it entered history, so we also add `--ignore-unmatch`:"
 msgstr ""
+"Usar a opção `--index-filter` com 'git rm' gera uma versão "
+"significativamente mais rápida.  Assim como o `rm filename` o `git rm --"
+"cached filename` falhará caso o arquivo do commit esteja ausente da árvore.  "
+"Caso queira \"esquecer completamente\" um arquivo, não se importando quando "
+"ele entrou no histórico, então também adicionamos a opção `--ignore-unmatch`:"
 
 #. type: delimited block -
 #: en/git-filter-branch.txt:268
 #, no-wrap, priority:100
 msgid "git filter-branch --index-filter 'git rm --cached --ignore-unmatch filename' HEAD\n"
 msgstr ""
+"git filter-branch --index-filter 'git rm --cached --ignore-unmatch nome-do-"
+"arquivo' HEAD\n"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:271
 #, priority:100
 msgid "Now, you will get the rewritten history saved in HEAD."
-msgstr ""
+msgstr "Agora, você salvará o histórico reescrito no `HEAD`."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:274
 #, priority:100
 msgid "To rewrite the repository to look as if `foodir/` had been its project root, and discard all other history:"
 msgstr ""
+"Para reescrever o repositório para fazer de conta que `foodir/` tenha sido a "
+"raiz do projeto e descarte todos os outros históricos:"
 
 #. type: delimited block -
 #: en/git-filter-branch.txt:277
 #, no-wrap, priority:100
 msgid "git filter-branch --subdirectory-filter foodir -- --all\n"
-msgstr ""
+msgstr "git filter-branch --subdirectory-filter foodir -- --all\n"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:282
 #, priority:100
 msgid "Thus you can, e.g., turn a library subdirectory into a repository of its own.  Note the `--` that separates 'filter-branch' options from revision options, and the `--all` to rewrite all branches and tags."
 msgstr ""
+"Assim, você pode, transformar um subdiretório da biblioteca em um "
+"repositório próprio por exemplo.  Observe o `--` que separa as opções "
+"'filter-branch' das opções de revisão e o` --all` para reescrever todos os "
+"ramos e as tags."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:286
 #, priority:100
 msgid "To set a commit (which typically is at the tip of another history) to be the parent of the current initial commit, in order to paste the other history behind the current history:"
 msgstr ""
+"Para definir um commit (que normalmente esteja na ponta de outro histórico) "
+"para ser a atual matriz inicial do commit e para colar o outro histórico "
+"atrás do histórico atual:"
 
 #. type: delimited block -
 #: en/git-filter-branch.txt:289
 #, no-wrap, priority:100
 msgid "git filter-branch --parent-filter 'sed \"s/^\\$/-p <graft-id>/\"' HEAD\n"
 msgstr ""
+"git filter-branch --parent-filter 'sed \"s/^\\$/-p <graft-id>/\"' HEAD\n"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:295
 #, priority:100
 msgid "(if the parent string is empty - which happens when we are dealing with the initial commit - add graftcommit as a parent).  Note that this assumes history with a single root (that is, no merge without common ancestors happened).  If this is not the case, use:"
 msgstr ""
+"(caso a cadeia de caracteres matriz esteja vazia - o que acontece quando "
+"estamos lidando com o commit inicial - `add graftcommit` como matriz).  "
+"Observe que isso assume o histórico com uma única raiz (ou seja, sem nenhuma "
+"mesclagem com ancestrais comuns).  Se não for esse o caso, use:"
 
 #. type: delimited block -
 #: en/git-filter-branch.txt:299
@@ -27557,12 +27879,14 @@ msgid ""
 "git filter-branch --parent-filter \\\n"
 "\t'test $GIT_COMMIT = <commit-id> && echo \"-p <graft-id>\" || cat' HEAD\n"
 msgstr ""
+"git filter-branch --parent-filter \\\n"
+"\t'test $GIT_COMMIT = <commit-id> && echo \"-p <graft-id>\" || cat' HEAD\n"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:302
 #, priority:100
 msgid "or even simpler:"
-msgstr ""
+msgstr "ou mais simples ainda:"
 
 #. type: delimited block -
 #: en/git-filter-branch.txt:306
@@ -27571,12 +27895,14 @@ msgid ""
 "git replace --graft $commit-id $graft-id\n"
 "git filter-branch $graft-id..HEAD\n"
 msgstr ""
+"git replace --graft $commit-id $graft-id\n"
+"git filter-branch $graft-id..HEAD\n"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:309
 #, priority:100
 msgid "To remove commits authored by \"Darl McBribe\" from the history:"
-msgstr ""
+msgstr "Para remover os commits criados por \"Darl McBribe\" do histórico:"
 
 #. type: delimited block -
 #: en/git-filter-branch.txt:318
@@ -27590,12 +27916,19 @@ msgid ""
 "\t\tgit commit-tree \"$@\";\n"
 "\tfi' HEAD\n"
 msgstr ""
+"git filter-branch --commit-filter '\n"
+"\tif [ \"$GIT_AUTHOR_NAME\" = \"Darl McBribe\" ];\n"
+"\tthen\n"
+"\t\tskip_commit \"$@\";\n"
+"\telse\n"
+"\t\tgit commit-tree \"$@\";\n"
+"\tfi' HEAD\n"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:321
 #, priority:100
 msgid "The function 'skip_commit' is defined as follows:"
-msgstr ""
+msgstr "A função 'skip_commit' é definida da seguinte maneira:"
 
 #. type: delimited block -
 #: en/git-filter-branch.txt:333
@@ -27612,12 +27945,27 @@ msgid ""
 "\tdone;\n"
 "}\n"
 msgstr ""
+"skip_commit()\n"
+"{\n"
+"\tshift;\n"
+"\twhile [ -n \"$1\" ];\n"
+"\tdo\n"
+"\t\tshift;\n"
+"\t\tmap \"$1\";\n"
+"\t\tshift;\n"
+"\tdone;\n"
+"}\n"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:340
 #, priority:100
 msgid "The shift magic first throws away the tree id and then the -p parameters.  Note that this handles merges properly! In case Darl committed a merge between P1 and P2, it will be propagated properly and all children of the merge will become merge commits with P1,P2 as their parents instead of the merge commit."
 msgstr ""
+"A mágica do deslocamento primeiro joga fora o ID da árvore e depois os "
+"parâmetros `-p`.  Observe que isso manipula a mesclagem de forma adequada! "
+"No caso de Darl ter feito um commit mesclando entre P1 e P2, ela será "
+"propagada corretamente e todos os herdeiros desta mesclagem se tornarão "
+"commits P1,P2 como suas matrizes em vez do commit de mesclagem."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:345
@@ -27628,12 +27976,20 @@ msgid ""
 "to throw out _changes_ together with the commits, you should use the\n"
 "interactive mode of 'git rebase'.\n"
 msgstr ""
+"*NOTA* as alterações introduzidas pelos commits que não sejam revertidos\n"
+"por commits subsequentes, ainda estarão na ramificação que foi reescrita. "
+"Caso queira\n"
+"descartar as _alterações_ junto com os commits, você deve usar o\n"
+"modo interativo do comando 'git rebase'.\n"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:349
 #, priority:100
 msgid "You can rewrite the commit log messages using `--msg-filter`.  For example, 'git svn-id' strings in a repository created by 'git svn' can be removed this way:"
 msgstr ""
+"Você pode re-escrever as mensagens do registro log dos commits com `--msg-"
+"filter`.  A cadeia de caracteres 'git svn-id' em um repositório criado por "
+"'git svn' por exemplo, podem ser removidos desta maneira:"
 
 #. type: delimited block -
 #: en/git-filter-branch.txt:354
@@ -27643,12 +27999,17 @@ msgid ""
 "\tsed -e \"/^git-svn-id:/d\"\n"
 "'\n"
 msgstr ""
+"git filter-branch --msg-filter '\n"
+"\tsed -e \"/^git-svn-id:/d\"\n"
+"'\n"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:358
 #, priority:100
 msgid "If you need to add 'Acked-by' lines to, say, the last 10 commits (none of which is a merge), use this command:"
 msgstr ""
+"Caso precise adicionar as linhas 'Acked-by' (Reconhecido por) aos últimos 10 "
+"commits por exemplo (nenhum dos quais seja uma mesclagem), use este comando:"
 
 #. type: delimited block -
 #: en/git-filter-branch.txt:364
@@ -27659,12 +28020,20 @@ msgid ""
 "\techo \"Acked-by: Bugs Bunny <bunny@bugzilla.org>\"\n"
 "' HEAD~10..HEAD\n"
 msgstr ""
+"git filter-branch --msg-filter '\n"
+"\tcat &&\n"
+"\techo \"Reconhecido por: Pernalonga <coelho@bugzilla.org>\"\n"
+"' HEAD~10..HEAD\n"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:370
 #, priority:100
 msgid "The `--env-filter` option can be used to modify committer and/or author identity.  For example, if you found out that your commits have the wrong identity due to a misconfigured user.email, you can make a correction, before publishing the project, like this:"
 msgstr ""
+"A opção `--env-filter` pode ser usada para modificar a identidade do autor "
+"de quem fez o commit.  Caso descubra que os seus commits têm a identidade "
+"errada devido a um `user.email` configurado de forma errada por exemplo, é "
+"possível fazer uma correção antes de publicar o projeto, assim:"
 
 #. type: delimited block -
 #: en/git-filter-branch.txt:382
@@ -27681,18 +28050,32 @@ msgid ""
 "\tfi\n"
 "' -- --all\n"
 msgstr ""
+"git filter-branch --env-filter '\n"
+"\tif test \"$GIT_AUTHOR_EMAIL\" = \"root@localhost\"\n"
+"\tthen\n"
+"\t\tGIT_AUTHOR_EMAIL=joao@exemplo.com.br\n"
+"\tfi\n"
+"\tif test \"$GIT_COMMITTER_EMAIL\" = \"root@localhost\"\n"
+"\tthen\n"
+"\t\tGIT_COMMITTER_EMAIL=joao@exemplo.com.br\n"
+"\tfi\n"
+"' -- --all\n"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:388
 #, priority:100
 msgid "To restrict rewriting to only part of the history, specify a revision range in addition to the new branch name.  The new branch name will point to the top-most revision that a 'git rev-list' of this range will print."
 msgstr ""
+"Para restringir a reescrita a apenas na parte do histórico, determine um "
+"intervalo da revisão além do novo nome da ramificação.  O novo nome da "
+"ramificação apontará para o topo da revisão em que um 'git rev-list' desse "
+"intervalo será impresso."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:390
 #, priority:100
 msgid "Consider this history:"
-msgstr ""
+msgstr "Considere este histórico:"
 
 #. type: delimited block -
 #: en/git-filter-branch.txt:395
@@ -27702,24 +28085,29 @@ msgid ""
 "    /     /\n"
 "A--B-----C\n"
 msgstr ""
+"     D--E--F--G--H\n"
+"    /     /\n"
+"A--B-----C\n"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:398
 #, priority:100
 msgid "To rewrite only commits D,E,F,G,H, but leave A, B and C alone, use:"
 msgstr ""
+"Para reescrever apenas os commits D, E, F, G, H, mas deixe A, B e C "
+"intactos, use:"
 
 #. type: delimited block -
 #: en/git-filter-branch.txt:401
 #, ignore-ellipsis, no-wrap, priority:100
 msgid "git filter-branch ... C..H\n"
-msgstr ""
+msgstr "git filter-branch ... C..H\n"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:404
 #, priority:100
 msgid "To rewrite commits E,F,G,H, use one of these:"
-msgstr ""
+msgstr "Para reescrever os commits E, F, G, H, use um destes:"
 
 #. type: delimited block -
 #: en/git-filter-branch.txt:408
@@ -27728,12 +28116,14 @@ msgid ""
 "git filter-branch ... C..H --not D\n"
 "git filter-branch ... D..H --not C\n"
 msgstr ""
+"git filter-branch ... C..H --not D\n"
+"git filter-branch ... D..H --not C\n"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:411
 #, priority:100
 msgid "To move the whole tree into a subdirectory, or remove it from there:"
-msgstr ""
+msgstr "Para mover toda a árvore para um subdiretório ou removê-la de lá:"
 
 #. type: delimited block -
 #: en/git-filter-branch.txt:418
@@ -27745,36 +28135,54 @@ msgid ""
 "\t\t\tgit update-index --index-info &&\n"
 "\t mv \"$GIT_INDEX_FILE.new\" \"$GIT_INDEX_FILE\"' HEAD\n"
 msgstr ""
+"git filter-branch --index-filter \\\n"
+"\t'git ls-files -s | sed \"s-\\t\\\"*-&novosubdir/-\" |\n"
+"\t\tGIT_INDEX_FILE=$GIT_INDEX_FILE.new \\\n"
+"\t\t\tgit update-index --index-info &&\n"
+"\t mv \"$GIT_INDEX_FILE.new\" \"$GIT_INDEX_FILE\"' HEAD\n"
 
 #. type: Title -
 #: en/git-filter-branch.txt:423
 #, no-wrap, priority:100
 msgid "CHECKLIST FOR SHRINKING A REPOSITORY"
-msgstr ""
+msgstr "LISTA DE VERIFICAÇÃO PARA REDUZIR DE UM REPOSITÓRIO"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:431
 #, priority:100
 msgid "git-filter-branch can be used to get rid of a subset of files, usually with some combination of `--index-filter` and `--subdirectory-filter`.  People expect the resulting repository to be smaller than the original, but you need a few more steps to actually make it smaller, because Git tries hard not to lose your objects until you tell it to.  First make sure that:"
 msgstr ""
+"O comando `git-filter-branch` pode ser usado para se livrar de um "
+"subconjunto de arquivos, geralmente com alguma combinação das opções "
+"`--index-filter` e `--subdirectory-filter`.  As pessoas esperam que o "
+"repositório resultante seja menor que o original, porém são necessários mais "
+"algumas etapas para torná-lo menor porque o Git se esforça para não perder "
+"os seus objetos até que você assim o solicite.  Primeiro, verifique se:"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:435
 #, priority:100
 msgid "You really removed all variants of a filename, if a blob was moved over its lifetime.  `git log --name-only --follow --all -- filename` can help you find renames."
 msgstr ""
+"Você realmente removeu todas as variantes de um nome do arquivo, se um bolha "
+"foi movida durante a sua vida útil.  O comando `git log --name-only --follow "
+"--all - nome_do_arquivo` pode ajudá-lo a encontrar os arquivos renomeados."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:438
 #, priority:100
 msgid "You really filtered all refs: use `--tag-name-filter cat -- --all` when calling git-filter-branch."
 msgstr ""
+"Você realmente filtrou todas as referências: use as opções `--tag-name-"
+"filter cat -- --all` ao invocar o comando git-filter-branch."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:441
 #, priority:100
 msgid "Then there are two ways to get a smaller repository.  A safer way is to clone, that keeps your original intact."
 msgstr ""
+"Depois, existem duas outras maneiras de se obter um repositório ainda "
+"menor.  A maneira mais segura seria clonar, mantendo o original intacto."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:445
@@ -27791,24 +28199,36 @@ msgstr ""
 #, priority:100
 msgid "If you really don't want to clone it, for whatever reasons, check the following points instead (in this order).  This is a very destructive approach, so *make a backup* or go back to cloning it.  You have been warned."
 msgstr ""
+"Caso realmente não queira cloná-lo, independente do motivo, verifique os "
+"seguintes pontos (nesta ordem).  Essa é uma abordagem muito destrutiva, "
+"logo, *faça um backup* ou volte para a clonagem.  Você foi avisado."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:454
 #, priority:100
 msgid "Remove the original refs backed up by git-filter-branch: say `git for-each-ref --format=\"%(refname)\" refs/original/ | xargs -n 1 git update-ref -d`."
 msgstr ""
+"Remova os refs originais com o backup do git-filter-branch usando: `git for-"
+"each-ref --format=\"%(refname)\" refs/original/ | xargs -n 1 git update-ref "
+"-d`."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:456
 #, priority:100
 msgid "Expire all reflogs with `git reflog expire --expire=now --all`."
 msgstr ""
+"Expire todos os `reflogs` usando o comando `git reflog expire --expire=now "
+"--all`."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:460
 #, priority:100
 msgid "Garbage collect all unreferenced objects with `git gc --prune=now` (or if your git-gc is not new enough to support arguments to `--prune`, use `git repack -ad; git prune` instead)."
 msgstr ""
+"O lixo é coletado de todos os objetos sem referências usando o comando `git "
+"gc --prune=now` (ou caso o seu `git-gc` não seja novo o suficiente para "
+"suportar os argumentos para a opção `--prune`, use `git repack -ad; git "
+"prune`)."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:467
@@ -28036,7 +28456,7 @@ msgstr "git-fmt-merge-msg(1)"
 #: en/git-fmt-merge-msg.txt:7
 #, priority:100
 msgid "git-fmt-merge-msg - Produce a merge commit message"
-msgstr ""
+msgstr "git-fmt-merge-msg - Gera uma mensagem de commit da mesclagem"
 
 #. type: Plain text
 #: en/git-fmt-merge-msg.txt:14
@@ -28045,18 +28465,25 @@ msgid ""
 "'git fmt-merge-msg' [-m <message>] [--log[=<n>] | --no-log]\n"
 "'git fmt-merge-msg' [-m <message>] [--log[=<n>] | --no-log] -F <file>\n"
 msgstr ""
+"'git fmt-merge-msg' [-m <mensagem>] [--log[=<n>] | --no-log]\n"
+"'git fmt-merge-msg' [-m <mensagem>] [--log[=<n>] | --no-log] -F <arquivo>\n"
 
 #. type: Plain text
 #: en/git-fmt-merge-msg.txt:20
 #, priority:100
 msgid "Takes the list of merged objects on stdin and produces a suitable commit message to be used for the merge commit, usually to be passed as the '<merge-message>' argument of 'git merge'."
 msgstr ""
+"Pega a lista de objetos mesclados no stdin e gera uma mensagem adequada para "
+"o commit, que foi mesclado, geralmente ser usada como '<mensagem-da-"
+"mesclagem>' que é um argumento do comando 'git merge'."
 
 #. type: Plain text
 #: en/git-fmt-merge-msg.txt:23
 #, priority:100
 msgid "This command is intended mostly for internal use by scripts automatically invoking 'git merge'."
 msgstr ""
+"Primeiramente, este comando é destinado para uso interno com scripts que "
+"invocam automaticamente o 'git merge'."
 
 #. type: Labeled list
 #: en/git-fmt-merge-msg.txt:27 en/merge-options.txt:68
@@ -28069,6 +28496,10 @@ msgstr "--log[=<n>]"
 #, priority:100
 msgid "In addition to branch names, populate the log message with one-line descriptions from the actual commits that are being merged.  At most <n> commits from each merge parent will be used (20 if <n> is omitted).  This overrides the `merge.log` configuration variable."
 msgstr ""
+"Além dos nomes das ramificações, popule a mensagem do registro log com "
+"descrições de uma linha dos commits que estão sendo mesclados atualmente.  "
+"Serão usadas no máximo <n> mesclagens dos commits de cada matriz (20 caso <n>"
+" seja omitido).  Isso substitui a variável de configuração `merge.log`."
 
 #. type: Labeled list
 #: en/git-fmt-merge-msg.txt:34 en/merge-options.txt:69
@@ -28081,6 +28512,8 @@ msgstr "--no-log"
 #, priority:100
 msgid "Do not list one-line descriptions from the actual commits being merged."
 msgstr ""
+"Não liste os descritivos de uma linha dos commits atuais que estão sendo "
+"mescladas."
 
 #. type: Labeled list
 #: en/git-fmt-merge-msg.txt:38
@@ -28093,30 +28526,34 @@ msgstr "--[no-]summary"
 #, priority:100
 msgid "Synonyms to --log and --no-log; these are deprecated and will be removed in the future."
 msgstr ""
+"É um sinônimos para `--log` e `--no-log`; estas opções foram descontinuadas "
+"e serão removidas no futuro."
 
 #. type: Labeled list
 #: en/git-fmt-merge-msg.txt:43
 #, no-wrap, priority:100
 msgid "--message <message>"
-msgstr ""
+msgstr "--message <mensagem>"
 
 #. type: Plain text
 #: en/git-fmt-merge-msg.txt:46
 #, priority:100
 msgid "Use <message> instead of the branch names for the first line of the log message.  For use with `--log`."
 msgstr ""
+"Para a primeira linha da mensagem do registro log use `<mensagem>` em vez "
+"dos nomes das ramificações.  Para usar com `--log`."
 
 #. type: Labeled list
 #: en/git-fmt-merge-msg.txt:48
 #, no-wrap, priority:100
 msgid "--file <file>"
-msgstr ""
+msgstr "--file <arquivo>"
 
 #. type: Plain text
 #: en/git-fmt-merge-msg.txt:51
 #, priority:100
 msgid "Take the list of merged objects from <file> instead of stdin."
-msgstr ""
+msgstr "Pegue a lista dos objetos mesclados de <arquivo> em vez do stdin."
 
 #. type: Labeled list
 #: en/git-fmt-merge-msg.txt:56
@@ -28129,6 +28566,8 @@ msgstr "merge.summary"
 #, priority:100
 msgid "Synonym to `merge.log`; this is deprecated and will be removed in the future."
 msgstr ""
+"É um sinônimo para `merge.log`; estas opções foram descontinuadas e serão "
+"removidas no futuro."
 
 #. type: delimited block -
 #: en/git-fmt-merge-msg.txt:66
@@ -28137,12 +28576,16 @@ msgid ""
 "$ git fetch origin master\n"
 "$ git fmt-merge-msg --log <$GIT_DIR/FETCH_HEAD\n"
 msgstr ""
+"$ git fetch origin master\n"
+"$ git fmt-merge-msg --log <$GIT_DIR/FETCH_HEAD\n"
 
 #. type: Plain text
 #: en/git-fmt-merge-msg.txt:70
 #, priority:100
 msgid "Print a log message describing a merge of the \"master\" branch from the \"origin\" remote."
 msgstr ""
+"Imprima uma mensagem do registro log descrevendo uma mesclagem da "
+"ramificação \"master\" no ramo remoto \"origin\"."
 
 #. type: Title =
 #: en/git-for-each-ref.txt:2
@@ -28154,7 +28597,7 @@ msgstr "git-for-each-ref(1)"
 #: en/git-for-each-ref.txt:7
 #, priority:100
 msgid "git-for-each-ref - Output information on each ref"
-msgstr ""
+msgstr "git-for-each-ref - Informações de saída de cada referência"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:16
@@ -28166,36 +28609,54 @@ msgid ""
 "\t\t   (--merged[=<object>] | --no-merged[=<object>])\n"
 "\t\t   [--contains[=<object>]] [--no-contains[=<object>]]\n"
 msgstr ""
+"'git for-each-ref' [--count=<count>] [--shell|--perl|--python|--tcl]\n"
+"\t\t   [(--sort=<chave>)...] [--format=<formato>] [<pattern>...]\n"
+"\t\t   [--points-at=<objeto>]\n"
+"\t\t   (--merged[=<objeto>] | --no-merged[=<objeto>])\n"
+"\t\t   [--contains[=<objeto>]] [--no-contains[=<objeto>]]\n"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:26
 #, priority:100
 msgid "Iterate over all refs that match `<pattern>` and show them according to the given `<format>`, after sorting them according to the given set of `<key>`.  If `<count>` is given, stop after showing that many refs.  The interpolated values in `<format>` can optionally be quoted as string literals in the specified host language allowing their direct evaluation in that language."
 msgstr ""
+"Reitere todos as referências que coincidam com `<pattern>` e mostre-os de "
+"acordo com o `<formato>` usado depois de classificá-los de acordo com o "
+"conjunto fornecido por `<chave>`.  Caso `<count>` seja usado, pare depois de "
+"exibir referências demais.  Os valores interpolados no `<formato>` podem "
+"opcionalmente ser citados como literais de uma cadeia de caracteres no "
+"idioma do host usado, permitindo a sua avaliação direta neste idioma."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:29 en/git-show-ref.txt:88
 #, ignore-ellipsis, no-wrap, priority:100
 msgid "<pattern>..."
-msgstr ""
+msgstr "<pattern>..."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:34
 #, priority:100
 msgid "If one or more patterns are given, only refs are shown that match against at least one pattern, either using fnmatch(3) or literally, in the latter case matching completely or from the beginning up to a slash."
 msgstr ""
+"Caso uma ou mais padrões sejam usados, serão exibidos apenas as referências "
+"que coincidam com um dos padrões apresentados usando fnmatch(3) ou literal, "
+"neste último caso, apenas caso coincida completamente seja desde o início ou "
+"até uma barra."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:35
 #, no-wrap, priority:100
 msgid "--count=<count>"
-msgstr ""
+msgstr "--count=<count>"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:39
 #, priority:100
 msgid "By default the command shows all refs that match `<pattern>`.  This option makes it stop after showing that many refs."
 msgstr ""
+"É predefinido que o comando exiba todos as referências que coincidam com "
+"`<padrão>`.  Esta opção define um limite de quantidade para parar após a "
+"exibição de `<count>` referências."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:46
@@ -28218,12 +28679,26 @@ msgstr "--format=<formato>"
 #, priority:100
 msgid "A string that interpolates `%(fieldname)` from a ref being shown and the object it points at.  If `fieldname` is prefixed with an asterisk (`*`) and the ref points at a tag object, use the value for the field in the object which the tag object refers to (instead of the field in the tag object).  When unspecified, `<format>` defaults to `%(objectname) SPC %(objecttype) TAB %(refname)`.  It also interpolates `%%` to `%`, and `%xx` where `xx` are hex digits interpolates to character with hex code `xx`; for example `%00` interpolates to `\\0` (NUL), `%09` to `\\t` (TAB) and `%0a` to `\\n` (LF)."
 msgstr ""
+"Uma cadeia de caracteres que interpola `%(fieldname)` vindo de uma "
+"referência sendo exibida e o objeto para o qual aponta.  Caso `fieldname` "
+"seja prefixada com um asterisco (`*`) e a referência aponte para um objeto "
+"tag, use o valor do campo no objeto ao qual o objeto tag se refere (em vez "
+"do campo no objeto tag).  Quando não especificado, o `<formato>` assume a "
+"predefinição `%(objectname) SPC %(objecttype) TAB %(refname)`.  Também "
+"interpola `%%` para `%` e `% xx` onde `xx` são dígitos hexadecimais "
+"interpolados com caracteres que tenha um código hexadecimal `xx`; `% 00` "
+"interpola para `\\0` (NUL) por exemplo, `%09` para `\\t` (TAB) e `%0a` para `"
+"\\n"
+"` (LF)."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:64 en/git-tag.txt:129
 #, priority:240
 msgid "Respect any colors specified in the `--format` option. The `<when>` field must be one of `always`, `never`, or `auto` (if `<when>` is absent, behave as if `always` was given)."
 msgstr ""
+"Respeite todas as cores especificadas com a opção `--format`. O campo "
+"`<quando>` deve ser `always`, `never` ou `auto` (comporte-se como `always` "
+"caso `<quando>` esteja ausente)."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:65
@@ -28254,246 +28729,342 @@ msgstr "--tcl"
 #, priority:100
 msgid "If given, strings that substitute `%(fieldname)` placeholders are quoted as string literals suitable for the specified host language.  This is meant to produce a scriptlet that can directly be `eval`ed."
 msgstr ""
+"Se fornecido, as strings que substituem os espaços reservados `% (fieldname)`"
+" são citadas como literais de strings adequadas para o idioma do host "
+"especificado.  Isso tem a intenção de produzir um \"scriptlet\" que possa "
+"ser diretamente \"avaliado\"."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:74
 #, no-wrap, priority:100
 msgid "--points-at=<object>"
-msgstr ""
+msgstr "--points-at=<objeto>"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:76
 #, priority:100
 msgid "Only list refs which points at the given object."
-msgstr ""
+msgstr "Listar apenas as referências que apontem para o objeto especificado."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:77
 #, no-wrap, priority:100
 msgid "--merged[=<object>]"
-msgstr ""
+msgstr "--merged[=<objeto>]"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:81
 #, priority:100
 msgid "Only list refs whose tips are reachable from the specified commit (HEAD if not specified), incompatible with `--no-merged`."
 msgstr ""
+"Liste apenas as referências cujas dicas são acessíveis a partir do commit "
+"especificado (ou HEAD caso nenhum seja especificado). A opção é incompatível "
+"com `--no-merged`."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:82
 #, no-wrap, priority:100
 msgid "--no-merged[=<object>]"
-msgstr ""
+msgstr "--no-merged[=<objeto>]"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:86
 #, priority:100
 msgid "Only list refs whose tips are not reachable from the specified commit (HEAD if not specified), incompatible with `--merged`."
 msgstr ""
+"Liste apenas as referências cujas dicas não podem ser acessadas a partir do "
+"commit especificado (ou HEAD caso nenhum seja especificado). A opção é "
+"incompatível com `--merged`."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:87
 #, no-wrap, priority:100
 msgid "--contains[=<object>]"
-msgstr ""
+msgstr "--contains[=<objeto>]"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:90
 #, priority:100
 msgid "Only list refs which contain the specified commit (HEAD if not specified)."
 msgstr ""
+"Liste apenas as referências que contenham os commits especificados (ou HEAD "
+"caso nenhum seja especificado)."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:91
 #, no-wrap, priority:100
 msgid "--no-contains[=<object>]"
-msgstr ""
+msgstr "--no-contains[=<objeto>]"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:94
 #, priority:100
 msgid "Only list refs which don't contain the specified commit (HEAD if not specified)."
 msgstr ""
+"Listar apenas as referências que não contenham os commits especificados (ou "
+"HEAD caso nenhum seja especificado)."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:97
 #, priority:100
 msgid "Sorting and filtering refs are case insensitive."
 msgstr ""
+"As referências de classificação e filtragem não diferenciam as maiúsculas de "
+"minúsculas."
 
 #. type: Title -
 #: en/git-for-each-ref.txt:99
 #, no-wrap, priority:100
 msgid "FIELD NAMES"
-msgstr ""
+msgstr "NOME DOS CAMPOS"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:104
 #, priority:100
 msgid "Various values from structured fields in referenced objects can be used to interpolate into the resulting output, or as sort keys."
 msgstr ""
+"Há vários valores dos campos estruturados nas referências dos objetos que "
+"podem ser usados para interpolação da saída resultante ou como chaves de "
+"classificação."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:106
 #, priority:100
 msgid "For all objects, the following names can be used:"
-msgstr ""
+msgstr "Os seguintes nomes podem ser usados para todos os objetos, :"
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:107
 #, no-wrap, priority:100
 msgid "refname"
-msgstr ""
+msgstr "refname"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:123
 #, priority:100
 msgid "The name of the ref (the part after $GIT_DIR/).  For a non-ambiguous short name of the ref append `:short`.  The option core.warnAmbiguousRefs is used to select the strict abbreviation mode. If `lstrip=<N>` (`rstrip=<N>`) is appended, strips `<N>` slash-separated path components from the front (back) of the refname (e.g. `%(refname:lstrip=2)` turns `refs/tags/foo` into `foo` and `%(refname:rstrip=2)` turns `refs/tags/foo` into `refs`).  If `<N>` is a negative number, strip as many path components as necessary from the specified end to leave `-<N>` path components (e.g. `%(refname:lstrip=-2)` turns `refs/tags/foo` into `tags/foo` and `%(refname:rstrip=-1)` turns `refs/tags/foo` into `refs`). When the ref does not have enough components, the result becomes an empty string if stripping with positive <N>, or it becomes the full refname if stripping with negative <N>.  Neither is an error."
 msgstr ""
+"O nome da referência \"ref\" (a parte após $GIT_DIR/).  Para um nome "
+"abreviado não ambíguo do ref, acrescente `: short`.  A opção "
+"`core.warnAmbiguousRefs` é utilizada para selecionar o modo estrito da "
+"abreviação. Caso `lstrip=<N>` (`rstrip=<N>`) for anexado, retira `<N>` dos "
+"componentes de caminho separados por barra da frente (traseira) do refname "
+"(`%(refname:lstrip=2)` por exemplo, transforma `refs/tags/foo` em `foo` "
+"e`%(refname:rstrip=2)` transforma `refs/tags/foo` em `refs`).  Caso `<N>` "
+"seja um número negativo, retire quantos componentes do caminho forem "
+"necessários do final especificado, deixando os componentes do caminho `-<N>`"
+", por exemplo (`%(refname:lstrip=-2)` transforma `refs/tags/foo` em `tags/"
+"foo` e `%(refname:rstrip=-1)` transforma `refs/tags/foo` em `refs`). Quando "
+"uma ref não possui componentes suficientes, o resultado se torna uma cadeia "
+"de caracteres vazia caso seja removida com <N> positivo, ou se torna o "
+"refname completo caso seja removida com um <N> negativo.  Nenhum dos dois é "
+"um erro."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:125
 #, priority:100
 msgid "`strip` can be used as a synonym to `lstrip`."
-msgstr ""
+msgstr "O `strip` pode ser utilizado como sinônimo de `lstrip`."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:126
 #, no-wrap, priority:100
 msgid "objecttype"
-msgstr ""
+msgstr "objecttype"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:128
 #, priority:100
 msgid "The type of the object (`blob`, `tree`, `commit`, `tag`)."
-msgstr ""
+msgstr "O tipo do objeto (`blob`, `tree`, `commit`, `tag`)."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:129
 #, no-wrap, priority:100
 msgid "objectsize"
-msgstr ""
+msgstr "objectsize"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:133
 #, priority:100
 msgid "The size of the object (the same as 'git cat-file -s' reports).  Append `:disk` to get the size, in bytes, that the object takes up on disk. See the note about on-disk sizes in the `CAVEATS` section below."
 msgstr ""
+"É o tamanho do objeto (o mesmo que relatórios 'git cat-file -s')  Acrescente "
+"`: disk` para saber o quanto o objeto ocupa no disco, em bytes. Veja a nota "
+"sobre tamanhos de disco na seção `CAVEATS` abaixo."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:133
 #, no-wrap, priority:100
 msgid "objectname"
-msgstr ""
+msgstr "objectname"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:139
 #, priority:100
 msgid "The object name (aka SHA-1).  For a non-ambiguous abbreviation of the object name append `:short`.  For an abbreviation of the object name with desired length append `:short=<length>`, where the minimum length is MINIMUM_ABBREV. The length may be exceeded to ensure unique object names."
 msgstr ""
+"O nome do objeto (também conhecido como SHA-1)  Para uma abreviação não "
+"ambígua do nome do objeto, adicione `: short`.  Para uma abreviação do nome "
+"do objeto com o comprimento desejado, inclua `:short=<comprimento>`, onde o "
+"comprimento mínimo é `MINIMUM_ABBREV`. O comprimento pode ser excedido para "
+"garantir que os nomes dos objetos sejam únicos."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:139
 #, no-wrap, priority:100
 msgid "deltabase"
-msgstr ""
+msgstr "deltabase"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:143
 #, priority:100
 msgid "This expands to the object name of the delta base for the given object, if it is stored as a delta.  Otherwise it expands to the null object name (all zeroes)."
 msgstr ""
+"Isso se expande para o nome do objeto da base delta para o objeto "
+"especificado, caso ele esteja armazenado como um delta.  Caso contrário, o "
+"objeto se expandirá para um nome nulo (todo zerado)."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:144
 #, no-wrap, priority:100
 msgid "upstream"
-msgstr ""
+msgstr "upstream"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:154
 #, priority:100
 msgid "The name of a local ref which can be considered ``upstream'' from the displayed ref. Respects `:short`, `:lstrip` and `:rstrip` in the same way as `refname` above.  Additionally respects `:track` to show \"[ahead N, behind M]\" and `:trackshort` to show the terse version: \">\" (ahead), \"<\" (behind), \"<>\" (ahead and behind), or \"=\" (in sync). `:track` also prints \"[gone]\" whenever unknown upstream ref is encountered. Append `:track,nobracket` to show tracking information without brackets (i.e \"ahead N, behind M\")."
 msgstr ""
+"É o nome de um ref local que pode ser considerado ``upstream'' do ref que "
+"está sendo exibido. Respeita `:short`, `:lstrip` and `:rstrip` da mesma "
+"maneira que o `refname` acima.  Além disso, respeita também `:track` para "
+"exibir \"[à frente N, atrás M]\"e `:trackshort` para exibir a versão concisa:"
+" \">\" (à frente), \"<\" (atrás), \"<>\" (à frente e atrás) ou \"=\" (em "
+"sincronia). `:track` também imprime \"[gone]\" sempre que um ref upstream "
+"desconhecido for encontrado. Acrescente `:track,nobracket` para exibir as "
+"informações de rastreamento sem colchetes (ou seja, \"à frente de N, atrás "
+"de M\")."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:161
 #, priority:100
 msgid "For any remote-tracking branch `%(upstream)`, `%(upstream:remotename)` and `%(upstream:remoteref)` refer to the name of the remote and the name of the tracked remote ref, respectively. In other words, the remote-tracking branch can be updated explicitly and individually by using the refspec `%(upstream:remoteref):%(upstream)` to fetch from `%(upstream:remotename)`."
 msgstr ""
+"Para qualquer ramificação de rastreamento remoto como `%(upstream)`, "
+"`%(upstream:nomeremoto)` e `%(upstream:remoteref)` consulte o nome remoto e "
+"o nome ref rastreado remotamente, e assim respectivamente. Em outras "
+"palavras, o ramo de rastreamento remoto pode ser atualizado explicitamente "
+"ou individualmente usando o refspec `%(upstream:remoteref):%(upstream)` para "
+"que seja buscado em `%(upstream:remotename)`."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:165
 #, priority:100
 msgid "Has no effect if the ref does not have tracking information associated with it.  All the options apart from `nobracket` are mutually exclusive, but if used together the last option is selected."
 msgstr ""
+"Não tem nenhum efeito caso o ref não tenha informações de rastreamento "
+"associadas a ele.  Todas as opções além de `nobracket` são mutuamente "
+"exclusivas, porém se utilizadas em conjunto, a última opção será selecionada."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:166
 #, no-wrap, priority:100
 msgid "push"
-msgstr ""
+msgstr "push"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:172
 #, priority:100
 msgid "The name of a local ref which represents the `@{push}` location for the displayed ref. Respects `:short`, `:lstrip`, `:rstrip`, `:track`, `:trackshort`, `:remotename`, and `:remoteref` options as `upstream` does. Produces an empty string if no `@{push}` ref is configured."
 msgstr ""
+"O nome de um ref local que representa a localização `@{push}` para um ref "
+"que está sendo exibido. Respeita as opções `:short`, `:lstrip`, `:rstrip`, "
+"`:track`, `:trackshort`, `:remotename`, e `:remoteref`; assim como a opção "
+"`upstream`. Produz uma cadeia de caracteres vazia caso nenhum `@{push}` ref "
+"esteja configurado."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:173 en/git.txt:376
 #, no-wrap, priority:100
 msgid "HEAD"
-msgstr ""
+msgstr "HEAD"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:176
 #, priority:100
 msgid "'*' if HEAD matches current ref (the checked out branch), ' ' otherwise."
 msgstr ""
+"'*' caso HEAD corresponda à ref atual (a ramificação que foi verificada), "
+"caso contrário ' '."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:182
 #, priority:100
 msgid "Change output color. Followed by `:<colorname>`, where color names are described under Values in the \"CONFIGURATION FILE\" section of linkgit:git-config[1].  For example, `%(color:bold red)`."
 msgstr ""
+"Muda a cor de saída. Seguido por `:<colorname>` onde os nomes das cores são "
+"descritos em Valores na seção \"ARQUIVO DE CONFIGURAÇÃO\" do linkgit:git-"
+"config[1].  Por exemplo, `%(color:bold red)`."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:183
 #, no-wrap, priority:100
 msgid "align"
-msgstr ""
+msgstr "align"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:197
 #, ignore-ellipsis, priority:100
 msgid "Left-, middle-, or right-align the content between %(align:...) and %(end). The \"align:\" is followed by `width=<width>` and `position=<position>` in any order separated by a comma, where the `<position>` is either left, right or middle, default being left and `<width>` is the total length of the content with alignment. For brevity, the \"width=\" and/or \"position=\" prefixes may be omitted, and bare <width> and <position> used instead.  For instance, `%(align:<width>,<position>)`. If the contents length is more than the width then no alignment is performed. If used with `--quote` everything in between %(align:...) and %(end) is quoted, but if nested then only the topmost level performs quoting."
 msgstr ""
+"Alinhe o conteúdo à esquerda (Left-), ao meio (Middle-) ou à direita entre "
+"%(align:...) e %(end). O \"align:\" é seguido por `width=<largura>` e "
+"`position=<posição>` em qualquer ordem separado por vírgula, onde a "
+"`<posição>` é esquerda, direita ou meio, a predefinição é esquerda e "
+"`<largura>` é o comprimento total do conteúdo com alinhamento. Por questões "
+"de brevidade, os prefixos \"width=\" ou \"position=\" podem ser omitidos, "
+"podendo ser usados <largura> e <posição> apenas.  Por exemplo, "
+"`%(align:<largura>,<posição>)`. Caso o comprimento do conteúdo seja maior "
+"que a largura, nenhum alinhamento será realizado. Se utilizado com `--quote`"
+", tudo entre %(align:...) e %(end) será citado, porém se aninhado, a citação "
+"ocorrerá apenas no nível do topo mais alto."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:198
 #, no-wrap, priority:100
 msgid "if"
-msgstr ""
+msgstr "if"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:210
 #, ignore-ellipsis, priority:100
 msgid "Used as %(if)...%(then)...%(end) or %(if)...%(then)...%(else)...%(end).  If there is an atom with value or string literal after the %(if) then everything after the %(then) is printed, else if the %(else) atom is used, then everything after %(else) is printed. We ignore space when evaluating the string before %(then), this is useful when we use the %(HEAD) atom which prints either \"*\" or \" \" and we want to apply the 'if' condition only on the 'HEAD' ref.  Append \":equals=<string>\" or \":notequals=<string>\" to compare the value between the %(if:...) and %(then) atoms with the given string."
 msgstr ""
+"Usado como %(if)...%(then)...%(end) ou %(if)...%(then)...%(else)...%(end).  "
+"Caso haja um átomo com um valor ou uma cadeia de caracteres literal após o "
+"%(if), tudo após o %(then) será impresso; caso contrário, caso o átomo em "
+"%(else) seja utilizado, tudo será impresso após o %(else). Ignoramos o "
+"espaço ao avaliar uma cadeia de caracteres antes de %(then), isso é útil "
+"quando usamos o átomo %(HEAD) que imprime \"*\" ou \" \" e queremos aplicar "
+"a condição 'if' apenas no ref 'HEAD'.  Anexar \":equals=<string>\" ou \""
+":notequals=<string>\" para comparar o valor entre os átomos de %(if:...) e "
+"%(then) com a sequência especificada."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:211
 #, no-wrap, priority:100
 msgid "symref"
-msgstr ""
+msgstr "symref"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:216
 #, priority:100
 msgid "The ref which the given symbolic ref refers to. If not a symbolic ref, nothing is printed. Respects the `:short`, `:lstrip` and `:rstrip` options in the same way as `refname` above."
 msgstr ""
+"O ref ao qual determinado ref simbólico se refere. Caso não seja um ref "
+"simbólico, nada será impresso. Respeita as opções `:short`, `:lstrip` e "
+"`:rstrip` da mesma maneira que o `refname` acima."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:217
@@ -28512,72 +29083,117 @@ msgstr ""
 #, priority:100
 msgid "In addition to the above, for commit and tag objects, the header field names (`tree`, `parent`, `object`, `type`, and `tag`) can be used to specify the value in the header field."
 msgstr ""
+"Além do que foi dito acima para os objetos commit e tag, os nomes dos campos "
+"do cabeçalho (`tree`, `parent`, `object`, `type`, e `tag`) podem ser usados "
+"para especificar o valor no campo do cabeçalho."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:230
 #, priority:100
 msgid "For commit and tag objects, the special `creatordate` and `creator` fields will correspond to the appropriate date or name-email-date tuple from the `committer` or `tagger` fields depending on the object type.  These are intended for working on a mix of annotated and lightweight tags."
 msgstr ""
+"Para os objetos commit e tag, os campos especiais `creatordate` e `creator` "
+"coincidirão com a data apropriada ou ao termo ordenado nome-email-data dos "
+"campos `committer` ou `tagger`, dependendo do tipo do objeto.  Estes são "
+"destinados para trabalhar com uma mistura de tags anotadas e leves."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:234
 #, priority:100
 msgid "Fields that have name-email-date tuple as its value (`author`, `committer`, and `tagger`) can be suffixed with `name`, `email`, and `date` to extract the named component."
 msgstr ""
+"Os campos que possuam um termo ordenado nome-email-data como o valor (`autor`"
+", `committer` e `tagger`) podem ser sufixados com `nome`, `email` e `data` "
+"para extrair o componente nomeado."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:247
 #, priority:100
 msgid "The complete message in a commit and tag object is `contents`.  Its first line is `contents:subject`, where subject is the concatenation of all lines of the commit message up to the first blank line.  The next line is `contents:body`, where body is all of the lines after the first blank line.  The optional GPG signature is `contents:signature`.  The first `N` lines of the message is obtained using `contents:lines=N`.  Additionally, the trailers as interpreted by linkgit:git-interpret-trailers[1] are obtained as `trailers` (or by using the historical alias `contents:trailers`).  Non-trailer lines from the trailer block can be omitted with `trailers:only`. Whitespace-continuations can be removed from trailers so that each trailer appears on a line by itself with its full content with `trailers:unfold`. Both can be used together as `trailers:unfold,only`."
 msgstr ""
+"A mensagem completa em um objeto commit e tag é `contents`.  A sua primeira "
+"linha é `contents:subject` onde \"subject\" (assunto) é a concatenação de "
+"todas as linhas da mensagem do commit até a primeira linha em branco.  A "
+"próxima linha é `contents:body`, onde \"body\" (corpo da mensagem) são todas "
+"as linhas após a primeira linha em branco.  A assinatura opcional GPG é "
+"`contents:signature`.  As primeiras `N` linhas da mensagem são obtidas "
+"usando `contents:lines=N`.  Além disso, os trailers interpretados por linkgit"
+":git-interpret-trailers[1] são obtidos como `trailers` (ou usando o alias do "
+"histórico `contents:trailers`).  As linhas que não forem \"trailers\" do "
+"bloco \"trailer\" podem ser omitidos com `trailers:only`. As continuações "
+"dos espaços em branco podem ser removidos dos \"trailers\", para que cada \""
+"trailer\" apareça em uma linha por si só e com o seu conteúdo completo "
+"usando `trailers:unfold`. Ambos podem ser usados juntos como "
+"`trailers:unfold,only`."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:251
 #, priority:100
 msgid "For sorting purposes, fields with numeric values sort in numeric order (`objectsize`, `authordate`, `committerdate`, `creatordate`, `taggerdate`).  All other fields are used to sort in their byte-value order."
 msgstr ""
+"Para fins de classificação, os campos com os valores numéricos são "
+"classificados em ordem numérica (`objectsize`, `authordate`, `committerdate`"
+", `creatordate`, `taggerdate`).  Todos os outros campos são usados para "
+"classificar a sua ordem em valor de bytes."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:254
 #, priority:100
 msgid "There is also an option to sort by versions, this can be done by using the fieldname `version:refname` or its alias `v:refname`."
 msgstr ""
+"Também existe uma opção de classificação por versões usando o nome do campo "
+"`version:refnamee` ou o seu apelido `v:refname`."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:258
 #, priority:100
 msgid "In any case, a field name that refers to a field inapplicable to the object referred by the ref does not cause an error.  It returns an empty string instead."
 msgstr ""
+"De qualquer forma, nenhum erro é gerado caso um nome do campo seja referido "
+"a um campo inaplicável ao objeto \"ref\".  Ele retorna uma cadeia de "
+"caracteres vazia."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:262
 #, priority:100
 msgid "As a special case for the date-type fields, you may specify a format for the date by adding `:` followed by date format name (see the values the `--date` option to linkgit:git-rev-list[1] takes)."
 msgstr ""
+"Como um caso especial para os campos do tipo data, você pode especificar um "
+"formato para a data adicionando `:` seguido pelo nome do formato da data ("
+"veja quais os valores a opção `--date` assume em linkgit:git-rev-list[1])."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:265
 #, priority:100
 msgid "Some atoms like %(align) and %(if) always require a matching %(end).  We call them \"opening atoms\" and sometimes denote them as %($open)."
 msgstr ""
+"Alguns átomos como %(align) e %(if) sempre exige que um %(end) coincida.  "
+"Nós os chamamos de \"átomos de abertura\" e às vezes os denotamos como "
+"%($open)."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:270
 #, priority:100
 msgid "When a scripting language specific quoting is in effect, everything between a top-level opening atom and its matching %(end) is evaluated according to the semantics of the opening atom and only its result from the top-level is quoted."
 msgstr ""
+"Quando uma citação específica da linguagem de script está em vigor, tudo "
+"entre um átomo de abertura no topo do nível e seu %(end) correspondente é "
+"avaliado de acordo com a semântica do átomo de abertura e apenas o resultado "
+"do topo do nível é citado."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:277
 #, priority:100
 msgid "An example directly producing formatted text.  Show the most recent 3 tagged commits:"
 msgstr ""
+"Um exemplo que produz diretamente um texto formatado.  Exibe as tags dos 3 "
+"commits mais recentes:"
 
 #. type: delimited block -
 #: en/git-for-each-ref.txt:280 en/git-for-each-ref.txt:296 en/git-for-each-ref.txt:310 en/git-bisect-lk2009.txt:933
 #, no-wrap, priority:100
 msgid "#!/bin/sh\n"
-msgstr ""
+msgstr "#!/bin/sh\n"
 
 #. type: delimited block -
 #: en/git-for-each-ref.txt:286
@@ -28589,6 +29205,11 @@ msgid ""
 "Date: %(*authordate)\n"
 "Ref: %(*refname)\n"
 msgstr ""
+"git for-each-ref --count=3 --sort='-*authordate' \\\n"
+"--format='From: %(*authorname) %(*authoremail)\n"
+"Subject: %(*subject)\n"
+"Date: %(*authordate)\n"
+"Ref: %(*refname)\n"
 
 #. type: delimited block -
 #: en/git-for-each-ref.txt:289
@@ -28597,12 +29218,16 @@ msgid ""
 "%(*body)\n"
 "' 'refs/tags'\n"
 msgstr ""
+"%(*body)\n"
+"' 'refs/tags'\n"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:294
 #, priority:100
 msgid "A simple example showing the use of shell eval on the output, demonstrating the use of --shell.  List the prefixes of all heads:"
 msgstr ""
+"Um exemplo simples mostrando o uso da saída do eval no shell, demonstrando o "
+"uso da opção --shell.  Liste os prefixos de todos os \"heads\":"
 
 #. type: delimited block -
 #: en/git-for-each-ref.txt:303
@@ -28615,12 +29240,20 @@ msgid ""
 "\techo `dirname $ref`\n"
 "done\n"
 msgstr ""
+"git for-each-ref --shell --format=\"ref=%(refname)\" refs/heads | \\\n"
+"while read entry\n"
+"do\n"
+"\teval \"$entry\"\n"
+"\techo `dirname $ref`\n"
+"done\n"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:308
 #, priority:100
 msgid "A bit more elaborate report on tags, demonstrating that the format may be an entire script:"
 msgstr ""
+"Um relatório um pouco mais elaborado sobre as tags, demonstrando que o "
+"formato pode ser um script inteiro:"
 
 #. type: delimited block -
 #: en/git-for-each-ref.txt:315
@@ -28631,6 +29264,10 @@ msgid ""
 "\tt=%(*objecttype)\n"
 "\tT=${r#refs/tags/}\n"
 msgstr ""
+"fmt='\n"
+"\tr=%(refname)\n"
+"\tt=%(*objecttype)\n"
+"\tT=${r#refs/tags/}\n"
 
 #. type: delimited block -
 #: en/git-for-each-ref.txt:322
@@ -28643,6 +29280,12 @@ msgid ""
 "\td=%(*authordate)\n"
 "\tb=%(*body)\n"
 msgstr ""
+"\to=%(*objectname)\n"
+"\tn=%(*authorname)\n"
+"\te=%(*authoremail)\n"
+"\ts=%(*subject)\n"
+"\td=%(*authordate)\n"
+"\tb=%(*body)\n"
 
 #. type: delimited block -
 #: en/git-for-each-ref.txt:341
@@ -28667,12 +29310,30 @@ msgid ""
 "\t\techo \"The commit was authored by $n $e\n"
 "at $d, and titled\n"
 msgstr ""
+"\tkind=Tag\n"
+"\tif test \"z$t\" = z\n"
+"\tthen\n"
+"\t\t# pode ser uma tag lightweight\n"
+"\t\tt=%(objecttype)\n"
+"\t\tkind=\"Tag Lightweight\"\n"
+"\t\to=%(objectname)\n"
+"\t\tn=%(authorname)\n"
+"\t\te=%(authoremail)\n"
+"\t\ts=%(subject)\n"
+"\t\td=%(authordate)\n"
+"\t\tb=%(body)\n"
+"\tfi\n"
+"\techo \"$kind $T aponta para o $t objeto $o\"\n"
+"\tif test \"z$t\" = zcommit\n"
+"\tthen\n"
+"\t\techo \"O commit foi criado por $n $e\n"
+"em $d, e com o título de\n"
 
 #. type: delimited block -
 #: en/git-for-each-ref.txt:343
 #, no-wrap, priority:100
 msgid "    $s\n"
-msgstr ""
+msgstr "    $s\n"
 
 #. type: delimited block -
 #: en/git-for-each-ref.txt:350
@@ -28685,6 +29346,12 @@ msgid ""
 "\tfi\n"
 "'\n"
 msgstr ""
+"A sua mensagem diz:\n"
+"\"\n"
+"\t\techo \"$b\" | sed -e \"s/^/    /\"\n"
+"\t\techo\n"
+"\tfi\n"
+"'\n"
 
 #. type: delimited block -
 #: en/git-for-each-ref.txt:356
@@ -28696,30 +29363,43 @@ msgid ""
 "\trefs/tags`\n"
 "eval \"$eval\"\n"
 msgstr ""
+"eval=`git for-each-ref --shell --format=\"$fmt\" \\\n"
+"\t--sort='*objecttype' \\\n"
+"\t--sort=-taggerdate \\\n"
+"\trefs/tags`\n"
+"eval \"$eval\"\n"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:361
 #, ignore-ellipsis, priority:100
 msgid "An example to show the usage of %(if)...%(then)...%(else)...%(end).  This prefixes the current branch with a star."
 msgstr ""
+"Um exemplo para exibir a utilização de %(if)...%(then)...%(else)...%(end).  "
+"Isso prefixa o ramo atual com uma estrela."
 
 #. type: delimited block -
 #: en/git-for-each-ref.txt:364
 #, no-wrap, priority:100
 msgid "git for-each-ref --format=\"%(if)%(HEAD)%(then)* %(else)  %(end)%(refname:short)\" refs/heads/\n"
 msgstr ""
+"git for-each-ref --format=\"%(if)%(HEAD)%(then)* %(else)  "
+"%(end)%(refname:short)\" refs/heads/\n"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:369
 #, ignore-ellipsis, priority:100
 msgid "An example to show the usage of %(if)...%(then)...%(end).  This prints the authorname, if present."
 msgstr ""
+"Um exemplo para exibir a utilização de %(if)...%(then)...%(end).  Isso "
+"imprime o authorname (nome do autor), caso esteja presente."
 
 #. type: delimited block -
 #: en/git-for-each-ref.txt:372
 #, no-wrap, priority:100
 msgid "git for-each-ref --format=\"%(refname)%(if)%(authorname)%(then) Authored by: %(authorname)%(end)\"\n"
 msgstr ""
+"git for-each-ref --format=\"%(refname)%(if)%(authorname)%(then) Criado por: "
+"%(authorname)%(end)\"\n"
 
 #. type: Title =
 #: en/git-format-patch.txt:2
@@ -28731,7 +29411,7 @@ msgstr "git-format-patch(1)"
 #: en/git-format-patch.txt:7
 #, priority:100
 msgid "git-format-patch - Prepare patches for e-mail submission"
-msgstr ""
+msgstr "git-format-patch - Preparar os patches para o envio de e-mails"
 
 #. type: Plain text
 #: en/git-format-patch.txt:33
@@ -28765,36 +29445,56 @@ msgstr ""
 #, priority:100
 msgid "Prepare each commit with its patch in one file per commit, formatted to resemble UNIX mailbox format.  The output of this command is convenient for e-mail submission or for use with 'git am'."
 msgstr ""
+"Prepare cada commit com o seu respectivo patch em um arquivo, formatado para "
+"que se assemelhe com uma caixa de correio UNIX.  A saída deste comando é "
+"conveniente para o envio de um e-mail ou para a utilização com 'git am'."
 
 #. type: Plain text
 #: en/git-format-patch.txt:43
 #, priority:100
 msgid "There are two ways to specify which commits to operate on."
-msgstr ""
+msgstr "Existem duas maneiras de especificar em quais commits operar."
 
 #. type: Plain text
 #: en/git-format-patch.txt:47
 #, priority:100
 msgid "A single commit, <since>, specifies that the commits leading to the tip of the current branch that are not in the history that leads to the <since> to be output."
 msgstr ""
+"Um único commit, `<since>`, determina que os commits que levem à ponta da "
+"ramificação atual que não estejam no histórico, levem ao `<since>` para ser "
+"expelido."
 
 #. type: Plain text
 #: en/git-format-patch.txt:51
 #, priority:100
 msgid "Generic <revision range> expression (see \"SPECIFYING REVISIONS\" section in linkgit:gitrevisions[7]) means the commits in the specified range."
 msgstr ""
+"Expressão genérica do <intervalo da revisão> (consulte a seção \""
+"ESPECIFICANDO REVISÕES\" no linkgit:gitrevisions[7]) define os commits no "
+"intervalo especificado."
 
 #. type: Plain text
 #: en/git-format-patch.txt:57
 #, priority:100
 msgid "The first rule takes precedence in the case of a single <commit>.  To apply the second rule, i.e., format everything since the beginning of history up until <commit>, use the `--root` option: `git format-patch --root <commit>`.  If you want to format only <commit> itself, you can do this with `git format-patch -1 <commit>`."
 msgstr ""
+"A primeira regra tem precedência no caso de um único `<commit>`.  Para "
+"aplicar a segunda regra, formate tudo desde o início do histórico até "
+"`<commit>`, use a opção `--root`, por exemplo: `git format-patch --root "
+"<commit>`.  Caso queira formatar apenas o `<commit>` em si, faça com `git "
+"format-patch -1 <commit>`."
 
 #. type: Plain text
 #: en/git-format-patch.txt:64
 #, priority:100
 msgid "By default, each output file is numbered sequentially from 1, and uses the first line of the commit message (massaged for pathname safety) as the filename. With the `--numbered-files` option, the output file names will only be numbers, without the first line of the commit appended.  The names of the output files are printed to standard output, unless the `--stdout` option is specified."
 msgstr ""
+"É predefinido que cada arquivo de saída seja numerado sequencialmente à "
+"partir de 1 e usa a primeira linha da mensagem do commit (trabalhada para a "
+"segurança do pathname) como o pathname. Com a opção `--numbered-files`, os "
+"nomes dos arquivos na saída serão apenas números, sem a primeira linha "
+"anexada do commit.  Os nomes dos arquivos na saída são impressos na saída "
+"predefinida a menos que a opção `--stdout` seja usada."
 
 #. type: Plain text
 #: en/git-format-patch.txt:72
@@ -28807,48 +29507,61 @@ msgstr ""
 #, priority:100
 msgid "By default, the subject of a single patch is \"[PATCH] \" followed by the concatenation of lines from the commit message up to the first blank line (see the DISCUSSION section of linkgit:git-commit[1])."
 msgstr ""
+"É predefinido que o assunto de um único patch seja \"[PATCH]\" seguido da "
+"concatenação das linhas da mensagem do commit até a primeira linha em branco "
+"(consulte a seção DISCUSSÃO em linkgit:git-commit[1])."
 
 #. type: Plain text
 #: en/git-format-patch.txt:80
 #, priority:100
 msgid "When multiple patches are output, the subject prefix will instead be \"[PATCH n/m] \".  To force 1/1 to be added for a single patch, use `-n`.  To omit patch numbers from the subject, use `-N`."
 msgstr ""
+"Quando vários patches são produzidos, o prefixo do assunto será \"[PATCH n/m]"
+" \".  Para forçar a adição 1/1 para um único patch, use `-n`.  Para omitir "
+"os números do assunto, use `-N`."
 
 #. type: Plain text
 #: en/git-format-patch.txt:85
 #, priority:100
 msgid "If given `--thread`, `git-format-patch` will generate `In-Reply-To` and `References` headers to make the second and subsequent patch mails appear as replies to the first mail; this also generates a `Message-Id` header to reference."
 msgstr ""
+"Caso a opção `--thread` seja usada, o ` git-format-patch` irá gerar "
+"cabeçalhos `In-Reply-To` (Em-Resposta-Para) e `References` para fazer com "
+"que o e-mail do segundo e subsequentes patches apareçam como resposta ao "
+"primeiro e-mail; isso também gera um cabeçalho `Message-Id` para a "
+"referência."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:91
 #, no-wrap, priority:100
 msgid "-<n>"
-msgstr ""
+msgstr "-<n>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:93
 #, priority:100
 msgid "Prepare patches from the topmost <n> commits."
-msgstr ""
+msgstr "Prepare os patches a partir do <n> do topo mais alto dos commits."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:94
 #, no-wrap, priority:100
 msgid "-o <dir>"
-msgstr ""
+msgstr "-o <dir>"
 
 #. type: Labeled list
 #: en/git-format-patch.txt:95
 #, no-wrap, priority:100
 msgid "--output-directory <dir>"
-msgstr ""
+msgstr "--output-directory <dir>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:98
 #, priority:100
 msgid "Use <dir> to store the resulting files, instead of the current working directory."
 msgstr ""
+"Use `<dir>` para armazenar os arquivos resultantes em vez do diretório de "
+"trabalho atual."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:100 en/git-shortlog.txt:30
@@ -28861,6 +29574,7 @@ msgstr "--numbered"
 #, priority:100
 msgid "Name output in '[PATCH n/m]' format, even with a single patch."
 msgstr ""
+"Nomeie a saída no formato '[PATCH n/m]', mesmo que seja com um único patch."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:104
@@ -28872,19 +29586,19 @@ msgstr "--no-numbered"
 #: en/git-format-patch.txt:106
 #, priority:100
 msgid "Name output in '[PATCH]' format."
-msgstr ""
+msgstr "Nomeie a saída no formato '[PATCH]'."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:107
 #, no-wrap, priority:100
 msgid "--start-number <n>"
-msgstr ""
+msgstr "--start-number <n>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:109
 #, priority:100
 msgid "Start numbering the patches at <n> instead of 1."
-msgstr ""
+msgstr "Comece a enumerar os patches à partir do <n> em vez de 1."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:110
@@ -28897,6 +29611,8 @@ msgstr "--numbered-files"
 #, priority:100
 msgid "Output file names will be a simple number sequence without the default first line of the commit appended."
 msgstr ""
+"Os nomes dos arquivos na saída serão uma sequência numérica simples sem a "
+"primeira linha predefinida do commit anexado."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:115
@@ -28909,12 +29625,17 @@ msgstr "--keep-subject"
 #, priority:100
 msgid "Do not strip/add '[PATCH]' from the first line of the commit log message."
 msgstr ""
+"Não retire/adicione '[PATCH]' da primeira linha da mensagem do registro log "
+"do commit."
 
 #. type: Plain text
 #: en/git-format-patch.txt:124
 #, priority:100
 msgid "Add `Signed-off-by:` line to the commit message, using the committer identity of yourself.  See the signoff option in linkgit:git-commit[1] for more information."
 msgstr ""
+"Adicione a linha `Signed-off-by:` (Assinada por:) à mensagem do commit, "
+"utilizando a sua identidade.  Para mais informações sobre a assinatura na "
+"saída da mensagem, consulte em linkgit:git-commit[1]."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:125 en/git-pack-objects.txt:59
@@ -28927,18 +29648,23 @@ msgstr "--stdout"
 #, priority:100
 msgid "Print all commits to the standard output in mbox format, instead of creating a file for each one."
 msgstr ""
+"Imprima todos os commits na saída predefinida no formato mbox em vez de "
+"criar um arquivo individual para cada um."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:129
 #, no-wrap, priority:100
 msgid "--attach[=<boundary>]"
-msgstr ""
+msgstr "--attach[=<divisa>]"
 
 #. type: Plain text
 #: en/git-format-patch.txt:133
 #, priority:100
 msgid "Create multipart/mixed attachment, the first part of which is the commit message and the patch itself in the second part, with `Content-Disposition: attachment`."
 msgstr ""
+"Crie anexos com diversas partes/misto onde a primeira parte é a mensagem do "
+"commit e o próprio patch na segunda parte usando `Content-Disposition: "
+"attachment`."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:134
@@ -28951,24 +29677,28 @@ msgstr "--no-attach"
 #, priority:100
 msgid "Disable the creation of an attachment, overriding the configuration setting."
 msgstr ""
+"Desative a criação de um anexo, substituindo a configuração predefinida."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:138
 #, no-wrap, priority:100
 msgid "--inline[=<boundary>]"
-msgstr ""
+msgstr "--inline[=<divisa>]"
 
 #. type: Plain text
 #: en/git-format-patch.txt:142
 #, priority:100
 msgid "Create multipart/mixed attachment, the first part of which is the commit message and the patch itself in the second part, with `Content-Disposition: inline`."
 msgstr ""
+"Crie um anexo com diversas partes/misto onde a primeira parte é a mensagem "
+"do commit e o próprio patch na segunda parte usando `Content-Disposition: "
+"inline`."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:143
 #, no-wrap, priority:100
 msgid "--thread[=<style>]"
-msgstr ""
+msgstr "--thread[=<estilo>]"
 
 #. type: Labeled list
 #: en/git-format-patch.txt:144
@@ -28981,24 +29711,42 @@ msgstr "--no-thread"
 #, priority:100
 msgid "Controls addition of `In-Reply-To` and `References` headers to make the second and subsequent mails appear as replies to the first.  Also controls generation of the `Message-Id` header to reference."
 msgstr ""
+"Controla a adição dos cabeçalhos `In-Reply-To` (Em resposta a) e `References`"
+" para fazer com que o segundo e os emails subsequentes apareçam como "
+"respostas ao primeiro.  Também controla a geração do cabeçalho para a "
+"referência `Message-Id`."
 
 #. type: Plain text
 #: en/git-format-patch.txt:155
 #, priority:100
 msgid "The optional <style> argument can be either `shallow` or `deep`.  'shallow' threading makes every mail a reply to the head of the series, where the head is chosen from the cover letter, the `--in-reply-to`, and the first patch mail, in this order.  'deep' threading makes every mail a reply to the previous one."
 msgstr ""
+"O argumento opcional <estilo> pode ser `shallow` (superficial) ou `deep` "
+"(profundo).  O argumento 'shallow' (superficial) faz com que todo o e-mail "
+"respondido para o cabeçalho da série onde o cabeçalho é escolhido nessa "
+"ordem, pela carta de apresentação, pelo `--in-reply-to` e pelo primeiro "
+"patch.  O argumento 'deep' (profundo) faz com que cada e-mail seja uma uma "
+"resposta ao anterior."
 
 #. type: Plain text
 #: en/git-format-patch.txt:159
 #, priority:100
 msgid "The default is `--no-thread`, unless the `format.thread` configuration is set.  If `--thread` is specified without a style, it defaults to the style specified by `format.thread` if any, or else `shallow`."
 msgstr ""
+"A predefinição é `--no-thread`, a menos que a configuração `format.thread` "
+"esteja definida.  Caso `--thread` seja utilizado sem um estilo, a "
+"predefinição será o estilo determinado em `format.thread` caso exista ou "
+"então, `shallow` (superficial)."
 
 #. type: Plain text
 #: en/git-format-patch.txt:163
 #, priority:100
 msgid "Beware that the default for 'git send-email' is to thread emails itself.  If you want `git format-patch` to take care of threading, you will want to ensure that threading is disabled for `git send-email`."
 msgstr ""
+"Lembre-se de que a predefinição para o comando 'git send-email' é encadear "
+"os próprios emails.  Caso queira que o comando `git format-patch` cuide do "
+"encadeamento, tenha certeza que o encadeamento esteja desativado para o "
+"comando `git send-email`."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:164
@@ -29023,6 +29771,10 @@ msgstr "--ignore-if-in-upstream"
 #, priority:100
 msgid "Do not include a patch that matches a commit in <until>..<since>.  This will examine all patches reachable from <since> but not from <until> and compare them with the patches being generated, and any patch that matches is ignored."
 msgstr ""
+"Não inclua um patch que coincida a um commit em <until>..<since> (até..desde)"
+".  Examina todos os patches acessíveis à partir de <since> (desde), mas não "
+"a partir de <until> (até), os comparará com os patches que estão sendo "
+"gerados e qualquer patch coincidente será ignorado."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:176
@@ -29085,48 +29837,64 @@ msgstr "--rfc"
 #, priority:100
 msgid "Alias for `--subject-prefix=\"RFC PATCH\"`. RFC means \"Request For Comments\"; use this when sending an experimental patch for discussion rather than application."
 msgstr ""
+"É um atalho `--subject-prefix=\"RFC PATCH\"`. O RFC significa \"Solicitação "
+"de Comentários\"; use isso ao enviar um patch experimental para que ele seja "
+"discutido em vez de um patch definitivo."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:207
 #, no-wrap, priority:100
 msgid "-v <n>"
-msgstr ""
+msgstr "-v <n>"
 
 #. type: Labeled list
 #: en/git-format-patch.txt:208
 #, no-wrap, priority:100
 msgid "--reroll-count=<n>"
-msgstr ""
+msgstr "--reroll-count=<n>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:215
 #, priority:100
 msgid "Mark the series as the <n>-th iteration of the topic. The output filenames have `v<n>` prepended to them, and the subject prefix (\"PATCH\" by default, but configurable via the `--subject-prefix` option) has ` v<n>` appended to it.  E.g.  `--reroll-count=4` may produce `v4-0001-add-makefile.patch` file that has \"Subject: [PATCH v4 1/20] Add makefile\" in it."
 msgstr ""
+"Marque a série como a <n>-ésima iteração do tópico. Os nomes dos arquivos na "
+"saída têm `v<n>` anexado a eles e o prefixo do assunto (a predefinição é \""
+"PATCH\", porém pode ser alterado através da opção `--subject-prefix`).  Por "
+"exemplo. `--reroll-count=4` pode produzir o arquivo `v4-0001-add-"
+"makefile.patch` que contém \"Assunto: [PATCH v4 1/20] Adicione o makefile\"."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:216
 #, no-wrap, priority:100
 msgid "--to=<email>"
-msgstr ""
+msgstr "--to=<email>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:221
 #, priority:100
 msgid "Add a `To:` header to the email headers. This is in addition to any configured headers, and may be used multiple times.  The negated form `--no-to` discards all `To:` headers added so far (from config or command line)."
 msgstr ""
+"Adicione um cabeçalho `Para:` nos cabeçalhos do email. É um acréscimo a "
+"qualquer cabeçalho configurado e pode ser usado várias vezes.  A forma "
+"negada da opção `--no-to` descarta todos os cabeçalhos `Para:` que foram "
+"adicionados até agora (seja da configuração ou da linha de comando)."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:222
 #, no-wrap, priority:100
 msgid "--cc=<email>"
-msgstr ""
+msgstr "--cc=<email>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:227
 #, priority:100
 msgid "Add a `Cc:` header to the email headers. This is in addition to any configured headers, and may be used multiple times.  The negated form `--no-cc` discards all `Cc:` headers added so far (from config or command line)."
 msgstr ""
+"Adicione um cabeçalho `Cc:` (Com Cópia Para) aos cabeçalhos do email. É um "
+"acréscimo a qualquer cabeçalho configurado e pode ser usado várias vezes.  A "
+"forma negada da opção `--no-cc` descarta todos os cabeçalhos `Cc:` que foram "
+"adicionados até agora (seja da configuração ou da linha de comando)."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:228
@@ -29138,31 +29906,47 @@ msgstr "--from"
 #: en/git-format-patch.txt:229
 #, no-wrap, priority:100
 msgid "--from=<ident>"
-msgstr ""
+msgstr "--from=<ident>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:235
 #, priority:100
 msgid "Use `ident` in the `From:` header of each commit email. If the author ident of the commit is not textually identical to the provided `ident`, place a `From:` header in the body of the message with the original author. If no `ident` is given, use the committer ident."
 msgstr ""
+"Use `ident` (identidade) no cabeçalho `De:` de cada email do commit. Caso o "
+"`ident` do autor do commit não seja textualmente idêntica ao `ident` "
+"fornecido, coloque um cabeçalho `De:` no corpo da mensagem com o autor "
+"original. Caso nenhum `ident` seja fornecido, use o `ident` de quem fez o "
+"commit."
 
 #. type: Plain text
 #: en/git-format-patch.txt:242
 #, priority:100
 msgid "Note that this option is only useful if you are actually sending the emails and want to identify yourself as the sender, but retain the original author (and `git am` will correctly pick up the in-body header). Note also that `git send-email` already handles this transformation for you, and this option should not be used if you are feeding the result to `git send-email`."
 msgstr ""
+"Observe que esta opção só é útil caso esteja realmente enviando os e-mails e "
+"quiser se identificar como remetente mantendo o autor original (o `git am` "
+"pegará corretamente o cabeçalho interno). Observe também que o comando `git "
+"send-email` já lida com essa transformação para você, essa opção não deve "
+"ser utilizada caso esteja alimentando o resultado com o comando `git send-"
+"email`."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:243
 #, no-wrap, priority:100
 msgid "--add-header=<header>"
-msgstr ""
+msgstr "--add-header=<cabeçalho>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:250
 #, priority:100
 msgid "Add an arbitrary header to the email headers.  This is in addition to any configured headers, and may be used multiple times.  For example, `--add-header=\"Organization: git-foo\"`.  The negated form `--no-add-header` discards *all* (`To:`, `Cc:`, and custom) headers added so far from config or command line."
 msgstr ""
+"Adicione um cabeçalho arbitrário aos cabeçalhos do e-mail.  É um acréscimo a "
+"qualquer cabeçalho configurado e pode ser usado várias vezes.  Por exemplo, "
+"`--add-header=\"Organization: git-foo\"`.  O formulário negado `--no-add-"
+"header` descarta *todos* os cabeçalhos (`Para:`, `Cc:` e customizado) "
+"adicionados até agora na configuração ou na linha de comando."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:251
@@ -29175,24 +29959,34 @@ msgstr "--[no-]cover-letter"
 #, priority:100
 msgid "In addition to the patches, generate a cover letter file containing the branch description, shortlog and the overall diffstat.  You can fill in a description in the file before sending it out."
 msgstr ""
+"Além dos patches, gere uma carta de apresentação contendo no arquivo a "
+"descrição da ramificação, o \"shortlog\" e o \"diffstat\" geral.  Você pode "
+"preencher uma descrição no arquivo antes de enviá-lo."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:256
 #, no-wrap, priority:100
 msgid "--interdiff=<previous>"
-msgstr ""
+msgstr "--interdiff=<anterior>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:264
 #, priority:100
 msgid "As a reviewer aid, insert an interdiff into the cover letter, or as commentary of the lone patch of a 1-patch series, showing the differences between the previous version of the patch series and the series currently being formatted. `previous` is a single revision naming the tip of the previous series which shares a common base with the series being formatted (for example `git format-patch --cover-letter --interdiff=feature/v1 -3 feature/v2`)."
 msgstr ""
+"Como um auxílio ao revisor, insira um \"interdiff\" na carta de apresentação "
+"ou como um comentário único do patch de uma série de 1, exibindo as "
+"diferenças entre a versão anterior da série do patch e a série atualmente "
+"sendo formatada. `previous` (anterior) é uma única revisão que nomeia a "
+"ponta da série anterior que compartilha uma base comum com a série que está "
+"sendo formatada (`git format-patch --cover-letter --interdiff=feature/v1 -3 "
+"feature/v2` por exemplo)."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:265
 #, no-wrap, priority:100
 msgid "--range-diff=<previous>"
-msgstr ""
+msgstr "--range-diff=<anterior>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:276
@@ -29200,27 +29994,31 @@ msgstr ""
 msgid "As a reviewer aid, insert a range-diff (see linkgit:git-range-diff[1])  into the cover letter, or as commentary of the lone patch of a 1-patch series, showing the differences between the previous version of the patch series and the series currently being formatted.  `previous` can be a single revision naming the tip of the previous series if it shares a common base with the series being formatted (for example `git format-patch --cover-letter --range-diff=feature/v1 -3 feature/v2`), or a revision range if the two versions of the series are disjoint (for example `git format-patch --cover-letter --range-diff=feature/v1~3..feature/v1 -3 feature/v2`)."
 msgstr ""
 "Como um assistente revisor, insira um \"range-diff\" (consulte linkgit:git-"
-"range-diff[1]) na capa da carta ou apenas como um comentário do patch da "
-"série de 1-patch, mostrando as diferenças entre a versão anterior da série "
-"de patchs e a série atualmente sendo formatada.  `previous` pode ser a única "
-"revisão nomeando o topo da série anterior caso compartilhem da mesma base em "
-"comparação com a série que está sendo formatada (como `git format-patch "
-"--cover-letter --range-diff=feature/v1 -3 feature/v2` por exemplo) ou um "
-"intervalo de revisão caso ambas as revisões das séries estejam em desacordo ("
-"como `git format-patch --cover-letter --range-diff=feature/v1~3..feature/v1 -"
-"3 feature/v2` por exemplo)."
+"range-diff[1]) na carta de apresentação ou apenas como um comentário do "
+"patch da série de 1-patch, mostrando as diferenças entre a versão anterior "
+"da série de patchs e a série atualmente sendo formatada.  `previous` pode "
+"ser a única revisão nomeando o topo da série anterior caso compartilhem da "
+"mesma base em comparação com a série que está sendo formatada (como `git "
+"format-patch --cover-letter --range-diff=feature/v1 -3 feature/v2` por "
+"exemplo) ou um intervalo de revisão caso ambas as revisões das séries "
+"estejam em desacordo (como `git format-patch --cover-letter --range-diff="
+"feature/v1~3..feature/v1 -3 feature/v2` por exemplo)."
 
 #. type: Plain text
 #: en/git-format-patch.txt:281
 #, priority:100
 msgid "Note that diff options passed to the command affect how the primary product of `format-patch` is generated, and they are not passed to the underlying `range-diff` machinery used to generate the cover-letter material (this may change in the future)."
 msgstr ""
+"Observe que as opções diff passadas ao comando afetam como o produto "
+"primário do `format-patch` será gerado, não são passadas para o mecanismo "
+"subjacente do `range-diff` usado para gerar o material da carta de "
+"apresentação (isso pode mudar no futuro)."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:282
 #, no-wrap, priority:100
 msgid "--creation-factor=<percent>"
-msgstr ""
+msgstr "--creation-factor=<percent>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:287
@@ -29257,6 +30055,14 @@ msgstr ""
 #, priority:100
 msgid "The expected use case of this is to write supporting explanation for the commit that does not belong to the commit log message proper, and include it with the patch submission. While one can simply write these explanations after `format-patch` has run but before sending, keeping them as Git notes allows them to be maintained between versions of the patch series (but see the discussion of the `notes.rewrite` configuration options in linkgit:git-notes[1] to use this workflow)."
 msgstr ""
+"É esperado que seja usado para escrever uma explicação de suporte para o "
+"commit que não pertença à mensagem do registro log do commit e seja incluída "
+"no envio do patch. Embora seja possível simplesmente escrever essas "
+"explicações após a execução do `format-patch`, antes do envio, mantê-las "
+"como notas do Git permite que elas sejam mantidas entre as versões da série "
+"de patches (ainda assim consulte a discussão das opções de configuração do "
+"`notes.rewrite` em linkgit:git-notes[1] para compreender este fluxo de "
+"trabalho)."
 
 #. type: Plain text
 #: en/git-format-patch.txt:303
@@ -29268,37 +30074,46 @@ msgstr ""
 #: en/git-format-patch.txt:304
 #, no-wrap, priority:100
 msgid "--[no-]signature=<signature>"
-msgstr ""
+msgstr "--[no-]signature=<assinatura>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:309
 #, priority:100
 msgid "Add a signature to each message produced. Per RFC 3676 the signature is separated from the body by a line with '-- ' on it. If the signature option is omitted the signature defaults to the Git version number."
 msgstr ""
+"Adicione uma assinatura em cada mensagem produzida. De acordo com a RFC "
+"3676, a assinatura é separada do corpo por uma linha com '-- '. Caso a opção "
+"da assinatura seja omitida, a assinatura predefinida será o número da versão "
+"do Git."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:310
 #, no-wrap, priority:100
 msgid "--signature-file=<file>"
-msgstr ""
+msgstr "--signature-file=<arquivo>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:312
 #, priority:100
 msgid "Works just like --signature except the signature is read from a file."
 msgstr ""
+"Funciona exatamente como `--signature`, exceto que a assinatura é lida em um "
+"arquivo."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:313
 #, no-wrap, priority:100
 msgid "--suffix=.<sfx>"
-msgstr ""
+msgstr "--suffix=.<sfx>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:318
 #, priority:100
 msgid "Instead of using `.patch` as the suffix for generated filenames, use specified suffix.  A common alternative is `--suffix=.txt`.  Leaving this empty will remove the `.patch` suffix."
 msgstr ""
+"Em vez de usar `.patch` como o sufixo dos nomes dos arquivos gerados, use o "
+"sufixo especificado.  Uma alternativa comum é `--suffix=.txt`.  Deixando "
+"este campo vazio remove o sufixo `.patch`."
 
 #. type: Plain text
 #: en/git-format-patch.txt:321
@@ -32052,9 +32867,9 @@ msgstr ""
 #, priority:100
 msgid "This serves 'git fetch-pack' and 'git ls-remote' clients.  It is enabled by default, but a repository can disable it by setting this configuration item to `false`."
 msgstr ""
-"Isso serve aos clientes 'git fetch-pack' e 'git ls-remote'.  It is enabled "
-"by default, but a repository can disable it by setting this configuration "
-"item to `false`."
+"Isso serve aos clientes 'git fetch-pack' e 'git ls-remote'.  A predefinição "
+"é estar sempre ativo, porém um repositório pode desativá-lo definindo este "
+"item de configuração como `false`."
 
 #. type: Labeled list
 #: en/git-http-backend.txt:50
@@ -41714,6 +42529,9 @@ msgstr ""
 #, priority:220
 msgid "The status of the push is output in tabular form, with each line representing the status of a single ref. Each line is of the form:"
 msgstr ""
+"A condição da saída durante um \"push\" é gerado em forma de tabela, com "
+"cada linha representando a condição de um único \"ref\". Cada linha é uma "
+"forma de:"
 
 #. type: delimited block -
 #: en/git-push.txt:420
@@ -48998,6 +49816,9 @@ msgstr ""
 #, priority:100
 msgid "A non-ambiguous short name of the objects name.  The option core.warnAmbiguousRefs is used to select the strict abbreviation mode."
 msgstr ""
+"Para um nome abreviado não ambíguo dos nomes dos objetos.  A opção "
+"`core.warnAmbiguousRefs` é utilizada para selecionar o modo estrito da "
+"abreviação."
 
 #. type: Labeled list
 #: en/git-rev-parse.txt:145
