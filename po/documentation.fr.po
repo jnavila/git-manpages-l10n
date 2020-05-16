@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-05-16 17:29+0200\n"
-"PO-Revision-Date: 2020-05-10 17:09+0200\n"
+"PO-Revision-Date: 2020-05-16 16:17+0000\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -46888,6 +46888,21 @@ msgid ""
 "override the push.recurseSubmodules configuration variable when no submodule "
 "recursion is required."
 msgstr ""
+"Peut être utilisé pour s'assurer que tous les commits de sous-module "
+"utilisés par les révisions à pousser sont disponibles sur une branche de "
+"suivi à distance.  Si 'check' est utilisé, Git vérifiera que tous les "
+"commits de sous-module qui ont changé dans les révisions à pousser sont "
+"disponibles sur au moins une branche distante du sous-module. S'il manque "
+"des validations, la poussée sera interrompue et sortira avec un statut non "
+"nul. Si 'on-demand' est utilisé, tous les sous-module qui ont été modifiés "
+"dans les révisions à pousser seront poussés. Si 'on-demand' n'a pas pu "
+"pousser toutes les révisions nécessaires, il sera également interrompu et "
+"sortira avec un statut non nul. Si 'only' est utilisé, tous les sous-modules "
+"seront poussés récursivement alors que le superprojet est laissé sans "
+"poussée. La valeur 'no' ou l'utilisation de `--no-recurse-submodules` peut "
+"être utilisée pour remplacer la variable de configuration "
+"push.recurseSubmodules lorsqu'aucune récursion de sous-module n'est "
+"nécessaire."
 
 #. type: Labeled list
 #: en/git-push.txt:393
@@ -46902,6 +46917,10 @@ msgid ""
 "verify, giving the hook a chance to prevent the push.  With --no-verify, the "
 "hook is bypassed completely."
 msgstr ""
+"Basculer le crochet de pré-poussée 'pre-push' (voir linkgit:githooks[5]).  "
+"La valeur par défaut est --verify, ce qui donne au crochet une chance "
+"d'empêcher la poussée.  Avec --no-verify, le crochet est complètement "
+"contourné."
 
 #. type: Plain text
 #: en/git-push.txt:414
@@ -46910,6 +46929,9 @@ msgid ""
 "section describes the output when pushing over the Git protocol (either "
 "locally or via ssh)."
 msgstr ""
+"La sortie de \"git push\" dépend de la méthode de transport utilisée ; cette "
+"section décrit la sortie lors du passage par protocole Git (soit localement "
+"soit via ssh)."
 
 #. type: Plain text
 #: en/git-push.txt:417
@@ -46917,23 +46939,26 @@ msgid ""
 "The status of the push is output in tabular form, with each line "
 "representing the status of a single ref. Each line is of the form:"
 msgstr ""
+"L'état de la poussée est affiché sous forme de tableau, chaque ligne "
+"représentant l'état d'une seule référence. Chaque ligne est de la forme :"
 
 #. type: delimited block -
 #: en/git-push.txt:420
 #, no-wrap
 msgid " <flag> <summary> <from> -> <to> (<reason>)\n"
-msgstr ""
+msgstr " <drapeau> <résumé> <de> -> <à> (<raison>)\n"
 
 #. type: Plain text
 #: en/git-push.txt:423
 msgid "If --porcelain is used, then each line of the output is of the form:"
 msgstr ""
+"Si --porcelain est utilisé, alors chaque ligne de la sortie est de la forme :"
 
 #. type: delimited block -
 #: en/git-push.txt:426
 #, no-wrap
 msgid " <flag> \\t <from>:<to> \\t <summary> (<reason>)\n"
-msgstr ""
+msgstr " <drapeau> \\t <de>:<à> \\t <résumé> (<raison>)\n"
 
 #. type: Plain text
 #: en/git-push.txt:430
@@ -46941,31 +46966,36 @@ msgid ""
 "The status of up-to-date refs is shown only if --porcelain or --verbose "
 "option is used."
 msgstr ""
+"L'état des références à jour n'est indiqué que si l'option --porcelaine ou --"
+"verbose est utilisée."
 
 #. type: Plain text
 #: en/git-push.txt:434
 msgid "for a successfully pushed fast-forward;"
-msgstr ""
+msgstr "pour une poussée en avance rapide réussie ;"
 
 #. type: Plain text
 #: en/git-push.txt:436
 msgid "for a successfully deleted ref;"
-msgstr ""
+msgstr "pour une réf. supprimée avec succès ;"
 
 #. type: Plain text
 #: en/git-push.txt:437
 msgid "for a successfully pushed new ref;"
-msgstr ""
+msgstr "pour une nouvelle référence poussée avec succès ;"
 
 #. type: Plain text
 #: en/git-push.txt:438
 msgid "for a ref that was rejected or failed to push; and"
 msgstr ""
+"pour une référence qui a été rejetée ou qui n'a pas réussi à être poussée ; "
+"et"
 
 #. type: Plain text
 #: en/git-push.txt:439
 msgid "for a ref that was up to date and did not need pushing."
 msgstr ""
+"pour une référence qui était à jour et n'avait pas besoin d'être poussée."
 
 #. type: Plain text
 #: en/git-push.txt:445
@@ -46975,6 +47005,11 @@ msgid ""
 "`<old>..<new>` in most cases, and `<old>...<new>` for forced non-fast-"
 "forward updates)."
 msgstr ""
+"Pour une réf poussée avec succès, le résumé montre les anciennes et les "
+"nouvelles valeurs de la réf sous une forme qui peut être utilisée comme "
+"argument pour `git log` (c'est `<ancien>..<nouveau>` dans la plupart des "
+"cas, et `<ancien>...<nouveau>` pour les mises à jour forcées pas en avance "
+"rapide)."
 
 #. type: Plain text
 #: en/git-push.txt:447
