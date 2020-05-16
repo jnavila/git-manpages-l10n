@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-05-16 17:29+0200\n"
 "PO-Revision-Date: 2020-05-16 16:17+0000\n"
-"Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
+"Last-Translator: brandelune <jean.christophe.helary@traduction-libre.org>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -2998,11 +2998,6 @@ msgstr "ISO 8601"
 
 #. type: Plain text
 #: en/date-formats.txt:26
-#, fuzzy
-#| msgid ""
-#| "Time and date specified by the ISO 8601 standard, for example "
-#| "`2005-04-07T22:13:13`. The parser accepts a space instead of the `T` "
-#| "character as well."
 msgid ""
 "Time and date specified by the ISO 8601 standard, for example "
 "`2005-04-07T22:13:13`. The parser accepts a space instead of the `T` "
@@ -3011,7 +3006,9 @@ msgid ""
 msgstr ""
 "Les heures et les dates sont spécifiées par le standard ISO 8601, par "
 "exemple `2005-04-07T22:13:13`. L'analyseur accepte aussi un espace au lieu "
-"du caractère `T`."
+"du caractère `T`. Les parties fractionnelles d'une seconde seront ignorées, "
+"par exemple, `2005-04-07T22:13:13.019` sera considéré comme étant "
+"`2005-04-07T22:13:13`"
 
 #. type: Plain text
 #: en/date-formats.txt:29
@@ -11909,9 +11906,9 @@ msgid ""
 "more than one branch for deletion.  If the branch currently has a reflog "
 "then the reflog will also be deleted."
 msgstr ""
-"Avec une option `-d` ou `-D`, `<branchname>` sera supprimé.\n"
-"Vous pouvez spécifier plus d'une branche pour la suppression.\n"
-"Si la branche a actuellement un reflog, alors le reflog sera aussi supprimé."
+"Avec une option `-d` ou `-D`, `<branchname>` sera supprimé. Vous pouvez "
+"spécifier plus d'une branche pour la suppression. Si la branche a "
+"actuellement un reflog, alors le reflog sera aussi supprimé."
 
 #. type: Plain text
 #: en/git-branch.txt:93
@@ -17339,16 +17336,7 @@ msgstr "git-clone - Clone un dépôt dans un nouveau répertoire"
 
 #. type: Plain text
 #: en/git-clone.txt:21
-#, fuzzy, no-wrap
-#| msgid ""
-#| "'git clone' [--template=<template_directory>]\n"
-#| "\t  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]\n"
-#| "\t  [-o <name>] [-b <name>] [-u <upload-pack>] [--reference <repository>]\n"
-#| "\t  [--dissociate] [--separate-git-dir <git dir>]\n"
-#| "\t  [--depth <depth>] [--[no-]single-branch] [--no-tags]\n"
-#| "\t  [--recurse-submodules[=<pathspec>]] [--[no-]shallow-submodules]\n"
-#| "\t  [--[no-]remote-submodules] [--jobs <n>] [--sparse] [--] <repository>\n"
-#| "\t  [<directory>]\n"
+#, no-wrap
 msgid ""
 "'git clone' [--template=<template_directory>]\n"
 "\t  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]\n"
@@ -17366,7 +17354,8 @@ msgstr ""
 "\t  [--dissociate] [--separate-git-dir <répertoire git>]\n"
 "\t  [--depth <profondeur>] [--[no-]single-branch] [--no-tags]\n"
 "\t  [--recurse-submodules[=<spéc.de chemin>]] [--[no-]shallow-submodules]\n"
-"\t  [--[no-]remote-submodules] [--jobs <n>] [--sparse] [--] <dépôt>\n"
+"\t  [--[no-]remote-submodules] [--jobs <n>] [--sparse]\n"
+"\t  [--filter=<filter>] [--] <dépôt>\n"
 "\t  [<répertoire>]\n"
 
 #. type: Plain text
@@ -75408,12 +75397,13 @@ msgstr "\t(voir <<CRTB,BRANCHES DE SUIVI À DISTANCE CONFIGURÉES>> ci-dessous).
 
 #. type: Plain text
 #: en/pull-fetch-param.txt:24
-#, fuzzy, no-wrap
-#| msgid "\t(see <<CRTB,CONFIGURED REMOTE-TRACKING BRANCHES>> below).\n"
+#, no-wrap
 msgid ""
 "\t(see the section \"CONFIGURED REMOTE-TRACKING BRANCHES\"\n"
 "\tin linkgit:git-fetch[1]).\n"
-msgstr "\t(voir <<CRTB,BRANCHES DE SUIVI À DISTANCE CONFIGURÉES>> ci-dessous).\n"
+msgstr ""
+"\t(voir la section <<BRANCHES DE SUIVI À DISTANCE CONFIGURÉES>>\n"
+"\tdans linkgit:git-fetch[1]).\n"
 
 #. type: Plain text
 #: en/pull-fetch-param.txt:32
@@ -77843,11 +77833,12 @@ msgid ""
 "\t  \\ /      /\\        /\n"
 "\t   `---X--'  `---Y--'\n"
 msgstr ""
-"\t  .-A---M---N---O---P---Q\n"
-"\t /     /   /   /   /\n"
-"\tI     B   /   D   /\n"
-"\t \\   /   /   /   /\n"
-"\t  `-------------'\n"
+"\t  .-A---M-----C--N---O---P\n"
+"\t /     / \\  \\  \\/   /   /\n"
+"\tI     B   \\  R-'`-Z'   /\n"
+"\t \\   /     \\/         /\n"
+"\t  \\ /      /\\        /\n"
+"\t   `---X--'  `---Y--'\n"
 
 #. type: Plain text
 #: en/rev-list-options.txt:610
@@ -77904,11 +77895,12 @@ msgid ""
 "\t  \\ /      /\\        /\n"
 "\t   `---X--'  `------'\n"
 msgstr ""
-"\t  .-A---M---N---O---P---Q\n"
-"\t /     /   /   /   /\n"
-"\tI     B   /   D   /\n"
-"\t \\   /   /   /   /\n"
-"\t  `-------------'\n"
+"\t  .-A---M--------N---O---P\n"
+"\t /     / \\  \\  \\/   /   /\n"
+"\tI     B   \\  R-'`--'   /\n"
+"\t \\   /     \\/         /\n"
+"\t  \\ /      /\\        /\n"
+"\t   `---X--'  `------'\n"
 
 #. type: Plain text
 #: en/rev-list-options.txt:638
@@ -77949,11 +77941,12 @@ msgid ""
 "\t  \\ /      /\n"
 "\t   `---X--'\n"
 msgstr ""
-"\t  .-A---M---N---O\n"
-"\t /     /       /\n"
-"\tI     B       D\n"
-"\t \\   /       /\n"
-"\t  `---------'\n"
+"\t  .-A---M--.\n"
+"\t /     /    \\\n"
+"\tI     B      R\n"
+"\t \\   /      /\n"
+"\t  \\ /      /\n"
+"\t   `---X--'\n"
 
 #. type: Plain text
 #: en/rev-list-options.txt:660
@@ -78034,11 +78027,12 @@ msgid ""
 "\t  \\ /      /\n"
 "\t   `---X--'\n"
 msgstr ""
-"\t  .-A---M---N---O\n"
-"\t /     /       /\n"
-"\tI     B       D\n"
-"\t \\   /       /\n"
-"\t  `---------'\n"
+"\t  .-A---M--.   N\n"
+"\t /     /    \\ /\n"
+"\tI     B      R\n"
+"\t \\   /      /\n"
+"\t  \\ /      /\n"
+"\t   `---X--'\n"
 
 #. type: Plain text
 #: en/rev-list-options.txt:707
