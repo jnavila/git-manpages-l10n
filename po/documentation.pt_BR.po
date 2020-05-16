@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-05-16 17:29+0200\n"
-"PO-Revision-Date: 2020-05-14 20:41+0000\n"
+"PO-Revision-Date: 2020-05-16 17:47+0000\n"
 "Last-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
@@ -4715,16 +4715,16 @@ msgid ""
 "\tthe same as `-M5%`.  To limit detection to exact renames, use\n"
 "\t`-M100%`.  The default similarity index is 50%.\n"
 msgstr ""
-"\tSe `n` é especificado, é um limiar na semelhança\n"
-"\tíndice (isto é, quantidade de adição/exclusões comparada com o\n"
+"\tCaso `n` seja usado, é um limiar na similaridade do\n"
+"\tíndice (ou seja, a quantidade de adições/exclusões comparado com o\n"
 "\ttamanho do arquivo). Por exemplo, `-M90%` significa que o Git deve\n"
-"\tconsiderar um par delete/add para ser renomeado se mais de 90%\n"
-"\tdo arquivo não mudou. Sem um sinal `%`, o número deve ser lido\n"
+"\tconsiderar um par delete/add para ser renomeado caso mais de 90%\n"
+"\tdo arquivo não tenha mudado.  Sem um sinal `%`, o número deve ser lido\n"
 "\tcomo uma fração, com um ponto decimal antes dele. Ou seja, `-M5`\n"
-"\ttorna-se 0.5, e é portanto, o mesmo que `-M50%`. Da mesma forma,\n"
-"\t-M05` é o mesmo que `-M5%`. Para limitar a detecção a \n"
-"\trenomeações exatas, use `-M100%`. O índice de similaridade padrão\n"
-"\té de 50%.\n"
+"\ttorna-se 0.5, e é portanto o mesmo que `-M50%`. Da mesma forma,\n"
+"\t`-M05` é o mesmo que `-M5%`.  Para limitar a detecção para \n"
+"\trenomeações exatas use `-M100%`. A predefinição do índice de\n"
+"\tsimilaridade padrão é de 50%.\n"
 
 #. type: Labeled list
 #: en/diff-options.txt:492
@@ -6384,17 +6384,19 @@ msgid ""
 msgstr ""
 "y - encenar esse pedaço\n"
 "n - não encenar esse pedaço\n"
-"q - sair; não encenar este pedaço ou qualquer um dos restantes\n"
+"q - encerrar; não encenar este pedaço ou qualquer um dos restantes\n"
 "a - encenar esse pedaço e todos os pedaços posteriores no arquivo\n"
-"d - não encenar esse pedaço ou qualquer um dos pedaços posteriores no arquivo\n"
+"d - não encenar esse pedaço ou qualquer um dos pedaços posteriores no "
+"arquivo\n"
 "g - selecione um pedaço para ir\n"
-"/ - procure por um pedaço que corresponda à regex dada\n"
-"j - deixe esse pedaço indeciso, veja o próximo pedaço indeciso\n"
-"k - deixe esse pedaço indeciso, veja o pedaço indeciso anterior\n"
-"K - deixe esse pedaço indeciso, veja o pedaço anterior\n"
+"/ - pesquise por um pedaço correspondente a expressão regular usada\n"
+"j - deixe este pedaço sem decisão, consulte o próximo pedaço sem decisão\n"
+"J - deixe este pedaço sem decisão, consulte o próximo pedaço\n"
+"k - deixe este pedaço sem decisão, consulte o pedaço sem decisão anterior\n"
+"K - deixe este pedaço sem decisão, consulte o pedaço anterior\n"
 "s - divide o pedaço atual em pedaços menores\n"
 "e - edite manualmente o pedaço atual\n"
-"? - ajuda de impressão\n"
+"? - exiba a ajuda\n"
 
 #. type: Plain text
 #: en/git-add.txt:346
@@ -7076,8 +7078,9 @@ msgstr "pule o patch atual reexecutando o comando com a opção `--skip`."
 #, priority:100
 msgid "hand resolve the conflict in the working directory, and update the index file to bring it into a state that the patch should have produced.  Then run the command with the `--continue` option."
 msgstr ""
-"mão resolver o conflito no diretório de trabalho e atualizar o arquivo de índice para colocá-lo em um estado que o patch deve ter produzido. \n"
-" Então execute o comando com a opção `--continue`."
+"mão resolver o conflito no diretório de trabalho e atualizar o arquivo do "
+"índice para colocá-lo em uma condição onde o patch deve ter produzido.  "
+"Então execute o comando com a opção `--continue`."
 
 #. type: Plain text
 #: en/git-am.txt:231
@@ -7298,8 +7301,11 @@ msgstr "Aplique o patch ao contrário."
 #, priority:100
 msgid "For atomicity, 'git apply' by default fails the whole patch and does not touch the working tree when some of the hunks do not apply.  This option makes it apply the parts of the patch that are applicable, and leave the rejected hunks in corresponding *.rej files."
 msgstr ""
-"Para atomicidade, 'git apply' por padrão falha em todo o patch e não toca na árvore de trabalho quando alguns dos blocos não se aplicam. \n"
-" Essa opção faz com que ela aplique as partes do patch aplicáveis e deixa os pedaços rejeitados nos arquivos *.rej correspondentes."
+"Por questões de atomicidade é predefinido que o comando 'git apply' condene "
+"o patch todo e não toque na árvore de trabalho quando alguns dos pedaços não "
+"se aplicarem. \n"
+" Esta opção faz com que se aplique apenas as partes do patch que sejam "
+"aplicáveis descartando o pedaços rejeitados em arquivos *.rej."
 
 #. type: Plain text
 #: en/git-apply.txt:118
@@ -7426,8 +7432,9 @@ msgstr "Ao aplicar um patch, detecte uma linha nova ou modificada que tenha erro
 #, priority:100
 msgid "By default, the command outputs warning messages but applies the patch.  When `git-apply` is used for statistics and not applying a patch, it defaults to `nowarn`."
 msgstr ""
-"Por padrão, o comando gera mensagens de aviso, mas aplica o patch. \n"
-" Quando o `git-apply` é usado para estatísticas e não aplica um patch, o padrão é` nowarn`."
+"É predefinido que o comando gere mensagens de aviso e só aplique o patch.  "
+"Quando o comando `git-apply` é utilizado para estatísticas e não para "
+"aplicar um patch, a sua predefinição é `nowarn`."
 
 #. type: Plain text
 #: en/git-apply.txt:205
@@ -7654,8 +7661,10 @@ msgstr "Enquanto o 'git archimport' tentará criar nomes de ramificações sens�
 #, priority:100
 msgid "Associating multiple Arch branches to one Git branch is possible; the result will make the most sense only if no commits are made to the first branch, after the second branch is created.  Still, this is useful to convert Arch repositories that had been rotated periodically."
 msgstr ""
-"A associação de vários ramos do Arch a um ramo do Git é possível; o resultado fará mais sentido somente se nenhuma confirmação for feita na primeira ramificação, depois que a segunda ramificação for criada. \n"
-" Ainda assim, isso é útil para converter repositórios do Arch que foram rotacionados periodicamente."
+"É possível associar vários ramos do Arch a um ramo do Git; o resultado fará "
+"mais sentido somente caso nenhum commit seja feito na primeira ramificação, "
+"depois que a segunda ramificação for criada.  Ainda assim é útil para "
+"converter os repositórios do Arch que forem periodicamente rotacionados."
 
 #. type: Title -
 #: en/git-archimport.txt:57
@@ -7874,8 +7883,8 @@ msgstr "<extra>"
 #, priority:100
 msgid "This can be any options that the archiver backend understands.  See next section."
 msgstr ""
-"Isso pode ser qualquer opção que o back-end do arquivador entenda. \n"
-" Veja a próxima seção."
+"Pode ser qualquer opção que o back-end do arquivador compreenda.  Consulte a "
+"próxima seção."
 
 #. type: Labeled list
 #: en/git-archive.txt:66
@@ -9064,8 +9073,12 @@ msgstr "--score-debug"
 #, priority:100
 msgid "Include debugging information related to the movement of lines between files (see `-C`) and lines moved within a file (see `-M`).  The first number listed is the score.  This is the number of alphanumeric characters detected as having been moved between or within files.  This must be above a certain threshold for 'git blame' to consider those lines of code to have been moved."
 msgstr ""
-"Inclua informações de depuração relacionadas ao movimento de linhas entre arquivos (consulte `-C) e linhas movidas dentro de um arquivo (consulte` -M`).  O primeiro número listado é a pontuação. \n"
-" Esse é o número de caracteres alfanuméricos detectados como tendo sido movidos entre ou dentro dos arquivos.  Isso deve estar acima de um certo limite para 'git blame' considerar essas linhas de código que foram movidas."
+"Inclua informações de depuração relacionadas ao movimento das linhas entre "
+"os arquivos (consulte `-C`) e linhas movidas dentro de um arquivo (consulte "
+"`-M`).  O primeiro número listado é a pontuação.  Esse é o número de "
+"caracteres alfanuméricos detectados como sendo movidos entre ou dentro dos "
+"arquivos.  Deve estar acima de um certo limite para que o comando 'git "
+"blame' considere que essas linhas do código tenham sido movidas."
 
 #. type: Labeled list
 #: en/git-blame.txt:66
