@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-05-16 17:29+0200\n"
 "PO-Revision-Date: 2020-05-16 17:45+0000\n"
-"Last-Translator: brandelune <jean.christophe.helary@traduction-libre.org>\n"
+"Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -46995,7 +46995,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-push.txt:447
 msgid "For a failed update, more details are given:"
-msgstr ""
+msgstr "En cas d'échec de la mise à jour, de plus amples détails sont donnés :"
 
 #. type: Labeled list
 #: en/git-push.txt:449
@@ -47009,6 +47009,8 @@ msgid ""
 "Git did not try to send the ref at all, typically because it is not a fast-"
 "forward and you did not force the update."
 msgstr ""
+"Git n'a pas du tout essayé d'envoyer la référence, généralement parce que ce "
+"n'est pas une avance rapide et que vous n'avez pas forcé la mise à jour."
 
 #. type: Labeled list
 #: en/git-push.txt:453
@@ -47026,6 +47028,12 @@ msgid ""
 "updates), `receive.denyDeletes` or `receive.denyDeleteCurrent`.  See linkgit:"
 "git-config[1]."
 msgstr ""
+"Le serveur distant a refusé la mise à jour.  Généralement causé par un "
+"crochet du côté distant, ou parce que le dépôt distant a l'une des options "
+"de sécurité suivantes en vigueur : `receive.denyCurrentBranch` (pour les "
+"poussées vers la branche extraite), `receive.denyNonFastForwards` (pour les "
+"mises à jour forcées mais pas en avance rapide), `receive.denyDeletes` ou "
+"`receive.denyDeleteCurrent`.  Voir linkgit:git-config[1]."
 
 #. type: Labeled list
 #: en/git-push.txt:462
@@ -47040,6 +47048,9 @@ msgid ""
 "because of a temporary error on the remote side, a break in the network "
 "connection, or other transient error."
 msgstr ""
+"Le serveur distant n'a pas signalé la mise à jour réussie de la référence, "
+"peut-être en raison d'une erreur temporaire du côté distant, d'une rupture "
+"de la connexion réseau ou d'une autre erreur transitoire."
 
 #. type: Plain text
 #: en/git-push.txt:472
@@ -47047,12 +47058,16 @@ msgid ""
 "The name of the local ref being pushed, minus its `refs/<type>/` prefix. In "
 "the case of deletion, the name of the local ref is omitted."
 msgstr ""
+"Le nom de la référence locale qui est poussée, moins son préfixe `refs/"
+"<type>/`. En cas de suppression, le nom de la référence locale est omis."
 
 #. type: Plain text
 #: en/git-push.txt:476
 msgid ""
 "The name of the remote ref being updated, minus its `refs/<type>/` prefix."
 msgstr ""
+"Le nom de la référence distante en cours de mise à jour, moins son préfixe `"
+"refs/<type>/`."
 
 #. type: Plain text
 #: en/git-push.txt:481
@@ -47060,12 +47075,15 @@ msgid ""
 "A human-readable explanation. In the case of successfully pushed refs, no "
 "explanation is needed. For a failed ref, the reason for failure is described."
 msgstr ""
+"Une explication compréhensible. Dans le cas des références qui ont été "
+"poussées avec succès, aucune explication n'est nécessaire. Dans le cas d'une "
+"référence en échec, la raison de l'échec est décrite."
 
 #. type: Title -
 #: en/git-push.txt:483
 #, no-wrap
 msgid "NOTE ABOUT FAST-FORWARDS"
-msgstr ""
+msgstr "NOTE SUR LES AVANCES RAPIDES"
 
 #. type: Plain text
 #: en/git-push.txt:488
@@ -47074,6 +47092,10 @@ msgid ""
 "point at commit A to point at another commit B, it is called a fast-forward "
 "update if and only if B is a descendant of A."
 msgstr ""
+"Lorsqu'une mise à jour modifie une branche (ou plus généralement, une réf) "
+"qui pointait auparavant vers le commit A pour pointer vers un autre commit "
+"B, on parle de mise à jour en avance rapide si et seulement si B est un "
+"descendant de A."
 
 #. type: Plain text
 #: en/git-push.txt:492
@@ -47082,6 +47104,9 @@ msgid ""
 "commit A built on top of is a subset of the commits the new commit B builds "
 "on top of.  Hence, it does not lose any history."
 msgstr ""
+"Dans une mise à jour rapide de A à B, l'ensemble des commits sur lesquels le "
+"commit original A s'appuyait est un sous-ensemble des commits sur lesquels "
+"le nouveau commit B s'appuie.  Ainsi, il ne perd pas d'historique."
 
 #. type: Plain text
 #: en/git-push.txt:497
@@ -47091,6 +47116,11 @@ msgid ""
 "history leading to commit B while the other person built a history leading "
 "to commit A.  The history looks like this:"
 msgstr ""
+"En revanche, une mise à jour pas en avance rapide fera perdre de "
+"l'historique.  Par exemple, supposons que vous et quelqu'un d'autre ayez "
+"commencé au même commit X, et que vous ayez construit un historique menant "
+"au commit B alors que l'autre personne a construit un historique menant au "
+"commit A.  L'historique ressemble à ceci :"
 
 #. type: delimited block -
 #: en/git-push.txt:503
@@ -47100,6 +47130,9 @@ msgid ""
 "     /\n"
 " ---X---A\n"
 msgstr ""
+"      B\n"
+"     /\n"
+" ---X---A\n"
 
 #. type: Plain text
 #: en/git-push.txt:509
@@ -47108,6 +47141,9 @@ msgid ""
 "back to the original repository from which you two obtained the original "
 "commit X."
 msgstr ""
+"Supposons en outre que l'autre personne ait déjà poussé les modifications "
+"menant à A vers le dépôt original dont vous avez tous deux obtenu le commit "
+"X original."
 
 #. type: Plain text
 #: en/git-push.txt:512
@@ -47115,6 +47151,9 @@ msgid ""
 "The push done by the other person updated the branch that used to point at "
 "commit X to point at commit A.  It is a fast-forward."
 msgstr ""
+"La poussée effectuée par l'autre personne a mis à jour la branche qui "
+"pointait sur le commit X pour pointer sur le commit A. Il s'agit d'une "
+"avance rapide."
 
 #. type: Plain text
 #: en/git-push.txt:517
@@ -47124,6 +47163,10 @@ msgid ""
 "the changes introduced by commit A will be lost, because everybody will now "
 "start building on top of B."
 msgstr ""
+"Mais si vous essayez de pousser, vous essaierez de mettre à jour la branche ("
+"qui pointe maintenant vers A) avec le commit B. Cela ne fait _pas_ d'avance "
+"rapide.  Si vous le faites, les modifications introduits par le commit A "
+"seront perdues, car tout le monde va maintenant commencer à construire sur B."
 
 #. type: Plain text
 #: en/git-push.txt:520
@@ -47131,6 +47174,8 @@ msgid ""
 "The command by default does not allow an update that is not a fast-forward "
 "to prevent such loss of history."
 msgstr ""
+"La commande par défaut ne permet pas une mise à jour qui ne soit pas une "
+"avance rapide pour éviter une telle perte d'historique."
 
 #. type: Plain text
 #: en/git-push.txt:525
@@ -47140,6 +47185,10 @@ msgid ""
 "history from the repository, create a history that contains changes done by "
 "both parties, and push the result back."
 msgstr ""
+"Si vous ne voulez pas perdre votre travail (historique de X à B) ou le "
+"travail de l'autre personne (historique de X à A), vous devez d'abord "
+"récupérer l'historique du dépôt, créer un historique qui contient les "
+"modifications effectuées par les deux parties et repousser le résultat."
 
 #. type: Plain text
 #: en/git-push.txt:529
@@ -47148,6 +47197,9 @@ msgid ""
 "the result.  A \"git pull\" will create a merge commit C between commits A "
 "and B."
 msgstr ""
+"Vous pouvez effectuer un \"git pull\", résoudre les conflits potentiels et \""
+"git push\" le résultat.  Un \"git pull\" créera un commit de fusion C entre "
+"les commit A et B."
 
 #. type: delimited block -
 #: en/git-push.txt:535
@@ -47157,6 +47209,9 @@ msgid ""
 "     /   /\n"
 " ---X---A\n"
 msgstr ""
+"      B---C\n"
+"     /   /\n"
+" ---X---A\n"
 
 #. type: Plain text
 #: en/git-push.txt:540
@@ -47164,6 +47219,8 @@ msgid ""
 "Updating A with the resulting merge commit will fast-forward and your push "
 "will be accepted."
 msgstr ""
+"La mise à jour de A avec le commit de fusion résultant sera une avance "
+"rapide et votre poussée sera acceptée."
 
 #. type: Plain text
 #: en/git-push.txt:545
@@ -47172,6 +47229,9 @@ msgid ""
 "\"git pull --rebase\", and push the result back.  The rebase will create a "
 "new commit D that builds the change between X and B on top of A."
 msgstr ""
+"Vous pouvez également rebaser votre modification entre X et B sur A, avec \""
+"git pull --rebase\", et pousser le résultat.  Le rebasage créera un nouveau "
+"commit D qui construit la modification entre X et B sur A."
 
 #. type: delimited block -
 #: en/git-push.txt:551
@@ -47181,6 +47241,9 @@ msgid ""
 "     /   /\n"
 " ---X---A\n"
 msgstr ""
+"      B   D\n"
+"     /   /\n"
+" ---X---A\n"
 
 #. type: Plain text
 #: en/git-push.txt:556
@@ -47188,6 +47251,8 @@ msgid ""
 "Again, updating A with this commit will fast-forward and your push will be "
 "accepted."
 msgstr ""
+"Là encore, la mise à jour de A avec ce commit sera en avance rapide et votre "
+"poussée sera acceptée."
 
 #. type: Plain text
 #: en/git-push.txt:567
@@ -47203,6 +47268,17 @@ msgid ""
 "words, \"git push --force\" is a method reserved for a case where you do "
 "mean to lose history."
 msgstr ""
+"Il existe une autre situation courante dans laquelle vous pouvez rencontrer "
+"un rejet du fait d'absence d'avance rapide lorsque vous essayez de pousser, "
+"et c'est possible même lorsque vous poussez dans un dépôt dans lequel "
+"personne d'autre ne pousse. Après avoir vous-même poussé le commit A (dans "
+"la première image de cette section), remplacez-le par \"git commit --amend\" "
+"pour produire le commit B, et vous essayez de le pousser, parce que vous "
+"avez oublié que vous avez déjà poussé A. Dans un tel cas, et seulement si "
+"vous êtes certain que personne n'a récupéré votre commit A précédent (et a "
+"commencé à construire dessus), vous pouvez lancer \"git push --force\" pour "
+"l'écraser. En d'autres termes, \"git push --force\" est une méthode réservée "
+"aux cas où vous voulez vraiment perdre l'historique."
 
 #. type: Labeled list
 #: en/git-push.txt:572
@@ -47216,6 +47292,9 @@ msgid ""
 "Works like `git push <remote>`, where <remote> is the current branch's "
 "remote (or `origin`, if no remote is configured for the current branch)."
 msgstr ""
+"Fonctionne comme `git push <distant>`, où <distant> est le distant de la "
+"branche actuelle (ou `origin`, si aucun distant n'est configuré pour la "
+"branche actuelle)."
 
 #. type: Labeled list
 #: en/git-push.txt:577
@@ -47231,6 +47310,10 @@ msgid ""
 "the same name as the current branch, and errors out without pushing "
 "otherwise."
 msgstr ""
+"Sans configuration supplémentaire, pousse la branche en cours vers l'amont "
+"configuré (variable de configuration `remote.origin.merge`) si elle a le "
+"même nom que la branche actuelle et génère des erreurs sans pousser "
+"autrement."
 
 #. type: Plain text
 #: en/git-push.txt:586
@@ -47239,6 +47322,9 @@ msgid ""
 "configured by setting the `push` option of the remote, or the `push.default` "
 "configuration variable."
 msgstr ""
+"Le comportement par défaut de cette commande quand aucun <spec-de-réf> n'est "
+"donné peut être configuré en définissant l'option `push` du distant, ou la "
+"variable de configuration `push.default`."
 
 #. type: Plain text
 #: en/git-push.txt:591
@@ -47247,6 +47333,10 @@ msgid ""
 "`git config remote.origin.push HEAD`.  Any valid <refspec> (like the ones in "
 "the examples below) can be configured as the default for `git push origin`."
 msgstr ""
+"Par exemple, pour pousser par défaut uniquement la branche actelle vers "
+"`origin`, utilisez `git config remote.origin.push HEAD`.  Tout <spec-de-réf> "
+"valide (comme ceux des exemples ci-dessous) peut être configuré par défaut "
+"pour `git push origin`."
 
 #. type: Labeled list
 #: en/git-push.txt:592
@@ -47260,6 +47350,9 @@ msgid ""
 "Push \"matching\" branches to `origin`. See <refspec> in the <<OPTIONS,"
 "OPTIONS>> section above for a description of \"matching\" branches."
 msgstr ""
+"Pousse les branches \"correspondantes\" sur `originè. Voir <spec-de-réf> "
+"dans la section <<OPTIONS,OPTIONS>> ci-dessus pour une description des "
+"branches \"correspondantes\"."
 
 #. type: Labeled list
 #: en/git-push.txt:597
