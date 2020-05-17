@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-05-16 17:29+0200\n"
-"PO-Revision-Date: 2020-05-17 07:57+0000\n"
+"PO-Revision-Date: 2020-05-24 21:41+0000\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -2629,6 +2629,14 @@ msgstr "merge.autoStash"
 #, priority:240
 msgid "When set to true, automatically create a temporary stash entry before the operation begins, and apply it after the operation ends.  This means that you can run merge on a dirty worktree.  However, use with care: the final stash application after a successful merge might result in non-trivial conflicts.  This option can be overridden by the `--no-autostash` and `--autostash` options of linkgit:git-merge[1].  Defaults to false."
 msgstr ""
+"Lorsque réglé sur true, créer automatiquement une entrée temporaire de "
+"remisage avant le début de l'opération, et l'appliquer après la fin de "
+"l'opération.  Cela signifie que vous pouvez exécuter la fusion sur un arbre "
+"de travail sale.  Cependant, à utiliser avec précaution : l'application "
+"finale du remisage après une fusion réussie peut entraîner des conflits non "
+"négligeables.  Cette option peut être remplacée par les options `--no-"
+"autostash` et `--autostash` de linkgit:git-merge[1].  La valeur par défaut "
+"est false."
 
 #. type: Labeled list
 #: en/config/merge.txt:83
@@ -2886,12 +2894,12 @@ msgid ""
 "delete         :100644 000000 1234567 0000000 D file5\n"
 "unmerged       :000000 000000 0000000 0000000 U file6\n"
 msgstr ""
-"in-place edit  :100644 100644 bcd1234 0123456 M fichier0\n"
-"copy-edit      :100644 100644 abcd123 1234567 C68 fichier1 fichier2\n"
-"rename-edit    :100644 100644 abcd123 1234567 R86 fichier1 fichier3\n"
-"create         :000000 100644 0000000 1234567 A fichier4\n"
-"delete         :100644 000000 1234567 0000000 D fichier5\n"
-"unmerged       :000000 000000 0000000 0000000 U fichier6\n"
+"édition en place  :100644 100644 bcd1234 0123456 M fichier0\n"
+"copie édition     :100644 100644 abcd123 1234567 C68 fichier1 fichier2\n"
+"édition renommage :100644 100644 abcd123 1234567 R86 fichier1 fichier3\n"
+"création          :000000 100644 0000000 1234567 A fichier4\n"
+"suppression       :100644 000000 1234567 0000000 D fichier5\n"
+"non fusionnné     :000000 000000 0000000 0000000 U fichier6\n"
 
 #. type: Plain text
 #: en/diff-format.txt:38
@@ -13921,6 +13929,14 @@ msgstr "--filter=<spéc. du filtre>"
 #, priority:300
 msgid "Use the partial clone feature and request that the server sends a subset of reachable objects according to a given object filter.  When using `--filter`, the supplied `<filter-spec>` is used for the partial clone filter. For example, `--filter=blob:none` will filter out all blobs (file contents) until needed by Git. Also, `--filter=blob:limit=<size>` will filter out all blobs of size at least `<size>`. For more details on filter specifications, see the `--filter` option in linkgit:git-rev-list[1]."
 msgstr ""
+"Utiliser la fonction de clonage partiel et demander que le serveur envoie un "
+"sous-ensemble d'objets accessibles selon un filtre d'objets donné.  Lorsque "
+"l'on utilise `--filter`, le `<spéc-de-filtre>` fourni est utilisé pour le "
+"filtre de clonage partiel. Par exemple, `--filter=blob:none` filtrera tous "
+"les blobs (contenu des fichiers) jusqu'à ce que Git en ait besoin. De même, "
+"`--filter=blob:limit=<taille>` filtrera tous les blobs de taille au moins "
+"égale à `<taille>`. Pour plus de détails sur les spécifications de filtre, "
+"voir l'option `--filter` dans linkgit:git-rev-list[1]."
 
 #. type: Labeled list
 #: en/git-clone.txt:176 en/git-push.txt:161
@@ -29531,6 +29547,9 @@ msgstr "--object-format=<format>"
 #, priority:300
 msgid "Specify the given object format (hash algorithm) for the repository.  The valid values are 'sha1' and (if enabled) 'sha256'.  'sha1' is the default."
 msgstr ""
+"Spécifier le format d'objet donné (algorithme d'empreinte) pour le dépôt.  "
+"Les valeurs valides sont 'sha1' et (si activé) 'sha256'.  'sha1' est la "
+"valeur par défaut."
 
 #. type: Plain text
 #: en/git-init.txt:60
@@ -33063,6 +33082,11 @@ msgstr "S'il y avait des modifications non validées dans l'arbre de travail lor
 #, priority:240
 msgid "'git merge --abort' is equivalent to 'git reset --merge' when `MERGE_HEAD` is present unless `MERGE_AUTOSTASH` is also present in which case 'git merge --abort' applies the stash entry to the worktree whereas 'git reset --merge' will save the stashed changes in the stash list."
 msgstr ""
+"'git merge --abort' est équivalent à 'git reset --merge' quand `MERGE_HEAD` "
+"est présent à moins que `MERGE_AUTOSTASH` soit également présent, auquel cas "
+"'git merge --abort' applique l'entrée de la remisage à l'arbre de travail "
+"alors que 'git reset --merge' sauvegardera les changements remisés dans la "
+"liste de remisage."
 
 #. type: Plain text
 #: en/git-merge.txt:115
@@ -38101,36 +38125,55 @@ msgstr "`git push origin HEAD`"
 #, priority:220
 msgid "A handy way to push the current branch to the same name on the remote."
 msgstr ""
+"Un moyen pratique de pousser la branche actuelle vers le même nom sur le "
+"distant."
 
 #. type: Labeled list
 #: en/git-push.txt:608
 #, no-wrap, priority:220
 msgid "`git push mothership master:satellite/master dev:satellite/dev`"
-msgstr ""
+msgstr "`git push vaisseaumère master:satellite/master dev:satellite/dev`"
 
 #. type: Plain text
 #: en/git-push.txt:613
 #, priority:220
 msgid "Use the source ref that matches `master` (e.g. `refs/heads/master`)  to update the ref that matches `satellite/master` (most probably `refs/remotes/satellite/master`) in the `mothership` repository; do the same for `dev` and `satellite/dev`."
 msgstr ""
+"Utiliser la référence source qui correspond à `master` (par exemple `refs/"
+"heads/master`) pour mettre à jour la référence qui correspond à `satellite/"
+"master` (très probablement `refs/remotes/satellite/master`) dans le dépôt "
+"`vaisseaumère` ; faire de même pour `dev` et `satellite/dev`."
 
 #. type: Plain text
 #: en/git-push.txt:616
 #, ignore-ellipsis, priority:220
 msgid "See the section describing `<refspec>...` above for a discussion of the matching semantics."
 msgstr ""
+"Voir la section décrivant `<spéc-de-réf>...` ci-dessus pour une discussion "
+"sur la sémantique de correspondance."
 
 #. type: Plain text
 #: en/git-push.txt:623
 #, priority:220
 msgid "This is to emulate `git fetch` run on the `mothership` using `git push` that is run in the opposite direction in order to integrate the work done on `satellite`, and is often necessary when you can only make connection in one way (i.e. satellite can ssh into mothership but mothership cannot initiate connection to satellite because the latter is behind a firewall or does not run sshd)."
 msgstr ""
+"Il s'agit d'émuler `git fetch` exécuté sur le `vaisseaumère` en utilisant `"
+"git push` qui est exécuté dans la direction opposée afin d'intégrer le "
+"travail effectué sur `satellite`, et est souvent nécessaire lorsque vous ne "
+"pouvez établir la connexion que dans un seul sens (c'est-à-dire que le "
+"satellite peut ssh dans vaisseaumère mais que le vaisseaumère ne peut pas "
+"établir de connexion avec satellite parce que ce dernier se trouve derrière "
+"un pare-feu ou n'exécute pas sshd)."
 
 #. type: Plain text
 #: en/git-push.txt:628
 #, priority:220
 msgid "After running this `git push` on the `satellite` machine, you would ssh into the `mothership` and run `git merge` there to complete the emulation of `git pull` that were run on `mothership` to pull changes made on `satellite`."
 msgstr ""
+"Après avoir lancé ce `git push` sur la machine `satellite`, vous ouvririez "
+"un ssh sur le `vaisseaumère` et y lanceriez `git merge` pour compléter "
+"l'émulation de `git pull` qui était lancée sur `vaisseaumère` afin de tirer "
+"les modifications faites sur `satellite`."
 
 #. type: Labeled list
 #: en/git-push.txt:629
@@ -38143,30 +38186,39 @@ msgstr "`git push origin HEAD:master`"
 #, priority:220
 msgid "Push the current branch to the remote ref matching `master` in the `origin` repository. This form is convenient to push the current branch without thinking about its local name."
 msgstr ""
+"Pousser la branche actuelle vers la référence distante correspondant à "
+"`master` dans le dépôt `origin`. Cette forme est pratique pour pousser la "
+"branche actuelle sans avoir à penser à son nom local."
 
 #. type: Labeled list
 #: en/git-push.txt:634
 #, no-wrap, priority:220
 msgid "`git push origin master:refs/heads/experimental`"
-msgstr ""
+msgstr "`git push origin master:refs/heads/experimental`"
 
 #. type: Plain text
 #: en/git-push.txt:640
 #, priority:220
 msgid "Create the branch `experimental` in the `origin` repository by copying the current `master` branch.  This form is only needed to create a new branch or tag in the remote repository when the local name and the remote name are different; otherwise, the ref name on its own will work."
 msgstr ""
+"Créer la branche `experimental` dans le dépôt `origin` en copiant la branche "
+"`master` actuelle.  Cette forme n'est nécessaire que pour créer une nouvelle "
+"branche ou étiquette dans le dépôt distant lorsque le nom local et le nom "
+"distant sont différents ; sinon, le nom de la réf seul fonctionnera."
 
 #. type: Labeled list
 #: en/git-push.txt:641
 #, no-wrap, priority:220
 msgid "`git push origin :experimental`"
-msgstr ""
+msgstr "`git push origin :experimental`"
 
 #. type: Plain text
 #: en/git-push.txt:644
 #, priority:220
 msgid "Find a ref that matches `experimental` in the `origin` repository (e.g. `refs/heads/experimental`), and delete it."
 msgstr ""
+"Trouver une ref qui correspond à `experimental` dans le dépôt `origin` (par "
+"exemple `refs/heads/experimental`), et la supprimer."
 
 #. type: Labeled list
 #: en/git-push.txt:645
@@ -38179,6 +38231,10 @@ msgstr "`git push origin +dev:master`"
 #, priority:220
 msgid "Update the origin repository's master branch with the dev branch, allowing non-fast-forward updates.  *This can leave unreferenced commits dangling in the origin repository.* Consider the following situation, where a fast-forward is not possible:"
 msgstr ""
+"Mettre à jour la branche master du dépôt origin avec la branche dev, ce qui "
+"permet des mises à jour en mode non avance rapide.  *Ceci peut laisser des "
+"commits non référencés dans le dépôt origin.* Considérez la situation "
+"suivante, où une avance rapide n'est pas possible :"
 
 #. type: delimited block -
 #: en/git-push.txt:655
@@ -38188,12 +38244,15 @@ msgid ""
 "\t\t     \\\n"
 "\t\t      X---Y---Z  dev\n"
 msgstr ""
+"\t    o---o---o---A---B  origin/master\n"
+"\t\t     \\\n"
+"\t\t      X---Y---Z  dev\n"
 
 #. type: Plain text
 #: en/git-push.txt:658
 #, priority:220
 msgid "The above command would change the origin repository to"
-msgstr ""
+msgstr "La commande ci-dessus changerait le dépôt origin en"
 
 #. type: delimited block -
 #: en/git-push.txt:663
@@ -38203,12 +38262,18 @@ msgid ""
 "\t\t     /\n"
 "\t    o---o---o---X---Y---Z  master\n"
 msgstr ""
+"\t\t      A---B  (branche sans nom)\n"
+"\t\t     /\n"
+"\t    o---o---o---X---Y---Z  master\n"
 
 #. type: Plain text
 #: en/git-push.txt:668
 #, priority:220
 msgid "Commits A and B would no longer belong to a branch with a symbolic name, and so would be unreachable.  As such, these commits would be removed by a `git gc` command on the origin repository."
 msgstr ""
+"Les commits A et B n'appartiendraient plus à une branche portant un nom "
+"symbolique, et seraient donc injoignables.  Dans cet état, ces commits "
+"seraient supprimés par une commande `git gc` sur le dépôt origin."
 
 #. type: Title =
 #: en/git-quiltimport.txt:2
@@ -41910,84 +41975,130 @@ msgid ""
 "'git remote prune' [-n | --dry-run] <name>...\n"
 "'git remote' [-v | --verbose] 'update' [-p | --prune] [(<group> | <remote>)...]\n"
 msgstr ""
+"'git remote' [-v | --verbose]\n"
+"'git remote add' [-t <branche>] [-m <master>] [-f] [--[no-]tags] "
+"[--mirror=(fetch|push)] <nom> <url>\n"
+"'git remote renom' <ancien> <nouveau>\n"
+"'git remote remove' <nom>\n"
+"'git remote set-head' <nom> (-a | --auto | -d | --delete | <branche>)\n"
+"'git remote set-branches' [--add] <nom> <branche>...\n"
+"'git remote get-url' [--push] [--all] <nom>\n"
+"'git remote set-url' [--push] <nom> <nouvelle-url> [<ancienne-url>]\n"
+"'git remote set-url --add' [--push] <nom> <nouvelle-url>\n"
+"'git remote set-url --delete' [--push] <nom> <url>\n"
+"'git remote' [-v | --verbose] 'show' [-n] <nom>...\n"
+"'git remote prune' [-n | --dry-run] <nom>...\n"
+"'git remote' [-v | --verbose] 'update' [-p | --prune] [(<groupe> | "
+"<distant>)...]\n"
 
 #. type: Plain text
 #: en/git-remote.txt:30
 #, priority:220
 msgid "Manage the set of repositories (\"remotes\") whose branches you track."
 msgstr ""
+"Gère un ensemble de dépôts (« distants ») dont vous suivez les branches."
 
 #. type: Plain text
 #: en/git-remote.txt:39
 #, priority:220
 msgid "Be a little more verbose and show remote url after name.  NOTE: This must be placed between `remote` and `subcommand`."
 msgstr ""
+"Être un peu plus verbeux et montrer les urls distantes après les noms. NOTE :"
+" cette option doit être placée entre `remote` et la sous-commande."
 
 #. type: Plain text
 #: en/git-remote.txt:46
 #, priority:220
 msgid "With no arguments, shows a list of existing remotes.  Several subcommands are available to perform operations on the remotes."
 msgstr ""
+"Sans argument, affiche la liste des distants existants. Quelques sous-"
+"commandes permettent d'appliquer des opérations sur les distants."
 
 #. type: Labeled list
 #: en/git-remote.txt:47
 #, no-wrap, priority:220
 msgid "'add'"
-msgstr ""
+msgstr "'add'"
 
 #. type: Plain text
 #: en/git-remote.txt:52
 #, priority:220
 msgid "Adds a remote named <name> for the repository at <url>.  The command `git fetch <name>` can then be used to create and update remote-tracking branches <name>/<branch>."
 msgstr ""
+"Ajoute un distant nommé <nom> pour le dépôt à <url>.  La commande `git fetch "
+"<nom>` peut alors être utilisée pour créer et mettre à jour les branches de "
+"suivi à distance <nom>/<branche>."
 
 #. type: Plain text
 #: en/git-remote.txt:55
 #, priority:220
 msgid "With `-f` option, `git fetch <name>` is run immediately after the remote information is set up."
 msgstr ""
+"Avec l'option `-f`, `git fetch <nom>` est lancé immédiatement après la mise "
+"en place des informations distantes."
 
 #. type: Plain text
 #: en/git-remote.txt:58
 #, priority:220
 msgid "With `--tags` option, `git fetch <name>` imports every tag from the remote repository."
 msgstr ""
+"Avec l'option `--tags`, `git fetch <nom>` importe chaque étiquette du dépôt "
+"distant."
 
 #. type: Plain text
 #: en/git-remote.txt:61
 #, priority:220
 msgid "With `--no-tags` option, `git fetch <name>` does not import tags from the remote repository."
 msgstr ""
+"Avec l'option `--no-tags`, `git fetch <nom>` n'importe pas les étiquettes du "
+"dépôt distant."
 
 #. type: Plain text
 #: en/git-remote.txt:64
 #, priority:220
 msgid "By default, only tags on fetched branches are imported (see linkgit:git-fetch[1])."
 msgstr ""
+"Par défaut, seules les étiquettes sur les branches récupérées sont importées "
+"(voir linkgit:git-fetch[1])."
 
 #. type: Plain text
 #: en/git-remote.txt:70
 #, priority:220
 msgid "With `-t <branch>` option, instead of the default glob refspec for the remote to track all branches under the `refs/remotes/<name>/` namespace, a refspec to track only `<branch>` is created.  You can give more than one `-t <branch>` to track multiple branches without grabbing all branches."
 msgstr ""
+"Avec l'option `-t <branche>`, au lieu du spécificateur par défaut de glob "
+"pour que le distant suive toutes les branches dans l'espace de noms `refs/"
+"remotes/<nom>/`, un spécificateur de référence de suivi uniquement pour "
+"`<branche>` est créé.  Vous pouvez donner plus d'un `-t <branche>` pour "
+"suivre plusieurs branches sans saisir toutes les branches."
 
 #. type: Plain text
 #: en/git-remote.txt:73
 #, priority:220
 msgid "With `-m <master>` option, a symbolic-ref `refs/remotes/<name>/HEAD` is set up to point at remote's `<master>` branch. See also the set-head command."
 msgstr ""
+"Avec l'option `-m <master>`, une réf symbolique `refs/remotes/<nom>/HEAD` "
+"est mise en place pour pointer sur la branche `<master>` du distant. Voir "
+"aussi la commande set-head."
 
 #. type: Plain text
 #: en/git-remote.txt:79
 #, priority:220
 msgid "When a fetch mirror is created with `--mirror=fetch`, the refs will not be stored in the 'refs/remotes/' namespace, but rather everything in 'refs/' on the remote will be directly mirrored into 'refs/' in the local repository. This option only makes sense in bare repositories, because a fetch would overwrite any local commits."
 msgstr ""
+"Lorsqu'un miroir est créé avec `--mirror=fetch`, les refs ne seront pas "
+"stockées dans l'espace de noms 'refs/remotes/', mais tout ce qui se trouve "
+"dans 'refs/' sur le serveur distant sera directement reflété dans 'refs/' "
+"dans le dépôt local. Cette option n'a de sens que dans les dépôts nus, car "
+"une récupération écraserait tous les commit locaux."
 
 #. type: Plain text
 #: en/git-remote.txt:82
 #, priority:220
 msgid "When a push mirror is created with `--mirror=push`, then `git push` will always behave as if `--mirror` was passed."
 msgstr ""
+"Lorsqu'un miroir de poussé est créé avec `--mirror=push`, alors `git push` "
+"se comportera toujours comme si `--mirror` était passé."
 
 #. type: Labeled list
 #: en/git-remote.txt:83
@@ -42000,150 +42111,208 @@ msgstr "'rename'"
 #, priority:220
 msgid "Rename the remote named <old> to <new>. All remote-tracking branches and configuration settings for the remote are updated."
 msgstr ""
+"Renommer le distant nommé <ancien> en <nouveau>. Toutes les branches de "
+"suivi à distance et les paramètres de configuration du distant sont mis à "
+"jour."
 
 #. type: Plain text
 #: en/git-remote.txt:91
 #, priority:220
 msgid "In case <old> and <new> are the same, and <old> is a file under `$GIT_DIR/remotes` or `$GIT_DIR/branches`, the remote is converted to the configuration file format."
 msgstr ""
+"Dans le cas où <ancien> et <nouveau> sont identiques, et que <ancien> est un "
+"fichier sous `$GIT_DIR/remotes` ou `$GIT_DIR/branches`, le distant est "
+"converti au format de fichier de configuration."
 
 #. type: Labeled list
 #: en/git-remote.txt:92
 #, no-wrap, priority:220
 msgid "'remove'"
-msgstr ""
+msgstr "'remove'"
 
 #. type: Labeled list
 #: en/git-remote.txt:93
 #, no-wrap, priority:220
 msgid "'rm'"
-msgstr ""
+msgstr "'rm'"
 
 #. type: Plain text
 #: en/git-remote.txt:97
 #, priority:220
 msgid "Remove the remote named <name>. All remote-tracking branches and configuration settings for the remote are removed."
 msgstr ""
+"Supprimer le distant nommé <nom>. Toutes les branches de suivi à distance et "
+"tous les paramètres de configuration du distant sont supprimés."
 
 #. type: Labeled list
 #: en/git-remote.txt:98
 #, no-wrap, priority:220
 msgid "'set-head'"
-msgstr ""
+msgstr "'set-head'"
 
 #. type: Plain text
 #: en/git-remote.txt:107
 #, priority:220
 msgid "Sets or deletes the default branch (i.e. the target of the symbolic-ref `refs/remotes/<name>/HEAD`) for the named remote. Having a default branch for a remote is not required, but allows the name of the remote to be specified in lieu of a specific branch. For example, if the default branch for `origin` is set to `master`, then `origin` may be specified wherever you would normally specify `origin/master`."
 msgstr ""
+"Définir ou supprimet la branche par défaut (c'est-à-dire la cible de la "
+"référence symbolique `refs/remotes/<nom>/HEAD`) pour le distant nommé. Il "
+"n'est pas nécessaire de disposer d'une branche par défaut pour un distant, "
+"mais cela permet de spécifier le nom du distant à la place d'une branche "
+"spécifique. Par exemple, si la branche par défaut pour `origin` est définie "
+"à `master`, alors `origin` peut être spécifié là où vous spécifieriez "
+"normalement `origin/master`."
 
 #. type: Plain text
 #: en/git-remote.txt:109
 #, priority:220
 msgid "With `-d` or `--delete`, the symbolic ref `refs/remotes/<name>/HEAD` is deleted."
 msgstr ""
+"Avec `-d` ou `--delete`, la référence symbolique `refs/remotes/<nom>/HEAD` "
+"est supprimée."
 
 #. type: Plain text
 #: en/git-remote.txt:116
 #, priority:220
 msgid "With `-a` or `--auto`, the remote is queried to determine its `HEAD`, then the symbolic-ref `refs/remotes/<name>/HEAD` is set to the same branch. e.g., if the remote `HEAD` is pointed at `next`, \"`git remote set-head origin -a`\" will set the symbolic-ref `refs/remotes/origin/HEAD` to `refs/remotes/origin/next`. This will only work if `refs/remotes/origin/next` already exists; if not it must be fetched first."
 msgstr ""
+"Avec `-a` ou `--auto`, le distant est interrogé pour déterminer son `HEAD`, "
+"puis la référence symbolique `refs/remotes/<nom>/HEAD` est définie sur la "
+"même branche. Par exemple, si le distant `HEAD` est pointé sur `next`, `git "
+"remote set-head origin -a` définira la référence symbolique `refs/remotes/"
+"origin/HEAD` sur `refs/remotes/origin/next`. Cela ne fonctionnera que si `"
+"refs/remotes/origin/next` existe déjà ; sinon, il faut d'abord la récupérer."
 
 #. type: Plain text
 #: en/git-remote.txt:121
 #, priority:220
 msgid "Use `<branch>` to set the symbolic-ref `refs/remotes/<name>/HEAD` explicitly. e.g., \"git remote set-head origin master\" will set the symbolic-ref `refs/remotes/origin/HEAD` to `refs/remotes/origin/master`. This will only work if `refs/remotes/origin/master` already exists; if not it must be fetched first."
 msgstr ""
+"Utiliser `<branche>` pour définir la référence symbolique `refs/remotes/"
+"<nom>/HEAD` explicitement. Par exemple, `git remote set-head origin master` "
+"définira la référence symbolique `refs/remotes/origin/HEAD` à `refs/remotes/"
+"origin/master`. Cela ne fonctionnera que si `refs/remotes/origin/master` "
+"existe déjà ; sinon, il faut d'abord le récupérer."
 
 #. type: Labeled list
 #: en/git-remote.txt:123
 #, no-wrap, priority:220
 msgid "'set-branches'"
-msgstr ""
+msgstr "'set-branches'"
 
 #. type: Plain text
 #: en/git-remote.txt:128
 #, priority:220
 msgid "Changes the list of branches tracked by the named remote.  This can be used to track a subset of the available remote branches after the initial setup for a remote."
 msgstr ""
+"Modifier la liste des branches suivies par le distant nommé.  Cela peut être "
+"utilisé pour suivre un sous-ensemble des branches distantes disponibles "
+"après la configuration initiale d'un distant."
 
 #. type: Plain text
 #: en/git-remote.txt:131
 #, priority:220
 msgid "The named branches will be interpreted as if specified with the `-t` option on the 'git remote add' command line."
 msgstr ""
+"Les branches nommées seront interprétées comme si elles étaient spécifiées "
+"avec l'option `-t` sur la ligne de commande `git remote add`."
 
 #. type: Plain text
 #: en/git-remote.txt:134
 #, priority:220
 msgid "With `--add`, instead of replacing the list of currently tracked branches, adds to that list."
 msgstr ""
+"Avec `--add`, au lieu de remplacer la liste des branches actuellement "
+"suivies, ajouter à cette liste."
 
 #. type: Labeled list
 #: en/git-remote.txt:135
 #, no-wrap, priority:220
 msgid "'get-url'"
-msgstr ""
+msgstr "'get-url'"
 
 #. type: Plain text
 #: en/git-remote.txt:139
 #, priority:220
 msgid "Retrieves the URLs for a remote. Configurations for `insteadOf` and `pushInsteadOf` are expanded here. By default, only the first URL is listed."
 msgstr ""
+"Récupèrer les URL pour un distant. Les configurations pour `insteadOf` et "
+"`pushInsteadOf` sont développées ici. Par défaut, seule la première URL est "
+"listée."
 
 #. type: Plain text
 #: en/git-remote.txt:141
 #, priority:220
 msgid "With `--push`, push URLs are queried rather than fetch URLs."
 msgstr ""
+"Avec `--push`, on interroge les URL de poussée plutôt que les URL de "
+"récupération."
 
 #. type: Plain text
 #: en/git-remote.txt:143
 #, priority:220
 msgid "With `--all`, all URLs for the remote will be listed."
-msgstr ""
+msgstr "Avec `--all`, toutes les URL du distant seront listées."
 
 #. type: Labeled list
 #: en/git-remote.txt:144
 #, no-wrap, priority:220
 msgid "'set-url'"
-msgstr ""
+msgstr "'set-url'"
 
 #. type: Plain text
 #: en/git-remote.txt:149
 #, priority:220
 msgid "Changes URLs for the remote. Sets first URL for remote <name> that matches regex <oldurl> (first URL if no <oldurl> is given) to <newurl>. If <oldurl> doesn't match any URL, an error occurs and nothing is changed."
 msgstr ""
+"Modifier les URL pour le distant. Fixer la première URL pour le distant "
+"<nom> qui correspond à la regex <ancienne-url> (première URL si aucune "
+"<ancienne-url> n'est donnée) à <nouvelle-url>. Si <ancienne-url> ne "
+"correspond à aucune URL, une erreur se produit et rien n'est modifié."
 
 #. type: Plain text
 #: en/git-remote.txt:151
 #, priority:220
 msgid "With `--push`, push URLs are manipulated instead of fetch URLs."
 msgstr ""
+"Avec `--push`, les URL de poussée sont manipulées au lieu des URL de "
+"récupération."
 
 #. type: Plain text
 #: en/git-remote.txt:153
 #, priority:220
 msgid "With `--add`, instead of changing existing URLs, new URL is added."
 msgstr ""
+"Avec `--add`, au lieu de modifier les URL existantes, on ajoute une nouvelle "
+"URL."
 
 #. type: Plain text
 #: en/git-remote.txt:157
 #, priority:220
 msgid "With `--delete`, instead of changing existing URLs, all URLs matching regex <url> are deleted for remote <name>.  Trying to delete all non-push URLs is an error."
 msgstr ""
+"Avec `--delete`, au lieu de changer les URL existantes, toutes les URL "
+"correspondant à la regex <url> sont supprimées pour le distant <nom>.  "
+"Essayer de supprimer toutes les URL non poussée est une erreur."
 
 #. type: Plain text
 #: en/git-remote.txt:164
 #, priority:220
 msgid "Note that the push URL and the fetch URL, even though they can be set differently, must still refer to the same place.  What you pushed to the push URL should be what you would see if you immediately fetched from the fetch URL.  If you are trying to fetch from one place (e.g. your upstream) and push to another (e.g.  your publishing repository), use two separate remotes."
 msgstr ""
+"Notez que l'URL de poussée et l'URL de récupération, même si elles peuvent "
+"être définies différemment, doivent toujours se référer au même endroit.  Ce "
+"que vous avez poussé à l'URL de poussée doit être ce que vous verriez si "
+"vous alliez récupérer immédiatement à l'URL de récupération.  Si vous "
+"essayez de récupérer depuis un endroit (par exemple votre site en amont) et "
+"de pousser à un autre (par exemple votre dépôt de publication), utilisez "
+"deux distants distincts."
 
 #. type: Labeled list
 #: en/git-remote.txt:166
 #, no-wrap, priority:220
 msgid "'show'"
-msgstr ""
+msgstr "'show'"
 
 #. type: Plain text
 #: en/git-remote.txt:169
@@ -42156,30 +42325,43 @@ msgstr "Fournir quelques informations sur le dépôt <nom>."
 #, priority:220
 msgid "With `-n` option, the remote heads are not queried first with `git ls-remote <name>`; cached information is used instead."
 msgstr ""
+"Avec l'option `-n`, les branches distantes ne sont pas interrogées en "
+"premier avec `git ls-remote <nom>` ; les informations en cache sont "
+"utilisées à la place."
 
 #. type: Labeled list
 #: en/git-remote.txt:173
 #, no-wrap, priority:220
 msgid "'prune'"
-msgstr ""
+msgstr "'prune'"
 
 #. type: Plain text
 #: en/git-remote.txt:180
 #, priority:220
 msgid "Deletes stale references associated with <name>. By default, stale remote-tracking branches under <name> are deleted, but depending on global configuration and the configuration of the remote we might even prune local tags that haven't been pushed there. Equivalent to `git fetch --prune <name>`, except that no new references will be fetched."
 msgstr ""
+"Supprimer les références périmées associées à <nom>. Par défaut, les "
+"branches de suivi à distance périmées sous <nom> sont supprimées, mais en "
+"fonction de la configuration globale et de la configuration du distant, nous "
+"pourrions même élaguer les étiquettes locales qui n'y ont pas été poussées. "
+"Équivalent à `git fetch --prune <nom>`, sauf qu'aucune nouvelle référence ne "
+"sera récupérée."
 
 #. type: Plain text
 #: en/git-remote.txt:183
 #, priority:220
 msgid "See the PRUNING section of linkgit:git-fetch[1] for what it'll prune depending on various configuration."
 msgstr ""
+"Voir la section ÉLAGAGE de linkgit:git-fetch[1] pour savoir ce qui sera "
+"élagué en fonction des différentes configurations."
 
 #. type: Plain text
 #: en/git-remote.txt:186
 #, priority:220
 msgid "With `--dry-run` option, report what branches will be pruned, but do not actually prune them."
 msgstr ""
+"Avec l'option `--dry-run`, signaler les branches qui seront élaguées, mais "
+"ne pas réellement les élaguer."
 
 #. type: Labeled list
 #: en/git-remote.txt:187
@@ -42192,12 +42374,21 @@ msgstr "'update'"
 #, priority:220
 msgid "Fetch updates for remotes or remote groups in the repository as defined by remotes.<group>.  If neither group nor remote is specified on the command line, the configuration parameter remotes.default will be used; if remotes.default is not defined, all remotes which do not have the configuration parameter remote.<name>.skipDefaultUpdate set to true will be updated.  (See linkgit:git-config[1])."
 msgstr ""
+"Récupérer les mises à jour pour les distants ou les groupes de distants dans "
+"le dépôt comme défini par `remotes.<groupe>`.  Si aucun groupe ni aucun "
+"distant n'est spécifié sur la ligne de commande, le paramètre de "
+"configuration `remotes.default` sera utilisé ; si `remotes.default` n'est "
+"pas défini, tous les distants dont le paramètre de configuration "
+"`remote.<nom>.skipDefaultUpdate` n'est pas défini à true seront mis à jour.  "
+"(Voir linkgit:git-config[1])."
 
 #. type: Plain text
 #: en/git-remote.txt:197
 #, priority:220
 msgid "With `--prune` option, run pruning against all the remotes that are updated."
 msgstr ""
+"Avec l'option `--prune`, lancer l'élagage contre tous les distants qui sont "
+"mises à jour."
 
 #. type: Plain text
 #: en/git-remote.txt:205
@@ -42209,7 +42400,7 @@ msgstr "Le paramètrage des informations de connexion est réalisé par les vari
 #: en/git-remote.txt:210
 #, priority:220
 msgid "Add a new remote, fetch, and check out a branch from it"
-msgstr ""
+msgstr "Ajouter un nouveau distant, le récupérer et en extraire une branche"
 
 #. type: delimited block -
 #: en/git-remote.txt:235
@@ -42239,12 +42430,35 @@ msgid ""
 "$ git switch -c staging staging/master\n"
 "...\n"
 msgstr ""
+"$ git remote\n"
+"origin\n"
+"$ git branch -r\n"
+"  origin/HEAD -> origin/master\n"
+"  origin/master\n"
+"$ git remote add staging git://git.kernel.org/.../gregkh/staging.git\n"
+"$ git remote\n"
+"origin\n"
+"staging\n"
+"$ git fetch staging\n"
+"...\n"
+"From git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging\n"
+" * [new branch]      master     -> staging/master\n"
+" * [new branch]      staging-linus -> staging/staging-linus\n"
+" * [new branch]      staging-next -> staging/staging-next\n"
+"$ git branch -r\n"
+"  origin/HEAD -> origin/master\n"
+"  origin/master\n"
+"  staging/master\n"
+"  staging/staging-linus\n"
+"  staging/staging-next\n"
+"$ git switch -c staging staging/master\n"
+"...\n"
 
 #. type: Plain text
 #: en/git-remote.txt:238
 #, priority:220
 msgid "Imitate 'git clone' but track only selected branches"
-msgstr ""
+msgstr "Imiter 'git clone' mais ne suivre que certaines branches sélectionnées"
 
 #. type: delimited block -
 #: en/git-remote.txt:245
@@ -42256,6 +42470,11 @@ msgid ""
 "$ git remote add -f -t master -m master origin git://example.com/git.git/\n"
 "$ git merge origin\n"
 msgstr ""
+"$ mkdir project.git\n"
+"$ cd project.git\n"
+"$ git init\n"
+"$ git remote add -f -t master -m master origin git://example.com/git.git/\n"
+"$ git merge origin\n"
 
 #. type: Plain text
 #: en/git-remote.txt:253
@@ -43285,6 +43504,11 @@ msgstr "Réinitialiser les entrées d'index et mettre à jour les fichiers dans 
 #, priority:280
 msgid "When the working tree is updated, using --recurse-submodules will also recursively reset the working tree of all active submodules according to the commit recorded in the superproject, also setting the submodules' HEAD to be detached at that commit."
 msgstr ""
+"Lorsque l'arbre de travail est mis à jour, l'utilisation de --recurse-"
+"submodules réinitialisera également de manière récursive l'arbre de travail "
+"de tous les sous-modules actifs en fonction du commit enregistré dans le "
+"superprojet, en définissant également la HEAD des sous-modules à détacher à "
+"ce commit."
 
 #. type: Plain text
 #: en/git-reset.txt:100 en/git-restore.txt:30 en/git-revert.txt:33
@@ -49527,6 +49751,7 @@ msgstr "git-submodule(1)"
 #, priority:220
 msgid "git-submodule - Initialize, update or inspect submodules"
 msgstr ""
+"git-submodule - Initialisation, mise à jour ou inspection des sous-modules"
 
 #. type: Plain text
 #: en/git-submodule.txt:24
@@ -49545,12 +49770,25 @@ msgid ""
 "'git submodule' [--quiet] sync [--recursive] [--] [<path>...]\n"
 "'git submodule' [--quiet] absorbgitdirs [--] [<path>...]\n"
 msgstr ""
+"'git submodule' [--quiet] [--cached]\n"
+"'git submodule' [--quiet] add [<options>] [--] <dépôt> [<chemin>]\n"
+"'git submodule' [--quiet] status [--cached] [--recursive] [--] [<chemin>...]"
+"\n"
+"'git submodule' [--quiet] init [--] [<chemin>...]\n"
+"'git submodule' [--quiet] deinit [-f|--force] (--all|[--] <chemin>...)\n"
+"'git submodule' [--quiet] update [<options>] [--] [<chemin>...]\n"
+"'git submodule' [--quiet] set-branch [<options>] [--] <chemin>\n"
+"'git submodule' [--quiet] set-url [--] <chemin> <nouvelle-url>\n"
+"'git submodule' [--quiet] summary [<options>] [--] [<chemin>...]\n"
+"'git submodule' [--quiet] foreach [--recursive] <commande>\n"
+"'git submodule' [--quiet] sync [--recursive] [--] [<chemin>...]\n"
+"'git submodule' [--quiet] absorbgitdirs [--] [<chemin>...]\n"
 
 #. type: Plain text
 #: en/git-submodule.txt:29
 #, priority:220
 msgid "Inspects, updates and manages submodules."
-msgstr ""
+msgstr "Inspecte, met à jour et gère les sous-modules."
 
 #. type: Plain text
 #: en/git-submodule.txt:31
@@ -49563,48 +49801,82 @@ msgstr "Pour plus d'informations sur les sous-modules, voir linkgit:gitsubmodule
 #, priority:220
 msgid "With no arguments, shows the status of existing submodules.  Several subcommands are available to perform operations on the submodules."
 msgstr ""
+"Sans arguments, montrer l'état des sous-modules existants.  Plusieurs sous-"
+"commandes sont disponibles pour effectuer des opérations sur les sous-"
+"modules."
 
 #. type: Labeled list
 #: en/git-submodule.txt:37
 #, no-wrap, priority:220
 msgid "add [-b <branch>] [-f|--force] [--name <name>] [--reference <repository>] [--depth <depth>] [--] <repository> [<path>]"
 msgstr ""
+"add [-b <branche>] [-f|--force] [--name <nom>] [--reference <dépôt>] [--"
+"depth <profondeur>] [--] <dépôt> [<chemin>]"
 
 #. type: Plain text
 #: en/git-submodule.txt:41
 #, priority:220
 msgid "Add the given repository as a submodule at the given path to the changeset to be committed next to the current project: the current project is termed the \"superproject\"."
 msgstr ""
+"Ajouter le dépôt donné comme sous-module au chemin donné vers les "
+"modifications à valider à côté du projet en cours : le projet en cours est "
+"appelé « superprojet »."
 
 #. type: Plain text
 #: en/git-submodule.txt:50
 #, priority:220
 msgid "<repository> is the URL of the new submodule's origin repository.  This may be either an absolute URL, or (if it begins with ./ or ../), the location relative to the superproject's default remote repository (Please note that to specify a repository 'foo.git' which is located right next to a superproject 'bar.git', you'll have to use `../foo.git` instead of `./foo.git` - as one might expect when following the rules for relative URLs - because the evaluation of relative URLs in Git is identical to that of relative directories)."
 msgstr ""
+"<dépôt> est l'URL du dépôt d'origine du nouveau sous-module.  Il peut s'agir "
+"soit d'une URL absolue, soit (si elle commence par ./ ou ../) de "
+"l'emplacement par rapport au dépôt distant par défaut du superprojet ("
+"veuillez noter que pour spécifier un dépôt 'foo.git', voisin d'un "
+"superprojet 'bar.git', vous devrez utiliser `../foo.git` au lieu de `./foo."
+"git` - comme on pourrait s'y attendre en suivant les règles pour les URL "
+"relatives - car l'évaluation des URL relatives dans Git est identique à "
+"celle des répertoires relatifs)."
 
 #. type: Plain text
 #: en/git-submodule.txt:57
 #, priority:220
 msgid "The default remote is the remote of the remote-tracking branch of the current branch. If no such remote-tracking branch exists or the HEAD is detached, \"origin\" is assumed to be the default remote.  If the superproject doesn't have a default remote configured the superproject is its own authoritative upstream and the current working directory is used instead."
 msgstr ""
+"Le distant par défaut est le distant de la branche de suivi à distance de la "
+"branche actuelle. Si une telle branche de suivi à distance n'existe pas ou "
+"si HEAD est détachée, \"origin\" est supposé être le distant par défaut.  Si "
+"le superprojet n'a pas de distant par défaut configuré, le superprojet est "
+"l'amont d'autorité et le répertoire de travail actuel est utilisé à la place."
 
 #. type: Plain text
 #: en/git-submodule.txt:66
 #, priority:220
 msgid "The optional argument <path> is the relative location for the cloned submodule to exist in the superproject. If <path> is not given, the canonical part of the source repository is used (\"repo\" for \"/path/to/repo.git\" and \"foo\" for \"host.xz:foo/.git\"). If <path> exists and is already a valid Git repository, then it is staged for commit without cloning. The <path> is also used as the submodule's logical name in its configuration entries unless `--name` is used to specify a logical name."
 msgstr ""
+"L'argument facultatif <chemin> est l'emplacement relatif du sous-module "
+"cloné dans le superprojet. Si <chemin> n'est pas donné, la partie canonique "
+"du dépôt de sources est utilisée (\"depot\" pour \"/chemin/du/depot.git\" et "
+"\"foo\" pour \"hote.xz:foo/.git\"). Si <chemin> existe et est déjà un dépôt "
+"Git valide, alors il est indexé pour le commit sans clonage. Le <chemin> est "
+"également utilisé comme nom logique du sous-module dans ses entrées de "
+"configuration, sauf si `--name` est utilisé pour spécifier un nom logique."
 
 #. type: Plain text
 #: en/git-submodule.txt:74
 #, priority:220
 msgid "The given URL is recorded into `.gitmodules` for use by subsequent users cloning the superproject. If the URL is given relative to the superproject's repository, the presumption is the superproject and submodule repositories will be kept together in the same relative location, and only the superproject's URL needs to be provided.  git-submodule will correctly locate the submodule using the relative URL in `.gitmodules`."
 msgstr ""
+"L'URL donnée est enregistrée dans  `.gitmodules` pour être utilisée par les "
+"utilisateurs qui clonent le superprojet plus tard. Si l'URL est donnée par "
+"rapport au dépôt du superprojet, on suppose que les dépôts du superprojet et "
+"du sous-module seront conservés ensemble au même emplacement relatif, et que "
+"seule l'URL du superprojet doit être fournie. git-submodule localisera "
+"correctement le sous-module en utilisant l'URL relative dans `.gitmodules`."
 
 #. type: Labeled list
 #: en/git-submodule.txt:75
 #, ignore-ellipsis, no-wrap, priority:220
 msgid "status [--cached] [--recursive] [--] [<path>...]"
-msgstr ""
+msgstr "status [--cached] [--recursive] [--] [<chemin>...]"
 
 #. type: Plain text
 #: en/git-submodule.txt:83
@@ -59240,6 +59512,11 @@ msgstr "Activer/désactiver explicitement l'affichage du progrès. Si aucun des 
 #, priority:240
 msgid "Automatically create a temporary stash entry before the operation begins, and apply it after the operation ends.  This means that you can run the operation on a dirty worktree.  However, use with care: the final stash application after a successful merge might result in non-trivial conflicts."
 msgstr ""
+"Créer automatiquement une entrée temporaire de remisage avant le début de "
+"l'opération et l'appliquer après la fin de l'opération.  Cela signifie que "
+"vous pouvez exécuter l'opération sur un arbre de travail sale.  Cependant, "
+"utilisez-le avec précaution : l'application finale du remisage après une "
+"fusion réussie peut entraîner des conflits non négligeables."
 
 #. type: Labeled list
 #: en/merge-options.txt:171
@@ -59814,6 +60091,9 @@ msgstr "'mboxrd'"
 #, priority:260
 msgid "Like 'email', but lines in the commit message starting with \"From \" (preceded by zero or more \">\") are quoted with \">\" so they aren't confused as starting a new commit."
 msgstr ""
+"Comme 'email', mais les lignes dans le message de validation commençant par "
+"\"From\" (précédé de zéro ou plus \">\") sont citées avec \">\" pour ne pas "
+"être confondues avec le début d'un nouveau commit."
 
 #. type: Plain text
 #: en/pretty-formats.txt:93
@@ -62429,6 +62709,10 @@ msgstr "--show-pulls"
 #, priority:260
 msgid "Include all commits from the default mode, but also any merge commits that are not TREESAME to the first parent but are TREESAME to a later parent. This mode is helpful for showing the merge commits that \"first introduced\" a change to a branch."
 msgstr ""
+"Inclure tous les commits du mode par défaut, mais aussi tous les commits de "
+"fusion qui ne sont pas MEMEARBRE au premier parent mais qui sont MEMEARBRE à "
+"un parent ultérieur. Ce mode est utile pour montrer les commits de fusion "
+"qui ont \"introduit en premier\" une modification dans une branche."
 
 #. type: Labeled list
 #: en/rev-list-options.txt:351
@@ -62845,12 +63129,19 @@ msgstr ""
 #, priority:260
 msgid "Before discussing another option, `--show-pulls`, we need to create a new example history."
 msgstr ""
+"Avant de discuter d'une autre option, `--show-pulls`, nous devons créer un "
+"nouvel exemple d'historique."
 
 #. type: Plain text
 #: en/rev-list-options.txt:589
 #, priority:260
 msgid "A common problem users face when looking at simplified history is that a commit they know changed a file somehow does not appear in the file's simplified history. Let's demonstrate a new example and show how options such as `--full-history` and `--simplify-merges` works in that case:"
 msgstr ""
+"Un problème courant auquel les utilisateurs sont confrontés lorsqu'ils "
+"consultent l'historique simplifié est qu'un commit dont ils savent qu'il a "
+"modifié un fichier n'apparaît pas dans l'historique simplifié du fichier. "
+"Prenons un nouvel exemple et montrons comment des options telles que `--full-"
+"history` et `--simplify-history` fonctionnent dans ce cas :"
 
 #. type: delimited block -
 #: en/rev-list-options.txt:597
@@ -62875,24 +63166,43 @@ msgstr ""
 #, priority:260
 msgid "For this example, suppose `I` created `file.txt` which was modified by `A`, `B`, and `X` in different ways. The single-parent commits `C`, `Z`, and `Y` do not change `file.txt`. The merge commit `M` was created by resolving the merge conflict to include both changes from `A` and `B` and hence is not TREESAME to either. The merge commit `R`, however, was created by ignoring the contents of `file.txt` at `M` and taking only the contents of `file.txt` at `X`. Hence, `R` is TREESAME to `X` but not `M`. Finally, the natural merge resolution to create `N` is to take the contents of `file.txt` at `R`, so `N` is TREESAME to `R` but not `C`.  The merge commits `O` and `P` are TREESAME to their first parents, but not to their second parents, `Z` and `Y` respectively."
 msgstr ""
+"Pour cet exemple, supposons que `I` a créé `fichier.txt` qui a été modifié "
+"par `A`, `B` et `X` de différentes manières. Les commits à parent unique  `C`"
+", `Z` et `Y` ne modifient pas `fichier.txt`. Le commit de fusion `M` a été "
+"créé en résolvant le conflit de fusion pour inclure les deux modifications "
+"de `A` et `B` et n'est donc pas MEMEARBRE pour l'un ou l'autre. Le commit de "
+"fusion `R`, cependant, a été créé en ignorant le contenu du fichier `fichier."
+"txt` à `M` et en prenant seulement le contenu du fichier `fichier.txt` à `X`"
+". Par conséquent, `R` est MEMEARBRE à `X` mais pas à `M`. Enfin, la "
+"résolution de fusion naturelle pour créer `N` est de prendre le contenu du "
+"`fichier.txt` à `R`, donc `N` est MEMEARBRE à `R` mais pas à `C`.  La fusion "
+"engage `O` et `P` sont MEMEARBRE à leurs premiers parents, mais pas à leurs "
+"seconds parents, `Z` et `Y` respectivement."
 
 #. type: Plain text
 #: en/rev-list-options.txt:614
 #, priority:260
 msgid "When using the default mode, `N` and `R` both have a TREESAME parent, so those edges are walked and the others are ignored. The resulting history graph is:"
 msgstr ""
+"En utilisant le mode par défaut, `N` et `R` ont tous deux un parent "
+"MEMEARBRE, donc ces bords sont parcourus et les autres sont ignorés. Le "
+"graphique d'historique qui en résulte est :"
 
 #. type: delimited block -
 #: en/rev-list-options.txt:617
 #, no-wrap, priority:260
 msgid "\tI---X\n"
-msgstr ""
+msgstr "\tI---X\n"
 
 #. type: Plain text
 #: en/rev-list-options.txt:622
 #, priority:260
 msgid "When using `--full-history`, Git walks every edge. This will discover the commits `A` and `B` and the merge `M`, but also will reveal the merge commits `O` and `P`. With parent rewriting, the resulting graph is:"
 msgstr ""
+"Lors de l'utilisation de `--full-history`, Git parcourt toutes les arêtes . "
+"Il découvrira les commits `A` et `B` et la fusion `M`, mais aussi les "
+"commits de fusion `O` et `P`. Avec la réécriture des parents, le graphe "
+"résultant est :"
 
 #. type: delimited block -
 #: en/rev-list-options.txt:630
@@ -62917,12 +63227,26 @@ msgstr ""
 #, priority:260
 msgid "Here, the merge commits `O` and `P` contribute extra noise, as they did not actually contribute a change to `file.txt`. They only merged a topic that was based on an older version of `file.txt`. This is a common issue in repositories using a workflow where many contributors work in parallel and merge their topic branches along a single trunk: manu unrelated merges appear in the `--full-history` results."
 msgstr ""
+"Ici, les commits de fusion `O` et `P` apportent un bruit supplémentaire, car "
+"ils n'ont pas réellement apporté de modification à `fichier.txt`. Ils ont "
+"seulement fusionné une branche thématique qui était basée sur une ancienne "
+"version de `fichier.txt`. C'est un problème courant dans les dépôts "
+"utilisant une organisation où de nombreux contributeurs travaillent en "
+"parallèle et fusionnent leurs branches thématiques le long d'un seul tronc : "
+"de nombreuses fusions sans rapport apparaissent dans les résultats de "
+"`--full-history`."
 
 #. type: Plain text
 #: en/rev-list-options.txt:645
 #, priority:260
 msgid "When using the `--simplify-merges` option, the commits `O` and `P` disappear from the results. This is because the rewritten second parents of `O` and `P` are reachable from their first parents. Those edges are removed and then the commits look like single-parent commits that are TREESAME to their parent. This also happens to the commit `N`, resulting in a history view as follows:"
 msgstr ""
+"Lorsque l'on utilise l'option `--simplify-merges`, les valeurs `O` et `P` "
+"disparaissent des résultats. Cela est dû au fait que les seconds parents "
+"réécrits de `O` et `P` sont accessibles depuis leurs premiers parents. Ces "
+"arêtes sont supprimées et les commits ressemblent alors à des commits "
+"monoparentaux qui sont MEMEARBRE pour leur parent. C'est également le cas "
+"pour le commit `N`, ce qui donne l'historique suivant :"
 
 #. type: delimited block -
 #: en/rev-list-options.txt:653
@@ -62947,42 +63271,73 @@ msgstr ""
 #, priority:260
 msgid "In this view, we see all of the important single-parent changes from `A`, `B`, and `X`. We also see the carefully-resolved merge `M` and the not-so-carefully-resolved merge `R`. This is usually enough information to determine why the commits `A` and `B` \"disappeared\" from history in the default view. However, there are a few issues with this approach."
 msgstr ""
+"Dans cette optique, nous voyons toutes les modifications monoparentales de "
+"`A`, `B` et `X`. Nous voyons également la fusion `M`, soigneusement résolue, "
+"et la fusion `R`, pas si soigneusement résolue. Ces informations sont "
+"généralement suffisantes pour déterminer pourquoi les commits `A` et `B` ont "
+"« disparu » de l'historique dans la vue par défaut. Cependant, cette "
+"approche pose quelques problèmes."
 
 #. type: Plain text
 #: en/rev-list-options.txt:665
 #, priority:260
 msgid "The first issue is performance. Unlike any previous option, the `--simplify-merges` option requires walking the entire commit history before returning a single result. This can make the option difficult to use for very large repositories."
 msgstr ""
+"La première question est celle de la performance. Contrairement à toutes les "
+"options précédentes, l'option `--simplify-merges` nécessite de parcourir "
+"l'historique complet des commits avant de renvoyer un seul résultat. Cela "
+"peut rendre l'option difficile à utiliser pour les très grands dépôts."
 
 #. type: Plain text
 #: en/rev-list-options.txt:674
 #, priority:260
 msgid "The second issue is one of auditing. When many contributors are working on the same repository, it is important which merge commits introduced a change into an important branch. The problematic merge `R` above is not likely to be the merge commit that was used to merge into an important branch. Instead, the merge `N` was used to merge `R` and `X` into the important branch. This commit may have information about why the change `X` came to override the changes from `A` and `B` in its commit message."
 msgstr ""
+"La deuxième question est celle de l'audit. Lorsque plusieurs contributeurs "
+"travaillent sur le même dépôt, il est important de savoir quels commits de "
+"fusion ont introduit un changement dans une branche importante. La fusion "
+"problématique `R` ci-dessus n'est probablement pas le commit de fusion qui a "
+"été utilisé pour fusionner dans une branche importante. Au lieu de cela, la "
+"fusion `N` a été utilisée pour fusionner `R` et `X` dans la branche "
+"importante. Ce commit peut avoir des informations sur la raison pour "
+"laquelle la modifcation `X` est venu remplacer les changements de `A` et `B` "
+"dans son message de commit."
 
 #. type: Plain text
 #: en/rev-list-options.txt:681
 #, priority:260
 msgid "The `--show-pulls` option helps with both of these issues by adding more merge commits to the history results. If a merge is not TREESAME to its first parent but is TREESAME to a later parent, then that merge is treated as if it \"pulled\" the change from another branch. When using `--show-pulls` on this example (and no other options) the resulting graph is:"
 msgstr ""
+"L'option `--show-pulls` aide à résoudre ces deux problèmes en ajoutant plus "
+"commits de fusion aux résultats de l'historique. Si une fusion n'est pas "
+"MEMEARBRE vers son premier parent mais est MEMEARBRE vers un parent "
+"ultérieur, alors cette fusion est traitée comme si elle avait \"tiré\" le "
+"changement d'une autre branche. Lorsque l'on utilise `--show-pulls` sur cet "
+"exemple (et aucune autre option), le graphe résultant est :"
 
 #. type: delimited block -
 #: en/rev-list-options.txt:684
 #, no-wrap, priority:260
 msgid "\tI---X---R---N\n"
-msgstr ""
+msgstr "\tI---X---R---N\n"
 
 #. type: Plain text
 #: en/rev-list-options.txt:690
 #, priority:260
 msgid "Here, the merge commits `R` and `N` are included because they pulled the commits `X` and `R` into the base branch, respectively. These merges are the reason the commits `A` and `B` do not appear in the default history."
 msgstr ""
+"Ici, les commits de fusion `R` et `N` sont inclus, car ils ont tiré les "
+"commits `X` et `R` dans la branche de base, respectivement. Ces fusions sont "
+"les raisons pour lesquelles les commits `A` et `B` n'apparaissent pas dans "
+"l'historique par défaut."
 
 #. type: Plain text
 #: en/rev-list-options.txt:693
 #, priority:260
 msgid "When `--show-pulls` is paired with `--simplify-merges`, the graph includes all of the necessary information:"
 msgstr ""
+"Lorsque l'option `--show-pulls` est associée à l'option `--simplify-merges`, "
+"le graphe comprend toutes les informations nécessaires :"
 
 #. type: delimited block -
 #: en/rev-list-options.txt:701
@@ -63007,6 +63362,10 @@ msgstr ""
 #, priority:260
 msgid "Notice that since `M` is reachable from `R`, the edge from `N` to `M` was simplified away. However, `N` still appears in the history as an important commit because it \"pulled\" the change `R` into the main branch."
 msgstr ""
+"Remarquez que puisque `M` est accessible à partir de `R`, l'arête entre `N` "
+"et `M` a été simplifiée. Cependant, `N` apparaît toujours dans l'historique "
+"comme un commit important parce qu'il a « tiré » le changement `R` dans la "
+"branche principale."
 
 #. type: Plain text
 #: en/rev-list-options.txt:715
