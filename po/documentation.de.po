@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-05-16 17:29+0200\n"
-"PO-Revision-Date: 2020-05-14 20:41+0000\n"
+"PO-Revision-Date: 2020-05-17 07:57+0000\n"
 "Last-Translator: Dieter Ziller <max123kl@ziller.de>\n"
 "Language-Team: Matthias Aßhauer <mha1993@live.de>\n"
 "Language: de\n"
@@ -2801,10 +2801,13 @@ msgstr "ISO 8601"
 
 #. type: Plain text
 #: en/date-formats.txt:26
-#, fuzzy, priority:280
-#| msgid "Time and date specified by the ISO 8601 standard, for example `2005-04-07T22:13:13`. The parser accepts a space instead of the `T` character as well."
+#, priority:280
 msgid "Time and date specified by the ISO 8601 standard, for example `2005-04-07T22:13:13`. The parser accepts a space instead of the `T` character as well. Fractional parts of a second will be ignored, for example `2005-04-07T22:13:13.019` will be treated as `2005-04-07T22:13:13`"
-msgstr "Datum und Uhrzeit, wie sie im ISO-Standard 8601 definiert sind. Zum Beispiel `2005-04-07T22:13:13`. Der Parser akzeptiert auch ein Leerzeichen statt dem `T`."
+msgstr ""
+"Datum und Uhrzeit, wie sie im ISO-Standard 8601 definiert sind. Zum Beispiel "
+"`2005-04-07T22:13:13`. Der Parser akzeptiert auch ein Leerzeichen statt dem "
+"`T`. Sekundenbruchteile werden ignoriert, zum Beispiel wird "
+"`2005-04-07T22:13:13.019` als `2005-04-07T22:13:13` behandelt."
 
 #. type: Plain text
 #: en/date-formats.txt:29
@@ -4839,6 +4842,9 @@ msgstr "-F <file>"
 #, priority:280
 msgid "Control the order in which files appear in the output.  This overrides the `diff.orderFile` configuration variable (see linkgit:git-config[1]).  To cancel `diff.orderFile`, use `-O/dev/null`."
 msgstr ""
+"Steuert die Reihenfolge der Dateien in der Ausgabe. Dies setzt die "
+"Konfigurations-Variable `diff.orderFile` außer Kraft (siehe linkgit:git-"
+"config[1]).  Um `diff.orderFile` zu stornieren, benutzen Sie `-O/dev/null`."
 
 #. type: Plain text
 #: en/diff-options.txt:622
@@ -12449,10 +12455,10 @@ msgstr "$ git checkout mytopic\n"
 msgid "However, your \"wrong\" branch and correct `mytopic` branch may differ in files that you have modified locally, in which case the above checkout would fail like this:"
 msgstr "Der \"falsche\" Branch und der korrekte Branch \"mytopic\" können sich in lokal geänderten Dateien unterscheiden, was daz führt, dass der obige Checkout folgendermaßen fehlschlägt:"
 
-#. type: delimited block -
 # git-checkout.txt is not up to date. The fuzzy msgid is the message prior to 142183d0 2010-07-09 "checkout: accord documentation to what git does", the msgid is the message in the documentation afterwards.
 # At that time there weren't even po files in the git tree. This message does not exist since 23cbf11b 2010-08-11 "merge-recursive: porcelain messages for checkout".
 # The current message is "Your local changes to the following files would be overwritten by merge:\n%%s" as of 2e3926b9 2016-05-13 "i18n: unpack-trees: avoid substituting only a verb in sentences"
+#. type: delimited block -
 #: en/git-checkout.txt:561
 #, fuzzy, no-wrap, priority:240
 #| msgid ""
@@ -13615,8 +13621,10 @@ msgstr ""
 "\t  [-o <Name>] [-b <Name>] [-u <Upload-Pack>] [--reference <Repository>]\n"
 "\t  [--dissociate] [--separate-git-dir <Git-Verzeichnis>]\n"
 "\t  [--depth <depth>] [--[no-]single-branch] [--no-tags]\n"
-"\t  [--recurse-submodules[=<Pfad-Spezifikation>]] [--[no-]shallow-submodules]\n"
-"\t  [--[no-]remote-submodules] [--jobs <n>] [--sparse] [--] <Repository>\n"
+"\t  [--recurse-submodules[=<Pfad-Spezifikation>]] [--[no-]shallow-submodules]"
+"\n"
+"\t  [--[no-]remote-submodules] [--jobs <n>] [--sparse]\n"
+"\t  [--filter=<filter>] [--] <Repository>\n"
 "\t  [<Directory>]\n"
 
 #. type: Plain text
@@ -13780,10 +13788,17 @@ msgstr "--bare"
 
 #. type: Plain text
 #: en/git-clone.txt:159
-#, fuzzy, priority:300
-#| msgid "Make a 'bare' GIT repository.  That is, instead of creating `<directory>` and placing the administrative files in `<directory>/.git`, make the `<directory>` itself the `$GIT_DIR`. This obviously implies the `-n` because there is nowhere to check out the working tree.  Also the branch heads at the remote are copied directly to corresponding local branch heads, without mapping them to `refs/remotes/origin/`.  When this option is used, neither remote-tracking branches nor the related configuration variables are created."
+#, priority:300
 msgid "Make a 'bare' Git repository.  That is, instead of creating `<directory>` and placing the administrative files in `<directory>/.git`, make the `<directory>` itself the `$GIT_DIR`. This obviously implies the `--no-checkout` because there is nowhere to check out the working tree.  Also the branch heads at the remote are copied directly to corresponding local branch heads, without mapping them to `refs/remotes/origin/`.  When this option is used, neither remote-tracking branches nor the related configuration variables are created."
-msgstr "Erzeuge ein 'reines' GIT repository, d.h. anstatt ein '<verzeichnis>' zu erzeugen und die administrativen Dateien unter '<verzeichnis>/.git' abzulegen werden diese direkt unter '<verzeichnis>' als '$GIT_DIR' abgelegt.  Dies impliziert die '-n' Option, da ein Abrufen (checkout)  des Arbeitsbereichs offensichtlich nicht möglich ist.  Zusätzlcih werden die Entwicklungszweige des fernen Projektarchivs direkt zu den entsprechenden lokalen Entwicklungszweigen kopiert, ohne Zuordnungen über 'refs/remotes/origin/' anzulegen. Wird diese Option angegeben, so werden weder remote-tracking Entwicklungszweige noch die dazugehörigen Konfigurationsvariablen angelegt.  Also the branch heads at the remote are copied directly to corresponding local branch heads, without mapping them to `refs/remotes/origin/`.  When this option is used, neither remote-tracking branches nor the related configuration variables are created."
+msgstr ""
+"Erstellt ein `bare` Git-Repository.  D.h. anstatt ein `<Directory>` zu "
+"erstellen und die Verwaltungsdateien in `<Directory>/.git` abzulegen, wird "
+"aus dem `<Directory>` selbst das `$GIT_DIR`. Dies impliziert offensichtlich "
+"`--no-checkout`, weil es nirgendwo eine Möglichkeit gibt, das Arbeitsbereich "
+"auszuchecken.  Auch die Branch-Heads auf der Remote-Seite werden direkt auf "
+"die entsprechenden lokalen Branch-Heads kopiert, ohne sie auf `refs/remotes/"
+"origin/` abzubilden.  Wenn diese Option verwendet wird, werden weder Remote-"
+"Tracking-Branches noch die zugehörigen Konfigurationsvariablen erstellt."
 
 #. type: Labeled list
 #: en/git-clone.txt:160 en/git-show-branch.txt:67 en/rev-list-options.txt:358 en/rev-list-options.txt:491
@@ -13799,10 +13814,9 @@ msgstr "Initialisiert die Sparse-Checkout-Datei so, dass das Arbeitsverzeichnis 
 
 #. type: Labeled list
 #: en/git-clone.txt:166 en/git-pack-objects.txt:260 en/rev-list-options.txt:867
-#, fuzzy, no-wrap, priority:300
-#| msgid "--file=<file>"
+#, no-wrap, priority:300
 msgid "--filter=<filter-spec>"
-msgstr "--file=<file>"
+msgstr "--filter=<Filter-Spezifikation>"
 
 #. type: Plain text
 #: en/git-clone.txt:175
@@ -29539,18 +29553,14 @@ msgstr "git-init-db – Erstellt ein leeres Git-Repository oder initialisiert ei
 
 #. type: Plain text
 #: en/git-init.txt:15
-#, fuzzy, no-wrap, priority:300
-#| msgid ""
-#| "'git init' [-q | --quiet] [--bare] [--template=<template_directory>]\n"
-#| "\t  [--separate-git-dir <git dir>]\n"
-#| "\t  [--shared[=<permissions>]] [directory]\n"
+#, no-wrap, priority:300
 msgid ""
 "'git init' [-q | --quiet] [--bare] [--template=<template_directory>]\n"
 "\t  [--separate-git-dir <git dir>] [--object-format=<format]\n"
 "\t  [--shared[=<permissions>]] [directory]\n"
 msgstr ""
 "'git init' [-q | --quiet] [--bare] [--template=<Template-Verzeichnis>]\n"
-"\t  [--separate-git-dir <Git-Verzeichnis>]\n"
+"\t  [--separate-git-dir <Git-Verzeichnis>] [--object-format=<Format>]\n"
 "\t  [--shared[=<Berechtigungen>]] [Verzeichnis]\n"
 
 #. type: Plain text
@@ -29567,9 +29577,12 @@ msgstr "Wenn die Umgebungsvariable `$GIT_DIR` gesetzt ist, dann gibt sie einen P
 
 #. type: Plain text
 #: en/git-init.txt:32
-#, fuzzy, priority:300
+#, priority:300
 msgid "If the object storage directory is specified via the `$GIT_OBJECT_DIRECTORY` environment variable then the sha1 directories are created underneath - otherwise the default `$GIT_DIR/objects` directory is used."
-msgstr "Wenn das Objektverzeichnis über diese Umgebungsvariable angegeben wird werden die SHA1-Verzeichnisse darunter angelegt, ansonsten wird standardmäßig Das Verzeichnis`$GIT_DIR/objects` verwendet."
+msgstr ""
+"Wenn das Objektverzeichnis über die Umgebungsvariable `$GIT_OBJECT_DIRECTORY`"
+" angegeben wird, werden die SHA1-Verzeichnisse darunter angelegt – "
+"andernfalls wird das Standardverzeichnis `$GIT_DIR/objects` verwendet."
 
 #. type: Plain text
 #: en/git-init.txt:37
@@ -29591,16 +29604,18 @@ msgstr "Erstellt ein Bare-Repository. Wenn die Umgebungsvariable `GIT_DIR` nicht
 
 #. type: Labeled list
 #: en/git-init.txt:51
-#, fuzzy, no-wrap, priority:300
-#| msgid "--format=<format>"
+#, no-wrap, priority:300
 msgid "--object-format=<format>"
-msgstr "--format=<Format>"
+msgstr "--object-format=<Format>"
 
 #. type: Plain text
 #: en/git-init.txt:55
 #, priority:300
 msgid "Specify the given object format (hash algorithm) for the repository.  The valid values are 'sha1' and (if enabled) 'sha256'.  'sha1' is the default."
 msgstr ""
+"Spezifiziert das angegebene Objektformat (Hash-Algorithmus) für das "
+"Repository.  Die gültigen Werte sind 'sha1' und, falls aktiviert, 'sha256'.  "
+"sha1\" ist die Voreinstellung."
 
 #. type: Plain text
 #: en/git-init.txt:60
@@ -53654,8 +53669,8 @@ msgstr ""
 msgid "`GIT_COMMON_DIR`"
 msgstr "`GIT_COMMON_DIR`"
 
-#. type: Plain text
 # noqa
+#. type: Plain text
 #: en/git.txt:495
 #, ignore-ellipsis, priority:100
 msgid "If this variable is set to a path, non-worktree files that are normally in $GIT_DIR will be taken from this path instead. Worktree-specific files such as HEAD or index are taken from $GIT_DIR. See linkgit:gitrepository-layout[5] and linkgit:git-worktree[1] for details. This variable has lower precedence than other path variables such as GIT_INDEX_FILE, GIT_OBJECT_DIRECTORY..."
