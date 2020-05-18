@@ -6,14 +6,15 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-05-16 17:29+0200\n"
-"PO-Revision-Date: 2020-05-16 10:53+0000\n"
+"PO-Revision-Date: 2020-05-24 21:41+0000\n"
 "Last-Translator: Golubev Alexander <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.1-dev\n"
 
 #. type: Labeled list
@@ -13871,7 +13872,7 @@ msgstr ""
 #: en/git-clone.txt:287 en/git-init.txt:61
 #, no-wrap, priority:300
 msgid "--separate-git-dir=<git dir>"
-msgstr ""
+msgstr "--separate-git-dir=<каталог-git>"
 
 #. type: Plain text
 #: en/git-clone.txt:293
@@ -29146,18 +29147,14 @@ msgstr "git-init - Создание пустого репозитория Git и
 
 #. type: Plain text
 #: en/git-init.txt:15
-#, fuzzy, no-wrap, priority:300
-#| msgid ""
-#| "'git init' [-q | --quiet] [--bare] [--template=<template_directory>]\n"
-#| "\t  [--separate-git-dir <git dir>]\n"
-#| "\t  [--shared[=<permissions>]] [directory]\n"
+#, no-wrap, priority:300
 msgid ""
 "'git init' [-q | --quiet] [--bare] [--template=<template_directory>]\n"
 "\t  [--separate-git-dir <git dir>] [--object-format=<format]\n"
 "\t  [--shared[=<permissions>]] [directory]\n"
 msgstr ""
 "'git init' [-q | --quiet] [--bare] [--template=<каталог_шаблонов>]\n"
-"\t  [--separate-git-dir <каталог_git>]\n"
+"\t  [--separate-git-dir <каталог_git>] [--object-format=<формат>]\n"
 "\t  [--shared[=<права_доступа>]] [каталог]\n"
 
 #. type: Plain text
@@ -29165,54 +29162,75 @@ msgstr ""
 #, priority:300
 msgid "This command creates an empty Git repository - basically a `.git` directory with subdirectories for `objects`, `refs/heads`, `refs/tags`, and template files.  An initial `HEAD` file that references the HEAD of the master branch is also created."
 msgstr ""
+"Эта команда создаёт пустой репозиторий Git, по существу, каталог `.git` с "
+"подкаталогами `objects`, `refs/heads`, `refs/tags`, и файлами шаблонов. "
+"Также создаётся начальный файл `HEAD`, который ссылается на HEAD ветки "
+"master."
 
 #. type: Plain text
 #: en/git-init.txt:27
 #, priority:300
 msgid "If the `$GIT_DIR` environment variable is set then it specifies a path to use instead of `./.git` for the base of the repository."
 msgstr ""
+"Если переменная среды `$GIT_DIR` установлена, то она задаёт путь, который "
+"будет использоваться вместо `./.git` в качестве основы для создания "
+"репозитория."
 
 #. type: Plain text
 #: en/git-init.txt:32
 #, priority:300
 msgid "If the object storage directory is specified via the `$GIT_OBJECT_DIRECTORY` environment variable then the sha1 directories are created underneath - otherwise the default `$GIT_DIR/objects` directory is used."
 msgstr ""
+"Если каталог хранения объектов задан с помощью переменной среды "
+"`$GIT_OBJECT_DIRECTORY`, то каталоги с хеш-кодом sha1 будут создаваться в "
+"нём. В противном случае будет использоваться каталог по умолчанию, `$GIT_DIR/"
+"objects`."
 
 #. type: Plain text
 #: en/git-init.txt:37
 #, priority:300
 msgid "Running 'git init' in an existing repository is safe. It will not overwrite things that are already there. The primary reason for rerunning 'git init' is to pick up newly added templates (or to move the repository to another place if --separate-git-dir is given)."
 msgstr ""
+"Запускать 'git init' внутри существующего репозитория безопасно. Эта команда "
+"не перезапишет то, что там уже есть. Основная причина повторно запускать "
+"'git init' состоит в том, чтобы подхватились только что добавленные шаблоны ("
+"или чтобы переместить репозиторий в другое место, если задан параметр "
+"`--separate-git-dir`)."
 
 #. type: Plain text
 #: en/git-init.txt:45
 #, priority:300
 msgid "Only print error and warning messages; all other output will be suppressed."
 msgstr ""
+"Выводить только ошибки и предупреждения; весь остальной вывод будет скрыт."
 
 #. type: Plain text
 #: en/git-init.txt:50
 #, priority:300
 msgid "Create a bare repository. If `GIT_DIR` environment is not set, it is set to the current working directory."
 msgstr ""
+"Создать голый репозиторий. Если переменная среды `GIT_DIR` не задана, то ей "
+"будет присвоен текущий рабочий каталог."
 
 #. type: Labeled list
 #: en/git-init.txt:51
-#, fuzzy, no-wrap, priority:300
+#, no-wrap, priority:300
 msgid "--object-format=<format>"
-msgstr "--patch-format"
+msgstr "--patch-format=<формат>"
 
 #. type: Plain text
 #: en/git-init.txt:55
 #, priority:300
 msgid "Specify the given object format (hash algorithm) for the repository.  The valid values are 'sha1' and (if enabled) 'sha256'.  'sha1' is the default."
 msgstr ""
+"Задать формат объектов (алгоритм хеширования) репозитория. Допустимые "
+"значения: 'sha1' и (если включён) 'sha256'. По умолчанию: 'sha1'."
 
 #. type: Plain text
 #: en/git-init.txt:60
 #, priority:300
 msgid "Specify the directory from which templates will be used.  (See the \"TEMPLATE DIRECTORY\" section below.)"
-msgstr ""
+msgstr "Указать каталог с шаблонами. (См. раздел «КАТАЛОГ ШАБЛОНОВ» ниже)"
 
 #. type: Plain text
 #: en/git-init.txt:67
@@ -29308,49 +29326,56 @@ msgstr ""
 #: en/git-init.txt:118
 #, no-wrap, priority:300
 msgid "TEMPLATE DIRECTORY"
-msgstr ""
+msgstr "КАТАЛОГ ШАБЛОНОВ"
 
 #. type: Plain text
 #: en/git-init.txt:122
 #, priority:300
 msgid "Files and directories in the template directory whose name do not start with a dot will be copied to the `$GIT_DIR` after it is created."
 msgstr ""
+"Файлы и каталоги, из каталога шаблонов, чьи имена начинаются не с точки "
+"будут скопированы в `$GIT_DIR` после того, как он будет создан."
 
 #. type: Plain text
 #: en/git-init.txt:124
 #, priority:300
 msgid "The template directory will be one of the following (in order):"
 msgstr ""
+"В качестве каталога шаблонов будет использоваться один из следующих (в "
+"порядке перечисления):"
 
 #. type: Plain text
 #: en/git-init.txt:126
 #, priority:300
 msgid "the argument given with the `--template` option;"
-msgstr ""
+msgstr "аргумент, указанный в параметре `--template`;"
 
 #. type: Plain text
 #: en/git-init.txt:128
 #, priority:300
 msgid "the contents of the `$GIT_TEMPLATE_DIR` environment variable;"
-msgstr ""
+msgstr "значение переменной среды `$GIT_TEMPLATE_DIR`;"
 
 #. type: Plain text
 #: en/git-init.txt:130
 #, priority:300
 msgid "the `init.templateDir` configuration variable; or"
-msgstr ""
+msgstr "переменная настройки `init.templateDir`; или"
 
 #. type: Plain text
 #: en/git-init.txt:132
 #, priority:300
 msgid "the default template directory: `/usr/share/git-core/templates`."
-msgstr ""
+msgstr "каталог шаблонов по умолчанию: `/usr/share/git-core/templates`."
 
 #. type: Plain text
 #: en/git-init.txt:135
 #, priority:300
 msgid "The default template directory includes some directory structure, suggested \"exclude patterns\" (see linkgit:gitignore[5]), and sample hook files."
 msgstr ""
+"Каталог шаблонов по умолчанию уже содержит некоторую структуру каталогов: "
+"рекомендованные «шаблоны исключений» (exlude patterns, см. "
+"linkgit:gitignore[5]) и примеры файлов-перехватчиков (hook)."
 
 #. type: Plain text
 #: en/git-init.txt:138
@@ -33185,7 +33210,8 @@ msgstr ""
 #: en/git-mv.txt:17
 #, priority:280
 msgid "Move or rename a file, directory or symlink."
-msgstr "Перемещение или переименование файла, каталога каталога или символической ссылки."
+msgstr ""
+"Перемещение или переименование файла, каталога или символической ссылки."
 
 #. type: Plain text
 #: en/git-mv.txt:20
@@ -36156,7 +36182,11 @@ msgstr "'. \"$(git --exec-path)/git-parse-remote\"'\n"
 #: en/git-parse-remote.txt:20
 #, priority:100
 msgid "This script is included in various scripts to supply routines to parse files under $GIT_DIR/remotes/ and $GIT_DIR/branches/ and configuration variables that are related to fetching, pulling and pushing."
-msgstr "Этот сценарий добавлен в коллекцию сценариев, дабы предоставить подпрограммы для разбора файлов, хранящихся в каталогах $GIT_DIR/remotes/ и $GIT_DIR/branches/, а также некоторых настроечных переменных связанных с извлечением (fetch), получением (pull) и отправкой (push) изменений."
+msgstr ""
+"Этот сценарий добавлен в коллекцию сценариев, дабы предоставить подпрограммы "
+"для разбора файлов, хранящихся в каталогах $GIT_DIR/remotes/ и $GIT_DIR/"
+"branches/, а также некоторых настроечных переменных, связанных с извлечением "
+"(fetch), получением (pull) и отправкой (push) изменений."
 
 #. type: Title =
 #: en/git-patch-id.txt:2
