@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-05-16 17:29+0200\n"
 "PO-Revision-Date: 2020-05-24 21:41+0000\n"
-"Last-Translator: 冉 <ranto2012@163.com>\n"
+"Last-Translator: jiengran <jiengran@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: zh_HANS-CN\n"
 "MIME-Version: 1.0\n"
@@ -49410,9 +49410,9 @@ msgstr "git-svn(1)"
 
 #. type: Plain text
 #: en/git-svn.txt:7
-#, fuzzy, priority:100
+#, priority:100
 msgid "git-svn - Bidirectional operation between a Subversion repository and Git"
-msgstr "Subersion  Git "
+msgstr "git-svn - Subversion 仓库和 Git 之间的双向操作"
 
 #. type: Plain text
 #: en/git-svn.txt:12
@@ -49425,18 +49425,23 @@ msgstr ""
 #, priority:100
 msgid "'git svn' is a simple conduit for changesets between Subversion and Git.  It provides a bidirectional flow of changes between a Subversion and a Git repository."
 msgstr ""
+"'git svn' 是一个 Subversion 和 Git 之间变更集的简单通道。  它用于 Subversion 和 Git 仓库之间变更的双向流动。"
 
 #. type: Plain text
 #: en/git-svn.txt:23
 #, priority:100
 msgid "'git svn' can track a standard Subversion repository, following the common \"trunk/branches/tags\" layout, with the --stdlayout option.  It can also follow branches and tags in any layout with the -T/-t/-b options (see options to 'init' below, and also the 'clone' command)."
 msgstr ""
+"'git svn' 可以跟踪标准 Subversion 仓库，遵循常见的“主干/分支/标记”布局，使用 --stdlayout 选项。 它还可以使用 "
+"-T/-t/-b 选项在任何布局中跟踪分支和标记（请参阅下面的 'init' 选项以及 'clone' 命令）。"
 
 #. type: Plain text
 #: en/git-svn.txt:27
 #, priority:100
 msgid "Once tracking a Subversion repository (with any of the above methods), the Git repository can be updated from Subversion by the 'fetch' command and Subversion updated from Git by the 'dcommit' command."
 msgstr ""
+"跟踪 Subversion 仓库（使用上述任何方法）后，可以通过 'fetch' 命令从 Subversion 更新 Git 仓库，并通过 "
+"'dcommit' 命令从 Git 更新 Subversion 仓库。"
 
 #. type: Labeled list
 #: en/git-svn.txt:31
@@ -49449,42 +49454,44 @@ msgstr "'init'"
 #, priority:100
 msgid "Initializes an empty Git repository with additional metadata directories for 'git svn'.  The Subversion URL may be specified as a command-line argument, or as full URL arguments to -T/-t/-b.  Optionally, the target directory to operate on can be specified as a second argument.  Normally this command initializes the current directory."
 msgstr ""
+"为 'git svn' 初始化一个空的 Git 仓库，并添加元数据目录。  Subversion 的 URL 可以作为命令行参数，也可以作为 -T/-t/"
+"-b 的完整 URL 参数。  或者，可以指定要操作的目标目录作为第二参数。  通常情况下这个命令会在当前目录进行初始化。"
 
 #. type: Labeled list
 #: en/git-svn.txt:40
 #, no-wrap, priority:100
 msgid "-T<trunk_subdir>"
-msgstr ""
+msgstr "-T<trunk_subdir>"
 
 #. type: Labeled list
 #: en/git-svn.txt:41
 #, no-wrap, priority:100
 msgid "--trunk=<trunk_subdir>"
-msgstr ""
+msgstr "--trunk=<trunk_subdir>"
 
 #. type: Labeled list
 #: en/git-svn.txt:42
 #, no-wrap, priority:100
 msgid "-t<tags_subdir>"
-msgstr ""
+msgstr "-t<tags_subdir>"
 
 #. type: Labeled list
 #: en/git-svn.txt:43
 #, no-wrap, priority:100
 msgid "--tags=<tags_subdir>"
-msgstr ""
+msgstr "--tags=<tags_subdir>"
 
 #. type: Labeled list
 #: en/git-svn.txt:44
 #, no-wrap, priority:100
 msgid "-b<branches_subdir>"
-msgstr ""
+msgstr "-b<branches_subdir>"
 
 #. type: Labeled list
 #: en/git-svn.txt:45
 #, no-wrap, priority:100
 msgid "--branches=<branches_subdir>"
-msgstr ""
+msgstr "--branches=<branches_subdir>"
 
 #. type: Labeled list
 #: en/git-svn.txt:47
@@ -49497,6 +49504,10 @@ msgstr "--stdlayout"
 #, priority:100
 msgid "These are optional command-line options for init.  Each of these flags can point to a relative repository path (--tags=project/tags) or a full url (--tags=https://foo.org/project/tags).  You can specify more than one --tags and/or --branches options, in case your Subversion repository places tags or branches under multiple paths.  The option --stdlayout is a shorthand way of setting trunk,tags,branches as the relative paths, which is the Subversion default. If any of the other options are given as well, they take precedence."
 msgstr ""
+"这些是用于 init 的可选命令行选项。  每个标志都可以指向相对的版本库路径 (-tags=project/tags) 或完整的 url "
+"(-tags=https://foo.org/project/tags)。  你可以指定多个 --tags 和/或 --branches 选项，以防你的 "
+"Subversion 仓库将标记或分支放在多个路径下。  选项 --stdlayout 是将 主干、标记、分支设置为相对路径的一种快捷方式，这是 "
+"Subversion 的默认设置。如果使用了其他的选项，它们将被优先考虑。"
 
 #. type: Labeled list
 #: en/git-svn.txt:58
@@ -49509,6 +49520,8 @@ msgstr "--no-metadata"
 #, priority:100
 msgid "Set the 'noMetadata' option in the [svn-remote] config.  This option is not recommended, please read the 'svn.noMetadata' section of this manpage before using this option."
 msgstr ""
+"设置 [svn-remote] 配置的 'noMetadata' 选项。  不建议使用该选项，请在使用该选项前阅读本手册中 "
+"'svn.noMetadata' 部分。"
 
 #. type: Labeled list
 #: en/git-svn.txt:62
@@ -49520,7 +49533,7 @@ msgstr "--use-svm-props"
 #: en/git-svn.txt:64
 #, priority:100
 msgid "Set the 'useSvmProps' option in the [svn-remote] config."
-msgstr ""
+msgstr "设置[svn-remote] 配置的 'useSvmProps' 选项。"
 
 #. type: Labeled list
 #: en/git-svn.txt:64
@@ -49532,43 +49545,46 @@ msgstr "--use-svnsync-props"
 #: en/git-svn.txt:66
 #, priority:100
 msgid "Set the 'useSvnsyncProps' option in the [svn-remote] config."
-msgstr ""
+msgstr "设置 [svn-remote] 配置的 'useSvnsyncProps' 选项。"
 
 #. type: Labeled list
 #: en/git-svn.txt:66
 #, no-wrap, priority:100
 msgid "--rewrite-root=<URL>"
-msgstr ""
+msgstr "--rewrite-root=<URL>"
 
 #. type: Plain text
 #: en/git-svn.txt:68
 #, priority:100
 msgid "Set the 'rewriteRoot' option in the [svn-remote] config."
-msgstr ""
+msgstr "设置 [svn-remote] 配置的 'rewriteRoot' 选项。"
 
 #. type: Labeled list
 #: en/git-svn.txt:68
 #, no-wrap, priority:100
 msgid "--rewrite-uuid=<UUID>"
-msgstr ""
+msgstr "--rewrite-uuid=<UUID>"
 
 #. type: Plain text
 #: en/git-svn.txt:70
 #, priority:100
 msgid "Set the 'rewriteUUID' option in the [svn-remote] config."
-msgstr ""
+msgstr "设置 [svn-remote] 配置的 'rewriteUUID' 选项。"
 
 #. type: Labeled list
 #: en/git-svn.txt:70
 #, no-wrap, priority:100
 msgid "--username=<user>"
-msgstr ""
+msgstr "--username=<user>"
 
 #. type: Plain text
 #: en/git-svn.txt:75
 #, priority:100
 msgid "For transports that SVN handles authentication for (http, https, and plain svn), specify the username.  For other transports (e.g. `svn+ssh://`), you must include the username in the URL, e.g. `svn+ssh://foo@svn.bar.com/project`"
 msgstr ""
+"对于由 SVN 处理认证的传输类型（http、https和纯svn），请指定用户名。  "
+"对于其他的传输类型(例如`svn+ssh:///`)，你必须在URL中包含用户名，例如：`svn+ssh://foo@svn.bar.com/"
+"project`"
 
 #. type: Plain text
 #: en/git-svn.txt:90
