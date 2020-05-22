@@ -24,6 +24,8 @@ po4a-stamp: po4a.conf $(EN_SOURCES) $(LANGUAGE_PO) Makefile
 
 update-sources:
 	./scripts/update-sources.sh
+	$(QUIET_PO4A)PERL5LIB=./po4a/lib po4a/po4a -v po4a.conf
+	for f in po/documentation.*.po; do ./scripts/pre-translate-po $f; ./scripts/set-priorities $f; done
 
 define MAKE_TARGET
 
