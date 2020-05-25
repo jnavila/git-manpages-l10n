@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-05-16 17:29+0200\n"
-"PO-Revision-Date: 2020-05-24 21:41+0000\n"
-"Last-Translator: jiengran <jiengran@gmail.com>\n"
+"PO-Revision-Date: 2020-05-28 20:42+0000\n"
+"Last-Translator: 冉 <ranto2012@163.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: zh_HANS-CN\n"
 "MIME-Version: 1.0\n"
@@ -4285,6 +4285,8 @@ msgstr "zebra"
 #, priority:280
 msgid "Blocks of moved text are detected as in 'blocks' mode. The blocks are painted using either the 'color.diff.{old,new}Moved' color or 'color.diff.{old,new}MovedAlternative'. The change between the two colors indicates that a new block was detected."
 msgstr ""
+"在“块”模式下检测到移动的文本块。块使用 'color.diff.{old,new}Moved' 颜色或 'color.diff.{old,new}"
+"MovedAlternative' 颜色。这两种颜色之间的变化表示检测到了新的块。"
 
 #. type: Labeled list
 #: en/diff-options.txt:306
@@ -4297,6 +4299,8 @@ msgstr "dimmed-zebra"
 #, priority:280
 msgid "Similar to 'zebra', but additional dimming of uninteresting parts of moved code is performed. The bordering lines of two adjacent blocks are considered interesting, the rest is uninteresting.  `dimmed_zebra` is a deprecated synonym."
 msgstr ""
+"类似于  'zebra' "
+"模式，但对=使移动的代码中不关注的部分变暗。相邻两个区块的边界线被认为是重要，其余的部分是无关紧要的。`dimmed_zebra` 是一个被废弃的同义词。"
 
 #. type: Labeled list
 #: en/diff-options.txt:313
@@ -4308,37 +4312,37 @@ msgstr "--no-color-moved"
 #: en/diff-options.txt:316
 #, priority:280
 msgid "Turn off move detection. This can be used to override configuration settings. It is the same as `--color-moved=no`."
-msgstr ""
+msgstr "关闭移动检测。这可以用来覆盖配置设置。它与 `--color-moved=no` 相同。"
 
 #. type: Labeled list
 #: en/diff-options.txt:317
 #, no-wrap, priority:280
 msgid "--color-moved-ws=<modes>"
-msgstr ""
+msgstr "--color-moved-ws=<模式>"
 
 #. type: Plain text
 #: en/diff-options.txt:320
 #, priority:280
 msgid "This configures how whitespace is ignored when performing the move detection for `--color-moved`."
-msgstr ""
+msgstr "这将配置在执行 `--color-moved` 的移动检测时如何忽略空格。"
 
 #. type: Plain text
 #: en/diff-options.txt:322
 #, no-wrap, priority:280
 msgid "\tIt can be set by the `diff.colorMovedWS` configuration setting.\n"
-msgstr ""
+msgstr "\t可以通过 `diff.colorMovedWS` 来设置。\n"
 
 #. type: Plain text
 #: en/diff-options.txt:324
 #, no-wrap, priority:280
 msgid "\tThese modes can be given as a comma separated list:\n"
-msgstr ""
+msgstr "\t这些模式可以通过以逗号分隔的列表给出：\n"
 
 #. type: Plain text
 #: en/diff-options.txt:328
 #, priority:280
 msgid "Do not ignore whitespace when performing move detection."
-msgstr ""
+msgstr "执行移动检测时不忽略空格。"
 
 #. type: Labeled list
 #: en/diff-options.txt:328 en/merge-strategies.txt:61
@@ -4350,7 +4354,7 @@ msgstr "ignore-space-at-eol"
 #: en/diff-options.txt:330 en/diff-options.txt:665
 #, priority:280
 msgid "Ignore changes in whitespace at EOL."
-msgstr ""
+msgstr "忽略行尾空格的变化。"
 
 #. type: Labeled list
 #: en/diff-options.txt:330 en/merge-strategies.txt:59
@@ -4360,9 +4364,9 @@ msgstr "ignore-space-change"
 
 #. type: Plain text
 #: en/diff-options.txt:334 en/diff-options.txt:671
-#, priority:280
+#, fuzzy, priority:280
 msgid "Ignore changes in amount of whitespace.  This ignores whitespace at line end, and considers all other sequences of one or more whitespace characters to be equivalent."
-msgstr ""
+msgstr "忽略空格数量的变化。这会忽略行尾的空格，并认为包含一个或多个空格字符的其他序列都是等同的。"
 
 #. type: Labeled list
 #: en/diff-options.txt:334 en/merge-strategies.txt:60
@@ -4374,7 +4378,7 @@ msgstr "ignore-all-space"
 #: en/diff-options.txt:337
 #, priority:280
 msgid "Ignore whitespace when comparing lines. This ignores differences even if one line has whitespace where the other line has none."
-msgstr ""
+msgstr "比较行时忽略空格。即使一行有空格而另一行没有空格，也会忽略差异。"
 
 #. type: Labeled list
 #: en/diff-options.txt:337
@@ -4386,7 +4390,7 @@ msgstr "allow-indentation-change"
 #: en/diff-options.txt:342
 #, priority:280
 msgid "Initially ignore any whitespace in the move detection, then group the moved code blocks only into a block if the change in whitespace is the same per line. This is incompatible with the other modes."
-msgstr ""
+msgstr "在最初移动检测中忽略的任何空格，然后只在每行的空格变化相同的情况下，将移动的代码块归为一个块。这与其他模式是不兼容的。"
 
 #. type: Labeled list
 #: en/diff-options.txt:344
@@ -4398,31 +4402,33 @@ msgstr "--no-color-moved-ws"
 #: en/diff-options.txt:348
 #, priority:280
 msgid "Do not ignore whitespace when performing move detection. This can be used to override configuration settings. It is the same as `--color-moved-ws=no`."
-msgstr ""
+msgstr "执行移动检测时，不忽略空格。这可以用来覆盖配置。它与 `--color-moved-ws=no` 相同。"
 
 #. type: Labeled list
 #: en/diff-options.txt:349
 #, no-wrap, priority:280
 msgid "--word-diff[=<mode>]"
-msgstr ""
+msgstr "--word-diff[=<模式>]"
 
 #. type: Plain text
 #: en/diff-options.txt:354
 #, priority:280
 msgid "Show a word diff, using the <mode> to delimit changed words.  By default, words are delimited by whitespace; see `--word-diff-regex` below.  The <mode> defaults to 'plain', and must be one of:"
 msgstr ""
+"显示词的差异，用 <模式> 来分隔已更改的词。默认情况下，单词是以空格分隔；请参考 `--word-diff-regex`。<模式> 默认为 "
+"`plain`，并且必须是以下其中之一："
 
 #. type: Plain text
 #: en/diff-options.txt:358
 #, priority:280
 msgid "Highlight changed words using only colors.  Implies `--color`."
-msgstr ""
+msgstr "只用颜色突出显示已更改的单词。暗含 `--color` 选项。"
 
 #. type: Plain text
 #: en/diff-options.txt:362
 #, priority:280
 msgid "Show words as `[-removed-]` and `{+added+}`.  Makes no attempts to escape the delimiters if they appear in the input, so the output may be ambiguous."
-msgstr ""
+msgstr "显示更改的词为 `[-removed-]` 和 `{+added+}`。如果在输入中出现定界符，则不尝试转义，所以输出可能是多义的。"
 
 #. type: Labeled list
 #: en/diff-options.txt:362
@@ -4432,9 +4438,11 @@ msgstr "porcelain"
 
 #. type: Plain text
 #: en/diff-options.txt:369
-#, priority:280
+#, fuzzy, priority:280
 msgid "Use a special line-based format intended for script consumption.  Added/removed/unchanged runs are printed in the usual unified diff format, starting with a `+`/`-`/` ` character at the beginning of the line and extending to the end of the line.  Newlines in the input are represented by a tilde `~` on a line of its own."
 msgstr ""
+"使用一种特殊的、基于行的格式，供脚本使用。添加/删除/未更改的运行数据以通常的统一的差异格式输出，行的开头以 `+`/`-`/` ` "
+"字符开始，一直到行的结尾。输入中的新行用单行上的 `~`表示。"
 
 #. type: Labeled list
 #: en/diff-options.txt:369 en/git-daemon.txt:131 en/git-submodule.txt:172
