@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-05-16 17:29+0200\n"
-"PO-Revision-Date: 2020-05-30 07:41+0000\n"
+"PO-Revision-Date: 2020-05-31 14:41+0000\n"
 "Last-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
@@ -270,10 +270,10 @@ msgstr ""
 "ou copia um bloco de linhas (o arquivo original possui A e, em seguida, B, e "
 "o commit muda para B e, em seguida, A por exemplo), o algoritmo tradicional "
 "de 'blame' percebe apenas metade do movimento e normalmente responsabiliza "
-"as linhas que forem movidos para cima (ou seja, B) para a matriz e atribuem "
+"as linhas que forem movidos para cima (ou seja, B) para a origem e atribuem "
 "a responsabilidade às linhas que foram movidas para baixo (ou seja, A) para "
 "o herdeiro do commit.  Com esta opção, os dois grupos das linhas são "
-"atribuídos à matriz ao executar os passes extras de inspeção."
+"atribuídos à origem durante a execução dos passes extras de inspeção."
 
 #. type: Plain text
 #: en/blame-options.txt:95
@@ -282,7 +282,7 @@ msgid "<num> is optional but it is the lower bound on the number of alphanumeric
 msgstr ""
 "A opção `<num>` é opcional porém é o limite inferior da quantidade de "
 "caracteres alfanuméricos que o Git deve detectar como mover/copiar dentro de "
-"um arquivo para associar essas linhas ao commit matriz. 20 é o valor "
+"um arquivo para associar essas linhas ao commit de origem. 20 é o valor "
 "predefinido."
 
 #. type: Labeled list
@@ -311,7 +311,7 @@ msgid "<num> is optional but it is the lower bound on the number of alphanumeric
 msgstr ""
 "A opção `<num>` é opcional porém é o limite inferior da quantidade de "
 "caracteres alfanuméricos que o Git deve detectar como mover/copiar entre os "
-"arquivos para associar estas linhas ao commit matriz. 40 é o valor "
+"arquivos para associar estas linhas ao commit de origem. 40 é o valor "
 "predefinido. Caso haja mais de uma opção `-C`, o argumento <num> do último "
 "`-C` entrará em vigor."
 
@@ -3517,7 +3517,7 @@ msgstr ""
 #: en/diff-format.txt:95
 #, priority:280
 msgid "there is a colon for each parent"
-msgstr "há dois pontos para cada matriz"
+msgstr "há dois pontos para cada origem"
 
 #. type: Plain text
 #: en/diff-format.txt:96
@@ -3530,7 +3530,7 @@ msgstr "existem mais modos \"src\" e \"src\" sha1"
 #, priority:280
 msgid "status is concatenated status characters for each parent"
 msgstr ""
-"a condição é concatenada como uma condição de caracteres para cada matriz"
+"a condição é concatenada como uma condição dos caracteres para cada origem"
 
 #. type: Plain text
 #: en/diff-format.txt:98
@@ -3551,7 +3551,7 @@ msgid "For `-c` and `--cc`, only the destination or final path is shown even if 
 msgstr ""
 "Para as opções `-c` e `--cc` apenas o destino ou o caminho final é exibido "
 "ainda que o arquivo tenha sido renomeado em qualquer parte do histórico.  "
-"Com a opção `--combined-all-paths`, o nome do caminho em cada matriz é "
+"Com a opção `--combined-all-paths`, o nome do caminho em cada origem é "
 "exibido seguido pelo nome do caminho durante a mesclagem do commit."
 
 #. type: Plain text
@@ -3600,7 +3600,7 @@ msgstr ""
 msgid "Note that 'combined diff' lists only files which were modified from all parents."
 msgstr ""
 "Note que o 'diff combinado' lista apenas os arquivos que foram alterados em "
-"todas as matrizes."
+"todas as origems."
 
 #. type: Title -
 #: en/diff-format.txt:128
@@ -3927,7 +3927,7 @@ msgstr ""
 "produzir um 'diff combinado' ao exibir uma mesclagem. Este é o formato "
 "predefinido durante a exibição das mesclagens com linkgit:git-diff[1] or "
 "linkgit:git-show[1]. Observe também que é possível utilizar a opção `-m` com "
-"qualquer um destes comandos para impor a geração dos diffs com as matrizes "
+"qualquer um destes comandos para impor a geração dos diffs com as origens "
 "individuais de uma mesclagem."
 
 #. type: Plain text
@@ -4036,7 +4036,7 @@ msgstr "       diff --cc arquivo\n"
 msgid "It is followed by one or more extended header lines (this example shows a merge with two parents):"
 msgstr ""
 "Ele é seguido por uma ou mais linhas estendidas do cabeçalho (este exemplo "
-"exibe uma mesclagem com duas matrizes):"
+"exibe uma mesclagem com duas origens):"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:135
@@ -4098,7 +4098,7 @@ msgstr ""
 "No entanto, caso a opção `--combined-all-paths` seja utilizada, em vez de "
 "duas linhas do arquivo/para o arquivo, será obtido um cabeçalho `N+1` do "
 "cabeçalho do arquivo de \"origem\" para o arquivo de \"destino\" onde N é a "
-"quantidade de matrizes na mesclagem do commit"
+"quantidade de origens na mesclagem do commit"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:163
@@ -4107,7 +4107,7 @@ msgid "This extended format can be useful if rename or copy detection is active,
 msgstr ""
 "Este formato estendido pode ser útil caso a detecção da renomeação ou cópia "
 "esteja ativa, permitindo que você veja o nome original do arquivo em "
-"diferentes matrizes."
+"diferentes origens."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:169
@@ -4131,7 +4131,7 @@ msgstr "@@@ <from-file-range> <from-file-range> <to-file-range> @@@\n"
 #, priority:260
 msgid "There are (number of parents + 1) `@` characters in the chunk header for combined diff format."
 msgstr ""
-"Existem (quantidade de matrizes + 1) caracteres `@` no cabeçalho do bloco "
+"Existem (a quantidade de origens + 1) caracteres `@` no cabeçalho do bloco "
 "para o formato diff combinado."
 
 #. type: Plain text
@@ -4153,10 +4153,10 @@ msgstr ""
 #, priority:260
 msgid "A `-` character in the column N means that the line appears in fileN but it does not appear in the result.  A `+` character in the column N means that the line appears in the result, and fileN does not have that line (in other words, the line was added, from the point of view of that parent)."
 msgstr ""
-"Um caractere `-` na coluna N significa que a linha aparece no arquivoN, mas "
-"não aparece no resultado.  Um caractere `+` na coluna N significa que a "
+"Um caractere `-` na coluna N significa que a linha aparece no \"arquivoN\", "
+"mas não aparece no resultado.  Um caractere `+` na coluna N significa que a "
 "linha aparece no resultado e o arquivoN não possui essa linha (em outras "
-"palavras, a linha foi adicionada, do ponto de vista dessa matriz)."
+"palavras, a linha foi adicionada, do ponto de vista dessa origem)."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:195
@@ -4174,12 +4174,12 @@ msgstr ""
 #, priority:260
 msgid "When shown by `git diff-tree -c`, it compares the parents of a merge commit with the merge result (i.e. file1..fileN are the parents).  When shown by `git diff-files -c`, it compares the two unresolved merge parents with the working tree file (i.e. file1 is stage 2 aka \"our version\", file2 is stage 3 aka \"their version\")."
 msgstr ""
-"Quando exibido pelo comando `git diff-tree -c`, compara as matrizes de um "
+"Quando exibido pelo comando `git diff-tree -c`, compara as origens de um "
 "commit mesclado com o resultado da mesclagem (ou seja, arquivo1..arquivoN "
-"são as matrizes).  Quando exibido pelo comando `git diff-files -c`, as duas "
-"matrizes com as suas respectivas mesclagens não resolvidas com o arquivo da "
+"são as origens).  Quando exibido pelo comando `git diff-files -c`, as duas "
+"origens com as suas respectivas mesclagens não resolvidas com o arquivo da "
 "árvore de trabalho (ou seja, arquivo1 é o estágio 2, conhecido como \"nossa "
-"versão \", o arquivo2 é o estágio 3, conhecido como \"a versão deles\")."
+"versão\", o arquivo2 é o estágio 3, conhecido como \"a versão deles\")."
 
 #. type: Labeled list
 #: en/diff-options.txt:17 en/git-rebase.txt:409 en/merge-options.txt:93
@@ -4664,8 +4664,8 @@ msgstr "`cumulative`"
 #, priority:280
 msgid "Count changes in a child directory for the parent directory as well.  Note that when using `cumulative`, the sum of the percentages reported may exceed 100%. The default (non-cumulative) behavior can be specified with the `noncumulative` parameter."
 msgstr ""
-"Contar as alterações em um diretório herdeiro e para o diretório matriz "
-"também.  Observe que, ao usar `cumulative` (cumulativo), a soma das "
+"Conta as alterações em um diretório herdeiro e também para o diretório de "
+"origem.  Observe que, ao utilizar `cumulative` (cumulativo), a soma das "
 "porcentagens relatadas pode exceder os 100%. O comportamento predefinido ("
 "não cumulativo) pode ser especificado com o parâmetro `noncumulative` (não "
 "cumulativo)."
@@ -10763,7 +10763,7 @@ msgstr "$ git bisect reset                   # encerra a seção bisect\n"
 msgid "In this case, when 'git bisect run' finishes, bisect/bad will refer to a commit that has at least one parent whose reachable graph is fully traversable in the sense required by 'git pack objects'."
 msgstr ""
 "Neste caso, quando 'git bisect run' encerra, o bisect/bad (ruim) irá apontar "
-"para um commit que tenha pelo menos uma matriz cujo gráfico seja "
+"para um commit que tenha pelo menos uma origem cujo gráfico seja "
 "completamente cruzado no sentido requerido pelo comando 'git pack objects'."
 
 #. type: Plain text
@@ -10999,7 +10999,7 @@ msgstr ""
 #, priority:100
 msgid "Ignore whitespace when comparing the parent's version and the child's to find where the lines came from."
 msgstr ""
-"Ignore os espaços em branco durante a comparação da versão das matrizes e "
+"Ignore os espaços em branco durante a comparação da versão das origens e "
 "seus herdeiros para descobrir de onde vieram as linhas."
 
 #. type: Labeled list
@@ -11226,7 +11226,7 @@ msgstr "\tgit log --diff-filter=A --pretty=short -- foo\n"
 #, priority:100
 msgid "and then annotate the change between the commit and its parents, using `commit^!` notation:"
 msgstr ""
-"e então anote a alteração entre o commit e as suas matrizes, utilizando a "
+"e então anote a alteração entre o commit e as suas origens, utilizando a "
 "notação `commit^!`:"
 
 #. type: Plain text
@@ -14835,7 +14835,11 @@ msgstr "--orfão <novo_branch>"
 #: en/git-checkout.txt:214
 #, priority:240
 msgid "Create a new 'orphan' branch, named `<new_branch>`, started from `<start_point>` and switch to it.  The first commit made on this new branch will have no parents and it will be the root of a new history totally disconnected from all the other branches and commits."
-msgstr "Crie uma nova ramificação 'orphan' denominada `<new_branch>` iniciada a partir do <start_point> e mude para ela. O primeiro commit feito nesta nova ramificação não terá matrizes e será a raiz de uma nova história totalmente desconectada de todas as outras ramificações e commits."
+msgstr ""
+"Crie uma nova ramificação 'orphan' denominada `<new_branch>` iniciada a "
+"partir do <start_point> e mude para ela. O primeiro commit feito nesta nova "
+"ramificação não terá as origens e será a raiz de uma nova história "
+"totalmente desconectada de todas os outros ramos e commits."
 
 #. type: Plain text
 #: en/git-checkout.txt:219
@@ -15121,7 +15125,12 @@ msgstr ""
 #: en/git-checkout.txt:383
 #, priority:240
 msgid "When a commit is created in this state, the branch is updated to refer to the new commit. Specifically, 'git commit' creates a new commit `d`, whose parent is commit `c`, and then updates branch `master` to refer to new commit `d`. `HEAD` still refers to branch `master` and so indirectly now refers to commit `d`:"
-msgstr "Quando uma confirmação é criada nesta condição a ramificação é atualizada com referência ao novo commit. Especificamente, o comando 'git commit' cria um novo commit `d`, cuja matriz é o commit 'c' e então atualiza o ramo `master` para se referir ao novo commit `d`. `HEAD` ainda se refere à ramificação `master` e então indiretamente agora se refere ao commit `d`:"
+msgstr ""
+"Quando uma confirmação é criada nesta condição a ramificação é atualizada "
+"com referência ao novo commit. Especificamente, o comando 'git commit' cria "
+"um novo commit `d`, cuja origem seja o commit 'c' e então atualiza o ramo "
+"`master` para se referir ao novo commit `d`. `HEAD` ainda se refere à "
+"ramificação `master` e então indiretamente agora se refere ao commit `d`:"
 
 #. type: delimited block -
 #: en/git-checkout.txt:386 en/git-checkout.txt:421 en/git-checkout.txt:438
@@ -15916,8 +15925,9 @@ msgid "Usually you cannot cherry-pick a merge because you do not know which side
 msgstr ""
 "Normalmente você não pode selecionar uma mesclagem porque não sabe qual o "
 "lado da mesclagem deve ser considerado como a linha principal.  Esta opção "
-"determina o número da matriz (a partir de 1) da linha principal e permite "
-"que o \"cherry-pick\" repita a alteração em relação a matriz informada."
+"determina o número da origem (a partir de 1) da linha principal e permite "
+"que o \"cherry-pick\" repita a alteração em relação a origem que foi "
+"informada."
 
 #. type: Labeled list
 #: en/git-cherry-pick.txt:93 en/git-revert.txt:78 en/merge-options.txt:2
@@ -17507,8 +17517,8 @@ msgid ""
 "'git commit-tree' [(-p <parent>)...] [-S[<keyid>]] [(-m <message>)...]\n"
 "\t\t  [(-F <file>)...] <tree>\n"
 msgstr ""
-"'git commit-tree' <tree> [(-p <matriz>)...]\n"
-"'git commit-tree' [(-p <matriz>)...] [-S[<keyid>]] [(-m <mensagem>)...]\n"
+"'git commit-tree' <tree> [(-p <origem>)...]\n"
+"'git commit-tree' [(-p <origem>)...] [-S[<keyid>]] [(-m <mensagem>)...]\n"
 "\t\t  [(-F <arquivo>)...] <árvore>\n"
 
 #. type: Plain text
@@ -17536,7 +17546,11 @@ msgstr ""
 #: en/git-commit-tree.txt:34
 #, priority:100
 msgid "A commit object may have any number of parents. With exactly one parent, it is an ordinary commit. Having more than one parent makes the commit a merge between several lines of history. Initial (root)  commits have no parents."
-msgstr "Um objeto commit pode ter qualquer quantidade matrizes. Um commit comum é aquele tem exatamente uma matriz. Ter mais de uma matriz faz com que o commit seja mesclado entre as várias linhas da história. Os commits iniciais (root) não possuem matrizes."
+msgstr ""
+"Um objeto commit pode ter qualquer quantidade de origens. Um commit comum é "
+"aquele tem exatamente uma origem. Ter mais de uma origem faz com que o "
+"commit seja mesclado entre as várias linhas da história. Os commits iniciais "
+"(root) não possuem origens."
 
 #. type: Plain text
 #: en/git-commit-tree.txt:38
@@ -17566,13 +17580,13 @@ msgstr "Um objeto árvore já existente."
 #: en/git-commit-tree.txt:50
 #, no-wrap, priority:100
 msgid "-p <parent>"
-msgstr "-p <matriz>"
+msgstr "-p <origem>"
 
 #. type: Plain text
 #: en/git-commit-tree.txt:52
 #, priority:100
 msgid "Each `-p` indicates the id of a parent commit object."
-msgstr "Cada `-p` indica o id de uma matriz do objeto commit."
+msgstr "Cada `-p` indica o id de uma origem do objeto commit."
 
 #. type: Labeled list
 #: en/git-commit-tree.txt:53 en/git-fmt-merge-msg.txt:42
@@ -17627,7 +17641,7 @@ msgstr "Os encapsulamentos de um commit:"
 #: en/git-commit-tree.txt:76
 #, priority:100
 msgid "all parent object ids"
-msgstr "ids de todos os objetos matriz"
+msgstr "ids de todos os objetos da origem"
 
 #. type: Plain text
 #: en/git-commit-tree.txt:77
@@ -18020,8 +18034,8 @@ msgstr "Esta opção ignora os ganchos dos commits anteriores e os ganchos das m
 msgid "Usually recording a commit that has the exact same tree as its sole parent commit is a mistake, and the command prevents you from making such a commit.  This option bypasses the safety, and is primarily for use by foreign SCM interface scripts."
 msgstr ""
 "Geralmente, gravar um commit que tem exatamente a mesma árvore como se fosse "
-"a sua matriz é um erro, o comando impede que você faça um commit dessa "
-"natureza.  Essa opção ignora a segurança e deve ser utilizada principalmente "
+"a sua origem é errado, o comando impede que você faça um commit desta "
+"natureza.  Esta opção ignora a segurança e deve ser utilizada principalmente "
 "por scripts de interface SCM externos."
 
 #. type: Plain text
@@ -18151,7 +18165,7 @@ msgstr ""
 "`pathspec` explicitamente), a mensagem do commit original é utilizada como "
 "um ponto de partida, em vez de uma mensagem vazia. Quando nenhuma outra "
 "mensagem é utilizada na linha de comando através de opções como `-m`, `-F`, "
-"`-c`, etc. O novo commit possuíra as mesmas matrizes e seu respectivo autor "
+"`-c`, etc. O novo commit possuirá as mesmas origens e seu respectivo autor "
 "como o atual (a opção `--reset-author` pode ser utilizada para mudar isso)."
 
 #. type: Plain text
@@ -20446,7 +20460,9 @@ msgstr "Oferece suporte a adições, remoções e commits que afetem os arquivos
 #: en/git-cvsexportcommit.txt:33
 #, priority:100
 msgid "If the commit is a merge commit, you must tell 'git cvsexportcommit' what parent the changeset should be done against."
-msgstr "Caso o commit seja uma confirmação mesclado, você deve informar ao `git cvsexportcommit` qual matriz o \"changeset\" deve ser feito."
+msgstr ""
+"Caso o commit seja um commit mesclado, informe ao `git cvsexportcommit` de "
+"qual origem o \"changeset\" deve ser feito."
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:40
@@ -20485,7 +20501,7 @@ msgstr "Imponha a mesclagem mesmo que os arquivos não estejam atualizados."
 #: en/git-cvsexportcommit.txt:59
 #, priority:100
 msgid "Force the parent commit, even if it is not a direct parent."
-msgstr "Imponha o commit da matriz, ainda que não seja direto da matriz."
+msgstr "Imponha o commit da origem, ainda que não seja direto dela."
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:63
@@ -20521,7 +20537,10 @@ msgstr ""
 #: en/git-cvsexportcommit.txt:81
 #, priority:100
 msgid "Tell cvsexportcommit that the current working directory is not only a Git checkout, but also the CVS checkout.  Therefore, Git will reset the working directory to the parent commit before proceeding."
-msgstr "Diga ao `cvsexportcommit` que o diretório de trabalho atual não é apenas um checkout do Git, mas também o checkout do CVS.  Portanto, o Git redefinirá o diretório de trabalho para o commit matriz antes de continuar."
+msgstr ""
+"Diga ao `cvsexportcommit` que o diretório de trabalho atual não é apenas um "
+"checkout do Git, mas também o checkout do CVS.  Portanto, o Git redefinirá o "
+"diretório de trabalho para o commit da origem antes de continuar."
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:84
@@ -22820,7 +22839,10 @@ msgstr "--first-parent"
 #: en/git-describe.txt:125
 #, priority:260
 msgid "Follow only the first parent commit upon seeing a merge commit.  This is useful when you wish to not match tags on branches merged in the history of the target commit."
-msgstr "Siga apenas o primeiro commit matriz ao ver um commit de mesclagem.  Isso é útil quando você quer que as tags não coincidam nos ramos mesclados no histórico do commit de destino."
+msgstr ""
+"Siga apenas o primeiro commit da origem ao ver um commit de mesclagem.  Isso "
+"é útil quando você quer que as tags não coincidam nos ramos mesclados do "
+"histórico do commit de destino."
 
 #. type: Plain text
 #: en/git-describe.txt:130
@@ -22842,7 +22864,11 @@ msgstr ""
 #: en/git-describe.txt:139
 #, priority:260
 msgid "i.e. the current head of my \"parent\" branch is based on v1.0.4, but since it has a few commits on top of that, describe has added the number of additional commits (\"14\") and an abbreviated object name for the commit itself (\"2414721\")  at the end."
-msgstr "ou seja, o cabeçalho atual do meu ramo \"matriz\" tem base na versão `v1.0.4`, mas como ele tem alguns commits a mais, o description adicionou a quantidade de commits adicionais (\"14\") e um nome do objeto abreviado para o próprio commit (\"2414721\") no final."
+msgstr ""
+"ou seja, o cabeçalho atual do meu ramo \"original\" tem base na versão `v1.0."
+"4`, mas como ele tem alguns commits a mais, o description adicionou a "
+"quantidade de commits adicionais (\"14\") e um nome do objeto abreviado para "
+"o próprio commit (\"2414721\") no final."
 
 #. type: Plain text
 #: en/git-describe.txt:147
@@ -22851,7 +22877,7 @@ msgid "The number of additional commits is the number of commits which would be 
 msgstr ""
 "A quantidade de commits adicionais é a quantidade de commits que seriam "
 "exibidas com \"git log v1.0.4..parent\".  O sufixo hash é \"-g\" + "
-"abreviação inequívoca para o commit como uma dica da matriz (que era "
+"abreviação inequívoca para o commit como uma dica da origem (que era "
 "`2414721b194453f058079d897d13c4e377f92dc6`).  O prefixo \"g\" significa \"git"
 "\" e é utilizado para permitir a descrição da versão de um software, "
 "dependendo do SCM com o qual o software é gerenciado. Isso é útil em um "
@@ -22941,7 +22967,13 @@ msgstr "Para cada \"commit-ish\" usado, o comando `git description` procurará p
 #: en/git-describe.txt:190
 #, priority:260
 msgid "If an exact match was not found, 'git describe' will walk back through the commit history to locate an ancestor commit which has been tagged.  The ancestor's tag will be output along with an abbreviation of the input commit-ish's SHA-1. If `--first-parent` was specified then the walk will only consider the first parent of each commit."
-msgstr "Caso nenhuma coincidência exata tenha sido encontrada, o comando `git description` retornará ao histórico do commit para localizar um commit mais antigo que foi marcado. O tag do commit mais antigo será gerado juntamente com uma abreviação do SHA-1 do \"commit-ish\" de entrada. Caso a opção `--first-parent` seja usada, então o passo a ser considerado será apenas a primeira matriz de cada commit."
+msgstr ""
+"Caso nenhuma correspondência exata tenha sido encontrada, o comando `git "
+"description` retornará ao histórico do commit para localizar um commit mais "
+"antigo que foi marcado. O tag do commit mais antigo será gerado juntamente "
+"com uma abreviação do SHA-1 do \"commit-ish\" de entrada. Caso a opção "
+"`--first-parent` seja utilizada, então o passo a ser considerado será apenas "
+"a primeira origem de cada commit."
 
 #. type: Plain text
 #: en/git-describe.txt:196
@@ -23698,10 +23730,10 @@ msgstr ""
 #, priority:100
 msgid "When two trees are given, it compares the first tree with the second.  When a single commit is given, it compares the commit with its parents.  The remaining commits, when given, are used as if they are parents of the first commit."
 msgstr ""
-"Quando duas árvores são informadas é feita uma comparação entre a primeira e "
-"a segunda árvore.  Quando um único commit é dado, ele compara o commit com "
-"as suas matrizes.  Os commits restantes, quando informados, são utilizados "
-"como se fossem as matrizes do primeiro commit."
+"Quando duas árvores são informadas, é feita uma comparação entre a primeira "
+"e a segunda.  Quando um único commit é dado, ele compara o commit com as "
+"suas origens.  Os commits restantes, quando informados, são utilizados como "
+"se fossem as origens do primeiro commit."
 
 #. type: Plain text
 #: en/git-diff-tree.txt:62
@@ -23719,7 +23751,10 @@ msgstr "Os seguintes sinalizadores afetam ainda mais o comportamento ao comparar
 #: en/git-diff-tree.txt:71
 #, priority:100
 msgid "By default, 'git diff-tree --stdin' does not show differences for merge commits.  With this flag, it shows differences to that commit from all of its parents. See also `-c`."
-msgstr "É predefinido que `git diff-tree --stdin` não exiba as diferenças para os commits que forem mesclados.  Com essa sinalização as diferenças são exibidas no commit de todas as suas matrizes. Consulte também `-c`."
+msgstr ""
+"É predefinido que `git diff-tree --stdin` não exiba as diferenças para os "
+"commits que forem mesclados.  Com esta opção as diferenças são exibidas no "
+"commit de todas as suas origens. Consulte também `-c`."
 
 #. type: Plain text
 #: en/git-diff-tree.txt:77
@@ -23750,19 +23785,27 @@ msgstr "o `git diff-tree` gera uma linha com o ID do commit, quando for aplicáv
 #, priority:100
 msgid "This flag changes the way a merge commit is displayed (which means it is useful only when the command is given one <tree-ish>, or `--stdin`).  It shows the differences from each of the parents to the merge result simultaneously instead of showing pairwise diff between a parent and the result one at a time (which is what the `-m` option does).  Furthermore, it lists only files which were modified from all parents."
 msgstr ""
-"Essa sinalização altera a maneira como um commit mesmo é exibido (o que "
+"Esta opção altera a maneira como um commit mesclado é exibido (o que "
 "significa que é útil apenas quando o comando recebe um <tree-ish>, ou "
-"`--stdin`).  Exibe as diferenças de cada um das matrizes simultaneamente "
-"para o resultado da mesclagem em vez de exibir a diferença dos pares entre "
-"as matrizes e o resultado, um de cada vez (que é o que a opção `-m` faz).  "
-"Além disso, lista apenas os arquivos que foram modificados por todas as "
-"matrizes."
+"`--stdin`).  Exibe as diferenças de cada um das origens simultaneamente para "
+"o resultado da mesclagem em vez de exibir a diferença dos pares entre as "
+"origens e o resultado, um de cada vez (que é o que a opção `-m` faz).  Além "
+"disso, lista apenas os arquivos que foram modificados vindo de todas as "
+"origens."
 
 #. type: Plain text
 #: en/git-diff-tree.txt:107
 #, priority:100
 msgid "This flag changes the way a merge commit patch is displayed, in a similar way to the `-c` option. It implies the `-c` and `-p` options and further compresses the patch output by omitting uninteresting hunks whose the contents in the parents have only two variants and the merge result picks one of them without modification.  When all hunks are uninteresting, the commit itself and the commit log message is not shown, just like in any other \"empty diff\" case."
-msgstr "Essa sinalização altera a maneira como um patch para a mesclagem de um commit é exibido, de uma maneira semelhante à opção `-c`. Implica no uso das opções `-c` e `-p`, comprime ainda mais a saída do patch ao omitir os pedaços não interessantes cujo conteúdo nas matrizes tenham apenas duas variantes e o resultado da mesclagem escolhe uma delas sem qualquer modificação.  Quando não há interesse em todos os blocos, o próprio commit e a mensagem do registro log não são exibidas, como em qualquer outro caso de um \"diff vazio\"."
+msgstr ""
+"Esta opção altera a maneira como um patch para a mesclagem de um commit é "
+"exibido, de uma maneira semelhante à opção `-c`. Implica na utilização das "
+"opções `-c` e `-p`, comprime ainda mais o patch gerado ao omitir os pedaços "
+"que não interessam, cujo conteúdo nas origens tenham apenas duas variantes e "
+"o resultado da mesclagem escolha uma delas sem qualquer modificação.  Quando "
+"não há interesse em todos os blocos, o próprio commit e a mensagem do "
+"registro log não são exibidas, como em qualquer outro caso de um \"diff "
+"vazio\"."
 
 #. type: Labeled list
 #: en/git-diff-tree.txt:108 en/rev-list-options.txt:1140
@@ -23774,7 +23817,12 @@ msgstr "--combined-all-paths"
 #: en/git-diff-tree.txt:114 en/rev-list-options.txt:1146
 #, priority:260
 msgid "This flag causes combined diffs (used for merge commits) to list the name of the file from all parents.  It thus only has effect when -c or --cc are specified, and is likely only useful if filename changes are detected (i.e. when either rename or copy detection have been requested)."
-msgstr "Essa flag faz com que os \"diffs\" combinados (usados para a mesclagem de commits) listem o nome do arquivo de todos as matrizes.  Portanto, ele só tem efeito quando `-c` ou `--cc` são usados e provavelmente é útil apenas caso as alterações no nome do arquivo sejam detectadas (ou seja, quando a renomeação ou a detecção de cópia foram solicitadas)."
+msgstr ""
+"Esta opção faz com que os \"diffs\" combinados (usados para a mesclagem dos "
+"commits) listem o nome do arquivo de todos as origens.  Portanto, ele só tem "
+"efeito quando `-c` ou `--cc` são utilizados e provavelmente é útil apenas "
+"caso as alterações no nome do arquivo sejam detectadas (ou seja, quando a "
+"renomeação ou a detecção de cópia foram solicitadas)."
 
 #. type: Plain text
 #: en/git-diff-tree.txt:118
@@ -24238,11 +24286,11 @@ msgstr "Determina como manipular as tags cujo objeto marcado seja filtrado.  Com
 #, priority:100
 msgid "When asking to 'abort' (which is the default), this program will die when encountering such a tag.  With 'drop' it will omit such tags from the output.  With 'rewrite', if the tagged object is a commit, it will rewrite the tag to tag an ancestor commit (via parent rewriting; see linkgit:git-rev-list[1])"
 msgstr ""
-"Ao pedir para abortar 'abort' (que é o padrão), este programa será terminado "
-"ao encontrar tal tag.  Com 'drop' estas tags serão omitidas da saída.  Com "
-"'rewrite', caso o objeto marcado seja um commit, a tag será reescrita para "
-"marcar a tag de um commit anterior (através da reescrita da matriz; consulte "
-"linkgit:git-rev-list[1])"
+"Ao pedir para abortar 'abort' (que é o predefinido), este programa será "
+"terminado ao encontrar tal tag.  Com 'drop' estas opções serão omitidas da "
+"saída.  Com 'rewrite', caso o objeto marcado seja um commit, a tag será "
+"reescrita para marcar a tag de um commit anterior (através da reescrita da "
+"origem; consulte linkgit:git-rev-list[1])"
 
 #. type: Plain text
 #: en/git-fast-export.txt:58
@@ -25763,9 +25811,9 @@ msgid "Included in a `commit` command to remove a file or recursively delete an 
 msgstr ""
 "Incluído no comando `commit` para remover um arquivo ou excluir "
 "recursivamente um diretório inteiro do ramo.  Caso a remoção do arquivo ou "
-"diretório deixar seu diretório matriz vazio, o diretório matriz também será "
-"automaticamente removido.  Isso faz cascata na árvore até que o primeiro "
-"diretório que não esteja vazio ou a raiz seja atingida."
+"diretório deixar o seu diretório de origem vazio, o diretório de origem "
+"também será automaticamente removido.  Isso faz segue na árvore até que o "
+"primeiro diretório não vazio ou até que chegue até a raiz."
 
 #. type: delimited block .
 #: en/git-fast-import.txt:659
@@ -27186,9 +27234,9 @@ msgstr "por marcação"
 #, priority:100
 msgid "Marks are stored in a sparse array, using 1 pointer (4 bytes or 8 bytes, depending on pointer size) per mark.  Although the array is sparse, frontends are still strongly encouraged to use marks between 1 and n, where n is the total number of marks required for this import."
 msgstr ""
-"As marcações são armazenadas em uma matriz esparsa, utilizando 1 ponteiro (4 "
+"As marcações são armazenadas em uma origem esparsa, utilizando 1 ponteiro (4 "
 "bytes ou 8 bytes, dependendo do tamanho do ponteiro) por marcação.  Embora a "
-"matriz seja escassa, os front-end ainda são fortemente incentivados a usar "
+"origem seja escassa, os front-end ainda são fortemente incentivados a usar "
 "marcas entre 1 e n, onde n é a quantidade total de marcações necessárias "
 "para essa importação."
 
@@ -28298,7 +28346,13 @@ msgstr "--parent-filter <comando>"
 #: en/git-filter-branch.txt:138
 #, ignore-ellipsis, priority:100
 msgid "This is the filter for rewriting the commit's parent list.  It will receive the parent string on stdin and shall output the new parent string on stdout.  The parent string is in the format described in linkgit:git-commit-tree[1]: empty for the initial commit, \"-p parent\" for a normal commit and \"-p parent1 -p parent2 -p parent3 ...\" for a merge commit."
-msgstr "Este filtro serve para reescrever a lista das matrizes de quem fez o commit.  Ele receberá a cadeia de caracteres matriz no stdin e produzirá a um nova cadeia de caracteres matriz no stdout.  A cadeia de caracteres matriz está no formato descrito em linkgit:git-commit-tree[1]: o commit inicial é vazio, \"-p parent\" para uma confirmação normal e \"-p parent1 -p parent2 -p parent3 ...\" para uma consolidação dos commits."
+msgstr ""
+"Este filtro serve para reescrever a lista das origens de quem fez o commit.  "
+"Ele receberá um texto da origem no stdin e produzirá a um novo texto de "
+"origem no stdout.  O texto de origem está no formato descrito em linkgit:git-"
+"commit-tree[1]: o commit inicial é vazio, \"-p parent\" para um commit "
+"normal e \"-p parent1 -p parent2 -p parent3 ...\" para os commits "
+"consolidados."
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:139
@@ -28328,7 +28382,10 @@ msgstr "Este filtro serve para apresentar o commit.  Caso este filtro seja utili
 #: en/git-filter-branch.txt:155
 #, priority:100
 msgid "As a special extension, the commit filter may emit multiple commit ids; in that case, the rewritten children of the original commit will have all of them as parents."
-msgstr "Como uma extensão especial, o filtro do commit pode emitir vários IDs para os commits; nesse caso, os herdeiros do commit original que foram reescritos, terão todos eles como matrizes."
+msgstr ""
+"Como uma extensão especial, o filtro do commit pode emitir vários IDs para "
+"estes commits; nesse caso, os herdeiros do commit original que foram "
+"reescritos, todos terão eles como origem."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:160
@@ -28340,7 +28397,10 @@ msgstr "Você pode utilizar a função 'map' como uma conveniência neste filtro
 #: en/git-filter-branch.txt:164
 #, priority:100
 msgid "You can also use the `git_commit_non_empty_tree \"$@\"` instead of `git commit-tree \"$@\"` if you don't wish to keep commits with a single parent and that makes no change to the tree."
-msgstr "É possível também utilizar `git_commit_non_empty_tree \"$@\"` em vez de `git commit-tree \"$@\"` caso não queira mais manter os commit com uma única matriz, isso não faz qualquer alteração na árvore."
+msgstr ""
+"É possível também utilizar `git_commit_non_empty_tree \"$@\"` em vez de `git "
+"commit-tree \"$@\"` caso não queira mais manter os commit com uma única "
+"origem, isso não faz qualquer alteração na árvore."
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:165
@@ -28383,7 +28443,7 @@ msgid "Some filters will generate empty commits that leave the tree untouched.  
 msgstr ""
 "Alguns filtros geram commits vazios que deixam a árvore intocada.  Essa "
 "opção instrui o comando `git-filter-branch` para remover tais commits caso "
-"elas tenham exatamente um ou zero matrizes sem poda; os commits mesclados "
+"elas tenham exatamente um ou zero origens sem poda; os commits mesclados "
 "permanecerão intactos.  Esta opção não pode ser utilizada em conjunto com "
 "`--commit-filter`, embora o mesmo efeito possa ser alcançado utilizando a "
 "função `git_commit_non_empty_tree` em um filtro do commit."
@@ -28526,7 +28586,10 @@ msgstr "Assim, você pode, transformar um subdiretório da biblioteca em um repo
 #: en/git-filter-branch.txt:286
 #, priority:100
 msgid "To set a commit (which typically is at the tip of another history) to be the parent of the current initial commit, in order to paste the other history behind the current history:"
-msgstr "Para definir um commit (que normalmente esteja na ponta de outro histórico) para ser a atual matriz inicial do commit e para colar o outro histórico atrás do histórico atual:"
+msgstr ""
+"Para definir um commit (que normalmente esteja na ponta de outro histórico) "
+"para ser a atual origem inicial do commit e para colar o outro histórico "
+"atrás do histórico atual:"
 
 #. type: delimited block -
 #: en/git-filter-branch.txt:289
@@ -28539,10 +28602,10 @@ msgstr "git filter-branch --parent-filter 'sed \"s/^\\$/-p <graft-id>/\"' HEAD\n
 #, priority:100
 msgid "(if the parent string is empty - which happens when we are dealing with the initial commit - add graftcommit as a parent).  Note that this assumes history with a single root (that is, no merge without common ancestors happened).  If this is not the case, use:"
 msgstr ""
-"(caso a cadeia de caracteres matriz esteja vazia - o que acontece quando "
-"estamos lidando com o commit inicial - `add graftcommit` como matriz).  "
-"Observe que isso assume o histórico com uma única raiz (ou seja, sem nenhuma "
-"mesclagem com ancestrais comuns).  Se não for esse o caso, utilize:"
+"(caso o texto da origem esteja vazio - o mesmo que acontece quando estamos "
+"lidando com o commit inicial - `add graftcommit` como origem).  Observe que "
+"isso assume o histórico com uma única raiz (ou seja, sem nenhuma mesclagem "
+"com ancestrais comuns).  Se não for esse o caso, utilize:"
 
 #. type: delimited block -
 #: en/git-filter-branch.txt:299
@@ -28632,7 +28695,12 @@ msgstr ""
 #: en/git-filter-branch.txt:340
 #, priority:100
 msgid "The shift magic first throws away the tree id and then the -p parameters.  Note that this handles merges properly! In case Darl committed a merge between P1 and P2, it will be propagated properly and all children of the merge will become merge commits with P1,P2 as their parents instead of the merge commit."
-msgstr "A mágica do deslocamento primeiro joga fora o ID da árvore e depois os parâmetros `-p`.  Observe que isso manipula a mesclagem de forma adequada! No caso de Darl ter feito um commit mesclando entre P1 e P2, ela será propagada corretamente e todos os herdeiros desta mesclagem se tornarão commits P1,P2 como suas matrizes em vez do commit de mesclagem."
+msgstr ""
+"A mágica do deslocamento primeiro joga fora o ID da árvore e depois os "
+"parâmetros `-p`.  Observe que isso manipula a mesclagem de forma adequada! "
+"No caso de Darl ter feito um commit mesclando entre P1 e P2, ela será "
+"propagada corretamente e todos os herdeiros desta mesclagem se tornarão "
+"commits P1,P2 como as suas origens em vez do commit de mesclagem."
 
 #. type: Plain text
 #: en/git-filter-branch.txt:345
@@ -29152,7 +29220,7 @@ msgid "In addition to branch names, populate the log message with one-line descr
 msgstr ""
 "Além dos nomes das ramificações, preencha a mensagem do registro log com "
 "descrições de uma linha dos commits que estão sendo mesclados atualmente.  "
-"Serão utilizadas no máximo <n> mesclagens dos commits de cada matriz (20 "
+"Serão utilizadas no máximo <n> mesclagens dos commits de cada origem (20 "
 "caso <n> seja omitido).  Isso substitui a variável da configuração `merge."
 "log`."
 
@@ -31775,7 +31843,7 @@ msgstr ""
 msgid "You haven't specified any nodes as heads so it won't be possible to differentiate between un-parented commits and root nodes."
 msgstr ""
 "Você não especificou nenhum nó como cabeçalho, portanto não será possível "
-"diferenciar entre os commits sem matriz e os nós raiz."
+"diferenciar entre os commits sem origem e os nós raiz."
 
 #. type: Labeled list
 #: en/git-fsck.txt:137
@@ -41788,7 +41856,9 @@ msgstr "--keep-true-parents"
 #: en/git-pack-objects.txt:259
 #, priority:100
 msgid "With this option, parents that are hidden by grafts are packed nevertheless."
-msgstr "Com esta opção, as matrizes são ocultas pelos enxertos são embalados mesmo assim."
+msgstr ""
+"Com esta opção, as origens são ocultas pelos enxertos são embalados mesmo "
+"assim."
 
 #. type: Plain text
 #: en/git-pack-objects.txt:264
@@ -48101,12 +48171,12 @@ msgid ""
 "'git replace' -d <object>...\n"
 "'git replace' [--format=<format>] [-l [<pattern>]]\n"
 msgstr ""
-"'git replace' [-f] <object> <replacement>\n"
-"'git replace' [-f] --edit <object>\n"
-"'git replace' [-f] --graft <commit> [<matriz>...]\n"
+"'git replace' [-f] <objeto> <replacement>\n"
+"'git replace' [-f] --edit <objeto>\n"
+"'git replace' [-f] --graft <commit> [<origem >...]\n"
 "'git replace' [-f] --convert-graft-file\n"
-"'git replace' -d <object>...\n"
-"'git replace' [--format=<format>] [-l [<pattern>]]\n"
+"'git replace' -d <objeto>...\n"
+"'git replace' [--format=<formato>] [-l [<pattern>]]\n"
 
 #. type: Plain text
 #: en/git-replace.txt:21
@@ -48220,7 +48290,7 @@ msgstr ""
 #: en/git-replace.txt:86
 #, ignore-ellipsis, no-wrap, priority:100
 msgid "--graft <commit> [<parent>...]"
-msgstr "--graft <commit> [<matriz>...]"
+msgstr "--graft <commit> [<origem>...]"
 
 #. type: Plain text
 #: en/git-replace.txt:93
@@ -48228,11 +48298,11 @@ msgstr "--graft <commit> [<matriz>...]"
 msgid "Create a graft commit. A new commit is created with the same content as <commit> except that its parents will be [<parent>...] instead of <commit>'s parents. A replacement ref is then created to replace <commit> with the newly created commit. Use `--convert-graft-file` to convert a `$GIT_DIR/info/grafts` file and use replace refs instead."
 msgstr ""
 "Cria um commit com enxerto. Um novo commit é criado com o mesmo conteúdo de "
-"`<commit>` exceto que as suas matrizes serão [<matriz>...] em vez do "
-"<commit> das matrizes. Um \"ref\" de substituição é então criado para "
-"substituir o `<commit>` pelo commit recém-criado. Utilize `--convert-graft-"
-"file` para converter um arquivo `$GIT_DIR/info/grafts` e utilize os \"refs\" "
-"de substituição em seu lugar."
+"`<commit>` exceto que as suas origens serão [<origem>...] em vez do <commit> "
+"das origens. Um \"ref\" de substituição é então criado para substituir o "
+"`<commit>` pelo commit recém-criado. Utilize `--convert-graft-file` para "
+"converter um arquivo `$GIT_DIR/info/grafts` e utilize os \"refs\" de "
+"substituição em seu lugar."
 
 #. type: Labeled list
 #: en/git-replace.txt:94
@@ -64818,7 +64888,10 @@ msgstr "[[def_parent]]parent"
 #: en/glossary-content.txt:431
 #, priority:100
 msgid "A <<def_commit_object,commit object>> contains a (possibly empty) list of the logical predecessor(s) in the line of development, i.e. its parents."
-msgstr "Um <<def_commit_object,commit object>> contém uma lista (possivelmente vazia) dos predecessores lógicos na linha de desenvolvimento, ou seja, as suas matrizes."
+msgstr ""
+"Um <<def_commit_object,commit object>> contém uma lista (possivelmente vazia)"
+" dos predecessores lógicos na linha de desenvolvimento, ou seja, as suas "
+"origens."
 
 #. type: Labeled list
 #: en/glossary-content.txt:432
@@ -64947,7 +65020,7 @@ msgstr ""
 "<<def_object,object>> é acessível a partir do outro se pudermos alcançá-lo "
 "através de um <<def_chain,chain>> seguido de <<def_tag,tags>> para o que "
 "quer que eles marque com uma tag, <<def_commit_object,commits>> para as suas "
-"matrizes ou árvores e <<def_tree_object,trees>> para as árvores ou "
+"origens ou árvores e <<def_tree_object,trees>> para as árvores ou "
 "<<def_blob_object,blobs>> que os contiverem."
 
 #. type: Labeled list
@@ -65143,7 +65216,7 @@ msgstr ""
 "Um <<def_repository,repository>> repositório raso possui um histórico "
 "incompleto da quais <<def_commit,commits>> possui <<def_parent,parents>> dos "
 "quais cauterizam (em outras palavras, o Git é informado para fingir que "
-"estes commits não possuem matrizes, ainda que esteja cadastrados no "
+"estes commits não possuam origens, ainda que esteja cadastrados no "
 "<<def_commit_object,commit object>>). Algumas vezes é útil quando você está "
 "interessado apenas no histórico recente de um projeto, ainda que o histórico "
 "real registrado no \"upstream\" seja muito maior. Um repositório raso é "
@@ -66527,12 +66600,12 @@ msgstr ""
 "O formato 'bruto' exibe todo o commit exatamente como foi armazenado no "
 "objeto commit.  Notavelmente, os hashes são exibidos na íntegra "
 "independentemente se a opção `--abbrev` ou `--no-abbrev` foram utilizadas, "
-"as informações 'parents' demonstram quais os verdadeiros commits da matriz "
-"sem levar em consideração os enxertos ou a simplificação do histórico. "
-"Observe que este formato afeta a maneira como os commits são exibidos mas "
-"não a maneira como o \"diff\" é exibido com `git log --raw` por exemplo. "
-"Para obter os nomes completos e sem abreviações dos objetos em formato diff "
-"bruto, utilize `--no-abbrev`."
+"as informações relacionadas as origens 'parents' demonstram quais os "
+"verdadeiros commits da origem sem levar em consideração os enxertos ou a "
+"simplificação do histórico. Observe que este formato afeta a maneira como os "
+"commits são exibidos mas não a maneira como o \"diff\" é exibido com `git "
+"log --raw` por exemplo. Para obter os nomes completos e sem abreviações dos "
+"objetos em formato diff bruto, utilize `--no-abbrev`."
 
 #. type: Plain text
 #: en/pretty-formats.txt:105
@@ -66872,7 +66945,7 @@ msgstr "'%P'"
 #: en/pretty-formats.txt:176
 #, priority:260
 msgid "parent hashes"
-msgstr "hash das matrizes"
+msgstr "hash das origens"
 
 #. type: Labeled list
 #: en/pretty-formats.txt:176
@@ -66884,7 +66957,7 @@ msgstr "'%p'"
 #: en/pretty-formats.txt:177
 #, priority:260
 msgid "abbreviated parent hashes"
-msgstr "hash abreviado das matrizes"
+msgstr "hash abreviado das origens"
 
 #. type: Labeled list
 #: en/pretty-formats.txt:177
@@ -68195,11 +68268,11 @@ msgstr "'<rev>{caret}[<n>]', exemplo, 'HEAD{caret}, v1.5.1{caret}0'"
 msgid "A suffix '{caret}' to a revision parameter means the first parent of that commit object.  '{caret}<n>' means the <n>th parent (i.e.  '<rev>{caret}' is equivalent to '<rev>{caret}1').  As a special rule, '<rev>{caret}0' means the commit itself and is used when '<rev>' is the object name of a tag object that refers to a commit object."
 msgstr ""
 "Um sufixo '{caret}' para um parâmetro de revisão significa que a primeira "
-"matriz desse objeto commit.  '{caret}<n>' significa que é a <n>th matriz (ou "
-"seja,  '<rev>{caret}' é equivamente a '<rev>{caret}1').  Como regra "
-"especial, '<rev>{caret}0' significa o commit em si e é utilizado quando "
-"'<rev>' for o nome do objeto de um objeto `tag` que tenha referência a um "
-"objeto de commit."
+"origem deste objeto commit.  '{caret}<n>' significa que é a quantidade <n> "
+"da origem (ou seja,  '<rev>{caret}' é equivamente a '<rev>{caret}1').  Como "
+"regra especial, '<rev>{caret}0' significa o commit em si e é utilizado "
+"quando '<rev>' for o nome do objeto de um objeto `tag` que tenha referência "
+"a um objeto de commit."
 
 #. type: Labeled list
 #: en/revisions.txt:142
@@ -68213,9 +68286,9 @@ msgstr "'<rev>{tilde}[<n>]', exemplo, 'HEAD{tilde}, master{tilde}3'"
 msgid "A suffix '{tilde}' to a revision parameter means the first parent of that commit object.  A suffix '{tilde}<n>' to a revision parameter means the commit object that is the <n>th generation ancestor of the named commit object, following only the first parents.  I.e. '<rev>{tilde}3' is equivalent to '<rev>{caret}{caret}{caret}' which is equivalent to '<rev>{caret}1{caret}1{caret}1'.  See below for an illustration of the usage of this form."
 msgstr ""
 "Um sufixo '{tilde}' para um parâmetro de revisão significa o que a primeira "
-"matriz deste objeto commit.  Um sufixo '{tilde}<n>' para um parâmetro de "
+"origem deste objeto commit.  Um sufixo '{tilde}<n>' para um parâmetro de "
 "revisão significa que o objeto commit é o <n> do ancestral da geração do "
-"objeto commit informado, seguindo apenas os primeiras matrizes.  Ou seja, "
+"objeto commit informado, seguindo apenas os primeiras origens.  Ou seja, "
 "'<rev>{tilde}3' é equivalente a '<rev>{caret}{caret}{caret}' que é "
 "equivalente a '<rev>{caret}1{caret}1{caret}1'.  Veja abaixo uma ilustração "
 "do uso deste formato."
@@ -68337,8 +68410,8 @@ msgstr "Os dois pontos opcionalmente seguidos por um número de estágio (0 para
 msgid "Here is an illustration, by Jon Loeliger.  Both commit nodes B and C are parents of commit node A.  Parent commits are ordered left-to-right."
 msgstr ""
 "Aqui está uma ilustração, de Jon Loeliger.  Ambos os nós do commit B e C são "
-"as matrizes do nós do commit A. Os commits matriz são ordenados da esquerda "
-"para a direita."
+"as origens dos nós do commit A. Os commits da origem são ordenados da "
+"esquerda para a direita."
 
 #. type: delimited block .
 #: en/revisions.txt:232
@@ -68889,7 +68962,9 @@ msgstr "--no-merges"
 #: en/rev-list-options.txt:110
 #, priority:260
 msgid "Do not print commits with more than one parent. This is exactly the same as `--max-parents=1`."
-msgstr "Não exiba os commits com mais de uma matriz. É exatamente o mesmo que a opção `--max-parents=1`."
+msgstr ""
+"Não exiba os commits com mais de uma origem. É exatamente o mesmo que a "
+"opção `--max-parents=1`."
 
 #. type: Labeled list
 #: en/rev-list-options.txt:111
@@ -68931,7 +69006,14 @@ msgstr ""
 #: en/rev-list-options.txt:133
 #, priority:260
 msgid "Follow only the first parent commit upon seeing a merge commit.  This option can give a better overview when viewing the evolution of a particular topic branch, because merges into a topic branch tend to be only about adjusting to updated upstream from time to time, and this option allows you to ignore the individual commits brought in to your history by such a merge. Cannot be combined with --bisect."
-msgstr "Siga apenas o primeiro commit matriz ao ver um commit de mesclagem.  This option can give a better overview when viewing the evolution of a particular topic branch, because merges into a topic branch tend to be only about adjusting to updated upstream from time to time, and this option allows you to ignore the individual commits brought in to your history by such a merge. Cannot be combined with --bisect."
+msgstr ""
+"Siga apenas o primeiro commit da origem ao ver a mesclagem de um commit.  "
+"Essa opção pode lhe fornecer uma melhor visão geral durante a visualização "
+"da evolução de um tópico específico no ramo, pois faz a mesclagem em um "
+"tópico no ramo e tende a ser apenas sobre o ajuste das atualizações da "
+"inicial de tempos em tempos, esta opção permite ignorar os commits "
+"individuais trazidas para o seu histórico feitas por essa mesclagem. Não "
+"pode ser combinado com `--bisect`."
 
 #. type: Plain text
 #: en/rev-list-options.txt:137
@@ -69987,7 +70069,9 @@ msgstr "É predefinido que os commits sejam exibidos em uma ordem cronológica r
 #: en/rev-list-options.txt:783
 #, priority:260
 msgid "Show no parents before all of its children are shown, but otherwise show commits in the commit timestamp order."
-msgstr "Não exiba nenhuma matriz antes de todos os herdeiros, porém exiba os commits com uma ordem de data e hora."
+msgstr ""
+"Não exiba nenhuma origem antes de todos os herdeiros, porém exiba os commits "
+"com uma ordem de data e hora."
 
 #. type: Labeled list
 #: en/rev-list-options.txt:784
@@ -69999,13 +70083,17 @@ msgstr "--author-date-order"
 #: en/rev-list-options.txt:787
 #, priority:260
 msgid "Show no parents before all of its children are shown, but otherwise show commits in the author timestamp order."
-msgstr "Não exiba nenhuma matriz antes de todos os herdeiros, porém exiba os commits com uma ordem de data e hora do autor."
+msgstr ""
+"Não exiba nenhuma origem antes de todos os herdeiros, porém exiba os commits "
+"com uma ordem de data e hora do autor."
 
 #. type: Plain text
 #: en/rev-list-options.txt:792
 #, priority:260
 msgid "Show no parents before all of its children are shown, and avoid showing commits on multiple lines of history intermixed."
-msgstr "Não exiba nenhuma matriz antes de todos os herdeiros e evite exibir os commits com múltiplas linhas misturadas no histórico."
+msgstr ""
+"Não exiba nenhuma origem antes de todos os herdeiros e evite exibir os "
+"commits com múltiplas linhas misturadas no histórico."
 
 #. type: Plain text
 #: en/rev-list-options.txt:794
@@ -70590,10 +70678,10 @@ msgstr "Listamos abaixo as opções que controlam a formatação da saída \"dif
 msgid "With this option, diff output for a merge commit shows the differences from each of the parents to the merge result simultaneously instead of showing pairwise diff between a parent and the result one at a time. Furthermore, it lists only files which were modified from all parents."
 msgstr ""
 "Com esta opção, a saída \"diff\" para um commit de mesclagem exibe as "
-"diferenças de cada uma das matrizes para a mesclagem resultante de forma "
-"simultânea em vez de mostrar a diferença pareada entre uma matriz e o "
+"diferenças de cada uma das origens para a mesclagem resultante de forma "
+"simultânea em vez de mostrar a diferença pareada entre uma origem e o "
 "resultado, um de cada vez. Além disso, lista apenas os arquivos que foram "
-"modificados por todas as matrizes."
+"modificados por todas as origens."
 
 #. type: Plain text
 #: en/rev-list-options.txt:1139
