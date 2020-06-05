@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-06-02 21:43+0200\n"
-"PO-Revision-Date: 2020-06-01 19:41+0000\n"
-"Last-Translator: BMN <weblate@yopmail.com>\n"
+"PO-Revision-Date: 2020-06-06 10:46+0000\n"
+"Last-Translator: Dieter Ziller <max123kl@ziller.de>\n"
 "Language-Team: Matthias Aßhauer <mha1993@live.de>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -12472,10 +12472,10 @@ msgstr "$ git checkout mytopic\n"
 msgid "However, your \"wrong\" branch and correct `mytopic` branch may differ in files that you have modified locally, in which case the above checkout would fail like this:"
 msgstr "Der \"falsche\" Branch und der korrekte Branch \"mytopic\" können sich in lokal geänderten Dateien unterscheiden, was daz führt, dass der obige Checkout folgendermaßen fehlschlägt:"
 
-#. type: delimited block -
 # git-checkout.txt is not up to date. The fuzzy msgid is the message prior to 142183d0 2010-07-09 "checkout: accord documentation to what git does", the msgid is the message in the documentation afterwards.
 # At that time there weren't even po files in the git tree. This message does not exist since 23cbf11b 2010-08-11 "merge-recursive: porcelain messages for checkout".
 # The current message is "Your local changes to the following files would be overwritten by merge:\n%%s" as of 2e3926b9 2016-05-13 "i18n: unpack-trees: avoid substituting only a verb in sentences"
+#. type: delimited block -
 #: en/git-checkout.txt:561
 #, fuzzy, no-wrap, priority:240
 #| msgid ""
@@ -14448,7 +14448,7 @@ msgstr "Discussion"
 #: en/git-commit-tree.txt:91 en/git-commit.txt:527 en/git-config.txt:275 en/git-credential-store.txt:45 en/git-show-ref.txt:174 en/git-submodule.txt:443 en/git-svn.txt:1157
 #, no-wrap, priority:280
 msgid "FILES"
-msgstr "FILES"
+msgstr "DATEIEN"
 
 #. type: Plain text
 #: en/git-commit-tree.txt:93
@@ -15290,7 +15290,8 @@ msgstr "git-config(1)"
 #: en/git-config.txt:7
 #, priority:100
 msgid "git-config - Get and set repository or global options"
-msgstr "git-config - Repositoryeigene oder globale Optionen auslesen und setzen"
+msgstr ""
+"git-config – Repository eigene oder globale Optionen auslesen und setzen"
 
 #. type: Plain text
 #: en/git-config.txt:27
@@ -15332,91 +15333,117 @@ msgstr ""
 #: en/git-config.txt:33
 #, priority:100
 msgid "You can query/set/replace/unset options with this command. The name is actually the section and the key separated by a dot, and the value will be escaped."
-msgstr "Sie können mit diesem Befehl Optionen abfragen/setzen/ersetzen/leeren. Der Name ist eigentlich das Abteil und der Schlüssel, durch einen Punkt getrennt und der Wert wird escapet."
+msgstr ""
+"Sie können mit diesem Befehl Optionen abfragen/setzen/ersetzen/leeren. Der "
+"Name ist tatsächlich der Abschnitt und der Schlüssel, getrennt durch einen "
+"Punkt, und der Wert wird außer Acht gelassen."
 
 #. type: Plain text
 #: en/git-config.txt:40
-#, fuzzy, priority:100
-#| msgid "Multiple lines can be added to an option by using the '--add' option.  If you want to update or unset an option which can occur on multiple lines, a POSIX regexp `value_regex` needs to be given.  Only the existing values that match the regexp are updated or unset.  If you want to handle the lines that do *not* match the regex, just prepend a single exclamation mark in front (see also <<EXAMPLES>>)."
+#, priority:100
 msgid "Multiple lines can be added to an option by using the `--add` option.  If you want to update or unset an option which can occur on multiple lines, a POSIX regexp `value_regex` needs to be given.  Only the existing values that match the regexp are updated or unset.  If you want to handle the lines that do *not* match the regex, just prepend a single exclamation mark in front (see also <<EXAMPLES>>)."
-msgstr "Mehrere Linien können zu einer Option mit der Option '--add' hinzugefügt werden. Falls Sie eine Option ändern oder leeren möchten, was bei mehreren Zeilen durchaus vorkommen kann, muss eine POSIX-Regexp `Wert_Regex` angegeben werden. Nur die vorhandenen Werte, welche auf die Regex passen, werden berücksichtigt. Falls Sie Linien bearbeiten möchten, die *nicht* auf die Regex passen, stellen Sie einfach ein einzelnes Ausrufezeichen vor den Ausdruck (Siehe auch <<EXAMPLES>>)."
+msgstr ""
+"Einer Option können mehrere Zeilen hinzugefügt werden, indem Sie die Option "
+"`--add` verwenden.  Wenn Sie eine Option, die auf mehreren Zeilen vorkommen "
+"kann, aktualisieren oder zurücksetzen wollen, muss ein regulärer POSIX-"
+"Ausdruck (regexp) `value_regex` angegeben werden.  Nur die vorhandenen "
+"Werte, die mit dem regexp übereinstimmen, werden aktualisiert oder "
+"zurückgesetzt.  Wenn Sie die Zeilen bearbeiten wollen, die mit dem regulären "
+"Ausdruck *nicht* übereinstimmen, setzen Sie einfach ein einzelnes "
+"Ausrufezeichen davor (siehe auch <<BEISPIELE>>)."
 
 #. type: Plain text
 #: en/git-config.txt:45
 #, priority:100
 msgid "The `--type=<type>` option instructs 'git config' to ensure that incoming and outgoing values are canonicalize-able under the given <type>.  If no `--type=<type>` is given, no canonicalization will be performed. Callers may unset an existing `--type` specifier with `--no-type`."
 msgstr ""
+"Die Option `--type=<Typ>` veranlasst 'git config' zu überprüfen, ob ein- und "
+"ausgehende Werte unter den angegebenen <Typ> zulässig sind.  Wenn kein "
+"`--type=<Typ>` angegeben wird, wird keine Kanonisierung durchgeführt. "
+"Benutzer können einen bestehenden `--type` Bezeichner mit `--no-type` "
+"aufheben."
 
 #. type: Plain text
 #: en/git-config.txt:51
 #, priority:100
 msgid "When reading, the values are read from the system, global and repository local configuration files by default, and options `--system`, `--global`, `--local`, `--worktree` and `--file <filename>` can be used to tell the command to read from only that location (see <<FILES>>)."
 msgstr ""
+"Standardmäßig werden die Werte aus den lokalen Konfigurationsdateien des "
+"Systems, der globalen Einstellung und der des Repositorys ausgelesen. Die "
+"Optionen `--system`, `--global`, `--local`, `---worktree` und `--file <Datei-"
+"Name>` können verwendet werden, um dem Befehl anzuweisen, nur von diesem "
+"Speicherort zu lesen (siehe den Abschnitt <<DATEIEN>>)."
 
 #. type: Plain text
 #: en/git-config.txt:57
 #, priority:100
 msgid "When writing, the new value is written to the repository local configuration file by default, and options `--system`, `--global`, `--worktree`, `--file <filename>` can be used to tell the command to write to that location (you can say `--local` but that is the default)."
 msgstr ""
+"Beim Schreiben wird der neue Wert standardmäßig in die lokale "
+"Konfigurationsdatei des Repositorys geschrieben, und die Optionen `--system`"
+", `--global`, `--worktree`, `--file <filename>` können benutzt werden, um "
+"dem Befehl mitzuteilen, dass er dorthin schreiben soll (Sie können `--local` "
+"angeben, aber das ist schon die Voreinstellung)."
 
 #. type: Plain text
 #: en/git-config.txt:60
 #, priority:100
 msgid "This command will fail with non-zero status upon error.  Some exit codes are:"
 msgstr ""
+"Dieser Befehl schlägt bei einem Fehler mit einem Nicht-Null-Status fehl.  "
+"Einige dieser Exit-Codes sind:"
 
 #. type: Plain text
 #: en/git-config.txt:62
-#, fuzzy, priority:100
-#| msgid "the section or key is invalid,"
+#, priority:100
 msgid "The section or key is invalid (ret=1),"
-msgstr "Das Abteil oder der Schlüssel falsch ist,"
+msgstr "Der Abschnitt oder Schlüssel ist ungültig (ret=1),"
 
 #. type: Plain text
 #: en/git-config.txt:63
-#, fuzzy, priority:100
-#| msgid "no section was provided,"
+#, priority:100
 msgid "no section or name was provided (ret=2),"
-msgstr "Kein Abteil angegeben wurde,"
+msgstr "weder Abschnitt noch Name wurde angegeben (ret=2),"
 
 #. type: Plain text
 #: en/git-config.txt:64
-#, fuzzy, priority:100
-#| msgid "The config file is invalid,"
+#, priority:100
 msgid "the config file is invalid (ret=3),"
-msgstr "Die Konfigurationsdatei falsch ist,"
+msgstr "die Konfigurationsdatei ist falsch (ret=3),"
 
 #. type: Plain text
 #: en/git-config.txt:65
 #, priority:100
 msgid "the config file cannot be written (ret=4),"
-msgstr ""
+msgstr "die Konfigurationsdatei kann nicht geschrieben werden (ret=4),"
 
 #. type: Plain text
 #: en/git-config.txt:66
-#, fuzzy, priority:100
-#| msgid "you try to unset an option which does not exist,"
+#, priority:100
 msgid "you try to unset an option which does not exist (ret=5),"
-msgstr "Sie versuchen, eine Option, die nicht existiert, zu leeren."
+msgstr "Sie versuchen, eine nicht existierende Option aufzuheben (ret=5),"
 
 #. type: Plain text
 #: en/git-config.txt:67
-#, fuzzy, priority:100
-#| msgid "you try to unset/set an option for which multiple lines match, or"
+#, priority:100
 msgid "you try to unset/set an option for which multiple lines match (ret=5), or"
-msgstr "Sie eine Option, die auf mehrere Zeilen passt, versuchen zu leeren/setzen, oder"
+msgstr ""
+"Sie versuchen, eine Option rückgängig zu machen/einzustellen, für die "
+"mehrere Zeilen übereinstimmen (ret=5), oder"
 
 #. type: Plain text
 #: en/git-config.txt:68
 #, priority:100
 msgid "you try to use an invalid regexp (ret=6)."
 msgstr ""
+"Sie versuchen, einen ungültigen regulären Ausdruck (regexp) zu verwenden "
+"(ret=6)."
 
 #. type: Plain text
 #: en/git-config.txt:70
 #, priority:100
 msgid "On success, the command returns the exit code 0."
-msgstr ""
+msgstr "Bei erfolgreichem Abschluss gibt der Befehl den Exit-Code 0 zurück."
 
 #. type: Labeled list
 #: en/git-config.txt:74
@@ -15428,7 +15455,9 @@ msgstr "--replace-all"
 #: en/git-config.txt:77
 #, priority:100
 msgid "Default behavior is to replace at most one line. This replaces all lines matching the key (and optionally the value_regex)."
-msgstr "Das Standardverhalten ist, höchstens eine Zeile zu ersetzen. Dies ersetzt alle Zeilen, die dem Schlüssel entsprechen (und eventuell der Wert_Regex)."
+msgstr ""
+"Das Standardverhalten ist, höchstens eine Zeile zu ersetzen. Dies ersetzt "
+"alle Zeilen, die dem Schlüssel entsprechen (und eventuell dem Wert_Regex)."
 
 #. type: Labeled list
 #: en/git-config.txt:78 en/git-update-index.txt:45
@@ -15438,10 +15467,12 @@ msgstr "--add"
 
 #. type: Plain text
 #: en/git-config.txt:82
-#, fuzzy, priority:100
-#| msgid "Adds a new line to the option without altering any existing values.  This is the same as providing '^$' as the value_regex."
+#, priority:100
 msgid "Adds a new line to the option without altering any existing values.  This is the same as providing '^$' as the value_regex in `--replace-all`."
-msgstr "Fügt eine neue Zeile zu der Option hinzu, ohne andere, ebenfalls vorhandene Werte zu verändern. Dies ist das Selbe, wie '^$' als Wert_Regex anzugeben."
+msgstr ""
+"Fügt der Option eine neue Zeile hinzu, ohne bestehende Werte zu ändern.  Das "
+"entspricht der Angabe von '^$' als Regex-Wert (value_regex) in `--replace-"
+"all`."
 
 #. type: Labeled list
 #: en/git-config.txt:83
@@ -15451,10 +15482,13 @@ msgstr "--get"
 
 #. type: Plain text
 #: en/git-config.txt:87
-#, fuzzy, priority:100
-#| msgid "Get the value for a given key (optionally filtered by a regex matching the value). Returns error code 1 if the key was not found and error code 2 if multiple key values were found."
+#, priority:100
 msgid "Get the value for a given key (optionally filtered by a regex matching the value). Returns error code 1 if the key was not found and the last value if multiple key values were found."
-msgstr "Zeigt den Wert für den angegebenen Schlüssel an (Optional auch durch eine Regex, die auf den Wert passt, gefiltert). Gibt Fehlercode 1 zurück, wenn der Schlüssel nicht gefunden wurde und Fehlercode 2 wenn mehrere Schlüsselwerte gefunden wurden."
+msgstr ""
+"Liefert den Wert für einen angegebenen Schlüssel (optional gefiltert durch "
+"einen dem Wert entsprechenden Regex). Gibt Fehlercode 1 zurück, wenn der "
+"Schlüssel nicht gefunden wurde. Wenn mehrere Schlüsselwerte gefunden werden, "
+"wird der letzte Wert zurückgegeben."
 
 #. type: Labeled list
 #: en/git-config.txt:88
@@ -15467,6 +15501,8 @@ msgstr "--get-all"
 #, priority:100
 msgid "Like get, but returns all values for a multi-valued key."
 msgstr ""
+"Entspricht `--get`, liefert aber alle Werte eines mehrwertigen Schlüssels "
+"zurück."
 
 #. type: Labeled list
 #: en/git-config.txt:91
@@ -15479,18 +15515,31 @@ msgstr "--get-regexp"
 #, priority:100
 msgid "Like --get-all, but interprets the name as a regular expression and writes out the key names.  Regular expression matching is currently case-sensitive and done against a canonicalized version of the key in which section and variable names are lowercased, but subsection names are not."
 msgstr ""
+"Wie `--get-all`, interpretiert den Namen aber als regulären Ausdruck und "
+"gibt die Schlüsselnamen aus.  Der Abgleich mit regulären Ausdrücken "
+"unterscheidet derzeit zwischen Groß- und Kleinschreibung und erfolgt gegen "
+"eine kanonisierte Version des Schlüssels, in der die Namen von Abschnitt und "
+"Variablen kleingeschrieben werden, die Namen von Unterabschnitten jedoch "
+"nicht."
 
 #. type: Labeled list
 #: en/git-config.txt:98
 #, no-wrap, priority:100
 msgid "--get-urlmatch name URL"
-msgstr ""
+msgstr "--get-urlmatch Name URL"
 
 #. type: Plain text
 #: en/git-config.txt:105
 #, priority:100
 msgid "When given a two-part name section.key, the value for section.<url>.key whose <url> part matches the best to the given URL is returned (if no such key exists, the value for section.key is used as a fallback).  When given just the section as name, do so for all the keys in the section and list them.  Returns error code 1 if no value is found."
 msgstr ""
+"Wenn ein zweiteiliger Name section.key angegeben wird, wird der Wert für "
+"section.<URL>.key zurückgegeben, dessen <URL>-Teil am besten zu der "
+"angegebenen URL passt (wenn kein solcher Schlüssel existiert, wird der Wert "
+"für section.key als Fallback verwendet). Wenn nur der Abschnitt als Name "
+"angegeben wird, geschieht das bei allen Schlüsseln in dem Abschnitt und sie "
+"werden aufgelistet. Falls kein Wert gefunden wird, liefert der Befehl den "
+"Fehlercode 1 zurück."
 
 #. type: Labeled list
 #: en/git-config.txt:106
@@ -15500,23 +15549,26 @@ msgstr "--global"
 
 #. type: Plain text
 #: en/git-config.txt:111
-#, fuzzy, priority:100
-#| msgid "For writing options: write to global ~/.gitconfig file rather than the repository .git/config."
+#, priority:100
 msgid "For writing options: write to global `~/.gitconfig` file rather than the repository `.git/config`, write to `$XDG_CONFIG_HOME/git/config` file if this file exists and the `~/.gitconfig` file doesn't."
-msgstr "Um Optionen zu schreiben: Es wird in die Globale Datei ~/.gitconfig geschrieben, anstatt in die Repositoryeigene .git/config"
+msgstr ""
+"Bei Schreib-Optionen: schreibt in die globale `~/.gitconfig` Datei anstatt "
+"in die `.git/config` des Repositorys, schreibt in die `$XDG_CONFIG_HOME/git/"
+"config` Datei, wenn diese Datei existiert und die `~/.gitconfig` Datei nicht."
 
 #. type: Plain text
 #: en/git-config.txt:114
-#, fuzzy, priority:100
-#| msgid "For reading options: read only from global ~/.gitconfig rather than from all available files."
+#, priority:100
 msgid "For reading options: read only from global `~/.gitconfig` and from `$XDG_CONFIG_HOME/git/config` rather than from all available files."
-msgstr "Um Optionen zu lesen: Es wird nur aus der globalen Datei ~/.gitconfig gelesen, anstelle aller verfügbaren Dateien."
+msgstr ""
+"Bei Lese-Optionen: Liest nur aus der globalen `~/.gitconfig` und aus `$"
+"XDG_CONFIG_HOME/git/config`, statt aus allen verfügbaren Dateien."
 
 #. type: Plain text
 #: en/git-config.txt:116 en/git-config.txt:126 en/git-config.txt:135 en/git-config.txt:339
 #, priority:100
 msgid "See also <<FILES>>."
-msgstr "Siehe auch <<FILES>>."
+msgstr "Siehe auch <<DATEIEN>>."
 
 #. type: Labeled list
 #: en/git-config.txt:117
@@ -15526,31 +15578,35 @@ msgstr "--system"
 
 #. type: Plain text
 #: en/git-config.txt:121
-#, fuzzy, priority:100
-#| msgid "For writing options: write to system-wide $(prefix)/etc/gitconfig rather than the repository .git/config."
+#, priority:100
 msgid "For writing options: write to system-wide `$(prefix)/etc/gitconfig` rather than the repository `.git/config`."
-msgstr "Um Optionen zu schreiben: Es wird in die systemweite Datei ${prefix}/etc/gitconfig anstatt in die Repositoryeigene .git/config"
+msgstr ""
+"Bei Schreib-Optionen: schreibt in die systemweite `$(prefix)/etc/gitconfig` "
+"Datei, anstatt im Repository auf `.git/config`."
 
 #. type: Plain text
 #: en/git-config.txt:124
-#, fuzzy, priority:100
-#| msgid "For reading options: read only from system-wide $(prefix)/etc/gitconfig rather than from all available files."
+#, priority:100
 msgid "For reading options: read only from system-wide `$(prefix)/etc/gitconfig` rather than from all available files."
-msgstr "Um Optionen zu lesen: Es wird nur aus der systemweiten Datei ${prefix}/etc/gitconfig gelesen, anstelle aller verfügbaren Dateien."
+msgstr ""
+"Bei Lese-Optionen: nur aus systemweitem `$(prefix)/etc/gitconfig` lesen, "
+"nicht aus allen verfügbaren Dateien."
 
 #. type: Plain text
 #: en/git-config.txt:130
-#, fuzzy, priority:100
-#| msgid "For writing options: write to global ~/.gitconfig file rather than the repository .git/config."
+#, priority:100
 msgid "For writing options: write to the repository `.git/config` file.  This is the default behavior."
-msgstr "Um Optionen zu schreiben: Es wird in die Globale Datei ~/.gitconfig geschrieben, anstatt in die Repositoryeigene .git/config"
+msgstr ""
+"Bei Schreib-Optionen: Schreibt in die `.git/config` Datei des Repositorys.  "
+"Dies entspricht dem Standardverhalten."
 
 #. type: Plain text
 #: en/git-config.txt:133
-#, fuzzy, priority:100
-#| msgid "For reading options: read only from global ~/.gitconfig rather than from all available files."
+#, priority:100
 msgid "For reading options: read only from the repository `.git/config` rather than from all available files."
-msgstr "Um Optionen zu lesen: Es wird nur aus der globalen Datei ~/.gitconfig gelesen, anstelle aller verfügbaren Dateien."
+msgstr ""
+"Bei Lese-Optionen: nur aus der Repository `.git/config` lesen, nicht aus "
+"allen verfügbaren Dateien."
 
 #. type: Labeled list
 #: en/git-config.txt:136 en/git-restore.txt:55
@@ -15563,36 +15619,46 @@ msgstr "--worktree"
 #, priority:100
 msgid "Similar to `--local` except that `.git/config.worktree` is read from or written to if `extensions.worktreeConfig` is present. If not it's the same as `--local`."
 msgstr ""
+"Analog zu `--local', außer dass `.git/config.worktree' gelesen oder "
+"geschrieben wird, sofern `extensions.worktreeConfig` vorhanden ist. Falls "
+"nicht, ist es identisch mit `--local`."
 
 #. type: Labeled list
 #: en/git-config.txt:141
 #, no-wrap, priority:100
 msgid "-f config-file"
-msgstr "-f Konfigurationsdatei"
+msgstr "-f Konfigurations-Datei"
 
 #. type: Labeled list
 #: en/git-config.txt:142
 #, no-wrap, priority:100
 msgid "--file config-file"
-msgstr "--file Konfigurationsdatei"
+msgstr "--file Konfigurations-Datei"
 
 #. type: Plain text
 #: en/git-config.txt:144
 #, priority:100
 msgid "Use the given config file instead of the one specified by GIT_CONFIG."
-msgstr "Verwende die angegebene Konfigurationsdatei anstatt der in GIT_CONFIG angegebenen."
+msgstr ""
+"Verwendet die genannte Konfigurations-Datei anstelle jener, die in "
+"GIT_CONFIG festgelegt ist."
 
 #. type: Labeled list
 #: en/git-config.txt:145
 #, no-wrap, priority:100
 msgid "--blob blob"
-msgstr ""
+msgstr "--blob Blob"
 
 #. type: Plain text
 #: en/git-config.txt:151
 #, priority:100
 msgid "Similar to `--file` but use the given blob instead of a file. E.g.  you can use 'master:.gitmodules' to read values from the file '.gitmodules' in the master branch. See \"SPECIFYING REVISIONS\" section in linkgit:gitrevisions[7] for a more complete list of ways to spell blob names."
 msgstr ""
+"Analog zu `--file`, aber benutzt den genannten Blob anstelle einer Datei. "
+"Sie können z.B. 'master:.gitmodules' verwenden, um Werte aus der Datei "
+"'.gitmodules' im Master-Branch zu lesen. Siehe den Abschnitt \"REVISIONEN "
+"SPEZIFIZIEREN\" in linkgit:gitrevisions[7] für eine umfassende Liste von "
+"Schreibweisen für Blob-Namen."
 
 #. type: Labeled list
 #: en/git-config.txt:152
@@ -15604,7 +15670,7 @@ msgstr "--remove-section"
 #: en/git-config.txt:154
 #, priority:100
 msgid "Remove the given section from the configuration file."
-msgstr "Lösche das gegebene Abteil aus der Konfigurationsdatei."
+msgstr "Entfernt den angegebenen Abschnitt aus der Konfigurations-Datei."
 
 #. type: Labeled list
 #: en/git-config.txt:155
@@ -15616,7 +15682,7 @@ msgstr "--rename-section"
 #: en/git-config.txt:157
 #, priority:100
 msgid "Rename the given section to a new name."
-msgstr "Gib dem gegebenen Abteil einen neuen Namen."
+msgstr "Umbenennen des betreffenden Abschnitts auf einen neuen Namen."
 
 #. type: Labeled list
 #: en/git-config.txt:158
@@ -15628,7 +15694,8 @@ msgstr "--unset"
 #: en/git-config.txt:160
 #, priority:100
 msgid "Remove the line matching the key from config file."
-msgstr "Lösche die Zeile, auf die der Schlüssel passt, aus der Konfigurationsdatei."
+msgstr ""
+"Löscht die Zeile, auf die der Schlüssel passt, aus der Konfigurations-Datei."
 
 #. type: Labeled list
 #: en/git-config.txt:161
@@ -15640,46 +15707,55 @@ msgstr "--unset-all"
 #: en/git-config.txt:163
 #, priority:100
 msgid "Remove all lines matching the key from config file."
-msgstr "Lösche alle Zeilen, auf die der Schlüssel passt, aus der Konfigurationsdatei."
+msgstr ""
+"Löscht alle Zeilen, auf die der Schlüssel passt, aus der Konfigurations-"
+"Datei."
 
 #. type: Plain text
 #: en/git-config.txt:167
-#, fuzzy, priority:100
-#| msgid "List all variables set in config file."
+#, priority:100
 msgid "List all variables set in config file, along with their values."
-msgstr "Zeige alle in der Konfigurationsdatei gesetzten Variablen an."
+msgstr ""
+"Listet alle in der Konfigurations-Datei gesetzten Variablen mit ihren Werten "
+"auf."
 
 #. type: Labeled list
 #: en/git-config.txt:168
-#, fuzzy, no-wrap, priority:100
-#| msgid "-t <file>"
+#, no-wrap, priority:100
 msgid "--type <type>"
-msgstr "-t <file>"
+msgstr "--type <Typ>"
 
 #. type: Plain text
 #: en/git-config.txt:172
 #, priority:100
 msgid "'git config' will ensure that any input or output is valid under the given type constraint(s), and will canonicalize outgoing values in `<type>`'s canonical form."
 msgstr ""
+"'git config' sorgt dafür, dass jede Eingabe oder Ausgabe unter der/den "
+"angegebenen Typ-Bedingung(en) gültig ist und wird ausgehende Werte in der "
+"zulässigen Form von `<Typ>`ausgeben."
 
 #. type: Plain text
 #: en/git-config.txt:174
 #, priority:100
 msgid "Valid `<type>`'s include:"
-msgstr ""
+msgstr "Zulässige Werte von `<Typ>` enthalten:"
 
 #. type: Plain text
 #: en/git-config.txt:176
 #, priority:100
 msgid "'bool': canonicalize values as either \"true\" or \"false\"."
 msgstr ""
+"'bool': die Werte entweder als „wahr“ (true) oder „falsch“ (false) "
+"deklarieren."
 
 #. type: Plain text
 #: en/git-config.txt:179
-#, fuzzy, priority:100
-#| msgid "'git-config' will ensure that the output is a simple decimal number.  An optional value suffix of 'k', 'm', or 'g' in the config file will cause the value to be multiplied by 1024, 1048576, or 1073741824 prior to output."
+#, priority:100
 msgid "'int': canonicalize values as simple decimal numbers. An optional suffix of 'k', 'm', or 'g' will cause the value to be multiplied by 1024, 1048576, or 1073741824 upon input."
-msgstr "'git-config' wird sich versichern, dass die Ausgabe eine einfache Dezimalzahl ist. Ein optionaler Suffix von 'k', 'm' oder 'g' sorgt dafür, dass der Wert vor der Ausgabe mit 1024, 1048576\toder 1073741824 multipliziert wird."
+msgstr ""
+"'int': die Werte als einfache Dezimalzahlen deklarieren. Ein optionales "
+"Suffix von 'k', 'm' oder 'g' bewirkt, dass der Wert der Eingabe mit 1024, "
+"1048576 oder 1073741824 multipliziert wird."
 
 #. type: Plain text
 #: en/git-config.txt:181
@@ -21434,6 +21510,8 @@ msgstr ""
 #, priority:100
 msgid "Any valid Git SHA-1 expression that resolves to a commit.  See ``SPECIFYING REVISIONS'' in linkgit:gitrevisions[7] for details."
 msgstr ""
+"Jeder gültige Git SHA-1-Ausdruck, der zu einem Commit führt.  Siehe "
+"\"REVISIONEN SPEZIFIZIEREN\" in linkgit:gitrevisions[7] für weitere Details."
 
 #. type: Plain text
 #: en/git-fast-import.txt:551
@@ -53625,8 +53703,8 @@ msgstr ""
 msgid "`GIT_COMMON_DIR`"
 msgstr "`GIT_COMMON_DIR`"
 
-#. type: Plain text
 # noqa
+#. type: Plain text
 #: en/git.txt:495
 #, ignore-ellipsis, priority:100
 msgid "If this variable is set to a path, non-worktree files that are normally in $GIT_DIR will be taken from this path instead. Worktree-specific files such as HEAD or index are taken from $GIT_DIR. See linkgit:gitrepository-layout[5] and linkgit:git-worktree[1] for details. This variable has lower precedence than other path variables such as GIT_INDEX_FILE, GIT_OBJECT_DIRECTORY..."
