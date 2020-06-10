@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-06-02 21:43+0200\n"
-"PO-Revision-Date: 2020-06-09 13:10+0000\n"
-"Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
+"PO-Revision-Date: 2020-06-12 08:41+0000\n"
+"Last-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -16278,7 +16278,14 @@ msgstr "$XDG_CONFIG_HOME/git/config"
 #: en/git-config.txt:290
 #, priority:100
 msgid "Second user-specific configuration file. If $XDG_CONFIG_HOME is not set or empty, `$HOME/.config/git/config` will be used. Any single-valued variable set in this file will be overwritten by whatever is in `~/.gitconfig`.  It is a good idea not to create this file if you sometimes use older versions of Git, as support for this file was added fairly recently."
-msgstr "Segundo arquivo de configuração específico do usuário. Se $ XDG_CONFIG_HOME não estiver definido ou vazio, o `$HOME/.config/git/config` será usado. Qualquer variável de valor único definida neste arquivo será sobrescrita pelo que estiver em `~/.gitconfig`.  É uma boa ideia não criar este arquivo se você, às vezes, usa versões mais antigas do Git, já que o suporte para esse arquivo foi adicionado recentemente."
+msgstr ""
+"O segundo arquivo de configuração específico do usuário. Caso "
+"`$XDG_CONFIG_HOME` não esteja definido ou seja vazio, o `$HOME/.config/git/"
+"config` será utilizado. Qualquer variável com valor único definido neste "
+"arquivo será sobrescrito pelo que existir em `~/.gitconfig`.  É uma boa "
+"pratica não criar este arquivo caso você, às vezes, utilize as versões mais "
+"antigas do Git, já que o suporte para este arquivo foi adicionado "
+"recentemente."
 
 #. type: Labeled list
 #: en/git-config.txt:291
@@ -16302,13 +16309,13 @@ msgstr "$GIT_DIR/config"
 #: en/git-config.txt:297
 #, priority:100
 msgid "Repository specific configuration file."
-msgstr "O arquivo da configuração específica do repositório."
+msgstr "Arquivo de configuração específico do repositório."
 
 #. type: Labeled list
 #: en/git-config.txt:298
 #, no-wrap, priority:100
 msgid "$GIT_DIR/config.worktree"
-msgstr "$GIT_DIR/config.árvore-de-trabalho"
+msgstr "$GIT_DIR/config.worktree"
 
 #. type: Plain text
 #: en/git-config.txt:301
@@ -16320,7 +16327,13 @@ msgstr "Isso é opcional e só é pesquisado quando o arquivo `extensions.worktr
 #: en/git-config.txt:307
 #, priority:100
 msgid "If no further options are given, all reading options will read all of these files that are available. If the global or the system-wide configuration file are not available they will be ignored. If the repository configuration file is not available or readable, 'git config' will exit with a non-zero error code. However, in neither case will an error message be issued."
-msgstr "Se nenhuma outra opção for fornecida, todas as opções de leitura lerão todos esses arquivos disponíveis. Se o arquivo de configuração global ou do sistema não estiver disponível, eles serão ignorados. Se o arquivo de configuração do repositório não estiver disponível ou legível, o 'git config' será encerrado com um código de erro diferente de zero. No entanto, em nenhum dos casos, será emitida uma mensagem de erro."
+msgstr ""
+"Caso nenhuma outra opção seja informada, todas as opções de leitura lerão "
+"todos estes arquivos que estão disponíveis. Caso o arquivo de configuração "
+"global ou do sistema não esteja disponível, eles serão ignorados. Caso o "
+"arquivo de configuração do repositório não esteja disponível ou legível, o "
+"comando 'git config' será encerrado com um código de erro diferente de zero. "
+"No entanto, em nenhum dos casos será emitida qualquer mensagem de erro."
 
 #. type: Plain text
 #: en/git-config.txt:311
@@ -16338,13 +16351,23 @@ msgstr "Você pode sobrescrever parâmetros de configuração individuais ao exe
 #: en/git-config.txt:318
 #, priority:100
 msgid "All writing options will per default write to the repository specific configuration file. Note that this also affects options like `--replace-all` and `--unset`. *'git config' will only ever change one file at a time*."
-msgstr "Todas as opções de gravação por padrão gravarão no arquivo de configuração específico do repositório. Note que isto também afeta opções como `--replace-all` e` --unset`. *'git config' sempre mudará apenas um arquivo de cada vez*."
+msgstr ""
+"É predefinido que todas as opções de gravação gravarão no arquivo de "
+"configuração específico do repositório. Note que isto também afeta opções "
+"como `--replace-all` e `--unset`. *O 'git config' sempre mudará apenas um "
+"arquivo de cada vez*."
 
 #. type: Plain text
 #: en/git-config.txt:324
 #, priority:100
 msgid "You can override these rules either by command-line options or by environment variables. The `--global`, `--system` and `--worktree` options will limit the file used to the global, system-wide or per-worktree file respectively.  The `GIT_CONFIG` environment variable has a similar effect, but you can specify any filename you want."
-msgstr "Você pode substituir essas regras por opções de linha de comando ou por variáveis de ambiente. As opções `--global`,` --system` e `--árvore de trabalho` limitarão o arquivo usado para o arquivo global, em todo o sistema ou por árvore de trabalho, respectivamente.  A variável de ambiente `GIT_CONFIG` tem um efeito similar, mas você pode especificar qualquer nome de arquivo desejado."
+msgstr ""
+"Você pode substituir estas regras pelas opções da linha de comando ou por "
+"variáveis de ambiente. As opções `--global`, `--system` e `--worktree` "
+"limitarão o arquivo usado para o arquivo global, em todo o sistema ou "
+"através da árvore de trabalho, respectivamente.  A variável de ambiente "
+"`GIT_CONFIG` tem um efeito similar, porém você pode definir qualquer nome de "
+"arquivo que quiser."
 
 #. type: Title -
 #: en/git-config.txt:327 en/git-cvsserver.txt:310 en/git-daemon.txt:332 en/git-http-backend.txt:243 en/git-notes.txt:373
@@ -39848,11 +39871,12 @@ msgstr ""
 #, priority:220
 msgid "Then \"`git pull`\" will fetch and replay the changes from the remote `master` branch since it diverged from the local `master` (i.e., `E`)  until its current commit (`C`) on top of `master` and record the result in a new commit along with the names of the two parent commits and a log message from the user describing the changes."
 msgstr ""
-"Então, o \"`git pull`\" buscará e reproduzirá as alterações do ramo remoto "
-"`master` pois ele divergiu do `master` local (ou seja,` E`) até o seu commit "
-"atual (`C`) no topo do `master` e registre o resultado em um novo commit, "
-"juntamente com os nomes dos dois commits principais e uma mensagem do "
-"registro log do usuário, descrevendo as alterações feitas."
+"Então, o comando \"`git pull`\" fara a captura e a reprodução das alterações "
+"do ramo remoto `master` por ter se divergido do `master` local (ou seja, `E`)"
+" até o seu commit atual (`C`) no topo do `master` e registra o resultado em "
+"um novo commit, juntamente com os nomes dos dois commits principais e uma "
+"mensagem do registro log do usuário, descrevendo quais forma as alterações "
+"que foram feitas."
 
 #. type: delimited block -
 #: en/git-pull.txt:59
@@ -57473,7 +57497,7 @@ msgstr ""
 msgid "Often, \"please pull\" messages on the mailing list just provide two pieces of information: a repo URL and a branch name; this is designed to be easily cut&pasted at the end of a 'git fetch' command line:"
 msgstr ""
 "Frequentemente, aparecem mensagens \"please pull\" na lista de discussão que "
-"ofornecem apenas duas informações: uma URL do repo e um nome do ramo; foi "
+"oferecem apenas duas informações: uma URL do repo e um nome do ramo; foi "
 "projetado para ser facilmente cortado e colado no final de uma linha de "
 "comando 'git fetch':"
 
