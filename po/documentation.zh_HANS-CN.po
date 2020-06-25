@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-06-02 21:43+0200\n"
-"PO-Revision-Date: 2020-05-28 20:42+0000\n"
+"PO-Revision-Date: 2020-06-26 19:42+0000\n"
 "Last-Translator: 冉 <ranto2012@163.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: zh_HANS-CN\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.1-dev\n"
+"X-Generator: Weblate 4.2-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:666 en/git-instaweb.txt:45 en/git-mailinfo.txt:47 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -1361,8 +1361,8 @@ msgstr ""
 msgid "linkgit:git-name-rev[1]"
 msgstr "linkgit:git-name-rev[1]"
 
-#. type: Plain text
 # 查找给定版本的符号名称
+#. type: Plain text
 #: en/cmds-plumbinginterrogators.txt:36
 #, priority:100
 msgid "Find symbolic names for given revs."
@@ -4442,55 +4442,60 @@ msgstr "none"
 #: en/diff-options.txt:371
 #, priority:280
 msgid "Disable word diff again."
-msgstr ""
+msgstr "再次禁用单词差异模式。"
 
 #. type: Plain text
 #: en/diff-options.txt:375
 #, priority:280
 msgid "Note that despite the name of the first mode, color is used to highlight the changed parts in all modes if enabled."
-msgstr ""
+msgstr "请注意，无论第一个模式的名称是什么，如果启用该选项，将在所有模式中使用颜色，以高亮显示更改的部分。"
 
 #. type: Labeled list
 #: en/diff-options.txt:376
 #, no-wrap, priority:280
 msgid "--word-diff-regex=<regex>"
-msgstr ""
+msgstr "--word-diff-regex=<正则表达式>"
 
 #. type: Plain text
 #: en/diff-options.txt:380
 #, priority:280
 msgid "Use <regex> to decide what a word is, instead of considering runs of non-whitespace to be a word.  Also implies `--word-diff` unless it was already enabled."
-msgstr ""
+msgstr "使用 <正则表达式> 来确定单词的格式，而不是将一串非空白行视为单词。除非已启用，否则还暗含 `--word-diff` 选项。"
 
 #. type: Plain text
 #: en/diff-options.txt:388
-#, priority:280
+#, fuzzy, priority:280
 msgid "Every non-overlapping match of the <regex> is considered a word.  Anything between these matches is considered whitespace and ignored(!) for the purposes of finding differences.  You may want to append `|[^[:space:]]` to your regular expression to make sure that it matches all non-whitespace characters.  A match that contains a newline is silently truncated(!) at the newline."
 msgstr ""
+"<正则表达式> 匹配的的每一个非重叠的匹配都被视为一个单词。在这些匹配项之间的任何内容都被认为是空白，并且在查找差异时被忽略(!)。"
+"您可能需要在您的正则表达式中附加 `|[^[:space:]]`，以确保它匹配所有非空格字符。包含换行的匹配会在换行处被截断(!)。"
 
 #. type: Plain text
 #: en/diff-options.txt:391
 #, priority:280
 msgid "For example, `--word-diff-regex=.` will treat each character as a word and, correspondingly, show differences character by character."
-msgstr ""
+msgstr "例如，`--word-diff-regex=.` 将把每个字符当作一个单词，并相应地逐个字符显示差异。"
 
 #. type: Plain text
 #: en/diff-options.txt:396
 #, priority:280
 msgid "The regex can also be set via a diff driver or configuration option, see linkgit:gitattributes[5] or linkgit:git-config[1].  Giving it explicitly overrides any diff driver or configuration setting.  Diff drivers override configuration settings."
 msgstr ""
+"正则表达式也可以通过差异程序或配置选项来设置，参见 linkgit:gitattributes[5] 或 linkgit:git-"
+"config[1]。显式指明会覆盖任何程序或配置。差异程序会覆盖配置。"
 
 #. type: Labeled list
 #: en/diff-options.txt:397
 #, no-wrap, priority:280
 msgid "--color-words[=<regex>]"
-msgstr ""
+msgstr "--color-words[=<正则表达式>]"
 
 #. type: Plain text
 #: en/diff-options.txt:400
 #, priority:280
 msgid "Equivalent to `--word-diff=color` plus (if a regex was specified) `--word-diff-regex=<regex>`."
 msgstr ""
+"与 `--word-diff=color` 和（如果指明了正则表达式）`--word-diff-regex=<正则表达式>` 两个选项含义相同。"
 
 #. type: Labeled list
 #: en/diff-options.txt:402 en/git-status.txt:143
@@ -4500,9 +4505,9 @@ msgstr "--no-renames"
 
 #. type: Plain text
 #: en/diff-options.txt:405
-#, priority:280
+#, fuzzy, priority:280
 msgid "Turn off rename detection, even when the configuration file gives the default to do so."
-msgstr ""
+msgstr "关闭重命名检测，即使配置文件给出的默认是这样做。"
 
 #. type: Labeled list
 #: en/diff-options.txt:406
@@ -4512,9 +4517,9 @@ msgstr "--[no-]rename-empty"
 
 #. type: Plain text
 #: en/diff-options.txt:408
-#, priority:280
+#, fuzzy, priority:280
 msgid "Whether to use empty blobs as rename source."
-msgstr ""
+msgstr "是否使用空的数据对象作为重命名源。"
 
 #. type: Labeled list
 #: en/diff-options.txt:410 en/git-apply.txt:58
@@ -4527,18 +4532,25 @@ msgstr "--check"
 #, priority:280
 msgid "Warn if changes introduce conflict markers or whitespace errors.  What are considered whitespace errors is controlled by `core.whitespace` configuration.  By default, trailing whitespaces (including lines that consist solely of whitespaces) and a space character that is immediately followed by a tab character inside the initial indent of the line are considered whitespace errors.  Exits with non-zero status if problems are found. Not compatible with --exit-code."
 msgstr ""
+"如果更改引入冲突标记或空格错误，则发出警告。哪些被认为是空格错误是由 `core.whitespace` "
+"配置控制的。默认情况下，行尾部的空格字符（包括仅由空格字符组成的行）和紧跟在行初缩进内 tab "
+"字符后的空格字符，都被认为是空格字符错误。如果发现问题，则以非零状态退出。与 --exit-code 选项不兼容。"
 
 #. type: Labeled list
 #: en/diff-options.txt:420
 #, no-wrap, priority:280
 msgid "--ws-error-highlight=<kind>"
-msgstr ""
+msgstr "--ws-error-highlight=<种类>"
 
 #. type: Plain text
 #: en/diff-options.txt:429
 #, priority:280
 msgid "Highlight whitespace errors in the `context`, `old` or `new` lines of the diff.  Multiple values are separated by comma, `none` resets previous values, `default` reset the list to `new` and `all` is a shorthand for `old,new,context`.  When this option is not given, and the configuration variable `diff.wsErrorHighlight` is not set, only whitespace errors in `new` lines are highlighted. The whitespace errors are colored with `color.diff.whitespace`."
 msgstr ""
+"突出显示差异中 `context`（上下文）、`old`（旧）或 `new`（新）行中的空格错误。多个值用逗号隔开，`none` "
+"选项会重置以前的值，`default` 重置列表为 ·new`，`all` 是 `old,new,context` 的简写。当没有给定这个选项，"
+"并且配置变量 `diff.wsErrorHighlight``没有设置时，只有 `new` 行中的空格错误会被高亮显示。空格错误会用 `color."
+"diff.whitespace` 配置进行着色。"
 
 #. type: Labeled list
 #: en/diff-options.txt:432
@@ -4550,7 +4562,7 @@ msgstr "--full-index"
 #: en/diff-options.txt:436
 #, priority:280
 msgid "Instead of the first handful of characters, show the full pre- and post-image blob object names on the \"index\" line when generating patch format output."
-msgstr ""
+msgstr "在生成补丁格式输出时，在 `index`（索引）行上显示完整的图像前和图像后数据对象名称，而不仅是前几个字符。"
 
 #. type: Labeled list
 #: en/diff-options.txt:437 en/git-apply.txt:160
@@ -4563,66 +4575,74 @@ msgstr "--binary"
 #, priority:280
 msgid "In addition to `--full-index`, output a binary diff that can be applied with `git-apply`. Implies `--patch`."
 msgstr ""
+"除了 `--full-index`输出的差异之外，输出二进制的差异。其可以用 `git-apply` 命令来应用。暗含 `--patch` 选项。"
 
 #. type: Labeled list
 #: en/diff-options.txt:441 en/git-ls-files.txt:154 en/git-ls-tree.txt:63 en/git-show-ref.txt:65
 #, no-wrap, priority:280
 msgid "--abbrev[=<n>]"
-msgstr ""
+msgstr "--abbrev[=<n>]"
 
 #. type: Plain text
 #: en/diff-options.txt:448
 #, priority:280
 msgid "Instead of showing the full 40-byte hexadecimal object name in diff-raw format output and diff-tree header lines, show only a partial prefix.  This is independent of the `--full-index` option above, which controls the diff-patch output format.  Non default number of digits can be specified with `--abbrev=<n>`."
 msgstr ""
+"在 diff-raw（原始差异）格式输出和 diff-tree（树状差异）头行中，不显示完整的 40 字节十六进制对象名称，而只显示部分前缀。这与上面的 "
+"`--full-index` 选项无关，后者控制了 diff-patch（差异补丁）的输出格式。非默认的位数可以用 `--abbrev=<n>` 指定。"
 
 #. type: Labeled list
 #: en/diff-options.txt:449
 #, no-wrap, priority:280
 msgid "-B[<n>][/<m>]"
-msgstr ""
+msgstr "-B[<n>][/<m>]"
 
 #. type: Labeled list
 #: en/diff-options.txt:450
 #, no-wrap, priority:280
 msgid "--break-rewrites[=[<n>][/<m>]]"
-msgstr ""
+msgstr "--break-rewrites[=[<n>][/<m>]]"
 
 #. type: Plain text
 #: en/diff-options.txt:453
 #, priority:280
 msgid "Break complete rewrite changes into pairs of delete and create. This serves two purposes:"
-msgstr ""
+msgstr "将完整的重写更改切分成删除和创建对（pair）。这有两个目的："
 
 #. type: Plain text
 #: en/diff-options.txt:463
-#, priority:280
+#, fuzzy, priority:280
 msgid "It affects the way a change that amounts to a total rewrite of a file not as a series of deletion and insertion mixed together with a very few lines that happen to match textually as the context, but as a single deletion of everything old followed by a single insertion of everything new, and the number `m` controls this aspect of the -B option (defaults to 60%). `-B/70%` specifies that less than 30% of the original should remain in the result for Git to consider it a total rewrite (i.e. otherwise the resulting patch will be a series of deletion and insertion mixed together with context lines)."
 msgstr ""
+"它会影响决定更改形式的阈值，当单个文件内修改总量达到一定值时，会认为该文件进行了完全重写，而不是将一系列删除和插入操作视为修改。如果视为多个删除和插入修改"
+"，修改中的行可能会碰巧在文本上与原文一致，从而被当作上下文。选项中的数字 `m` 控制 -B 选项的这一方面（默认为 60％）。`-B/70％` "
+"表示，如果在结果中保留的原始内容少于原始内容的30％，则 Git 认为它是完全重写的（否则，生成的补丁将是一系列删除和插入，并与上下文行混合在一起）。"
 
 #. type: Plain text
 #: en/diff-options.txt:471
-#, priority:280
+#, fuzzy, priority:280
 msgid "When used with -M, a totally-rewritten file is also considered as the source of a rename (usually -M only considers a file that disappeared as the source of a rename), and the number `n` controls this aspect of the -B option (defaults to 50%). `-B20%` specifies that a change with addition and deletion compared to 20% or more of the file's size are eligible for being picked up as a possible source of a rename to another file."
 msgstr ""
+"使用 -M 选项时，一个完全改写的文件也被认为是重命名文件的来源（通常 -M 只考查一个消失文件作为重命名的来源)。选项中的数量 `n` 控制 -B "
+"选项的这一方面（默认为 50％)。`-B20%` 表明，当插入与删除比 20％ 的文件大小更多，该文件可作为重命名到另一文件的可能来源。"
 
 #. type: Labeled list
 #: en/diff-options.txt:472
 #, no-wrap, priority:280
 msgid "-M[<n>]"
-msgstr ""
+msgstr "-M[<n>]"
 
 #. type: Labeled list
 #: en/diff-options.txt:473 en/git-status.txt:147
 #, no-wrap, priority:280
 msgid "--find-renames[=<n>]"
-msgstr ""
+msgstr "--find-renames[=<n>]"
 
 #. type: Plain text
 #: en/diff-options.txt:476
 #, no-wrap, priority:280
 msgid "\tDetect renames.\n"
-msgstr ""
+msgstr "\t重命名检测。\n"
 
 #. type: Plain text
 #: en/diff-options.txt:481
@@ -6373,8 +6393,8 @@ msgstr "删除的内容"
 msgid "Removed content is represented by lines beginning with \"-\". You can prevent staging their removal by converting the \"-\" to a \" \" (space)."
 msgstr "删除的内容以“-”开头的行表示。您可以通过将“-”转换为“ ”（空格）来防止将其删除。"
 
-#. type: Labeled list
 # 译者：末尾两个字节可能被删减，如果翻译为中文标点会出现半个汉字
+#. type: Labeled list
 #: en/git-add.txt:379
 #, no-wrap, priority:300
 msgid "modified content"
