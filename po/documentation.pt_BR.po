@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-06-02 21:43+0200\n"
-"PO-Revision-Date: 2020-06-30 06:51+0000\n"
+"PO-Revision-Date: 2020-07-02 06:01+0000\n"
 "Last-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
@@ -176,7 +176,11 @@ msgstr "--encoding=<codificação>"
 #: en/blame-options.txt:58
 #, priority:100
 msgid "Specifies the encoding used to output author names and commit summaries. Setting it to `none` makes blame output unconverted data. For more information see the discussion about encoding in the linkgit:git-log[1] manual page."
-msgstr "Defina a codificação a ser utilizada para gerar os nomes dos autores e do resumo dos commits. Definindo como `none` torna a saída \"blame\" em dados sem conversão. Para mais informações, consulte a discussão sobre codificação na página de manual linkgit:git-log[1]."
+msgstr ""
+"Defina a codificação a ser utilizada para gerar os nomes dos autores e do "
+"resumo dos commits. Definindo como `none` torna a saída \"blame\" em dados "
+"sem conversão. Para mais informações, consulte a discussão sobre codificação "
+"na página do manual linkgit:git-log[1]."
 
 #. type: Labeled list
 #: en/blame-options.txt:59
@@ -2629,10 +2633,10 @@ msgstr ""
 "Se a mesclagem for chamada sem nenhum argumento para o commit, mescle as "
 "ramificações \"upstream\" configuradas para a ramificação atual utilizando "
 "os seus últimos valores observados e armazenados nos seus ramos monitorados "
-"remotamente.  Os valores do `branch.<ramo atual>.merge` que nomeiam os ramos "
-"remotos informado por `branch.<ramo atual>.remote` são consultados e em "
-"seguida são mapeados através de `remote.<remoto>.fetch` para as suas "
-"ramificações coincidentes monitoradas remotamente, as pontas dessas "
+"remotamente.  Os valores do `branch.<ramo atual>.merge` que nomeiam as "
+"ramificações remotas, nomeadas através da consulta do `branch.<ramo atual>."
+"remote` e em seguida são mapeadas através de `remote.<remoto>.fetch` para as "
+"suas ramificações coincidentes monitoradas remotamente, as pontas destas "
 "ramificações monitoradas são mescladas."
 
 #. type: Labeled list
@@ -4144,13 +4148,13 @@ msgstr "Produz apenas a última linha do formato `--stat` contendo a quantidade 
 #: en/diff-options.txt:161
 #, ignore-ellipsis, no-wrap, priority:280
 msgid "-X[<param1,param2,...>]"
-msgstr "-X[<param1,param2,...>]"
+msgstr "-X[<parâmetro1,parâmetro2,...>]"
 
 #. type: Labeled list
 #: en/diff-options.txt:162
 #, ignore-ellipsis, no-wrap, priority:280
 msgid "--dirstat[=<param1,param2,...>]"
-msgstr "--dirstat[=<param1,param2,...>]"
+msgstr "--dirstat[=<parâmetro1,parâmetro2,...>]"
 
 #. type: Plain text
 #: en/diff-options.txt:169
@@ -4230,7 +4234,11 @@ msgstr ""
 #: en/diff-options.txt:205
 #, priority:280
 msgid "Example: The following will count changed files, while ignoring directories with less than 10% of the total amount of changed files, and accumulating child directory counts in the parent directories: `--dirstat=files,10,cumulative`."
-msgstr "Exemplo: O seguinte contará os arquivos alterados, ignorando os diretórios com menos de 10% da quantidade total dos arquivos alterados e acumulando as contagens de um diretório-herdado nos diretórios-raiz: `---dirstat=files,10,cumulative`."
+msgstr ""
+"Exemplo: O seguinte contará os arquivos alterados, ignorando os diretórios "
+"com menos de 10% da quantidade total dos arquivos alterados e acumulando as "
+"contagens de um diretório-herdado nos diretórios-raiz: "
+"`---dirstat=arquivos,10,cumulative`."
 
 #. type: Labeled list
 #: en/diff-options.txt:206
@@ -4248,13 +4256,13 @@ msgstr "É um sinônimo para `--dirstat=cumulative`"
 #: en/diff-options.txt:209
 #, ignore-ellipsis, no-wrap, priority:280
 msgid "--dirstat-by-file[=<param1,param2>...]"
-msgstr "--dirstat-by-file[=<param1,param2>...]"
+msgstr "--dirstat-by-file[=<parâmetro1,parâmetro2>...]"
 
 #. type: Plain text
 #: en/diff-options.txt:211
 #, ignore-ellipsis, priority:280
 msgid "Synonym for --dirstat=files,param1,param2..."
-msgstr "É um sinônimo para `--dirstat=files,param1,param2...`"
+msgstr "É um sinônimo para `--dirstat=arquivos,parâmetro1,parâmetro2...`"
 
 #. type: Labeled list
 #: en/diff-options.txt:212 en/git-apply.txt:52 en/git-shortlog.txt:35 en/merge-options.txt:140
@@ -6224,7 +6232,9 @@ msgstr "Para mais detalhes sobre a sintaxe `<pathspec>`, consulte a entrada 'pat
 #: en/git-add.txt:73
 #, priority:300
 msgid "Don't actually add the file(s), just show if they exist and/or will be ignored."
-msgstr "Na verdade, não adicione o(s) arquivo(s), apenas mostre se eles existem e/ou serão ignorados."
+msgstr ""
+"Na verdade, não adicione o(s) arquivo(s), apenas demonstre se eles existem e/"
+"ou serão ignorados."
 
 #. type: Plain text
 #: en/git-add.txt:81
@@ -8911,7 +8921,7 @@ msgstr "Então, utilize `git bisect <termo-antigo>` e `git bisect <novo-termo>` 
 #: en/git-bisect.txt:197
 #, no-wrap, priority:100
 msgid "Bisect visualize/view"
-msgstr "Visualize/observe do bisect"
+msgstr "Bisect visualize/observe"
 
 #. type: Plain text
 #: en/git-bisect.txt:202
@@ -9952,12 +9962,12 @@ msgstr ""
 msgid "The command's second form creates a new branch head named <branchname> which points to the current `HEAD`, or <start-point> if given. As a special case, for <start-point>, you may use `\"A...B\"` as a shortcut for the merge base of `A` and `B` if there is exactly one merge base. You can leave out at most one of `A` and `B`, in which case it defaults to `HEAD`."
 msgstr ""
 "O segundo formulário do comando cria um novo cabeçalho do ramo informado "
-"`<branchname>` (nome do ramo0), que aponta para o `HEAD` atual, ou o `<start-"
-"point>` (ponto de início) se utilizado. Como um caso especial, para o "
-"`<start-point>`, utilize `\"A...B\"` como um atalho para a base da mesclagem "
-"de `A` e `B` caso sejam exatamente uma base para ser mesclada. Você pode "
-"deixar de fora no máximo um de `A` e `B`, caso onde a predefinição retorna "
-"para `HEAD`."
+"`<nome-do-ramo>` (nome do ramo0), que aponta para o `HEAD` atual, ou o "
+"`<ponto-de-partida>` caso seja utilizado. Como um caso especial, para o "
+"`<ponto-de-partida>`, utilize `\"A...B\"` como um atalho para a base da "
+"mesclagem de `A` e `B` caso sejam exatamente uma base para ser mesclada. "
+"Você pode deixar de fora no máximo um de `A` e `B`, caso onde a predefinição "
+"retorna para `HEAD`."
 
 #. type: Plain text
 #: en/git-branch.txt:65
@@ -9983,7 +9993,13 @@ msgstr ""
 #: en/git-branch.txt:79
 #, priority:240
 msgid "With a `-m` or `-M` option, <oldbranch> will be renamed to <newbranch>.  If <oldbranch> had a corresponding reflog, it is renamed to match <newbranch>, and a reflog entry is created to remember the branch renaming. If <newbranch> exists, -M must be used to force the rename to happen."
-msgstr "Com uma opção `-m` ou `-M`, o ramo antigo `<oldbranch>` será renomeado para o novo ramo `<newbranch>`.  Caso o `<oldbranch>` tenha um reflog correspondente, ele será renomeado para coincidir com o `<newbranch>`, uma entrada de reflog será criada para lembrar da renomeação do ramo. Caso `<newbranch>` exista, -M deve ser utilizado para impor que a renomeação aconteça."
+msgstr ""
+"Com uma opção `-m` ou `-M`, o ramo antigo `<ramo-antigo>` será renomeado "
+"para o novo ramo `<novo-ramo>`.  Caso o `<ramo-antigo>` tenha um reflog "
+"correspondente, ele será renomeado para coincidir com o `<novo-ramo>`, uma "
+"entrada de reflog será criada para lembrar da renomeação do ramo. Caso "
+"`<novo-ramo>` exista, -M deve ser utilizado para impor que a renomeação "
+"aconteça."
 
 #. type: Plain text
 #: en/git-branch.txt:83
@@ -9995,7 +10011,10 @@ msgstr "As opções `-c` e `-C` possuem exatamente a mesma semântica que `-m` e
 #: en/git-branch.txt:87
 #, priority:240
 msgid "With a `-d` or `-D` option, `<branchname>` will be deleted.  You may specify more than one branch for deletion.  If the branch currently has a reflog then the reflog will also be deleted."
-msgstr "Com uma opção `-d` ou `-D`, o `<branchname>` será excluído.  Você pode informar mais de uma ramificação para ser excluído.  Caso o ramo tiver atualmente um reflog, este também será excluído."
+msgstr ""
+"Com uma opção `-d` ou `-D`, o `<nome-do-ramo>` será excluído.  Você pode "
+"informar mais de uma ramificação para ser excluído.  Caso o ramo tiver "
+"atualmente um reflog, este também será excluído."
 
 #. type: Plain text
 #: en/git-branch.txt:93
@@ -10040,7 +10059,7 @@ msgid "Create the branch's reflog.  This activates recording of all changes made
 msgstr ""
 "Crie o reflog do ramo.  Ativa a gravação de todas as alterações feitas no "
 "\"ref\" do ramo, permitindo a utilização de expressões sha1 baseadas na "
-"data, como `<branchname>@\\{yesterday}`.  Observe que nos repositórios que "
+"data, como `<nome-do-ramo>@\\{yesterday}`.  Observe que nos repositórios que "
 "não estiverem vazios, é predefinido que os reflogs geralmente sejam ativados "
 "através da variável de configuração `core.logAllRefUpdates`.  A forma negada "
 "o comando `--no-create-reflog` substitui apenas um `--create-reflog` "
@@ -10050,7 +10069,13 @@ msgstr ""
 #: en/git-branch.txt:124
 #, priority:240
 msgid "Reset <branchname> to <startpoint>, even if <branchname> exists already. Without `-f`, 'git branch' refuses to change an existing branch.  In combination with `-d` (or `--delete`), allow deleting the branch irrespective of its merged status. In combination with `-m` (or `--move`), allow renaming the branch even if the new branch name already exists, the same applies for `-c` (or `--copy`)."
-msgstr "Redefina o `<branchname>` para `<startpoint>`, mesmo se o `<branchname>` já existir. Sem o `-f`, o comando 'git branch' se recusa a alterar uma ramificação já existente.  Em combinação com `-d` (ou `--delete`), permita excluir a ramificação, independentemente da sua condição de mesclagem. Em combinação com `-m` (ou `--move`), permita renomear a ramificação, mesmo que o novo nome do ramo já exista, o mesmo se aplica com `-c` (ou `--copy`)."
+msgstr ""
+"Redefina o `<nome-do-ramo>` para `<startpoint>`, mesmo se o `<nome-do-ramo>` "
+"já existir. Sem o `-f`, o comando 'git branch' se recusa a alterar uma "
+"ramificação já existente.  Em combinação com `-d` (ou `--delete`), permita "
+"excluir a ramificação, independentemente da sua condição de mesclagem. Em "
+"combinação com `-m` (ou `--move`), permita renomear a ramificação, mesmo que "
+"o novo nome do ramo já exista, o mesmo se aplica com `-c` (ou `--copy`)."
 
 #. type: Labeled list
 #: en/git-branch.txt:126
@@ -10303,9 +10328,9 @@ msgstr "--set-upstream-to=<upstream>"
 #, priority:240
 msgid "Set up <branchname>'s tracking information so <upstream> is considered <branchname>'s upstream branch. If no <branchname> is specified, then it defaults to the current branch."
 msgstr ""
-"Configure as informações do monitoramento do `<branchname>` para que o "
-"`<upstream>` seja considerado o ramo \"upstream\" do `<branchname>`. Caso "
-"nenhum `<branchname>` seja utilizado, então a predefinição retorna para o "
+"Configure as informações do monitoramento do `<nome-do-ramo>` para que o "
+"`<upstream>` seja considerado o ramo \"upstream\" do `<nome-do-ramo>`. Caso "
+"nenhum `<nome-do-ramo>` seja utilizado, então a predefinição retorna para o "
 "ramo atual."
 
 #. type: Labeled list
@@ -10319,7 +10344,7 @@ msgstr "--unset-upstream"
 #, priority:240
 msgid "Remove the upstream information for <branchname>. If no branch is specified it defaults to the current branch."
 msgstr ""
-"Remova as informações \"upstream\" para o `<branchname>`. Caso nenhuma "
+"Remova as informações \"upstream\" para o `<nome-do-ramo>`. Caso nenhuma "
 "ramificação seja utilizada, a predefinição retorna para a ramificação atual."
 
 #. type: Labeled list
@@ -10396,7 +10421,7 @@ msgstr ""
 #: en/git-branch.txt:263
 #, no-wrap, priority:240
 msgid "<branchname>"
-msgstr "<branchname>"
+msgstr "<nome-do-ramo>"
 
 #. type: Plain text
 #: en/git-branch.txt:268
@@ -10408,7 +10433,7 @@ msgstr "O nome do ramo que será criada ou excluída.  O nome da nova ramificaç
 #: en/git-branch.txt:269 en/git-switch.txt:42
 #, no-wrap, priority:240
 msgid "<start-point>"
-msgstr "<start-point>"
+msgstr "<ponto-de-partida>"
 
 #. type: Plain text
 #: en/git-branch.txt:273
@@ -10420,7 +10445,7 @@ msgstr "O cabeçalho da nova ramificação apontará para este commit.  Pode ser
 #: en/git-branch.txt:274
 #, no-wrap, priority:240
 msgid "<oldbranch>"
-msgstr "<oldbranch>"
+msgstr "<ramo-antigo>"
 
 #. type: Plain text
 #: en/git-branch.txt:276
@@ -10432,13 +10457,15 @@ msgstr "O nome de uma ramificação existente que será renomeada."
 #: en/git-branch.txt:277
 #, no-wrap, priority:240
 msgid "<newbranch>"
-msgstr "<newbranch>"
+msgstr "<novo-ramo>"
 
 #. type: Plain text
 #: en/git-branch.txt:280
 #, priority:240
 msgid "The new name for an existing branch. The same restrictions as for <branchname> apply."
-msgstr "Um novo nome para um ramo já existente. Se aplicam as mesmas restrições para `<branchname>`."
+msgstr ""
+"Um novo nome para um ramo já existente. Se aplicam as mesmas restrições para "
+"`<nome-do-ramo>`."
 
 #. type: Labeled list
 #: en/git-branch.txt:281 en/git-for-each-ref.txt:40 en/git-ls-remote.txt:65 en/git-tag.txt:112
@@ -10772,7 +10799,7 @@ msgstr "git-bundle(1)"
 #: en/git-bundle.txt:7
 #, priority:100
 msgid "git-bundle - Move objects and refs by archive"
-msgstr "git-bundle - Mova os objetos e os refs por arquivo"
+msgstr "git-bundle - Mova os objetos e as refs através do arquivo"
 
 #. type: Plain text
 #: en/git-bundle.txt:16
@@ -11463,7 +11490,7 @@ msgstr "SAÍDA"
 #: en/git-cat-file.txt:179
 #, priority:100
 msgid "If `-t` is specified, one of the <type>."
-msgstr "Caso a opção `-t` seja utilizada, um dos <tipo>."
+msgstr "Caso a opção `-t` seja utilizada, um do <tipo>."
 
 #. type: Plain text
 #: en/git-cat-file.txt:181
@@ -12587,9 +12614,12 @@ msgstr ""
 "'git checkout' [-q] [-f] [-m] [<ramo>]\n"
 "'git checkout' [-q] [-f] [-m] --detach [<ramo>]\n"
 "'git checkout' [-q] [-f] [-m] [--detach] <commit>\n"
-"'git checkout' [-q] [-f] [-m] [[-b|-B|--orphan] <novo_ramo>] [<ponto_de_inicio>]\n"
-"'git checkout' [-f|--ours|--theirs|-m|--conflict=<estilo>] [<tree-ish>] [--] <pathspec>...\n"
-"'git checkout' [-f|--ours|--theirs|-m|--conflict=<estilo>] [<tree-ish>] --pathspec-from-file=<arquivo> [--pathspec-file-nul]\n"
+"'git checkout' [-q] [-f] [-m] [[-b|-B|--orphan] <novo-ramo>] [<ponto-de-"
+"partida>]\n"
+"'git checkout' [-f|--ours|--theirs|-m|--conflict=<estilo>] [<tree-ish>] [--] "
+"<pathspec>...\n"
+"'git checkout' [-f|--ours|--theirs|-m|--conflict=<estilo>] [<tree-ish>] "
+"--pathspec-from-file=<arquivo> [--pathspec-file-nul]\n"
 "'git checkout' (-p|--patch) [<tree-ish>] [--] [<pathspec>...]\n"
 
 #. type: Plain text
@@ -12654,7 +12684,7 @@ msgstr ""
 #, priority:240
 msgid "If `-B` is given, `<new_branch>` is created if it doesn't exist; otherwise, it is reset. This is the transactional equivalent of"
 msgstr ""
-"Caso a opção `-B` seja utilizada, então um `<novo_ramo>` é criado caso ainda "
+"Caso a opção `-B` seja utilizada, então um `<novo-ramo>` é criado caso ainda "
 "não exista, senão, será redefinido. Este é o equivalente transacional do"
 
 #. type: delimited block -
@@ -12664,7 +12694,7 @@ msgid ""
 "$ git branch -f <branch> [<start point>]\n"
 "$ git checkout <branch>\n"
 msgstr ""
-"$ git branch -f <ramo> [<ponto de partida>]\n"
+"$ git branch -f <ramo> [<ponto-de-partida>]\n"
 "$ git checkout <ramo>\n"
 
 #. type: Plain text
@@ -12717,13 +12747,17 @@ msgstr "Ao omitir o `<ramo>` isso desanexa o `HEAD` na ponta do ramo atual."
 #: en/git-checkout.txt:82
 #, ignore-ellipsis, no-wrap, priority:240
 msgid "'git checkout' [-f|--ours|--theirs|-m|--conflict=<style>] [<tree-ish>] [--] <pathspec>..."
-msgstr "'git checkout' [-f|--ours|--theirs|-m|--conflict=<style>] [<tree-ish>] [--] <pathspec>..."
+msgstr ""
+"'git checkout' [-f|--ours|--theirs|-m|--conflict=<estilo>] [<tree-ish>] [--] "
+"<pathspec>..."
 
 #. type: Labeled list
 #: en/git-checkout.txt:83
 #, no-wrap, priority:240
 msgid "'git checkout' [-f|--ours|--theirs|-m|--conflict=<style>] [<tree-ish>] --pathspec-from-file=<file> [--pathspec-file-nul]"
-msgstr "'git checkout' [-f|--ours|--theirs|-m|--conflict=<style>] [<tree-ish>] --pathspec-from-file=<file> [--pathspec-file-nul]"
+msgstr ""
+"'git checkout' [-f|--ours|--theirs|-m|--conflict=<estilo>] [<tree-ish>] "
+"--pathspec-from-file=<arquivo> [--pathspec-file-nul]"
 
 #. type: Plain text
 #: en/git-checkout.txt:90
@@ -12841,7 +12875,7 @@ msgstr ""
 #: en/git-checkout.txt:147
 #, no-wrap, priority:240
 msgid "-b <new_branch>"
-msgstr "-b <novo_ramo>"
+msgstr "-b <novo-ramo>"
 
 #. type: Plain text
 #: en/git-checkout.txt:150
@@ -12853,15 +12887,15 @@ msgstr "Crie uma nova ramificação chamada `<new_branch>` e inicie-a em `<start
 #: en/git-checkout.txt:151
 #, no-wrap, priority:240
 msgid "-B <new_branch>"
-msgstr "-B <novo_ramo>"
+msgstr "-B <novo-ramo>"
 
 #. type: Plain text
 #: en/git-checkout.txt:156
 #, priority:240
 msgid "Creates the branch `<new_branch>` and start it at `<start_point>`; if it already exists, then reset it to `<start_point>`. This is equivalent to running \"git branch\" with \"-f\"; see linkgit:git-branch[1] for details."
 msgstr ""
-"Cria o `<novo_ramo>` e inicia no `<ponto_de_partida>`; caso já exista, "
-"redefina-o para o `<ponto_de_partida>`. É o mesmo que executar o comando "
+"Cria o `<novo-ramo>` e inicia no `<ponto-de-partida>`; caso já exista, "
+"redefina-o para o `<ponto-de-partida>`. É o mesmo que executar o comando "
 "\"git branch\" com a opção \"-f\"; para mais detalhes, consulte linkgit:git-"
 "branch[1]."
 
@@ -12958,15 +12992,15 @@ msgstr ""
 #: en/git-checkout.txt:208
 #, no-wrap, priority:240
 msgid "--orphan <new_branch>"
-msgstr "--orfão <novo_ramo>"
+msgstr "--orphan <novo-ramo>"
 
 #. type: Plain text
 #: en/git-checkout.txt:214
 #, priority:240
 msgid "Create a new 'orphan' branch, named `<new_branch>`, started from `<start_point>` and switch to it.  The first commit made on this new branch will have no parents and it will be the root of a new history totally disconnected from all the other branches and commits."
 msgstr ""
-"Crie um novo ramo 'orphan', chamado `<novo_ramo>`, iniciado a partir do "
-"`<ponto_de_partida>` e alterne para ele.  O primeiro commit feito neste novo "
+"Crie um novo ramo 'orphan', chamado `<novo-ramo>`, iniciado a partir do "
+"`<ponto-de-partida>` e alterne para ele.  O primeiro commit feito neste novo "
 "ramo não terá pais e será a raiz de um novo histórico totalmente "
 "desconectado de todos os outros ramos e commits."
 
@@ -12976,9 +13010,9 @@ msgstr ""
 msgid "The index and the working tree are adjusted as if you had previously run `git checkout <start_point>`.  This allows you to start a new history that records a set of paths similar to `<start_point>` by easily running `git commit -a` to make the root commit."
 msgstr ""
 "O índice e a árvore de trabalho são ajustadas como se você tivesse rodado o "
-"comando `git checkout <ponto_de_partida>` antes.  Isto permite que você "
+"comando `git checkout <ponto-de-partida>` antes.  Isto permite que você "
 "inicie um novo histórico que registra um conjunto dos caminhos semelhante ao "
-"`<ponto_de_partida>` através da execução do comando `git commit -a` para "
+"`<ponto-de-partida>` através da execução do comando `git commit -a` para "
 "fazer o commit principal."
 
 #. type: Plain text
@@ -12998,7 +13032,7 @@ msgstr ""
 msgid "If you want to start a disconnected history that records a set of paths that is totally different from the one of `<start_point>`, then you should clear the index and the working tree right after creating the orphan branch by running `git rm -rf .` from the top level of the working tree.  Afterwards you will be ready to prepare your new files, repopulating the working tree, by copying them from elsewhere, extracting a tarball, etc."
 msgstr ""
 "Caso queira iniciar um histórico desconectado que registre um conjunto dos "
-"caminhos totalmente diferentes de um dos `<ponto_de_partida>`, limpe o "
+"caminhos totalmente diferentes de um dos `<ponto-de-partida>`, limpe o "
 "índice e a árvore de trabalho logo após criar o ramo órfão executando o "
 "comando `git rm -rf.` Do cume da árvore de trabalho.  Depois, você estará "
 "pronto para preparar os seus arquivos novos, populando novamente a árvore de "
@@ -13209,7 +13243,7 @@ msgstr ""
 #: en/git-checkout.txt:339
 #, no-wrap, priority:240
 msgid "<new_branch>"
-msgstr "<novo_ramo>"
+msgstr "<novo-ramo>"
 
 #. type: Plain text
 #: en/git-checkout.txt:341 en/git-switch.txt:41
@@ -13221,7 +13255,7 @@ msgstr "Nome para o novo branch."
 #: en/git-checkout.txt:342
 #, no-wrap, priority:240
 msgid "<start_point>"
-msgstr "<ponto_de_partida>"
+msgstr "<ponto-de-partida>"
 
 #. type: Plain text
 #: en/git-checkout.txt:345
@@ -14085,13 +14119,13 @@ msgstr ""
 #: en/git-cherry-pick.txt:84 en/git-revert.txt:50
 #, no-wrap, priority:100
 msgid "-m parent-number"
-msgstr "-m número-pai"
+msgstr "-m parent-number"
 
 #. type: Labeled list
 #: en/git-cherry-pick.txt:85 en/git-revert.txt:51
 #, no-wrap, priority:100
 msgid "--mainline parent-number"
-msgstr "--mainline número-pai"
+msgstr "--mainline parent-number"
 
 #. type: Plain text
 #: en/git-cherry-pick.txt:91
@@ -14406,7 +14440,7 @@ msgstr "git-cherry(1)"
 #: en/git-cherry.txt:7
 #, priority:100
 msgid "git-cherry - Find commits yet to be applied to upstream"
-msgstr "git-cherry - Encontre os commits que ainda serão aplicados na inicial"
+msgstr "git-cherry - Encontre os commits que ainda serão aplicados na upstream"
 
 #. type: Plain text
 #: en/git-cherry.txt:12
@@ -14768,7 +14802,7 @@ msgstr "Exibe o que seria feito e exclua os arquivos interativamente. Para mais 
 #: en/git-clean.txt:52
 #, priority:100
 msgid "Don't actually remove anything, just show what would be done."
-msgstr "Na verdade, não remova nada, apenas mostre o que seria feito."
+msgstr "Na verdade, não remova nada, apenas demonstre o que seria feito."
 
 #. type: Plain text
 #: en/git-clean.txt:57
@@ -14786,7 +14820,7 @@ msgstr "-e <padrão>"
 #: en/git-clean.txt:59 en/git-ls-files.txt:85 en/git-name-rev.txt:33
 #, no-wrap, priority:100
 msgid "--exclude=<pattern>"
-msgstr "--excluir=<padrão>"
+msgstr "--exclude=<padrão>"
 
 #. type: Plain text
 #: en/git-clean.txt:62
@@ -14840,7 +14874,7 @@ msgid ""
 msgstr ""
 "    *** Comandos ***\n"
 "\t1: limpa                2: filtra através de um padrão    3: seleciona "
-"através de números\n"
+"através dos números\n"
 "\t4: pergunte a cada      5: encerra                        6: ajuda\n"
 "    Agora o quê> 1\n"
 
@@ -14891,7 +14925,7 @@ msgstr ""
 #: en/git-clean.txt:110
 #, no-wrap, priority:100
 msgid "select by numbers"
-msgstr "selecione por números"
+msgstr "seleciona através dos números"
 
 #. type: Plain text
 #: en/git-clean.txt:121
@@ -14970,10 +15004,10 @@ msgid ""
 "\t  [--filter=<filter>] [--] <repository>\n"
 "\t  [<directory>]\n"
 msgstr ""
-"'git clone' [--template=<diretório_modelo>]\n"
+"'git clone' [--template=<diretório-modelo>]\n"
 "\t  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]\n"
 "\t  [-o <nome>] [-b <nome>] [-u <upload-pack>] [--reference <repositório>]\n"
-"\t  [--dissociate] [--separate-git-dir <git dir>]\n"
+"\t  [--dissociate] [--separate-git-dir <dir git>]\n"
 "\t  [--depth <profundidade>] [--[no-]single-branch] [--no-tags]\n"
 "\t  [--recurse-submodules[=<pathspec>]] [--[no-]shallow-submodules]\n"
 "\t  [--[no-]remote-submodules] [--jobs <n>] [--sparse]\n"
@@ -15073,7 +15107,7 @@ msgid ""
 "If these objects are removed and were referenced by the cloned repository,\n"
 "then the cloned repository will become corrupt.\n"
 msgstr ""
-"*ATENÇÃO*: provavelmente está uma operação muito perigosa; *não*\n"
+"*OBSERVAÇÃO*: provavelmente está uma operação muito perigosa; *não*\n"
 "utilize a menos que compreenda o que ela faz. Caso clone o seu\n"
 "repositório utilizando esta opção e em seguida exclua os ramos (ou use "
 "qualquer\n"
@@ -15109,7 +15143,7 @@ msgstr "Caso queira quebrar a dependência de um repositório clonado com `--sha
 #: en/git-clone.txt:95
 #, no-wrap, priority:300
 msgid "--reference[-if-able] <repository>"
-msgstr "--referência [-if-able] <repositório>"
+msgstr "--reference[-if-able] <repositório>"
 
 #. type: Plain text
 #: en/git-clone.txt:105
@@ -15264,7 +15298,7 @@ msgstr "-o <nome>"
 #: en/git-clone.txt:185
 #, no-wrap, priority:300
 msgid "--origin <name>"
-msgstr "--origem <nome>"
+msgstr "--origin <nome>"
 
 #. type: Plain text
 #: en/git-clone.txt:188
@@ -15465,7 +15499,7 @@ msgstr "Todos os submódulos que forem clonados, para realizar a atualização o
 #: en/git-clone.txt:287 en/git-init.txt:61
 #, no-wrap, priority:300
 msgid "--separate-git-dir=<git dir>"
-msgstr "--separate-git-dir=<git dir>"
+msgstr "--separate-git-dir=<dir git>"
 
 #. type: Plain text
 #: en/git-clone.txt:293
@@ -15526,7 +15560,7 @@ msgstr ""
 #: en/git-clone.txt:318
 #, priority:300
 msgid "Clone from upstream:"
-msgstr "Clonando de um \"upstream\":"
+msgstr "Clonando a partir de um \"upstream\":"
 
 #. type: delimited block -
 #: en/git-clone.txt:323
@@ -15564,7 +15598,9 @@ msgstr ""
 #: en/git-clone.txt:336
 #, priority:300
 msgid "Clone from upstream while borrowing from an existing local directory:"
-msgstr "Clone do \"upstream\" enquanto pega emprestado de um diretório local já existente:"
+msgstr ""
+"Clone a partir de um \"upstream\" enquanto pega emprestado de um diretório "
+"local já existente:"
 
 #. type: delimited block -
 #: en/git-clone.txt:342
@@ -15992,7 +16028,7 @@ msgid ""
 msgstr ""
 "'git commit' [-a | --interactive | --patch] [-s] [-v] [-u<modo>] [--amend]\n"
 "\t   [--dry-run] [(-c | -C | --fixup | --squash) <commit>]\n"
-"\t   [-F <file> | -m <msg>] [--reset-author] [--allow-empty]\n"
+"\t   [-F <arquivo> | -m <msg>] [--reset-author] [--allow-empty]\n"
 "\t   [--allow-empty-message] [--no-verify] [-e] [--author=<autor>]\n"
 "\t   [--date=<data>] [--cleanup=<modo>] [--[no-]status]\n"
 "\t   [-i | -o] [--pathspec-from-file=<arquivo> [--pathspec-file-nul]]\n"
@@ -16266,7 +16302,7 @@ msgstr ""
 "formato padrão `Chiquinha <chiquinha@examplo.com>`. Caso contrário, assume-"
 "se que a predefinição seja <autor> que é usado para localizar um commit já "
 "existente feito através deste autor (ou seja, `rev-list --all -i "
-"--author=<author>`); o autor do commit é copiado a partir do primeiro commit "
+"--author=<autor>`); o autor do commit é copiado a partir do primeiro commit "
 "que for encontrado."
 
 #. type: Labeled list
@@ -16309,13 +16345,13 @@ msgstr "A opção `-m` é utilizado em conjunto exclusivamente com `-c`, `-C` e 
 #: en/git-commit.txt:155
 #, no-wrap, priority:280
 msgid "-t <file>"
-msgstr "-t <file>"
+msgstr "-t <arquivo>"
 
 #. type: Labeled list
 #: en/git-commit.txt:156
 #, no-wrap, priority:280
 msgid "--template=<file>"
-msgstr "--template=<file>"
+msgstr "--template=<arquivo>"
 
 #. type: Plain text
 #: en/git-commit.txt:165
@@ -17214,13 +17250,13 @@ msgstr ""
 #: en/git-config.txt:141
 #, no-wrap, priority:100
 msgid "-f config-file"
-msgstr "-f config-arquivo"
+msgstr "-f arquivo-config"
 
 #. type: Labeled list
 #: en/git-config.txt:142
 #, no-wrap, priority:100
 msgid "--file config-file"
-msgstr "--arquivo config-arquivo"
+msgstr "--file arquivo-config"
 
 #. type: Plain text
 #: en/git-config.txt:144
@@ -17540,7 +17576,7 @@ msgstr ""
 #: en/git-config.txt:263
 #, no-wrap, priority:100
 msgid "--default <value>"
-msgstr "--padrão <valor>"
+msgstr "--default <valor>"
 
 #. type: Plain text
 #: en/git-config.txt:266
@@ -19661,7 +19697,9 @@ msgstr "Nenhuma configuração especial é necessária para o acesso SSH, além 
 #: en/git-cvsserver.txt:139
 #, priority:100
 msgid "Note: Newer CVS versions (>= 1.12.11) also support specifying CVS_SERVER directly in CVSROOT like"
-msgstr "Nota: As versões mais recentes do CVS (>= 1.12.11) também é compatível a especificação do `CVS_SERVER` diretamente no `CVSROOT`, como"
+msgstr ""
+"Observação: As versões mais recentes do CVS (>= 1.12.11) também é compatível "
+"a especificação do `CVS_SERVER` diretamente no `CVSROOT`, como"
 
 #. type: delimited block -
 #: en/git-cvsserver.txt:142
@@ -19699,7 +19737,12 @@ msgstr ""
 #: en/git-cvsserver.txt:164
 #, priority:100
 msgid "Note: you need to ensure each user that is going to invoke 'git-cvsserver' has write access to the log file and to the database (see <<dbbackend,Database Backend>>. If you want to offer write access over SSH, the users of course also need write access to the Git repository itself."
-msgstr "Nota: você precisa garantir que cada usuário que invoque o comando `git-cvsserver` tenha acesso de gravação ao arquivo de registro log e ao banco de dados (consulte <<dbbackend,Database Backend>>. Caso queira oferecer acesso de gravação via SSH, é óbvio que os usuários também precisam ter acesso de gravação ao próprio repositório Git."
+msgstr ""
+"Observação: você precisa garantir que cada usuário que invoque o comando "
+"`git-cvsserver` tenha acesso de gravação ao arquivo de registro log e ao "
+"banco de dados (consulte <<dbbackend,Database Backend>>. Caso queira "
+"oferecer acesso de gravação via SSH, é óbvio que os usuários também precisam "
+"ter acesso de gravação ao próprio repositório Git."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:167
@@ -20022,7 +20065,7 @@ msgstr "Quando essas variáveis do ambiente são definidas, os argumentos corres
 #: en/git-cvsserver.txt:325
 #, no-wrap, priority:100
 msgid "ECLIPSE CVS CLIENT NOTES"
-msgstr "NOTAS DO CLIENTE ECLIPSE CVS"
+msgstr "OBSERVAÇÕES SOBRE O CLIENTE ECLIPSE CVS"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:328
@@ -20888,13 +20931,20 @@ msgstr "Descreve a condição da árvore de trabalho.  Quando a árvore de traba
 #: en/git-describe.txt:54
 #, priority:260
 msgid "Instead of using only the annotated tags, use any ref found in `refs/` namespace.  This option enables matching any known branch, remote-tracking branch, or lightweight tag."
-msgstr "Em vez de usar apenas as anotações das tags, utilize qualquer \"ref\" encontrada no espaço de nomes `refs/`.  Essa opção permite fazer a coincidência com qualquer ramificação que seja conhecida, rastreamento remoto do ramo ou uma tag \"lightweight\"."
+msgstr ""
+"Em vez de usar apenas as tags anotadas, utilize qualquer \"ref\" encontrada "
+"no espaço de nomes `refs/`.  Essa opção permite fazer com que coincida com "
+"qualquer ramificação conhecida, do ramo monitorado remotamente ou de uma tag "
+"leve (lightweight)."
 
 #. type: Plain text
 #: en/git-describe.txt:59
 #, priority:260
 msgid "Instead of using only the annotated tags, use any tag found in `refs/tags` namespace.  This option enables matching a lightweight (non-annotated) tag."
-msgstr "Em vez de usar apenas as anotações das tags, utilize qualquer tag que for encontrada no `namespace` `refs/tags`.  Essa opção permite fazer a coincidência com uma tag \"lightweight\" (não anotada)."
+msgstr ""
+"Em vez de usar apenas as anotações das tags, utilize qualquer tag que for "
+"encontrada no `namespace` `refs/tags`.  Essa opção permite fazer a "
+"coincidência com uma tag \"leve\" (não anotada)."
 
 #. type: Labeled list
 #: en/git-describe.txt:60
@@ -21119,10 +21169,10 @@ msgid "For each commit-ish supplied, 'git describe' will first look for a tag wh
 msgstr ""
 "Para cada 'commit-ish' informado, o comando 'git description' procurará "
 "primeiro em uma tag que identifique exatamente este commit.  As tags "
-"anotadas sempre serão preferidas às tags \"lightweight\", as tags com datas "
-"mais recentes sempre serão preferidas às tags com datas mais antigas.  Em "
-"caso de uma coincidência exata ser encontrada, o seu nome será exibido e a "
-"pesquisa será interrompida."
+"anotadas sempre serão preferidas às tags leves, as tags com datas mais "
+"recentes sempre serão preferidas às tags com datas mais antigas.  Em caso de "
+"uma coincidência exata ser encontrada, o seu nome será exibido e a pesquisa "
+"será interrompida."
 
 #. type: Plain text
 #: en/git-describe.txt:190
@@ -23341,7 +23391,11 @@ msgstr "`tag`"
 #: en/git-fast-import.txt:364
 #, priority:100
 msgid "Creates an annotated tag object from an existing commit or branch.  Lightweight tags are not supported by this command, as they are not recommended for recording meaningful points in time."
-msgstr "Cria um objeto \"tag\" anotado a partir de um commit ou ramificação existente.  As tags `lightweight` não são compatíveis com este comando, pois não são recomendadas para registrar os pontos importantes de tempo."
+msgstr ""
+"Cria um objeto \"tag\" anotado a partir de um commit ou ramificação "
+"existente.  As tags `lightweight` (ou leves) não são compatíveis com este "
+"comando, pois não são recomendadas para registrar os pontos importantes de "
+"tempo."
 
 #. type: Title ~
 #: en/git-fast-import.txt:365 en/git-fast-import.txt:858
@@ -24104,7 +24158,9 @@ msgstr "onde `<identificador-do-objeto>` é qualquer cadeia de caracteres que n�
 #: en/git-fast-import.txt:816
 #, priority:100
 msgid "Creates an annotated tag referring to a specific commit.  To create lightweight (non-annotated) tags see the `reset` command below."
-msgstr "Cria uma tag anotada referente a um commit específico.  Para criar tags `lightweight` (não anotadas), consulte o comando `reset` abaixo."
+msgstr ""
+"Cria uma tag anotada referente a um commit específico.  Para criar tags "
+"`leve` (não anotadas), consulte o comando `reset` abaixo."
 
 #. type: delimited block .
 #: en/git-fast-import.txt:824
@@ -24164,7 +24220,14 @@ msgstr "O comando `data` após o `tagger` deve fornecer a mensagem anotada do ta
 #: en/git-fast-import.txt:856
 #, priority:100
 msgid "Signing annotated tags during import from within fast-import is not supported.  Trying to include your own PGP/GPG signature is not recommended, as the frontend does not (easily) have access to the complete set of bytes which normally goes into such a signature.  If signing is required, create lightweight tags from within fast-import with `reset`, then create the annotated versions of those tags offline with the standard 'git tag' process."
-msgstr "A assinatura de tags anotadas durante a importação com `fast-import` não é compatível.  Não é recomendável tentar incluir na sua própria assinatura PGP/GPG, pois o front-end não tem (facilmente) acesso ao conjunto completo de bytes que normalmente entra nessa assinatura.  Caso a assinatura seja necessária, crie tags `lightweight` a partir do `fast-import` com `reset` e crie as versões anotadas dessas tags desconectadas com o processo predefinido 'git tag'."
+msgstr ""
+"A assinatura de tags anotadas durante a importação com `fast-import` não é "
+"compatível.  Não é recomendável tentar incluir na sua própria assinatura PGP/"
+"GPG, pois o front-end não tem (facilmente) acesso ao conjunto completo de "
+"bytes que normalmente entra nessa assinatura.  Caso a assinatura seja "
+"necessária, crie tags `leve` a partir do `fast-import` com `reset` e crie as "
+"versões anotadas dessas tags desconectadas com o processo predefinido 'git "
+"tag'."
 
 #. type: Plain text
 #: en/git-fast-import.txt:863
@@ -24200,7 +24263,9 @@ msgstr "O `LF` após o comando é opcional (costumava ser necessário)."
 #: en/git-fast-import.txt:877
 #, priority:100
 msgid "The `reset` command can also be used to create lightweight (non-annotated) tags.  For example:"
-msgstr "The `reset` command can also be used to create lightweight (non-annotated) tags.  Por exemplo:"
+msgstr ""
+"O comando `reset` também pode ser utilizado para criar tags leves (não "
+"anotadas).  Por exemplo:"
 
 #. type: delimited block =
 #: en/git-fast-import.txt:881
@@ -24216,7 +24281,9 @@ msgstr ""
 #: en/git-fast-import.txt:885
 #, priority:100
 msgid "would create the lightweight tag `refs/tags/938` referring to whatever commit mark `:938` references."
-msgstr "criaria a tag `lightweight` `refs/tags/938` se referindo a qualquer marcação do commit `:938`."
+msgstr ""
+"criaria a tag `leve` `refs/tags/938` se referindo a qualquer marcação do "
+"commit `:938`."
 
 #. type: Plain text
 #: en/git-fast-import.txt:892
@@ -24528,7 +24595,10 @@ msgstr "Lendo a partir do commit ativo"
 #: en/git-fast-import.txt:1088
 #, priority:100
 msgid "This form can only be used in the middle of a `commit`.  The path names a directory entry within fast-import's active commit.  The path must be quoted in this case."
-msgstr "Este formulário pode ser utilizado apenas no meio de um `commit`.  O caminho nomeia uma entrada do diretório no commit ativo do `fast-import`.  O caminho deve ser citado neste caso."
+msgstr ""
+"Este formulário pode ser utilizado apenas no meio de um `commit`.  O caminho "
+"informa uma entrada do diretório no commit ativo do `fast-import`.  O "
+"caminho deve ser citado neste caso."
 
 #. type: delimited block .
 #: en/git-fast-import.txt:1091
@@ -26018,8 +26088,8 @@ msgstr "O primeiro comando captura a ramificação `maint` do repositório em `g
 msgid "Using --recurse-submodules can only fetch new commits in already checked out submodules right now. When e.g. upstream added a new submodule in the just fetched commits of the superproject the submodule itself cannot be fetched, making it impossible to check out that submodule later without having to do a fetch again. This is expected to be fixed in a future Git version."
 msgstr ""
 "Com a opção `--recurse-submodules` só pode buscar novos commits nos "
-"submódulos que já foram averiguados no momento. Quando, por exemplo, o "
-"'upstream' adicionou um novo submódulo nos commits recém-buscados do "
+"submódulos que já foram averiguados no momento. Quando, por exemplo, a "
+"\"upstream\" adicionou um novo submódulo nos commits recém-buscados do "
 "superprojeto, o submódulo em si não pode ser buscado, tornando impossível "
 "verificar o submódulo sendo necessário fazer uma nova busca mais tarde. "
 "Espera-se que isso seja corrigido em uma versão futura do Git."
@@ -27651,7 +27721,16 @@ msgstr "upstream"
 #: en/git-for-each-ref.txt:154
 #, priority:100
 msgid "The name of a local ref which can be considered ``upstream'' from the displayed ref. Respects `:short`, `:lstrip` and `:rstrip` in the same way as `refname` above.  Additionally respects `:track` to show \"[ahead N, behind M]\" and `:trackshort` to show the terse version: \">\" (ahead), \"<\" (behind), \"<>\" (ahead and behind), or \"=\" (in sync). `:track` also prints \"[gone]\" whenever unknown upstream ref is encountered. Append `:track,nobracket` to show tracking information without brackets (i.e \"ahead N, behind M\")."
-msgstr "É o nome de um \"ref\" local que pode ser considerado ``upstream'' do \"ref\" que está sendo exibido. Respeita `:short`, `:lstrip` and `:rstrip` da mesma maneira que o `refname` acima.  Além disso, respeita também `:track` para exibir \"[à frente N, atrás M]\"e `:trackshort` para exibir a versão concisa: \">\" (à frente), \"<\" (atrás), \"<>\" (à frente e atrás) ou \"=\" (em sincronia). `:track` também imprime \"[gone]\" sempre que um \"ref\" \"upstream\" desconhecido for encontrado. Acrescente `:track,nobracket` para exibir as informações de rastreamento sem colchetes (ou seja, \"à frente de N, atrás de M\")."
+msgstr ""
+"É o nome de uma \"ref\" local que pode ser considerada ``upstream'' da \"ref"
+"\" que está sendo exibida. Respeita `:short`, `:lstrip` e `:rstrip` da mesma "
+"maneira que o `refname` acima.  Além disso, respeita também `:track` para "
+"exibir \"[à frente N, atrás M]\"e `:trackshort` para exibir a versão concisa:"
+" \">\" (à frente), \"<\" (atrás), \"<>\" (à frente e atrás) ou \"=\" (em "
+"sincronia). `:track` também imprime \"[gone]\" sempre que uma \"ref\" "
+"\"upstream\" desconhecida seja encontrada. Acrescente `:track,nobracket` "
+"para exibir as informações de rastreamento sem colchetes (ou seja, \"à "
+"frente de N, atrás de M\")."
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:161
@@ -27675,7 +27754,12 @@ msgstr "push"
 #: en/git-for-each-ref.txt:172
 #, priority:100
 msgid "The name of a local ref which represents the `@{push}` location for the displayed ref. Respects `:short`, `:lstrip`, `:rstrip`, `:track`, `:trackshort`, `:remotename`, and `:remoteref` options as `upstream` does. Produces an empty string if no `@{push}` ref is configured."
-msgstr "O nome de um ref local que representa a localização `@{push}` para um ref que está sendo exibido. Respeita as opções `:short`, `:lstrip`, `:rstrip`, `:track`, `:trackshort`, `:remotename`, e `:remoteref`; assim como a opção `upstream`. Produz uma cadeia de caracteres vazia caso nenhum `@{push}` ref esteja configurado."
+msgstr ""
+"O nome de uma \"ref\" local que representa a localização `@{push}` para uma "
+"ref que está sendo exibido. Respeita as opções `:short`, `:lstrip`, `:rstrip`"
+", `:track`, `:trackshort`, `:remotename`, e `:remoteref`; assim como a opção "
+"`upstream`. Produz uma cadeia de caracteres vazia caso nenhum `@{push}` \"ref"
+"\" esteja configurada."
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:173 en/git.txt:376
@@ -28081,7 +28165,7 @@ msgid ""
 "\t\t   [ <since> | <revision range> ]\n"
 msgstr ""
 "'git format-patch' [-k] [(-o|--output-directory) <dir> | --stdout]\n"
-"\t\t   [--no-thread | --thread[=<style>]]\n"
+"\t\t   [--no-thread | --thread[=<estilo>]]\n"
 "\t\t   [(--attach|--inline)[=<limite>] | --no-attach]\n"
 "\t\t   [-s | --signoff]\n"
 "\t\t   [--signature=<assinatura> | --no-signature]\n"
@@ -28101,7 +28185,7 @@ msgstr ""
 "\t\t   [--range-diff=<anterior> [--creation-factor=<percent>]]\n"
 "\t\t   [--progress]\n"
 "\t\t   [<common diff options>]\n"
-"\t\t   [ <desde> | <faixa da revisão> ]\n"
+"\t\t   [ <desde> | <faixa-da-revisão> ]\n"
 
 #. type: Plain text
 #: en/git-format-patch.txt:42
@@ -28596,7 +28680,14 @@ msgstr "--interdiff=<anterior>"
 #: en/git-format-patch.txt:272
 #, priority:100
 msgid "As a reviewer aid, insert an interdiff into the cover letter, or as commentary of the lone patch of a 1-patch series, showing the differences between the previous version of the patch series and the series currently being formatted. `previous` is a single revision naming the tip of the previous series which shares a common base with the series being formatted (for example `git format-patch --cover-letter --interdiff=feature/v1 -3 feature/v2`)."
-msgstr "Como um auxílio ao revisor, insira um \"interdiff\" na carta de apresentação ou como um comentário único do patch de uma série de 1, exibindo as diferenças entre a versão anterior da série do patch e a série atualmente sendo formatada. `previous` (anterior) é uma única revisão que nomeia a ponta da série anterior que compartilha uma base comum com a série que está sendo formatada (`git format-patch --cover-letter --interdiff=feature/v1 -3 feature/v2` por exemplo)."
+msgstr ""
+"Como um auxílio ao revisor, insira um \"interdiff\" na carta de apresentação "
+"ou como um comentário único do patch de uma série de 1, exibindo as "
+"diferenças entre a versão anterior da série do patch e a série atualmente "
+"sendo formatada. `previous` (anterior) é uma única revisão que informa a "
+"ponta da série anterior que compartilha uma base comum com a série que está "
+"sendo formatada (`git format-patch --cover-letter --interdiff=feature/v1 -3 "
+"feature/v2` por exemplo)."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:273
@@ -29785,7 +29876,9 @@ msgstr "git-gc - Limpa os arquivos desnecessários e otimiza o repositório loca
 #: en/git-gc.txt:13
 #, no-wrap, priority:100
 msgid "'git gc' [--aggressive] [--auto] [--quiet] [--prune=<date> | --no-prune] [--force] [--keep-largest-pack]\n"
-msgstr "'git gc' [--aggressive] [--auto] [--quiet] [--prune=<date> | --no-prune] [--force] [--keep-largest-pack]\n"
+msgstr ""
+"'git gc' [--aggressive] [--auto] [--quiet] [--prune=<data> | --no-prune] "
+"[--force] [--keep-largest-pack]\n"
 
 #. type: Plain text
 #: en/git-gc.txt:22
@@ -29871,7 +29964,7 @@ msgstr "Caso seja excedido os limites definidos nas opções de configuração c
 #: en/git-gc.txt:57
 #, no-wrap, priority:100
 msgid "--prune=<date>"
-msgstr "--prune=<date>"
+msgstr "--prune=<data>"
 
 #. type: Plain text
 #: en/git-gc.txt:64
@@ -31189,7 +31282,8 @@ msgid ""
 "'git hash-object' [-t <type>] [-w] [--path=<file>|--no-filters] [--stdin [--literally]] [--] <file>...\n"
 "'git hash-object' [-t <type>] [-w] --stdin-paths [--no-filters]\n"
 msgstr ""
-"'git hash-object' [-t <tipo>] [-w] [--path=<file>|--no-filters] [--stdin [--literally]] [--] <file>...\n"
+"'git hash-object' [-t <tipo>] [-w] [--path=<arquivo>|--no-filters] [--stdin "
+"[--literally]] [--] <arquivo>...\n"
 "'git hash-object' [-t <tipo>] [-w] --stdin-paths [--no-filters]\n"
 
 #. type: Plain text
@@ -31468,7 +31562,7 @@ msgstr "--web"
 #, priority:100
 msgid "Display manual page for the command in the 'web' (HTML)  format. A web browser will be used for that purpose."
 msgstr ""
-"Exiba a página de manual do comando no formato 'web' (HTML). Um navegador da "
+"Exiba a página do manual do comando no formato 'web' (HTML). Um navegador da "
 "web será utilizado para este fim."
 
 #. type: Plain text
@@ -31998,7 +32092,7 @@ msgstr ""
 msgid "To require authentication for both reads and writes, use a Location directive around the repository, or one of its parent directories:"
 msgstr ""
 "Para exigir a autenticação para ambas as leituras e gravações, utilize uma "
-"diretiva local ao redor do repositório ou um dos seus diretórios da inicial:"
+"diretiva local ao redor do repositório ou um dos seus diretórios upstream:"
 
 #. type: delimited block -
 #: en/git-http-backend.txt:136
@@ -33100,7 +33194,9 @@ msgstr "git-init-db - Cria um repositório Git vazio"
 #: en/git-init-db.txt:13
 #, no-wrap, priority:100
 msgid "'git init-db' [-q | --quiet] [--bare] [--template=<template_directory>] [--separate-git-dir <git dir>] [--shared[=<permissions>]]\n"
-msgstr "'git init-db' [-q | --quiet] [--bare] [--template=<diretório_modelo>] [--separate-git-dir <git dir>] [--shared[=<permissões>]]\n"
+msgstr ""
+"'git init-db' [-q | --quiet] [--bare] [--template=<diretório-modelo>] "
+"[--separate-git-dir <dir git>] [--shared[=<permissões>]]\n"
 
 #. type: Plain text
 #: en/git-init-db.txt:20
@@ -33129,7 +33225,7 @@ msgid ""
 "\t  [--shared[=<permissions>]] [directory]\n"
 msgstr ""
 "'git init' [-q | --quiet] [--bare] [--template=<template_directory>]\n"
-"\t  [--separate-git-dir <git dir>] [--object-format=<format>]\n"
+"\t  [--separate-git-dir <dir git>] [--object-format=<format>]\n"
 "\t  [--shared[=<permissões>]] [diretório]\n"
 
 #. type: Plain text
@@ -33596,8 +33692,9 @@ msgstr ""
 msgid "This command reads some patches or commit messages from either the <file> arguments or the standard input if no <file> is specified. If `--parse` is specified, the output consists of the parsed trailers."
 msgstr ""
 "Este comando lê alguns patches ou faz o commit das mensagens dos argumentos "
-"<file> ou da entrada padrão se nenhum <file> seja definido. Caso `--parse` "
-"seja definido a saída consistirá nos caracteres de resposta analisados."
+"<arquivo> ou da entrada padrão se nenhum <arquivo> seja definido. Caso "
+"`--parse` seja definido a saída consistirá nos caracteres de resposta "
+"analisados."
 
 #. type: Plain text
 #: en/git-interpret-trailers.txt:27
@@ -35883,7 +35980,7 @@ msgstr "Formato de saída"
 #: en/git-ls-tree.txt:85
 #, no-wrap, priority:100
 msgid "        <mode> SP <type> SP <object> TAB <file>\n"
-msgstr "        <mode> SP <tipo> SP <object> TAB <file>\n"
+msgstr "        <mode> SP <tipo> SP <object> TAB <arquivo>\n"
 
 #. type: Plain text
 #: en/git-ls-tree.txt:88
@@ -35903,7 +36000,7 @@ msgstr "Quando a opção `-l` é utilizada, o formato muda para"
 #: en/git-ls-tree.txt:92
 #, no-wrap, priority:100
 msgid "        <mode> SP <type> SP <object> SP <object size> TAB <file>\n"
-msgstr "        <mode> SP <tipo> SP <object> SP <object size> TAB <file>\n"
+msgstr "        <mode> SP <tipo> SP <object> SP <object size> TAB <arquivo>\n"
 
 #. type: Plain text
 #: en/git-ls-tree.txt:96
@@ -36247,7 +36344,7 @@ msgstr "--mboxrd"
 #, priority:100
 msgid "Input is of the \"mboxrd\" format and \"^>+From \" line escaping is reversed."
 msgstr ""
-"A entrada utiliza o formato \"mboxrd\" e a saída da linha \"^>+From \" é "
+"A entrada utiliza o formato \"mboxrd\" e a quebra da linha \"^>+From \" é "
 "revertida."
 
 #. type: Title =
@@ -36938,7 +37035,7 @@ msgstr ""
 #: en/git-merge-index.txt:13
 #, no-wrap, priority:100
 msgid "'git merge-index' [-o] [-q] <merge-program> (-a | [--] <file>*)\n"
-msgstr "'git merge-index' [-o] [-q] <merge-program> (-a | [--] <file>*)\n"
+msgstr "'git merge-index' [-o] [-q] <merge-program> (-a | [--] <arquivo>*)\n"
 
 #. type: Plain text
 #: en/git-merge-index.txt:20
@@ -37455,7 +37552,7 @@ msgid ""
 "'git merge' (--continue | --abort | --quit)\n"
 msgstr ""
 "'git merge' [-n] [--stat] [--no-commit] [--squash] [--[no-]edit]\n"
-"\t[--no-verify] [-s <estratégia>] [-X <strategy-option>] [-S[<keyid>]]\n"
+"\t[--no-verify] [-s <estratégia>] [-X <opção-da-estratégia>] [-S[<keyid>]]\n"
 "\t[--[no-]allow-unrelated-histories]\n"
 "\t[--[no-]rerere-autoupdate] [-m <msg>] [-F <arquivo>] [<commit>...]\n"
 "'git merge' (--continue | --abort | --quit)\n"
@@ -37637,8 +37734,8 @@ msgid "If no commit is given from the command line, merge the remote-tracking br
 msgstr ""
 "Caso nenhum commit seja informado na linha de comando, mescle as "
 "ramificações monitoradas remotamente para que a ramificação atual esteja "
-"configurada para ser utilizada como a inicial.  Consulte também a seção de "
-"configuração desta página do manual."
+"configurada para ser utilizada como sua upstream.  Consulte também a seção "
+"de configuração desta página do manual."
 
 #. type: Plain text
 #: en/git-merge.txt:133
@@ -37686,12 +37783,12 @@ msgid "Often the current branch head is an ancestor of the named commit.  This i
 msgstr ""
 "Frequentemente, o cabeçalho do ramo atual é um ancestral do commit "
 "informado.  Este é o caso mais comum especialmente quando invocado a partir "
-"do comando 'git pull': você está monitorando um repositório da inicial "
-"(upstream), não efetuou as alterações locais e agora deseja atualizar para "
-"uma revisão mais recente da inicial.  Nesse caso, não é necessário um novo "
-"commit para armazenar o histórico combinado; em vez disso, o `HEAD` (junto "
-"com o índice) é atualizado para apontar para o commit informado sem criar "
-"uma mesclagem extra do commit."
+"do comando 'git pull': você está monitorando um repositório upstream, não "
+"efetuou as alterações locais e agora deseja atualizar para uma revisão "
+"upstream mais recente.  Nesse caso, não é necessário um novo commit para "
+"armazenar o histórico combinado; em vez disso, o `HEAD` (junto com o índice) "
+"é atualizado para apontar para o commit informado sem criar uma mesclagem "
+"extra do commit."
 
 #. type: Plain text
 #: en/git-merge.txt:167
@@ -37804,9 +37901,8 @@ msgstr ""
 msgid "When you want to just integrate with the work leading to the commit that happens to be tagged, e.g. synchronizing with an upstream release point, you may not want to make an unnecessary merge commit."
 msgstr ""
 "Quando você deseja apenas integrar-se ao trabalho que leva ao commit que "
-"está marcado, por exemplo, sincronizando com um ponto de liberação da "
-"inicial upstream, talvez você não queira fazer uma consolidação "
-"desnecessária da mesclagem."
+"está marcado, por exemplo, sincronizando com um ponto de liberação upstream, "
+"talvez você não queira fazer uma consolidação desnecessária da mesclagem."
 
 #. type: Plain text
 #: en/git-merge.txt:217
@@ -38501,7 +38597,7 @@ msgstr ""
 "'git notes' [list [<objeto>]]\n"
 "'git notes' add [-f] [--allow-empty] [-F <arquivo> | -m <msg> | (-c | -C) "
 "<objeto>] [<objeto>]\n"
-"'git notes' copy [-f] ( --stdin | <from-object> [<to-object>] )\n"
+"'git notes' copy [-f] ( --stdin | <a-partir-do-objeto> [<para-o-objeto>] )\n"
 "'git notes' append [--allow-empty] [-F <arquivo> | -m <msg> | (-c | -C) "
 "<objeto>] [<objeto>]\n"
 "'git notes' edit [--allow-empty] [<objeto>]\n"
@@ -39354,10 +39450,11 @@ msgid ""
 "'git p4 rebase'\n"
 "'git p4 submit' [<submit options>] [<master branch name>]\n"
 msgstr ""
-"'git p4 clone' [<sync options>] [<clone options>] <p4 depot path>...\n"
-"'git p4 sync' [<sync options>] [<p4 depot path>...]\n"
+"'git p4 clone' [<opções de sincronismo>] [<opções da clonagem>] <caminho do "
+"depósito p4>...\n"
+"'git p4 sync' [<opções de sincronismo>] [<caminho do depósito p4>...]\n"
 "'git p4 rebase'\n"
-"'git p4 submit' [<opções de envio>] [<master branch name>]\n"
+"'git p4 submit' [<opções de envio>] [<nome do ramo master>]\n"
 
 #. type: Plain text
 #: en/git-p4.txt:22
@@ -39648,7 +39745,7 @@ msgstr ""
 #, priority:100
 msgid "The upstream reference is generally 'refs/remotes/p4/master', but can be overridden using the `--origin=` command-line option."
 msgstr ""
-"A referência da inicial geralmente é 'refs/remotes/p4/master', mas pode ser "
+"A referência upstream geralmente é 'refs/remotes/p4/master', mas pode ser "
 "substituída utilizando a opção da linha de comando `--origin=`."
 
 #. type: Plain text
@@ -40054,7 +40151,7 @@ msgstr "--origin <commit>"
 #, priority:100
 msgid "Upstream location from which commits are identified to submit to p4.  By default, this is the most recent p4 commit reachable from `HEAD`."
 msgstr ""
-"Localização da inicial a partir de onde os commits são identificados para "
+"Localização upstream a partir de onde os commits são identificados para "
 "envio ao 'p4'.  É predefinido que este é o commit 'p4' mais recente "
 "acessível a partir do `HEAD`."
 
@@ -40367,7 +40464,7 @@ msgstr ""
 #: en/git-p4.txt:441
 #, no-wrap, priority:100
 msgid "DEPOT PATH SYNTAX"
-msgstr "SINTAXE DE CAMINHO DO DEPÓSITO"
+msgstr "SINTAXE DO CAMINHO DO DEPÓSITO"
 
 #. type: Plain text
 #: en/git-p4.txt:445
@@ -42355,7 +42452,7 @@ msgstr ""
 #, priority:100
 msgid "Don't actually remove any objects, only show those that would have been removed."
 msgstr ""
-"Na verdade, não remova nenhum objeto, apenas mostre aqueles que teriam sido "
+"Na verdade, não remova nenhum objeto, apenas exiba aqueles que teriam sido "
 "removidos."
 
 #. type: Plain text
@@ -42689,8 +42786,8 @@ msgstr "--rebase[=false|true|merges|preserve|interactive]"
 msgid "When true, rebase the current branch on top of the upstream branch after fetching. If there is a remote-tracking branch corresponding to the upstream branch and the upstream branch was rebased since last fetched, the rebase uses that information to avoid rebasing non-local changes."
 msgstr ""
 "Quando for verdadeiro, reorganize a fundação do ramo atual no topo da "
-"ramificação inicial após a busca. Caso haja uma ramificação monitorado "
-"remotamente correspondente à ramificação da inicial e a ramificação inicial "
+"ramificação upstream após a busca. Caso haja uma ramificação monitorado "
+"remotamente correspondente à ramificação upstream e a ramificação upstream "
 "foi reconstruído desde a última busca, a reconstrução da fundação utilizará "
 "estas informações para evitar reconstruir as alterações que não fora locais."
 
@@ -42717,7 +42814,7 @@ msgstr ""
 #: en/git-pull.txt:121
 #, priority:220
 msgid "When false, merge the current branch into the upstream branch."
-msgstr "Quando for falso, mescle a ramificação atual na ramificação da inicial."
+msgstr "Quando for falso, mescle a ramificação atual na ramificação upstream."
 
 #. type: Plain text
 #: en/git-pull.txt:123
@@ -43006,8 +43103,8 @@ msgid "When neither the command-line nor the configuration specify what to push,
 msgstr ""
 "Quando nem a linha de comando nem a configuração informam o que enviar, o "
 "comportamento predefinido é utilizado, que corresponde ao valor `simple` "
-"para `push.default`: o ramo atual é enviado ao ramo inicial correspondente, "
-"porém como uma medida segurança, o envio será cancelado caso o ramo inicial "
+"para `push.default`: o ramo atual é enviado ao ramo upstream correspondente, "
+"porém como uma medida segurança, o envio será cancelado caso o ramo upstream "
 "não esteja com o mesmo nome que o ramo local."
 
 #. type: Title -
@@ -43541,12 +43638,12 @@ msgstr ""
 #, priority:220
 msgid "I.e. create a `base` tag for versions of the upstream code that you've seen and are willing to overwrite, then rewrite history, and finally force push changes to `master` if the remote version is still at `base`, regardless of what your local `remotes/origin/master` has been updated to in the background."
 msgstr ""
-"Crie uma tag `base` para as versões do código da inicial \"upstream\" que "
-"você viu e está disposto a sobrescrever por exemplo, depois reescreva o "
-"histórico e finalmente, imponha um impulsionamento \"push\" com as "
-"alterações para `master` caso a versão remota ainda esteja na `base`, "
-"independentemente se os seus ramos `remotes/origin/master` locais foram "
-"atualizados em segundo plano ou não."
+"Crie uma tag `base` para as versões do código upstream que você viu e está "
+"disposto a sobrescrever por exemplo, depois reescreva o histórico e "
+"finalmente, imponha um impulsionamento \"push\" com as alterações para "
+"`master` caso a versão remota ainda esteja na `base`, independentemente se "
+"os seus ramos `remotes/origin/master` locais foram atualizados em segundo "
+"plano ou não."
 
 #. type: Plain text
 #: en/git-push.txt:331
@@ -43601,9 +43698,9 @@ msgstr ""
 msgid "For every branch that is up to date or successfully pushed, add upstream (tracking) reference, used by argument-less linkgit:git-pull[1] and other commands. For more information, see `branch.<name>.merge` in linkgit:git-config[1]."
 msgstr ""
 "Para cada ramo atualizado ou impulsionada com êxito, adicione uma referência "
-"na inicial \"upstream\" (monitorado), utilizada sem argumento pelo linkgit"
-":git-pull[1] e os outros comandos. Para mais informações, consulte "
-"`branch.<nome>.merge` no linkgit:git-config[1]."
+"\"upstream\" (monitorado), utilizada sem argumento pelo linkgit:git-pull[1] "
+"e os outros comandos. Para mais informações, consulte `branch.<nome>.merge` "
+"no linkgit:git-config[1]."
 
 #. type: Labeled list
 #: en/git-push.txt:355
@@ -44024,10 +44121,10 @@ msgstr "`git push origin`"
 #, priority:220
 msgid "Without additional configuration, pushes the current branch to the configured upstream (`remote.origin.merge` configuration variable) if it has the same name as the current branch, and errors out without pushing otherwise."
 msgstr ""
-"Sem uma configuração adicional, envia a ramificação atual para a inicial "
-"\"upstream\" configurada (a variável de configuração `remote.origin.merge`) "
-"caso ela tenha o mesmo nome que o ramo atual e os erros ocorrerem sem "
-"qualquer outro impulsionamento."
+"Sem uma configuração adicional, envia a ramificação atual para a upstream "
+"configurada (a variável de configuração `remote.origin.merge`) caso ela "
+"tenha o mesmo nome que o ramo atual e os erros ocorrerem sem qualquer outro "
+"impulsionamento."
 
 #. type: Plain text
 #: en/git-push.txt:586
@@ -45414,8 +45511,8 @@ msgstr ""
 #, priority:100
 msgid "If the upstream branch already contains a change you have made (e.g., because you mailed a patch which was applied upstream), then that commit will be skipped. For example, running `git rebase master` on the following history (in which `A'` and `A` introduce the same set of changes, but have different committer information):"
 msgstr ""
-"Caso a ramificação da inicial já contiver uma alteração que você fez (porque "
-"você enviou um patch que foi aplicado na inicial por exemplo), então este "
+"Caso a ramificação upstream já contiver uma alteração que você fez (porque "
+"você enviou um patch que foi aplicado na upstream por exemplo), então este "
 "commit será ignorado. Por exemplo, executando o comando `git rebase master` "
 "no histórico a seguir (onde `A'` e `A` introduzem o mesmo conjunto de "
 "alterações, mas possuem informações diferentes de quem fez o commit):"
@@ -45744,7 +45841,7 @@ msgstr "Consulte também a seção \"OPÇÕES INCOMPATÍVEIS\" logo abaixo."
 #, priority:100
 msgid "Upstream branch to compare against.  May be any valid commit, not just an existing branch name. Defaults to the configured upstream for the current branch."
 msgstr ""
-"Ramo inicial para fazer a comparação.  Pode ser qualquer commit válido, não "
+"Ramo upstream para fazer a comparação.  Pode ser qualquer commit válido, não "
 "apenas um nome de uma ramo já existente. A predefinição retorna para "
 "\"upstream\" configurada para o ramo atual."
 
@@ -45803,16 +45900,16 @@ msgstr "--empty={drop,keep,ask}"
 msgid "How to handle commits that are not empty to start and are not clean cherry-picks of any upstream commit, but which become empty after rebasing (because they contain a subset of already upstream changes).  With drop (the default), commits that become empty are dropped.  With keep, such commits are kept.  With ask (implied by --interactive), the rebase will halt when an empty commit is applied allowing you to choose whether to drop it, edit files more, or just commit the empty changes.  Other options, like --exec, will use the default of drop unless -i/--interactive is explicitly specified."
 msgstr ""
 "Como lidar com commits que não estão vazias para iniciar e não são escolhas "
-"seletivas limpas de nenhum commit da inicial 'upstream', mas que ficam "
-"vazias após a reconstrução (porque elas já contêm um subconjunto de "
-"alterações na inicial 'upstream').  Com drop (a predefinição), os commits "
-"que ficam vazias são descartadas.  Com keep, estes commits são mantidos.  "
-"Com o comando 'ask' (implícito através da opção `--interactive`), uma "
-"reconstrução 'rebase' será interrompida quando um commit vazia for aplicado, "
-"permitindo que você escolha se elimina, edita mais arquivos ou apenas faça o "
-"commit das alterações vazias.  Outras opções, como `--exec`, utilizarão a "
-"predefinição 'drop', a menos que a opção `-i/--interactive` seja informado "
-"de forma explicita."
+"seletivas limpas de nenhum commit upstream, mas que ficam vazias após a "
+"reconstrução (porque elas já contêm um subconjunto de alterações na upstream)"
+".  Com drop (a predefinição), os commits que ficam vazias são descartadas.  "
+"Com keep, estes commits são mantidos.  Com o comando 'ask' (implícito "
+"através da opção `--interactive`), uma reconstrução 'rebase' será "
+"interrompida quando um commit vazia for aplicado, permitindo que você "
+"escolha se elimina, edita mais arquivos ou apenas faça o commit das "
+"alterações vazias.  Outras opções, como `--exec`, utilizarão a predefinição "
+"'drop', a menos que a opção `-i/--interactive` seja informado de forma "
+"explicita."
 
 #. type: Plain text
 #: en/git-rebase.txt:285
@@ -45898,9 +45995,8 @@ msgid "By default (or if `--no-reapply-cherry-picks` is given), these commits wi
 msgstr ""
 "É predefinido que (ou se `--no-reapply-cherry-picks 'for fornecido), estes "
 "commits serão automaticamente eliminados.  Como isso requer a leitura de "
-"todos os commits da inicial 'upstream', isso pode custar caro nos "
-"repositórios com uma grande quantidade de commits na inicial que precisam "
-"ser lidos."
+"todos os commits upstream, isso pode custar caro nos repositórios com uma "
+"grande quantidade de commits na upstream que precisam ser lidos."
 
 #. type: Plain text
 #: en/git-rebase.txt:324
@@ -45958,7 +46054,10 @@ msgstr ""
 #: en/git-rebase.txt:351
 #, priority:100
 msgid "Use merging strategies to rebase.  When the recursive (default) merge strategy is used, this allows rebase to be aware of renames on the upstream side.  This is the default."
-msgstr "Utilize estratégias de mesclagem para fazer o `rebase`.  Quando a estratégia de mesclagem recursiva (predefinida) for utilizada, permite que o `rebase` esteja ciente das renomeações no lado da inicial.  Esta é a predefinição."
+msgstr ""
+"Utilize estratégias de mesclagem para fazer o `rebase`.  Quando a estratégia "
+"de mesclagem recursiva (predefinida) for utilizada, permite que o `rebase` "
+"esteja ciente das renomeações no lado upstream.  Esta é a predefinição."
 
 #. type: Plain text
 #: en/git-rebase.txt:357
@@ -45966,11 +46065,10 @@ msgstr "Utilize estratégias de mesclagem para fazer o `rebase`.  Quando a estra
 msgid "Note that a rebase merge works by replaying each commit from the working branch on top of the <upstream> branch.  Because of this, when a merge conflict happens, the side reported as 'ours' is the so-far rebased series, starting with <upstream>, and 'theirs' is the working branch.  In other words, the sides are swapped."
 msgstr ""
 "Observe que uma mesclagem de reconstrução (rebase) funciona repetindo cada "
-"commit da ramificação de trabalho na parte do topo da inicial <upstream>.  "
-"Por esse motivo, quando ocorre um conflito na mesclagem, o lado relatado "
-"como 'nosso' é a série até agora reformulada, começando com a inicial "
-"<upstream> e 'deles' é o ramo de trabalho.  Em outras palavras, os lados são "
-"trocados."
+"commit da ramificação de trabalho na parte do topo <upstream>.  Por esse "
+"motivo, quando ocorre um conflito na mesclagem, o lado relatado como 'nosso' "
+"é a série até agora reformulada, começando com <upstream> e 'deles' é o ramo "
+"de trabalho.  Em outras palavras, os lados são trocados."
 
 #. type: Plain text
 #: en/git-rebase.txt:365
@@ -45994,13 +46092,13 @@ msgstr ""
 #: en/git-rebase.txt:373
 #, no-wrap, priority:100
 msgid "-X <strategy-option>"
-msgstr "-X <strategy-option>"
+msgstr "-X <opção-da-estratégia>"
 
 #. type: Labeled list
 #: en/git-rebase.txt:374
 #, no-wrap, priority:100
 msgid "--strategy-option=<strategy-option>"
-msgstr "--strategy-option=<strategy-option>"
+msgstr "--strategy-option=<opção-da-estratégia>"
 
 #. type: Plain text
 #: en/git-rebase.txt:379
@@ -46029,9 +46127,9 @@ msgstr "Seja loquaz. Implica no uso de `--stat`."
 #, priority:100
 msgid "Show a diffstat of what changed upstream since the last rebase. The diffstat is also controlled by the configuration option rebase.stat."
 msgstr ""
-"Exiba uma descrição do que mudou na inicial \"upstream\" desde a última "
-"reconstrução (rebase). O diffstat também é controlado pela opção de "
-"configuração `rebase.stat`."
+"Exiba uma descrição do que mudou na upstream desde a última reconstrução "
+"(rebase). O diffstat também é controlado pela opção de configuração `rebase."
+"stat`."
 
 #. type: Plain text
 #: en/git-rebase.txt:411
@@ -46108,9 +46206,8 @@ msgstr "--no-fork-point"
 #, priority:100
 msgid "Use reflog to find a better common ancestor between <upstream> and <branch> when calculating which commits have been introduced by <branch>."
 msgstr ""
-"Utilize reflog para encontrar um ancestral comum melhor entre a inicial "
-"<upstream> e o <ramo> ao calcular quais os commits foram introduzidos pelo "
-"<ramo>."
+"Utilize reflog para encontrar um ancestral comum melhor entre a <upstream> e "
+"o <ramo> ao calcular quais os commits foram introduzidos pelo <ramo>."
 
 #. type: Plain text
 #: en/git-rebase.txt:451
@@ -46213,7 +46310,7 @@ msgstr ""
 "ramo original, ou seja, os commits que seriam excluídos pela opção linkgit"
 ":git-log[1] `--ancestry-path`, por predefinição manterá a sua ancestralidade "
 "original. Caso o modo `rebase-cousins` esteja ativo, estes commits serão "
-"reconstruídos para a inicial `<upstream>` (ou `<onto>`, caso seja utilizado)."
+"reconstruídos para a `<upstream>` (ou `<onto>`, caso seja utilizado)."
 
 #. type: Plain text
 #: en/git-rebase.txt:515
@@ -46338,13 +46435,12 @@ msgstr ""
 msgid "Rebase all commits reachable from <branch>, instead of limiting them with an <upstream>.  This allows you to rebase the root commit(s) on a branch.  When used with --onto, it will skip changes already contained in <newbase> (instead of <upstream>) whereas without --onto it will operate on every change.  When used together with both --onto and --preserve-merges, 'all' root commits will be rewritten to have <newbase> as parent instead."
 msgstr ""
 "Reconstrói todos os commits acessíveis a partir do <ramo>, em vez de limitá-"
-"los com a inicial <upstream>.  Permite a reestruturação dos commit da raiz "
-"em um ramo.  Quando utilizado com a opção `--onto`, será ignorado as "
-"alterações já contidas em <newbase> (em vez de <upstream>) enquanto que sem "
-"a opção `--onto` a operação ocorrerá em todas as alterações.  Quando "
-"utilizado junto com ambas as opções `--onto` e `--preserve-merges`, 'todos' "
-"os commits das raízes serão reescritos para ter o <newbase> como a sua "
-"origem."
+"los com a <upstream>.  Permite a reestruturação dos commit da raiz em um "
+"ramo.  Quando utilizado com a opção `--onto`, será ignorado as alterações já "
+"contidas em <newbase> (em vez de <upstream>) enquanto que sem a opção "
+"`--onto` a operação ocorrerá em todas as alterações.  Quando utilizado junto "
+"com ambas as opções `--onto` e `--preserve-merges`, 'todos' os commits das "
+"raízes serão reescritos para ter o <newbase> como a sua origem."
 
 #. type: Labeled list
 #: en/git-rebase.txt:572
@@ -49581,8 +49677,8 @@ msgstr ""
 "de maneira diferente, ainda devem se referir ao mesmo local.  O que você "
 "impulsionou para a URL de envio deve ser o que você veria se buscasse "
 "imediatamente a URL de busca.  Caso esteja tentando buscar de um lugar (como "
-"por exemplo, a sua 'upstream') e enviar para outro (como por exemplo, o seu "
-"repositório de publicação), utilize dois ramos remotos separados."
+"por exemplo, a sua \"upstream\") e enviar para outro (como por exemplo, o "
+"seu repositório de publicação), utilize dois ramos remotos separados."
 
 #. type: Labeled list
 #: en/git-remote.txt:166
@@ -50372,8 +50468,8 @@ msgstr "'git request-pull' [-p] <início> <url> [<fim>]\n"
 #, priority:100
 msgid "Generate a request asking your upstream project to pull changes into their tree.  The request, printed to the standard output, begins with the branch description, summarizes the changes and indicates from where they can be pulled."
 msgstr ""
-"Gere um pedido solicitando ao seu projeto na inicial 'upstream' que capture "
-"as alterações na árvore deles.  A solicitação, é impressa na saída padrão, "
+"Gere um pedido solicitando ao seu projeto na upstream que capture as "
+"alterações na árvore deles.  A solicitação, é impressa na saída padrão, "
 "começa com o descritivo do ramo, resume as alterações e indica de onde elas "
 "podem ser extraídas."
 
@@ -50403,8 +50499,8 @@ msgstr "<inicio>"
 #, priority:100
 msgid "Commit to start at.  This names a commit that is already in the upstream history."
 msgstr ""
-"Faça o commit para iniciar em.  Isso nomeia um commit que já está no "
-"histórico da inicial 'upstream'."
+"Faça o commit para iniciar em.  Isso informa um commit que já está no "
+"histórico upstream."
 
 #. type: Labeled list
 #: en/git-request-pull.txt:36
@@ -50430,7 +50526,7 @@ msgstr "<fim>"
 msgid "Commit to end at (defaults to HEAD).  This names the commit at the tip of the history you are asking to be pulled."
 msgstr ""
 "Faça o commit para terminar em (a predefinição retorna para `HEAD`).  Isso "
-"nomeia o commit no topo do histórico que você está pedindo para ser "
+"informa o commit no topo do histórico que você está pedindo para ser "
 "capturado."
 
 #. type: Plain text
@@ -50535,7 +50631,7 @@ msgstr ""
 "relativamente longa, o desenvolvedor às vezes precisa resolver os mesmos "
 "conflitos de forma repetida até que o tópico das ramificações sejam "
 "concluídas (entre mesclagem no ramo \"release\" ou enviadas e aceitas na "
-"inicial 'upstream')."
+"upstream)."
 
 #. type: Plain text
 #: en/git-rerere.txt:25
@@ -50727,9 +50823,9 @@ msgstr ""
 "Após a mesclagem deste teste, há duas maneiras de continuar o tópico do seu "
 "trabalho.  A mais fácil é construir sobre o commit da mesclagem de teste `+`"
 ", quando o seu trabalho no ramo dos tópicos estiver finalmente pronto, "
-"capture o tópico do ramo no 'master' e/ou solicite que a inicial retire "
-"você.  Naquele momento no entanto, o 'master' ou a inicial poderiam ter sido "
-"avançadas desde a mesclagem do teste `+`; nesse caso, o grafo do commit "
+"capture o tópico do ramo no 'master' e/ou solicite que a upstream retire "
+"você.  Naquele momento no entanto, o 'master' ou a upstream poderiam ter "
+"sido avançadas desde a mesclagem do teste `+`; nesse caso, o grafo do commit "
 "final ficaria assim:"
 
 #. type: delimited block -
@@ -50920,11 +51016,11 @@ msgstr ""
 msgid "you could run `git rebase master topic`, to bring yourself up to date before your topic is ready to be sent upstream.  This would result in falling back to a three-way merge, and it would conflict the same way as the test merge you resolved earlier.  'git rerere' will be run by 'git rebase' to help you resolve this conflict."
 msgstr ""
 "você pode executar o comando `git rebase master topic`, para se atualizar "
-"antes que o seu tópico esteja pronto para ser enviado para a inicial "
-"\"upstream\".  Isso resultaria no retorno para uma mesclagem de três vias e "
-"entraria em conflito da mesma maneira que o teste de mesclagem que você "
-"resolveu anteriormente.  O comando 'git rerere' será executado através do "
-"'git rebase' para ajudá-lo a resolver este conflito."
+"antes que o seu tópico esteja pronto para ser enviado para a upstream.  Isso "
+"resultaria no retorno para uma mesclagem de três vias e entraria em conflito "
+"da mesma maneira que o teste de mesclagem que você resolveu anteriormente.  "
+"O comando 'git rerere' será executado através do 'git rebase' para ajudá-lo "
+"a resolver este conflito."
 
 #. type: Plain text
 #: en/git-rerere.txt:219
@@ -50960,9 +51056,11 @@ msgid ""
 "'git reset' [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [<commit>]\n"
 msgstr ""
 "'git reset' [-q] [<tree-ish>] [--] <pathspec>...\n"
-"'git reset' [-q] [--pathspec-from-file=<file> [--pathspec-file-nul]] [<tree-ish>]\n"
+"'git reset' [-q] [--pathspec-from-file=<arquivo> [--pathspec-file-nul]] "
+"[<tree-ish>]\n"
 "'git reset' (--patch | -p) [<tree-ish>] [--] [<pathspec>...]\n"
-"'git reset' [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [<commit>]\n"
+"'git reset' [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] "
+"[<commit>]\n"
 
 #. type: Plain text
 #: en/git-reset.txt:22
@@ -50985,7 +51083,9 @@ msgstr "'git reset' [-q] [<tree-ish>] [--] <pathspec>..."
 #: en/git-reset.txt:24
 #, no-wrap, priority:280
 msgid "'git reset' [-q] [--pathspec-from-file=<file> [--pathspec-file-nul]] [<tree-ish>]"
-msgstr "'git reset' [-q] [--pathspec-from-file=<file> [--pathspec-file-nul]] [<tree-ish>]"
+msgstr ""
+"'git reset' [-q] [--pathspec-from-file=<arquivo> [--pathspec-file-nul]] "
+"[<tree-ish>]"
 
 #. type: Plain text
 #: en/git-reset.txt:28
@@ -51309,7 +51409,10 @@ msgstr ""
 #: en/git-reset.txt:223
 #, priority:280
 msgid "Try to update from the upstream resulted in a lot of conflicts; you were not ready to spend a lot of time merging right now, so you decide to do that later."
-msgstr "Tente atualizar a partir da inicial responsável pelos diversos conflitos; você não estava pronto para perder muito tempo mesclando agora, então decide fazer isso mais tarde."
+msgstr ""
+"Tente atualizar a partir do upstream responsável pelos diversos conflitos; "
+"você não estava pronto para perder muito tempo mesclando agora, então decide "
+"fazer isso mais tarde."
 
 #. type: Plain text
 #: en/git-reset.txt:226
@@ -51827,9 +51930,12 @@ msgid ""
 "'git restore' [<options>] [--source=<tree>] [--staged] [--worktree] --pathspec-from-file=<file> [--pathspec-file-nul]\n"
 "'git restore' (-p|--patch) [<options>] [--source=<tree>] [--staged] [--worktree] [--] [<pathspec>...]\n"
 msgstr ""
-"'git restore' [<opções>] [--source=<árvore>] [--staged] [--worktree] [--] <pathspec>...\n"
-"'git restore' [<opções>] [--source=<árvore>] [--staged] [--worktree] --pathspec-from-file=<file> [--pathspec-file-nul]\n"
-"'git restore' (-p|--patch) [<opções>] [--source=<árvore>] [--staged] [--worktree] [--] [<pathspec>...]\n"
+"'git restore' [<opções>] [--source=<árvore>] [--staged] [--worktree] [--] "
+"<pathspec>...\n"
+"'git restore' [<opções>] [--source=<árvore>] [--staged] [--worktree] "
+"--pathspec-from-file=<arquivo> [--pathspec-file-nul]\n"
+"'git restore' (-p|--patch) [<opções>] [--source=<árvore>] [--staged] "
+"[--worktree] [--] [<pathspec>...]\n"
 
 #. type: Plain text
 #: en/git-restore.txt:20
@@ -55751,7 +55857,7 @@ msgstr "<rev>"
 msgid "Arbitrary extended SHA-1 expression (see linkgit:gitrevisions[7])  that typically names a branch head or a tag."
 msgstr ""
 "A expressão arbitrária estendida do SHA-1 (consulte linkgit:gitrevisions[7]) "
-"que normalmente nomeia o cabeçalho de um ramo ou uma tag."
+"que normalmente informa o cabeçalho de um ramo ou uma tag."
 
 #. type: Labeled list
 #: en/git-show-branch.txt:37
@@ -56940,10 +57046,10 @@ msgstr ""
 "'git stash' show [<opções>] [<stash>]\n"
 "'git stash' drop [-q|--quiet] [<stash>]\n"
 "'git stash' ( pop | apply ) [--index] [-q|--quiet] [<stash>]\n"
-"'git stash' branch <branchname> [<stash>]\n"
+"'git stash' branch <nome-do-ramo> [<stash>]\n"
 "'git stash' [push [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]\n"
 "\t     [-u|--include-untracked] [-a|--all] [-m|--message <mensagem>]\n"
-"\t     [--pathspec-from-file=<file> [--pathspec-file-nul]]\n"
+"\t     [--pathspec-from-file=<arquivo> [--pathspec-file-nul]]\n"
 "\t     [--] [<pathspec>...]]\n"
 "'git stash' clear\n"
 "'git stash' create [<mensagem>]\n"
@@ -56989,7 +57095,10 @@ msgstr ""
 #: en/git-stash.txt:50
 #, ignore-ellipsis, no-wrap, priority:240
 msgid "push [-p|--patch] [-k|--[no-]keep-index] [-u|--include-untracked] [-a|--all] [-q|--quiet] [-m|--message <message>] [--pathspec-from-file=<file> [--pathspec-file-nul]] [--] [<pathspec>...]"
-msgstr "push [-p|--patch] [-k|--[no-]keep-index] [-u|--include-untracked] [-a|--all] [-q|--quiet] [-m|--message <mensagem>] [--pathspec-from-file=<file> [--pathspec-file-nul]] [--] [<pathspec>...]"
+msgstr ""
+"push [-p|--patch] [-k|--[no-]keep-index] [-u|--include-untracked] [-a|--all] "
+"[-q|--quiet] [-m|--message <mensagem>] [--pathspec-from-file=<arquivo> "
+"[--pathspec-file-nul]] [--] [<pathspec>...]"
 
 #. type: Plain text
 #: en/git-stash.txt:56
@@ -57130,11 +57239,11 @@ msgstr "branch <nome-do-ramo> [<stash>]"
 #, priority:240
 msgid "Creates and checks out a new branch named `<branchname>` starting from the commit at which the `<stash>` was originally created, applies the changes recorded in `<stash>` to the new working tree and index.  If that succeeds, and `<stash>` is a reference of the form `stash@{<revision>}`, it then drops the `<stash>`."
 msgstr ""
-"Cria e efetua a averiguação de um novo ramo chamado `<branchname>` iniciando "
-"a partir do commit onde o `<stash>` foi criado originalmente, aplica as "
-"alterações registradas do `<stash>` na nova árvore de trabalho e no índice.  "
-"Caso seja bem-sucedido, e `<stash>` for uma referência do formulário "
-"`stash@{<revision>}`, ele liberará o `<stash>`."
+"Cria e efetua a averiguação de um novo ramo chamado `<nome-do-ramo>` "
+"iniciando a partir do commit onde o `<stash>` foi criado originalmente, "
+"aplica as alterações registradas do `<stash>` na nova árvore de trabalho e "
+"no índice.  Caso seja bem-sucedido, e `<stash>` for uma referência do "
+"formulário `stash@{<revision>}`, ele liberará o `<stash>`."
 
 #. type: Plain text
 #: en/git-stash.txt:127
@@ -57374,7 +57483,7 @@ msgstr "Obtendo de um diretório sujo"
 #, priority:240
 msgid "When you are in the middle of something, you learn that there are upstream changes that are possibly relevant to what you are doing.  When your local changes do not conflict with the changes in the upstream, a simple `git pull` will let you move forward."
 msgstr ""
-"Quando você está no meio de alguma coisa, aprende que há alterações iniciais "
+"Quando você está no meio de alguma coisa, aprende que há alterações upstream "
 "que são possivelmente relevantes para o que você está fazendo.  Quando as "
 "suas alterações locais não entrarem em conflito com as alterações na "
 "\"upstream\", um simples `git pull` permitirá que você avance."
@@ -57385,7 +57494,7 @@ msgstr ""
 msgid "However, there are cases in which your local changes do conflict with the upstream changes, and `git pull` refuses to overwrite your changes.  In such a case, you can stash your changes away, perform a pull, and then unstash, like this:"
 msgstr ""
 "No entanto, há casos onde as suas alterações locais entram em conflito com "
-"as alterações anteriores, e o `git pull` se recusa a sobrescrever as suas "
+"as alterações na upstream, e o `git pull` se recusa a sobrescrever as suas "
 "alterações.  Nesse caso, é possível ocultar as suas alterações, executar um "
 "'pull' e remover da pilha, da seguinte maneira:"
 
@@ -58667,7 +58776,13 @@ msgstr "init [--] [<caminho>...]"
 #: en/git-submodule.txt:102
 #, priority:220
 msgid "Initialize the submodules recorded in the index (which were added and committed elsewhere) by setting `submodule.$name.url` in .git/config. It uses the same setting from `.gitmodules` as a template. If the URL is relative, it will be resolved using the default remote. If there is no default remote, the current repository will be assumed to be upstream."
-msgstr "Inicialize os submódulos registrados no índice (que foram adicionados e onde os commits foram feitos em outros lugares) configurando o `submodule.$name.url` no `.git/config`. Ele usa a mesma configuração do `.gitmodules` como um modelo. Caso a URL seja relativa, será resolvido utilizando ramo remoto predefinido. Caso não nenhum ramo remoto seja predefinido, o repositório atual será reconhecido como sendo a inicial."
+msgstr ""
+"Inicialize os submódulos registrados no índice (que foram adicionados e onde "
+"os commits foram feitos em outros lugares) configurando o `submodule.$name."
+"url` no `.git/config`. Ele usa a mesma configuração do `.gitmodules` como um "
+"modelo. Caso a URL seja relativa, será resolvido utilizando ramo remoto "
+"predefinido. Caso não nenhum ramo remoto seja predefinido, o repositório "
+"atual será reconhecido como sendo a upstream."
 
 #. type: Plain text
 #: en/git-submodule.txt:107
@@ -58964,7 +59079,12 @@ msgstr "sync [--recursive] [--] [<caminho>...]"
 #: en/git-submodule.txt:242
 #, priority:220
 msgid "Synchronizes submodules' remote URL configuration setting to the value specified in `.gitmodules`. It will only affect those submodules which already have a URL entry in .git/config (that is the case when they are initialized or freshly added). This is useful when submodule URLs change upstream and you need to update your local repositories accordingly."
-msgstr "Sincroniza a configuração da URL remota dos submódulos com o valor definido em `.gitmodules`. Afetará apenas os submódulos que já possuem uma entrada da URL no `.git/config` (é o caso quando eles são inicializados ou foram adicionados recentemente). É útil quando as URLs do submódulo mudam a inicial e você precisa atualizar os seus repositórios locais de acordo."
+msgstr ""
+"Sincroniza a configuração da URL remota dos submódulos com o valor definido "
+"em `.gitmodules`. Afetará apenas os submódulos que já possuem uma entrada da "
+"URL no `.git/config` (é o caso quando eles são inicializados ou foram "
+"adicionados recentemente). É útil quando as URLs do submódulo mudam a "
+"upstream e você precisa atualizar os seus repositórios locais de acordo."
 
 #. type: Plain text
 #: en/git-submodule.txt:245
@@ -59114,7 +59234,16 @@ msgstr "Para garantir uma condição de monitoramento da ramificação atual, `u
 #: en/git-submodule.txt:350
 #, priority:220
 msgid "Use this option to integrate changes from the upstream subproject with your submodule's current HEAD.  Alternatively, you can run `git pull` from the submodule, which is equivalent except for the remote branch name: `update --remote` uses the default upstream repository and `submodule.<name>.branch`, while `git pull` uses the submodule's `branch.<name>.merge`.  Prefer `submodule.<name>.branch` if you want to distribute the default upstream branch with the superproject and `branch.<name>.merge` if you want a more native feel while working in the submodule itself."
-msgstr "Use esta opção para integrar as alterações do subprojeto inicial ao `HEAD` atual do seu submódulo.  Como alternativa, você pode executar o comando `git pull` a partir do submódulo, que é equivalente, exceto pelo nome do ramo remoto: `update --remote` utiliza o repositório inicial predefinido e `submodule.<nome>.branch`, enquanto `git pull` utiliza o submódulo `branch.<name>.merge`.  Prefira o `submodule.<name>.branch` caso queira distribuir a ramificação inicial predefinido com o superprojeto e `branch.<nome>.merge` caso queira uma sensação mais nativa ao trabalhar no próprio submódulo."
+msgstr ""
+"Use esta opção para integrar as alterações a partir do subprojeto upstream "
+"ao `HEAD` atual do seu submódulo.  Como alternativa, você pode executar o "
+"comando `git pull` a partir do submódulo, que é equivalente, exceto pelo "
+"nome do ramo remoto: `update --remote` utiliza o repositório upstream "
+"predefinido e `submodule.<nome>.branch`, enquanto `git pull` utiliza o "
+"submódulo `branch.<name>.merge`.  Prefira o `submodule.<name>.branch` caso "
+"queira distribuir a ramificação upstream predefinido com o superprojeto e "
+"`branch.<nome>.merge` caso queira uma sensação mais nativa ao trabalhar no "
+"próprio submódulo."
 
 #. type: Labeled list
 #: en/git-submodule.txt:352
@@ -61547,14 +61676,14 @@ msgstr ""
 "utilizar um commit Git já existente como parente do ramo, ele lerá o "
 "histórico SVN do diretório onde o ramo foi copiado e criará os commits Git "
 "apropriadas.  Isto é indicado através da mensagem \"Initializing parent: "
-"<branchname>\" (Inicializando parente: <nomedoramo>)."
+"<nome-do-ramo>\" (Inicializando parente: <nomedoramo>)."
 
 #. type: Plain text
 #: en/git-svn.txt:984
 #, priority:100
 msgid "Additionally, it will create a special branch named '<branchname>@<SVN-Revision>', where <SVN-Revision> is the SVN revision number the branch was copied from.  This branch will point to the newly created parent commit of the branch.  If in SVN the branch was deleted and later recreated from a different version, there will be multiple such branches with an '@'."
 msgstr ""
-"Além disso, ele criará um ramo especial chamado '<branchname>@<SVN-"
+"Além disso, ele criará um ramo especial chamado '<nome-do-ramo>@<SVN-"
 "Revision>', onde <Revisão SVN> é o número da revisão do SVN onde o ramo foi "
 "copiado.  Este ramo apontará para o commit da origem recém-criado do ramo.  "
 "Se no SVN o ramo foi excluído e posteriormente recriado a partir de uma "
@@ -61979,7 +62108,7 @@ msgstr "O ramo para onde nos mudaremos."
 #: en/git-switch.txt:39
 #, no-wrap, priority:100
 msgid "<new-branch>"
-msgstr "<new-branch>"
+msgstr "<novo-ramo>"
 
 #. type: Plain text
 #: en/git-switch.txt:48
@@ -62001,19 +62130,21 @@ msgstr "Você pode usar a sintaxe `@{-N}` para se referir ao último ramo/commit
 #: en/git-switch.txt:59
 #, no-wrap, priority:100
 msgid "-c <new-branch>"
-msgstr "-c <new-branch>"
+msgstr "-c <novo-ramo>"
 
 #. type: Labeled list
 #: en/git-switch.txt:60
 #, no-wrap, priority:100
 msgid "--create <new-branch>"
-msgstr "--create <new-branch>"
+msgstr "--create <novo-ramo>"
 
 #. type: Plain text
 #: en/git-switch.txt:64
 #, priority:100
 msgid "Create a new branch named `<new-branch>` starting at `<start-point>` before switching to the branch. This is a convenient shortcut for:"
-msgstr "Crie um novo ramo chamado `<new-branch>` começando em `<start-point>` antes de mudar para o ramo. Este é um atalho conveniente para:"
+msgstr ""
+"Crie um novo ramo chamado `<novo-ramo>` começando em `<ponto-de-partida>` "
+"antes de mudar para o ramo. Este é um atalho conveniente para:"
 
 #. type: delimited block -
 #: en/git-switch.txt:68
@@ -62022,26 +62153,28 @@ msgid ""
 "$ git branch <new-branch>\n"
 "$ git switch <new-branch>\n"
 msgstr ""
-"$ git branch <new-branch>\n"
-"$ git switch <new-branch>\n"
+"$ git branch <novo-ramo>\n"
+"$ git switch <novo-ramo>\n"
 
 #. type: Labeled list
 #: en/git-switch.txt:70
 #, no-wrap, priority:100
 msgid "-C <new-branch>"
-msgstr "-C <new-branch>"
+msgstr "-C <novo-ramo>"
 
 #. type: Labeled list
 #: en/git-switch.txt:71
 #, no-wrap, priority:100
 msgid "--force-create <new-branch>"
-msgstr "--force-create <new-branch>"
+msgstr "--force-create <novo-ramo>"
 
 #. type: Plain text
 #: en/git-switch.txt:75
 #, priority:100
 msgid "Similar to `--create` except that if `<new-branch>` already exists, it will be reset to `<start-point>`. This is a convenient shortcut for:"
-msgstr "Similar to `--create` except that if `<new-branch>` already exists, it will be reset to `<start-point>`. Este é um atalho conveniente para:"
+msgstr ""
+"É similar a opção `--create` exceto quando `<novo-ramo>` já exista, ele será "
+"redefinido para o `<ponto-de-partida>`. Este é um atalho conveniente para:"
 
 #. type: delimited block -
 #: en/git-switch.txt:79
@@ -62050,8 +62183,8 @@ msgid ""
 "$ git branch -f <new-branch>\n"
 "$ git switch <new-branch>\n"
 msgstr ""
-"$ git branch -f <new-branch>\n"
-"$ git switch <new-branch>\n"
+"$ git branch -f <novo-ramo>\n"
+"$ git switch <novo-ramo>\n"
 
 #. type: Plain text
 #: en/git-switch.txt:86
@@ -62138,7 +62271,7 @@ msgstr ""
 #: en/git-switch.txt:171
 #, no-wrap, priority:100
 msgid "--orphan <new-branch>"
-msgstr "--orphan <new-branch>"
+msgstr "--orphan <novo-ramo>"
 
 #. type: Plain text
 #: en/git-switch.txt:174
@@ -62466,8 +62599,8 @@ msgid "If one of `-a`, `-s`, or `-u <keyid>` is passed, the command creates a 't
 msgstr ""
 "Caso um dos comandos `-a`, `-s` ou `-u <keyid>` seja informado, o comando "
 "criará um objeto 'tag' e exigirá uma mensagem para a tag.  A menos que as "
-"opções `-m <msg>` ou `-F <file>` sejam utilizadas, um editor é iniciado para "
-"que o usuário digite a mensagem da tag."
+"opções `-m <msg>` ou `-F <arquivo>` sejam utilizadas, um editor é iniciado "
+"para que o usuário digite a mensagem da tag."
 
 #. type: Plain text
 #: en/git-tag.txt:36
@@ -63157,7 +63290,7 @@ msgstr ""
 "Depois de dominar os conceitos básicos, é possível voltar para esta página "
 "para aprender quais os outros comandos o Git oferece.  É possível aprender "
 "mais sobre os comandos individuais do Git com o comando \"git help nome-do-"
-"comando\".  A página de manual linkgit:gitcli[7] fornece uma visão geral da "
+"comando\".  A página do manual linkgit:gitcli[7] fornece uma visão geral da "
 "sintaxe de comandos da linha de comando."
 
 #. type: Plain text
@@ -65158,8 +65291,8 @@ msgstr ""
 "subdiretório \".git\" no ponto mais alto.  O diretório .git contém, entre "
 "outras coisas, um banco de dados dos objetos compactados representando o "
 "histórico completo do projeto, um arquivo para o \"índice\" que vincula este "
-"histórico ao conteúdo atual da árvore de trabalho e nomeia os ponteiros para "
-"este histórico, como as tags e os cabeçalhos do ramo."
+"histórico ao conteúdo atual da árvore de trabalho e informa os ponteiros "
+"para este histórico, como as tags e os cabeçalhos do ramo."
 
 #. type: Plain text
 #: en/git.txt:903
@@ -65702,7 +65835,7 @@ msgid "Git will fail (gracefully) in case it needs to modify this file in the in
 msgstr ""
 "O Git falhará (de forma elegante) caso precise modificar este arquivo no "
 "índice, quando for mesclar em um commit por exemplo; portanto, caso o "
-"arquivo assumido não monitorado seja alterado na inicial, você precisará "
+"arquivo assumido não monitorado seja alterado na upstream, você precisará "
 "lidar com a situação de forma manual."
 
 #. type: Labeled list
@@ -68078,7 +68211,7 @@ msgid ""
 "'git worktree remove' [-f] <worktree>\n"
 "'git worktree unlock' <worktree>\n"
 msgstr ""
-"'git worktree add' [-f] [--detach] [--checkout] [--lock] [-b <novo ramo>] "
+"'git worktree add' [-f] [--detach] [--checkout] [--lock] [-b <novo-ramo>] "
 "<caminho> [<commit-ish>]\n"
 "'git worktree list' [--porcelain]\n"
 "'git worktree lock' [--reason <string>] <árvore de trabalho>\n"
@@ -68301,11 +68434,11 @@ msgstr "-B <novo-ramo>"
 #, priority:240
 msgid "With `add`, create a new branch named `<new-branch>` starting at `<commit-ish>`, and check out `<new-branch>` into the new working tree.  If `<commit-ish>` is omitted, it defaults to HEAD.  By default, `-b` refuses to create a new branch if it already exists. `-B` overrides this safeguard, resetting `<new-branch>` to `<commit-ish>`."
 msgstr ""
-"Com `add`, crie um novo ramo chamado `<new-branch>` (novo-ramo) começando em "
-"`<commit-ish>` e faça uma averiguação do `<new-branch>` na nova árvore de "
+"Com `add`, crie um novo ramo chamado `<novo-ramo>` (novo-ramo) começando em "
+"`<commit-ish>` e faça uma averiguação do `<novo-ramo>` na nova árvore de "
 "trabalho.  Caso o `<commit-ish>` seja omitido, a predefinição retorna para "
 "`HEAD`.  É predefinido que `b` se recuse a criar um novo ramo, caso ele já "
-"exista. O `B` substitui esta salvaguarda, redefinindo o `<new-branch>` para "
+"exista. O `B` substitui esta salvaguarda, redefinindo o `<novo-ramo>` para "
 "`<commit-ish>`."
 
 #. type: Plain text
@@ -71463,7 +71596,7 @@ msgstr "'oneline'"
 #: en/pretty-formats.txt:24
 #, no-wrap, priority:260
 msgid "<hash> <title line>\n"
-msgstr "<hash> <title line>\n"
+msgstr "<hash> <linha do título>\n"
 
 #. type: Plain text
 #: en/pretty-formats.txt:26
@@ -71485,13 +71618,13 @@ msgid ""
 "Author: <author>\n"
 msgstr ""
 "commit <hash>\n"
-"Author: <author>\n"
+"Author: <autor>\n"
 
 #. type: Plain text
 #: en/pretty-formats.txt:33 en/pretty-formats.txt:41 en/pretty-formats.txt:51 en/pretty-formats.txt:63
 #, no-wrap, priority:260
 msgid "<title line>\n"
-msgstr "<title line>\n"
+msgstr "<linha do título>\n"
 
 #. type: Plain text
 #: en/pretty-formats.txt:35
@@ -71508,8 +71641,8 @@ msgid ""
 "Date:   <author date>\n"
 msgstr ""
 "commit <hash>\n"
-"Author: <author>\n"
-"Date:   <author date>\n"
+"Author: <autor>\n"
+"Date:   <data do autor>\n"
 
 #. type: Plain text
 #: en/pretty-formats.txt:43 en/pretty-formats.txt:53 en/pretty-formats.txt:65 en/pretty-formats.txt:85
@@ -71532,8 +71665,8 @@ msgid ""
 "Commit: <committer>\n"
 msgstr ""
 "commit <hash>\n"
-"Author: <author>\n"
-"Commit: <committer>\n"
+"Author: <autor>\n"
+"Commit: <quem fez o commit>\n"
 
 #. type: Plain text
 #: en/pretty-formats.txt:55
@@ -71552,10 +71685,10 @@ msgid ""
 "CommitDate: <committer date>\n"
 msgstr ""
 "commit <hash>\n"
-"Author:     <author>\n"
-"AuthorDate: <author date>\n"
-"Commit:     <committer>\n"
-"CommitDate: <committer date>\n"
+"Author:     <autor>\n"
+"AuthorDate: <data do autor>\n"
+"Commit:     <quem fez o commit>\n"
+"CommitDate: <a data de quem fez o commit>\n"
 
 #. type: Plain text
 #: en/pretty-formats.txt:67
@@ -71567,7 +71700,7 @@ msgstr "'reference'"
 #: en/pretty-formats.txt:69
 #, no-wrap, priority:260
 msgid "<abbrev hash> (<title line>, <short author date>)\n"
-msgstr "<abbrev hash> (<title line>, <short author date>)\n"
+msgstr "<abbrev hash> (<linha do título>, <data do autor abreviada>)\n"
 
 #. type: Plain text
 #: en/pretty-formats.txt:76
@@ -71590,10 +71723,10 @@ msgid ""
 "Date: <author date>\n"
 "Subject: [PATCH] <title line>\n"
 msgstr ""
-"From <hash> <date>\n"
-"From: <author>\n"
-"Date: <author date>\n"
-"Subject: [PATCH] <title line>\n"
+"From <hash> <data>\n"
+"From: <autor>\n"
+"Date: <data do autor>\n"
+"Subject: [PATCH] <linha do título>\n"
 
 #. type: Plain text
 #: en/pretty-formats.txt:87
@@ -73144,8 +73277,8 @@ msgstr ""
 "Um parâmetro de revisão '<rev>' normalmente, mas não necessariamente, dá "
 "nome a um objeto commit.  Utiliza o que é chamado de uma sintaxe 'extended "
 "SHA-1'.  Aqui estão as várias maneiras de soletrar os nomes dos objetos.  Os "
-"listados próximos do final desta lista nomeiam árvores e gotas existentes em "
-"um commit."
+"listados próximos do final desta lista informam árvores e gotas existentes "
+"em um commit."
 
 #. type: Plain text
 #: en/revisions.txt:13
@@ -73163,7 +73296,12 @@ msgstr "'<sha1>', exemplo. 'dae86e1950b1277e545cee180551750029cfe735', 'dae86e'"
 #: en/revisions.txt:20
 #, priority:100
 msgid "The full SHA-1 object name (40-byte hexadecimal string), or a leading substring that is unique within the repository.  E.g. dae86e1950b1277e545cee180551750029cfe735 and dae86e both name the same commit object if there is no other object in your repository whose object name starts with dae86e."
-msgstr "O nome completo do objeto SHA-1 (a sequência hexadecimal com 40-bytes) ou uma carreira de caracteres que é exclusiva e única no repositório.  Por exemplo, dae86e1950b1277e545cee180551750029cfe735 e dae86e nomeiam o mesmo objeto commit caso não haja um outro objeto em seu repositório cujo nome comece com daee."
+msgstr ""
+"O nome completo do objeto SHA-1 (a sequência hexadecimal com 40-bytes) ou "
+"uma carreira de caracteres que é exclusiva e única no repositório.  Por "
+"exemplo, dae86e1950b1277e545cee180551750029cfe735 e dae86e informam o mesmo "
+"objeto commit caso não haja um outro objeto em seu repositório cujo nome "
+"comece com daee."
 
 #. type: Labeled list
 #: en/revisions.txt:21
@@ -73229,7 +73367,16 @@ msgstr "caso contrário, utilize 'refs/remotes/<refname>/HEAD' caso exista."
 #: en/revisions.txt:59
 #, priority:100
 msgid "`HEAD` names the commit on which you based the changes in the working tree.  `FETCH_HEAD` records the branch which you fetched from a remote repository with your last `git fetch` invocation.  `ORIG_HEAD` is created by commands that move your `HEAD` in a drastic way, to record the position of the `HEAD` before their operation, so that you can easily change the tip of the branch back to the state before you ran them.  `MERGE_HEAD` records the commit(s) which you are merging into your branch when you run `git merge`.  `CHERRY_PICK_HEAD` records the commit which you are cherry-picking when you run `git cherry-pick`."
-msgstr "`HEAD` nomeia o commit no qual você teve como base as alterações na árvore de trabalho.  `FETCH_HEAD` registra em qual ramo você buscou no repositório remoto com a sua última invocação `git fetch`.  `ORIG_HEAD` é criado por comandos que movem seu` HEAD` de uma maneira drástica, para registrar a posição do `HEAD` antes da sua operação, para que você possa facilmente mudar a ponta do ramo de volta ao estado anterior a sua execução.  `MERGE_HEAD` registra os commits que você está mesclando no seu ramo quando você executa o comando `git merge`.  `CHERRY_PICK_HEAD` registra o commit que você está escolhendo quando executa o comando `git cherry-pick`."
+msgstr ""
+"`HEAD` informa o commit no qual você teve como base as alterações na árvore "
+"de trabalho.  `FETCH_HEAD` registra em qual ramo você buscou no repositório "
+"remoto com a sua última invocação `git fetch`.  `ORIG_HEAD` é criado por "
+"comandos que movem seu` HEAD` de uma maneira drástica, para registrar a "
+"posição do `HEAD` antes da sua operação, para que você possa facilmente "
+"mudar a ponta do ramo de volta ao estado anterior a sua execução.  "
+"`MERGE_HEAD` registra os commits que você está mesclando no seu ramo quando "
+"você executa o comando `git merge`.  `CHERRY_PICK_HEAD` registra o commit "
+"que você está escolhendo quando executa o comando `git cherry-pick`."
 
 #. type: Plain text
 #: en/revisions.txt:64
@@ -73257,7 +73404,9 @@ msgstr "O '@' sozinho é um atalho para `HEAD`."
 #: en/revisions.txt:68
 #, no-wrap, priority:100
 msgid "'[<refname>]@{<date>}', e.g. 'master@\\{yesterday\\}', 'HEAD@{5 minutes ago}'"
-msgstr "'[<refname>]@{<date>}', exemplo. 'master@\\{yesterday\\}', 'HEAD@{5 minutos atrás}'"
+msgstr ""
+"'[<refname>]@{<data>}', exemplo. 'master@\\{yesterday\\}', 'HEAD@{5 minutos "
+"atrás}'"
 
 #. type: Plain text
 #: en/revisions.txt:79
@@ -73321,7 +73470,9 @@ msgstr "O construtor '@{-<n>}' significa que <n> do ramo/commit foi verificado a
 #: en/revisions.txt:98
 #, no-wrap, priority:100
 msgid "'[<branchname>]@\\{upstream\\}', e.g. 'master@\\{upstream\\}', '@\\{u\\}'"
-msgstr "'[<branchname>]@\\{upstream\\}', exemplo, 'master@\\{upstream\\}', '@\\{u\\}'"
+msgstr ""
+"'[<nome-do-ramo>]@\\{upstream\\}', exemplo, 'master@\\{upstream\\}', '@\\{u\\"
+"}'"
 
 #. type: Plain text
 #: en/revisions.txt:105
@@ -73329,7 +73480,7 @@ msgstr "'[<branchname>]@\\{upstream\\}', exemplo, 'master@\\{upstream\\}', '@\\{
 msgid "The suffix '@\\{upstream\\}' to a branchname (short form '<branchname>@\\{u\\}')  refers to the branch that the branch specified by branchname is set to build on top of (configured with `branch.<name>.remote` and `branch.<name>.merge`).  A missing branchname defaults to the current one. These suffixes are also accepted when spelled in uppercase, and they mean the same thing no matter the case."
 msgstr ""
 "O sufixo '@ {upstream}' para o nome de uma ramificação (o formato abreviado "
-"'<branchname>@\\{u\\}') refere-se ao ramo onde o ramo informado pelo "
+"'<nome-do-ramo>@\\{u\\}') refere-se ao ramo onde o ramo informado pelo "
 "\"branchname\" esteja definido para construir em cima do `branch.<nome>."
 "remote` e `branch.<nome>.merge`).  Em uma ramificação desaparecida a "
 "predefinição retorna para a atual. Estes sufixos também são aceitos quando "
@@ -73339,7 +73490,8 @@ msgstr ""
 #: en/revisions.txt:106
 #, no-wrap, priority:100
 msgid "'[<branchname>]@\\{push\\}', e.g. 'master@\\{push\\}', '@\\{push\\}'"
-msgstr "'[<branchname>]@\\{push\\}', exemplo, 'master@\\{push\\}', '@\\{push\\}'"
+msgstr ""
+"'[<nome-do-ramo>]@\\{push\\}', exemplo, 'master@\\{push\\}', '@\\{push\\}'"
 
 #. type: Plain text
 #: en/revisions.txt:112
@@ -73529,7 +73681,14 @@ msgstr "':[<n>:]<caminho>', exemplo, ':0:README', ':README'"
 #: en/revisions.txt:216
 #, priority:100
 msgid "A colon, optionally followed by a stage number (0 to 3) and a colon, followed by a path, names a blob object in the index at the given path. A missing stage number (and the colon that follows it) names a stage 0 entry. During a merge, stage 1 is the common ancestor, stage 2 is the target branch's version (typically the current branch), and stage 3 is the version from the branch which is being merged."
-msgstr "Os dois pontos opcionalmente seguidos por um número de estágio (0 para 3) e dois pontos, seguidos por um caminho, nomeiam um objeto gota no índice no caminho especificado. Nomeia uma entrada de estágio quando o número estiver ausente (assim como dois pontos que o seguem). Durante uma mesclagem, o estágio 1 é o ancestral comum, o estágio 2 é a versão do ramo de destino (normalmente o ramo atual) e o estágio 3 é a versão do ramo que está sendo mesclado."
+msgstr ""
+"Os dois pontos opcionalmente seguidos por um número de estágio (0 para 3) e "
+"dois pontos, seguidos por um caminho, informam um objeto gota no índice no "
+"caminho especificado. Nomeia uma entrada de estágio quando o número estiver "
+"ausente (assim como dois pontos que o seguem). Durante uma mesclagem, o "
+"estágio 1 é o ancestral comum, o estágio 2 é a versão do ramo de destino ("
+"normalmente o ramo atual) e o estágio 3 é a versão do ramo que está sendo "
+"mesclado."
 
 #. type: Plain text
 #: en/revisions.txt:220
@@ -74225,7 +74384,14 @@ msgstr ""
 #: en/rev-list-options.txt:133
 #, priority:260
 msgid "Follow only the first parent commit upon seeing a merge commit.  This option can give a better overview when viewing the evolution of a particular topic branch, because merges into a topic branch tend to be only about adjusting to updated upstream from time to time, and this option allows you to ignore the individual commits brought in to your history by such a merge. Cannot be combined with --bisect."
-msgstr "Siga apenas o primeiro commit da origem ao ver a mesclagem de um commit.  Essa opção pode lhe fornecer uma melhor visão geral durante a visualização da evolução de um tópico específico no ramo, pois faz a mesclagem em um tópico no ramo e tende a ser apenas sobre o ajuste das atualizações da inicial de tempos em tempos, esta opção permite ignorar os commits individuais trazidas para o seu histórico feitas por essa mesclagem. Não pode ser combinado com `--bisect`."
+msgstr ""
+"Siga apenas o primeiro commit da origem ao ver a mesclagem de um commit.  "
+"Essa opção pode lhe fornecer uma melhor visão geral durante a visualização "
+"da evolução de um tópico específico no ramo, pois faz a mesclagem em um "
+"tópico no ramo e tende a ser apenas sobre o ajuste das atualizações upstream "
+"de tempos em tempos, esta opção permite ignorar os commits individuais "
+"trazidas para o seu histórico feitas por essa mesclagem. Não pode ser "
+"combinado com `--bisect`."
 
 #. type: Plain text
 #: en/rev-list-options.txt:137
@@ -76899,11 +77065,11 @@ msgstr ""
 msgid "Software bugs, or errors, are so prevalent and so detrimental that they cost the U.S. economy an estimated $59.5 billion annually, or about 0.6 percent of the gross domestic product, according to a newly released study commissioned by the Department of Commerce's National Institute of Standards and Technology (NIST). At the national level, over half of the costs are borne by software users and the remainder by software developers/vendors.  The study also found that, although all errors cannot be removed, more than a third of these costs, or an estimated $22.2 billion, could be eliminated by an improved testing infrastructure that enables earlier and more effective identification and removal of software defects. These are the savings associated with finding an increased percentage (but not 100 percent) of errors closer to the development stages in which they are introduced. Currently, over half of all errors are not found until \"downstream\" in the development process or during post-sale software use."
 msgstr ""
 "Bugs ou erros de software são tão prevalentes e tão prejudiciais que custam "
-"à economia dos Estados Unidos um valor estimado em US $ bilhões anualmente, "
-"ou cerca de 0.6 por cento do produto interno bruto, de acordo com um estudo "
-"recém-lançado, encomendado pelo Instituto Nacional de Padrões e Tecnologia "
-"do Departamento de Comércio (NIST). No nível nacional, mais da metade dos "
-"custos são drenados pelos usuários de software e o restante pelos "
+"à economia dos Estados Unidos um valor estimado em US$59.5 bilhões "
+"anualmente, ou cerca de 0.6 por cento do produto interno bruto, de acordo "
+"com um estudo recém-lançado, encomendado pelo Instituto Nacional de Padrões "
+"e Tecnologia do Departamento de Comércio (NIST). No nível nacional, mais da "
+"metade dos custos são drenados pelos usuários de software e o restante pelos "
 "desenvolvedores/fornecedores de software.  O estudo também descobriu que, "
 "embora todos os erros não possam ser removidos, mais de um terço destes "
 "custos, ou um valor estimado em US$22.2 bilhões, poderia ser eliminado por "
@@ -77030,7 +77196,7 @@ msgstr ""
 msgid "I most actively use it during the merge window (when a lot of trees get merged upstream and when the influx of bugs is the highest) - and yes, there have been cases that i used it multiple times a day. My average is roughly once a day."
 msgstr ""
 "Eu o utilizo de forma mais ativa durante a janela da mesclagem (quando "
-"muitas árvores são mescladas na inicial e quando o influxo de bugs é mais "
+"muitas árvores são mescladas na upstream e quando o influxo de bugs é mais "
 "alto) - e sim, houve casos onde eu o usei várias vezes no dia. Minha média é "
 "de aproximadamente uma vez por dia."
 
@@ -77531,7 +77697,7 @@ msgstr ""
 "78e86cf3e850bd755bb71831f42e200626fbd1e0\n"
 "e15b73ad3db9b48d7d1ade32f8cd23a751fe0ace\n"
 "070eab2303024706f2924822bfec8b9847e4ac1b\n"
-"Não podemos dividir (bisect) mais!\n"
+"Não podemos mais seguir adiante com o bisect!\n"
 
 #. type: Title ~
 #: en/git-bisect-lk2009.txt:391
@@ -77614,7 +77780,8 @@ msgstr ""
 #: en/git-bisect-lk2009.txt:425
 #, priority:100
 msgid "are not ancestor of a \"good\" commit (excluding the \"good\" commits)."
-msgstr "não são ancestrais de commit \"bom\" (excluindo os commits \"bons\")."
+msgstr ""
+"não são ancestrais de um commit \"bom\" (excluindo os commits \"bons\")."
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:427
@@ -79610,24 +79777,23 @@ msgstr ""
 msgid "[[[4]]] https://lore.kernel.org/git/7vps5xsbwp.fsf_-_@assigned-by-dhcp.cox.net/[Junio C Hamano. 'Automated bisect success story'.]"
 msgstr ""
 "[[[4]]] https://lore.kernel.org/git/7vps5xsbwp.fsf_-_@assigned-by-dhcp.cox."
-"net/[Junio C Hamano. 'História de sucesso de um secionamento (bisect) "
-"automatizado'.]"
+"net/[Junio C Hamano. 'A História de sucesso de um bisect automatizado'.]"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:1355
 #, priority:100
 msgid "[[[5]]] https://lwn.net/Articles/317154/[Christian Couder. 'Fully automated bisecting with \"git bisect run\"'. LWN.net.]"
 msgstr ""
-"[[[5]]] https://lwn.net/Articles/317154/[Christian Couder. 'Fully automated "
-"bisecting with \"git bisect run\"'. LWN.net.]"
+"[[[5]]] https://lwn.net/Articles/317154/[Christian Couder. 'Um bisect "
+"totalmente automatizado com \"git bisect run\"'. LWN.net.]"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:1356
 #, priority:100
 msgid "[[[6]]] https://lwn.net/Articles/277872/[Jonathan Corbet. 'Bisection divides users and developers'. LWN.net.]"
 msgstr ""
-"[[[6]]] https://lwn.net/Articles/277872/[Jonathan Corbet. 'Utilização da "
-"divisão bisseção e os desenvolvedores'. LWN.net.]"
+"[[[6]]] https://lwn.net/Articles/277872/[Jonathan Corbet. 'A bisseção divide "
+"usuários e os desenvolvedores'. LWN.net.]"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:1357
