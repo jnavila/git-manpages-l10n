@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-07-11 18:07+0200\n"
-"PO-Revision-Date: 2020-06-06 10:46+0000\n"
+"PO-Revision-Date: 2020-07-23 10:41+0000\n"
 "Last-Translator: Dieter Ziller <max123kl@ziller.de>\n"
 "Language-Team: Matthias Aßhauer <mha1993@live.de>\n"
 "Language: de\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.1-dev\n"
+"X-Generator: Weblate 4.2-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:669 en/git-instaweb.txt:45 en/git-mailinfo.txt:47 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -12484,10 +12484,10 @@ msgstr "$ git checkout mytopic\n"
 msgid "However, your \"wrong\" branch and correct `mytopic` branch may differ in files that you have modified locally, in which case the above checkout would fail like this:"
 msgstr "Der \"falsche\" Branch und der korrekte Branch \"mytopic\" können sich in lokal geänderten Dateien unterscheiden, was daz führt, dass der obige Checkout folgendermaßen fehlschlägt:"
 
-#. type: delimited block -
 # git-checkout.txt is not up to date. The fuzzy msgid is the message prior to 142183d0 2010-07-09 "checkout: accord documentation to what git does", the msgid is the message in the documentation afterwards.
 # At that time there weren't even po files in the git tree. This message does not exist since 23cbf11b 2010-08-11 "merge-recursive: porcelain messages for checkout".
 # The current message is "Your local changes to the following files would be overwritten by merge:\n%%s" as of 2e3926b9 2016-05-13 "i18n: unpack-trees: avoid substituting only a verb in sentences"
+#. type: delimited block -
 #: en/git-checkout.txt:561
 #, fuzzy, no-wrap, priority:240
 #| msgid ""
@@ -15679,10 +15679,11 @@ msgstr "'int': die Werte als einfache Dezimalzahlen deklarieren. Ein optionales 
 
 #. type: Plain text
 #: en/git-config.txt:181
-#, fuzzy, priority:100
-#| msgid "'git-config' will ensure that the output is \"true\" or \"false\""
+#, priority:100
 msgid "'bool-or-int': canonicalize according to either 'bool' or 'int', as described above."
-msgstr "'git-config' wird sich versichern, dass die Ausgabe entweder \"true\" oder \"false\" ist."
+msgstr ""
+"'bool-or-int': entsprechend der obigen Beschreibung entweder nach 'bool' "
+"oder 'int' kanonisieren."
 
 #. type: Plain text
 #: en/git-config.txt:185
@@ -31064,21 +31065,22 @@ msgstr ""
 #, fuzzy, no-wrap, priority:260
 #| msgid "$ git log -p\n"
 msgid "`git log -3`"
-msgstr "$ git log -p\n"
+msgstr "`git log -3`"
 
 #. type: Plain text
 #: en/git-log.txt:178
-#, fuzzy, priority:260
-#| msgid "Limits the number of commits to show."
+#, priority:260
 msgid "Limits the number of commits to show to 3."
-msgstr "Limitiert die Anzahl der angezeigten Commits."
+msgstr "Limitiert die Anzahl der angezeigten Commits auf 3."
 
 #. type: Plain text
 #: en/git-log.txt:189
-#, fuzzy, priority:260
-#| msgid "See linkgit:git-config[1] for configuration variable used to change the default for when the option is not specified."
+#, priority:260
 msgid "See linkgit:git-config[1] for core variables and linkgit:git-diff[1] for settings related to diff generation."
-msgstr "Siehe linkgit:git-config[1] für die Verwendung von Konfigurationsvariablen um die Standardoption die verwendet wird wenn der Parameter nicht angegeben wird zu ändern."
+msgstr ""
+"Siehe linkgit:git-config[1] für die Verwendung von Konfigurationsvariablen "
+"und linkgit:git-diff[1] für Einstellungen im Zusammenhang mit der Diff-"
+"Generierung."
 
 #. type: Labeled list
 #: en/git-log.txt:190
@@ -31166,10 +31168,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-log.txt:226
-#, fuzzy, priority:260
-#| msgid "linkgit:git-add[1]"
+#, priority:260
 msgid "See linkgit:git-shortlog[1]."
-msgstr "linkgit:git-add[1]"
+msgstr "Siehe linkgit:git-shortlog[1]."
 
 #. type: Labeled list
 #: en/git-log.txt:227 en/git-notes.txt:333
@@ -46992,12 +46993,13 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-shortlog.txt:13
-#, fuzzy, ignore-ellipsis, no-wrap, priority:260
-#| msgid "'git diff' [--options] <commit> [--] [<path>...]"
+#, ignore-ellipsis, no-wrap, priority:260
 msgid ""
 "'git shortlog' [<options>] [<revision range>] [[--] <path>...]\n"
 "git log --pretty=short | 'git shortlog' [<options>]\n"
-msgstr "'git diff' [--options] <commit> [--] [<path>...]"
+msgstr ""
+"'git shortlog' [<Optionen>] [<Revisionsbereich>] [[--] <path>...]\n"
+"git log --pretty=short | 'git shortlog' [<Optionen>]\n"
 
 #. type: Plain text
 #: en/git-shortlog.txt:18
@@ -47097,10 +47099,11 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-shortlog.txt:75
-#, fuzzy, priority:260
-#| msgid "Show only commits that affect any of the specified paths."
+#, priority:260
 msgid "Consider only commits that are enough to explain how the files that match the specified paths came to be."
-msgstr "Zeigt nur Commits die Änderungen an den angegebenen Pfaden vornehmen."
+msgstr ""
+"Berücksichtigt nur Commits, die ausreichend erklären, wie die Dateien in den "
+"angegebenen Pfaden entstanden sind."
 
 #. type: Plain text
 #: en/git-shortlog.txt:88
@@ -47781,10 +47784,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-show.txt:13
-#, fuzzy, ignore-ellipsis, no-wrap, priority:260
-#| msgid "'git log' <option>..."
+#, ignore-ellipsis, no-wrap, priority:260
 msgid "'git show' [<options>] [<object>...]\n"
-msgstr "'git log' <option>..."
+msgstr "'git show' [<Optionen>] [<Objekt>...]\n"
 
 #. type: Plain text
 #: en/git-show.txt:17
@@ -47818,10 +47820,12 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-show.txt:31
-#, fuzzy, priority:260
-#| msgid "The command takes options applicable to the 'git-rev-list' command to control what is shown and how, and options applicable to the 'git-diff-*' commands to control how the changes each commit introduces are shown."
+#, priority:260
 msgid "The command takes options applicable to the 'git diff-tree' command to control how the changes the commit introduces are shown."
-msgstr "Das Kommando akzeptiert dieselben Optionen wie 'git-rev-list' und 'git-diff-*' um die Ausgabeformate der Commits und deren Unterschiede zu kontrollieren und zu limitieren."
+msgstr ""
+"Der Befehl verwendet Optionen, die auf den Befehl 'git diff-tree' anwendbar "
+"sind, um die Darstellung der durch den Commit eingebrachten Änderungen zu "
+"kontrollieren."
 
 #. type: Plain text
 #: en/git-show.txt:33
@@ -47831,13 +47835,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-show.txt:37
-#, fuzzy, ignore-ellipsis, no-wrap, priority:260
+#, ignore-ellipsis, no-wrap, priority:260
 msgid "<object>..."
-msgstr ""
-"#-#-#-#-#  git-commit-de.po (PACKAGE VERSION)  #-#-#-#-#\n"
-"<file>...\n"
-"#-#-#-#-#  git-rm-de.po (PACKAGE VERSION)  #-#-#-#-#\n"
-"<Datei>..."
+msgstr "<Objekt>..."
 
 #. type: Plain text
 #: en/git-show.txt:41
@@ -53760,8 +53760,8 @@ msgstr ""
 msgid "`GIT_COMMON_DIR`"
 msgstr "`GIT_COMMON_DIR`"
 
-#. type: Plain text
 # noqa
+#. type: Plain text
 #: en/git.txt:495
 #, ignore-ellipsis, priority:100
 msgid "If this variable is set to a path, non-worktree files that are normally in $GIT_DIR will be taken from this path instead. Worktree-specific files such as HEAD or index are taken from $GIT_DIR. See linkgit:gitrepository-layout[5] and linkgit:git-worktree[1] for details. This variable has lower precedence than other path variables such as GIT_INDEX_FILE, GIT_OBJECT_DIRECTORY..."
