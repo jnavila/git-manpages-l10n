@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: git-manpages-l 10n\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-06-02 21:43+0200\n"
-"PO-Revision-Date: 2020-08-05 11:32+0000\n"
+"PO-Revision-Date: 2020-08-05 20:57+0000\n"
 "Last-Translator: Þórhalla Guðmundsdóttir Beck <plergux@outlook.com>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -14203,36 +14203,69 @@ msgstr "--[no-]single-branch"
 #, priority:300
 msgid "Clone only the history leading to the tip of a single branch, either specified by the `--branch` option or the primary branch remote's `HEAD` points at.  Further fetches into the resulting repository will only update the remote-tracking branch for the branch this option was used for the initial cloning.  If the HEAD at the remote did not point at any branch when `--single-branch` clone was made, no remote-tracking branch is created."
 msgstr ""
+"Einungis einrita sögu sem nær til enda einnar greinar sem er annað hvort "
+"grein tilgreind með `--branch`(grein) valmöguleikanum eða er aðalgreinin sem "
+"HAUS fjarlægjunnar bendir á. Þegar \"sækja\" er notað aftur á hirsluna sem "
+"verður til eru einungis gerðar uppfærslur á greinina sem var undir "
+"fjareftirliti fyrir þá grein sem þessi valmöguleiki var notaður á í "
+"upprunalegri einritun. Ef HAUS og fjarlægja bentu ekki á neina grein þegar "
+"`--single-branch`(ein grein) einritið ver gert er engin grein undir "
+"fjareftirliti búin til."
 
 #. type: Plain text
 #: en/git-clone.txt:256
 #, priority:300
 msgid "Don't clone any tags, and set `remote.<remote>.tagOpt=--no-tags` in the config, ensuring that future `git pull` and `git fetch` operations won't follow any tags. Subsequent explicit tag fetches will still work, (see linkgit:git-fetch[1])."
 msgstr ""
+"Ekki einrita nein merki, og tilgreina`remote.<fjarlægja>.tagOpt=--no-tags`("
+"fjarlægja merki valmöguleikar, engin merki) í stillingaskránni, sem gerir "
+"það að verkum að í framtíðinni munu `git pull` (git draga) og`git fetch` ("
+"git sækja) ekki elta nein merki. Sérstakar skilgreiningar á merkjum þegar "
+"\"sækja\" er notað eftir á munu samt virka (sjá linkgit:git-fetch[1])."
 
 #. type: Plain text
 #: en/git-clone.txt:261
 #, priority:300
 msgid "Can be used in conjunction with `--single-branch` to clone and maintain a branch with no references other than a single cloned branch. This is useful e.g. to maintain minimal clones of the default branch of some repository for search indexing."
 msgstr ""
+"Hægt er að nota þennan valmöguleika í samfloti við `--single-branch` (ein "
+"grein) til þess að einrita og viðhalda grein sem hefur engar tilvísanir "
+"aðrar en ein einrituð grein. Þetta er nytsamlegt t.d. til þess að viðhalda "
+"lágmarkseinritum af forstilltri grein í einhverri hirslu svo hægt sé að "
+"leita í henni eftir atriðaskrá."
 
 #. type: Labeled list
 #: en/git-clone.txt:262
 #, no-wrap, priority:300
 msgid "--recurse-submodules[=<pathspec]"
-msgstr ""
+msgstr "--recurse-submodules[=<slóðatilgreining]"
 
 #. type: Plain text
 #: en/git-clone.txt:270
 #, priority:300
 msgid "After the clone is created, initialize and clone submodules within based on the provided pathspec.  If no pathspec is provided, all submodules are initialized and cloned.  This option can be given multiple times for pathspecs consisting of multiple entries.  The resulting clone has `submodule.active` set to the provided pathspec, or \".\" (meaning all submodules) if no pathspec is provided."
 msgstr ""
+"Frumstilla og einrita undirverkeiningar innan einrits byggt á uppgefinni "
+"slóðartilgreiningu eftir að einritið hefur verið búið til. Ef engin "
+"slóðatilgreining er gefin upp eru allar undirverkeiningar frumstilltar og "
+"einritaðar. Hægt er að tilgreina þennan valmöguleika oftar en einu sinni "
+"fyrir slóðatilgreiningar sem innihalda fleiri en eina færslu. Einritið sem "
+"verður til fær`submodule.active`(undirverkeining virk) stillt á viðkomandi "
+"slóðatilgreiningu, eða \".\" (þ.e. allar verkeiningar) ef engin "
+"slóðatilgreining er gefin upp."
 
 #. type: Plain text
 #: en/git-clone.txt:277
 #, priority:300
 msgid "Submodules are initialized and cloned using their default settings. This is equivalent to running `git submodule update --init --recursive <pathspec>` immediately after the clone is finished. This option is ignored if the cloned repository does not have a worktree/checkout (i.e. if any of `--no-checkout`/`-n`, `--bare`, or `--mirror` is given)"
 msgstr ""
+"Undirverkeiningar eru frumstilltar og einritaðar með sínum forstillingum. "
+"Þetta jafngildir því að nota `git submodule update --init --recursive "
+"<slóðatilgreining>` (git undirverkeining uppfæra frumstilla endurkvæmt) um "
+"leið og einritið er tilbúið. Þessi valmöguleiki er hunsaður er einritaða "
+"hirslan hefur ekki verktré/afskráningu (þ.e. ef einver af valmöguleikunum "
+"`--no-checkout`/`-n` (engin afritun), `--bare` (nakinn), eða "
+"`--mirror`(spegilmynd) eru gefnir upp)"
 
 #. type: Labeled list
 #: en/git-clone.txt:278
