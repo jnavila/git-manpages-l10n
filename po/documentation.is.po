@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: git-manpages-l 10n\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-06-02 21:43+0200\n"
-"PO-Revision-Date: 2020-08-05 20:57+0000\n"
+"PO-Revision-Date: 2020-08-11 10:44+0000\n"
 "Last-Translator: Þórhalla Guðmundsdóttir Beck <plergux@outlook.com>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -5746,6 +5746,13 @@ msgstr "ÚTSKÝRING"
 #, priority:300
 msgid "This command updates the index using the current content found in the working tree, to prepare the content staged for the next commit.  It typically adds the current content of existing paths as a whole, but with some options it can also be used to add content with only part of the changes made to the working tree files applied, or remove paths that do not exist in the working tree anymore."
 msgstr ""
+"Þessi skipun uppfærir atriðaskrána með því að nota það innihald sem finnst í "
+"verktrénu á þeirri stundu, til þess að undirbúa innihaldið sem hefur verið "
+"staðhæft fyrir næsta innlegg. Hún bætir venjulega við því innihaldi sem er "
+"til staðar í heild, en með sumum valmöguleikum er einnig hægt að nota hana "
+"til þess að bæta við innihaldi þar sem einungis hluti þeirra breytinga sem "
+"hafa verið gerðar í verktrénu eru lagðar við, eða til að fjarlægja slóðir "
+"sem eru ekki lengur til í verktrénu."
 
 #. type: Plain text
 #: en/git-add.txt:31
@@ -13731,7 +13738,7 @@ msgstr "git-clone - Einrita hirslu í nýja skrá"
 
 #. type: Plain text
 #: en/git-clone.txt:21
-#, fuzzy, no-wrap, priority:300
+#, no-wrap, priority:300
 msgid ""
 "'git clone' [--template=<template_directory>]\n"
 "\t  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]\n"
@@ -13743,15 +13750,15 @@ msgid ""
 "\t  [--filter=<filter>] [--] <repository>\n"
 "\t  [<directory>]\n"
 msgstr ""
-"'git clone' [--template=<template_directory>]\n"
+"'git clone' [--template=<sniðmótsskrá>]\n"
 "\t  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]\n"
-"\t  [-o <name>] [-b <name>] [-u <upload-pack>] [--reference <repository>]\n"
-"\t  [--dissociate] [--separate-git-dir <git dir>]\n"
-"\t  [--depth <depth>] [--[no-]single-branch] [--no-tags]\n"
-"\t  [--recurse-submodules[=<pathspec>]] [--[no-]shallow-submodules]\n"
+"\t  [-o <nafn>] [-b <nafn>] [-u <upphalspakki>] [--reference <hirsla>]\n"
+"\t  [--dissociate] [--separate-git-dir <git skrá>]\n"
+"\t  [--depth <dýpt>] [--[no-]single-branch] [--no-tags]\n"
+"\t  [--recurse-submodules[=<slóðatilgreining>]] [--[no-]shallow-submodules]\n"
 "\t  [--[no-]remote-submodules] [--jobs <n>] [--sparse]\n"
-"\t  [--filter=<filter>] [--] <repository>\n"
-"\t  [<directory>]\n"
+"\t  [--filter=<sía>] [--] <hirsla>\n"
+"\t  [<skrá>]\n"
 
 #. type: Plain text
 #: en/git-clone.txt:30
@@ -14278,6 +14285,7 @@ msgstr "--[no-]shallow-submodules"
 #, priority:300
 msgid "All submodules which are cloned will be shallow with a depth of 1."
 msgstr ""
+"Allar undirverkeiningar sem eru einritaðar munu verða grunnar með dýpt 1."
 
 #. type: Labeled list
 #: en/git-clone.txt:281
@@ -14290,66 +14298,82 @@ msgstr "--[no-]remote-submodules"
 #, priority:300
 msgid "All submodules which are cloned will use the status of the submodule's remote-tracking branch to update the submodule, rather than the superproject's recorded SHA-1. Equivalent to passing `--remote` to `git submodule update`."
 msgstr ""
+"Allar undirverkeiningar sem eru einritðaðar nota stöðu viðeigandi greinar "
+"undir fjareftirliti til þess að uppfæra undirverkeininguna, fremur en skráða "
+"SHA-1 öryggisundirskrift yfirverksins. Jafngildir því að gefa upp "
+"`--remote`(fjarlægja) með `git submodule update` (undirverkeining uppfæra)."
 
 #. type: Labeled list
 #: en/git-clone.txt:287 en/git-init.txt:61
 #, no-wrap, priority:300
 msgid "--separate-git-dir=<git dir>"
-msgstr ""
+msgstr "--separate-git-dir=<git skrá>"
 
 #. type: Plain text
 #: en/git-clone.txt:293
 #, priority:300
 msgid "Instead of placing the cloned repository where it is supposed to be, place the cloned repository at the specified directory, then make a filesystem-agnostic Git symbolic link to there.  The result is Git repository can be separated from working tree."
 msgstr ""
+"Í stað þess að setja einrituðu hirsluna þar sem hún á að vera, setja hana í "
+"tilgreinda skrá, og búa síðan til Git hlekk þangað sem er ómeðvitaður um "
+"skráasafnið. Árangurinn verður sá að Git hirslan verður aðskilin verktrénu."
 
 #. type: Labeled list
 #: en/git-clone.txt:294 en/git-submodule.txt:427
-#, no-wrap, priority:300
+#, fuzzy, no-wrap, priority:300
 msgid "-j <n>"
-msgstr ""
+msgstr "-j <n>"
 
 #. type: Labeled list
 #: en/git-clone.txt:295 en/git-submodule.txt:428
-#, no-wrap, priority:300
+#, fuzzy, no-wrap, priority:300
 msgid "--jobs <n>"
-msgstr ""
+msgstr "--jobs <n>"
 
 #. type: Plain text
 #: en/git-clone.txt:298
 #, priority:300
 msgid "The number of submodules fetched at the same time.  Defaults to the `submodule.fetchJobs` option."
 msgstr ""
+"Fjöldi undirverkeininga sem eru sóttar á sama tíma. Er forstillt samkvæmt "
+"`submodule.fetchJobs` (undirverkeining sæja verk) valmöguleikanum."
 
 #. type: Labeled list
 #: en/git-clone.txt:299 en/git-fetch-pack.txt:114 en/git-ls-remote.txt:83 en/git-push.txt:50 en/pull-fetch-param.txt:1
 #, no-wrap, priority:300
 msgid "<repository>"
-msgstr ""
+msgstr "<hirsla>"
 
 #. type: Plain text
 #: en/git-clone.txt:303
 #, priority:300
 msgid "The (possibly remote) repository to clone from.  See the <<URLS,GIT URLS>> section below for more information on specifying repositories."
 msgstr ""
+"Hirslan (mögulega fjarlæg) til þess að einrita frá. Sjá <<URLS,GIT URLS>> "
+"(vefslóð) hlutann hér fyrir neðan fyrir frekari upplýsingar um það hvernig á "
+"að tilgreina hirslur."
 
 #. type: Labeled list
 #: en/git-clone.txt:304 en/git-cvsserver.txt:53 en/git-daemon.txt:220 en/git-receive-pack.txt:41 en/git-send-pack.txt:95 en/git-upload-archive.txt:57 en/git-upload-pack.txt:44
 #, no-wrap, priority:300
 msgid "<directory>"
-msgstr ""
+msgstr "<skrá>"
 
 #. type: Plain text
 #: en/git-clone.txt:310
 #, priority:300
 msgid "The name of a new directory to clone into.  The \"humanish\" part of the source repository is used if no directory is explicitly given (`repo` for `/path/to/repo.git` and `foo` for `host.xz:foo/.git`).  Cloning into an existing directory is only allowed if the directory is empty."
 msgstr ""
+"Nafn skrárinnar sem á að einrita í. Ef engin skrá er uppgefin er \"mennsklegi"
+"\" hluti upprunahirslunnar notaður (`repo` fyrir `/path/to/repo.git` og`foo` "
+"fyrir `host.xz:foo/.git`). Einungis er leyfilegt að einrita í skrá sem þegar "
+"er til ef hún er tóm."
 
 #. type: Plain text
 #: en/git-clone.txt:318
 #, priority:300
 msgid "Clone from upstream:"
-msgstr ""
+msgstr "Einrita í bakátt:"
 
 #. type: delimited block -
 #: en/git-clone.txt:323
@@ -14359,12 +14383,17 @@ msgid ""
 "$ cd my-linux\n"
 "$ make\n"
 msgstr ""
+"$ git clone git://git.kernel.org/pub/scm/.../linux.git mitt-línux\n"
+"$ cd mitt-línux\n"
+"$ make\n"
 
 #. type: Plain text
 #: en/git-clone.txt:327
 #, priority:300
 msgid "Make a local clone that borrows from the current directory, without checking things out:"
 msgstr ""
+"Búa til staðbundið einrit sem fær lánað úr núgildandi skrá, án þess að "
+"útskrá neitt:"
 
 #. type: delimited block -
 #: en/git-clone.txt:332
@@ -14374,12 +14403,17 @@ msgid ""
 "$ cd ../copy\n"
 "$ git show-branch\n"
 msgstr ""
+"$ git clone -l -s -n . ../afrit\n"
+"$ cd ../afrit\n"
+"$ git show-branch\n"
 
 #. type: Plain text
 #: en/git-clone.txt:336
 #, priority:300
 msgid "Clone from upstream while borrowing from an existing local directory:"
 msgstr ""
+"Einrita í bakátt á meðan fengið er lánað frá staðbundinni skrá sem þegar er "
+"til:"
 
 #. type: delimited block -
 #: en/git-clone.txt:342
@@ -14390,18 +14424,22 @@ msgid ""
 "\tmy-linux\n"
 "$ cd my-linux\n"
 msgstr ""
+"$ git clone --reference /git/linux.git \\\n"
+"\tgit://git.kernel.org/pub/scm/.../linux.git \\\n"
+"\tmitt-línux\n"
+"$ cd mitt-línux\n"
 
 #. type: Plain text
 #: en/git-clone.txt:346
 #, priority:300
 msgid "Create a bare repository to publish your changes to the public:"
-msgstr ""
+msgstr "Búa til nakta hirslu til þess að birta breytingar þínar almenningi:"
 
 #. type: delimited block -
 #: en/git-clone.txt:349
-#, no-wrap, priority:300
+#, fuzzy, no-wrap, priority:300
 msgid "$ git clone --bare -l /home/proj/.git /pub/scm/proj.git\n"
-msgstr ""
+msgstr "$ git clone --bare -l /home/proj/.git /pub/scm/proj.git\n"
 
 #. type: Title =
 #: en/git-column.txt:2
@@ -29545,6 +29583,7 @@ msgstr "git-init(1)"
 #, priority:300
 msgid "git-init - Create an empty Git repository or reinitialize an existing one"
 msgstr ""
+"git-init - Búa til tóma Git hirslu eða endurfrumstilla hirslu sem er til"
 
 #. type: Plain text
 #: en/git-init.txt:15
@@ -29554,216 +29593,284 @@ msgid ""
 "\t  [--separate-git-dir <git dir>] [--object-format=<format>]\n"
 "\t  [--shared[=<permissions>]] [directory]\n"
 msgstr ""
+"'git init' [-q | --quiet] [--bare] [--template=<sniðmótaskrá>]\n"
+"\t  [--separate-git-dir <git skrá>] [--object-format=<snið>]\n"
+"\t  [--shared[=<leyfi>]] [directory]\n"
 
 #. type: Plain text
 #: en/git-init.txt:24
 #, priority:300
 msgid "This command creates an empty Git repository - basically a `.git` directory with subdirectories for `objects`, `refs/heads`, `refs/tags`, and template files.  An initial `HEAD` file that references the HEAD of the master branch is also created."
 msgstr ""
+"Þessi skipun býr til tóma Git hirslu - í raun `.git` skrá með undirskrám "
+"fyrir `objects` (viðföng), `refs/heads` (tilvísanir/hausar), `refs/tags` "
+"(tilvísanir/merki), og sniðmátsskjöl."
 
 #. type: Plain text
 #: en/git-init.txt:27
 #, priority:300
 msgid "If the `$GIT_DIR` environment variable is set then it specifies a path to use instead of `./.git` for the base of the repository."
 msgstr ""
+"Ef `$GIT_DIR` umhverfisbreytan er uppgefin þá tilgreinir hún slóð til þess "
+"að nota í staðinn fyrir `./.git` fyrir grunnbyggingu hirslunnar."
 
 #. type: Plain text
 #: en/git-init.txt:32
 #, priority:300
 msgid "If the object storage directory is specified via the `$GIT_OBJECT_DIRECTORY` environment variable then the sha1 directories are created underneath - otherwise the default `$GIT_DIR/objects` directory is used."
 msgstr ""
+"Ef viðfangageymslan er tilgreind með `$GIT_OBJECT_DIRECTORY`(viðföng skrá) "
+"umhverfisbreytunni þá eru SHA-1 öryggisskrárnar búnar til þar undir - annars "
+"er frumstillt skrá samkvæmt `$GIT_DIR/objects` (skrá viðföng) notuð."
 
 #. type: Plain text
 #: en/git-init.txt:37
 #, priority:300
 msgid "Running 'git init' in an existing repository is safe. It will not overwrite things that are already there. The primary reason for rerunning 'git init' is to pick up newly added templates (or to move the repository to another place if --separate-git-dir is given)."
 msgstr ""
+"Að framkvæma 'git init' í hirslu sem þegar er til er öruggt. Það mun ekki "
+"skrifa yfir það sem þegar er í hirslunni. Helsta ástæðan fyrir því að "
+"endurframkvæma 'git init' er til þess að taka með sniðmát sem nýlega hefur "
+"verið bætt við (eða til þess að færa hirsluna á nýjan stað ef --separate-git-"
+"dir (aðskilinn git skrá) er gefið upp)."
 
 #. type: Plain text
 #: en/git-init.txt:45
 #, priority:300
 msgid "Only print error and warning messages; all other output will be suppressed."
-msgstr ""
+msgstr "Prenta einungis villu- og varnaðarboð; allt annað frálag er þaggað."
 
 #. type: Plain text
 #: en/git-init.txt:50
 #, priority:300
 msgid "Create a bare repository. If `GIT_DIR` environment is not set, it is set to the current working directory."
 msgstr ""
+"Búa til nakta hirslu. Ef `GIT_DIR`(git skrá) umhverfisbreytan er ekki "
+"tilgreind er hirslan búin til í núgildandi vinnuskrá."
 
 #. type: Labeled list
 #: en/git-init.txt:51
 #, no-wrap, priority:300
 msgid "--object-format=<format>"
-msgstr ""
+msgstr "--object-format=<snið>"
 
 #. type: Plain text
 #: en/git-init.txt:55
 #, priority:300
 msgid "Specify the given object format (hash algorithm) for the repository.  The valid values are 'sha1' and (if enabled) 'sha256'.  'sha1' is the default."
 msgstr ""
+"Gefa upp snið viðkomandi viðfangs (reikniforskrift mylnuskrár) fyrir "
+"hirsluna. Gild gildi eru 'sha1' og (ef virkt) 'sha256'. Forstillingin er "
+"'sha1'."
 
 #. type: Plain text
 #: en/git-init.txt:60
 #, priority:300
 msgid "Specify the directory from which templates will be used.  (See the \"TEMPLATE DIRECTORY\" section below.)"
 msgstr ""
+"Tilgreina skrána sem geymir þau sniðmót sem verða notuð. (Sjá \"SNIÐMÁTASKRÁ"
+"\" hlutann hér að neðan.)"
 
 #. type: Plain text
 #: en/git-init.txt:67
 #, priority:300
 msgid "Instead of initializing the repository as a directory to either `$GIT_DIR` or `./.git/`, create a text file there containing the path to the actual repository.  This file acts as filesystem-agnostic Git symbolic link to the repository."
 msgstr ""
+"Í stað þess að frumstilla hrisluna sem skrá sem annað hvort `$GIT_DIR` eða "
+"`./.git/`, búa til textaskrá þar sem inniheldur slóðina til hinnar "
+"raunverulegu hirslu. Þessi skrá virkar eins og táknrænn Git hlekkur til "
+"skrárinnar sem er ómeðvitaður um skráasafnið."
 
 #. type: Plain text
 #: en/git-init.txt:69
 #, priority:300
 msgid "If this is reinitialization, the repository will be moved to the specified path."
 msgstr ""
+"Ef þetta er endurfrumstilling verður hirslan færð eftir tilgreindri slóð."
 
 #. type: Labeled list
 #: en/git-init.txt:70
-#, no-wrap, priority:300
+#, fuzzy, no-wrap, priority:300
 msgid "--shared[=(false|true|umask|group|all|world|everybody|0xxx)]"
-msgstr ""
+msgstr "--shared[=(false|true|umask|group|all|world|everybody|0xxx)]"
 
 #. type: Plain text
 #: en/git-init.txt:78
 #, priority:300
 msgid "Specify that the Git repository is to be shared amongst several users.  This allows users belonging to the same group to push into that repository.  When specified, the config variable \"core.sharedRepository\" is set so that files and directories under `$GIT_DIR` are created with the requested permissions.  When not specified, Git will use permissions reported by umask(2)."
 msgstr ""
+"Tilgreina að Git hirslunni muni verða deilt meðal fjölmargra notenda. Þetta "
+"leyfir notendum sem tilheyra sama hópi að ýta gögnum inn í þá hirslu. Þegar "
+"þessi tilgreining er til staðar er stillingabreytan \"core.sharedRepository\""
+" (kjarni deild hirsla) stillt þannig að skjöl og skrár undir `$GIT_DIR` (git "
+"skrá) eru búnar til með umbeðnum leyfum. Þegar þessi tilgreining er ekki til "
+"staðar notar Git leyfi sem koma frá umask(2) (leyfasetningar skjala)."
 
 #. type: Plain text
 #: en/git-init.txt:81
 #, priority:300
 msgid "The option can have the following values, defaulting to 'group' if no value is given:"
 msgstr ""
+"Valmöguleikinn getur haft eftirfarandi gildi, frumstilltur á 'group' (hópur) "
+"ef engin gildi eru gefin:"
 
 #. type: Labeled list
 #: en/git-init.txt:83
 #, no-wrap, priority:300
 msgid "'umask' (or 'false')"
-msgstr ""
+msgstr "'umask' (eða 'false')"
 
 #. type: Plain text
 #: en/git-init.txt:87
 #, priority:300
 msgid "Use permissions reported by umask(2). The default, when `--shared` is not specified."
 msgstr ""
+"Nota leyfi frá umask(2) (leyfasetningar skjala). Þetta er frumstillingin "
+"þegar `--shared` (deildur) er ekki uppgefinn."
 
 #. type: Labeled list
 #: en/git-init.txt:88
 #, no-wrap, priority:300
 msgid "'group' (or 'true')"
-msgstr ""
+msgstr "'group' (eða 'true')"
 
 #. type: Plain text
 #: en/git-init.txt:96
 #, priority:300
 msgid "Make the repository group-writable, (and g+sx, since the git group may be not the primary group of all users). This is used to loosen the permissions of an otherwise safe umask(2) value. Note that the umask still applies to the other permission bits (e.g. if umask is '0022', using 'group' will not remove read privileges from other (non-group) users). See '0xxx' for how to exactly specify the repository permissions."
 msgstr ""
+"Gera hirsluna hópskrifanlega (og g+sx þar sem git hópurinn er mögulega ekki "
+"aðalhópur allra notenda). Þetta er notað til þess að losa um leyfisgildi "
+"umask(2) (leyfasetningar skjala) gildis sem annars vegar er öruggt. Athugaðu "
+"að umask gildið er enn virkt fyrir leyfi sem ná yfir önnur gögn (t.d. ef "
+"umask er '0022', mun það að nota 'group' (hópur) ekki fjarlægja lesréttindi "
+"annarra notenda sem eru ekki í hópnum). Sjá '0xxx' fyrir hvernig á "
+"nákvæmlega að stilla leyfi hirslunnar."
 
 #. type: Labeled list
 #: en/git-init.txt:97
 #, no-wrap, priority:300
 msgid "'all' (or 'world' or 'everybody')"
-msgstr ""
+msgstr "'all' (eða 'world' eða 'everybody')"
 
 #. type: Plain text
 #: en/git-init.txt:100
 #, priority:300
 msgid "Same as 'group', but make the repository readable by all users."
-msgstr ""
+msgstr "Sama og 'group', en gerir hirsluna lesanlega fyrir alla notendur."
 
 #. type: Labeled list
 #: en/git-init.txt:101
-#, no-wrap, priority:300
+#, fuzzy, no-wrap, priority:300
 msgid "'0xxx'"
-msgstr ""
+msgstr "'0xxx'"
 
 #. type: Plain text
 #: en/git-init.txt:108
 #, priority:300
 msgid "'0xxx' is an octal number and each file will have mode '0xxx'. '0xxx' will override users' umask(2) value (and not only loosen permissions as 'group' and 'all' does). '0640' will create a repository which is group-readable, but not group-writable or accessible to others. '0660' will create a repo that is readable and writable to the current user and group, but inaccessible to others."
 msgstr ""
+"'0xxx' er áttundartala og hvert skjal fylgir fyrirkomulaginu '0xxx'. '0xxx' "
+"tekur ekki tilliti til gildis umask(2) (leyfasetningar skjala) sem tilgreint "
+"er af notanda (og ekki einungis víkka leyfi eins og 'group' (hópur) og 'all' "
+"(allir) gera). '0640' býr til hirslu sem er lesanleg af hóp, en ekki "
+"skrifanleg af hóp eða opin öðrum. '0660' mun búa til hirslu sem er lesanleg "
+"og skrifanleg fyrir núverandi notanada og hóp, en lokuð öllum öðrum."
 
 #. type: Plain text
 #: en/git-init.txt:113
 #, priority:300
 msgid "By default, the configuration flag `receive.denyNonFastForwards` is enabled in shared repositories, so that you cannot force a non fast-forwarding push into it."
 msgstr ""
+"Í deildum hirslum er stillingarvalmöguleikinn `receive.denyNonFastForwards`("
+"viðtaka neita ekki framspóla) forstilltur sem gildur svo að þú getur ekki "
+"ýtt gögnum sem ekki framspóla inn í hana með þvingunum."
 
 #. type: Plain text
 #: en/git-init.txt:116
 #, priority:300
 msgid "If you provide a 'directory', the command is run inside it. If this directory does not exist, it will be created."
 msgstr ""
+"Ef þú gefur upp 'skrá', verður skipunin framkvæmd í henni. Ef skráin er ekki "
+"til verður hún búin til."
 
 #. type: Title -
 #: en/git-init.txt:118
 #, no-wrap, priority:300
 msgid "TEMPLATE DIRECTORY"
-msgstr ""
+msgstr "SNIÐMÓTASKRÁ"
 
 #. type: Plain text
 #: en/git-init.txt:122
 #, priority:300
 msgid "Files and directories in the template directory whose name do not start with a dot will be copied to the `$GIT_DIR` after it is created."
 msgstr ""
+"Skjöl og skrár í sniðmótaskránni sem hafa ekki nafn sem byrjar á punkti "
+"verða afrituð yfir í `$GIT_DIR`(git skrá) eftir að hún er búin til."
 
 #. type: Plain text
 #: en/git-init.txt:124
 #, priority:300
 msgid "The template directory will be one of the following (in order):"
-msgstr ""
+msgstr "Sniðmótaskráin verður eitt af eftirtöldu (í röð):"
 
 #. type: Plain text
 #: en/git-init.txt:126
 #, priority:300
 msgid "the argument given with the `--template` option;"
-msgstr ""
+msgstr "breytan sem gefin er með `--template` (sniðmót) valmöguleikanum;"
 
 #. type: Plain text
 #: en/git-init.txt:128
 #, priority:300
 msgid "the contents of the `$GIT_TEMPLATE_DIR` environment variable;"
-msgstr ""
+msgstr "innihald `$GIT_TEMPLATE_DIR`(git sniðmót skrá) umhverfisbreytunnar;"
 
 #. type: Plain text
 #: en/git-init.txt:130
 #, priority:300
 msgid "the `init.templateDir` configuration variable; or"
-msgstr ""
+msgstr "stillingabreytan `init.templateDir` (frumstilla sniðmót skrá); eða"
 
 #. type: Plain text
 #: en/git-init.txt:132
 #, priority:300
 msgid "the default template directory: `/usr/share/git-core/templates`."
 msgstr ""
+"forstillta sniðmótaskráin: `/usr/share/git-core/templates` (notandi deila "
+"git-kjarni sniðmót)."
 
 #. type: Plain text
 #: en/git-init.txt:135
 #, priority:300
 msgid "The default template directory includes some directory structure, suggested \"exclude patterns\" (see linkgit:gitignore[5]), and sample hook files."
 msgstr ""
+"Forstillta sniðmótaskráin hefur einhverjar undirskrár, tillögur um \"exclude "
+"patterns\" (hunsunarmynstur) (see linkgit:gitignore[5] (hlekk-git git-hunsa)"
+", og dæmi um krækjuskjöl."
 
 #. type: Plain text
 #: en/git-init.txt:138
 #, priority:300
 msgid "The sample hooks are all disabled by default. To enable one of the sample hooks rename it by removing its `.sample` suffix."
 msgstr ""
+"Krækjudæmin eru öll forstillt sem óvirk. TIl þess að virkja eitt af "
+"krækjudæmunum þarf að endurnefna það með því að fjarlægja `.sample` (dæmi) "
+"viðskeytið."
 
 #. type: Plain text
 #: en/git-init.txt:140
 #, priority:300
 msgid "See linkgit:githooks[5] for more general info on hook execution."
 msgstr ""
+"Sjá linkgit:githooks[5] (hlekk-git git-krækjur) fyrir frekari upplýsingar um "
+"það hvernig á að hrinda krækjum í framkvæmd."
 
 #. type: Labeled list
 #: en/git-init.txt:144
 #, no-wrap, priority:300
 msgid "Start a new Git repository for an existing code base"
-msgstr ""
+msgstr "Stofna nýja Git hirslu fyrir forskriftargrunn sem þegar er til"
 
 #. type: delimited block -
 #: en/git-init.txt:151
@@ -29774,6 +29881,10 @@ msgid ""
 "$ git add .     <2>\n"
 "$ git commit    <3>\n"
 msgstr ""
+"$ cd /slóð/til/míns/forskriftargrunns\n"
+"$ git init      <1>\n"
+"$ git add .     <2>\n"
+"$ git commit    <3>\n"
 
 #. type: Plain text
 #: en/git-init.txt:154
