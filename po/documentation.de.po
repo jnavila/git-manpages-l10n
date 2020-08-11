@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-07-11 18:07+0200\n"
-"PO-Revision-Date: 2020-08-10 08:32+0000\n"
+"PO-Revision-Date: 2020-08-11 10:44+0000\n"
 "Last-Translator: Dieter Ziller <max123kl@ziller.de>\n"
 "Language-Team: Matthias Aßhauer <mha1993@live.de>\n"
 "Language: de\n"
@@ -17050,73 +17050,106 @@ msgstr "git-credential(1)"
 #: en/git-credential.txt:7
 #, priority:100
 msgid "git-credential - Retrieve and store user credentials"
-msgstr ""
+msgstr "git-credential – Abrufen und Speichern von Zugangsdaten von Benutzern"
 
 #. type: delimited block -
 #: en/git-credential.txt:12
-#, no-wrap, priority:100
+#, fuzzy, no-wrap, priority:100
 msgid "git credential <fill|approve|reject>\n"
-msgstr ""
+msgstr "git credential <fill|approve|reject>\n"
 
 #. type: Plain text
 #: en/git-credential.txt:24
 #, priority:100
 msgid "Git has an internal interface for storing and retrieving credentials from system-specific helpers, as well as prompting the user for usernames and passwords. The git-credential command exposes this interface to scripts which may want to retrieve, store, or prompt for credentials in the same manner as Git. The design of this scriptable interface models the internal C API; see credential.h for more background on the concepts."
 msgstr ""
+"Git verfügt über eine interne Schnittstelle zum Speichern und Abrufen von "
+"Zugangsdaten, die von systemeigenen Assistenten bereitgestellt werden. "
+"Darüber hinaus wird der Benutzer zur Eingabe von Benutzernamen und "
+"Passwörtern aufgefordert. Der Befehl git-credential macht diese "
+"Schnittstelle für Skripte zugänglich, die Anmeldedaten auf die gleiche Weise "
+"wie Git abrufen, speichern oder zur Eingabe von Anmeldedaten auffordern "
+"möchten. Das Design dieser skriptfähigen Schnittstelle modelliert die "
+"interne C-API; siehe credential.h für weitere Hintergrundinformationen zu "
+"den Konzepten."
 
 #. type: Plain text
 #: en/git-credential.txt:28
 #, priority:100
 msgid "git-credential takes an \"action\" option on the command-line (one of `fill`, `approve`, or `reject`) and reads a credential description on stdin (see <<IOFMT,INPUT/OUTPUT FORMAT>>)."
 msgstr ""
+"git-credential benutzt eine „Funktions“-Option auf der Kommandozeile ("
+"entweder `fill`, `approve` oder `reject`) und findet eine Credential-"
+"Beschreibung auf stdin (siehe <<IOFMT,INPUT/OUTPUT FORMAT>>)."
 
 #. type: Plain text
 #: en/git-credential.txt:35
 #, priority:100
 msgid "If the action is `fill`, git-credential will attempt to add \"username\" and \"password\" attributes to the description by reading config files, by contacting any configured credential helpers, or by prompting the user. The username and password attributes of the credential description are then printed to stdout together with the attributes already provided."
 msgstr ""
+"Falls die Funktion `fill` ist, wird git-credential versuchen, der "
+"Beschreibung die Attribute „username“ und „password“ hinzuzufügen, indem es "
+"die Konfigurationsdateien ausliest, die Hilfsprogramme der konfigurierten "
+"Credentials kontaktiert oder den Benutzer abfragt. Die Attribute „username“ "
+"und „password“ der Credential-Information werden dann zusammen mit den "
+"bereits vorhandenen Attributen nach stdout ausgegeben."
 
 #. type: Plain text
 #: en/git-credential.txt:39
 #, priority:100
 msgid "If the action is `approve`, git-credential will send the description to any configured credential helpers, which may store the credential for later use."
 msgstr ""
+"Falls die Funktion `approve` (genehmigt) ist, wird git-credential die "
+"Beschreibung an alle konfigurierten Credential-Hilfsprogramme senden, die "
+"das Credential zur späteren Wiederverwendung abspeichern können."
 
 #. type: Plain text
 #: en/git-credential.txt:43
 #, priority:100
 msgid "If the action is `reject`, git-credential will send the description to any configured credential helpers, which may erase any stored credential matching the description."
 msgstr ""
+"Wenn die Aktion `reject` (ablehnen) ist, dann übermittelt git-credential die "
+"Information an alle konfigurierten Credential-Hilfsprogramme, die jedes der "
+"gespeicherten Credentials, die der Beschreibung entsprechen wieder löschen "
+"können."
 
 #. type: Plain text
 #: en/git-credential.txt:45
 #, priority:100
 msgid "If the action is `approve` or `reject`, no output should be emitted."
 msgstr ""
+"Falls die Operation `approve` oder `reject` ist, sollte keine Meldung "
+"ausgegeben werden."
 
 #. type: Title -
 #: en/git-credential.txt:47
 #, no-wrap, priority:100
 msgid "TYPICAL USE OF GIT CREDENTIAL"
-msgstr ""
+msgstr "TYPISCHE ANWENDUNG VON GIT-CREDENTIAL"
 
 #. type: Plain text
 #: en/git-credential.txt:51
 #, priority:100
 msgid "An application using git-credential will typically use `git credential` following these steps:"
 msgstr ""
+"Eine Anwendung, die git-credential nutzt, wird typischerweise `git "
+"credential`, wie in den folgenden Schritten beschrieben, verwenden:"
 
 #. type: Plain text
 #: en/git-credential.txt:53
 #, priority:100
 msgid "Generate a credential description based on the context."
-msgstr ""
+msgstr "Eine kontextabhängige Credential-Beschreibung erstellen."
 
 #. type: Plain text
 #: en/git-credential.txt:59
 #, priority:100
 msgid "For example, if we want a password for `https://example.com/foo.git`, we might generate the following credential description (don't forget the blank line at the end; it tells `git credential` that the application finished feeding all the information it has):"
 msgstr ""
+"Wenn wir z.B. ein Passwort für `https://example.com/foo.git` benötigen, "
+"könnten wir die folgende Credential-Beschreibung erstellen (vergessen Sie "
+"nicht die Leerzeile am Ende; sie teilt `git credential` mit, dass die "
+"Eingabe der Informationen abgeschlossen ist):"
 
 #. type: Plain text
 #: en/git-credential.txt:63
@@ -17126,40 +17159,65 @@ msgid ""
 "\t host=example.com\n"
 "\t path=foo.git\n"
 msgstr ""
+"\t protocol=https\n"
+"\t host=example.com\n"
+"\t path=foo.git\n"
 
 #. type: Plain text
 #: en/git-credential.txt:69
 #, priority:100
 msgid "Ask git-credential to give us a username and password for this description. This is done by running `git credential fill`, feeding the description from step (1) to its standard input. The complete credential description (including the credential per se, i.e. the login and password) will be produced on standard output, like:"
 msgstr ""
+"Fordern Sie git-credential auf, dieser Beschreibung einen Benutzernamen und "
+"ein Passwort zuzuordnen. Dafür wird `git-credential fill` ausgeführt, wobei "
+"die Beschreibung aus Schritt (1) in die Standardeingabe übernommen wird. Die "
+"vollständige Beschreibung des Credentials (einschließlich des Credentials an "
+"sich, d.h. des Benutzernamens und des Passwortes) wird wie bei der "
+"Standardausgabe erzeugt:"
 
 #. type: Plain text
 #: en/git-credential.txt:74
-#, no-wrap, priority:100
+#, fuzzy, no-wrap, priority:100
 msgid ""
 "protocol=https\n"
 "host=example.com\n"
 "username=bob\n"
 "password=secr3t\n"
 msgstr ""
+"protocol=https\n"
+"host=example.com\n"
+"username=bob\n"
+"password=secr3t\n"
 
 #. type: Plain text
 #: en/git-credential.txt:79
 #, priority:100
 msgid "In most cases, this means the attributes given in the input will be repeated in the output, but Git may also modify the credential description, for example by removing the `path` attribute when the protocol is HTTP(s) and `credential.useHttpPath` is false."
 msgstr ""
+"Meistens bedeutet dies, dass die in der Eingabe angegebenen Attribute in der "
+"Ausgabe wiederholt werden, aber Git kann auch die Beschreibung des "
+"Credentials modifizieren, z.B. durch Entfernen des `path`-Attributs, wenn "
+"das Protokoll HTTP(s) ist und `credential.useHttpPath` auf „false“ gesetzt "
+"ist."
 
 #. type: Plain text
 #: en/git-credential.txt:85
 #, priority:100
 msgid "If the `git credential` knew about the password, this step may not have involved the user actually typing this password (the user may have typed a password to unlock the keychain instead, or no user interaction was done if the keychain was already unlocked) before it returned `password=secr3t`."
 msgstr ""
+"Falls `git credential` das Passwort kannte, hat der Anwender in diesem "
+"Schritt möglicherweise kein Passwort eingegeben (der User kann stattdessen "
+"ein Passwort eingegeben haben, um die Keychain zu entsperren oder es wurde "
+"keine Benutzerinteraktion durchgeführt, wenn der Schlüsselbund bereits "
+"entsperrt war), bevor er `password=secr3t` zurückgab."
 
 #. type: Plain text
 #: en/git-credential.txt:88
 #, priority:100
 msgid "Use the credential (e.g., access the URL with the username and password from step (2)), and see if it's accepted."
 msgstr ""
+"Rufen Sie mit dem Zugangscode (z.B. mit dem Benutzernamen und dem Passwort "
+"aus Schritt (2)) die URL auf und prüfen Sie, ob sie akzeptiert wird."
 
 #. type: Plain text
 #: en/git-credential.txt:98
