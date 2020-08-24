@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: git-manpages-l 10n\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-06-02 21:43+0200\n"
-"PO-Revision-Date: 2020-08-15 01:32+0000\n"
+"PO-Revision-Date: 2020-08-24 14:49+0000\n"
 "Last-Translator: Þórhalla Guðmundsdóttir Beck <plergux@outlook.com>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
-"X-Generator: Weblate 4.2-dev\n"
+"X-Generator: Weblate 4.2.1-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:666 en/git-instaweb.txt:45 en/git-mailinfo.txt:47 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -2755,55 +2755,63 @@ msgstr ""
 #: en/date-formats.txt:2
 #, no-wrap, priority:280
 msgid "DATE FORMATS"
-msgstr ""
+msgstr "DAGSETNINGARSNIÐ"
 
 #. type: Plain text
 #: en/date-formats.txt:5
 #, priority:280
 msgid "The `GIT_AUTHOR_DATE`, `GIT_COMMITTER_DATE` environment variables"
-msgstr ""
+msgstr "Umhverfisbreyturnar `GIT_AUTHOR_DATE` og `GIT_COMMITTER_DATE`"
 
 #. type: Plain text
 #: en/date-formats.txt:7
 #, priority:280
 msgid "and the `--date` option"
-msgstr ""
+msgstr "og `--date` valmöguleikinn"
 
 #. type: Plain text
 #: en/date-formats.txt:9
 #, priority:280
 msgid "support the following date formats:"
-msgstr ""
+msgstr "styðja eftirfarandi dagsetningasnið:"
 
 #. type: Labeled list
 #: en/date-formats.txt:10
 #, no-wrap, priority:280
 msgid "Git internal format"
-msgstr ""
+msgstr "Innbyggt Git snið"
 
 #. type: Plain text
 #: en/date-formats.txt:15
 #, priority:280
 msgid "It is `<unix timestamp> <time zone offset>`, where `<unix timestamp>` is the number of seconds since the UNIX epoch.  `<time zone offset>` is a positive or negative offset from UTC.  For example CET (which is 1 hour ahead of UTC) is `+0100`."
 msgstr ""
+"Það er `<unix tímastimpill> <tímabeltishliðrun>`, þar sem `<unix "
+"tímastimpill> ` er fjöldi sekúnda frá UNIX tímamótunum (miðnætti 01.01.1970)"
+", en `<tímabeltishliðrun>` er jákvæð eða neikvæð hliðrun frá samræmdum "
+"alheimstíma, eða UTC (universal time coordinated). Til dæmis væri "
+"miðevróputími (CET) sem er 1 klukkustund á undan UTC `+0100`."
 
 #. type: Labeled list
 #: en/date-formats.txt:16
 #, no-wrap, priority:280
 msgid "RFC 2822"
-msgstr ""
+msgstr "RFC 2822"
 
 #. type: Plain text
 #: en/date-formats.txt:19
 #, priority:280
 msgid "The standard email format as described by RFC 2822, for example `Thu, 07 Apr 2005 22:13:13 +0200`."
 msgstr ""
+"Staðlað vefpóstssnið dagsetninga eins og því er lýst af RFC 2822 staðlinum ("
+"request for comment, skilaboðabeiðnir), til dæmis `Thu, 07 Apr 2005 22:13:13 "
+"+0200`."
 
 #. type: Labeled list
 #: en/date-formats.txt:20
 #, no-wrap, priority:280
 msgid "ISO 8601"
-msgstr ""
+msgstr "ISO 8601"
 
 #. type: Plain text
 #: en/date-formats.txt:26
@@ -6231,7 +6239,7 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-add.txt:228
-#, fuzzy, no-wrap, priority:300
+#, no-wrap, priority:300
 msgid "$ git add git-*.sh\n"
 msgstr "$ git add git-*.sh\n"
 
@@ -6400,7 +6408,7 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-add.txt:310
-#, fuzzy, no-wrap, priority:300
+#, no-wrap, priority:300
 msgid "revert"
 msgstr "revert"
 
@@ -6415,7 +6423,7 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-add.txt:316
-#, fuzzy, no-wrap, priority:300
+#, no-wrap, priority:300
 msgid "add untracked"
 msgstr "add untracked"
 
@@ -6430,7 +6438,7 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-add.txt:321
-#, fuzzy, no-wrap, priority:300
+#, no-wrap, priority:300
 msgid "patch"
 msgstr "patch"
 
@@ -8682,96 +8690,140 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-bisect.txt:286
-#, no-wrap, priority:100
+#, fuzzy, no-wrap, priority:100
 msgid "$ git bisect skip v2.5 v2.5..v2.6\n"
-msgstr ""
+msgstr "$ git bisect skip v2.5 v2.5..v2.6\n"
 
 #. type: Plain text
 #: en/git-bisect.txt:290
 #, priority:100
 msgid "This tells the bisect process that the commits between `v2.5` and `v2.6` (inclusive) should be skipped."
 msgstr ""
+"Þetta segir bisect (tvískipta) ferlinu að innleggjum á milli `v2.5` og `v2.6`"
+" (bæði meðtalin) skuli vera sleppt."
 
 #. type: Title ~
 #: en/git-bisect.txt:293
 #, no-wrap, priority:100
 msgid "Cutting down bisection by giving more parameters to bisect start"
 msgstr ""
+"Fækka tvískiptingum með því að gefa bisect skipuninni fleiri færslubreytur"
 
 #. type: Plain text
 #: en/git-bisect.txt:298
 #, priority:100
 msgid "You can further cut down the number of trials, if you know what part of the tree is involved in the problem you are tracking down, by specifying path parameters when issuing the `bisect start` command:"
 msgstr ""
+"Ef þú veist hvaða hluti trésins er viðriðið vandamálið sem þú ert að hafa "
+"uppi á getur þú fækkað atlögum enn frekar með því að gefa upp slóðabreytur "
+"þegar þú gefur `bisect start` (tvískipting byrja) skipunina:"
 
 #. type: delimited block -
 #: en/git-bisect.txt:301
-#, no-wrap, priority:100
+#, fuzzy, no-wrap, priority:100
 msgid "$ git bisect start -- arch/i386 include/asm-i386\n"
-msgstr ""
+msgstr "$ git bisect start -- arch/i386 include/asm-i386\n"
 
 #. type: Plain text
 #: en/git-bisect.txt:306
 #, priority:100
 msgid "If you know beforehand more than one good commit, you can narrow the bisect space down by specifying all of the good commits immediately after the bad commit when issuing the `bisect start` command:"
 msgstr ""
+"Ef þú veist fyrirfram af fleiri en einu góðu innleggi geturðu þrengt "
+"tvískiptingarsvæðið með því að skilgreina öll góðu innleggin strax á eftir "
+"slæma inlegginu þegar þú gefur `bisect start` skipunina:"
 
 #. type: delimited block -
 #: en/git-bisect.txt:311
-#, no-wrap, priority:100
+#, fuzzy, no-wrap, priority:100
 msgid ""
 "$ git bisect start v2.6.20-rc6 v2.6.20-rc4 v2.6.20-rc1 --\n"
 "                   # v2.6.20-rc6 is bad\n"
 "                   # v2.6.20-rc4 and v2.6.20-rc1 are good\n"
 msgstr ""
+"$ git bisect start v2.6.20-rc6 v2.6.20-rc4 v2.6.20-rc1 --\n"
+"                   # v2.6.20-rc6 is bad\n"
+"                   # v2.6.20-rc4 and v2.6.20-rc1 are good\n"
 
 #. type: Title ~
 #: en/git-bisect.txt:314
-#, no-wrap, priority:100
+#, fuzzy, no-wrap, priority:100
 msgid "Bisect run"
-msgstr ""
+msgstr "Bisect run"
 
 #. type: Plain text
 #: en/git-bisect.txt:318
 #, priority:100
 msgid "If you have a script that can tell if the current source code is good or bad, you can bisect by issuing the command:"
 msgstr ""
+"Ef þú hefur forritling sem getur sagt til um það hvort tiltekin "
+"upptakaforskrift er góð eða slæm þá geturðu tvískipt með því að gefa "
+"skipunina:"
 
 #. type: delimited block -
 #: en/git-bisect.txt:321
 #, no-wrap, priority:100
 msgid "$ git bisect run my_script arguments\n"
-msgstr ""
+msgstr "$ git bisect run minn_forritlingur breytur\n"
 
 #. type: Plain text
 #: en/git-bisect.txt:327
 #, priority:100
 msgid "Note that the script (`my_script` in the above example) should exit with code 0 if the current source code is good/old, and exit with a code between 1 and 127 (inclusive), except 125, if the current source code is bad/new."
 msgstr ""
+"Athugaðu að forritlingnum (`minn_forritlingur` í dæminu hér að framan) ætti "
+"að ljúka með tákninu 0 ef viðkomandi upptakaforskrift er góð/gömul, og ljúka "
+"með tákni á milli 1 og 127 (bæði meðtalin), nema 125, ef viðkomandi "
+"upptakaforskrift er slæm/ný."
 
 #. type: Plain text
 #: en/git-bisect.txt:331
 #, priority:100
 msgid "Any other exit code will abort the bisect process. It should be noted that a program that terminates via `exit(-1)` leaves $? = 255, (see the exit(3) manual page), as the value is chopped with `& 0377`."
 msgstr ""
+"Öll önnur lokunartákn munu stöðva tvískiptingarferlið. Það má taka það fram "
+"að forrit sem stöðvast vegna `exit(-1)` skilur eftir $? = 255, (sjá exit(3) "
+"leiðbeiningasíðuna), þar sem gildið er brotið upp með `& 0377`."
 
 #. type: Plain text
 #: en/git-bisect.txt:340
 #, priority:100
 msgid "The special exit code 125 should be used when the current source code cannot be tested. If the script exits with this code, the current revision will be skipped (see `git bisect skip` above). 125 was chosen as the highest sensible value to use for this purpose, because 126 and 127 are used by POSIX shells to signal specific error status (127 is for command not found, 126 is for command found but not executable--these details do not matter, as they are normal errors in the script, as far as `bisect run` is concerned)."
 msgstr ""
+"Sérstaka lokunartáknið 125 ætti að nota þegar ekki er hægt að prófa "
+"viðkomandi upptakaforskriftir. Ef forritlingurinn lokar með þessu tákni "
+"verður núgildandi endurskoðun sleppt (sjá `git bisect skip` hér að framan). "
+"125 var valið sem hæsta heppilegasta gildið til þess að nýta í þessum "
+"tilgangi því 126 og 127 eru venjulega notuð af POSIX skeljum til þess að "
+"gefa til kynna sérstök villuboð (127 er fyrir skipun fannst ekki, 126 er "
+"fyrir skipun fannst en ekki er hægt að keyra hana -- þessi smáatriði skipta "
+"ekki máli, þar sem þær eru venjulegar villur að því er `bisect run` "
+"viðkemur)."
 
 #. type: Plain text
 #: en/git-bisect.txt:346
 #, priority:100
 msgid "You may often find that during a bisect session you want to have temporary modifications (e.g. s/#define DEBUG 0/#define DEBUG 1/ in a header file, or \"revision that does not have this commit needs this patch applied to work around another problem this bisection is not interested in\") applied to the revision being tested."
 msgstr ""
+"Þú gætir oft rekist á það í tvískiptingartörnum að þú vilt hafa tímabundnar "
+"breytingar (t.d. s/#define DEBUG 0/#define DEBUG 1/ í hausskjali, eða "
+"\"endurskoðun sem hefur ekki þetta innlegg þarf að leggja við þessar "
+"viðbætur til að vinna í kring um annað vandamál sem þessi tvískipting hefur "
+"ekki áhuga á\") lagðar við endurskoðunina sem er verið að prófa."
 
 #. type: Plain text
 #: en/git-bisect.txt:354
 #, priority:100
 msgid "To cope with such a situation, after the inner 'git bisect' finds the next revision to test, the script can apply the patch before compiling, run the real test, and afterwards decide if the revision (possibly with the needed patch) passed the test and then rewind the tree to the pristine state.  Finally the script should exit with the status of the real test to let the `git bisect run` command loop determine the eventual outcome of the bisect session."
 msgstr ""
+"Til þess að ráða fram úr slíkri stöðu, eftir að hið innra 'git bisect' "
+"finnur næstu endurskoðun til þess að prófa, getur forritlingurinn lagt "
+"viðbæturnar við fyrir aðrakstur, framkvæmt hina raunverulegu prófun, og "
+"ákveðið eftir á hvort endurskoðunin (mögulega með þeim viðbótum sem þarf) "
+"stóðst prófunina og síðan spólað tréð aftur í ósnert ástand. Að lokum ætti "
+"forritlingnum að ljúka með stöðu hinnar raunverulegu prófunar til þess að "
+"láta `git bisect run` skipunalykkjuna ákveða endanlega niðurstöðu "
+"tvískiptingartörninni."
 
 #. type: Labeled list
 #: en/git-bisect.txt:357 en/git-clone.txt:145
@@ -13980,7 +14032,7 @@ msgstr ""
 #: en/git-clone.txt:147
 #, priority:300
 msgid "No checkout of HEAD is performed after the clone is complete."
-msgstr "Afskráning HAUS er ekki framkvæmd eftir að einritið er fullgert."
+msgstr "Endurupptaka HAUS er ekki framkvæmd eftir að einritið er fullgert."
 
 #. type: Labeled list
 #: en/git-clone.txt:148 en/git-init.txt:46 en/git-p4.txt:305 en/git.txt:149
@@ -13996,12 +14048,12 @@ msgstr ""
 "Þessi valmöguleiki býr til 'nakta' Git hirslu. Það er að segja, í stað þess "
 "að búa til `<skrá>` og setja stjórnunarskrárnar í `<skrá>/git.` gerir hann "
 "`<skrá>` sjálfa `$GIT_DIR`skrána. Þetta felur augljóslega í sér `--no-"
-"checkout`(engin afskráning) vegna þess að það er ekki neinn staður til þar "
-"sem hægt er að afskrá verktréð. Einnig eru greinahausarnir sem eru fjarlægir "
-"afritaðir beint yfir í samsvarandi staðbundna greinahausa, án þess að "
-"kortleggja þá í `refs/remotes/origin/`(tilvísanir fjarlægjur uppruni). Þegar "
-"þessi valmöguleiki er notaður eru hvorki búnar til greinarnar sem eru undir "
-"fjareftirliti né tilheyrandi stillingabreytur."
+"checkout`(engin endurupptaka) vegna þess að það er ekki neinn staður til þar "
+"sem hægt er að endurupptaka verktréð. Einnig eru greinahausarnir sem eru "
+"fjarlægir afritaðir beint yfir í samsvarandi staðbundna greinahausa, án þess "
+"að kortleggja þá í `refs/remotes/origin/`(tilvísanir fjarlægjur uppruni). "
+"Þegar þessi valmöguleiki er notaður eru hvorki búnar til greinarnar sem eru "
+"undir fjareftirliti né tilheyrandi stillingabreytur."
 
 #. type: Labeled list
 #: en/git-clone.txt:160 en/git-show-branch.txt:67 en/rev-list-options.txt:358 en/rev-list-options.txt:491
@@ -14014,8 +14066,8 @@ msgstr "--sparse"
 #, priority:300
 msgid "Initialize the sparse-checkout file so the working directory starts with only the files in the root of the repository. The sparse-checkout file can be modified to grow the working directory as needed."
 msgstr ""
-"Frumstillir sparlega afskráningu skjala svo að verkskráin byrjar einungis "
-"með þau skjöl sem eru í rót hirslunnar. Sparleg afskráning getur verið "
+"Frumstillir sparlega endurupptöku skjala svo að verkskráin byrjar einungis "
+"með þau skjöl sem eru í rót hirslunnar. Sparleg endurupptaka getur verið "
 "stillt til þess að stækka verkskrána eins og þörf er á."
 
 #. type: Labeled list
@@ -14162,11 +14214,11 @@ msgstr ""
 msgid "Due to limitations of the current implementation, some configuration variables do not take effect until after the initial fetch and checkout.  Configuration variables known to not take effect are: `remote.<name>.mirror` and `remote.<name>.tagOpt`.  Use the corresponding `--mirror` and `--no-tags` options instead."
 msgstr ""
 "Vegna takmarkana í þeirri útfærslu sem er í notkun byrja sumar "
-"stillingabreytur ekki að virka fyrr en eftir fyrsta \"sækja\" og \"afskráning"
-"\". Stillingabreytur sem vitað er að virka ekki eru: `remote.<nafn>.mirror`("
-"fjarlæg spegilmynd) og `remote.<nafn>.tagOpt`(fjarlæg merki valfrjáls). "
-"Notaðu samsvarandi valmöguleika, `--mirror`(spegilmynd) og `--no-tags`(engin "
-"merki), í staðinn."
+"stillingabreytur ekki að virka fyrr en eftir fyrsta \"sækja\" og "
+"\"endurupptaka\". Stillingabreytur sem vitað er að virka ekki eru: "
+"`remote.<nafn>.mirror`(fjarlæg spegilmynd) og `remote.<nafn>.tagOpt`(fjarlæg "
+"merki valfrjáls). Notaðu samsvarandi valmöguleika, `--mirror`(spegilmynd) og "
+"`--no-tags`(engin merki), í staðinn."
 
 #. type: Labeled list
 #: en/git-clone.txt:225
@@ -14270,8 +14322,8 @@ msgstr ""
 "Þetta jafngildir því að nota `git submodule update --init --recursive "
 "<slóðatilgreining>` (git undirverkeining uppfæra frumstilla endurkvæmt) um "
 "leið og einritið er tilbúið. Þessi valmöguleiki er hunsaður er einritaða "
-"hirslan hefur ekki verktré/afskráningu (þ.e. ef einver af valmöguleikunum "
-"`--no-checkout`/`-n` (engin afritun), `--bare` (nakinn), eða "
+"hirslan hefur ekki verktré/endurupptöku (þ.e. ef einver af valmöguleikunum "
+"`--no-checkout`/`-n` (engin endurupptaka), `--bare` (nakinn), eða "
 "`--mirror`(spegilmynd) eru gefnir upp)"
 
 #. type: Labeled list
@@ -14320,13 +14372,13 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-clone.txt:294 en/git-submodule.txt:427
-#, fuzzy, no-wrap, priority:300
+#, no-wrap, priority:300
 msgid "-j <n>"
 msgstr "-j <n>"
 
 #. type: Labeled list
 #: en/git-clone.txt:295 en/git-submodule.txt:428
-#, fuzzy, no-wrap, priority:300
+#, no-wrap, priority:300
 msgid "--jobs <n>"
 msgstr "--jobs <n>"
 
@@ -14437,7 +14489,7 @@ msgstr "Búa til nakta hirslu til þess að birta breytingar þínar almenningi:
 
 #. type: delimited block -
 #: en/git-clone.txt:349
-#, fuzzy, no-wrap, priority:300
+#, no-wrap, priority:300
 msgid "$ git clone --bare -l /home/proj/.git /pub/scm/proj.git\n"
 msgstr "$ git clone --bare -l /home/proj/.git /pub/scm/proj.git\n"
 
@@ -29690,7 +29742,7 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-init.txt:70
-#, fuzzy, no-wrap, priority:300
+#, no-wrap, priority:300
 msgid "--shared[=(false|true|umask|group|all|world|everybody|0xxx)]"
 msgstr "--shared[=(false|true|umask|group|all|world|everybody|0xxx)]"
 
@@ -29761,7 +29813,7 @@ msgstr "Sama og 'group', en gerir hirsluna lesanlega fyrir alla notendur."
 
 #. type: Labeled list
 #: en/git-init.txt:101
-#, fuzzy, no-wrap, priority:300
+#, no-wrap, priority:300
 msgid "'0xxx'"
 msgstr "'0xxx'"
 
@@ -63451,90 +63503,123 @@ msgstr "{startsb}notandi@{endsb}hýsill.xz:slóð/til/hirsla.git/"
 #, priority:300
 msgid "This syntax is only recognized if there are no slashes before the first colon. This helps differentiate a local path that contains a colon. For example the local path `foo:bar` could be specified as an absolute path or `./foo:bar` to avoid being misinterpreted as an ssh url."
 msgstr ""
+"Þessar samsetningarreglur virka einungis ef það eru engin skástrik á undan "
+"fyrsta tvípunktinum. Þetta hjálpar til við að aðgreina staðbundna slóð sem "
+"inniheldur tvípunkt. Til dæmis er hægt að skilgreina staðbundnu slóðina "
+"`foo:bar` sem algilda slóð, eða `./foo:bar`, til þess að forðast það að hún "
+"verði túlkuð sem SSH vefslóð."
 
 #. type: Plain text
 #: en/urls.txt:34
 #, priority:300
 msgid "The ssh and git protocols additionally support ~username expansion:"
 msgstr ""
+"Auk þess styðja SSH- og Git-samskiptareglurnar framlenginguna ~notandanafn:"
 
 #. type: Plain text
 #: en/urls.txt:36
 #, priority:300
 msgid "ssh://{startsb}user@{endsb}host.xz{startsb}:port{endsb}/~{startsb}user{endsb}/path/to/repo.git/"
 msgstr ""
+"ssh://{startsb}notandi@{endsb}hýsill."
+"xz{startsb}:tengill{endsb}/~{startsb}notandi{endsb}/slóð/til/hirsla.git/"
 
 #. type: Plain text
 #: en/urls.txt:37
 #, priority:300
 msgid "git://host.xz{startsb}:port{endsb}/~{startsb}user{endsb}/path/to/repo.git/"
 msgstr ""
+"git://hýsill.xz{startsb}:tengill{endsb}/~{startsb}notandi{endsb}/slóð/til/"
+"hirsla.git/"
 
 #. type: Plain text
 #: en/urls.txt:38
 #, priority:300
 msgid "{startsb}user@{endsb}host.xz:/~{startsb}user{endsb}/path/to/repo.git/"
 msgstr ""
+"{startsb}notandi@{endsb}hýsill.xz:/~{startsb}notandi{endsb}/slóð/til/hirsla."
+"git/"
 
 #. type: Plain text
 #: en/urls.txt:41
 #, priority:300
 msgid "For local repositories, also supported by Git natively, the following syntaxes may be used:"
 msgstr ""
+"Fyrir staðbundnar hirslur, sem Git hefur einnig innbyggðan stuðning fyrir, "
+"er hægt að nota eftirfarandi samsetninagrreglu:"
 
 #. type: Plain text
 #: en/urls.txt:43
 #, priority:300
 msgid "/path/to/repo.git/"
-msgstr ""
+msgstr "/slóð/til/hirsla.git/"
 
 #. type: Plain text
 #: en/urls.txt:44
 #, priority:300
 msgid "\\file:///path/to/repo.git/"
-msgstr ""
+msgstr "\\file:///slóð/til/hirsla.git/"
 
 #. type: Plain text
 #: en/urls.txt:49
 #, priority:300
 msgid "These two syntaxes are mostly equivalent, except when cloning, when the former implies --local option. See linkgit:git-clone[1] for details."
 msgstr ""
+"Þessar tvær reglur eru að mestu jafngildar, nema þegar verið er að einrita, "
+"en fyrri reglan felur í sér --local (staðbundinn) valmöguleikann. Sjá linkgit"
+":git-clone[1] fyrir frekari upplýsingar."
 
 #. type: Plain text
 #: en/urls.txt:54
 #, priority:300
 msgid "These two syntaxes are mostly equivalent, except the former implies --local option."
 msgstr ""
+"Þessar reglur eru að mestu jafngildar, nema að fyrri reglan felur í sér --"
+"local (staðbundinn) valmöguleikann."
 
 #. type: Plain text
 #: en/urls.txt:58
 #, priority:300
 msgid "'git clone', 'git fetch' and 'git pull', but not 'git push', will also accept a suitable bundle file. See linkgit:git-bundle[1]."
 msgstr ""
+"'git clone' (einrita), 'git fetch' (sækja) og 'git pull' (draga), but not "
+"'git push' (stjaka) samþykkja líka viðeigandi knippisskjal. Sjá linkgit:git-"
+"bundle[1]."
 
 #. type: Plain text
 #: en/urls.txt:63
 #, priority:300
 msgid "When Git doesn't know how to handle a certain transport protocol, it attempts to use the 'remote-<transport>' remote helper, if one exists. To explicitly request a remote helper, the following syntax may be used:"
 msgstr ""
+"Þegar Git veit ekki hvernig á að meðhöndla ákveðna flutningsreglu reynir það "
+"að nota 'remote-<flutningur>' (fjarlægja) hjálpargagn, ef það er til. Til "
+"þess að biðja sértstaklega um fjarlægjuhjálpargagn er hægt að nota "
+"eftirfarandi samsetningarreglu:"
 
 #. type: Plain text
 #: en/urls.txt:65
 #, priority:300
 msgid "<transport>::<address>"
-msgstr ""
+msgstr "<flutningur>::<fang>"
 
 #. type: Plain text
 #: en/urls.txt:69
 #, priority:300
 msgid "where <address> may be a path, a server and path, or an arbitrary URL-like string recognized by the specific remote helper being invoked. See linkgit:gitremote-helpers[7] for details."
 msgstr ""
+"þar sem <fang> getur verið slóð, netþjónn og slóð, eða einhver strengur "
+"líkur veffangi sem viðkomandi fjarlægjuhjálpargagn þekkir. Sjá inkgit"
+":gitremote-helpers[7] fyrir frekari upplýsingar."
 
 #. type: Plain text
 #: en/urls.txt:74
 #, priority:300
 msgid "If there are a large number of similarly-named remote repositories and you want to use a different format for them (such that the URLs you use will be rewritten into URLs that work), you can create a configuration section of the form:"
 msgstr ""
+"Ef um er að ræða mikinn fjölda fjarlægra hirsla með svipuð heiti og þú vilt "
+"nota annað snið fyrir þær (svo að vefslóðirnar sem þú notar verði "
+"endurskrifaðar yfir í vefslóðir sem virka) geturðu búið til "
+"stillingareiningu með:"
 
 #. type: delimited block -
 #: en/urls.txt:78
@@ -63543,12 +63628,14 @@ msgid ""
 "\t[url \"<actual url base>\"]\n"
 "\t\tinsteadOf = <other url base>\n"
 msgstr ""
+"\t[url \"<raunverulegur veffangsgrunnur>\"]\n"
+"\t\tinsteadOf = <annar veffangsgrunnur>\n"
 
 #. type: Plain text
 #: en/urls.txt:81 en/urls.txt:100
 #, priority:300
 msgid "For example, with this:"
-msgstr ""
+msgstr "Til dæmis, með þessu:"
 
 #. type: delimited block -
 #: en/urls.txt:86
@@ -63558,18 +63645,26 @@ msgid ""
 "\t\tinsteadOf = host.xz:/path/to/\n"
 "\t\tinsteadOf = work:\n"
 msgstr ""
+"\t[url \"git://git.hýsill.xz/\"]\n"
+"\t\tinsteadOf = hýsill.xz:/slóð/til/\n"
+"\t\tinsteadOf = vinna:\n"
 
 #. type: Plain text
 #: en/urls.txt:90
 #, priority:300
 msgid "a URL like \"work:repo.git\" or like \"host.xz:/path/to/repo.git\" will be rewritten in any context that takes a URL to be \"git://git.host.xz/repo.git\"."
 msgstr ""
+"vefslóð eins og \"vinna:hirsla.git\" eða \"hýsill.xz:/slóð/til/hirsla.git\" "
+"verða endurskrifaðar í öllum samhengjum semtaka vefslóð til þess að vera "
+"\"git://git.hýsill.xz/hirsla.git\"."
 
 #. type: Plain text
 #: en/urls.txt:93
 #, priority:300
 msgid "If you want to rewrite URLs for push only, you can create a configuration section of the form:"
 msgstr ""
+"Ef þú vilt endurskrifa vefslóðir einungis þegar þú stjakar, þá geturðu búið "
+"til stillingareiningu með sniðinu:"
 
 #. type: delimited block -
 #: en/urls.txt:97
@@ -63578,6 +63673,8 @@ msgid ""
 "\t[url \"<actual url base>\"]\n"
 "\t\tpushInsteadOf = <other url base>\n"
 msgstr ""
+"\t[url \"<raunverulegur vefslóðargrunnur>\"]\n"
+"\t\tpushInsteadOf = <annar vefslóðargrunnur>\n"
 
 #. type: delimited block -
 #: en/urls.txt:104
@@ -63586,12 +63683,17 @@ msgid ""
 "\t[url \"ssh://example.org/\"]\n"
 "\t\tpushInsteadOf = git://example.org/\n"
 msgstr ""
+"\t[url \"ssh://dæmi.org/\"]\n"
+"\t\tpushInsteadOf = git://dæmi.org/\n"
 
 #. type: Plain text
 #: en/urls.txt:108
 #, priority:300
 msgid "a URL like \"git://example.org/path/to/repo.git\" will be rewritten to \"ssh://example.org/path/to/repo.git\" for pushes, but pulls will still use the original URL."
 msgstr ""
+"vefslóð eins og \"git://dæmi.org/slóð/til/hirsla.git\" verður endurskrifuð "
+"sem \"ssh://dæmi.org/slóð/til/hirlsa.git\" þegar þú stjakar, en upprunalega "
+"vefslóðin verður notuð þegar þú dregur."
 
 #. type: Title =
 #: en/git-bisect-lk2009.txt:2
