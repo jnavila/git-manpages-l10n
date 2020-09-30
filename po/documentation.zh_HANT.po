@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-07-11 18:07+0200\n"
-"PO-Revision-Date: 2020-09-20 19:39+0000\n"
+"PO-Revision-Date: 2020-09-30 12:27+0000\n"
 "Last-Translator: 維維狐 <appiedavid777@gmail.com>\n"
 "Language-Team: French\n"
 "Language: zh_HANT\n"
@@ -29337,7 +29337,7 @@ msgstr "指定的Git倉庫可在多個使用者之間共享，這會允許屬於
 #: en/git-init.txt:88
 #, priority:300
 msgid "The option can have the following values, defaulting to 'group' if no value is given:"
-msgstr "這個選項可以加上下列參數，若不使用參數則預設會使用'group'："
+msgstr "這個選項可以加上下列數值，若不給值，則預設會使用'group'："
 
 #. type: Labeled list
 #: en/git-init.txt:90
@@ -29386,18 +29386,20 @@ msgstr "'0xxx'"
 #, priority:300
 msgid "'0xxx' is an octal number and each file will have mode '0xxx'. '0xxx' will override users' umask(2) value (and not only loosen permissions as 'group' and 'all' does). '0640' will create a repository which is group-readable, but not group-writable or accessible to others. '0660' will create a repo that is readable and writable to the current user and group, but inaccessible to others."
 msgstr ""
+"'0xxx' 是個八進位數字，而各個檔案都會擁有權限'0xxx'。'0xxx'會覆蓋掉使用者的umask(2)值(而且並不像group跟all一樣會放寬權"
+"限)。'0640'會創建群組可讀，但群組不可寫，其他人也不可存取的倉庫。'0660'會創建當前使用者與群組可讀可寫，但是其他人無法存取的倉庫。"
 
 #. type: Plain text
 #: en/git-init.txt:120
 #, priority:300
 msgid "By default, the configuration flag `receive.denyNonFastForwards` is enabled in shared repositories, so that you cannot force a non fast-forwarding push into it."
-msgstr ""
+msgstr "在預設中，共享倉庫的設定旗標 receive.denyNonFastForwards是被啟用的，所以你無法強制使用非快進進行推送。"
 
 #. type: Plain text
 #: en/git-init.txt:123
 #, priority:300
 msgid "If you provide a 'directory', the command is run inside it. If this directory does not exist, it will be created."
-msgstr ""
+msgstr "如果你在指令中提供了'目錄'，而此目錄不存在的話，它則會被創建。"
 
 #. type: Title -
 #: en/git-init.txt:125
@@ -29409,37 +29411,37 @@ msgstr "模版檔案目錄"
 #: en/git-init.txt:129
 #, priority:300
 msgid "Files and directories in the template directory whose name do not start with a dot will be copied to the `$GIT_DIR` after it is created."
-msgstr ""
+msgstr "並非以點作為名稱開頭的檔案和目錄將會在`$GIT_DIR`被創建後，被複製到其中。"
 
 #. type: Plain text
 #: en/git-init.txt:131
 #, priority:300
 msgid "The template directory will be one of the following (in order):"
-msgstr ""
+msgstr "模板目錄將為下列其一（依照順序）："
 
 #. type: Plain text
 #: en/git-init.txt:133
 #, priority:300
 msgid "the argument given with the `--template` option;"
-msgstr ""
+msgstr "在選項`--template`中被給予的引數;"
 
 #. type: Plain text
 #: en/git-init.txt:135
 #, priority:300
 msgid "the contents of the `$GIT_TEMPLATE_DIR` environment variable;"
-msgstr ""
+msgstr "環境變數`$GIT_TEMPLATE_DIR`中的內容;"
 
 #. type: Plain text
 #: en/git-init.txt:137
 #, priority:300
 msgid "the `init.templateDir` configuration variable; or"
-msgstr ""
+msgstr "設定變數`init.templateDir`; 或是"
 
 #. type: Plain text
 #: en/git-init.txt:139
 #, priority:300
 msgid "the default template directory: `/usr/share/git-core/templates`."
-msgstr ""
+msgstr "預設模板目錄：`/usr/share/git-core/templates`。"
 
 #. type: Plain text
 #: en/git-init.txt:142
@@ -29474,6 +29476,10 @@ msgid ""
 "$ git add .     <2>\n"
 "$ git commit    <3>\n"
 msgstr ""
+"$ cd /path/to/my/codebase\n"
+"$ git init      <1>\n"
+"$ git add .     <2>\n"
+"$ git commit    <3>\n"
 
 #. type: Plain text
 #: en/git-init.txt:161
