@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-10-09 18:58+0200\n"
-"PO-Revision-Date: 2020-10-11 09:26+0000\n"
+"PO-Revision-Date: 2020-10-14 05:26+0000\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -2532,6 +2532,10 @@ msgid ""
 "\t; Don't trust file modes\n"
 "\tfilemode = false\n"
 msgstr ""
+"# Variables core\n"
+"[core]\n"
+"\t; Ne pas se fier au modes des fichiers\n"
+"\tfilemode = false\n"
 
 #. type: delimited block -
 #: en/config.txt:192
@@ -2542,6 +2546,10 @@ msgid ""
 "\texternal = /usr/local/bin/diff-wrapper\n"
 "\trenames = true\n"
 msgstr ""
+"# Notre algorithme de diff\n"
+"[diff]\n"
+"\texternal = /usr/local/bin/diff-wrapper\n"
+"\trenames = true\n"
 
 #. type: delimited block -
 #: en/config.txt:196
@@ -2551,6 +2559,9 @@ msgid ""
 "\tremote = origin\n"
 "\tmerge = refs/heads/devel\n"
 msgstr ""
+"[branch \"devel\"]\n"
+"\tremote = origin\n"
+"\tmerge = refs/heads/devel\n"
 
 #. type: delimited block -
 #: en/config.txt:201
@@ -2561,6 +2572,10 @@ msgid ""
 "\tgitProxy=\"ssh\" for \"kernel.org\"\n"
 "\tgitProxy=default-proxy ; for the rest\n"
 msgstr ""
+"# Réglages proxy\n"
+"[core]\n"
+"\tgitProxy=\"ssh\" for \"kernel.org\"\n"
+"\tgitProxy=default-proxy ;pour le reste\n"
 
 #. type: delimited block -
 #: en/config.txt:206
@@ -2571,6 +2586,10 @@ msgid ""
 "\tpath = foo.inc ; find \"foo.inc\" relative to the current file\n"
 "\tpath = ~/foo.inc ; find \"foo.inc\" in your `$HOME` directory\n"
 msgstr ""
+"[include]\n"
+"\tpath = /chemin/vers/foo.inc ; inclure par chemin absolu\n"
+"\tpath = foo.inc ; trouver \"foo.inc\" relativement au fichier actuel\n"
+"\tpath = ~/foo.inc ; trouver \"foo.inc\" dans votre répertoire `$HOME`\n"
 
 #. type: delimited block -
 #: en/config.txt:210
@@ -2580,6 +2599,9 @@ msgid ""
 "[includeIf \"gitdir:/path/to/foo/.git\"]\n"
 "\tpath = /path/to/foo.inc\n"
 msgstr ""
+"; inclure si $GIT_DIR est /chemin/vers/foo/.git\n"
+"[includeIf \"gitdir:/chemin/vers/foo/.git\"]\n"
+"\tpath = /chemin/vers/foo.inc\n"
 
 #. type: delimited block -
 #: en/config.txt:214
@@ -2589,6 +2611,9 @@ msgid ""
 "[includeIf \"gitdir:/path/to/group/\"]\n"
 "\tpath = /path/to/foo.inc\n"
 msgstr ""
+"; inclure tous les dépôts dans /chemin/vers/groupe\n"
+"[includeIf \"gitdir:/chemin/vers/groupe\"]\n"
+"\tpath = /chemin/vers/foo.inc\n"
 
 #. type: delimited block -
 #: en/config.txt:218
@@ -2598,6 +2623,9 @@ msgid ""
 "[includeIf \"gitdir:~/to/group/\"]\n"
 "\tpath = /path/to/foo.inc\n"
 msgstr ""
+"; inclure pour tous les dépôts à l'intérieur de $HOME/vers/groupe\n"
+"[includeIf \"gitdir:~/vers/groupe/\"]\n"
+"\tpath = /chemin/vers/foo.inc\n"
 
 #. type: delimited block -
 #: en/config.txt:224
@@ -2609,6 +2637,11 @@ msgid ""
 "[includeIf \"gitdir:/path/to/group/\"]\n"
 "\tpath = foo.inc\n"
 msgstr ""
+"les chemins relatifs sont toujours relatifs au fichier\n"
+"; incluant (si la condition est vraie) ; leur emplacement n'est pas\n"
+"; affecté par la condition\n"
+"[includeIf \"gitdir:/chemin/vers/groupe/\"]\n"
+"\tpath = foo.inc\n"
 
 #. type: delimited block -
 #: en/config.txt:229
@@ -2619,42 +2652,51 @@ msgid ""
 "[includeIf \"onbranch:foo-branch\"]\n"
 "\tpath = foo.inc\n"
 msgstr ""
+"; n'inclure que si nous sommes dans un arbre de travail où foo-branch\n"
+"; actuellement extrait\n"
+"[includeIf \"onbranch:foo-branch\"]\n"
+"\tpath = foo.inc\n"
 
 #. type: Title ~
 #: en/config.txt:232
 #, no-wrap, priority:100
 msgid "Values"
-msgstr ""
+msgstr "Valeurs"
 
 #. type: Plain text
 #: en/config.txt:237
 #, priority:100
 msgid "Values of many variables are treated as a simple string, but there are variables that take values of specific types and there are rules as to how to spell them."
 msgstr ""
+"Les valeurs de nombreuses variables sont traitées comme une simple chaîne de "
+"caractères, mais il existe des variables qui prennent des valeurs de types "
+"spécifiques et il existe des règles quant à leur orthographe."
 
 #. type: Labeled list
 #: en/config.txt:238
 #, no-wrap, priority:100
 msgid "boolean"
-msgstr ""
+msgstr "booléen"
 
 #. type: Plain text
 #: en/config.txt:243
 #, priority:100
 msgid "When a variable is said to take a boolean value, many synonyms are accepted for 'true' and 'false'; these are all case-insensitive."
 msgstr ""
+"Lorsqu'une variable prend une valeur booléenne, de nombreux synonymes sont "
+"acceptés pour 'vrai' et 'faux' ; ils sont tous insensibles à la casse."
 
 #. type: Labeled list
 #: en/config.txt:244
 #, no-wrap, priority:100
 msgid "true"
-msgstr ""
+msgstr "true"
 
 #. type: Plain text
 #: en/config.txt:245
 #, priority:100
 msgid "Boolean true literals are `yes`, `on`, `true`,"
-msgstr ""
+msgstr "Les vrais littéraux booléens sont `yes`, `on`, `true`,"
 
 #. type: Plain text
 #: en/config.txt:247
@@ -2668,7 +2710,7 @@ msgstr ""
 #: en/config.txt:248
 #, no-wrap, priority:100
 msgid "false"
-msgstr ""
+msgstr "faux"
 
 #. type: Plain text
 #: en/config.txt:249
@@ -2687,18 +2729,24 @@ msgstr ""
 #, priority:100
 msgid "When converting a value to its canonical form using the `--type=bool` type specifier, 'git config' will ensure that the output is \"true\" or \"false\" (spelled in lowercase)."
 msgstr ""
+"Lors de la conversion d'une valeur sous sa forme canonique en utilisant le "
+"spécificateur de type `--type=bool`, 'git config' s'assurera que la sortie "
+"est \"true\" ou \"false\" (écrit en minuscules)."
 
 #. type: Labeled list
 #: en/config.txt:255
 #, no-wrap, priority:100
 msgid "integer"
-msgstr ""
+msgstr "Entier"
 
 #. type: Plain text
 #: en/config.txt:259
 #, ignore-ellipsis, priority:100
 msgid "The value for many variables that specify various sizes can be suffixed with `k`, `M`,... to mean \"scale the number by 1024\", \"by 1024x1024\", etc."
 msgstr ""
+"La valeur de nombreuses variables qui spécifient différentes tailles peut "
+"être suffixée par `k`, `M`, ... pour signifier « multiplier le nombre par "
+"1024 », « par 1024x1024 », etc."
 
 #. type: Labeled list
 #: en/config.txt:260 en/diff-options.txt:361 en/git-for-each-ref.txt:175
@@ -2711,66 +2759,108 @@ msgstr "color"
 #, priority:100
 msgid "The value for a variable that takes a color is a list of colors (at most two, one for foreground and one for background)  and attributes (as many as you want), separated by spaces."
 msgstr ""
+"La valeur d’une variable qui prend une couleur est une liste de couleurs (au "
+"plus deux, une pour le premier plan et une pour l’arrière-plan) et les "
+"attributs (autant que vous le souhaitez), séparés par des espaces."
 
 #. type: Plain text
 #: en/config.txt:270
 #, priority:100
 msgid "The basic colors accepted are `normal`, `black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan` and `white`.  The first color given is the foreground; the second is the background.  All the basic colors except `normal` have a bright variant that can be speficied by prefixing the color with `bright`, like `brightred`."
 msgstr ""
+"Les couleurs de base acceptées sont `normal`, `black`, `red`, `green`, "
+"`yellow`, `blue`, `magenta`, `cyan` et `white`.  La première couleur donnée "
+"est le premier plan ; la seconde est l'arrière-plan.  Toutes les couleurs de "
+"base, sauf la couleur `normal`, ont une variante claire qui peut être "
+"spécifiée en préfixant la couleur par `bright`, comme `brightred`."
 
 #. type: Plain text
 #: en/config.txt:275
 #, priority:100
 msgid "Colors may also be given as numbers between 0 and 255; these use ANSI 256-color mode (but note that not all terminals may support this).  If your terminal supports it, you may also specify 24-bit RGB values as hex, like `#ff0ab3`."
 msgstr ""
+"Les couleurs peuvent également être données en tant que nombres entre 0 et "
+"255 ; ceux-ci utilisent le mode ANSI 256 couleurs (mais notez que certains "
+"terminaux ne peuvent pas prendre en charge cela).  Si votre terminal le "
+"prend en charge, vous pouvez également spécifier des valeurs RGB 24 bits en "
+"hexadécimal, comme `#ff0ab3`."
 
 #. type: Plain text
 #: en/config.txt:282
 #, priority:100
 msgid "The accepted attributes are `bold`, `dim`, `ul`, `blink`, `reverse`, `italic`, and `strike` (for crossed-out or \"strikethrough\" letters).  The position of any attributes with respect to the colors (before, after, or in between), doesn't matter. Specific attributes may be turned off by prefixing them with `no` or `no-` (e.g., `noreverse`, `no-ul`, etc)."
 msgstr ""
+"Les attributs acceptés sont `bold`, `dim`, `ul`, `blink`, `reverse`, `italic`"
+", et `strike` (pour les lettres barrées ou \"surlignées\").  La position de "
+"tout attribut par rapport aux couleurs (avant, après ou entre les deux) n'a "
+"pas d'importance. Des attributs spécifiques peuvent être désactivés en les "
+"préfixant par `no` ou `no-` (par exemple, `noreverse`, `no-ul`, etc.)."
 
 #. type: Plain text
 #: en/config.txt:285
 #, priority:100
 msgid "An empty color string produces no color effect at all. This can be used to avoid coloring specific elements without disabling color entirely."
 msgstr ""
+"Une chaîne de couleur vide ne produit aucun effet de couleur. Cela peut être "
+"utilisé pour éviter de colorer des éléments spécifiques sans désactiver "
+"complètement la couleur."
 
 #. type: Plain text
 #: en/config.txt:294
 #, priority:100
 msgid "For git's pre-defined color slots, the attributes are meant to be reset at the beginning of each item in the colored output. So setting `color.decorate.branch` to `black` will paint that branch name in a plain `black`, even if the previous thing on the same output line (e.g.  opening parenthesis before the list of branch names in `log --decorate` output) is set to be painted with `bold` or some other attribute.  However, custom log formats may do more complicated and layered coloring, and the negated forms may be useful there."
 msgstr ""
+"Pour les étiquettes de couleur prédéfinies de git, les attributs sont censés "
+"être réinitialisés au début de chaque élément de la sortie colorée. Ainsi, "
+"mettre `color.decorate.branch` à `black` peindra le nom de cette branche en "
+"un simple `black`, même si la chose précédente sur la même ligne de sortie ("
+"par exemple, ouvrir une parenthèse avant la liste des noms de branches dans "
+"la sortie de `log --decorate`) est mise à être peinte avec `bold` ou un "
+"autre attribut.  Cependant, les formats de log personnalisés peuvent faire "
+"une coloration plus compliquée et plus stratifiée, et les formes inversées "
+"peuvent être utiles dans ce cas."
 
 #. type: Labeled list
 #: en/config.txt:295
 #, no-wrap, priority:100
 msgid "pathname"
-msgstr ""
+msgstr "nom-de-chemin"
 
 #. type: Plain text
 #: en/config.txt:301
 #, priority:100
 msgid "A variable that takes a pathname value can be given a string that begins with \"`~/`\" or \"`~user/`\", and the usual tilde expansion happens to such a string: `~/` is expanded to the value of `$HOME`, and `~user/` to the specified user's home directory."
 msgstr ""
+"Une variable qui prend la valeur d'un nom de chemin peut recevoir une chaîne "
+"de caractères commençant par \"`~/`\" ou \"`~user/`\", et l'expansion tilde "
+"habituelle se fait sur une telle chaîne : `~/` est développée à la valeur de "
+"`$HOME`, et `~user/` au répertoire personnel de l'utilisateur spécifié."
 
 #. type: Title ~
 #: en/config.txt:304
 #, no-wrap, priority:100
 msgid "Variables"
-msgstr ""
+msgstr "Variables"
 
 #. type: Plain text
 #: en/config.txt:309
 #, priority:100
 msgid "Note that this list is non-comprehensive and not necessarily complete.  For command-specific variables, you will find a more detailed description in the appropriate manual page."
 msgstr ""
+"Notez que cette liste n'est pas exhaustive et n'est pas nécessairement "
+"complète.  Pour les variables spécifiques à une commande, vous trouverez une "
+"description plus détaillée dans la page du manuel appropriée."
 
 #. type: Plain text
 #: en/config.txt:314
 #, priority:100
 msgid "Other git-related tools may and do use their own variables.  When inventing new variables for use in your own tool, make sure their names do not conflict with those that are used by Git itself and other popular tools, and describe them in your documentation."
 msgstr ""
+"D'autres outils liés à git peuvent utiliser et utilisent leurs propres "
+"variables.  Lorsque vous inventez de nouvelles variables à utiliser dans "
+"votre propre outil, assurez-vous que leurs noms n'entrent pas en conflit "
+"avec ceux qui sont utilisés par Git lui-même et d'autres outils populaires, "
+"et décrivez-les dans votre documentation."
 
 #. type: Labeled list
 #: en/config/merge.txt:1
@@ -7012,6 +7102,10 @@ msgstr "--message-id"
 #, priority:100
 msgid "Pass the `-m` flag to 'git mailinfo' (see linkgit:git-mailinfo[1]), so that the Message-ID header is added to the commit message.  The `am.messageid` configuration variable can be used to specify the default behaviour."
 msgstr ""
+"Passer le drapeau `-m` à 'git mailinfo' (voir linkgit:git-mailinfo[1]), de "
+"sorte que l'en-tête Message-ID soit ajouté au message de validation.  La "
+"variable de configuration `am.messageid` peut être utilisée pour spécifier "
+"le comportement par défaut."
 
 #. type: Labeled list
 #: en/git-am.txt:69
@@ -7160,6 +7254,8 @@ msgstr "--reject"
 #, priority:100
 msgid "These flags are passed to the 'git apply' (see linkgit:git-apply[1])  program that applies the patch."
 msgstr ""
+"Ces drapeaux sont transmis au programme 'git apply' (voir linkgit:git-"
+"apply[1]) qui applique le patch."
 
 #. type: Labeled list
 #: en/git-am.txt:120
@@ -7172,6 +7268,11 @@ msgstr "--patch-format"
 #, priority:100
 msgid "By default the command will try to detect the patch format automatically. This option allows the user to bypass the automatic detection and specify the patch format that the patch(es) should be interpreted as. Valid formats are mbox, mboxrd, stgit, stgit-series and hg."
 msgstr ""
+"Par défaut, la commande tentera de détecter automatiquement le format de la "
+"rustine. Cette option permet à l'utilisateur de contourner la détection "
+"automatique et de spécifier le format de rustine comme lequel la(les) "
+"rustine(s) doit/doivent être interprétée(s). Les formats valides sont mbox, "
+"mboxrd, stgit, stgit-series et hg."
 
 #. type: Plain text
 #: en/git-am.txt:130
@@ -7190,6 +7291,10 @@ msgstr "--committer-date-is-author-date"
 #, priority:100
 msgid "By default the command records the date from the e-mail message as the commit author date, and uses the time of commit creation as the committer date. This allows the user to lie about the committer date by using the same value as the author date."
 msgstr ""
+"Par défaut, la commande enregistre la date du message électronique comme "
+"date de l'auteur du commit, et utilise l'heure de création du commit comme "
+"date du validateur. Cela permet à l'utilisateur de mentir sur la date du "
+"validateur en utilisant la même valeur que la date de l'auteur."
 
 #. type: Labeled list
 #: en/git-am.txt:138 en/git-rebase.txt:490
@@ -7202,6 +7307,10 @@ msgstr "--ignore-date"
 #, priority:100
 msgid "By default the command records the date from the e-mail message as the commit author date, and uses the time of commit creation as the committer date. This allows the user to lie about the author date by using the same value as the committer date."
 msgstr ""
+"Par défaut, la commande enregistre la date du message électronique comme "
+"date de l'auteur du commit, et utilise l'heure de création du commit comme "
+"date du committeur. Cela permet à l'utilisateur de mentir sur la date de "
+"l'auteur en utilisant la même valeur que la date du validateur."
 
 #. type: Labeled list
 #: en/git-am.txt:145 en/git-rebase.txt:336 en/sequencer.txt:6
@@ -7214,6 +7323,8 @@ msgstr "--skip"
 #, priority:100
 msgid "Skip the current patch.  This is only meaningful when restarting an aborted patch."
 msgstr ""
+"Sauter la rustine actuelle.  Cela n'a de sens que si l'on redémarre une "
+"rustine avortée."
 
 #. type: Labeled list
 #: en/git-am.txt:149 en/git-cherry-pick.txt:110 en/git-commit-tree.txt:62 en/git-commit.txt:349 en/git-rebase.txt:388 en/git-revert.txt:91 en/merge-options.txt:62
@@ -7262,18 +7373,27 @@ msgstr "--resolved"
 #, priority:100
 msgid "After a patch failure (e.g. attempting to apply conflicting patch), the user has applied it by hand and the index file stores the result of the application.  Make a commit using the authorship and commit log extracted from the e-mail message and the current index file, and continue."
 msgstr ""
+"Après l'échec d'une rustine (par exemple, en cas de tentative d'application "
+"d'une rustine conflictuelle), l'utilisateur l'a appliquée à la main et le "
+"fichier d'index stocke le résultat de l'application.  Faire un commit en "
+"utilisant le journal des auteurs et du commit extrait du message "
+"électronique et du fichier d'index actuel, et continuer."
 
 #. type: Labeled list
 #: en/git-am.txt:168
 #, no-wrap, priority:100
 msgid "--resolvemsg=<msg>"
-msgstr ""
+msgstr "--resolvemsg=<msg>"
 
 #. type: Plain text
 #: en/git-am.txt:174
 #, priority:100
 msgid "When a patch failure occurs, <msg> will be printed to the screen before exiting.  This overrides the standard message informing you to use `--continue` or `--skip` to handle the failure.  This is solely for internal use between 'git rebase' and 'git am'."
 msgstr ""
+"En cas de défaillance d'un patch, <msg> sera imprimé à l'écran avant de "
+"sortir.  Ceci remplace le message standard vous informant d'utiliser "
+"`--continue` ou `--skip` pour gérer l'échec.  Ceci est uniquement pour un "
+"usage interne entre 'git rebase' et 'git am'."
 
 #. type: Labeled list
 #: en/git-am.txt:175 en/git-merge.txt:95 en/git-notes.txt:201 en/git-rebase.txt:250 en/sequencer.txt:15
@@ -7298,6 +7418,7 @@ msgstr "--quit"
 #, priority:100
 msgid "Abort the patching operation but keep HEAD and the index untouched."
 msgstr ""
+"Abandonner l'opération de rustinage mais garder HEAD et l'index intacts."
 
 #. type: Labeled list
 #: en/git-am.txt:182
@@ -7310,6 +7431,9 @@ msgstr "--show-current-patch[=(diff|raw)]"
 #, priority:100
 msgid "Show the message at which `git am` has stopped due to conflicts.  If `raw` is specified, show the raw contents of the e-mail message; if `diff`, show the diff portion only.  Defaults to `raw`."
 msgstr ""
+"Montrer le message auquel `git am` s'est arrêté en raison de conflits.  Si "
+"`raw` est spécifié, afficher le contenu brut du message électronique ; si "
+"`diff`, afficher uniquement la partie diff.  La valeur par défaut est `raw`."
 
 #. type: Title -
 #: en/git-am.txt:189 en/git-commit.txt:501 en/git-format-patch.txt:386 en/git-fsck.txt:113 en/git-log.txt:226 en/git-merge-base.txt:76 en/git-notes.txt:218 en/git-remote.txt:200 en/git-rerere.txt:77 en/git-reset.txt:378 en/git-show.txt:81 en/git-stash.txt:245 en/git-tag.txt:231
@@ -7322,12 +7446,20 @@ msgstr "DISCUSSION"
 #, priority:100
 msgid "The commit author name is taken from the \"From: \" line of the message, and commit author date is taken from the \"Date: \" line of the message.  The \"Subject: \" line is used as the title of the commit, after stripping common prefix \"[PATCH <anything>]\".  The \"Subject: \" line is supposed to concisely describe what the commit is about in one line of text."
 msgstr ""
+"Le nom de l'auteur du commit est tiré du \"From: \"et la date de l'auteur du "
+"commit est tirée de la ligne \"Date:\" du message.  Le \"Subject:\" est "
+"utilisé comme titre du commit, après avoir supprimé le préfixe commun \"["
+"PATCH <quelque chose>]\".  La ligne \"Subject:\"est censée décrire de "
+"manière concise l'objet du commit en une seule ligne de texte."
 
 #. type: Plain text
 #: en/git-am.txt:200
 #, priority:100
 msgid "\"From: \", \"Date: \", and \"Subject: \" lines starting the body override the respective commit author name and title values taken from the headers."
 msgstr ""
+"Les lignes «From:», «Date:» et «Subject:» commençant le corps remplacent le "
+"nom de l'auteur de la validation et les valeurs de titre respectives tirées "
+"des en-têtes."
 
 #. type: Plain text
 #: en/git-am.txt:205
