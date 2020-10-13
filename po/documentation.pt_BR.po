@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-10-09 18:58+0200\n"
-"PO-Revision-Date: 2020-10-11 09:26+0000\n"
+"PO-Revision-Date: 2020-10-14 05:26+0000\n"
 "Last-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
@@ -7369,6 +7369,9 @@ msgstr "--cached"
 #, priority:100
 msgid "Apply the patch to just the index, without touching the working tree. If `--check` is in effect, merely check that it would apply cleanly to the index entry."
 msgstr ""
+"Aplica o patch apenas no índice sem afetar a árvore de trabalho. Caso a "
+"opção `--check` esteja em vigor, basta verificar se ele se aplicaria de "
+"forma limpa à entrada do índice."
 
 #. type: Plain text
 #: en/git-apply.txt:84
@@ -8847,7 +8850,7 @@ msgstr "Caso o repositório seja simples, assume-se a opção `--no-checkout`."
 #: en/git-bisect.txt:371
 #, priority:100
 msgid "Follow only the first parent commit upon seeing a merge commit."
-msgstr ""
+msgstr "Siga apenas o primeiro commit ao ver a mesclagem de um commit."
 
 #. type: Plain text
 #: en/git-bisect.txt:375
@@ -23983,6 +23986,9 @@ msgstr "Os nomes dos `refs` que são capturados, juntamente com os nomes dos obj
 #, priority:220
 msgid "Read refspecs, one per line, from stdin in addition to those provided as arguments. The \"tag <name>\" format is not supported."
 msgstr ""
+"Faz a leitura linha a linha dos refspecs a partir do stdin adicionalmente "
+"aqueles fornecidos pelos argumentos. O formato \"tag <nome>\" não é "
+"compatível."
 
 #. type: Title -
 #: en/git-fetch.txt:59
@@ -32121,12 +32127,20 @@ msgstr "FORMATAÇÃO DIFF"
 #, priority:260
 msgid "By default, `git log` does not generate any diff output. The options below can be used to show the changes made by each commit."
 msgstr ""
+"Por predefinição, o comando `git log` não gera qualquer diff. As opções "
+"abaixo podem ser usadas para exibir as alterações feitas por cada commit."
 
 #. type: Plain text
 #: en/git-log.txt:129
 #, priority:260
 msgid "Note that unless one of `-c`, `--cc`, or `-m` is given, merge commits will never show a diff, even if a diff format like `--patch` is selected, nor will they match search options like `-S`. The exception is when `--first-parent` is in use, in which merges are treated like normal single-parent commits (this can be overridden by providing a combined-diff option or with `--no-diff-merges`)."
 msgstr ""
+"Observe que a menos que uma das opções `-c`, `--cc` ou `-m` sejam usadas, os "
+"commits mesclados nunca mostrarão um diff, mesmo que um formato diff como "
+"`--patch` seja escolhido, sequer eles corresponderão às opções de pesquisa "
+"como `-S`. A exceção é quando a opção `--first-parent` estiver em uso, onde "
+"as mesclagens são tratadas como simples commits normais (isso pode ser "
+"substituído usando uma opção combinada com diff ou com `--no-diff-merges`)."
 
 #. type: Plain text
 #: en/git-log.txt:136
@@ -32163,6 +32177,8 @@ msgstr "--no-diff-merges"
 #, priority:260
 msgid "Disable output of diffs for merge commits (default). Useful to override `-m`, `-c`, or `--cc`."
 msgstr ""
+"Desativa a saída dos diffs para a mesclagem dos commits (padrão). Útil para "
+"substituir '-m', '-c', ou '--cc'."
 
 #. type: Labeled list
 #: en/git-log.txt:170
@@ -33314,10 +33330,14 @@ msgstr "Copie o cabeçalho da ID da mensagem no final da mensagem do commit.  É
 
 #. type: Plain text
 #: en/git-mailinfo.txt:81
-#, fuzzy, priority:100
-#| msgid "Remove everything in body before a scissors line.  A line that mainly consists of scissors (either \">8\" or \"8<\") and perforation (dash \"-\") marks is called a scissors line, and is used to request the reader to cut the message at that line.  If such a line appears in the body of the message before the patch, everything before it (including the scissors line itself) is ignored when this option is used."
+#, priority:100
 msgid "Remove everything in body before a scissors line (e.g. \"-- >8 --\").  The line represents scissors and perforation marks, and is used to request the reader to cut the message at that line.  If that line appears in the body of the message before the patch, everything before it (including the scissors line itself) is ignored when this option is used."
-msgstr "Remova tudo no corpo antes das marcações.  Uma linha que consiste principalmente das marcas (\">8\" ou \"8<\") e a perfuração (traço \"-\") é chamada de linha de grafo traçado, é utilizada para solicitar que o leitor corte a mensagem nesta linha.  Caso esta linha apareça no corpo da mensagem antes do patch, tudo o que estiver à frente (incluindo a própria linha) será ignorado quando essa opção for utilizada."
+msgstr ""
+"Remove tudo do corpo da mensagem antes das marcações  (por exemplo \"-- >8 --"
+"\").  A linha representa cortes e marcas de perfuração utilizada para pedir "
+"ao leitor que corte a mensagem bem nessa linha.  Caso esta linha apareça no "
+"corpo da mensagem antes do patch, tudo o que estiver à frente (incluindo a "
+"própria linha) será ignorado quando essa opção for utilizada."
 
 #. type: Plain text
 #: en/git-mailinfo.txt:86
@@ -35613,10 +35633,18 @@ msgstr "Quando mesclar as anotações, seja loquaz.  Quando remover as anotaçõ
 
 #. type: Plain text
 #: en/git-notes.txt:229
-#, fuzzy, ignore-ellipsis, priority:100
-#| msgid "Commit notes are blobs containing extra information about an object (usually information to supplement a commit's message).  These blobs are taken from notes refs.  A notes ref is usually a branch which contains \"files\" whose paths are the object names for the objects they describe, with some directory separators included for performance reasons footnote:[Permitted pathnames have the form 'ab'`/`'cd'`/`'ef'`/`'...'`/`'abcdef...': a sequence of directory names of two hexadecimal digits each followed by a filename with the rest of the object ID.]."
+#, ignore-ellipsis, priority:100
 msgid "Commit notes are blobs containing extra information about an object (usually information to supplement a commit's message).  These blobs are taken from notes refs.  A notes ref is usually a branch which contains \"files\" whose paths are the object names for the objects they describe, with some directory separators included for performance reasons footnote:[Permitted pathnames have the form 'bf'`/`'fe'`/`'30'`/`'...'`/`'680d5a...': a sequence of directory names of two hexadecimal digits each followed by a filename with the rest of the object ID.]."
-msgstr "As anotações dos commits são bolhas que contêm informações extras sobre um objeto (geralmente informações para complementar a mensagem de um commit).  Estas bolhas são retiradas das anotações refs.  Uma anotação \"ref\" geralmente é um ramo que contém \"arquivos\" cujos caminhos são os nomes dos objetos que o descrevem, com alguns separadores do diretório incluídos por motivos de desempenho, nota de rodapé: [Os nomes dos caminhos permitidos têm o formato 'ab'`/`'cd'`/`'ef'`/`'...'`/`'abcdef...': uma sequência com os nomes dos diretórios com dois dígitos hexadecimais cada um, seguido por um nome do arquivo com o resto do ID do objeto.]."
+msgstr ""
+"As anotações dos commits são bolhas que contêm informações extras sobre um "
+"objeto (geralmente informações para complementar a mensagem de um commit).  "
+"Estas bolhas são retiradas das anotações refs.  Uma anotação \"ref\" "
+"geralmente é um ramo que contém \"arquivos\" cujos caminhos são os nomes dos "
+"objetos que o descrevem, com alguns separadores do diretório incluídos por "
+"motivos de desempenho, nota de rodapé: [Os nomes dos caminhos permitidos têm "
+"o formato `'bf'`/`'fe'`/`'30'`/`'...'`/`'680d5a...'`: uma sequência com os "
+"nomes dos diretórios com dois dígitos hexadecimais cada um, seguido por um "
+"nome do arquivo com o resto do ID do objeto.]."
 
 #. type: Plain text
 #: en/git-notes.txt:236
@@ -37776,24 +37804,33 @@ msgstr "Uma opção de depuração para ajudar no desenvolvimento futuro do \"cl
 
 #. type: Plain text
 #: en/git-pack-objects.txt:276
-#, fuzzy, priority:100
-#| msgid "The form '--missing=error' requests that pack-objects stop with an error if a missing object is encountered.  This is the default action."
+#, priority:100
 msgid "The form '--missing=error' requests that pack-objects stop with an error if a missing object is encountered.  If the repository is a partial clone, an attempt to fetch missing objects will be made before declaring them missing.  This is the default action."
-msgstr "A opção `--missing=error` solicita que os objetos do pacote parem com um erro caso um objeto perdido seja encontrado.  Esta é a ação predefinida."
+msgstr ""
+"A opção `--missing=error` solicita que os objetos do pacote parem com um "
+"erro caso um objeto perdido seja encontrado.  Caso o repositório seja um "
+"clone parcial, uma tentativa será feita para buscar os objetos desaparecidos "
+"antes de declará-los como desaparecidos.  Esta é a ação predefinida."
 
 #. type: Plain text
 #: en/git-pack-objects.txt:280
-#, fuzzy, priority:100
-#| msgid "The form '--missing=allow-any' will allow object traversal to continue if a missing object is encountered.  Missing objects will silently be omitted from the results."
+#, priority:100
 msgid "The form '--missing=allow-any' will allow object traversal to continue if a missing object is encountered.  No fetch of a missing object will occur.  Missing objects will silently be omitted from the results."
-msgstr "O formulário '--missing=allow-any' permitirá que a travessia do objeto continue caso um objeto ausente seja encontrado.  Os objetos ausentes serão omitidos silenciosamente dos resultados."
+msgstr ""
+"O formulário '--missing=allow-any' permitirá que a travessia do objeto "
+"continue caso um objeto ausente seja encontrado.  Não ocorrerá nenhuma busca "
+"em um objeto ausente.  Os objetos ausentes serão omitidos silenciosamente "
+"dos resultados."
 
 #. type: Plain text
 #: en/git-pack-objects.txt:285
-#, fuzzy, priority:100
-#| msgid "The form '--missing=allow-promisor' is like 'allow-any', but will only allow object traversal to continue for EXPECTED promisor missing objects.  Unexpected missing object will raise an error."
+#, priority:100
 msgid "The form '--missing=allow-promisor' is like 'allow-any', but will only allow object traversal to continue for EXPECTED promisor missing objects.  No fetch of a missing object will occur.  An unexpected missing object will raise an error."
-msgstr "A opção '--missing=allow-promisor' é como `allow-any`, mas só vai permitir que a travessia de objetos continue para os objetos prometedores PREVISTOS.  Os objetos perdidos e inesperados provocarão um erro."
+msgstr ""
+"A opção '--missing=allow-promisor' é como um `allow-any`, porém só será "
+"permitido que a travessia dos objetos continue para os objetos ausentes que "
+"forem PREVISTOS. Não ocorrerá nenhuma busca em um objeto ausente. Um objeto "
+"que se perdeu de forma inesperada irão provocar um erro."
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:286 en/rev-list-options.txt:941
@@ -41129,10 +41166,11 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-rebase.txt:482
-#, fuzzy, priority:100
-#| msgid "These flags are passed to the 'git apply' program (see linkgit:git-apply[1]) that applies the patch.  Implies --apply."
+#, priority:100
 msgid "This flag is passed to the 'git apply' program (see linkgit:git-apply[1]) that applies the patch.  Implies --apply."
-msgstr "Estas opções são repassados para o comando 'git apply' que aplica o patch (consulte  linkgit:git-apply[1]).  Implica no uso da opção --apply."
+msgstr ""
+"Esta opção é repassada para o comando 'git apply' que aplica o patch ("
+"consulte  linkgit:git-apply[1]).  Implica no uso da opção --apply."
 
 #. type: Plain text
 #: en/git-rebase.txt:489
@@ -41445,24 +41483,21 @@ msgstr "--preserve-merges e --empty="
 
 #. type: Plain text
 #: en/git-rebase.txt:659
-#, fuzzy, priority:100
-#| msgid "--preserve-merges and --interactive"
+#, priority:100
 msgid "--preserve-merges and --ignore-whitespace"
-msgstr "--preserve-merges e --interactive"
+msgstr "--preserve-merges e --ignore-whitespace"
 
 #. type: Plain text
 #: en/git-rebase.txt:660
-#, fuzzy, priority:100
-#| msgid "--committer-date-is-author-date"
+#, priority:100
 msgid "--preserve-merges and --committer-date-is-author-date"
-msgstr "--committer-date-is-author-date"
+msgstr "--preserve-merges e --committer-date-is-author-date"
 
 #. type: Plain text
 #: en/git-rebase.txt:661
-#, fuzzy, priority:100
-#| msgid "--preserve-merges and --interactive"
+#, priority:100
 msgid "--preserve-merges and --ignore-date"
-msgstr "--preserve-merges e --interactive"
+msgstr "--preserve-merges e --ignore-date"
 
 #. type: Plain text
 #: en/git-rebase.txt:662
@@ -49025,30 +49060,43 @@ msgstr "--group=<tipo>"
 #, priority:260
 msgid "Group commits based on `<type>`. If no `--group` option is specified, the default is `author`. `<type>` is one of:"
 msgstr ""
+"Grupo dos commits com base no `<tipo>`. Caso nenhuma opção `--group` seja "
+"usada a predefinição é `author`. `<tipo>` é um dos:"
 
 #. type: Plain text
 #: en/git-shortlog.txt:56
 #, priority:260
 msgid "`author`, commits are grouped by author"
-msgstr ""
+msgstr "`author`, os commits são agrupados pelo autor"
 
 #. type: Plain text
 #: en/git-shortlog.txt:57
 #, priority:260
 msgid "`committer`, commits are grouped by committer (the same as `-c`)"
 msgstr ""
+"`committer`, os commits são agrupados por aquele que faz os commits (o mesmo "
+"que `-c`)"
 
 #. type: Plain text
 #: en/git-shortlog.txt:62
 #, priority:260
 msgid "`trailer:<field>`, the `<field>` is interpreted as a case-insensitive commit message trailer (see linkgit:git-interpret-trailers[1]). For example, if your project uses `Reviewed-by` trailers, you might want to see who has been reviewing with `git shortlog -ns --group=trailer:reviewed-by`."
 msgstr ""
+"`trailer:<campo>`, o `<campo>` é interpretado como um trecho da mensagem do "
+"commit indiferente se for maiúsculas ou minúsculas (consulte linkgit:git-"
+"interpret-trailers[1]). Por exemplo, caso o seu projeto use trechos `"
+"Revisados por` (`Reviewed-by`), é possível ver quem tem feito a revisão "
+"através do comando `git shortlog -ns --group=trailer:reviewed-by`."
 
 #. type: Plain text
 #: en/git-shortlog.txt:67
 #, priority:260
 msgid "Note that commits that do not include the trailer will not be counted.  Likewise, commits with multiple trailers (e.g., multiple signoffs) may be counted more than once (but only once per unique trailer value in that commit)."
 msgstr ""
+"Observe que os commits não serão contados caso não incluam os trechos.  Da "
+"mesma maneira que os commits com vários trechos (por exemplo, diversos "
+"signoffs) podem ser contados mais de uma vez (porém apenas uma vez com o "
+"valor de um trecho único naquele commit)."
 
 #. type: Plain text
 #: en/git-shortlog.txt:72
@@ -49072,7 +49120,7 @@ msgstr "--committer"
 #: en/git-shortlog.txt:82
 #, priority:260
 msgid "This is an alias for `--group=committer`."
-msgstr ""
+msgstr "É um apelido para `--group=committer`."
 
 #. type: Labeled list
 #: en/git-shortlog.txt:83
@@ -55771,10 +55819,9 @@ msgstr "Estes são comandos auxiliares internos usados por outros comandos; os u
 
 #. type: Title -
 #: en/git.txt:308
-#, fuzzy, no-wrap, priority:100
-#| msgid "--guides"
+#, no-wrap, priority:100
 msgid "Guides"
-msgstr "--guides"
+msgstr "Guias"
 
 #. type: Plain text
 #: en/git.txt:311
@@ -56122,10 +56169,14 @@ msgstr "`GIT_DEFAULT_HASH`"
 
 #. type: Plain text
 #: en/git.txt:509
-#, fuzzy, priority:100
-#| msgid "If this variable is set, the default hash algorithm for new repositories will be set to this value. This value is currently ignored when cloning; the setting of the remote repository is used instead. The default is \"sha1\"."
+#, priority:100
 msgid "If this variable is set, the default hash algorithm for new repositories will be set to this value. This value is currently ignored when cloning; the setting of the remote repository is used instead. The default is \"sha1\". THIS VARIABLE IS EXPERIMENTAL! See `--object-format` in linkgit:git-init[1]."
-msgstr "Caso esta variável esteja definida, o algoritmo hash predefinido para os novos repositórios será definido com este valor. Este valor é atualmente ignorado durante a clonagem; em vez disso, a configuração do repositório remoto é utilizada. O valor predefinido é `sha1`."
+msgstr ""
+"Caso esta variável esteja definida, o algoritmo hash predefinido para os "
+"novos repositórios será definido com este valor. Este valor é atualmente "
+"ignorado durante a clonagem; em vez disso, a configuração do repositório "
+"remoto é utilizada. O valor predefinido é `sha1`. ESTA VARIÁVEL É "
+"EXPERIMENTAL! Consulte `--object-format` in linkgit:git-init[1]."
 
 #. type: Title ~
 #: en/git.txt:511
@@ -56243,10 +56294,13 @@ msgstr "`GIT_EXTERNAL_DIFF`"
 
 #. type: Plain text
 #: en/git.txt:558
-#, fuzzy, priority:100
-#| msgid "When the environment variable `GIT_EXTERNAL_DIFF` is set, the program named by it is called, instead of the diff invocation described above.  For a path that is added, removed, or modified, `GIT_EXTERNAL_DIFF` is called with 7 parameters:"
+#, priority:100
 msgid "When the environment variable `GIT_EXTERNAL_DIFF` is set, the program named by it is called to generate diffs, and Git does not use its builtin diff machinery.  For a path that is added, removed, or modified, `GIT_EXTERNAL_DIFF` is called with 7 parameters:"
-msgstr "Quando a variável de ambiente `GIT_EXTERNAL_DIFF` é configurada, o programa informado nele é chamado, em vez do \"diff\" descrito acima.  Para um caminho que é adicionado, removido ou modificado, a variável `GIT_EXTERNAL_DIFF` é chamado com 7 parâmetros:"
+msgstr ""
+"Quando a variável de ambiente `GIT_EXTERNAL_DIFF` é configurada, o programa "
+"informado nele é chamado para gerar os diffs, o Git não utiliza o seu "
+"mecanismo diff interno .  Para um caminho que é adicionado, removido ou "
+"modificado, a variável `GIT_EXTERNAL_DIFF` é chamado com 7 parâmetros:"
 
 #. type: Plain text
 #: en/git.txt:560
@@ -56626,10 +56680,12 @@ msgstr "`GIT_TRACE_REFS`"
 
 #. type: Plain text
 #: en/git.txt:728
-#, fuzzy, priority:100
-#| msgid "Enables trace messages for the filesystem monitor extension.  See `GIT_TRACE` for available trace output options."
+#, priority:100
 msgid "Enables trace messages for operations on the ref database.  See `GIT_TRACE` for available trace output options."
-msgstr "Ativa as mensagens de rastreamento para a extensão do monitor do sistema de arquivos.  Consulte `GIT_TRACE` para conhecer opções de saída de rastreio disponíveis."
+msgstr ""
+"Ativa as mensagens de rastreamento para a operação no banco de dados do "
+"ref.  Consulte `GIT_TRACE` para conhecer opções de saída de rastreio "
+"disponíveis."
 
 #. type: Labeled list
 #: en/git.txt:729
@@ -58364,10 +58420,16 @@ msgstr "ATUALIZAÇÕES DOS REGISTROS DOS EVENTOS"
 
 #. type: Plain text
 #: en/git-update-ref.txt:158
-#, fuzzy, priority:100
-#| msgid "If config parameter \"core.logAllRefUpdates\" is true and the ref is one under \"refs/heads/\", \"refs/remotes/\", \"refs/notes/\", or the symbolic ref HEAD; or the file \"$GIT_DIR/logs/<ref>\" exists then `git update-ref` will append a line to the log file \"$GIT_DIR/logs/<ref>\" (dereferencing all symbolic refs before creating the log name) describing the change in ref value.  Log lines are formatted as:"
+#, priority:100
 msgid "If config parameter \"core.logAllRefUpdates\" is true and the ref is one under \"refs/heads/\", \"refs/remotes/\", \"refs/notes/\", or a pseudoref like HEAD or ORIG_HEAD; or the file \"$GIT_DIR/logs/<ref>\" exists then `git update-ref` will append a line to the log file \"$GIT_DIR/logs/<ref>\" (dereferencing all symbolic refs before creating the log name) describing the change in ref value.  Log lines are formatted as:"
-msgstr "Caso o parâmetro de configuração \"core.logAllRefUpdates\" seja verdadeiro e a \"ref\" for uma no \"refs/heads/\", \"refs/remotes/\", \"refs/notes/\" ou o simbólico \"ref\" `HEAD`; ou caso o arquivo `$GIT_DIR/logs/<ref>` existir, o comando `git update-ref` anexará uma linha ao arquivo do registor log `$GIT_DIR/logs/<ref>` (removendo a referência de todas as referências simbólicas antes de criar o nome do registro log) descrevendo a alteração no valor da ref.  As linhas do registro log são formatadas como:"
+msgstr ""
+"Caso o parâmetro de configuração \"core.logAllRefUpdates\" seja verdadeiro e "
+"a \"ref\" for uma no \"refs/heads/\", \"refs/remotes/\", \"refs/notes/\" ou "
+"um pseudo ref como `HEAD` ou `ORIG HEAD`; ou caso o arquivo `$GIT_DIR/logs/"
+"<ref>` existir, o comando `git update-ref` anexará uma linha ao arquivo do "
+"registor log `$GIT_DIR/logs/<ref>` (removendo a referência de todas as "
+"referências simbólicas antes de criar o nome do registro log) descrevendo a "
+"alteração no valor da ref.  As linhas do registro log são formatadas como:"
 
 #. type: Plain text
 #: en/git-update-ref.txt:160
@@ -59435,6 +59497,8 @@ msgstr "repair [<caminho>...]"
 #, priority:240
 msgid "Repair working tree administrative files, if possible, if they have become corrupted or outdated due to external factors."
 msgstr ""
+"Faz o reparo dos arquivos administrativos da árvore de trabalho caso tenham "
+"se corrompido ou tenham se desatualizado devido a fatores externos."
 
 #. type: Plain text
 #: en/git-worktree.txt:138
@@ -64181,10 +64245,11 @@ msgstr "Para estes comandos, defina uma única revisão utilizando a notação d
 
 #. type: Plain text
 #: en/revisions.txt:259
-#, fuzzy, priority:100
-#| msgid "This option may be specified more than once; if so, Git will report commits reachable from any of the given commits."
+#, priority:100
 msgid "Specifying several revisions means the set of commits reachable from any of the given commits."
-msgstr "Esta opção pode ser utilizada mais de uma vez; Se assim for, o Git irá reportar os commits de qualquer um dos commits informados."
+msgstr ""
+"Ao especificar várias revisões significa que o conjunto dos commits "
+"acessíveis a partir de qualquer um dos commits informados."
 
 #. type: Plain text
 #: en/revisions.txt:262
