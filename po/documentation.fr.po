@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-10-26 22:55+0100\n"
-"PO-Revision-Date: 2020-11-01 23:26+0000\n"
+"PO-Revision-Date: 2020-11-08 00:45+0000\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.3.2-dev\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:675 en/git-instaweb.txt:45 en/git-mailinfo.txt:47 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -7300,6 +7300,8 @@ msgstr "--stat"
 #, priority:100
 msgid "Instead of applying the patch, output diffstat for the input.  Turns off \"apply\"."
 msgstr ""
+"Au lieu d'appliquer la rustine, afficher le diffstat de l'entrée.  "
+"Désactiver \"appliquer\"."
 
 #. type: Plain text
 #: en/git-apply.txt:51
@@ -7312,12 +7314,18 @@ msgstr "Similaire à `--stat`, mais afficher le nombre de lignes ajoutées ou su
 #, priority:100
 msgid "Instead of applying the patch, output a condensed summary of information obtained from git diff extended headers, such as creations, renames and mode changes.  Turns off \"apply\"."
 msgstr ""
+"Au lieu d'appliquer la rustine, produire un résumé condensé des informations "
+"obtenues à partir des en-têtes étendus de git diff, tels que les créations, "
+"les renommages et les changements de mode.  Désactive \"apply\"."
 
 #. type: Plain text
 #: en/git-apply.txt:62
 #, priority:100
 msgid "Instead of applying the patch, see if the patch is applicable to the current working tree and/or the index file and detects errors.  Turns off \"apply\"."
 msgstr ""
+"Au lieu d'appliquer la rustine, voir si la rustine est applicable à l'arbre "
+"de travail actuel et/ou au fichier d'index et détecte les erreurs.  "
+"Désactive \"apply\"."
 
 #. type: Labeled list
 #: en/git-apply.txt:63 en/git-checkout-index.txt:26 en/git-stash.txt:168
@@ -7330,6 +7338,14 @@ msgstr "--index"
 #, priority:100
 msgid "Apply the patch to both the index and the working tree (or merely check that it would apply cleanly to both if `--check` is in effect). Note that `--index` expects index entries and working tree copies for relevant paths to be identical (their contents and metadata such as file mode must match), and will raise an error if they are not, even if the patch would apply cleanly to both the index and the working tree in isolation."
 msgstr ""
+"Appliquer la rustine à la fois à l'index et à l'arbre de travail (ou "
+"vérifier simplement qu'il s'appliquerait proprement aux deux si `--check` "
+"est en vigueur). Notez que `--index` s'attend à ce que les entrées de "
+"l'index et les copies de l'arbre de travail pour les chemins pertinents "
+"soient identiques (leur contenu et leurs métadonnées telles que le mode de "
+"fichier doivent correspondre), et qu'il générera une erreur si ce n'est pas "
+"le cas, même si la rustine s'applique proprement à l'index et à l'arbre de "
+"travail de manière isolée."
 
 #. type: Labeled list
 #: en/git-apply.txt:72 en/git-check-attr.txt:27 en/git-diff-index.txt:29 en/git-grep.txt:75 en/git-ls-files.txt:36 en/git-rm.txt:65 en/git-submodule.txt:302
@@ -7342,18 +7358,34 @@ msgstr "--cached"
 #, priority:100
 msgid "Apply the patch to just the index, without touching the working tree. If `--check` is in effect, merely check that it would apply cleanly to the index entry."
 msgstr ""
+"Appliquer la rustine uniquement sur l'index, sans toucher l'arbre de "
+"travail. Si la fonction `--check` est activée, vérifier simplement qu'elle "
+"s'applique correctement à l'entrée de l'index."
 
 #. type: Plain text
 #: en/git-apply.txt:84
 #, priority:100
 msgid "When applying the patch only to the working tree, mark new files to be added to the index later (see `--intent-to-add` option in linkgit:git-add[1]). This option is ignored unless running in a Git repository and `--index` is not specified.  Note that `--index` could be implied by other options such as `--cached` or `--3way`."
 msgstr ""
+"Lorsque de l'application de la rustine uniquement à l'arbre de travail, "
+"marquer les nouveaux fichiers à ajouter à l'index plus tard (voir l'option "
+"`--intent-to-add` dans linkgit:git-add[1]). Cette option est ignorée sauf si "
+"elle est exécutée dans un dépôt Git et que `--index` n'est pas spécifié.  "
+"Notez que `--index` peut être implicite par d'autres options telles que "
+"`--cached` ou `--3way`."
 
 #. type: Plain text
 #: en/git-apply.txt:93
 #, priority:100
 msgid "When the patch does not apply cleanly, fall back on 3-way merge if the patch records the identity of blobs it is supposed to apply to, and we have those blobs available locally, possibly leaving the conflict markers in the files in the working tree for the user to resolve.  This option implies the `--index` option, and is incompatible with the `--reject` and the `--cached` options."
 msgstr ""
+"Lorsque la rustine ne s'applique pas proprement, on a recours à la fusion à "
+"trois points si la rustine enregistre l'identité des blobs auxquels elle est "
+"censée s'appliquer, et que ces blobs sont disponibles localement, laissant "
+"éventuellement les marqueurs de conflit dans les fichiers de l'arbre de "
+"travail pour que l'utilisateur puisse les résoudre.  Cette option implique "
+"l'option `--index`, et est incompatible avec les options `--reject` et "
+"`--cached`."
 
 #. type: Labeled list
 #: en/git-apply.txt:94
@@ -7366,12 +7398,19 @@ msgstr "--build-fake-ancestor=<fichier>"
 #, priority:100
 msgid "Newer 'git diff' output has embedded 'index information' for each blob to help identify the original version that the patch applies to.  When this flag is given, and if the original versions of the blobs are available locally, builds a temporary index containing those blobs."
 msgstr ""
+"La nouvelle sortie 'git diff' contient des 'informations d'index' pour "
+"chaque blob afin d'identifier la version originale à laquelle la rustine "
+"s'applique.  Lorsque ce drapeau est donné, et si les versions originales des "
+"blobs sont disponibles localement, construire un index temporaire contenant "
+"ces blobs."
 
 #. type: Plain text
 #: en/git-apply.txt:103
 #, priority:100
 msgid "When a pure mode change is encountered (which has no index information), the information is read from the current index instead."
 msgstr ""
+"Lorsqu'un changement de mode pur est rencontré (qui n'a pas d'information "
+"d'index), l'information est lue à partir de l'index actuel à la place."
 
 #. type: Labeled list
 #: en/git-apply.txt:105 en/rev-list-options.txt:814
