@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2020-10-26 22:55+0100\n"
-"PO-Revision-Date: 2020-11-08 00:45+0000\n"
+"PO-Revision-Date: 2020-11-09 22:28+0000\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.4-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:675 en/git-instaweb.txt:45 en/git-mailinfo.txt:47 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -7429,24 +7429,39 @@ msgstr "Appliquer la rustine à rebours."
 #, priority:100
 msgid "For atomicity, 'git apply' by default fails the whole patch and does not touch the working tree when some of the hunks do not apply.  This option makes it apply the parts of the patch that are applicable, and leave the rejected hunks in corresponding *.rej files."
 msgstr ""
+"Pour l'atomicité, 'git apply' par défaut ne fonctionne pas sur l'ensemble de "
+"la rustine et ne touche pas l'arbre de travail lorsque certaines des "
+"sections ne s'appliquent pas.  Cette option permet d'appliquer les parties "
+"de la rustine qui sont applicables et de laisser les sections rejetées dans "
+"les fichiers *.rej correspondants."
 
 #. type: Plain text
 #: en/git-apply.txt:118
 #, priority:100
 msgid "When `--numstat` has been given, do not munge pathnames, but use a NUL-terminated machine-readable format."
 msgstr ""
+"Lorsque le `--numstat` a été donné, ne pas changer les noms de chemin, mais "
+"utiliser un format lisible par machine et terminé par NUL."
 
 #. type: Plain text
 #: en/git-apply.txt:128
 #, priority:100
 msgid "Remove <n> leading path components (separated by slashes) from traditional diff paths. E.g., with `-p2`, a patch against `a/dir/file` will be applied directly to `file`. The default is 1."
 msgstr ""
+"Supprimer les composants <n> du chemin d'accès principal (séparés par des "
+"barres obliques) des chemins de diff traditionnels. Par exemple, avec `-p2`, "
+"une rustine contre `a/dir/fichier` sera appliquée directement à `fichier`. "
+"La valeur par défaut est 1."
 
 #. type: Plain text
 #: en/git-apply.txt:134
 #, priority:100
 msgid "Ensure at least <n> lines of surrounding context match before and after each change.  When fewer lines of surrounding context exist they all must match.  By default no context is ever ignored."
 msgstr ""
+"S'assurer qu'au moins <n> lignes du contexte environnant correspondent avant "
+"et après chaque modification.  Lorsqu'il y a moins de lignes de contexte "
+"environnant, elles doivent toutes correspondre.  Par défaut, aucun contexte "
+"n'est jamais ignoré."
 
 #. type: Labeled list
 #: en/git-apply.txt:135
@@ -7459,12 +7474,18 @@ msgstr "--unidiff-zero"
 #, priority:100
 msgid "By default, 'git apply' expects that the patch being applied is a unified diff with at least one line of context.  This provides good safety measures, but breaks down when applying a diff generated with `--unified=0`. To bypass these checks use `--unidiff-zero`."
 msgstr ""
+"Par défaut, 'git apply' s'attend à ce que la rustine appliquée soit un diff "
+"unifié avec au moins une ligne de contexte.  Ceci fournit de bonnes mesures "
+"de sécurité, mais s'effondre lorsque l'on applique un diff généré avec "
+"`--unified=0`. Pour contourner ces vérifications, utilisez `--unidiff-zero`."
 
 #. type: Plain text
 #: en/git-apply.txt:144
 #, priority:100
 msgid "Note, for the reasons stated above usage of context-free patches is discouraged."
 msgstr ""
+"Notez que, pour les raisons mentionnées ci-dessus, l'utilisation de rustines "
+"sans contexte est découragée."
 
 #. type: Plain text
 #: en/git-apply.txt:145 en/git-rebase.txt:263 en/git-rebase.txt:632
@@ -7477,6 +7498,10 @@ msgstr "--apply"
 #, priority:100
 msgid "If you use any of the options marked \"Turns off 'apply'\" above, 'git apply' reads and outputs the requested information without actually applying the patch.  Give this flag after those flags to also apply the patch."
 msgstr ""
+"Si vous utilisez l'une des options marquées \"Désactiver 'apply'\" ci-"
+"dessus, 'git apply' lit et produit les informations demandées sans appliquer "
+"la rustine.  Donnez ce drapeau après ces drapeaux pour appliquer également "
+"la rustine."
 
 #. type: Labeled list
 #: en/git-apply.txt:152
@@ -7489,6 +7514,11 @@ msgstr "--no-add"
 #, priority:100
 msgid "When applying a patch, ignore additions made by the patch.  This can be used to extract the common part between two files by first running 'diff' on them and applying the result with this option, which would apply the deletion part but not the addition part."
 msgstr ""
+"Lors de l'application d'une rustine, ignorer les ajouts faits par la "
+"rustine.  Cette option peut être utilisée pour extraire la partie commune "
+"entre deux fichiers en exécutant d'abord 'diff' sur ceux-ci et en appliquant "
+"le résultat avec cette option, ce qui appliquerait la partie de suppression "
+"mais pas la partie d'ajout."
 
 #. type: Labeled list
 #: en/git-apply.txt:159
@@ -7501,12 +7531,16 @@ msgstr "--allow-binary-replacement"
 #, priority:100
 msgid "Historically we did not allow binary patch applied without an explicit permission from the user, and this flag was the way to do so.  Currently we always allow binary patch application, so this is a no-op."
 msgstr ""
+"Historiquement, nous n'autorisions pas l'application de rustines binaires "
+"sans une autorisation explicite de l'utilisateur, et ce drapeau était le "
+"moyen de le faire.  Actuellement, nous autorisons toujours l'application de "
+"rustines binaires, donc c'est un non-op."
 
 #. type: Labeled list
 #: en/git-apply.txt:166
 #, no-wrap, priority:100
 msgid "--exclude=<path-pattern>"
-msgstr ""
+msgstr "--exclude=<motif-de-chemin>"
 
 #. type: Plain text
 #: en/git-apply.txt:170
