@@ -64,7 +64,7 @@ The variable names are case-insensitive, allow only alphanumeric characters
 and `-`, and must start with an alphabetic character.
 
 A line that defines a value can be continued to the next line by
-ending it with a `\`; the backquote and the end-of-line are
+ending it with a `\`; the backslash and the end-of-line are
 stripped.  Leading whitespaces after 'name =', the remainder of the
 line after the first comment character '#' or ';', and trailing
 whitespaces of the line are discarded unless they are enclosed in
@@ -120,8 +120,8 @@ are:
 The .git location may be auto-discovered, or come from `$GIT_DIR`
 environment variable. If the repository is auto discovered via a .git
 file (e.g. from submodules, or a linked worktree), the .git location
-would be the final location where the .git directory is, not where the
-.git file is.
+would be the final location where the .git directory is, not where
+the .git file is.
 +
 The pattern can contain standard globbing wildcards and two additional
 ones, `**/` and `/**`, that can match multiple path components. Please
@@ -240,13 +240,15 @@ boolean::
        When a variable is said to take a boolean value, many
        synonyms are accepted for 'true' and 'false'; these are all
        case-insensitive.
++
+true;;
+  Boolean true literals are `yes`, `on`, `true`,
+  and `1`.  Also, a variable defined without `= <value>`
+  is taken as true.
 
-	true;; Boolean true literals are `yes`, `on`, `true`,
-		and `1`.  Also, a variable defined without `= <value>`
-		is taken as true.
-
-	false;; Boolean false literals are `no`, `off`, `false`,
-		`0` and the empty string.
+false;;
+  Boolean false literals are `no`, `off`, `false`,
+  `0` and the empty string.
 +
 When converting a value to its canonical form using the `--type=bool` type
 specifier, 'git config' will ensure that the output is "true" or
@@ -265,7 +267,7 @@ color::
 The basic colors accepted are `normal`, `black`, `red`, `green`, `yellow`,
 `blue`, `magenta`, `cyan` and `white`.  The first color given is the
 foreground; the second is the background.  All the basic colors except
-`normal` have a bright variant that can be speficied by prefixing the
+`normal` have a bright variant that can be specified by prefixing the
 color with `bright`, like `brightred`.
 +
 Colors may also be given as numbers between 0 and 255; these use ANSI
@@ -333,6 +335,8 @@ include::config/browser.txt[]
 include::config/checkout.txt[]
 
 include::config/clean.txt[]
+
+include::config/clone.txt[]
 
 include::config/color.txt[]
 
