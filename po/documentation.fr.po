@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
-"POT-Creation-Date: 2020-12-16 23:08+0100\n"
-"PO-Revision-Date: 2020-11-16 12:28+0000\n"
+"POT-Creation-Date: 2020-10-26 22:55+0100\n"
+"PO-Revision-Date: 2020-11-30 17:29+0000\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language: fr\n"
@@ -7477,30 +7477,48 @@ msgstr "--exclude=<motif-de-chemin>"
 #, priority:100
 msgid "Don't apply changes to files matching the given path pattern. This can be useful when importing patchsets, where you want to exclude certain files or directories."
 msgstr ""
+"Ne pas appliquer les modifications aux fichiers correspondant au modèle de "
+"chemin donné. Cela peut être utile lors de l'importation d'ensembles de "
+"rustines, lorsque vous souhaitez exclure certains fichiers ou répertoires."
 
 #. type: Labeled list
 #: en/git-apply.txt:171
 #, no-wrap, priority:100
 msgid "--include=<path-pattern>"
-msgstr ""
+msgstr "--include = <modèle-de-chemin>"
 
 #. type: Plain text
 #: en/git-apply.txt:175
 #, priority:100
 msgid "Apply changes to files matching the given path pattern. This can be useful when importing patchsets, where you want to include certain files or directories."
 msgstr ""
+"Appliquer les modifications aux fichiers correspondant au modèle de chemin "
+"donné. Cela peut être utile lors de l'importation d'ensembles de rustines, "
+"lorsque vous souhaitez inclure certains fichiers ou répertoires."
 
 #. type: Plain text
 #: en/git-apply.txt:181
 #, priority:100
 msgid "When `--exclude` and `--include` patterns are used, they are examined in the order they appear on the command line, and the first match determines if a patch to each path is used.  A patch to a path that does not match any include/exclude pattern is used by default if there is no include pattern on the command line, and ignored if there is any include pattern."
 msgstr ""
+"Lorsque des motifs `--exclude` et `--include` sont utilisés, ils sont "
+"examinés dans l'ordre où ils apparaissent sur la ligne de commande, et la "
+"première correspondance détermine si une rustine est utilisée pour chaque "
+"chemin.  Une rustine pour un chemin qui ne correspond à aucun motif d'"
+"inclusion/exclusion est utilisée par défaut s'il n'y a pas de motif "
+"d'inclusion sur la ligne de commande, et ignorée s'il y a un motif "
+"d'inclusion."
 
 #. type: Plain text
 #: en/git-apply.txt:189
 #, priority:100
 msgid "When applying a patch, ignore changes in whitespace in context lines if necessary.  Context lines will preserve their whitespace, and they will not undergo whitespace fixing regardless of the value of the `--whitespace` option. New lines will still be fixed, though."
 msgstr ""
+"Lors de l’application d’une rustine, ignorer les modifications d’espaces "
+"blancs dans les lignes de contexte si nécessaire.  Les lignes contextatives "
+"préserveront leurs espaces blancs, et elles ne subiront pas de correction d’"
+"espaces blancs quelle que soit la valeur de l’option `--whitespace`. Les "
+"nouvelles lignes seront toutefois encore corrigées."
 
 #. type: Labeled list
 #: en/git-apply.txt:190
@@ -7513,48 +7531,70 @@ msgstr "--whitespace=<action>"
 #, priority:100
 msgid "When applying a patch, detect a new or modified line that has whitespace errors.  What are considered whitespace errors is controlled by `core.whitespace` configuration.  By default, trailing whitespaces (including lines that solely consist of whitespaces) and a space character that is immediately followed by a tab character inside the initial indent of the line are considered whitespace errors."
 msgstr ""
+"Lors de l'application d'une rustine, détecter une ligne nouvelle ou modifiée "
+"qui comporte des erreurs d'espacement.  Ce qui est considéré comme des "
+"erreurs d'espacement est contrôlé par la configuration `core.whitespace`.  "
+"Par défaut, les espaces de fin de ligne (y compris les lignes qui ne sont "
+"composées que d'espaces) et un caractère espace qui est immédiatement suivi "
+"d'un caractère de tabulation à l'intérieur de l'indentation initiale de la "
+"ligne sont considérés comme des erreurs d'espacement."
 
 #. type: Plain text
 #: en/git-apply.txt:202
 #, priority:100
 msgid "By default, the command outputs warning messages but applies the patch.  When `git-apply` is used for statistics and not applying a patch, it defaults to `nowarn`."
 msgstr ""
+"Par défaut, la commande émet des messages d'avertissement mais applique la "
+"rustine.  Lorsque `git-apply` est utilisé pour des statistiques et non pour "
+"appliquer une rustine, la valeur par défaut est `nowarn`."
 
 #. type: Plain text
 #: en/git-apply.txt:205
 #, priority:100
 msgid "You can use different `<action>` values to control this behavior:"
 msgstr ""
+"Vous pouvez utiliser différentes valeurs de `<action>` pour contrôler ce "
+"comportement :"
 
 #. type: Plain text
 #: en/git-apply.txt:207
 #, priority:100
 msgid "`nowarn` turns off the trailing whitespace warning."
-msgstr ""
+msgstr "`nowarn` désactive l'alerte d'espace blanc."
 
 #. type: Plain text
 #: en/git-apply.txt:209
 #, priority:100
 msgid "`warn` outputs warnings for a few such errors, but applies the patch as-is (default)."
 msgstr ""
+"`warn` émet des avertissements pour quelques erreurs de ce type, mais "
+"applique la rustine tel quel (par défaut)."
 
 #. type: Plain text
 #: en/git-apply.txt:213
 #, priority:100
 msgid "`fix` outputs warnings for a few such errors, and applies the patch after fixing them (`strip` is a synonym --- the tool used to consider only trailing whitespace characters as errors, and the fix involved 'stripping' them, but modern Gits do more)."
 msgstr ""
+"`fix` émet des avertissements pour quelques erreurs de ce type, et applique "
+"la rustine après les avoir corrigées (`strip` est un synonyme --- l'outil "
+"utilisé pour ne considérer que les caractères d'espacement de fin de ligne "
+"comme des erreurs, et le correctif impliquait de les \"dépouiller\" "
+"(`stripping`), mais les Gits modernes font plus)."
 
 #. type: Plain text
 #: en/git-apply.txt:215
 #, priority:100
 msgid "`error` outputs warnings for a few such errors, and refuses to apply the patch."
 msgstr ""
+"`error` génère des avertissements pour quelques-unes de ces erreurs et "
+"refuse d'appliquer la rustine."
 
 #. type: Plain text
 #: en/git-apply.txt:216
 #, priority:100
 msgid "`error-all` is similar to `error` but shows all errors."
 msgstr ""
+"Le terme `error-all` est similaire à `error` mais montre toutes les erreurs."
 
 #. type: Labeled list
 #: en/git-apply.txt:217
@@ -7567,12 +7607,20 @@ msgstr "--inaccurate-eof"
 #, priority:100
 msgid "Under certain circumstances, some versions of 'diff' do not correctly detect a missing new-line at the end of the file. As a result, patches created by such 'diff' programs do not record incomplete lines correctly. This option adds support for applying such patches by working around this bug."
 msgstr ""
+"Dans certaines circonstances, certaines versions de 'diff' ne détectent pas "
+"correctement une nouvelle ligne manquante à la fin du fichier. Par "
+"conséquent, les rustines créées par ces programmes de 'diff' n'enregistrent "
+"pas correctement les lignes incomplètes. Cette option permet d'appliquer ces "
+"rustines en contournant ce bogue."
 
 #. type: Plain text
 #: en/git-apply.txt:229
 #, priority:100
 msgid "Report progress to stderr. By default, only a message about the current patch being applied will be printed. This option will cause additional information to be reported."
 msgstr ""
+"Afficher l'état d'avancement sur stderr. Par défaut, seul un message "
+"concernant la rustine en cours d'application sera imprimé. Cette option "
+"entraînera l'affichage d'informations supplémentaires."
 
 #. type: Labeled list
 #: en/git-apply.txt:230
@@ -7585,6 +7633,9 @@ msgstr "--recount"
 #, priority:100
 msgid "Do not trust the line counts in the hunk headers, but infer them by inspecting the patch (e.g. after editing the patch without adjusting the hunk headers appropriately)."
 msgstr ""
+"Ne pas se fier au nombre de lignes dans les en-têtes de sections, mais le "
+"déduire en inspectant la rustine (par exemple, après avoir modifié la "
+"rustine sans avoir ajusté les en-têtes de section de manière appropriée)."
 
 #. type: Labeled list
 #: en/git-apply.txt:235
@@ -7597,12 +7648,17 @@ msgstr "--directory=<racine>"
 #, priority:100
 msgid "Prepend <root> to all filenames.  If a \"-p\" argument was also passed, it is applied before prepending the new root."
 msgstr ""
+"Préfixer <racine> à tous les noms de fichiers.  Si un argument \"-p\" a "
+"également été passé, il est appliqué avant de préfixer la nouvelle racine."
 
 #. type: Plain text
 #: en/git-apply.txt:242
 #, priority:100
 msgid "For example, a patch that talks about updating `a/git-gui.sh` to `b/git-gui.sh` can be applied to the file in the working tree `modules/git-gui/git-gui.sh` by running `git apply --directory=modules/git-gui`."
 msgstr ""
+"Par exemple, une rustine qui parle de mettre à jour `a/git-gui.sh` en `b/git-"
+"gui.sh` peut être appliquée au fichier dans l'arbre de travail `modules/"
+"git-gui/git-gui.sh` en lançant `git apply --directory=modules/git-gui`."
 
 #. type: Labeled list
 #: en/git-apply.txt:243
@@ -7733,66 +7789,99 @@ msgstr "'git archimport' utilise beaucoup `tla` en arrière-plan pour accéder a
 #, priority:100
 msgid "For the initial import, 'git archimport' expects to find itself in an empty directory. To follow the development of a project that uses Arch, rerun 'git archimport' with the same parameters as the initial import to perform incremental imports."
 msgstr ""
+"Pour l'importation initiale, 'git archimport' s'attend à se retrouver dans "
+"un répertoire vide. Pour suivre le développement d'un projet qui utilise "
+"Arch, relancez 'git archimport' avec les mêmes paramètres que l'importation "
+"initiale pour effectuer des importations incrémentales."
 
 #. type: Plain text
 #: en/git-archimport.txt:49
 #, priority:100
 msgid "While 'git archimport' will try to create sensible branch names for the archives that it imports, it is also possible to specify Git branch names manually.  To do so, write a Git branch name after each <archive/branch> parameter, separated by a colon.  This way, you can shorten the Arch branch names and convert Arch jargon to Git jargon, for example mapping a \"PROJECT{litdd}devo{litdd}VERSION\" branch to \"master\"."
 msgstr ""
+"Alors que 'git archimport' essaiera de créer des noms de branches sensibles "
+"pour les archives qu'il importe, il est également possible de spécifier "
+"manuellement les noms de branches Git.  Pour ce faire, écrivez un nom de "
+"branche Git après chaque paramètre <archive/branche>, séparé par deux "
+"points.  De cette façon, vous pouvez raccourcir les noms de branches Arch et "
+"convertir le jargon Arch en jargon Git, par exemple en faisant correspondre "
+"une branche \"PROJECT{litdd}devo{litdd}VERSION\" à \"master\"."
 
 #. type: Plain text
 #: en/git-archimport.txt:54
 #, priority:100
 msgid "Associating multiple Arch branches to one Git branch is possible; the result will make the most sense only if no commits are made to the first branch, after the second branch is created.  Still, this is useful to convert Arch repositories that had been rotated periodically."
 msgstr ""
+"Il est possible d'associer plusieurs branches Arch à une branche Git ; le "
+"résultat n'aura de sens que si aucun commit n'est poussé sur la première "
+"branche, après la création de la deuxième branche.  Néanmoins, cela est "
+"utile pour convertir les dépôts Arch qui ont fait l'objet d'une rotation "
+"périodique."
 
 #. type: Title -
 #: en/git-archimport.txt:57
 #, no-wrap, priority:100
 msgid "MERGES"
-msgstr ""
+msgstr "FUSIONS"
 
 #. type: Plain text
 #: en/git-archimport.txt:63
 #, priority:100
 msgid "Patch merge data from Arch is used to mark merges in Git as well. Git does not care much about tracking patches, and only considers a merge when a branch incorporates all the commits since the point they forked. The end result is that Git will have a good idea of how far branches have diverged. So the import process does lose some patch-trading metadata."
 msgstr ""
+"Les données de fusion de rustines d'Arch sont utilisées pour marquer les "
+"fusions dans Git également. Git ne se soucie pas beaucoup du suivi des "
+"rustines, et ne considère une fusion que lorsqu'une branche incorpore tous "
+"les commits depuis le point où ils ont bifurqué. Le résultat final est que "
+"Git aura une bonne idée de l'étendue de la divergence des branches. Le "
+"processus d'importation perd donc certaines métadonnées d'échange de "
+"rustines."
 
 #. type: Plain text
 #: en/git-archimport.txt:67
 #, priority:100
 msgid "Fortunately, when you try and merge branches imported from Arch, Git will find a good merge base, and it has a good chance of identifying patches that have been traded out-of-sequence between the branches."
 msgstr ""
+"Heureusement, lorsque vous essayez de fusionner des branches importées "
+"d'Arch, Git trouve une bonne base de fusion, et il a de bonnes chances "
+"d'identifier les rustines qui ont été échangés hors séquence entre les "
+"branches."
 
 #. type: Plain text
 #: en/git-archimport.txt:73
 #, priority:100
 msgid "Display usage."
-msgstr ""
+msgstr "Afficher l'utilisation."
 
 #. type: Plain text
 #: en/git-archimport.txt:76
 #, priority:100
 msgid "Verbose output."
-msgstr ""
+msgstr "Sortie verbeuse."
 
 #. type: Labeled list
 #: en/git-archimport.txt:77
 #, no-wrap, priority:100
 msgid "-T"
-msgstr ""
+msgstr "-T"
 
 #. type: Plain text
 #: en/git-archimport.txt:80
 #, priority:100
 msgid "Many tags. Will create a tag for every commit, reflecting the commit name in the Arch repository."
 msgstr ""
+"Beaucoup d'étiquettes. Créera une étiquette pour chaque commit, reflétant le "
+"nom du commit dans le dépôt Arch."
 
 #. type: Plain text
 #: en/git-archimport.txt:85
 #, priority:100
 msgid "Use the fast patchset import strategy.  This can be significantly faster for large trees, but cannot handle directory renames or permissions changes.  The default strategy is slow and safe."
 msgstr ""
+"Utiliser la stratégie d'importation rapide d'ensembles de rustines.  Cela "
+"peut être beaucoup plus rapide pour les grands arbres, mais ne permet pas de "
+"gérer les renommages de répertoires ou les modifications de permissions.  La "
+"stratégie par défaut est lente et sûre."
 
 #. type: Labeled list
 #: en/git-archimport.txt:86 en/git-commit.txt:262 en/git-grep.txt:214 en/git-ls-files.txt:47 en/git-merge-index.txt:29
@@ -7805,48 +7894,61 @@ msgstr "-o"
 #, priority:100
 msgid "Use this for compatibility with old-style branch names used by earlier versions of 'git archimport'.  Old-style branch names were category{litdd}branch, whereas new-style branch names are archive,category{litdd}branch{litdd}version.  In both cases, names given on the command-line will override the automatically-generated ones."
 msgstr ""
+"Utilisez-le pour assurer la compatibilité avec les noms de branche à "
+"l'ancienne utilisés par les versions antérieures de 'git archimport'.  Les "
+"anciens noms de branches étaient categorie{litdd}branche, tandis que les "
+"nouveaux noms de branches sont archive,categorie{litdd}branche{litdd}"
+"version.  Dans les deux cas, les noms donnés sur la ligne de commande "
+"remplaceront les noms générés automatiquement."
 
 #. type: Labeled list
 #: en/git-archimport.txt:94
 #, no-wrap, priority:100
 msgid "-D <depth>"
-msgstr ""
+msgstr "-D <profondeur>"
 
 #. type: Plain text
 #: en/git-archimport.txt:98
 #, priority:100
 msgid "Follow merge ancestry and attempt to import trees that have been merged from.  Specify a depth greater than 1 if patch logs have been pruned."
 msgstr ""
+"Suivre l'ascendance de la fusion et essayer d'importer des arbres qui ont "
+"été fusionnés.  Spécifier une profondeur supérieure à 1 si les journaux de "
+"rustine ont été élagués."
 
 #. type: Plain text
 #: en/git-archimport.txt:102
 #, priority:100
 msgid "Attempt to auto-register archives at `http://mirrors.sourcecontrol.net` This is particularly useful with the -D option."
 msgstr ""
+"Essayer d'enregistrer automatiquement les archives sur `http://mirrors."
+"sourcecontrol.net`. Ceci est particulièrement utile avec l'option -D."
 
 #. type: Labeled list
 #: en/git-archimport.txt:103
 #, no-wrap, priority:100
 msgid "-t <tmpdir>"
-msgstr ""
+msgstr "-t <rép-temporaire>"
 
 #. type: Plain text
 #: en/git-archimport.txt:105
 #, priority:100
 msgid "Override the default tempdir."
-msgstr ""
+msgstr "Remplacer le répertoire temporaire par défaut."
 
 #. type: Labeled list
 #: en/git-archimport.txt:107
 #, no-wrap, priority:100
 msgid "<archive/branch>"
-msgstr ""
+msgstr "<archive/branche>"
 
 #. type: Plain text
 #: en/git-archimport.txt:109
 #, priority:100
 msgid "Archive/branch identifier in a format that `tla log` understands."
 msgstr ""
+"Identificateur de l'archive/branche dans un format compréhensible par `tla "
+"log`."
 
 #. type: Title =
 #: en/git-archive.txt:2
@@ -7869,18 +7971,33 @@ msgid ""
 "\t      [--remote=<repo> [--exec=<git-upload-archive>]] <tree-ish>\n"
 "\t      [<path>...]\n"
 msgstr ""
+"'git archive' [--format=<fmt>] [--list] [--prefix=<préfixe>/] [<extra>]\n"
+"\t      [-o <fichier> | --output=<fichier>] [--worktree-attributes]\n"
+"\t      [--remote=<dépôt> [--exec=<git-upload-archive>]] <arbre-esque>\n"
+"\t      [<chemin>...]\n"
 
 #. type: Plain text
 #: en/git-archive.txt:23
 #, priority:100
 msgid "Creates an archive of the specified format containing the tree structure for the named tree, and writes it out to the standard output.  If <prefix> is specified it is prepended to the filenames in the archive."
 msgstr ""
+"Crée une archive du format spécifié contenant l'arborescence de l'arbre "
+"nommé, et l'écrit sur la sortie standard.  Si <préfixe> est spécifié, il  "
+"préfixe le nom des fichiers dans l'archive."
 
 #. type: Plain text
 #: en/git-archive.txt:32
 #, priority:100
 msgid "'git archive' behaves differently when given a tree ID versus when given a commit ID or tag ID.  In the first case the current time is used as the modification time of each file in the archive.  In the latter case the commit time as recorded in the referenced commit object is used instead.  Additionally the commit ID is stored in a global extended pax header if the tar format is used; it can be extracted using 'git get-tar-commit-id'. In ZIP files it is stored as a file comment."
 msgstr ""
+"'git archive' se comporte différemment lorsqu'on lui donne un ID d'arbre et "
+"lorsqu'on lui donne un ID de commit ou d'étiquette.  Dans le premier cas, "
+"l'heure actuelle est utilisée comme heure de modification de chaque fichier "
+"dans l'archive.  Dans le second cas, l'heure de validation enregistrée dans "
+"l'objet commit référencé est utilisée à la place.  En outre, l'ID de commit "
+"est stocké dans un en-tête pax étendu global si le format tar est utilisé ; "
+"il peut être extrait en utilisant 'git get-tar-commit-id'. Dans les fichiers "
+"ZIP, il est stocké sous forme de commentaire de fichier."
 
 #. type: Labeled list
 #: en/git-archive.txt:36
@@ -7893,6 +8010,10 @@ msgstr "--format=<fmt>"
 #, priority:100
 msgid "Format of the resulting archive: 'tar' or 'zip'. If this option is not given, and the output file is specified, the format is inferred from the filename if possible (e.g. writing to \"foo.zip\" makes the output to be in the zip format). Otherwise the output format is `tar`."
 msgstr ""
+"Format de l'archive résultante : 'tar' ou 'zip'. Si cette option n'est pas "
+"donnée, et que le fichier de sortie est spécifié, le format est déduit du "
+"nom du fichier si possible (par exemple, en écrivant \"foo.zip\", la sortie "
+"sera au format zip). Sinon, le format de sortie est `tar`."
 
 #. type: Labeled list
 #: en/git-archive.txt:44 en/git-branch.txt:172 en/git-config.txt:168 en/git-show-branch.txt:80 en/git-tag.txt:100
@@ -7904,7 +8025,7 @@ msgstr "--list"
 #: en/git-archive.txt:46
 #, priority:100
 msgid "Show all available formats."
-msgstr ""
+msgstr "Afficher tous les formats disponibles."
 
 #. type: Plain text
 #: en/git-archive.txt:50
@@ -7934,7 +8055,7 @@ msgstr "-o <fichier>"
 #: en/git-archive.txt:57
 #, priority:100
 msgid "Write the archive to <file> instead of stdout."
-msgstr ""
+msgstr "Ecrire l'archive dans <fichier> au lieu de stdout."
 
 #. type: Labeled list
 #: en/git-archive.txt:58
@@ -7947,6 +8068,10 @@ msgstr "--add-file=<fichier>"
 #, priority:100
 msgid "Add a non-tracked file to the archive.  Can be repeated to add multiple files.  The path of the file in the archive is built by concatenating the value for `--prefix` (if any) and the basename of <file>."
 msgstr ""
+"Ajouter un fichier non suivi à l'archive.  Peut être répété pour ajouter "
+"plusieurs fichiers.  Le chemin du fichier dans l'archive est construit en "
+"concaténant la valeur de `--prefix` (le cas échéant) et le nom de base de "
+"<fichier>."
 
 #. type: Labeled list
 #: en/git-archive.txt:64
@@ -7959,30 +8084,39 @@ msgstr "--worktree-attributes"
 #, priority:100
 msgid "Look for attributes in .gitattributes files in the working tree as well (see <<ATTRIBUTES>>)."
 msgstr ""
+"Rechercher également les attributs dans les fichiers .gitattributs de "
+"l'arbre de travail (voir <<ATTRIBUTES>>)."
 
 #. type: Labeled list
 #: en/git-archive.txt:68
 #, no-wrap, priority:100
 msgid "<extra>"
-msgstr ""
+msgstr "<extra>"
 
 #. type: Plain text
 #: en/git-archive.txt:71
 #, priority:100
 msgid "This can be any options that the archiver backend understands.  See next section."
 msgstr ""
+"Il peut s'agir de n'importe quelle option que le moteur de l'archiveur "
+"comprend.  Voir la section suivante."
 
 #. type: Labeled list
 #: en/git-archive.txt:72
 #, no-wrap, priority:100
 msgid "--remote=<repo>"
-msgstr ""
+msgstr "--remote=<dépôt>"
 
 #. type: Plain text
 #: en/git-archive.txt:78
 #, priority:100
 msgid "Instead of making a tar archive from the local repository, retrieve a tar archive from a remote repository. Note that the remote repository may place restrictions on which sha1 expressions may be allowed in `<tree-ish>`. See linkgit:git-upload-archive[1] for details."
 msgstr ""
+"Au lieu de créer une archive tar à partir du dépôt local, récupérer une "
+"archive tar à partir d'un dépôt distant. Notez que le dépôt distant peut "
+"imposer des restrictions sur les expressions sha1 qui peuvent être "
+"autorisées dans `<arbre-esque>`. Voir linkgit:git-upload-archive[1] pour "
+"plus de détails."
 
 #. type: Labeled list
 #: en/git-archive.txt:79
@@ -7995,6 +8129,8 @@ msgstr "--exec=<git-upload-archive>"
 #, priority:100
 msgid "Used with --remote to specify the path to the 'git-upload-archive' on the remote side."
 msgstr ""
+"Utilisé avec --remote pour spécifier le chemin d'accès à 'git-upload-"
+"archive' du côté distant."
 
 #. type: Labeled list
 #: en/git-archive.txt:83 en/git-checkout.txt:354 en/git-diff-index.txt:26 en/git-diff-tree.txt:29 en/git-ls-tree.txt:38 en/git.txt:358
@@ -8006,7 +8142,7 @@ msgstr "<arbre-esque>"
 #: en/git-archive.txt:85
 #, priority:100
 msgid "The tree or commit to produce an archive for."
-msgstr ""
+msgstr "L'arbre ou le commit pour lequel produire une archive ."
 
 #. type: Labeled list
 #: en/git-archive.txt:86
@@ -8019,18 +8155,21 @@ msgstr "<chemin>"
 #, priority:100
 msgid "Without an optional path parameter, all files and subdirectories of the current working directory are included in the archive.  If one or more paths are specified, only these are included."
 msgstr ""
+"Sans paramètre de chemin optionnel, tous les fichiers et sous-répertoires du "
+"répertoire de travail actuel sont inclus dans l'archive.  Si un ou plusieurs "
+"chemins sont spécifiés, seuls ceux-ci sont inclus."
 
 #. type: Title -
 #: en/git-archive.txt:92
 #, no-wrap, priority:100
 msgid "BACKEND EXTRA OPTIONS"
-msgstr ""
+msgstr "OPTIONS SUPPLÉMENTAIRES DE MOTEUR"
 
 #. type: Title ~
 #: en/git-archive.txt:95
 #, no-wrap, priority:100
 msgid "zip"
-msgstr ""
+msgstr "zip"
 
 #. type: Labeled list
 #: en/git-archive.txt:96 en/git-diff-files.txt:28 en/git-diff.txt:129
@@ -8042,7 +8181,7 @@ msgstr "-0"
 #: en/git-archive.txt:98
 #, priority:100
 msgid "Store the files instead of deflating them."
-msgstr ""
+msgstr "Stocker les fichiers au lieu de les compresser."
 
 #. type: Labeled list
 #: en/git-archive.txt:98
@@ -8055,78 +8194,106 @@ msgstr "-9"
 #, priority:100
 msgid "Highest and slowest compression level.  You can specify any number from 1 to 9 to adjust compression speed and ratio."
 msgstr ""
+"Niveau de compression le plus élevé et le plus lent.  Vous pouvez spécifier "
+"un nombre quelconque de 1 à 9 pour ajuster la vitesse et le ratio de "
+"compression."
 
 #. type: Labeled list
 #: en/git-archive.txt:106
 #, no-wrap, priority:100
 msgid "tar.umask"
-msgstr ""
+msgstr "tar.umask"
 
 #. type: Plain text
 #: en/git-archive.txt:113
 #, priority:100
 msgid "This variable can be used to restrict the permission bits of tar archive entries.  The default is 0002, which turns off the world write bit.  The special value \"user\" indicates that the archiving user's umask will be used instead.  See umask(2) for details.  If `--remote` is used then only the configuration of the remote repository takes effect."
 msgstr ""
+"Cette variable peut être utilisée pour limiter les bits de permission des "
+"entrées d'archives tar.  La valeur par défaut est 0002, ce qui désactive le "
+"bit d'écriture générale.  La valeur spéciale \"user\" indique que l'umask de "
+"l'utilisateur d'archivage sera utilisé à la place.  Voir umask(2) pour plus "
+"de détails.  Si `--remote` est utilisé alors seule la configuration du dépôt "
+"distant prend effet."
 
 #. type: Labeled list
 #: en/git-archive.txt:114
 #, no-wrap, priority:100
 msgid "tar.<format>.command"
-msgstr ""
+msgstr "tar.<format>.command"
 
 #. type: Plain text
 #: en/git-archive.txt:123
 #, priority:100
 msgid "This variable specifies a shell command through which the tar output generated by `git archive` should be piped. The command is executed using the shell with the generated tar file on its standard input, and should produce the final output on its standard output. Any compression-level options will be passed to the command (e.g., \"-9\"). An output file with the same extension as `<format>` will be use this format if no other format is given."
 msgstr ""
+"Cette variable spécifie une commande shell à travers laquelle la sortie tar "
+"générée par `git archive` doit être envoyée. La commande est exécutée en "
+"utilisant le shell avec le fichier tar généré sur son entrée standard, et "
+"devrait produire la sortie finale sur sa sortie standard. Toute option de "
+"niveau de compression sera passée à la commande (par exemple, \"-9\"). Un "
+"fichier de sortie avec la même extension que `<format>` utilisera ce format "
+"si aucun autre format n'est donné."
 
 #. type: Plain text
 #: en/git-archive.txt:126
 #, priority:100
 msgid "The \"tar.gz\" and \"tgz\" formats are defined automatically and default to `gzip -cn`. You may override them with custom commands."
 msgstr ""
+"Les formats \"tar.gz\" et \"tgz\" sont définis automatiquement et se "
+"présentent par défaut sous la forme `gzip -cn`. Vous pouvez les remplacer "
+"par des commandes personnalisées."
 
 #. type: Labeled list
 #: en/git-archive.txt:127
 #, no-wrap, priority:100
 msgid "tar.<format>.remote"
-msgstr ""
+msgstr "tar.<format>.remote"
 
 #. type: Plain text
 #: en/git-archive.txt:132
 #, priority:100
 msgid "If true, enable `<format>` for use by remote clients via linkgit:git-upload-archive[1]. Defaults to false for user-defined formats, but true for the \"tar.gz\" and \"tgz\" formats."
 msgstr ""
+"Si vrai, activer `<format>` pour une utilisation par des clients distants "
+"via linkgit:git-upload-archive[1]. Par défaut à faux pour les formats "
+"définis par l’utilisateur, mais vrai pour les formats « tar.gz » et « tgz »."
 
 #. type: Title -
 #: en/git-archive.txt:135
 #, no-wrap, priority:100
 msgid "ATTRIBUTES"
-msgstr ""
+msgstr "ATTRIBUTS"
 
 #. type: Labeled list
 #: en/git-archive.txt:137
 #, no-wrap, priority:100
 msgid "export-ignore"
-msgstr ""
+msgstr "export-ignore"
 
 #. type: Plain text
 #: en/git-archive.txt:140
 #, priority:100
 msgid "Files and directories with the attribute export-ignore won't be added to archive files.  See linkgit:gitattributes[5] for details."
 msgstr ""
+"Les fichiers et répertoires avec l'attribut export-ignore ne seront pas "
+"ajoutés aux fichiers d'archives.  Voir linkgit:gitattributes[5] pour plus de "
+"détails."
 
 #. type: Labeled list
 #: en/git-archive.txt:141
 #, no-wrap, priority:100
 msgid "export-subst"
-msgstr ""
+msgstr "export-subst"
 
 #. type: Plain text
 #: en/git-archive.txt:145
 #, priority:100
 msgid "If the attribute export-subst is set for a file then Git will expand several placeholders when adding this file to an archive.  See linkgit:gitattributes[5] for details."
 msgstr ""
+"Si l'attribut export-subst est défini pour un fichier, Git développera "
+"plusieurs caractères de remplissage lors de l'ajout de ce fichier à une "
+"archive.  Voir linkgit:gitattributes[5] pour plus de détails."
 
 #. type: Plain text
 #: en/git-archive.txt:153
@@ -45207,7 +45374,13 @@ msgstr "--exclude=<motif-glob>"
 #: en/git-rev-parse.txt:193 en/rev-list-options.txt:173
 #, priority:260
 msgid "Do not include refs matching '<glob-pattern>' that the next `--all`, `--branches`, `--tags`, `--remotes`, or `--glob` would otherwise consider. Repetitions of this option accumulate exclusion patterns up to the next `--all`, `--branches`, `--tags`, `--remotes`, or `--glob` option (other options or arguments do not clear accumulated patterns)."
-msgstr "Ne pas inclure les références correspondant à'<glob-pattern>' que les `--all`, `--branches`, `--tags`, `--remotes`, ou `--glob` suivantes considéreraient autrement. Les répétitions de cette option accumulent les motifs d'exclusion jusqu'à la prochaine option `--all`, `--branches`, `--tags`, `--tags`, `--remotes` ou `--glob` (les autres options ou arguments n'éliminent pas les motifs accumulés)."
+msgstr ""
+"Ne pas inclure les références correspondant à'<glob-pattern>' que les `--all`"
+", `--branches`, `--tags`, `--remotes`, ou `--glob` suivantes considéreraient "
+"autrement. Les répétitions de cette option accumulent les motifs d'exclusion "
+"jusqu'à la prochaine option `--all`, `--branches`, `--tags`, `--remotes` ou "
+"`--glob` (les autres options ou arguments n'éliminent pas les motifs "
+"accumulés)."
 
 #. type: Plain text
 #: en/git-rev-parse.txt:199 en/rev-list-options.txt:179
