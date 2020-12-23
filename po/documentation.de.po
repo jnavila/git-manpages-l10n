@@ -7,19 +7,7 @@
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 # Andrea Bruehlmann <login@swisscreatebusinessmanager.com>, 2019.
 msgid ""
-msgstr ""
-"Project-Id-Version: git documentation\n"
-"Report-Msgid-Bugs-To: jn.avila@free.fr\n"
-"POT-Creation-Date: 2020-12-21 22:39+0100\n"
-"PO-Revision-Date: 2020-08-18 02:32+0000\n"
-"Last-Translator: Dieter Ziller <max123kl@ziller.de>\n"
-"Language-Team: Matthias Aßhauer <mha1993@live.de>\n"
-"Language: de\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.2-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2020-12-21 22:39+0100\nPO-Revision-Date: 2020-12-24 18:29+0000\nLast-Translator: Johannes Keyser <johanneskeyser@posteo.de>\nLanguage-Team: Matthias Aßhauer <mha1993@live.de>\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.4.1-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:679 en/git-instaweb.txt:45 en/git-mailinfo.txt:47 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -12653,10 +12641,10 @@ msgstr "$ git checkout mytopic\n"
 msgid "However, your \"wrong\" branch and correct `mytopic` branch may differ in files that you have modified locally, in which case the above checkout would fail like this:"
 msgstr "Der \"falsche\" Branch und der korrekte Branch \"mytopic\" können sich in lokal geänderten Dateien unterscheiden, was daz führt, dass der obige Checkout folgendermaßen fehlschlägt:"
 
-#. type: delimited block -
 # git-checkout.txt is not up to date. The fuzzy msgid is the message prior to 142183d0 2010-07-09 "checkout: accord documentation to what git does", the msgid is the message in the documentation afterwards.
 # At that time there weren't even po files in the git tree. This message does not exist since 23cbf11b 2010-08-11 "merge-recursive: porcelain messages for checkout".
 # The current message is "Your local changes to the following files would be overwritten by merge:\n%%s" as of 2e3926b9 2016-05-13 "i18n: unpack-trees: avoid substituting only a verb in sentences"
+#. type: delimited block -
 #: en/git-checkout.txt:569
 #, fuzzy, no-wrap, priority:240
 #| msgid ""
@@ -13870,17 +13858,7 @@ msgstr "Befindet sich das zu klonende Repository lokal auf der Maschine (anstatt
 
 #. type: Plain text
 #: en/git-clone.txt:84
-#, fuzzy, no-wrap, priority:300
-#| msgid ""
-#| "*NOTE*: this is a possibly dangerous operation; do *not* use\n"
-#| "it unless you understand what it does. If you clone your\n"
-#| "repository using this option and then delete branches (or use any\n"
-#| "other Git command that makes any existing commit unreferenced) in the\n"
-#| "source repository, some objects may become unreferenced (or dangling).\n"
-#| "These objects may be removed by normal Git operations (such as `git commit`)\n"
-#| "which automatically call `git gc --auto`. (See linkgit:git-gc[1].)\n"
-#| "If these objects are removed and were referenced by the cloned repository,\n"
-#| "then the cloned repository will become corrupt.\n"
+#, no-wrap, priority:300
 msgid ""
 "*NOTE*: this is a possibly dangerous operation; do *not* use\n"
 "it unless you understand what it does. If you clone your\n"
@@ -13891,15 +13869,7 @@ msgid ""
 "which automatically call `git maintenance run --auto`. (See\n"
 "linkgit:git-maintenance[1].) If these objects are removed and were referenced\n"
 "by the cloned repository, then the cloned repository will become corrupt.\n"
-msgstr ""
-"*HINWEIS*: Dies kann möglicherweise gefährlich sein! Verwenden Sie diese\n"
-"Option *nicht*, wenn Sie sich nicht wirklich sicher sind. Wird ein Repository\n"
-"mit dieser Option geklont und man löscht z.B. später einen Branch oder\n"
-"führt sonst eine Git-Operation im Quellarchiv durch, die bestehende Commits\n"
-"dereferenziert, kann dies das geklonte Repository zerstören.\n"
-"Diese „gefährlichen“ Operationen können auch implizit, z.B. von `git commit`\n"
-"(ruft intern automatisch `git gc --auto` auf) ausgeführt werden.\n"
-"(Siehe linkgit:git-gc[1].)\n"
+msgstr "*HINWEIS*: Dies ist potentiell ein gefährlicher Vorgang; verwenden Sie ihn *nicht*\nwenn Sie nicht verstehen, was er bewirkt. Wenn Sie Ihr Repository mit dieser Option\nklonen und später Branches im Quell-Repository löschen (oder einen anderen\nGit-Befehl verwenden, der bestehende Commits dereferenziert),\nwerden manche Objekte möglicherweise dereferenziert (oder hängengelassen).\nSolche Objekte könnten durch normale Git-Operationen (wie `git commit`)\nentfernt werden, die automatisch `git maintenance run --auto` aufrufen. (Siehe\nlinkgit:git-maintenance[1].) Wenn diese Objekte entfernt werden und vom geklonten\nRepository referenziert wurden, wird das geklonte Repository beschädigt.\n"
 
 #. type: Plain text
 #: en/git-clone.txt:90
@@ -14033,10 +14003,9 @@ msgstr "--origin <Name>"
 
 #. type: Plain text
 #: en/git-clone.txt:189
-#, fuzzy, priority:300
-#| msgid "Instead of using the remote name `origin` to keep track of the upstream repository, use `<name>`."
+#, priority:300
 msgid "Instead of using the remote name `origin` to keep track of the upstream repository, use `<name>`.  Overrides `clone.defaultRemoteName` from the config."
-msgstr "Verwendet den Namen `<Name>` statt `origin` zum Tracken der Änderungen des Upstream-Repository."
+msgstr "Verwendet den Namen `<Name>` statt `origin` zum Tracken der Änderungen des Upstream-Repository. Überschreibt `clone.defaultRemoteName` aus der Konfiguration."
 
 #. type: Labeled list
 #: en/git-clone.txt:190
@@ -14154,8 +14123,7 @@ msgstr "Kann in Verbindung mit `--single-branch` verwendet werden, um einen Bran
 
 #. type: Labeled list
 #: en/git-clone.txt:263
-#, fuzzy, no-wrap, priority:300
-#| msgid "--recurse-submodules[=<pathspec>]"
+#, no-wrap, priority:300
 msgid "--recurse-submodules[=<pathspec>]"
 msgstr "--recurse-submodules[=<Pfadspezifikation>]"
 
@@ -29900,29 +29868,19 @@ msgstr "git-init-db – Erstellt ein leeres Git-Repository oder initialisiert ei
 
 #. type: Plain text
 #: en/git-init.txt:16
-#, fuzzy, no-wrap, priority:300
-#| msgid ""
-#| "'git init' [-q | --quiet] [--bare] [--template=<template_directory>]\n"
-#| "\t  [--separate-git-dir <git dir>] [--object-format=<format>]\n"
-#| "\t  [-b <branch-name> | --initial-branch=<branch-name>]\n"
-#| "\t  [--shared[=<permissions>]] [directory]\n"
+#, no-wrap, priority:300
 msgid ""
 "'git init' [-q | --quiet] [--bare] [--template=<template_directory>]\n"
 "\t  [--separate-git-dir <git dir>] [--object-format=<format>]\n"
 "\t  [-b <branch-name> | --initial-branch=<branch-name>]\n"
 "\t  [--shared[=<permissions>]] [directory]\n"
-msgstr ""
-"'git init' [-q | --quiet] [--bare] [--template=<Template-Verzeichnis>]\n"
-"\t  [--separate-git-dir <Git-Verzeichnis>] [--object-format=<Format>]\n"
-"\t  [-b <Branch-Name> | --initial-branch=<Branch-Name>]\n"
-"\t  [--shared[=<Berechtigungen>]] [Verzeichnis]\n"
+msgstr "'git init' [-q | --quiet] [--bare] [--template=<Template-Verzeichnis>]\n\t  [--separate-git-dir <Git-Verzeichnis>] [--object-format=<Format>]\n\t  [-b <Branch-Name> | --initial-branch=<Branch-Name>]\n\t  [--shared[=<Berechtigungen>]] [Verzeichnis]\n"
 
 #. type: Plain text
 #: en/git-init.txt:26
-#, fuzzy, priority:300
-#| msgid "This command creates an empty Git repository - basically a `.git` directory with subdirectories for `objects`, `refs/heads`, `refs/tags`, and template files.  An initial `HEAD` file that references the HEAD of the master branch is also created."
+#, priority:300
 msgid "This command creates an empty Git repository - basically a `.git` directory with subdirectories for `objects`, `refs/heads`, `refs/tags`, and template files.  An initial branch without any commits will be created (see the `--initial-branch` option below for its name)."
-msgstr "Dieser Befehl erzeugt ein leeres Git-Repository – im Grunde ein `.git`-Verzeichnis mit Unterverzeichnissen für `objects`, `refs/heads`, `refs/tags` und für die Template-Dateien. Eine initiale `HEAD` Datei, die auf den HEAD des Master-Branchs verweist, wird ebenfalls erstellt."
+msgstr "Dieser Befehl erzeugt ein leeres Git-Repository – im Grunde ein `.git`-Verzeichnis mit Unterverzeichnissen für `objects`, `refs/heads`, `refs/tags` und für die Template-Dateien. Eine initialer Branch ohne jegliche Commits wird erstellt (siehe die Option `--initial-branch` unten für dessen Namen)."
 
 #. type: Plain text
 #: en/git-init.txt:29
@@ -29986,10 +29944,9 @@ msgstr "Falls dies eine Neu-Initialisierung ist, wird das Repository auf den ang
 
 #. type: Labeled list
 #: en/git-init.txt:74
-#, fuzzy, no-wrap, priority:300
-#| msgid "-b <branch-name"
+#, no-wrap, priority:300
 msgid "-b <branch-name>"
-msgstr "-b <Branch-Name"
+msgstr "-b <Branch-Name>"
 
 #. type: Labeled list
 #: en/git-init.txt:75
@@ -29999,10 +29956,9 @@ msgstr "--initial-branch=<Branch-Name>"
 
 #. type: Plain text
 #: en/git-init.txt:81
-#, fuzzy, priority:300
-#| msgid "Use the specified name for the initial branch in the newly created repository.  If not specified, fall back to the default name: `master`."
+#, priority:300
 msgid "Use the specified name for the initial branch in the newly created repository.  If not specified, fall back to the default name (currently `master`, but this is subject to change in the future; the name can be customized via the `init.defaultBranch` configuration variable)."
-msgstr "Verwendet den angegebenen Namen für den initialen Branch im neu erstellten Repository.  Falls nicht angegeben, wird auf den Standardnamen `master` zurückgegriffen."
+msgstr "Verwendet den angegebenen Namen für den initialen Branch im neu erstellten Repository. Falls nicht angegeben, wird auf den Standardnamen zurückgegriffen (derzeit `master`, aber dies kann sich in Zukunft ändern; der Name kann über die Konfigurationsvariable `init.defaultBranch` angepasst werden)."
 
 #. type: Labeled list
 #: en/git-init.txt:82
@@ -53946,8 +53902,8 @@ msgstr ""
 msgid "`GIT_COMMON_DIR`"
 msgstr "`GIT_COMMON_DIR`"
 
-#. type: Plain text
 # noqa
+#. type: Plain text
 #: en/git.txt:502
 #, ignore-ellipsis, priority:100
 msgid "If this variable is set to a path, non-worktree files that are normally in $GIT_DIR will be taken from this path instead. Worktree-specific files such as HEAD or index are taken from $GIT_DIR. See linkgit:gitrepository-layout[5] and linkgit:git-worktree[1] for details. This variable has lower precedence than other path variables such as GIT_INDEX_FILE, GIT_OBJECT_DIRECTORY..."
