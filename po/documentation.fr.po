@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Jean-Noël Avila <jn.avila@free.fr>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2020-12-21 22:39+0100\nPO-Revision-Date: 2021-01-20 20:32+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: Jean-Noël Avila <jn.avila@free.fr>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.5-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2020-12-21 22:39+0100\nPO-Revision-Date: 2021-01-30 14:41+0000\nLast-Translator: Christophe CHAUVET <christophe.chauvet@gmail.com>\nLanguage-Team: Jean-Noël Avila <jn.avila@free.fr>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.5-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:679 en/git-instaweb.txt:45 en/git-mailinfo.txt:47 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -8468,49 +8468,49 @@ msgstr "git bisect terms\n"
 #: en/git-bisect.txt:170
 #, priority:100
 msgid "You can get just the old (respectively new) term with `git bisect terms --term-old` or `git bisect terms --term-good`."
-msgstr ""
+msgstr "Vous pouvez obtenir uniquement l'ancien terme (respectivement le nouveau) avec les termes \"git bisect --term-old\" ou \"git bisect --term-good\"."
 
 #. type: Plain text
 #: en/git-bisect.txt:175
-#, ignore-ellipsis, priority:100
+#, fuzzy, ignore-ellipsis, priority:100
 msgid "If you would like to use your own terms instead of \"bad\"/\"good\" or \"new\"/\"old\", you can choose any names you like (except existing bisect subcommands like `reset`, `start`, ...) by starting the bisection using"
-msgstr ""
+msgstr "Si vous souhaitez utiliser vos propres termes au lieu de \"mauvais\"/\"bon\" ou \"nouveau\"/\"ancien\", vous pouvez choisir les noms que vous voulez (sauf les sous-commandes de bissect existantes comme \"reset\", \"start\", ...) en commençant la bissectrice par"
 
 #. type: delimited block -
 #: en/git-bisect.txt:178
 #, no-wrap, priority:100
 msgid "git bisect start --term-old <term-old> --term-new <term-new>\n"
-msgstr ""
+msgstr "git bisect start --term-old <ancien-terme> --term-new <nouveau-terme>\n"
 
 #. type: Plain text
 #: en/git-bisect.txt:182
 #, priority:100
 msgid "For example, if you are looking for a commit that introduced a performance regression, you might use"
-msgstr ""
+msgstr "Par exemple, si vous recherchez un commit qui a introduit une régression de performance, vous pouvez utiliser"
 
 #. type: delimited block -
 #: en/git-bisect.txt:185
 #, no-wrap, priority:100
 msgid "git bisect start --term-old fast --term-new slow\n"
-msgstr ""
+msgstr "git bisect start --term-old rapide --term-new lent\n"
 
 #. type: Plain text
 #: en/git-bisect.txt:188
-#, priority:100
+#, fuzzy, priority:100
 msgid "Or if you are looking for the commit that fixed a bug, you might use"
-msgstr ""
+msgstr "Ou si vous cherchez le commit qui a corrigé un bogue, vous pouvez utiliser"
 
 #. type: delimited block -
 #: en/git-bisect.txt:191
 #, no-wrap, priority:100
 msgid "git bisect start --term-new fixed --term-old broken\n"
-msgstr ""
+msgstr "git bisect start --term-new corrige --term-old casse\n"
 
 #. type: Plain text
 #: en/git-bisect.txt:195
 #, priority:100
 msgid "Then, use `git bisect <term-old>` and `git bisect <term-new>` instead of `git bisect good` and `git bisect bad` to mark commits."
-msgstr ""
+msgstr "Ensuite, utiliser `git bisect <ancien-terme>` et `git bisect <nouveau-terme>` à la place de `git bisect bon` et `git bisect mauvais` pour marquer les commits."
 
 #. type: Title ~
 #: en/git-bisect.txt:197
@@ -8522,7 +8522,7 @@ msgstr "Visualisation/vue de bissection"
 #: en/git-bisect.txt:202
 #, priority:100
 msgid "To see the currently remaining suspects in 'gitk', issue the following command during the bisection process (the subcommand `view` can be used as an alternative to `visualize`):"
-msgstr ""
+msgstr "Pour voir les suspects restants dans 'gitk', lancez la commande suivante pendant le processus de bisection (la sous-commande `view` peut être utilisée comme alternative à `visualize`) :"
 
 #. type: delimited block -
 #: en/git-bisect.txt:205
@@ -8546,13 +8546,13 @@ msgstr "$ git bisect visualize --stat\n"
 #: en/git-bisect.txt:216
 #, no-wrap, priority:100
 msgid "Bisect log and bisect replay"
-msgstr ""
+msgstr "Bisect log et bisect replay"
 
 #. type: Plain text
 #: en/git-bisect.txt:220
 #, priority:100
 msgid "After having marked revisions as good or bad, issue the following command to show what has been done so far:"
-msgstr ""
+msgstr "Après avoir marqué les révisions comme bonnes ou mauvaises, donnez l'ordre suivant pour montrer ce qui a été fait jusqu'à présent :"
 
 #. type: delimited block -
 #: en/git-bisect.txt:223
@@ -8564,7 +8564,7 @@ msgstr "$ git bisect log\n"
 #: en/git-bisect.txt:229
 #, priority:100
 msgid "If you discover that you made a mistake in specifying the status of a revision, you can save the output of this command to a file, edit it to remove the incorrect entries, and then issue the following commands to return to a corrected state:"
-msgstr ""
+msgstr "Si vous découvrez que vous avez fait une erreur en spécifiant l'état d'une révision, vous pouvez enregistrer la sortie de cette commande dans un fichier, la modifier pour supprimer les entrées incorrectes, puis émettre les commandes suivantes pour revenir à un état corrigé :"
 
 #. type: delimited block -
 #: en/git-bisect.txt:233
@@ -8572,7 +8572,7 @@ msgstr ""
 msgid ""
 "$ git bisect reset\n"
 "$ git bisect replay that-file\n"
-msgstr ""
+msgstr "$ git bisect reset\n$ git bisect replay ce-fichier\n"
 
 #. type: Title ~
 #: en/git-bisect.txt:236
@@ -8584,7 +8584,7 @@ msgstr "Éviter le test d'un commit"
 #: en/git-bisect.txt:243
 #, priority:100
 msgid "If, in the middle of a bisect session, you know that the suggested revision is not a good one to test (e.g. it fails to build and you know that the failure does not have anything to do with the bug you are chasing), you can manually select a nearby commit and test that one instead."
-msgstr ""
+msgstr "Si, au milieu d'une session bisect, vous savez que la révision suggérée n'est pas bonne à tester (par exemple, elle ne parvient pas à se construire et vous savez que l'échec n'a rien à voir avec le bogue que vous poursuivez), vous pouvez sélectionner manuellement une validation proche et tester celle-ci à la place."
 
 #. type: Plain text
 #: en/git-bisect.txt:245 en/git-tag.txt:373 en/git-bisect-lk2009.txt:914 en/git-bisect-lk2009.txt:1136 en/git-bisect-lk2009.txt:1152 en/git-bisect-lk2009.txt:1175
