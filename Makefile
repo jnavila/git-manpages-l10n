@@ -20,13 +20,15 @@ po4a.conf: scripts/create_po4a_conf.sh sources.txt $(LANGUAGE_PO)
 
 po4a-stamp: po4a.conf $(EN_SOURCES) $(LANGUAGE_PO) Makefile
 	$(QUIET_PO4A)PERL5LIB=./po4a/lib po4a/po4a -v po4a.conf
-	for f in po/documentation.*.po; do ./scripts/pre-translate-po $$f; ./scripts/set-priorities $$f; done
+	for f in po/documentation.*.po; do ./scripts/pre-translate-po $$f; done
+	./scripts/set-priorities po/documentation.*.po
 	@touch $@
 
 update-sources:
-	./scripts/update-sources.sh
+	@./scripts/update-sources.sh
 	$(QUIET_PO4A)PERL5LIB=./po4a/lib po4a/po4a -v --no-translations po4a.conf
-	for f in po/documentation.*.po; do ./scripts/pre-translate-po $$f; ./scripts/set-priorities $$f; done
+	@for f in po/documentation.*.po; do ./scripts/pre-translate-po $$f; done
+	@./scripts/set-priorities po/documentation.*.po
 
 define MAKE_TARGET
 

@@ -2,66 +2,71 @@
 
 import polib
 import sys
+import re
+from os.path import join, dirname
 
 SECTIONS = {300: ["en/git-init.txt",
                   "en/git-clone.txt",
-                  "en/urls.txt",
                   "en/git-add.txt"],
             280: ["en/git-status.txt",
                   "en/git-diff.txt",
                   "en/diff-options.txt",
                   "en/diff-format.txt",
                   "en/git-commit.txt",
-                  "en/date-formats.txt",
-                  "en/i18n.txt",
+                  "en/git-notes.txt",
+                  "en/git-restore.txt",
                   "en/git-reset.txt",
                   "en/git-rm.txt",
                   "en/git-mv.txt"],
-            260: ["en/git-show.txt",
-                  "en/pretty-options.txt",
-                  "en/pretty-formats.txt",
-                  "en/diff-generate-patch.txt",
+            260: ["en/git-branch.txt",
                   "en/git-log.txt",
-                  "en/line-range-format.txt",
-                  "en/rev-list-options.txt",
                   "en/git-shortlog.txt",
-                  "en/mailmap.txt",
                   "en/git-describe.txt"],
-            240: ["en/git-branch.txt",
+            240: ["en/git-show.txt",
                   "en/git-checkout.txt",
                   "en/git-merge.txt",
-                  "en/merge-options.txt",
-                  "en/merge-strategies.txt",
-                  "en/config/merge.txt",
-                  "en/config/fmt-merge-msg.txt",
-                  "en/mergetools-merge.txt",
                   "en/git-mergetool.txt",
                   "en/git-stash.txt",
                   "en/git-tag.txt",
                   "en/git-worktree.txt"],
             220: ["en/git-fetch.txt",
-                  "en/fetch-options.txt",
-                  "en/pull-fetch-param.txt",
-                  "en/urls-remotes.txt",
-                  "en/transfer-data-leaks.txt",
                   "en/git-pull.txt",
                   "en/git-push.txt",
                   "en/git-remote.txt",
                   "en/git-submodule.txt"]
             }
 
-def main (f):
-    po = polib.pofile(f, wrapwidth=0)
+INCLUDE_REGEX = re.compile('''include::(.*)\\[\\]\n''')
+
+def process_file(filename, priority, priorities):
+    basedirname = dirname(filename)
+    try:
+        with open(filename, 'r') as f:
+            for line in f.readlines():
+                match = INCLUDE_REGEX.fullmatch(line)
+                if match:
+                    filename = join(basedirname, match.group(1))
+                    priorities[filename] = max(priority, priorities.get(filename, 100))
+                    process_file(filename, priority, priorities)
+    except Exception:
+        print("could not find " + filename)
+
+def main(f_list):
     priorities = dict((source, section) for section in SECTIONS for source in SECTIONS[section])
-    for entry in po:
-      if not entry.obsolete:
-        flags = [f for f in entry.flags if not (f.startswith("priority") or f.isdigit()) ]
-        p = max(priorities.get(filename) or 100 for (filename,_) in entry.occurrences)
-        flags.append("priority:{}".format(p))
-        entry.flags = flags
-    po.save(f)
+    items = list(priorities.items())
+    for source, priority in items:
+        process_file(source, priority, priorities)
+    for source in f_list:
+        po = polib.pofile(source, wrapwidth=0)
+        for entry in po:
+            if not entry.obsolete:
+                flags = [f for f in entry.flags if not (f.startswith("priority") or f.isdigit())]
+                p = max(priorities.get(filename, 100) for (filename, _) in entry.occurrences)
+                flags.append("priority:{}".format(p))
+                entry.flags = flags
+        po.save(source)
 
 
 if __name__ == '__main__':
-    if len(sys.argv)>1:
-        main(sys.argv[1])
+    if len(sys.argv) > 1:
+        main(sys.argv[1:])
