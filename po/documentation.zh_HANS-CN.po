@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2021-02-27 18:16+0100\nPO-Revision-Date: 2021-03-18 10:18+0000\nLast-Translator: 冉 <ranto2012@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.5.2-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2021-02-27 18:16+0100\nPO-Revision-Date: 2021-04-06 18:01+0000\nLast-Translator: Patrick R GUERRERO <jcs.pattystackzz@gmail.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.6-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:738 en/git-instaweb.txt:45 en/git-mailinfo.txt:47 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -69,7 +69,7 @@ msgstr "'<start>' 和 '<end>' 是可选的 `-L <start>` 或 `-L <start>,` 范围
 #: en/blame-options.txt:23 en/git-archive.txt:43 en/git-branch.txt:171 en/git-checkout.txt:200 en/git-clone.txt:45 en/git-config.txt:167 en/git-grep.txt:187 en/git-instaweb.txt:23 en/git-ls-tree.txt:51 en/git-repack.txt:66 en/git-svn.txt:244 en/git-tag.txt:99 en/git-var.txt:20
 #, ignore-same, no-wrap, priority:300
 msgid "-l"
-msgstr "-l"
+msgstr "\"repo\"{Index.yml}"
 
 #. type: Plain text
 #: en/blame-options.txt:25
@@ -3794,15 +3794,15 @@ msgstr ""
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:146 en/diff-generate-patch.txt:157 en/diff-generate-patch.txt:158 en/diff-generate-patch.txt:159
-#, fuzzy, priority:260
+#, priority:260
 msgid "a/file"
-msgstr "a/file"
+msgstr "Index.pg"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:147 en/diff-generate-patch.txt:160
-#, priority:260
+#, fuzzy, priority:260
 msgid "b/file"
-msgstr ""
+msgstr "Files.index,core,source"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:151
@@ -5211,7 +5211,7 @@ msgstr "查找其补丁文本包含与 <正则表达式> 匹配的添加/删除�
 #: en/diff-options.txt:629
 #, priority:280
 msgid "To illustrate the difference between `-S<regex> --pickaxe-regex` and `-G<regex>`, consider a commit with the following diff in the same file:"
-msgstr ""
+msgstr "为了说明 `-S<正则表达式> --pickaxe-regex` 和 `-G<正则表达式>` 之间的区别，假设某次提交在同一文件中有以下差异："
 
 #. type: delimited block -
 #: en/diff-options.txt:634
@@ -5220,25 +5220,25 @@ msgid ""
 "+    return frotz(nitfol, two->ptr, 1, 0);\n"
 "...\n"
 "-    hit = frotz(nitfol, mf2.ptr, 1, 0);\n"
-msgstr ""
+msgstr "+    return frotz(nitfol, two->ptr, 1, 0);\n...\n-    hit = frotz(nitfol, mf2.ptr, 1, 0);\n"
 
 #. type: Plain text
 #: en/diff-options.txt:639
 #, priority:280
 msgid "While `git log -G\"frotz\\(nitfol\"` will show this commit, `git log -S\"frotz\\(nitfol\" --pickaxe-regex` will not (because the number of occurrences of that string did not change)."
-msgstr ""
+msgstr "`git log -G \"frotz\\(nitfol\"` 会显示这次提交，但 `git log -S \"frotz\\(nitfol\" --pickaxe-regex` 不会显示（因为该字符串的出现次数没有改变）。"
 
 #. type: Plain text
 #: en/diff-options.txt:642
-#, priority:280
+#, fuzzy, priority:280
 msgid "Unless `--text` is supplied patches of binary files without a textconv filter will be ignored."
-msgstr ""
+msgstr "除非提供 `--text`，否则没有 textconv 过滤器的二进制文件补丁将被忽略。"
 
 #. type: Plain text
 #: en/diff-options.txt:645
 #, priority:280
 msgid "See the 'pickaxe' entry in linkgit:gitdiffcore[7] for more information."
-msgstr ""
+msgstr "更多信息请参见 linkgit:gitdiffcore[7] 中的 'pickaxe' 条目。"
 
 #. type: Labeled list
 #: en/diff-options.txt:646
@@ -5250,13 +5250,13 @@ msgstr "--find-object=<object-id>"
 #: en/diff-options.txt:651
 #, priority:280
 msgid "Look for differences that change the number of occurrences of the specified object. Similar to `-S`, just the argument is different in that it doesn't search for a specific string but for a specific object id."
-msgstr ""
+msgstr "查找指定对象出现次数的差异。与 `-S` 类似，只是参数不同：它不搜索特定的字符串，而是搜索特定的对象 id。"
 
 #. type: Plain text
 #: en/diff-options.txt:654
 #, priority:280
 msgid "The object can be a blob or a submodule commit. It implies the `-t` option in `git-log` to also find trees."
-msgstr ""
+msgstr "该对象可以是一个 blob 或一个子模块提交。它意味着 `git-log` 中的 `-t` 选项也能找到工作树。"
 
 #. type: Labeled list
 #: en/diff-options.txt:655
@@ -5268,7 +5268,7 @@ msgstr "--pickaxe-all"
 #: en/diff-options.txt:659
 #, priority:280
 msgid "When `-S` or `-G` finds a change, show all the changes in that changeset, not just the files that contain the change in <string>."
-msgstr ""
+msgstr "当使用 `-S` 或 `-G` 选项找到一个更改时，显示该更改集中的所有更改，而不仅仅是显示包含 <string> 更改的文件。"
 
 #. type: Labeled list
 #: en/diff-options.txt:660
@@ -5280,55 +5280,55 @@ msgstr "--pickaxe-regex"
 #: en/diff-options.txt:663
 #, priority:280
 msgid "Treat the <string> given to `-S` as an extended POSIX regular expression to match."
-msgstr ""
+msgstr "将 `-S` 选项的 <string> 参数当作扩展的 POSIX 正则表达式来匹配。"
 
 #. type: Labeled list
 #: en/diff-options.txt:666 en/git-mergetool.txt:95
 #, no-wrap, priority:280
 msgid "-O<orderfile>"
-msgstr ""
+msgstr "-O<顺序控制文件>"
 
 #. type: Plain text
 #: en/diff-options.txt:671
 #, priority:280
 msgid "Control the order in which files appear in the output.  This overrides the `diff.orderFile` configuration variable (see linkgit:git-config[1]).  To cancel `diff.orderFile`, use `-O/dev/null`."
-msgstr ""
+msgstr "控制文件在输出中出现的顺序。这将覆盖 `diff.orderFile` 配置变量（参见 linkgit:git-config[1]）。要取消 `diff.orderFile`，请使用 `-O/dev/null`。"
 
 #. type: Plain text
 #: en/diff-options.txt:683
 #, priority:280
 msgid "The output order is determined by the order of glob patterns in <orderfile>.  All files with pathnames that match the first pattern are output first, all files with pathnames that match the second pattern (but not the first) are output next, and so on.  All files with pathnames that do not match any pattern are output last, as if there was an implicit match-all pattern at the end of the file.  If multiple pathnames have the same rank (they match the same pattern but no earlier patterns), their output order relative to each other is the normal order."
-msgstr ""
+msgstr "输出顺序由 <顺序控制文件> 中的 glob 模式的顺序决定。所有路径名与第一个模式匹配的文件首先输出，路径名与第二个模式匹配（但不与第一个模式匹配）的文件其次输出，以此类推。所有路径名与任何模式匹配的文件会最后输出，就像在文件末尾有一个隐含的全部匹配模式。如果多个路径名具有相同的等级（它们匹配相同的模式，但没有匹配先前的模式），它们相对于彼此的输出顺序是正常的。"
 
 #. type: Plain text
 #: en/diff-options.txt:685
 #, priority:280
 msgid "<orderfile> is parsed as follows:"
-msgstr ""
+msgstr "<顺序控制文件> 格式如下："
 
 #. type: Plain text
 #: en/diff-options.txt:689
 #, priority:280
 msgid "Blank lines are ignored, so they can be used as separators for readability."
-msgstr ""
+msgstr "空白行会被忽略，因此可以用它们作为分隔符，以保证可读性。"
 
 #. type: Plain text
 #: en/diff-options.txt:693
 #, priority:280
 msgid "Lines starting with a hash (\"`#`\") are ignored, so they can be used for comments.  Add a backslash (\"`\\`\") to the beginning of the pattern if it starts with a hash."
-msgstr ""
+msgstr "以井号（\"`#`\"）开头的行会被忽略，所以它们可以用来做注释。如果模式以井号开头，则需要在模式的开头加上反斜杠（\"`\\`\"）。"
 
 #. type: Plain text
 #: en/diff-options.txt:695
 #, priority:280
 msgid "Each other line contains a single pattern."
-msgstr ""
+msgstr "每一行都包含一个模式。"
 
 #. type: Plain text
 #: en/diff-options.txt:702
 #, priority:280
 msgid "Patterns have the same syntax and semantics as patterns used for fnmatch(3) without the FNM_PATHNAME flag, except a pathname also matches a pattern if removing any number of the final pathname components matches the pattern.  For example, the pattern \"`foo*bar`\" matches \"`fooasdfbar`\" and \"`foo/bar/baz/asdf`\" but not \"`foobarx`\"."
-msgstr ""
+msgstr "模式的语法和语义与 fnmatch(3) 中使用的相同，不包括 FNM_PATHNAME 标志，但在删除路径名中结尾任意几个成分后匹配的情况下例外。例如，模式 \"`foo*bar`\" 匹配 \"`fooasdfbar`\" 和 \"`foo/bar/baz/asdf`\"，但不匹配 \"`foobarx`\"。"
 
 #. type: Labeled list
 #: en/diff-options.txt:703 en/git-difftool.txt:41
@@ -5346,7 +5346,7 @@ msgstr "--template=<file>"
 #: en/diff-options.txt:710
 #, priority:280
 msgid "Discard the files before the named <file> from the output (i.e. 'skip to'), or move them to the end of the output (i.e. 'rotate to').  These were invented primarily for use of the `git difftool` command, and may not be very useful otherwise."
-msgstr ""
+msgstr "从输出中丢弃命名为 <文件> 之前的文件（即 '跳过'），或将它们移到输出的末尾（即 '旋转'）。这些选项主要是为了使用 `git difftool` 命令而添加的，在其他情况下可能不是很有用。"
 
 #. type: Labeled list
 #: en/diff-options.txt:712 en/git-apply.txt:104 en/git-cvsimport.txt:168
@@ -5358,13 +5358,13 @@ msgstr "-R"
 #: en/diff-options.txt:715
 #, priority:280
 msgid "Swap two inputs; that is, show differences from index or on-disk file to tree contents."
-msgstr ""
+msgstr "交换两个输入；即显示从索引或磁盘文件到目录树内容的差异。"
 
 #. type: Labeled list
 #: en/diff-options.txt:717
 #, no-wrap, priority:280
 msgid "--relative[=<path>]"
-msgstr ""
+msgstr "--relative[=<路径>]"
 
 #. type: Labeled list
 #: en/diff-options.txt:718
@@ -5376,7 +5376,7 @@ msgstr "--no-relative"
 #: en/diff-options.txt:727
 #, priority:280
 msgid "When run from a subdirectory of the project, it can be told to exclude changes outside the directory and show pathnames relative to it with this option.  When you are not in a subdirectory (e.g. in a bare repository), you can name which subdirectory to make the output relative to by giving a <path> as an argument.  `--no-relative` can be used to countermand both `diff.relative` config option and previous `--relative`."
-msgstr ""
+msgstr "当从项目的子目录中运行时，可以排除目录外的变化，并通过这个选项显示相对于它的路径名。当你不在子目录中时（例如在纯仓库中），你可以通过 <路径> 参数来指明要使输出相对于哪个子目录。`--no-relative` 可以用来取消 `diff.relative`配置选项和之前的 `--relative` 选项。"
 
 #. type: Labeled list
 #: en/diff-options.txt:728 en/fetch-options.txt:4 en/git-archimport.txt:99 en/git-branch.txt:166 en/git-checkout-index.txt:38 en/git-commit.txt:66 en/git-cvsexportcommit.txt:45 en/git-cvsimport.txt:135 en/git-grep.txt:102 en/git-help.txt:45 en/git-merge-base.txt:71 en/git-merge-index.txt:26 en/git-repack.txt:31 en/git-show-branch.txt:47 en/git-stash.txt:154 en/git-tag.txt:60
@@ -5406,7 +5406,7 @@ msgstr "--ignore-cr-at-eol"
 #: en/diff-options.txt:734
 #, priority:280
 msgid "Ignore carriage-return at the end of line when doing a comparison."
-msgstr ""
+msgstr "在进行比较时，忽略行末的回车。"
 
 #. type: Labeled list
 #: en/diff-options.txt:735
@@ -5436,7 +5436,7 @@ msgstr "--ignore-all-space"
 #: en/diff-options.txt:749
 #, priority:280
 msgid "Ignore whitespace when comparing lines.  This ignores differences even if one line has whitespace where the other line has none."
-msgstr ""
+msgstr "比较行时忽略空格。即使一行有空格而另一行没有空格，也会忽略差异。"
 
 #. type: Labeled list
 #: en/diff-options.txt:750
@@ -5448,7 +5448,7 @@ msgstr "--ignore-blank-lines"
 #: en/diff-options.txt:752
 #, priority:280
 msgid "Ignore changes whose lines are all blank."
-msgstr ""
+msgstr "忽略空白行的变化。"
 
 #. type: Labeled list
 #: en/diff-options.txt:753
@@ -5478,7 +5478,7 @@ msgstr "--inter-hunk-context=<lines>"
 #: en/diff-options.txt:763
 #, priority:280
 msgid "Show the context between diff hunks, up to the specified number of lines, thereby fusing hunks that are close to each other.  Defaults to `diff.interHunkContext` or 0 if the config option is unset."
-msgstr ""
+msgstr "显示块差异之间的上下文，最多显示指定的行数，从而合并彼此接近的块。 默认认为 `diff.interHunkContext`，如果配置选项未设置，则默认为0。"
 
 #. type: Labeled list
 #: en/diff-options.txt:764 en/git-cvsexportcommit.txt:77 en/git-grep.txt:264 en/git-restore.txt:58
@@ -5496,7 +5496,7 @@ msgstr "--function-context"
 #: en/diff-options.txt:770
 #, priority:280
 msgid "Show whole function as context lines for each change.  The function names are determined in the same way as `git diff` works out patch hunk headers (see 'Defining a custom hunk-header' in linkgit:gitattributes[5])."
-msgstr ""
+msgstr "在每个修改中的上下文行显示整个函数。函数名称的确定方式与 `git diff` 计算补丁头的方式相同（参见 linkgit:gitattributes[5] 中的 '自定义区块头' ）。"
 
 #. type: Labeled list
 #: en/diff-options.txt:773 en/git-ls-remote.txt:48
@@ -5508,7 +5508,7 @@ msgstr "--exit-code"
 #: en/diff-options.txt:777
 #, priority:280
 msgid "Make the program exit with codes similar to diff(1).  That is, it exits with 1 if there were differences and 0 means no differences."
-msgstr ""
+msgstr "让程序以类似 diff(1) 的代码退出。也就是说，如果有差异则返回1，否则返回0。"
 
 #. type: Labeled list
 #: en/diff-options.txt:778 en/fetch-options.txt:242 en/git-am.txt:74 en/git-branch.txt:193 en/git-bundle.txt:113 en/git-checkout-index.txt:31 en/git-checkout.txt:108 en/git-clean.txt:54 en/git-clone.txt:125 en/git-commit.txt:324 en/git-fast-import.txt:42 en/git-fetch-pack.txt:49 en/git-format-patch.txt:339 en/git-gc.txt:68 en/git-grep.txt:318 en/git-imap-send.txt:37 en/git-init.txt:44 en/git-ls-remote.txt:39 en/git-notes.txt:207 en/git-prune-packed.txt:37 en/git-pull.txt:78 en/git-push.txt:386 en/git-read-tree.txt:133 en/git-rebase.txt:398 en/git-reset.txt:106 en/git-restore.txt:67 en/git-rev-parse.txt:118 en/git-rm.txt:74 en/git-send-email.txt:409 en/git-show-ref.txt:71 en/git-stash.txt:216 en/git-submodule.txt:266 en/git-svn.txt:671 en/git-switch.txt:144 en/git-symbolic-ref.txt:40 en/git-worktree.txt:229 en/merge-options.txt:138 en/rev-list-options.txt:224
@@ -5520,7 +5520,7 @@ msgstr "--quiet"
 #: en/diff-options.txt:780
 #, priority:280
 msgid "Disable all output of the program. Implies `--exit-code`."
-msgstr ""
+msgstr "禁用程序的所有输出。暗含 `--exit-code`。"
 
 #. type: Labeled list
 #: en/diff-options.txt:783
@@ -5530,9 +5530,9 @@ msgstr "--ext-diff"
 
 #. type: Plain text
 #: en/diff-options.txt:787
-#, priority:280
+#, fuzzy, priority:280
 msgid "Allow an external diff helper to be executed. If you set an external diff driver with linkgit:gitattributes[5], you need to use this option with linkgit:git-log[1] and friends."
-msgstr ""
+msgstr "允许执行外部差异器。如果你用 linkgit:gitattributes[5] 设置了一个外部差异驱动程序，你需要在 linkgit:git-log[1] 和相关命令中使用这个选项。"
 
 #. type: Labeled list
 #: en/diff-options.txt:788
@@ -5544,7 +5544,7 @@ msgstr "--no-ext-diff"
 #: en/diff-options.txt:790
 #, priority:280
 msgid "Disallow external diff drivers."
-msgstr ""
+msgstr "禁止使用外部差异器。"
 
 #. type: Labeled list
 #: en/diff-options.txt:791 en/git-cat-file.txt:60 en/git-grep.txt:106
@@ -5562,19 +5562,19 @@ msgstr "--no-textconv"
 #: en/diff-options.txt:801
 #, priority:280
 msgid "Allow (or disallow) external text conversion filters to be run when comparing binary files. See linkgit:gitattributes[5] for details. Because textconv filters are typically a one-way conversion, the resulting diff is suitable for human consumption, but cannot be applied. For this reason, textconv filters are enabled by default only for linkgit:git-diff[1] and linkgit:git-log[1], but not for linkgit:git-format-patch[1] or diff plumbing commands."
-msgstr ""
+msgstr "允许（或不允许）在比较二进制文件时运行外部文本转换过滤器。详情请参见 linkgit:gitattributes[5] 。由于文本转换过滤器通常是单向转换，因此产生的差异适合人类用户使用，但不能应用（apply）。因此默认情况下，只有 linkgit:git-diff[1] 和 linkgit:git-log[1] 启用文本转换过滤器，而 linkgit:git-format-patch[1] 或 diff plumbing 命令则不启用。"
 
 #. type: Labeled list
 #: en/diff-options.txt:802 en/git-status.txt:87
 #, no-wrap, priority:280
 msgid "--ignore-submodules[=<when>]"
-msgstr ""
+msgstr "--ignore-submodules[=<when>]"
 
 #. type: Plain text
 #: en/diff-options.txt:814
 #, priority:280
 msgid "Ignore changes to submodules in the diff generation. <when> can be either \"none\", \"untracked\", \"dirty\" or \"all\", which is the default.  Using \"none\" will consider the submodule modified when it either contains untracked or modified files or its HEAD differs from the commit recorded in the superproject and can be used to override any settings of the 'ignore' option in linkgit:git-config[1] or linkgit:gitmodules[5]. When \"untracked\" is used submodules are not considered dirty when they only contain untracked content (but they are still scanned for modified content). Using \"dirty\" ignores all changes to the work tree of submodules, only changes to the commits stored in the superproject are shown (this was the behavior until 1.7.0). Using \"all\" hides all changes to submodules."
-msgstr ""
+msgstr "在生成差异时忽略子模块的修改。<when> 可以是 \"none\"、\"untracked\"、\"dirty \" 或 \"all\"，\"all\" 是默认选项。使用 \"none\" 会在子模块包含未跟踪或修改的文件，或者它的HEAD 与上级项目中记录的提交不同时，认为它被修改了，并且可以用来覆盖 linkgit:git-config[1] 或 linkgit:gitmodules[5] 中 '忽略' 选项的设置。当使用 \"untracked\" 时，当子模块只包含未跟踪的内容时，它们不会被认为是有改动的（但它们仍然会被扫描是否有被修改的内容）。使用 \"dirty\" 会忽略所有对子模块工作树的修改，只有存储在上级项目中的提交的修改才会被显示出来（这是在1.7.0之前的行为）。使用 \"all\" 会隐藏所有对子模块的修改。"
 
 #. type: Labeled list
 #: en/diff-options.txt:815
@@ -5610,7 +5610,7 @@ msgstr "--no-prefix"
 #: en/diff-options.txt:823
 #, priority:280
 msgid "Do not show any source or destination prefix."
-msgstr ""
+msgstr "不显示任何源或目的前缀。"
 
 #. type: Labeled list
 #: en/diff-options.txt:824
@@ -5622,7 +5622,7 @@ msgstr "--line-prefix=<prefix>"
 #: en/diff-options.txt:826
 #, priority:280
 msgid "Prepend an additional prefix to every line of output."
-msgstr ""
+msgstr "在每一行输出前加上一个额外的前缀。"
 
 #. type: Labeled list
 #: en/diff-options.txt:827
@@ -5634,13 +5634,13 @@ msgstr "--ita-invisible-in-index"
 #: en/diff-options.txt:834
 #, priority:280
 msgid "By default entries added by \"git add -N\" appear as an existing empty file in \"git diff\" and a new file in \"git diff --cached\".  This option makes the entry appear as a new file in \"git diff\" and non-existent in \"git diff --cached\". This option could be reverted with `--ita-visible-in-index`. Both options are experimental and could be removed in future."
-msgstr ""
+msgstr "默认情况下，通过 \"git add -N\" 添加的条目在 \"git diff\" 中显示为现有的空文件，在 \"git diff --cached\" 中显示为新文件。这个选项使得条目在 \"git diff\" 中显示为一个新文件，而在 \"git diff --cached\" 中显示为不存在的文件。这个选项可以用 `--ita-visible-in-index` 来还原。这两个选项都是试验性的，将来可能会被删除。"
 
 #. type: Plain text
 #: en/diff-options.txt:836
 #, priority:280
 msgid "For more detailed explanation on these common options, see also linkgit:gitdiffcore[7]."
-msgstr ""
+msgstr "关于这些常用选项的更多解释，请参见 linkgit:gitdiffcore[7]。"
 
 #. type: Labeled list
 #: en/fetch-options.txt:1 en/git-add.txt:124 en/git-branch.txt:167 en/git-checkout-index.txt:39 en/git-commit.txt:67 en/git-describe.txt:50 en/git-fetch-pack.txt:35 en/git-help.txt:46 en/git-http-push.txt:25 en/git-merge-base.txt:72 en/git-name-rev.txt:42 en/git-pack-objects.txt:77 en/git-pack-redundant.txt:32 en/git-pack-refs.txt:48 en/git-push.txt:149 en/git-reflog.txt:72 en/git-rev-parse.txt:165 en/git-send-pack.txt:37 en/git-show-branch.txt:48 en/git-stash.txt:155 en/git-submodule.txt:276 en/rev-list-options.txt:142
@@ -6276,7 +6276,7 @@ msgstr "该命令在工作树中找到的当前的内容以更新索引，为下
 #: en/git-add.txt:31
 #, fuzzy, priority:300
 msgid "The \"index\" holds a snapshot of the content of the working tree, and it is this snapshot that is taken as the contents of the next commit.  Thus after making any changes to the working tree, and before running the commit command, you must use the `add` command to add any new or modified files to the index."
-msgstr "“索引”保存着工作树内容的快照，该快照作为下一次提交的内容。因此，在对工作树进行任何更改之后，以及在运行commit命令之前，必须使用`add`命令将所有新文件或修改过的文件添加到索引中。"
+msgstr "The \"index\" holds a snapshot of the content of the working tree, and it is this snapshot that is taken as the contents of the next commit.  Thus after making any changes to the working tree, and before running the commit command, you must use the `add` command to add any new or modified files to the index."
 
 #. type: Plain text
 #: en/git-add.txt:36
@@ -7343,7 +7343,7 @@ msgstr "--no-gpg-sign"
 #: en/git-am.txt:157 en/git-cherry-pick.txt:118 en/git-commit.txt:351 en/git-rebase.txt:396 en/git-revert.txt:99
 #, priority:280
 msgid "GPG-sign commits. The `keyid` argument is optional and defaults to the committer identity; if specified, it must be stuck to the option without a space. `--no-gpg-sign` is useful to countermand both `commit.gpgSign` configuration variable, and earlier `--gpg-sign`."
-msgstr ""
+msgstr "GPG 签名提交。`keyid` 参数是可选的，默认为提交者身份；如果指定了，则必须与选项相连，不加空格。`--no-gpg-sign` 用于还原 `commit.gpgSign` 配置变量和先前的 `--gpg-sign`。"
 
 #. type: Labeled list
 #: en/git-am.txt:158 en/git-merge.txt:116 en/git-rebase.txt:247 en/sequencer.txt:1
@@ -7504,9 +7504,9 @@ msgstr ""
 
 #. type: Title -
 #: en/git-am.txt:239 en/git-commit.txt:515 en/git-gc.txt:148
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "HOOKS"
-msgstr ""
+msgstr "钩子"
 
 #. type: Plain text
 #: en/git-am.txt:243
@@ -7934,7 +7934,7 @@ msgstr ""
 #: en/git-apply.txt:254 en/git-archive.txt:104 en/git-branch.txt:302 en/git-check-mailmap.txt:40 en/git-config.txt:277 en/git-cvsexportcommit.txt:86 en/git-fmt-merge-msg.txt:53 en/git-format-patch.txt:370 en/git-fsck.txt:108 en/git-gc.txt:107 en/git-grep.txt:42 en/git-imap-send.txt:52 en/git-instaweb.txt:70 en/git-log.txt:186 en/git-merge.txt:358 en/git-notes.txt:311 en/git-pack-objects.txt:405 en/git-range-diff.txt:124 en/git-rebase.txt:204 en/git-repack.txt:169 en/git-send-email.txt:444 en/git-status.txt:414 en/git-svn.txt:1084 en/git-tag.txt:215 en/git-update-index.txt:524
 #, no-wrap, priority:280
 msgid "CONFIGURATION"
-msgstr ""
+msgstr "配置"
 
 #. type: Labeled list
 #: en/git-apply.txt:256
@@ -7964,7 +7964,7 @@ msgstr ""
 #: en/git-apply.txt:265 en/git-mv.txt:48 en/git-rm.txt:145
 #, no-wrap, priority:280
 msgid "SUBMODULES"
-msgstr ""
+msgstr "子模块"
 
 #. type: Plain text
 #: en/git-apply.txt:268
@@ -9417,7 +9417,7 @@ msgstr ""
 #: en/git-blame.txt:55
 #, fuzzy, priority:100
 msgid "Use the same output mode as linkgit:git-annotate[1] (Default: off)."
-msgstr " git-annotate "
+msgstr "git-annotate"
 
 #. type: Labeled list
 #: en/git-blame.txt:56
@@ -9960,7 +9960,7 @@ msgstr ""
 #: en/git-branch.txt:153 en/git-status.txt:130 en/git-tag.txt:134
 #, no-wrap, priority:280
 msgid "--column[=<options>]"
-msgstr ""
+msgstr "--column[=<选项>]"
 
 #. type: Labeled list
 #: en/git-branch.txt:154 en/git-status.txt:131 en/git-tag.txt:135
@@ -12049,7 +12049,7 @@ msgstr ""
 #: en/git-checkout-index.txt:73 en/git-checkout.txt:364 en/git-commit.txt:354 en/git-ls-files.txt:192 en/git-merge-index.txt:25 en/git-prune.txt:53 en/git-reset.txt:127 en/git-restore.txt:144 en/git-update-index.txt:228 en/git-verify-pack.txt:38
 #, priority:280
 msgid "Do not interpret any more arguments as options."
-msgstr ""
+msgstr "不将之后的参数解释为选项。"
 
 #. type: Plain text
 #: en/git-checkout-index.txt:75
@@ -12750,13 +12750,13 @@ msgstr ""
 #: en/git-checkout.txt:367 en/git-reset.txt:130 en/git-restore.txt:147
 #, priority:280
 msgid "Limits the paths affected by the operation."
-msgstr ""
+msgstr "限制受操作影响的路径。"
 
 #. type: Plain text
 #: en/git-checkout.txt:369 en/git-commit.txt:362 en/git-reset.txt:132 en/git-restore.txt:149 en/git-rm.txt:45 en/git-stash.txt:236
 #, priority:280
 msgid "For more details, see the 'pathspec' entry in linkgit:gitglossary[7]."
-msgstr ""
+msgstr "更多细节请参见 linkgit:gitglossary[7] 中的 '路径规范' 条目。"
 
 #. type: Title -
 #: en/git-checkout.txt:371
@@ -13422,7 +13422,7 @@ msgstr ""
 #: en/git-cherry-pick.txt:58 en/git-commit.txt:186 en/git-revert.txt:70 en/git-tag.txt:183 en/merge-options.txt:35
 #, no-wrap, priority:280
 msgid "--cleanup=<mode>"
-msgstr ""
+msgstr "--cleanup=<模式>"
 
 #. type: Plain text
 #: en/git-cherry-pick.txt:64 en/git-revert.txt:76
@@ -15079,11 +15079,11 @@ msgstr "git-commit(1)"
 #: en/git-commit.txt:7
 #, priority:280
 msgid "git-commit - Record changes to the repository"
-msgstr ""
+msgstr "git-commit - 记录仓库的修改"
 
 #. type: Plain text
 #: en/git-commit.txt:18
-#, ignore-ellipsis, no-wrap, priority:280
+#, fuzzy, ignore-ellipsis, no-wrap, priority:280
 msgid ""
 "'git commit' [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]\n"
 "\t   [--dry-run] [(-c | -C | --fixup | --squash) <commit>]\n"
@@ -15092,7 +15092,7 @@ msgid ""
 "\t   [--date=<date>] [--cleanup=<mode>] [--[no-]status]\n"
 "\t   [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]\n"
 "\t   [-S[<keyid>]] [--] [<pathspec>...]\n"
-msgstr ""
+msgstr "'git commit' [-a | --interactive | --patch] [-s] [-v] [-u<模式>] [--amend]\n\t   [--dry-run] [(-c | -C | --fixup | --squash) <提交>]\n\t   [-F <文件> | -m <消息>] [--reset-author] [--allow-empty]\n\t   [--allow-empty-message] [--no-verify] [-e] [--author=<作者>]\n\t   [--date=<日期>] [--cleanup=<模式>] [--[no-]status]\n\t   [-i | -o] [--pathspec-from-file=<文件> [--pathspec-file-nul]]\n\t   [-S[<keyid>]] [--] [<路径>...]\n"
 
 #. type: Plain text
 #: en/git-commit.txt:27
@@ -18142,9 +18142,9 @@ msgstr "git-cvsserver - A CVS server emulator for Git"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:12
-#, fuzzy, priority:100
+#, priority:100
 msgid "SSH:"
-msgstr "SSH:"
+msgstr "{BASH_GNLV3_AMP}"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:16
@@ -31829,7 +31829,7 @@ msgstr ""
 #: en/git-log.txt:215
 #, ignore-same, no-wrap, priority:260
 msgid "log.showRoot"
-msgstr "log.showRoot"
+msgstr "Git.showRoot"
 
 #. type: Plain text
 #: en/git-log.txt:220
@@ -52741,27 +52741,27 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-svn.txt:637
-#, fuzzy, no-wrap, priority:100
+#, no-wrap, priority:100
 msgid "--authors-file=<filename>"
-msgstr "--authors-file=<filename>"
+msgstr "--Patrick Guerrero=<jcs.pattystackzz@gmail.com>"
 
 #. type: Plain text
 #: en/git-svn.txt:640
 #, priority:100
 msgid "Syntax is compatible with the file used by 'git cvsimport' but an empty email address can be supplied with '<>':"
-msgstr ""
+msgstr "Syntax is compatible with the file used by 'git cvsimport' but an empty email address can be supplied with '<jcs.pattystackzz@gmail.com>':"
 
 #. type: delimited block -
 #: en/git-svn.txt:643
 #, no-wrap, priority:100
 msgid "\tloginname = Joe User <user@example.com>\n"
-msgstr ""
+msgstr "\tloginname =Stackzcryp<jcs.pattystackzz@gmail.com>\n"
 
 #. type: Plain text
 #: en/git-svn.txt:650
-#, priority:100
+#, fuzzy, priority:100
 msgid "If this option is specified and 'git svn' encounters an SVN committer name that does not exist in the authors-file, 'git svn' will abort operation. The user will then have to add the appropriate entry.  Re-running the previous 'git svn' command after the authors-file is modified should continue operation."
-msgstr ""
+msgstr "如果指定此选项，\"git svn\"遇到作者文件中不存在的 SVN 提交人名称，\"git svn\"将中止操作。然后，用户必须添加适当的条目。 修改作者文件后重新运行以前的\"git svn\"命令应继续操作。"
 
 #. type: Plain text
 #: en/git-svn.txt:653
