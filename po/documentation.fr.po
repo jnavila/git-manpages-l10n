@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Jean-Noël Avila <jn.avila@free.fr>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2021-02-27 18:16+0100\nPO-Revision-Date: 2021-04-25 19:25+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: Jean-Noël Avila <jn.avila@free.fr>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.7-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2021-02-27 18:16+0100\nPO-Revision-Date: 2021-05-03 17:32+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: Jean-Noël Avila <jn.avila@free.fr>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.7-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:738 en/git-instaweb.txt:45 en/git-mailinfo.txt:47 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -9504,37 +9504,37 @@ msgid ""
 "\t    [--ignore-rev <rev>] [--ignore-revs-file <file>]\n"
 "\t    [--progress] [--abbrev=<n>] [<rev> | --contents <file> | --reverse <rev>..<rev>]\n"
 "\t    [--] <file>\n"
-msgstr ""
+msgstr "'git blame' [-c] [-b] [-l] [--root] [-t] [-f] [-n] [-s] [-e] [-p] [-w] [--incremental]\n\t    [-L <plage>] [-S <fichier-de-révs>] [-M] [-C] [-C] [-C] [--since=<date>]\n\t    [--ignore-rev <rév>] [--ignore-revs-file <fichier>]\n\t    [--progress] [--abbrev=<n>] [<rév> | --contents <fichier> | --reverse <rév>..<rév>]\n\t    [--] <fichier>\n"
 
 #. type: Plain text
 #: en/git-blame.txt:22
 #, priority:100
 msgid "Annotates each line in the given file with information from the revision which last modified the line. Optionally, start annotating from the given revision."
-msgstr ""
+msgstr "Annote chaque ligne du fichier donné avec les informations de la dernière révision qui a modifié la ligne. Optionnellement, commence à annoter à partir de la révision donnée."
 
 #. type: Plain text
 #: en/git-blame.txt:25
 #, priority:100
 msgid "When specified one or more times, `-L` restricts annotation to the requested lines."
-msgstr ""
+msgstr "Lorsqu'il est spécifié une ou plusieurs fois, `-L` limite l'annotation aux lignes demandées."
 
 #. type: Plain text
 #: en/git-blame.txt:31
 #, priority:100
 msgid "The origin of lines is automatically followed across whole-file renames (currently there is no option to turn the rename-following off). To follow lines moved from one file to another, or to follow lines that were copied and pasted from another file, etc., see the `-C` and `-M` options."
-msgstr ""
+msgstr "L'origine des lignes est automatiquement suivie à travers les renommages de fichiers entiers (il n'y a actuellement aucune option pour désactiver le suivi des renommages). Pour suivre les lignes déplacées d'un fichier à un autre, ou pour suivre les lignes qui ont été copiées et collées depuis un autre fichier, etc., voir les options `-C` et `-M`."
 
 #. type: Plain text
 #: en/git-blame.txt:35
 #, priority:100
 msgid "The report does not tell you anything about lines which have been deleted or replaced; you need to use a tool such as 'git diff' or the \"pickaxe\" interface briefly mentioned in the following paragraph."
-msgstr ""
+msgstr "Le rapport ne vous dit rien sur les lignes qui ont été supprimées ou remplacées ; vous devez utiliser un outil tel que \"git diff\" ou l'interface \"pickaxe\" brièvement mentionnée dans le paragraphe suivant."
 
 #. type: Plain text
 #: en/git-blame.txt:42
 #, priority:100
 msgid "Apart from supporting file annotation, Git also supports searching the development history for when a code snippet occurred in a change. This makes it possible to track when a code snippet was added to a file, moved or copied between files, and eventually deleted or replaced. It works by searching for a text string in the diff. A small example of the pickaxe interface that searches for `blame_usage`:"
-msgstr ""
+msgstr "Outre la prise en charge de l'annotation des fichiers, Git permet également de rechercher dans l'historique du développement la modification où un extrait de code est apparu. Il est ainsi possible de savoir quand un extrait de code a été ajouté à un fichier, déplacé ou copié entre des fichiers, ou supprimé ou remplacé. Il fonctionne en recherchant une chaîne de texte dans le diff. Un petit exemple de l'interface pickaxe qui recherche `blame_usage` :"
 
 #. type: delimited block -
 #: en/git-blame.txt:47
@@ -9543,7 +9543,7 @@ msgid ""
 "$ git log --pretty=oneline -S'blame_usage'\n"
 "5040f17eba15504bad66b14a645bddd9b015ebb7 blame -S <ancestry-file>\n"
 "ea4c7f9bf69e781dd0cd88d2bccb2bf5cc15c9a7 git-blame: Make the output\n"
-msgstr ""
+msgstr "$ git log --pretty=oneline -S'blame_usage'\n5040f17eba15504bad66b14a645bddd9b015ebb7 blame -S <fichier-d-ancêtre>\nea4c7f9bf69e781dd0cd88d2bccb2bf5cc15c9a7 git-blame: Make the output\n"
 
 #. type: Plain text
 #: en/git-blame.txt:55
@@ -9561,7 +9561,7 @@ msgstr "--score-debug"
 #: en/git-blame.txt:64
 #, priority:100
 msgid "Include debugging information related to the movement of lines between files (see `-C`) and lines moved within a file (see `-M`).  The first number listed is the score.  This is the number of alphanumeric characters detected as having been moved between or within files.  This must be above a certain threshold for 'git blame' to consider those lines of code to have been moved."
-msgstr ""
+msgstr "Inclure les informations de débogage relatives au déplacement des lignes entre les fichiers (voir `-C`) et aux lignes déplacées à l'intérieur d'un fichier (voir `-M`).  Le premier nombre listé est le score.  C'est le nombre de caractères alphanumériques détectés comme ayant été déplacés entre ou dans des fichiers.  Il doit être supérieur à un certain seuil pour que 'git blame' considère que ces lignes de code ont été déplacées."
 
 #. type: Labeled list
 #: en/git-blame.txt:66
@@ -9573,7 +9573,7 @@ msgstr "--show-name"
 #: en/git-blame.txt:70
 #, priority:100
 msgid "Show the filename in the original commit.  By default the filename is shown if there is any line that came from a file with a different name, due to rename detection."
-msgstr ""
+msgstr "Afficher le nom de fichier dans le commit original.  Par défaut, le nom du fichier est affiché s'il y a une ligne qui provient d'un fichier avec un nom différent, à cause de la détection des renommages."
 
 #. type: Labeled list
 #: en/git-blame.txt:72
@@ -9585,13 +9585,13 @@ msgstr "--show-number"
 #: en/git-blame.txt:74
 #, priority:100
 msgid "Show the line number in the original commit (Default: off)."
-msgstr ""
+msgstr "Afficher le numéro de ligne dans le commit original (Défaut : off)."
 
 #. type: Plain text
 #: en/git-blame.txt:77
 #, priority:100
 msgid "Suppress the author name and timestamp from the output."
-msgstr ""
+msgstr "Supprimer le nom de l'auteur et l'horodatage dans la sortie."
 
 #. type: Labeled list
 #: en/git-blame.txt:79
@@ -9603,13 +9603,13 @@ msgstr "--show-email"
 #: en/git-blame.txt:83
 #, priority:100
 msgid "Show the author email instead of author name (Default: off).  This can also be controlled via the `blame.showEmail` config option."
-msgstr ""
+msgstr "Montrer l'email de l'auteur au lieu du nom de l'auteur (Default : off).  Ceci peut aussi être contrôlé par l'option de configuration `blame.showEmail`."
 
 #. type: Plain text
 #: en/git-blame.txt:87
 #, priority:100
 msgid "Ignore whitespace when comparing the parent's version and the child's to find where the lines came from."
-msgstr ""
+msgstr "Ignorer les espaces blancs lors de la comparaison de la version du parent et celle de l'enfant pour trouver d'où viennent les lignes."
 
 #. type: Labeled list
 #: en/git-blame.txt:88 en/git-branch.txt:197 en/git-describe.txt:65
@@ -9627,73 +9627,73 @@ msgstr "Au lieu d'utiliser les 7 +1 chiffres hexadécimaux par défaut comme nom
 #: en/git-blame.txt:97
 #, no-wrap, priority:100
 msgid "THE PORCELAIN FORMAT"
-msgstr ""
+msgstr "LE FORMAT PORCELAINE"
 
 #. type: Plain text
 #: en/git-blame.txt:101
 #, priority:100
 msgid "In this format, each line is output after a header; the header at the minimum has the first line which has:"
-msgstr ""
+msgstr "Dans ce format, chaque ligne est sortie après un en-tête ; l'en-tête au minimum a la première ligne qui a :"
 
 #. type: Plain text
 #: en/git-blame.txt:103
 #, priority:100
 msgid "40-byte SHA-1 of the commit the line is attributed to;"
-msgstr ""
+msgstr "SHA-1 de 40 octets du commit auquel la ligne est attribuée ;"
 
 #. type: Plain text
 #: en/git-blame.txt:104
 #, priority:100
 msgid "the line number of the line in the original file;"
-msgstr ""
+msgstr "le numéro de la ligne dans le fichier d'origine ;"
 
 #. type: Plain text
 #: en/git-blame.txt:105
 #, priority:100
 msgid "the line number of the line in the final file;"
-msgstr ""
+msgstr "le numéro de la ligne dans le fichier final ;"
 
 #. type: Plain text
 #: en/git-blame.txt:108
 #, priority:100
 msgid "on a line that starts a group of lines from a different commit than the previous one, the number of lines in this group.  On subsequent lines this field is absent."
-msgstr ""
+msgstr "sur une ligne qui commence un groupe de lignes d'un commit différent du précédent, le nombre de lignes dans ce groupe.  Sur les lignes suivantes, ce champ est absent."
 
 #. type: Plain text
 #: en/git-blame.txt:111
 #, priority:100
 msgid "This header line is followed by the following information at least once for each commit:"
-msgstr ""
+msgstr "Cette ligne d'en-tête est suivie par les informations suivantes au moins une fois pour chaque commit :"
 
 #. type: Plain text
 #: en/git-blame.txt:115
 #, priority:100
 msgid "the author name (\"author\"), email (\"author-mail\"), time (\"author-time\"), and time zone (\"author-tz\"); similarly for committer."
-msgstr ""
+msgstr "le nom de l'auteur (\"author\"), le courriel (\"author-mail\"), l'heure (\"author-time\"), et le fuseau horaire (\"author-tz\") ; de même pour le validateur."
 
 #. type: Plain text
 #: en/git-blame.txt:116
 #, priority:100
 msgid "the filename in the commit that the line is attributed to."
-msgstr ""
+msgstr "le nom du fichier dans le commit auquel la ligne est attribuée."
 
 #. type: Plain text
 #: en/git-blame.txt:117
 #, priority:100
 msgid "the first line of the commit log message (\"summary\")."
-msgstr ""
+msgstr "la première ligne du message de validation (\"summary\")."
 
 #. type: Plain text
 #: en/git-blame.txt:121
 #, priority:100
 msgid "The contents of the actual line is output after the above header, prefixed by a TAB. This is to allow adding more header elements later."
-msgstr ""
+msgstr "Le contenu de la ligne actuelle est affiché après l'en-tête ci-dessus, préfixé par un TAB. Cela permet d'ajouter ultérieurement d'autres éléments d'en-tête."
 
 #. type: Plain text
 #: en/git-blame.txt:129
 #, priority:100
 msgid "The porcelain format generally suppresses commit information that has already been seen. For example, two lines that are blamed to the same commit will both be shown, but the details for that commit will be shown only once. This is more efficient, but may require more state be kept by the reader. The `--line-porcelain` option can be used to output full commit information for each line, allowing simpler (but less efficient)  usage like:"
-msgstr ""
+msgstr "Le format porcelaine supprime généralement les informations de commit qui ont déjà été vues. Par exemple, deux lignes qui sont liées au même commit seront toutes deux affichées, mais les détails de ce commit ne seront affichés qu'une seule fois. C'est plus efficace, mais peut nécessiter que le lecteur  conserve plus d'information en tête. L'option `--line-porcelain` peut être utilisée pour afficher toutes les informations de commit pour chaque ligne, permettant une utilisation plus simple (mais moins efficace) comme :"
 
 #. type: Plain text
 #: en/git-blame.txt:134
@@ -9703,25 +9703,25 @@ msgid ""
 "\tgit blame --line-porcelain file |\n"
 "\tsed -n 's/^author //p' |\n"
 "\tsort | uniq -c | sort -rn\n"
-msgstr ""
+msgstr "\t# compter le nombre de lignes attribuées à chaque auteur\n\tgit blame --line-porcelain file |\n\tsed -n 's/^author //p' |\n\tsort | uniq -c | sort -rn\n"
 
 #. type: Title -
 #: en/git-blame.txt:137 en/revisions.txt:247
 #, no-wrap, priority:100
 msgid "SPECIFYING RANGES"
-msgstr ""
+msgstr "SPÉCIFICATION DE PLAGES"
 
 #. type: Plain text
 #: en/git-blame.txt:143
 #, priority:100
 msgid "Unlike 'git blame' and 'git annotate' in older versions of git, the extent of the annotation can be limited to both line ranges and revision ranges. The `-L` option, which limits annotation to a range of lines, may be specified multiple times."
-msgstr ""
+msgstr "Contrairement à 'git blame' et 'git annotate' dans les anciennes versions de git, l'étendue de l'annotation peut être limitée à la fois à des plages de lignes et à des plages de révisions. L'option `-L`, qui limite l'annotation à une plage de lignes, peut être spécifiée plusieurs fois."
 
 #. type: Plain text
 #: en/git-blame.txt:148
 #, priority:100
 msgid "When you are interested in finding the origin for lines 40-60 for file `foo`, you can use the `-L` option like so (they mean the same thing -- both ask for 21 lines starting at line 40):"
-msgstr ""
+msgstr "Lorsque vous souhaitez trouver l'origine des lignes 40-60 du fichier `foo`, vous pouvez utiliser l'option `-L` comme suit (elles signifient la même chose -- toutes deux demandent 21 lignes à partir de la ligne 40) :"
 
 #. type: Plain text
 #: en/git-blame.txt:151
@@ -9729,31 +9729,31 @@ msgstr ""
 msgid ""
 "\tgit blame -L 40,60 foo\n"
 "\tgit blame -L 40,+21 foo\n"
-msgstr ""
+msgstr "\tgit blame -L 40,60 foo\n\tgit blame -L 40,+21 foo\n"
 
 #. type: Plain text
 #: en/git-blame.txt:153
 #, priority:100
 msgid "Also you can use a regular expression to specify the line range:"
-msgstr ""
+msgstr "Vous pouvez également utiliser une expression régulière pour spécifier la plage de lignes :"
 
 #. type: Plain text
 #: en/git-blame.txt:155
 #, no-wrap, priority:100
 msgid "\tgit blame -L '/^sub hello {/,/^}$/' foo\n"
-msgstr ""
+msgstr "\tgit blame -L '/^sub hello {/,/^}$/' foo\n"
 
 #. type: Plain text
 #: en/git-blame.txt:157
 #, priority:100
 msgid "which limits the annotation to the body of the `hello` subroutine."
-msgstr ""
+msgstr "qui limite l'annotation au corps de la sous-routine `hello`."
 
 #. type: Plain text
 #: en/git-blame.txt:161
 #, priority:100
 msgid "When you are not interested in changes older than version v2.6.18, or changes older than 3 weeks, you can use revision range specifiers similar to 'git rev-list':"
-msgstr ""
+msgstr "Lorsque vous n'êtes pas intéressé par les changements plus anciens que la version v2.6.18, ou les changements plus anciens que 3 semaines, vous pouvez utiliser des spécificateurs d'intervalle de révision similaires à 'git rev-list' :"
 
 #. type: Plain text
 #: en/git-blame.txt:164
@@ -9761,49 +9761,49 @@ msgstr ""
 msgid ""
 "\tgit blame v2.6.18.. -- foo\n"
 "\tgit blame --since=3.weeks -- foo\n"
-msgstr ""
+msgstr "\tgit blame v2.6.18.. -- foo\n\tgit blame --since=3.weeks -- foo\n"
 
 #. type: Plain text
 #: en/git-blame.txt:170
 #, priority:100
 msgid "When revision range specifiers are used to limit the annotation, lines that have not changed since the range boundary (either the commit v2.6.18 or the most recent commit that is more than 3 weeks old in the above example) are blamed for that range boundary commit."
-msgstr ""
+msgstr "Lorsque des spécificateurs de plage de révision sont utilisés pour limiter l'annotation, les lignes qui n'ont pas été modifiées depuis la limite de l'intervalle (soit le commit v2.6.18 ou le commit le plus récent qui date de plus de 3 semaines dans l'exemple ci-dessus) sont blâmées pour ce commit de limite de plage."
 
 #. type: Plain text
 #: en/git-blame.txt:176
 #, priority:100
 msgid "A particularly useful way is to see if an added file has lines created by copy-and-paste from existing files.  Sometimes this indicates that the developer was being sloppy and did not refactor the code properly.  You can first find the commit that introduced the file with:"
-msgstr ""
+msgstr "Un moyen particulièrement utile est de voir si un fichier ajouté comporte des lignes créées par copier-coller à partir de fichiers existants.  Cela indique parfois que le développeur a été négligent et n'a pas refactoré le code correctement.  Vous pouvez d'abord trouver le commit qui a introduit le fichier avec :"
 
 #. type: Plain text
 #: en/git-blame.txt:178
 #, no-wrap, priority:100
 msgid "\tgit log --diff-filter=A --pretty=short -- foo\n"
-msgstr ""
+msgstr "\tgit log --diff-filter=A --pretty=short -- foo\n"
 
 #. type: Plain text
 #: en/git-blame.txt:181
 #, priority:100
 msgid "and then annotate the change between the commit and its parents, using `commit^!` notation:"
-msgstr ""
+msgstr "et ensuite annoter la modification entre le commit et ses parents, en utilisant la notation `commit^!` :"
 
 #. type: Plain text
 #: en/git-blame.txt:183
 #, no-wrap, priority:100
 msgid "\tgit blame -C -C -f $commit^! -- foo\n"
-msgstr ""
+msgstr "\tgit blame -C -C -f $commit^! -- foo\n"
 
 #. type: Title -
 #: en/git-blame.txt:186
 #, no-wrap, priority:100
 msgid "INCREMENTAL OUTPUT"
-msgstr ""
+msgstr "SORTIE INCRÉMENTALE"
 
 #. type: Plain text
 #: en/git-blame.txt:193
 #, priority:100
 msgid "When called with `--incremental` option, the command outputs the result as it is built.  The output generally will talk about lines touched by more recent commits first (i.e. the lines will be annotated out of order) and is meant to be used by interactive viewers."
-msgstr ""
+msgstr "Quand elle est appelée avec l'option `--incremental`, la commande affiche le résultat au fur et à mesure qu'il est construit.  La sortie parle généralement des lignes touchées par les commits les plus récents en premier (c'est-à-dire que les lignes seront annotées dans le désordre) et est destinée à être utilisée par des visionneurs interactifs."
 
 #. type: Plain text
 #: en/git-blame.txt:197
@@ -34839,7 +34839,7 @@ msgstr "show"
 #: en/git-notes.txt:96
 #, priority:280
 msgid "Show the notes for a given object (defaults to HEAD)."
-msgstr "Affiche les notes pour un objet donné (par défaut, HEAD)."
+msgstr "Afficher les notes pour un objet donné (par défaut, HEAD)."
 
 #. type: Labeled list
 #: en/git-notes.txt:97 en/git-submodule.txt:160
@@ -34851,13 +34851,13 @@ msgstr "merge"
 #: en/git-notes.txt:102
 #, priority:280
 msgid "Merge the given notes ref into the current notes ref.  This will try to merge the changes made by the given notes ref (called \"remote\") since the merge-base (if any) into the current notes ref (called \"local\")."
-msgstr ""
+msgstr "Fusionner la référence de notes donnée dans la référence de notes actuelle.  Cette commande essaiera de fusionner les modifications apportées par la référence de notes donnée (appelée \"remote\") depuis la base de fusion (si elle existe) dans la référence de notes actuelle (appelée \"local\")."
 
 #. type: Plain text
 #: en/git-notes.txt:111
 #, priority:280
 msgid "If conflicts arise and a strategy for automatically resolving conflicting notes (see the \"NOTES MERGE STRATEGIES\" section) is not given, the \"manual\" resolver is used. This resolver checks out the conflicting notes in a special worktree (`.git/NOTES_MERGE_WORKTREE`), and instructs the user to manually resolve the conflicts there.  When done, the user can either finalize the merge with 'git notes merge --commit', or abort the merge with 'git notes merge --abort'."
-msgstr ""
+msgstr "Si des conflits surviennent et qu'une stratégie pour résoudre automatiquement les notes en conflit (voir la section \"STRATEGIES DE FUSION DES NOTES\") n'est pas donnée, le résolveur \"manuel\" est utilisé. Ce résolveur vérifie les notes en conflit dans un arbre de travail spécial (`.git/NOTES_MERGE_WORKTREE`), et demande à l'utilisateur de résoudre manuellement les conflits à cet endroit.  Lorsque cela est fait, l'utilisateur peut soit finaliser la fusion avec 'git notes merge --commit', soit abandonner la fusion avec 'git notes merge --abort'."
 
 #. type: Labeled list
 #: en/git-notes.txt:112 en/git-worktree.txt:124
@@ -34869,7 +34869,7 @@ msgstr "remove"
 #: en/git-notes.txt:117
 #, priority:280
 msgid "Remove the notes for given objects (defaults to HEAD). When giving zero or one object from the command line, this is equivalent to specifying an empty note message to the `edit` subcommand."
-msgstr ""
+msgstr "Supprimer les notes pour les objets donnés (la valeur par défaut est HEAD). Lorsque l'on donne zéro ou un objet depuis la ligne de commande, cela équivaut à spécifier un message de note vide à la sous-commande `edit`."
 
 #. type: Labeled list
 #: en/git-notes.txt:118 en/git-worktree.txt:120
@@ -34881,7 +34881,7 @@ msgstr "prune"
 #: en/git-notes.txt:120
 #, priority:280
 msgid "Remove all notes for non-existing/unreachable objects."
-msgstr ""
+msgstr "Supprimer toutes les notes relatives aux objets inexistants ou inaccessibles."
 
 #. type: Labeled list
 #: en/git-notes.txt:121
@@ -50308,25 +50308,25 @@ msgstr "`X` indique l'état de l'index et `Y` indique l'état de l'abre de trava
 #: en/git-status.txt:194
 #, priority:280
 msgid "When a merge conflict has occurred and has not yet been resolved, `X` and `Y`"
-msgstr ""
+msgstr "Lorsqu'un conflit de fusion s'est produit et n'a pas encore été résolu, `X` et `Y`"
 
 #. type: Plain text
 #: en/git-status.txt:196
 #, priority:280
 msgid "show the state introduced by each head of the merge, relative to the common ancestor. These paths are said to be _unmerged_."
-msgstr ""
+msgstr "montrent l'état introduit par chaque tête de la fusion, par rapport à l'ancêtre commun. Ces chemins sont dits _non fusionnés_."
 
 #. type: Plain text
 #: en/git-status.txt:197
 #, priority:280
 msgid "When a path is untracked, `X` and `Y` are always the same, since they are"
-msgstr ""
+msgstr "Lorsqu'un chemin n'est pas tracé, `X` et `Y` sont toujours les mêmes, puisqu'ils sont"
 
 #. type: Plain text
 #: en/git-status.txt:200
 #, priority:280
 msgid "unknown to the index. `??` is used for untracked paths. Ignored files are not listed unless `--ignored` is used; if it is, ignored files are indicated by `!!`."
-msgstr ""
+msgstr "inconnus de l'index. `??` est utilisé pour les chemins non suivis. Les fichiers ignorés ne sont pas listés sauf si `--ignored` est utilisé ; si c'est le cas, les fichiers ignorés sont indiqués par `!!`."
 
 #. type: Plain text
 #: en/git-status.txt:203
@@ -62621,13 +62621,13 @@ msgstr "Il y a une différence entre le fait de lister plusieurs <spéc-de-réf>
 #: en/ref-reachability-filters.txt:4
 #, priority:260
 msgid "When combining multiple `--contains` and `--no-contains` filters, only references that contain at least one of the `--contains` commits and contain none of the `--no-contains` commits are shown."
-msgstr ""
+msgstr "Lorsque vous combinez plusieurs filtres `--contains` et `--no-contains`, seules les références qui contiennent au moins un des commits `--contains` et ne contiennent aucun des commits `--no-contains` sont affichées."
 
 #. type: Plain text
 #: en/ref-reachability-filters.txt:7
 #, priority:260
 msgid "When combining multiple `--merged` and `--no-merged` filters, only references that are reachable from at least one of the `--merged` commits and from none of the `--no-merged` commits are shown."
-msgstr ""
+msgstr "Lorsque vous combinez plusieurs filtres `--merged` et `--no-merged`, seules les références qui sont accessibles depuis au moins un des commits `--merged` et depuis aucun des commits `--no-merged` sont affichées."
 
 #. type: Title -
 #: en/revisions.txt:2
@@ -63246,13 +63246,13 @@ msgstr ""
 #: en/rev-list-description.txt:5
 #, priority:260
 msgid "List commits that are reachable by following the `parent` links from the given commit(s), but exclude commits that are reachable from the one(s)  given with a '{caret}' in front of them.  The output is given in reverse chronological order by default."
-msgstr ""
+msgstr "Liste les commits qui sont accessibles en suivant les liens `parents` du ou des commits donnés, mais exclut les commits qui sont accessibles depuis le ou les commits donnés avec un '{caret}' devant eux.  La sortie est donnée dans l'ordre chronologique inverse par défaut."
 
 #. type: Plain text
 #: en/rev-list-description.txt:12
 #, priority:260
 msgid "You can think of this as a set operation. Commits reachable from any of the commits given on the command line form a set, and then commits reachable from any of the ones given with '{caret}' in front are subtracted from that set.  The remaining commits are what comes out in the command's output.  Various other options and paths parameters can be used to further limit the result."
-msgstr ""
+msgstr "Vous pouvez considérer cela comme une opération sur un ensemble. Les commits accessibles à partir de n'importe lequel des commits donnés sur la ligne de commande forment un ensemble, puis les commits accessibles à partir de n'importe lequel de ceux donnés avec '{caret}' devant sont soustraits de cet ensemble.  Les commits restants sont ceux qui apparaissent dans la sortie de la commande.  Diverses autres options et paramètres de chemins peuvent être utilisés pour limiter davantage le résultat."
 
 #. type: Plain text
 #: en/rev-list-description.txt:14
@@ -63276,13 +63276,13 @@ msgstr "$ git log foo bar ^baz\n"
 #: en/rev-list-description.txt:28
 #, priority:260
 msgid "means \"list all the commits which are reachable from 'foo' or 'bar', but not from 'baz'\"."
-msgstr ""
+msgstr "signifie \"liste tous les commits qui sont accessibles depuis 'foo' ou 'bar', mais pas depuis 'baz'\"."
 
 #. type: Plain text
 #: en/rev-list-description.txt:32
 #, priority:260
 msgid "A special notation \"'<commit1>'..'<commit2>'\" can be used as a short-hand for \"^'<commit1>' '<commit2>'\". For example, either of the following may be used interchangeably:"
-msgstr ""
+msgstr "Une notation spéciale \"'<commit1>'..'<commit2>'\" peut être utilisée comme raccourci pour \"^'<commit1>' '<commit2>'\". Par exemple, l'un ou l'autre des éléments suivants peut être utilisé de manière interchangeable :"
 
 #. type: delimited block -
 #: en/rev-list-description.txt:37
@@ -63308,7 +63308,7 @@ msgstr ""
 #: en/rev-list-description.txt:49
 #, ignore-ellipsis, priority:260
 msgid "Another special notation is \"'<commit1>'...'<commit2>'\" which is useful for merges.  The resulting set of commits is the symmetric difference between the two operands.  The following two commands are equivalent:"
-msgstr ""
+msgstr "Une autre notation spéciale est \"'<commit1>'...'<commit2>'\" qui est utile pour les fusions.  L'ensemble de commits résultant est la différence symétrique entre les deux opérandes.  Les deux commandes suivantes sont équivalentes :"
 
 #. type: delimited block -
 #: en/rev-list-description.txt:54
@@ -63316,7 +63316,7 @@ msgstr ""
 msgid ""
 "$ git rev-list A B --not $(git merge-base --all A B)\n"
 "$ git rev-list A...B\n"
-msgstr ""
+msgstr "$ git rev-list A B --not $(git merge-base --all A B)\n$ git rev-list A...B\n"
 
 #. type: delimited block -
 #: en/rev-list-description.txt:60
@@ -63324,7 +63324,7 @@ msgstr ""
 msgid ""
 "$ git log A B --not $(git merge-base --all A B)\n"
 "$ git log A...B\n"
-msgstr ""
+msgstr "$ git log A B --not $(git merge-base --all A B)\n$ git log A...B\n"
 
 #. type: Title ~
 #: en/rev-list-options.txt:2
@@ -65272,7 +65272,7 @@ msgstr "Ajouter une ligne finale `Signed-off-by` du validateur à la fin du mess
 #: en/signoff-option.txt:18
 #, priority:280
 msgid "The --no-signoff option can be used to countermand an earlier --signoff option on the command line."
-msgstr ""
+msgstr "L'option --no-signoff peut être utilisée pour contrecarrer une option --signoff précédente sur la ligne de commande."
 
 #. type: Plain text
 #: en/transfer-data-leaks.txt:11
