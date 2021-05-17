@@ -190,6 +190,8 @@ The placeholders are:
 '%ai':: author date, ISO 8601-like format
 '%aI':: author date, strict ISO 8601 format
 '%as':: author date, short format (`YYYY-MM-DD`)
+'%ah':: author date, human style (like the `--date=human` option of
+	linkgit:git-rev-list[1])
 '%cn':: committer name
 '%cN':: committer name (respecting .mailmap, see
 	linkgit:git-shortlog[1] or linkgit:git-blame[1])
@@ -206,8 +208,23 @@ The placeholders are:
 '%ci':: committer date, ISO 8601-like format
 '%cI':: committer date, strict ISO 8601 format
 '%cs':: committer date, short format (`YYYY-MM-DD`)
+'%ch':: committer date, human style (like the `--date=human` option of
+	linkgit:git-rev-list[1])
 '%d':: ref names, like the --decorate option of linkgit:git-log[1]
 '%D':: ref names without the " (", ")" wrapping.
+'%(describe[:options])':: human-readable name, like
+			  linkgit:git-describe[1]; empty string for
+			  undescribable commits.  The `describe` string
+			  may be followed by a colon and zero or more
+			  comma-separated options.  Descriptions can be
+			  inconsistent when tags are added or removed at
+			  the same time.
++
+** 'match=<pattern>': Only consider tags matching the given
+   `glob(7)` pattern, excluding the "refs/tags/" prefix.
+** 'exclude=<pattern>': Do not consider tags matching the given
+   `glob(7)` pattern, excluding the "refs/tags/" prefix.
+
 '%S':: ref name given on the command line by which the commit was reached
        (like `git log --source`), only works with `git log`
 '%e':: encoding
@@ -254,7 +271,7 @@ endif::git-rev-list[]
 			  `trailers` string may be followed by a colon
 			  and zero or more comma-separated options.
 			  If any option is provided multiple times the
-			  last occurance wins.
+			  last occurrence wins.
 +
 The boolean options accept an optional value `[=<BOOL>]`. The values
 `true`, `false`, `on`, `off` etc. are all accepted. See the "boolean"
