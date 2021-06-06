@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Jean-Noël Avila <jn.avila@free.fr>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2021-05-17 17:03+0200\nPO-Revision-Date: 2021-05-25 18:32+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: Jean-Noël Avila <jn.avila@free.fr>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.7-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2021-05-17 17:03+0200\nPO-Revision-Date: 2021-06-06 20:40+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: Jean-Noël Avila <jn.avila@free.fr>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.7-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:748 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -11936,31 +11936,31 @@ msgstr "-v, --verbose"
 #: en/git-check-ignore.txt:39
 #, priority:100
 msgid "Instead of printing the paths that are excluded, for each path that matches an exclude pattern, print the exclude pattern together with the path.  (Matching an exclude pattern usually means the path is excluded, but if the pattern begins with '!' then it is a negated pattern and matching it means the path is NOT excluded.)"
-msgstr ""
+msgstr "Au lieu d'afficher les chemins qui sont exclus, pour chaque chemin qui correspond à un motif d'exclusion, imprimer le motif d'exclusion avec le chemin.  (La correspondance d'un motif d'exclusion signifie généralement que le chemin est exclu, mais si le motif commence par '!', il s'agit alors d'un motif négatif et sa correspondance signifie que le chemin n'est PAS exclu)."
 
 #. type: Plain text
 #: en/git-check-ignore.txt:42
 #, priority:100
 msgid "For precedence rules within and between exclude sources, see linkgit:gitignore[5]."
-msgstr ""
+msgstr "Pour les règles de préséance dans et entre les sources d'exclusion, voir linkgit:gitignore[5]."
 
 #. type: Plain text
 #: en/git-check-ignore.txt:51
 #, priority:100
 msgid "The output format is modified to be machine-parsable (see below).  If `--stdin` is also given, input paths are separated with a NUL character instead of a linefeed character."
-msgstr ""
+msgstr "Le format de sortie est modifié pour être analysable par une machine.  Si `--stdin` est également donné, les chemins d'entrée sont séparés par un caractère NUL au lieu d'un caractère de saut de ligne."
 
 #. type: Labeled list
 #: en/git-check-ignore.txt:52
 #, no-wrap, priority:100
 msgid "-n, --non-matching"
-msgstr ""
+msgstr "-n, --non-matching"
 
 #. type: Plain text
 #: en/git-check-ignore.txt:57
 #, priority:100
 msgid "Show given paths which don't match any pattern.\t This only makes sense when `--verbose` is enabled, otherwise it would not be possible to distinguish between paths which match a pattern and those which don't."
-msgstr ""
+msgstr "Afficher les chemins donnés qui ne correspondent à aucun motif. Cela n'a de sens que si `--verbose` est activé, sinon il ne serait pas possible de distinguer les chemins qui correspondent à un motif de ceux qui ne le correspondent pas."
 
 #. type: Labeled list
 #: en/git-check-ignore.txt:58 en/git-grep.txt:47
@@ -11972,49 +11972,49 @@ msgstr "--no-index"
 #: en/git-check-ignore.txt:64
 #, priority:100
 msgid "Don't look in the index when undertaking the checks. This can be used to debug why a path became tracked by e.g. `git add .` and was not ignored by the rules as expected by the user or when developing patterns including negation to match a path previously added with `git add -f`."
-msgstr ""
+msgstr "Ne pas regarder dans l'index lors des vérifications. Cela peut être utilisé pour déboguer la raison pour laquelle un chemin est devenu suivi par exemple par `git add .` et n'a pas été ignoré par les règles comme prévu par l'utilisateur ou lors du développement de motifs incluant la négation pour correspondre à un chemin précédemment ajouté avec `git add -f`."
 
 #. type: Plain text
 #: en/git-check-ignore.txt:72
 #, priority:100
 msgid "By default, any of the given pathnames which match an ignore pattern will be output, one per line.  If no pattern matches a given path, nothing will be output for that path; this means that path will not be ignored."
-msgstr ""
+msgstr "Par défaut, tous les noms de chemin donnés qui correspondent à un motif négatif seront affichés, un par ligne.  Si aucun motif ne correspond à un chemin donné, rien ne sera affiché pour ce chemin ; cela signifie que ce chemin ne sera pas ignoré."
 
 #. type: Plain text
 #: en/git-check-ignore.txt:74
 #, priority:100
 msgid "If `--verbose` is specified, the output is a series of lines of the form:"
-msgstr ""
+msgstr "Si `--verbose` est spécifié, la sortie est une série de lignes de la forme :"
 
 #. type: Plain text
 #: en/git-check-ignore.txt:76
 #, priority:100
 msgid "<source> <COLON> <linenum> <COLON> <pattern> <HT> <pathname>"
-msgstr ""
+msgstr "<source> <DEUX-POINTS> <num-ligne> <DEUX-POINTS> <motif> <HT> <nom-de-chemin>"
 
 #. type: Plain text
 #: en/git-check-ignore.txt:84
 #, priority:100
 msgid "<pathname> is the path of a file being queried, <pattern> is the matching pattern, <source> is the pattern's source file, and <linenum> is the line number of the pattern within that source.  If the pattern contained a `!` prefix or `/` suffix, it will be preserved in the output.  <source> will be an absolute path when referring to the file configured by `core.excludesFile`, or relative to the repository root when referring to `.git/info/exclude` or a per-directory exclude file."
-msgstr ""
+msgstr "<nom-de-chemin> est le chemin d'un fichier interrogé, <motif> est le motif correspondant, <source> est le fichier source du motif, et <num-ligne> est le numéro de ligne du motif dans cette source.  Si le motif contenait un préfixe `!` ou un suffixe `/`, il sera préservé dans la sortie.  <source> sera un chemin absolu quand il se réfère au fichier configuré par `core.excludesFile`, ou relatif à la racine du dépôt quand il se réfère à `.git/info/exclude` ou à un fichier d'exclusion par répertoire."
 
 #. type: Plain text
 #: en/git-check-ignore.txt:88
 #, priority:100
 msgid "If `-z` is specified, the pathnames in the output are delimited by the null character; if `--verbose` is also specified then null characters are also used instead of colons and hard tabs:"
-msgstr ""
+msgstr "Si `-z` est spécifié, les noms de chemin dans la sortie sont délimités par le caractère nul ; si `--verbose` est également spécifié, les caractères nuls sont également utilisés à la place des deux-points et des tabulations :"
 
 #. type: Plain text
 #: en/git-check-ignore.txt:90
 #, priority:100
 msgid "<source> <NULL> <linenum> <NULL> <pattern> <NULL> <pathname> <NULL>"
-msgstr ""
+msgstr "<source> <NULL> <num-ligne> <NULL> <motif> <NULL> <nome-de-chemin> <NULL>"
 
 #. type: Plain text
 #: en/git-check-ignore.txt:100
 #, priority:100
 msgid "If `-n` or `--non-matching` are specified, non-matching pathnames will also be output, in which case all fields in each output record except for <pathname> will be empty.  This can be useful when running non-interactively, so that files can be incrementally streamed to STDIN of a long-running check-ignore process, and for each of these files, STDOUT will indicate whether that file matched a pattern or not.  (Without this option, it would be impossible to tell whether the absence of output for a given file meant that it didn't match any pattern, or that the output hadn't been generated yet.)"
-msgstr ""
+msgstr "Si `-n` ou `--non-matching` sont spécifiés, les noms de chemin non-matching seront aussi sortis, dans ce cas tous les champs dans chaque enregistrement de sortie sauf pour <nom-de-chemin> seront vides.  Cela peut être utile lors d'une exécution non-interactive, de sorte que les fichiers peuvent être envoyés incrémentalement sur STDIN d'un processus check-ignore au long cours, et pour chacun de ces fichiers, STDOUT indiquera si ce fichier correspond à un motif ou non.  (Sans cette option, il serait impossible de dire si l'absence de sortie pour un fichier donné signifie qu'il ne correspond à aucun motif, ou que la sortie n'a pas encore été générée)."
 
 #. type: Title -
 #: en/git-check-ignore.txt:107 en/git-filter-branch.txt:239 en/git-remote.txt:207
@@ -12026,37 +12026,37 @@ msgstr "STATUT DE SORTIE"
 #: en/git-check-ignore.txt:109
 #, no-wrap, priority:100
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #. type: Plain text
 #: en/git-check-ignore.txt:111
 #, priority:100
 msgid "One or more of the provided paths is ignored."
-msgstr ""
+msgstr "Un ou plusieurs des chemins fournis sont ignorés."
 
 #. type: Labeled list
 #: en/git-check-ignore.txt:112
 #, no-wrap, priority:100
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #. type: Plain text
 #: en/git-check-ignore.txt:114
 #, priority:100
 msgid "None of the provided paths are ignored."
-msgstr ""
+msgstr "Aucun des chemins fournis n'est ignoré."
 
 #. type: Labeled list
 #: en/git-check-ignore.txt:115
 #, no-wrap, priority:100
 msgid "128"
-msgstr ""
+msgstr "128"
 
 #. type: Plain text
 #: en/git-check-ignore.txt:117
 #, priority:100
 msgid "A fatal error was encountered."
-msgstr ""
+msgstr "Une erreur fatale a été rencontrée."
 
 #. type: Plain text
 #: en/git-check-ignore.txt:123
@@ -12074,7 +12074,7 @@ msgstr "git-check-mailmap(1)"
 #: en/git-check-mailmap.txt:7
 #, priority:100
 msgid "git-check-mailmap - Show canonical names and email addresses of contacts"
-msgstr ""
+msgstr "git-check-mailmap - Affiche les noms canoniques et les adresses de courriel des contacts"
 
 #. type: Plain text
 #: en/git-check-mailmap.txt:13
@@ -12086,25 +12086,25 @@ msgstr "'git check-mailmap' [<options>] <contact>...\n"
 #: en/git-check-mailmap.txt:22
 #, priority:100
 msgid "For each ``Name $$<user@host>$$'' or ``$$<user@host>$$'' from the command-line or standard input (when using `--stdin`), look up the person's canonical name and email address (see \"Mapping Authors\" below). If found, print them; otherwise print the input as-is."
-msgstr ""
+msgstr "Pour chaque \"Nom $$<utilisateur@hote>$$\" ou \"$$<utilisateur@hote>$$\" de la ligne de commande ou de l'entrée standard (si vous utilisez `--stdin`), rechercher le nom canonique et l'adresse électronique de la personne (voir \"Convertir les auteurs\" ci-dessous). S'ils sont trouvés, les afficher, sinon afficher l'entrée telle quelle."
 
 #. type: Plain text
 #: en/git-check-mailmap.txt:29
 #, priority:100
 msgid "Read contacts, one per line, from the standard input after exhausting contacts provided on the command-line."
-msgstr ""
+msgstr "Lire les contacts, un par ligne, à partir de l'entrée standard après avoir épuisé les contacts fournis sur la ligne de commande."
 
 #. type: Plain text
 #: en/git-check-mailmap.txt:37
 #, priority:100
 msgid "For each contact, a single line is output, terminated by a newline.  If the name is provided or known to the 'mailmap', ``Name $$<user@host>$$'' is printed; otherwise only ``$$<user@host>$$'' is printed."
-msgstr ""
+msgstr "Pour chaque contact, une seule ligne est sortie, terminée par un saut de ligne.  Si le nom est fourni ou connu de la 'mailmap', \"Nom $$<utilisateur@hote>$$\" est affiché ; sinon, seul \"$$<utilisateur@hote>$$\" est affiché."
 
 #. type: Plain text
 #: en/git-check-mailmap.txt:44
 #, priority:100
 msgid "See `mailmap.file` and `mailmap.blob` in linkgit:git-config[1] for how to specify a custom `.mailmap` target file or object."
-msgstr ""
+msgstr "Voir `mailmap.file` et `mailmap.blob` dans linkgit:git-config[1] pour savoir comment spécifier un fichier ou un objet cible `.mailmap` personnalisé."
 
 #. type: Title =
 #: en/git-checkout-index.txt:2
@@ -12127,7 +12127,7 @@ msgid ""
 "\t\t   [--temp]\n"
 "\t\t   [-z] [--stdin]\n"
 "\t\t   [--] [<file>...]\n"
-msgstr ""
+msgstr "git checkout-index' [-u] [-q] [-a] [-f] [-n] [--prefix=<chaine>]\n\t\t   [--stage=<numéro>|all]\n\t\t   [--temp]\n\t\t   [-z] [--stdin]\n\t\t   [--] [<fichier>...]\n"
 
 #. type: Plain text
 #: en/git-checkout-index.txt:22
@@ -12139,7 +12139,7 @@ msgstr "Va copier tous les fichiers indiqués depuis l'index dans l'arbre de tra
 #: en/git-checkout-index.txt:29
 #, priority:100
 msgid "update stat information for the checked out entries in the index file."
-msgstr ""
+msgstr "mettre à jour les informations sur les statuts des entrées extraites dans le fichier d'index."
 
 #. type: Plain text
 #: en/git-checkout-index.txt:33
@@ -12157,7 +12157,7 @@ msgstr "forcer l'écrasement de fichiers existants"
 #: en/git-checkout-index.txt:42
 #, priority:100
 msgid "checks out all files in the index.  Cannot be used together with explicit filenames."
-msgstr ""
+msgstr "vérifier tous les fichiers de l'index.  Ne peut pas être utilisé avec des noms de fichiers explicites."
 
 #. type: Labeled list
 #: en/git-checkout-index.txt:44
@@ -12169,7 +12169,7 @@ msgstr "--no-create"
 #: en/git-checkout-index.txt:47
 #, priority:100
 msgid "Don't checkout new files, only refresh files already checked out."
-msgstr ""
+msgstr "Ne pas extraire de nouveaux fichiers, seulement rafraîchir les fichiers déjà extraits."
 
 #. type: Labeled list
 #: en/git-checkout-index.txt:48
@@ -12181,19 +12181,19 @@ msgstr "--prefix=<chaîne>"
 #: en/git-checkout-index.txt:51
 #, priority:100
 msgid "When creating files, prepend <string> (usually a directory including a trailing /)"
-msgstr ""
+msgstr "Lors de la création de fichiers, les préfixer avec <chaine> (généralement un répertoire incluant une terminaison /)"
 
 #. type: Labeled list
 #: en/git-checkout-index.txt:52
 #, no-wrap, priority:100
 msgid "--stage=<number>|all"
-msgstr ""
+msgstr "--stage=<nombre>|all"
 
 #. type: Plain text
 #: en/git-checkout-index.txt:56
 #, priority:100
 msgid "Instead of checking out unmerged entries, copy out the files from named stage.  <number> must be between 1 and 3.  Note: --stage=all automatically implies --temp."
-msgstr ""
+msgstr "Au lieu de vérifier les entrées non fusionnées, copier les fichiers de l'étape nommée.  <numéro> doit être compris entre 1 et 3.  Note : --stage=all implique automatiquement --temp."
 
 #. type: Labeled list
 #: en/git-checkout-index.txt:57
@@ -12205,19 +12205,19 @@ msgstr "--temp"
 #: en/git-checkout-index.txt:61
 #, priority:100
 msgid "Instead of copying the files to the working directory write the content to temporary files.  The temporary name associations will be written to stdout."
-msgstr ""
+msgstr "Au lieu de copier les fichiers dans le répertoire de travail, écrire le contenu dans des fichiers temporaires.  Les associations de noms temporaires seront écrites sur stdout."
 
 #. type: Plain text
 #: en/git-checkout-index.txt:66 en/git-update-index.txt:157
 #, priority:100
 msgid "Instead of taking list of paths from the command line, read list of paths from the standard input.  Paths are separated by LF (i.e. one path per line) by default."
-msgstr ""
+msgstr "Au lieu de prendre la liste des chemins à partir de la ligne de commande, lire la liste des chemins à partir de l'entrée standard.  Les chemins sont séparés par LF (c'est-à-dire un chemin par ligne) par défaut."
 
 #. type: Plain text
 #: en/git-checkout-index.txt:70
 #, priority:100
 msgid "Only meaningful with `--stdin`; paths are separated with NUL character instead of LF."
-msgstr ""
+msgstr "N'a de sens qu'avec `--stdin` ; les chemins sont séparés par le caractère NUL au lieu de LF."
 
 #. type: Plain text
 #: en/git-checkout-index.txt:73 en/git-checkout.txt:364 en/git-commit.txt:399 en/git-ls-files.txt:192 en/git-merge-index.txt:25 en/git-prune.txt:53 en/git-reset.txt:127 en/git-restore.txt:144 en/git-update-index.txt:228 en/git-verify-pack.txt:38
@@ -12229,31 +12229,31 @@ msgstr "Ne pas interpréter les arguments qui suivent comme options."
 #: en/git-checkout-index.txt:75
 #, priority:100
 msgid "The order of the flags used to matter, but not anymore."
-msgstr ""
+msgstr "L'ordre des drapeaux était autrefois important, mais plus maintenant."
 
 #. type: Plain text
 #: en/git-checkout-index.txt:79
 #, priority:100
 msgid "Just doing `git checkout-index` does nothing. You probably meant `git checkout-index -a`. And if you want to force it, you want `git checkout-index -f -a`."
-msgstr ""
+msgstr "Faire simplement `git checkout-index` ne fait rien. Vous vouliez probablement dire `git checkout-index -a`. Et si vous voulez le forcer, il faut faire `git checkout-index -f -a`."
 
 #. type: Plain text
 #: en/git-checkout-index.txt:83
 #, priority:100
 msgid "Intuitiveness is not the goal here. Repeatability is. The reason for the \"no arguments means no work\" behavior is that from scripts you are supposed to be able to do:"
-msgstr ""
+msgstr "L'intuitivité n'est pas le but ici. La répétabilité l'est. La raison du comportement \"pas d'arguments signifie pas de travail\" est que, à partir de scripts, vous êtes censé être capable de faire :"
 
 #. type: delimited block -
 #: en/git-checkout-index.txt:86
 #, no-wrap, priority:100
 msgid "$ find . -name '*.h' -print0 | xargs -0 git checkout-index -f --\n"
-msgstr ""
+msgstr "$ find . -name '*.h' -print0 | xargs -0 git checkout-index -f --\n"
 
 #. type: Plain text
 #: en/git-checkout-index.txt:92
 #, priority:100
 msgid "which will force all existing `*.h` files to be replaced with their cached copies. If an empty command line implied \"all\", then this would force-refresh everything in the index, which was not the point.  But since 'git checkout-index' accepts --stdin it would be faster to use:"
-msgstr ""
+msgstr "qui forcera tous les fichiers `*.h` existants à être remplacés par leurs copies en cache. Si une ligne de commande vide impliquait \"all\", alors cela forcerait le rafraîchissement de tous les fichiers de l'index, ce qui n'était pas le but.  Mais puisque 'git checkout-index' accepte --stdin, il serait plus rapide d'utiliser :"
 
 #. type: delimited block -
 #: en/git-checkout-index.txt:95
