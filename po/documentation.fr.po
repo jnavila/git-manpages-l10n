@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Jean-Noël Avila <jn.avila@free.fr>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2021-05-17 17:03+0200\nPO-Revision-Date: 2021-06-14 19:07+0000\nLast-Translator: sloppyjuicy <Juicysloppy@gmail.com>\nLanguage-Team: Jean-Noël Avila <jn.avila@free.fr>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.7-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2021-05-17 17:03+0200\nPO-Revision-Date: 2021-06-17 20:34+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: Jean-Noël Avila <jn.avila@free.fr>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.7\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:748 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:126 en/git-status.txt:31
@@ -12259,127 +12259,127 @@ msgstr "qui forcera tous les fichiers `*.h` existants à être remplacés par le
 #: en/git-checkout-index.txt:95
 #, no-wrap, priority:100
 msgid "$ find . -name '*.h' -print0 | git checkout-index -f -z --stdin\n"
-msgstr ""
+msgstr "$ find . -name '*.h' -print0 | git checkout-index -f -z --stdin\n"
 
 #. type: Plain text
 #: en/git-checkout-index.txt:100
 #, priority:100
 msgid "The `--` is just a good idea when you know the rest will be filenames; it will prevent problems with a filename of, for example, `-a`.  Using `--` is probably a good policy in scripts."
-msgstr ""
+msgstr "Le `--` est juste une bonne idée quand vous savez que le reste sera des noms de fichiers ; cela évitera les problèmes avec  par exemple, un nom de fichier `-a`.  L'utilisation de `--` est probablement une bonne politique dans les scripts."
 
 #. type: Title -
 #: en/git-checkout-index.txt:103
 #, no-wrap, priority:100
 msgid "Using --temp or --stage=all"
-msgstr ""
+msgstr "Utilisation de --temp ou --stage=all"
 
 #. type: Plain text
 #: en/git-checkout-index.txt:110
 #, priority:100
 msgid "When `--temp` is used (or implied by `--stage=all`)  'git checkout-index' will create a temporary file for each index entry being checked out.  The index will not be updated with stat information.  These options can be useful if the caller needs all stages of all unmerged entries so that the unmerged files can be processed by an external merge tool."
-msgstr ""
+msgstr "Lorsque `--temp` est utilisé (ou impliqué par `--stage=all`), 'git checkout-index' créera un fichier temporaire pour chaque entrée de l'index en cours d'extraction.  L'index ne sera pas mis à jour avec les informations sur les statuts.  Ces options peuvent être utiles si l'appelant a besoin de toutes les étapes de toutes les entrées non fusionnées afin que les fichiers non fusionnés puissent être traités par un outil de fusion externe."
 
 #. type: Plain text
 #: en/git-checkout-index.txt:114
 #, priority:100
 msgid "A listing will be written to stdout providing the association of temporary file names to tracked path names.  The listing format has two variations:"
-msgstr ""
+msgstr "Une liste sera écrite sur stdout fournissant l'association des noms de fichiers temporaires aux noms de chemins suivis.  Le format de la liste a deux variantes :"
 
 #. type: Plain text
 #: en/git-checkout-index.txt:116
 #, priority:100
 msgid "tempname TAB path RS"
-msgstr ""
+msgstr "nomtemporaire TAB chemin RS"
 
 #. type: Plain text
 #: en/git-checkout-index.txt:121
 #, priority:100
 msgid "The first format is what gets used when `--stage` is omitted or is not `--stage=all`. The field tempname is the temporary file name holding the file content and path is the tracked path name in the index.  Only the requested entries are output."
-msgstr ""
+msgstr "Le premier format est celui qui est utilisé lorsque `--stage` est omis ou n'est pas `--stage=all`. Le champ nomtemporaire est le nom du fichier temporaire contenant le contenu du fichier et chemin est le nom du chemin suivi dans l'index.  Seules les entrées demandées sont produites."
 
 #. type: Plain text
 #: en/git-checkout-index.txt:123
 #, priority:100
 msgid "stage1temp SP stage2temp SP stage3tmp TAB path RS"
-msgstr ""
+msgstr "index1temp SP index2temp SP index3tmp TAB chemin RS"
 
 #. type: Plain text
 #: en/git-checkout-index.txt:129
 #, priority:100
 msgid "The second format is what gets used when `--stage=all`.  The three stage temporary fields (stage1temp, stage2temp, stage3temp) list the name of the temporary file if there is a stage entry in the index or `.` if there is no stage entry.  Paths which only have a stage 0 entry will always be omitted from the output."
-msgstr ""
+msgstr "Le second format est celui qui est utilisé lorsque `--stage=all`.  Les trois champs temporaires index (index1temp, index2temp, index3temp) listent le nom du fichier temporaire s'il y a une entrée d'index dans l'index ou `.` s'il n'y a pas d'entrée d'index.  Les chemins qui ont seulement une entrée d'index 0 seront toujours omis de la sortie."
 
 #. type: Plain text
 #: en/git-checkout-index.txt:136
 #, priority:100
 msgid "In both formats RS (the record separator) is newline by default but will be the null byte if -z was passed on the command line.  The temporary file names are always safe strings; they will never contain directory separators or whitespace characters.  The path field is always relative to the current directory and the temporary file names are always relative to the top level directory."
-msgstr ""
+msgstr "Dans les deux formats, RS (le séparateur d'enregistrement) est une nouvelle ligne par défaut mais sera l'octet nul si -z a été passé sur la ligne de commande.  Les noms des fichiers temporaires sont toujours des chaînes de caractères sûres ; ils ne contiendront jamais de séparateurs de répertoire ou de caractères d'espacement.  Le champ chemin est toujours relatif au répertoire courant et les noms de fichiers temporaires sont toujours relatifs au répertoire de premier niveau."
 
 #. type: Plain text
 #: en/git-checkout-index.txt:140
 #, priority:100
 msgid "If the object being copied out to a temporary file is a symbolic link the content of the link will be written to a normal file.  It is up to the end-user or the Porcelain to make use of this information."
-msgstr ""
+msgstr "Si l'objet copié dans un fichier temporaire est un lien symbolique, le contenu du lien sera écrit dans un fichier normal.  C'est à l'utilisateur final ou au Porcelain de faire usage de cette information."
 
 #. type: Labeled list
 #: en/git-checkout-index.txt:144
 #, no-wrap, priority:100
 msgid "To update and refresh only the files already checked out"
-msgstr ""
+msgstr "Pour mettre à jour et rafraîchir uniquement les fichiers déjà extraits"
 
 #. type: delimited block -
 #: en/git-checkout-index.txt:148 en/git-update-index.txt:361
 #, no-wrap, priority:100
 msgid "$ git checkout-index -n -f -a && git update-index --ignore-missing --refresh\n"
-msgstr ""
+msgstr "$ git checkout-index -n -f -a && git update-index --ignore-missing --refresh\n"
 
 #. type: Labeled list
 #: en/git-checkout-index.txt:150
 #, no-wrap, priority:100
 msgid "Using 'git checkout-index' to \"export an entire tree\""
-msgstr ""
+msgstr "Utilisation de 'git checkout-index' pour « exporter un arbre entier »"
 
 #. type: Plain text
 #: en/git-checkout-index.txt:154
 #, priority:100
 msgid "The prefix ability basically makes it trivial to use 'git checkout-index' as an \"export as tree\" function.  Just read the desired tree into the index, and do:"
-msgstr ""
+msgstr "La possibilité de préfixe rend triviale l'utilisation de 'git checkout-index' comme une fonction « export comme arbre »\".  Il suffit de lire l'arbre désiré dans l'index, et de faire :"
 
 #. type: delimited block -
 #: en/git-checkout-index.txt:157
 #, no-wrap, priority:100
 msgid "$ git checkout-index --prefix=git-export-dir/ -a\n"
-msgstr ""
+msgstr "$ git checkout-index --prefix=git-export-dir/ -a\n"
 
 #. type: Plain text
 #: en/git-checkout-index.txt:161
 #, priority:100
 msgid "`git checkout-index` will \"export\" the index into the specified directory."
-msgstr ""
+msgstr "`git checkout-index` va \"exporter\" l'index dans le répertoire spécifié."
 
 #. type: Plain text
 #: en/git-checkout-index.txt:165
 #, priority:100
 msgid "The final \"/\" is important. The exported name is literally just prefixed with the specified string.  Contrast this with the following example."
-msgstr ""
+msgstr "Le \"/\" final est important. Le nom exporté est littéralement juste préfixé avec la chaîne spécifiée.  Comparez cela avec l'exemple suivant."
 
 #. type: Labeled list
 #: en/git-checkout-index.txt:166
 #, no-wrap, priority:100
 msgid "Export files with a prefix"
-msgstr ""
+msgstr "Exporter des fichiers avec un préfixe"
 
 #. type: delimited block -
 #: en/git-checkout-index.txt:170
 #, no-wrap, priority:100
 msgid "$ git checkout-index --prefix=.merged- Makefile\n"
-msgstr ""
+msgstr "$ git checkout-index --prefix=.merged- Makefile\n"
 
 #. type: Plain text
 #: en/git-checkout-index.txt:174
 #, priority:100
 msgid "This will check out the currently cached copy of `Makefile` into the file `.merged-Makefile`."
-msgstr ""
+msgstr "Ceci va extraire la copie actuellement en cache de `Makefile` dans le fichier `.merged-Makefile`."
 
 #. type: Title =
 #: en/git-checkout.txt:2
@@ -32043,7 +32043,7 @@ msgstr "Si `false`, `git log` et les commandes associées ne traiteront pas le c
 #: en/git-log.txt:221
 #, ignore-same, no-wrap, priority:260
 msgid "log.showSignature"
-msgstr ""
+msgstr "log.showSignature"
 
 #. type: Plain text
 #: en/git-log.txt:224
