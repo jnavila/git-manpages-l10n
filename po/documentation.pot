@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-05-17 17:03+0200\n"
+"POT-Creation-Date: 2021-08-03 23:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. type: Labeled list
-#: en/blame-options.txt:1 en/diff-options.txt:748 en/git-instaweb.txt:45
-#: en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:126
+#: en/blame-options.txt:1 en/diff-options.txt:754 en/git-instaweb.txt:45
+#: en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:128
 #: en/git-status.txt:31
 #, no-wrap
 msgid "-b"
@@ -85,7 +85,7 @@ msgstr ""
 
 #. type: Labeled list
 #: en/blame-options.txt:23 en/git-archive.txt:43 en/git-branch.txt:171
-#: en/git-checkout.txt:200 en/git-clone.txt:45 en/git-config.txt:167
+#: en/git-checkout.txt:200 en/git-clone.txt:45 en/git-config.txt:174
 #: en/git-grep.txt:155 en/git-instaweb.txt:23 en/git-ls-tree.txt:51
 #: en/git-repack.txt:66 en/git-svn.txt:244 en/git-tag.txt:99 en/git-var.txt:20
 #, no-wrap
@@ -98,7 +98,7 @@ msgid "Show long rev (Default: off)."
 msgstr ""
 
 #. type: Labeled list
-#: en/blame-options.txt:26 en/diff-options.txt:135 en/fetch-options.txt:167
+#: en/blame-options.txt:26 en/diff-options.txt:135 en/fetch-options.txt:176
 #: en/git-branch.txt:207 en/git-cat-file.txt:36 en/git-checkout.txt:157
 #: en/git-diff-tree.txt:39 en/git-ls-files.txt:120 en/git-ls-remote.txt:26
 #: en/git-ls-tree.txt:47 en/git-svn.txt:312 en/git-switch.txt:154
@@ -139,7 +139,7 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/blame-options.txt:40 en/git-bisect.txt:368 en/git-describe.txt:121
+#: en/blame-options.txt:40 en/git-bisect.txt:368 en/git-describe.txt:122
 #: en/rev-list-options.txt:124
 #, no-wrap
 msgid "--first-parent"
@@ -156,11 +156,11 @@ msgstr ""
 
 #. type: Labeled list
 #: en/blame-options.txt:46 en/diff-options.txt:16 en/diff-options.txt:22
-#: en/fetch-options.txt:118 en/git-add.txt:89 en/git-cat-file.txt:49
+#: en/fetch-options.txt:127 en/git-add.txt:89 en/git-cat-file.txt:49
 #: en/git-checkout.txt:271 en/git-commit.txt:73 en/git-cvsexportcommit.txt:41
 #: en/git-grep.txt:208 en/git-instaweb.txt:41 en/git-merge-file.txt:63
 #: en/git-rebase.txt:538 en/git-request-pull.txt:29 en/git-restore.txt:48
-#: en/git-stash.txt:191 en/git-svn.txt:535 en/git-svn.txt:679 en/git.txt:123
+#: en/git-stash.txt:193 en/git-svn.txt:535 en/git-svn.txt:679 en/git.txt:123
 #, no-wrap
 msgid "-p"
 msgstr ""
@@ -2843,7 +2843,7 @@ msgid ""
 "branch>.merge` that name the branches at the remote named by "
 "`branch.<current branch>.remote` are consulted, and then they are mapped via "
 "`remote.<remote>.fetch` to their corresponding remote-tracking branches, and "
-"the tips of these tracking branches are merged."
+"the tips of these tracking branches are merged. Defaults to true."
 msgstr ""
 
 #. type: Labeled list
@@ -2884,21 +2884,23 @@ msgid "merge.renameLimit"
 msgstr ""
 
 #. type: Plain text
-#: en/config/merge.txt:40
+#: en/config/merge.txt:42
 msgid ""
-"The number of files to consider when performing rename detection during a "
-"merge; if not specified, defaults to the value of diff.renameLimit. This "
-"setting has no effect if rename detection is turned off."
+"The number of files to consider in the exhaustive portion of rename "
+"detection during a merge.  If not specified, defaults to the value of "
+"diff.renameLimit.  If neither merge.renameLimit nor diff.renameLimit are "
+"specified, currently defaults to 7000.  This setting has no effect if rename "
+"detection is turned off."
 msgstr ""
 
 #. type: Labeled list
-#: en/config/merge.txt:41
+#: en/config/merge.txt:43
 #, no-wrap
 msgid "merge.renames"
 msgstr ""
 
 #. type: Plain text
-#: en/config/merge.txt:45
+#: en/config/merge.txt:47
 msgid ""
 "Whether Git detects renames.  If set to \"false\", rename detection is "
 "disabled. If set to \"true\", basic rename detection is enabled.  Defaults "
@@ -2906,13 +2908,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/config/merge.txt:46
+#: en/config/merge.txt:48
 #, no-wrap
 msgid "merge.directoryRenames"
 msgstr ""
 
 #. type: Plain text
-#: en/config/merge.txt:58
+#: en/config/merge.txt:60
 msgid ""
 "Whether Git detects directory renames, affecting what happens at merge time "
 "to new files added to a directory on one side of history when that directory "
@@ -2926,13 +2928,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/config/merge.txt:59
+#: en/config/merge.txt:61
 #, no-wrap
 msgid "merge.renormalize"
 msgstr ""
 
 #. type: Plain text
-#: en/config/merge.txt:68
+#: en/config/merge.txt:70
 msgid ""
 "Tell Git that canonical representation of files in the repository has "
 "changed over time (e.g. earlier commits record text files with CRLF line "
@@ -2944,26 +2946,26 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/config/merge.txt:69
+#: en/config/merge.txt:71
 #, no-wrap
 msgid "merge.stat"
 msgstr ""
 
 #. type: Plain text
-#: en/config/merge.txt:72
+#: en/config/merge.txt:74
 msgid ""
 "Whether to print the diffstat between ORIG_HEAD and the merge result at the "
 "end of the merge.  True by default."
 msgstr ""
 
 #. type: Labeled list
-#: en/config/merge.txt:73
+#: en/config/merge.txt:75
 #, no-wrap
 msgid "merge.autoStash"
 msgstr ""
 
 #. type: Plain text
-#: en/config/merge.txt:82
+#: en/config/merge.txt:84
 msgid ""
 "When set to true, automatically create a temporary stash entry before the "
 "operation begins, and apply it after the operation ends.  This means that "
@@ -2974,13 +2976,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/config/merge.txt:83
+#: en/config/merge.txt:85
 #, no-wrap
 msgid "merge.tool"
 msgstr ""
 
 #. type: Plain text
-#: en/config/merge.txt:88
+#: en/config/merge.txt:90
 msgid ""
 "Controls which merge tool is used by linkgit:git-mergetool[1].  The list "
 "below shows the valid built-in values.  Any other value is treated as a "
@@ -2989,13 +2991,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/config/merge.txt:89
+#: en/config/merge.txt:91
 #, no-wrap
 msgid "merge.guitool"
 msgstr ""
 
 #. type: Plain text
-#: en/config/merge.txt:94
+#: en/config/merge.txt:96
 msgid ""
 "Controls which merge tool is used by linkgit:git-mergetool[1] when the "
 "-g/--gui flag is specified. The list below shows the valid built-in values.  "
@@ -3004,13 +3006,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/config/merge.txt:97
+#: en/config/merge.txt:99
 #, no-wrap
 msgid "merge.verbosity"
 msgstr ""
 
 #. type: Plain text
-#: en/config/merge.txt:104
+#: en/config/merge.txt:106
 msgid ""
 "Controls the amount of output shown by the recursive merge strategy.  Level "
 "0 outputs nothing except a final error message if conflicts were "
@@ -3021,39 +3023,39 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/config/merge.txt:105
+#: en/config/merge.txt:107
 #, no-wrap
 msgid "merge.<driver>.name"
 msgstr ""
 
 #. type: Plain text
-#: en/config/merge.txt:108
+#: en/config/merge.txt:110
 msgid ""
 "Defines a human-readable name for a custom low-level merge driver.  See "
 "linkgit:gitattributes[5] for details."
 msgstr ""
 
 #. type: Labeled list
-#: en/config/merge.txt:109
+#: en/config/merge.txt:111
 #, no-wrap
 msgid "merge.<driver>.driver"
 msgstr ""
 
 #. type: Plain text
-#: en/config/merge.txt:112
+#: en/config/merge.txt:114
 msgid ""
 "Defines the command that implements a custom low-level merge driver.  See "
 "linkgit:gitattributes[5] for details."
 msgstr ""
 
 #. type: Labeled list
-#: en/config/merge.txt:113
+#: en/config/merge.txt:115
 #, no-wrap
 msgid "merge.<driver>.recursive"
 msgstr ""
 
 #. type: Plain text
-#: en/config/merge.txt:116
+#: en/config/merge.txt:118
 msgid ""
 "Names a low-level merge driver to be used when performing an internal merge "
 "between common ancestors.  See linkgit:gitattributes[5] for details."
@@ -3990,17 +3992,17 @@ msgid "Generate plain patches without any diffstats."
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:23 en/fetch-options.txt:229 en/git-add.txt:112
+#: en/diff-options.txt:23 en/fetch-options.txt:238 en/git-add.txt:112
 #: en/git-am.txt:81 en/git-checkout-index.txt:25 en/git-cvsexportcommit.txt:64
 #: en/git-cvsimport.txt:98 en/git-ls-files.txt:70 en/git-mailinfo.txt:54
-#: en/git-push.txt:372 en/git-read-tree.txt:45 en/git-stash.txt:161
+#: en/git-push.txt:372 en/git-read-tree.txt:45 en/git-stash.txt:163
 #, no-wrap
 msgid "-u"
 msgstr ""
 
 #. type: Labeled list
 #: en/diff-options.txt:24 en/git-add.txt:90 en/git-checkout.txt:272
-#: en/git-commit.txt:74 en/git-restore.txt:49 en/git-stash.txt:192
+#: en/git-commit.txt:74 en/git-restore.txt:49 en/git-stash.txt:194
 #, no-wrap
 msgid "--patch"
 msgstr ""
@@ -4096,35 +4098,35 @@ msgid "-m"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:56
+#: en/diff-options.txt:55
 msgid ""
 "This option makes diff output for merge commits to be shown in the default "
-"format. `-m` will produce the output only if `-p` is given as well. The "
-"default format could be changed using `log.diffMerges` configuration "
-"parameter, which default value is `separate`."
+"format. The default format could be changed using `log.diffMerges` "
+"configuration parameter, which default value is `separate`. `-m` implies "
+"`-p`."
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:57
+#: en/diff-options.txt:56
 #, no-wrap
 msgid "--diff-merges=first-parent"
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:58
+#: en/diff-options.txt:57
 #, no-wrap
 msgid "--diff-merges=1"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:61
+#: en/diff-options.txt:60
 msgid ""
 "This option makes merge commits show the full diff with respect to the first "
 "parent only."
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:62
+#: en/diff-options.txt:61
 #, no-wrap
 msgid "--diff-merges=separate"
 msgstr ""
@@ -4133,7 +4135,8 @@ msgstr ""
 #: en/diff-options.txt:66
 msgid ""
 "This makes merge commits show the full diff with respect to each of the "
-"parents. Separate log entry and diff is generated for each parent."
+"parents. Separate log entry and diff is generated for each parent. This is "
+"the format that `-m` produced historically."
 msgstr ""
 
 #. type: Labeled list
@@ -4680,7 +4683,7 @@ msgstr ""
 #. type: Labeled list
 #: en/diff-options.txt:286 en/git-apply.txt:116 en/git-check-attr.txt:34
 #: en/git-check-ignore.txt:47 en/git-checkout-index.txt:67
-#: en/git-commit.txt:158 en/git-config.txt:215 en/git-grep.txt:175
+#: en/git-commit.txt:158 en/git-config.txt:222 en/git-grep.txt:175
 #: en/git-ls-files.txt:80 en/git-ls-tree.txt:55 en/git-mktree.txt:23
 #: en/git-status.txt:126 en/git-update-index.txt:173
 #, no-wrap
@@ -4717,7 +4720,7 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:302 en/git-config.txt:224 en/git-grep.txt:157
+#: en/diff-options.txt:302 en/git-config.txt:231 en/git-grep.txt:157
 #: en/git-ls-tree.txt:59 en/git-name-rev.txt:51
 #, no-wrap
 msgid "--name-only"
@@ -4971,7 +4974,7 @@ msgid "ignore-space-at-eol"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:396 en/diff-options.txt:747
+#: en/diff-options.txt:396 en/diff-options.txt:753
 msgid "Ignore changes in whitespace at EOL."
 msgstr ""
 
@@ -4982,7 +4985,7 @@ msgid "ignore-space-change"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:400 en/diff-options.txt:753
+#: en/diff-options.txt:400 en/diff-options.txt:759
 msgid ""
 "Ignore changes in amount of whitespace.  This ignores whitespace at line "
 "end, and considers all other sequences of one or more whitespace characters "
@@ -5406,22 +5409,27 @@ msgid "-l<num>"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:596
+#: en/diff-options.txt:602
 msgid ""
-"The `-M` and `-C` options require O(n^2) processing time where n is the "
-"number of potential rename/copy targets.  This option prevents rename/copy "
-"detection from running if the number of rename/copy targets exceeds the "
-"specified number."
+"The `-M` and `-C` options involve some preliminary steps that can detect "
+"subsets of renames/copies cheaply, followed by an exhaustive fallback "
+"portion that compares all remaining unpaired destinations to all relevant "
+"sources.  (For renames, only remaining unpaired sources are relevant; for "
+"copies, all original sources are relevant.)  For N sources and destinations, "
+"this exhaustive check is O(N^2).  This option prevents the exhaustive "
+"portion of rename/copy detection from running if the number of "
+"source/destination files involved exceeds the specified number.  Defaults to "
+"diff.renameLimit.  Note that a value of 0 is treated as unlimited."
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:598
+#: en/diff-options.txt:604
 #, no-wrap
 msgid "--diff-filter=[(A|C|D|M|R|T|U|X|B)...[*]]"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:609
+#: en/diff-options.txt:615
 msgid ""
 "Select only files that are Added (`A`), Copied (`C`), Deleted (`D`), "
 "Modified (`M`), Renamed (`R`), have their type (i.e. regular file, symlink, "
@@ -5434,14 +5442,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:612
+#: en/diff-options.txt:618
 msgid ""
 "Also, these upper-case letters can be downcased to exclude.  E.g.  "
 "`--diff-filter=ad` excludes added and deleted paths."
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:618
+#: en/diff-options.txt:624
 msgid ""
 "Note that not all diffs can feature all types. For instance, diffs from the "
 "index to the working tree can never have Added entries (because the set of "
@@ -5451,20 +5459,20 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:619
+#: en/diff-options.txt:625
 #, no-wrap
 msgid "-S<string>"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:623
+#: en/diff-options.txt:629
 msgid ""
 "Look for differences that change the number of occurrences of the specified "
 "string (i.e. addition/deletion) in a file.  Intended for the scripter's use."
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:629
+#: en/diff-options.txt:635
 msgid ""
 "It is useful when you're looking for an exact block of code (like a struct), "
 "and want to know the history of that block since it first came into being: "
@@ -5474,32 +5482,32 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:631
+#: en/diff-options.txt:637
 msgid "Binary files are searched as well."
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:632
+#: en/diff-options.txt:638
 #, no-wrap
 msgid "-G<regex>"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:635
+#: en/diff-options.txt:641
 msgid ""
 "Look for differences whose patch text contains added/removed lines that "
 "match <regex>."
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:639
+#: en/diff-options.txt:645
 msgid ""
 "To illustrate the difference between `-S<regex> --pickaxe-regex` and "
 "`-G<regex>`, consider a commit with the following diff in the same file:"
 msgstr ""
 
 #. type: delimited block -
-#: en/diff-options.txt:644
+#: en/diff-options.txt:650
 #, no-wrap
 msgid ""
 "+    return frotz(nitfol, two->ptr, 1, 0);\n"
@@ -5508,7 +5516,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:649
+#: en/diff-options.txt:655
 msgid ""
 "While `git log -G\"frotz\\(nitfol\"` will show this commit, `git log "
 "-S\"frotz\\(nitfol\" --pickaxe-regex` will not (because the number of "
@@ -5516,25 +5524,25 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:652
+#: en/diff-options.txt:658
 msgid ""
 "Unless `--text` is supplied patches of binary files without a textconv "
 "filter will be ignored."
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:655
+#: en/diff-options.txt:661
 msgid "See the 'pickaxe' entry in linkgit:gitdiffcore[7] for more information."
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:656
+#: en/diff-options.txt:662
 #, no-wrap
 msgid "--find-object=<object-id>"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:661
+#: en/diff-options.txt:667
 msgid ""
 "Look for differences that change the number of occurrences of the specified "
 "object. Similar to `-S`, just the argument is different in that it doesn't "
@@ -5542,46 +5550,46 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:664
+#: en/diff-options.txt:670
 msgid ""
 "The object can be a blob or a submodule commit. It implies the `-t` option "
 "in `git-log` to also find trees."
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:665
+#: en/diff-options.txt:671
 #, no-wrap
 msgid "--pickaxe-all"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:669
+#: en/diff-options.txt:675
 msgid ""
 "When `-S` or `-G` finds a change, show all the changes in that changeset, "
 "not just the files that contain the change in <string>."
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:670
+#: en/diff-options.txt:676
 #, no-wrap
 msgid "--pickaxe-regex"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:673
+#: en/diff-options.txt:679
 msgid ""
 "Treat the <string> given to `-S` as an extended POSIX regular expression to "
 "match."
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:676 en/git-mergetool.txt:95
+#: en/diff-options.txt:682 en/git-mergetool.txt:95
 #, no-wrap
 msgid "-O<orderfile>"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:681
+#: en/diff-options.txt:687
 msgid ""
 "Control the order in which files appear in the output.  This overrides the "
 "`diff.orderFile` configuration variable (see linkgit:git-config[1]).  To "
@@ -5589,7 +5597,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:693
+#: en/diff-options.txt:699
 msgid ""
 "The output order is determined by the order of glob patterns in "
 "<orderfile>.  All files with pathnames that match the first pattern are "
@@ -5602,17 +5610,17 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:695
+#: en/diff-options.txt:701
 msgid "<orderfile> is parsed as follows:"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:699
+#: en/diff-options.txt:705
 msgid "Blank lines are ignored, so they can be used as separators for readability."
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:703
+#: en/diff-options.txt:709
 msgid ""
 "Lines starting with a hash (\"`#`\") are ignored, so they can be used for "
 "comments.  Add a backslash (\"`\\`\") to the beginning of the pattern if it "
@@ -5620,12 +5628,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:705
+#: en/diff-options.txt:711
 msgid "Each other line contains a single pattern."
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:712
+#: en/diff-options.txt:718
 msgid ""
 "Patterns have the same syntax and semantics as patterns used for fnmatch(3) "
 "without the FNM_PATHNAME flag, except a pathname also matches a pattern if "
@@ -5635,19 +5643,19 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:713 en/git-difftool.txt:41
+#: en/diff-options.txt:719 en/git-difftool.txt:41
 #, no-wrap
 msgid "--skip-to=<file>"
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:714 en/git-difftool.txt:37
+#: en/diff-options.txt:720 en/git-difftool.txt:37
 #, no-wrap
 msgid "--rotate-to=<file>"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:720
+#: en/diff-options.txt:726
 msgid ""
 "Discard the files before the named <file> from the output (i.e. 'skip to'), "
 "or move them to the end of the output (i.e. 'rotate to').  These were "
@@ -5656,32 +5664,32 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:722 en/git-apply.txt:105 en/git-cvsimport.txt:168
+#: en/diff-options.txt:728 en/git-apply.txt:105 en/git-cvsimport.txt:168
 #, no-wrap
 msgid "-R"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:725
+#: en/diff-options.txt:731
 msgid ""
 "Swap two inputs; that is, show differences from index or on-disk file to "
 "tree contents."
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:727
+#: en/diff-options.txt:733
 #, no-wrap
 msgid "--relative[=<path>]"
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:728
+#: en/diff-options.txt:734
 #, no-wrap
 msgid "--no-relative"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:737
+#: en/diff-options.txt:743
 msgid ""
 "When run from a subdirectory of the project, it can be told to exclude "
 "changes outside the directory and show pathnames relative to it with this "
@@ -5692,108 +5700,108 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:738 en/fetch-options.txt:4 en/git-archimport.txt:99
+#: en/diff-options.txt:744 en/fetch-options.txt:4 en/git-archimport.txt:99
 #: en/git-branch.txt:166 en/git-checkout-index.txt:38 en/git-commit.txt:67
 #: en/git-cvsexportcommit.txt:45 en/git-cvsimport.txt:135 en/git-grep.txt:70
 #: en/git-help.txt:45 en/git-merge-base.txt:71 en/git-merge-index.txt:26
-#: en/git-repack.txt:31 en/git-show-branch.txt:47 en/git-stash.txt:154
+#: en/git-repack.txt:31 en/git-show-branch.txt:47 en/git-stash.txt:156
 #: en/git-tag.txt:60
 #, no-wrap
 msgid "-a"
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:739 en/git-grep.txt:71
+#: en/diff-options.txt:745 en/git-grep.txt:71
 #, no-wrap
 msgid "--text"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:741
+#: en/diff-options.txt:747
 msgid "Treat all files as text."
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:742
+#: en/diff-options.txt:748
 #, no-wrap
 msgid "--ignore-cr-at-eol"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:744
+#: en/diff-options.txt:750
 msgid "Ignore carriage-return at the end of line when doing a comparison."
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:745
+#: en/diff-options.txt:751
 #, no-wrap
 msgid "--ignore-space-at-eol"
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:749 en/git-am.txt:111 en/git-apply.txt:183
+#: en/diff-options.txt:755 en/git-am.txt:111 en/git-apply.txt:183
 #, no-wrap
 msgid "--ignore-space-change"
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:754 en/git-blame.txt:84 en/git-cvsexportcommit.txt:71
+#: en/diff-options.txt:760 en/git-blame.txt:84 en/git-cvsexportcommit.txt:71
 #: en/git-grep.txt:103 en/git-hash-object.txt:29 en/git-help.txt:79
 #, no-wrap
 msgid "-w"
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:755
+#: en/diff-options.txt:761
 #, no-wrap
 msgid "--ignore-all-space"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:759
+#: en/diff-options.txt:765
 msgid ""
 "Ignore whitespace when comparing lines.  This ignores differences even if "
 "one line has whitespace where the other line has none."
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:760
+#: en/diff-options.txt:766
 #, no-wrap
 msgid "--ignore-blank-lines"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:762
+#: en/diff-options.txt:768
 msgid "Ignore changes whose lines are all blank."
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:763
+#: en/diff-options.txt:769
 #, no-wrap
 msgid "-I<regex>"
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:764
+#: en/diff-options.txt:770
 #, no-wrap
 msgid "--ignore-matching-lines=<regex>"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:767
+#: en/diff-options.txt:773
 msgid ""
 "Ignore changes whose all lines match <regex>.  This option may be specified "
 "more than once."
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:768
+#: en/diff-options.txt:774
 #, no-wrap
 msgid "--inter-hunk-context=<lines>"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:773
+#: en/diff-options.txt:779
 msgid ""
 "Show the context between diff hunks, up to the specified number of lines, "
 "thereby fusing hunks that are close to each other.  Defaults to "
@@ -5801,20 +5809,20 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:774 en/git-cvsexportcommit.txt:77 en/git-grep.txt:232
+#: en/diff-options.txt:780 en/git-cvsexportcommit.txt:77 en/git-grep.txt:232
 #: en/git-restore.txt:58
 #, no-wrap
 msgid "-W"
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:775 en/git-grep.txt:233
+#: en/diff-options.txt:781 en/git-grep.txt:233
 #, no-wrap
 msgid "--function-context"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:780
+#: en/diff-options.txt:786
 msgid ""
 "Show whole function as context lines for each change.  The function names "
 "are determined in the same way as `git diff` works out patch hunk headers "
@@ -5822,20 +5830,20 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:783 en/git-ls-remote.txt:48
+#: en/diff-options.txt:789 en/git-ls-remote.txt:48
 #, no-wrap
 msgid "--exit-code"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:787
+#: en/diff-options.txt:793
 msgid ""
 "Make the program exit with codes similar to diff(1).  That is, it exits with "
 "1 if there were differences and 0 means no differences."
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:788 en/fetch-options.txt:247 en/git-am.txt:78
+#: en/diff-options.txt:794 en/fetch-options.txt:256 en/git-am.txt:78
 #: en/git-branch.txt:193 en/git-bundle.txt:113 en/git-checkout-index.txt:31
 #: en/git-checkout.txt:108 en/git-clean.txt:54 en/git-clone.txt:125
 #: en/git-commit.txt:369 en/git-fast-import.txt:42 en/git-fetch-pack.txt:49
@@ -5844,8 +5852,8 @@ msgstr ""
 #: en/git-notes.txt:207 en/git-prune-packed.txt:37 en/git-pull.txt:78
 #: en/git-push.txt:386 en/git-read-tree.txt:133 en/git-rebase.txt:392
 #: en/git-reset.txt:106 en/git-restore.txt:67 en/git-rev-parse.txt:118
-#: en/git-rm.txt:76 en/git-send-email.txt:409 en/git-show-ref.txt:71
-#: en/git-stash.txt:224 en/git-submodule.txt:266 en/git-svn.txt:671
+#: en/git-rm.txt:76 en/git-send-email.txt:420 en/git-show-ref.txt:71
+#: en/git-stash.txt:226 en/git-submodule.txt:266 en/git-svn.txt:671
 #: en/git-switch.txt:144 en/git-symbolic-ref.txt:40 en/git-worktree.txt:229
 #: en/merge-options.txt:138 en/rev-list-options.txt:224
 #, no-wrap
@@ -5853,18 +5861,18 @@ msgid "--quiet"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:790
+#: en/diff-options.txt:796
 msgid "Disable all output of the program. Implies `--exit-code`."
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:793
+#: en/diff-options.txt:799
 #, no-wrap
 msgid "--ext-diff"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:797
+#: en/diff-options.txt:803
 msgid ""
 "Allow an external diff helper to be executed. If you set an external diff "
 "driver with linkgit:gitattributes[5], you need to use this option with "
@@ -5872,30 +5880,30 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:798
+#: en/diff-options.txt:804
 #, no-wrap
 msgid "--no-ext-diff"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:800
+#: en/diff-options.txt:806
 msgid "Disallow external diff drivers."
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:801 en/git-cat-file.txt:60 en/git-grep.txt:74
+#: en/diff-options.txt:807 en/git-cat-file.txt:60 en/git-grep.txt:74
 #, no-wrap
 msgid "--textconv"
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:802 en/git-grep.txt:77
+#: en/diff-options.txt:808 en/git-grep.txt:77
 #, no-wrap
 msgid "--no-textconv"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:811
+#: en/diff-options.txt:817
 msgid ""
 "Allow (or disallow) external text conversion filters to be run when "
 "comparing binary files. See linkgit:gitattributes[5] for details. Because "
@@ -5907,13 +5915,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:812 en/git-status.txt:87
+#: en/diff-options.txt:818 en/git-status.txt:87
 #, no-wrap
 msgid "--ignore-submodules[=<when>]"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:824
+#: en/diff-options.txt:830
 msgid ""
 "Ignore changes to submodules in the diff generation. <when> can be either "
 "\"none\", \"untracked\", \"dirty\" or \"all\", which is the default.  Using "
@@ -5929,57 +5937,57 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/diff-options.txt:825
+#: en/diff-options.txt:831
 #, no-wrap
 msgid "--src-prefix=<prefix>"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:827
-msgid "Show the given source prefix instead of \"a/\"."
-msgstr ""
-
-#. type: Labeled list
-#: en/diff-options.txt:828
-#, no-wrap
-msgid "--dst-prefix=<prefix>"
-msgstr ""
-
-#. type: Plain text
-#: en/diff-options.txt:830
-msgid "Show the given destination prefix instead of \"b/\"."
-msgstr ""
-
-#. type: Labeled list
-#: en/diff-options.txt:831
-#, no-wrap
-msgid "--no-prefix"
-msgstr ""
-
-#. type: Plain text
 #: en/diff-options.txt:833
-msgid "Do not show any source or destination prefix."
+msgid "Show the given source prefix instead of \"a/\"."
 msgstr ""
 
 #. type: Labeled list
 #: en/diff-options.txt:834
 #, no-wrap
-msgid "--line-prefix=<prefix>"
+msgid "--dst-prefix=<prefix>"
 msgstr ""
 
 #. type: Plain text
 #: en/diff-options.txt:836
-msgid "Prepend an additional prefix to every line of output."
+msgid "Show the given destination prefix instead of \"b/\"."
 msgstr ""
 
 #. type: Labeled list
 #: en/diff-options.txt:837
 #, no-wrap
+msgid "--no-prefix"
+msgstr ""
+
+#. type: Plain text
+#: en/diff-options.txt:839
+msgid "Do not show any source or destination prefix."
+msgstr ""
+
+#. type: Labeled list
+#: en/diff-options.txt:840
+#, no-wrap
+msgid "--line-prefix=<prefix>"
+msgstr ""
+
+#. type: Plain text
+#: en/diff-options.txt:842
+msgid "Prepend an additional prefix to every line of output."
+msgstr ""
+
+#. type: Labeled list
+#: en/diff-options.txt:843
+#, no-wrap
 msgid "--ita-invisible-in-index"
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:844
+#: en/diff-options.txt:850
 msgid ""
 "By default entries added by \"git add -N\" appear as an existing empty file "
 "in \"git diff\" and a new file in \"git diff --cached\".  This option makes "
@@ -5990,7 +5998,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/diff-options.txt:846
+#: en/diff-options.txt:852
 msgid ""
 "For more detailed explanation on these common options, see also "
 "linkgit:gitdiffcore[7]."
@@ -6003,7 +6011,7 @@ msgstr ""
 #: en/git-merge-base.txt:72 en/git-name-rev.txt:42 en/git-pack-objects.txt:77
 #: en/git-pack-redundant.txt:32 en/git-pack-refs.txt:48 en/git-push.txt:149
 #: en/git-reflog.txt:72 en/git-rev-parse.txt:165 en/git-send-pack.txt:37
-#: en/git-show-branch.txt:48 en/git-stash.txt:155 en/git-submodule.txt:276
+#: en/git-show-branch.txt:48 en/git-stash.txt:157 en/git-submodule.txt:276
 #: en/rev-list-options.txt:142
 #, no-wrap
 msgid "--all"
@@ -6165,37 +6173,59 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:67
+#: en/fetch-options.txt:68
 msgid ""
-"See also the `fetch.negotiationAlgorithm` configuration variable documented "
-"in linkgit:git-config[1]."
+"See also the `fetch.negotiationAlgorithm` and `push.negotiate` configuration "
+"variables documented in linkgit:git-config[1], and the `--negotiate-only` "
+"option below."
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:68 en/git-add.txt:70 en/git-clean.txt:50
+#: en/fetch-options.txt:69
+#, no-wrap
+msgid "--negotiate-only"
+msgstr ""
+
+#. type: Plain text
+#: en/fetch-options.txt:73
+msgid ""
+"Do not fetch anything from the server, and instead print the ancestors of "
+"the provided `--negotiation-tip=*` arguments, which we have in common with "
+"the server."
+msgstr ""
+
+#. type: Plain text
+#: en/fetch-options.txt:76
+msgid ""
+"Internally this is used to implement the `push.negotiate` option, see "
+"linkgit:git-config[1]."
+msgstr ""
+
+#. type: Labeled list
+#: en/fetch-options.txt:77 en/git-add.txt:70 en/git-clean.txt:50
 #: en/git-commit.txt:372 en/git-http-push.txt:37 en/git-mv.txt:40
 #: en/git-notes.txt:179 en/git-p4.txt:332 en/git-prune-packed.txt:32
 #: en/git-prune.txt:37 en/git-push.txt:173 en/git-quiltimport.txt:35
 #: en/git-read-tree.txt:59 en/git-reflog.txt:120 en/git-rm.txt:53
-#: en/git-send-email.txt:400 en/git-send-pack.txt:51 en/git-svn.txt:688
+#: en/git-send-email.txt:411 en/git-send-pack.txt:51 en/git-svn.txt:688
 #: en/git-worktree.txt:219
 #, no-wrap
 msgid "--dry-run"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:70
+#: en/fetch-options.txt:79
 msgid "Show what would be done, without making any changes."
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:72
+#: en/fetch-options.txt:81
 #, no-wrap
 msgid "--[no-]write-fetch-head"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:78
+#: en/fetch-options.txt:87
 msgid ""
 "Write the list of remote refs fetched in the `FETCH_HEAD` file directly "
 "under `$GIT_DIR`.  This is the default.  Passing `--no-write-fetch-head` "
@@ -6204,7 +6234,7 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:80 en/git-add.txt:78 en/git-archimport.txt:81
+#: en/fetch-options.txt:89 en/git-add.txt:78 en/git-archimport.txt:81
 #: en/git-blame.txt:65 en/git-branch.txt:116 en/git-checkout-index.txt:34
 #: en/git-checkout.txt:118 en/git-clean.txt:36 en/git-cvsexportcommit.txt:54
 #: en/git-filter-branch.txt:208 en/git-ls-files.txt:146 en/git-mv.txt:31
@@ -6217,26 +6247,26 @@ msgid "-f"
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:81 en/git-add.txt:79 en/git-branch.txt:117
+#: en/fetch-options.txt:90 en/git-add.txt:79 en/git-branch.txt:117
 #: en/git-checkout-index.txt:35 en/git-checkout.txt:119 en/git-clean.txt:37
 #: en/git-fast-import.txt:37 en/git-filter-branch.txt:209 en/git-gc.txt:71
 #: en/git-http-push.txt:30 en/git-mv.txt:32 en/git-notes.txt:128
 #: en/git-push.txt:333 en/git-replace.txt:61 en/git-rm.txt:49
-#: en/git-send-email.txt:429 en/git-send-pack.txt:54 en/git-submodule.txt:290
+#: en/git-send-email.txt:440 en/git-send-pack.txt:54 en/git-submodule.txt:290
 #: en/git-switch.txt:111 en/git-tag.txt:80 en/git-worktree.txt:161
 #, no-wrap
 msgid "--force"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:84
+#: en/fetch-options.txt:93
 msgid ""
 "When 'git fetch' is used with `<src>:<dst>` refspec it may refuse to update "
 "the local branch as discussed"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:87
+#: en/fetch-options.txt:96
 #, no-wrap
 msgid ""
 "\tin the `<refspec>` part of the linkgit:git-fetch[1]\n"
@@ -6244,65 +6274,65 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:90
+#: en/fetch-options.txt:99
 #, no-wrap
 msgid "\tin the `<refspec>` part below.\n"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:92
+#: en/fetch-options.txt:101
 #, no-wrap
 msgid "\tThis option overrides that check.\n"
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:93 en/git-am.txt:41 en/git-cvsexportcommit.txt:67
+#: en/fetch-options.txt:102 en/git-am.txt:41 en/git-cvsexportcommit.txt:67
 #: en/git-cvsimport.txt:93 en/git-fetch-pack.txt:53 en/git-format-patch.txt:133
 #: en/git-ls-files.txt:74 en/git-mailinfo.txt:29 en/git-mv.txt:34
-#: en/git-repack.txt:156 en/git-stash.txt:184
+#: en/git-repack.txt:158 en/git-stash.txt:186
 #, no-wrap
 msgid "-k"
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:94 en/git-am.txt:42 en/git-fetch-pack.txt:54
+#: en/fetch-options.txt:103 en/git-am.txt:42 en/git-fetch-pack.txt:54
 #: en/git-index-pack.txt:62 en/git-reset.txt:85
 #, no-wrap
 msgid "--keep"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:96
+#: en/fetch-options.txt:105
 msgid "Keep downloaded pack."
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:98
+#: en/fetch-options.txt:107
 #, no-wrap
 msgid "--multiple"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:101
+#: en/fetch-options.txt:110
 msgid ""
 "Allow several <repository> and <group> arguments to be specified. No "
 "<refspec>s may be specified."
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:102
+#: en/fetch-options.txt:111
 #, no-wrap
 msgid "--[no-]auto-maintenance"
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:103
+#: en/fetch-options.txt:112
 #, no-wrap
 msgid "--[no-]auto-gc"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:107
+#: en/fetch-options.txt:116
 msgid ""
 "Run `git maintenance run --auto` at the end to perform automatic repository "
 "maintenance if needed. (`--[no-]auto-gc` is a synonym.)  This is enabled by "
@@ -6310,39 +6340,39 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:108
+#: en/fetch-options.txt:117
 #, no-wrap
 msgid "--[no-]write-commit-graph"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:111
+#: en/fetch-options.txt:120
 msgid ""
 "Write a commit-graph after fetching. This overrides the config setting "
 "`fetch.writeCommitGraph`."
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:113
+#: en/fetch-options.txt:122
 #, no-wrap
 msgid "--prefetch"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:117
+#: en/fetch-options.txt:126
 msgid ""
 "Modify the configured refspec to place all refs into the `refs/prefetch/` "
 "namespace. See the `prefetch` task in linkgit:git-maintenance[1]."
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:119 en/git-push.txt:153
+#: en/fetch-options.txt:128 en/git-push.txt:153
 #, no-wrap
 msgid "--prune"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:129
+#: en/fetch-options.txt:138
 msgid ""
 "Before fetching, remove any remote-tracking references that no longer exist "
 "on the remote.  Tags are not subject to pruning if they are fetched only "
@@ -6355,25 +6385,25 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:132 en/fetch-options.txt:143
+#: en/fetch-options.txt:141 en/fetch-options.txt:152
 msgid "See the PRUNING section below for more details."
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:133 en/git-cvsexportcommit.txt:57 en/git-grep.txt:134
+#: en/fetch-options.txt:142 en/git-cvsexportcommit.txt:57 en/git-grep.txt:134
 #: en/git.txt:130 en/rev-list-options.txt:92
 #, no-wrap
 msgid "-P"
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:134
+#: en/fetch-options.txt:143
 #, no-wrap
 msgid "--prune-tags"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:141
+#: en/fetch-options.txt:150
 msgid ""
 "Before fetching, remove any local tags that no longer exist on the remote if "
 "`--prune` is enabled. This option should be used more carefully, unlike "
@@ -6383,7 +6413,7 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:147 en/git-add.txt:69 en/git-blame.txt:71
+#: en/fetch-options.txt:156 en/git-add.txt:69 en/git-blame.txt:71
 #: en/git-checkout-index.txt:43 en/git-cherry-pick.txt:92 en/git-clean.txt:49
 #: en/git-clone.txt:148 en/git-commit.txt:214 en/git-format-patch.txt:118
 #: en/git-grep.txt:147 en/git-mailinfo.txt:68 en/git-mv.txt:39
@@ -6398,13 +6428,13 @@ msgid "-n"
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:149 en/git-clone.txt:260
+#: en/fetch-options.txt:158 en/git-clone.txt:260
 #, no-wrap
 msgid "--no-tags"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:155
+#: en/fetch-options.txt:164
 msgid ""
 "By default, tags that point at objects that are downloaded from the remote "
 "repository are fetched and stored locally.  This option disables this "
@@ -6413,13 +6443,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:156
+#: en/fetch-options.txt:165
 #, no-wrap
 msgid "--refmap=<refspec>"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:166
+#: en/fetch-options.txt:175
 msgid ""
 "When fetching refs listed on the command line, use the specified refspec "
 "(can be given more than once) to map the refs to remote-tracking branches, "
@@ -6431,7 +6461,7 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:168 en/git-describe.txt:55 en/git-fsck.txt:41
+#: en/fetch-options.txt:177 en/git-describe.txt:55 en/git-fsck.txt:41
 #: en/git-ls-remote.txt:27 en/git-name-rev.txt:24 en/git-push.txt:186
 #: en/git-show-ref.txt:41
 #, no-wrap
@@ -6439,7 +6469,7 @@ msgid "--tags"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:175
+#: en/fetch-options.txt:184
 msgid ""
 "Fetch all tags from the remote (i.e., fetch remote tags `refs/tags/*` into "
 "local tags with the same name), in addition to whatever else would otherwise "
@@ -6449,13 +6479,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:177
+#: en/fetch-options.txt:186
 #, no-wrap
 msgid "--recurse-submodules[=yes|on-demand|no]"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:188
+#: en/fetch-options.txt:197
 msgid ""
 "This option controls if and under what conditions new commits of populated "
 "submodules should be fetched too. It can be used as a boolean option to "
@@ -6469,24 +6499,24 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:190
+#: en/fetch-options.txt:199
 #, no-wrap
 msgid "-j"
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:191
+#: en/fetch-options.txt:200
 #, no-wrap
 msgid "--jobs=<n>"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:193
+#: en/fetch-options.txt:202
 msgid "Number of parallel children to be used for all forms of fetching."
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:198
+#: en/fetch-options.txt:207
 msgid ""
 "If the `--multiple` option was specified, the different remotes will be "
 "fetched in parallel. If multiple submodules are fetched, they will be "
@@ -6495,34 +6525,34 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:201
+#: en/fetch-options.txt:210
 msgid ""
 "Typically, parallel recursive and multi-remote fetches will be faster. By "
 "default fetches are performed sequentially, not in parallel."
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:203 en/git-checkout.txt:298 en/git-push.txt:401
+#: en/fetch-options.txt:212 en/git-checkout.txt:298 en/git-push.txt:401
 #: en/git-restore.txt:112 en/git-switch.txt:185
 #, no-wrap
 msgid "--no-recurse-submodules"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:206
+#: en/fetch-options.txt:215
 msgid ""
 "Disable recursive fetching of submodules (this has the same effect as using "
 "the `--recurse-submodules=no` option)."
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:208 en/git-branch.txt:227 en/git-push.txt:373
+#: en/fetch-options.txt:217 en/git-branch.txt:227 en/git-push.txt:373
 #, no-wrap
 msgid "--set-upstream"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:214
+#: en/fetch-options.txt:223
 msgid ""
 "If the remote is fetched successfully, add upstream (tracking) reference, "
 "used by argument-less linkgit:git-pull[1] and other commands. For more "
@@ -6531,13 +6561,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:216
+#: en/fetch-options.txt:225
 #, no-wrap
 msgid "--submodule-prefix=<path>"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:220
+#: en/fetch-options.txt:229
 msgid ""
 "Prepend <path> to paths printed in informative messages such as \"Fetching "
 "submodule foo\".  This option is used internally when recursing over "
@@ -6545,13 +6575,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:221
+#: en/fetch-options.txt:230
 #, no-wrap
 msgid "--recurse-submodules-default=[yes|on-demand]"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:228
+#: en/fetch-options.txt:237
 msgid ""
 "This option is used internally to temporarily provide a non-negative default "
 "value for the --recurse-submodules option.  All other methods of configuring "
@@ -6561,13 +6591,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:230
+#: en/fetch-options.txt:239
 #, no-wrap
 msgid "--update-head-ok"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:237
+#: en/fetch-options.txt:246
 msgid ""
 "By default 'git fetch' refuses to update the head which corresponds to the "
 "current branch.  This flag disables the check.  This is purely for the "
@@ -6576,13 +6606,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:239 en/git-clone.txt:209
+#: en/fetch-options.txt:248 en/git-clone.txt:209
 #, no-wrap
 msgid "--upload-pack <upload-pack>"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:244
+#: en/fetch-options.txt:253
 msgid ""
 "When given, and the repository to fetch from is handled by 'git fetch-pack', "
 "`--exec=<upload-pack>` is passed to the command to specify non-default path "
@@ -6590,7 +6620,7 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:246 en/git-am.txt:77 en/git-branch.txt:192
+#: en/fetch-options.txt:255 en/git-am.txt:77 en/git-branch.txt:192
 #: en/git-bundle.txt:112 en/git-checkout-index.txt:30 en/git-checkout.txt:107
 #: en/git-clean.txt:53 en/git-clone.txt:124 en/git-commit.txt:368
 #: en/git-diff-files.txt:44 en/git-fetch-pack.txt:48
@@ -6600,7 +6630,7 @@ msgstr ""
 #: en/git-prune-packed.txt:36 en/git-pull.txt:77 en/git-push.txt:385
 #: en/git-read-tree.txt:132 en/git-rebase.txt:391 en/git-repack.txt:78
 #: en/git-reset.txt:105 en/git-restore.txt:66 en/git-rev-parse.txt:117
-#: en/git-rm.txt:75 en/git-show-ref.txt:70 en/git-stash.txt:223
+#: en/git-rm.txt:75 en/git-show-ref.txt:70 en/git-stash.txt:225
 #: en/git-submodule.txt:265 en/git-svn.txt:670 en/git-switch.txt:143
 #: en/git-symbolic-ref.txt:39 en/git-unpack-objects.txt:34
 #: en/git-update-index.txt:58 en/git-worktree.txt:228 en/merge-options.txt:137
@@ -6609,14 +6639,14 @@ msgid "-q"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:251
+#: en/fetch-options.txt:260
 msgid ""
 "Pass --quiet to git-fetch-pack and silence any other internally used git "
 "commands. Progress is not reported to the standard error stream."
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:252 en/git-add.txt:74 en/git-apply.txt:225
+#: en/fetch-options.txt:261 en/git-add.txt:74 en/git-apply.txt:225
 #: en/git-archimport.txt:74 en/git-archive.txt:47 en/git-branch.txt:181
 #: en/git-cherry.txt:29 en/git-clone.txt:129 en/git-commit.txt:353
 #: en/git-count-objects.txt:21 en/git-cvsexportcommit.txt:82
@@ -6634,7 +6664,7 @@ msgid "-v"
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:253 en/git-add.txt:75 en/git-apply.txt:226
+#: en/fetch-options.txt:262 en/git-add.txt:75 en/git-apply.txt:226
 #: en/git-archive.txt:48 en/git-branch.txt:183 en/git-clone.txt:130
 #: en/git-commit.txt:354 en/git-count-objects.txt:22 en/git-daemon.txt:148
 #: en/git-fsck.txt:85 en/git-help.txt:50 en/git-http-push.txt:40
@@ -6650,13 +6680,13 @@ msgid "--verbose"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:255 en/git-add.txt:77 en/git-imap-send.txt:35
+#: en/fetch-options.txt:264 en/git-add.txt:77 en/git-imap-send.txt:35
 #: en/merge-options.txt:144
 msgid "Be verbose."
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:257 en/git-bundle.txt:84 en/git-checkout.txt:111
+#: en/fetch-options.txt:266 en/git-bundle.txt:84 en/git-checkout.txt:111
 #: en/git-clone.txt:134 en/git-format-patch.txt:388 en/git-pack-objects.txt:161
 #: en/git-prune.txt:45 en/git-push.txt:395 en/git-restore.txt:70
 #: en/git-submodule.txt:269 en/git-switch.txt:147 en/merge-options.txt:145
@@ -6665,7 +6695,7 @@ msgid "--progress"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:262 en/git-bundle.txt:89 en/git-pack-objects.txt:166
+#: en/fetch-options.txt:271 en/git-bundle.txt:89 en/git-pack-objects.txt:166
 #: en/git-push.txt:400
 msgid ""
 "Progress status is reported on the standard error stream by default when it "
@@ -6674,19 +6704,19 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:263 en/git-ls-remote.txt:75 en/git-push.txt:215
+#: en/fetch-options.txt:272 en/git-ls-remote.txt:75 en/git-push.txt:215
 #, no-wrap
 msgid "-o <option>"
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:264 en/git-clone.txt:140 en/git-ls-remote.txt:76
+#: en/fetch-options.txt:273 en/git-clone.txt:140 en/git-ls-remote.txt:76
 #, no-wrap
 msgid "--server-option=<option>"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:271 en/git-clone.txt:147
+#: en/fetch-options.txt:280 en/git-clone.txt:147
 msgid ""
 "Transmit the given string to the server when communicating using protocol "
 "version 2.  The given string must not contain a NUL or LF character.  The "
@@ -6696,13 +6726,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:272
+#: en/fetch-options.txt:281
 #, no-wrap
 msgid "--show-forced-updates"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:277
+#: en/fetch-options.txt:286
 msgid ""
 "By default, git checks if a branch is force-updated during fetch. This can "
 "be disabled through fetch.showForcedUpdates, but the --show-forced-updates "
@@ -6710,13 +6740,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:278
+#: en/fetch-options.txt:287
 #, no-wrap
 msgid "--no-show-forced-updates"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:284
+#: en/fetch-options.txt:293
 msgid ""
 "By default, git checks if a branch is force-updated during fetch. Pass "
 "--no-show-forced-updates or set fetch.showForcedUpdates to false to skip "
@@ -6726,36 +6756,36 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:285 en/git-push.txt:422
+#: en/fetch-options.txt:294 en/git-push.txt:422
 #, no-wrap
 msgid "-4"
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:286 en/git-push.txt:423
+#: en/fetch-options.txt:295 en/git-push.txt:423
 #, no-wrap
 msgid "--ipv4"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:288 en/git-push.txt:425
+#: en/fetch-options.txt:297 en/git-push.txt:425
 msgid "Use IPv4 addresses only, ignoring IPv6 addresses."
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:289 en/git-push.txt:426
+#: en/fetch-options.txt:298 en/git-push.txt:426
 #, no-wrap
 msgid "-6"
 msgstr ""
 
 #. type: Labeled list
-#: en/fetch-options.txt:290 en/git-push.txt:427
+#: en/fetch-options.txt:299 en/git-push.txt:427
 #, no-wrap
 msgid "--ipv6"
 msgstr ""
 
 #. type: Plain text
-#: en/fetch-options.txt:291 en/git-push.txt:429
+#: en/fetch-options.txt:300 en/git-push.txt:429
 msgid "Use IPv6 addresses only, ignoring IPv4 addresses."
 msgstr ""
 
@@ -7025,12 +7055,12 @@ msgstr ""
 #: en/git-checkout.txt:106 en/git-check-ref-format.txt:100
 #: en/git-cherry-pick.txt:42 en/git-cherry.txt:28 en/git-clean.txt:27
 #: en/git-clone.txt:44 en/git-column.txt:22 en/git-commit-tree.txt:46
-#: en/git-commit.txt:66 en/git-config.txt:75 en/git-count-objects.txt:20
+#: en/git-commit.txt:66 en/git-config.txt:76 en/git-count-objects.txt:20
 #: en/git-credential-cache.txt:27 en/git-credential-store.txt:30
 #: en/git-cvsexportcommit.txt:35 en/git-cvsimport.txt:51
 #: en/git-cvsserver.txt:40 en/git-daemon.txt:48 en/git-describe.txt:36
 #: en/git-diff-files.txt:22 en/git-diff-index.txt:23 en/git-difftool.txt:21
-#: en/git-diff-tree.txt:26 en/git-diff.txt:116 en/git-fast-export.txt:25
+#: en/git-diff-tree.txt:26 en/git-diff.txt:120 en/git-fast-export.txt:25
 #: en/git-fast-import.txt:35 en/git-fetch-pack.txt:34 en/git-fetch.txt:46
 #: en/git-filter-branch.txt:96 en/git-fmt-merge-msg.txt:25
 #: en/git-for-each-ref.txt:28 en/git-format-patch.txt:106 en/git-fsck.txt:22
@@ -7053,7 +7083,7 @@ msgstr ""
 #: en/git-rev-list.txt:27 en/git-rev-parse.txt:26 en/git-rm.txt:32
 #: en/git-send-email.txt:43 en/git-send-pack.txt:27 en/git-shortlog.txt:27
 #: en/git-show-branch.txt:32 en/git-show-index.txt:40 en/git-show-ref.txt:34
-#: en/git-show.txt:36 en/git-stash.txt:153 en/git-status.txt:25
+#: en/git-show.txt:36 en/git-stash.txt:155 en/git-status.txt:25
 #: en/git-stripspace.txt:37 en/git-submodule.txt:264 en/git-svn.txt:575
 #: en/git-switch.txt:35 en/git-symbolic-ref.txt:33 en/git-tag.txt:59
 #: en/git.txt:41 en/git-unpack-file.txt:22 en/git-unpack-objects.txt:29
@@ -7068,7 +7098,7 @@ msgstr ""
 #. type: Labeled list
 #: en/git-add.txt:53 en/git-checkout.txt:365 en/git-commit.txt:400
 #: en/git-grep.txt:298 en/git-reset.txt:128 en/git-restore.txt:145
-#: en/git-rm.txt:33 en/git-stash.txt:235 en/git-status.txt:152
+#: en/git-rm.txt:33 en/git-stash.txt:237 en/git-status.txt:152
 #, no-wrap
 msgid "<pathspec>..."
 msgstr ""
@@ -7110,7 +7140,7 @@ msgstr ""
 #: en/git-add.txt:82 en/git-am.txt:131 en/git-branch.txt:149
 #: en/git-clean.txt:44 en/git-commit.txt:300 en/git-cvsimport.txt:88
 #: en/git-grep.txt:81 en/git-help.txt:64 en/git-ls-files.txt:51
-#: en/git-read-tree.txt:49 en/git-rebase.txt:499 en/git-repack.txt:163
+#: en/git-read-tree.txt:49 en/git-rebase.txt:499 en/git-repack.txt:165
 #: en/git-tag.txt:130 en/rev-list-options.txt:73
 #, no-wrap
 msgid "-i"
@@ -7149,7 +7179,7 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-add.txt:100 en/git-blame.txt:78 en/git-cat-file.txt:44
-#: en/git-cherry-pick.txt:53 en/git-commit.txt:259 en/git-config.txt:261
+#: en/git-cherry-pick.txt:53 en/git-commit.txt:259 en/git-config.txt:268
 #: en/git-grep.txt:265 en/git-revert.txt:44 en/git-shortlog.txt:38
 #: en/git-svn.txt:614 en/git-tag.txt:177 en/merge-options.txt:16
 #, no-wrap
@@ -7158,7 +7188,7 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-add.txt:101 en/git-cherry-pick.txt:54 en/git-commit.txt:260
-#: en/git-config.txt:262 en/git-revert.txt:45 en/git-svn.txt:615
+#: en/git-config.txt:269 en/git-revert.txt:45 en/git-svn.txt:615
 #: en/git-tag.txt:178 en/merge-options.txt:15
 #, no-wrap
 msgid "--edit"
@@ -7370,7 +7400,7 @@ msgstr ""
 #. type: Labeled list
 #: en/git-add.txt:191 en/git-checkout.txt:315 en/git-commit.txt:321
 #: en/git-reset.txt:112 en/git-restore.txt:129 en/git-rm.txt:80
-#: en/git-stash.txt:206
+#: en/git-stash.txt:208
 #, no-wrap
 msgid "--pathspec-from-file=<file>"
 msgstr ""
@@ -7378,7 +7408,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-add.txt:198 en/git-checkout.txt:322 en/git-commit.txt:328
 #: en/git-reset.txt:119 en/git-restore.txt:136 en/git-rm.txt:87
-#: en/git-stash.txt:215
+#: en/git-stash.txt:217
 msgid ""
 "Pathspec is passed in `<file>` instead of commandline args. If `<file>` is "
 "exactly `-` then standard input is used. Pathspec elements are separated by "
@@ -7390,7 +7420,7 @@ msgstr ""
 #. type: Labeled list
 #: en/git-add.txt:199 en/git-checkout.txt:323 en/git-commit.txt:329
 #: en/git-reset.txt:120 en/git-restore.txt:137 en/git-rm.txt:88
-#: en/git-stash.txt:216
+#: en/git-stash.txt:218
 #, no-wrap
 msgid "--pathspec-file-nul"
 msgstr ""
@@ -7398,7 +7428,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-add.txt:203 en/git-checkout.txt:327 en/git-commit.txt:333
 #: en/git-reset.txt:124 en/git-restore.txt:141 en/git-rm.txt:92
-#: en/git-stash.txt:222
+#: en/git-stash.txt:224
 msgid ""
 "Only meaningful with `--pathspec-from-file`. Pathspec elements are separated "
 "with NUL character and all other characters are taken literally (including "
@@ -7410,7 +7440,7 @@ msgstr ""
 #: en/git-checkout.txt:362 en/git-commit.txt:397 en/git-grep.txt:294
 #: en/git-ls-files.txt:190 en/git-merge-index.txt:23 en/git-prune.txt:51
 #: en/git-reset.txt:125 en/git-restore.txt:142 en/git-rm.txt:62
-#: en/git-stash.txt:230 en/git-update-index.txt:226 en/git-verify-pack.txt:36
+#: en/git-stash.txt:232 en/git-update-index.txt:226 en/git-verify-pack.txt:36
 #, no-wrap
 msgid "\\--"
 msgstr ""
@@ -7428,23 +7458,23 @@ msgstr ""
 #: en/git-checkout-index.txt:143 en/git-checkout.txt:518
 #: en/git-check-ref-format.txt:123 en/git-cherry-pick.txt:169
 #: en/git-cherry.txt:43 en/git-clone.txt:325 en/git-column.txt:50
-#: en/git-commit.txt:409 en/git-config.txt:373 en/git-credential-cache.txt:55
+#: en/git-commit.txt:409 en/git-config.txt:379 en/git-credential-cache.txt:55
 #: en/git-credential-store.txt:71 en/git-cvsexportcommit.txt:91
-#: en/git-daemon.txt:257 en/git-describe.txt:127 en/git-diff.txt:143
+#: en/git-daemon.txt:257 en/git-describe.txt:128 en/git-diff.txt:147
 #: en/git-fast-export.txt:167 en/git-fetch.txt:246 en/git-filter-branch.txt:247
 #: en/git-fmt-merge-msg.txt:61 en/git-for-each-ref.txt:292
 #: en/git-format-patch.txt:699 en/git-grep.txt:306 en/git-http-backend.txt:67
 #: en/git-imap-send.txt:60 en/git-init.txt:154
-#: en/git-interpret-trailers.txt:269 en/git-log.txt:124 en/git-ls-remote.txt:95
+#: en/git-interpret-trailers.txt:269 en/git-log.txt:126 en/git-ls-remote.txt:95
 #: en/git-merge-file.txt:81 en/git-merge.txt:324 en/git-name-rev.txt:65
 #: en/git-notes.txt:278 en/git-p4.txt:33 en/git-prune.txt:60
 #: en/git-pull.txt:203 en/git-push.txt:594 en/git-range-diff.txt:131
 #: en/git-remote-ext.txt:77 en/git-remote-fd.txt:37 en/git-remote.txt:218
 #: en/git-request-pull.txt:50 en/git-reset.txt:134 en/git-restore.txt:151
 #: en/git-revert.txt:125 en/git-rev-list.txt:35 en/git-rev-parse.txt:456
-#: en/git-rm.txt:169 en/git-send-email.txt:483 en/git-shell.txt:66
+#: en/git-rm.txt:169 en/git-send-email.txt:494 en/git-shell.txt:66
 #: en/git-show-branch.txt:177 en/git-show-ref.txt:124 en/git-show.txt:61
-#: en/git-stash.txt:271 en/git-stripspace.txt:49 en/git-switch.txt:194
+#: en/git-stash.txt:273 en/git-stripspace.txt:49 en/git-switch.txt:194
 #: en/git-update-index.txt:356 en/git-var.txt:27 en/git-worktree.txt:465
 #, no-wrap
 msgid "EXAMPLES"
@@ -7855,7 +7885,7 @@ msgstr ""
 #: en/git-check-ignore.txt:119 en/git-checkout.txt:604
 #: en/git-cherry-pick.txt:241 en/git-cherry.txt:140 en/git-clean.txt:137
 #: en/git-commit-tree.txt:95 en/git-commit.txt:576 en/git-difftool.txt:145
-#: en/git-diff.txt:213 en/git-fast-export.txt:279 en/git-fast-import.txt:1568
+#: en/git-diff.txt:217 en/git-fast-export.txt:279 en/git-fast-import.txt:1568
 #: en/git-fetch-pack.txt:127 en/git-fetch.txt:298 en/git-fmt-merge-msg.txt:73
 #: en/git-for-each-ref.txt:413 en/git-format-patch.txt:752 en/git-gc.txt:155
 #: en/git-gui.txt:103 en/git-imap-send.txt:139 en/git-instaweb.txt:89
@@ -7864,10 +7894,10 @@ msgstr ""
 #: en/git-pack-redundant.txt:43 en/git-prune-packed.txt:41 en/git-prune.txt:81
 #: en/git-pull.txt:250 en/git-range-diff.txt:288 en/git-read-tree.txt:437
 #: en/git-receive-pack.txt:251 en/git-remote-ext.txt:120
-#: en/git-remote-fd.txt:54 en/git-remote.txt:260 en/git-repack.txt:212
+#: en/git-remote-fd.txt:54 en/git-remote.txt:260 en/git-repack.txt:214
 #: en/git-replace.txt:149 en/git-restore.txt:213 en/git-revert.txt:140
-#: en/git-rm.txt:193 en/git-send-email.txt:525 en/git-shell.txt:99
-#: en/git-show-ref.txt:178 en/git-stash.txt:357 en/git-status.txt:450
+#: en/git-rm.txt:193 en/git-send-email.txt:536 en/git-shell.txt:99
+#: en/git-show-ref.txt:178 en/git-stash.txt:359 en/git-status.txt:450
 #: en/git-submodule.txt:451 en/git-svn.txt:1170 en/git-switch.txt:270
 #: en/git-tag.txt:386 en/git.txt:1033 en/git-update-index.txt:568
 #: en/git-upload-pack.txt:48 en/git-var.txt:63 en/gitglossary.txt:18
@@ -7892,13 +7922,13 @@ msgstr ""
 #: en/git-checkout.txt:609 en/git-check-ref-format.txt:139
 #: en/git-cherry-pick.txt:245 en/git-cherry.txt:144 en/git-citool.txt:24
 #: en/git-clean.txt:141 en/git-clone.txt:363 en/git-column.txt:78
-#: en/git-commit-tree.txt:100 en/git-commit.txt:584 en/git-config.txt:529
+#: en/git-commit-tree.txt:100 en/git-commit.txt:584 en/git-config.txt:535
 #: en/git-count-objects.txt:53 en/git-credential-cache--daemon.txt:29
 #: en/git-credential-cache.txt:79 en/git-credential-store.txt:109
 #: en/git-credential.txt:164 en/git-cvsexportcommit.txt:117
 #: en/git-cvsimport.txt:227 en/git-cvsserver.txt:432 en/git-daemon.txt:339
-#: en/git-describe.txt:206 en/git-diff-files.txt:51 en/git-diff-index.txt:126
-#: en/git-difftool.txt:156 en/git-diff-tree.txt:130 en/git-diff.txt:223
+#: en/git-describe.txt:210 en/git-diff-files.txt:51 en/git-diff-index.txt:126
+#: en/git-difftool.txt:156 en/git-diff-tree.txt:130 en/git-diff.txt:227
 #: en/git-fast-export.txt:283 en/git-fast-import.txt:1572
 #: en/git-fetch-pack.txt:131 en/git-fetch.txt:302 en/git-filter-branch.txt:702
 #: en/git-fmt-merge-msg.txt:77 en/git-for-each-ref.txt:417
@@ -7908,7 +7938,7 @@ msgstr ""
 #: en/git-http-backend.txt:276 en/git-http-fetch.txt:61 en/git-http-push.txt:96
 #: en/git-imap-send.txt:143 en/git-index-pack.txt:130 en/git-init-db.txt:22
 #: en/git-init.txt:170 en/git-instaweb.txt:93 en/git-interpret-trailers.txt:451
-#: en/git-log.txt:243 en/git-ls-files.txt:257 en/git-ls-remote.txt:120
+#: en/git-log.txt:245 en/git-ls-files.txt:257 en/git-ls-remote.txt:120
 #: en/git-ls-tree.txt:104 en/git-mailinfo.txt:119 en/git-mailsplit.txt:56
 #: en/git-merge-base.txt:246 en/git-merge-file.txt:94 en/git-merge-index.txt:82
 #: en/git-merge-one-file.txt:20 en/git-mergetool--lib.txt:52
@@ -7921,14 +7951,14 @@ msgstr ""
 #: en/git-quiltimport.txt:63 en/git-range-diff.txt:292 en/git-read-tree.txt:442
 #: en/git-rebase.txt:1301 en/git-receive-pack.txt:255 en/git-reflog.txt:137
 #: en/git-remote-ext.txt:124 en/git-remote-fd.txt:58 en/git-remote.txt:266
-#: en/git-repack.txt:217 en/git-replace.txt:160 en/git-request-pull.txt:78
+#: en/git-repack.txt:219 en/git-replace.txt:160 en/git-request-pull.txt:78
 #: en/git-rerere.txt:221 en/git-reset.txt:502 en/git-restore.txt:218
 #: en/git-revert.txt:144 en/git-rev-list.txt:128 en/git-rev-parse.txt:481
-#: en/git-rm.txt:197 en/git-send-email.txt:529 en/git-send-pack.txt:155
+#: en/git-rm.txt:197 en/git-send-email.txt:540 en/git-send-pack.txt:155
 #: en/git-shell.txt:105 en/git-sh-i18n--envsubst.txt:35 en/git-sh-i18n.txt:42
 #: en/git-shortlog.txt:121 en/git-show-branch.txt:203 en/git-show-index.txt:51
 #: en/git-show-ref.txt:185 en/git-show.txt:89 en/git-sh-setup.txt:94
-#: en/git-stage.txt:22 en/git-stash.txt:365 en/git-status.txt:454
+#: en/git-stage.txt:22 en/git-stash.txt:367 en/git-status.txt:454
 #: en/git-stripspace.txt:93 en/git-submodule.txt:455 en/git-svn.txt:1174
 #: en/git-switch.txt:275 en/git-symbolic-ref.txt:68 en/git-tag.txt:391
 #: en/git.txt:1041 en/git-unpack-file.txt:27 en/git-unpack-objects.txt:51
@@ -7952,13 +7982,13 @@ msgstr ""
 #: en/git-checkout.txt:610 en/git-check-ref-format.txt:140
 #: en/git-cherry-pick.txt:246 en/git-cherry.txt:145 en/git-citool.txt:25
 #: en/git-clean.txt:142 en/git-clone.txt:364 en/git-column.txt:79
-#: en/git-commit-tree.txt:101 en/git-commit.txt:585 en/git-config.txt:530
+#: en/git-commit-tree.txt:101 en/git-commit.txt:585 en/git-config.txt:536
 #: en/git-count-objects.txt:54 en/git-credential-cache--daemon.txt:30
 #: en/git-credential-cache.txt:80 en/git-credential-store.txt:110
 #: en/git-credential.txt:165 en/git-cvsexportcommit.txt:118
 #: en/git-cvsimport.txt:228 en/git-cvsserver.txt:433 en/git-daemon.txt:340
-#: en/git-describe.txt:207 en/git-diff-files.txt:52 en/git-diff-index.txt:127
-#: en/git-difftool.txt:157 en/git-diff-tree.txt:131 en/git-diff.txt:224
+#: en/git-describe.txt:211 en/git-diff-files.txt:52 en/git-diff-index.txt:127
+#: en/git-difftool.txt:157 en/git-diff-tree.txt:131 en/git-diff.txt:228
 #: en/git-fast-export.txt:284 en/git-fast-import.txt:1573
 #: en/git-fetch-pack.txt:132 en/git-fetch.txt:303 en/git-filter-branch.txt:703
 #: en/git-fmt-merge-msg.txt:78 en/git-for-each-ref.txt:418
@@ -7968,7 +7998,7 @@ msgstr ""
 #: en/git-http-backend.txt:277 en/git-http-fetch.txt:62 en/git-http-push.txt:97
 #: en/git-imap-send.txt:144 en/git-index-pack.txt:131 en/git-init-db.txt:23
 #: en/git-init.txt:171 en/git-instaweb.txt:94 en/git-interpret-trailers.txt:452
-#: en/git-log.txt:244 en/git-ls-files.txt:258 en/git-ls-remote.txt:121
+#: en/git-log.txt:246 en/git-ls-files.txt:258 en/git-ls-remote.txt:121
 #: en/git-ls-tree.txt:105 en/git-mailinfo.txt:120 en/git-mailsplit.txt:57
 #: en/git-merge-base.txt:247 en/git-merge-file.txt:95 en/git-merge-index.txt:83
 #: en/git-merge-one-file.txt:21 en/git-mergetool--lib.txt:53
@@ -7981,14 +8011,14 @@ msgstr ""
 #: en/git-quiltimport.txt:64 en/git-range-diff.txt:293 en/git-read-tree.txt:443
 #: en/git-rebase.txt:1302 en/git-receive-pack.txt:256 en/git-reflog.txt:138
 #: en/git-remote-ext.txt:125 en/git-remote-fd.txt:59 en/git-remote.txt:267
-#: en/git-repack.txt:218 en/git-replace.txt:161 en/git-request-pull.txt:79
+#: en/git-repack.txt:220 en/git-replace.txt:161 en/git-request-pull.txt:79
 #: en/git-rerere.txt:222 en/git-reset.txt:503 en/git-restore.txt:219
 #: en/git-revert.txt:145 en/git-rev-list.txt:129 en/git-rev-parse.txt:482
-#: en/git-rm.txt:198 en/git-send-email.txt:530 en/git-send-pack.txt:156
+#: en/git-rm.txt:198 en/git-send-email.txt:541 en/git-send-pack.txt:156
 #: en/git-shell.txt:106 en/git-sh-i18n--envsubst.txt:36 en/git-sh-i18n.txt:43
 #: en/git-shortlog.txt:122 en/git-show-branch.txt:204 en/git-show-index.txt:52
 #: en/git-show-ref.txt:186 en/git-show.txt:90 en/git-sh-setup.txt:95
-#: en/git-stage.txt:23 en/git-stash.txt:366 en/git-status.txt:455
+#: en/git-stage.txt:23 en/git-stash.txt:368 en/git-status.txt:455
 #: en/git-stripspace.txt:94 en/git-submodule.txt:456 en/git-svn.txt:1175
 #: en/git-switch.txt:276 en/git-symbolic-ref.txt:69 en/git-tag.txt:392
 #: en/git.txt:1042 en/git-unpack-file.txt:28 en/git-unpack-objects.txt:52
@@ -8487,9 +8517,9 @@ msgstr ""
 
 #. type: Title -
 #: en/git-am.txt:193 en/git-commit.txt:540 en/git-format-patch.txt:416
-#: en/git-fsck.txt:113 en/git-log.txt:181 en/git-merge-base.txt:76
+#: en/git-fsck.txt:113 en/git-log.txt:183 en/git-merge-base.txt:76
 #: en/git-notes.txt:218 en/git-remote.txt:200 en/git-rerere.txt:77
-#: en/git-reset.txt:378 en/git-show.txt:84 en/git-stash.txt:253
+#: en/git-reset.txt:378 en/git-show.txt:84 en/git-stash.txt:255
 #: en/git-tag.txt:231
 #, no-wrap
 msgid "DISCUSSION"
@@ -8734,7 +8764,7 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-apply.txt:63 en/git-checkout-index.txt:26 en/git-stash.txt:176
+#: en/git-apply.txt:63 en/git-checkout-index.txt:26 en/git-stash.txt:178
 #, no-wrap
 msgid "--index"
 msgstr ""
@@ -9112,13 +9142,13 @@ msgstr ""
 
 #. type: Title -
 #: en/git-apply.txt:255 en/git-archive.txt:104 en/git-branch.txt:302
-#: en/git-check-mailmap.txt:40 en/git-config.txt:277
+#: en/git-check-mailmap.txt:40 en/git-config.txt:284
 #: en/git-cvsexportcommit.txt:86 en/git-fmt-merge-msg.txt:53
 #: en/git-format-patch.txt:392 en/git-fsck.txt:108 en/git-gc.txt:107
 #: en/git-grep.txt:335 en/git-imap-send.txt:52 en/git-instaweb.txt:70
-#: en/git-log.txt:186 en/git-mergetool.txt:103 en/git-merge.txt:358
+#: en/git-log.txt:188 en/git-mergetool.txt:103 en/git-merge.txt:358
 #: en/git-notes.txt:311 en/git-pack-objects.txt:415 en/git-range-diff.txt:124
-#: en/git-rebase.txt:1272 en/git-repack.txt:192 en/git-send-email.txt:444
+#: en/git-rebase.txt:1272 en/git-repack.txt:194 en/git-send-email.txt:455
 #: en/git-status.txt:414 en/git-svn.txt:1065 en/git-tag.txt:215
 #: en/git-update-index.txt:524
 #, no-wrap
@@ -9441,7 +9471,7 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-archive.txt:44 en/git-branch.txt:172 en/git-config.txt:168
+#: en/git-archive.txt:44 en/git-branch.txt:172 en/git-config.txt:175
 #: en/git-show-branch.txt:80 en/git-tag.txt:100
 #, no-wrap
 msgid "--list"
@@ -9586,7 +9616,7 @@ msgid "zip"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-archive.txt:96 en/git-diff-files.txt:28 en/git-diff.txt:129
+#: en/git-archive.txt:96 en/git-diff-files.txt:28 en/git-diff.txt:133
 #, no-wrap
 msgid "-0"
 msgstr ""
@@ -14109,7 +14139,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-checkout.txt:110 en/git-read-tree.txt:135 en/git-stash.txt:229
+#: en/git-checkout.txt:110 en/git-read-tree.txt:135 en/git-stash.txt:231
 #: en/git-switch.txt:146
 msgid "Quiet, suppress feedback messages."
 msgstr ""
@@ -14590,7 +14620,7 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-checkout.txt:369 en/git-commit.txt:407 en/git-reset.txt:132
-#: en/git-restore.txt:149 en/git-rm.txt:47 en/git-stash.txt:244
+#: en/git-restore.txt:149 en/git-rm.txt:47 en/git-stash.txt:246
 msgid "For more details, see the 'pathspec' entry in linkgit:gitglossary[7]."
 msgstr ""
 
@@ -16216,7 +16246,7 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-clone.txt:46 en/git-config.txt:130 en/git-instaweb.txt:24
+#: en/git-clone.txt:46 en/git-config.txt:131 en/git-instaweb.txt:24
 #: en/git-pack-objects.txt:152 en/git-svn.txt:245
 #, no-wrap
 msgid "--local"
@@ -17133,7 +17163,7 @@ msgid "Discussion"
 msgstr ""
 
 #. type: Title -
-#: en/git-commit-tree.txt:91 en/git-commit.txt:566 en/git-config.txt:284
+#: en/git-commit-tree.txt:91 en/git-commit.txt:566 en/git-config.txt:291
 #: en/git-credential-store.txt:45 en/git-show-ref.txt:174
 #: en/git-submodule.txt:443 en/git-svn.txt:1138
 #, no-wrap
@@ -17259,7 +17289,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-commit.txt:78
 msgid ""
-"Use the interactive patch selection interface to chose which changes to "
+"Use the interactive patch selection interface to choose which changes to "
 "commit. See linkgit:git-add[1] for details."
 msgstr ""
 
@@ -17423,7 +17453,7 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-commit.txt:154 en/git-describe.txt:87 en/git-ls-tree.txt:52
+#: en/git-commit.txt:154 en/git-describe.txt:88 en/git-ls-tree.txt:52
 #: en/git-status.txt:47
 #, no-wrap
 msgid "--long"
@@ -17437,7 +17467,7 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-commit.txt:159 en/git-config.txt:216 en/git-grep.txt:176
+#: en/git-commit.txt:159 en/git-config.txt:223 en/git-grep.txt:176
 #, no-wrap
 msgid "--null"
 msgstr ""
@@ -18296,39 +18326,39 @@ msgid "On success, the command returns the exit code 0."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:77
+#: en/git-config.txt:78
 #, no-wrap
 msgid "--replace-all"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:80
+#: en/git-config.txt:81
 msgid ""
 "Default behavior is to replace at most one line. This replaces all lines "
 "matching the key (and optionally the `value-pattern`)."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:81 en/git-update-index.txt:44
+#: en/git-config.txt:82 en/git-update-index.txt:44
 #, no-wrap
 msgid "--add"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:85
+#: en/git-config.txt:86
 msgid ""
 "Adds a new line to the option without altering any existing values.  This is "
 "the same as providing '^$' as the `value-pattern` in `--replace-all`."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:86
+#: en/git-config.txt:87
 #, no-wrap
 msgid "--get"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:90
+#: en/git-config.txt:91
 msgid ""
 "Get the value for a given key (optionally filtered by a regex matching the "
 "value). Returns error code 1 if the key was not found and the last value if "
@@ -18336,24 +18366,24 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:91
+#: en/git-config.txt:92
 #, no-wrap
 msgid "--get-all"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:93
+#: en/git-config.txt:94
 msgid "Like get, but returns all values for a multi-valued key."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:94
+#: en/git-config.txt:95
 #, no-wrap
 msgid "--get-regexp"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:100
+#: en/git-config.txt:101
 msgid ""
 "Like --get-all, but interprets the name as a regular expression and writes "
 "out the key names.  Regular expression matching is currently case-sensitive "
@@ -18362,13 +18392,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:101
+#: en/git-config.txt:102
 #, no-wrap
 msgid "--get-urlmatch name URL"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:108
+#: en/git-config.txt:109
 msgid ""
 "When given a two-part name section.key, the value for section.<url>.key "
 "whose <url> part matches the best to the given URL is returned (if no such "
@@ -18378,13 +18408,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:109
+#: en/git-config.txt:110
 #, no-wrap
 msgid "--global"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:114
+#: en/git-config.txt:115
 msgid ""
 "For writing options: write to global `~/.gitconfig` file rather than the "
 "repository `.git/config`, write to `$XDG_CONFIG_HOME/git/config` file if "
@@ -18392,60 +18422,60 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:117
+#: en/git-config.txt:118
 msgid ""
 "For reading options: read only from global `~/.gitconfig` and from "
 "`$XDG_CONFIG_HOME/git/config` rather than from all available files."
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:119 en/git-config.txt:129 en/git-config.txt:138
-#: en/git-config.txt:353
+#: en/git-config.txt:120 en/git-config.txt:130 en/git-config.txt:139
+#: en/git-config.txt:154 en/git-config.txt:353
 msgid "See also <<FILES>>."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:120
+#: en/git-config.txt:121
 #, no-wrap
 msgid "--system"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:124
+#: en/git-config.txt:125
 msgid ""
 "For writing options: write to system-wide `$(prefix)/etc/gitconfig` rather "
 "than the repository `.git/config`."
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:127
+#: en/git-config.txt:128
 msgid ""
 "For reading options: read only from system-wide `$(prefix)/etc/gitconfig` "
 "rather than from all available files."
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:133
+#: en/git-config.txt:134
 msgid ""
 "For writing options: write to the repository `.git/config` file.  This is "
 "the default behavior."
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:136
+#: en/git-config.txt:137
 msgid ""
 "For reading options: read only from the repository `.git/config` rather than "
 "from all available files."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:139 en/git-restore.txt:59
+#: en/git-config.txt:140 en/git-restore.txt:59
 #, no-wrap
 msgid "--worktree"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:143
+#: en/git-config.txt:144
 msgid ""
 "Similar to `--local` except that `.git/config.worktree` is read from or "
 "written to if `extensions.worktreeConfig` is present. If not it's the same "
@@ -18453,30 +18483,39 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:144
+#: en/git-config.txt:145
 #, no-wrap
 msgid "-f config-file"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:145
+#: en/git-config.txt:146
 #, no-wrap
 msgid "--file config-file"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:147
-msgid "Use the given config file instead of the one specified by GIT_CONFIG."
+#: en/git-config.txt:149
+msgid ""
+"For writing options: write to the specified file rather than the repository "
+"`.git/config`."
+msgstr ""
+
+#. type: Plain text
+#: en/git-config.txt:152
+msgid ""
+"For reading options: read only from the specified file rather than from all "
+"available files."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:148
+#: en/git-config.txt:155
 #, no-wrap
 msgid "--blob blob"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:154
+#: en/git-config.txt:161
 msgid ""
 "Similar to `--file` but use the given blob instead of a file. E.g.  you can "
 "use 'master:.gitmodules' to read values from the file '.gitmodules' in the "
@@ -18486,62 +18525,62 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:155
+#: en/git-config.txt:162
 #, no-wrap
 msgid "--remove-section"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:157
+#: en/git-config.txt:164
 msgid "Remove the given section from the configuration file."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:158
+#: en/git-config.txt:165
 #, no-wrap
 msgid "--rename-section"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:160
+#: en/git-config.txt:167
 msgid "Rename the given section to a new name."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:161
+#: en/git-config.txt:168
 #, no-wrap
 msgid "--unset"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:163
-msgid "Remove the line matching the key from config file."
-msgstr ""
-
-#. type: Labeled list
-#: en/git-config.txt:164
-#, no-wrap
-msgid "--unset-all"
-msgstr ""
-
-#. type: Plain text
-#: en/git-config.txt:166
-msgid "Remove all lines matching the key from config file."
-msgstr ""
-
-#. type: Plain text
 #: en/git-config.txt:170
-msgid "List all variables set in config file, along with their values."
+msgid "Remove the line matching the key from config file."
 msgstr ""
 
 #. type: Labeled list
 #: en/git-config.txt:171
 #, no-wrap
+msgid "--unset-all"
+msgstr ""
+
+#. type: Plain text
+#: en/git-config.txt:173
+msgid "Remove all lines matching the key from config file."
+msgstr ""
+
+#. type: Plain text
+#: en/git-config.txt:177
+msgid "List all variables set in config file, along with their values."
+msgstr ""
+
+#. type: Labeled list
+#: en/git-config.txt:178
+#, no-wrap
 msgid "--fixed-value"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:176
+#: en/git-config.txt:183
 msgid ""
 "When used with the `value-pattern` argument, treat `value-pattern` as an "
 "exact string instead of a regular expression. This will restrict the "
@@ -18550,13 +18589,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:177
+#: en/git-config.txt:184
 #, no-wrap
 msgid "--type <type>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:181
+#: en/git-config.txt:188
 msgid ""
 "'git config' will ensure that any input or output is valid under the given "
 "type constraint(s), and will canonicalize outgoing values in `<type>`'s "
@@ -18564,17 +18603,17 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:183
+#: en/git-config.txt:190
 msgid "Valid `<type>`'s include:"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:185
+#: en/git-config.txt:192
 msgid "'bool': canonicalize values as either \"true\" or \"false\"."
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:188
+#: en/git-config.txt:195
 msgid ""
 "'int': canonicalize values as simple decimal numbers. An optional suffix of "
 "'k', 'm', or 'g' will cause the value to be multiplied by 1024, 1048576, or "
@@ -18582,14 +18621,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:190
+#: en/git-config.txt:197
 msgid ""
 "'bool-or-int': canonicalize according to either 'bool' or 'int', as "
 "described above."
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:194
+#: en/git-config.txt:201
 msgid ""
 "'path': canonicalize by adding a leading `~` to the value of `$HOME` and "
 "`~user` to the home directory for the specified user. This specifier has no "
@@ -18598,7 +18637,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:196
+#: en/git-config.txt:203
 msgid ""
 "'expiry-date': canonicalize by converting from a fixed or relative "
 "date-string to a timestamp. This specifier has no effect when setting the "
@@ -18606,7 +18645,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:200
+#: en/git-config.txt:207
 msgid ""
 "'color': When getting a value, canonicalize by converting to an ANSI color "
 "escape sequence. When setting a value, a sanity-check is performed to ensure "
@@ -18615,50 +18654,50 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:202
+#: en/git-config.txt:209
 #, no-wrap
 msgid "--bool"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:203
+#: en/git-config.txt:210
 #, no-wrap
 msgid "--int"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:204
+#: en/git-config.txt:211
 #, no-wrap
 msgid "--bool-or-int"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:205 en/git-hash-object.txt:39
+#: en/git-config.txt:212 en/git-hash-object.txt:39
 #, no-wrap
 msgid "--path"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:206
+#: en/git-config.txt:213
 #, no-wrap
 msgid "--expiry-date"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:209
+#: en/git-config.txt:216
 msgid ""
 "Historical options for selecting a type specifier. Prefer instead `--type` "
 "(see above)."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:210
+#: en/git-config.txt:217
 #, no-wrap
 msgid "--no-type"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:214
+#: en/git-config.txt:221
 msgid ""
 "Un-sets the previously set type specifier (if one was previously set). This "
 "option requests that 'git config' not canonicalize the retrieved variable.  "
@@ -18666,7 +18705,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:223
+#: en/git-config.txt:230
 msgid ""
 "For all options that output values and/or keys, always end values with the "
 "null character (instead of a newline). Use newline instead as a delimiter "
@@ -18675,18 +18714,18 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:227
+#: en/git-config.txt:234
 msgid "Output only the names of config variables for `--list` or `--get-regexp`."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:228
+#: en/git-config.txt:235
 #, no-wrap
 msgid "--show-origin"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:233
+#: en/git-config.txt:240
 msgid ""
 "Augment the output of all queried config options with the origin type (file, "
 "standard input, blob, command line) and the actual origin (config file path, "
@@ -18694,13 +18733,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:234
+#: en/git-config.txt:241
 #, no-wrap
 msgid "--show-scope"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:238
+#: en/git-config.txt:245
 msgid ""
 "Similar to `--show-origin` in that it augments the output of all queried "
 "config options with the scope of that value (local, global, system, "
@@ -18708,13 +18747,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:239
+#: en/git-config.txt:246
 #, no-wrap
 msgid "--get-colorbool name [stdout-is-tty]"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:249
+#: en/git-config.txt:256
 msgid ""
 "Find the color setting for `name` (e.g. `color.diff`) and output \"true\" or "
 "\"false\".  `stdout-is-tty` should be either \"true\" or \"false\", and is "
@@ -18726,13 +18765,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:250
+#: en/git-config.txt:257
 #, no-wrap
 msgid "--get-color name [default]"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:256
+#: en/git-config.txt:263
 msgid ""
 "Find the color configured for `name` (e.g. `color.diff.new`) and output it "
 "as the ANSI color escape sequence to the standard output.  The optional "
@@ -18741,7 +18780,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:260
+#: en/git-config.txt:267
 msgid ""
 "`--type=color [--default=<default>]` is preferred over `--get-color` (but "
 "note that `--get-color` will omit the trailing newline printed by "
@@ -18749,20 +18788,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:265
+#: en/git-config.txt:272
 msgid ""
 "Opens an editor to modify the specified config file; either `--system`, "
 "`--global`, or repository (default)."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:266
+#: en/git-config.txt:273
 #, no-wrap
 msgid "--[no-]includes"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:271
+#: en/git-config.txt:278
 msgid ""
 "Respect `include.*` directives in config files when looking up "
 "values. Defaults to `off` when a specific file is given (e.g., using "
@@ -18770,20 +18809,20 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:272
+#: en/git-config.txt:279
 #, no-wrap
 msgid "--default <value>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:275
+#: en/git-config.txt:282
 msgid ""
 "When using `--get`, and the requested variable is not found, behave as if "
 "<value> were the value assigned to the that variable."
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:281
+#: en/git-config.txt:288
 msgid ""
 "`pager.config` is only respected when listing configuration, i.e., when "
 "using `--list` or any of the `--get-*` which may return multiple results.  "
@@ -18791,31 +18830,31 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:288
+#: en/git-config.txt:295
 msgid ""
 "If not set explicitly with `--file`, there are four files where 'git config' "
 "will search for configuration options:"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:289
+#: en/git-config.txt:296
 #, no-wrap
 msgid "$(prefix)/etc/gitconfig"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:291
+#: en/git-config.txt:298
 msgid "System-wide configuration file."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:292
+#: en/git-config.txt:299
 #, no-wrap
 msgid "$XDG_CONFIG_HOME/git/config"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:299
+#: en/git-config.txt:306
 msgid ""
 "Second user-specific configuration file. If $XDG_CONFIG_HOME is not set or "
 "empty, `$HOME/.config/git/config` will be used. Any single-valued variable "
@@ -18825,42 +18864,42 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:300
+#: en/git-config.txt:307
 #, no-wrap
 msgid "~/.gitconfig"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:303
+#: en/git-config.txt:310
 msgid "User-specific configuration file. Also called \"global\" configuration file."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:304
+#: en/git-config.txt:311
 #, no-wrap
 msgid "$GIT_DIR/config"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:306
+#: en/git-config.txt:313
 msgid "Repository specific configuration file."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-config.txt:307
+#: en/git-config.txt:314
 #, no-wrap
 msgid "$GIT_DIR/config.worktree"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:310
+#: en/git-config.txt:317
 msgid ""
 "This is optional and is only searched when `extensions.worktreeConfig` is "
 "present in $GIT_DIR/config."
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:316
+#: en/git-config.txt:323
 msgid ""
 "If no further options are given, all reading options will read all of these "
 "files that are available. If the global or the system-wide configuration "
@@ -18870,7 +18909,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:320
+#: en/git-config.txt:327
 msgid ""
 "The files are read in the order given above, with last value found taking "
 "precedence over values read earlier.  When multiple values are taken then "
@@ -18878,14 +18917,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:323
+#: en/git-config.txt:330
 msgid ""
 "You may override individual configuration parameters when running any git "
 "command by using the `-c` option. See linkgit:git[1] for details."
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:327
+#: en/git-config.txt:334
 msgid ""
 "All writing options will per default write to the repository specific "
 "configuration file. Note that this also affects options like `--replace-all` "
@@ -18893,34 +18932,17 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:333
+#: en/git-config.txt:338
 msgid ""
-"You can override these rules either by command-line options or by "
-"environment variables. The `--global`, `--system` and `--worktree` options "
-"will limit the file used to the global, system-wide or per-worktree file "
-"respectively.  The `GIT_CONFIG` environment variable has a similar effect, "
-"but you can specify any filename you want."
+"You can override these rules using the `--global`, `--system`, `--local`, "
+"`--worktree`, and `--file` command-line options; see <<OPTIONS>> above."
 msgstr ""
 
 #. type: Title -
-#: en/git-config.txt:336 en/git-cvsserver.txt:310 en/git-daemon.txt:332
+#: en/git-config.txt:341 en/git-cvsserver.txt:310 en/git-daemon.txt:332
 #: en/git-http-backend.txt:243 en/git-notes.txt:373
 #, no-wrap
 msgid "ENVIRONMENT"
-msgstr ""
-
-#. type: Labeled list
-#: en/git-config.txt:338
-#, no-wrap
-msgid "GIT_CONFIG"
-msgstr ""
-
-#. type: Plain text
-#: en/git-config.txt:342
-msgid ""
-"Take the configuration from the given file instead of .git/config.  Using "
-"the \"--global\" option forces this to ~/.gitconfig. Using the \"--system\" "
-"option forces this to $(prefix)/etc/gitconfig."
 msgstr ""
 
 #. type: Labeled list
@@ -18994,13 +19016,28 @@ msgid ""
 "example when writing scripts."
 msgstr ""
 
+#. type: Labeled list
+#: en/git-config.txt:370
+#, no-wrap
+msgid "GIT_CONFIG"
+msgstr ""
+
 #. type: Plain text
 #: en/git-config.txt:376
+msgid ""
+"If no `--file` option is provided to `git config`, use the file given by "
+"`GIT_CONFIG` as if it were provided via `--file`. This variable has no "
+"effect on other Git commands, and is mostly for historical compatibility; "
+"there is generally no reason to use it instead of the `--file` option."
+msgstr ""
+
+#. type: Plain text
+#: en/git-config.txt:382
 msgid "Given a .git/config like this:"
 msgstr ""
 
 #. type: delimited block -
-#: en/git-config.txt:383
+#: en/git-config.txt:389
 #, no-wrap
 msgid ""
 "#\n"
@@ -19011,7 +19048,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: en/git-config.txt:388 en/git.txt:353
+#: en/git-config.txt:394 en/git.txt:353
 #, no-wrap
 msgid ""
 "; core variables\n"
@@ -19021,7 +19058,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: en/git-config.txt:393
+#: en/git-config.txt:399
 #, no-wrap
 msgid ""
 "; Our diff algorithm\n"
@@ -19031,7 +19068,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: en/git-config.txt:398
+#: en/git-config.txt:404
 #, no-wrap
 msgid ""
 "; Proxy settings\n"
@@ -19041,7 +19078,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: en/git-config.txt:405
+#: en/git-config.txt:411
 #, no-wrap
 msgid ""
 "; HTTP\n"
@@ -19053,18 +19090,18 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:408
+#: en/git-config.txt:414
 msgid "you can set the filemode to true with"
 msgstr ""
 
 #. type: delimited block -
-#: en/git-config.txt:411
+#: en/git-config.txt:417
 #, no-wrap
 msgid "% git config core.filemode true\n"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:416
+#: en/git-config.txt:422
 msgid ""
 "The hypothetical proxy command entries actually have a postfix to discern "
 "what URL they apply to. Here is how to change the entry for kernel.org to "
@@ -19072,133 +19109,133 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: en/git-config.txt:419
+#: en/git-config.txt:425
 #, no-wrap
 msgid "% git config core.gitproxy '\"ssh\" for kernel.org' 'for kernel.org$'\n"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:422
+#: en/git-config.txt:428
 msgid "This makes sure that only the key/value pair for kernel.org is replaced."
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:424
+#: en/git-config.txt:430
 msgid "To delete the entry for renames, do"
 msgstr ""
 
 #. type: delimited block -
-#: en/git-config.txt:427
+#: en/git-config.txt:433
 #, no-wrap
 msgid "% git config --unset diff.renames\n"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:431
+#: en/git-config.txt:437
 msgid ""
 "If you want to delete an entry for a multivar (like core.gitproxy above), "
 "you have to provide a regex matching the value of exactly one line."
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:433
+#: en/git-config.txt:439
 msgid "To query the value for a given key, do"
-msgstr ""
-
-#. type: delimited block -
-#: en/git-config.txt:436
-#, no-wrap
-msgid "% git config --get core.filemode\n"
-msgstr ""
-
-#. type: Plain text
-#: en/git-config.txt:439 en/git-merge-index.txt:66
-msgid "or"
 msgstr ""
 
 #. type: delimited block -
 #: en/git-config.txt:442
 #, no-wrap
-msgid "% git config core.filemode\n"
+msgid "% git config --get core.filemode\n"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:445
-msgid "or, to query a multivar:"
+#: en/git-config.txt:445 en/git-merge-index.txt:66
+msgid "or"
 msgstr ""
 
 #. type: delimited block -
 #: en/git-config.txt:448
 #, no-wrap
-msgid "% git config --get core.gitproxy \"for kernel.org$\"\n"
+msgid "% git config core.filemode\n"
 msgstr ""
 
 #. type: Plain text
 #: en/git-config.txt:451
-msgid "If you want to know all the values for a multivar, do:"
+msgid "or, to query a multivar:"
 msgstr ""
 
 #. type: delimited block -
 #: en/git-config.txt:454
 #, no-wrap
+msgid "% git config --get core.gitproxy \"for kernel.org$\"\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-config.txt:457
+msgid "If you want to know all the values for a multivar, do:"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-config.txt:460
+#, no-wrap
 msgid "% git config --get-all core.gitproxy\n"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:458
+#: en/git-config.txt:464
 msgid ""
 "If you like to live dangerously, you can replace *all* core.gitproxy by a "
 "new one with"
 msgstr ""
 
 #. type: delimited block -
-#: en/git-config.txt:461
+#: en/git-config.txt:467
 #, no-wrap
 msgid "% git config --replace-all core.gitproxy ssh\n"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:465
+#: en/git-config.txt:471
 msgid ""
 "However, if you really only want to replace the line for the default proxy, "
 "i.e. the one without a \"for ...\" postfix, do something like this:"
 msgstr ""
 
 #. type: delimited block -
-#: en/git-config.txt:468
+#: en/git-config.txt:474
 #, no-wrap
 msgid "% git config core.gitproxy ssh '! for '\n"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:471
-msgid "To actually match only values with an exclamation mark, you have to"
-msgstr ""
-
-#. type: delimited block -
-#: en/git-config.txt:474
-#, no-wrap
-msgid "% git config section.key value '[!]'\n"
-msgstr ""
-
-#. type: Plain text
 #: en/git-config.txt:477
-msgid "To add a new proxy, without altering any of the existing ones, use"
+msgid "To actually match only values with an exclamation mark, you have to"
 msgstr ""
 
 #. type: delimited block -
 #: en/git-config.txt:480
 #, no-wrap
+msgid "% git config section.key value '[!]'\n"
+msgstr ""
+
+#. type: Plain text
+#: en/git-config.txt:483
+msgid "To add a new proxy, without altering any of the existing ones, use"
+msgstr ""
+
+#. type: delimited block -
+#: en/git-config.txt:486
+#, no-wrap
 msgid "% git config --add core.gitproxy '\"proxy-command\" for example.com'\n"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:484
+#: en/git-config.txt:490
 msgid "An example to use customized color from the configuration in your script:"
 msgstr ""
 
 #. type: delimited block -
-#: en/git-config.txt:490
+#: en/git-config.txt:496
 #, no-wrap
 msgid ""
 "#!/bin/sh\n"
@@ -19208,14 +19245,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:494
+#: en/git-config.txt:500
 msgid ""
 "For URLs in `https://weak.example.com`, `http.sslVerify` is set to false, "
 "while it is set to `true` for all others:"
 msgstr ""
 
 #. type: delimited block -
-#: en/git-config.txt:503
+#: en/git-config.txt:509
 #, no-wrap
 msgid ""
 "% git config --type=bool --get-urlmatch http.sslverify "
@@ -19230,7 +19267,7 @@ msgid ""
 msgstr ""
 
 #. type: Title -
-#: en/git-config.txt:508 en/git-describe.txt:198 en/git-fetch.txt:289
+#: en/git-config.txt:514 en/git-describe.txt:202 en/git-fetch.txt:289
 #: en/git-mv.txt:56 en/git-pack-refs.txt:64 en/git-pull.txt:241
 #: en/git-rebase.txt:1278 en/git-replace.txt:139 en/git-rm.txt:184
 #: en/git-svn.txt:1151 en/git-worktree.txt:485
@@ -19239,7 +19276,7 @@ msgid "BUGS"
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:513
+#: en/git-config.txt:519
 msgid ""
 "When using the deprecated `[section.subsection]` syntax, changing a value "
 "will result in adding a multi-line key instead of a change, if the "
@@ -19248,7 +19285,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: en/git-config.txt:517
+#: en/git-config.txt:523
 #, no-wrap
 msgid ""
 "  [section.subsection]\n"
@@ -19256,12 +19293,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-config.txt:520
+#: en/git-config.txt:526
 msgid "and running `git config section.Subsection.key value2` will result in"
 msgstr ""
 
 #. type: delimited block -
-#: en/git-config.txt:525
+#: en/git-config.txt:531
 #, no-wrap
 msgid ""
 "  [section.subsection]\n"
@@ -22290,21 +22327,23 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:70
+#: en/git-describe.txt:71
 msgid ""
-"Instead of using the default 7 hexadecimal digits as the abbreviated object "
-"name, use <n> digits, or as many digits as needed to form a unique object "
-"name.  An <n> of 0 will suppress long format, only showing the closest tag."
+"Instead of using the default number of hexadecimal digits (which will vary "
+"according to the number of objects in the repository with a default of 7) of "
+"the abbreviated object name, use <n> digits, or as many digits as needed to "
+"form a unique object name. An <n> of 0 will suppress long format, only "
+"showing the closest tag."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-describe.txt:71
+#: en/git-describe.txt:72
 #, no-wrap
 msgid "--candidates=<n>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:77
+#: en/git-describe.txt:78
 msgid ""
 "Instead of considering only the 10 most recent tags as candidates to "
 "describe the input commit-ish consider up to <n> candidates.  Increasing <n> "
@@ -22313,33 +22352,33 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-describe.txt:78
+#: en/git-describe.txt:79
 #, no-wrap
 msgid "--exact-match"
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:81
+#: en/git-describe.txt:82
 msgid ""
 "Only output exact matches (a tag directly references the supplied commit).  "
 "This is a synonym for --candidates=0."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-describe.txt:82 en/git-ls-files.txt:167
+#: en/git-describe.txt:83 en/git-ls-files.txt:167
 #, no-wrap
 msgid "--debug"
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:86
+#: en/git-describe.txt:87
 msgid ""
 "Verbosely display information about the searching strategy being employed to "
 "standard error.  The tag name will still be printed to standard out."
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:95
+#: en/git-describe.txt:96
 msgid ""
 "Always output the long format (the tag, the number of commits and the "
 "abbreviated commit name) even when it matches a tag.  This is useful when "
@@ -22350,13 +22389,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-describe.txt:96
+#: en/git-describe.txt:97
 #, no-wrap
 msgid "--match <pattern>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:105
+#: en/git-describe.txt:106
 msgid ""
 "Only consider tags matching the given `glob(7)` pattern, excluding the "
 "\"refs/tags/\" prefix. If used with `--all`, it also considers local "
@@ -22368,13 +22407,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-describe.txt:106
+#: en/git-describe.txt:107
 #, no-wrap
 msgid "--exclude <pattern>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:117
+#: en/git-describe.txt:118
 msgid ""
 "Do not consider tags matching the given `glob(7)` pattern, excluding the "
 "\"refs/tags/\" prefix. If used with `--all`, it also does not consider local "
@@ -22388,18 +22427,18 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-describe.txt:118 en/git-diff-tree.txt:120 en/git-name-rev.txt:61
+#: en/git-describe.txt:119 en/git-diff-tree.txt:120 en/git-name-rev.txt:61
 #, no-wrap
 msgid "--always"
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:120 en/git-name-rev.txt:63
+#: en/git-describe.txt:121 en/git-name-rev.txt:63
 msgid "Show uniquely abbreviated commit object as fallback."
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:125
+#: en/git-describe.txt:126
 msgid ""
 "Follow only the first parent commit upon seeing a merge commit.  This is "
 "useful when you wish to not match tags on branches merged in the history of "
@@ -22407,12 +22446,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:130
+#: en/git-describe.txt:131
 msgid "With something like git.git current tree, I get:"
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:133
+#: en/git-describe.txt:134
 #, no-wrap
 msgid ""
 "\t[torvalds@g5 git]$ git describe parent\n"
@@ -22420,7 +22459,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:139
+#: en/git-describe.txt:140
 msgid ""
 "i.e. the current head of my \"parent\" branch is based on v1.0.4, but since "
 "it has a few commits on top of that, describe has added the number of "
@@ -22429,24 +22468,27 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:147
+#: en/git-describe.txt:151
 msgid ""
 "The number of additional commits is the number of commits which would be "
-"displayed by \"git log v1.0.4..parent\".  The hash suffix is \"-g\" + "
-"unambiguous abbreviation for the tip commit of parent (which was "
-"`2414721b194453f058079d897d13c4e377f92dc6`).  The \"g\" prefix stands for "
-"\"git\" and is used to allow describing the version of a software depending "
-"on the SCM the software is managed with. This is useful in an environment "
-"where people may use different SCMs."
+"displayed by \"git log v1.0.4..parent\".  The hash suffix is \"-g\" + an "
+"unambigous abbreviation for the tip commit of parent (which was "
+"`2414721b194453f058079d897d13c4e377f92dc6`). The length of the abbreviation "
+"scales as the repository grows, using the approximate number of objects in "
+"the repository and a bit of math around the birthday paradox, and defaults "
+"to a minimum of 7.  The \"g\" prefix stands for \"git\" and is used to allow "
+"describing the version of a software depending on the SCM the software is "
+"managed with. This is useful in an environment where people may use "
+"different SCMs."
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:149
+#: en/git-describe.txt:153
 msgid "Doing a 'git describe' on a tag-name will just show the tag name:"
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:152
+#: en/git-describe.txt:156
 #, no-wrap
 msgid ""
 "\t[torvalds@g5 git]$ git describe v1.0.4\n"
@@ -22454,14 +22496,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:155
+#: en/git-describe.txt:159
 msgid ""
 "With --all, the command can use branch heads as references, so the output "
 "shows the reference path as well:"
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:158
+#: en/git-describe.txt:162
 #, no-wrap
 msgid ""
 "\t[torvalds@g5 git]$ git describe --all --abbrev=4 v1.0.5^2\n"
@@ -22469,7 +22511,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:161
+#: en/git-describe.txt:165
 #, no-wrap
 msgid ""
 "\t[torvalds@g5 git]$ git describe --all --abbrev=4 HEAD^\n"
@@ -22477,14 +22519,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:164
+#: en/git-describe.txt:168
 msgid ""
 "With --abbrev set to 0, the command can be used to find the closest tagname "
 "without any suffix:"
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:167
+#: en/git-describe.txt:171
 #, no-wrap
 msgid ""
 "\t[torvalds@g5 git]$ git describe --abbrev=0 v1.0.5^2\n"
@@ -22492,7 +22534,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:173
+#: en/git-describe.txt:177
 msgid ""
 "Note that the suffix you get if you type these commands today may be longer "
 "than what Linus saw above when he ran these commands, as your Git repository "
@@ -22502,13 +22544,13 @@ msgid ""
 msgstr ""
 
 #. type: Title -
-#: en/git-describe.txt:176
+#: en/git-describe.txt:180
 #, no-wrap
 msgid "SEARCH STRATEGY"
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:183
+#: en/git-describe.txt:187
 msgid ""
 "For each commit-ish supplied, 'git describe' will first look for a tag which "
 "tags exactly that commit.  Annotated tags will always be preferred over "
@@ -22518,7 +22560,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:190
+#: en/git-describe.txt:194
 msgid ""
 "If an exact match was not found, 'git describe' will walk back through the "
 "commit history to locate an ancestor commit which has been tagged.  The "
@@ -22528,7 +22570,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:196
+#: en/git-describe.txt:200
 msgid ""
 "If multiple tags were found during the walk then the tag which has the "
 "fewest commits different from the input commit-ish will be selected and "
@@ -22538,7 +22580,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-describe.txt:204
+#: en/git-describe.txt:208
 msgid ""
 "Tree objects as well as tag objects not pointing at commits, cannot be "
 "described.  When describing blobs, the lightweight tags pointing at blobs "
@@ -22575,19 +22617,19 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-diff-files.txt:25 en/git-diff.txt:120
+#: en/git-diff-files.txt:25 en/git-diff.txt:124
 #, no-wrap
 msgid "-1 --base"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-diff-files.txt:26 en/git-diff.txt:121
+#: en/git-diff-files.txt:26 en/git-diff.txt:125
 #, no-wrap
 msgid "-2 --ours"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-diff-files.txt:27 en/git-diff.txt:122
+#: en/git-diff-files.txt:27 en/git-diff.txt:126
 #, no-wrap
 msgid "-3 --theirs"
 msgstr ""
@@ -23240,7 +23282,7 @@ msgid "The id of a tree object."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-diff-tree.txt:32 en/git-diff.txt:134 en/git-submodule.txt:437
+#: en/git-diff-tree.txt:32 en/git-diff.txt:138 en/git-submodule.txt:437
 #, no-wrap
 msgid "<path>..."
 msgstr ""
@@ -23470,14 +23512,14 @@ msgstr ""
 #: en/git-diff.txt:56
 msgid ""
 "If --merge-base is given, instead of using <commit>, use the merge base of "
-"<commit> and HEAD.  `git diff --merge-base A` is equivalent to `git diff "
-"$(git merge-base A HEAD)`."
+"<commit> and HEAD.  `git diff --cached --merge-base A` is equivalent to `git "
+"diff --cached $(git merge-base A HEAD)`."
 msgstr ""
 
 #. type: Labeled list
 #: en/git-diff.txt:57
 #, no-wrap
-msgid "'git diff' [<options>] <commit> [--] [<path>...]"
+msgid "'git diff' [<options>] [--merge-base] <commit> [--] [<path>...]"
 msgstr ""
 
 #. type: Plain text
@@ -23488,19 +23530,27 @@ msgid ""
 "or a branch name to compare with the tip of a different branch."
 msgstr ""
 
+#. type: Plain text
+#: en/git-diff.txt:68
+msgid ""
+"If --merge-base is given, instead of using <commit>, use the merge base of "
+"<commit> and HEAD.  `git diff --merge-base A` is equivalent to `git diff "
+"$(git merge-base A HEAD)`."
+msgstr ""
+
 #. type: Labeled list
-#: en/git-diff.txt:65
+#: en/git-diff.txt:69
 #, no-wrap
 msgid "'git diff' [<options>] [--merge-base] <commit> <commit> [--] [<path>...]"
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:69
+#: en/git-diff.txt:73
 msgid "This is to view the changes between two arbitrary <commit>."
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:73
+#: en/git-diff.txt:77
 msgid ""
 "If --merge-base is given, use the merge base of the two commits for the "
 "\"before\" side.  `git diff --merge-base A B` is equivalent to `git diff "
@@ -23508,13 +23558,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-diff.txt:74
+#: en/git-diff.txt:78
 #, no-wrap
 msgid "'git diff' [<options>] <commit> <commit>... <commit> [--] [<path>...]"
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:82
+#: en/git-diff.txt:86
 msgid ""
 "This form is to view the results of a merge commit.  The first listed "
 "<commit> must be the merge itself; the remaining two or more commits should "
@@ -23525,13 +23575,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-diff.txt:83
+#: en/git-diff.txt:87
 #, no-wrap
 msgid "'git diff' [<options>] <commit>..<commit> [--] [<path>...]"
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:89
+#: en/git-diff.txt:93
 msgid ""
 "This is synonymous to the earlier form (without the `..`) for viewing the "
 "changes between two arbitrary <commit>.  If <commit> on one side is omitted, "
@@ -23539,13 +23589,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-diff.txt:90
+#: en/git-diff.txt:94
 #, no-wrap
 msgid "'git diff' [<options>] <commit>\\...<commit> [--] [<path>...]"
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:97
+#: en/git-diff.txt:101
 msgid ""
 "This form is to view the changes on the branch containing and up to the "
 "second <commit>, starting at a common ancestor of both <commit>.  `git diff "
@@ -23554,7 +23604,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:102
+#: en/git-diff.txt:106
 msgid ""
 "Just in case you are doing something exotic, it should be noted that all of "
 "the <commit> in the above description, except in the `--merge-base` case and "
@@ -23562,7 +23612,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:109
+#: en/git-diff.txt:113
 msgid ""
 "For a more complete list of ways to spell <commit>, see \"SPECIFYING "
 "REVISIONS\" section in linkgit:gitrevisions[7].  However, \"diff\" is about "
@@ -23572,20 +23622,20 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-diff.txt:110
+#: en/git-diff.txt:114
 #, no-wrap
 msgid "'git diff' [<options>] <blob> <blob>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:114
+#: en/git-diff.txt:118
 msgid ""
 "This form is to view the differences between the raw contents of two blob "
 "objects."
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:128
+#: en/git-diff.txt:132
 msgid ""
 "Compare the working tree with the \"base\" version (stage #1), \"our "
 "branch\" (stage #2) or \"their branch\" (stage #3).  The index contains "
@@ -23594,27 +23644,27 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:133
+#: en/git-diff.txt:137
 msgid ""
 "Omit diff output for unmerged entries and just show \"Unmerged\".  Can be "
 "used only when comparing the working tree with the index."
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:138
+#: en/git-diff.txt:142
 msgid ""
 "The <paths> parameters, when given, are used to limit the diff to the named "
 "paths (you can give directory names and get diff for all files under them)."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-diff.txt:145
+#: en/git-diff.txt:149
 #, no-wrap
 msgid "Various ways to check your working tree"
 msgstr ""
 
 #. type: delimited block -
-#: en/git-diff.txt:151
+#: en/git-diff.txt:155
 #, no-wrap
 msgid ""
 "$ git diff            <1>\n"
@@ -23623,32 +23673,32 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:154
+#: en/git-diff.txt:158
 msgid "Changes in the working tree not yet staged for the next commit."
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:156
+#: en/git-diff.txt:160
 msgid ""
 "Changes between the index and your last commit; what you would be committing "
 "if you run `git commit` without `-a` option."
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:158
+#: en/git-diff.txt:162
 msgid ""
 "Changes in the working tree since your last commit; what you would be "
 "committing if you run `git commit -a`"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-diff.txt:159
+#: en/git-diff.txt:163
 #, no-wrap
 msgid "Comparing with arbitrary commits"
 msgstr ""
 
 #. type: delimited block -
-#: en/git-diff.txt:165
+#: en/git-diff.txt:169
 #, no-wrap
 msgid ""
 "$ git diff test            <1>\n"
@@ -23657,32 +23707,32 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:169
+#: en/git-diff.txt:173
 msgid ""
 "Instead of using the tip of the current branch, compare with the tip of "
 "\"test\" branch."
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:172
+#: en/git-diff.txt:176
 msgid ""
 "Instead of comparing with the tip of \"test\" branch, compare with the tip "
 "of the current branch, but limit the comparison to the file \"test\"."
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:173
+#: en/git-diff.txt:177
 msgid "Compare the version before the last commit and the last commit."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-diff.txt:174
+#: en/git-diff.txt:178
 #, no-wrap
 msgid "Comparing branches"
 msgstr ""
 
 #. type: delimited block -
-#: en/git-diff.txt:180
+#: en/git-diff.txt:184
 #, no-wrap
 msgid ""
 "$ git diff topic master    <1>\n"
@@ -23691,31 +23741,31 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:183
+#: en/git-diff.txt:187
 msgid "Changes between the tips of the topic and the master branches."
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:184 en/git-remote-fd.txt:44 en/git-remote-fd.txt:52
+#: en/git-diff.txt:188 en/git-remote-fd.txt:44 en/git-remote-fd.txt:52
 #: en/git-web--browse.txt:52
 msgid "Same as above."
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:186
+#: en/git-diff.txt:190
 msgid ""
 "Changes that occurred on the master branch since when the topic branch was "
 "started off it."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-diff.txt:187
+#: en/git-diff.txt:191
 #, no-wrap
 msgid "Limiting the diff output"
 msgstr ""
 
 #. type: delimited block -
-#: en/git-diff.txt:193
+#: en/git-diff.txt:197
 #, no-wrap
 msgid ""
 "$ git diff --diff-filter=MRC            <1>\n"
@@ -23724,28 +23774,28 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:197
+#: en/git-diff.txt:201
 msgid "Show only modification, rename, and copy, but not addition or deletion."
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:199
+#: en/git-diff.txt:203
 msgid "Show only names and the nature of change, but not actual diff output."
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:200
+#: en/git-diff.txt:204
 msgid "Limit diff output to named subtrees."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-diff.txt:201
+#: en/git-diff.txt:205
 #, no-wrap
 msgid "Munging the diff output"
 msgstr ""
 
 #. type: delimited block -
-#: en/git-diff.txt:206
+#: en/git-diff.txt:210
 #, no-wrap
 msgid ""
 "$ git diff --find-copies-harder -B -C  <1>\n"
@@ -23753,19 +23803,19 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:210
+#: en/git-diff.txt:214
 msgid ""
 "Spend extra cycles to find renames, copies and complete rewrites (very "
 "expensive)."
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:211
+#: en/git-diff.txt:215
 msgid "Output diff in reverse."
 msgstr ""
 
 #. type: Plain text
-#: en/git-diff.txt:221
+#: en/git-diff.txt:225
 msgid ""
 "diff(1), linkgit:git-difftool[1], linkgit:git-log[1], "
 "linkgit:gitdiffcore[7], linkgit:git-format-patch[1], linkgit:git-apply[1], "
@@ -32460,7 +32510,7 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-grep.txt:188 en/rev-list-options.txt:1131
+#: en/git-grep.txt:188 en/rev-list-options.txt:1139
 #, no-wrap
 msgid "--count"
 msgstr ""
@@ -36301,30 +36351,32 @@ msgid "--decorate[=short|full|auto|no]"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:43
+#: en/git-log.txt:45
 msgid ""
 "Print out the ref names of any commits that are shown. If 'short' is "
 "specified, the ref name prefixes 'refs/heads/', 'refs/tags/' and "
 "'refs/remotes/' will not be printed. If 'full' is specified, the full ref "
 "name (including prefix) will be printed. If 'auto' is specified, then if the "
 "output is going to a terminal, the ref names are shown as if 'short' were "
-"given, otherwise no ref names are shown. The default option is 'short'."
+"given, otherwise no ref names are shown. The option `--decorate` is "
+"short-hand for `--decorate=short`.  Default to configuration value of "
+"`log.decorate` if configured, otherwise, `auto`."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:44
+#: en/git-log.txt:46
 #, no-wrap
 msgid "--decorate-refs=<pattern>"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:45
+#: en/git-log.txt:47
 #, no-wrap
 msgid "--decorate-refs-exclude=<pattern>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:53
+#: en/git-log.txt:55
 msgid ""
 "If no `--decorate-refs` is given, pretend as if all refs were included.  For "
 "each candidate, do not use it for decoration if it matches any patterns "
@@ -36335,45 +36387,45 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:54
+#: en/git-log.txt:56
 #, no-wrap
 msgid "--source"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:57
+#: en/git-log.txt:59
 msgid ""
 "Print out the ref name given on the command line by which each commit was "
 "reached."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:58
+#: en/git-log.txt:60
 #, no-wrap
 msgid "--[no-]mailmap"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:59
+#: en/git-log.txt:61
 #, no-wrap
 msgid "--[no-]use-mailmap"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:63
+#: en/git-log.txt:65
 msgid ""
 "Use mailmap file to map author and committer names and email addresses to "
 "canonical real names and email addresses. See linkgit:git-shortlog[1]."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:64
+#: en/git-log.txt:66
 #, no-wrap
 msgid "--full-diff"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:70
+#: en/git-log.txt:72
 msgid ""
 "Without this flag, `git log -p <path>...` shows commits that touch the "
 "specified paths, and diffs about the same specified paths.  With this, the "
@@ -36383,20 +36435,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:73
+#: en/git-log.txt:75
 msgid ""
 "Note that this affects all diff-based output types, e.g. those produced by "
 "`--stat`, etc."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:74
+#: en/git-log.txt:76
 #, no-wrap
 msgid "--log-size"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:79
+#: en/git-log.txt:81
 msgid ""
 "Include a line ``log size <number>'' in the output for each commit, where "
 "<number> is the length of that commit's message in bytes.  Intended to speed "
@@ -36405,13 +36457,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:82 en/git-shortlog.txt:92
+#: en/git-log.txt:84 en/git-shortlog.txt:92
 #, no-wrap
 msgid "<revision range>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:90
+#: en/git-log.txt:92
 msgid ""
 "Show only commits in the specified revision range.  When no <revision range> "
 "is specified, it defaults to `HEAD` (i.e. the whole history leading to the "
@@ -36422,13 +36474,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:91 en/git-shortlog.txt:101
+#: en/git-log.txt:93 en/git-shortlog.txt:101
 #, no-wrap
 msgid "[--] <path>..."
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:96
+#: en/git-log.txt:98
 msgid ""
 "Show only commits that are enough to explain how the files that match the "
 "specified paths came to be.  See 'History Simplification' below for details "
@@ -36436,27 +36488,27 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:99 en/git-shortlog.txt:107
+#: en/git-log.txt:101 en/git-shortlog.txt:107
 msgid ""
 "Paths may need to be prefixed with `--` to separate them from options or the "
 "revision range, when confusion arises."
 msgstr ""
 
 #. type: Title -
-#: en/git-log.txt:105 en/git-show.txt:49
+#: en/git-log.txt:107 en/git-show.txt:49
 #, no-wrap
 msgid "DIFF FORMATTING"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:109
+#: en/git-log.txt:111
 msgid ""
 "By default, `git log` does not generate any diff output. The options below "
 "can be used to show the changes made by each commit."
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:116
+#: en/git-log.txt:118
 msgid ""
 "Note that unless one of `--diff-merges` variants (including short `-m`, "
 "`-c`, and `--cc` options) is explicitly given, merge commits will not show a "
@@ -36466,102 +36518,102 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:125
+#: en/git-log.txt:127
 #, no-wrap
 msgid "`git log --no-merges`"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:128
+#: en/git-log.txt:130
 msgid "Show the whole commit history, but skip any merges"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:129
+#: en/git-log.txt:131
 #, no-wrap
 msgid "`git log v2.6.12.. include/scsi drivers/scsi`"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:133
+#: en/git-log.txt:135
 msgid ""
 "Show all commits since version 'v2.6.12' that changed any file in the "
 "`include/scsi` or `drivers/scsi` subdirectories"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:134
+#: en/git-log.txt:136
 #, no-wrap
 msgid "`git log --since=\"2 weeks ago\" -- gitk`"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:139
+#: en/git-log.txt:141
 msgid ""
 "Show the changes during the last two weeks to the file 'gitk'.  The `--` is "
 "necessary to avoid confusion with the *branch* named 'gitk'"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:140
+#: en/git-log.txt:142
 #, no-wrap
 msgid "`git log --name-status release..test`"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:145
+#: en/git-log.txt:147
 msgid ""
 "Show the commits that are in the \"test\" branch but not yet in the "
 "\"release\" branch, along with the list of paths each commit modifies."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:146
+#: en/git-log.txt:148
 #, no-wrap
 msgid "`git log --follow builtin/rev-list.c`"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:151
+#: en/git-log.txt:153
 msgid ""
 "Shows the commits that changed `builtin/rev-list.c`, including those commits "
 "that occurred before the file was given its present name."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:152
+#: en/git-log.txt:154
 #, no-wrap
 msgid "`git log --branches --not --remotes=origin`"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:157
+#: en/git-log.txt:159
 msgid ""
 "Shows all commits that are in any of local branches but not in any of "
 "remote-tracking branches for 'origin' (what you have that origin doesn't)."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:158
+#: en/git-log.txt:160
 #, no-wrap
 msgid "`git log master --not --remotes=*/master`"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:162
+#: en/git-log.txt:164
 msgid ""
 "Shows all commits that are in local master but not in any remote repository "
 "master branches."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:163
+#: en/git-log.txt:165
 #, no-wrap
 msgid "`git log -p -m --first-parent`"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:170
+#: en/git-log.txt:172
 msgid ""
 "Shows the history including change diffs, but only from the ``main branch'' "
 "perspective, skipping commits that come from merged branches, and showing "
@@ -36571,68 +36623,68 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:171
+#: en/git-log.txt:173
 #, no-wrap
 msgid "`git log -L '/int main/',/^}/:main.c`"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:175
+#: en/git-log.txt:177
 msgid "Shows how the function `main()` in the file `main.c` evolved over time."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:176
+#: en/git-log.txt:178
 #, no-wrap
 msgid "`git log -3`"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:179
+#: en/git-log.txt:181
 msgid "Limits the number of commits to show to 3."
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:190
+#: en/git-log.txt:192
 msgid ""
 "See linkgit:git-config[1] for core variables and linkgit:git-diff[1] for "
 "settings related to diff generation."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:191
+#: en/git-log.txt:193
 #, no-wrap
 msgid "format.pretty"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:194
+#: en/git-log.txt:196
 msgid ""
 "Default for the `--format` option.  (See 'Pretty Formats' above.)  Defaults "
 "to `medium`."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:195
+#: en/git-log.txt:197
 #, no-wrap
 msgid "i18n.logOutputEncoding"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:199
+#: en/git-log.txt:201
 msgid ""
 "Encoding to use when displaying logs.  (See 'Discussion' above.)  Defaults "
 "to the value of `i18n.commitEncoding` if set, and UTF-8 otherwise."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:200
+#: en/git-log.txt:202
 #, no-wrap
 msgid "log.date"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:204
+#: en/git-log.txt:206
 msgid ""
 "Default format for human-readable dates.  (Compare the `--date` option.)  "
 "Defaults to \"default\", which means to write dates like `Sat May 8 19:35:34 "
@@ -36640,20 +36692,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:208
+#: en/git-log.txt:210
 msgid ""
 "If the format is set to \"auto:foo\" and the pager is in use, format \"foo\" "
 "will be the used for the date format. Otherwise \"default\" will be used."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:209
+#: en/git-log.txt:211
 #, no-wrap
 msgid "log.follow"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:214
+#: en/git-log.txt:216
 msgid ""
 "If `true`, `git log` will act as if the `--follow` option was used when a "
 "single <path> is given.  This has the same limitations as `--follow`, "
@@ -36662,13 +36714,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:215
+#: en/git-log.txt:217
 #, no-wrap
 msgid "log.showRoot"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:220
+#: en/git-log.txt:222
 msgid ""
 "If `false`, `git log` and related commands will not treat the initial commit "
 "as a big creation event.  Any root commits in `git log -p` output would be "
@@ -36676,37 +36728,37 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:221
+#: en/git-log.txt:223
 #, no-wrap
 msgid "log.showSignature"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:224
+#: en/git-log.txt:226
 msgid ""
 "If `true`, `git log` and related commands will act as if the "
 "`--show-signature` option was passed to them."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:225
+#: en/git-log.txt:227
 #, no-wrap
 msgid "mailmap.*"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:227
+#: en/git-log.txt:229
 msgid "See linkgit:git-shortlog[1]."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-log.txt:228 en/git-notes.txt:333
+#: en/git-log.txt:230 en/git-notes.txt:333
 #, no-wrap
 msgid "notes.displayRef"
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:233
+#: en/git-log.txt:235
 msgid ""
 "Which refs, in addition to the default set by `core.notesRef` or "
 "`GIT_NOTES_REF`, to read notes from when showing commit messages with the "
@@ -36714,7 +36766,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:237
+#: en/git-log.txt:239
 msgid ""
 "May be an unabbreviated ref name or a glob and may be specified multiple "
 "times.  A warning will be issued for refs that do not exist, but a glob that "
@@ -36722,7 +36774,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-log.txt:241
+#: en/git-log.txt:243
 msgid ""
 "This setting can be disabled by the `--no-notes` option, overridden by the "
 "`GIT_NOTES_DISPLAY_REF` environment variable, and overridden by the "
@@ -42564,9 +42616,10 @@ msgid ""
 "certain size on your filesystem, and this option can be used to tell the "
 "command to split the output packfile into multiple independent packfiles, "
 "each not larger than the given size. The size can be suffixed with \"k\", "
-"\"m\", or \"g\". The minimum size allowed is limited to 1 MiB.  This option "
-"prevents the creation of a bitmap index.  The default is unlimited, unless "
-"the config variable `pack.packSizeLimit` is set."
+"\"m\", or \"g\". The minimum size allowed is limited to 1 MiB.  The default "
+"is unlimited, unless the config variable `pack.packSizeLimit` is set. Note "
+"that this option may result in a larger and slower repository; see the "
+"discussion in `pack.packSizeLimit`."
 msgstr ""
 
 #. type: Labeled list
@@ -42583,7 +42636,7 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-pack-objects.txt:141 en/git-repack.txt:143
+#: en/git-pack-objects.txt:141 en/git-repack.txt:145
 #, no-wrap
 msgid "--keep-pack=<pack-name>"
 msgstr ""
@@ -42842,7 +42895,7 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-pack-objects.txt:303 en/git-repack.txt:157
+#: en/git-pack-objects.txt:303 en/git-repack.txt:159
 #, no-wrap
 msgid "--keep-unreachable"
 msgstr ""
@@ -42880,7 +42933,7 @@ msgid "Keep unreachable objects in loose form. This implies `--revs`."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-pack-objects.txt:316 en/git-repack.txt:164
+#: en/git-pack-objects.txt:316 en/git-repack.txt:166
 #, no-wrap
 msgid "--delta-islands"
 msgstr ""
@@ -43039,7 +43092,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-pack-objects.txt:419 en/git-repack.txt:196
+#: en/git-pack-objects.txt:419 en/git-repack.txt:198
 msgid ""
 "Various configuration variables affect packing, see linkgit:git-config[1] "
 "(search for \"pack\" and \"delta\")."
@@ -43680,7 +43733,7 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-pull.txt:121
-msgid "When false, merge the current branch into the upstream branch."
+msgid "When false, merge the upstream branch into the current branch."
 msgstr ""
 
 #. type: Plain text
@@ -44297,8 +44350,8 @@ msgid ""
 "have to bypass the \"must fast-forward\" rule in order to replace the "
 "history you originally published with the rebased history.  If somebody else "
 "built on top of your original history while you are rebasing, the tip of the "
-"branch at the remote may advance with her commit, and blindly pushing with "
-"`--force` will lose her work."
+"branch at the remote may advance with their commit, and blindly pushing with "
+"`--force` will lose their work."
 msgstr ""
 
 #. type: Plain text
@@ -50393,23 +50446,24 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-repack.txt:125
+#: en/git-repack.txt:127
 msgid ""
 "Maximum size of each output pack file. The size can be suffixed with \"k\", "
 "\"m\", or \"g\". The minimum size allowed is limited to 1 MiB.  If "
 "specified, multiple packfiles may be created, which also prevents the "
 "creation of a bitmap index.  The default is unlimited, unless the config "
-"variable `pack.packSizeLimit` is set."
+"variable `pack.packSizeLimit` is set. Note that this option may result in a "
+"larger and slower repository; see the discussion in `pack.packSizeLimit`."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-repack.txt:127
+#: en/git-repack.txt:129
 #, no-wrap
 msgid "--write-bitmap-index"
 msgstr ""
 
 #. type: Plain text
-#: en/git-repack.txt:133
+#: en/git-repack.txt:135
 msgid ""
 "Write a reachability bitmap index as part of the repack. This only makes "
 "sense when used with `-a` or `-A`, as the bitmaps must be able to refer to "
@@ -50419,13 +50473,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-repack.txt:134
+#: en/git-repack.txt:136
 #, no-wrap
 msgid "--pack-kept-objects"
 msgstr ""
 
 #. type: Plain text
-#: en/git-repack.txt:142
+#: en/git-repack.txt:144
 msgid ""
 "Include objects in `.keep` files when repacking.  Note that we still do not "
 "delete `.keep` packs after `pack-objects` finishes.  This means that we may "
@@ -50436,7 +50490,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-repack.txt:149
+#: en/git-repack.txt:151
 msgid ""
 "Exclude the given pack from repacking. This is the equivalent of having "
 "`.keep` file on the pack. `<pack-name>` is the pack file name without "
@@ -50445,13 +50499,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-repack.txt:150
+#: en/git-repack.txt:152
 #, no-wrap
 msgid "--unpack-unreachable=<when>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-repack.txt:155
+#: en/git-repack.txt:157
 msgid ""
 "When loosening unreachable objects, do not bother loosening any objects "
 "older than `<when>`. This can be used to optimize out the write of any "
@@ -50459,7 +50513,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-repack.txt:162
+#: en/git-repack.txt:164
 msgid ""
 "When used with `-ad`, any unreachable objects from existing packs will be "
 "appended to the end of the packfile instead of being removed. In addition, "
@@ -50468,33 +50522,33 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-repack.txt:167
+#: en/git-repack.txt:169
 msgid ""
 "Pass the `--delta-islands` option to `git-pack-objects`, see "
 "linkgit:git-pack-objects[1]."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-repack.txt:168
+#: en/git-repack.txt:170
 #, no-wrap
 msgid "-g=<factor>"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-repack.txt:169
+#: en/git-repack.txt:171
 #, no-wrap
 msgid "--geometric=<factor>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-repack.txt:173
+#: en/git-repack.txt:175
 msgid ""
 "Arrange resulting pack structure so that each successive pack contains at "
 "least `<factor>` times the number of objects as the next-largest pack."
 msgstr ""
 
 #. type: Plain text
-#: en/git-repack.txt:179
+#: en/git-repack.txt:181
 msgid ""
 "`git repack` ensures this by determining a \"cut\" of packfiles that need to "
 "be repacked into one in order to ensure a geometric progression. It picks "
@@ -50503,7 +50557,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-repack.txt:184
+#: en/git-repack.txt:186
 msgid ""
 "Unlike other repack modes, the set of objects to pack is determined uniquely "
 "by the set of packs being \"rolled-up\"; in other words, the packs "
@@ -50512,7 +50566,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-repack.txt:190
+#: en/git-repack.txt:192
 msgid ""
 "When `--unpacked` is specified, loose objects are implicitly included in "
 "this \"roll-up\", without respect to their reachability. This is subject to "
@@ -50522,7 +50576,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-repack.txt:206
+#: en/git-repack.txt:208
 msgid ""
 "By default, the command passes `--delta-base-offset` option to 'git "
 "pack-objects'; this typically results in slightly smaller packs, but the "
@@ -50536,7 +50590,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-repack.txt:210
+#: en/git-repack.txt:212
 msgid ""
 "Delta compression is not used on objects larger than the "
 "`core.bigFileThreshold` configuration variable and on files with the "
@@ -50544,7 +50598,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-repack.txt:215
+#: en/git-repack.txt:217
 msgid "linkgit:git-pack-objects[1] linkgit:git-prune-packed[1]"
 msgstr ""
 
@@ -51791,7 +51845,7 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-reset.txt:256 en/git-stash.txt:294
+#: en/git-reset.txt:256 en/git-stash.txt:296
 #, no-wrap
 msgid "Interrupted workflow"
 msgstr ""
@@ -54498,24 +54552,41 @@ msgstr ""
 #. type: Labeled list
 #: en/git-send-email.txt:170
 #, no-wrap
+msgid "--sendmail-cmd=<command>"
+msgstr ""
+
+#. type: Plain text
+#: en/git-send-email.txt:177
+msgid ""
+"Specify a command to run to send the email. The command should be "
+"sendmail-like; specifically, it must support the `-i` option.  The command "
+"will be executed in the shell if necessary.  Default is the value of "
+"`sendemail.sendmailcmd`.  If unspecified, and if --smtp-server is also "
+"unspecified, git-send-email will search for `sendmail` in `/usr/sbin`, "
+"`/usr/lib` and $PATH."
+msgstr ""
+
+#. type: Labeled list
+#: en/git-send-email.txt:178
+#, no-wrap
 msgid "--smtp-encryption=<encryption>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:174
+#: en/git-send-email.txt:182
 msgid ""
 "Specify the encryption to use, either 'ssl' or 'tls'.  Any other value "
 "reverts to plain SMTP.  Default is the value of `sendemail.smtpEncryption`."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:175
+#: en/git-send-email.txt:183
 #, no-wrap
 msgid "--smtp-domain=<FQDN>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:181
+#: en/git-send-email.txt:189
 msgid ""
 "Specifies the Fully Qualified Domain Name (FQDN) used in the HELO/EHLO "
 "command to the SMTP server.  Some servers require the FQDN to match your IP "
@@ -54524,26 +54595,26 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:182
+#: en/git-send-email.txt:190
 #, no-wrap
 msgid "--smtp-auth=<mechanisms>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:185
+#: en/git-send-email.txt:193
 msgid ""
 "Whitespace-separated list of allowed SMTP-AUTH mechanisms. This setting "
 "forces using only the listed mechanisms. Example:"
 msgstr ""
 
 #. type: delimited block -
-#: en/git-send-email.txt:188
+#: en/git-send-email.txt:196
 #, no-wrap
 msgid "$ git send-email --smtp-auth=\"PLAIN LOGIN GSSAPI\" ...\n"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:196
+#: en/git-send-email.txt:204
 msgid ""
 "If at least one of the specified mechanisms matches the ones advertised by "
 "the SMTP server and if it is supported by the utilized SASL library, the "
@@ -54554,13 +54625,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:197
+#: en/git-send-email.txt:205
 #, no-wrap
 msgid "--smtp-pass[=<password>]"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:202
+#: en/git-send-email.txt:210
 msgid ""
 "Password for SMTP-AUTH. The argument is optional: If no argument is "
 "specified, then the empty string is used as the password. Default is the "
@@ -54569,7 +54640,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:208
+#: en/git-send-email.txt:216
 msgid ""
 "Furthermore, passwords need not be specified in configuration files or on "
 "the command line. If a username has been specified (with `--smtp-user` or a "
@@ -54579,42 +54650,49 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:209
+#: en/git-send-email.txt:217
 #, no-wrap
 msgid "--no-smtp-auth"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:211
+#: en/git-send-email.txt:219
 msgid "Disable SMTP authentication. Short hand for `--smtp-auth=none`"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:212
+#: en/git-send-email.txt:220
 #, no-wrap
 msgid "--smtp-server=<host>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:221
+#: en/git-send-email.txt:226
 msgid ""
 "If set, specifies the outgoing SMTP server to use (e.g.  `smtp.example.com` "
-"or a raw IP address).  Alternatively it can specify a full pathname of a "
-"sendmail-like program instead; the program must support the `-i` option.  "
-"Default value can be specified by the `sendemail.smtpServer` configuration "
-"option; the built-in default is to search for `sendmail` in `/usr/sbin`, "
-"`/usr/lib` and $PATH if such program is available, falling back to "
+"or a raw IP address).  If unspecified, and if `--sendmail-cmd` is also "
+"unspecified, the default is to search for `sendmail` in `/usr/sbin`, "
+"`/usr/lib` and $PATH if such a program is available, falling back to "
 "`localhost` otherwise."
 msgstr ""
 
+#. type: Plain text
+#: en/git-send-email.txt:232
+msgid ""
+"For backward compatibility, this option can also specify a full pathname of "
+"a sendmail-like program instead; the program must support the `-i` option.  "
+"This method does not support passing arguments or using plain command "
+"names.  For those use cases, consider using `--sendmail-cmd` instead."
+msgstr ""
+
 #. type: Labeled list
-#: en/git-send-email.txt:222
+#: en/git-send-email.txt:233
 #, no-wrap
 msgid "--smtp-server-port=<port>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:229
+#: en/git-send-email.txt:240
 msgid ""
 "Specifies a port different from the default port (SMTP servers typically "
 "listen to smtp port 25, but may also listen to submission port 587, or the "
@@ -54624,20 +54702,20 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:230
+#: en/git-send-email.txt:241
 #, no-wrap
 msgid "--smtp-server-option=<option>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:234
+#: en/git-send-email.txt:245
 msgid ""
 "If set, specifies the outgoing SMTP server option to use.  Default value can "
 "be specified by the `sendemail.smtpServerOption` configuration option."
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:238
+#: en/git-send-email.txt:249
 msgid ""
 "The --smtp-server-option option must be repeated for each option you want to "
 "pass to the server. Likewise, different lines in the configuration files "
@@ -54645,24 +54723,24 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:239
+#: en/git-send-email.txt:250
 #, no-wrap
 msgid "--smtp-ssl"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:241
+#: en/git-send-email.txt:252
 msgid "Legacy alias for '--smtp-encryption ssl'."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:242
+#: en/git-send-email.txt:253
 #, no-wrap
 msgid "--smtp-ssl-cert-path"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:252
+#: en/git-send-email.txt:263
 msgid ""
 "Path to a store of trusted CA certificates for SMTP SSL/TLS certificate "
 "validation (either a directory that has been processed by 'c_rehash', or a "
@@ -54675,13 +54753,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:253
+#: en/git-send-email.txt:264
 #, no-wrap
 msgid "--smtp-user=<user>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:257
+#: en/git-send-email.txt:268
 msgid ""
 "Username for SMTP-AUTH. Default is the value of `sendemail.smtpUser`; if a "
 "username is not specified (with `--smtp-user` or `sendemail.smtpUser`), then "
@@ -54689,13 +54767,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:258
+#: en/git-send-email.txt:269
 #, no-wrap
 msgid "--smtp-debug=0|1"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:262
+#: en/git-send-email.txt:273
 msgid ""
 "Enable (1) or disable (0) debug output. If enabled, SMTP commands and "
 "replies will be printed. Useful to debug TLS connection and authentication "
@@ -54703,13 +54781,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:263
+#: en/git-send-email.txt:274
 #, no-wrap
 msgid "--batch-size=<num>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:272
+#: en/git-send-email.txt:283
 msgid ""
 "Some email servers (e.g. smtp.163.com) limit the number emails to be sent "
 "per session (connection) and this will lead to a failure when sending many "
@@ -54721,13 +54799,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:273
+#: en/git-send-email.txt:284
 #, no-wrap
 msgid "--relogin-delay=<int>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:277
+#: en/git-send-email.txt:288
 msgid ""
 "Waiting $<int> seconds before reconnecting to SMTP server. Used together "
 "with --batch-size option.  Defaults to the `sendemail.smtpReloginDelay` "
@@ -54735,45 +54813,45 @@ msgid ""
 msgstr ""
 
 #. type: Title ~
-#: en/git-send-email.txt:279
+#: en/git-send-email.txt:290
 #, no-wrap
 msgid "Automating"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:281
+#: en/git-send-email.txt:292
 #, no-wrap
 msgid "--no-[to|cc|bcc]"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:284
+#: en/git-send-email.txt:295
 msgid ""
 "Clears any list of \"To:\", \"Cc:\", \"Bcc:\" addresses previously set via "
 "config."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:285
+#: en/git-send-email.txt:296
 #, no-wrap
 msgid "--no-identity"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:288
+#: en/git-send-email.txt:299
 msgid ""
 "Clears the previously read value of `sendemail.identity` set via config, if "
 "any."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:289
+#: en/git-send-email.txt:300
 #, no-wrap
 msgid "--to-cmd=<command>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:294
+#: en/git-send-email.txt:305
 msgid ""
 "Specify a command to execute once per patch file which should generate patch "
 "file specific \"To:\" entries.  Output of this command must be single email "
@@ -54782,13 +54860,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:295
+#: en/git-send-email.txt:306
 #, no-wrap
 msgid "--cc-cmd=<command>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:300
+#: en/git-send-email.txt:311
 msgid ""
 "Specify a command to execute once per patch file which should generate patch "
 "file specific \"Cc:\" entries.  Output of this command must be single email "
@@ -54797,13 +54875,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:301
+#: en/git-send-email.txt:312
 #, no-wrap
 msgid "--[no-]chain-reply-to"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:308
+#: en/git-send-email.txt:319
 msgid ""
 "If this is set, each email will be sent as a reply to the previous email "
 "sent.  If disabled with \"--no-chain-reply-to\", all emails after the first "
@@ -54814,13 +54892,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:309
+#: en/git-send-email.txt:320
 #, no-wrap
 msgid "--identity=<identity>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:314
+#: en/git-send-email.txt:325
 msgid ""
 "A configuration identity. When given, causes values in the "
 "'sendemail.<identity>' subsection to take precedence over values in the "
@@ -54829,13 +54907,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:315
+#: en/git-send-email.txt:326
 #, no-wrap
 msgid "--[no-]signed-off-by-cc"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:319
+#: en/git-send-email.txt:330
 msgid ""
 "If this is set, add emails found in the `Signed-off-by` trailer or Cc: lines "
 "to the cc list. Default is the value of `sendemail.signedoffbycc` "
@@ -54843,13 +54921,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:320
+#: en/git-send-email.txt:331
 #, no-wrap
 msgid "--[no-]cc-cover"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:325
+#: en/git-send-email.txt:336
 msgid ""
 "If this is set, emails found in Cc: headers in the first patch of the series "
 "(typically the cover letter) are added to the cc list for each email "
@@ -54858,13 +54936,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:326
+#: en/git-send-email.txt:337
 #, no-wrap
 msgid "--[no-]to-cover"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:331
+#: en/git-send-email.txt:342
 msgid ""
 "If this is set, emails found in To: headers in the first patch of the series "
 "(typically the cover letter) are added to the to list for each email "
@@ -54873,49 +54951,49 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:332
+#: en/git-send-email.txt:343
 #, no-wrap
 msgid "--suppress-cc=<category>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:335
+#: en/git-send-email.txt:346
 msgid "Specify an additional category of recipients to suppress the auto-cc of:"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:338
+#: en/git-send-email.txt:349
 msgid "'author' will avoid including the patch author."
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:339
+#: en/git-send-email.txt:350
 msgid "'self' will avoid including the sender."
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:341
+#: en/git-send-email.txt:352
 msgid ""
 "'cc' will avoid including anyone mentioned in Cc lines in the patch header "
 "except for self (use 'self' for that)."
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:343
+#: en/git-send-email.txt:354
 msgid ""
 "'bodycc' will avoid including anyone mentioned in Cc lines in the patch body "
 "(commit message) except for self (use 'self' for that)."
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:345
+#: en/git-send-email.txt:356
 msgid ""
 "'sob' will avoid including anyone mentioned in the Signed-off-by trailers "
 "except for self (use 'self' for that)."
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:348
+#: en/git-send-email.txt:359
 msgid ""
 "'misc-by' will avoid including anyone mentioned in Acked-by, Reviewed-by, "
 "Tested-by and other \"-by\" lines in the patch body, except Signed-off-by "
@@ -54923,22 +55001,22 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:349
+#: en/git-send-email.txt:360
 msgid "'cccmd' will avoid running the --cc-cmd."
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:350
+#: en/git-send-email.txt:361
 msgid "'body' is equivalent to 'sob' + 'bodycc' + 'misc-by'."
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:351
+#: en/git-send-email.txt:362
 msgid "'all' will suppress all auto cc values."
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:356
+#: en/git-send-email.txt:367
 msgid ""
 "Default is the value of `sendemail.suppresscc` configuration value; if that "
 "is unspecified, default to 'self' if --suppress-from is specified, as well "
@@ -54946,13 +55024,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:357
+#: en/git-send-email.txt:368
 #, no-wrap
 msgid "--[no-]suppress-from"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:361
+#: en/git-send-email.txt:372
 msgid ""
 "If this is set, do not add the From: address to the cc: list.  Default is "
 "the value of `sendemail.suppressFrom` configuration value; if that is "
@@ -54960,13 +55038,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:362
+#: en/git-send-email.txt:373
 #, no-wrap
 msgid "--[no-]thread"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:368
+#: en/git-send-email.txt:379
 msgid ""
 "If this is set, the In-Reply-To and References headers will be added to each "
 "email sent.  Whether each mail refers to the previous email (`deep` "
@@ -54975,7 +55053,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:373
+#: en/git-send-email.txt:384
 msgid ""
 "If disabled with \"--no-thread\", those headers will not be added (unless "
 "specified with --in-reply-to).  Default is the value of the "
@@ -54984,7 +55062,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:379
+#: en/git-send-email.txt:390
 msgid ""
 "It is up to the user to ensure that no In-Reply-To header already exists "
 "when 'git send-email' is asked to add it (especially note that 'git "
@@ -54993,53 +55071,53 @@ msgid ""
 msgstr ""
 
 #. type: Title ~
-#: en/git-send-email.txt:382
+#: en/git-send-email.txt:393
 #, no-wrap
 msgid "Administering"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:384
+#: en/git-send-email.txt:395
 #, no-wrap
 msgid "--confirm=<mode>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:386
+#: en/git-send-email.txt:397
 msgid "Confirm just before sending:"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:389
+#: en/git-send-email.txt:400
 msgid "'always' will always confirm before sending"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:390
+#: en/git-send-email.txt:401
 msgid "'never' will never confirm before sending"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:392
+#: en/git-send-email.txt:403
 msgid ""
 "'cc' will confirm before sending when send-email has automatically added "
 "addresses from the patch to the Cc list"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:393
+#: en/git-send-email.txt:404
 msgid ""
 "'compose' will confirm before sending the first message when using "
 "--compose."
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:394
+#: en/git-send-email.txt:405
 msgid "'auto' is equivalent to 'cc' + 'compose'"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:399
+#: en/git-send-email.txt:410
 msgid ""
 "Default is the value of `sendemail.confirm` configuration value; if that is "
 "unspecified, default to 'auto' unless any of the suppress options have been "
@@ -55047,18 +55125,18 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:402
+#: en/git-send-email.txt:413
 msgid "Do everything except actually send the emails."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:403
+#: en/git-send-email.txt:414
 #, no-wrap
 msgid "--[no-]format-patch"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:408
+#: en/git-send-email.txt:419
 msgid ""
 "When an argument may be understood either as a reference or as a file name, "
 "choose to understand it as a format-patch argument (`--format-patch`)  or as "
@@ -55067,37 +55145,37 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:412
+#: en/git-send-email.txt:423
 msgid ""
 "Make git-send-email less verbose.  One line per email should be all that is "
 "output."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:413
+#: en/git-send-email.txt:424
 #, no-wrap
 msgid "--[no-]validate"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:416
+#: en/git-send-email.txt:427
 msgid ""
 "Perform sanity checks on patches.  Currently, validation means the "
 "following:"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:419
+#: en/git-send-email.txt:430
 msgid "Invoke the sendemail-validate hook if present (see linkgit:githooks[5])."
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:420
+#: en/git-send-email.txt:431
 msgid "Warn of patches that contain lines longer than"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:424
+#: en/git-send-email.txt:435
 #, no-wrap
 msgid ""
 "998 characters unless a suitable transfer encoding\n"
@@ -55107,31 +55185,31 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:428
+#: en/git-send-email.txt:439
 msgid ""
 "Default is the value of `sendemail.validate`; if this is not set, default to "
 "`--validate`."
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:431
+#: en/git-send-email.txt:442
 msgid "Send emails even if safety checks would prevent it."
 msgstr ""
 
 #. type: Title ~
-#: en/git-send-email.txt:434
+#: en/git-send-email.txt:445
 #, no-wrap
 msgid "Information"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:436
+#: en/git-send-email.txt:447
 #, no-wrap
 msgid "--dump-aliases"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:441
+#: en/git-send-email.txt:452
 msgid ""
 "Instead of the normal operation, dump the shorthand alias names from the "
 "configured alias file(s), one per line in alphabetical order. Note, this "
@@ -55140,33 +55218,33 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:446
+#: en/git-send-email.txt:457
 #, no-wrap
 msgid "sendemail.aliasesFile"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:449
+#: en/git-send-email.txt:460
 msgid ""
 "To avoid typing long email addresses, point this to one or more email "
 "aliases files.  You must also supply `sendemail.aliasFileType`."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:450
+#: en/git-send-email.txt:461
 #, no-wrap
 msgid "sendemail.aliasFileType"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:453
+#: en/git-send-email.txt:464
 msgid ""
 "Format of the file(s) specified in sendemail.aliasesFile. Must be one of "
 "'mutt', 'mailrc', 'pine', 'elm', or 'gnus', or 'sendmail'."
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:458
+#: en/git-send-email.txt:469
 msgid ""
 "What an alias file in each format looks like can be found in the "
 "documentation of the email program of the same name. The differences and "
@@ -55174,56 +55252,56 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:460
+#: en/git-send-email.txt:471
 #, no-wrap
 msgid "sendmail"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:462
+#: en/git-send-email.txt:473
 msgid "Quoted aliases and quoted addresses are not supported: lines that"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:463
+#: en/git-send-email.txt:474
 msgid "contain a `\"` symbol are ignored."
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:464
+#: en/git-send-email.txt:475
 msgid "Redirection to a file (`/path/name`) or pipe (`|command`) is not"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:465
+#: en/git-send-email.txt:476
 msgid "supported."
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:466
+#: en/git-send-email.txt:477
 msgid "File inclusion (`:include: /path/name`) is not supported."
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:467
+#: en/git-send-email.txt:478
 msgid "Warnings are printed on the standard error output for any"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:469
+#: en/git-send-email.txt:480
 msgid ""
 "explicitly unsupported constructs, and any other lines that are not "
 "recognized by the parser."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:471
+#: en/git-send-email.txt:482
 #, no-wrap
 msgid "sendemail.multiEdit"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:476
+#: en/git-send-email.txt:487
 msgid ""
 "If true (default), a single editor instance will be spawned to edit files "
 "you have to edit (patches when `--annotate` is used, and the summary when "
@@ -55232,13 +55310,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-send-email.txt:477
+#: en/git-send-email.txt:488
 #, no-wrap
 msgid "sendemail.confirm"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:481
+#: en/git-send-email.txt:492
 msgid ""
 "Sets the default for whether to confirm before sending. Must be one of "
 "'always', 'never', 'cc', 'compose', or 'auto'. See `--confirm` in the "
@@ -55246,20 +55324,20 @@ msgid ""
 msgstr ""
 
 #. type: Title ~
-#: en/git-send-email.txt:485
+#: en/git-send-email.txt:496
 #, no-wrap
 msgid "Use gmail as the smtp server"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:488
+#: en/git-send-email.txt:499
 msgid ""
 "To use 'git send-email' to send your patches through the GMail SMTP server, "
 "edit ~/.gitconfig to specify your account settings:"
 msgstr ""
 
 #. type: delimited block -
-#: en/git-send-email.txt:495
+#: en/git-send-email.txt:506
 #, no-wrap
 msgid ""
 "[sendemail]\n"
@@ -55270,7 +55348,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:500
+#: en/git-send-email.txt:511
 msgid ""
 "If you have multi-factor authentication set up on your Gmail account, you "
 "will need to generate an app-specific password for use with 'git "
@@ -55279,7 +55357,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:504
+#: en/git-send-email.txt:515
 msgid ""
 "If you do not have multi-factor authentication set up on your Gmail account, "
 "you will need to allow less secure app access. Visit "
@@ -55287,14 +55365,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:507
+#: en/git-send-email.txt:518
 msgid ""
 "Once your commits are ready to be sent to the mailing list, run the "
 "following commands:"
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:511
+#: en/git-send-email.txt:522
 #, no-wrap
 msgid ""
 "\t$ git format-patch --cover-letter -M origin/master -o outgoing/\n"
@@ -55303,7 +55381,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:516
+#: en/git-send-email.txt:527
 msgid ""
 "The first time you run it, you will be prompted for your credentials.  Enter "
 "the app-specific or your regular password as appropriate.  If you have "
@@ -55313,7 +55391,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:522
+#: en/git-send-email.txt:533
 msgid ""
 "Note: the following core Perl modules that may be installed with your "
 "distribution of Perl are required: MIME::Base64, MIME::QuotedPrint, "
@@ -55322,7 +55400,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-send-email.txt:527
+#: en/git-send-email.txt:538
 msgid "linkgit:git-format-patch[1], linkgit:git-imap-send[1], mbox(5)"
 msgstr ""
 
@@ -57149,25 +57227,26 @@ msgid "show [-u|--include-untracked|--only-untracked] [<diff-options>] [<stash>]
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:96
+#: en/git-stash.txt:98
 msgid ""
 "Show the changes recorded in the stash entry as a diff between the stashed "
 "contents and the commit back when the stash entry was first created.  By "
 "default, the command shows the diffstat, but it will accept any format known "
 "to 'git diff' (e.g., `git stash show -p stash@{1}` to view the second most "
-"recent entry in patch form).  You can use stash.showIncludeUntracked, "
-"stash.showStat, and stash.showPatch config variables to change the default "
-"behavior."
+"recent entry in patch form).  If no `<diff-option>` is provided, the default "
+"behavior will be given by the `stash.showStat`, and `stash.showPatch` config "
+"variables. You can also use `stash.showIncludeUntracked` to set whether "
+"`--include-untracked` is enabled by default."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-stash.txt:97
+#: en/git-stash.txt:99
 #, no-wrap
 msgid "pop [--index] [-q|--quiet] [<stash>]"
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:103
+#: en/git-stash.txt:105
 msgid ""
 "Remove a single stashed state from the stash list and apply it on top of the "
 "current working tree state, i.e., do the inverse operation of `git stash "
@@ -57175,7 +57254,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:107
+#: en/git-stash.txt:109
 msgid ""
 "Applying the state can fail with conflicts; in this case, it is not removed "
 "from the stash list. You need to resolve the conflicts by hand and call `git "
@@ -57183,13 +57262,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-stash.txt:108
+#: en/git-stash.txt:110
 #, no-wrap
 msgid "apply [--index] [-q|--quiet] [<stash>]"
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:113
+#: en/git-stash.txt:115
 msgid ""
 "Like `pop`, but do not remove the state from the stash list. Unlike `pop`, "
 "`<stash>` may be any commit that looks like a commit created by `stash push` "
@@ -57197,13 +57276,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-stash.txt:114
+#: en/git-stash.txt:116
 #, no-wrap
 msgid "branch <branchname> [<stash>]"
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:121
+#: en/git-stash.txt:123
 msgid ""
 "Creates and checks out a new branch named `<branchname>` starting from the "
 "commit at which the `<stash>` was originally created, applies the changes "
@@ -57213,7 +57292,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:127
+#: en/git-stash.txt:129
 msgid ""
 "This is useful if the branch on which you ran `git stash push` has changed "
 "enough that `git stash apply` fails due to conflicts. Since the stash entry "
@@ -57222,13 +57301,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-stash.txt:128
+#: en/git-stash.txt:130
 #, no-wrap
 msgid "clear"
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:132
+#: en/git-stash.txt:134
 msgid ""
 "Remove all the stash entries. Note that those entries will then be subject "
 "to pruning, and may be impossible to recover (see 'Examples' below for a "
@@ -57236,24 +57315,24 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-stash.txt:133
+#: en/git-stash.txt:135
 #, no-wrap
 msgid "drop [-q|--quiet] [<stash>]"
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:136
+#: en/git-stash.txt:138
 msgid "Remove a single stash entry from the list of stash entries."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-stash.txt:137 en/git-update-ref.txt:108
+#: en/git-stash.txt:139 en/git-update-ref.txt:108
 #, no-wrap
 msgid "create"
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:144
+#: en/git-stash.txt:146
 msgid ""
 "Create a stash entry (which is a regular commit object) and return its "
 "object name, without storing it anywhere in the ref namespace.  This is "
@@ -57262,13 +57341,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-stash.txt:145
+#: en/git-stash.txt:147
 #, no-wrap
 msgid "store"
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:151
+#: en/git-stash.txt:153
 msgid ""
 "Store a given stash created via 'git stash create' (which is a dangling "
 "merge commit) in the stash ref, updating the stash reflog.  This is intended "
@@ -57277,66 +57356,66 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:157 en/git-stash.txt:188 en/git-stash.txt:194
+#: en/git-stash.txt:159 en/git-stash.txt:190 en/git-stash.txt:196
 msgid "This option is only valid for `push` and `save` commands."
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:160
+#: en/git-stash.txt:162
 msgid ""
 "All ignored and untracked files are also stashed and then cleaned up with "
 "`git clean`."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-stash.txt:162
+#: en/git-stash.txt:164
 #, no-wrap
 msgid "--include-untracked"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-stash.txt:163
+#: en/git-stash.txt:165
 #, no-wrap
 msgid "--no-include-untracked"
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:167
+#: en/git-stash.txt:169
 msgid ""
 "When used with the `push` and `save` commands, all untracked files are also "
 "stashed and then cleaned up with `git clean`."
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:170
+#: en/git-stash.txt:172
 msgid ""
 "When used with the `show` command, show the untracked files in the stash "
 "entry as part of the diff."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-stash.txt:171
+#: en/git-stash.txt:173
 #, no-wrap
 msgid "--only-untracked"
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:173
+#: en/git-stash.txt:175
 msgid "This option is only valid for the `show` command."
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:175
+#: en/git-stash.txt:177
 msgid "Show only the untracked files in the stash entry as part of the diff."
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:178
+#: en/git-stash.txt:180
 msgid "This option is only valid for `pop` and `apply` commands."
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:183
+#: en/git-stash.txt:185
 msgid ""
 "Tries to reinstate not only the working tree's changes, but also the index's "
 "ones. However, this can fail, when you have conflicts (which are stored in "
@@ -57345,24 +57424,24 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-stash.txt:185
+#: en/git-stash.txt:187
 #, no-wrap
 msgid "--keep-index"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-stash.txt:186
+#: en/git-stash.txt:188
 #, no-wrap
 msgid "--no-keep-index"
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:190
+#: en/git-stash.txt:192
 msgid "All changes already added to the index are left intact."
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:202
+#: en/git-stash.txt:204
 msgid ""
 "Interactively select hunks from the diff between HEAD and the working tree "
 "to be stashed.  The stash entry is constructed such that its index state is "
@@ -57373,32 +57452,32 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:205
+#: en/git-stash.txt:207
 msgid ""
 "The `--patch` option implies `--keep-index`.  You can use `--no-keep-index` "
 "to override this."
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:208 en/git-stash.txt:218 en/git-stash.txt:232
-#: en/git-stash.txt:237
+#: en/git-stash.txt:210 en/git-stash.txt:220 en/git-stash.txt:234
+#: en/git-stash.txt:239
 msgid "This option is only valid for `push` command."
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:227
+#: en/git-stash.txt:229
 msgid ""
 "This option is only valid for `apply`, `drop`, `pop`, `push`, `save`, "
 "`store` commands."
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:234
+#: en/git-stash.txt:236
 msgid "Separates pathspec from options for disambiguation purposes."
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:242
+#: en/git-stash.txt:244
 msgid ""
 "The new stash entry records the modified states only for the files that "
 "match the pathspec.  The index entries and working tree files are then "
@@ -57407,27 +57486,27 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-stash.txt:245
+#: en/git-stash.txt:247
 #, no-wrap
 msgid "<stash>"
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:248
+#: en/git-stash.txt:250
 msgid ""
 "This option is only valid for `apply`, `branch`, `drop`, `pop`, `show` "
 "commands."
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:251
+#: en/git-stash.txt:253
 msgid ""
 "A reference of the form `stash@{<revision>}`. When no `<stash>` is given, "
 "the latest stash is assumed (that is, `stash@{0}`)."
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:260
+#: en/git-stash.txt:262
 msgid ""
 "A stash entry is represented as a commit whose tree records the state of the "
 "working directory, and its first parent is the commit at `HEAD` when the "
@@ -57437,7 +57516,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:264
+#: en/git-stash.txt:266
 #, no-wrap
 msgid ""
 "            .----W\n"
@@ -57446,20 +57525,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:268
+#: en/git-stash.txt:270
 msgid ""
 "where `H` is the `HEAD` commit, `I` is a commit that records the state of "
 "the index, and `W` is a commit that records the state of the working tree."
 msgstr ""
 
 #. type: Labeled list
-#: en/git-stash.txt:273
+#: en/git-stash.txt:275
 #, no-wrap
 msgid "Pulling into a dirty tree"
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:279
+#: en/git-stash.txt:281
 msgid ""
 "When you are in the middle of something, you learn that there are upstream "
 "changes that are possibly relevant to what you are doing.  When your local "
@@ -57468,7 +57547,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:284
+#: en/git-stash.txt:286
 msgid ""
 "However, there are cases in which your local changes do conflict with the "
 "upstream changes, and `git pull` refuses to overwrite your changes.  In such "
@@ -57477,7 +57556,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: en/git-stash.txt:292
+#: en/git-stash.txt:294
 #, no-wrap
 msgid ""
 "$ git pull\n"
@@ -57489,7 +57568,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:300
+#: en/git-stash.txt:302
 msgid ""
 "When you are in the middle of something, your boss comes in and demands that "
 "you fix something immediately.  Traditionally, you would make a commit to a "
@@ -57498,7 +57577,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: en/git-stash.txt:311
+#: en/git-stash.txt:313
 #, no-wrap
 msgid ""
 "# ... hack hack hack ...\n"
@@ -57513,12 +57592,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:314
+#: en/git-stash.txt:316
 msgid "You can use 'git stash' to simplify the above, like this:"
 msgstr ""
 
 #. type: delimited block -
-#: en/git-stash.txt:322
+#: en/git-stash.txt:324
 #, no-wrap
 msgid ""
 "# ... hack hack hack ...\n"
@@ -57530,13 +57609,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-stash.txt:324
+#: en/git-stash.txt:326
 #, no-wrap
 msgid "Testing partial commits"
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:329
+#: en/git-stash.txt:331
 msgid ""
 "You can use `git stash push --keep-index` when you want to make two or more "
 "commits out of the changes in the work tree, and you want to test each "
@@ -57544,7 +57623,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: en/git-stash.txt:340
+#: en/git-stash.txt:342
 #, no-wrap
 msgid ""
 "# ... hack hack hack ...\n"
@@ -57559,13 +57638,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/git-stash.txt:342
+#: en/git-stash.txt:344
 #, no-wrap
 msgid "Recovering stash entries that were cleared/dropped erroneously"
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:348
+#: en/git-stash.txt:350
 msgid ""
 "If you mistakenly drop or clear stash entries, they cannot be recovered "
 "through the normal safety mechanisms.  However, you can try the following "
@@ -57574,7 +57653,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: en/git-stash.txt:353
+#: en/git-stash.txt:355
 #, no-wrap
 msgid ""
 "git fsck --unreachable |\n"
@@ -57583,7 +57662,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/git-stash.txt:363
+#: en/git-stash.txt:365
 msgid ""
 "linkgit:git-checkout[1], linkgit:git-commit[1], linkgit:git-reflog[1], "
 "linkgit:git-reset[1], linkgit:git-switch[1]"
@@ -60086,7 +60165,7 @@ msgid "git config --get-all svn-remote.<name>.commiturl"
 msgstr ""
 
 #. type: Labeled list
-#: en/git-svn.txt:346 en/rev-list-options.txt:1069
+#: en/git-svn.txt:346 en/rev-list-options.txt:1077
 #, no-wrap
 msgid "--parents"
 msgstr ""
@@ -67169,8 +67248,8 @@ msgstr ""
 #: en/git-worktree.txt:20
 #, no-wrap
 msgid ""
-"'git worktree add' [-f] [--detach] [--checkout] [--lock] [-b <new-branch>] "
-"<path> [<commit-ish>]\n"
+"'git worktree add' [-f] [--detach] [--checkout] [--lock [--reason <string>]] "
+"[-b <new-branch>] <path> [<commit-ish>]\n"
 "'git worktree list' [--porcelain]\n"
 "'git worktree lock' [--reason <string>] <worktree>\n"
 "'git worktree move' <worktree> <new-path>\n"
@@ -67569,7 +67648,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-worktree.txt:246
-msgid "With `lock`, an explanation why the working tree is locked."
+msgid ""
+"With `lock` or with `add --lock`, an explanation why the working tree is "
+"locked."
 msgstr ""
 
 #. type: Labeled list
@@ -67826,7 +67907,7 @@ msgstr ""
 msgid ""
 "$ git worktree list\n"
 "/path/to/linked-worktree    abcd1234 [master]\n"
-"/path/to/locked-worktreee   acbd5678 (brancha) locked\n"
+"/path/to/locked-worktree    acbd5678 (brancha) locked\n"
 "/path/to/prunable-worktree  5678abc  (detached HEAD) prunable\n"
 msgstr ""
 
@@ -68398,9 +68479,10 @@ msgid ""
 "<<def_revision,revision>> and you are \"merging\" another "
 "<<def_branch,branch>>'s changes that happen to be a descendant of what you "
 "have. In such a case, you do not make a new <<def_merge,merge>> "
-"<<def_commit,commit>> but instead just update to his revision. This will "
-"happen frequently on a <<def_remote_tracking_branch,remote-tracking branch>> "
-"of a remote <<def_repository,repository>>."
+"<<def_commit,commit>> but instead just update your branch to point at the "
+"same revision as the branch you are merging. This will happen frequently on "
+"a <<def_remote_tracking_branch,remote-tracking branch>> of a remote "
+"<<def_repository,repository>>."
 msgstr ""
 
 #. type: Labeled list
@@ -72640,20 +72722,27 @@ msgid ""
 "ancestry chain."
 msgstr ""
 
-#. type: Title ~
+#. type: Plain text
 #: en/revisions.txt:265
+msgid ""
+"There are several notations to specify a set of connected commits (called a "
+"\"revision range\"), illustrated below."
+msgstr ""
+
+#. type: Title ~
+#: en/revisions.txt:268
 #, no-wrap
 msgid "Commit Exclusions"
 msgstr ""
 
 #. type: Labeled list
-#: en/revisions.txt:267
+#: en/revisions.txt:270
 #, no-wrap
 msgid "'{caret}<rev>' (caret) Notation"
 msgstr ""
 
 #. type: Plain text
-#: en/revisions.txt:272
+#: en/revisions.txt:275
 msgid ""
 "To exclude commits reachable from a commit, a prefix '{caret}' notation is "
 "used.  E.g. '{caret}r1 r2' means commits reachable from 'r2' but exclude the "
@@ -72661,19 +72750,19 @@ msgid ""
 msgstr ""
 
 #. type: Title ~
-#: en/revisions.txt:274
+#: en/revisions.txt:277
 #, no-wrap
 msgid "Dotted Range Notations"
 msgstr ""
 
 #. type: Labeled list
-#: en/revisions.txt:276
+#: en/revisions.txt:279
 #, no-wrap
 msgid "The '..' (two-dot) Range Notation"
 msgstr ""
 
 #. type: Plain text
-#: en/revisions.txt:282
+#: en/revisions.txt:285
 msgid ""
 "The '{caret}r1 r2' set operation appears so often that there is a shorthand "
 "for it.  When you have two commits 'r1' and 'r2' (named according to the "
@@ -72683,13 +72772,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/revisions.txt:283
+#: en/revisions.txt:286
 #, no-wrap
 msgid "The '...' (three-dot) Symmetric Difference Notation"
 msgstr ""
 
 #. type: Plain text
-#: en/revisions.txt:289
+#: en/revisions.txt:292
 msgid ""
 "A similar notation 'r1\\...r2' is called symmetric difference of 'r1' and "
 "'r2' and is defined as 'r1 r2 --not $(git merge-base --all r1 r2)'.  It is "
@@ -72698,7 +72787,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/revisions.txt:296
+#: en/revisions.txt:299
 msgid ""
 "In these two shorthand notations, you can omit one end and let it default to "
 "HEAD.  For example, 'origin..' is a shorthand for 'origin..HEAD' and asks "
@@ -72708,33 +72797,71 @@ msgid ""
 "is an empty range that is both reachable and unreachable from HEAD."
 msgstr ""
 
+#. type: Plain text
+#: en/revisions.txt:306
+msgid ""
+"Commands that are specifically designed to take two distinct ranges "
+"(e.g. \"git range-diff R1 R2\" to compare two ranges) do exist, but they are "
+"exceptions.  Unless otherwise noted, all \"git\" commands that operate on a "
+"set of commits work on a single revision range.  In other words, writing two "
+"\"two-dot range notation\" next to each other, e.g."
+msgstr ""
+
+#. type: Plain text
+#: en/revisions.txt:308
+#, no-wrap
+msgid "    $ git log A..B C..D\n"
+msgstr ""
+
+#. type: Plain text
+#: en/revisions.txt:313
+msgid ""
+"does *not* specify two revision ranges for most commands.  Instead it will "
+"name a single connected set of commits, i.e. those that are reachable from "
+"either B or D but are reachable from neither A or C.  In a linear history "
+"like this:"
+msgstr ""
+
+#. type: Plain text
+#: en/revisions.txt:315
+#, no-wrap
+msgid "    ---A---B---o---o---C---D\n"
+msgstr ""
+
+#. type: Plain text
+#: en/revisions.txt:318
+msgid ""
+"because A and B are reachable from C, the revision range specified by these "
+"two dotted ranges is a single commit D."
+msgstr ""
+
 #. type: Title ~
-#: en/revisions.txt:298
+#: en/revisions.txt:321
 #, no-wrap
 msgid "Other <rev>{caret} Parent Shorthand Notations"
 msgstr ""
 
 #. type: Plain text
-#: en/revisions.txt:301
+#: en/revisions.txt:324
 msgid ""
 "Three other shorthands exist, particularly useful for merge commits, for "
 "naming a set that is formed by a commit and its parent commits."
 msgstr ""
 
 #. type: Plain text
-#: en/revisions.txt:303
+#: en/revisions.txt:326
 msgid "The 'r1{caret}@' notation means all parents of 'r1'."
 msgstr ""
 
 #. type: Plain text
-#: en/revisions.txt:306
+#: en/revisions.txt:329
 msgid ""
 "The 'r1{caret}!' notation includes commit 'r1' but excludes all of its "
 "parents.  By itself, this notation denotes the single commit 'r1'."
 msgstr ""
 
 #. type: Plain text
-#: en/revisions.txt:313
+#: en/revisions.txt:336
 msgid ""
 "The '<rev>{caret}-[<n>]' notation includes '<rev>' but excludes the <n>th "
 "parent (i.e. a shorthand for '<rev>{caret}<n>..<rev>'), with '<n>' = 1 if "
@@ -72744,7 +72871,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/revisions.txt:317
+#: en/revisions.txt:340
 msgid ""
 "While '<rev>{caret}<n>' was about specifying a single commit parent, these "
 "three notations also consider its parents. For example you can say "
@@ -72752,45 +72879,45 @@ msgid ""
 msgstr ""
 
 #. type: Title -
-#: en/revisions.txt:319
+#: en/revisions.txt:342
 #, no-wrap
 msgid "Revision Range Summary"
 msgstr ""
 
 #. type: Labeled list
-#: en/revisions.txt:321
+#: en/revisions.txt:344
 #, no-wrap
 msgid "'<rev>'"
 msgstr ""
 
 #. type: Plain text
-#: en/revisions.txt:324
+#: en/revisions.txt:347
 msgid ""
 "Include commits that are reachable from <rev> (i.e. <rev> and its "
 "ancestors)."
 msgstr ""
 
 #. type: Labeled list
-#: en/revisions.txt:325
+#: en/revisions.txt:348
 #, no-wrap
 msgid "'{caret}<rev>'"
 msgstr ""
 
 #. type: Plain text
-#: en/revisions.txt:328
+#: en/revisions.txt:351
 msgid ""
 "Exclude commits that are reachable from <rev> (i.e. <rev> and its "
 "ancestors)."
 msgstr ""
 
 #. type: Labeled list
-#: en/revisions.txt:329
+#: en/revisions.txt:352
 #, no-wrap
 msgid "'<rev1>..<rev2>'"
 msgstr ""
 
 #. type: Plain text
-#: en/revisions.txt:333
+#: en/revisions.txt:356
 msgid ""
 "Include commits that are reachable from <rev2> but exclude those that are "
 "reachable from <rev1>.  When either <rev1> or <rev2> is omitted, it defaults "
@@ -72798,13 +72925,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/revisions.txt:334
+#: en/revisions.txt:357
 #, no-wrap
 msgid "'<rev1>\\...<rev2>'"
 msgstr ""
 
 #. type: Plain text
-#: en/revisions.txt:338
+#: en/revisions.txt:361
 msgid ""
 "Include commits that are reachable from either <rev1> or <rev2> but exclude "
 "those that are reachable from both.  When either <rev1> or <rev2> is "
@@ -72812,13 +72939,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/revisions.txt:339
+#: en/revisions.txt:362
 #, no-wrap
 msgid "'<rev>{caret}@', e.g. 'HEAD{caret}@'"
 msgstr ""
 
 #. type: Plain text
-#: en/revisions.txt:343
+#: en/revisions.txt:366
 msgid ""
 "A suffix '{caret}' followed by an at sign is the same as listing all parents "
 "of '<rev>' (meaning, include anything reachable from its parents, but not "
@@ -72826,13 +72953,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/revisions.txt:344
+#: en/revisions.txt:367
 #, no-wrap
 msgid "'<rev>{caret}!', e.g. 'HEAD{caret}!'"
 msgstr ""
 
 #. type: Plain text
-#: en/revisions.txt:348
+#: en/revisions.txt:371
 msgid ""
 "A suffix '{caret}' followed by an exclamation mark is the same as giving "
 "commit '<rev>' and then all its parents prefixed with '{caret}' to exclude "
@@ -72840,25 +72967,25 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/revisions.txt:349
+#: en/revisions.txt:372
 #, no-wrap
 msgid "'<rev>{caret}-<n>', e.g. 'HEAD{caret}-, HEAD{caret}-2'"
 msgstr ""
 
 #. type: Plain text
-#: en/revisions.txt:352
+#: en/revisions.txt:375
 msgid "Equivalent to '<rev>{caret}<n>..<rev>', with '<n>' = 1 if not given."
 msgstr ""
 
 #. type: Plain text
-#: en/revisions.txt:356
+#: en/revisions.txt:379
 msgid ""
 "Here are a handful of examples using the Loeliger illustration above, with "
 "each step in the notation's expansion and selection carefully spelt out:"
 msgstr ""
 
 #. type: delimited block .
-#: en/revisions.txt:380
+#: en/revisions.txt:403
 #, no-wrap
 msgid ""
 "   Args   Expanded arguments    Selected commits\n"
@@ -74689,8 +74816,8 @@ msgstr ""
 msgid ""
 "The form '--filter=sparse:oid=<blob-ish>' uses a sparse-checkout "
 "specification contained in the blob (or blob-expression) '<blob-ish>' to "
-"omit blobs that would not be not required for a sparse checkout on the "
-"requested refs."
+"omit blobs that would not be required for a sparse checkout on the requested "
+"refs."
 msgstr ""
 
 #. type: Plain text
@@ -75006,45 +75133,70 @@ msgid ""
 "with a NUL character."
 msgstr ""
 
+#. type: Labeled list
+#: en/rev-list-options.txt:1068
+#, no-wrap
+msgid "--no-commit-header"
+msgstr ""
+
 #. type: Plain text
 #: en/rev-list-options.txt:1072
+msgid ""
+"Suppress the header line containing \"commit\" and the object ID printed "
+"before the specified format.  This has no effect on the built-in formats; "
+"only custom formats are affected."
+msgstr ""
+
+#. type: Labeled list
+#: en/rev-list-options.txt:1073
+#, no-wrap
+msgid "--commit-header"
+msgstr ""
+
+#. type: Plain text
+#: en/rev-list-options.txt:1075
+msgid "Overrides a previous `--no-commit-header`."
+msgstr ""
+
+#. type: Plain text
+#: en/rev-list-options.txt:1080
 msgid ""
 "Print also the parents of the commit (in the form \"commit parent...\").  "
 "Also enables parent rewriting, see 'History Simplification' above."
 msgstr ""
 
 #. type: Labeled list
-#: en/rev-list-options.txt:1073
+#: en/rev-list-options.txt:1081
 #, no-wrap
 msgid "--children"
 msgstr ""
 
 #. type: Plain text
-#: en/rev-list-options.txt:1076
+#: en/rev-list-options.txt:1084
 msgid ""
 "Print also the children of the commit (in the form \"commit child...\").  "
 "Also enables parent rewriting, see 'History Simplification' above."
 msgstr ""
 
 #. type: Labeled list
-#: en/rev-list-options.txt:1078
+#: en/rev-list-options.txt:1086
 #, no-wrap
 msgid "--timestamp"
 msgstr ""
 
 #. type: Plain text
-#: en/rev-list-options.txt:1080
+#: en/rev-list-options.txt:1088
 msgid "Print the raw commit timestamp."
 msgstr ""
 
 #. type: Labeled list
-#: en/rev-list-options.txt:1082
+#: en/rev-list-options.txt:1090
 #, no-wrap
 msgid "--left-right"
 msgstr ""
 
 #. type: Plain text
-#: en/rev-list-options.txt:1087
+#: en/rev-list-options.txt:1095
 msgid ""
 "Mark which side of a symmetric difference a commit is reachable from.  "
 "Commits from the left side are prefixed with `<` and those from the right "
@@ -75053,12 +75205,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/rev-list-options.txt:1089
+#: en/rev-list-options.txt:1097
 msgid "For example, if you have this topology:"
 msgstr ""
 
 #. type: delimited block -
-#: en/rev-list-options.txt:1096
+#: en/rev-list-options.txt:1104
 #, no-wrap
 msgid ""
 "\t     y---b---b  branch B\n"
@@ -75069,18 +75221,18 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/rev-list-options.txt:1099
+#: en/rev-list-options.txt:1107
 msgid "you would get an output like this:"
 msgstr ""
 
 #. type: delimited block -
-#: en/rev-list-options.txt:1102
+#: en/rev-list-options.txt:1110
 #, no-wrap
 msgid "\t$ git rev-list --left-right --boundary --pretty=oneline A...B\n"
 msgstr ""
 
 #. type: delimited block -
-#: en/rev-list-options.txt:1109
+#: en/rev-list-options.txt:1117
 #, no-wrap
 msgid ""
 "\t>bbbbbbb... 3rd on b\n"
@@ -75092,13 +75244,13 @@ msgid ""
 msgstr ""
 
 #. type: Labeled list
-#: en/rev-list-options.txt:1111
+#: en/rev-list-options.txt:1119
 #, no-wrap
 msgid "--graph"
 msgstr ""
 
 #. type: Plain text
-#: en/rev-list-options.txt:1117
+#: en/rev-list-options.txt:1125
 msgid ""
 "Draw a text-based graphical representation of the commit history on the left "
 "hand side of the output.  This may cause extra lines to be printed in "
@@ -75107,25 +75259,25 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/rev-list-options.txt:1119
+#: en/rev-list-options.txt:1127
 msgid "This enables parent rewriting, see 'History Simplification' above."
 msgstr ""
 
 #. type: Plain text
-#: en/rev-list-options.txt:1122
+#: en/rev-list-options.txt:1130
 msgid ""
 "This implies the `--topo-order` option by default, but the `--date-order` "
 "option may also be specified."
 msgstr ""
 
 #. type: Labeled list
-#: en/rev-list-options.txt:1123
+#: en/rev-list-options.txt:1131
 #, no-wrap
 msgid "--show-linear-break[=<barrier>]"
 msgstr ""
 
 #. type: Plain text
-#: en/rev-list-options.txt:1129
+#: en/rev-list-options.txt:1137
 msgid ""
 "When --graph is not used, all history branches are flattened which can make "
 "it hard to see that the two consecutive commits do not belong to a linear "
@@ -75135,7 +75287,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: en/rev-list-options.txt:1139
+#: en/rev-list-options.txt:1147
 msgid ""
 "Print a number stating how many commits would have been listed, and suppress "
 "all other output.  When used together with `--left-right`, instead print the "
