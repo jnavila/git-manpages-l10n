@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Jean-Noël Avila <jn.avila@free.fr>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2021-08-03 23:17+0200\nPO-Revision-Date: 2021-08-08 17:33+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: Jean-Noël Avila <jn.avila@free.fr>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.8-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2021-08-03 23:17+0200\nPO-Revision-Date: 2021-10-06 21:04+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: Jean-Noël Avila <jn.avila@free.fr>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.9-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:754 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:128 en/git-status.txt:31
@@ -14026,25 +14026,25 @@ msgstr "'git cherry' [-v] [<branche_amont> [<head> [<limite>]]]\n"
 #: en/git-cherry.txt:17
 #, priority:100
 msgid "Determine whether there are commits in `<head>..<upstream>` that are equivalent to those in the range `<limit>..<head>`."
-msgstr ""
+msgstr "Détermine s'il existe des commits dans `<tête>..<amont>` qui sont équivalents à ceux de la plage `<limite>..<tête>`."
 
 #. type: Plain text
 #: en/git-cherry.txt:22
 #, priority:100
 msgid "The equivalence test is based on the diff, after removing whitespace and line numbers.  git-cherry therefore detects when commits have been \"copied\" by means of linkgit:git-cherry-pick[1], linkgit:git-am[1] or linkgit:git-rebase[1]."
-msgstr ""
+msgstr "Le test d'équivalence est basé sur le diff, après avoir supprimé les espaces et les numéros de ligne. git-cherry détecte donc quand les commits ont été « copiés » au moyen de linkgit:git-cherry-pick[1], linkgit:git-am[1] ou linkgit:git-rebase[1]."
 
 #. type: Plain text
 #: en/git-cherry.txt:26
 #, priority:100
 msgid "Outputs the SHA1 of every commit in `<limit>..<head>`, prefixed with `-` for commits that have an equivalent in <upstream>, and `+` for commits that do not."
-msgstr ""
+msgstr "Sort le SHA1 de chaque commit dans `<limite>..<tête>`, préfixé avec `-` pour les commits qui ont un équivalent dans <amont>, et `+` pour les commits qui n'en ont pas."
 
 #. type: Plain text
 #: en/git-cherry.txt:31
 #, priority:100
 msgid "Show the commit subjects next to the SHA1s."
-msgstr ""
+msgstr "Montrer les sujets de commit à côté des SHA1s."
 
 #. type: Labeled list
 #: en/git-cherry.txt:32 en/git-rebase.txt:233
@@ -14056,7 +14056,7 @@ msgstr "<branche_amont>"
 #: en/git-cherry.txt:35
 #, priority:100
 msgid "Upstream branch to search for equivalent commits.  Defaults to the upstream branch of HEAD."
-msgstr ""
+msgstr "Branche amont pour rechercher des commits équivalents.  La valeur par défaut est la branche amont de HEAD."
 
 #. type: Labeled list
 #: en/git-cherry.txt:36 en/git.txt:412
@@ -14068,25 +14068,25 @@ msgstr "<tête>"
 #: en/git-cherry.txt:38 en/git-rebase.txt:240
 #, priority:100
 msgid "Working branch; defaults to HEAD."
-msgstr ""
+msgstr "Branche de travail ; la valeur par défaut est HEAD."
 
 #. type: Plain text
 #: en/git-cherry.txt:41
 #, priority:100
 msgid "Do not report commits up to (and including) limit."
-msgstr ""
+msgstr "Ne pas signaler les commits jusqu'à (et y compris) la limite."
 
 #. type: Title ~
 #: en/git-cherry.txt:46
 #, no-wrap, priority:100
 msgid "Patch workflows"
-msgstr ""
+msgstr "Flux de travail des rustines"
 
 #. type: Plain text
 #: en/git-cherry.txt:52
 #, priority:100
 msgid "git-cherry is frequently used in patch-based workflows (see linkgit:gitworkflows[7]) to determine if a series of patches has been applied by the upstream maintainer.  In such a workflow you might create and send a topic branch like this:"
-msgstr ""
+msgstr "git-cherry est fréquemment utilisé dans les flux de travail basés sur les rustines (voir linkgit:gitworkflows[7]) pour déterminer si une série de rustines a été appliquée par le mainteneur amont.  Dans un tel flux de travail, vous pourriez créer et envoyer une branche thématique comme ceci :"
 
 #. type: delimited block -
 #: en/git-cherry.txt:58
@@ -14096,13 +14096,13 @@ msgid ""
 "# work and create some commits\n"
 "$ git format-patch origin/master\n"
 "$ git send-email ... 00*\n"
-msgstr ""
+msgstr "$ git checkout -b theme origin/master\n# travail et création de commits supplémentaires\n$ git format-patch origin/master\n$ git send-email ... 00*\n"
 
 #. type: Plain text
 #: en/git-cherry.txt:62
 #, priority:100
 msgid "Later, you can see whether your changes have been applied by saying (still on `topic`):"
-msgstr ""
+msgstr "Plus tard, vous pourrez voir si vos modifications ont été appliquées en disant (toujours sur `theme`) :"
 
 #. type: delimited block -
 #: en/git-cherry.txt:66
@@ -14110,19 +14110,19 @@ msgstr ""
 msgid ""
 "$ git fetch  # update your notion of origin/master\n"
 "$ git cherry -v\n"
-msgstr ""
+msgstr "$ git fetch # met à jour votre notion de origin/master\n$ git cherry -v\n"
 
 #. type: Title ~
 #: en/git-cherry.txt:69
 #, no-wrap, priority:100
 msgid "Concrete example"
-msgstr ""
+msgstr "Exemple concret"
 
 #. type: Plain text
 #: en/git-cherry.txt:73
 #, priority:100
 msgid "In a situation where topic consisted of three commits, and the maintainer applied two of them, the situation might look like:"
-msgstr ""
+msgstr "Dans une situation où le sujet consiste en trois commits, et où le mainteneur applique deux d'entre eux, la situation pourrait ressembler à ceci :"
 
 #. type: delimited block -
 #: en/git-cherry.txt:86
@@ -14139,13 +14139,13 @@ msgid ""
 "| * aaaa000 commit A\n"
 "|/\n"
 "o 1234567 branch point\n"
-msgstr ""
+msgstr "$ git log --graph --oneline --decorate --boundary origin/master...theme\n* 7654321 (origin/master) upstream tip commit\n[... autres commits élidés ...]\n* cccc111 cherry-pick of C\n* aaaa111 cherry-pick of A\n[... encore d'autres commits élidés ...]\n| * cccc000 (theme) commit C\n| * bbbb000 commit B\n| * aaaa000 commit A\n|/\no 1234567 branch point\n"
 
 #. type: Plain text
 #: en/git-cherry.txt:90
 #, priority:100
 msgid "In such cases, git-cherry shows a concise summary of what has yet to be applied:"
-msgstr ""
+msgstr "Dans ces cas, git-cherry affiche un résumé concis de ce qui doit encore être appliqué :"
 
 #. type: delimited block -
 #: en/git-cherry.txt:96
@@ -14155,25 +14155,25 @@ msgid ""
 "- cccc000... commit C\n"
 "+ bbbb000... commit B\n"
 "- aaaa000... commit A\n"
-msgstr ""
+msgstr "$ git cherry origin/master topic\n- cccc000... commit C\n+ bbbb000... commit B\n- aaaa000... commit A\n"
 
 #. type: Plain text
 #: en/git-cherry.txt:102
 #, priority:100
 msgid "Here, we see that the commits A and C (marked with `-`) can be dropped from your `topic` branch when you rebase it on top of `origin/master`, while the commit B (marked with `+`) still needs to be kept so that it will be sent to be applied to `origin/master`."
-msgstr ""
+msgstr "Ici, nous voyons que les commits A et C (marqués par `-`) peuvent être supprimés de votre branche `theme` lorsque vous la rebasez au-dessus de `origin/master`, alors que le commit B (marqué par `+`) doit encore être conservé pour qu'il soit envoyé pour être appliqué à `origin/master`."
 
 #. type: Title ~
 #: en/git-cherry.txt:105
 #, no-wrap, priority:100
 msgid "Using a limit"
-msgstr ""
+msgstr "Utilisation d'une limite"
 
 #. type: Plain text
 #: en/git-cherry.txt:110
 #, priority:100
 msgid "The optional <limit> is useful in cases where your topic is based on other work that is not in upstream.  Expanding on the previous example, this might look like:"
-msgstr ""
+msgstr "L'option <limite> est utile dans les cas où votre thème est basé sur d'autres travaux qui ne sont pas en amont.  En développant l'exemple précédent, cela pourrait ressembler à :"
 
 #. type: delimited block -
 #: en/git-cherry.txt:126
@@ -14193,13 +14193,13 @@ msgid ""
 "| * 0000aaa unpublished stuff A\n"
 "|/\n"
 "o 1234567 merge-base between upstream and topic\n"
-msgstr ""
+msgstr "$ git log --graph --oneline --decorate --boundary origin/master...topic\n* 7654321 (origin/master) upstream tip commit\n[... d'autres commits élidés ...]\n* cccc111 cherry-pick of C\n* aaaa111 cherry-pick of A\n[... encore plus d'historique élidé ...]\n| * cccc000 (topic) commit C\n| * bbbb000 commit B\n| * aaaa000 commit A\n| * 0000fff (base) unpublished stuff F\n[... élidé ...]\n| * 0000aaa unpublished stuff A\n|/\no 1234567 base de fusion entre amont et theme\n"
 
 #. type: Plain text
 #: en/git-cherry.txt:130
 #, priority:100
 msgid "By specifying `base` as the limit, you can avoid listing commits between `base` and `topic`:"
-msgstr ""
+msgstr "En spécifiant `base` comme limite, vous pouvez éviter de lister les commits entre `base` et `theme` :"
 
 #. type: delimited block -
 #: en/git-cherry.txt:136
@@ -14209,7 +14209,7 @@ msgid ""
 "- cccc000... commit C\n"
 "+ bbbb000... commit B\n"
 "- aaaa000... commit A\n"
-msgstr ""
+msgstr "$ git cherry origin/master theme base\n- cccc000... commit C\n+ bbbb000... commit B\n- aaaa000... commit A\n"
 
 #. type: Title =
 #: en/git-citool.txt:2
@@ -14221,7 +14221,7 @@ msgstr "git-citool(1)"
 #: en/git-citool.txt:7
 #, priority:100
 msgid "git-citool - Graphical alternative to git-commit"
-msgstr ""
+msgstr "git-citool - Alternative graphique à git-commit"
 
 #. type: Plain text
 #: en/git-citool.txt:12
@@ -14233,13 +14233,13 @@ msgstr "'git citool'\n"
 #: en/git-citool.txt:19
 #, priority:100
 msgid "A Tcl/Tk based graphical interface to review modified files, stage them into the index, enter a commit message and record the new commit onto the current branch.  This interface is an alternative to the less interactive 'git commit' program."
-msgstr ""
+msgstr "Une interface graphique basée sur Tcl/Tk pour revoir les fichiers modifiés, les mettre dans l'index, entrer un message de validation et enregistrer le nouveau commit sur la branche courante.  Cette interface est une alternative au programme moins interactif 'git commit'."
 
 #. type: Plain text
 #: en/git-citool.txt:22
 #, priority:100
 msgid "'git citool' is actually a standard alias for `git gui citool`.  See linkgit:git-gui[1] for more details."
-msgstr ""
+msgstr "'git citool' est en fait un alias standard pour `git gui citool`.  Voir linkgit:git-gui[1] pour plus de détails."
 
 #. type: Title =
 #: en/git-clean.txt:2
@@ -14263,19 +14263,19 @@ msgstr "'git clean' [-d] [-f] [-i] [-n] [-q] [-e <motif>] [-x | -X] [--] <chemin
 #: en/git-clean.txt:18
 #, priority:100
 msgid "Cleans the working tree by recursively removing files that are not under version control, starting from the current directory."
-msgstr ""
+msgstr "Nettoie l'arbre de travail en supprimant récursivement les fichiers qui ne sont pas sous contrôle de version, en commençant par le répertoire courant."
 
 #. type: Plain text
 #: en/git-clean.txt:22
 #, priority:100
 msgid "Normally, only files unknown to Git are removed, but if the `-x` option is specified, ignored files are also removed. This can, for example, be useful to remove all build products."
-msgstr ""
+msgstr "Normalement, seuls les fichiers inconnus de Git sont supprimés, mais si l'option `-x` est spécifiée, les fichiers ignorés sont également supprimés. Cela peut, par exemple, être utile pour supprimer tous les produits de construction."
 
 #. type: Plain text
 #: en/git-clean.txt:25
 #, ignore-ellipsis, priority:100
 msgid "If any optional `<path>...` arguments are given, only those paths are affected."
-msgstr ""
+msgstr "Si des arguments optionnels `<chemin>...` sont donnés, seuls ces chemins sont affectés."
 
 #. type: Plain text
 #: en/git-clean.txt:35
