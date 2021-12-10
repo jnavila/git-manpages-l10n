@@ -33,10 +33,35 @@ SECTIONS = {300: ["en/git-init.txt",
                   "en/git-pull.txt",
                   "en/git-push.txt",
                   "en/git-remote.txt",
-                  "en/git-submodule.txt"]
+                  "en/git-submodule.txt"],
+            90: ["en/git-cvsexportcommit.txt",
+                 "en/git-cvsimport.txt",
+                 "en/git-cvsserver.txt",
+                 "en/git-unpack-file.txt",
+                 "en/git-unpack-objects.txt",
+                 "en/git-fetch-pack.txt",
+                 "en/git-filter-branch.txt",
+                 "en/git-update-server-info.txt"
+                 "en/git-sh-i18n.txt",
+                 "en/git-sh-i18n--envsubst.txt",
+                 "en/git-send-pack.txt",
+                 "en/git-remote-ext.txt",
+                 "en/git-remote-fd.txt",
+                 "en/git-receive-pack.txt",
+                 "en/git-send-pack.txt",
+                 "en/git-p4.txt",
+                 "en/git-write-tree.txt",
+                 "en/git-symbolic-ref.txt"
+                 "en/git-merge-base.txt",
+                 "en/git-merge-file.txt",
+                 "en/git-merge-index.txt",
+                 "en/git-credential-cache--deamon.txt",
+                 "en/git-credential-cache.txt"
+                 ]
             }
 
 INCLUDE_REGEX = re.compile('''include::(.*)\\[\\]\n''')
+
 
 def process_file(filename, priority, priorities):
     basedirname = dirname(filename)
@@ -50,6 +75,7 @@ def process_file(filename, priority, priorities):
                     process_file(filename, priority, priorities)
     except Exception:
         print("could not find " + filename)
+
 
 def main(f_list):
     priorities = dict((source, section) for section in SECTIONS for source in SECTIONS[section])
