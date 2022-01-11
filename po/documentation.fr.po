@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Jean-Noël Avila <jn.avila@free.fr>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2021-10-31 17:03+0100\nPO-Revision-Date: 2021-11-12 16:52+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: Jean-Noël Avila <jn.avila@free.fr>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.9.1-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2021-10-31 17:03+0100\nPO-Revision-Date: 2022-01-09 18:52+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: Jean-Noël Avila <jn.avila@free.fr>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.10.1\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:754 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:128 en/git-status.txt:31
@@ -10886,13 +10886,13 @@ msgstr "Les colis créés en utilisant les exclusions de révision sont des \"pa
 #: en/git-bundle.txt:58
 #, priority:100
 msgid "There is no option to create a \"thick pack\" when using revision exclusions, and users should not be concerned about the difference. By using \"thin packs\", bundles created using exclusions are smaller in size. That they're \"thin\" under the hood is merely noted here as a curiosity, and as a reference to other documentation."
-msgstr ""
+msgstr "Il n'y a pas d'option pour créer un \"paquet épais\" lors de l'utilisation des exclusions de révision, et les utilisateurs ne doivent pas s'inquiéter de la différence. En utilisant des \"paquets minces\", les paquets créés à l'aide d'exclusions sont plus petits en taille. Le fait qu'ils soient \"minces\" sous le capot est simplement noté ici comme une curiosité, et comme une référence à d'autres documents."
 
 #. type: Plain text
 #: en/git-bundle.txt:63
 #, priority:100
 msgid "See link:technical/bundle-format.html[the `bundle-format` documentation] for more details and the discussion of \"thin pack\" in link:technical/pack-format.html[the pack format documentation] for further details."
-msgstr ""
+msgstr "Voir link:technical/bundle-format.html[la documentation `bundle-format`] pour plus de détails et la discussion sur le \"paquets fins\" dans link:technical/pack-format.html[la documentation sur le format du pack] pour plus de détails."
 
 #. type: Labeled list
 #: en/git-bundle.txt:67
@@ -11018,25 +11018,25 @@ msgstr "SPÉCIFICATION DES RÉFÉRENCES"
 #: en/git-bundle.txt:149
 #, priority:100
 msgid "Revisions must be accompanied by reference names to be packaged in a bundle."
-msgstr ""
+msgstr "Les révisions doivent être accompagnées de noms de référence pour être regroupées dans un colis."
 
 #. type: Plain text
 #: en/git-bundle.txt:153
 #, priority:100
 msgid "More than one reference may be packaged, and more than one set of prerequisite objects can be specified.  The objects packaged are those not contained in the union of the prerequisites."
-msgstr ""
+msgstr "Plus d'une référence peut être empaquetée, et plus d'un ensemble d'objets prérequis peut être spécifié.  Les objets empaquetés sont ceux qui ne sont pas contenus dans l'union des prérequis."
 
 #. type: Plain text
 #: en/git-bundle.txt:158
 #, priority:100
 msgid "The 'git bundle create' command resolves the reference names for you using the same rules as `git rev-parse --abbrev-ref=loose`. Each prerequisite can be specified explicitly (e.g. `^master~10`), or implicitly (e.g. `master~10..master`, `--since=10.days.ago master`)."
-msgstr ""
+msgstr "La commande 'git bundle create' résout les noms de référence pour vous en utilisant les mêmes règles que `git rev-parse --abbrev-ref=loose`. Chaque pré-requis peut être spécifié explicitement (par exemple `^master~10`), ou implicitement (par exemple `master~10..master`, `--since=10.days.ago master`)."
 
 #. type: Plain text
 #: en/git-bundle.txt:161
 #, priority:100
 msgid "All of these simple cases are OK (assuming we have a \"master\" and \"next\" branch):"
-msgstr ""
+msgstr "Tous ces cas simples sont OK (en supposant que nous avons des branches \"master\" et \"next\") :"
 
 #. type: delimited block -
 #: en/git-bundle.txt:167
@@ -11046,13 +11046,13 @@ msgid ""
 "$ echo master | git bundle create master.bundle --stdin\n"
 "$ git bundle create master-and-next.bundle master next\n"
 "$ (echo master; echo next) | git bundle create master-and-next.bundle --stdin\n"
-msgstr ""
+msgstr "$ git bundle create master.bundle master\n$ echo master | git bundle create master.bundle --stdin\n$ git bundle create master-and-next.bundle master next\n$ (echo master; echo next) | git bundle create master-and-next.bundle --stdin\n"
 
 #. type: Plain text
 #: en/git-bundle.txt:170
 #, priority:100
 msgid "And so are these (and the same but omitted `--stdin` examples):"
-msgstr ""
+msgstr "Et il en est de même pour ces exemples (et le même mais avec `--stdin` omis) :"
 
 #. type: delimited block -
 #: en/git-bundle.txt:174
@@ -11060,13 +11060,13 @@ msgstr ""
 msgid ""
 "$ git bundle create recent-master.bundle master~10..master\n"
 "$ git bundle create recent-updates.bundle master~10..master next~5..next\n"
-msgstr ""
+msgstr "$ git bundle create recent-master.bundle master~10..master\n$ git bundle create recent-updates.bundle master~10..master next~5..next\n"
 
 #. type: Plain text
 #: en/git-bundle.txt:178
 #, priority:100
 msgid "A revision name or a range whose right-hand-side cannot be resolved to a reference is not accepted:"
-msgstr ""
+msgstr "Un nom de révision ou un intervalle dont le côté droit ne peut être résolu en une référence n'est pas accepté :"
 
 #. type: delimited block -
 #: en/git-bundle.txt:184
@@ -11076,25 +11076,25 @@ msgid ""
 "fatal: Refusing to create empty bundle.\n"
 "$ git bundle create master-yesterday.bundle master~10..master~5\n"
 "fatal: Refusing to create empty bundle.\n"
-msgstr ""
+msgstr "$ git bundle create HEAD.bundle $(git rev-parse HEAD)\nfatal: Refus de créer un colis vide.\n$ git bundle create master-yesterday.bundle master~10..master~5\nfatal: Refus de créer un colis vide.\n"
 
 #. type: Title -
 #: en/git-bundle.txt:187
 #, no-wrap, priority:100
 msgid "OBJECT PREREQUISITES"
-msgstr ""
+msgstr "PRÉ-REQUIS D'OBJET"
 
 #. type: Plain text
 #: en/git-bundle.txt:193
 #, priority:100
 msgid "When creating bundles it is possible to create a self-contained bundle that can be unbundled in a repository with no common history, as well as providing negative revisions to exclude objects needed in the earlier parts of the history."
-msgstr ""
+msgstr "Lors de la création de colis, il est possible de créer un colis autonome qui peut être dégroupé dans un dépôt sans historique commun, ainsi que de fournir des révisions négatives pour exclure les objets nécessaires dans les parties antérieures de l'historique."
 
 #. type: Plain text
 #: en/git-bundle.txt:198
 #, priority:100
 msgid "Feeding a revision such as `new` to `git bundle create` will create a bundle file that contains all the objects reachable from the revision `new`. That bundle can be unbundled in any repository to obtain a full history that leads to the revision `new`:"
-msgstr ""
+msgstr "Fournir une révision telle que `nouveau` à `git bundle create` créera un fichier colis qui contient tous les objets accessibles depuis la révision `nouveau`. Ce colis peut être dégroupé dans n'importe quel dépôt pour obtenir un historique complet qui mène à la révision `nouveau` :"
 
 #. type: delimited block -
 #: en/git-bundle.txt:201
@@ -11106,7 +11106,7 @@ msgstr "$ git bundle create complet.bundle nouveau\n"
 #: en/git-bundle.txt:206
 #, priority:100
 msgid "A revision range such as `old..new` will produce a bundle file that will require the revision `old` (and any objects reachable from it)  to exist for the bundle to be \"unbundle\"-able:"
-msgstr ""
+msgstr "Une plage de révision telle que `ancien..nouveau` produira un fichier colis qui nécessitera l'existence de la révision `ancien` (et de tout objet pouvant être atteint à partir de celle-ci) pour que le colis puisse être \"dégroupé\" :"
 
 #. type: delimited block -
 #: en/git-bundle.txt:209
@@ -11118,7 +11118,7 @@ msgstr "$ git bundle create complet.bundle ancien..nouveau\n"
 #: en/git-bundle.txt:214
 #, priority:100
 msgid "A self-contained bundle without any prerequisites can be extracted into anywhere, even into an empty repository, or be cloned from (i.e., `new`, but not `old..new`)."
-msgstr ""
+msgstr "Un colis autonome sans pré-requis peut être extrait n'importe où, même dans un dépôt vide, ou peut être cloné (c-à-d, `nouveau`, mais pas `ancien..nouveau`)."
 
 #. type: Plain text
 #: en/git-bundle.txt:218
@@ -11136,7 +11136,7 @@ msgstr "Si vous voulez imiter `git clone --mirror`, qui inclurait vos refs comme
 #: en/git-bundle.txt:228
 #, priority:100
 msgid "The 'git bundle verify' command can be used to check whether your recipient repository has the required prerequisite commits for a bundle."
-msgstr ""
+msgstr "La commande 'git bundle verify' peut être utilisée pour vérifier si votre dépôt destinataire possède les commits pré-requis nécessaires pour un colis."
 
 #. type: Plain text
 #: en/git-bundle.txt:237
@@ -16614,7 +16614,7 @@ msgstr "En cas de succès, la commande renvoie le code de sortie 0."
 #: en/git-config.txt:76
 #, priority:100
 msgid "A list of all available configuration variables can be obtained using the `git help --config` command."
-msgstr ""
+msgstr "Une liste de toutes les variables de configuration disponibles peut être obtenue en utilisant la commande `git help --config`."
 
 #. type: Labeled list
 #: en/git-config.txt:81
@@ -16896,7 +16896,7 @@ msgstr "'bool-ou-int' : canoniser selon 'bool' ou 'int', comme décrit ci-dess
 #: en/git-config.txt:204
 #, priority:100
 msgid "'path': canonicalize by adding a leading `~` to the value of `$HOME` and `~user` to the home directory for the specified user. This specifier has no effect when setting the value (but you can use `git config section.variable ~/` from the command line to let your shell do the expansion.)"
-msgstr ""
+msgstr "'path' : canonise en ajoutant un `~` à la valeur de `$HOME` et `~user` au répertoire personnel de l'utilisateur spécifié. Ce spécificateur n'a aucun effet lors de la définition de la valeur (mais vous pouvez utiliser `git config section.variable ~/` depuis la ligne de commande pour laisser votre shell faire l'expansion)."
 
 #. type: Plain text
 #: en/git-config.txt:206
@@ -17004,31 +17004,31 @@ msgstr "--get-colorbool <nom> [<stdout-est-tty>]"
 #: en/git-config.txt:259
 #, priority:100
 msgid "Find the color setting for `name` (e.g. `color.diff`) and output \"true\" or \"false\".  `stdout-is-tty` should be either \"true\" or \"false\", and is taken into account when configuration says \"auto\".  If `stdout-is-tty` is missing, then checks the standard output of the command itself, and exits with status 0 if color is to be used, or exits with status 1 otherwise.  When the color setting for `name` is undefined, the command uses `color.ui` as fallback."
-msgstr ""
+msgstr "Trouver le paramètre de couleur pour `name` (par exemple, `color.diff`) et affiche \"true\" ou \"false\".  `stdout-est-tty` devrait être soit \"true\" soit \"false\", et est pris en compte lorsque la configuration est \"auto\".  Si `stdout-est-tty` est absent, alors vérifier la sortie standard de la commande elle-même, et sortir avec le statut 0 si la couleur doit être utilisée, ou sortir avec le statut 1 sinon.  Lorsque le paramètre de couleur pour `name` est indéfini, la commande utilise `color.ui` comme solution de repli."
 
 #. type: Labeled list
 #: en/git-config.txt:260
 #, no-wrap, priority:100
 msgid "--get-color name [default]"
-msgstr ""
+msgstr "--get-color <nom> [<défaut>]"
 
 #. type: Plain text
 #: en/git-config.txt:266
 #, priority:100
 msgid "Find the color configured for `name` (e.g. `color.diff.new`) and output it as the ANSI color escape sequence to the standard output.  The optional `default` parameter is used instead, if there is no color configured for `name`."
-msgstr ""
+msgstr "Trouver la couleur configurée pour `nom` (par exemple `color.diff.new`) et l'afficher comme séquence d'échappement de couleur ANSI sur la sortie standard.  Le paramètre optionnel `défaut` est utilisé à la place, s'il n'y a pas de couleur configurée pour `nom`."
 
 #. type: Plain text
 #: en/git-config.txt:270
 #, priority:100
 msgid "`--type=color [--default=<default>]` is preferred over `--get-color` (but note that `--get-color` will omit the trailing newline printed by `--type=color`)."
-msgstr ""
+msgstr "`--type=color [--default=<défaut>]` est préféré à `--get-color` (mais notez que `--get-color` omettra le caractère de nouvelle ligne final affiché par `--type=color`)."
 
 #. type: Plain text
 #: en/git-config.txt:275
 #, priority:100
 msgid "Opens an editor to modify the specified config file; either `--system`, `--global`, or repository (default)."
-msgstr ""
+msgstr "Ouvrir un éditeur pour modifier le fichier de configuration spécifié ; soit `--system`, `--global`, ou du dépôt (par défaut)."
 
 #. type: Labeled list
 #: en/git-config.txt:276
@@ -17040,7 +17040,7 @@ msgstr "--[no-]includes"
 #: en/git-config.txt:281
 #, priority:100
 msgid "Respect `include.*` directives in config files when looking up values. Defaults to `off` when a specific file is given (e.g., using `--file`, `--global`, etc) and `on` when searching all config files."
-msgstr ""
+msgstr "Respecter les directives `include.*` dans les fichiers de configuration lors de la recherche de valeurs. La valeur par défaut est `off` lorsqu'un fichier spécifique est donné (par exemple, en utilisant `--file`, `--global`, etc) et `on` lorsqu'on cherche dans tous les fichiers de configuration."
 
 #. type: Labeled list
 #: en/git-config.txt:282
@@ -17052,19 +17052,19 @@ msgstr "--default <valeur>"
 #: en/git-config.txt:285
 #, priority:100
 msgid "When using `--get`, and the requested variable is not found, behave as if <value> were the value assigned to the that variable."
-msgstr ""
+msgstr "Lors de l'utilisation de `--get`, et que la variable demandée n'est pas trouvée, se comporter comme si <valeur> était la valeur assignée à cette variable."
 
 #. type: Plain text
 #: en/git-config.txt:291
 #, priority:100
 msgid "`pager.config` is only respected when listing configuration, i.e., when using `--list` or any of the `--get-*` which may return multiple results.  The default is to use a pager."
-msgstr ""
+msgstr "`pager.config` n'est respecté que lors de l'énumération de la configuration, c'est-à-dire lors de l'utilisation de `--list` ou de l'un des `--get-*` qui peuvent retourner plusieurs résultats.  Le défaut est d'utiliser un pager."
 
 #. type: Plain text
 #: en/git-config.txt:298
 #, priority:100
 msgid "If not set explicitly with `--file`, there are four files where 'git config' will search for configuration options:"
-msgstr ""
+msgstr "Si ce n'est pas défini explicitement avec `--file`, il y a quatre fichiers où 'git config' cherchera des options de configuration :"
 
 #. type: Labeled list
 #: en/git-config.txt:299
@@ -17220,7 +17220,7 @@ msgstr "Si GIT_CONFIG_COUNT est défini comme un nombre positif, toutes les pair
 #: en/git-config.txt:372
 #, priority:100
 msgid "This is useful for cases where you want to spawn multiple git commands with a common configuration but cannot depend on a configuration file, for example when writing scripts."
-msgstr ""
+msgstr "C'est utile dans les cas où vous voulez lancer plusieurs commandes git avec une configuration commune mais ne pouvez pas dépendre d'un fichier de configuration, par exemple lorsque vous écrivez des scripts."
 
 #. type: Labeled list
 #: en/git-config.txt:373
@@ -17232,13 +17232,13 @@ msgstr "GIT_CONFIG"
 #: en/git-config.txt:379
 #, priority:100
 msgid "If no `--file` option is provided to `git config`, use the file given by `GIT_CONFIG` as if it were provided via `--file`. This variable has no effect on other Git commands, and is mostly for historical compatibility; there is generally no reason to use it instead of the `--file` option."
-msgstr ""
+msgstr "Si aucune option `--file` n'est fournie à `git config`, utiliser le fichier donné par `GIT_CONFIG` comme s'il était fourni via `--file`. Cette variable n'a aucun effet sur les autres commandes Git, et est surtout destinée à assurer une compatibilité historique ; il n'y a généralement aucune raison de l'utiliser à la place de l'option `--file`."
 
 #. type: Plain text
 #: en/git-config.txt:385
 #, priority:100
 msgid "Given a .git/config like this:"
-msgstr ""
+msgstr "Avec un .git/config comme ceci :"
 
 #. type: delimited block -
 #: en/git-config.txt:392
@@ -17249,7 +17249,7 @@ msgid ""
 "# a '#' or ';' character indicates\n"
 "# a comment\n"
 "#\n"
-msgstr ""
+msgstr "#\n# C'est le fichier de configuration, et\n# un caractère '#' ou ';' indique\n# un commentaire\n#\n"
 
 #. type: delimited block -
 #: en/git-config.txt:397 en/git.txt:357
@@ -17273,7 +17273,7 @@ msgid ""
 "[diff]\n"
 "\texternal = /usr/local/bin/diff-wrapper\n"
 "\trenames = true\n"
-msgstr ""
+msgstr "; Notre algorithme de diff\n[diff]\n\texternal = /usr/local/bin/diff-wrapper\n\trenames = true\n"
 
 #. type: delimited block -
 #: en/git-config.txt:407
@@ -17283,7 +17283,7 @@ msgid ""
 "[core]\n"
 "\tgitproxy=proxy-command for kernel.org\n"
 "\tgitproxy=default-proxy ; for all the rest\n"
-msgstr ""
+msgstr "; paramètres du proxy\n[core]\n\tgitproxy=proxy-command pour kernel.org\n\tgitproxy=default-proxy ; pour tout le reste\n"
 
 #. type: delimited block -
 #: en/git-config.txt:414
@@ -17295,157 +17295,157 @@ msgid ""
 "[http \"https://weak.example.com\"]\n"
 "\tsslVerify = false\n"
 "\tcookieFile = /tmp/cookie.txt\n"
-msgstr ""
+msgstr "; HTTP\n[http]\n\tsslVerify\n[http \"https://weak.example.com\"]\n\tsslVerify = false\n\tcookieFile = /tmp/cookie.txt\n"
 
 #. type: Plain text
 #: en/git-config.txt:417
 #, priority:100
 msgid "you can set the filemode to true with"
-msgstr ""
+msgstr "vous pouvez mettre le filemode à true avec"
 
 #. type: delimited block -
 #: en/git-config.txt:420
 #, no-wrap, priority:100
 msgid "% git config core.filemode true\n"
-msgstr ""
+msgstr "% git config core.filemode true\n"
 
 #. type: Plain text
 #: en/git-config.txt:425
 #, priority:100
 msgid "The hypothetical proxy command entries actually have a postfix to discern what URL they apply to. Here is how to change the entry for kernel.org to \"ssh\"."
-msgstr ""
+msgstr "Les entrées hypothétiques de la commande proxy ont en fait un postfix pour discerner l'URL à laquelle elles s'appliquent. Voici comment changer l'entrée pour kernel.org en \"ssh\"."
 
 #. type: delimited block -
 #: en/git-config.txt:428
 #, no-wrap, priority:100
 msgid "% git config core.gitproxy '\"ssh\" for kernel.org' 'for kernel.org$'\n"
-msgstr ""
+msgstr "% git config core.gitproxy '<\"ssh\" pour kernel.org>' 'for kernel.org$'\n"
 
 #. type: Plain text
 #: en/git-config.txt:431
 #, priority:100
 msgid "This makes sure that only the key/value pair for kernel.org is replaced."
-msgstr ""
+msgstr "Cela permet de s'assurer que seule la paire clé/valeur de kernel.org est remplacée."
 
 #. type: Plain text
 #: en/git-config.txt:433
 #, priority:100
 msgid "To delete the entry for renames, do"
-msgstr ""
+msgstr "Pour supprimer l'entrée pour les renommages, faites"
 
 #. type: delimited block -
 #: en/git-config.txt:436
 #, no-wrap, priority:100
 msgid "% git config --unset diff.renames\n"
-msgstr ""
+msgstr "% git config --unset diff.renames\n"
 
 #. type: Plain text
 #: en/git-config.txt:440
 #, priority:100
 msgid "If you want to delete an entry for a multivar (like core.gitproxy above), you have to provide a regex matching the value of exactly one line."
-msgstr ""
+msgstr "Si vous voulez supprimer une entrée pour un multivar (comme core.gitproxy ci-dessus), vous devez fournir une regex correspondant à la valeur d'exactement une ligne."
 
 #. type: Plain text
 #: en/git-config.txt:442
 #, priority:100
 msgid "To query the value for a given key, do"
-msgstr ""
+msgstr "Pour demander la valeur d'une clef donnée, faites"
 
 #. type: delimited block -
 #: en/git-config.txt:445
 #, no-wrap, priority:100
 msgid "% git config --get core.filemode\n"
-msgstr ""
+msgstr "% git config --get core.filemode\n"
 
 #. type: Plain text
 #: en/git-config.txt:448 en/git-merge-index.txt:66
 #, priority:100
 msgid "or"
-msgstr ""
+msgstr "ou"
 
 #. type: delimited block -
 #: en/git-config.txt:451
 #, no-wrap, priority:100
 msgid "% git config core.filemode\n"
-msgstr ""
+msgstr "% git config core.filemode\n"
 
 #. type: Plain text
 #: en/git-config.txt:454
 #, priority:100
 msgid "or, to query a multivar:"
-msgstr ""
+msgstr "ou, pour interroger un multivar :"
 
 #. type: delimited block -
 #: en/git-config.txt:457
 #, no-wrap, priority:100
 msgid "% git config --get core.gitproxy \"for kernel.org$\"\n"
-msgstr ""
+msgstr "% git config --get core.gitproxy \"for kernel.org$\"\n"
 
 #. type: Plain text
 #: en/git-config.txt:460
 #, priority:100
 msgid "If you want to know all the values for a multivar, do:"
-msgstr ""
+msgstr "Si vous voulez connaître toutes les valeurs d’un multivar, faites :"
 
 #. type: delimited block -
 #: en/git-config.txt:463
 #, no-wrap, priority:100
 msgid "% git config --get-all core.gitproxy\n"
-msgstr ""
+msgstr "% git config --get-all core.gitproxy\n"
 
 #. type: Plain text
 #: en/git-config.txt:467
 #, priority:100
 msgid "If you like to live dangerously, you can replace *all* core.gitproxy by a new one with"
-msgstr ""
+msgstr "Si vous aimez vivre dangereusement, vous pouvez remplacer *tout* core.gitproxy par une nouvelle valeur avec"
 
 #. type: delimited block -
 #: en/git-config.txt:470
 #, no-wrap, priority:100
 msgid "% git config --replace-all core.gitproxy ssh\n"
-msgstr ""
+msgstr "% git config --replace-all core.gitproxy ssh\n"
 
 #. type: Plain text
 #: en/git-config.txt:474
 #, ignore-ellipsis, priority:100
 msgid "However, if you really only want to replace the line for the default proxy, i.e. the one without a \"for ...\" postfix, do something like this:"
-msgstr ""
+msgstr "Cependant, si vous voulez seulement remplacer la ligne pour le proxy par défaut, c'est-à-dire celui sans postfixe \"for ...\", faites quelque chose comme ceci :"
 
 #. type: delimited block -
 #: en/git-config.txt:477
 #, no-wrap, priority:100
 msgid "% git config core.gitproxy ssh '! for '\n"
-msgstr ""
+msgstr "% git config core.gitproxy ssh '! for '\n"
 
 #. type: Plain text
 #: en/git-config.txt:480
 #, priority:100
 msgid "To actually match only values with an exclamation mark, you have to"
-msgstr ""
+msgstr "Pour ne faire correspondre que les valeurs comportant un point d'exclamation, vous devez"
 
 #. type: delimited block -
 #: en/git-config.txt:483
 #, no-wrap, priority:100
 msgid "% git config section.key value '[!]'\n"
-msgstr ""
+msgstr "% git config section.key value '[!]'\n"
 
 #. type: Plain text
 #: en/git-config.txt:486
 #, priority:100
 msgid "To add a new proxy, without altering any of the existing ones, use"
-msgstr ""
+msgstr "Pour ajouter un nouveau proxy, sans modifier aucun des proxy existants, utilisez"
 
 #. type: delimited block -
 #: en/git-config.txt:489
 #, no-wrap, priority:100
 msgid "% git config --add core.gitproxy '\"proxy-command\" for example.com'\n"
-msgstr ""
+msgstr "% git config --add core.gitproxy '\"proxy-command\" for example.com'\n"
 
 #. type: Plain text
 #: en/git-config.txt:493
 #, priority:100
 msgid "An example to use customized color from the configuration in your script:"
-msgstr ""
+msgstr "Un exemple d'utilisation de la couleur personnalisée de la configuration dans votre script :"
 
 #. type: delimited block -
 #: en/git-config.txt:499
@@ -17455,13 +17455,13 @@ msgid ""
 "WS=$(git config --get-color color.diff.whitespace \"blue reverse\")\n"
 "RESET=$(git config --get-color \"\" \"reset\")\n"
 "echo \"${WS}your whitespace color or blue reverse${RESET}\"\n"
-msgstr ""
+msgstr "#!/bin/sh\nWS=$(git config --get-color color.diff.whitespace \"blue reverse\")\nRESET=$(git config --get-color \"\" \"reset\")\necho \"${WS}your whitespace color or blue reverse${RESET}\"\n"
 
 #. type: Plain text
 #: en/git-config.txt:503
 #, priority:100
 msgid "For URLs in `https://weak.example.com`, `http.sslVerify` is set to false, while it is set to `true` for all others:"
-msgstr ""
+msgstr "Pour les URLs dans `https://weak.example.com`, `http.sslVerify` est mis à false, alors qu'il est mis à `true` pour toutes les autres :"
 
 #. type: delimited block -
 #: en/git-config.txt:512
@@ -17474,7 +17474,7 @@ msgid ""
 "% git config --get-urlmatch http https://weak.example.com\n"
 "http.cookieFile /tmp/cookie.txt\n"
 "http.sslverify false\n"
-msgstr ""
+msgstr "% git config --type=bool --get-urlmatch http.sslverify https://good.example.com\ntrue\n% git config --type=bool --get-urlmatch http.sslverify https://weak.example.com\nfalse\n% git config --get-urlmatch http https://weak.example.com\nhttp.cookieFile /tmp/cookie.txt\nhttp.sslverify false\n"
 
 #. type: Title -
 #: en/git-config.txt:517 en/git-describe.txt:202 en/git-fetch.txt:289 en/git-mv.txt:56 en/git-pack-refs.txt:64 en/git-pull.txt:240 en/git-replace.txt:139 en/git-rm.txt:190 en/git-svn.txt:1150 en/git-worktree.txt:485
@@ -17486,7 +17486,7 @@ msgstr "BOGUES"
 #: en/git-config.txt:522
 #, priority:100
 msgid "When using the deprecated `[section.subsection]` syntax, changing a value will result in adding a multi-line key instead of a change, if the subsection is given with at least one uppercase character. For example when the config looks like"
-msgstr ""
+msgstr "Lors de l'utilisation de la syntaxe dépréciée `[section.sous-section]`, la modification d'une valeur entraînera l'ajout d'une clé multi-lignes au lieu d'une modification, si la sous-section est donnée avec au moins un caractère majuscule. Par exemple, lorsque la configuration ressemble à"
 
 #. type: delimited block -
 #: en/git-config.txt:526
@@ -17494,13 +17494,13 @@ msgstr ""
 msgid ""
 "  [section.subsection]\n"
 "    key = value1\n"
-msgstr ""
+msgstr "  [section.sous-section]\n    clé = valeur1\n"
 
 #. type: Plain text
 #: en/git-config.txt:529
 #, priority:100
 msgid "and running `git config section.Subsection.key value2` will result in"
-msgstr ""
+msgstr "et l'exécution de `git config section.sous-section.clé valeur2` donnera comme résultat"
 
 #. type: delimited block -
 #: en/git-config.txt:534
@@ -17509,7 +17509,7 @@ msgid ""
 "  [section.subsection]\n"
 "    key = value1\n"
 "    key = value2\n"
-msgstr ""
+msgstr "  [section.sous-section]\n    clé = valeur1\n    clé = valeur 2\n"
 
 #. type: Title =
 #: en/git-count-objects.txt:2
@@ -17521,7 +17521,7 @@ msgstr "git-count-objects(1)"
 #: en/git-count-objects.txt:7
 #, priority:100
 msgid "git-count-objects - Count unpacked number of objects and their disk consumption"
-msgstr ""
+msgstr "git-count-objects - Compte le nombre d'objets non emballés et leur consommation disque"
 
 #. type: Plain text
 #: en/git-count-objects.txt:12
@@ -17533,13 +17533,13 @@ msgstr "'git count-objects' [-v] [-H | --human-readable]\n"
 #: en/git-count-objects.txt:17
 #, priority:100
 msgid "This counts the number of unpacked object files and disk space consumed by them, to help you decide when it is a good time to repack."
-msgstr ""
+msgstr "Cette commande compte le nombre de fichiers objets décompressés et l'espace disque qu'ils consomment, pour vous aider à décider quand il est temps de ré-empaqueter."
 
 #. type: Plain text
 #: en/git-count-objects.txt:24
 #, priority:100
 msgid "Report in more detail:"
-msgstr ""
+msgstr "Rapporter plus en détail :"
 
 #. type: Plain text
 #: en/git-count-objects.txt:26
@@ -17551,49 +17551,49 @@ msgstr "compte : le nombre d'objets perdus"
 #: en/git-count-objects.txt:28
 #, priority:100
 msgid "size: disk space consumed by loose objects, in KiB (unless -H is specified)"
-msgstr ""
+msgstr "size : espace disque consommé par les objets libres, en Kio (sauf si -H est spécifié)"
 
 #. type: Plain text
 #: en/git-count-objects.txt:30
 #, priority:100
 msgid "in-pack: the number of in-pack objects"
-msgstr ""
+msgstr "in-pack : le nombre d'objets in-pack"
 
 #. type: Plain text
 #: en/git-count-objects.txt:32
 #, priority:100
 msgid "size-pack: disk space consumed by the packs, in KiB (unless -H is specified)"
-msgstr ""
+msgstr "size-pack : espace disque consommé par les paquets, en Kio (sauf si -H est spécifié)"
 
 #. type: Plain text
 #: en/git-count-objects.txt:35
 #, priority:100
 msgid "prune-packable: the number of loose objects that are also present in the packs. These objects could be pruned using `git prune-packed`."
-msgstr ""
+msgstr "prune-packable : le nombre d'objets libres qui sont également présents dans les paquets. Ces objets peuvent être élagués en utilisant `git prune-packed`."
 
 #. type: Plain text
 #: en/git-count-objects.txt:38
 #, priority:100
 msgid "garbage: the number of files in object database that are neither valid loose objects nor valid packs"
-msgstr ""
+msgstr "garbage : le nombre de fichiers dans la base de données d'objets qui ne sont ni des objects lâches ni des paquets valides"
 
 #. type: Plain text
 #: en/git-count-objects.txt:41
 #, priority:100
 msgid "size-garbage: disk space consumed by garbage files, in KiB (unless -H is specified)"
-msgstr ""
+msgstr "size-garbage : espace disque consommé par les fichiers poubelle, en Kio (sauf si -H est spécifié)"
 
 #. type: Plain text
 #: en/git-count-objects.txt:46
 #, priority:100
 msgid "alternate: absolute path of alternate object databases; may appear multiple times, one line per path. Note that if the path contains non-printable characters, it may be surrounded by double-quotes and contain C-style backslashed escape sequences."
-msgstr ""
+msgstr "alternate : chemin absolu des bases de données d'objets alternatifs ; peut apparaître plusieurs fois, une ligne par chemin. Notez que si le chemin d'accès contient des caractères non imprimables, il peut être entouré de guillemets doubles et contenir des séquences d'échappement antislash de style C."
 
 #. type: Labeled list
 #: en/git-count-objects.txt:47 en/git-cvsserver.txt:61 en/git-grep.txt:114
 #, no-wrap, priority:100
 msgid "-H"
-msgstr ""
+msgstr "-H"
 
 #. type: Labeled list
 #: en/git-count-objects.txt:48
@@ -17617,31 +17617,31 @@ msgstr "git-credential-cache--daemon(1)"
 #: en/git-credential-cache--daemon.txt:7
 #, priority:100
 msgid "git-credential-cache--daemon - Temporarily store user credentials in memory"
-msgstr ""
+msgstr "git-credential-cache--daemon - Stocke temporairement les informations d'identification de l'utilisateur en mémoire"
 
 #. type: Plain text
 #: en/git-credential-cache--daemon.txt:12
 #, no-wrap, priority:100
 msgid "git credential-cache--daemon [--debug] <socket>\n"
-msgstr ""
+msgstr "git credential-cache--daemon [--debug] <socket>\n"
 
 #. type: Plain text
 #: en/git-credential-cache--daemon.txt:18
 #, priority:100
 msgid "You probably don't want to invoke this command yourself; it is started automatically when you use linkgit:git-credential-cache[1]."
-msgstr ""
+msgstr "Vous ne voudrez probablement pas invoquer cette commande vous-même ; elle est lancée automatiquement lorsque vous utilisez linkgit:git-credential-cache[1]."
 
 #. type: Plain text
 #: en/git-credential-cache--daemon.txt:23
 #, priority:100
 msgid "This command listens on the Unix domain socket specified by `<socket>` for `git-credential-cache` clients. Clients may store and retrieve credentials. Each credential is held for a timeout specified by the client; once no credentials are held, the daemon exits."
-msgstr ""
+msgstr "Cette commande écoute les clients `git-credential-cache` sur le socket de domaine Unix spécifié par `<socket>`. Les clients peuvent stocker et récupérer des informations d'identification. Chaque justificatif est conservé pendant un délai spécifié par le client ; une fois qu'aucun justificatif n'est conservé, le démon se termine."
 
 #. type: Plain text
 #: en/git-credential-cache--daemon.txt:27
 #, priority:100
 msgid "If the `--debug` option is specified, the daemon does not close its stderr stream, and may output extra diagnostics to it even after it has begun listening for clients."
-msgstr ""
+msgstr "Si l'option `--debug` est spécifiée, le daemon ne ferme pas son flux stderr, et peut y émettre des diagnostics supplémentaires même après avoir commencé à écouter les clients."
 
 #. type: Title =
 #: en/git-credential-cache.txt:2
@@ -17653,37 +17653,37 @@ msgstr "git-credential-cache(1)"
 #: en/git-credential-cache.txt:7
 #, priority:100
 msgid "git-credential-cache - Helper to temporarily store passwords in memory"
-msgstr ""
+msgstr "git-credential-cache - Aide pour stocker temporairement les mots de passe en mémoire"
 
 #. type: delimited block -
 #: en/git-credential-cache.txt:12
 #, no-wrap, priority:100
 msgid "git config credential.helper 'cache [<options>]'\n"
-msgstr ""
+msgstr "git config credential.helper 'cache [<options>]'\n"
 
 #. type: Plain text
 #: en/git-credential-cache.txt:21
 #, priority:100
 msgid "This command caches credentials in memory for use by future Git programs. The stored credentials never touch the disk, and are forgotten after a configurable timeout.  The cache is accessible over a Unix domain socket, restricted to the current user by filesystem permissions."
-msgstr ""
+msgstr "Cette commande met en cache les informations d'identification en mémoire pour être utilisées par les futurs programmes Git. Les informations d'identification stockées ne touchent jamais le disque, et sont oubliées après un délai configurable.  Le cache est accessible via un socket de domaine Unix, limité à l'utilisateur actuel par les permissions du système de fichiers."
 
 #. type: Plain text
 #: en/git-credential-cache.txt:25
 #, priority:100
 msgid "You probably don't want to invoke this command directly; it is meant to be used as a credential helper by other parts of Git. See linkgit:gitcredentials[7] or `EXAMPLES` below."
-msgstr ""
+msgstr "Vous n'avez probablement pas envie d'invoquer cette commande directement ; elle est destinée à être utilisée comme une aide à l'identification par d'autres parties de Git. Voir linkgit:gitcredentials[7] ou `EXEMPLES` ci-dessous."
 
 #. type: Labeled list
 #: en/git-credential-cache.txt:29
 #, no-wrap, priority:100
 msgid "--timeout <seconds>"
-msgstr ""
+msgstr "--timeout <secondes>"
 
 #. type: Plain text
 #: en/git-credential-cache.txt:32
 #, priority:100
 msgid "Number of seconds to cache credentials (default: 900)."
-msgstr ""
+msgstr "Nombre de secondes pour mettre en cache les informations d'identification (par défaut : 900)."
 
 #. type: Labeled list
 #: en/git-credential-cache.txt:33
@@ -17695,19 +17695,19 @@ msgstr "--socket <chemin>"
 #: en/git-credential-cache.txt:43
 #, priority:100
 msgid "Use `<path>` to contact a running cache daemon (or start a new cache daemon if one is not started).  Defaults to `$XDG_CACHE_HOME/git/credential/socket` unless `~/.git-credential-cache/` exists in which case `~/.git-credential-cache/socket` is used instead.  If your home directory is on a network-mounted filesystem, you may need to change this to a local filesystem. You must specify an absolute path."
-msgstr ""
+msgstr "Utiliser `<chemin>` pour contacter un démon de cache en cours d'exécution (ou démarrer un nouveau démon de cache s'il n'en existe pas).  La valeur par défaut est `$XDG_CACHE_HOME/git/credential/socket` sauf si `~/.git-credential-cache/` existe, auquel cas `~/.git-credential-cache/socket` est utilisé à la place.  Si votre répertoire personnel est sur un système de fichiers monté sur le réseau, vous devrez peut-être le changer pour un système de fichiers local. Vous devez spécifier un chemin absolu."
 
 #. type: Title -
 #: en/git-credential-cache.txt:45
 #, no-wrap, priority:100
 msgid "CONTROLLING THE DAEMON"
-msgstr ""
+msgstr "CONTRÔLER LE DAEMON"
 
 #. type: Plain text
 #: en/git-credential-cache.txt:49
 #, priority:100
 msgid "If you would like the daemon to exit early, forgetting all cached credentials before their timeout, you can issue an `exit` action:"
-msgstr ""
+msgstr "Si vous souhaitez que le daemon se termine prématurément, en oubliant toutes les informations d'identification mises en cache avant leur expiration, vous pouvez lancer une action `exit` :"
 
 #. type: delimited block -
 #: en/git-credential-cache.txt:52
@@ -17719,7 +17719,7 @@ msgstr "git credential-cache exit\n"
 #: en/git-credential-cache.txt:59 en/git-credential-store.txt:75
 #, priority:100
 msgid "The point of this helper is to reduce the number of times you must type your username or password. For example:"
-msgstr ""
+msgstr "Le but de cette aide est de réduire le nombre de fois où vous devez taper votre nom d'utilisateur ou votre mot de passe. Par exemple :"
 
 #. type: delimited block -
 #: en/git-credential-cache.txt:65
@@ -17729,7 +17729,7 @@ msgid ""
 "$ git push http://example.com/repo.git\n"
 "Username: <type your username>\n"
 "Password: <type your password>\n"
-msgstr ""
+msgstr "$ git config credential.helper cache\n$ git push http://example.com/repo.git\nNom d'utilisateur : <Tapez votre nom d'utilisateur>\nMot de passe : <Tapez votre mot de passe>\n"
 
 #. type: delimited block -
 #: en/git-credential-cache.txt:69
@@ -17738,19 +17738,19 @@ msgid ""
 "[work for 5 more minutes]\n"
 "$ git push http://example.com/repo.git\n"
 "[your credentials are used automatically]\n"
-msgstr ""
+msgstr "[travail pendant 5 minutes de plus]\n$ git push http://example.com/repo.git\n[vos informations d'identification sont utilisées automatiquement]\n"
 
 #. type: Plain text
 #: en/git-credential-cache.txt:73
 #, priority:100
 msgid "You can provide options via the credential.helper configuration variable (this example drops the cache time to 5 minutes):"
-msgstr ""
+msgstr "Vous pouvez fournir des options via la variable de configuration credential.helper (dans cet exemple, le temps de cache est réduit à 5 minutes) :"
 
 #. type: delimited block -
 #: en/git-credential-cache.txt:76
 #, no-wrap, priority:100
 msgid "$ git config credential.helper 'cache --timeout=300'\n"
-msgstr ""
+msgstr "$ git config credential.helper 'cache --timeout=300'\n"
 
 #. type: Title =
 #: en/git-credential-store.txt:2
@@ -17762,31 +17762,31 @@ msgstr "git-credential-store(1)"
 #: en/git-credential-store.txt:7
 #, priority:100
 msgid "git-credential-store - Helper to store credentials on disk"
-msgstr ""
+msgstr "git-credential-store - Aide pour stocker les informations d'identification sur disque"
 
 #. type: delimited block -
 #: en/git-credential-store.txt:12
 #, no-wrap, priority:100
 msgid "git config credential.helper 'store [<options>]'\n"
-msgstr ""
+msgstr "git config credential.helper 'store [<options>]'\n"
 
 #. type: Plain text
 #: en/git-credential-store.txt:21
 #, priority:100
 msgid "Using this helper will store your passwords unencrypted on disk, protected only by filesystem permissions. If this is not an acceptable security tradeoff, try linkgit:git-credential-cache[1], or find a helper that integrates with secure storage provided by your operating system."
-msgstr ""
+msgstr "L'utilisation de cette aide stockera vos mots de passe en clair sur le disque, protégés uniquement par les permissions du système de fichiers. Si ce n'est pas un compromis de sécurité acceptable, essayez linkgit:git-credential-cache[1], ou trouvez une aide qui s'intègre au stockage sécurisé fourni par votre système d'exploitation."
 
 #. type: Plain text
 #: en/git-credential-store.txt:24
 #, priority:100
 msgid "This command stores credentials indefinitely on disk for use by future Git programs."
-msgstr ""
+msgstr "Cette commande stocke les informations d'identification indéfiniment sur le disque pour être utilisées par de futurs programmes Git."
 
 #. type: Plain text
 #: en/git-credential-store.txt:28
 #, priority:100
 msgid "You probably don't want to invoke this command directly; it is meant to be used as a credential helper by other parts of git. See linkgit:gitcredentials[7] or `EXAMPLES` below."
-msgstr ""
+msgstr "Vous ne voudrez probablement pas invoquer cette commande directement ; elle est destinée à être utilisée comme une aide pour les informations d'identification par d'autres parties de git. Voir linkgit:gitcredentials[7] ou `EXEMPLES` ci-dessous."
 
 #. type: Labeled list
 #: en/git-credential-store.txt:32
@@ -17798,13 +17798,13 @@ msgstr "--file=<chemin>"
 #: en/git-credential-store.txt:42
 #, priority:100
 msgid "Use `<path>` to lookup and store credentials. The file will have its filesystem permissions set to prevent other users on the system from reading it, but will not be encrypted or otherwise protected. If not specified, credentials will be searched for from `~/.git-credentials` and `$XDG_CONFIG_HOME/git/credentials`, and credentials will be written to `~/.git-credentials` if it exists, or `$XDG_CONFIG_HOME/git/credentials` if it exists and the former does not. See also <<FILES>>."
-msgstr ""
+msgstr "Utilisez `<chemin>` pour rechercher et stocker les informations d'identification. Les permissions du système de fichiers du fichier seront définies pour empêcher les autres utilisateurs du système de le lire, mais il ne sera pas crypté ou protégé d'une autre manière. Si rien n'est spécifié, les informations d'identification seront recherchées dans `~/.git-credentials` et `$XDG_CONFIG_HOME/git/credentials`, et les informations d'identification seront écrites dans `~/.git-credentials` s'il existe, ou dans `$XDG_CONFIG_HOME/git/credentials` s'il existe et que le premier n'existe pas. Voir aussi <<FICHIERS>>."
 
 #. type: Plain text
 #: en/git-credential-store.txt:49
 #, priority:100
 msgid "If not set explicitly with `--file`, there are two files where git-credential-store will search for credentials in order of precedence:"
-msgstr ""
+msgstr "S'il n'est pas défini explicitement avec `--file`, il y a deux fichiers dans lesquels git-credential-store cherchera les informations d'identification par ordre de préséance :"
 
 #. type: Labeled list
 #: en/git-credential-store.txt:50
@@ -17816,37 +17816,37 @@ msgstr "~/.git-credentials"
 #: en/git-credential-store.txt:52
 #, priority:100
 msgid "User-specific credentials file."
-msgstr ""
+msgstr "Fichier d'informations d'identification spécifique à l'utilisateur."
 
 #. type: Labeled list
 #: en/git-credential-store.txt:53
 #, no-wrap, priority:100
 msgid "$XDG_CONFIG_HOME/git/credentials"
-msgstr ""
+msgstr "$XDG_CONFIG_HOME/git/credentials"
 
 #. type: Plain text
 #: en/git-credential-store.txt:59
 #, priority:100
 msgid "Second user-specific credentials file. If '$XDG_CONFIG_HOME' is not set or empty, `$HOME/.config/git/credentials` will be used. Any credentials stored in this file will not be used if `~/.git-credentials` has a matching credential as well. It is a good idea not to create this file if you sometimes use older versions of Git that do not support it."
-msgstr ""
+msgstr "Deuxième fichier d'informations d'identification spécifique à l'utilisateur. Si '$XDG_CONFIG_HOME' n'est pas défini ou est vide, `$HOME/.config/git/credentials` sera utilisé. Toutes les informations d'identification stockées dans ce fichier ne seront pas utilisées si `~/.git-credentials` a également des informations d'identification correspondantes. C'est une bonne idée de ne pas créer ce fichier si vous utilisez parfois d'anciennes versions de Git qui ne le supportent pas."
 
 #. type: Plain text
 #: en/git-credential-store.txt:63
 #, priority:100
 msgid "For credential lookups, the files are read in the order given above, with the first matching credential found taking precedence over credentials found in files further down the list."
-msgstr ""
+msgstr "Pour la recherche des informations d'identification, les fichiers sont lus dans l'ordre indiqué ci-dessus, la première information d'identification trouvée étant prioritaire sur les informations d'identification trouvées dans les fichiers plus bas dans la liste."
 
 #. type: Plain text
 #: en/git-credential-store.txt:67
 #, priority:100
 msgid "Credential storage will by default write to the first existing file in the list. If none of these files exist, `~/.git-credentials` will be created and written to."
-msgstr ""
+msgstr "Le stockage des informations d'identification sera par défaut écrit dans le premier fichier existant de la liste. Si aucun de ces fichiers n'existe, `~/.git-credentials` sera créé et écrit."
 
 #. type: Plain text
 #: en/git-credential-store.txt:69
 #, priority:100
 msgid "When erasing credentials, matching credentials will be erased from all files."
-msgstr ""
+msgstr "Lors de l'effacement des informations d'identification, les informations d'identification correspondantes seront effacées de tous les fichiers."
 
 #. type: delimited block -
 #: en/git-credential-store.txt:81
@@ -17856,7 +17856,7 @@ msgid ""
 "$ git push http://example.com/repo.git\n"
 "Username: <type your username>\n"
 "Password: <type your password>\n"
-msgstr ""
+msgstr "$ git config credential.helper store\n$ git push http://example.com/repo.git\nNom d'utilisateur : <Tapez votre nom d'utilisateur>\nMot de passe : <Tapez votre mot de passe>\n"
 
 #. type: delimited block -
 #: en/git-credential-store.txt:85
@@ -17865,7 +17865,7 @@ msgid ""
 "[several days later]\n"
 "$ git push http://example.com/repo.git\n"
 "[your credentials are used automatically]\n"
-msgstr ""
+msgstr "[plusieurs jours plus tard]\n$ git push http://example.com/repo.git\n[vos informations d'identification sont utilisées automatiquement]\n"
 
 #. type: Title -
 #: en/git-credential-store.txt:88
@@ -17877,25 +17877,25 @@ msgstr "FORMAT DE STOCKAGE"
 #: en/git-credential-store.txt:92
 #, priority:100
 msgid "The `.git-credentials` file is stored in plaintext. Each credential is stored on its own line as a URL like:"
-msgstr ""
+msgstr "Le fichier `.git-credentials` est stocké en texte clair. Chaque identité est stockée sur sa propre ligne comme une URL comme :"
 
 #. type: delimited block -
 #: en/git-credential-store.txt:95
 #, no-wrap, priority:100
 msgid "https://user:pass@example.com\n"
-msgstr ""
+msgstr "https://user:pass@example.com\n"
 
 #. type: Plain text
 #: en/git-credential-store.txt:100
 #, priority:100
 msgid "No other kinds of lines (e.g. empty lines or comment lines) are allowed in the file, even though some may be silently ignored. Do not view or edit the file with editors."
-msgstr ""
+msgstr "Aucun autre type de ligne (par exemple, les lignes vides ou les lignes de commentaire) n'est autorisé dans le fichier, même si certaines peuvent être ignorées en silence. Ne visualisez pas et ne modifiez pas le fichier avec des éditeurs."
 
 #. type: Plain text
 #: en/git-credential-store.txt:107
 #, priority:100
 msgid "When Git needs authentication for a particular URL context, credential-store will consider that context a pattern to match against each entry in the credentials file.  If the protocol, hostname, and username (if we already have one) match, then the password is returned to Git. See the discussion of configuration in linkgit:gitcredentials[7] for more information."
-msgstr ""
+msgstr "Lorsque Git a besoin d'une authentification pour un contexte d'URL particulier, credential-store va considérer ce contexte comme un motif à faire correspondre à chaque entrée du fichier credentials.  Si le protocole, le nom d'hôte et le nom d'utilisateur (si nous en avons déjà un) correspondent, alors le mot de passe est renvoyé à Git. Voir la discussion sur la configuration dans linkgit:gitcredentials[7] pour plus d'informations."
 
 #. type: Title =
 #: en/git-credential.txt:2
@@ -17907,73 +17907,73 @@ msgstr "git-credential(1)"
 #: en/git-credential.txt:7
 #, priority:100
 msgid "git-credential - Retrieve and store user credentials"
-msgstr ""
+msgstr "git-credential - Récupère et stocke les informations d'identification de l'utilisateur"
 
 #. type: delimited block -
 #: en/git-credential.txt:12
 #, no-wrap, priority:100
 msgid "git credential <fill|approve|reject>\n"
-msgstr ""
+msgstr "git credential [fill|approve|reject]\n"
 
 #. type: Plain text
 #: en/git-credential.txt:24
 #, priority:100
 msgid "Git has an internal interface for storing and retrieving credentials from system-specific helpers, as well as prompting the user for usernames and passwords. The git-credential command exposes this interface to scripts which may want to retrieve, store, or prompt for credentials in the same manner as Git. The design of this scriptable interface models the internal C API; see credential.h for more background on the concepts."
-msgstr ""
+msgstr "Git possède une interface interne pour stocker et récupérer les informations d'identification à partir d'assistants spécifiques au système, ainsi que pour demander à l'utilisateur des noms d'utilisateur et des mots de passe. La commande git-credential expose cette interface aux scripts qui peuvent vouloir récupérer, stocker ou demander des informations d'identification de la même manière que Git. La conception de cette interface scriptable modélise l'API C interne ; voir credential.h pour plus de détails sur les concepts."
 
 #. type: Plain text
 #: en/git-credential.txt:28
 #, priority:100
 msgid "git-credential takes an \"action\" option on the command-line (one of `fill`, `approve`, or `reject`) and reads a credential description on stdin (see <<IOFMT,INPUT/OUTPUT FORMAT>>)."
-msgstr ""
+msgstr "git-credential prend une option \"action\" sur la ligne de commande (une parmi `fill`, `approve`, ou `reject`) et lit une description de credential sur stdin (voir <<IOFMT, FORMAT D'ENTRÉE/SORTIE>>)."
 
 #. type: Plain text
 #: en/git-credential.txt:35
 #, priority:100
 msgid "If the action is `fill`, git-credential will attempt to add \"username\" and \"password\" attributes to the description by reading config files, by contacting any configured credential helpers, or by prompting the user. The username and password attributes of the credential description are then printed to stdout together with the attributes already provided."
-msgstr ""
+msgstr "Si l'action est `fill`, git-credential tentera d'ajouter les attributs \"username\" et \"password\" à la description en lisant les fichiers de configuration, en contactant les assistants d'authentification configurés, ou en demandant à l'utilisateur. Les attributs \"username\" et \"password\" de la description de l'authentification sont ensuite imprimés sur stdout avec les attributs déjà fournis."
 
 #. type: Plain text
 #: en/git-credential.txt:39
 #, priority:100
 msgid "If the action is `approve`, git-credential will send the description to any configured credential helpers, which may store the credential for later use."
-msgstr ""
+msgstr "Si l'action est `approve`, git-credential enverra la description à tout assistant d'accréditation configuré, qui peut stocker l'accréditation pour une utilisation ultérieure."
 
 #. type: Plain text
 #: en/git-credential.txt:43
 #, priority:100
 msgid "If the action is `reject`, git-credential will send the description to any configured credential helpers, which may erase any stored credential matching the description."
-msgstr ""
+msgstr "Si l'action est `reject`, git-credential enverra la description à tous les assistants d'authentification configurés, qui peuvent effacer toute authentification stockée correspondant à la description."
 
 #. type: Plain text
 #: en/git-credential.txt:45
 #, priority:100
 msgid "If the action is `approve` or `reject`, no output should be emitted."
-msgstr ""
+msgstr "Si l'action est `approve` ou `reject`, aucune sortie ne doit être émise."
 
 #. type: Title -
 #: en/git-credential.txt:47
 #, no-wrap, priority:100
 msgid "TYPICAL USE OF GIT CREDENTIAL"
-msgstr ""
+msgstr "UTILISATION TYPIQUE DE L'AUTHENTIFICATION GIT"
 
 #. type: Plain text
 #: en/git-credential.txt:51
 #, priority:100
 msgid "An application using git-credential will typically use `git credential` following these steps:"
-msgstr ""
+msgstr "Une application utilisant git-credential utilisera typiquement `git credential` en suivant ces étapes :"
 
 #. type: Plain text
 #: en/git-credential.txt:53
 #, priority:100
 msgid "Generate a credential description based on the context."
-msgstr ""
+msgstr "Générer une description d'authentification basée sur le contexte."
 
 #. type: Plain text
 #: en/git-credential.txt:59
 #, priority:100
 msgid "For example, if we want a password for `https://example.com/foo.git`, we might generate the following credential description (don't forget the blank line at the end; it tells `git credential` that the application finished feeding all the information it has):"
-msgstr ""
+msgstr "Par exemple, si nous voulons un mot de passe pour `https://example.com/foo.git`, nous pourrions générer la description d'authentification suivante (n'oubliez pas la ligne blanche à la fin ; elle indique à `git credential` que l'application a fini de fournir toutes les informations dont elle dispose) :"
 
 #. type: Plain text
 #: en/git-credential.txt:63
@@ -17982,13 +17982,13 @@ msgid ""
 "\t protocol=https\n"
 "\t host=example.com\n"
 "\t path=foo.git\n"
-msgstr ""
+msgstr "\t protocol=https\n\t host=example.com\n\t path=foo.git\n"
 
 #. type: Plain text
 #: en/git-credential.txt:69
 #, priority:100
 msgid "Ask git-credential to give us a username and password for this description. This is done by running `git credential fill`, feeding the description from step (1) to its standard input. The complete credential description (including the credential per se, i.e. the login and password) will be produced on standard output, like:"
-msgstr ""
+msgstr "Demander à git-credential de nous donner un nom d'utilisateur et un mot de passe pour cette description. Ceci est fait en exécutant `git credential fill`, en fournissant la description de l'étape (1) à son entrée standard. La description complète des identifiants (incluant l'identification elle-même, c'est-à-dire le nom d'utilisateur et le mot de passe) sera produite sur la sortie standard, comme :"
 
 #. type: Plain text
 #: en/git-credential.txt:74
@@ -17998,61 +17998,61 @@ msgid ""
 "host=example.com\n"
 "username=bob\n"
 "password=secr3t\n"
-msgstr ""
+msgstr "protocol=https\nhost=example.com\nusername=bob\npassword=secr3t\n"
 
 #. type: Plain text
 #: en/git-credential.txt:79
 #, priority:100
 msgid "In most cases, this means the attributes given in the input will be repeated in the output, but Git may also modify the credential description, for example by removing the `path` attribute when the protocol is HTTP(s) and `credential.useHttpPath` is false."
-msgstr ""
+msgstr "Dans la plupart des cas, cela signifie que les attributs donnés en entrée seront répétés en sortie, mais Git peut aussi modifier la description des identifiants, par exemple en supprimant l'attribut `path` lorsque le protocole est HTTP(s) et que `credential.useHttpPath` est faux."
 
 #. type: Plain text
 #: en/git-credential.txt:85
 #, priority:100
 msgid "If the `git credential` knew about the password, this step may not have involved the user actually typing this password (the user may have typed a password to unlock the keychain instead, or no user interaction was done if the keychain was already unlocked) before it returned `password=secr3t`."
-msgstr ""
+msgstr "Si le `git credential` connaissait le mot de passe, cette étape peut ne pas avoir impliqué que l'utilisateur tape réellement ce mot de passe (l'utilisateur peut avoir tapé un mot de passe pour déverrouiller le trousseau à la place, ou aucune interaction de l'utilisateur n'a été faite si le trousseau était déjà déverrouillé) avant de retourner `password=secr3t`."
 
 #. type: Plain text
 #: en/git-credential.txt:88
 #, priority:100
 msgid "Use the credential (e.g., access the URL with the username and password from step (2)), and see if it's accepted."
-msgstr ""
+msgstr "Utiliser le justificatif d'identité (par exemple, accéder à l'URL avec le nom d'utilisateur et le mot de passe de l'étape (2)), et voir s'il est accepté."
 
 #. type: Plain text
 #: en/git-credential.txt:98
 #, priority:100
 msgid "Report on the success or failure of the password. If the credential allowed the operation to complete successfully, then it can be marked with an \"approve\" action to tell `git credential` to reuse it in its next invocation. If the credential was rejected during the operation, use the \"reject\" action so that `git credential` will ask for a new password in its next invocation. In either case, `git credential` should be fed with the credential description obtained from step (2) (which also contain the ones provided in step (1))."
-msgstr ""
+msgstr "Rapporter sur le succès ou l'échec du mot de passe. Si l'identifiant a permis à l'opération de se terminer avec succès, il peut être marqué avec une action \"approve\" pour dire à `git credential` de le réutiliser dans sa prochaine invocation. Si l'identifiant a été rejeté pendant l'opération, utiliser l'action \"reject\" pour que `git credential` demande un nouveau mot de passe lors de sa prochaine invocation. Dans les deux cas, `git credential` doit être alimenté avec la description de l'identifiant obtenue à l'étape (2) (qui contient également celle fournie à l'étape (1))."
 
 #. type: Title -
 #: en/git-credential.txt:101
 #, no-wrap, priority:100
 msgid "INPUT/OUTPUT FORMAT"
-msgstr ""
+msgstr "FORMAT D'ENTRÉE/SORTIE"
 
 #. type: Plain text
 #: en/git-credential.txt:108
 #, priority:100
 msgid "`git credential` reads and/or writes (depending on the action used)  credential information in its standard input/output. This information can correspond either to keys for which `git credential` will obtain the login information (e.g. host, protocol, path), or to the actual credential data to be obtained (username/password)."
-msgstr ""
+msgstr "`git credential` lit et/ou écrit (en fonction de l'action utilisée) des informations d'identification dans son entrée/sortie standard. Ces informations peuvent correspondre soit à des clés pour lesquelles `git credential` obtiendra les informations de connexion (par exemple, hôte, protocole, chemin), soit aux données d'identification réelles à obtenir (nom d'utilisateur/mot de passe)."
 
 #. type: Plain text
 #: en/git-credential.txt:112
 #, priority:100
 msgid "The credential is split into a set of named attributes, with one attribute per line. Each attribute is specified by a key-value pair, separated by an `=` (equals) sign, followed by a newline."
-msgstr ""
+msgstr "L'identifiant est divisé en un ensemble d'attributs nommés, avec un attribut par ligne. Chaque attribut est spécifié par une paire clé-valeur, séparée par un signe `=` (égal), suivi d'une nouvelle ligne."
 
 #. type: Plain text
 #: en/git-credential.txt:115
 #, priority:100
 msgid "The key may contain any bytes except `=`, newline, or NUL. The value may contain any bytes except newline or NUL."
-msgstr ""
+msgstr "La clé peut contenir n'importe quel octet sauf `=`, newline ou NUL. La valeur peut contenir n'importe quel octet, à l'exception de newline ou NUL."
 
 #. type: Plain text
 #: en/git-credential.txt:119
 #, priority:100
 msgid "In both cases, all bytes are treated as-is (i.e., there is no quoting, and one cannot transmit a value with newline or NUL in it). The list of attributes is terminated by a blank line or end-of-file."
-msgstr ""
+msgstr "Dans les deux cas, tous les octets sont traités tels quels (c'est-à-dire qu'il n'y a pas de guillemets et qu'on ne peut pas transmettre une valeur contenant une nouvelle ligne ou NUL). La liste des attributs se termine par une ligne blanche ou une fin de fichier."
 
 #. type: Plain text
 #: en/git-credential.txt:121
@@ -18070,7 +18070,7 @@ msgstr "`protocol`"
 #: en/git-credential.txt:126
 #, priority:100
 msgid "The protocol over which the credential will be used (e.g., `https`)."
-msgstr ""
+msgstr "Le protocole sur lequel l'identifiant sera utilisé (par exemple, `https`)."
 
 #. type: Labeled list
 #: en/git-credential.txt:127
@@ -18082,7 +18082,7 @@ msgstr "`host`"
 #: en/git-credential.txt:131
 #, priority:100
 msgid "The remote hostname for a network credential.  This includes the port number if one was specified (e.g., \"example.com:8088\")."
-msgstr ""
+msgstr "Le nom d'hôte distant pour un identifiant réseau.  Cela inclut le numéro de port s'il a été spécifié (par exemple, \"exemple.com:8088\")."
 
 #. type: Labeled list
 #: en/git-credential.txt:132
@@ -18094,7 +18094,7 @@ msgstr "`path`"
 #: en/git-credential.txt:137
 #, priority:100
 msgid "The path with which the credential will be used. E.g., for accessing a remote https repository, this will be the repository's path on the server."
-msgstr ""
+msgstr "Le chemin avec lequel l'identifiant sera utilisé. Par exemple, pour accéder à un référentiel https distant, ce sera le chemin du référentiel sur le serveur."
 
 #. type: Labeled list
 #: en/git-credential.txt:138
@@ -18106,7 +18106,7 @@ msgstr "`username`"
 #: en/git-credential.txt:142
 #, priority:100
 msgid "The credential's username, if we already have one (e.g., from a URL, the configuration, the user, or from a previously run helper)."
-msgstr ""
+msgstr "Le nom d'utilisateur de l'identifiant, si nous en avons déjà un (par exemple, à partir d'une URL, de la configuration, de l'utilisateur ou d'une aide précédemment exécutée)."
 
 #. type: Labeled list
 #: en/git-credential.txt:143
@@ -18118,7 +18118,7 @@ msgstr "`password`"
 #: en/git-credential.txt:146
 #, priority:100
 msgid "The credential's password, if we are asking it to be stored."
-msgstr ""
+msgstr "Le mot de passe de l'identifiant, si nous demandons qu'il soit stocké."
 
 #. type: Labeled list
 #: en/git-credential.txt:147
@@ -18130,19 +18130,19 @@ msgstr "`url`"
 #: en/git-credential.txt:154
 #, priority:100
 msgid "When this special attribute is read by `git credential`, the value is parsed as a URL and treated as if its constituent parts were read (e.g., `url=https://example.com` would behave as if `protocol=https` and `host=example.com` had been provided). This can help callers avoid parsing URLs themselves."
-msgstr ""
+msgstr "Lorsque cet attribut spécial est lu par `git credential`, la valeur est analysée comme une URL et traitée comme si ses parties constitutives étaient lues (par exemple, `url=https://example.com` se comporterait comme si `protocol=https` et `host=example.com` avaient été fournis). Cela peut aider les appelants à éviter d'analyser eux-mêmes les URL."
 
 #. type: Plain text
 #: en/git-credential.txt:159
 #, priority:100
 msgid "Note that specifying a protocol is mandatory and if the URL doesn't specify a hostname (e.g., \"cert:///path/to/file\") the credential will contain a hostname attribute whose value is an empty string."
-msgstr ""
+msgstr "Notez que la spécification d'un protocole est obligatoire et que si l'URL ne spécifie pas de nom d'hôte (par exemple, \"cert:///chemin/vers/un/fichier\"), l'identifiant contiendra un attribut de nom d'hôte dont la valeur est une chaîne vide."
 
 #. type: Plain text
 #: en/git-credential.txt:162
 #, priority:100
 msgid "Components which are missing from the URL (e.g., there is no username in the example above) will be left unset."
-msgstr ""
+msgstr "Les composants qui manquent dans l'URL (par exemple, il n'y a pas de nom d'utilisateur dans l'exemple ci-dessus) ne seront pas définis."
 
 #. type: Title =
 #: en/git-cvsexportcommit.txt:2
@@ -18154,7 +18154,7 @@ msgstr "git-cvsexportcommit(1)"
 #: en/git-cvsexportcommit.txt:7
 #, priority:100
 msgid "git-cvsexportcommit - Export a single commit to a CVS checkout"
-msgstr ""
+msgstr "git-cvsexportcommit - Exporter un seul commit vers une extraction CVS"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:14
@@ -18162,103 +18162,103 @@ msgstr ""
 msgid ""
 "'git cvsexportcommit' [-h] [-u] [-v] [-c] [-P] [-p] [-a] [-d cvsroot]\n"
 "\t[-w cvsworkdir] [-W] [-f] [-m msgprefix] [PARENTCOMMIT] COMMITID\n"
-msgstr ""
+msgstr "git cvsexportcommit' [-h] [-u] [-v] [-c] [-P] [-p] [-a] [-d cvsroot]\n\t[-w cvsworkdir] [-W] [-f] [-m <préfixe-msg>] [<commit-parent>] <id-commit>\n"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:20
 #, priority:100
 msgid "Exports a commit from Git to a CVS checkout, making it easier to merge patches from a Git repository into a CVS repository."
-msgstr ""
+msgstr "Exporte un commit de Git vers une extraction CVS, ce qui facilite la fusion des rustines d'un dépôt Git vers un dépôt CVS."
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:24
 #, priority:100
 msgid "Specify the name of a CVS checkout using the -w switch or execute it from the root of the CVS working copy. In the latter case GIT_DIR must be defined. See examples below."
-msgstr ""
+msgstr "Spécifier le nom d'une extraction CVS en utilisant le commutateur -w ou l'exécuter depuis la racine de la copie de travail CVS. Dans ce dernier cas, GIT_DIR doit être défini. Voir les exemples ci-dessous."
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:28
 #, priority:100
 msgid "It does its best to do the safe thing, it will check that the files are unchanged and up to date in the CVS checkout, and it will not autocommit by default."
-msgstr ""
+msgstr "Il fait de son mieux pour faire ce qui est le plus sûr, il vérifiera que les fichiers sont inchangés et à jour dans le checkout CVS, et il ne fera pas d'autocommit par défaut."
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:30
 #, priority:100
 msgid "Supports file additions, removals, and commits that affect binary files."
-msgstr ""
+msgstr "Prend en charge les ajouts, les suppressions et les modifications de fichiers qui affectent les fichiers binaires."
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:33
 #, priority:100
 msgid "If the commit is a merge commit, you must tell 'git cvsexportcommit' what parent the changeset should be done against."
-msgstr ""
+msgstr "Si le commit est un commit de fusion, vous devez dire à 'git cvsexportcommit' contre quel parent le changeset doit être fait."
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:40
 #, priority:100
 msgid "Commit automatically if the patch applied cleanly. It will not commit if any hunks fail to apply or there were other problems."
-msgstr ""
+msgstr "La validation est automatique si la rustine s'est appliquée proprement. Il ne sera pas validé si des sections n'ont pas été appliquées ou s'il y a eu d'autres problèmes."
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:44
 #, priority:100
 msgid "Be pedantic (paranoid) when applying patches. Invokes patch with --fuzz=0"
-msgstr ""
+msgstr "Mode pédant (paranoïaque) lors de l’application de rustines. Appelle `patch` avec --fuzz=0"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:48
 #, priority:100
 msgid "Add authorship information. Adds Author line, and Committer (if different from Author) to the message."
-msgstr ""
+msgstr "Ajouter des informations sur l'auteur. Ajoute la ligne Auteur, et Validateur (si différent de l'auteur) au message."
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:53
 #, priority:100
 msgid "Set an alternative CVSROOT to use.  This corresponds to the CVS -d parameter.  Usually users will not want to set this, except if using CVS in an asymmetric fashion."
-msgstr ""
+msgstr "Définir un CVSROOT alternatif à utiliser.  Ceci correspond au paramètre CVS -d.  En général, les utilisateurs ne souhaitent pas définir ce paramètre, sauf s'ils utilisent CVS de manière asymétrique."
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:56
 #, priority:100
 msgid "Force the merge even if the files are not up to date."
-msgstr ""
+msgstr "Force la fusion même si les fichiers ne sont pas à jour."
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:59
 #, priority:100
 msgid "Force the parent commit, even if it is not a direct parent."
-msgstr ""
+msgstr "Forcer le commit parent , même s’il ne s’agit pas d’un parent direct."
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:63
 #, priority:100
 msgid "Prepend the commit message with the provided prefix.  Useful for patch series and the like."
-msgstr ""
+msgstr "Préfixe le message de validation avec le préfixe fourni.  Utile pour les séries de patchs et autres."
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:66
 #, priority:100
 msgid "Update affected files from CVS repository before attempting export."
-msgstr ""
+msgstr "Mettre à jour les fichiers affectés du dépôt CVS avant de tenter l'exportation."
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:70
 #, priority:100
 msgid "Reverse CVS keyword expansion (e.g. $Revision: 1.2.3.4$ becomes $Revision$) in working CVS checkout before applying patch."
-msgstr ""
+msgstr "Inverser l'expansion des mots-clés CVS (par exemple, $Revision : 1.2.3.4$ devient $Revision$) dans l'extraction CVS de travail avant d'appliquer la rustine."
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:76
 #, priority:100
 msgid "Specify the location of the CVS checkout to use for the export. This option does not require GIT_DIR to be set before execution if the current directory is within a Git repository.  The default is the value of 'cvsexportcommit.cvsdir'."
-msgstr ""
+msgstr "Spécifier l'emplacement de l'extraction CVS à utiliser pour l'exportation. Cette option ne nécessite pas que GIT_DIR soit défini avant l'exécution si le répertoire actuel se trouve dans un dépôt Git.  La valeur par défaut est celle de 'cvsexportcommit.cvsdir'."
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:81
 #, priority:100
 msgid "Tell cvsexportcommit that the current working directory is not only a Git checkout, but also the CVS checkout.  Therefore, Git will reset the working directory to the parent commit before proceeding."
-msgstr ""
+msgstr "Indiquer à cvsexportcommit que le répertoire de travail actuel n'est pas seulement une extraction Git, mais aussi une extraction CVS.  Par conséquent, Git réinitialisera le répertoire de travail au commit parent avant de poursuivre."
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:84
@@ -18276,13 +18276,13 @@ msgstr "cvsexportcommit.cvsdir"
 #: en/git-cvsexportcommit.txt:89
 #, priority:100
 msgid "The default location of the CVS checkout to use for the export."
-msgstr ""
+msgstr "L'emplacement par défaut de l'extraction CVS à utiliser pour l'exportation."
 
 #. type: Labeled list
 #: en/git-cvsexportcommit.txt:93
 #, no-wrap, priority:100
 msgid "Merge one patch into CVS"
-msgstr ""
+msgstr "Fusionner une rustine dans le CVS"
 
 #. type: delimited block -
 #: en/git-cvsexportcommit.txt:100
@@ -18292,25 +18292,25 @@ msgid ""
 "$ cd ~/project_cvs_checkout\n"
 "$ git cvsexportcommit -v <commit-sha1>\n"
 "$ cvs commit -F .msg <files>\n"
-msgstr ""
+msgstr "$ export GIT_DIR=~/project/.git\n$ cd ~/project_cvs_checkout\n$ git cvsexportcommit -v <sha1-commit>\n$ cvs commit -F .msg <fichiers>\n"
 
 #. type: Labeled list
 #: en/git-cvsexportcommit.txt:102
 #, no-wrap, priority:100
 msgid "Merge one patch into CVS (-c and -w options). The working directory is within the Git Repo"
-msgstr ""
+msgstr "Fusionner une rustine dans CVS (options -c et -w). Le répertoire de travail se trouve dans le dépôt Git"
 
 #. type: delimited block -
 #: en/git-cvsexportcommit.txt:106
 #, no-wrap, priority:100
 msgid "\t$ git cvsexportcommit -v -c -w ~/project_cvs_checkout <commit-sha1>\n"
-msgstr ""
+msgstr "\t$ git cvsexportcommit -v -c -w ~/projet_cvs_extrait <sha1-commit>\n"
 
 #. type: Labeled list
 #: en/git-cvsexportcommit.txt:108
 #, no-wrap, priority:100
 msgid "Merge pending patches into CVS automatically -- only if you really know what you are doing"
-msgstr ""
+msgstr "Fusionner automatiquement les rustines en attente dans CVS - seulement si vous savez vraiment ce que vous faites"
 
 #. type: delimited block -
 #: en/git-cvsexportcommit.txt:114
@@ -18319,7 +18319,7 @@ msgid ""
 "$ export GIT_DIR=~/project/.git\n"
 "$ cd ~/project_cvs_checkout\n"
 "$ git cherry cvshead myhead | sed -n 's/^+ //p' | xargs -l1 git cvsexportcommit -c -p -v\n"
-msgstr ""
+msgstr "$ export GIT_DIR=~/projet/.git\n$ cd ~/projet_cvs_extrait\n$ git cherry cvshead mahead | sed -n 's/^+ //p' | xargs -l1 git cvsexportcommit -c -p -v\n"
 
 #. type: Title =
 #: en/git-cvsimport.txt:2
@@ -18342,7 +18342,7 @@ msgid ""
 "\t      [-C <git_repository>] [-z <fuzz>] [-i] [-k] [-u] [-s <subst>]\n"
 "\t      [-a] [-m] [-M <regex>] [-S <regex>] [-L <commitlimit>]\n"
 "\t      [-r <remote>] [-R] [<CVS_module>]\n"
-msgstr ""
+msgstr "'git cvsimport' [-o <branche-pour-HEAD>] [-h] [-v] [-d <CVSROOT>]\n\t      [-A <fichier-conv-auteur>] [-p <options-pour-cvsps>] [-P <fichier>]\n\t      [-C <depot-git>] [-z <fuzz>] [-i] [-k] [-u] [-s <subst>]\n\t      [-a] [-m] [-M <regex>] [-S <regex>] [-L <limite-commit>]\n\t      [-r <distant>] [-R] [<module-CVS>]\n"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:26
@@ -18353,19 +18353,19 @@ msgid ""
 "performing a one-shot import of a CVS repository consider using\n"
 "http://cvs2svn.tigris.org/cvs2git.html[cvs2git] or\n"
 "http://www.catb.org/esr/cvs-fast-export/[cvs-fast-export].\n"
-msgstr ""
+msgstr "*ATTENTION* : 'git cvsimport' utilise cvsps version 2, qui est considéré comme\nobsolète; il ne fonctionne pas avec cvsps version 3 et ultérieure.  Si vous \neffectuez une importation en une fois d’un dépôt CVS envisagez d’utiliser\nhttp://cvs2svn.tigris.org/cvs2git.html[cvs2git] ou\nhttp://www.catb.org/esr/cvs-fast-export/[cvs-fast-export].\n"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:29
 #, priority:100
 msgid "Imports a CVS repository into Git. It will either create a new repository, or incrementally import into an existing one."
-msgstr ""
+msgstr "Importe un dépôt CVS dans Git. Il créera un nouveau dépôt, ou importera de manière incrémentielle dans un dépôt existant."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:32
 #, priority:100
 msgid "Splitting the CVS log into patch sets is done by 'cvsps'.  At least version 2.1 is required."
-msgstr ""
+msgstr "La division du journal CVS en ensembles de rustines est effectuée par'cvsps'.  La version 2.1 au moins est requise."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:35
@@ -18373,37 +18373,37 @@ msgstr ""
 msgid ""
 "*WARNING:* for certain situations the import leads to incorrect results.\n"
 "Please see the section <<issues,ISSUES>> for further reference.\n"
-msgstr ""
+msgstr "*ATTENTION* : pour certaines situations, l’importation entraîne des résultats incorrects.\nVeuillez consulter la section <<problèmes,PROBLÈMES>> pour plus de référence.\n"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:42
 #, priority:100
 msgid "You should *never* do any work of your own on the branches that are created by 'git cvsimport'.  By default initial import will create and populate a \"master\" branch from the CVS repository's main branch which you're free to work with; after that, you need to 'git merge' incremental imports, or any CVS branches, yourself.  It is advisable to specify a named remote via -r to separate and protect the incoming branches."
-msgstr ""
+msgstr "Vous ne devez *jamais* effectuer de travail personnel sur les branches créées par 'git cvsimport'.  Par défaut, l'importation initiale créera et alimentera une branche `master` à partir de la branche principale du dépôt CVS avec laquelle vous êtes libre de travailler ; après cela, vous devez `git merge` les importations incrémentales, ou toute branche CVS, vous-même.  Il est conseillé de spécifier un distant nommé via -r pour séparer et protéger les branches entrantes."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:48
 #, priority:100
 msgid "If you intend to set up a shared public repository that all developers can read/write, or if you want to use linkgit:git-cvsserver[1], then you probably want to make a bare clone of the imported repository, and use the clone as the shared repository.  See linkgit:gitcvs-migration[7]."
-msgstr ""
+msgstr "Si vous avez l'intention de mettre en place un dépôt public partagé que tous les développeurs peuvent lire/écrire, ou si vous voulez utiliser linkgit:git-cvsserver[1], alors vous voudrez probablement faire un clone nu du dépôt importé, et utiliser le clone comme dépôt partagé.  Voir linkgit:gitcvs-migration[7]."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:54
 #, priority:100
 msgid "Verbosity: let 'cvsimport' report what it is doing."
-msgstr ""
+msgstr "Verbosité : laisser 'cvsimport' rapporter ce qu'il fait."
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:55
 #, no-wrap, priority:100
 msgid "-d <CVSROOT>"
-msgstr ""
+msgstr "-d<CVSROOT>"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:61
 #, priority:100
 msgid "The root of the CVS archive. May be local (a simple path) or remote; currently, only the :local:, :ext: and :pserver: access methods are supported. If not given, 'git cvsimport' will try to read it from `CVS/Root`. If no such file exists, it checks for the `CVSROOT` environment variable."
-msgstr ""
+msgstr "La racine de l'archive CVS. Peut être local (un chemin simple) ou distant ; actuellement, seules les méthodes d'accès :local:, :ext: et :pserver: sont prises en charge. S'il n'est pas fourni, 'git cvsimport' essaiera de le lire à partir de 'CVS/Root'. Si aucun fichier de ce type n'existe, il recherche la variable d'environnement `CVSROOT`."
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:62
@@ -18415,13 +18415,13 @@ msgstr "<module_CVS>"
 #: en/git-cvsimport.txt:66
 #, priority:100
 msgid "The CVS module you want to import. Relative to <CVSROOT>.  If not given, 'git cvsimport' tries to read it from `CVS/Repository`."
-msgstr ""
+msgstr "Module CVS que vous souhaitez importer. Par rapport à <CVSROOT>.  S’il n’est pas donné, 'git cvsimport' essaie de le lire à partir de 'CVS/Repository'."
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:67
 #, no-wrap, priority:100
 msgid "-C <target-dir>"
-msgstr ""
+msgstr "-C <rép-cible>"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:70
@@ -18433,109 +18433,109 @@ msgstr "Le dépôt Git dans lequel importer.  Si le répertoire n'existe pas, il
 #: en/git-cvsimport.txt:71
 #, no-wrap, priority:100
 msgid "-r <remote>"
-msgstr ""
+msgstr "-r<distant>"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:75
 #, priority:100
 msgid "The Git remote to import this CVS repository into.  Moves all CVS branches into remotes/<remote>/<branch> akin to the way 'git clone' uses 'origin' by default."
-msgstr ""
+msgstr "Le distant Git dans lequel importer ce dépôt CVS. Déplace toutes les branches CVS dans remotes/<distant>/<branche> de la même manière que 'git clone' utilise 'origin' par défaut."
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:76
 #, no-wrap, priority:100
 msgid "-o <branch-for-HEAD>"
-msgstr ""
+msgstr "-o <branche-pour-HEAD>"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:84
 #, priority:100
 msgid "When no remote is specified (via -r) the `HEAD` branch from CVS is imported to the 'origin' branch within the Git repository, as `HEAD` already has a special meaning for Git.  When a remote is specified the `HEAD` branch is named remotes/<remote>/master mirroring 'git clone' behaviour.  Use this option if you want to import into a different branch."
-msgstr ""
+msgstr "Lorsqu’aucun distant n’est spécifié (via -r), la branche 'HEAD' de CVS est importée dans la branche 'origin' du dépôt Git, car 'HEAD' a déjà une signification particulière pour Git.  Lorsqu’un distant est spécifié, la branche 'HEAD' est nommée remotes/<distant>/master qui miroite le comportement de 'git clone'.  Utilisez cette option si vous souhaitez importer dans une autre branche."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:87
 #, priority:100
 msgid "Use '-o master' for continuing an import that was initially done by the old cvs2git tool."
-msgstr ""
+msgstr "Utilisez '-o master' pour poursuivre une importation qui a été initialement effectuée par l’ancien outil cvs2git."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:92
 #, priority:100
 msgid "Import-only: don't perform a checkout after importing.  This option ensures the working directory and index remain untouched and will not create them if they do not exist."
-msgstr ""
+msgstr "Importation uniquement : ne pas effectuer d'extraction après l’importation.  Cette option garantit que le répertoire de travail et l’index restent intacts et ne les créeront pas s’ils n’existent pas."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:97
 #, priority:100
 msgid "Kill keywords: will extract files with '-kk' from the CVS archive to avoid noisy changesets. Highly recommended, but off by default to preserve compatibility with early imported trees."
-msgstr ""
+msgstr "Tuer les mots-clés : extraira les fichiers avec '-kk' de l’archive CVS pour éviter les changements bruyants. Fortement recommandé, mais désactivé par défaut pour préserver la compatibilité avec les premiers arbres importés."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:100
 #, priority:100
 msgid "Convert underscores in tag and branch names to dots."
-msgstr ""
+msgstr "Convertir les traits de soulignement en points dans les noms d'étiquette et de branche."
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:101
 #, no-wrap, priority:100
 msgid "-s <subst>"
-msgstr ""
+msgstr "-s <subst>"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:103
 #, priority:100
 msgid "Substitute the character \"/\" in branch names with <subst>"
-msgstr ""
+msgstr "Remplacer le caractère \"/\" dans les noms de branche par <subst>"
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:104
 #, no-wrap, priority:100
 msgid "-p <options-for-cvsps>"
-msgstr ""
+msgstr "-p <options-pour-cvsps>"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:107
 #, priority:100
 msgid "Additional options for cvsps.  The options `-u` and '-A' are implicit and should not be used here."
-msgstr ""
+msgstr "Options supplémentaires pour cvsps. Les options `-u` et '-A' sont implicites et ne doivent pas être utilisées ici."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:109
 #, priority:100
 msgid "If you need to pass multiple options, separate them with a comma."
-msgstr ""
+msgstr "Si vous devez passer plusieurs options, séparez-les par une virgule."
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:110
 #, no-wrap, priority:100
 msgid "-z <fuzz>"
-msgstr ""
+msgstr "-z <fuzz>"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:113
 #, priority:100
 msgid "Pass the timestamp fuzz factor to cvsps, in seconds. If unset, cvsps defaults to 300s."
-msgstr ""
+msgstr "Transmettez le facteur de fuzz d’horodatage à cvsps, en quelques secondes. S’il n’est pas défini, cvsps est défini par défaut sur 300s."
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:114
 #, no-wrap, priority:100
 msgid "-P <cvsps-output-file>"
-msgstr ""
+msgstr "-P <fichier-sortie-cvsps>"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:117
 #, priority:100
 msgid "Instead of calling cvsps, read the provided cvsps output file. Useful for debugging or when cvsps is being handled outside cvsimport."
-msgstr ""
+msgstr "Au lieu d'appeler cvsps, lire le fichier de sortie cvsps fourni. Utile pour le débogage ou lorsque cvsps est manipulé à l'extérieur du cvsimport."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:122
 #, priority:100
 msgid "Attempt to detect merges based on the commit message. This option will enable default regexes that try to capture the source branch name from the commit message."
-msgstr ""
+msgstr "Tenter de détecter les fusions en se basant sur le message de validation. Cette option activera les regex par défaut qui tentent de capturer le nom de la branche source à partir du message de validation."
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:123
@@ -18547,19 +18547,19 @@ msgstr "-M <regex>"
 #: en/git-cvsimport.txt:127
 #, priority:100
 msgid "Attempt to detect merges based on the commit message with a custom regex. It can be used with `-m` to enable the default regexes as well. You must escape forward slashes."
-msgstr ""
+msgstr "Tenter de détecter les fusions en se basant sur le message de validation avec une regex personnalisée. Elle peut être utilisée avec `-m` pour activer les regex par défaut. Vous devez échapper les barres anti-obliques."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:129
 #, priority:100
 msgid "The regex must capture the source branch name in $1."
-msgstr ""
+msgstr "La regex doit capturer le nom de la branche source dans $1."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:131
 #, priority:100
 msgid "This option can be used several times to provide several detection regexes."
-msgstr ""
+msgstr "Cette option peut être utilisée plusieurs fois pour fournir plusieurs regexes de détection."
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:132
@@ -18571,37 +18571,37 @@ msgstr "-S <regex>"
 #: en/git-cvsimport.txt:134
 #, priority:100
 msgid "Skip paths matching the regex."
-msgstr ""
+msgstr "Ignorer les chemins correspondant à l'expression régulière."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:138
 #, priority:100
 msgid "Import all commits, including recent ones. cvsimport by default skips commits that have a timestamp less than 10 minutes ago."
-msgstr ""
+msgstr "Importer tous les commits, y compris les plus récents. cvsimport ignore par défaut les commits dont l'horodatage date de moins de 10 minutes."
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:139
 #, no-wrap, priority:100
 msgid "-L <limit>"
-msgstr ""
+msgstr "-L <limite>"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:142
 #, priority:100
 msgid "Limit the number of commits imported. Workaround for cases where cvsimport leaks memory."
-msgstr ""
+msgstr "Limiter le nombre de commits importés. Solution de contournement pour les cas où cvsimport perd de la mémoire."
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:143
 #, no-wrap, priority:100
 msgid "-A <author-conv-file>"
-msgstr ""
+msgstr "-A <fichier-conv-auteur>"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:148
 #, priority:100
 msgid "CVS by default uses the Unix username when writing its commit logs. Using this option and an author-conv-file maps the name recorded in CVS to author name, e-mail and optional time zone:"
-msgstr ""
+msgstr "CVS utilise par défaut le nom d'utilisateur Unix lors de l'écriture de ses journaux de commit. L'utilisation de cette option et d'un fichier fichier-conv-auteur fait correspondre le nom enregistré dans CVS au nom de l'auteur, à son e-mail et à son fuseau horaire optionnel :"
 
 #. type: delimited block -
 #: en/git-cvsimport.txt:152
@@ -18609,145 +18609,145 @@ msgstr ""
 msgid ""
 "\texon=Andreas Ericsson <ae@op5.se>\n"
 "\tspawn=Simon Pawn <spawn@frog-pond.org> America/Chicago\n"
-msgstr ""
+msgstr "\texon=Andreas Ericsson <ae@op5.se>\n\tspawn=Simon Pawn <spawn@frog-pond.org> America/Chicago\n"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:159
 #, priority:100
 msgid "'git cvsimport' will make it appear as those authors had their GIT_AUTHOR_NAME and GIT_AUTHOR_EMAIL set properly all along.  If a time zone is specified, GIT_AUTHOR_DATE will have the corresponding offset applied."
-msgstr ""
+msgstr "'git cvsimport' le fera apparaître comme si ces auteurs avaient leurs GIT_AUTHOR_NAME et GIT_AUTHOR_EMAIL correctement définis depuis le début.  Si un fuseau horaire est spécifié, GIT_AUTHOR_DATE aura le décalage correspondant appliqué."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:163
 #, priority:100
 msgid "For convenience, this data is saved to `$GIT_DIR/cvs-authors` each time the '-A' option is provided and read from that same file each time 'git cvsimport' is run."
-msgstr ""
+msgstr "Pour plus de commodité, ces données sont enregistrées dans '$GIT_DIR/cvs-authors' chaque fois que l’option '-A' est fournie et lues à partir de ce même fichier chaque fois que 'git cvsimport' est exécuté."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:167
 #, priority:100
 msgid "It is not recommended to use this feature if you intend to export changes back to CVS again later with 'git cvsexportcommit'."
-msgstr ""
+msgstr "Il n’est pas recommandé d’utiliser cette fonctionnalité si vous avez l’intention d’exporter à nouveau les modifications vers CVS ultérieurement avec 'git cvsexportcommit'."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:173
 #, priority:100
 msgid "Generate a `$GIT_DIR/cvs-revisions` file containing a mapping from CVS revision numbers to newly-created Git commit IDs.  The generated file will contain one line for each (filename, revision) pair imported; each line will look like"
-msgstr ""
+msgstr "Générer un fichier '$GIT_DIR/cvs-revisions' contenant un mappage des numéros de révision CVS aux ID de validation Git nouvellement créés.  Le fichier généré contiendra une ligne pour chaque paire (nom de fichier, révision) importée ; chaque ligne ressemblera à"
 
 #. type: delimited block -
 #: en/git-cvsimport.txt:176
 #, no-wrap, priority:100
 msgid "src/widget.c 1.1 1d862f173cdc7325b6fa6d2ae1cfd61fd1b512b7\n"
-msgstr ""
+msgstr "src/widget.c 1.1 1d862f173cdc7325b6fa6d2ae1cfd61fd1b512b7\n"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:180
 #, priority:100
 msgid "The revision data is appended to the file if it already exists, for use when doing incremental imports."
-msgstr ""
+msgstr "Les données de révision sont ajoutées au fichier s’il existe déjà, pour être utilisées lors des importations incrémentielles."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:183
 #, priority:100
 msgid "This option may be useful if you have CVS revision numbers stored in commit messages, bug-tracking systems, email archives, and the like."
-msgstr ""
+msgstr "Cette option peut être utile si vous avez des numéros de révision CVS stockés dans des messages de validation, des systèmes de suivi des bogues, des archives d’e-mails, etc."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:186
 #, priority:100
 msgid "Print a short usage message and exit."
-msgstr ""
+msgstr "Imprimer un petit message d'utilisation et de sortie."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:190
 #, priority:100
 msgid "If `-v` is specified, the script reports what it is doing."
-msgstr ""
+msgstr "Si `-v` est spécifié, le script indique ce qu’il fait."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:193
 #, priority:100
 msgid "Otherwise, success is indicated the Unix way, i.e. by simply exiting with a zero exit status."
-msgstr ""
+msgstr "Sinon, le succès est indiqué à la manière Unix, c'est-à-dire en sortant simplement avec un statut de sortie nul."
 
 #. type: Title -
 #: en/git-cvsimport.txt:196
 #, no-wrap, priority:100
 msgid "ISSUES"
-msgstr ""
+msgstr "PROBLÈMES"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:198
 #, priority:100
 msgid "Problems related to timestamps:"
-msgstr ""
+msgstr "Problèmes liés à l'horodatage :"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:202
 #, priority:100
 msgid "If timestamps of commits in the CVS repository are not stable enough to be used for ordering commits changes may show up in the wrong order."
-msgstr ""
+msgstr "Si l'horodatage des commits dans le dépôt CVS n'est pas suffisamment stable pour être utilisé pour ordonner les commits, les modifications peuvent apparaître dans le mauvais ordre."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:204
 #, priority:100
 msgid "If any files were ever \"cvs import\"ed more than once (e.g., import of more than one vendor release) the HEAD contains the wrong content."
-msgstr ""
+msgstr "Si des fichiers ont déjà été \"cvs import\"és plus d'une fois (par exemple, l'importation de plusieurs versions de fournisseurs), le HEAD contient le mauvais contenu."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:207
 #, priority:100
 msgid "If the timestamp order of different files cross the revision order within the commit matching time window the order of commits may be wrong."
-msgstr ""
+msgstr "Si l'ordre d'horodatage de différents fichiers croise l'ordre de révision dans la fenêtre de temps de correspondance des commits, l'ordre des commits peut être erroné."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:209
 #, priority:100
 msgid "Problems related to branches:"
-msgstr ""
+msgstr "Problèmes liés aux branches :"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:211
 #, priority:100
 msgid "Branches on which no commits have been made are not imported."
-msgstr ""
+msgstr "Les branches sur lesquelles aucun commit n'a été effectué ne sont pas importées."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:213
 #, priority:100
 msgid "All files from the branching point are added to a branch even if never added in CVS."
-msgstr ""
+msgstr "Tous les fichiers du point de branchement sont ajoutés à une branche même s'ils n'ont jamais été ajoutés dans CVS."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:216
 #, priority:100
 msgid "This applies to files added to the source branch *after* a daughter branch was created: if previously no commit was made on the daughter branch they will erroneously be added to the daughter branch in git."
-msgstr ""
+msgstr "Cela s'applique aux fichiers ajoutés à la branche source *après* la création d'une branche fille : si aucun commit n'a été fait auparavant sur la branche fille, elles seront ajoutées par erreur à la branche fille dans git."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:218
 #, priority:100
 msgid "Problems related to tags:"
-msgstr ""
+msgstr "Problèmes liés aux étiquettes :"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:220
 #, priority:100
 msgid "Multiple tags on the same revision are not imported."
-msgstr ""
+msgstr "Plusieurs étiquettes sur la même révision ne sont pas importées."
 
 #. type: Plain text
 #: en/git-cvsimport.txt:223
 #, priority:100
 msgid "If you suspect that any of these issues may apply to the repository you want to import, consider using cvs2git:"
-msgstr ""
+msgstr "Si vous pensez que l'un de ces problèmes peut s'appliquer au dépôt que vous voulez importer, envisagez d'utiliser cvs2git :"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:225
 #, priority:100
 msgid "cvs2git (part of cvs2svn), `http://subversion.apache.org/`"
-msgstr ""
+msgstr "cvs2git (partie de cvs2svn), `http://subversion.apache.org/`"
 
 #. type: Title =
 #: en/git-cvsserver.txt:2
@@ -18759,13 +18759,13 @@ msgstr "git-cvsserver(1)"
 #: en/git-cvsserver.txt:7
 #, priority:100
 msgid "git-cvsserver - A CVS server emulator for Git"
-msgstr ""
+msgstr "git-cvsserver - Un émulateur de serveur CVS pour Git"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:12
 #, priority:100
 msgid "SSH:"
-msgstr ""
+msgstr "SSH :"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:16
@@ -18773,55 +18773,55 @@ msgstr ""
 msgid ""
 "export CVS_SERVER=\"git cvsserver\"\n"
 "'cvs' -d :ext:user@server/path/repo.git co <HEAD_name>\n"
-msgstr ""
+msgstr "export CVS_SERVER=\"git cvsserver\"\n'cvs' -d :ext:user@serveur/chemin/depot.git co <nom-HEAD>\n"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:18
 #, priority:100
 msgid "pserver (/etc/inetd.conf):"
-msgstr ""
+msgstr "pserver (/etc/inetd.conf) :"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:21
 #, no-wrap, priority:100
 msgid "cvspserver stream tcp nowait nobody /usr/bin/git-cvsserver git-cvsserver pserver\n"
-msgstr ""
+msgstr "cvspserver stream tcp nowait nobody /usr/bin/git-cvsserver git-cvsserver pserver\n"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:23
 #, priority:100
 msgid "Usage:"
-msgstr ""
+msgstr "Utilisation :"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:26
 #, ignore-ellipsis, no-wrap, priority:100
 msgid "'git-cvsserver' [<options>] [pserver|server] [<directory> ...]\n"
-msgstr ""
+msgstr "'git-cvsserver' [<options>] [pserveur|serveur] [<répertoire> ...]\n"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:31
 #, priority:100
 msgid "This application is a CVS emulation layer for Git."
-msgstr ""
+msgstr "Cette application est une couche d'émulation CVS pour Git."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:35
 #, priority:100
 msgid "It is highly functional. However, not all methods are implemented, and for those methods that are implemented, not all switches are implemented."
-msgstr ""
+msgstr "Elle est très fonctionnelle. Cependant, toutes les méthodes ne sont pas mises en œuvre, et pour les méthodes qui le sont, tous les drapeaux ne sont pas mis en œuvre."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:38
 #, priority:100
 msgid "Testing has been done using both the CLI CVS client, and the Eclipse CVS plugin. Most functionality works fine with both of these clients."
-msgstr ""
+msgstr "Les tests ont été effectués en utilisant à la fois le client en ligne de commande CVS et le plugin CVS Eclipse. La plupart des fonctionnalités fonctionnent bien avec ces deux clients."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:45
 #, priority:100
 msgid "All these options obviously only make sense if enforced by the server side.  They have been implemented to resemble the linkgit:git-daemon[1] options as closely as possible."
-msgstr ""
+msgstr "Toutes ces options n'ont évidemment de sens que si elles sont appliquées du côté du serveur.  Elles ont été implémentées pour ressembler le plus possible aux options de linkgit:git-daemon[1]."
 
 #. type: Labeled list
 #: en/git-cvsserver.txt:46
@@ -18833,7 +18833,7 @@ msgstr "--base-path <chemin>"
 #: en/git-cvsserver.txt:48
 #, priority:100
 msgid "Prepend 'path' to requested CVSROOT"
-msgstr ""
+msgstr "préfixer le CVSROOT demandé par 'chemin'"
 
 #. type: Labeled list
 #: en/git-cvsserver.txt:49 en/git-daemon.txt:49
@@ -18845,7 +18845,7 @@ msgstr "--strict-paths"
 #: en/git-cvsserver.txt:51
 #, priority:100
 msgid "Don't allow recursing into subdirectories"
-msgstr ""
+msgstr "Ne pas autoriser les récursions dans les sous-répertoires"
 
 #. type: Labeled list
 #: en/git-cvsserver.txt:52 en/git-daemon.txt:78
@@ -18857,13 +18857,13 @@ msgstr "--export-all"
 #: en/git-cvsserver.txt:55
 #, priority:100
 msgid "Don't check for `gitcvs.enabled` in config. You also have to specify a list of allowed directories (see below) if you want to use this option."
-msgstr ""
+msgstr "Ne pas vérifier `gitcvs.enabled` dans la configuration. Vous devez également spécifier une liste de répertoires autorisés (voir ci-dessous) si vous voulez utiliser cette option."
 
 #. type: Labeled list
 #: en/git-cvsserver.txt:56
 #, no-wrap, priority:100
 msgid "-V"
-msgstr ""
+msgstr "-V"
 
 #. type: Labeled list
 #: en/git-cvsserver.txt:57 en/git.txt:42
@@ -18875,7 +18875,7 @@ msgstr "--version"
 #: en/git-cvsserver.txt:59
 #, priority:100
 msgid "Print version information and exit"
-msgstr ""
+msgstr "Afficher les informations sur la version et quitter"
 
 #. type: Labeled list
 #: en/git-cvsserver.txt:62 en/git.txt:49
@@ -18887,67 +18887,67 @@ msgstr "--help"
 #: en/git-cvsserver.txt:64
 #, priority:100
 msgid "Print usage information and exit"
-msgstr ""
+msgstr "Afficher les informations d'utilisation et quitter"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:70
 #, priority:100
 msgid "You can specify a list of allowed directories. If no directories are given, all are allowed. This is an additional restriction, gitcvs access still needs to be enabled by the `gitcvs.enabled` config option unless `--export-all` was given, too."
-msgstr ""
+msgstr "Vous pouvez spécifier une liste de répertoires autorisés. Si aucun répertoire n'est donné, tous sont autorisés. Il s'agit d'une restriction supplémentaire, l'accès à gitcvs doit toujours être activé par l'option de configuration `gitcvs.enabled`, à moins que `--export-all` ne soit également donné."
 
 #. type: Title -
 #: en/git-cvsserver.txt:73 en/git-fast-export.txt:272
 #, no-wrap, priority:100
 msgid "LIMITATIONS"
-msgstr ""
+msgstr "LIMITATIONS"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:76
 #, priority:100
 msgid "CVS clients cannot tag, branch or perform Git merges."
-msgstr ""
+msgstr "Les clients CVS ne peuvent pas étiqueter, faire des branches ou effectuer des fusions Git."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:80
 #, priority:100
 msgid "'git-cvsserver' maps Git branches to CVS modules. This is very different from what most CVS users would expect since in CVS modules usually represent one or more directories."
-msgstr ""
+msgstr "'git-cvsserver' fait correspondre les branches Git aux modules CVS. C'est très différent de ce à quoi la plupart des utilisateurs de CVS s'attendent puisque dans CVS, les modules représentent généralement un ou plusieurs répertoires."
 
 #. type: Title -
 #: en/git-cvsserver.txt:82
 #, no-wrap, priority:100
 msgid "INSTALLATION"
-msgstr ""
+msgstr "INSTALLATION"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:86
 #, priority:100
 msgid "If you are going to offer CVS access via pserver, add a line in /etc/inetd.conf like"
-msgstr ""
+msgstr "Si vous comptez offrir un accès CVS via pserver, ajoutez une ligne dans /etc/inetd.conf comme suit"
 
 #. type: delimited block -
 #: en/git-cvsserver.txt:90
 #, no-wrap, priority:100
 msgid "   cvspserver stream tcp nowait nobody git-cvsserver pserver\n"
-msgstr ""
+msgstr "   cvspserver stream tcp nowait nobody git-cvsserver pserver\n"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:96
 #, priority:100
 msgid "Note: Some inetd servers let you specify the name of the executable independently of the value of argv[0] (i.e. the name the program assumes it was executed with). In this case the correct line in /etc/inetd.conf looks like"
-msgstr ""
+msgstr "Note : Certains serveurs inetd vous permettent de spécifier le nom de l'exécutable indépendamment de la valeur de argv[0] (c-à-d le nom avec lequel le programme suppose avoir été exécuté). Dans ce cas, la ligne correcte dans le fichier /etc/inetd.conf est la suivante"
 
 #. type: delimited block -
 #: en/git-cvsserver.txt:99
 #, no-wrap, priority:100
 msgid "   cvspserver stream tcp nowait nobody /usr/bin/git-cvsserver git-cvsserver pserver\n"
-msgstr ""
+msgstr "   cvspserver stream tcp nowait nobody /usr/bin/git-cvsserver git-cvsserver pserver\n"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:106
 #, priority:100
 msgid "Only anonymous access is provided by pserver by default. To commit you will have to create pserver accounts, simply add a gitcvs.authdb setting in the config file of the repositories you want the cvsserver to allow writes to, for example:"
-msgstr ""
+msgstr "Seul l'accès anonyme est fourni par pserver par défaut. Pour valider, vous devrez créer des comptes pserver, il suffit d'ajouter un paramètre gitcvs.authdb dans le fichier de configuration des dépôts pour lesquels vous voulez que le cvsserver autorise les écritures, par exemple :"
 
 #. type: delimited block -
 #: en/git-cvsserver.txt:111
@@ -18955,13 +18955,13 @@ msgstr ""
 msgid ""
 "   [gitcvs]\n"
 "\tauthdb = /etc/cvsserver/passwd\n"
-msgstr ""
+msgstr "   [gitcvs]\n\tauthdb = /etc/cvsserver/passwd\n"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:115
 #, priority:100
 msgid "The format of these files is username followed by the encrypted password, for example:"
-msgstr ""
+msgstr "Le format de ces fichiers est le nom d'utilisateur suivi du mot de passe crypté, par exemple :"
 
 #. type: delimited block -
 #: en/git-cvsserver.txt:120
@@ -18970,61 +18970,61 @@ msgid ""
 "   myuser:sqkNi8zPf01HI\n"
 "   myuser:$1$9K7FzU28$VfF6EoPYCJEYcVQwATgOP/\n"
 "   myuser:$5$.NqmNH1vwfzGpV8B$znZIcumu1tNLATgV2l6e1/mY8RzhUDHMOaVOeL1cxV3\n"
-msgstr ""
+msgstr "   monutilisateur:sqkNi8zPf01HI\n   monutilisateur:$1$9K7FzU28$VfF6EoPYCJEYcVQwATgOP/\n   monutilisateur:$5$.NqmNH1vwfzGpV8B$znZIcumu1tNLATgV2l6e1/mY8RzhUDHMOaVOeL1cxV3\n"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:123
 #, priority:100
 msgid "You can use the 'htpasswd' facility that comes with Apache to make these files, but only with the -d option (or -B if your system suports it)."
-msgstr ""
+msgstr "Vous pouvez utiliser la fonction 'htpasswd' fournie avec Apache pour créer ces fichiers, mais uniquement avec l'option -d (ou -B si votre système la prend en charge)."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:127
 #, priority:100
 msgid "Preferably use the system specific utility that manages password hash creation in your platform (e.g. mkpasswd in Linux, encrypt in OpenBSD or pwhash in NetBSD) and paste it in the right location."
-msgstr ""
+msgstr "Utilisez de préférence l'utilitaire spécifique au système qui gère la création du hachage du mot de passe sur votre plate-forme (par exemple, mkpasswd sous Linux, encrypt sous OpenBSD ou pwhash sous NetBSD) et collez-le au bon endroit."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:129
 #, priority:100
 msgid "Then provide your password via the pserver method, for example:"
-msgstr ""
+msgstr "Ensuite, fournissez votre mot de passe via la méthode pserver, par exemple :"
 
 #. type: delimited block -
 #: en/git-cvsserver.txt:131
 #, no-wrap, priority:100
 msgid "   cvs -d:pserver:someuser:somepassword@server:/path/repo.git co <HEAD_name>\n"
-msgstr ""
+msgstr "   cvs -d:pserver:unutilisateur:unmotdepasse@serveur:/chemin/depot.git co <nom_de_HEAD>\n"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:135
 #, priority:100
 msgid "No special setup is needed for SSH access, other than having Git tools in the PATH. If you have clients that do not accept the CVS_SERVER environment variable, you can rename 'git-cvsserver' to `cvs`."
-msgstr ""
+msgstr "Aucune configuration particulière n'est nécessaire pour l'accès SSH, si ce n'est d'avoir les outils Git dans le PATH. Si vous avez des clients qui n'acceptent pas la variable d'environnement CVS_SERVER, vous pouvez renommer 'git-cvsserver' ; en `cvs`."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:138
 #, priority:100
 msgid "Note: Newer CVS versions (>= 1.12.11) also support specifying CVS_SERVER directly in CVSROOT like"
-msgstr ""
+msgstr "Note : Les versions plus récentes de CVS (>= 1.12.11) supportent également la spécification de CVS_SERVER directement dans CVSROOT comme"
 
 #. type: delimited block -
 #: en/git-cvsserver.txt:141
 #, no-wrap, priority:100
 msgid "   cvs -d \":ext;CVS_SERVER=git cvsserver:user@server/path/repo.git\" co <HEAD_name>\n"
-msgstr ""
+msgstr "   cvs -d \":ext;CVS_SERVER=git cvsserver:utilisateur@serveur/chemin/depot.git\" co <nom_HEAD>\n"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:147
 #, priority:100
 msgid "This has the advantage that it will be saved in your 'CVS/Root' files and you don't need to worry about always setting the correct environment variable.  SSH users restricted to 'git-shell' don't need to override the default with CVS_SERVER (and shouldn't) as 'git-shell' understands `cvs` to mean 'git-cvsserver' and pretends that the other end runs the real 'cvs' better."
-msgstr ""
+msgstr "Cela présente l'avantage d'être enregistré dans vos fichiers 'CVS/Root' ; et vous n'avez pas besoin de vous soucier de toujours définir la bonne variable d'environnement.  Les utilisateurs SSH limités à 'git-shell' n'ont pas besoin de remplacer la valeur par défaut par CVS_SERVER (et ne devraient pas le faire) car 'git-shell' comprend que `cvs` signifie 'git-cvsserver' et prétend que l'autre extrémité exécute mieux le vrai 'cvs' ;."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:150
 #, priority:100
 msgid "For each repo that you want accessible from CVS you need to edit config in the repo and add the following section."
-msgstr ""
+msgstr "Pour chaque dépôt que vous souhaitez rendre accessible depuis CVS, vous devez modifier la configuration du dépôt et ajouter la section suivante."
 
 #. type: delimited block -
 #: en/git-cvsserver.txt:157
@@ -19034,25 +19034,25 @@ msgid ""
 "        enabled=1\n"
 "        # optional for debugging\n"
 "\tlogFile=/path/to/logfile\n"
-msgstr ""
+msgstr "   [gitcvs]\n        enabled=1\n        # optionnel pour le débogage\n\tlogFile=/chemin/vers/fichierjournal\n"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:163
 #, priority:100
 msgid "Note: you need to ensure each user that is going to invoke 'git-cvsserver' has write access to the log file and to the database (see <<dbbackend,Database Backend>>. If you want to offer write access over SSH, the users of course also need write access to the Git repository itself."
-msgstr ""
+msgstr "Note : vous devez vous assurer que chaque utilisateur qui va invoquer 'git-cvsserver' a un accès en écriture au fichier journal et à la base de données (voir <<dbbackend,Moteur de base de données>>). Si vous souhaitez offrir un accès en écriture via SSH, les utilisateurs doivent bien sûr également disposer d'un accès en écriture au dépôt Git lui-même."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:166
 #, priority:100
 msgid "You also need to ensure that each repository is \"bare\" (without a Git index file) for `cvs commit` to work. See linkgit:gitcvs-migration[7]."
-msgstr ""
+msgstr "Vous devez également vous assurer que chaque dépôt est nu \"bare\" (sans fichier d'index Git) pour que `cvs commit` fonctionne. Voir linkgit:gitcvs-migration[7]."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:172
 #, priority:100
 msgid "All configuration variables can also be overridden for a specific method of access. Valid method names are \"ext\" (for SSH access) and \"pserver\". The following example configuration would disable pserver access while still allowing access over SSH."
-msgstr ""
+msgstr "Toutes les variables de configuration peuvent également être remplacées pour une méthode d'accès spécifique. Les noms de méthode valides sont \"ext\" (pour l'accès SSH) et \"pserver\". L'exemple de configuration suivant désactiverait l'accès via pserver tout en autorisant l'accès via SSH."
 
 #. type: delimited block -
 #: en/git-cvsserver.txt:175
@@ -19060,7 +19060,7 @@ msgstr ""
 msgid ""
 "   [gitcvs]\n"
 "        enabled=0\n"
-msgstr ""
+msgstr "   [gitcvs]\n        enabled=0\n"
 
 #. type: delimited block -
 #: en/git-cvsserver.txt:178
@@ -19068,13 +19068,13 @@ msgstr ""
 msgid ""
 "   [gitcvs \"ext\"]\n"
 "        enabled=1\n"
-msgstr ""
+msgstr "   [gitcvs \"ext\"]\n        enabled=1\n"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:185
 #, priority:100
 msgid "If you didn't specify the CVSROOT/CVS_SERVER directly in the checkout command, automatically saving it in your 'CVS/Root' files, then you need to set them explicitly in your environment.  CVSROOT should be set as per normal, but the directory should point at the appropriate Git repo.  As above, for SSH clients _not_ restricted to 'git-shell', CVS_SERVER should be set to 'git-cvsserver'."
-msgstr ""
+msgstr "Si vous n’avez pas spécifié le CVSROOT/CVS_SERVER directement dans la commande checkout, en l’enregistrant automatiquement dans vos fichiers 'CVS/Root', vous devez les définir explicitement dans votre environnement.  CVSROOT doit être défini comme d’habitude, mais le répertoire doit pointer vers le dépôt Git approprié.  Comme ci-dessus, pour les clients SSH _non_ limités à 'git-shell', CVS_SERVER doit être défini sur 'git-cvsserver'."
 
 #. type: delimited block -
 #: en/git-cvsserver.txt:190
@@ -19082,157 +19082,157 @@ msgstr ""
 msgid ""
 "   export CVSROOT=:ext:user@server:/var/git/project.git\n"
 "   export CVS_SERVER=\"git cvsserver\"\n"
-msgstr ""
+msgstr "   export CVSROOT=:ext:utilisateur@serveur:/var/git/projet.git\n   export CVS_SERVER=\"git cvsserver\"\n"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:197
 #, priority:100
 msgid "For SSH clients that will make commits, make sure their server-side .ssh/environment files (or .bashrc, etc., according to their specific shell)  export appropriate values for GIT_AUTHOR_NAME, GIT_AUTHOR_EMAIL, GIT_COMMITTER_NAME, and GIT_COMMITTER_EMAIL.  For SSH clients whose login shell is bash, .bashrc may be a reasonable alternative."
-msgstr ""
+msgstr "Pour les clients SSH qui feront des commits, assurez-vous que leurs fichiers .ssh/environnement côté serveur (ou .bashrc, etc., selon leur shell spécifique) exportent les valeurs appropriées pour GIT_AUTHOR_NAME, GIT_AUTHOR_EMAIL, GIT_COMMITTER_NAME et GIT_COMMITTER_EMAIL.  Pour les clients SSH dont le shell de connexion est bash, .bashrc peut être une alternative raisonnable."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:203
 #, priority:100
 msgid "Clients should now be able to check out the project. Use the CVS 'module' name to indicate what Git 'head' you want to check out.  This also sets the name of your newly checked-out directory, unless you tell it otherwise with `-d <dir_name>`.  For example, this checks out 'master' branch to the `project-master` directory:"
-msgstr ""
+msgstr "Les clients devraient maintenant pouvoir extraire le projet. Utilisez le nom du 'module' CVS pour indiquer quel 'head' Git vous voulez extraire.  Ceci définit également le nom de votre répertoire nouvellement extrait, à moins que vous ne l'indiquiez autrement avec `-d <nom_répertoire>`.  Par exemple, ceci extrait la branche 'master' dans le répertoire `master-projet` :"
 
 #. type: delimited block -
 #: en/git-cvsserver.txt:206
 #, no-wrap, priority:100
 msgid "   cvs co -d project-master master\n"
-msgstr ""
+msgstr "   cvs co -d master-projet master\n"
 
 #. type: Title -
 #: en/git-cvsserver.txt:210
 #, no-wrap, priority:100
 msgid "DATABASE BACKEND"
-msgstr ""
+msgstr "MOTEUR DE BASE DE DONNÉES"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:216
 #, priority:100
 msgid "'git-cvsserver' uses one database per Git head (i.e. CVS module) to store information about the repository to maintain consistent CVS revision numbers. The database needs to be updated (i.e. written to) after every commit."
-msgstr ""
+msgstr "'git-cvsserver' utilise une base de données par tête Git (c'est-à-dire le module CVS) pour stocker des informations sur le dépôt afin de maintenir des numéros de révision CVS cohérents. La base de données doit être mise à jour (c'est-à-dire écrite) après chaque validation."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:221
 #, priority:100
 msgid "If the commit is done directly by using `git` (as opposed to using 'git-cvsserver') the update will need to happen on the next repository access by 'git-cvsserver', independent of access method and requested operation."
-msgstr ""
+msgstr "Si le commit est effectué directement en utilisant `git` (par opposition à l'utilisation de 'git-cvsserver'), la mise à jour devra se produire lors du prochain accès au dépôt par 'git-cvsserver', indépendamment de la méthode d'accès et de l'opération demandée."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:226
 #, priority:100
 msgid "That means that even if you offer only read access (e.g. by using the pserver method), 'git-cvsserver' should have write access to the database to work reliably (otherwise you need to make sure that the database is up to date any time 'git-cvsserver' is executed)."
-msgstr ""
+msgstr "Cela signifie que même si vous n'offrez qu'un accès en lecture (par exemple en utilisant la méthode pserver), 'git-cvsserver' doit avoir un accès en écriture à la base de données pour fonctionner de manière fiable (sinon vous devez vous assurer que la base de données est à jour à chaque fois que 'git-cvsserver' est exécuté)."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:233
 #, priority:100
 msgid "By default it uses SQLite databases in the Git directory, named `gitcvs.<module_name>.sqlite`. Note that the SQLite backend creates temporary files in the same directory as the database file on write so it might not be enough to grant the users using 'git-cvsserver' write access to the database file without granting them write access to the directory, too."
-msgstr ""
+msgstr "Par défaut, il utilise des bases de données SQLite dans le répertoire Git, nommées `gitcvs.<nom-de-module>.sqlite`. Notez que le moteur SQLite crée des fichiers temporaires dans le même répertoire que le fichier de base de données lors de l'écriture. Il pourrait donc ne pas être suffisant d'accorder aux utilisateurs utilisant 'git-cvsserver' un accès en écriture au fichier de base de données sans leur accorder également un accès en écriture au répertoire."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:245
 #, priority:100
 msgid "The database cannot be reliably regenerated in a consistent form after the branch it is tracking has changed.  Example: For merged branches, 'git-cvsserver' only tracks one branch of development, and after a 'git merge' an incrementally updated database may track a different branch than a database regenerated from scratch, causing inconsistent CVS revision numbers. `git-cvsserver` has no way of knowing which branch it would have picked if it had been run incrementally pre-merge. So if you have to fully or partially (from old backup) regenerate the database, you should be suspicious of pre-existing CVS sandboxes."
-msgstr ""
+msgstr "La base de données ne peut pas être régénérée de manière fiable sous une forme cohérente après que la branche qu'elle suit a changé.  Exemple : pour les branches fusionnées, 'git-cvsserver' ne suit qu'une branche de développement, et après un 'git merge' une base de données mise à jour de manière incrémentielle peut suivre une branche différente de celle d'une base de données régénérée à partir de zéro, ce qui entraîne des numéros de révision CVS incohérents. `git-cvsserver` n'a aucun moyen de savoir quelle branche il aurait choisie s'il avait été lancé de manière incrémentale avant la fusion. Donc si vous devez régénérer entièrement ou partiellement (à partir d'une ancienne sauvegarde) la base de données, vous devez vous méfier des bacs à sable CVS préexistants."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:248
 #, priority:100
 msgid "You can configure the database backend with the following configuration variables:"
-msgstr ""
+msgstr "Vous pouvez configurer le moteur de la base de données avec les variables de configuration suivantes :"
 
 #. type: Title ~
 #: en/git-cvsserver.txt:250
 #, no-wrap, priority:100
 msgid "Configuring database backend"
-msgstr ""
+msgstr "Configuration du moteur de la base de données"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:255
 #, priority:100
 msgid "'git-cvsserver' uses the Perl DBI module. Please also read its documentation if changing these variables, especially about `DBI->connect()`."
-msgstr ""
+msgstr "'git-cvsserver' utilise le module Perl DBI. Veuillez également lire sa documentation si vous modifiez ces variables, en particulier à propos de `DBI->connect()`."
 
 #. type: Labeled list
 #: en/git-cvsserver.txt:256
 #, no-wrap, priority:100
 msgid "gitcvs.dbName"
-msgstr ""
+msgstr "gitcvs.dbName"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:262
 #, priority:100
 msgid "Database name. The exact meaning depends on the selected database driver, for SQLite this is a filename.  Supports variable substitution (see below). May not contain semicolons (`;`).  Default: '%Ggitcvs.%m.sqlite'"
-msgstr ""
+msgstr "Nom de la base de données. La signification exacte dépend du pilote de base de données sélectionné, pour SQLite il s'agit d'un nom de fichier.  Supporte la substitution de variables (voir ci-dessous). Ne peut pas contenir de point-virgule (`;`).  Valeur par défaut : '%Ggitcvs.%m.sqlite'"
 
 #. type: Labeled list
 #: en/git-cvsserver.txt:263
 #, no-wrap, priority:100
 msgid "gitcvs.dbDriver"
-msgstr ""
+msgstr "gitcvs.dbDriver"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:271
 #, priority:100
 msgid "Used DBI driver. You can specify any available driver for this here, but it might not work. cvsserver is tested with 'DBD::SQLite', reported to work with 'DBD::Pg', and reported *not* to work with 'DBD::mysql'.  Please regard this as an experimental feature. May not contain colons (`:`).  Default: 'SQLite'"
-msgstr ""
+msgstr "Pilote DBI utilisé. Vous pouvez spécifier n'importe quel pilote disponible ici, mais il est possible qu'il ne fonctionne pas. cvsserver a été testé avec 'DBD::SQLite', il a été signalé comme fonctionnant avec 'DBD::Pg' et il a été signalé comme ne fonctionnant *pas* avec 'DBD::mysql'.  Veuillez considérer ceci comme une fonctionnalité expérimentale. Ne peut pas contenir de deux-points (`:`).  Valeur par défaut : 'SQLite'"
 
 #. type: Labeled list
 #: en/git-cvsserver.txt:272
 #, no-wrap, priority:100
 msgid "gitcvs.dbuser"
-msgstr ""
+msgstr "gitcvs.dbuser"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:276
 #, priority:100
 msgid "Database user. Only useful if setting `dbDriver`, since SQLite has no concept of database users. Supports variable substitution (see below)."
-msgstr ""
+msgstr "Utilisateur de la base de données. Seulement utile si vous définissez `dbDriver`, puisque SQLite n'a pas de concept d'utilisateur de base de données. Supporte la substitution de variables (voir ci-dessous)."
 
 #. type: Labeled list
 #: en/git-cvsserver.txt:277
 #, no-wrap, priority:100
 msgid "gitcvs.dbPass"
-msgstr ""
+msgstr "gitcvs.dbPass"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:280
 #, priority:100
 msgid "Database password.  Only useful if setting `dbDriver`, since SQLite has no concept of database passwords."
-msgstr ""
+msgstr "Mot de passe de la base de données.  Seulement utile si vous définissez `dbDriver`, puisque SQLite n'a pas de concept de mot de passe de base de données."
 
 #. type: Labeled list
 #: en/git-cvsserver.txt:281
 #, no-wrap, priority:100
 msgid "gitcvs.dbTableNamePrefix"
-msgstr ""
+msgstr "gitcvs.dbTableNamePrefix"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:285
 #, priority:100
 msgid "Database table name prefix.  Supports variable substitution (see below).  Any non-alphabetic characters will be replaced with underscores."
-msgstr ""
+msgstr "Préfixe du nom de la table de la base de données.  Supporte la substitution de variables (voir ci-dessous).  Tout caractère non alphabétique sera remplacé par un trait de soulignement."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:287
 #, priority:100
 msgid "All variables can also be set per access method, see <<configaccessmethod,above>>."
-msgstr ""
+msgstr "Toutes les variables peuvent également être définies par méthode d'accès, voir <<configaccessmethod,ci-dessus>>."
 
 #. type: Title ^
 #: en/git-cvsserver.txt:289
 #, no-wrap, priority:100
 msgid "Variable substitution"
-msgstr ""
+msgstr "Substitution de variables"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:291
 #, priority:100
 msgid "In `dbDriver` and `dbUser` you can use the following variables:"
-msgstr ""
+msgstr "Dans `dbDriver` et `dbUser`, vous pouvez utiliser les variables suivantes :"
 
 #. type: Labeled list
 #: en/git-cvsserver.txt:292
@@ -19244,7 +19244,7 @@ msgstr "%G"
 #: en/git-cvsserver.txt:294
 #, priority:100
 msgid "Git directory name"
-msgstr ""
+msgstr "Nom du répertoire Git"
 
 #. type: Labeled list
 #: en/git-cvsserver.txt:294
@@ -19256,7 +19256,7 @@ msgstr "%g"
 #: en/git-cvsserver.txt:299
 #, priority:100
 msgid "Git directory name, where all characters except for alphanumeric ones, `.`, and `-` are replaced with `_` (this should make it easier to use the directory name in a filename if wanted)"
-msgstr ""
+msgstr "Nom du répertoire Git, où tous les caractères sauf les alphanumériques, `.`, et `-` sont remplacés par `_` (cela devrait rendre plus facile l'utilisation du nom du répertoire dans un nom de fichier si on le souhaite)"
 
 #. type: Labeled list
 #: en/git-cvsserver.txt:299
@@ -19268,7 +19268,7 @@ msgstr "%m"
 #: en/git-cvsserver.txt:301
 #, priority:100
 msgid "CVS module/Git head name"
-msgstr ""
+msgstr "Nom du module CVS/head Git"
 
 #. type: Labeled list
 #: en/git-cvsserver.txt:301
@@ -19280,7 +19280,7 @@ msgstr "%a"
 #: en/git-cvsserver.txt:303
 #, priority:100
 msgid "access method (one of \"ext\" or \"pserver\")"
-msgstr ""
+msgstr "méthode d'accès (l'une des méthodes suivantes : \"ext\" ou \"pserver\")"
 
 #. type: Labeled list
 #: en/git-cvsserver.txt:303
@@ -19292,109 +19292,109 @@ msgstr "%u"
 #: en/git-cvsserver.txt:307
 #, priority:100
 msgid "Name of the user running 'git-cvsserver'.  If no name can be determined, the numeric uid is used."
-msgstr ""
+msgstr "Nom de l'utilisateur qui exécute 'git-cvsserver'.  Si aucun nom ne peut être déterminé, l'uid numérique est utilisé."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:313
 #, priority:100
 msgid "These variables obviate the need for command-line options in some circumstances, allowing easier restricted usage through git-shell."
-msgstr ""
+msgstr "Ces variables rendent inutile l'utilisation d'options en ligne de commande dans certaines circonstances, ce qui permet un usage restreint plus facile via git-shell."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:315
 #, priority:100
 msgid "GIT_CVSSERVER_BASE_PATH takes the place of the argument to --base-path."
-msgstr ""
+msgstr "GIT_CVSSERVER_BASE_PATH prend la place de l'argument de --base-path."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:319
 #, priority:100
 msgid "GIT_CVSSERVER_ROOT specifies a single-directory whitelist. The repository must still be configured to allow access through git-cvsserver, as described above."
-msgstr ""
+msgstr "GIT_CVSSERVER_ROOT spécifie une liste blanche à répertoire unique. Le dépôt doit toujours être configuré pour permettre l'accès via git-cvsserver, comme décrit ci-dessus."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:322
 #, priority:100
 msgid "When these environment variables are set, the corresponding command-line arguments may not be used."
-msgstr ""
+msgstr "Lorsque ces variables d’environnement sont définies, les arguments de ligne de commande correspondants peuvent ne pas être utilisés."
 
 #. type: Title -
 #: en/git-cvsserver.txt:324
 #, no-wrap, priority:100
 msgid "ECLIPSE CVS CLIENT NOTES"
-msgstr ""
+msgstr "NOTES POUR LE CLIENT ECLIPSE CVS"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:327
 #, priority:100
 msgid "To get a checkout with the Eclipse CVS client:"
-msgstr ""
+msgstr "Pour obtenir une extraction avec le client CVS d'Eclipse :"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:329
 #, priority:100
 msgid "Select \"Create a new project -> From CVS checkout\""
-msgstr ""
+msgstr "Sélectionnez \"Create a new project -> From CVS checkout\""
 
 #. type: Plain text
 #: en/git-cvsserver.txt:331
 #, priority:100
 msgid "Create a new location. See the notes below for details on how to choose the right protocol."
-msgstr ""
+msgstr "Créez un nouvel emplacement. Consultez les notes ci-dessous pour savoir comment choisir le bon protocole."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:334
 #, priority:100
 msgid "Browse the 'modules' available. It will give you a list of the heads in the repository. You will not be able to browse the tree from there. Only the heads."
-msgstr ""
+msgstr "Parcourez les 'modules' disponibles. Cela vous donnera une liste des têtes dans le dépôt. Vous ne pourrez pas parcourir l'arbre à partir de là. Seulement les têtes."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:336
 #, priority:100
 msgid "Pick `HEAD` when it asks what branch/tag to check out. Untick the \"launch commit wizard\" to avoid committing the .project file."
-msgstr ""
+msgstr "Choisissez `HEAD` pour la branche/étiquette à extraire. Décochez la case \"launch commit wizard\" pour éviter de valider le fichier .project."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:342
 #, priority:100
 msgid "Protocol notes: If you are using anonymous access via pserver, just select that.  Those using SSH access should choose the 'ext' protocol, and configure 'ext' access on the Preferences->Team->CVS->ExtConnection pane. Set CVS_SERVER to \"`git cvsserver`\". Note that password support is not good when using 'ext', you will definitely want to have SSH keys setup."
-msgstr ""
+msgstr "Notes sur le protocole : si vous utilisez un accès anonyme via pserver, il suffit de le sélectionner.  Ceux qui utilisent un accès SSH doivent choisir le protocole 'ext' et configurer l'accès 'ext' dans le panneau Preferences->Team->CVS->ExtConnection. Définissez CVS_SERVER à \"`git cvsserver`\". Notez que la prise en charge des mots de passe n'est pas bonne lorsque vous utilisez 'ext' vous voudrez certainement avoir des clés SSH configurées."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:347
 #, priority:100
 msgid "Alternatively, you can just use the non-standard extssh protocol that Eclipse offer. In that case CVS_SERVER is ignored, and you will have to replace the cvs utility on the server with 'git-cvsserver' or manipulate your `.bashrc` so that calling 'cvs' effectively calls 'git-cvsserver'."
-msgstr ""
+msgstr "Alternativement, vous pouvez simplement utiliser le protocole non standard extssh que Eclipse propose. Dans ce cas, CVS_SERVER est ignoré, et vous devrez remplacer l'utilitaire cvs sur le serveur par 'git-cvsserver' ou manipuler votre `.bashrc` pour que l'appel à 'cvs' appelle effectivement 'git-cvsserver'."
 
 #. type: Title -
 #: en/git-cvsserver.txt:349
 #, no-wrap, priority:100
 msgid "CLIENTS KNOWN TO WORK"
-msgstr ""
+msgstr "CLIENTS CONNUS POUR FONCTIONNER"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:352
 #, priority:100
 msgid "CVS 1.12.9 on Debian"
-msgstr ""
+msgstr "CVS 1.12.9 sur Debian"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:353
 #, priority:100
 msgid "CVS 1.11.17 on MacOSX (from Fink package)"
-msgstr ""
+msgstr "CVS 1.11.17 sur MacOSX (à partir du paquet Fink)"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:354
 #, priority:100
 msgid "Eclipse 3.0, 3.1.2 on MacOSX (see Eclipse CVS Client Notes)"
-msgstr ""
+msgstr "Eclipse 3.0, 3.1.2 sur MacOSX (voir les notes sur le client CVS d'Eclipse)"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:355
 #, priority:100
 msgid "TortoiseCVS"
-msgstr ""
+msgstr "TortoiseCVS"
 
 #. type: Title -
 #: en/git-cvsserver.txt:357
@@ -19406,73 +19406,73 @@ msgstr "OPÉRATIONS SUPPORTÉES"
 #: en/git-cvsserver.txt:361
 #, priority:100
 msgid "All the operations required for normal use are supported, including checkout, diff, status, update, log, add, remove, commit."
-msgstr ""
+msgstr "Toutes les opérations nécessaires à une utilisation normale sont prises en charge, y compris l'extraction, la comparaison, l'état, la mise à jour, le journal, l'ajout, la suppression et la validation."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:370
 #, priority:100
 msgid "Most CVS command arguments that read CVS tags or revision numbers (typically -r) work, and also support any git refspec (tag, branch, commit ID, etc).  However, CVS revision numbers for non-default branches are not well emulated, and cvs log does not show tags or branches at all.  (Non-main-branch CVS revision numbers superficially resemble CVS revision numbers, but they actually encode a git commit ID directly, rather than represent the number of revisions since the branch point.)"
-msgstr ""
+msgstr "La plupart des arguments de commande CVS qui lisent les étiquettes CVS ou les numéros de révision (typiquement -r) fonctionnent, et supportent également n'importe quel spécificateur de référence git (étiquette, branche, ID de commit, etc).  Cependant, les numéros de révision CVS pour les branches non-définies par défaut ne sont pas bien émulés, et cvs log n'affiche pas du tout les étiquettes ou les branches.  (Les numéros de révision CVS des branches non principales ressemblent superficiellement aux numéros de révision CVS, mais ils encodent en fait directement un ID de commit git, plutôt que de représenter le nombre de révisions depuis le point de branchement)."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:384
 #, priority:100
 msgid "Note that there are two ways to checkout a particular branch.  As described elsewhere on this page, the \"module\" parameter of cvs checkout is interpreted as a branch name, and it becomes the main branch.  It remains the main branch for a given sandbox even if you temporarily make another branch sticky with cvs update -r.  Alternatively, the -r argument can indicate some other branch to actually checkout, even though the module is still the \"main\" branch.  Tradeoffs (as currently implemented): Each new \"module\" creates a new database on disk with a history for the given module, and after the database is created, operations against that main branch are fast.  Or alternatively, -r doesn't take any extra disk space, but may be significantly slower for many operations, like cvs update."
-msgstr ""
+msgstr "Notez qu'il y a deux façons d'extraire une branche particulière.  Comme décrit ailleurs sur cette page, le paramètre \"module\" de cvs checkout est interprété comme un nom de branche, et il devient la branche principale.  Elle reste la branche principale pour un bac à sable donné même si vous rendez temporairement une autre branche collante avec cvs update -r.  Alternativement, l'argument -r peut indiquer une autre branche à vérifier, même si le module est toujours la branche \"principale\".  Compromis (tel qu'implémenté actuellement) : chaque nouveau \"module\" crée une nouvelle base de données sur le disque avec un historique pour le module donné, et après la création de la base de données, les opérations sur cette branche principale sont rapides.  Ou alternativement, -r ne prend pas d'espace disque supplémentaire, mais peut être significativement plus lent pour de nombreuses opérations, comme cvs update."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:397
 #, priority:100
 msgid "If you want to refer to a git refspec that has characters that are not allowed by CVS, you have two options.  First, it may just work to supply the git refspec directly to the appropriate CVS -r argument; some CVS clients don't seem to do much sanity checking of the argument.  Second, if that fails, you can use a special character escape mechanism that only uses characters that are valid in CVS tags.  A sequence of 4 or 5 characters of the form (underscore (`\"_\"`), dash (`\"-\"`), one or two characters, and dash (`\"-\"`)) can encode various characters based on the one or two letters: `\"s\"` for slash (`\"/\"`), `\"p\"` for period (`\".\"`), `\"u\"` for underscore (`\"_\"`), or two hexadecimal digits for any byte value at all (typically an ASCII number, or perhaps a part of a UTF-8 encoded character)."
-msgstr ""
+msgstr "Si vous voulez faire référence à une spécification de référence git qui contient des caractères non autorisés par CVS, vous avez deux options.  Premièrement, il est possible de fournir la spécification de référence git directement à l'argument CVS -r approprié ; certains clients CVS ne semblent pas faire beaucoup de vérification de l'intégrité de l'argument.  Deuxièmement, si cela échoue, vous pouvez utiliser un mécanisme spécial d'échappement de caractères qui n'utilise que les caractères valides dans les étiquettes CVS.  Une séquence de 4 ou 5 caractères de la forme (trait de soulignement (`\"_\"`), tiret (`\"-\"`), un ou deux caractères, et tiret (`\"-\"`)) peut coder divers caractères basés sur les une ou deux lettres : `\"s\"` pour la barre oblique (`\"/\"`), `\"p\"` pour le point (`\" .\"`), `\"u\"` pour le trait de soulignement (`\"_\"`), ou deux chiffres hexadécimaux pour toute valeur d'octet (typiquement un nombre ASCII, ou peut-être une partie d'un caractère codé UTF-8)."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:400
 #, priority:100
 msgid "Legacy monitoring operations are not supported (edit, watch and related).  Exports and tagging (tags and branches) are not supported at this stage."
-msgstr ""
+msgstr "Les anciennes opérations de surveillance ne sont pas prises en charge (édition, surveillance et connexes).  Les exportations et l'étiquetage (étiquettes et branches) ne sont pas supportés à ce stade."
 
 #. type: Title ~
 #: en/git-cvsserver.txt:402
 #, no-wrap, priority:100
 msgid "CRLF Line Ending Conversions"
-msgstr ""
+msgstr "Conversions de fin de ligne CRLF"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:407
 #, priority:100
 msgid "By default the server leaves the `-k` mode blank for all files, which causes the CVS client to treat them as a text files, subject to end-of-line conversion on some platforms."
-msgstr ""
+msgstr "Par défaut, le serveur laisse le mode `-k` vide pour tous les fichiers, ce qui amène le client CVS à les traiter comme des fichiers texte, sujets à une conversion de fin de ligne sur certaines plateformes."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:412
 #, priority:100
 msgid "You can make the server use the end-of-line conversion attributes to set the `-k` modes for files by setting the `gitcvs.usecrlfattr` config variable.  See linkgit:gitattributes[5] for more information about end-of-line conversion."
-msgstr ""
+msgstr "Vous pouvez faire en sorte que le serveur utilise les attributs de conversion de fin de ligne pour définir les modes `-k` des fichiers en définissant la variable de configuration `gitcvs.usecrlfattr`.  Voir linkgit:gitattributes[5] pour plus d'informations sur la conversion de fin de ligne."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:421
 #, priority:100
 msgid "Alternatively, if `gitcvs.usecrlfattr` config is not enabled or the attributes do not allow automatic detection for a filename, then the server uses the `gitcvs.allBinary` config for the default setting.  If `gitcvs.allBinary` is set, then file not otherwise specified will default to '-kb' mode. Otherwise the `-k` mode is left blank. But if `gitcvs.allBinary` is set to \"guess\", then the correct `-k` mode will be guessed based on the contents of the file."
-msgstr ""
+msgstr "Alternativement, si la configuration `gitcvs.usecrlfattr` n'est pas activée ou si les attributs ne permettent pas la détection automatique pour un nom de fichier, alors le serveur utilise la configuration `gitcvs.allBinary` pour le paramètre par défaut.  Si `gitcvs.allBinary` est défini, alors les fichiers qui ne sont pas spécifiés autrement seront par défaut en mode '-kb'. Sinon, le mode `-k` est laissé vide. Mais si `gitcvs.allBinary` est défini à \"guess\", alors le mode `-k` correct sera deviné en fonction du contenu du fichier."
 
 #. type: Plain text
 #: en/git-cvsserver.txt:425
 #, priority:100
 msgid "For best consistency with 'cvs', it is probably best to override the defaults by setting `gitcvs.usecrlfattr` to true, and `gitcvs.allBinary` to \"guess\"."
-msgstr ""
+msgstr "Pour une meilleure cohérence avec 'cvs', il est probablement préférable de remplacer les valeurs par défaut en mettant `gitcvs.usecrlfattr` à true, et `gitcvs.allBinary` à \"guess\"."
 
 #. type: Title -
 #: en/git-cvsserver.txt:427
 #, no-wrap, priority:100
 msgid "DEPENDENCIES"
-msgstr ""
+msgstr "DÉPENDANCES"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:429
 #, priority:100
 msgid "'git-cvsserver' depends on DBD::SQLite."
-msgstr ""
+msgstr "'git-cvsserver' dépend de DBD::SQLite."
 
 #. type: Title =
 #: en/git-daemon.txt:2
@@ -19504,43 +19504,43 @@ msgid ""
 "\t      [--user=<user> [--group=<group>]]]\n"
 "\t     [--log-destination=(stderr|syslog|none)]\n"
 "\t     [<directory>...]\n"
-msgstr ""
+msgstr "'git daemon' [--verbose] [--syslog] [--export-all]\n\t     [--timeout=<n>] [--init-timeout=<n>] [--max-connections=<n>]\n\t     [--strict-paths] [--base-path=<chemin>] [--base-path-relaxed]\n\t     [--user-path | --user-path=<chemin>]\n\t     [--interpolated-path=<chemin-de-modèle>]\n\t     [--reuseaddr] [--detach] [--pid-file=<fichier>]\n\t     [--enable=<service>] [--disable=<service>]\n\t     [--allow-override=<service>] [--forbid-override=<service>]\n\t     [--access-hook=<chemin>] [--[no-]informative-errors]\n\t     [--inetd |\n\t      [--listen=<hôte-ou-adr-ip>] [--port=<n>]\n\t      [--user=<user> [--group=<groupe>]]]\n\t     [--log-destination=(stderr|syslog|none)]\n\t     [<répertoire>...]\n"
 
 #. type: Plain text
 #: en/git-daemon.txt:31
 #, priority:100
 msgid "A really simple TCP Git daemon that normally listens on port \"DEFAULT_GIT_PORT\" aka 9418.  It waits for a connection asking for a service, and will serve that service if it is enabled."
-msgstr ""
+msgstr "Un démon TCP Git très simple qui écoute normalement sur le port \"DEFAULT_GIT_PORT\" soit 9418.  Il attend une connexion demandant un service, et servira ce service s'il est activé."
 
 #. type: Plain text
 #: en/git-daemon.txt:37
 #, priority:100
 msgid "It verifies that the directory has the magic file \"git-daemon-export-ok\", and it will refuse to export any Git directory that hasn't explicitly been marked for export this way (unless the `--export-all` parameter is specified). If you pass some directory paths as 'git daemon' arguments, you can further restrict the offers to a whitelist comprising of those."
-msgstr ""
+msgstr "Il vérifie que le répertoire possède le fichier magique \"git-daemon-export-ok\", et il refusera d'exporter tout répertoire Git qui n'a pas été explicitement marqué pour l'exportation de cette façon (à moins que le paramètre `--export-all` soit spécifié). Si vous passez certains chemins de répertoire en tant qu'arguments de 'git daemon', vous pouvez restreindre davantage les offres à une liste blanche composée de ceux-ci."
 
 #. type: Plain text
 #: en/git-daemon.txt:41
 #, priority:100
 msgid "By default, only `upload-pack` service is enabled, which serves 'git fetch-pack' and 'git ls-remote' clients, which are invoked from 'git fetch', 'git pull', and 'git clone'."
-msgstr ""
+msgstr "Par défaut, seul le service `upload-pack` est activé, qui sert les clients 'git fetch-pack' et 'git ls-remote', qui sont invoqués depuis 'git fetch', 'git pull', et 'git clone'."
 
 #. type: Plain text
 #: en/git-daemon.txt:44
 #, priority:100
 msgid "This is ideally suited for read-only updates, i.e., pulling from Git repositories."
-msgstr ""
+msgstr "Cette méthode convient parfaitement aux mises à jour en lecture seule, c'est-à-dire à l'extraction de dépôts Git."
 
 #. type: Plain text
 #: en/git-daemon.txt:46
 #, priority:100
 msgid "An `upload-archive` also exists to serve 'git archive'."
-msgstr ""
+msgstr "Une 'upload-archive' existe également pour servir 'git archive'."
 
 #. type: Plain text
 #: en/git-daemon.txt:54
 #, priority:100
 msgid "Match paths exactly (i.e. don't allow \"/foo/repo\" when the real path is \"/foo/repo.git\" or \"/foo/repo/.git\") and don't do user-relative paths.  'git daemon' will refuse to start when this option is enabled and no whitelist is specified."
-msgstr ""
+msgstr "Faire correspondre exactement les chemins (c’est-à-dire ne pas autoriser « /foo/dépôt » lorsque le chemin réel est « /foo/dépôt.git » ou « /foo/dépôt/.git ») et ne pas faire de chemins relatifs à l’utilisateur.  'git daemon' refusera de démarrer lorsque cette option est activée et qu’aucune liste blanche n’est spécifiée."
 
 #. type: Labeled list
 #: en/git-daemon.txt:55
@@ -19552,7 +19552,7 @@ msgstr "--base-path=<chemin>"
 #: en/git-daemon.txt:61
 #, priority:100
 msgid "Remap all the path requests as relative to the given path.  This is sort of \"Git root\" - if you run 'git daemon' with '--base-path=/srv/git' on example.com, then if you later try to pull 'git://example.com/hello.git', 'git daemon' will interpret the path as `/srv/git/hello.git`."
-msgstr ""
+msgstr "Relocalise toutes les chemins de requêtes comme relatifs au chemin donné.  C'est une sorte de \"racine Git\" - si vous exécutez 'git daemon' avec '--base-path=/srv/git' sur exemple.com, alors si vous essayez plus tard de tirer 'git://exemple.com/hello.git', 'git daemon' interprétera le chemin comme `/srv/git/hello.git`."
 
 #. type: Labeled list
 #: en/git-daemon.txt:62
@@ -19564,25 +19564,25 @@ msgstr "--base-path-relaxed"
 #: en/git-daemon.txt:67
 #, priority:100
 msgid "If --base-path is enabled and repo lookup fails, with this option 'git daemon' will attempt to lookup without prefixing the base path.  This is useful for switching to --base-path usage, while still allowing the old paths."
-msgstr ""
+msgstr "Si --base-path est activé et que la recherche de dépôt échoue, avec cette option 'git daemon' tentera de faire la recherche sans préfixer le chemin de base.  Ceci est utile pour passer à l'utilisation de --base-path, tout en autorisant toujours les anciens chemins."
 
 #. type: Labeled list
 #: en/git-daemon.txt:68
 #, no-wrap, priority:100
 msgid "--interpolated-path=<pathtemplate>"
-msgstr ""
+msgstr "--interpolated-path=<modèle-de-chemin>"
 
 #. type: Plain text
 #: en/git-daemon.txt:77
 #, priority:100
 msgid "To support virtual hosting, an interpolated path template can be used to dynamically construct alternate paths.  The template supports %H for the target hostname as supplied by the client but converted to all lowercase, %CH for the canonical hostname, %IP for the server's IP address, %P for the port number, and %D for the absolute path of the named repository.  After interpolation, the path is validated against the directory whitelist."
-msgstr ""
+msgstr "Pour prendre en charge l'hébergement virtuel, un modèle de chemin interpolé peut être utilisé pour construire dynamiquement des chemins alternatifs.  Le modèle prend en charge %H pour le nom d'hôte cible tel que fourni par le client mais converti en minuscules, %CH pour le nom d'hôte canonique, %IP pour l'adresse IP du serveur, %P pour le numéro de port et %D pour le chemin absolu du dépôt nommé.  Après interpolation, le chemin est validé par rapport à la liste blanche des répertoires."
 
 #. type: Plain text
 #: en/git-daemon.txt:82
 #, priority:100
 msgid "Allow pulling from all directories that look like Git repositories (have the 'objects' and 'refs' subdirectories), even if they do not have the 'git-daemon-export-ok' file."
-msgstr ""
+msgstr "Autoriser les tirages à partir de tous les répertoires qui ressemblent à des dépôts Git (avec les sous-répertoires 'objects' et 'refs'), même s'ils ne possèdent pas le fichier 'git-daemon-export-ok'."
 
 #. type: Labeled list
 #: en/git-daemon.txt:83
@@ -19594,67 +19594,67 @@ msgstr "--inetd"
 #: en/git-daemon.txt:88
 #, priority:100
 msgid "Have the server run as an inetd service. Implies --syslog (may be overridden with `--log-destination=`).  Incompatible with --detach, --port, --listen, --user and --group options."
-msgstr ""
+msgstr "Faire tourner le serveur comme un service inetd. Implique --syslog (peut être surchargé avec `--log-destination=`).  Incompatible avec les options --detach, --port, --listen, --user et --group."
 
 #. type: Labeled list
 #: en/git-daemon.txt:89
 #, no-wrap, priority:100
 msgid "--listen=<host_or_ipaddr>"
-msgstr ""
+msgstr "--listen=<hôte_ou_adr_ip>"
 
 #. type: Plain text
 #: en/git-daemon.txt:96
 #, priority:100
 msgid "Listen on a specific IP address or hostname.  IP addresses can be either an IPv4 address or an IPv6 address if supported.  If IPv6 is not supported, then --listen=hostname is also not supported and --listen must be given an IPv4 address.  Can be given more than once.  Incompatible with `--inetd` option."
-msgstr ""
+msgstr "Écouter sur une adresse IP ou un nom d'hôte spécifique.  Les adresses IP peuvent être soit une adresse IPv4, soit une adresse IPv6 si elle est supportée.  Si IPv6 n'est pas supporté, alors --listen=<nom-d-hote> n'est pas supporté non plus et --listen doit recevoir une adresse IPv4.  Peut être donné plus d'une fois.  Incompatible avec l'option `--inetd`."
 
 #. type: Labeled list
 #: en/git-daemon.txt:97
 #, no-wrap, priority:100
 msgid "--port=<n>"
-msgstr ""
+msgstr "--port=<n>"
 
 #. type: Plain text
 #: en/git-daemon.txt:99
 #, priority:100
 msgid "Listen on an alternative port.  Incompatible with `--inetd` option."
-msgstr ""
+msgstr "Écouter sur un port alternatif.  Incompatible avec l'option `--inetd`."
 
 #. type: Labeled list
 #: en/git-daemon.txt:100
 #, no-wrap, priority:100
 msgid "--init-timeout=<n>"
-msgstr ""
+msgstr "--init-timeout=<n>"
 
 #. type: Plain text
 #: en/git-daemon.txt:104
 #, priority:100
 msgid "Timeout (in seconds) between the moment the connection is established and the client request is received (typically a rather low value, since that should be basically immediate)."
-msgstr ""
+msgstr "Délai d'attente (en secondes) entre le moment où la connexion est établie et celui où la demande du client est reçue (généralement une valeur assez faible, puisque cela devrait être essentiellement immédiat)."
 
 #. type: Labeled list
 #: en/git-daemon.txt:105 en/git-upload-pack.txt:31
 #, no-wrap, priority:100
 msgid "--timeout=<n>"
-msgstr ""
+msgstr "--timeout=<n>"
 
 #. type: Plain text
 #: en/git-daemon.txt:109
 #, priority:100
 msgid "Timeout (in seconds) for specific client sub-requests. This includes the time it takes for the server to process the sub-request and the time spent waiting for the next client's request."
-msgstr ""
+msgstr "Délai d'attente (en secondes) pour les sous-requêtes spécifiques du client. Cela comprend le temps nécessaire au serveur pour traiter la sous-demande et le temps d'attente de la demande du client suivant."
 
 #. type: Labeled list
 #: en/git-daemon.txt:110
 #, no-wrap, priority:100
 msgid "--max-connections=<n>"
-msgstr ""
+msgstr "--max-connections=<n>"
 
 #. type: Plain text
 #: en/git-daemon.txt:113
 #, priority:100
 msgid "Maximum number of concurrent clients, defaults to 32.  Set it to zero for no limit."
-msgstr ""
+msgstr "Nombre maximum de clients simultanés, la valeur par défaut est de 32.  Définissez-le à zéro pour ne pas avoir de limite."
 
 #. type: Labeled list
 #: en/git-daemon.txt:114
@@ -19666,31 +19666,31 @@ msgstr "--syslog"
 #: en/git-daemon.txt:116
 #, priority:100
 msgid "Short for `--log-destination=syslog`."
-msgstr ""
+msgstr "Abréviation de `--log-destination=syslog`."
 
 #. type: Labeled list
 #: en/git-daemon.txt:117
 #, no-wrap, priority:100
 msgid "--log-destination=<destination>"
-msgstr ""
+msgstr "--log-destination=<destination>"
 
 #. type: Plain text
 #: en/git-daemon.txt:122
 #, priority:100
 msgid "Send log messages to the specified destination.  Note that this option does not imply --verbose, thus by default only error conditions will be logged.  The <destination> must be one of:"
-msgstr ""
+msgstr "Envoyer les messages de journal à la destination spécifiée.  Notez que cette option n'implique pas --verbose, donc par défaut, seules les conditions d'erreur seront enregistrées.  La <destination> doit être l'une des suivantes :"
 
 #. type: Labeled list
 #: en/git-daemon.txt:124
 #, no-wrap, priority:100
 msgid "stderr"
-msgstr ""
+msgstr "stderr"
 
 #. type: Plain text
 #: en/git-daemon.txt:129
 #, priority:100
 msgid "Write to standard error.  Note that if `--detach` is specified, the process disconnects from the real standard error, making this destination effectively equivalent to `none`."
-msgstr ""
+msgstr "Écriture sur le flux d'erreur standard.  Notez que si `--detach` est spécifié, le processus se déconnecte de l'erreur standard réelle, rendant cette destination effectivement équivalente à `none`."
 
 #. type: Labeled list
 #: en/git-daemon.txt:129
@@ -19702,19 +19702,19 @@ msgstr "syslog"
 #: en/git-daemon.txt:131
 #, priority:100
 msgid "Write to syslog, using the `git-daemon` identifier."
-msgstr ""
+msgstr "Écrire dans syslog, en utilisant l'identifiant `git-daemon`."
 
 #. type: Plain text
 #: en/git-daemon.txt:133
 #, priority:100
 msgid "Disable all logging."
-msgstr ""
+msgstr "Désactiver toute la journalisation."
 
 #. type: Plain text
 #: en/git-daemon.txt:137
 #, priority:100
 msgid "The default destination is `syslog` if `--inetd` or `--detach` is specified, otherwise `stderr`."
-msgstr ""
+msgstr "La destination par défaut est `syslog` si `--inetd` ou `--detach` est spécifié, sinon `stderr`."
 
 #. type: Labeled list
 #: en/git-daemon.txt:138
@@ -19732,13 +19732,13 @@ msgstr "--user-path=<chemin>"
 #: en/git-daemon.txt:147
 #, priority:100
 msgid "Allow {tilde}user notation to be used in requests.  When specified with no parameter, requests to git://host/{tilde}alice/foo is taken as a request to access 'foo' repository in the home directory of user `alice`.  If `--user-path=path` is specified, the same request is taken as a request to access `path/foo` repository in the home directory of user `alice`."
-msgstr ""
+msgstr "Autoriser l’utilisation de la notation {tilde}user dans les requêtes.  Lorsqu’elles sont spécifiées sans paramètre, les demandes à git://hote/{tilde}alice/foo sont considérées comme une demande d’accès au référentiel 'foo' dans le répertoire de base de l’utilisateur `alice`.  Si `--user-path=<chemin>` est spécifié, la même demande est prise comme une demande d’accès au dépôt `<chemin>/foo' dans le répertoire de base de l’utilisateur `alice`."
 
 #. type: Plain text
 #: en/git-daemon.txt:150
 #, priority:100
 msgid "Log details about the incoming connections and requested files."
-msgstr ""
+msgstr "Enregistre les détails des connexions entrantes et des fichiers demandés."
 
 #. type: Labeled list
 #: en/git-daemon.txt:151
@@ -19750,13 +19750,13 @@ msgstr "--reuseaddr"
 #: en/git-daemon.txt:155
 #, priority:100
 msgid "Use SO_REUSEADDR when binding the listening socket.  This allows the server to restart without waiting for old connections to time out."
-msgstr ""
+msgstr "Utiliser SO_REUSEADDR pour lier la socket d'écoute.  Cela permet au serveur de redémarrer sans attendre la fin des anciennes connexions."
 
 #. type: Plain text
 #: en/git-daemon.txt:158
 #, priority:100
 msgid "Detach from the shell. Implies --syslog."
-msgstr ""
+msgstr "Se détacher du shell. Implique --syslog."
 
 #. type: Labeled list
 #: en/git-daemon.txt:159
@@ -19768,73 +19768,73 @@ msgstr "--pid-file=<fichier>"
 #: en/git-daemon.txt:162
 #, priority:100
 msgid "Save the process id in 'file'.  Ignored when the daemon is run under `--inetd`."
-msgstr ""
+msgstr "Sauvegarder l'id du processus dans le 'fichier'.  Ignoré lorsque le démon est exécuté sous `--inetd`."
 
 #. type: Labeled list
 #: en/git-daemon.txt:163
 #, no-wrap, priority:100
 msgid "--user=<user>"
-msgstr ""
+msgstr "--user=<utilisateur>"
 
 #. type: Labeled list
 #: en/git-daemon.txt:164
 #, no-wrap, priority:100
 msgid "--group=<group>"
-msgstr ""
+msgstr "--group=<groupe>"
 
 #. type: Plain text
 #: en/git-daemon.txt:170
 #, priority:100
 msgid "Change daemon's uid and gid before entering the service loop.  When only `--user` is given without `--group`, the primary group ID for the user is used.  The values of the option are given to `getpwnam(3)` and `getgrnam(3)` and numeric IDs are not supported."
-msgstr ""
+msgstr "Changer le uid et gid du daemon avant d'entrer la boucle du service. Le groupe ID primaire de l'utilisateur est utilisé quand seule l'option `--user` est donnée sans l'option `--group`. Les valeurs de l'option sont données par `getpwnam(3)` et `getgrnam(3)`, les valeurs numériques ne sont pas supportées."
 
 #. type: Plain text
 #: en/git-daemon.txt:174
 #, priority:100
 msgid "Giving these options is an error when used with `--inetd`; use the facility of inet daemon to achieve the same before spawning 'git daemon' if needed."
-msgstr ""
+msgstr "Donner ces options est une erreur lorsqu'elles sont utilisées avec `--inetd` ; utilisez la fonction du daemon inet pour réaliser la même chose avant de lancer 'git daemon' si nécessaire."
 
 #. type: Plain text
 #: en/git-daemon.txt:181
 #, priority:100
 msgid "Like many programs that switch user id, the daemon does not reset environment variables such as `$HOME` when it runs git programs, e.g. `upload-pack` and `receive-pack`. When using this option, you may also want to set and export `HOME` to point at the home directory of `<user>` before starting the daemon, and make sure any Git configuration files in that directory are readable by `<user>`."
-msgstr ""
+msgstr "Comme beaucoup de programmes qui changent d'identité d'utilisateur, le daemon ne réinitialise pas les variables d'environnement telles que `$HOME` lorsqu'il exécute les programmes git, par exemple `upload-pack` et `receive-pack`. Si vous utilisez cette option, vous voudrez peut-être aussi définir et exporter `HOME` pour qu'il pointe sur le répertoire personnel de `<utilisateur>` avant de lancer le démon, et vous assurer que tous les fichiers de configuration de Git dans ce répertoire sont lisibles par `<utilisateur>`."
 
 #. type: Labeled list
 #: en/git-daemon.txt:182
 #, no-wrap, priority:100
 msgid "--enable=<service>"
-msgstr ""
+msgstr "--enable=<service>"
 
 #. type: Labeled list
 #: en/git-daemon.txt:183
 #, no-wrap, priority:100
 msgid "--disable=<service>"
-msgstr ""
+msgstr "--disable=<service>"
 
 #. type: Plain text
 #: en/git-daemon.txt:189
 #, priority:100
 msgid "Enable/disable the service site-wide per default.  Note that a service disabled site-wide can still be enabled per repository if it is marked overridable and the repository enables the service with a configuration item."
-msgstr ""
+msgstr "Activer/désactiver le service à l’échelle du site par défaut.  Notez qu’un service désactivé à l’échelle du site peut toujours être activé par dépôt s’il est marqué comme substituable et que le dépôt active le service avec un élément de configuration."
 
 #. type: Labeled list
 #: en/git-daemon.txt:190
 #, no-wrap, priority:100
 msgid "--allow-override=<service>"
-msgstr ""
+msgstr "--allow-override=<service>"
 
 #. type: Labeled list
 #: en/git-daemon.txt:191
 #, no-wrap, priority:100
 msgid "--forbid-override=<service>"
-msgstr ""
+msgstr "--forbid-override=<service>"
 
 #. type: Plain text
 #: en/git-daemon.txt:195
 #, priority:100
 msgid "Allow/forbid overriding the site-wide default with per repository configuration.  By default, all the services may be overridden."
-msgstr ""
+msgstr "Autoriser/interdire le remplacement de la valeur par défaut du site par une configuration par dépôt.  Par défaut, tous les services peuvent être remplacés."
 
 #. type: Labeled list
 #: en/git-daemon.txt:196
@@ -19846,7 +19846,7 @@ msgstr "--[no-]informative-errors"
 #: en/git-daemon.txt:204
 #, priority:100
 msgid "When informative errors are turned on, git-daemon will report more verbose errors to the client, differentiating conditions like \"no such repository\" from \"repository not exported\". This is more convenient for clients, but may leak information about the existence of unexported repositories.  When informative errors are not enabled, all errors report \"access denied\" to the client. The default is --no-informative-errors."
-msgstr ""
+msgstr "Lorsque les erreurs informatives sont activées, git-daemon rapportera des erreurs plus détaillées au client, en différenciant des conditions comme \"no such repository\" de \"repository not exported\". Ceci est plus pratique pour les clients, mais peut laisser fuir des informations sur l'existence de dépôts non exportés.  Lorsque les erreurs informatives ne sont pas activées, toutes les erreurs signalent \"accès refusé\" au client. La valeur par défaut est --no-informative-errors."
 
 #. type: Labeled list
 #: en/git-daemon.txt:205
@@ -19864,13 +19864,13 @@ msgstr ""
 #: en/git-daemon.txt:219
 #, priority:100
 msgid "The external command can optionally write a single line to its standard output to be sent to the requestor as an error message when it declines the service."
-msgstr ""
+msgstr "Le command externe peut écrire optionalement une ligne en se sortie standard par être envoyé pour le requisiteur comme une méssage d'error quand lui decline le service."
 
 #. type: Plain text
 #: en/git-daemon.txt:224
 #, priority:100
 msgid "A directory to add to the whitelist of allowed directories. Unless --strict-paths is specified this will also include subdirectories of each named directory."
-msgstr ""
+msgstr "Un répertoire pour ajouter dans le liste blanche des répertoire permés. À moins que --strict-paths ne soit spécifié cette action inclura également les sous-répertoire de chaque répertoire nommé."
 
 #. type: Title -
 #: en/git-daemon.txt:226 en/git-http-backend.txt:35
@@ -19894,7 +19894,7 @@ msgstr "upload-pack"
 #: en/git-daemon.txt:240
 #, priority:100
 msgid "This serves 'git fetch-pack' and 'git ls-remote' clients.  It is enabled by default, but a repository can disable it by setting `daemon.uploadpack` configuration item to `false`."
-msgstr ""
+msgstr "Cela sert les clients 'git fetch-pack' et 'git ls-remote'. Il est activé par défaut, mais un dépôt peut le désactiver en definissant l'élement de configuration 'daemon.uploadpack' sur 'false'."
 
 #. type: Labeled list
 #: en/git-daemon.txt:241
@@ -19906,7 +19906,7 @@ msgstr "upload-archive"
 #: en/git-daemon.txt:245
 #, priority:100
 msgid "This serves 'git archive --remote'.  It is disabled by default, but a repository can enable it by setting `daemon.uploadarch` configuration item to `true`."
-msgstr ""
+msgstr "Cela sert 'git archive --remote'. Il est désactivé par défaut, mais un dépôt peut l'activer en definissant l'element de configuration 'daemon.uploadarch' sur 'true'."
 
 #. type: Labeled list
 #: en/git-daemon.txt:246
@@ -68700,7 +68700,7 @@ msgstr ""
 #: en/git-bisect-lk2009.txt:1358
 #, priority:100
 msgid "[[[9]]] https://github.com/Ealdwulf/bbchop[Ealdwulf. 'bbchop'. GitHub.]"
-msgstr ""
+msgstr "[[[9]]] https://github.com/Ealdwulf/bbchop[Ealdwulf. 'bbchop'. GitHub.]"
 
 #~ msgid "Store the files instead of deflating them."
 #~ msgstr "Stocker les fichiers au lieu de les compresser."
