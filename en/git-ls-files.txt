@@ -10,9 +10,9 @@ SYNOPSIS
 --------
 [verse]
 'git ls-files' [-z] [-t] [-v] [-f]
-		(--[cached|deleted|others|ignored|stage|unmerged|killed|modified])*
-		(-[c|d|o|i|s|u|k|m])*
-		[--eol]
+		[-c|--cached] [-d|--deleted] [-o|--others] [-i|--|ignored]
+		[-s|--stage] [-u|--unmerged] [-k|--|killed] [-m|--modified]
+		[--directory [--no-empty-directory]] [--eol]
 		[--deduplicate]
 		[-x <pattern>|--exclude=<pattern>]
 		[-X <file>|--exclude-from=<file>]
@@ -186,6 +186,11 @@ Since Git 2.10 "text=auto eol=lf" and "text=auto eol=crlf" are supported.
 Both the <eolinfo> in the index ("i/<eolinfo>")
 and in the working tree ("w/<eolinfo>") are shown for regular files,
 followed by the  ("attr/<eolattr>").
+
+--sparse::
+	If the index is sparse, show the sparse directories without expanding
+	to the contained files. Sparse directories will be shown with a
+	trailing slash, such as "x/" for a sparse directory "x".
 
 \--::
 	Do not interpret any more arguments as options.
