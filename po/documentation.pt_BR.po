@@ -3,7 +3,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Report-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2022-01-11 13:34+0100\nPO-Revision-Date: 2022-01-17 19:56+0000\nLast-Translator: Jessica Temporal <jessicatemporal@gmail.com>\nLanguage-Team: none\nLanguage: pt_BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.11-dev\n"
+msgstr "Report-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2022-01-11 13:34+0100\nPO-Revision-Date: 2022-01-21 14:56+0000\nLast-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\nLanguage-Team: none\nLanguage: pt_BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.11-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:754 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:129 en/git-status.txt:31
@@ -2787,22 +2787,21 @@ msgstr "O valor de uma variável que pega uma cor de uma lista de cores (ao meno
 
 #. type: Plain text
 #: en/config.txt:270
-#, fuzzy, priority:100
-#| msgid "The basic colors accepted are `normal`, `black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan` and `white`.  The first color given is the foreground; the second is the background.  All the basic colors except `normal` have a bright variant that can be specified by prefixing the color with `bright`, like `brightred`."
+#, priority:100
 msgid "The basic colors accepted are `normal`, `black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white` and `default`.  The first color given is the foreground; the second is the background.  All the basic colors except `normal` and `default` have a bright variant that can be specified by prefixing the color with `bright`, like `brightred`."
-msgstr "As cores básicas que são aceitas são `normal` (normal), `black` (preto) , `red` (vermelho) , `green` (verde), `yellow` (amarelo) , `blue` (azul), `magenta` (magenta), `cyan` (ciano) and `white` (branco).  A primeira cor é o primeiro plano; a segunda é o plano de fundo.  Todas as cores básicas, exceto `normal`, possuem uma variante brilhante da cor que pode ser definida com `bright`, como `brightred`."
+msgstr "As cores básicas que são aceitas são `normal` (normal), `black` (preto) , `red` (vermelho) , `green` (verde), `yellow` (amarelo) , `blue` (azul), `magenta` (magenta), `cyan` (ciano), `white` (branco) e `default` (predefinido).  A primeira cor é o primeiro plano; a segunda é o plano de fundo.  Todas as cores básicas, exceto `normal` e `default`, possuem uma variante brilhante da cor que pode ser definida com `bright`, assim como `brightred`."
 
 #. type: Plain text
 #: en/config.txt:274
 #, priority:100
 msgid "The color `normal` makes no change to the color. It is the same as an empty string, but can be used as the foreground color when specifying a background color alone (for example, \"normal red\")."
-msgstr ""
+msgstr "A cor `normal` não faz qualquer alteração na cor. É o mesmo que uma string vazia mas pode ser usada como a cor do primeiro plano ao definir apenas uma cor de fundo (\"normal red\" por exemplo)."
 
 #. type: Plain text
 #: en/config.txt:278
 #, priority:100
 msgid "The color `default` explicitly resets the color to the terminal default, for example to specify a cleared background. Although it varies between terminals, this is usually not the same as setting to \"white black\"."
-msgstr ""
+msgstr "A cor `default` repõe explicitamente a cor predefinida do terminal, por exemplo, para definir um fundo sem cor. Embora varie entre os terminais, isso normalmente não é o mesmo que definir para \"white black\" (branco preto)."
 
 #. type: Plain text
 #: en/config.txt:283
@@ -2820,7 +2819,7 @@ msgstr "Os atributos compatíveis são `bold`, `dim`, `ul`, `blink`, `reverse`, 
 #: en/config.txt:295
 #, priority:100
 msgid "The pseudo-attribute `reset` resets all colors and attributes before applying the specified coloring. For example, `reset green` will result in a green foreground and default background without any active attributes."
-msgstr ""
+msgstr "O pseudo-atributo `reset` redefine todas as cores e os atributos antes de aplicar a cor definida. Por exemplo, o `reset green` resultará em um primeiro plano verde e o fundo padrão sem qualquer atributo ativo."
 
 #. type: Plain text
 #: en/config.txt:298
@@ -2878,10 +2877,9 @@ msgstr "merge.conflictStyle"
 
 #. type: Plain text
 #: en/config/merge.txt:15
-#, fuzzy, priority:240
-#| msgid "Specify the style in which conflicted hunks are written out to working tree files upon merge.  The default is \"merge\", which shows a `<<<<<<<` conflict marker, changes made by one side, a `=======` marker, changes made by the other side, and then a `>>>>>>>` marker.  An alternate style, \"diff3\", adds a `|||||||` marker and the original text before the `=======` marker."
+#, priority:240
 msgid "Specify the style in which conflicted hunks are written out to working tree files upon merge.  The default is \"merge\", which shows a `<<<<<<<` conflict marker, changes made by one side, a `=======` marker, changes made by the other side, and then a `>>>>>>>` marker.  An alternate style, \"diff3\", adds a `|||||||` marker and the original text before the `=======` marker.  The \"merge\" style tends to produce smaller conflict regions than diff3, both because of the exclusion of the original text, and because when a subset of lines match on the two sides they are just pulled out of the conflict region.  Another alternate style, \"zdiff3\", is similar to diff3 but removes matching lines on the two sides from the conflict region when those matching lines appear near either the beginning or end of a conflict region."
-msgstr "Especifique o estilo no qual os blocos em conflito são gravados nos arquivos da árvore de trabalho durante a mesclagem.  A predefinição é \"mesclar\", onde exibe um marcador de conflito `<<<<<<<` nas modificações feitas por um lado, o `=======` marca as modificações feita pelo outro lado e então a marca `>>>>>>>`.  Um estilo alternativo, \"diff3\", adiciona um marcador `|||||||` e o texto original antes do marcador `=======`."
+msgstr "Especifique o estilo no qual os blocos em conflito são gravados nos arquivos da árvore de trabalho durante a mesclagem.  A predefinição é \"mesclar\", onde exibe um marcador de conflito `<<<<<<<` nas modificações feitas por um lado, o `=======` marca as modificações feita pelo outro lado e então a marca `>>>>>>>`.  Um estilo alternativo, \"diff3\", adiciona um marcador `|||||||` e o texto original antes do marcador `=======`. O estilo \"merge\" tende a produzir menos regiões com conflito se comparado com o diff3, seja por causa da exclusão do texto original, seja porque quando um subconjunto das linhas combine nos dois lados elas são retiradas da região em conflito. O outro estilo alternativo, \"zdiff3\", é semelhante ao diff3 mas remove as linhas correspondentes nos dois lados da região em conflito quando essas linhas correspondentes aparecem perto do início ou do fim de uma região em conflito."
 
 #. type: Labeled list
 #: en/config/merge.txt:16
@@ -7295,7 +7293,7 @@ msgstr "--empty=(stop|drop|keep)"
 #: en/git-am.txt:74
 #, priority:100
 msgid "By default, or when the option is set to 'stop', the command errors out on an input e-mail message lacking a patch and stops into the middle of the current am session. When this option is set to 'drop', skip such an e-mail message instead.  When this option is set to 'keep', create an empty commit, recording the contents of the e-mail message as its log."
-msgstr ""
+msgstr "É predefinido, ou quando a opção está definida como 'stop', que o comando de um erro numa mensagem de e-mail recebida sem um patch e que pare no meio da sessão atual. Quando esta opção está definida para 'drop', ignora a mensagem de e-mail.  Quando esta opção está definida para 'keep', cria um commit vazio, registrando o conteúdo da mensagem de e-mail em seu registro."
 
 #. type: Labeled list
 #: en/git-am.txt:76 en/git-mailinfo.txt:72
@@ -7617,7 +7615,7 @@ msgstr "--allow-empty"
 #: en/git-am.txt:207
 #, priority:100
 msgid "After a patch failure on an input e-mail message lacking a patch, create an empty commit with the contents of the e-mail message as its log message."
-msgstr ""
+msgstr "Após uma falha do patch numa mensagem de e-mail recebida sem um patch, crie um commit vazio com o conteúdo da mensagem de e-mail como sua mensagem de registro log."
 
 #. type: Title -
 #: en/git-am.txt:209 en/git-commit.txt:541 en/git-format-patch.txt:420 en/git-fsck.txt:113 en/git-log.txt:183 en/git-merge-base.txt:76 en/git-notes.txt:218 en/git-remote.txt:200 en/git-rerere.txt:77 en/git-reset.txt:379 en/git-show.txt:84 en/git-stash.txt:265 en/git-tag.txt:231
@@ -8087,7 +8085,7 @@ msgstr "Relate o progresso para o stderr. É predefinido que apenas seja exibida
 #: en/git-apply.txt:235
 #, priority:100
 msgid "Suppress stderr output. Messages about patch status and progress will not be printed."
-msgstr ""
+msgstr "Suprime a saída stderr. As mensagens sobre o estado do patch e o progresso não serão impressas."
 
 #. type: Labeled list
 #: en/git-apply.txt:236
@@ -8141,7 +8139,7 @@ msgstr "Quando o comando `git apply` for utilizado como um \"better GNU patch\" 
 #: en/git-apply.txt:262
 #, priority:100
 msgid "Don't return error for patches containing no diff. This includes empty patches and patches with commit text only."
-msgstr ""
+msgstr "Não retorne um erro para as correções que não contenham um diff. Isso inclui correções vazias e correções que tenham apenas um commit com texto."
 
 #. type: Title -
 #: en/git-apply.txt:264 en/git-archive.txt:111 en/git-branch.txt:313 en/git-check-mailmap.txt:40 en/git-config.txt:287 en/git-cvsexportcommit.txt:86 en/git-fmt-merge-msg.txt:57 en/git-format-patch.txt:396 en/git-fsck.txt:108 en/git-gc.txt:107 en/git-grep.txt:335 en/git-imap-send.txt:52 en/git-instaweb.txt:70 en/git-log.txt:188 en/git-mergetool.txt:103 en/git-merge.txt:388 en/git-notes.txt:311 en/git-pack-objects.txt:415 en/git-range-diff.txt:124 en/git-rebase.txt:1250 en/git-repack.txt:205 en/git-send-email.txt:457 en/git-status.txt:425 en/git-svn.txt:1064 en/git-tag.txt:215 en/git-update-index.txt:524
@@ -8225,10 +8223,9 @@ msgstr "'git archimport' [-h] [-v] [-o] [-a] [-f] [-T] [-D <profundidade>] [-t <
 
 #. type: Plain text
 #: en/git-archimport.txt:23
-#, fuzzy, priority:100
-#| msgid "Imports a project from one or more GNU Arch repositories.  It will follow branches and repositories within the namespaces defined by the <archive/branch> parameters supplied. If it cannot find the remote branch a merge comes from it will just import it as a regular commit. If it can find it, it will mark it as a merge whenever possible (see discussion below)."
+#, priority:100
 msgid "Imports a project from one or more GNU Arch repositories.  It will follow branches and repositories within the namespaces defined by the <archive>/<branch> parameters supplied. If it cannot find the remote branch a merge comes from it will just import it as a regular commit. If it can find it, it will mark it as a merge whenever possible (see discussion below)."
-msgstr "Importa um projeto de um ou mais repositórios do GNU Arch.  Ele seguirá as ramificações e repositórios dentro dos espaço de nomes definidos através do parâmetro <arquivo/ramo> informado. Caso ele não consiga encontrar o ramo remoto, a mesclagem será importada apenas como um commit normal. Caso possa localizá-lo, será marcado como uma mesclagem sempre que for possível (consulte a discussão abaixo)."
+msgstr "Importa um projeto de um ou mais repositórios do GNU Arch.  Ele seguirá as ramificações e repositórios dentro dos espaço de nomes definidos através do parâmetro <arquivo>/<ramo> informado. Caso ele não consiga encontrar o ramo remoto, a mesclagem será importada apenas como um commit normal. Caso possa localizá-lo, será marcado como uma mesclagem sempre que for possível (consulte a discussão abaixo)."
 
 #. type: Plain text
 #: en/git-archimport.txt:27
@@ -8238,10 +8235,9 @@ msgstr "O script espera que você informe as principais raízes nas quais ele po
 
 #. type: Plain text
 #: en/git-archimport.txt:32
-#, fuzzy, priority:100
-#| msgid "It expects to be dealing with one project only. If it sees branches that have different roots, it will refuse to run. In that case, edit your <archive/branch> parameters to define clearly the scope of the import."
+#, priority:100
 msgid "It expects to be dealing with one project only. If it sees branches that have different roots, it will refuse to run. In that case, edit your <archive>/<branch> parameters to define clearly the scope of the import."
-msgstr "Ele espera lidar apenas com um projeto apenas. Caso veja ramificações com raízes diferentes, a execução será impedida de prosseguir. Nesse caso, edite os parâmetros <arquivo/ramo> para definir claramente o escopo da importação."
+msgstr "Ele espera lidar apenas com um projeto apenas. Caso veja ramificações com raízes diferentes, a execução será impedida de prosseguir. Nesse caso, edite os parâmetros <arquivo>/<ramo> para definir claramente o escopo da importação."
 
 #. type: Plain text
 #: en/git-archimport.txt:37
@@ -10372,29 +10368,27 @@ msgstr "--track [inherit|direct]"
 
 #. type: Plain text
 #: en/git-branch.txt:217
-#, fuzzy, priority:260
-#| msgid "When creating a new branch, set up `branch.<name>.remote` and `branch.<name>.merge` configuration entries to mark the start-point branch as \"upstream\" from the new branch. This configuration will tell git to show the relationship between the two branches in `git status` and `git branch -v`. Furthermore, it directs `git pull` without arguments to pull from the upstream when the new branch is checked out."
+#, priority:260
 msgid "When creating a new branch, set up `branch.<name>.remote` and `branch.<name>.merge` configuration entries to set \"upstream\" tracking configuration for the new branch. This configuration will tell git to show the relationship between the two branches in `git status` and `git branch -v`. Furthermore, it directs `git pull` without arguments to pull from the upstream when the new branch is checked out."
-msgstr "Ao criar uma nova ramificação, configure as entradas da configuração `branch.<nome>.remote` e `branch.<nome>.merge` para marcar a ramificação do ponto do início como \"upstream\" partindo da nova ramificação. Esta configuração instruirá o git a exibir o relacionamento entre as duas ramificações com o `git status` e com o `git branch -v`. Além disso, ele direciona o `git pull` sem argumentos para extrair do \"upstream\" quando o novo ramo for retirado."
+msgstr "Ao criar uma nova ramificação, configure as entradas da configuração `branch.<nome>.remote` e `branch.<nome>.merge` para definir a configuração do monitoramento \"upstream\" partindo da nova ramificação. Esta configuração instruirá o git a exibir o relacionamento entre as duas ramificações com o `git status` e com o `git branch -v`. Além disso, ele direciona o `git pull` sem argumentos para extrair do \"upstream\" quando o novo ramo for retirado."
 
 #. type: Plain text
 #: en/git-branch.txt:222
 #, priority:260
 msgid "The exact upstream branch is chosen depending on the optional argument: `--track` or `--track direct` means to use the start-point branch itself as the upstream; `--track inherit` means to copy the upstream configuration of the start-point branch."
-msgstr ""
+msgstr "O exato ramo \"upstream\" é escolhido dependendo do argumento opcional: `--track` ou `--track direct`, significa usar o próprio ramo do ponto inicial como o \"upstream\"; já a opção `--track inherit` significa copiar a configuração \"upstream\" da ramificação do ponto inicial."
 
 #. type: Plain text
 #: en/git-branch.txt:230
-#, fuzzy, priority:260
-#| msgid "This behavior is the default when the start point is a remote-tracking branch.  Set the branch.autoSetupMerge configuration variable to `false` if you want `git switch`, `git checkout` and `git branch` to always behave as if `--no-track` were given. Set it to `always` if you want this behavior when the start-point is either a local or remote-tracking branch."
+#, priority:260
 msgid "`--track direct` is the default when the start point is a remote-tracking branch.  Set the branch.autoSetupMerge configuration variable to `false` if you want `git switch`, `git checkout` and `git branch` to always behave as if `--no-track` were given. Set it to `always` if you want this behavior when the start-point is either a local or remote-tracking branch. Set it to `inherit` if you want to copy the tracking configuration from the branch point."
-msgstr "Este é o comportamento predefinido quando o ponto inicial for uma ramificação rastreada remotamente.  Defina a variável de configuração `branch.autoSetupMerge` como `false` caso queira que o `git switch`, `git checkout` e o `git branch` sempre se comportem como se a opção `--no-track` fosse utilizada. Defina-o como `always` caso queira que este comportamento quando o ponto de partida for uma ramificação local ou rastreada remotamente."
+msgstr "A opção `--track direct` é a opção predefinida quando o ponto inicial for uma ramificação rastreada remotamente.  Defina a variável de configuração `branch.autoSetupMerge` como `false` caso queira que o `git switch`, `git checkout` e o `git branch` sempre se comportem como se a opção `--no-track` fosse utilizada. Defina-o como `always` caso queira que este comportamento quando o ponto de partida for uma ramificação local ou rastreada remotamente. Defina-o como `inherit` caso queira copiar a configuração de rastreamento a partir do ponto da ramificação."
 
 #. type: Plain text
 #: en/git-branch.txt:233
 #, priority:260
 msgid "See linkgit:git-pull[1] and linkgit:git-config[1] for additional discussion on how the `branch.<name>.remote` and `branch.<name>.merge` options are used."
-msgstr ""
+msgstr "Consulte linkgit:git-pull[1] e linkgit:git-config[1] para uma discussão adicional sobre como as opções `branch.<nome>.remote` e `branch.<nome>.merge` são utilizadas."
 
 #. type: Labeled list
 #: en/git-branch.txt:234 en/git-checkout.txt:173 en/git-switch.txt:169
@@ -14022,10 +14016,9 @@ msgstr "Costumava ser que o comando predefinia para fazer com a opção `-x` des
 
 #. type: Labeled list
 #: en/git-cherry-pick.txt:84
-#, fuzzy, no-wrap, priority:100
-#| msgid "-m parent-number"
+#, no-wrap, priority:100
 msgid "-m <parent-number>"
-msgstr "-m parent-number"
+msgstr "-m <parent-number>"
 
 #. type: Labeled list
 #: en/git-cherry-pick.txt:85
@@ -16530,23 +16523,7 @@ msgstr "git-config - Obtenha e defina opções globais ou do repositório"
 
 #. type: Plain text
 #: en/git-config.txt:27
-#, fuzzy, no-wrap, priority:100
-#| msgid ""
-#| "'git config' [<file-option>] [--type=<type>] [--fixed-value] [--show-origin] [--show-scope] [-z|--null] name [value [value-pattern]]\n"
-#| "'git config' [<file-option>] [--type=<type>] --add name value\n"
-#| "'git config' [<file-option>] [--type=<type>] [--fixed-value] --replace-all name value [value-pattern]\n"
-#| "'git config' [<file-option>] [--type=<type>] [--show-origin] [--show-scope] [-z|--null] [--fixed-value] --get name [value-pattern]\n"
-#| "'git config' [<file-option>] [--type=<type>] [--show-origin] [--show-scope] [-z|--null] [--fixed-value] --get-all name [value-pattern]\n"
-#| "'git config' [<file-option>] [--type=<type>] [--show-origin] [--show-scope] [-z|--null] [--fixed-value] [--name-only] --get-regexp name_regex [value-pattern]\n"
-#| "'git config' [<file-option>] [--type=<type>] [-z|--null] --get-urlmatch name URL\n"
-#| "'git config' [<file-option>] [--fixed-value] --unset name [value-pattern]\n"
-#| "'git config' [<file-option>] [--fixed-value] --unset-all name [value-pattern]\n"
-#| "'git config' [<file-option>] --rename-section old_name new_name\n"
-#| "'git config' [<file-option>] --remove-section name\n"
-#| "'git config' [<file-option>] [--show-origin] [--show-scope] [-z|--null] [--name-only] -l | --list\n"
-#| "'git config' [<file-option>] --get-color name [default]\n"
-#| "'git config' [<file-option>] --get-colorbool name [stdout-is-tty]\n"
-#| "'git config' [<file-option>] -e | --edit\n"
+#, no-wrap, priority:100
 msgid ""
 "'git config' [<file-option>] [--type=<type>] [--fixed-value] [--show-origin] [--show-scope] [-z|--null] <name> [<value> [<value-pattern>]]\n"
 "'git config' [<file-option>] [--type=<type>] --add <name> <value>\n"
@@ -16563,22 +16540,7 @@ msgid ""
 "'git config' [<file-option>] --get-color <name> [<default>]\n"
 "'git config' [<file-option>] --get-colorbool <name> [<stdout-is-tty>]\n"
 "'git config' [<file-option>] -e | --edit\n"
-msgstr ""
-"'git config' [<opção-do-arquivo>] [--type=<tipo>] [--fixed-value] [--show-origin] [--show-scope] [-z|--null] nome [valor [value-pattern]]\n"
-"'git config' [<opção-do-arquivo>] [--type=<tipo>] --add nome valor\n"
-"'git config' [<opção-do-arquivo>] [--type=<tipo>] [--fixed-value] --replace-all nome valor [value-pattern]\n"
-"'git config' [<opção-do-arquivo>] [--type=<tipo>] [--show-origin] [--show-scope] [-z|--null] [--fixed-value] --get nome [value-pattern]\n"
-"'git config' [<opção-do-arquivo>] [--type=<tipo>] [--show-origin] [--show-scope] [-z|--null] [--fixed-value] --get-all nome [value-pattern]\n"
-"'git config' [<opção-do-arquivo>] [--type=<tipo>] [--show-origin] [--show-scope] [-z|--null] [--fixed-value] [--name-only] --get-regexp name_regex [value-pattern]\n"
-"'git config' [<opção-do-arquivo>] [--type=<tipo>] [-z|--null] --get-urlmatch nome URL\n"
-"'git config' [<opção-do-arquivo>] [--fixed-value] --unset nome [value-pattern]\n"
-"'git config' [<opção-do-arquivo>] [--fixed-value] --unset-all nome [value-pattern]\n"
-"'git config' [<opção-do-arquivo>] --rename-section nome_antigo novo_nome\n"
-"'git config' [<opção-do-arquivo>] --remove-section nome\n"
-"'git config' [<opção-do-arquivo>] [--show-origin] [--show-scope] [-z|--null] [--name-only] -l | --list\n"
-"'git config' [<opção-do-arquivo>] --get-color nome [default]\n"
-"'git config' [<opção-do-arquivo>] --get-colorbool nome [stdout-is-tty]\n"
-"'git config' [<opção-do-arquivo>] -e | --edit\n"
+msgstr "'git config' [<opção-do-arquivo>] [--type=<tipo>] [--fixed-value] [--show-origin] [--show-scope] [-z|--null] <nome> [<valor> [<value-pattern>]]\n'git config' [<opção-do-arquivo>] [--type=<tipo>] --add <nome> <valor>\n'git config' [<opção-do-arquivo>] [--type=<tipo>] [--fixed-value] --replace-all <nome> <valor> [<value-pattern>]\n'git config' [<opção-do-arquivo>] [--type=<tipo>] [--show-origin] [--show-scope] [-z|--null] [--fixed-value] --get <nome> [<value-pattern>]\n'git config' [<opção-do-arquivo>] [--type=<tipo>] [--show-origin] [--show-scope] [-z|--null] [--fixed-value] --get-all <nome> [<value-pattern>]\n'git config' [<opção-do-arquivo>] [--type=<tipo>] [--show-origin] [--show-scope] [-z|--null] [--fixed-value] [--name-only] --get-regexp <nome_regex> [<value-pattern>]\n'git config' [<opção-do-arquivo>] [--type=<tipo>] [-z|--null] --get-urlmatch <nome> <URL>\n'git config' [<opção-do-arquivo>] [--fixed-value] --unset <nome> [<value-pattern>]\n'git config' [<opção-do-arquivo>] [--fixed-value] --unset-all <nome> [<value-pattern>]\n'git config' [<opção-do-arquivo>] --rename-section <nome_antigo> <novo_nome>\n'git config' [<opção-do-arquivo>] --remove-section <nome>\n'git config' [<opção-do-arquivo>] [--show-origin] [--show-scope] [-z|--null] [--name-only] -l | --list\n'git config' [<opção-do-arquivo>] --get-color nome [<default>]\n'git config' [<opção-do-arquivo>] --get-colorbool <nome> [<stdout-is-tty>]\n'git config' [<opção-do-arquivo>] -e | --edit\n"
 
 #. type: Plain text
 #: en/git-config.txt:33
@@ -26216,7 +26178,7 @@ msgstr "--into-name <ramo>"
 #: en/git-fmt-merge-msg.txt:50
 #, priority:100
 msgid "Prepare the merge message as if merging to the branch `<branch>`, instead of the name of the real branch to which the merge is made."
-msgstr ""
+msgstr "Prepare a mensagem da mesclagem como se estivesse mesclando com a ramificação `<ramificação>` em vez do nome real da ramificação para onde a mesclagem será feita."
 
 #. type: Labeled list
 #: en/git-fmt-merge-msg.txt:52
@@ -27311,7 +27273,7 @@ msgstr "Não inclua um patch que coincida a um commit em <until>..<since> (até.
 #: en/git-format-patch.txt:198
 #, priority:100
 msgid "Include patches for commits that do not introduce any change, which are omitted by default."
-msgstr ""
+msgstr "Inclua as correções para os commits que não apresentam nenhuma alteração, que por predefinição, são omitidos."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:199
@@ -28193,10 +28155,9 @@ msgstr "Você também pode usar o comando `git format-patch --base = P -3 C` par
 
 #. type: Plain text
 #: en/git-format-patch.txt:701
-#, fuzzy, priority:100
-#| msgid "If set `--base=auto` in cmdline, it will track base commit automatically, the base commit will be the merge base of tip commit of the remote-tracking branch and revision-range specified in cmdline.  For a local branch, you need to track a remote branch by `git branch --set-upstream-to` before using this option."
+#, priority:100
 msgid "If set `--base=auto` in cmdline, it will automatically compute the base commit as the merge base of tip commit of the remote-tracking branch and revision-range specified in cmdline.  For a local branch, you need to make it to track a remote branch by `git branch --set-upstream-to` before using this option."
-msgstr "Caso `--base=auto` seja definido no cmdline, ele rastreará automaticamente a base do commit, o commit da base será o cume do ramo do commit monitorado remotamente e o intervalo da revisão determinado pelo cmdline.  Antes de utilizar esta opção para uma ramificação local, é necessário monitorar um ramo remoto com o comando `git branch --set-upstream-to`."
+msgstr "Caso `--base=auto` seja definido no cmdline, será automaticamente computado na base do commit como o commit da base será o cume do ramo do commit monitorado remotamente e o intervalo da revisão determinado pelo cmdline.  Antes de utilizar esta opção para uma ramificação local, é preciso monitorar um ramo remoto com o comando `git branch --set-upstream-to`."
 
 #. type: Plain text
 #: en/git-format-patch.txt:707
@@ -33682,7 +33643,7 @@ msgstr "Ambos os `<eolinfo>` no índice (\"i/<eolinfo>\") e na árvore de trabal
 #: en/git-ls-files.txt:194
 #, priority:80
 msgid "If the index is sparse, show the sparse directories without expanding to the contained files. Sparse directories will be shown with a trailing slash, such as \"x/\" for a sparse directory \"x\"."
-msgstr ""
+msgstr "Caso o índice seja esparso, mostre os diretórios esparsos sem expandir aos arquivos contidos. Os diretórios esparsos serão mostrados com uma barra, como \"x/\" para um diretório esparso \"x\"."
 
 #. type: Labeled list
 #: en/git-ls-files.txt:198 en/git.txt:400 en/git-update-index.txt:229
@@ -35476,7 +35437,7 @@ msgstr "O comando 'git fmt-merge-msg' pode ser utilizado para informar uma boa p
 #: en/git-merge.txt:84
 #, priority:240
 msgid "Prepare the default merge message as if merging to the branch `<branch>`, instead of the name of the real branch to which the merge is made."
-msgstr ""
+msgstr "Prepare a mensagem predefinida da mesclagem como se fosse uma mesclagem para a ramificação `<ramificação>` em vez do nome da ramificação real para onde a mesclagem for feita."
 
 #. type: Plain text
 #: en/git-merge.txt:89
@@ -35730,19 +35691,7 @@ msgstr "Um estilo alternativo pode ser utilizado ao definir a variável de confi
 
 #. type: delimited block -
 #: en/git-merge.txt:289
-#, fuzzy, no-wrap, priority:240
-#| msgid ""
-#| "Here are lines that are either unchanged from the common\n"
-#| "ancestor, or cleanly resolved because only one side changed.\n"
-#| "<<<<<<< yours:sample.txt\n"
-#| "Conflict resolution is hard;\n"
-#| "let's go shopping.\n"
-#| "|||||||\n"
-#| "Conflict resolution is hard.\n"
-#| "=======\n"
-#| "Git makes conflict resolution easy.\n"
-#| ">>>>>>> theirs:sample.txt\n"
-#| "And here is another line that is cleanly resolved or unmodified.\n"
+#, no-wrap, priority:240
 msgid ""
 "Here are lines that are either unchanged from the common\n"
 "ancestor, or cleanly resolved because only one side changed,\n"
@@ -35758,18 +35707,7 @@ msgid ""
 "Git makes conflict resolution easy.\n"
 ">>>>>>> theirs:sample.txt\n"
 "And here is another line that is cleanly resolved or unmodified.\n"
-msgstr ""
-"Aqui estão as linhas que não são alteradas em relação ao ancestral\n"
-"comum ou resolvido de maneira limpa porque apenas um lado mudou.\n"
-"<<<<<<< yours:sample.txt\n"
-"A resolução de conflitos é difícil;\n"
-"vamos às compras.\n"
-"|||||||\n"
-"A resolução de conflitos é difícil.\n"
-"=======\n"
-"O Git facilita a resolução de conflitos.\n"
-">>>>>>> theirs:sample.txt\n"
-"E aqui está outra linha que foi claramente resolvida ou não foi modificada.\n"
+msgstr "Aqui estão as linhas que não são alteradas em relação ao ancestral\ncomum ou foi resolvido de maneira limpa porque apenas um lado foi alterado.\n<<<<<<< seu:sample.txt\nou resolvidos de forma limpa porque ambos os lados foram alterados igualmente.\nA resolução de conflitos é difícil;\nvamos às compras.\n||||||| base:sample.txt\nou resolvidos de forma limpa porque ambos os lados foram igualmente alterados.\nA resolução de conflitos é difícil.\n=======\nou resolvidos de forma limpa porque ambos os lados foram alterados igualmente.\nO git facilita a resolução de conflitos.\n>>>>>>> deles:sample.txt\nE aqui está outra linha que foi resolvida ou não foi modificada.\n"
 
 #. type: Plain text
 #: en/git-merge.txt:292
@@ -35779,19 +35717,7 @@ msgstr "enquanto no estilo \"zdiff3\", por ficar assim:"
 
 #. type: delimited block -
 #: en/git-merge.txt:307
-#, fuzzy, no-wrap, priority:240
-#| msgid ""
-#| "Here are lines that are either unchanged from the common\n"
-#| "ancestor, or cleanly resolved because only one side changed.\n"
-#| "<<<<<<< yours:sample.txt\n"
-#| "Conflict resolution is hard;\n"
-#| "let's go shopping.\n"
-#| "|||||||\n"
-#| "Conflict resolution is hard.\n"
-#| "=======\n"
-#| "Git makes conflict resolution easy.\n"
-#| ">>>>>>> theirs:sample.txt\n"
-#| "And here is another line that is cleanly resolved or unmodified.\n"
+#, no-wrap, priority:240
 msgid ""
 "Here are lines that are either unchanged from the common\n"
 "ancestor, or cleanly resolved because only one side changed,\n"
@@ -35806,18 +35732,7 @@ msgid ""
 "Git makes conflict resolution easy.\n"
 ">>>>>>> theirs:sample.txt\n"
 "And here is another line that is cleanly resolved or unmodified.\n"
-msgstr ""
-"Aqui estão as linhas que não são alteradas em relação ao ancestral\n"
-"comum ou resolvido de maneira limpa porque apenas um lado mudou.\n"
-"<<<<<<< yours:sample.txt\n"
-"A resolução de conflitos é difícil;\n"
-"vamos às compras.\n"
-"|||||||\n"
-"A resolução de conflitos é difícil.\n"
-"=======\n"
-"O Git facilita a resolução de conflitos.\n"
-">>>>>>> theirs:sample.txt\n"
-"E aqui está outra linha que foi claramente resolvida ou não foi modificada.\n"
+msgstr "Aqui estão as linhas que não são alteradas a partir do ancestral\ncomum ou foi resolvido de maneira limpa porque apenas um lado foi alterado,\nou foi resolvido de maneira limpa porque apenas um lado foi alterado.\n<<<<<<< seu:sample.txt\nA resolução de conflitos é difícil;\nvamos às compras.\n||||||| base:sample.txt\nou resolvidos de forma limpa porque ambos os lados foram igualmente alterados.\nA resolução de conflitos é difícil;\n=======\nO Git facilita a resolução de conflitos.\n>>>>>>> deles:sample.txt\nE aqui está outra linha que foi claramente resolvida ou não foi modificada.\n"
 
 #. type: Plain text
 #: en/git-merge.txt:315
@@ -44905,10 +44820,9 @@ msgstr "'add'"
 
 #. type: Plain text
 #: en/git-remote.txt:52
-#, fuzzy, priority:220
-#| msgid "Add a remote named <name> for the repository at <url>.  The command `git fetch <name>` can then be used to create and update remote-tracking branches <name>/<branch>."
+#, priority:220
 msgid "Add a remote named <name> for the repository at <URL>.  The command `git fetch <name>` can then be used to create and update remote-tracking branches <name>/<branch>."
-msgstr "Adiciona um ramo remoto chamado <nome> para o repositório na <url>.  O comando `git fetch <nome>` pode ser utilizado para criar e atualizar os ramos monitorados remotamente <nome>/<ramo>."
+msgstr "Adiciona um ramo remoto chamado <nome> para o repositório na <URL>.  O comando `git fetch <nome>` pode ser utilizado para criar e atualizar os ramos monitorados remotamente <nome>/<ramo>."
 
 #. type: Plain text
 #: en/git-remote.txt:55
@@ -45098,10 +45012,9 @@ msgstr "Com `--add`, em vez de alterar as URLs existentes, uma nova URL é adici
 
 #. type: Plain text
 #: en/git-remote.txt:157
-#, fuzzy, priority:220
-#| msgid "With `--delete`, instead of changing existing URLs, all URLs matching regex <url> are deleted for remote <name>.  Trying to delete all non-push URLs is an error."
+#, priority:220
 msgid "With `--delete`, instead of changing existing URLs, all URLs matching regex <URL> are deleted for remote <name>.  Trying to delete all non-push URLs is an error."
-msgstr "Com `--delete`, em vez de alterar as URLs existentes, todas as URLs coincidentes à expressão regular <url> são excluídas para o ramo remoto <nome>.  Tentar excluir todas as URLs 'não push' é um erro."
+msgstr "Com `--delete`, em vez de alterar as URLs existentes, todas as URLs coincidentes à expressão regular <URL> são excluídas para o ramo remoto <nome>.  Tentar excluir todas as URLs onde um push não foi feito é um erro."
 
 #. type: Plain text
 #: en/git-remote.txt:164
@@ -45353,10 +45266,9 @@ msgstr "Encaminha a opção `--no-reuse-object` para `git-pack-objects`, consult
 
 #. type: Plain text
 #: en/git-repack.txt:82
-#, fuzzy, priority:100
-#| msgid "Pass the `-q` option to 'git pack-objects'. See linkgit:git-pack-objects[1]."
+#, priority:100
 msgid "Show no progress over the standard error stream and pass the `-q` option to 'git pack-objects'. See linkgit:git-pack-objects[1]."
-msgstr "Encaminha a opção `-q` para 'git pack-objects'. Consulte linkgit:git-pack-objects[1]."
+msgstr "Não mostre nenhum progresso sobre o fluxo de erro padrão e repasse a opção `-q` para o comando 'git pack-objects'. Consulte linkgit:git-pack-objects[1]."
 
 #. type: Plain text
 #: en/git-repack.txt:89
@@ -45836,7 +45748,7 @@ msgstr "Faça o commit para iniciar em.  Isso informa um commit que já está no
 #: en/git-request-pull.txt:36
 #, no-wrap, priority:100
 msgid "<URL>"
-msgstr ""
+msgstr "<URL>"
 
 #. type: Plain text
 #: en/git-request-pull.txt:38
@@ -48903,10 +48815,9 @@ msgstr "'git send-email' [<opções>] <file|directory>...\n'git send-email' [<op
 
 #. type: Plain text
 #: en/git-send-email.txt:25
-#, fuzzy, priority:100
-#| msgid "Takes the patches given on the command line and emails them out.  Patches can be specified as files, directories (which will send all files in the directory), or directly as a revision list.  In the last case, any format accepted by linkgit:git-format-patch[1] can be passed to git send-email."
+#, priority:100
 msgid "Takes the patches given on the command line and emails them out.  Patches can be specified as files, directories (which will send all files in the directory), or directly as a revision list.  In the last case, any format accepted by linkgit:git-format-patch[1] can be passed to git send-email, as well as options understood by linkgit:git-format-patch[1]."
-msgstr "Toma as correções informadas na linha de comando e as envia por e-mail.  Os patches podem ser utilizados como arquivos, diretórios (que enviarão todos os arquivos no diretório) ou diretamente como uma lista de revisão.  No último caso, qualquer formato aceito pelo linkgit:git-format-patch[1] pode ser passado para o git-send-email."
+msgstr "Toma as correções informadas na linha de comando e as envia por e-mail.  Os patches podem ser utilizados como arquivos, diretórios (que enviarão todos os arquivos no diretório) ou diretamente como uma lista de revisão.  No último caso, qualquer formato aceito pelo linkgit:git-format-patch[1] pode ser passado para o git-send-email, bem como as opções linkgit:git-format-patch[1]."
 
 #. type: Plain text
 #: en/git-send-email.txt:29
@@ -51886,13 +51797,13 @@ msgstr "A opção `--patch` implica no uso da opção `--keep-index`.  Você pod
 #: en/git-stash.txt:215
 #, priority:240
 msgid "Stash only the changes that are currently staged. This is similar to basic `git commit` except the state is committed to the stash instead of current branch."
-msgstr ""
+msgstr "Armazene apenas as alterações que estão sendo preparadas atualmente. Isto é similar ao comando `git commit` básico, exceto que o estado do commit é feito na pilha armazenada em vez do ramo atual."
 
 #. type: Plain text
 #: en/git-stash.txt:217
 #, priority:240
 msgid "The `--patch` option has priority over this one."
-msgstr ""
+msgstr "A opção `--patch` tem prioridade sobre esta."
 
 #. type: Plain text
 #: en/git-stash.txt:220 en/git-stash.txt:230 en/git-stash.txt:244 en/git-stash.txt:249
@@ -52090,27 +52001,17 @@ msgstr ""
 #: en/git-stash.txt:354
 #, no-wrap, priority:240
 msgid "Saving unrelated changes for future use"
-msgstr ""
+msgstr "Salvando as alterações não relacionadas para utilização futura"
 
 #. type: Plain text
 #: en/git-stash.txt:361
 #, priority:240
 msgid "When you are in the middle of massive changes and you find some unrelated issue that you don't want to forget to fix, you can do the change(s), stage them, and use `git stash push --staged` to stash them out for future use. This is similar to committing the staged changes, only the commit ends-up being in the stash and not on the current branch."
-msgstr ""
+msgstr "Quando estiver no meio de grandes alterações e encontre algum problema não relacionado que você não queira deixar de corrigir, você pode fazer as alterações, organizá-las e usar o comando `git stash push --staged` deixando guardado para uso posterior. Isso se assemelha ao fazer o commit das alterações acumuladas, apenas o commit acaba ficando armazenado e não no ramo atual."
 
 #. type: delimited block -
 #: en/git-stash.txt:370
-#, fuzzy, ignore-ellipsis, no-wrap, priority:240
-#| msgid ""
-#| "# ... hack hack hack ...\n"
-#| "$ git add --patch foo            # add just first part to the index\n"
-#| "$ git stash push --keep-index    # save all other changes to the stash\n"
-#| "$ edit/build/test first part\n"
-#| "$ git commit -m 'First part'     # commit fully tested change\n"
-#| "$ git stash pop                  # prepare to work on all other changes\n"
-#| "# ... repeat above five steps until one commit remains ...\n"
-#| "$ edit/build/test remaining parts\n"
-#| "$ git commit foo -m 'Remaining parts'\n"
+#, ignore-ellipsis, no-wrap, priority:240
 msgid ""
 "# ... hack hack hack ...\n"
 "$ git add --patch foo           # add unrelated changes to the index\n"
@@ -52119,16 +52020,7 @@ msgid ""
 "$ git commit -m 'Massive'       # commit fully tested changes\n"
 "$ git switch fixup-branch       # switch to another branch\n"
 "$ git stash pop                 # to finish work on the saved changes\n"
-msgstr ""
-"# ... hack hack hack ...\n"
-"$ git add --patch foo            # adiciona apenas a primeira parte ao índice\n"
-"$ git stash push --keep-index    # armazene todas as outras alterações\n"
-"$ edit/build/test first part\n"
-"$ git commit -m 'First part'     # faça o commit completo de todas as modificações testadas\n"
-"$ git stash pop                  # prepare para trabalhar em todas as outras modificações\n"
-"# ... repita os cinco passos acima até que sobre apenas um commit ...\n"
-"$ edit/build/test remaining parts\n"
-"$ git commit foo -m 'Partes resultantes'\n"
+msgstr "# ... hack hack hack ...\n$ git add --patch foo           # adiciona alterações não relacionadas ao índice\n$ git stash push --staged       # salva estas alterações nos arquivos que foram armazenados\n# ... hack hack hack, concluí as alterações atuais ...\n$ git commit -m 'Massive'       # faz o commit das alterações que foram totalmente testados\n$ git switch fixup-branch       # alterna para outro ramo\n$ git stash pop                 # para concluir o trabalho nas alterações que foram salvas\n"
 
 #. type: Labeled list
 #: en/git-stash.txt:372
@@ -58266,10 +58158,9 @@ msgstr "`GIT_TRACE_REDACT`"
 
 #. type: Plain text
 #: en/git.txt:838
-#, fuzzy, priority:100
-#| msgid "By default, when tracing is activated, Git redacts the values of cookies, the \"Authorization:\" header, and the \"Proxy-Authorization:\" header. Set this variable to `0` to prevent this redaction."
+#, priority:100
 msgid "By default, when tracing is activated, Git redacts the values of cookies, the \"Authorization:\" header, the \"Proxy-Authorization:\" header and packfile URIs. Set this variable to `0` to prevent this redaction."
-msgstr "É predefinido que quando o monitoramento seja ativado, o Git redita os valores dos cookies, o cabeçalho \"Autorização:\" e o cabeçalho \"Autorização do proxy:\". Defina esta variável como `0` para evitar esta redação."
+msgstr "É predefinido que quando o monitoramento seja ativado, o Git redita os valores dos cookies, o cabeçalho \"Autorização:\" o cabeçalho e o URI do arquivo do pacote \"Autorização do proxy:\". Defina esta variável como `0` para evitar esta redação."
 
 #. type: Labeled list
 #: en/git.txt:839
@@ -60231,7 +60122,7 @@ msgstr "GIT_DEFAULT_BRANCH"
 #: en/git-var.txt:64
 #, priority:100
 msgid "The name of the first branch created in newly initialized repositories."
-msgstr ""
+msgstr "O nome do primeiro ramo criado nos repositórios que foram recentemente inicializados."
 
 #. type: Plain text
 #: en/git-var.txt:70
@@ -64435,14 +64326,13 @@ msgstr "nome legível para as pessoas, como linkgit:git-describe[1]; uma express
 #: en/pretty-formats.txt:225
 #, priority:260
 msgid "'tags[=<bool-value>]': Instead of only considering annotated tags, consider lightweight tags as well."
-msgstr ""
+msgstr "'tags[=<bool-value>]': Em vez de considerar apenas as tags anotadas, considere também as lightweight tags."
 
 #. type: Plain text
 #: en/pretty-formats.txt:229
-#, fuzzy, priority:260
-#| msgid "Instead of using the default number of hexadecimal digits (which will vary according to the number of objects in the repository with a default of 7) of the abbreviated object name, use <n> digits, or as many digits as needed to form a unique object name. An <n> of 0 will suppress long format, only showing the closest tag."
+#, priority:260
 msgid "'abbrev=<number>': Instead of using the default number of hexadecimal digits (which will vary according to the number of objects in the repository with a default of 7) of the abbreviated object name, use <number> digits, or as many digits as needed to form a unique object name."
-msgstr "Em vez de usar o número padrão de dígitos hexadecimais (que variam de acordo com a quantidade de objetos no repositório com um padrão de 7) do nome abreviado do objeto, utilize `<n>` dígitos ou quantos dígitos forem necessários para formar um nome do objeto que seja único. Um `<n>` que seja 0, suprime o formato longo exibindo apenas a tag mais próxima."
+msgstr "'abbrev=<número>': Em vez de usar o número padrão com dígitos hexadecimais (que variam de acordo com a quantidade dos objetos no repositório com um padrão de 7) do nome abreviado do objeto, utilize `<número>` dígitos ou quantos dígitos forem necessários para formar um nome do objeto que seja único."
 
 #. type: Plain text
 #: en/pretty-formats.txt:231
@@ -67977,10 +67867,9 @@ msgstr "\t[remote \"<nome>\"]\n\t\turl = <URL>\n\t\tpushurl = <pushurl>\n\t\tpus
 
 #. type: Plain text
 #: en/urls-remotes.txt:37
-#, fuzzy, priority:220
-#| msgid "The `<pushurl>` is used for pushes only. It is optional and defaults to `<url>`."
+#, priority:220
 msgid "The `<pushurl>` is used for pushes only. It is optional and defaults to `<URL>`."
-msgstr "O `<pushurl>` é utilizado apenas para os impulsionamentos. Além de opcional a sua predefinição retorna para `<url>`."
+msgstr "O `<pushurl>` é utilizado apenas para os envios. Além de opcional a sua predefinição retorna para `<URL>`."
 
 #. type: Title ~
 #: en/urls-remotes.txt:39
@@ -68026,10 +67915,9 @@ msgstr "Você pode decidir entre informar o nome de um arquivo no `$GIT_DIR/bran
 
 #. type: delimited block -
 #: en/urls-remotes.txt:71
-#, fuzzy, no-wrap, priority:220
-#| msgid "\t<url>#<head>\n"
+#, no-wrap, priority:220
 msgid "\t<URL>#<head>\n"
-msgstr "\t<url>#<head>\n"
+msgstr "\t<URL>#<head>\n"
 
 #. type: Plain text
 #: en/urls-remotes.txt:74
