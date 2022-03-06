@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Jean-Noël Avila <jn.avila@free.fr>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2022-01-11 13:34+0100\nPO-Revision-Date: 2022-02-17 21:57+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: Jean-Noël Avila <jn.avila@free.fr>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.11-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2022-01-11 13:34+0100\nPO-Revision-Date: 2022-03-07 17:58+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: Jean-Noël Avila <jn.avila@free.fr>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.12-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:754 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:129 en/git-status.txt:31
@@ -22280,43 +22280,43 @@ msgstr "La conception de fast-import lui permet d’importer de grands projets d
 #: en/git-fast-import.txt:192
 #, priority:100
 msgid "Most bottlenecks appear to be in foreign source data access (the source just cannot extract revisions fast enough) or disk IO (fast-import writes as fast as the disk will take the data).  Imports will run faster if the source data is stored on a different drive than the destination Git repository (due to less IO contention)."
-msgstr ""
+msgstr "La plupart des goulets d'étranglement semblent se situer au niveau de l'accès aux données de la source étrangère (la source ne peut tout simplement pas extraire les révisions assez rapidement) ou de l'E/S du disque (l'importation rapide écrit aussi vite que le disque peut prendre les données).  Les importations s'exécuteront plus rapidement si les données sources sont stockées sur un lecteur différent de celui du dépôt Git de destination (en raison d'une moindre contention des entrées/sorties)."
 
 #. type: Title -
 #: en/git-fast-import.txt:195
 #, no-wrap, priority:100
 msgid "DEVELOPMENT COST"
-msgstr ""
+msgstr "COÛT DE DÉVELOPPEMENT"
 
 #. type: Plain text
 #: en/git-fast-import.txt:202
 #, priority:100
 msgid "A typical frontend for fast-import tends to weigh in at approximately 200 lines of Perl/Python/Ruby code.  Most developers have been able to create working importers in just a couple of hours, even though it is their first exposure to fast-import, and sometimes even to Git.  This is an ideal situation, given that most conversion tools are throw-away (use once, and never look back)."
-msgstr ""
+msgstr "Un frontal typique pour l'importation rapide a tendance à peser environ 200 lignes de code Perl/Python/Ruby. La plupart des développeurs ont pu créer des importateurs fonctionnels en quelques heures seulement, même s'il s'agit de leur première exposition à l'importation rapide, et parfois même à Git. C'est une situation idéale, étant donné que la plupart des outils de conversion sont jetables (à utiliser une fois, et ne jamais regarder en arrière)."
 
 #. type: Title -
 #: en/git-fast-import.txt:205
 #, no-wrap, priority:100
 msgid "PARALLEL OPERATION"
-msgstr ""
+msgstr "FONCTIONNEMENT EN PARALLÈLE"
 
 #. type: Plain text
 #: en/git-fast-import.txt:210
 #, priority:100
 msgid "Like 'git push' or 'git fetch', imports handled by fast-import are safe to run alongside parallel `git repack -a -d` or `git gc` invocations, or any other Git operation (including 'git prune', as loose objects are never used by fast-import)."
-msgstr ""
+msgstr "Comme pour 'git push' ou 'git fetch', les importations gérées par fast-import peuvent être exécutées en toute sécurité parallèlement à des invocations parallèles de `git repack -a -d` ou `git gc`, ou à toute autre opération Git (y compris 'git prune' , car les objets libres ne sont jamais utilisés par fast-import)."
 
 #. type: Plain text
 #: en/git-fast-import.txt:219
 #, priority:100
 msgid "fast-import does not lock the branch or tag refs it is actively importing.  After the import, during its ref update phase, fast-import tests each existing branch ref to verify the update will be a fast-forward update (the commit stored in the ref is contained in the new history of the commit to be written).  If the update is not a fast-forward update, fast-import will skip updating that ref and instead prints a warning message.  fast-import will always attempt to update all branch refs, and does not stop on the first failure."
-msgstr ""
+msgstr "fast-import ne verrouille pas les refs de branches ou d'étiquettes qu'il est en train d'importer.  Après l'importation, pendant sa phase de mise à jour des références, fast-import teste chaque référence de branche existante pour vérifier que la mise à jour sera une mise à jour en avance rapide (le commit stocké dans la référence est contenu dans le nouvel historique du commit à écrire).  Si la mise à jour n'est pas une mise à jour en avance rapide, fast-import ne mettra pas à jour cette référence et affichera un message d'avertissement. fast-import essaiera toujours de mettre à jour toutes les références de branche, et ne s'arrêtera pas au premier échec."
 
 #. type: Plain text
 #: en/git-fast-import.txt:223
 #, priority:100
 msgid "Branch updates can be forced with --force, but it's recommended that this only be used on an otherwise quiet repository.  Using --force is not necessary for an initial import into an empty repository."
-msgstr ""
+msgstr "Les mises à jour de branche peuvent être forcées avec --force, mais il est recommandé de ne l'utiliser que sur un dépôt autrement calme.  L'utilisation de --force n'est pas nécessaire pour une importation initiale dans un dépôt vide."
 
 #. type: Title -
 #: en/git-fast-import.txt:226
@@ -22328,13 +22328,13 @@ msgstr "DISCUSSION TECHNIQUE"
 #: en/git-fast-import.txt:233
 #, priority:100
 msgid "fast-import tracks a set of branches in memory.  Any branch can be created or modified at any point during the import process by sending a `commit` command on the input stream.  This design allows a frontend program to process an unlimited number of branches simultaneously, generating commits in the order they are available from the source data.  It also simplifies the frontend programs considerably."
-msgstr ""
+msgstr "fast-import suit un ensemble de branches en mémoire.  Chaque branche peut être créée ou modifiée à tout moment pendant le processus d'importation en envoyant une commande `commit` sur le flux d'entrée.  Cette conception permet à un programme frontal de traiter un nombre illimité de branches simultanément, en générant des commits dans l'ordre où ils sont disponibles dans les données sources.  Elle simplifie aussi considérablement les programmes frontaux."
 
 #. type: Plain text
 #: en/git-fast-import.txt:242
 #, priority:100
 msgid "fast-import does not use or alter the current working directory, or any file within it.  (It does however update the current Git repository, as referenced by `GIT_DIR`.)  Therefore an import frontend may use the working directory for its own purposes, such as extracting file revisions from the foreign source.  This ignorance of the working directory also allows fast-import to run very quickly, as it does not need to perform any costly file update operations when switching between branches."
-msgstr ""
+msgstr "fast-import n'utilise pas et ne modifie pas le répertoire de travail actuel, ni aucun fichier qui s'y trouve.  (Il met cependant à jour le dépôt Git actuel, comme référencé par `GIT_DIR`).  Par conséquent, un frontal d'importation peut utiliser le répertoire de travail pour ses propres besoins, comme l'extraction des révisions de fichiers de la source étrangère.  Cette ignorance du répertoire de travail permet également à fast-import de s'exécuter très rapidement, car il n'a pas besoin d'effectuer de coûteuses opérations de mise à jour de fichiers lorsqu'il passe d'une branche à l'autre."
 
 #. type: Title -
 #: en/git-fast-import.txt:244
