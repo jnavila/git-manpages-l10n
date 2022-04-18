@@ -3,7 +3,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Report-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2022-04-09 23:15+0200\nPO-Revision-Date: 2022-04-16 18:38+0000\nLast-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\nLanguage-Team: none\nLanguage: pt_BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.12-dev\n"
+msgstr "Report-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2022-04-09 23:15+0200\nPO-Revision-Date: 2022-04-20 10:48+0000\nLast-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\nLanguage-Team: none\nLanguage: pt_BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.12-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:763 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:129 en/git-status.txt:31
@@ -2553,20 +2553,19 @@ msgstr "Caso o padrão termine com `/`, `**` será adicionado automaticamente. O
 #: en/config.txt:162
 #, no-wrap, priority:100
 msgid "`hasconfig:remote.*.url:`"
-msgstr ""
+msgstr "`hasconfig:remote.*.url:`"
 
 #. type: Plain text
 #: en/config.txt:170
-#, fuzzy, priority:100
-#| msgid "The data that follows the keyword `onbranch:` is taken to be a pattern with standard globbing wildcards and two additional ones, `**/` and `/**`, that can match multiple path components.  If we are in a worktree where the name of the branch that is currently checked out matches the pattern, the include condition is met."
+#, priority:100
 msgid "The data that follows this keyword is taken to be a pattern with standard globbing wildcards and two additional ones, `**/` and `/**`, that can match multiple components. The first time this keyword is seen, the rest of the config files will be scanned for remote URLs (without applying any values). If there exists at least one remote URL that matches this pattern, the include condition is met."
-msgstr "Os dados que seguem a palavra-chave `onbranch:` são considerados um padrão com caracteres curinga de mascaramento predefinidos e dois adicionais, `**/` e `/**`, que podem coincidir com vários componentes do caminho.  Caso estejamos em uma árvore de trabalho cujo nome do ramo atual com check-out coincida com o padrão, a inclusão condicional será atendida."
+msgstr "Os dados que seguem esta palavra-chave são tomados como um padrão com curingas e dois adicionais, `**/` e `/**`, que podem corresponder com vários componentes. A primeira vez que esta palavra-chave for vista, o resto dos arquivos de configuração serão verificados com as URLs remotas (sem aplicar nenhum valor). Se existir pelo menos uma URL remota que corresponda a este padrão, a condição de inclusão será satisfeita."
 
 #. type: Plain text
 #: en/config.txt:173
 #, priority:100
 msgid "Files included by this option (directly or indirectly) are not allowed to contain remote URLs."
-msgstr ""
+msgstr "Os arquivos inclusos por esta opção (direta ou indiretamente) não podem conter URLs remotas."
 
 #. type: Plain text
 #: en/config.txt:184
@@ -2761,7 +2760,7 @@ msgid ""
 "\tpath = foo.inc\n"
 "[remote \"origin\"]\n"
 "\turl = https://example.com/git\n"
-msgstr ""
+msgstr "; inclua apenas caso exista um ramo remoto com a URL fornecida (observe\n; que tal URL pode ser fornecida posteriormente num arquivo ou num\n; arquivo lido após este arquivo ser lido, como visto neste exemplo)\n[includeIf \"hasconfig:remote.*.url:https://example.com/**\"]\n\tpath = foo.inc\n[remote \"origin\"]\n\turl = https://example.com/git\n"
 
 #. type: Title ~
 #: en/config.txt:267
@@ -10549,7 +10548,7 @@ msgstr "ESSA OPÇÃO É EXPERIMENTAL! Faz com que o comando atual se repita no s
 #: en/git-branch.txt:254
 #, priority:260
 msgid "When used in branch creation, a new branch <branchname> will be created in the superproject and all of the submodules in the superproject's <start-point>. In submodules, the branch will point to the submodule commit in the superproject's <start-point> but the branch's tracking information will be set up based on the submodule's branches and remotes e.g. `git branch --recurse-submodules topic origin/main` will create the submodule branch \"topic\" that points to the submodule commit in the superproject's \"origin/main\", but tracks the submodule's \"origin/main\"."
-msgstr ""
+msgstr "Quando usado na criação dos ramos, um novo ramo <nome-do-ramo> será criado no super projeto (superproject) e todos os submódulos no super projeto <ponto-de-início>. Nos submódulos, o ramo irá apontar para o commit do submódulo no <ponto-de-inicio> do super projeto, porém a informação do rastreamento do ramo será configurado com base no submódulo's dos ramos locais e remotos por exemplo. O ramo `git --recurse-submodules topic origin/main` irá criar o ramo do submódulo \"topic\" que aponta para o commit do submódulo no super projeto \"origin/main\", contudo rastreia o submódulos \"origin/main\"."
 
 #. type: Plain text
 #: en/git-branch.txt:258
@@ -11111,10 +11110,9 @@ msgstr "verify <arquivo>"
 
 #. type: Plain text
 #: en/git-bundle.txt:83
-#, fuzzy, priority:100
-#| msgid "Used to check that a bundle file is valid and will apply cleanly to the current repository.  This includes checks on the bundle format itself as well as checking that the prerequisite commits exist and are fully linked in the current repository.  'git bundle' prints a list of missing commits, if any, and exits with a non-zero status."
+#, priority:100
 msgid "Used to check that a bundle file is valid and will apply cleanly to the current repository.  This includes checks on the bundle format itself as well as checking that the prerequisite commits exist and are fully linked in the current repository.  Then, 'git bundle' prints a list of missing commits, if any.  Finally, information about additional capabilities, such as \"object filter\", is printed. See \"Capabilities\" in link:technical/bundle-format.html for more information. The exit code is zero for success, but will be nonzero if the bundle file is invalid."
-msgstr "Utilizado para verificar se um arquivo do pacote é válido e se será aplicado de forma limpa ao repositório atual.  Isso incluí as verificações no formato do pacote e também a que verificação dos pré-requisitos dos commits existam e estejam totalmente vinculados ao repositório atual.  O comando 'git bundle' exibe uma lista dos commits que faltam, caso haja, e encerra com uma condição diferente de zero."
+msgstr "Utilizado para verificar se um arquivo do pacote é válido e se será aplicado de forma limpa ao repositório atual.  Isso incluí as verificações no formato do pacote e também a que verificação dos pré-requisitos dos commits existam e estejam totalmente vinculados ao repositório atual.  O comando 'git bundle' exibe uma lista dos commits que faltam, caso haja.  Finalmente, a informação sobre as capacidades adicionais tais como \"object filter\" é exibida. Veja \"Recursos\" em link:technical/bundle-format.html para obter mais informações. O código de encerramento é zero em caso de sucesso, mas não será zero se o arquivo do pacote for inválido."
 
 #. type: Labeled list
 #: en/git-bundle.txt:84
@@ -11690,10 +11688,9 @@ msgstr "--batch-command=<formato>"
 
 #. type: Plain text
 #: en/git-cat-file.txt:106
-#, fuzzy, priority:80
-#| msgid "Print object information for each object provided on stdin.  May not be combined with any other options or arguments except `--textconv` or `--filters`, in which case the input lines also need to specify the path, separated by whitespace.  See the section `BATCH OUTPUT` below for details."
+#, priority:80
 msgid "Enter a command mode that reads commands and arguments from stdin. May only be combined with `--buffer`, `--textconv` or `--filters`. In the case of `--textconv` or `--filters`, the input lines also need to specify the path, separated by whitespace. See the section `BATCH OUTPUT` below for details."
-msgstr "Exiba as informações do objeto para cada objeto informado no stdin.  Talvez não possa ser combinado com nenhuma outra opção exceto `--textconv` ou `--filters`, neste caso, as linhas da entrada também precisam informar o caminho, separado por espaços.  Para mais detalhes consulte a seção `SAÍDA DO LOTE` abaixo."
+msgstr "Insira um modo de comando que faça a leitura dos comandos e dos argumentos do stdin. Só pode ser combinado com `--buffer`, `--textconv` ou `--filters`. No caso de `--textconv` ou de `--filters`, as linhas da entrada também precisam especificar o caminho, separado por espaços em branco. Consulte a seção `SAÍDA DE LOTE` abaixo para obter mais detalhes."
 
 #. type: Plain text
 #: en/git-cat-file.txt:108
@@ -11735,7 +11732,7 @@ msgstr "flush"
 #: en/git-cat-file.txt:123
 #, priority:80
 msgid "Used with `--buffer` to execute all preceding commands that were issued since the beginning or since the last flush was issued. When `--buffer` is used, no output will come until a `flush` is issued. When `--buffer` is not used, commands are flushed each time without issuing `flush`."
-msgstr ""
+msgstr "É utilizado com a opção `--buffer` para executar todos os comandos anteriores que foram emitidos desde o início ou desde que o último flush tenha sido feito. Quando a opção `--buffer` é utilizada, nenhuma saída virá até que um `flush` seja emitido. Quando `--buffer` não for utilizado, os comandos são liberados um por vez sem emitir um `flush`."
 
 #. type: Labeled list
 #: en/git-cat-file.txt:126
@@ -17018,7 +17015,7 @@ msgstr "--worktree"
 #: en/git-config.txt:151
 #, priority:100
 msgid "Similar to `--local` except that `$GIT_DIR/config.worktree` is read from or written to if `extensions.worktreeConfig` is enabled. If not it's the same as `--local`. Note that `$GIT_DIR` is equal to `$GIT_COMMON_DIR` for the main working tree, but is of the form `$GIT_DIR/worktrees/<id>/` for other working trees. See linkgit:git-worktree[1] to learn how to enable `extensions.worktreeConfig`."
-msgstr ""
+msgstr "Similar ao comando `--local` exceto quando o `$GIT_DIR/config.worktree` for lido ou escrito e se `extensions.worktreeConfig` estiver ativado. Se não estiver, é o mesmo que a opção `--local`. Observe que `$GIT_DIR` é igual a `$GIT_COMMON_DIR` para a árvore principal de trabalho, mas é da forma `$GIT_DIR/worktrees/<id>/` nas outras árvores de trabalho. Consulte linkgit:git-worktree[1] para aprender como ativar o `extensions.worktreeConfig`."
 
 #. type: Labeled list
 #: en/git-config.txt:152
@@ -25404,10 +25401,9 @@ msgstr "O primeiro comando captura a ramificação `maint` do repositório em `g
 
 #. type: Plain text
 #: en/git-fetch.txt:294
-#, fuzzy, priority:220
-#| msgid "Using --recurse-submodules can only fetch new commits in already checked out submodules right now. When e.g. upstream added a new submodule in the just fetched commits of the superproject the submodule itself cannot be fetched, making it impossible to check out that submodule later without having to do a fetch again. This is expected to be fixed in a future Git version."
+#, priority:220
 msgid "Using --recurse-submodules can only fetch new commits in submodules that are present locally e.g. in `$GIT_DIR/modules/`. If the upstream adds a new submodule, that submodule cannot be fetched until it is cloned e.g. by `git submodule update`. This is expected to be fixed in a future Git version."
-msgstr "Com a opção `--recurse-submodules` só pode buscar novos commits nos submódulos que já foram averiguados no momento. Quando, por exemplo, a \"upstream\" adicionou um novo submódulo nos commits recém-buscados do superprojeto, o submódulo em si não pode ser buscado, tornando impossível verificar o submódulo sendo necessário fazer uma nova busca mais tarde. Espera-se que isso seja corrigido em uma versão futura do Git."
+msgstr "Com a opção `--recurse-submodules` só se pode buscar por novos commits nos submódulos que estejam presentes localmente, por exemplo, em `$GIT_DIR/modules/`. Se o upstream adicionar um novo submódulo, este submódulo não pode ser buscado até que seja clonado, por exemplo, através do `git submodule update`. Isso deve ser corrigido numa versão futura do Git."
 
 #. type: Title =
 #: en/git-filter-branch.txt:2
@@ -34388,7 +34384,7 @@ msgstr "Formato de saída"
 #: en/git-ls-tree.txt:108
 #, priority:80
 msgid "The output format of `ls-tree` is determined by either the `--format` option, or other format-altering options such as `--name-only` etc.  (see `--format` above)."
-msgstr ""
+msgstr "O formato de saída do `ls-tree` é determinado pela opção `--format` ou com as outras opções de alteração do formato, tais como `--name-only` etc.  (consulte o `--format` acima)."
 
 #. type: Plain text
 #: en/git-ls-tree.txt:112
@@ -34400,13 +34396,13 @@ msgstr ""
 #: en/git-ls-tree.txt:116
 #, priority:80
 msgid "In cases where the `--format` would exactly map to an existing option `ls-tree` will use the appropriate faster path. Thus the default format is equivalent to:"
-msgstr ""
+msgstr "Nos casos onde o `- -format` mapearia exatamente para uma opção existente, o `ls-tree` utilizará o caminho mais rápido e apropriado. Assim, o formato padrão é equivalente a:"
 
 #. type: Plain text
 #: en/git-ls-tree.txt:118
 #, no-wrap, priority:80
 msgid "\t%(objectmode) %(objecttype) %(objectname)%x09%(path)\n"
-msgstr ""
+msgstr "\t%(objectmode) %(objecttype) %(objectname)%x09%(path)\n"
 
 #. type: Plain text
 #: en/git-ls-tree.txt:121
@@ -34424,7 +34420,7 @@ msgstr "Quando a opção `-l` é utilizada, o formato muda para"
 #: en/git-ls-tree.txt:125
 #, no-wrap, priority:80
 msgid "\t%(objectmode) %(objecttype) %(objectname) %(objectsize:padded)%x09%(path)\n"
-msgstr ""
+msgstr "\t%(objectmode) %(objecttype) %(objectname) %(objectsize:padded)%x09%(path)\n"
 
 #. type: Plain text
 #: en/git-ls-tree.txt:129
@@ -53924,7 +53920,7 @@ msgstr "Caso a opção `--recursive` seja utilizada, este comando recursará nos
 #: en/git-submodule.txt:184
 #, priority:220
 msgid "If `--filter <filter spec>` is specified, the given partial clone filter will be applied to the submodule. See linkgit:git-rev-list[1] for details on filter specifications."
-msgstr ""
+msgstr "Caso a opção `--filter <filter spec>` seja especificada, o filtro de clonagem parcial fornecido será aplicado ao submódulo. Consulte linkgit:git-rev-list[1] para obter mais detalhes sobre as especificações do filtro."
 
 #. type: Labeled list
 #: en/git-submodule.txt:185
@@ -59910,16 +59906,15 @@ msgstr "SKIP-WORKTREE BIT"
 
 #. type: Plain text
 #: en/git-update-index.txt:403
-#, fuzzy, priority:80
-#| msgid "Skip-worktree bit can be defined in one (long) sentence: When reading an entry, if it is marked as skip-worktree, then Git pretends its working directory version is up to date and read the index version instead."
+#, priority:80
 msgid "Skip-worktree bit can be defined in one (long) sentence: Tell git to avoid writing the file to the working directory when reasonably possible, and treat the file as unchanged when it is not present in the working directory."
-msgstr "Skip-worktree bit (o bit que ignora a árvore de trabalho) pode ser definido com uma sentença (longa): Ao ler uma entrada, caso esteja marcado com 'skip-work-tree', então o Git finge que a versão do diretório de trabalho está atualizada e em vez disso, lê a versão do índice."
+msgstr "O bit do Skip-worktree pode ser definido numa (longa) frase: Diga ao git para evitar escrever o arquivo no diretório de trabalho quando for razoavelmente possível, e trate o arquivo como inalterado quando ele não estiver presente no diretório de trabalho."
 
 #. type: Plain text
 #: en/git-update-index.txt:406
 #, priority:80
 msgid "Note that not all git commands will pay attention to this bit, and some only partially support it."
-msgstr ""
+msgstr "Note que nem todos os comandos do git prestarão atenção a este bit, e alguns, só são parcialmente compatíveis."
 
 #. type: Plain text
 #: en/git-update-index.txt:415
@@ -61665,10 +61660,9 @@ msgstr "Para acessar as `refs` é melhor não olhar diretamente para dentro do `
 
 #. type: Plain text
 #: en/git-worktree.txt:298
-#, fuzzy, priority:240
-#| msgid "By default, the repository `config` file is shared across all working trees. If the config variables `core.bare` or `core.worktree` are already present in the config file, they will be applied to the main working trees only."
+#, priority:240
 msgid "By default, the repository `config` file is shared across all worktrees.  If the config variables `core.bare` or `core.worktree` are present in the common config file and `extensions.worktreeConfig` is disabled, then they will be applied to the main worktree only."
-msgstr "É predefinido que o arquivo `config` do repositório seja compartilhado entre todas as árvores de trabalho. Caso as variáveis da configuração `core.bare` ou `core.worktree` estejam presentes no arquivo de configuração elas serão aplicadas apenas às principais árvores de trabalho."
+msgstr "É predefinido que o arquivo `config` do repositório seja compartilhado entre todas as árvores de trabalho.  Caso as variáveis da configuração `core.bare` ou `core.worktree` estejam presentes no arquivo de configuração comum, e a opção `extensions.worktreeConfig` esteja desativada, elas serão aplicadas apenas às principais árvores de trabalho."
 
 #. type: Plain text
 #: en/git-worktree.txt:301
@@ -66785,7 +66779,7 @@ msgstr "--exclude-first-parent-only"
 #: en/rev-list-options.txt:145
 #, priority:260
 msgid "When finding commits to exclude (with a '{caret}'), follow only the first parent commit upon seeing a merge commit.  This can be used to find the set of changes in a topic branch from the point where it diverged from the remote branch, given that arbitrary merges can be valid topic branch changes."
-msgstr ""
+msgstr "Ao encontrar os commits para serem excluídos (com um '{caret}'), siga apenas o primeiro commit principal ao ver um commit para ser mesclado.  Isso pode ser usado para encontrar o conjunto de alterações num determinado ramo a partir do ponto em que ele divergiu do ramo remoto, dado que as mesclagens arbitrárias podem ser alterações válidas no tópico do ramo."
 
 #. type: Plain text
 #: en/rev-list-options.txt:149
