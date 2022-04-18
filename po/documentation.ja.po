@@ -4,19 +4,7 @@
 # Jean-Noël AVILA <jn.avila@free.fr>, 2020.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: git-manpages-l 10n\n"
-"Report-Msgid-Bugs-To: jn.avila@free.fr\n"
-"POT-Creation-Date: 2022-04-09 23:15+0200\n"
-"PO-Revision-Date: 2021-11-25 13:53+0000\n"
-"Last-Translator: yajamon <yajamon.tatsuki@gmail.com>\n"
-"Language-Team: Japanese\n"
-"Language: ja\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.10-dev\n"
+msgstr "Project-Id-Version: git-manpages-l 10n\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2022-04-09 23:15+0200\nPO-Revision-Date: 2022-04-20 10:48+0000\nLast-Translator: yajamon <yajamon.tatsuki@gmail.com>\nLanguage-Team: Japanese\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.12-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:763 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:129 en/git-status.txt:31
@@ -3154,10 +3142,9 @@ msgstr "Gitの内部フォーマット"
 
 #. type: Plain text
 #: en/date-formats.txt:12
-#, fuzzy, priority:280
-#| msgid "It is `<unix timestamp> <time zone offset>`, where `<unix timestamp>` is the number of seconds since the UNIX epoch.  `<time zone offset>` is a positive or negative offset from UTC.  For example CET (which is 1 hour ahead of UTC) is `+0100`."
+#, priority:280
 msgid "It is `<unix-timestamp> <time-zone-offset>`, where `<unix-timestamp>` is the number of seconds since the UNIX epoch.  `<time-zone-offset>` is a positive or negative offset from UTC.  For example CET (which is 1 hour ahead of UTC) is `+0100`."
-msgstr "これは `<unix timestamp> <time zone offset>` で、`<unix timestamp>` はUNIXエポックからの秒数です。  `<time zone offset>` は、UTCからの正負のオフセットです。  例えば、CET（UTCより1時間進んでいる）は `+0100` です。"
+msgstr "これは `<unix-timestamp> <time-zone-offset>` で、`<unix-timestamp>` はUNIXエポックからの秒数です。  `<time-zone-offset>` は、UTCからの正負のオフセットです。  例えば、CET（UTCより1時間進んでいる）は `+0100` です。"
 
 #. type: Labeled list
 #: en/date-formats.txt:13
@@ -4077,10 +4064,9 @@ msgstr "diffの出力を抑制します。デフォルトでパッチを表示�
 
 #. type: Labeled list
 #: en/diff-options.txt:37
-#, fuzzy, no-wrap, priority:280
-#| msgid "--diff-merges=(off|none|on|first-parent|1|separate|m|combined|c|dense-combined|cc)"
+#, no-wrap, priority:280
 msgid "--diff-merges=(off|none|on|first-parent|1|separate|m|combined|c|dense-combined|cc|remerge|r)"
-msgstr "--diff-merges=(off|none|on|first-parent|1|separate|m|combined|c|dense-combined|cc)"
+msgstr "--diff-merges=(off|none|on|first-parent|1|separate|m|combined|c|dense-combined|cc|remerge|r)"
 
 #. type: Labeled list
 #: en/diff-options.txt:38 en/diff-options.txt:44
@@ -4162,17 +4148,15 @@ msgstr "これにより、マージコミットはそれぞれの親に対する
 
 #. type: Labeled list
 #: en/diff-options.txt:67
-#, fuzzy, no-wrap, priority:280
-#| msgid "--diff-merges=m"
+#, no-wrap, priority:280
 msgid "--diff-merges=remerge"
-msgstr "--diff-merges=m"
+msgstr "--diff-merges=remerge"
 
 #. type: Labeled list
 #: en/diff-options.txt:68
-#, fuzzy, no-wrap, priority:280
-#| msgid "--diff-merges=m"
+#, no-wrap, priority:280
 msgid "--diff-merges=r"
-msgstr "--diff-merges=m"
+msgstr "--diff-merges=r"
 
 #. type: Labeled list
 #: en/diff-options.txt:69
@@ -4184,13 +4168,13 @@ msgstr "--remerge-diff"
 #: en/diff-options.txt:74
 #, priority:280
 msgid "With this option, two-parent merge commits are remerged to create a temporary tree object -- potentially containing files with conflict markers and such.  A diff is then shown between that temporary tree and the actual merge commit."
-msgstr ""
+msgstr "このオプションでは、2つの親を持つマージコミットが再マージされ、一時的なツリーオブジェクト（コンフリクトマーカーなどのファイルを含む可能性があります）が作成されます。  そして、その一時的なツリーと実際のマージコミットの間の diff が表示されます。"
 
 #. type: Plain text
 #: en/diff-options.txt:78
 #, priority:280
 msgid "The output emitted when this option is used is subject to change, and so is its interaction with other options (unless explicitly documented)."
-msgstr ""
+msgstr "このオプションを使用したときに出力される内容は変更される可能性があり、他のオプションとの相互作用も（明示的に文書化されていない限り）変更される可能性があります。"
 
 #. type: Labeled list
 #: en/diff-options.txt:79
@@ -4238,7 +4222,7 @@ msgstr "--cc"
 #: en/diff-options.txt:97
 #, priority:280
 msgid "With this option the output produced by `--diff-merges=combined` is further compressed by omitting uninteresting hunks whose contents in the parents have only two variants and the merge result picks one of them without modification.  `--cc` implies `-p`."
-msgstr ""
+msgstr "このオプションを使うと、 `--diff-merges=combined` の出力は、親の内容が2つのバリエーションしかなく、マージ結果がそのうちの1つをそのまま選ぶような、興味のないハンクを省くことでさらに圧縮されます。  `-cc` は `-p` を意味します。"
 
 #. type: Labeled list
 #: en/diff-options.txt:98 en/git-diff-tree.txt:113
@@ -4250,67 +4234,67 @@ msgstr "--combined-all-paths"
 #: en/diff-options.txt:104
 #, priority:280
 msgid "This flag causes combined diffs (used for merge commits) to list the name of the file from all parents.  It thus only has effect when `--diff-merges=[dense-]combined` is in use, and is likely only useful if filename changes are detected (i.e.  when either rename or copy detection have been requested)."
-msgstr ""
+msgstr "このフラグを指定すると、結合された差分 (マージコミットで使用) ですべての親ファイルのファイル名がリストアップされるようになります。  このフラグは `--diff-merges=[dense-]combined` が使用されている場合にのみ効果があり、ファイル名の変更が検出された場合 (つまり、リネームやコピー検出が要求された場合) にのみ有効でしょう。"
 
 #. type: Labeled list
 #: en/diff-options.txt:106
 #, no-wrap, priority:280
 msgid "-U<n>"
-msgstr ""
+msgstr "-U<n>"
 
 #. type: Labeled list
 #: en/diff-options.txt:107
 #, no-wrap, priority:280
 msgid "--unified=<n>"
-msgstr ""
+msgstr "--unified=<n>"
 
 #. type: Plain text
 #: en/diff-options.txt:110
 #, priority:280
 msgid "Generate diffs with <n> lines of context instead of the usual three."
-msgstr ""
+msgstr "通常の3行ではなく、<n>行のコンテキストで差分を生成します。"
 
 #. type: Plain text
 #: en/diff-options.txt:112 en/diff-options.txt:520
 #, no-wrap, priority:280
 msgid "\tImplies `--patch`.\n"
-msgstr ""
+msgstr "\t`--patch` を意味します。\n"
 
 #. type: Labeled list
 #: en/diff-options.txt:114 en/git-archive.txt:55
 #, no-wrap, priority:280
 msgid "--output=<file>"
-msgstr ""
+msgstr "--output=<file>"
 
 #. type: Plain text
 #: en/diff-options.txt:116
 #, priority:280
 msgid "Output to a specific file instead of stdout."
-msgstr ""
+msgstr "標準出力の代わりに特定のファイルへ出力します。"
 
 #. type: Labeled list
 #: en/diff-options.txt:117
 #, no-wrap, priority:280
 msgid "--output-indicator-new=<char>"
-msgstr ""
+msgstr "--output-indicator-new=<char>"
 
 #. type: Labeled list
 #: en/diff-options.txt:118
 #, no-wrap, priority:280
 msgid "--output-indicator-old=<char>"
-msgstr ""
+msgstr "--output-indicator-old=<char>"
 
 #. type: Labeled list
 #: en/diff-options.txt:119
 #, no-wrap, priority:280
 msgid "--output-indicator-context=<char>"
-msgstr ""
+msgstr "--output-indicator-context=<char>"
 
 #. type: Plain text
 #: en/diff-options.txt:123
 #, priority:280
 msgid "Specify the character used to indicate new, old or context lines in the generated patch. Normally they are '+', '-' and ' ' respectively."
-msgstr ""
+msgstr "生成されたパッチの新しい行、古い行、または前後関係の行を示すために使用される文字を指定します。通常、それらはそれぞれ'+'、'-'、および' 'です。"
 
 #. type: Labeled list
 #: en/diff-options.txt:125 en/git-replace.txt:78 en/git-verify-commit.txt:19 en/git-verify-tag.txt:19
@@ -4322,7 +4306,7 @@ msgstr "--raw"
 #: en/diff-options.txt:128
 #, no-wrap, priority:280
 msgid "\tGenerate the diff in raw format.\n"
-msgstr ""
+msgstr "\t差分をraw形式で生成します。\n"
 
 #. type: Plain text
 #: en/diff-options.txt:138
@@ -4333,7 +4317,7 @@ msgid ""
 "\tlinkgit:git-diff[1]. This is different from showing the log\n"
 "\titself in raw format, which you can achieve with\n"
 "\t`--format=raw`.\n"
-msgstr ""
+msgstr "\t各コミットについて、raw形式の diff を使って変更のサマリーを表示します。\n\tlinkgit:git-diff[1]の \"RAW OUTPUT FORMAT\" セクションを\n\t参照してください。これは、ログ自体をraw形式で\n\t表示するのとは異なります。そのようなことを実現するには\n\t`--format=raw`とします。\n"
 
 #. type: Labeled list
 #: en/diff-options.txt:142
@@ -4345,13 +4329,13 @@ msgstr "--patch-with-raw"
 #: en/diff-options.txt:144
 #, priority:280
 msgid "Synonym for `-p --raw`."
-msgstr ""
+msgstr "`-p --raw`と同義です。"
 
 #. type: Plain text
 #: en/diff-options.txt:149
 #, priority:280
 msgid "Show the tree objects in the diff output."
-msgstr ""
+msgstr "diff出力にツリーオブジェクトを表示します。"
 
 #. type: Labeled list
 #: en/diff-options.txt:151
@@ -4363,7 +4347,7 @@ msgstr "--indent-heuristic"
 #: en/diff-options.txt:154
 #, priority:280
 msgid "Enable the heuristic that shifts diff hunk boundaries to make patches easier to read. This is the default."
-msgstr ""
+msgstr "差分ハンクの境界をずらす発見的解決法を有効にして、パッチを読みやすくします。これはデフォルトです。"
 
 #. type: Labeled list
 #: en/diff-options.txt:155
@@ -4375,7 +4359,7 @@ msgstr "--no-indent-heuristic"
 #: en/diff-options.txt:157
 #, priority:280
 msgid "Disable the indent heuristic."
-msgstr ""
+msgstr "インデントの発見的解決法を無効にします。"
 
 #. type: Labeled list
 #: en/diff-options.txt:158
@@ -4387,7 +4371,7 @@ msgstr "--minimal"
 #: en/diff-options.txt:161 en/diff-options.txt:187
 #, priority:280
 msgid "Spend extra time to make sure the smallest possible diff is produced."
-msgstr ""
+msgstr "可能な限り小さな差分を出すために、更に時間を費やします。"
 
 #. type: Labeled list
 #: en/diff-options.txt:162
@@ -4399,7 +4383,7 @@ msgstr "--patience"
 #: en/diff-options.txt:164
 #, priority:280
 msgid "Generate a diff using the \"patience diff\" algorithm."
-msgstr ""
+msgstr "\"patience diff\"アルゴリズムを用いてdiffを生成します。"
 
 #. type: Labeled list
 #: en/diff-options.txt:165
@@ -4411,43 +4395,43 @@ msgstr "--histogram"
 #: en/diff-options.txt:167
 #, priority:280
 msgid "Generate a diff using the \"histogram diff\" algorithm."
-msgstr ""
+msgstr "\"histogram diff\" アルゴリズムを用いてdiffを生成します。"
 
 #. type: Labeled list
 #: en/diff-options.txt:168
 #, no-wrap, priority:280
 msgid "--anchored=<text>"
-msgstr ""
+msgstr "--anchored=<text>"
 
 #. type: Plain text
 #: en/diff-options.txt:170
 #, priority:280
 msgid "Generate a diff using the \"anchored diff\" algorithm."
-msgstr ""
+msgstr "\"anchored diff\"アルゴリズムでdiffを生成します。"
 
 #. type: Plain text
 #: en/diff-options.txt:172
 #, priority:280
 msgid "This option may be specified more than once."
-msgstr ""
+msgstr "このオプションは複数回指定できます。"
 
 #. type: Plain text
 #: en/diff-options.txt:177
 #, priority:280
 msgid "If a line exists in both the source and destination, exists only once, and starts with this text, this algorithm attempts to prevent it from appearing as a deletion or addition in the output. It uses the \"patience diff\" algorithm internally."
-msgstr ""
+msgstr "ある行がソースと宛先の両方に存在し、一度だけ存在し、そのテキストで始まる場合、このアルゴリズムは、出力に削除または追加として現れるのを防ごうとします。これは、内部で \"patience diff\" アルゴリズムを使用します。"
 
 #. type: Labeled list
 #: en/diff-options.txt:178
 #, no-wrap, priority:280
 msgid "--diff-algorithm={patience|minimal|histogram|myers}"
-msgstr ""
+msgstr "--diff-algorithm={patience|minimal|histogram|myers}"
 
 #. type: Plain text
 #: en/diff-options.txt:180
 #, priority:280
 msgid "Choose a diff algorithm. The variants are as follows:"
-msgstr ""
+msgstr "diffのアルゴリズムを選択します。バリアントは以下の通りです。"
 
 #. type: Labeled list
 #: en/diff-options.txt:182
@@ -4459,7 +4443,7 @@ msgstr "`default`, `myers`"
 #: en/diff-options.txt:184
 #, priority:280
 msgid "The basic greedy diff algorithm. Currently, this is the default."
-msgstr ""
+msgstr "基本的な greedy diff アルゴリズム。現在のところ、これがデフォルトです。"
 
 #. type: Labeled list
 #: en/diff-options.txt:184
@@ -4477,7 +4461,7 @@ msgstr "`patience`"
 #: en/diff-options.txt:189
 #, priority:280
 msgid "Use \"patience diff\" algorithm when generating patches."
-msgstr ""
+msgstr "パッチを生成する際に、\"patience diff\" アルゴリズムを使用します。"
 
 #. type: Labeled list
 #: en/diff-options.txt:189
@@ -4489,31 +4473,31 @@ msgstr "`histogram`"
 #: en/diff-options.txt:192
 #, priority:280
 msgid "This algorithm extends the patience algorithm to \"support low-occurrence common elements\"."
-msgstr ""
+msgstr "このアルゴリズムは、patience アルゴリズムを拡張し、「発生頻度の低い共通要素をサポート」します。"
 
 #. type: Plain text
 #: en/diff-options.txt:197
 #, priority:280
 msgid "For instance, if you configured the `diff.algorithm` variable to a non-default value and want to use the default one, then you have to use `--diff-algorithm=default` option."
-msgstr ""
+msgstr "例えば、 `diff.algorithm` 変数をデフォルト以外の値に設定している上で、デフォルトの値を使用したい場合は、 `--diff-algorithm=default` オプションを使用する必要があります。"
 
 #. type: Labeled list
 #: en/diff-options.txt:198
 #, no-wrap, priority:280
 msgid "--stat[=<width>[,<name-width>[,<count>]]]"
-msgstr ""
+msgstr "--stat[=<width>[,<name-width>[,<count>]]]"
 
 #. type: Plain text
 #: en/diff-options.txt:212
 #, ignore-ellipsis, priority:280
 msgid "Generate a diffstat. By default, as much space as necessary will be used for the filename part, and the rest for the graph part. Maximum width defaults to terminal width, or 80 columns if not connected to a terminal, and can be overridden by `<width>`. The width of the filename part can be limited by giving another width `<name-width>` after a comma. The width of the graph part can be limited by using `--stat-graph-width=<width>` (affects all commands generating a stat graph) or by setting `diff.statGraphWidth=<width>` (does not affect `git format-patch`).  By giving a third parameter `<count>`, you can limit the output to the first `<count>` lines, followed by `...` if there are more."
-msgstr ""
+msgstr "diffstatを生成します。デフォルトでは、必要なだけのスペースがファイル名部分に使われ、残りはグラフ部分に使われます。最大幅はデフォルトで端末の幅、端末に接続されていない場合は80カラムであり、 `<width>` で上書きすることができます。ファイル名部分の幅は、カンマの後に `<name-width>` という別の幅を与えることで制限できます。グラフ部分の幅は `--stat-graph-width=<width>` (statグラフを生成する全てのコマンドに影響します) 使用するか `diff.statGraphWidth=<width>` (`git format-patch` には影響しません) を設定することで制限可能です。  第3のパラメータとして `<count>` を与えることで、出力を最初の `<count>` 行に制限できます（それ以上ある場合は `...` が続きます）。"
 
 #. type: Plain text
 #: en/diff-options.txt:215
 #, priority:280
 msgid "These parameters can also be set individually with `--stat-width=<width>`, `--stat-name-width=<name-width>` and `--stat-count=<count>`."
-msgstr ""
+msgstr "これらのパラメータは、個別に `--stat-width=<width>`, `--stat-name-width=<name-width>` および `--stat-count=<count>` を用いて設定することもできます。"
 
 #. type: Labeled list
 #: en/diff-options.txt:216
@@ -4525,7 +4509,7 @@ msgstr "--compact-summary"
 #: en/diff-options.txt:223
 #, priority:280
 msgid "Output a condensed summary of extended header information such as file creations or deletions (\"new\" or \"gone\", optionally \"+l\" if it's a symlink) and mode changes (\"+x\" or \"-x\" for adding or removing executable bit respectively) in diffstat. The information is put between the filename part and the graph part. Implies `--stat`."
-msgstr ""
+msgstr "ファイルの作成または削除(\"new\" または \"gone\"、シンボリックリンクの場合はオプションで \"+l\")やモードの変更（それぞれ実行可能ビットの追加または削除に \"+x\" または \"-x\"）などの拡張ヘッダー情報を diffstat で凝縮して出力するようにします。この情報は、ファイル名部分とグラフ部分の間に置かれます。`--stat`を意味します。"
 
 #. type: Labeled list
 #: en/diff-options.txt:224 en/git-apply.txt:45
@@ -4537,7 +4521,7 @@ msgstr "--numstat"
 #: en/diff-options.txt:230
 #, priority:280
 msgid "Similar to `--stat`, but shows number of added and deleted lines in decimal notation and pathname without abbreviation, to make it more machine friendly.  For binary files, outputs two `-` instead of saying `0 0`."
-msgstr ""
+msgstr "`--stat` と似ていますが、追加された行数と削除された行数を10進数で表示し、マシンフレンドリーとなるようにパス名は省略せずに表示します。  バイナリファイルの場合、`0 0` の代わりに `-` を2つ出力します。"
 
 #. type: Labeled list
 #: en/diff-options.txt:231
@@ -4549,25 +4533,25 @@ msgstr "--shortstat"
 #: en/diff-options.txt:235
 #, priority:280
 msgid "Output only the last line of the `--stat` format containing total number of modified files, as well as number of added and deleted lines."
-msgstr ""
+msgstr "変更されたファイルの総数、追加された行数、削除された行数を含む `--stat` フォーマットの最終行のみを出力する。"
 
 #. type: Labeled list
 #: en/diff-options.txt:236
 #, ignore-ellipsis, no-wrap, priority:280
 msgid "-X[<param1,param2,...>]"
-msgstr ""
+msgstr "-X[<param1,param2,...>]"
 
 #. type: Labeled list
 #: en/diff-options.txt:237
 #, ignore-ellipsis, no-wrap, priority:280
 msgid "--dirstat[=<param1,param2,...>]"
-msgstr ""
+msgstr "--dirstat[=<param1,param2,...>]"
 
 #. type: Plain text
 #: en/diff-options.txt:244
 #, priority:280
 msgid "Output the distribution of relative amount of changes for each sub-directory. The behavior of `--dirstat` can be customized by passing it a comma separated list of parameters.  The defaults are controlled by the `diff.dirstat` configuration variable (see linkgit:git-config[1]).  The following parameters are available:"
-msgstr ""
+msgstr "各サブディレクトリの相対的な変更量の分布を出力します。`--dirstat` の振る舞いはカンマで区切られたパラメータを渡すことでカスタマイズできます。  デフォルトでは、設定変数 `diff.dirstat` によって制御されます (linkgit:git-config[1] を参照)。  以下のパラメータが利用可能です。"
 
 #. type: Labeled list
 #: en/diff-options.txt:246
@@ -4579,7 +4563,7 @@ msgstr "`changes`"
 #: en/diff-options.txt:252
 #, priority:280
 msgid "Compute the dirstat numbers by counting the lines that have been removed from the source, or added to the destination. This ignores the amount of pure code movements within a file.  In other words, rearranging lines in a file is not counted as much as other changes.  This is the default behavior when no parameter is given."
-msgstr ""
+msgstr "ソースから削除された行、または宛先に追加された行をカウントして、dirstat番号を計算します。これは、ファイル内の純粋なコード移動の量を無視します。  つまり、ファイル内の行を並べ替えることは、他の変更点ほどにはカウントされません。  これは、パラメータが与えられていない場合のデフォルトの動作です。"
 
 #. type: Labeled list
 #: en/diff-options.txt:252
@@ -4603,7 +4587,7 @@ msgstr "`files`"
 #: en/diff-options.txt:265
 #, priority:280
 msgid "Compute the dirstat numbers by counting the number of files changed.  Each changed file counts equally in the dirstat analysis. This is the computationally cheapest `--dirstat` behavior, since it does not have to look at the file contents at all."
-msgstr ""
+msgstr "変更されたファイルの数を数えて、dirstatの数値を計算します。  変更された各ファイルは、dirstatの分析において等しくカウントされます。これは、ファイルの内容を全く見る必要がないため、計算上最も安価な `--dirstat` の動作です。"
 
 #. type: Labeled list
 #: en/diff-options.txt:265
@@ -4615,25 +4599,25 @@ msgstr "`cumulative`"
 #: en/diff-options.txt:270
 #, priority:280
 msgid "Count changes in a child directory for the parent directory as well.  Note that when using `cumulative`, the sum of the percentages reported may exceed 100%. The default (non-cumulative) behavior can be specified with the `noncumulative` parameter."
-msgstr ""
+msgstr "子ディレクトリの変更も親ディレクトリにカウントします。  `cumulative`を使用する場合、報告されるパーセントの合計は100%を超える可能性があることに注意してください。デフォルトの (累積しない) 動作は `noncumulative` パラメータで指定できます。"
 
 #. type: Labeled list
 #: en/diff-options.txt:270 en/git-cherry.txt:39
 #, no-wrap, priority:280
 msgid "<limit>"
-msgstr ""
+msgstr "<limit>"
 
 #. type: Plain text
 #: en/diff-options.txt:274
 #, priority:280
 msgid "An integer parameter specifies a cut-off percent (3% by default).  Directories contributing less than this percentage of the changes are not shown in the output."
-msgstr ""
+msgstr "整数のパラメータでカットオフ率を指定します（デフォルトでは3％）。  このパーセンテージ以下の変更しか貢献していないディレクトリは出力に表示されません。"
 
 #. type: Plain text
 #: en/diff-options.txt:280
 #, priority:280
 msgid "Example: The following will count changed files, while ignoring directories with less than 10% of the total amount of changed files, and accumulating child directory counts in the parent directories: `--dirstat=files,10,cumulative`."
-msgstr ""
+msgstr "例: 以下は、変更されたファイル総数の10％未満のディレクトリを無視し、親ディレクトリに子ディレクトリの数を累積しながら、変更されたファイルをカウントします: `--dirstat=files,10,cumulative`。"
 
 #. type: Labeled list
 #: en/diff-options.txt:281
@@ -4645,19 +4629,19 @@ msgstr "--cumulative"
 #: en/diff-options.txt:283
 #, priority:280
 msgid "Synonym for --dirstat=cumulative"
-msgstr ""
+msgstr "--dirstat=cumulative と同義"
 
 #. type: Labeled list
 #: en/diff-options.txt:284
 #, ignore-ellipsis, no-wrap, priority:280
 msgid "--dirstat-by-file[=<param1,param2>...]"
-msgstr ""
+msgstr "--dirstat-by-file[=<param1,param2>...]"
 
 #. type: Plain text
 #: en/diff-options.txt:286
 #, ignore-ellipsis, priority:280
 msgid "Synonym for --dirstat=files,param1,param2..."
-msgstr ""
+msgstr "--dirstat=files,param1,param2... と同義"
 
 #. type: Labeled list
 #: en/diff-options.txt:287 en/git-apply.txt:52 en/git-shortlog.txt:35 en/merge-options.txt:168
@@ -4681,7 +4665,7 @@ msgstr "--patch-with-stat"
 #: en/diff-options.txt:294
 #, priority:280
 msgid "Synonym for `-p --stat`."
-msgstr ""
+msgstr "`-p --stat` と同義です。"
 
 #. type: Labeled list
 #: en/diff-options.txt:298 en/git-apply.txt:116 en/git-check-attr.txt:34 en/git-check-ignore.txt:47 en/git-checkout-index.txt:73 en/git-commit.txt:158 en/git-config.txt:229 en/git-grep.txt:175 en/git-ls-files.txt:80 en/git-ls-tree.txt:55 en/git-mktree.txt:23 en/git-status.txt:126 en/git-update-index.txt:173 en/git-worktree.txt:230
@@ -4743,7 +4727,7 @@ msgstr ""
 #: en/diff-options.txt:324
 #, no-wrap, priority:280
 msgid "--submodule[=<format>]"
-msgstr ""
+msgstr "--submodule[=<format>]"
 
 #. type: Plain text
 #: en/diff-options.txt:335
@@ -4755,7 +4739,7 @@ msgstr ""
 #: en/diff-options.txt:336 en/git-branch.txt:141 en/git-for-each-ref.txt:60 en/git-grep.txt:192 en/git-show-branch.txt:119 en/git-tag.txt:125
 #, no-wrap, priority:280
 msgid "--color[=<when>]"
-msgstr ""
+msgstr "--color[=<when>]"
 
 #. type: Plain text
 #: en/diff-options.txt:340
@@ -4799,7 +4783,7 @@ msgstr ""
 #: en/diff-options.txt:352
 #, no-wrap, priority:280
 msgid "--color-moved[=<mode>]"
-msgstr ""
+msgstr "--color-moved[=<mode>]"
 
 #. type: Plain text
 #: en/diff-options.txt:354
@@ -4844,7 +4828,7 @@ msgstr "default"
 #: en/diff-options.txt:367
 #, priority:280
 msgid "Is a synonym for `zebra`. This may change to a more sensible mode in the future."
-msgstr ""
+msgstr "`zebra` と同義です。これは将来、より賢明なモードに変更されるかもしれません。"
 
 #. type: Labeled list
 #: en/diff-options.txt:367 en/diff-options.txt:436
@@ -11482,10 +11466,9 @@ msgstr "--batch-command"
 
 #. type: Labeled list
 #: en/git-cat-file.txt:100
-#, fuzzy, no-wrap, priority:80
-#| msgid "--object-format=<format>"
+#, no-wrap, priority:80
 msgid "--batch-command=<format>"
-msgstr "--object-format=<format>"
+msgstr "--batch-command=<format>"
 
 #. type: Plain text
 #: en/git-cat-file.txt:106
@@ -11501,9 +11484,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-cat-file.txt:110
-#, fuzzy, no-wrap, priority:80
+#, no-wrap, priority:80
 msgid "contents <object>"
-msgstr "--objects"
+msgstr "contents <object>"
 
 #. type: Plain text
 #: en/git-cat-file.txt:113
@@ -13918,10 +13901,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-cherry-pick.txt:85
-#, fuzzy, no-wrap, priority:100
-#| msgid "--line-number"
+#, no-wrap, priority:100
 msgid "--mainline <parent-number>"
-msgstr "--line-number"
+msgstr "--mainline <parent-number>"
 
 #. type: Plain text
 #: en/git-cherry-pick.txt:91
@@ -14626,17 +14608,7 @@ msgstr "git-clone - リポジトリを新しいディレクトリにクローン
 
 #. type: Plain text
 #: en/git-clone.txt:21
-#, fuzzy, no-wrap, priority:300
-#| msgid ""
-#| "'git clone' [--template=<template_directory>]\n"
-#| "\t  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]\n"
-#| "\t  [-o <name>] [-b <name>] [-u <upload-pack>] [--reference <repository>]\n"
-#| "\t  [--dissociate] [--separate-git-dir <git dir>]\n"
-#| "\t  [--depth <depth>] [--[no-]single-branch] [--no-tags]\n"
-#| "\t  [--recurse-submodules[=<pathspec>]] [--[no-]shallow-submodules]\n"
-#| "\t  [--[no-]remote-submodules] [--jobs <n>] [--sparse] [--[no-]reject-shallow]\n"
-#| "\t  [--filter=<filter>] [--] <repository>\n"
-#| "\t  [<directory>]\n"
+#, no-wrap, priority:300
 msgid ""
 "'git clone' [--template=<template-directory>]\n"
 "\t  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]\n"
@@ -14647,16 +14619,7 @@ msgid ""
 "\t  [--[no-]remote-submodules] [--jobs <n>] [--sparse] [--[no-]reject-shallow]\n"
 "\t  [--filter=<filter> [--also-filter-submodules]] [--] <repository>\n"
 "\t  [<directory>]\n"
-msgstr ""
-"'git clone' [--template=<template_directory>]\n"
-"\t  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]\n"
-"\t  [-o <name>] [-b <name>] [-u <upload-pack>] [--reference <repository>]\n"
-"\t  [--dissociate] [--separate-git-dir <git dir>]\n"
-"\t  [--depth <depth>] [--[no-]single-branch] [--no-tags]\n"
-"\t  [--recurse-submodules[=<pathspec>]] [--[no-]shallow-submodules]\n"
-"\t  [--[no-]remote-submodules] [--jobs <n>] [--sparse] [--[no-]reject-shallow]\n"
-"\t  [--filter=<filter>] [--] <repository>\n"
-"\t  [<directory>]\n"
+msgstr "'git clone' [--template=<template-directory>]\n\t  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]\n\t  [-o <name>] [-b <name>] [-u <upload-pack>] [--reference <repository>]\n\t  [--dissociate] [--separate-git-dir <git-dir>]\n\t  [--depth <depth>] [--[no-]single-branch] [--no-tags]\n\t  [--recurse-submodules[=<pathspec>]] [--[no-]shallow-submodules]\n\t  [--[no-]remote-submodules] [--jobs <n>] [--sparse] [--[no-]reject-shallow]\n\t  [--filter=<filter> [--also-filter-submodules]] [--] <repository>\n\t  [<directory>]\n"
 
 #. type: Plain text
 #: en/git-clone.txt:30
@@ -14850,10 +14813,9 @@ msgstr "「ベア」Git リポジトリを作成します。  つまり、`<dire
 
 #. type: Plain text
 #: en/git-clone.txt:174
-#, fuzzy, priority:300
-#| msgid "Initialize the sparse-checkout file so the working directory starts with only the files in the root of the repository. The sparse-checkout file can be modified to grow the working directory as needed."
+#, priority:300
 msgid "Employ a sparse-checkout, with only files in the toplevel directory initially being present.  The linkgit:git-sparse-checkout[1] command can be used to grow the working directory as needed."
-msgstr "sparse-checkout ファイルを初期化して、作業ディレクトリがリポジトリのルートにあるファイルだけで始まるようにします。sparse-checkout ファイルは、必要に応じて作業ディレクトリを増やすように変更することができます。"
+msgstr "sparse-checkout を採用し、最初にトップレベル・ディレクトリのファイルのみが存在するようにします。linkgit:git-sparse-checkout[1] コマンドを使うと、必要に応じて作業ディレクトリを増やすことができます。"
 
 #. type: Labeled list
 #: en/git-clone.txt:175 en/git-pack-objects.txt:270 en/rev-list-options.txt:891
@@ -14877,7 +14839,7 @@ msgstr "--also-filter-submodules"
 #: en/git-clone.txt:189
 #, priority:300
 msgid "Also apply the partial clone filter to any submodules in the repository.  Requires `--filter` and `--recurse-submodules`. This can be turned on by default by setting the `clone.filterSubmodules` config option."
-msgstr ""
+msgstr "また、リポジトリ内の任意のサブモジュールにパーシャルクローンフィルタを適用します。  `--filter` と `--recurse-submodules` が必要です。これは、 `clone.filterSubmodules` 設定オプションで、デフォルトで有効にすることができます。"
 
 #. type: Labeled list
 #: en/git-clone.txt:190 en/git-push.txt:161
@@ -14941,10 +14903,9 @@ msgstr "指定された場合、クローンを作成するリポジトリにssh
 
 #. type: Labeled list
 #: en/git-clone.txt:219 en/git-init.txt:60 en/git-svn.txt:578
-#, fuzzy, no-wrap, priority:300
-#| msgid "--template=<template_directory>"
+#, no-wrap, priority:300
 msgid "--template=<template-directory>"
-msgstr "--template=<template_directory>"
+msgstr "--template=<template-directory>"
 
 #. type: Plain text
 #: en/git-clone.txt:222
@@ -15068,10 +15029,9 @@ msgstr "クローンされたすべてのサブモジュールは、サブモジ
 
 #. type: Labeled list
 #: en/git-clone.txt:302 en/git-init.txt:65
-#, fuzzy, no-wrap, priority:300
-#| msgid "--separate-git-dir=<git dir>"
+#, no-wrap, priority:300
 msgid "--separate-git-dir=<git-dir>"
-msgstr "--separate-git-dir=<git dir>"
+msgstr "--separate-git-dir=<git-dir>"
 
 #. type: Plain text
 #: en/git-clone.txt:308
@@ -15555,7 +15515,7 @@ msgstr ""
 #: en/git-commit.txt:30
 #, priority:280
 msgid "The content to be committed can be specified in several ways:"
-msgstr ""
+msgstr "コミットされる内容は、いくつかの方法で指定できます。"
 
 #. type: Plain text
 #: en/git-commit.txt:34
@@ -16528,10 +16488,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-config.txt:105
-#, fuzzy, no-wrap, priority:100
-#| msgid "--branch <name>"
+#, no-wrap, priority:100
 msgid "--get-urlmatch <name> <URL>"
-msgstr "--branch <name>"
+msgstr "--get-urlmatch <name> <URL>"
 
 #. type: Plain text
 #: en/git-config.txt:112
@@ -16607,17 +16566,15 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-config.txt:152
-#, fuzzy, no-wrap, priority:100
-#| msgid "-t <file>"
+#, no-wrap, priority:100
 msgid "-f <config-file>"
-msgstr "-t <file>"
+msgstr "-f <config-file>"
 
 #. type: Labeled list
 #: en/git-config.txt:153
-#, fuzzy, no-wrap, priority:100
-#| msgid "--file=<file>"
+#, no-wrap, priority:100
 msgid "--file <config-file>"
-msgstr "--file=<file>"
+msgstr "--file <config-file>"
 
 #. type: Plain text
 #: en/git-config.txt:156
@@ -25653,10 +25610,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-fmt-merge-msg.txt:47 en/git-merge.txt:80
-#, fuzzy, no-wrap, priority:240
-#| msgid "--[no-]single-branch"
+#, no-wrap, priority:240
 msgid "--into-name <branch>"
-msgstr "--[no-]single-branch"
+msgstr "--into-name <branch>"
 
 #. type: Plain text
 #: en/git-fmt-merge-msg.txt:50
@@ -25909,7 +25865,7 @@ msgstr ""
 #: en/git-for-each-ref.txt:123
 #, priority:80
 msgid "`strip` can be used as a synonym to `lstrip`."
-msgstr ""
+msgstr "`strip` は `lstrip` の同義語として使用できます。"
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:124 en/git-ls-tree.txt:153
@@ -30783,16 +30739,15 @@ msgstr "git-init-db - 空のGitリポジトリを作成する"
 
 #. type: Plain text
 #: en/git-init-db.txt:13
-#, fuzzy, no-wrap, priority:100
-#| msgid "'git init-db' [-q | --quiet] [--bare] [--template=<template_directory>] [--separate-git-dir <git dir>] [--shared[=<permissions>]]\n"
+#, no-wrap, priority:100
 msgid "'git init-db' [-q | --quiet] [--bare] [--template=<template-directory>] [--separate-git-dir <git-dir>] [--shared[=<permissions>]]\n"
-msgstr "'git init-db' [-q | --quiet] [--bare] [--template=<template_directory>] [--separate-git-dir <git dir>] [--shared[=<permissions>]]\n"
+msgstr "'git init-db' [-q | --quiet] [--bare] [--template=<template-directory>] [--separate-git-dir <git-dir>] [--shared[=<permissions>]]\n"
 
 #. type: Plain text
 #: en/git-init-db.txt:20
 #, priority:100
 msgid "This is a synonym for linkgit:git-init[1].  Please refer to the documentation of that command."
-msgstr "これは linkgit:git-init[1] の同義語です。  該当コマンドのドキュメントを参照してください。"
+msgstr "これは linkgit:git-init[1] と同義です。  該当コマンドのドキュメントを参照してください。"
 
 #. type: Title =
 #: en/git-init.txt:2
@@ -30808,22 +30763,13 @@ msgstr "git-init - 空のGitリポジトリを作成、または既存のリポ�
 
 #. type: Plain text
 #: en/git-init.txt:16
-#, fuzzy, no-wrap, priority:300
-#| msgid ""
-#| "'git init' [-q | --quiet] [--bare] [--template=<template_directory>]\n"
-#| "\t  [--separate-git-dir <git dir>] [--object-format=<format>]\n"
-#| "\t  [-b <branch-name> | --initial-branch=<branch-name>]\n"
-#| "\t  [--shared[=<permissions>]] [directory]\n"
+#, no-wrap, priority:300
 msgid ""
 "'git init' [-q | --quiet] [--bare] [--template=<template-directory>]\n"
 "\t  [--separate-git-dir <git-dir>] [--object-format=<format>]\n"
 "\t  [-b <branch-name> | --initial-branch=<branch-name>]\n"
 "\t  [--shared[=<permissions>]] [<directory>]\n"
-msgstr ""
-"'git init' [-q | --quiet] [--bare] [--template=<template_directory>]\n"
-"\t  [--separate-git-dir <git dir>] [--object-format=<format>]\n"
-"\t  [-b <branch-name> | --initial-branch=<branch-name>]\n"
-"\t  [--shared[=<permissions>]] [directory]\n"
+msgstr "'git init' [-q | --quiet] [--bare] [--template=<template-directory>]\n\t  [--separate-git-dir <git-dir>] [--object-format=<format>]\n\t  [-b <branch-name> | --initial-branch=<branch-name>]\n\t  [--shared[=<permissions>]] [<directory>]\n"
 
 #. type: Plain text
 #: en/git-init.txt:26
@@ -30911,10 +30857,9 @@ msgstr "新しく作成されたリポジトリの最初のブランチに、指
 
 #. type: Labeled list
 #: en/git-init.txt:82
-#, fuzzy, no-wrap, priority:300
-#| msgid "--shared[=(false|true|umask|group|all|world|everybody|0xxx)]"
+#, no-wrap, priority:300
 msgid "--shared[=(false|true|umask|group|all|world|everybody|<perm>)]"
-msgstr "--shared[=(false|true|umask|group|all|world|everybody|0xxx)]"
+msgstr "--shared[=(false|true|umask|group|all|world|everybody|<perm>)]"
 
 #. type: Plain text
 #: en/git-init.txt:90
@@ -30968,14 +30913,13 @@ msgstr "'group'と同じですが、すべてのユーザーがリポジトリ�
 #: en/git-init.txt:113
 #, no-wrap, priority:300
 msgid "'<perm>'"
-msgstr ""
+msgstr "'<perm>'"
 
 #. type: Plain text
 #: en/git-init.txt:123
-#, fuzzy, priority:300
-#| msgid "'0xxx' is an octal number and each file will have mode '0xxx'. '0xxx' will override users' umask(2) value (and not only loosen permissions as 'group' and 'all' does). '0640' will create a repository which is group-readable, but not group-writable or accessible to others. '0660' will create a repo that is readable and writable to the current user and group, but inaccessible to others."
+#, priority:300
 msgid "'<perm>' is a 3-digit octal number prefixed with `0` and each file will have mode '<perm>'. '<perm>' will override users' umask(2)  value (and not only loosen permissions as 'group' and 'all' does). '0640' will create a repository which is group-readable, but not group-writable or accessible to others. '0660' will create a repo that is readable and writable to the current user and group, but inaccessible to others (directories and executable files get their `x` bit from the `r` bit for corresponding classes of users)."
-msgstr "'0xxx' は8進数で、各ファイルのモードは '0xxx' になります。 '0xxx' は、ユーザーのumask(2)の値を上書きします（'group' や 'all' のようにパーミッションが緩くなるだけではありません）。'0640' は、グループでの読み取りは可能ですが、グループでの書き込みや他の人からのアクセスはできないリポジトリを作成します。'0660' は、現在のユーザーとグループは読み書き可能だが、他のユーザーにはアクセスできないリポジトリを作成します。"
+msgstr "'<perm>' は `0`の接頭辞が付いた3桁の8進数で、各ファイルのモードは '<perm>' になります。 '<perm>' は、ユーザーのumask(2)の値を上書きします（'group' や 'all' のようにパーミッションが緩くなるだけではありません）。'0640' は、グループでの読み取りは可能ですが、グループでの書き込みや他の人からのアクセスはできないリポジトリを作成します。'0660' は、現在のユーザーとグループは読み書き可能だが、他のユーザーにはアクセスできないリポジトリを作成します（ディレクトリと実行可能ファイルは対応するユーザークラスの`r`ビットから`x`ビットを取得します）。"
 
 #. type: Plain text
 #: en/git-init.txt:128
@@ -33247,10 +33191,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-ls-tree.txt:136
-#, fuzzy, priority:80
-#| msgid "Combined diff format"
+#, priority:80
 msgid "Customized format:"
-msgstr "結合されたdiffフォーマット"
+msgstr "カスタマイズされたフォーマット:"
 
 #. type: Plain text
 #: en/git-ls-tree.txt:141
@@ -33272,16 +33215,15 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-ls-tree.txt:151
-#, fuzzy, no-wrap, priority:80
-#| msgid "`objectname`"
+#, no-wrap, priority:80
 msgid "objectmode"
-msgstr "`objectname`"
+msgstr "objectmode"
 
 #. type: Plain text
 #: en/git-ls-tree.txt:153
-#, fuzzy, priority:80
+#, priority:80
 msgid "The mode of the object."
-msgstr "--objects"
+msgstr "オブジェクトのモード。"
 
 #. type: Plain text
 #: en/git-ls-tree.txt:155
@@ -33291,16 +33233,15 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-ls-tree.txt:157
-#, fuzzy, priority:80
+#, priority:80
 msgid "The name of the object."
-msgstr "--objects"
+msgstr "オブジェクトの名前。"
 
 #. type: Labeled list
 #: en/git-ls-tree.txt:157
-#, fuzzy, no-wrap, priority:80
-#| msgid "`objectsize`"
+#, no-wrap, priority:80
 msgid "objectsize[:padded]"
-msgstr "`objectsize`"
+msgstr "objectsize[:padded]"
 
 #. type: Plain text
 #: en/git-ls-tree.txt:160
@@ -33310,10 +33251,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-ls-tree.txt:160
-#, fuzzy, no-wrap, priority:80
-#| msgid "--path"
+#, no-wrap, priority:80
 msgid "path"
-msgstr "--path"
+msgstr "path"
 
 #. type: Plain text
 #: en/git-ls-tree.txt:162
@@ -34917,10 +34857,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-merge.txt:292
-#, fuzzy, priority:240
-#| msgid "A \"combined diff\" format looks like this:"
+#, priority:240
 msgid "while in \"zdiff3\" style, it may look like this:"
-msgstr "\"結合されたdiff\" のフォーマットは次のようになります。"
+msgstr "\"zdiff3\" のスタイルでは次のようになります。"
 
 #. type: delimited block -
 #: en/git-merge.txt:307
@@ -49236,7 +49175,7 @@ msgstr ""
 #: en/git-show-branch.txt:82
 #, priority:100
 msgid "Synonym to `--more=-1`"
-msgstr ""
+msgstr "`--more=-1` と同義"
 
 #. type: Plain text
 #: en/git-show-branch.txt:89
@@ -59501,10 +59440,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-worktree.txt:469
-#, fuzzy, priority:240
-#| msgid "Pathnames with \"unusual\" characters are quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1])."
+#, priority:240
 msgid "Unless `-z` is used any \"unusual\" characters in the lock reason such as newlines are escaped and the entire reason is quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1]).  For Example:"
-msgstr "\"異常な\"文字を含むパス名は、設定変数 `core.quotePath` の説明に従って引用されます（linkgit:git-config[1]を参照）。"
+msgstr "`-z` を使用しない限り、ロック理由の中にある改行などの\"異常な\"文字はエスケープされ理由全体が 設定変数 `core.quotePath` の説明に従って引用されます（linkgit:git-config[1]を参照）。  例:"
 
 #. type: delimited block -
 #: en/git-worktree.txt:475
@@ -59994,7 +59932,7 @@ msgstr ""
 #: en/glossary-content.txt:203
 #, priority:100
 msgid "A synonym for <<def_head,head>>."
-msgstr ""
+msgstr "<<def_head,head>> と同義です。"
 
 #. type: Labeled list
 #: en/glossary-content.txt:204
@@ -60096,7 +60034,7 @@ msgstr ""
 #: en/glossary-content.txt:267
 #, priority:100
 msgid "Synonym for <<def_object_name,object name>>."
-msgstr ""
+msgstr "<<def_object_name,object name>> と同義。"
 
 #. type: Labeled list
 #: en/glossary-content.txt:268
@@ -60612,7 +60550,7 @@ msgstr ""
 #: en/glossary-content.txt:556
 #, priority:100
 msgid "Synonym for <<def_commit,commit>> (the noun)."
-msgstr ""
+msgstr "<<def_commit,commit>> (名詞) と同義です。"
 
 #. type: Labeled list
 #: en/glossary-content.txt:557
@@ -61771,10 +61709,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/pretty-formats.txt:43 en/pretty-formats.txt:53 en/pretty-formats.txt:65 en/pretty-formats.txt:85
-#, fuzzy, priority:260
-#| msgid "--allow-empty-message"
+#, priority:260
 msgid "<full-commit-message>"
-msgstr "--allow-empty-message"
+msgstr "<full-commit-message>"
 
 #. type: Plain text
 #: en/pretty-formats.txt:45
@@ -62172,7 +62109,7 @@ msgstr "'%an'"
 #: en/pretty-formats.txt:178
 #, priority:260
 msgid "author name"
-msgstr "執筆者の名称"
+msgstr "著作者の名称"
 
 #. type: Labeled list
 #: en/pretty-formats.txt:178
@@ -62196,7 +62133,7 @@ msgstr "'%ae'"
 #: en/pretty-formats.txt:181
 #, priority:260
 msgid "author email"
-msgstr "執筆者のメール"
+msgstr "著作者のメール"
 
 #. type: Labeled list
 #: en/pretty-formats.txt:181
@@ -65556,7 +65493,7 @@ msgstr "--relative-date"
 #: en/rev-list-options.txt:1006
 #, priority:260
 msgid "Synonym for `--date=relative`."
-msgstr ""
+msgstr "`--date=relative`と同義です。"
 
 #. type: Labeled list
 #: en/rev-list-options.txt:1007
