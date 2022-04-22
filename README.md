@@ -2,11 +2,11 @@
 
 This project holds the translations for the documentation of Git. This document describes how you can contribute to the effort of enhancing the language coverage and maintaining the translation.
 
-This project is *not* about translating Git itself although the base content (the manpages) is extracted from it. Git uses a workflow for translations which is deifferent from the one used by Git Manpages. If you feel interested, please refer to the [specific instructions][].
+This project is *not* about translating Git itself although the base content (the manpages) is extracted from it. Git uses a workflow for translations which is different from the one used by Git Manpages. If you feel interested, please refer to the [specific instructions][].
 
 ## Presentation
 
-This project relies on the Git project itself for the original version of the Git manpages and documents. In order to allow the translations in a maintainable way over the changes to the git project, the source files are processed with a converter named [po4a][] . This tool converts the source files into gettext po files which can be processed just like gettext internationalization files.
+This project relies on the Git project itself for the original version of the Git manpages and documents. In order to allow the translations in a maintainable way over the changes to the Git project, the source files are processed with a converter named [po4a][] . This tool converts the source files into gettext po files which can be processed just like gettext internationalization files.
 
 The source files for the manpages are written in [Asciidoc][] with some custom macros. Although the documents are split into simple paragraphs by po4a for translations, Asciidoc inline formatting marks are retained.
 
@@ -31,10 +31,10 @@ The overall data-flow looks like this:
           +--------------------+     +--------------------+
           | Git translated doc |     | Language Team (4)  |
           | repository         |     +--------------------+
-		  +--------------------+
+   	      +--------------------+
 
  1. The original documentation files are tagged for a new release 
- 2. L10n coordinator pulls from the source (2) and updates the local
+ 2. L10n coordinator pulls from the source and updates the local
     documentation source files and the message template
     po/documentation.pot, and merges the changes into all
     po/documentation.XX.po files
@@ -199,7 +199,7 @@ When some template command lines contain `<terms-in-brackets>`, it is helpful fo
 
 If you don't specify an order on Weblate, the source segments are presented in the order priority, which places in first the content of most used git commands. The corresponding manpages are more susceptible to be read by beginners. So your work has the biggest impact right when starting.
 
-## Get in touch the maintainer
+## Get in touch with the maintainer
 
 In case you need to contact the maintainer for e.g. an issue in a source string or an issue with the translated manpages, the project is hosted on [GitHub][] where issues can be opened.
 
