@@ -3,19 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Jean-Noël Avila <jn.avila@free.fr>, 2019.
 msgid ""
-msgstr ""
-"Project-Id-Version: git documentation\n"
-"Report-Msgid-Bugs-To: jn.avila@free.fr\n"
-"POT-Creation-Date: 2022-09-16 20:56+0200\n"
-"PO-Revision-Date: 2022-09-16 18:51+0000\n"
-"Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
-"Language-Team: Jean-Noël Avila <jn.avila@free.fr>\n"
-"Language: fr\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.14.1-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2022-09-16 20:56+0200\nPO-Revision-Date: 2022-09-19 23:47+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: Jean-Noël Avila <jn.avila@free.fr>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.14.1\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:763 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:140 en/git-status.txt:31
@@ -3371,10 +3359,9 @@ msgstr "sha1 de \"src\", 0\\{40\\} si création ou non fusionné."
 
 #. type: Plain text
 #: en/diff-format.txt:47
-#, fuzzy, priority:280
-#| msgid "sha1 for \"dst\"; 0\\{40\\} if creation, unmerged or \"look at work tree\"."
+#, priority:280
 msgid "sha1 for \"dst\"; 0\\{40\\} if deletion, unmerged or \"work tree out of sync with the index\"."
-msgstr "sha1 de \"dst\", 0\\{40\\} si création, non fusionné ou \"recherche dans l'arbre de travail\"."
+msgstr "sha1 de \"dst\", 0\\{40\\} si suppression, non fusionné ou \"arbre de travail désynchronisé par rapport à l'index\"."
 
 #. type: Plain text
 #: en/diff-format.txt:49
@@ -3474,10 +3461,9 @@ msgstr "Les lettres de statut C et R sont toujours suivies d'un score (indiquant
 
 #. type: Plain text
 #: en/diff-format.txt:74
-#, fuzzy, priority:280
-#| msgid "<sha1> is shown as all 0's if a file is new on the filesystem and it is out of sync with the index."
+#, priority:280
 msgid "The sha1 for \"dst\" is shown as all 0's if a file on the filesystem is out of sync with the index."
-msgstr "Le <sha1> est tout à zéro si le fichier est nouveau sur le système de fichiers et est désynchronisé avec l'index."
+msgstr "Le sha1 de \"dst\" est tout à zéro si le fichier sur le système de fichiers est désynchronisé par rapport à l'index."
 
 #. type: Labeled list
 #: en/diff-format.txt:76 en/git-svn.txt:499 en/git-svn.txt:539
@@ -6835,10 +6821,9 @@ msgstr "--renormalize"
 
 #. type: Plain text
 #: en/git-add.txt:194
-#, fuzzy, priority:300
-#| msgid "Apply the \"clean\" process freshly to all tracked files to forcibly add them again to the index.  This is useful after changing `core.autocrlf` configuration or the `text` attribute in order to correct files added with wrong CRLF/LF line endings.  This option implies `-u`."
+#, priority:300
 msgid "Apply the \"clean\" process freshly to all tracked files to forcibly add them again to the index.  This is useful after changing `core.autocrlf` configuration or the `text` attribute in order to correct files added with wrong CRLF/LF line endings.  This option implies `-u`. Lone CR characters are untouched, thus while a CRLF cleans to LF, a CRCRLF sequence is only partially cleaned to CRLF."
-msgstr "Forcer l'application du filtre \"clean\" à tous les fichiers suivis pour les ajouter en force à l'index. C'est utile après avoir changé la variable de configuration `core.autocrlf` ou l'attribut `text` pour corriger des fichiers ajoutés avec des fins de lignes erronées CRLF/LF. Cette option implique `-u`."
+msgstr "Forcer l'application du filtre \"clean\" à tous les fichiers suivis pour les ajouter en force à l'index. C'est utile après avoir changé la variable de configuration `core.autocrlf` ou l'attribut `text` pour corriger des fichiers ajoutés avec des fins de lignes erronées CRLF/LF. Cette option implique `-u`. Les caractères CR solitaires ne sont pas traités, donc alors qu'un CRLF est nettoyé en LF, une séquence CRCRLF n'est que partiellement nettoyée en CRLF."
 
 #. type: Labeled list
 #: en/git-add.txt:195 en/git-update-index.txt:85
@@ -8520,10 +8505,9 @@ msgstr "--format=<fmt>"
 
 #. type: Plain text
 #: en/git-archive.txt:44
-#, fuzzy, priority:100
-#| msgid "Format of the resulting archive: 'tar' or 'zip'. If this option is not given, and the output file is specified, the format is inferred from the filename if possible (e.g. writing to \"foo.zip\" makes the output to be in the zip format). Otherwise the output format is `tar`."
+#, priority:100
 msgid "Format of the resulting archive. Possible values are `tar`, `zip`, `tar.gz`, `tgz`, and any format defined using the configuration option `tar.<format>.command`. If `--format` is not given, and the output file is specified, the format is inferred from the filename if possible (e.g. writing to `foo.zip` makes the output to be in the `zip` format). Otherwise the output format is `tar`."
-msgstr "Format de l'archive résultante : 'tar' ou 'zip'. Si cette option n'est pas donnée, et que le fichier de sortie est spécifié, le format est déduit du nom du fichier si possible (par exemple, en écrivant \"foo.zip\", la sortie sera au format zip). Sinon, le format de sortie est `tar`."
+msgstr "Format de l'archive résultante. Les valeurs possibles sont `tar`, `zip`, `tar.gz`, `tgz`, ou tout format défini en utilisant l'option de configuration `tar.<format>`.command`. Si `--format` n'est pas donnée, et que le fichier de sortie est spécifié, le format est déduit du nom du fichier si possible (par exemple, en écrivant \"foo.zip\", la sortie sera au format `zip`). Sinon, le format de sortie est `tar`."
 
 #. type: Labeled list
 #: en/git-archive.txt:46 en/git-branch.txt:174 en/git-config.txt:182 en/git-show-branch.txt:80 en/git-tag.txt:100
@@ -8737,17 +8721,15 @@ msgstr "tar.<format>.command"
 
 #. type: Plain text
 #: en/git-archive.txt:149
-#, fuzzy, priority:100
-#| msgid "This variable specifies a shell command through which the tar output generated by `git archive` should be piped. The command is executed using the shell with the generated tar file on its standard input, and should produce the final output on its standard output. Any compression-level options will be passed to the command (e.g., \"-9\"). An output file with the same extension as `<format>` will be use this format if no other format is given."
+#, priority:100
 msgid "This variable specifies a shell command through which the tar output generated by `git archive` should be piped. The command is executed using the shell with the generated tar file on its standard input, and should produce the final output on its standard output. Any compression-level options will be passed to the command (e.g., `-9`)."
-msgstr "Cette variable spécifie une commande shell à travers laquelle la sortie tar générée par `git archive` doit être envoyée. La commande est exécutée en utilisant le shell avec le fichier tar généré sur son entrée standard, et devrait produire la sortie finale sur sa sortie standard. Toute option de niveau de compression sera passée à la commande (par exemple, \"-9\"). Un fichier de sortie avec la même extension que `<format>` utilisera ce format si aucun autre format n'est donné."
+msgstr "Cette variable spécifie une commande shell à travers laquelle la sortie tar générée par `git archive` doit être envoyée. La commande est exécutée en utilisant le shell avec le fichier tar généré sur son entrée standard, et devrait produire la sortie finale sur sa sortie standard. Toute option de niveau de compression sera passée à la commande (par exemple, `-9`)."
 
 #. type: Plain text
 #: en/git-archive.txt:153
-#, fuzzy, priority:100
-#| msgid "The \"tar.gz\" and \"tgz\" formats are defined automatically and default to `gzip -cn`. You may override them with custom commands."
+#, priority:100
 msgid "The `tar.gz` and `tgz` formats are defined automatically and use the magic command `git archive gzip` by default, which invokes an internal implementation of gzip."
-msgstr "Les formats \"tar.gz\" et \"tgz\" sont définis automatiquement et se présentent par défaut sous la forme `gzip -cn`. Vous pouvez les remplacer par des commandes personnalisées."
+msgstr "Les formats `tar.gz` et `tgz` sont définis automatiquement et utilisent la commande magique `git archive gzip` par défaut, qui invoque une mise en œuvre interne de gzip."
 
 #. type: Labeled list
 #: en/git-archive.txt:154
@@ -8757,10 +8739,9 @@ msgstr "tar.<format>.remote"
 
 #. type: Plain text
 #: en/git-archive.txt:159
-#, fuzzy, priority:100
-#| msgid "If true, enable `<format>` for use by remote clients via linkgit:git-upload-archive[1]. Defaults to false for user-defined formats, but true for the \"tar.gz\" and \"tgz\" formats."
+#, priority:100
 msgid "If true, enable the format for use by remote clients via linkgit:git-upload-archive[1]. Defaults to false for user-defined formats, but true for the `tar.gz` and `tgz` formats."
-msgstr "Si vrai, activer `<format>` pour une utilisation par des clients distants via linkgit:git-upload-archive[1]. Par défaut à faux pour les formats définis par l’utilisateur, mais vrai pour les formats « tar.gz » et « tgz »."
+msgstr "Si vrai, activer le format pour une utilisation par des clients distants via linkgit:git-upload-archive[1]. Par défaut à faux pour les formats définis par l’utilisateur, mais vrai pour les formats `tar.gz` et `tgz`."
 
 #. type: Title -
 #: en/git-archive.txt:162
@@ -10932,12 +10913,11 @@ msgstr "git-bugreport - Collecte les informations permettant à l'utilisateur de
 
 #. type: Plain text
 #: en/git-bugreport.txt:13
-#, fuzzy, no-wrap, priority:100
-#| msgid "'git bugreport' [(-o | --output-directory) <path>] [(-s | --suffix) <format>]\n"
+#, no-wrap, priority:100
 msgid ""
 "'git bugreport' [(-o | --output-directory) <path>] [(-s | --suffix) <format>]\n"
 "\t\t[--diagnose[=<mode>]]\n"
-msgstr "'git bugreport' [(-o | --output-directory) <chemin>] [(-s | --suffix) <format>]\n"
+msgstr "'git bugreport' [(-o | --output-directory) <chemin>] [(-s | --suffix) <format>]\n\t\t[--diagnose[=<mode>]]\n"
 
 #. type: Plain text
 #: en/git-bugreport.txt:20
@@ -11009,7 +10989,7 @@ msgstr "$SHELL"
 #: en/git-bugreport.txt:38
 #, priority:100
 msgid "Additional information may be gathered into a separate zip archive using the `--diagnose` option, and can be attached alongside the bugreport document to provide additional context to readers."
-msgstr ""
+msgstr "Des informations supplémentaires peuvent être rassemblées dans une archive zip séparée en utilisant l'option `--diagnose`, et peuvent être jointes au document du rapport de bogue pour fournir un contexte supplémentaire aux lecteurs."
 
 #. type: Plain text
 #: en/git-bugreport.txt:43
@@ -11061,22 +11041,21 @@ msgstr "--no-diagnose"
 
 #. type: Labeled list
 #: en/git-bugreport.txt:58
-#, fuzzy, no-wrap, priority:100
-#| msgid "--ignored[=<mode>]"
+#, no-wrap, priority:100
 msgid "--diagnose[=<mode>]"
-msgstr "--ignored[=<mode>]"
+msgstr "--diagnose[=<mode>]"
 
 #. type: Plain text
 #: en/git-bugreport.txt:63
 #, priority:100
 msgid "Create a zip archive of supplemental information about the user's machine, Git client, and repository state. The archive is written to the same output directory as the bug report and is named 'git-diagnostics-<formatted suffix>'."
-msgstr ""
+msgstr "Créer une archive zip contenant des informations supplémentaires sur la machine de l'utilisateur, le client Git et l'état du dépôt. L'archive est écrite dans le même répertoire de sortie que le rapport de bogue et est nommée 'git-diagnostics-<suffixe formaté>'."
 
 #. type: Plain text
 #: en/git-bugreport.txt:69
 #, priority:100
 msgid "Without `mode` specified, the diagnostic archive will contain the default set of statistics reported by `git diagnose`. An optional `mode` value may be specified to change which information is included in the archive. See linkgit:git-diagnose[1] for the list of valid values for `mode` and details about their usage."
-msgstr ""
+msgstr "Sans spécifier `mode`, l'archive de diagnostic contiendra l'ensemble par défaut des statistiques rapportées par `git diagnose`. Une valeur optionnelle `mode` peut être spécifiée pour changer quelles informations sont incluses dans l'archive. Voir linkgit:git-diagnose[1] pour la liste des valeurs valides pour `mode` et les détails sur leur utilisation."
 
 #. type: Title =
 #: en/git-bundle.txt:2
@@ -11144,8 +11123,7 @@ msgstr "Les colis sont des fichiers `.pack` (voir linkgit:git-pack-objects[1]) a
 
 #. type: Plain text
 #: en/git-bundle.txt:48
-#, fuzzy, priority:100
-#| msgid "Like the the packed archive format itself bundles can either be self-contained, or be created using exclusions.  See the \"OBJECT PREREQUISITES\" section below."
+#, priority:100
 msgid "Like the packed archive format itself bundles can either be self-contained, or be created using exclusions.  See the \"OBJECT PREREQUISITES\" section below."
 msgstr "Comme le format d'archive packed lui-même, les colis peuvent être soit autonomes, soit créés à l'aide d'exclusions.  Voir la section \"PRÉREQUIS D'OBJET\" ci-dessous."
 
@@ -11163,10 +11141,9 @@ msgstr "Il n'y a pas d'option pour créer un \"paquet épais\" lors de l'utilisa
 
 #. type: Plain text
 #: en/git-bundle.txt:61
-#, fuzzy, priority:100
-#| msgid "See link:technical/bundle-format.html[the `bundle-format` documentation] for more details and the discussion of \"thin pack\" in link:technical/pack-format.html[the pack format documentation] for further details."
+#, priority:100
 msgid "See linkgit:gitformat-bundle[5] for more details and the discussion of \"thin pack\" in linkgit:gitformat-pack[5] for further details."
-msgstr "Voir link:technical/bundle-format.html[la documentation `bundle-format`] pour plus de détails et la discussion sur le \"paquets fins\" dans link:technical/pack-format.html[la documentation sur le format du pack] pour plus de détails."
+msgstr "Voir git:gitformat-bundle[5] pour plus de détails et la discussion sur le \"paquets fins\" dans git:gitformat-pack[5] pour plus de détails."
 
 #. type: Labeled list
 #: en/git-bundle.txt:65
@@ -11188,10 +11165,9 @@ msgstr "verify <fichier>"
 
 #. type: Plain text
 #: en/git-bundle.txt:81
-#, fuzzy, priority:100
-#| msgid "Used to check that a bundle file is valid and will apply cleanly to the current repository.  This includes checks on the bundle format itself as well as checking that the prerequisite commits exist and are fully linked in the current repository.  Then, 'git bundle' prints a list of missing commits, if any.  Finally, information about additional capabilities, such as \"object filter\", is printed. See \"Capabilities\" in link:technical/bundle-format.html for more information. The exit code is zero for success, but will be nonzero if the bundle file is invalid."
+#, priority:100
 msgid "Used to check that a bundle file is valid and will apply cleanly to the current repository.  This includes checks on the bundle format itself as well as checking that the prerequisite commits exist and are fully linked in the current repository.  Then, 'git bundle' prints a list of missing commits, if any.  Finally, information about additional capabilities, such as \"object filter\", is printed. See \"Capabilities\" in linkgit:gitformat-bundle[5] for more information. The exit code is zero for success, but will be nonzero if the bundle file is invalid."
-msgstr "Utilisé pour vérifier qu'un fichier regroupement est valide et s'appliquera proprement au dépôt actuel.  Cela inclut des vérifications sur le format du regroupement lui-même ainsi que la vérification que les commits pré-requis existent et sont complètement liés dans le dépôt actuel.  'git bundle' affiche une liste des commits manquants, s'il y en a. Enfin, des informations sur des capacités supplémentaires, telles que \"object filter\" sont imprimées. Voir \"Capacités\" dans link:technical/bundle-format.html pour plus d'informations. Le code de sortie est zéro en cas de succès, mais sera non nul si le fichier colis est invalide."
+msgstr "Utilisé pour vérifier qu'un fichier regroupement est valide et s'appliquera proprement au dépôt actuel.  Cela inclut des vérifications sur le format du regroupement lui-même ainsi que la vérification que les commits pré-requis existent et sont complètement liés dans le dépôt actuel.  'git bundle' affiche une liste des commits manquants, s'il y en a. Enfin, des informations sur des capacités supplémentaires, telles que \"object filter\" sont imprimées. Voir \"Capacités\" dans git:gitformat-bundle[5] pour plus d'informations. Le code de sortie est zéro en cas de succès, mais sera non nul si le fichier colis est invalide."
 
 #. type: Labeled list
 #: en/git-bundle.txt:82
@@ -11603,17 +11579,15 @@ msgstr "$ git ls-remote monpaquet\n"
 
 #. type: Title -
 #: en/git-bundle.txt:339
-#, fuzzy, no-wrap, priority:100
-#| msgid "BUNDLE FORMAT"
+#, no-wrap, priority:100
 msgid "FILE FORMAT"
-msgstr "FORMATS DES COLIS"
+msgstr "FORMATS DE FICHIER"
 
 #. type: Plain text
 #: en/git-bundle.txt:342
-#, fuzzy, priority:100
-#| msgid "See linkgit:gitmailmap[5]."
+#, priority:100
 msgid "See linkgit:gitformat-bundle[5]."
-msgstr "Voir linkgit:gitmailmap[5]."
+msgstr "Voir linkgit:gitformat-bundle[5]."
 
 #. type: Title =
 #: en/git-cat-file.txt:2
@@ -11715,10 +11689,9 @@ msgstr "--[no-]use-mailmap"
 
 #. type: Plain text
 #: en/git-cat-file.txt:71
-#, fuzzy, priority:80
-#| msgid "Use mailmap file to map author and committer names and email addresses to canonical real names and email addresses. See linkgit:git-shortlog[1]."
+#, priority:80
 msgid "Use mailmap file to map author, committer and tagger names and email addresses to canonical real names and email addresses.  See linkgit:git-shortlog[1]."
-msgstr "Utiliser le fichier mailmap pour mapper les noms d'auteurs et de validateurs et les adresses email avec les vrais noms et adresses email canoniques. Voir linkgit:git-shortlog[1]."
+msgstr "Utiliser le fichier mailmap pour mapper les noms d'auteurs, de validateurs et d'étiqueteur, et les adresses email avec les vrais noms et adresses email canoniques. Voir linkgit:git-shortlog[1]."
 
 #. type: Plain text
 #: en/git-cat-file.txt:77
@@ -15606,13 +15579,13 @@ msgstr "Le nom du nouveau répertoire dans lequel cloner. La partie « humaine�
 #: en/git-clone.txt:326
 #, no-wrap, priority:300
 msgid "--bundle-uri=<uri>"
-msgstr ""
+msgstr "--bundle-uri=<uri>"
 
 #. type: Plain text
 #: en/git-clone.txt:332
 #, priority:300
 msgid "Before fetching from the remote, fetch a bundle from the given `<uri>` and unbundle the data into the local repository. The refs in the bundle will be stored under the hidden `refs/bundle/*` namespace. This option is incompatible with `--depth`, `--shallow-since`, and `--shallow-exclude`."
-msgstr ""
+msgstr "Avant de récupérer depuis le distant, récupérer un colis à partir du `<uri>` donné et décompresser les données dans le dépôt local. Les références dans le colis seront stockées dans l'espace de nom caché `refs/bundle/*`. Cette option est incompatible avec `--depth`, `--shallow-since`, et `--shallow-exclude`."
 
 #. type: Plain text
 #: en/git-clone.txt:340
@@ -17472,7 +17445,7 @@ msgstr "`pager.config` n'est respecté que lors de l'énumération de la configu
 #: en/git-config.txt:302
 #, priority:100
 msgid "By default, 'git config' will read configuration options from multiple files:"
-msgstr ""
+msgstr "Par défaut, 'git config' lira les options de configuration à partir de plusieurs fichiers :"
 
 #. type: Plain text
 #: en/git-config.txt:303 en/git-config.txt:353
@@ -17502,13 +17475,13 @@ msgstr "~/.gitconfig"
 #: en/git-config.txt:311
 #, priority:100
 msgid "User-specific configuration files. When the XDG_CONFIG_HOME environment variable is not set or empty, $HOME/.config/ is used as $XDG_CONFIG_HOME."
-msgstr ""
+msgstr "Fichiers de configuration spécifiques à l'utilisateur. Lorsque la variable d'environnement XDG_CONFIG_HOME n'est pas définie ou est vide, $HOME/.config/ est utilisé comme $XDG_CONFIG_HOME."
 
 #. type: Plain text
 #: en/git-config.txt:314
 #, priority:100
 msgid "These are also called \"global\" configuration files. If both files exist, both files are read in the order given above."
-msgstr ""
+msgstr "Ces fichiers sont également appelés fichiers de configuration \"globaux\". Si les deux fichiers existent, ils sont lus dans l'ordre donné ci-dessus."
 
 #. type: Plain text
 #: en/git-config.txt:315 en/git-config.txt:361
@@ -17536,17 +17509,15 @@ msgstr "Ceci est optionnel et n'est recherché que si `extensions.worktreeConfig
 
 #. type: Plain text
 #: en/git-config.txt:324
-#, fuzzy, priority:100
-#| msgid "You may override individual configuration parameters when running any git command by using the `-c` option. See linkgit:git[1] for details."
+#, priority:100
 msgid "You may also provide additional configuration parameters when running any git command by using the `-c` option. See linkgit:git[1] for details."
-msgstr "Vous pouvez remplacer les paramètres de configuration individuels lorsque vous exécutez une commande git en utilisant l'option `-c`. Voir linkgit:git[1] pour plus de détails."
+msgstr "Vous pouvez aussi fournir des paramètres de configuration additionnels lorsque vous exécutez une commande git en utilisant l'option `-c`. Voir linkgit:git[1] pour plus de détails."
 
 #. type: Plain text
 #: en/git-config.txt:330
-#, fuzzy, priority:100
-#| msgid "If no further options are given, all reading options will read all of these files that are available. If the global or the system-wide configuration file are not available they will be ignored. If the repository configuration file is not available or readable, 'git config' will exit with a non-zero error code. However, in neither case will an error message be issued."
+#, priority:100
 msgid "Options will be read from all of these files that are available. If the global or the system-wide configuration files are missing or unreadable they will be ignored. If the repository configuration file is missing or unreadable, 'git config' will exit with a non-zero error code. An error message is produced if the file is unreadable, but not if it is missing."
-msgstr "Si aucune autre option n'est donnée, toutes les options de lecture liront tous ces fichiers lorsqu'ils sont disponibles. Si le fichier de configuration global ou le fichier de configuration du système ne sont pas disponibles, ils seront ignorés. Si le fichier de configuration du dépôt n'est pas disponible ou lisible, 'git config' se terminera avec un code d'erreur non nul. Cependant, dans aucun des cas, un message d'erreur ne sera émis."
+msgstr "Les options seront lues depuis tous ces fichiers lorsqu'ils sont disponibles. Si le fichier de configuration global ou le fichier de configuration du système sont manquants ou illisibles, ils seront ignorés. Si le fichier de configuration du dépôt est manquant ou illisible, 'git config' se terminera avec un code d'erreur non nul. Un message d'erreur sera produit si le fichier n'est pas lisible, mais pas s'il est manquant."
 
 #. type: Plain text
 #: en/git-config.txt:334
@@ -17556,113 +17527,105 @@ msgstr "Les fichiers sont lus dans l'ordre indiqué ci-dessus, la dernière vale
 
 #. type: Plain text
 #: en/git-config.txt:338
-#, fuzzy, priority:100
-#| msgid "All writing options will per default write to the repository specific configuration file. Note that this also affects options like `--replace-all` and `--unset`. *'git config' will only ever change one file at a time*."
+#, priority:100
 msgid "By default, options are only written to the repository specific configuration file. Note that this also affects options like `--replace-all` and `--unset`. *'git config' will only ever change one file at a time*."
-msgstr "Toutes les options d'écriture seront par défaut écrites dans le fichier de configuration spécifique au dépôt. Notez que cela affecte également les options comme `--replace-all` et `--unset`. *'git config' ne modifiera jamais qu'un seul fichier à la fois*."
+msgstr "Par défaut, les options sont seulement écrites dans le fichier de configuration spécifique au dépôt. Notez que cela affecte également les options comme `--replace-all` et `--unset`. *'git config' ne modifiera jamais qu'un seul fichier à la fois*."
 
 #. type: Plain text
 #: en/git-config.txt:343
 #, priority:100
 msgid "You can limit which configuration sources are read from or written to by specifying the path of a file with the `--file` option, or by specifying a configuration scope with `--system`, `--global`, `--local`, or `--worktree`.  For more, see <<OPTIONS>> above."
-msgstr ""
+msgstr "Vous pouvez limiter les sources de configuration qui sont lues ou écrites en spécifiant le chemin d'un fichier avec l'option `--file`, ou en spécifiant une portée de configuration avec `--system`, `--global`, `--local`, ou `--worktree`.  Pour en savoir plus, voir <<OPTIONS>> ci-dessus."
 
 #. type: Title -
 #: en/git-config.txt:346
 #, no-wrap, priority:100
 msgid "SCOPES"
-msgstr ""
+msgstr "PORTÉES"
 
 #. type: Plain text
 #: en/git-config.txt:350
 #, priority:100
 msgid "Each configuration source falls within a configuration scope. The scopes are:"
-msgstr ""
+msgstr "Chaque source de configuration relève d'une portée de configuration. Les portées sont les suivantes :"
 
 #. type: Labeled list
 #: en/git-config.txt:351
-#, fuzzy, no-wrap, priority:100
-#| msgid "--system"
+#, no-wrap, priority:100
 msgid "system"
-msgstr "--system"
+msgstr "Système"
 
 #. type: Labeled list
 #: en/git-config.txt:354
-#, fuzzy, no-wrap, priority:100
-#| msgid "--global"
+#, no-wrap, priority:100
 msgid "global"
-msgstr "--global"
+msgstr "global"
 
 #. type: Labeled list
 #: en/git-config.txt:359
-#, fuzzy, no-wrap, priority:100
-#| msgid "--local"
+#, no-wrap, priority:100
 msgid "local"
-msgstr "--local"
+msgstr "local"
 
 #. type: Labeled list
 #: en/git-config.txt:362
-#, fuzzy, no-wrap, priority:100
-#| msgid "--worktree"
+#, no-wrap, priority:100
 msgid "worktree"
-msgstr "--worktree"
+msgstr "arbre-de-travail"
 
 #. type: Labeled list
 #: en/git-config.txt:365
-#, fuzzy, no-wrap, priority:100
-#| msgid "Commands"
+#, no-wrap, priority:100
 msgid "command"
-msgstr "Commandes"
+msgstr "commande"
 
 #. type: Plain text
 #: en/git-config.txt:368
 #, priority:100
 msgid "GIT_CONFIG_{COUNT,KEY,VALUE} environment variables (see <<ENVIRONMENT>> below)"
-msgstr ""
+msgstr "variables d'environnement GIT_CONFIG_{COUNT,KEY,VALUE} (voir <<ENVIRONNEMENT>> ci-dessous)"
 
 #. type: Plain text
 #: en/git-config.txt:370
-#, fuzzy, priority:100
-#| msgid "and the `--date` option"
+#, priority:100
 msgid "the `-c` option"
-msgstr "et l'option `--date`"
+msgstr "l'option `-c`"
 
 #. type: Plain text
 #: en/git-config.txt:373
 #, priority:100
 msgid "With the exception of 'command', each scope corresponds to a command line option: `--system`, `--global`, `--local`, `--worktree`."
-msgstr ""
+msgstr "À l'exception de 'commande', chaque portée correspond à une option de ligne de commande : `--system`, `--global`, `--local`, `--worktree`."
 
 #. type: Plain text
 #: en/git-config.txt:378
 #, priority:100
 msgid "When reading options, specifying a scope will only read options from the files within that scope. When writing options, specifying a scope will write to the files within that scope (instead of the repository specific configuration file). See <<OPTIONS>> above for a complete description."
-msgstr ""
+msgstr "Lors de la lecture d'options, la spécification d'une portée ne lira que les options des fichiers de cette portée. Lors de l'écriture d'options, la spécification d'une portée écrira dans les fichiers de cette portée (au lieu du fichier de configuration spécifique au dépôt). Voir <<OPTIONS>> ci-dessus pour une description complète."
 
 #. type: Plain text
 #: en/git-config.txt:382
 #, priority:100
 msgid "Most configuration options are respected regardless of the scope it is defined in, but some options are only respected in certain scopes. See the respective option's documentation for the full details."
-msgstr ""
+msgstr "La plupart des options de configuration sont respectées quelle que soit la portée dans laquelle elles sont définies, mais certaines options ne sont respectées que dans certaines portées. Consultez la documentation de l'option concernée pour plus de détails."
 
 #. type: Title ~
 #: en/git-config.txt:384
-#, fuzzy, no-wrap, priority:100
-#| msgid "Approach #2 (configuration)"
+#, no-wrap, priority:100
 msgid "Protected configuration"
-msgstr "Approche n°2 (configuration)"
+msgstr "Configuration protégée"
 
 #. type: Plain text
 #: en/git-config.txt:389
 #, priority:100
 msgid "Protected configuration refers to the 'system', 'global', and 'command' scopes.  For security reasons, certain options are only respected when they are specified in protected configuration, and ignored otherwise."
-msgstr ""
+msgstr "La configuration protégée fait référence aux portées 'système', 'global' et 'commande'. Pour des raisons de sécurité, certaines options ne sont respectées que lorsqu'elles sont spécifiées en configuration protégée, et ignorées dans le cas contraire."
 
 #. type: Plain text
 #: en/git-config.txt:394
 #, priority:100
 msgid "Git treats these scopes as if they are controlled by the user or a trusted administrator. This is because an attacker who controls these scopes can do substantial harm without using Git, so it is assumed that the user's environment protects these scopes against attackers."
-msgstr ""
+msgstr "Git traite ces portées comme si elles étaient contrôlées par l'utilisateur ou un administrateur de confiance. Ceci est dû au fait qu'un attaquant qui contrôle ces portées peut causer des dommages substantiels sans utiliser Git, il est donc supposé que l'environnement de l'utilisateur protège ces portées contre les attaquants."
 
 #. type: Title -
 #: en/git-config.txt:397 en/git-cvsserver.txt:308 en/git-daemon.txt:333 en/git-http-backend.txt:257 en/git-notes.txt:326 en/git-upload-pack.txt:51
@@ -19480,10 +19443,9 @@ msgstr "Afficher les informations d'utilisation et quitter"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:70
-#, fuzzy, priority:90
-#| msgid "You can specify a list of allowed directories. If no directories are given, all are allowed. This is an additional restriction, gitcvs access still needs to be enabled by the `gitcvs.enabled` config option unless `--export-all` was given, too."
+#, priority:90
 msgid "The remaining arguments provide a list of directories. If no directories are given, then all are allowed. Repositories within these directories still require the `gitcvs.enabled` config option, unless `--export-all` is specified."
-msgstr "Vous pouvez spécifier une liste de répertoires autorisés. Si aucun répertoire n'est donné, tous sont autorisés. Il s'agit d'une restriction supplémentaire, l'accès à gitcvs doit toujours être activé par l'option de configuration `gitcvs.enabled`, à moins que `--export-all` ne soit également donné."
+msgstr "Les arguments restants fournissent une liste de répertoires. Si aucun répertoire n'est donné, alors tous sont autorisés. Les dépôts dans ces répertoires nécessitent toujours l'option de configuration `gitcvs.enabled`, à moins que `--export-all` soit spécifié."
 
 #. type: Title -
 #: en/git-cvsserver.txt:72 en/git-fast-export.txt:272
@@ -19913,10 +19875,9 @@ msgstr "GIT_CVSSERVER_BASE_PATH"
 
 #. type: Plain text
 #: en/git-cvsserver.txt:315
-#, fuzzy, priority:90
-#| msgid "GIT_CVSSERVER_BASE_PATH takes the place of the argument to --base-path."
+#, priority:90
 msgid "This variable replaces the argument to --base-path."
-msgstr "GIT_CVSSERVER_BASE_PATH prend la place de l'argument de --base-path."
+msgstr "Cette variable prend la place de l'argument de --base-path."
 
 #. type: Labeled list
 #: en/git-cvsserver.txt:316
@@ -20146,10 +20107,9 @@ msgstr "Un démon TCP Git très simple qui écoute normalement sur le port \"DEF
 
 #. type: Plain text
 #: en/git-daemon.txt:37
-#, fuzzy, priority:100
-#| msgid "It verifies that the directory has the magic file \"git-daemon-export-ok\", and it will refuse to export any Git directory that hasn't explicitly been marked for export this way (unless the `--export-all` parameter is specified). If you pass some directory paths as 'git daemon' arguments, you can further restrict the offers to a whitelist comprising of those."
+#, priority:100
 msgid "It verifies that the directory has the magic file \"git-daemon-export-ok\", and it will refuse to export any Git directory that hasn't explicitly been marked for export this way (unless the `--export-all` parameter is specified). If you pass some directory paths as 'git daemon' arguments, the offers are limited to repositories within those directories."
-msgstr "Il vérifie que le répertoire possède le fichier magique \"git-daemon-export-ok\", et il refusera d'exporter tout répertoire Git qui n'a pas été explicitement marqué pour l'exportation de cette façon (à moins que le paramètre `--export-all` soit spécifié). Si vous passez certains chemins de répertoire en tant qu'arguments de 'git daemon', vous pouvez restreindre davantage les offres à une liste blanche composée de ceux-ci."
+msgstr "Il vérifie que le répertoire possède le fichier magique \"git-daemon-export-ok\", et il refusera d'exporter tout répertoire Git qui n'a pas été explicitement marqué pour l'exportation de cette façon (à moins que le paramètre `--export-all` soit spécifié). Si vous passez certains chemins de répertoire en tant qu'arguments de 'git daemon', les offres sont limitées aux dépôts dans ces répertoires."
 
 #. type: Plain text
 #: en/git-daemon.txt:41
@@ -20171,10 +20131,9 @@ msgstr "Une 'upload-archive' existe également pour servir 'git archive'."
 
 #. type: Plain text
 #: en/git-daemon.txt:54
-#, fuzzy, priority:100
-#| msgid "Match paths exactly (i.e. don't allow \"/foo/repo\" when the real path is \"/foo/repo.git\" or \"/foo/repo/.git\") and don't do user-relative paths.  'git daemon' will refuse to start when this option is enabled and no whitelist is specified."
+#, priority:100
 msgid "Match paths exactly (i.e. don't allow \"/foo/repo\" when the real path is \"/foo/repo.git\" or \"/foo/repo/.git\") and don't do user-relative paths.  'git daemon' will refuse to start when this option is enabled and no directory arguments are provided."
-msgstr "Faire correspondre exactement les chemins (c’est-à-dire ne pas autoriser « /foo/dépôt » lorsque le chemin réel est « /foo/dépôt.git » ou « /foo/dépôt/.git ») et ne pas faire de chemins relatifs à l’utilisateur.  'git daemon' refusera de démarrer lorsque cette option est activée et qu’aucune liste blanche n’est spécifiée."
+msgstr "Faire correspondre exactement les chemins (c’est-à-dire ne pas autoriser « /foo/dépôt » lorsque le chemin réel est « /foo/dépôt.git » ou « /foo/dépôt/.git ») et ne pas faire de chemins relatifs à l’utilisateur.  'git daemon' refusera de démarrer lorsque cette option est activée et qu'aucun argument de répertoire n'est spécifié."
 
 #. type: Labeled list
 #: en/git-daemon.txt:55
@@ -20208,10 +20167,9 @@ msgstr "--interpolated-path=<modèle-de-chemin>"
 
 #. type: Plain text
 #: en/git-daemon.txt:77
-#, fuzzy, priority:100
-#| msgid "To support virtual hosting, an interpolated path template can be used to dynamically construct alternate paths.  The template supports %H for the target hostname as supplied by the client but converted to all lowercase, %CH for the canonical hostname, %IP for the server's IP address, %P for the port number, and %D for the absolute path of the named repository.  After interpolation, the path is validated against the directory whitelist."
+#, priority:100
 msgid "To support virtual hosting, an interpolated path template can be used to dynamically construct alternate paths.  The template supports %H for the target hostname as supplied by the client but converted to all lowercase, %CH for the canonical hostname, %IP for the server's IP address, %P for the port number, and %D for the absolute path of the named repository.  After interpolation, the path is validated against the directory list."
-msgstr "Pour prendre en charge l'hébergement virtuel, un modèle de chemin interpolé peut être utilisé pour construire dynamiquement des chemins alternatifs.  Le modèle prend en charge %H pour le nom d'hôte cible tel que fourni par le client mais converti en minuscules, %CH pour le nom d'hôte canonique, %IP pour l'adresse IP du serveur, %P pour le numéro de port et %D pour le chemin absolu du dépôt nommé.  Après interpolation, le chemin est validé par rapport à la liste blanche des répertoires."
+msgstr "Pour prendre en charge l'hébergement virtuel, un modèle de chemin interpolé peut être utilisé pour construire dynamiquement des chemins alternatifs.  Le modèle prend en charge %H pour le nom d'hôte cible tel que fourni par le client mais converti en minuscules, %CH pour le nom d'hôte canonique, %IP pour l'adresse IP du serveur, %P pour le numéro de port et %D pour le chemin absolu du dépôt nommé.  Après interpolation, le chemin est validé par rapport à la liste des répertoires."
 
 #. type: Plain text
 #: en/git-daemon.txt:82
@@ -20505,7 +20463,7 @@ msgstr "Le command externe peut écrire optionalement une ligne en se sortie sta
 #: en/git-daemon.txt:226
 #, priority:100
 msgid "The remaining arguments provide a list of directories. If any directories are specified, then the `git-daemon` process will serve a requested directory only if it is contained in one of these directories. If `--strict-paths` is specified, then the requested directory must match one of these directories exactly."
-msgstr ""
+msgstr "Les arguments restants fournissent une liste de répertoires. Si des répertoires sont spécifiés, alors le processus `git-daemon` servira un répertoire demandé seulement s'il est contenu dans un de ces répertoires. Si `--strict-paths` est spécifié, alors le répertoire demandé doit correspondre exactement à l'un de ces répertoires."
 
 #. type: Title -
 #: en/git-daemon.txt:228 en/git-http-backend.txt:35
@@ -20579,10 +20537,9 @@ msgstr "'git daemon' comme serveur inetd"
 
 #. type: Plain text
 #: en/git-daemon.txt:271
-#, fuzzy, priority:100
-#| msgid "To set up 'git daemon' as an inetd service that handles any repository under the whitelisted set of directories, /pub/foo and /pub/bar, place an entry like the following into /etc/inetd all on one line:"
+#, priority:100
 msgid "To set up 'git daemon' as an inetd service that handles any repository within `/pub/foo` or `/pub/bar`, place an entry like the following into `/etc/inetd` all on one line:"
-msgstr "Pour configurer 'git daemon' comme un service inetd qui gère tout dépôt sous l'ensemble des répertoires de la liste blanche, /pub/foo et /pub/bar, placez une entrée comme ceci dans /etc/inetd sur une seule ligne :"
+msgstr "Pour configurer 'git daemon' comme un service inetd qui gère tout dépôt sous /pub/foo ou /pub/bar, placez une entrée comme ceci dans `/etc/inetd` sur une seule ligne :"
 
 #. type: delimited block -
 #: en/git-daemon.txt:276
@@ -27617,19 +27574,19 @@ msgstr "Si `<mode>` est `message` ou `default`, le sujet de la lettre d'introduc
 #: en/git-format-patch.txt:211
 #, priority:100
 msgid "If `<mode>` is `subject`, the first paragraph of the branch description will populate the cover letter subject. The remainder of the description will populate the body of the cover letter."
-msgstr ""
+msgstr "Si `<mode>` est `subject`, le premier paragraphe de la description de la branche alimentera le sujet de la lettre d'introduction. Le reste de la description constituera le corps de la lettre d'introduction."
 
 #. type: Plain text
 #: en/git-format-patch.txt:215
 #, priority:100
 msgid "If `<mode>` is `auto`, if the first paragraph of the branch description is greater than 100 bytes, then the mode will be `message`, otherwise `subject` will be used."
-msgstr ""
+msgstr "Quand `<mode>` est `auto`, si le premier paragraphe de la description de la branche est supérieur à 100 octets, alors le mode sera `message`, sinon `subject` sera utilisé."
 
 #. type: Plain text
 #: en/git-format-patch.txt:218
 #, priority:100
 msgid "If `<mode>` is `none`, both the cover letter subject and body will be populated with placeholder text."
-msgstr ""
+msgstr "Si `<mode>` est `none`, le sujet et le corps de la lettre d'introduction seront remplis avec du texte de remplacement."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:219
@@ -27641,19 +27598,19 @@ msgstr "--subject-prefix=<préfixe de sujet>"
 #: en/git-format-patch.txt:224
 #, priority:100
 msgid "Instead of the standard '[PATCH]' prefix in the subject line, instead use '[<subject prefix>]'. This allows for useful naming of a patch series, and can be combined with the `--numbered` option."
-msgstr ""
+msgstr "Au lieu du préfixe standard '[PATCH]' dans la ligne d'objet, utiliser plutôt '[<préfixe de l'objet>]. Cela permet de nommer utilement une série de rustines, et peut être combiné avec l'option `--numbered`."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:225
 #, no-wrap, priority:100
 msgid "--filename-max-length=<n>"
-msgstr ""
+msgstr "--filename-max-length=<n>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:231
 #, priority:100
 msgid "Instead of the standard 64 bytes, chomp the generated output filenames at around '<n>' bytes (too short a value will be silently raised to a reasonable length).  Defaults to the value of the `format.filenameMaxLength` configuration variable, or 64 if unconfigured."
-msgstr ""
+msgstr "Au lieu de la longueur standard de 64 octets, les noms de fichiers de sortie générés sont réduits à environ '<n>' octets (une valeur trop courte sera augmentée silencieusement à une longueur raisonnable).  La valeur par défaut est la valeur de la variable de configuration `format.filenameMaxLength`, ou 64 si non configuré."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:232
@@ -27665,7 +27622,7 @@ msgstr "--rfc"
 #: en/git-format-patch.txt:236
 #, priority:100
 msgid "Alias for `--subject-prefix=\"RFC PATCH\"`. RFC means \"Request For Comments\"; use this when sending an experimental patch for discussion rather than application."
-msgstr ""
+msgstr "Alias pour `--subject-prefix=\"RFC PATCH\"`. RFC signifie \"Request For Comments\" (demande de commentaires) ; utilisez ceci lorsque vous envoyez une rustine expérimentale pour une discussion plutôt que pour une application."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:237
@@ -27677,37 +27634,37 @@ msgstr "-v <n>"
 #: en/git-format-patch.txt:238
 #, no-wrap, priority:100
 msgid "--reroll-count=<n>"
-msgstr ""
+msgstr "--reroll-count=<n>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:250
 #, priority:100
 msgid "Mark the series as the <n>-th iteration of the topic. The output filenames have `v<n>` prepended to them, and the subject prefix (\"PATCH\" by default, but configurable via the `--subject-prefix` option) has ` v<n>` appended to it.  E.g.  `--reroll-count=4` may produce `v4-0001-add-makefile.patch` file that has \"Subject: [PATCH v4 1/20] Add makefile\" in it.  `<n>` does not have to be an integer (e.g. \"--reroll-count=4.4\", or \"--reroll-count=4rev2\" are allowed), but the downside of using such a reroll-count is that the range-diff/interdiff with the previous version does not state exactly which version the new interation is compared against."
-msgstr ""
+msgstr "Marquer la série comme la <n>ème itération du sujet. Les noms des fichiers de sortie sont précédés de `v<n>`, et le préfixe du sujet (\"PATCH\" par défaut, mais configurable via l'option `--subject-prefix`) a ` v<n>` ajouté.  Par exemple, `--reroll-count=4` peut produire le fichier `v4-0001-add-makefile.patch` qui a \"Subject : [PATCH v4 1/20] Add makefile\".  `<n>` n'a pas besoin d'être un nombre entier (par exemple, \"--reroll-count=4.4\", ou \"--reroll-count=4rev2\" sont autorisés), mais l'inconvénient d'utiliser un tel nombre de rerolls est que le range-diff/interdiff avec la version précédente n'indique pas exactement à quelle version la nouvelle interation est comparée."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:251
 #, no-wrap, priority:100
 msgid "--to=<email>"
-msgstr ""
+msgstr "--to=<courriel>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:256
 #, priority:100
 msgid "Add a `To:` header to the email headers. This is in addition to any configured headers, and may be used multiple times.  The negated form `--no-to` discards all `To:` headers added so far (from config or command line)."
-msgstr ""
+msgstr "Ajoute un en-tête `To:` aux en-têtes du courriel. Ceci s'ajoute à tous les en-têtes configurés, et peut être utilisé plusieurs fois.  La forme négative `--no-to` élimine tous les en-têtes `To:` ajoutés jusqu'à présent (depuis la configuration ou la ligne de commande)."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:257
 #, no-wrap, priority:100
 msgid "--cc=<email>"
-msgstr ""
+msgstr "--cc=<courriel>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:262
 #, priority:100
 msgid "Add a `Cc:` header to the email headers. This is in addition to any configured headers, and may be used multiple times.  The negated form `--no-cc` discards all `Cc:` headers added so far (from config or command line)."
-msgstr ""
+msgstr "Ajoute un en-tête `Cc:` aux en-têtes du courriel. Ceci s'ajoute à tous les en-têtes configurés, et peut être utilisé plusieurs fois.  La forme négative `--no-cc` élimine tous les en-têtes `Cc:` ajoutés jusqu'à présent (depuis la configuration ou la ligne de commande)."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:263
@@ -27719,19 +27676,19 @@ msgstr "--from"
 #: en/git-format-patch.txt:264
 #, no-wrap, priority:100
 msgid "--from=<ident>"
-msgstr ""
+msgstr "--from=<ident>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:270
 #, priority:100
 msgid "Use `ident` in the `From:` header of each commit email. If the author ident of the commit is not textually identical to the provided `ident`, place a `From:` header in the body of the message with the original author. If no `ident` is given, use the committer ident."
-msgstr ""
+msgstr "Utiliser `ident` dans l'en-tête `From:` de chaque courriel de commit. Si l'identifiant de l'auteur du commit n'est pas textuellement identique au `ident` fourni, placer un en-tête `From:` dans le corps du message avec l'auteur original. Si aucun `ident` n'est fourni, utiliser l'identifiant du validateur."
 
 #. type: Plain text
 #: en/git-format-patch.txt:277
 #, priority:100
 msgid "Note that this option is only useful if you are actually sending the emails and want to identify yourself as the sender, but retain the original author (and `git am` will correctly pick up the in-body header). Note also that `git send-email` already handles this transformation for you, and this option should not be used if you are feeding the result to `git send-email`."
-msgstr ""
+msgstr "Notez que cette option n'est utile que si vous envoyez réellement les courriel et que vous voulez vous identifier comme l'expéditeur, mais conserver l'auteur original (et `git am` récupérera correctement l'en-tête in-body). Notez également que `git send-email` gère déjà cette transformation pour vous, et cette option ne devrait pas être utilisée si vous envoyez le résultat à `git send-email`."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:278
@@ -27743,19 +27700,19 @@ msgstr "--[no-]force-in-body-from"
 #: en/git-format-patch.txt:288
 #, priority:100
 msgid "With the e-mail sender specified via the `--from` option, by default, an in-body \"From:\" to identify the real author of the commit is added at the top of the commit log message if the sender is different from the author.  With this option, the in-body \"From:\" is added even when the sender and the author have the same name and address, which may help if the mailing list software mangles the sender's identity.  Defaults to the value of the `format.forceInBodyFrom` configuration variable."
-msgstr ""
+msgstr "Avec l'expéditeur du courriel spécifié par l'option `--from`, par défaut, un \"From :\" dans le corps du message pour identifier l'auteur réel du commit est ajouté en haut du message du journal des validations si l'expéditeur est différent de l'auteur.  Avec cette option, le \"From :\" dans le corps du message est ajouté même si l'expéditeur et l'auteur ont le même nom et la même adresse, ce qui peut aider si le logiciel de liste de diffusion confond l'identité de l'expéditeur.  La valeur par défaut est la valeur de la variable de configuration `format.forceInBodyFrom`."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:289
 #, no-wrap, priority:100
 msgid "--add-header=<header>"
-msgstr ""
+msgstr "--add-header=<entête>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:296
 #, priority:100
 msgid "Add an arbitrary header to the email headers.  This is in addition to any configured headers, and may be used multiple times.  For example, `--add-header=\"Organization: git-foo\"`.  The negated form `--no-add-header` discards *all* (`To:`, `Cc:`, and custom) headers added so far from config or command line."
-msgstr ""
+msgstr "Ajoute un entête arbitraire aux entêtes du courriel.  Ceci s'ajoute à tous les entêtes configurés, et peut être utilisé plusieurs fois.  Par exemple, `--add-header=\"Organisation : git-foo\"`.  La forme négative `--no-add-header` élimine *tous* les entêtes (`To:`, `Cc:`, et personnalisés) ajoutés jusqu'ici depuis la configuration ou la ligne de commande."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:297
@@ -27767,7 +27724,7 @@ msgstr "--[no-]cover-letter"
 #: en/git-format-patch.txt:301
 #, priority:100
 msgid "In addition to the patches, generate a cover letter file containing the branch description, shortlog and the overall diffstat.  You can fill in a description in the file before sending it out."
-msgstr ""
+msgstr "En plus des rustine, générer un fichier de lettre d'introduction contenant la description de la branche, le shortlog et le diffstat global.  Vous pouvez remplir une description dans le fichier avant de l'envoyer."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:302
@@ -27785,49 +27742,49 @@ msgstr "--no-encode-email-headers"
 #: en/git-format-patch.txt:308
 #, priority:100
 msgid "Encode email headers that have non-ASCII characters with \"Q-encoding\" (described in RFC 2047), instead of outputting the headers verbatim. Defaults to the value of the `format.encodeEmailHeaders` configuration variable."
-msgstr ""
+msgstr "Encoder les entêtes de courriel qui contiennent des caractères non ASCII avec le \"Q-encoding\" (décrit dans la RFC 2047), au lieu d'afficher les entêtes textuellement. La valeur par défaut est la valeur de la variable de configuration `format.encodeEmailHeaders`."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:309
 #, no-wrap, priority:100
 msgid "--interdiff=<previous>"
-msgstr ""
+msgstr "--interdiff=<précédent>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:317
 #, priority:100
 msgid "As a reviewer aid, insert an interdiff into the cover letter, or as commentary of the lone patch of a 1-patch series, showing the differences between the previous version of the patch series and the series currently being formatted. `previous` is a single revision naming the tip of the previous series which shares a common base with the series being formatted (for example `git format-patch --cover-letter --interdiff=feature/v1 -3 feature/v2`)."
-msgstr ""
+msgstr "Pour aider à la revue, insérer un interdiff dans la lettre d'introduction, ou comme commentaire de la rustine d'une série d'une seule rustine, montrant les différences entre la version précédente de la série de rustines et la série en cours de formatage. `précédent` est une révision unique nommant la pointe de la série précédente qui partage une base commune avec la série en cours de formatage (par exemple `git format-patch --cover-letter --interdiff=feature/v1 -3 feature/v2`)."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:318
 #, no-wrap, priority:100
 msgid "--range-diff=<previous>"
-msgstr ""
+msgstr "--range-diff=<précédent>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:329
 #, priority:100
 msgid "As a reviewer aid, insert a range-diff (see linkgit:git-range-diff[1])  into the cover letter, or as commentary of the lone patch of a 1-patch series, showing the differences between the previous version of the patch series and the series currently being formatted.  `previous` can be a single revision naming the tip of the previous series if it shares a common base with the series being formatted (for example `git format-patch --cover-letter --range-diff=feature/v1 -3 feature/v2`), or a revision range if the two versions of the series are disjoint (for example `git format-patch --cover-letter --range-diff=feature/v1~3..feature/v1 -3 feature/v2`)."
-msgstr ""
+msgstr "Pour aider à la revue, insérer un range-diff (voir linkgit:git-range-diff[1]) dans la lettre d'introduction, ou comme commentaire de la rustine d'une série d'une seule rustine, montrant les différences entre la version précédente de la série de rustines et la série en cours de formatage.  `précédent` peut être une révision unique nommant la pointe de la série précédente si elle partage une base commune avec la série en cours de formatage (par exemple `git format-patch --cover-letter --range-diff=feature/v1 -3 feature/v2`), ou une plage de révisions si les deux versions de la série sont disjointes (par exemple `git format-patch --cover-letter --range-diff=feature/v1~3..feature/v1 -3 feature/v2`)."
 
 #. type: Plain text
 #: en/git-format-patch.txt:334
 #, priority:100
 msgid "Note that diff options passed to the command affect how the primary product of `format-patch` is generated, and they are not passed to the underlying `range-diff` machinery used to generate the cover-letter material (this may change in the future)."
-msgstr ""
+msgstr "Notez que les options diff passées à la commande affectent la façon dont le produit principal de `format-patch` est généré, mais qu'elles ne sont pas passées à la machinerie sous-jacente de `range-diff` utilisée pour générer le matériel de la lettre d'introduction (ceci pourrait changer dans le futur)."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:335 en/git-range-diff.txt:68
 #, no-wrap, priority:100
 msgid "--creation-factor=<percent>"
-msgstr ""
+msgstr "--creation-factor=<pourcentage>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:340
 #, priority:100
 msgid "Used with `--range-diff`, tweak the heuristic which matches up commits between the previous and current series of patches by adjusting the creation/deletion cost fudge factor. See linkgit:git-range-diff[1])  for details."
-msgstr ""
+msgstr "Utilisé avec `--range-diff`, modifie l'heuristique qui fait correspondre les commits entre la série précédente et la série actuelle de rustines en ajustant le facteur de correction du coût de création/suppression. Voir linkgit:git-range-diff[1]) pour plus de détails."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:341 en/pretty-options.txt:62
@@ -27845,7 +27802,7 @@ msgstr "--no-notes"
 #: en/git-format-patch.txt:345
 #, priority:100
 msgid "Append the notes (see linkgit:git-notes[1]) for the commit after the three-dash line."
-msgstr ""
+msgstr "Ajouter les notes (voir linkgit:git-notes[1]) pour le commit après la ligne à trois tirets."
 
 #. type: Plain text
 #: en/git-format-patch.txt:353
@@ -29568,17 +29525,15 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-grep.txt:242
-#, fuzzy, no-wrap, priority:100
-#| msgid "-C <num>"
+#, no-wrap, priority:100
 msgid "-m <num>"
-msgstr "-C <num>"
+msgstr "-m <num>"
 
 #. type: Labeled list
 #: en/git-grep.txt:243
-#, fuzzy, no-wrap, priority:100
-#| msgid "--max-count=<number>"
+#, no-wrap, priority:100
 msgid "--max-count <num>"
-msgstr "--max-count==<nombre>"
+msgstr "--max-count <nombre>"
 
 #. type: Plain text
 #: en/git-grep.txt:249
@@ -32950,16 +32905,15 @@ msgstr "--decorate-refs-exclude=<motif>"
 
 #. type: Plain text
 #: en/git-log.txt:54
-#, fuzzy, priority:260
-#| msgid "If no `--decorate-refs` is given, pretend as if all refs were included.  For each candidate, do not use it for decoration if it matches any patterns given to `--decorate-refs-exclude` or if it doesn't match any of the patterns given to `--decorate-refs`. The `log.excludeDecoration` config option allows excluding refs from the decorations, but an explicit `--decorate-refs` pattern will override a match in `log.excludeDecoration`."
+#, priority:260
 msgid "For each candidate reference, do not use it for decoration if it matches any patterns given to `--decorate-refs-exclude` or if it doesn't match any of the patterns given to `--decorate-refs`. The `log.excludeDecoration` config option allows excluding refs from the decorations, but an explicit `--decorate-refs` pattern will override a match in `log.excludeDecoration`."
-msgstr "Si aucun `--decorate-refs` n'est donné, faire comme si tous les refs étaient inclus.  Pour chaque candidat, ne pas l'utiliser pour la décoration s'il correspond à un motif fourni à `--decorate-refs-exclude' ou s'il ne correspond à aucun des motifs fournis à `--decorate-refs`. L'option de configuration `log.excludeDecoration` permet d'exclure les références des décorations, mais un motif explicite `--decorate-refs` remplacera une correspondance dans `log.excludeDecoration`."
+msgstr "Pour chaque référence candidate, ne pas l'utiliser pour la décoration s'il correspond à un motif fourni à `--decorate-refs-exclude' ou s'il ne correspond à aucun des motifs fournis à `--decorate-refs`. L'option de configuration `log.excludeDecoration` permet d'exclure les références des décorations, mais un motif explicite `--decorate-refs` remplacera une correspondance dans `log.excludeDecoration`."
 
 #. type: Plain text
 #: en/git-log.txt:58
 #, priority:260
 msgid "If none of these options or config settings are given, then references are used as decoration if they match `HEAD`, `refs/heads/`, `refs/remotes/`, `refs/stash/`, or `refs/tags/`."
-msgstr ""
+msgstr "Si aucune de ces options ou paramètres de configuration n'est donnée, alors les références sont utilisées comme décoration si elles correspondent à `HEAD`, `refs/heads/`, `refs/remotes/`, `refs/stash/`, ou `refs/tags/`."
 
 #. type: Labeled list
 #: en/git-log.txt:59
@@ -32971,7 +32925,7 @@ msgstr "--clear-decorations"
 #: en/git-log.txt:65
 #, priority:260
 msgid "When specified, this option clears all previous `--decorate-refs` or `--decorate-refs-exclude` options and relaxes the default decoration filter to include all references. This option is assumed if the config value `log.initialDecorationSet` is set to `all`."
-msgstr ""
+msgstr "Lorsqu'elle est spécifiée, cette option efface toutes les options `--decorate-refs` ou `--decorate-refs-exclude` précédentes et assouplit le filtre de décoration par défaut pour inclure toutes les références. Cette option est supposée si la valeur de configuration `log.initialDecorationSet` est définie sur `all`."
 
 #. type: Labeled list
 #: en/git-log.txt:66
@@ -33703,45 +33657,39 @@ msgstr "mode objet"
 
 #. type: Plain text
 #: en/git-ls-files.txt:250
-#, fuzzy, priority:80
-#| msgid "be quiet if files exist or are not in the index"
+#, priority:80
 msgid "The mode of the file which is recorded in the index."
-msgstr "rester silencieux si les fichiers existent ou ne sont pas dans l'index"
+msgstr "Le mode du fichier qui est enregistré dans l'index."
 
 #. type: Plain text
 #: en/git-ls-files.txt:252
-#, fuzzy, priority:80
-#| msgid "be quiet if files exist or are not in the index"
+#, priority:80
 msgid "The name of the file which is recorded in the index."
-msgstr "rester silencieux si les fichiers existent ou ne sont pas dans l'index"
+msgstr "Le nom du fichier qui est enregistré dans l'index."
 
 #. type: Labeled list
 #: en/git-ls-files.txt:252
-#, fuzzy, no-wrap, priority:80
-#| msgid "--stage"
+#, no-wrap, priority:80
 msgid "stage"
-msgstr "--stage"
+msgstr "étape"
 
 #. type: Plain text
 #: en/git-ls-files.txt:254
-#, fuzzy, priority:80
-#| msgid "be quiet if files exist or are not in the index"
+#, priority:80
 msgid "The stage of the file which is recorded in the index."
-msgstr "rester silencieux si les fichiers existent ou ne sont pas dans l'index"
+msgstr "L'étape du fichier qui est enregistré dans l'index."
 
 #. type: Labeled list
 #: en/git-ls-files.txt:254
-#, fuzzy, no-wrap, priority:80
-#| msgid "--no-index"
+#, no-wrap, priority:80
 msgid "eolinfo:index"
-msgstr "--no-index"
+msgstr "eolinfo:index"
 
 #. type: Labeled list
 #: en/git-ls-files.txt:255
-#, fuzzy, no-wrap, priority:80
-#| msgid "linkgit:git-worktree[1]"
+#, no-wrap, priority:80
 msgid "eolinfo:worktree"
-msgstr "linkgit:git-worktree[1]"
+msgstr "eolinfo:worktree"
 
 #. type: Plain text
 #: en/git-ls-files.txt:258
@@ -33751,10 +33699,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-ls-files.txt:258
-#, fuzzy, no-wrap, priority:80
-#| msgid "attr"
+#, no-wrap, priority:80
 msgid "eolattr"
-msgstr "attr"
+msgstr "eolattr"
 
 #. type: Plain text
 #: en/git-ls-files.txt:261
@@ -35421,10 +35368,9 @@ msgstr "git-merge-tree(1)"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:7
-#, fuzzy, priority:100
-#| msgid "Show three-way merge without touching index."
+#, priority:100
 msgid "git-merge-tree - Perform merge without touching index or working tree"
-msgstr "Afficher la fusion à trois points sans modifier l'index."
+msgstr "git-merge-tree - Effectue une fusion sans toucher à l'index ou à l'arbre de travail"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:14
@@ -35460,10 +35406,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-merge-tree.txt:32
-#, fuzzy, priority:100
-#| msgid "--rename-section"
+#, priority:100
 msgid "rename detection"
-msgstr "--rename-section"
+msgstr "détection de renommage"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:33
@@ -35539,10 +35484,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-merge-tree.txt:77
-#, fuzzy, priority:100
-#| msgid "If `--verbose` is specified, the output is a series of lines of the form:"
+#, priority:100
 msgid "Whereas for a conflicted merge, the output is by default of the form:"
-msgstr "Si `--verbose` est spécifié, la sortie est une série de lignes de la forme :"
+msgstr "Alors que pour une fusion conflictuelle, la sortie est par défaut de la forme :"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:81
@@ -35591,17 +35535,15 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-merge-tree.txt:106
-#, fuzzy, priority:100
-#| msgid "Without the `-z` option, pathnames with \"unusual\" characters are quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1]).  Using `-z` the filename is output verbatim and the line is terminated by a NUL byte."
+#, priority:100
 msgid "The filename will be quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1]).  However, if the `--name-only` option is passed, the mode, object, and stage will be omitted.  If `-z` is passed, the \"lines\" are terminated by a NUL character instead of a newline character."
-msgstr "Sans l'option `-z`, les noms de chemin avec des caractères « inhabituels » sont cités comme expliqué pour la variable de configuration `core.quotePath` (voir linkgit:git-config[1]). Lors de l'utilisation de `-z` le fichier est affiché verbatim et la ligne est terminée par un octet NUL."
+msgstr "Le nom du fichier sera cité comme expliqué pour la variable de configuration `core.quotePath` (voir linkgit:git-config[1]).  Cependant, si l'option `--name-only` est passée, le mode, l'objet, et l'étape seront omis.  Si l'option `-z` est passée, les \"lignes\" sont terminées par un caractère NUL au lieu d'un caractère de nouvelle ligne."
 
 #. type: Title ~
 #: en/git-merge-tree.txt:109
-#, fuzzy, no-wrap, priority:100
-#| msgid "Information"
+#, no-wrap, priority:100
 msgid "Informational messages"
-msgstr "Information"
+msgstr "Messages d'information"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:114
@@ -35611,10 +35553,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-merge-tree.txt:116
-#, fuzzy, priority:100
-#| msgid "--series <file>"
+#, priority:100
 msgid "\"Auto-merging <file>\""
-msgstr "--series <fichier>"
+msgstr "\"Fusion automatique de <fichier>\""
 
 #. type: Plain text
 #: en/git-merge-tree.txt:117
@@ -35648,10 +35589,9 @@ msgstr ""
 
 #. type: Title -
 #: en/git-merge-tree.txt:133
-#, fuzzy, no-wrap, priority:100
-#| msgid "NOTES"
+#, no-wrap, priority:100
 msgid "USAGE NOTES"
-msgstr "NOTES"
+msgstr "NOTES D'UTILISATION"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:140
@@ -35743,10 +35683,9 @@ msgstr ""
 
 #. type: Title -
 #: en/git-merge-tree.txt:214
-#, fuzzy, no-wrap, priority:100
-#| msgid "DESCRIPTION"
+#, no-wrap, priority:100
 msgid "DEPRECATED DESCRIPTION"
-msgstr "DESCRIPTION"
+msgstr "DESCRIPTION DÉCONSEILLÉE"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:219
@@ -36819,10 +36758,9 @@ msgstr "Des notes peuvent également être ajoutées aux rustines préparées av
 
 #. type: Plain text
 #: en/git-notes.txt:48
-#, fuzzy, priority:280
-#| msgid "To change which notes are shown by 'git log', see the \"notes.displayRef\" configuration in linkgit:git-log[1]."
+#, priority:280
 msgid "To change which notes are shown by 'git log', see the \"notes.displayRef\" discussion in <<CONFIGURATION>>."
-msgstr "Pour changer les notes qui sont affichées par 'git log', voir la configuration \"notes.displayRef\" dans linkgit:git-log[1]."
+msgstr "Pour changer les notes qui sont affichées par 'git log', voir la discussion sur \"notes.displayRef\" dans <<CONFIGURATION>>."
 
 #. type: Plain text
 #: en/git-notes.txt:51
@@ -42621,10 +42559,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-rebase.txt:242
-#, fuzzy, priority:100
-#| msgid "Working branch; defaults to HEAD."
+#, priority:100
 msgid "Working branch; defaults to `HEAD`."
-msgstr "Branche de travail ; la valeur par défaut est HEAD."
+msgstr "Branche de travail ; la valeur par défaut est `HEAD`."
 
 #. type: Plain text
 #: en/git-rebase.txt:245
@@ -42808,17 +42745,15 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-rebase.txt:393
-#, fuzzy, priority:100
-#| msgid "Be quiet. Implies --no-stat."
+#, priority:100
 msgid "Be quiet. Implies `--no-stat`."
-msgstr "Être silencieux. Implique --no-stat."
+msgstr "Être silencieux. Implique `--no-stat`."
 
 #. type: Plain text
 #: en/git-rebase.txt:397
-#, fuzzy, priority:100
-#| msgid "Be verbose. Implies --stat."
+#, priority:100
 msgid "Be verbose. Implies `--stat`."
-msgstr "Mode bavard. Implique --stat."
+msgstr "Mode bavard. Implique `--stat`."
 
 #. type: Plain text
 #: en/git-rebase.txt:401
@@ -42852,17 +42787,15 @@ msgstr "--verify"
 
 #. type: Plain text
 #: en/git-rebase.txt:412
-#, fuzzy, priority:100
-#| msgid "Perform the merge and commit the result. This option can be used to override --no-commit."
+#, priority:100
 msgid "Allows the pre-rebase hook to run, which is the default.  This option can be used to override `--no-verify`.  See also linkgit:githooks[5]."
-msgstr "Effectuer la fusion et valider le résultat. Cette option peut être utilisée pour passer outre --no-commit."
+msgstr "Permet l'exécution du crochet pre-rebase, qui est la valeur par défaut.  Cette option peut être utilisée pour remplacer `--no-verify`.  Voir aussi linkgit:githooks[5]."
 
 #. type: Plain text
 #: en/git-rebase.txt:418
-#, fuzzy, priority:100
-#| msgid "Ensure at least <n> lines of surrounding context match before and after each change.  When fewer lines of surrounding context exist they all must match.  By default no context is ever ignored."
+#, priority:100
 msgid "Ensure at least `<n>` lines of surrounding context match before and after each change.  When fewer lines of surrounding context exist they all must match.  By default no context is ever ignored.  Implies `--apply`."
-msgstr "S'assurer qu'au moins <n> lignes du contexte environnant correspondent avant et après chaque modification.  Lorsqu'il y a moins de lignes de contexte environnant, elles doivent toutes correspondre.  Par défaut, aucun contexte n'est jamais ignoré."
+msgstr "S'assurer qu'au moins `<n>` lignes du contexte environnant correspondent avant et après chaque modification.  Lorsqu'il y a moins de lignes de contexte environnant, elles doivent toutes correspondre.  Par défaut, aucun contexte n'est jamais ignoré."
 
 #. type: Labeled list
 #: en/git-rebase.txt:421 en/merge-options.txt:47 en/merge-options.txt:62
@@ -42938,10 +42871,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-rebase.txt:468
-#, fuzzy, no-wrap, priority:100
-#| msgid "--merge-base"
+#, no-wrap, priority:100
 msgid "merge backend"
-msgstr "--merge-base"
+msgstr "backend de fusion"
 
 #. type: Plain text
 #: en/git-rebase.txt:473
@@ -42951,10 +42883,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-rebase.txt:478
-#, fuzzy, priority:100
-#| msgid "This flag is passed to the `git log` program (see linkgit:git-log[1]) that generates the patches."
+#, priority:100
 msgid "This flag is passed to the `git apply` program (see linkgit:git-apply[1]) that applies the patch.  Implies `--apply`."
-msgstr "Ce drapeau est passé au programme `git log` (voir linkgit:git-log[1]) qui génère les rustines."
+msgstr "Ce drapeau est passé au programme `git apply` (voir linkgit:git-apply[1]) qui applique la rustine. Implique `--apply`."
 
 #. type: Plain text
 #: en/git-rebase.txt:485
@@ -43420,10 +43351,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-rebase.txt:800
-#, fuzzy, priority:100
-#| msgid "You should understand the implications of using 'git rebase' on a repository that you share.  See also RECOVERING FROM UPSTREAM REBASE below."
+#, priority:100
 msgid "You should understand the implications of using `git rebase` on a repository that you share.  See also RECOVERING FROM UPSTREAM REBASE below."
-msgstr "Vous devriez comprendre les implications de l'utilisation de 'git rebase' sur un dépôt partagé. Voir la section « RATTRAPER UN REBASAGE AMONT » ci-dessous."
+msgstr "Vous devriez comprendre les implications de l'utilisation de `git rebase` sur un dépôt partagé. Voir la section « RATTRAPER UN REBASAGE AMONT » ci-dessous."
 
 #. type: Plain text
 #: en/git-rebase.txt:805
@@ -43433,10 +43363,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-rebase.txt:807
-#, fuzzy, priority:100
-#| msgid "Omitting `<branch>` detaches `HEAD` at the tip of the current branch."
+#, priority:100
 msgid "Upon completion, `<branch>` will be the current branch."
-msgstr "Omettre `<branche>` détache `HEAD` au sommet de la branche actuelle."
+msgstr "Une fois terminé, `<branche>` sera la branche actuelle."
 
 #. type: Plain text
 #: en/git-rebase.txt:814
@@ -66177,17 +66106,15 @@ msgstr "--disk-usage"
 
 #. type: Labeled list
 #: en/rev-list-options.txt:245
-#, fuzzy, no-wrap, priority:260
-#| msgid "--disk-usage"
+#, no-wrap, priority:260
 msgid "--disk-usage=human"
-msgstr "--disk-usage"
+msgstr "--disk-usage=human"
 
 #. type: Plain text
 #: en/rev-list-options.txt:255
-#, fuzzy, priority:260
-#| msgid "Suppress normal output; instead, print the sum of the bytes used for on-disk storage by the selected commits or objects. This is equivalent to piping the output into `git cat-file --batch-check='%(objectsize:disk)'`, except that it runs much faster (especially with `--use-bitmap-index`). See the `CAVEATS` section in linkgit:git-cat-file[1] for the limitations of what \"on-disk storage\" means."
+#, priority:260
 msgid "Suppress normal output; instead, print the sum of the bytes used for on-disk storage by the selected commits or objects. This is equivalent to piping the output into `git cat-file --batch-check='%(objectsize:disk)'`, except that it runs much faster (especially with `--use-bitmap-index`). See the `CAVEATS` section in linkgit:git-cat-file[1] for the limitations of what \"on-disk storage\" means.  With the optional value `human`, on-disk storage size is shown in human-readable string(e.g. 12.24 Kib, 3.50 Mib)."
-msgstr "Supprimer la sortie normale ; afficher plutôt la somme des octets utilisés pour le stockage sur disque par les commits ou les objets sélectionnés. Cela équivaut à envoyer la sortie dans `git cat-file --batch-check='%(objectsize:disk)'`, sauf que cela fonctionne beaucoup plus vite (surtout avec `--use-bitmap-index`). Voir la section `AVERTISSEMENTS` dans linkgit:git-cat-file[1] pour les limitations de ce que signifie \"stockage sur disque\"."
+msgstr "Supprimer la sortie normale ; afficher plutôt la somme des octets utilisés pour le stockage sur disque par les commits ou les objets sélectionnés. Cela équivaut à envoyer la sortie dans `git cat-file --batch-check='%(objectsize:disk)'`, sauf que cela fonctionne beaucoup plus vite (surtout avec `--use-bitmap-index`). Voir la section `AVERTISSEMENTS` dans linkgit:git-cat-file[1] pour les limitations de ce que signifie \"stockage sur disque\". Avec la valeur optionnelle `human`, la taille du stockage sur disque est affichée par une chaîne de caractères lisible par l'homme (par exemple 12,24 Kio, 3,50 Mio)."
 
 #. type: Labeled list
 #: en/rev-list-options.txt:257
@@ -66461,17 +66388,15 @@ msgstr "Option supplémentaire à `--full-history' pour supprimer certaines fusi
 
 #. type: Labeled list
 #: en/rev-list-options.txt:395 en/rev-list-options.txt:576
-#, fuzzy, no-wrap, priority:260
-#| msgid "--ancestry-path"
+#, no-wrap, priority:260
 msgid "--ancestry-path[=<commit>]"
-msgstr "--ancestry-path"
+msgstr "--ancestry-path[=<commit>]"
 
 #. type: Plain text
 #: en/rev-list-options.txt:403
-#, fuzzy, priority:260
-#| msgid "When given a range of commits to display (e.g. 'commit1..commit2' or 'commit2 {caret}commit1'), only display commits that exist directly on the ancestry chain between the 'commit1' and 'commit2', i.e. commits that are both descendants of 'commit1', and ancestors of 'commit2'."
+#, priority:260
 msgid "When given a range of commits to display (e.g. 'commit1..commit2' or 'commit2 {caret}commit1'), only display commits in that range that are ancestors of <commit>, descendants of <commit>, or <commit> itself.  If no commit is specified, use 'commit1' (the excluded part of the range) as <commit>.  Can be passed multiple times; if so, a commit is included if it is any of the commits given or if it is an ancestor or descendant of one of them."
-msgstr "Lorsqu'on lui donne une plage de commits à afficher (par exemple'commit1..commit2' ou'commit2 {caret}commit1'), seuls les commits qui existent directement sur la chaîne des ancêtres entre 'commit1' et 'commit2', c'est-à-dire les commits qui sont à la fois descendants de 'commit1' et ancêtres de 'commit2', sont affichés."
+msgstr "Lorsque l'on donne une plage de commits à afficher (par exemple 'commit1..commit2' ou 'commit2 {caret}commit1'), n'afficher que les commits de cette plage qui sont des ancêtres de <commit>, des descendants de <commit>, ou <commit> lui-même.  Si aucun commit n'est spécifié, utiliser 'commit1' (la partie exclue de la plage) comme <commit>.  Peut être passée plusieurs fois ; si c'est le cas, un commit est inclus s'il est l'un des commits donnés ou s'il est un ancêtre ou un descendant de l'un d'eux."
 
 #. type: Plain text
 #: en/rev-list-options.txt:405
@@ -66777,7 +66702,7 @@ msgstr "Il existe un autre mode de simplification :"
 #: en/rev-list-options.txt:580
 #, priority:260
 msgid "Limit the displayed commits to those which are an ancestor of <commit>, or which are a descendant of <commit>, or are <commit> itself."
-msgstr ""
+msgstr "Limiter les commits affichés à ceux qui sont un ancêtre de <commit>, ou qui sont un descendant de <commit>, ou sont <commit> lui-même."
 
 #. type: Plain text
 #: en/rev-list-options.txt:582
@@ -66833,47 +66758,36 @@ msgstr ""
 #: en/rev-list-options.txt:615
 #, priority:260
 msgid "We can also use `--ancestry-path=D` instead of `--ancestry-path` which means the same thing when applied to the 'D..M' range but is just more explicit."
-msgstr ""
+msgstr "Nous pouvons également utiliser `--ancestry-path=D` au lieu de `--ancestry-path` qui signifie la même chose lorsqu'il est appliqué à la plage 'D..M' mais est juste plus explicite."
 
 #. type: Plain text
 #: en/rev-list-options.txt:620
 #, priority:260
 msgid "If we instead are interested in a given topic within this range, and all commits affected by that topic, we may only want to view the subset of `D..M` which contain that topic in their ancestry path.  So, using `--ancestry-path=H D..M` for example would result in:"
-msgstr ""
+msgstr "Si nous sommes plutôt intéressés par un sujet donné dans cette plage, et tous les commits affectés par ce sujet, nous pouvons seulement vouloir voir ceux du sous-ensemble de `D..M` qui contiennent ce sujet dans leur chemin d'ascendance.  Ainsi, en utilisant `--ancestry-path=H D..M` par exemple, on obtiendrait le résultat suivant :"
 
 #. type: delimited block -
 #: en/rev-list-options.txt:627
-#, fuzzy, no-wrap, priority:260
-#| msgid ""
-#| "\t\tE-------F\n"
-#| "\t\t \\       \\\n"
-#| "\t\t  G---H---I---J\n"
-#| "\t\t\t       \\\n"
-#| "\t\t\t\tL--M\n"
+#, no-wrap, priority:260
 msgid ""
 "\t\tE\n"
 "\t\t \\\n"
 "\t\t  G---H---I---J\n"
 "\t\t\t       \\\n"
 "\t\t\t\tL--M\n"
-msgstr ""
-"\t\tE-------F\n"
-"\t\t \\       \\\n"
-"\t\t  G---H---I---J\n"
-"\t\t\t       \\\n"
-"\t\t\t\tL--M\n"
+msgstr "\t\tE\n\t\t \\\n\t\t  G---H---I---J\n\t\t\t       \\\n\t\t\t\tL--M\n"
 
 #. type: Plain text
 #: en/rev-list-options.txt:630
 #, priority:260
 msgid "Whereas `--ancestry-path=K D..M` would result in"
-msgstr ""
+msgstr "Alors que `--ancestry-path=K D...M` donnerait comme résultat"
 
 #. type: delimited block -
 #: en/rev-list-options.txt:633
 #, no-wrap, priority:260
 msgid "\t\tK---------------L--M\n"
-msgstr ""
+msgstr "\t\tK---------------L--M\n"
 
 #. type: Plain text
 #: en/rev-list-options.txt:637
@@ -66949,8 +66863,7 @@ msgstr ""
 
 #. type: Plain text
 #: en/rev-list-options.txt:691
-#, fuzzy, priority:260
-#| msgid "Here, the merge commits `O` and `P` contribute extra noise, as they did not actually contribute a change to `file.txt`. They only merged a topic that was based on an older version of `file.txt`. This is a common issue in repositories using a workflow where many contributors work in parallel and merge their topic branches along a single trunk: manu unrelated merges appear in the `--full-history` results."
+#, priority:260
 msgid "Here, the merge commits `O` and `P` contribute extra noise, as they did not actually contribute a change to `file.txt`. They only merged a topic that was based on an older version of `file.txt`. This is a common issue in repositories using a workflow where many contributors work in parallel and merge their topic branches along a single trunk: many unrelated merges appear in the `--full-history` results."
 msgstr "Ici, les commits de fusion `O` et `P` apportent un bruit supplémentaire, car ils n'ont pas réellement apporté de modification à `fichier.txt`. Ils ont seulement fusionné une branche thématique qui était basée sur une ancienne version de `fichier.txt`. C'est un problème courant dans les dépôts utilisant une organisation où de nombreux contributeurs travaillent en parallèle et fusionnent leurs branches thématiques le long d'un seul tronc : de nombreuses fusions sans rapport apparaissent dans les résultats de `--full-history`."
 
