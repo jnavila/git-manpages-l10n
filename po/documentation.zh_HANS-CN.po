@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-02-26 14:06+0100\nPO-Revision-Date: 2023-03-17 20:22+0000\nLast-Translator: taotieren <admin@taotieren.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.16.2-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-02-26 14:06+0100\nPO-Revision-Date: 2023-03-25 18:56+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.17-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:769 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:146 en/git-status.txt:31
@@ -69708,13 +69708,13 @@ msgstr "在前面的例子中，我们认为 \"好 \"的提交是 \"坏 \"的提
 #: en/git-bisect-lk2009.txt:769
 #, priority:100
 msgid "Of course the \"bad\" commit cannot be an ancestor of a \"good\" commit, because the ancestors of the good commits are supposed to be \"good\". And all the \"good\" commits must be related to the bad commit.  They cannot be on a branch that has no link with the branch of the \"bad\" commit. But it is possible for a good commit to be related to a bad commit and yet not be neither one of its ancestor nor one of its descendants."
-msgstr ""
+msgstr "当然，\"坏 \"提交不可能是 \"好 \"提交的祖先，因为好提交的祖先应该是 \"好 \"的。而所有 \"好 \"的提交必须与坏的提交有关。  它们不可能在一个与 \"坏 \"提交的分支没有联系的分支上。但是，一个好的提交有可能与一个坏的提交有关系，但既不是它的祖先，也不是它的后代。"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:772
 #, priority:100
 msgid "For example, there can be a \"main\" branch, and a \"dev\" branch that was forked of the main branch at a commit named \"D\" like this:"
-msgstr ""
+msgstr "例如，可以有一个 \"main\"分支和一个 \"dev\"分支，后者是从main分支中提交名为 \"D\"的提交克隆出来的，如下所示："
 
 #. type: delimited block -
 #: en/git-bisect-lk2009.txt:777
@@ -69723,31 +69723,31 @@ msgid ""
 "A-B-C-D-E-F-G  <--main\n"
 "       \\\n"
 "        H-I-J  <--dev\n"
-msgstr ""
+msgstr "A-B-C-D-E-F-G  <--main\n       \\\n        H-I-J  <--dev\n"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:781
 #, priority:100
 msgid "The commit \"D\" is called a \"merge base\" for branch \"main\" and \"dev\" because it's the best common ancestor for these branches for a merge."
-msgstr ""
+msgstr "提交 \"D \"被称为 \"main \"和 \"dev \"分支的 \"合并基础\"，因为它是这些分支可以进行合并的最佳共同祖先。"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:785
 #, priority:100
 msgid "Now let's suppose that commit J is bad and commit G is good and that we apply the bisection algorithm like it has been previously described."
-msgstr ""
+msgstr "现在我们假设提交J是坏的，提交G是好的，并且我们像之前描述的那样应用二分法。"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:789
 #, priority:100
 msgid "As described in step 1) b) of the bisection algorithm, we remove all the ancestors of the good commits because they are supposed to be good too."
-msgstr ""
+msgstr "正如一分为二算法的步骤1）b）所描述的那样，我们移除所有好提交的祖先，因为他们也应该是好的。"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:791
 #, priority:100
 msgid "So we would be left with only:"
-msgstr ""
+msgstr "因此，我们将只剩下："
 
 #. type: delimited block -
 #: en/git-bisect-lk2009.txt:794
@@ -69759,25 +69759,25 @@ msgstr "H-I-J\n"
 #: en/git-bisect-lk2009.txt:798
 #, priority:100
 msgid "But what happens if the first bad commit is \"B\" and if it has been fixed in the \"main\" branch by commit \"F\"?"
-msgstr ""
+msgstr "但如果第一个坏的提交是 \"B\"，而在 \"main\"分支中已经被提交 \"F \"修复，会发生什么？"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:801
 #, priority:100
 msgid "The result of such a bisection would be that we would find that H is the first bad commit, when in fact it's B. So that would be wrong!"
-msgstr ""
+msgstr "这样一分为二后，我们会发现H是第一个坏提交，但实际上第一个坏提交是B，所以这将造成错误的结果！"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:807
 #, priority:100
 msgid "And yes it can happen in practice that people working on one branch are not aware that people working on another branch fixed a bug! It could also happen that F fixed more than one bug or that it is a revert of some big development effort that was not ready to be released."
-msgstr ""
+msgstr "在实践中可能会发生这样的情况：在一个分支上工作的人不知道在另一个分支上工作的人修复了一个bug！也可能发生的情况是，F修复了不止一个bug，或者是对一些尚未准备好发布的大型开发工作进行了恢复。"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:813
 #, priority:100
 msgid "In fact development teams often maintain both a development branch and a maintenance branch, and it would be quite easy for them if \"git bisect\" just worked when they want to bisect a regression on the development branch that is not on the maintenance branch. They should be able to start bisecting using:"
-msgstr ""
+msgstr "事实上，开发团队经常同时维护一个开发分支和一个维护分支，如果 \"git bisect \"只是在他们想对开发分支上的回归进行分流而不在维护分支上的时候发挥作用，那对他们来说会很容易。他们应该可以用以下方法开始二分："
 
 #. type: delimited block -
 #: en/git-bisect-lk2009.txt:816
@@ -69789,13 +69789,13 @@ msgstr "$ git bisect start dev main\n"
 #: en/git-bisect-lk2009.txt:823
 #, priority:100
 msgid "To enable that additional nice feature, when a bisection is started and when some good commits are not ancestors of the bad commit, we first compute the merge bases between the bad and the good commits and we chose these merge bases as the first commits that will be checked out and tested."
-msgstr ""
+msgstr "为了实现这个额外的功能，当一个分界开始，一些好的提交不是坏的提交的祖先时，我们首先计算坏的提交和好的提交之间的合并基数，我们选择这些合并基数作为第一个将被检查和测试的提交。"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:826
 #, priority:100
 msgid "If it happens that one merge base is bad, then the bisection process is stopped with a message like:"
-msgstr ""
+msgstr "如果有一个合并基数是坏的，那么二分过程就会停止，并发出类似的信息："
 
 #. type: delimited block -
 #: en/git-bisect-lk2009.txt:830
@@ -69803,19 +69803,19 @@ msgstr ""
 msgid ""
 "The merge base BBBBBB is bad.\n"
 "This means the bug has been fixed between BBBBBB and [GGGGGG,...].\n"
-msgstr ""
+msgstr "合并基础BBBBB是坏的。\n这意味着BBBBB和[GGGGG,...]之间的错误已经被修复。\n"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:834
 #, ignore-ellipsis, priority:100
 msgid "where BBBBBB is the sha1 hash of the bad merge base and [GGGGGG,...] is a comma separated list of the sha1 of the good commits."
-msgstr ""
+msgstr "其中BBBBBB是坏合并基础的sha1哈希值，[GGGGG,...]是好提交的sha1的逗号分隔列表。"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:838
 #, priority:100
 msgid "If some of the merge bases are skipped, then the bisection process continues, but the following message is printed for each skipped merge base:"
-msgstr ""
+msgstr "如果一些合并基点被跳过，那么二分过程将继续进行，但对于每一个被跳过的合并基点都会打印出以下信息："
 
 #. type: delimited block -
 #: en/git-bisect-lk2009.txt:843
@@ -69824,73 +69824,73 @@ msgid ""
 "Warning: the merge base between BBBBBB and [GGGGGG,...] must be skipped.\n"
 "So we cannot be sure the first bad commit is between MMMMMM and BBBBBB.\n"
 "We continue anyway.\n"
-msgstr ""
+msgstr "警告：BBBBB和[GGGGG,...]之间的合并基数必须被跳过。\n所以我们不能确定第一个坏提交是在MMMMMM和BBBBB之间。\n我们会继续操作。\n"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:848
 #, ignore-ellipsis, priority:100
 msgid "where BBBBBB is the sha1 hash of the bad commit, MMMMMM is the sha1 hash of the merge base that is skipped and [GGGGGG,...] is a comma separated list of the sha1 of the good commits."
-msgstr ""
+msgstr "其中BBBBB是坏提交的sha1哈希值，MMMMM是被跳过的合并基础的sha1哈希值，[GGGGG,...]是好提交的sha1的逗号分隔列表。"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:851
 #, priority:100
 msgid "So if there is no bad merge base, the bisection process continues as usual after this step."
-msgstr ""
+msgstr "因此，如果没有坏的合并基础，在这一步之后，二分过程照常进行。"
 
 #. type: Title -
 #: en/git-bisect-lk2009.txt:853
 #, no-wrap, priority:100
 msgid "Best bisecting practices"
-msgstr ""
+msgstr "最佳的二分做法"
 
 #. type: Title ~
 #: en/git-bisect-lk2009.txt:856
 #, no-wrap, priority:100
 msgid "Using test suites and git bisect together"
-msgstr ""
+msgstr "测试套件和git bisect一起使用"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:863
 #, priority:100
 msgid "If you both have a test suite and use git bisect, then it becomes less important to check that all tests pass after each commit. Though of course it is probably a good idea to have some checks to avoid breaking too many things because it could make bisecting other bugs more difficult."
-msgstr ""
+msgstr "如果你有一个测试套件并使用git bisect，那么在每次提交后检查所有测试是否通过就变得不那么重要。当然，为了避免破坏太多的东西，有一些检查可能是个好的做法，因为这可能会使二分其他bug更加困难。"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:868
 #, priority:100
 msgid "You can focus your efforts to check at a few points (for example rc and beta releases) that all the T test cases pass for all the N configurations. And when some tests don't pass you can use \"git bisect\" (or better \"git bisect run\"). So you should perform roughly:"
-msgstr ""
+msgstr "你可以集中精力在几个点上检查（例如rc和beta版本），所有的T测试用例在所有的N个配置下都能通过。当一些测试没有通过时，你可以使用 \"git bisect\"（当然\"git bisect run\"更好）。所以你应该大致上执行："
 
 #. type: delimited block -
 #: en/git-bisect-lk2009.txt:871
 #, no-wrap, priority:100
 msgid "c * N * T + b * M * log2(M) tests\n"
-msgstr ""
+msgstr "c * N * T + b * M * log2(M) tests\n"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:875
 #, priority:100
 msgid "where c is the number of rounds of test (so a small constant) and b is the ratio of bug per commit (hopefully a small constant too)."
-msgstr ""
+msgstr "其中c是测试的轮数（所以是一个小常数），b是每次提交的bug比例（希望也是一个小常数）。"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:878
 #, priority:100
 msgid "So of course it's much better as it's O(N * T) vs O(N * T * M) if you would test everything after each commit."
-msgstr ""
+msgstr "所以，如果你在每次提交后都测试所有内容，O(N * T)当然比O(N * T * M)要好得多 。"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:883
 #, priority:100
 msgid "This means that test suites are good to prevent some bugs from being committed and they are also quite good to tell you that you have some bugs. But they are not so good to tell you where some bugs have been introduced. To tell you that efficiently, git bisect is needed."
-msgstr ""
+msgstr "这意味着测试套件对于防止一些bug被提交是很好的，它们对于告诉你有一些bug也是很好的。但它们并不能很好地告诉你一些错误是在哪里被引入的。所以需要git bisect告诉你这些信息。"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:890
 #, priority:100
 msgid "The other nice thing with test suites, is that when you have one, you already know how to test for bad behavior. So you can use this knowledge to create a new test case for \"git bisect\" when it appears that there is a regression. So it will be easier to bisect the bug and fix it. And then you can add the test case you just created to your test suite."
-msgstr ""
+msgstr "测试套件的另一个好处是，当你有一个测试套件时，你已经知道如何测试不良行为。因此，当出现类似问题时，你可以使用这些知识来创建一个新的 \"git bisect \"测试案例。这样就能更容易地将bug二分并修复它。然后你就可以把你刚创建的测试用例添加到你的测试套件中。"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:893
