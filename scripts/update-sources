@@ -1,0 +1,15 @@
+#!/usr/bin/python
+
+import shutil
+
+with open('sources.txt') as f:
+    sources = f.read().splitlines()
+    for source in sources:
+        try:
+            shutil.copy2(f"../{source}", f"en/{source}")
+        except FileNotFoundError:
+            print(f"File not found: {source}")
+        except shutil.SameFileError:
+            print(f"File is the same: {source}")
+
+shutil.copy2("../../GIT-VERSION-FILE", ".")
