@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+import glob
+
+with open('po4a.conf', 'w') as f:
+    f.write('[po4a_langs]')
+    langs = [ l[17:-3] for l in glob.glob('po/documentation.*.po')]
+    langs.sort()
+    f.write(' '.join(langs))
+    f.write('\n[po4a_paths] po/documentation.pot $lang:po/documentation.$lang.po\n[options] opt: " -k 80"\n')
+    with open('sources.txt', 'r') as sources:
+        for source in sources:
+            source = source.strip()
+            f.write(f"[type: asciidoc] en/{source} $lang:./$lang/{source}")
+            if source.startswith('git'):
+                f.write(' add_$lang:?addenda/addendum.$lang.txt\n')
+            else:
+                f.write('\n')
