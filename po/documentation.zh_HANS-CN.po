@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-02-26 14:06+0100\nPO-Revision-Date: 2023-04-27 02:33+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.18-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-02-26 14:06+0100\nPO-Revision-Date: 2023-05-02 00:50+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.18-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:769 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:146 en/git-status.txt:31
@@ -13207,7 +13207,7 @@ msgstr "注意在 \"git rebase \"和 \"git pull --rebase \"过程中，\"ours\"�
 #: en/git-checkout.txt:147
 #, priority:240
 msgid "This is because `rebase` is used in a workflow that treats the history at the remote as the shared canonical one, and treats the work done on the branch you are rebasing as the third-party work to be integrated, and you are temporarily assuming the role of the keeper of the canonical history during the rebase.  As the keeper of the canonical history, you need to view the history from the remote as `ours` (i.e. \"our shared canonical history\"), while what you did on your side branch as `theirs` (i.e. \"one contributor's work on top of it\")."
-msgstr ""
+msgstr "这是因为 \"rebase\"在工作流程中使用，它将远程的历史视为共享的规范历史，并将在你重命名的分支上所做的工作视为需要整合的第三方工作，而你在重命名过程中暂时承担了规范历史守护者的角色。 作为规范历史的守护者，你需要将远程的历史视为 \"ours\"（即 \"我们共享的规范历史\"），而将你在侧边分支上的工作视为 \"their\"（即 \"一个贡献者在上面所作的工作\"）。"
 
 #. type: Labeled list
 #: en/git-checkout.txt:148 en/git-worktree.txt:179
@@ -13219,37 +13219,37 @@ msgstr "-b <new-branch>"
 #: en/git-checkout.txt:152
 #, priority:240
 msgid "Create a new branch named `<new-branch>`, start it at `<start-point>`, and check the resulting branch out; see linkgit:git-branch[1] for details."
-msgstr ""
+msgstr "创建一个名为\"<新分支>\"的新分支，从\"<起点>\"开始，并检出产生的分支；详情见 linkgit:git-branch[1]。"
 
 #. type: Labeled list
 #: en/git-checkout.txt:153 en/git-worktree.txt:180
 #, no-wrap, priority:240
 msgid "-B <new-branch>"
-msgstr ""
+msgstr "-B <新分支>"
 
 #. type: Plain text
 #: en/git-checkout.txt:159
 #, priority:240
 msgid "Creates the branch `<new-branch>`, start it at `<start-point>`; if it already exists, then reset it to `<start-point>`. And then check the resulting branch out.  This is equivalent to running \"git branch\" with \"-f\" followed by \"git checkout\" of that branch; see linkgit:git-branch[1] for details."
-msgstr ""
+msgstr "从`<起点>`开始，创建分支`<新分支>`；如果分支已经存在，则重置为`<起点>`。然后检出生成的分支。这相当于用 \"-f\"选项 运行 \"git branch\" ，然后用 \"git checkout\" 检出该分支；详见 linkgit:git-branch[1]。"
 
 #. type: Plain text
 #: en/git-checkout.txt:164
 #, priority:240
 msgid "When creating a new branch, set up \"upstream\" configuration. See \"--track\" in linkgit:git-branch[1] for details."
-msgstr ""
+msgstr "创建新分支时，要设置 \"上游\"配置。详情见 linkgit:git-branch[1] 中的 \"--track\"。"
 
 #. type: Plain text
 #: en/git-checkout.txt:174
 #, priority:240
 msgid "If no `-b` option is given, the name of the new branch will be derived from the remote-tracking branch, by looking at the local part of the refspec configured for the corresponding remote, and then stripping the initial part up to the \"*\".  This would tell us to use `hack` as the local branch when branching off of `origin/hack` (or `remotes/origin/hack`, or even `refs/remotes/origin/hack`).  If the given name has no slash, or the above guessing results in an empty name, the guessing is aborted.  You can explicitly give a name with `-b` in such a case."
-msgstr ""
+msgstr "如果没有给出`-b`选项，新分支的名称将从远程跟踪分支中推导出来，方法是查看为相应的远程配置引用规范的本地部分，然后剥离初始部分，直至 \"*\"。由上述可得出，在从`origin/hack`（或`remotes/origin/hack`，甚至`refs/remotes/origin/hack`）分支时，将使用`hack`作为本地分支。如果给定的名字没有斜线，或者上述推测的结果是一个空名，则会终止推测。在这种情况下，你可以用`-b`明确地给出一个名字。"
 
 #. type: Plain text
 #: en/git-checkout.txt:178 en/git-switch.txt:172
 #, priority:240
 msgid "Do not set up \"upstream\" configuration, even if the `branch.autoSetupMerge` configuration variable is true."
-msgstr ""
+msgstr "不设置 \"上游 \"配置，即使`branch.autoSetupMerge`配置变量为true。"
 
 #. type: Labeled list
 #: en/git-checkout.txt:179 en/git-switch.txt:87
@@ -13267,31 +13267,31 @@ msgstr "--no-guess"
 #: en/git-checkout.txt:184 en/git-switch.txt:92
 #, priority:240
 msgid "If `<branch>` is not found but there does exist a tracking branch in exactly one remote (call it `<remote>`) with a matching name, treat as equivalent to"
-msgstr ""
+msgstr "如果没有找到`<分支>`，但确实有一个远程分支（称为`<远程分支>`）的跟踪分支存在，且名称匹配，则视为等同于"
 
 #. type: Plain text
 #: en/git-checkout.txt:197 en/git-switch.txt:104
 #, priority:240
 msgid "If the branch exists in multiple remotes and one of them is named by the `checkout.defaultRemote` configuration variable, we'll use that one for the purposes of disambiguation, even if the `<branch>` isn't unique across all remotes. Set it to e.g. `checkout.defaultRemote=origin` to always checkout remote branches from there if `<branch>` is ambiguous but exists on the 'origin' remote. See also `checkout.defaultRemote` in linkgit:git-config[1]."
-msgstr ""
+msgstr "如果该分支存在于多个远程，并且其中一个是由`checkout.defaultRemote`配置变量命名的，为了消除歧义，我们将使用该变量，即使`<分支>`在所有远程中并不唯一。将其设置为例如 `checkout.defaultRemote=origin`，以便在`<分支>`不明确但存在于'origin'远程时，总是从那里签出远程分支。参见 linkgit:git-config[1] 中的 `checkout.defaultRemote`。"
 
 #. type: Plain text
 #: en/git-checkout.txt:199 en/git-switch.txt:106
 #, priority:240
 msgid "`--guess` is the default behavior. Use `--no-guess` to disable it."
-msgstr ""
+msgstr "`--guess`是默认行为。使用`--no-guess`来禁用它。"
 
 #. type: Plain text
 #: en/git-checkout.txt:202 en/git-switch.txt:109
 #, priority:240
 msgid "The default behavior can be set via the `checkout.guess` configuration variable."
-msgstr ""
+msgstr "默认行为可以通过`checkout.guess`配置变量设置。"
 
 #. type: Plain text
 #: en/git-checkout.txt:206
 #, priority:240
 msgid "Create the new branch's reflog; see linkgit:git-branch[1] for details."
-msgstr ""
+msgstr "创建新分支的引用日志；详见 linkgit:git-branch[1]。"
 
 #. type: Labeled list
 #: en/git-checkout.txt:208 en/git-daemon.txt:156 en/git-switch.txt:82 en/git-worktree.txt:189
@@ -13303,7 +13303,7 @@ msgstr "--detach"
 #: en/git-checkout.txt:214
 #, priority:240
 msgid "Rather than checking out a branch to work on it, check out a commit for inspection and discardable experiments.  This is the default behavior of `git checkout <commit>` when `<commit>` is not a branch name.  See the \"DETACHED HEAD\" section below for details."
-msgstr ""
+msgstr "与其签出一个分支来工作，不如签出一个提交来进行检查和可放弃的实验。当`<提交>`不是一个分支名时， 这是`git checkout <提交>`的默认行为，。 详见下面的 \"游离状态（DETACHED HEAD）\"部分。"
 
 #. type: Labeled list
 #: en/git-checkout.txt:215 en/git-switch.txt:173
@@ -13315,31 +13315,31 @@ msgstr "--orphan <new-branch>"
 #: en/git-checkout.txt:221
 #, priority:240
 msgid "Create a new 'orphan' branch, named `<new-branch>`, started from `<start-point>` and switch to it.  The first commit made on this new branch will have no parents and it will be the root of a new history totally disconnected from all the other branches and commits."
-msgstr ""
+msgstr "从\"<起点>\"开始，创建一个新的 \"孤儿\"分支，命名为\"<新分支>\"，并切换到该分支。 在这个新分支上的第一次提交将没有父分支，它将是一个新的历史起点，与所有其他的分支和提交完全断开。"
 
 #. type: Plain text
 #: en/git-checkout.txt:226
 #, priority:240
 msgid "The index and the working tree are adjusted as if you had previously run `git checkout <start-point>`.  This allows you to start a new history that records a set of paths similar to `<start-point>` by easily running `git commit -a` to make the root commit."
-msgstr ""
+msgstr "索引和工作区的调整就像你之前运行`git checkout <起点>`一样。 这允许你轻松地通过运行`git commit -a`来启动一个新的历史，记录一组类似于`<新起点>`的路径，进行根提交。"
 
 #. type: Plain text
 #: en/git-checkout.txt:232
 #, priority:240
 msgid "This can be useful when you want to publish the tree from a commit without exposing its full history. You might want to do this to publish an open source branch of a project whose current tree is \"clean\", but whose full history contains proprietary or otherwise encumbered bits of code."
-msgstr ""
+msgstr "当你想发布一个提交树而不暴露其完整的历史时，这就很有用。你可能想这样做来发布一个项目的开源分支，这个分支的当前树是 \"干净的\"，但其完整的历史包含了专有的或其他一些代码。"
 
 #. type: Plain text
 #: en/git-checkout.txt:239
 #, priority:240
 msgid "If you want to start a disconnected history that records a set of paths that is totally different from the one of `<start-point>`, then you should clear the index and the working tree right after creating the orphan branch by running `git rm -rf .` from the top level of the working tree.  Afterwards you will be ready to prepare your new files, repopulating the working tree, by copying them from elsewhere, extracting a tarball, etc."
-msgstr ""
+msgstr "如果你想启动一个断开的历史，记录一组完全不同于`<起点>`的路径，那么你应该在创建孤儿分支后立即清除索引和工作区，从工作区的顶层运行`git rm -rf .`。 之后你就可以准备你的新文件了，重新填充工作区，办法是从其他地方复制它们，提取一个包，等等。"
 
 #. type: Plain text
 #: en/git-checkout.txt:245
 #, priority:240
 msgid "In sparse checkout mode, `git checkout -- <paths>` would update only entries matched by `<paths>` and sparse patterns in `$GIT_DIR/info/sparse-checkout`. This option ignores the sparse patterns and adds back any files in `<paths>`."
-msgstr ""
+msgstr "在稀疏签出模式下，`git checkout -- <路径>`将只更新由`<路径>`和`$GIT_DIR/info/sparse-checkout`中的稀疏模式匹配的条目。这个选项忽略了稀疏模式，并添加回`<路径>`中的任何文件。"
 
 #. type: Labeled list
 #: en/git-checkout.txt:247 en/git-rebase.txt:364 en/git-rebase.txt:649 en/git-reset.txt:76 en/git-restore.txt:87 en/git-submodule.txt:369 en/git-svn.txt:676 en/git-switch.txt:122 en/rev-list-options.txt:335
@@ -13351,25 +13351,25 @@ msgstr "--merge"
 #: en/git-checkout.txt:256
 #, priority:240
 msgid "When switching branches, if you have local modifications to one or more files that are different between the current branch and the branch to which you are switching, the command refuses to switch branches in order to preserve your modifications in context.  However, with this option, a three-way merge between the current branch, your working tree contents, and the new branch is done, and you will be on the new branch."
-msgstr ""
+msgstr "在切换分支时，如果你对一个或多个文件的本地修改在当前分支和你要切换的分支之间是不同的，命令会拒绝切换分支，以保留你的修改内容。 然而，使用这个选项后，就会在当前分支、你的工作区内容和新的分支之间进行三方合并，之后，你会处于新分支。"
 
 #. type: Plain text
 #: en/git-checkout.txt:261 en/git-switch.txt:135
 #, priority:240
 msgid "When a merge conflict happens, the index entries for conflicting paths are left unmerged, and you need to resolve the conflicts and mark the resolved paths with `git add` (or `git rm` if the merge should result in deletion of the path)."
-msgstr ""
+msgstr "当合并冲突发生时，冲突路径的索引条目会被留下，你需要解决冲突，并用`git add`标记已解决的路径（如果合并应导致删除路径，则用`git rm`）。"
 
 #. type: Plain text
 #: en/git-checkout.txt:264
 #, priority:240
 msgid "When checking out paths from the index, this option lets you recreate the conflicted merge in the specified paths."
-msgstr ""
+msgstr "当从索引中检查出路径时，这个选项让你在指定的路径中重新创建冲突的合并。"
 
 #. type: Plain text
 #: en/git-checkout.txt:266
 #, priority:240
 msgid "When switching branches with `--merge`, staged changes may be lost."
-msgstr ""
+msgstr "当用`--merge`切换分支时，可能会丢失阶段性修改。"
 
 #. type: Labeled list
 #: en/git-checkout.txt:267 en/git-restore.txt:91 en/git-switch.txt:136
@@ -13388,19 +13388,19 @@ msgstr "与上面的 `--merge` 选项相同，但改变了冲突块的显示方�
 #: en/git-checkout.txt:279
 #, priority:240
 msgid "Interactively select hunks in the difference between the `<tree-ish>` (or the index, if unspecified) and the working tree.  The chosen hunks are then applied in reverse to the working tree (and if a `<tree-ish>` was specified, the index)."
-msgstr ""
+msgstr "在`<树状对象>`（或索引，如果没有指定）和工作区之间的差异中，交互式地选择目标。 选择的目标会被反向应用到工作区上（如果指定了`<树状对象>`，则是索引）。"
 
 #. type: Plain text
 #: en/git-checkout.txt:283
 #, priority:240
 msgid "This means that you can use `git checkout -p` to selectively discard edits from your current working tree. See the ``Interactive Mode'' section of linkgit:git-add[1] to learn how to operate the `--patch` mode."
-msgstr ""
+msgstr "这意味着你可以使用 `git checkout -p` 来有选择地丢弃当前工作区上的编辑内容。参见 linkgit:git-add[1] 的 \"互动模式''部分，了解`--patch`模式如何操作。"
 
 #. type: Plain text
 #: en/git-checkout.txt:286
 #, priority:240
 msgid "Note that this option uses the no overlay mode by default (see also `--overlay`), and currently doesn't support overlay mode."
-msgstr ""
+msgstr "注意，这个选项默认使用无覆盖模式（另见`--overlay`），目前不支持覆盖模式。"
 
 #. type: Labeled list
 #: en/git-checkout.txt:287 en/git-switch.txt:177
@@ -13412,7 +13412,7 @@ msgstr "--ignore-other-worktrees"
 #: en/git-checkout.txt:292
 #, priority:240
 msgid "`git checkout` refuses when the wanted ref is already checked out by another worktree. This option makes it check the ref out anyway. In other words, the ref can be held by more than one worktree."
-msgstr ""
+msgstr "`git checkout`在想要的引用已经被另一个工作区签出时拒绝。这个选项让它无论如何都要签出这个引用。换句话说，这个引用可能被多个工作区持有。"
 
 #. type: Labeled list
 #: en/git-checkout.txt:293 en/git-merge.txt:96
@@ -13430,13 +13430,13 @@ msgstr "--no-overwrite-ignore"
 #: en/git-checkout.txt:298
 #, priority:240
 msgid "Silently overwrite ignored files when switching branches. This is the default behavior. Use `--no-overwrite-ignore` to abort the operation when the new branch contains ignored files."
-msgstr ""
+msgstr "在切换分支时静默地覆盖被忽略的文件。这是默认行为。使用 `--no-overwrite-ignore` 可以在新的分支包含被忽略的文件时中止操作。"
 
 #. type: Plain text
 #: en/git-checkout.txt:308
 #, priority:240
 msgid "Using `--recurse-submodules` will update the content of all active submodules according to the commit recorded in the superproject. If local modifications in a submodule would be overwritten the checkout will fail unless `-f` is used. If nothing (or `--no-recurse-submodules`)  is used, submodules working trees will not be updated.  Just like linkgit:git-submodule[1], this will detach `HEAD` of the submodule."
-msgstr ""
+msgstr "使用`--recurse-submodules`将根据父项目的提交记录更新所有活动的子模块的内容。如果子模块中的本地修改会被覆盖，除非使用`-f`，则会签出将失败。如果什么都不使用（或`--no-recurse-submodules`），子模块的工作区将不会被更新。  就像linkgit:git-submodule[1]，这将分离子模块的`HEAD`。"
 
 #. type: Labeled list
 #: en/git-checkout.txt:309 en/git-restore.txt:121
@@ -13454,7 +13454,7 @@ msgstr "--no-overlay"
 #: en/git-checkout.txt:316
 #, priority:240
 msgid "In the default overlay mode, `git checkout` never removes files from the index or the working tree.  When specifying `--no-overlay`, files that appear in the index and working tree, but not in `<tree-ish>` are removed, to make them match `<tree-ish>` exactly."
-msgstr ""
+msgstr "在默认的覆盖模式下，`git checkout`不会从索引或工作区中删除文件。  当指定`--no-overlay`时，出现在索引和工作区中，但不在`<树状对象>`中的文件会被删除，以使它们与`<树状对象>`完全匹配。"
 
 #. type: Labeled list
 #: en/git-checkout.txt:330 en/git-rebase.txt:282 en/git-switch.txt:36
@@ -13466,37 +13466,37 @@ msgstr "<branch>"
 #: en/git-checkout.txt:336
 #, priority:240
 msgid "Branch to checkout; if it refers to a branch (i.e., a name that, when prepended with \"refs/heads/\", is a valid ref), then that branch is checked out. Otherwise, if it refers to a valid commit, your `HEAD` becomes \"detached\" and you are no longer on any branch (see below for details)."
-msgstr ""
+msgstr "签出的分支；如果它指的是一个分支（即一个名字，在前面加上 \"refs/heads/\"时，是一个有效的 引用），那么这个分支就被签出。否则，如果它指的是一个有效的提交，你的`HEAD`就会\"分离\"，此时，你就不再在任何一个分支上了（详见下文）。"
 
 #. type: Plain text
 #: en/git-checkout.txt:340
 #, priority:240
 msgid "You can use the `@{-N}` syntax to refer to the N-th last branch/commit checked out using \"git checkout\" operation. You may also specify `-` which is synonymous to `@{-1}`."
-msgstr ""
+msgstr "你可以使用`@{-N}`语法来指代使用 \"git checkout \"操作检查出来的第N个最后的分支或是提交。你也可以指定`-`，它与`@{-1}`同义。"
 
 #. type: Plain text
 #: en/git-checkout.txt:344 en/git-switch.txt:58
 #, ignore-ellipsis, priority:240
 msgid "As a special case, you may use `A...B` as a shortcut for the merge base of `A` and `B` if there is exactly one merge base. You can leave out at most one of `A` and `B`, in which case it defaults to `HEAD`."
-msgstr ""
+msgstr "作为一种特殊情况，如果正好有一个合并基础，你可以使用`A...B`作为`A`和`B`的合并基础的快捷方式。你最多可以省略在`A`和`B`中默认为`HEAD`的一个分支。"
 
 #. type: Labeled list
 #: en/git-checkout.txt:345 en/git-switch.txt:39
 #, no-wrap, priority:240
 msgid "<new-branch>"
-msgstr ""
+msgstr "<新分支>"
 
 #. type: Plain text
 #: en/git-checkout.txt:347 en/git-switch.txt:41
 #, priority:240
 msgid "Name for the new branch."
-msgstr ""
+msgstr "新分支的名称。"
 
 #. type: Plain text
 #: en/git-checkout.txt:351
 #, priority:240
 msgid "The name of a commit at which to start the new branch; see linkgit:git-branch[1] for details. Defaults to `HEAD`."
-msgstr ""
+msgstr "启动新分支的提交名称；详见 linkgit:git-branch[1]。默认为 `HEAD`。"
 
 #. type: Plain text
 #: en/git-checkout.txt:355 en/git-checkout.txt:363 en/git-restore.txt:47
@@ -13508,7 +13508,7 @@ msgstr "作为一种特殊情况，如果正好有一个合并基数，你可以
 #: en/git-checkout.txt:359
 #, priority:240
 msgid "Tree to checkout from (when paths are given). If not specified, the index will be used."
-msgstr ""
+msgstr "签出的树（当路径给定时）。如果没有指定，将使用索引。"
 
 #. type: Plain text
 #: en/git-checkout.txt:369 en/git-reset.txt:133 en/git-restore.txt:146
@@ -13526,13 +13526,13 @@ msgstr "更多细节请参见 linkgit:gitglossary[7] 中的 '路径规范' 条�
 #: en/git-checkout.txt:373
 #, no-wrap, priority:240
 msgid "DETACHED HEAD"
-msgstr ""
+msgstr "游离状态（DETACHED HEAD）"
 
 #. type: Plain text
 #: en/git-checkout.txt:377
 #, priority:240
 msgid "`HEAD` normally refers to a named branch (e.g. `master`). Meanwhile, each branch refers to a specific commit. Let's look at a repo with three commits, one of them tagged, and with branch `master` checked out:"
-msgstr ""
+msgstr "`HEAD`通常指的是一个分支的引用（例如`master`）。同时，每个分支指的是一个特定的提交。让我们看看一个有三个提交的仓库，其中一个被标记了，并且分支`master`被检出："
 
 #. type: delimited block -
 #: en/git-checkout.txt:386
@@ -13545,13 +13545,13 @@ msgid ""
 "    ^\n"
 "    |\n"
 "  tag 'v2.0' (refers to commit 'b')\n"
-msgstr ""
+msgstr "           HEAD（'master'分支的引用）\n            |\n            v\na---b---c  branch 'master'（'c' 提交的引用）\n    ^\n    |\n  tag 'v2.0' （'b' 提交的引用）\n"
 
 #. type: Plain text
 #: en/git-checkout.txt:393
 #, priority:240
 msgid "When a commit is created in this state, the branch is updated to refer to the new commit. Specifically, 'git commit' creates a new commit `d`, whose parent is commit `c`, and then updates branch `master` to refer to new commit `d`. `HEAD` still refers to branch `master` and so indirectly now refers to commit `d`:"
-msgstr ""
+msgstr "当在这种状态下创建一个提交时，分支会被更新以引用新的提交。具体来说，'git commit'创建了一个新的提交`d`，其父级是提交`c`，然后更新分支`master`以引用新的提交`d`。`HEAD'仍指向`master'，所以现在间接地指向提交`d`："
 
 #. type: delimited block -
 #: en/git-checkout.txt:396 en/git-checkout.txt:431 en/git-checkout.txt:448
@@ -13570,13 +13570,13 @@ msgid ""
 "    ^\n"
 "    |\n"
 "  tag 'v2.0' (refers to commit 'b')\n"
-msgstr ""
+msgstr "               HEAD （指向'master'分支）\n                |\n                v\na---b---c---d  分支'master' （指向提交'd'）\n    ^\n    |\n  tag 'v2.0' (指向提交'b')\n"
 
 #. type: Plain text
 #: en/git-checkout.txt:410
 #, priority:240
 msgid "It is sometimes useful to be able to checkout a commit that is not at the tip of any named branch, or even to create a new commit that is not referenced by a named branch. Let's look at what happens when we checkout commit `b` (here we show two ways this may be done):"
-msgstr ""
+msgstr "有时能够签出一个不在任何命名分支顶端的提交，甚至创建一个不被命名分支引用的新提交，是很有用的。让我们来看看当我们签出提交 `b`时会发生什么（这里我们展示了两种方法）："
 
 #. type: delimited block -
 #: en/git-checkout.txt:414
@@ -13599,13 +13599,13 @@ msgid ""
 "    ^\n"
 "    |\n"
 "  tag 'v2.0' (refers to commit 'b')\n"
-msgstr ""
+msgstr "   HEAD （指向提交'b'）\n    |\n    v\na---b---c---d  分支'master'（指向提交'd'）\n    ^\n    |\n  tag 'v2.0' (指向提交'b')\n"
 
 #. type: Plain text
 #: en/git-checkout.txt:428
 #, priority:240
 msgid "Notice that regardless of which checkout command we use, `HEAD` now refers directly to commit `b`. This is known as being in detached `HEAD` state.  It means simply that `HEAD` refers to a specific commit, as opposed to referring to a named branch. Let's see what happens when we create a commit:"
-msgstr ""
+msgstr "请注意，无论我们使用哪条结账命令，`HEAD`现在都直接指向提交`b`。这就是所谓的分离的`HEAD'状态。  这意味着，`HEAD`指向一个特定的提交，而不是指向一个命名的分支。让我们看看创建提交时发生了什么："
 
 #. type: delimited block -
 #: en/git-checkout.txt:441
@@ -13620,13 +13620,13 @@ msgid ""
 "    ^\n"
 "    |\n"
 "  tag 'v2.0' (refers to commit 'b')\n"
-msgstr ""
+msgstr "     HEAD （指向提交'e'）\n      |\n      v\n      e\n     /\na---b---c---d  branch 'master' （指向提交'd'）\n    ^\n    |\n  tag 'v2.0' （指向提交'b'）\n"
 
 #. type: Plain text
 #: en/git-checkout.txt:445
 #, priority:240
 msgid "There is now a new commit `e`, but it is referenced only by `HEAD`. We can of course add yet another commit in this state:"
-msgstr ""
+msgstr "现在有一个新的提交`e`，但它只被`HEAD`所引用。当然，我们可以在这个状态下再增加一个提交："
 
 #. type: delimited block -
 #: en/git-checkout.txt:458
@@ -13641,13 +13641,13 @@ msgid ""
 "    ^\n"
 "    |\n"
 "  tag 'v2.0' (refers to commit 'b')\n"
-msgstr ""
+msgstr "\t HEAD（指向提交'f'）。\n\t  |\n\t  v\n      e--f\n     /\na--b--c--d 分支\"master\"（指向提交'd'）。\n    ^\n    |\n  tag 'v2.0'（指向提交'b'）。\n"
 
 #. type: Plain text
 #: en/git-checkout.txt:462
 #, priority:240
 msgid "In fact, we can perform all the normal Git operations. But, let's look at what happens when we then checkout `master`:"
-msgstr ""
+msgstr "事实上，我们可以执行所有正常的 Git 操作。但是，让我们看看当我们签出`master`时会发生什么："
 
 #. type: delimited block -
 #: en/git-checkout.txt:465
@@ -13666,13 +13666,13 @@ msgid ""
 "    ^\n"
 "    |\n"
 "  tag 'v2.0' (refers to commit 'b')\n"
-msgstr ""
+msgstr "               HEAD（指向分支 'master'）\n      e---f     |\n     /          v\na---b---c---d  branch 'master' （指向提交 'd'）\n    ^\n    |\n  tag 'v2.0' (指向提交 'b')\n"
 
 #. type: Plain text
 #: en/git-checkout.txt:480
 #, priority:240
 msgid "It is important to realize that at this point nothing refers to commit `f`. Eventually commit `f` (and by extension commit `e`) will be deleted by the routine Git garbage collection process, unless we create a reference before that happens. If we have not yet moved away from commit `f`, any of these will create a reference to it:"
-msgstr ""
+msgstr "重要的是要意识到，在这一点上，没有任何引用是指向提交`f`的。最终，提交 `f`（以及提交 `e`）会被 Git 的例行垃圾回收程序删除，除非我们在这之前创建一个引用。如果我们还没有离开提交 `f`，以下任何一个操作都会创建一个对它的引用："
 
 #. type: delimited block -
 #: en/git-checkout.txt:485
@@ -13690,25 +13690,25 @@ msgstr ""
 #: en/git-checkout.txt:490
 #, priority:240
 msgid "creates a new branch `foo`, which refers to commit `f`, and then updates `HEAD` to refer to branch `foo`. In other words, we'll no longer be in detached `HEAD` state after this command."
-msgstr ""
+msgstr "创建一个新的分支`foo`，指向提交`f`，然后更新`HEAD`，指向分支`foo`。换句话说，这条命令之后，我们将不再处于分离的`HEAD`状态。"
 
 #. type: Plain text
 #: en/git-checkout.txt:493
 #, priority:240
 msgid "similarly creates a new branch `foo`, which refers to commit `f`, but leaves `HEAD` detached."
-msgstr ""
+msgstr "类似的，创建一个新的分支`foo`，它指向提交`f`，但将`HEAD`分离出来。"
 
 #. type: Plain text
 #: en/git-checkout.txt:496
 #, priority:240
 msgid "creates a new tag `foo`, which refers to commit `f`, leaving `HEAD` detached."
-msgstr ""
+msgstr "创建一个新的标签`foo`，指向提交`f`，让`HEAD`处于分离状态。"
 
 #. type: Plain text
 #: en/git-checkout.txt:501
 #, priority:240
 msgid "If we have moved away from commit `f`, then we must first recover its object name (typically by using git reflog), and then we can create a reference to it. For example, to see the last two commits to which `HEAD` referred, we can use either of these commands:"
-msgstr ""
+msgstr "如果我们已经离开了`f'的提交，那么我们必须首先恢复它的对象名称（通常使用git reflog），然后我们可以创建一个对它的引用。例如，要查看`HEAD`指向的最后两个提交，我们可以使用以下任一命令："
 
 #. type: delimited block -
 #: en/git-checkout.txt:505
@@ -13722,21 +13722,21 @@ msgstr ""
 
 #. type: Title -
 #: en/git-checkout.txt:508
-#, no-wrap, priority:240
+#, fuzzy, no-wrap, priority:240
 msgid "ARGUMENT DISAMBIGUATION"
-msgstr ""
+msgstr "论点消歧"
 
 #. type: Plain text
 #: en/git-checkout.txt:518
 #, priority:240
 msgid "When there is only one argument given and it is not `--` (e.g. `git checkout abc`), and when the argument is both a valid `<tree-ish>` (e.g. a branch `abc` exists) and a valid `<pathspec>` (e.g. a file or a directory whose name is \"abc\" exists), Git would usually ask you to disambiguate.  Because checking out a branch is so common an operation, however, `git checkout abc` takes \"abc\" as a `<tree-ish>` in such a situation.  Use `git checkout -- <pathspec>` if you want to checkout these paths out of the index."
-msgstr ""
+msgstr "当只有一个参数且不是`--`时（例如`git checkout abc`），当参数既是有效的`<树状对象>`（例如分支`abc`存在）又是有效的`<路径规范>`（例如文件或目录的名称为 \"abc \"存在），Git通常会要求你进行区分。  因为签出分支是很常见的操作，`git checkout abc`在这种情况下把 \"abc \"作为`<树状对象>`。  如果你想从索引中签出这些路径，请使用`git checkout --<路径规范>`。"
 
 #. type: Plain text
 #: en/git-checkout.txt:525
 #, priority:240
 msgid "The following sequence checks out the `master` branch, reverts the `Makefile` to two revisions back, deletes `hello.c` by mistake, and gets it back from the index."
-msgstr ""
+msgstr "下面的序列检查了 \"master \"分支，将 \"Makefile \"恢复到两个修订版，错误地删除了 \"hello.c\"，并从索引中取回它。"
 
 #. type: delimited block -
 #: en/git-checkout.txt:531
@@ -13756,7 +13756,7 @@ msgstr ""
 #: en/git-checkout.txt:534
 #, priority:240
 msgid "switch branch"
-msgstr ""
+msgstr "选择分支"
 
 #. type: Plain text
 #: en/git-checkout.txt:535 en/git-restore.txt:164
@@ -13768,13 +13768,13 @@ msgstr "将一个文件从另一个提交中取出"
 #: en/git-checkout.txt:536
 #, priority:240
 msgid "restore `hello.c` from the index"
-msgstr ""
+msgstr "从索引中恢复`hello.c`"
 
 #. type: Plain text
 #: en/git-checkout.txt:539
 #, priority:240
 msgid "If you want to check out _all_ C source files out of the index, you can say"
-msgstr ""
+msgstr "如果你想从索引中检出_所有_的C源文件，你可以这样"
 
 #. type: delimited block -
 #: en/git-checkout.txt:542
@@ -13786,13 +13786,13 @@ msgstr "$ git checkout -- '*.c'\n"
 #: en/git-checkout.txt:548
 #, priority:240
 msgid "Note the quotes around `*.c`.  The file `hello.c` will also be checked out, even though it is no longer in the working tree, because the file globbing is used to match entries in the index (not in the working tree by the shell)."
-msgstr ""
+msgstr "注意 `*.c `周围的引号。  文件`hello.c`也将被检出，尽管它已经不在工作树中了，因为文件通配符被用来匹配索引中的条目（不是工作区中的shell）。"
 
 #. type: Plain text
 #: en/git-checkout.txt:552
 #, priority:240
 msgid "If you have an unfortunate branch that is named `hello.c`, this step would be confused as an instruction to switch to that branch.  You should instead write:"
-msgstr ""
+msgstr "如果不幸你有一个分支被命名为 \"hello.c\"，这一步会误认为切换到该分支的指令。  你应该这样写："
 
 #. type: delimited block -
 #: en/git-checkout.txt:555
@@ -13804,7 +13804,7 @@ msgstr "$ git checkout -- hello.c\n"
 #: en/git-checkout.txt:559 en/git-switch.txt:203
 #, priority:240
 msgid "After working in the wrong branch, switching to the correct branch would be done using:"
-msgstr ""
+msgstr "在错误的分支工作后，切换到正确的分支将使用："
 
 #. type: delimited block -
 #: en/git-checkout.txt:562
@@ -13816,7 +13816,7 @@ msgstr "$ git checkout mytopic\n"
 #: en/git-checkout.txt:567
 #, priority:240
 msgid "However, your \"wrong\" branch and correct `mytopic` branch may differ in files that you have modified locally, in which case the above checkout would fail like this:"
-msgstr ""
+msgstr "然而，你的 \"错误\"分支和正确的`mytopic`分支可能在你本地修改的文件中存在差异，在这种情况下，上述检出会失败，像这样："
 
 #. type: delimited block -
 #: en/git-checkout.txt:571
@@ -13832,7 +13832,7 @@ msgstr ""
 #: en/git-checkout.txt:575 en/git-switch.txt:219
 #, priority:240
 msgid "You can give the `-m` flag to the command, which would try a three-way merge:"
-msgstr ""
+msgstr "你可以给命令加上 `-m`标志，这样就可以尝试三方合并了："
 
 #. type: delimited block -
 #: en/git-checkout.txt:579
@@ -13848,13 +13848,13 @@ msgstr ""
 #: en/git-checkout.txt:584 en/git-switch.txt:228
 #, priority:240
 msgid "After this three-way merge, the local modifications are _not_ registered in your index file, so `git diff` would show you what changes you made since the tip of the new branch."
-msgstr ""
+msgstr "在这个三方合并之后，本地的修改并「没有」登记在你的索引文件中，所以`git diff`会显示你在新分支的提示下做了哪些修改。"
 
 #. type: Plain text
 #: en/git-checkout.txt:587
 #, priority:240
 msgid "When a merge conflict happens during switching branches with the `-m` option, you would see something like this:"
-msgstr ""
+msgstr "当使用`-m`选项切换分支时发生合并冲突，你会看到类似这样的情况："
 
 #. type: delimited block -
 #: en/git-checkout.txt:593
@@ -13874,7 +13874,7 @@ msgstr ""
 #: en/git-checkout.txt:599
 #, priority:240
 msgid "At this point, `git diff` shows the changes cleanly merged as in the previous example, as well as the changes in the conflicted files.  Edit and resolve the conflict and mark it resolved with `git add` as usual:"
-msgstr ""
+msgstr "在这一点上，`git diff`显示了与前面的例子一样干净地合并的修改，以及冲突文件中的修改。  编辑并解决冲突，让后像往常一样用`git add`标记已解决："
 
 #. type: delimited block -
 #: en/git-checkout.txt:603
@@ -26101,7 +26101,7 @@ msgstr ""
 #: en/git-fmt-merge-msg.txt:27 en/merge-options.txt:93
 #, no-wrap, priority:240
 msgid "--log[=<n>]"
-msgstr ""
+msgstr "--log[=<n>]"
 
 #. type: Plain text
 #: en/git-fmt-merge-msg.txt:33
@@ -26277,7 +26277,7 @@ msgstr ""
 #: en/git-for-each-ref.txt:64 en/git-tag.txt:129
 #, priority:240
 msgid "Respect any colors specified in the `--format` option. The `<when>` field must be one of `always`, `never`, or `auto` (if `<when>` is absent, behave as if `always` was given)."
-msgstr ""
+msgstr "尊重`--format`选项中指定的任何颜色。`<什么时候>`字段必须是`always`、`never`或`auto`之一（如果没有`<什么时候>`，则表现为`always`）。"
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:65
@@ -29473,7 +29473,7 @@ msgstr ""
 #: en/git-gui.txt:31 en/git-p4.txt:63 en/git-remote.txt:44 en/git-rerere.txt:32 en/git-shell.txt:25 en/git-stash.txt:51 en/git-submodule.txt:33 en/git-svn.txt:29 en/git-worktree.txt:65
 #, no-wrap, priority:240
 msgid "COMMANDS"
-msgstr ""
+msgstr "命令"
 
 #. type: Labeled list
 #: en/git-gui.txt:32
@@ -35085,55 +35085,55 @@ msgstr "git-mergetool - Run merge conflict resolution tools to resolve merge con
 #: en/git-mergetool.txt:12
 #, ignore-ellipsis, no-wrap, priority:240
 msgid "'git mergetool' [--tool=<tool>] [-y | --[no-]prompt] [<file>...]\n"
-msgstr ""
+msgstr "'git mergetool' [--tool=<工具>] [-y |-[no-]prompt] [<文件>...] 。\n"
 
 #. type: Plain text
 #: en/git-mergetool.txt:18
 #, priority:240
 msgid "Use `git mergetool` to run one of several merge utilities to resolve merge conflicts.  It is typically run after 'git merge'."
-msgstr ""
+msgstr "使用`git mergetool`来运行几个合并工具中的一个来解决合并冲突。  它通常在 \"git merge \"之后运行。"
 
 #. type: Plain text
 #: en/git-mergetool.txt:24
 #, priority:240
 msgid "If one or more <file> parameters are given, the merge tool program will be run to resolve differences on each file (skipping those without conflicts).  Specifying a directory will include all unresolved files in that path.  If no <file> names are specified, 'git mergetool' will run the merge tool program on every file with merge conflicts."
-msgstr ""
+msgstr "如果给出一个或多个<文件>参数，合并工具程序会运行以解决每个文件的差异（跳过那些没有冲突的文件）。  指定一个目录将包括该路径中所有未解决的文件。  如果没有指定<文件>名称，'git mergetool'将对每个有合并冲突的文件运行合并工具程序。"
 
 #. type: Plain text
 #: en/git-mergetool.txt:33
 #, priority:240
 msgid "Use the merge resolution program specified by <tool>.  Valid values include emerge, gvimdiff, kdiff3, meld, vimdiff, and tortoisemerge. Run `git mergetool --tool-help` for the list of valid <tool> settings."
-msgstr ""
+msgstr "使用由<工具>指定的合并解决程序。  有效值包括 emerge、gvimdiff、kdiff3、meld、vimdiff 和 tortoisemerge。运行`git mergetool --tool-help`以获得有效的<工具>设置列表。"
 
 #. type: Plain text
 #: en/git-mergetool.txt:38
 #, priority:240
 msgid "If a merge resolution program is not specified, 'git mergetool' will use the configuration variable `merge.tool`.  If the configuration variable `merge.tool` is not set, 'git mergetool' will pick a suitable default."
-msgstr ""
+msgstr "如果没有指定合并解决程序，'git mergetool'将使用配置变量`merge.tool`。  如果配置变量`merge.tool`没有设置，'git mergetool'将自行挑选一个合适的程序。"
 
 #. type: Plain text
 #: en/git-mergetool.txt:44
 #, priority:240
 msgid "You can explicitly provide a full path to the tool by setting the configuration variable `mergetool.<tool>.path`. For example, you can configure the absolute path to kdiff3 by setting `mergetool.kdiff3.path`. Otherwise, 'git mergetool' assumes the tool is available in PATH."
-msgstr ""
+msgstr "你可以通过设置配置变量`mergetool.<工具>.path`来明确提供工具的完整路径。例如，你可以通过设置`mergetool.kdiff3.path`来配置kdiff3的绝对路径。否则，\"git mergetool\"会假定该工具在PATH中配置过。"
 
 #. type: Plain text
 #: en/git-mergetool.txt:49
 #, priority:240
 msgid "Instead of running one of the known merge tool programs, 'git mergetool' can be customized to run an alternative program by specifying the command line to invoke in a configuration variable `mergetool.<tool>.cmd`."
-msgstr ""
+msgstr "通过在配置变量`mergetool.<工具>.cmd`中指定调用的命令行，'git mergetool'可以代替运行一个已知的合并工具程序，从而指定运行另一个程序。"
 
 #. type: Plain text
 #: en/git-mergetool.txt:60
 #, priority:240
 msgid "When 'git mergetool' is invoked with this tool (either through the `-t` or `--tool` option or the `merge.tool` configuration variable) the configured command line will be invoked with `$BASE` set to the name of a temporary file containing the common base for the merge, if available; `$LOCAL` set to the name of a temporary file containing the contents of the file on the current branch; `$REMOTE` set to the name of a temporary file containing the contents of the file to be merged, and `$MERGED` set to the name of the file to which the merge tool should write the result of the merge resolution."
-msgstr ""
+msgstr "当'git mergetool'与该工具一起被调用时（通过`-t`或`--tool`选项或`merge.tool`配置变量），配置的命令行将被调用，`$BASE`被设置为临时文件的名称，包含合并的共同基础（如果有的话）；`$LOCAL`被设置为包含当前分支上的文件内容的临时文件名称；`$REMOTE`被设置为包含要合并文件内容的临时文件名称，以及合并工具应该将合并的结果写入`$MERGED`设置的文件中。"
 
 #. type: Plain text
 #: en/git-mergetool.txt:66
 #, priority:240
 msgid "If the custom merge tool correctly indicates the success of a merge resolution with its exit code, then the configuration variable `mergetool.<tool>.trustExitCode` can be set to `true`.  Otherwise, 'git mergetool' will prompt the user to indicate the success of the resolution after the custom tool has exited."
-msgstr ""
+msgstr "如果自定义合并工具能够正确地用其退出代码指示合并成功，那么配置变量`mergetool.<工具>.trustExitCode`可以被设置为`true`。  否则，'git mergetool'将在用户在自定义工具退出后表明解决成功。"
 
 #. type: Plain text
 #: en/git-mergetool.txt:69
@@ -35145,13 +35145,13 @@ msgstr "打印出可以和\"--tool\"命令一起使用的merge工具列表。"
 #: en/git-mergetool.txt:77
 #, priority:240
 msgid "Don't prompt before each invocation of the merge resolution program.  This is the default if the merge resolution program is explicitly specified with the `--tool` option or with the `merge.tool` configuration variable."
-msgstr ""
+msgstr "在每次调用合并解决程序之前不会提示。  如果用`--tool`选项或`merge.tool`配置变量明确指定了合并解决程序，默认就是这种做法。"
 
 #. type: Plain text
 #: en/git-mergetool.txt:81
 #, priority:240
 msgid "Prompt before each invocation of the merge resolution program to give the user a chance to skip the path."
-msgstr ""
+msgstr "在每次调用合并解决程序前提示，让用户有机会跳过该路径。"
 
 #. type: Labeled list
 #: en/git-mergetool.txt:83
@@ -35163,7 +35163,7 @@ msgstr "--gui"
 #: en/git-mergetool.txt:89
 #, priority:240
 msgid "When 'git-mergetool' is invoked with the `-g` or `--gui` option the default merge tool will be read from the configured `merge.guitool` variable instead of `merge.tool`. If `merge.guitool` is not set, we will fallback to the tool configured under `merge.tool`."
-msgstr ""
+msgstr "当'git-mergetool'以`-g`或`--gui`选项调用时，默认的合并工具将从配置的`merge.guitool`变量读取，而不是`merge.tool`。如果`merge.guitool`没有设置，git将会使用`merge.tool`配置的工具。"
 
 #. type: Labeled list
 #: en/git-mergetool.txt:90
@@ -35175,37 +35175,37 @@ msgstr "--no-gui"
 #: en/git-mergetool.txt:94
 #, priority:240
 msgid "This overrides a previous `-g` or `--gui` setting and reads the default merge tool will be read from the configured `merge.tool` variable."
-msgstr ""
+msgstr "这将覆盖之前的`-g`或`-gui`设置，并将从配置的`merge.tool`变量读取默认的合并工具。"
 
 #. type: Plain text
 #: en/git-mergetool.txt:101
 #, priority:240
 msgid "Process files in the order specified in the <orderfile>, which has one shell glob pattern per line.  This overrides the `diff.orderFile` configuration variable (see linkgit:git-config[1]).  To cancel `diff.orderFile`, use `-O/dev/null`."
-msgstr ""
+msgstr "按照 <顺序文件> 中指定的顺序处理文件，每行有一个 shell匹配模式。  这会覆盖 `diff.orderFile` 配置的变量（见 linkgit:git-config[1]）。  可以使用使用 `-O/dev/null`取消 `diff.orderFile`。"
 
 #. type: Title -
 #: en/git-mergetool.txt:111
 #, no-wrap, priority:240
 msgid "TEMPORARY FILES"
-msgstr ""
+msgstr "临时文件"
 
 #. type: Plain text
 #: en/git-mergetool.txt:115
 #, priority:240
 msgid "`git mergetool` creates `*.orig` backup files while resolving merges.  These are safe to remove once a file has been merged and its `git mergetool` session has completed."
-msgstr ""
+msgstr "`git mergetool`在解决合并问题时创建`*.orig`备份文件。  一旦文件被合并，并且其`git mergetool`会话完成，这些文件就可以安全地删除。"
 
 #. type: Plain text
 #: en/git-mergetool.txt:119
 #, priority:240
 msgid "Setting the `mergetool.keepBackup` configuration variable to `false` causes `git mergetool` to automatically remove the backup as files are successfully merged."
-msgstr ""
+msgstr "将`mergetool.keepBackup`配置变量设置为`false`会使`git mergetool`在文件成功合并后自动删除备份。"
 
 #. type: Title -
 #: en/git-mergetool.txt:121
-#, no-wrap, priority:240
+#, fuzzy, no-wrap, priority:240
 msgid "BACKEND SPECIFIC HINTS"
-msgstr ""
+msgstr "后端特定提示"
 
 #. type: Plain text
 #: en/git-mergetool.txt:124 en/mergetools-merge.txt:29
@@ -35725,7 +35725,7 @@ msgstr "git-merge - Join two or more development histories together"
 
 #. type: Plain text
 #: en/git-merge.txt:18
-#, ignore-ellipsis, no-wrap, priority:240
+#, fuzzy, ignore-ellipsis, no-wrap, priority:240
 msgid ""
 "'git merge' [-n] [--stat] [--no-commit] [--squash] [--[no-]edit]\n"
 "\t[--no-verify] [-s <strategy>] [-X <strategy-option>] [-S[<keyid>]]\n"
@@ -35733,19 +35733,19 @@ msgid ""
 "\t[--[no-]rerere-autoupdate] [-m <msg>] [-F <file>]\n"
 "\t[--into-name <branch>] [<commit>...]\n"
 "'git merge' (--continue | --abort | --quit)\n"
-msgstr ""
+msgstr "'git merge' [-n] [-stat] [--no-commit] [--squash] [--[no-]edit] [--[no-] edit\n\t[--no-verify] [-s <strategy>] [-X <strategy-option>] [-S[<keyid>]] 。\n\t[--[no-]allow-unrelated-histories] [--[no-]allow-unrelated-histories]。\n\t[--[no-]reer-autoupdate] [-m <msg>] [-F <file>] 。\n\t[--into-name <branch>] [<commit>...］\n'git merge' (--continue |-abort |-quit)\n"
 
 #. type: Plain text
 #: en/git-merge.txt:26
 #, priority:240
 msgid "Incorporates changes from the named commits (since the time their histories diverged from the current branch) into the current branch.  This command is used by 'git pull' to incorporate changes from another repository and can be used by hand to merge changes from one branch into another."
-msgstr ""
+msgstr "将指定的提交内容（从它们的历史与当前分支相分离时起）并入当前分支。  这条命令被 \"git pull \"用来合并另一个仓库的改动，也可以用手将一个分支的改动合并到另一个分支。"
 
 #. type: Plain text
 #: en/git-merge.txt:29 en/git-pull.txt:43
 #, priority:240
 msgid "Assume the following history exists and the current branch is \"`master`\":"
-msgstr ""
+msgstr "假设存在以下历史，且当前分支为\"`master`\"："
 
 #. type: delimited block -
 #: en/git-merge.txt:34
@@ -35754,13 +35754,13 @@ msgid ""
 "\t  A---B---C topic\n"
 "\t /\n"
 "    D---E---F---G master\n"
-msgstr ""
+msgstr "\t  A---B---C topic\n\t /\n    D---E---F---G master\n"
 
 #. type: Plain text
 #: en/git-merge.txt:42
 #, priority:240
 msgid "Then \"`git merge topic`\" will replay the changes made on the `topic` branch since it diverged from `master` (i.e., `E`) until its current commit (`C`) on top of `master`, and record the result in a new commit along with the names of the two parent commits and a log message from the user describing the changes. Before the operation, `ORIG_HEAD` is set to the tip of the current branch (`C`)."
-msgstr ""
+msgstr "然后\"`git merge topic`\"将重现`topic`分支从`master`（即`E`）分流到`master`之上的当前提交（`C`）所做的修改，并将结果与两个父提交的名称和用户描述修改的日志信息一起记录在一个新提交中。在操作之前，`ORIG_HEAD`被设置为当前分支（`C`）的顶端。"
 
 #. type: delimited block -
 #: en/git-merge.txt:47
@@ -35769,13 +35769,13 @@ msgid ""
 "\t  A---B---C topic\n"
 "\t /         \\\n"
 "    D---E---F---G---H master\n"
-msgstr ""
+msgstr "\t  A---B---C topic\n\t /         \\\n    D---E---F---G---H master\n"
 
 #. type: Plain text
 #: en/git-merge.txt:56
 #, priority:240
 msgid "The second syntax (\"`git merge --abort`\") can only be run after the merge has resulted in conflicts. 'git merge --abort' will abort the merge process and try to reconstruct the pre-merge state. However, if there were uncommitted changes when the merge started (and especially if those changes were further modified after the merge was started), 'git merge --abort' will in some cases be unable to reconstruct the original (pre-merge) changes. Therefore:"
-msgstr ""
+msgstr "第二种语法（\"`git merge --abort`\"）只能在合并导致冲突后运行。\"git merge --abort\"将中止合并过程，并尝试重建合并前的状态。然而，如果合并开始时有未提交的修改（特别是如果这些修改在合并开始后被进一步修改），'git merge --abort'在某些情况下将无法重建原始（合并前）修改。因此："
 
 #. type: Plain text
 #: en/git-merge.txt:60
@@ -35784,25 +35784,25 @@ msgid ""
 "*Warning*: Running 'git merge' with non-trivial uncommitted changes is\n"
 "discouraged: while possible, it may leave you in a state that is hard to\n"
 "back out of in the case of a conflict.\n"
-msgstr ""
+msgstr "*警告*：在非重要的未提交的修改中运行 \"git merge \"是不可取的。\n不鼓励这样做：虽然有可能，但它可能会让你处于一个很难在冲突中恢复的状态。\n并且如果发生冲突的话会处于一个很难退出的状态。\n"
 
 #. type: Plain text
 #: en/git-merge.txt:63
 #, priority:240
 msgid "The third syntax (\"`git merge --continue`\") can only be run after the merge has resulted in conflicts."
-msgstr ""
+msgstr "第三种语法（\"`git merge --continue`\"）只能在合并导致冲突后运行。"
 
 #. type: Plain text
 #: en/git-merge.txt:73
 #, priority:240
 msgid "Set the commit message to be used for the merge commit (in case one is created)."
-msgstr ""
+msgstr "设置用于合并提交的提交信息（如果创建了一个的话）。"
 
 #. type: Plain text
 #: en/git-merge.txt:76 en/git-merge.txt:93
 #, priority:240
 msgid "If `--log` is specified, a shortlog of the commits being merged will be appended to the specified message."
-msgstr ""
+msgstr "如果指定了`--log`，正在合并的提交的简短日志将被附加到指定的消息中。"
 
 #. type: Plain text
 #: en/git-merge.txt:80
@@ -35814,31 +35814,31 @@ msgstr "The 'git fmt-merge-msg' command can be used to give a good default for a
 #: en/git-merge.txt:85
 #, priority:240
 msgid "Prepare the default merge message as if merging to the branch `<branch>`, instead of the name of the real branch to which the merge is made."
-msgstr ""
+msgstr "准备默认的合并信息，就像合并到分支`<分支>`一样，而不是真正要合并的分支名称。"
 
 #. type: Plain text
 #: en/git-merge.txt:90
 #, priority:240
 msgid "Read the commit message to be used for the merge commit (in case one is created)."
-msgstr ""
+msgstr "读取用于合并提交的提交信息（如果创建了）。"
 
 #. type: Plain text
 #: en/git-merge.txt:100
 #, priority:240
 msgid "Silently overwrite ignored files from the merge result. This is the default behavior. Use `--no-overwrite-ignore` to abort."
-msgstr ""
+msgstr "默认会静默地覆盖合并结果中被忽略的文件。使用`--no-overwrite-ignore`来终止。"
 
 #. type: Plain text
 #: en/git-merge.txt:105
 #, priority:240
 msgid "Abort the current conflict resolution process, and try to reconstruct the pre-merge state. If an autostash entry is present, apply it to the worktree."
-msgstr ""
+msgstr "中止当前的冲突解决过程，并尝试重建合并前的状态。工作区会自动应用自动存储条目。"
 
 #. type: Plain text
 #: en/git-merge.txt:110
 #, priority:240
 msgid "If there were uncommitted worktree changes present when the merge started, 'git merge --abort' will in some cases be unable to reconstruct these changes. It is therefore recommended to always commit or stash your changes before running 'git merge'."
-msgstr ""
+msgstr "如果合并开始时有未提交的工作区变化，'git merge --abort'在某些情况下将无法重现这些变化。因此，建议在运行'git merge'之前，一定要提交或储存你的修改。"
 
 #. type: Plain text
 #: en/git-merge.txt:116
@@ -35850,157 +35850,157 @@ msgstr "'git merge --abort' is equivalent to 'git reset --merge' when `MERGE_HEA
 #: en/git-merge.txt:121
 #, priority:240
 msgid "Forget about the current merge in progress. Leave the index and the working tree as-is. If `MERGE_AUTOSTASH` is present, the stash entry will be saved to the stash list."
-msgstr ""
+msgstr "忘记当前正在进行的合并。让索引和工作区保持原样。如果`MERGE_AUTOSTASH`存在，储藏库条目将被保存到储藏库列表。"
 
 #. type: Plain text
 #: en/git-merge.txt:126
 #, priority:240
 msgid "After a 'git merge' stops due to conflicts you can conclude the merge by running 'git merge --continue' (see \"HOW TO RESOLVE CONFLICTS\" section below)."
-msgstr ""
+msgstr "在 \"git merge \"因冲突而停止后，你可以通过运行 \"git merge --continue \"来结束当前合并（见下文 \"如何解决冲突\"部分）。"
 
 #. type: Plain text
 #: en/git-merge.txt:131
 #, priority:240
 msgid "Commits, usually other branch heads, to merge into our branch.  Specifying more than one commit will create a merge with more than two parents (affectionately called an Octopus merge)."
-msgstr ""
+msgstr "提交，通常是其他分支负责人，合并到我们的分支中。 指定多个提交将创建具有两个以上父项的合并（亲切地称为八爪/多路合并）。"
 
 #. type: Plain text
 #: en/git-merge.txt:135
 #, priority:240
 msgid "If no commit is given from the command line, merge the remote-tracking branches that the current branch is configured to use as its upstream.  See also the configuration section of this manual page."
-msgstr ""
+msgstr "如果命令行没有给出提交，则合并当前分支被配置为上游的远程跟踪分支。  参见本手册页的配置部分。"
 
 #. type: Plain text
 #: en/git-merge.txt:139
 #, priority:240
 msgid "When `FETCH_HEAD` (and no other commit) is specified, the branches recorded in the `.git/FETCH_HEAD` file by the previous invocation of `git fetch` for merging are merged to the current branch."
-msgstr ""
+msgstr "当指定`FETCH_HEAD`（没有其他提交）时，之前调用 `git fetch`进行合并时记录在`.git/FETCH_HEAD`文件中的分支会被合并到当前分支。"
 
 #. type: Title -
 #: en/git-merge.txt:142
 #, no-wrap, priority:240
 msgid "PRE-MERGE CHECKS"
-msgstr ""
+msgstr "合并前检查"
 
 #. type: Plain text
 #: en/git-merge.txt:150
 #, priority:240
 msgid "Before applying outside changes, you should get your own work in good shape and committed locally, so it will not be clobbered if there are conflicts.  See also linkgit:git-stash[1].  'git pull' and 'git merge' will stop without doing anything when local uncommitted changes overlap with files that 'git pull'/'git merge' may need to update."
-msgstr ""
+msgstr "在应用外部的修改之前，你应该把自己的工作做好，并在本地提交，这样在有冲突的时候就不会被打乱了。  参见 linkgit:git-stash[1]。  \"git pul \"和 \"git merge \"会在本地未提交的修改与 \"git pull\"/\"git merge \"可能需要更新的文件重叠时会不做任何操作，立即停止。"
 
 #. type: Plain text
 #: en/git-merge.txt:156
 #, priority:240
 msgid "To avoid recording unrelated changes in the merge commit, 'git pull' and 'git merge' will also abort if there are any changes registered in the index relative to the `HEAD` commit.  (Special narrow exceptions to this rule may exist depending on which merge strategy is in use, but generally, the index must match HEAD.)"
-msgstr ""
+msgstr "为了避免在合并提交中记录不相关的变化，'git pull'和'git merge'也会在相对于`HEAD`提交的索引中存在任何变化时中止。  (根据使用的合并策略，这一规则可能存在特殊的狭义例外，但一般来说，索引必须与HEAD相匹配。)"
 
 #. type: Plain text
 #: en/git-merge.txt:159
 #, priority:240
 msgid "If all named commits are already ancestors of `HEAD`, 'git merge' will exit early with the message \"Already up to date.\""
-msgstr ""
+msgstr "如果所有命名的提交都已经是`HEAD`的祖先，'git merge'将提前退出，提示 \"已经是最新的。\""
 
 #. type: Title -
 #: en/git-merge.txt:161
 #, no-wrap, priority:240
 msgid "FAST-FORWARD MERGE"
-msgstr ""
+msgstr "快进式合并"
 
 #. type: Plain text
 #: en/git-merge.txt:171
 #, priority:240
 msgid "Often the current branch head is an ancestor of the named commit.  This is the most common case especially when invoked from 'git pull': you are tracking an upstream repository, you have committed no local changes, and now you want to update to a newer upstream revision.  In this case, a new commit is not needed to store the combined history; instead, the `HEAD` (along with the index) is updated to point at the named commit, without creating an extra merge commit."
-msgstr ""
+msgstr "通常情况下，当前的分支头是指定提交的祖先。  这是最常见的情况，特别是当从'git pull'调用时：你正在跟踪一个上游仓库，你没有提交本地的修改，现在你想更新到一个更新的上游版本。  在这种情况下，不需要新的提交来存储合并历史；相反，`HEAD`（连同索引）被更新为指向指定的提交，而不需要创建额外的合并提交。"
 
 #. type: Plain text
 #: en/git-merge.txt:173
 #, priority:240
 msgid "This behavior can be suppressed with the `--no-ff` option."
-msgstr ""
+msgstr "这种行为可以通过`--no-ff`选项来抑制。"
 
 #. type: Title -
 #: en/git-merge.txt:175
 #, no-wrap, priority:240
 msgid "TRUE MERGE"
-msgstr ""
+msgstr "正确的合并"
 
 #. type: Plain text
 #: en/git-merge.txt:180
 #, priority:240
 msgid "Except in a fast-forward merge (see above), the branches to be merged must be tied together by a merge commit that has both of them as its parents."
-msgstr ""
+msgstr "除了快进合并（见上文），被合并的分支必须由一个以它们两个为父分支的合并提交捆绑在一起。"
 
 #. type: Plain text
 #: en/git-merge.txt:185
 #, priority:240
 msgid "A merged version reconciling the changes from all branches to be merged is committed, and your `HEAD`, index, and working tree are updated to it.  It is possible to have modifications in the working tree as long as they do not overlap; the update will preserve them."
-msgstr ""
+msgstr "一个调和了所有要合并的分支的修改的合并版本被提交，你的`HEAD`、索引和工作区将更新到这个版本。  在工作区中可以有一些修改，只要它们不重叠；更新将保留这些修改。"
 
 #. type: Plain text
 #: en/git-merge.txt:188
 #, priority:240
 msgid "When it is not obvious how to reconcile the changes, the following happens:"
-msgstr ""
+msgstr "当不清楚如何调和这些变化时，就会发生以下情况："
 
 #. type: Plain text
 #: en/git-merge.txt:190
 #, priority:240
 msgid "The `HEAD` pointer stays the same."
-msgstr ""
+msgstr "`HEAD`的指针保持不变。"
 
 #. type: Plain text
 #: en/git-merge.txt:191
 #, priority:240
 msgid "The `MERGE_HEAD` ref is set to point to the other branch head."
-msgstr ""
+msgstr "`MERGE_HEAD`参数被设置为指向另一个分支头部。"
 
 #. type: Plain text
 #: en/git-merge.txt:193
 #, priority:240
 msgid "Paths that merged cleanly are updated both in the index file and in your working tree."
-msgstr ""
+msgstr "合并干净的路径在索引文件和你的工作区中都更新了。"
 
 #. type: Plain text
 #: en/git-merge.txt:199
 #, priority:240
 msgid "For conflicting paths, the index file records up to three versions: stage 1 stores the version from the common ancestor, stage 2 from `HEAD`, and stage 3 from `MERGE_HEAD` (you can inspect the stages with `git ls-files -u`).  The working tree files contain the result of the \"merge\" program; i.e. 3-way merge results with familiar conflict markers `<<<` `===` `>>>`."
-msgstr ""
+msgstr "对于冲突的路径，索引文件最多记录三个版本：第1阶段存储来自共同祖先的版本，第2阶段来自`HEAD`，第3阶段来自`MERGE_HEAD`（你可以用`git ls-files -u`检查这些阶段）。  工作区文件包含了\"合并\"程序的结果；即带有熟悉的冲突标记`<<<` `===``>>>`的三方合并结果。"
 
 #. type: Plain text
 #: en/git-merge.txt:203
 #, priority:240
 msgid "No other changes are made.  In particular, the local modifications you had before you started merge will stay the same and the index entries for them stay as they were, i.e. matching `HEAD`."
-msgstr ""
+msgstr "没有其他变化。  特别是，你在开始合并之前的本地修改将保持不变，它们的索引条目保持原样，即匹配`HEAD`。"
 
 #. type: Plain text
 #: en/git-merge.txt:206
 #, priority:240
 msgid "If you tried a merge which resulted in complex conflicts and want to start over, you can recover with `git merge --abort`."
-msgstr ""
+msgstr "如果你尝试的合并导致了复杂的冲突，并想重新开始，你可以用`git merge --abort`恢复。"
 
 #. type: Title -
 #: en/git-merge.txt:208
 #, no-wrap, priority:240
 msgid "MERGING TAG"
-msgstr ""
+msgstr "合并标签"
 
 #. type: Plain text
 #: en/git-merge.txt:215
 #, priority:240
 msgid "When merging an annotated (and possibly signed) tag, Git always creates a merge commit even if a fast-forward merge is possible, and the commit message template is prepared with the tag message.  Additionally, if the tag is signed, the signature check is reported as a comment in the message template. See also linkgit:git-tag[1]."
-msgstr ""
+msgstr "当合并一个有注释的（可能是有签名的）标签时，即使可以进行快速合并，Git也会创建一个合并提交，并且会一起准备提交消息模板和标签消息。  此外，如果标签有签名，签名检查会在消息模板中作为注释报告。参见 linkgit:git-tag[1]。"
 
 #. type: Plain text
 #: en/git-merge.txt:219
 #, priority:240
 msgid "When you want to just integrate with the work leading to the commit that happens to be tagged, e.g. synchronizing with an upstream release point, you may not want to make an unnecessary merge commit."
-msgstr ""
+msgstr "当你只想与恰好被标记的提交的工作整合时，比如说与上游发布点同步，你可能不想做一个不必要的合并提交。"
 
 #. type: Plain text
 #: en/git-merge.txt:223
 #, priority:240
 msgid "In such a case, you can \"unwrap\" the tag yourself before feeding it to `git merge`, or pass `--ff-only` when you do not have any work on your own. e.g."
-msgstr ""
+msgstr "在这种情况下，你可以在把标签送入`git merge`之前自己 \"解包\"，或者在自己没有任何工作的时候设置`--ff-only`，如下例。"
 
 #. type: delimited block -
 #: en/git-merge.txt:228
@@ -36009,25 +36009,25 @@ msgid ""
 "git fetch origin\n"
 "git merge v1.2.3^0\n"
 "git merge --ff-only v1.2.3\n"
-msgstr ""
+msgstr "git fetch origin\ngit merge v1.2.3^0\ngit merge --ff-only v1.2.3\n"
 
 #. type: Title -
 #: en/git-merge.txt:232
-#, no-wrap, priority:240
+#, fuzzy, no-wrap, priority:240
 msgid "HOW CONFLICTS ARE PRESENTED"
-msgstr ""
+msgstr "冲突是如何出现的"
 
 #. type: Plain text
 #: en/git-merge.txt:241
 #, priority:240
 msgid "During a merge, the working tree files are updated to reflect the result of the merge.  Among the changes made to the common ancestor's version, non-overlapping ones (that is, you changed an area of the file while the other side left that area intact, or vice versa) are incorporated in the final result verbatim.  When both sides made changes to the same area, however, Git cannot randomly pick one side over the other, and asks you to resolve it by leaving what both sides did to that area."
-msgstr ""
+msgstr "在合并过程中，工作区文件被更新以反映合并的结果。  在对共同祖先的版本所做的修改中，非重叠的修改（即你改变了文件的某个区域，而另一方则保留了该区域，反之亦然）会被逐字纳入最终结果中。  然而，当双方都对同一区域进行了修改时，Git不能随机地选择一方而不是另一方，而是要求你通过保留双方对该区域的修改来解决这个问题。"
 
 #. type: Plain text
 #: en/git-merge.txt:244
 #, priority:240
 msgid "By default, Git uses the same style as the one used by the \"merge\" program from the RCS suite to present such a conflicted hunk, like this:"
-msgstr ""
+msgstr "默认情况下，Git使用与RCS套件中的 \"merge\"程序相同的样式来呈现这样一个有冲突的大块，像这样："
 
 #. type: delimited block -
 #: en/git-merge.txt:256
@@ -36043,25 +36043,25 @@ msgid ""
 "Git makes conflict resolution easy.\n"
 ">>>>>>> theirs:sample.txt\n"
 "And here is another line that is cleanly resolved or unmodified.\n"
-msgstr ""
+msgstr "这里是与共同的祖先相比没有变化的行。\n祖先没有变化，或者因为只有一方发生了变化而得到干净的解决、\n或者因为两边都有相同的变化而被干净地解决了。\n<<<<<<< yours:sample.txt\n冲突的解决是困难的；\n让我们去购物吧。\n=======\nGit让冲突解决变得简单。\n>>>>>>> theirs:sample.txt\n而这里是另一行干净利落的解决或未修改的内容。\n"
 
 #. type: Plain text
 #: en/git-merge.txt:261
 #, priority:240
 msgid "The area where a pair of conflicting changes happened is marked with markers `<<<<<<<`, `=======`, and `>>>>>>>`.  The part before the `=======` is typically your side, and the part afterwards is typically their side."
-msgstr ""
+msgstr "发生一对冲突变化的区域被标记为`<<<<<<<`、`=======`和`>>>>>>>`。  `=======`之前的部分通常是你做的修改，而之后的部分通常是别人的修改。"
 
 #. type: Plain text
 #: en/git-merge.txt:267
 #, priority:240
 msgid "The default format does not show what the original said in the conflicting area.  You cannot tell how many lines are deleted and replaced with Barbie's remark on your side.  The only thing you can tell is that your side wants to say it is hard and you'd prefer to go shopping, while the other side wants to claim it is easy."
-msgstr ""
+msgstr "默认的格式并不显示原文在冲突区说了什么。  你无法知道有多少行被删除，并被替换成你方的芭比娃娃的言论。  你唯一能知道的是，你方想说这很难，你更愿意去购物，而另一方则想说这很容易。"
 
 #. type: Plain text
 #: en/git-merge.txt:271
 #, priority:240
 msgid "An alternative style can be used by setting the \"merge.conflictStyle\" configuration variable to either \"diff3\" or \"zdiff3\".  In \"diff3\" style, the above conflict may look like this:"
-msgstr ""
+msgstr "通过将 \"merge.conflictStyle \"配置变量设置为 \"diff3 \"或 \"zdiff3\"，可以使用另一种风格。  在 \"diff3 \"风格中，上述冲突可能看起来像这样："
 
 #. type: delimited block -
 #: en/git-merge.txt:287
@@ -36081,7 +36081,7 @@ msgid ""
 "Git makes conflict resolution easy.\n"
 ">>>>>>> theirs:sample.txt\n"
 "And here is another line that is cleanly resolved or unmodified.\n"
-msgstr ""
+msgstr "这里是与共同的祖先相比没有变化的行。\n祖先没有变化，或者因为只有一方发生了变化而得到了干净的解决、\n<<<<<<< yours:sample.txt\n或干净地解决了，因为双方都以同样的方式改变了。\n冲突的解决是很难的；\n让我们去购物吧。\n||||||| base:sample.txt\n或干净利落地解决了，因为双方的变化都一样。\n冲突的解决是很难的。\n=======\n或干净利落地解决了，因为双方都有相同的变化。\nGit使冲突解决变得容易。\n>>>>>>> theirs:sample.txt\n而这里是另一行被干净地解决或未修改的。\n"
 
 #. type: Plain text
 #: en/git-merge.txt:290
@@ -36092,7 +36092,7 @@ msgstr "\"合并的差异\" 的格式如下："
 
 #. type: delimited block -
 #: en/git-merge.txt:305
-#, no-wrap, priority:240
+#, fuzzy, no-wrap, priority:240
 msgid ""
 "Here are lines that are either unchanged from the common\n"
 "ancestor, or cleanly resolved because only one side changed,\n"
@@ -36107,49 +36107,49 @@ msgid ""
 "Git makes conflict resolution easy.\n"
 ">>>>>>> theirs:sample.txt\n"
 "And here is another line that is cleanly resolved or unmodified.\n"
-msgstr ""
+msgstr "这里是与共同的祖先相比没有变化的行。\n祖先没有变化，或者因为只有一方发生了变化而得到干净的解决、\n或者因为两边都有相同的变化而被干净地解决了。\n<<<<<<< yours:sample.txt\n冲突的解决是困难的；\n让我们去购物吧。\n||||||| base:sample.txt\n或干净利落地解决，因为双方的变化都一样。\n冲突的解决是很难的。\n=======\nGit让冲突解决变得简单。\n>>>>>>> theirs:sample.txt\n而这里是另一行被干净地解决或未修改的内容。\n"
 
 #. type: Plain text
 #: en/git-merge.txt:313
 #, priority:240
 msgid "In addition to the `<<<<<<<`, `=======`, and `>>>>>>>` markers, it uses another `|||||||` marker that is followed by the original text.  You can tell that the original just stated a fact, and your side simply gave in to that statement and gave up, while the other side tried to have a more positive attitude.  You can sometimes come up with a better resolution by viewing the original."
-msgstr ""
+msgstr "除了`<<<<<<<`、`=======`和`>>>>>>>`标记外，它还使用了另一个`|||||||`标记，后面是原文。  你可以看出，原文只是陈述了一个事实，而你的一方只是屈服于这个陈述而放弃了，而另一方则试图有一个更积极的态度。  你有时可以通过查看原文得出一个更好的解决方案。"
 
 #. type: Title -
 #: en/git-merge.txt:316
 #, no-wrap, priority:240
 msgid "HOW TO RESOLVE CONFLICTS"
-msgstr ""
+msgstr "如何解决冲突"
 
 #. type: Plain text
 #: en/git-merge.txt:319
 #, priority:240
 msgid "After seeing a conflict, you can do two things:"
-msgstr ""
+msgstr "看到冲突后，你可以做两件事："
 
 #. type: Plain text
 #: en/git-merge.txt:324
 #, priority:240
 msgid "Decide not to merge.  The only clean-ups you need are to reset the index file to the `HEAD` commit to reverse 2. and to clean up working tree changes made by 2. and 3.; `git merge --abort` can be used for this."
-msgstr ""
+msgstr "决定不进行合并。  唯一需要清理的是将索引文件重置为`HEAD`提交，以逆转2.，并清理2.和3.对工作树的修改；可以用`git merge --abort`来做这份工作。"
 
 #. type: Plain text
 #: en/git-merge.txt:331
 #, priority:240
 msgid "Resolve the conflicts.  Git will mark the conflicts in the working tree.  Edit the files into shape and 'git add' them to the index.  Use 'git commit' or 'git merge --continue' to seal the deal. The latter command checks whether there is a (interrupted) merge in progress before calling 'git commit'."
-msgstr ""
+msgstr "解决冲突。  Git会在工作树上标记冲突。  将文件编辑成形，然后'git add'它们到索引中。  使用'git commit'或'git merge --continue'解决。后一个命令在调用'git commit'之前会检查是否有一个（中断的）合并正在进行。"
 
 #. type: Plain text
 #: en/git-merge.txt:333
 #, priority:240
 msgid "You can work through the conflict with a number of tools:"
-msgstr ""
+msgstr "你可以用一些工具来解决冲突："
 
 #. type: Plain text
 #: en/git-merge.txt:336
 #, priority:240
 msgid "Use a mergetool.  `git mergetool` to launch a graphical mergetool which will work you through the merge."
-msgstr ""
+msgstr "使用一个mergetool。  `git mergetool`启动一个图形化的mergetool，它将帮助你完成合并工作。"
 
 #. type: Plain text
 #: en/git-merge.txt:340
@@ -36161,13 +36161,13 @@ msgstr ""
 #: en/git-merge.txt:344
 #, priority:240
 msgid "Look at the diffs from each branch. `git log --merge -p <path>` will show diffs first for the `HEAD` version and then the `MERGE_HEAD` version."
-msgstr ""
+msgstr "看看每个分支的差异。`git log --merge -p <路径>`将首先显示`HEAD`版本的差异，然后是`MERGE_HEAD`版本。"
 
 #. type: Plain text
 #: en/git-merge.txt:349
 #, priority:240
 msgid "Look at the originals.  `git show :1:filename` shows the common ancestor, `git show :2:filename` shows the `HEAD` version, and `git show :3:filename` shows the `MERGE_HEAD` version."
-msgstr ""
+msgstr "看一下原件。  `git show :1:filename`显示共同的祖先，`git show :2:filename`显示`HEAD`版本，`git show :3:filename`显示`MERGE_HEAD`版本。"
 
 #. type: Plain text
 #: en/git-merge.txt:356
@@ -51354,57 +51354,57 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-show.txt:21
-#, priority:240
+#, fuzzy, priority:240
 msgid "For commits it shows the log message and textual diff. It also presents the merge commit in a special format as produced by 'git diff-tree --cc'."
-msgstr ""
+msgstr "对于提交，它显示日志信息和文本差异。并会以一种特殊的格式显示合并提交，就像 \"git diff-tree --cc \"所产生的信息那样。"
 
 #. type: Plain text
 #: en/git-show.txt:23
 #, priority:240
 msgid "For tags, it shows the tag message and the referenced objects."
-msgstr ""
+msgstr "对于标签，它显示标签信息和引用的对象。"
 
 #. type: Plain text
 #: en/git-show.txt:26
 #, priority:240
 msgid "For trees, it shows the names (equivalent to 'git ls-tree' with --name-only)."
-msgstr ""
+msgstr "对于目录树，它显示名字（相当于'git ls-tree'添加了--name-only选项）。"
 
 #. type: Plain text
 #: en/git-show.txt:28
 #, priority:240
 msgid "For plain blobs, it shows the plain contents."
-msgstr ""
+msgstr "对于普通二进制对象，它显示普通内容。"
 
 #. type: Plain text
 #: en/git-show.txt:31
 #, priority:240
 msgid "The command takes options applicable to the 'git diff-tree' command to control how the changes the commit introduces are shown."
-msgstr ""
+msgstr "该命令采用适用于'git diff-tree'命令的选项来控制提交所带来的变化的显示方式。"
 
 #. type: Plain text
 #: en/git-show.txt:33
 #, priority:240
 msgid "This manual page describes only the most frequently used options."
-msgstr ""
+msgstr "本手册页只描述了最常用的选项。"
 
 #. type: Labeled list
 #: en/git-show.txt:37
 #, ignore-ellipsis, no-wrap, priority:240
 msgid "<object>..."
-msgstr ""
+msgstr "<对象>..."
 
 #. type: Plain text
 #: en/git-show.txt:41
 #, priority:240
 msgid "The names of objects to show (defaults to 'HEAD').  For a more complete list of ways to spell object names, see \"SPECIFYING REVISIONS\" section in linkgit:gitrevisions[7]."
-msgstr ""
+msgstr "要显示的对象的名称（默认为'HEAD'）。  更完整的对象名称拼写方式列表，请参见 linkgit:gitrevisions[7] 中的 \"特别修订\" 部分。"
 
 #. type: Plain text
 #: en/git-show.txt:52
 #, priority:240
 msgid "The options below can be used to change the way `git show` generates diff output."
-msgstr ""
+msgstr "下面的选项可以用来改变`git show`生成差异输出的方式。"
 
 #. type: Labeled list
 #: en/git-show.txt:63
@@ -51416,7 +51416,7 @@ msgstr "`git show v1.0.0`"
 #: en/git-show.txt:66
 #, priority:240
 msgid "Shows the tag `v1.0.0`, along with the object the tags points at."
-msgstr ""
+msgstr "显示标签`v1.0.0`，以及标签指向的对象。"
 
 #. type: Labeled list
 #: en/git-show.txt:67
@@ -51428,7 +51428,7 @@ msgstr "`git show v1.0.0^{tree}`"
 #: en/git-show.txt:69
 #, priority:240
 msgid "Shows the tree pointed to by the tag `v1.0.0`."
-msgstr ""
+msgstr "显示标签`v1.0.0`所指向的树。"
 
 #. type: Labeled list
 #: en/git-show.txt:70
@@ -51440,19 +51440,19 @@ msgstr "`git show -s --format=%s v1.0.0^{commit}`"
 #: en/git-show.txt:73
 #, priority:240
 msgid "Shows the subject of the commit pointed to by the tag `v1.0.0`."
-msgstr ""
+msgstr "显示由标签`v1.0.0`指向的提交的主题。"
 
 #. type: Labeled list
 #: en/git-show.txt:74
 #, no-wrap, priority:240
 msgid "`git show next~10:Documentation/README`"
-msgstr ""
+msgstr "`git show next~10:Documentation/README`"
 
 #. type: Plain text
 #: en/git-show.txt:78
 #, priority:240
 msgid "Shows the contents of the file `Documentation/README` as they were current in the 10th last commit of the branch `next`."
-msgstr ""
+msgstr "显示`Documentation/README`文件的内容，因为它们在分支`next`的最后10次提交中是当前的。"
 
 #. type: Labeled list
 #: en/git-show.txt:79
@@ -51464,7 +51464,7 @@ msgstr "`git show master:Makefile master:t/Makefile`"
 #: en/git-show.txt:82
 #, priority:240
 msgid "Concatenates the contents of said Makefiles in the head of the branch `master`."
-msgstr ""
+msgstr "将上述Makefiles的内容串联在分支`master`的头部。"
 
 #. type: Title =
 #: en/git-sh-setup.txt:2
@@ -51674,11 +51674,11 @@ msgstr "git-stash(1)"
 #: en/git-stash.txt:7
 #, priority:240
 msgid "git-stash - Stash the changes in a dirty working directory away"
-msgstr ""
+msgstr "git-stash - 将变化藏在一个脏工作区中"
 
 #. type: Plain text
 #: en/git-stash.txt:26
-#, ignore-ellipsis, no-wrap, priority:240
+#, fuzzy, ignore-ellipsis, no-wrap, priority:240
 msgid ""
 "'git stash' list [<log-options>]\n"
 "'git stash' show [-u | --include-untracked | --only-untracked] [<diff-options>] [<stash>]\n"
@@ -51695,25 +51695,25 @@ msgid ""
 "'git stash' clear\n"
 "'git stash' create [<message>]\n"
 "'git stash' store [(-m | --message) <message>] [-q | --quiet] <commit>\n"
-msgstr ""
+msgstr "'git stash' list [<log-options>]\n'git stash' show [-u | --include-untracked | --only-untracked] [<diff-options>] [<stash>]\n'git stash' drop [-q | --quiet] [<stash>]\n'git stash' pop [--index] [-q | --quiet] [<stash>]\n'git stash' apply [--index] [-q | --quiet] [<stash>]\n'git stash' branch <branchname> [<stash>]\n'git stash' [push [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-q | --quiet]\n\t     [-u | --include-untracked] [-a | --all] [(-m | --message) <message>]\n\t     [--pathspec-from-file=<file> [--pathspec-file-nul]]\n\t     [--] [<pathspec>...]]\n'git stash' save [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-q | --quiet]\n\t     [-u | --include-untracked] [-a | --all] [<message>]\n'git stash' clear\n'git stash' create [<message>]\n'git stash' store [(-m | --message) <message>] [-q | --quiet] <commit>\n"
 
 #. type: Plain text
 #: en/git-stash.txt:34
 #, priority:240
 msgid "Use `git stash` when you want to record the current state of the working directory and the index, but want to go back to a clean working directory.  The command saves your local modifications away and reverts the working directory to match the `HEAD` commit."
-msgstr ""
+msgstr "当你想记录工作目录和索引的当前状态，但又想回到一个干净的工作目录时，请使用`git stash`。  该命令将你的本地修改保存起来，并将工作目录还原为与`HEAD`提交相匹配。"
 
 #. type: Plain text
 #: en/git-stash.txt:42
 #, ignore-ellipsis, priority:240
 msgid "The modifications stashed away by this command can be listed with `git stash list`, inspected with `git stash show`, and restored (potentially on top of a different commit) with `git stash apply`.  Calling `git stash` without any arguments is equivalent to `git stash push`.  A stash is by default listed as \"WIP on 'branchname' ...\", but you can give a more descriptive message on the command line when you create one."
-msgstr ""
+msgstr "这个命令所存储的修改可以用`git stash list`列出，用`git stash show`检查，用`git stash apply`恢复（可能是在不同的提交之上）。  在没有任何参数的情况下调用`git stash`等同于`git stash push`。  默认情况下，储藏库被列为 \"WIP on 'branchname' ...\"，但你可以在创建储藏库时在命令行中给出更多描述性信息。"
 
 #. type: Plain text
 #: en/git-stash.txt:49
 #, priority:240
 msgid "The latest stash you created is stored in `refs/stash`; older stashes are found in the reflog of this reference and can be named using the usual reflog syntax (e.g. `stash@{0}` is the most recently created stash, `stash@{1}` is the one before it, `stash@{2.hours.ago}` is also possible). Stashes may also be referenced by specifying just the stash index (e.g. the integer `n` is equivalent to `stash@{n}`)."
-msgstr ""
+msgstr "你最近创建的储藏库被保存在`refs/stash`中；旧的储藏库可以在这个引用的引用日志中找到，并且可以使用通常的引用日志语法来命名（例如，`stash@{0}`是最近创建的储藏库，`stash@{1}`是它之前的储藏库，`stash@{2.hours.ago}`也是可以的）。也可以通过指定储藏库的索引来引用储藏库（例如，整数`n`等同于`stash@{n}`）。"
 
 #. type: Labeled list
 #: en/git-stash.txt:53
@@ -51725,37 +51725,37 @@ msgstr "push [-p|--patch] [-S|--staged] [-k|--[no-]keep-index] [-u|--include-unt
 #: en/git-stash.txt:59
 #, priority:240
 msgid "Save your local modifications to a new 'stash entry' and roll them back to HEAD (in the working tree and in the index).  The <message> part is optional and gives the description along with the stashed state."
-msgstr ""
+msgstr "将你的本地修改保存到一个新的 \"存储条目 \"中，并将它们回滚到 HEAD（在工作区和索引中）。  <信息>部分是可选的，它给出了描述和储藏的状态。"
 
 #. type: Plain text
 #: en/git-stash.txt:65
 #, priority:240
 msgid "For quickly making a snapshot, you can omit \"push\".  In this mode, non-option arguments are not allowed to prevent a misspelled subcommand from making an unwanted stash entry.  The two exceptions to this are `stash -p` which acts as alias for `stash push -p` and pathspec elements, which are allowed after a double hyphen `--` for disambiguation."
-msgstr ""
+msgstr "为了快速制作快照，你可以省略 \"push\"。  在这种模式下，非选项参数是不允许的，以防止拼写错误的子命令产生不需要的储藏条目。  这方面的两个例外是`stash -p`，它作为`stash push -p`的别名，以及为消除歧义允许在双连字符`--`之后的路径规范元素。"
 
 #. type: Labeled list
 #: en/git-stash.txt:66
 #, no-wrap, priority:240
 msgid "save [-p|--patch] [-S|--staged] [-k|--[no-]keep-index] [-u|--include-untracked] [-a|--all] [-q|--quiet] [<message>]"
-msgstr ""
+msgstr "save [-p|--patch] [-S|--staged] [-k|--[no-]keep-index] [-u|--include-untracked] [-a|--all] [-q|--quiet] [<信息>]"
 
 #. type: Plain text
 #: en/git-stash.txt:72
 #, priority:240
 msgid "This option is deprecated in favour of 'git stash push'.  It differs from \"stash push\" in that it cannot take pathspec.  Instead, all non-option arguments are concatenated to form the stash message."
-msgstr ""
+msgstr "该选项已被弃用，改为 \"git stash push\"。  它与 \"stash push \"的不同之处在于，它不能接受路径规范。  取而代之的是，所有非选项的参数都被串联起来，形成储藏消息。"
 
 #. type: Labeled list
 #: en/git-stash.txt:73
 #, no-wrap, priority:240
 msgid "list [<log-options>]"
-msgstr ""
+msgstr "list [<日志选项>]"
 
 #. type: Plain text
 #: en/git-stash.txt:80
 #, priority:240
 msgid "List the stash entries that you currently have.  Each 'stash entry' is listed with its name (e.g. `stash@{0}` is the latest entry, `stash@{1}` is the one before, etc.), the name of the branch that was current when the entry was made, and a short description of the commit the entry was based on."
-msgstr ""
+msgstr "列出你目前拥有的储藏目录。  每个 \"储藏目录 \"都列出了它的名字（例如，`stash@{0}`是最新的条目，`stash@{1}`是之前的条目，等等），条目产生时的分支名称，以及该条目所基于的提交的简短描述。"
 
 #. type: delimited block -
 #: en/git-stash.txt:84
@@ -51771,19 +51771,19 @@ msgstr ""
 #: en/git-stash.txt:88
 #, priority:240
 msgid "The command takes options applicable to the 'git log' command to control what is shown and how. See linkgit:git-log[1]."
-msgstr ""
+msgstr "该命令采用适用于 'git log' 命令的选项来控制显示的内容和方式。参见 linkgit:git-log[1]。"
 
 #. type: Labeled list
 #: en/git-stash.txt:89
 #, no-wrap, priority:240
 msgid "show [-u|--include-untracked|--only-untracked] [<diff-options>] [<stash>]"
-msgstr ""
+msgstr "show [-u|--include-untracked|--only-untracked] [<diff选项>] [<储藏目录>]"
 
 #. type: Plain text
 #: en/git-stash.txt:101
 #, priority:240
 msgid "Show the changes recorded in the stash entry as a diff between the stashed contents and the commit back when the stash entry was first created.  By default, the command shows the diffstat, but it will accept any format known to 'git diff' (e.g., `git stash show -p stash@{1}` to view the second most recent entry in patch form).  If no `<diff-option>` is provided, the default behavior will be given by the `stash.showStat`, and `stash.showPatch` config variables. You can also use `stash.showIncludeUntracked` to set whether `--include-untracked` is enabled by default."
-msgstr ""
+msgstr "显示贮藏中记录的修改，作为贮藏内容与贮藏库条目首次创建时的提交之间的差异。  默认情况下，该命令显示diff统计，但它会接受 \"git diff \"已知的任何格式（例如，`git stash show -p stash@{1}`以补丁形式查看第二条最新条目）。  如果没有提供`<diff选项>`，默认行为将由`stash.showStat`和`stash.showPatch`配置变量给出。你也可以使用`stash.showIncludeUntracked`来设置是否默认启用`--include-untracked`。"
 
 #. type: Labeled list
 #: en/git-stash.txt:102
@@ -51795,13 +51795,13 @@ msgstr "pop [--index] [-q|--quiet] [<stash>]"
 #: en/git-stash.txt:108
 #, priority:240
 msgid "Remove a single stashed state from the stash list and apply it on top of the current working tree state, i.e., do the inverse operation of `git stash push`. The working directory must match the index."
-msgstr ""
+msgstr "从贮藏库列表中移除一个单一的贮藏状态，并将其应用于当前工作区状态之上，也就是做`git stash push`的逆向操作。工作目录必须与索引匹配。"
 
 #. type: Plain text
 #: en/git-stash.txt:112
 #, priority:240
 msgid "Applying the state can fail with conflicts; in this case, it is not removed from the stash list. You need to resolve the conflicts by hand and call `git stash drop` manually afterwards."
-msgstr ""
+msgstr "应用状态可能会因为冲突而失败；在这种情况下，它不会被从贮藏库列表中删除。你需要手动解决冲突，并在之后调用 `git stash drop`。"
 
 #. type: Labeled list
 #: en/git-stash.txt:113
@@ -51813,25 +51813,25 @@ msgstr "apply [--index] [-q|--quiet] [<stash>]"
 #: en/git-stash.txt:118
 #, priority:240
 msgid "Like `pop`, but do not remove the state from the stash list. Unlike `pop`, `<stash>` may be any commit that looks like a commit created by `stash push` or `stash create`."
-msgstr ""
+msgstr "和 `pop` 一样，但不从贮藏库列表中删除该状态。与`pop`不同，`<贮藏项>`可以是任何看起来像由`stash push`或`stash create`创建的提交。"
 
 #. type: Labeled list
 #: en/git-stash.txt:119
 #, no-wrap, priority:240
 msgid "branch <branchname> [<stash>]"
-msgstr ""
+msgstr "branch <分支名> [<贮藏项>]"
 
 #. type: Plain text
 #: en/git-stash.txt:126
 #, priority:240
 msgid "Creates and checks out a new branch named `<branchname>` starting from the commit at which the `<stash>` was originally created, applies the changes recorded in `<stash>` to the new working tree and index.  If that succeeds, and `<stash>` is a reference of the form `stash@{<revision>}`, it then drops the `<stash>`."
-msgstr ""
+msgstr "创建并检查一个名为 `<分支名>` 的新分支，从最初创建 `<贮藏项>` 的提交开始，将 `<贮藏项>` 中记录的修改应用到新的工作树和索引。  如果成功了，并且`<贮藏项>`是`stash@{<版本>}`形式的引用，那么它将删除`<贮藏项>`。"
 
 #. type: Plain text
 #: en/git-stash.txt:132
 #, priority:240
 msgid "This is useful if the branch on which you ran `git stash push` has changed enough that `git stash apply` fails due to conflicts. Since the stash entry is applied on top of the commit that was HEAD at the time `git stash` was run, it restores the originally stashed state with no conflicts."
-msgstr ""
+msgstr "如果你运行 `git stash push` 的分支发生了足够的变化，以至于 `git stash apply` 因冲突而失败，那么这就很有用。由于贮藏条目是在运行 `git stash` 时的当前分支提交之上应用的，它没有冲突地恢复了最初的贮藏状态。"
 
 #. type: Labeled list
 #: en/git-stash.txt:133
@@ -51843,19 +51843,19 @@ msgstr "清除"
 #: en/git-stash.txt:137
 #, priority:240
 msgid "Remove all the stash entries. Note that those entries will then be subject to pruning, and may be impossible to recover (see 'Examples' below for a possible strategy)."
-msgstr ""
+msgstr "删除所有的贮藏条目。直接切断任何联系，而且可能无法恢复（可能的策略见下面的 \"例子\"）。"
 
 #. type: Labeled list
 #: en/git-stash.txt:138
 #, no-wrap, priority:240
 msgid "drop [-q|--quiet] [<stash>]"
-msgstr ""
+msgstr "Drop [-q|--quite] [<贮藏项>]"
 
 #. type: Plain text
 #: en/git-stash.txt:141
 #, priority:240
 msgid "Remove a single stash entry from the list of stash entries."
-msgstr ""
+msgstr "从贮藏条目列表中删除一个单一的贮藏条目。"
 
 #. type: Labeled list
 #: en/git-stash.txt:142 en/git-update-ref.txt:108
@@ -51867,7 +51867,7 @@ msgstr "create"
 #: en/git-stash.txt:149
 #, priority:240
 msgid "Create a stash entry (which is a regular commit object) and return its object name, without storing it anywhere in the ref namespace.  This is intended to be useful for scripts.  It is probably not the command you want to use; see \"push\" above."
-msgstr ""
+msgstr "创建一个贮藏条目（这是一个普通的提交对象），并返回其对象名称，而不将其存储在引用命名空间的任何地方。  这是为了对脚本有用。  你可能不想用这个命令；可以看看前面的 \"push\"。"
 
 #. type: Labeled list
 #: en/git-stash.txt:150
@@ -51879,19 +51879,19 @@ msgstr "商店"
 #: en/git-stash.txt:156
 #, priority:240
 msgid "Store a given stash created via 'git stash create' (which is a dangling merge commit) in the stash ref, updating the stash reflog.  This is intended to be useful for scripts.  It is probably not the command you want to use; see \"push\" above."
-msgstr ""
+msgstr "将通过'git stash create'（这是一个悬空的合并提交）创建的特定贮藏库存储在贮藏库引用中，更新贮藏库参考文件。  这是为了对脚本有用。  这条命令可能不是你想要的；见上文\"push\"。"
 
 #. type: Plain text
 #: en/git-stash.txt:162 en/git-stash.txt:193 en/git-stash.txt:199 en/git-stash.txt:214
 #, priority:240
 msgid "This option is only valid for `push` and `save` commands."
-msgstr ""
+msgstr "这个选项只对`push`和`save`命令有效。"
 
 #. type: Plain text
 #: en/git-stash.txt:165
 #, priority:240
 msgid "All ignored and untracked files are also stashed and then cleaned up with `git clean`."
-msgstr ""
+msgstr "所有被忽略的和未被追踪的文件也被贮藏起来，然后用`git clean`来清理。"
 
 #. type: Labeled list
 #: en/git-stash.txt:167
@@ -51909,13 +51909,13 @@ msgstr "--no-include-untracked"
 #: en/git-stash.txt:172
 #, priority:240
 msgid "When used with the `push` and `save` commands, all untracked files are also stashed and then cleaned up with `git clean`."
-msgstr ""
+msgstr "当与`push`和`save`命令一起使用时，所有未被追踪的文件也被贮藏起来，然后用`git clean`来清理。"
 
 #. type: Plain text
 #: en/git-stash.txt:175
 #, priority:240
 msgid "When used with the `show` command, show the untracked files in the stash entry as part of the diff."
-msgstr ""
+msgstr "当与`show`命令一起使用时，显示贮藏库条目中未被追踪的文件作为差异的一部分。"
 
 #. type: Labeled list
 #: en/git-stash.txt:176
@@ -51927,25 +51927,25 @@ msgstr "--only-untracked"
 #: en/git-stash.txt:178
 #, priority:240
 msgid "This option is only valid for the `show` command."
-msgstr ""
+msgstr "这个选项只对`show`命令有效。"
 
 #. type: Plain text
 #: en/git-stash.txt:180
 #, priority:240
 msgid "Show only the untracked files in the stash entry as part of the diff."
-msgstr ""
+msgstr "只显示贮藏库条目中未被追踪的文件作为差异的一部分。"
 
 #. type: Plain text
 #: en/git-stash.txt:183
 #, priority:240
 msgid "This option is only valid for `pop` and `apply` commands."
-msgstr ""
+msgstr "这个选项只对`pop`和`apply`命令有效。"
 
 #. type: Plain text
 #: en/git-stash.txt:188
 #, priority:240
 msgid "Tries to reinstate not only the working tree's changes, but also the index's ones. However, this can fail, when you have conflicts (which are stored in the index, where you therefore can no longer apply the changes as they were originally)."
-msgstr ""
+msgstr "不仅试图恢复工作区的变化，而且恢复索引的变化。然而，这可能会在出现冲突时失败（这些冲突被存储在索引中，因此你不能再按原来的方式应用这些变化）。"
 
 #. type: Labeled list
 #: en/git-stash.txt:190
@@ -51963,7 +51963,7 @@ msgstr "--no-keep-index"
 #: en/git-stash.txt:195
 #, priority:240
 msgid "All changes already added to the index are left intact."
-msgstr ""
+msgstr "所有已经添加到索引中的变化都保持原样。"
 
 #. type: Plain text
 #: en/git-stash.txt:207
