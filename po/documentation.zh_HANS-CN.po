@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: git documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
-"POT-Creation-Date: 2023-05-18 19:52+0200\n"
-"PO-Revision-Date: 2023-05-03 17:31+0000\n"
+"POT-Creation-Date: 2023-02-26 14:06+0100\n"
+"PO-Revision-Date: 2023-05-18 17:58+0000\n"
 "Last-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: zh_HANS-CN\n"
@@ -5838,7 +5838,7 @@ msgstr "--all"
 #: en/fetch-options.txt:3
 #, priority:220
 msgid "Fetch all remotes."
-msgstr ""
+msgstr "抓取所有远程。"
 
 #. type: Labeled list
 #: en/fetch-options.txt:5
@@ -5850,7 +5850,7 @@ msgstr "--append"
 #: en/fetch-options.txt:9
 #, priority:220
 msgid "Append ref names and object names of fetched refs to the existing contents of `.git/FETCH_HEAD`.  Without this option old data in `.git/FETCH_HEAD` will be overwritten."
-msgstr ""
+msgstr "在 `.git/FETCH_HEAD` 的现有内容中添加获取的引用名称和对象名称。  如果没有这个选项，`.git/FETCH_HEAD` 中的旧数据将被覆盖。"
 
 #. type: Labeled list
 #: en/fetch-options.txt:10 en/git-send-pack.txt:69
@@ -5862,7 +5862,7 @@ msgstr "--atomic"
 #: en/fetch-options.txt:13
 #, priority:220
 msgid "Use an atomic transaction to update local refs. Either all refs are updated, or on error, no refs are updated."
-msgstr ""
+msgstr "使用一个原子事务来更新本地索引。要么所有的引用都被更新，要么在出错时，没有引用被更新。"
 
 #. type: Labeled list
 #: en/fetch-options.txt:14
@@ -5874,19 +5874,19 @@ msgstr "--depth=<深度>"
 #: en/fetch-options.txt:20
 #, priority:220
 msgid "Limit fetching to the specified number of commits from the tip of each remote branch history. If fetching to a 'shallow' repository created by `git clone` with `--depth=<depth>` option (see linkgit:git-clone[1]), deepen or shorten the history to the specified number of commits. Tags for the deepened commits are not fetched."
-msgstr ""
+msgstr "限制从每个远程分支历史的顶端获取指定数量的提交。如果获取的是由 `git clone` 创建的 '浅层' 仓库，并使用 `--depth=<depth>` 选项（见 linkgit:git-clone[1]），则加深或缩短历史，达到指定数量的提交。深化后的提交的标签不会被获取。"
 
 #. type: Labeled list
 #: en/fetch-options.txt:21
 #, no-wrap, priority:220
 msgid "--deepen=<depth>"
-msgstr ""
+msgstr "--deepen=<深度>"
 
 #. type: Plain text
 #: en/fetch-options.txt:25
 #, priority:220
 msgid "Similar to --depth, except it specifies the number of commits from the current shallow boundary instead of from the tip of each remote branch history."
-msgstr ""
+msgstr "与--depth类似，只是它指定了从当前浅层边界开始的提交数量，而不是从每个远程分支历史的顶端开始。"
 
 #. type: Labeled list
 #: en/fetch-options.txt:26 en/git-clone.txt:252 en/git-fetch-pack.txt:90
@@ -5898,7 +5898,7 @@ msgstr "--shallow-since=<日期>"
 #: en/fetch-options.txt:29 en/git-fetch-pack.txt:93
 #, priority:220
 msgid "Deepen or shorten the history of a shallow repository to include all reachable commits after <date>."
-msgstr ""
+msgstr "加深或缩短浅层仓库的历史，包括<日期>之后所有可触及的提交。"
 
 #. type: Labeled list
 #: en/fetch-options.txt:30 en/git-clone.txt:255 en/git-fetch-pack.txt:94
@@ -5910,7 +5910,7 @@ msgstr "--shallow-exclude=<修订版本>"
 #: en/fetch-options.txt:34 en/git-fetch-pack.txt:98
 #, priority:220
 msgid "Deepen or shorten the history of a shallow repository to exclude commits reachable from a specified remote branch or tag.  This option can be specified multiple times."
-msgstr ""
+msgstr "深化或缩短浅层版本库的历史，以排除从指定的远程分支或标记中可以到达的提交。  这个选项可以指定多次。"
 
 #. type: Labeled list
 #: en/fetch-options.txt:35
@@ -5922,13 +5922,13 @@ msgstr "--unshallow"
 #: en/fetch-options.txt:39
 #, priority:220
 msgid "If the source repository is complete, convert a shallow repository to a complete one, removing all the limitations imposed by shallow repositories."
-msgstr ""
+msgstr "如果源仓库是完整的，将浅层资源库转换为完整的仓库，消除浅层仓库带来的所有限制。"
 
 #. type: Plain text
 #: en/fetch-options.txt:42
 #, priority:220
 msgid "If the source repository is shallow, fetch as much as possible so that the current repository has the same history as the source repository."
-msgstr ""
+msgstr "如果源仓库是浅层的，尽可能多的获取，使当前仓库的历史与源仓库相同。"
 
 #. type: Labeled list
 #: en/fetch-options.txt:43
@@ -5940,7 +5940,7 @@ msgstr "--update-shallow"
 #: en/fetch-options.txt:48
 #, priority:220
 msgid "By default when fetching from a shallow repository, `git fetch` refuses refs that require updating .git/shallow. This option updates .git/shallow and accept such refs."
-msgstr ""
+msgstr "默认情况下，当从浅层仓库获取时，`git fetch` 会拒绝需要更新 .git/shallow 的引用。这个选项更新了 .git/shallow 并接受这样的引用。"
 
 #. type: Labeled list
 #: en/fetch-options.txt:49
@@ -5952,25 +5952,25 @@ msgstr "--negotiation-tip=<commit|glob>"
 #: en/fetch-options.txt:57
 #, priority:220
 msgid "By default, Git will report, to the server, commits reachable from all local refs to find common commits in an attempt to reduce the size of the to-be-received packfile. If specified, Git will only report commits reachable from the given tips.  This is useful to speed up fetches when the user knows which local ref is likely to have commits in common with the upstream ref being fetched."
-msgstr ""
+msgstr "默认情况下，Git 会向服务器报告从所有本地引用中可触及的提交，以寻找共同的提交，试图减少待接收的打包文件的大小。如果指定的话，Git将只报告从给定提示中的可达提交。  当用户知道哪个本地引用可能与被获取的上游引用有共同的提交时，这会加快抓取文件的速度。"
 
 #. type: Plain text
 #: en/fetch-options.txt:60
 #, priority:220
 msgid "This option may be specified more than once; if so, Git will report commits reachable from any of the given commits."
-msgstr ""
+msgstr "这个选项可以指定多次；如果是这样，Git将报告从任何一个给定的提交中可达提交。"
 
 #. type: Plain text
 #: en/fetch-options.txt:64
 #, priority:220
 msgid "The argument to this option may be a glob on ref names, a ref, or the (possibly abbreviated) SHA-1 of a commit. Specifying a glob is equivalent to specifying this option multiple times, one for each matching ref name."
-msgstr ""
+msgstr "这个选项的参数可以是一个引用名称的通配符，一个引用，或者一个提交的SHA-1（可能是缩写的）。指定一个通配符相当于多次指定这个选项，为每个匹配的引用名称指定该选项。"
 
 #. type: Plain text
 #: en/fetch-options.txt:68
 #, priority:220
 msgid "See also the `fetch.negotiationAlgorithm` and `push.negotiate` configuration variables documented in linkgit:git-config[1], and the `--negotiate-only` option below."
-msgstr ""
+msgstr "参见 linkgit:git-config[1] 中记录的 `fetch.negotiAlgorithm` 和 `push.negoti` 配置变量，以及下面的 `--negotiate-only` 选项。"
 
 #. type: Labeled list
 #: en/fetch-options.txt:69
@@ -5988,7 +5988,7 @@ msgstr ""
 #: en/fetch-options.txt:77
 #, priority:220
 msgid "This is incompatible with `--recurse-submodules=[yes|on-demand]`.  Internally this is used to implement the `push.negotiate` option, see linkgit:git-config[1]."
-msgstr ""
+msgstr "这与 `--recurse-submodules=[yes|on-demand]` 不兼容。  在内部，这被用来实现 `push.negotiate` 选项，见linkgit:git-config[1]。"
 
 #. type: Labeled list
 #: en/fetch-options.txt:78 en/git-add.txt:70 en/git-clean.txt:50 en/git-commit.txt:373 en/git-http-push.txt:37 en/git-mv.txt:40 en/git-notes.txt:179 en/git-p4.txt:332 en/git-prune-packed.txt:32 en/git-prune.txt:37 en/git-push.txt:174 en/git-quiltimport.txt:35 en/git-read-tree.txt:59 en/git-reflog.txt:117 en/git-rm.txt:53 en/git-send-email.txt:433 en/git-send-pack.txt:52 en/git-svn.txt:687 en/git-worktree.txt:221
@@ -6000,7 +6000,7 @@ msgstr "--dry-run"
 #: en/fetch-options.txt:80
 #, priority:220
 msgid "Show what would be done, without making any changes."
-msgstr ""
+msgstr "显示会做什么，而不做任何改变。"
 
 #. type: Plain text
 #: en/fetch-options.txt:84
@@ -6024,7 +6024,7 @@ msgstr "--[no-]write-fetch-head"
 #: en/fetch-options.txt:95
 #, priority:220
 msgid "Write the list of remote refs fetched in the `FETCH_HEAD` file directly under `$GIT_DIR`.  This is the default.  Passing `--no-write-fetch-head` from the command line tells Git not to write the file.  Under `--dry-run` option, the file is never written."
-msgstr ""
+msgstr "直接在`$GIT_DIR`下的`FETCH_HEAD`文件中写入获取的远程引用列表。  这是默认的。  从命令行传递`--no-write-fetch-head`，告诉Git不要写入该文件。  在`--dry-run`选项下，该文件永远不会被写入。"
 
 #. type: Labeled list
 #: en/fetch-options.txt:97 en/git-add.txt:78 en/git-archimport.txt:81 en/git-blame.txt:65 en/git-branch.txt:117 en/git-checkout-index.txt:35 en/git-checkout.txt:118 en/git-clean.txt:36 en/git-cvsexportcommit.txt:54 en/git-filter-branch.txt:208 en/git-ls-files.txt:169 en/git-mv.txt:31 en/git-notes.txt:127 en/git-push.txt:333 en/git-rebase.txt:440 en/git-repack.txt:87 en/git-replace.txt:60 en/git-rm.txt:48 en/git-submodule.txt:293 en/git-switch.txt:110 en/git-tag.txt:79 en/git-update-server-info.txt:24 en/git-worktree.txt:162
@@ -61437,13 +61437,13 @@ msgstr "`remove`拒绝删除一个脏工作区，除非使用`--force`。  要�
 #: en/git-worktree.txt:187
 #, priority:240
 msgid "With `add`, create a new branch named `<new-branch>` starting at `<commit-ish>`, and check out `<new-branch>` into the new worktree.  If `<commit-ish>` is omitted, it defaults to `HEAD`.  By default, `-b` refuses to create a new branch if it already exists. `-B` overrides this safeguard, resetting `<new-branch>` to `<commit-ish>`."
-msgstr ""
+msgstr "通过`add`，创建一个名为`<新分支>`的新分支，从`<提交号>`开始，并将`<新分支>`检出到新的工作树。  如果省略了`<提交号>`，则默认为`HEAD`。  默认情况下，如果一个新的分支已经存在，`-b`会拒绝创建它。`-B`则不会拒绝创建，将`<新分支>`重置为`<提交号>`。"
 
 #. type: Plain text
 #: en/git-worktree.txt:192
-#, priority:240
+#, fuzzy, priority:240
 msgid "With `add`, detach `HEAD` in the new worktree. See \"DETACHED HEAD\" in linkgit:git-checkout[1]."
-msgstr ""
+msgstr "通过 `add`，在新的工作树中分离出 `HEAD`。参见 linkgit:git-checkout[1] 中的 \"DETACHED HEAD\"。"
 
 #. type: Labeled list
 #: en/git-worktree.txt:193
@@ -61455,7 +61455,7 @@ msgstr "--[no-]checkout"
 #: en/git-worktree.txt:198
 #, priority:240
 msgid "By default, `add` checks out `<commit-ish>`, however, `--no-checkout` can be used to suppress checkout in order to make customizations, such as configuring sparse-checkout. See \"Sparse checkout\" in linkgit:git-read-tree[1]."
-msgstr ""
+msgstr "默认情况下，`add`会检出`<提交号>`，然而，`--no-checkout`可以用来抑制检出，以便进行定制，比如配置稀疏检出。参见 linkgit:git-read-tree[1] 中的 \"稀疏检出\"。"
 
 #. type: Labeled list
 #: en/git-worktree.txt:199
@@ -61467,13 +61467,13 @@ msgstr "--[no-]guess-remote"
 #: en/git-worktree.txt:205
 #, priority:240
 msgid "With `worktree add <path>`, without `<commit-ish>`, instead of creating a new branch from `HEAD`, if there exists a tracking branch in exactly one remote matching the basename of `<path>`, base the new branch on the remote-tracking branch, and mark the remote-tracking branch as \"upstream\" from the new branch."
-msgstr ""
+msgstr "在`worktree add <路径>`下，如果没有`<提交号>`，则不从`HEAD`创建新的分支，而是在正好有一个与`<路径>`的基名相匹配的远程跟踪分支的情况下，将新的分支建立在远程跟踪分支上，并将远程跟踪分支标记为新分支的 \"上游\"。"
 
 #. type: Plain text
 #: en/git-worktree.txt:208
 #, priority:240
 msgid "This can also be set up as the default behaviour by using the `worktree.guessRemote` config option."
-msgstr ""
+msgstr "这也可以通过使用`worktree.guessRemote`配置选项设置为默认行为。"
 
 #. type: Labeled list
 #: en/git-worktree.txt:209
@@ -61485,7 +61485,7 @@ msgstr "--[no-]track"
 #: en/git-worktree.txt:214
 #, priority:240
 msgid "When creating a new branch, if `<commit-ish>` is a branch, mark it as \"upstream\" from the new branch.  This is the default if `<commit-ish>` is a remote-tracking branch.  See `--track` in linkgit:git-branch[1] for details."
-msgstr ""
+msgstr "当创建一个新的分支时，如果 `<提交号>` 是一个分支，则将其标记为新分支的 \"上游\"。  默认认为 `<提交号>` 是一个远程跟踪分支。  详情见 linkgit:git-branch[1] 中的 `--track`。"
 
 #. type: Labeled list
 #: en/git-worktree.txt:215
@@ -61497,13 +61497,13 @@ msgstr "--lock"
 #: en/git-worktree.txt:219
 #, priority:240
 msgid "Keep the worktree locked after creation. This is the equivalent of `git worktree lock` after `git worktree add`, but without a race condition."
-msgstr ""
+msgstr "在创建后保持工作区的锁定。这相当于在`git worktree add`之后执行`git worktree lock`，但没有资源竞争。"
 
 #. type: Plain text
 #: en/git-worktree.txt:224
 #, priority:240
 msgid "With `prune`, do not remove anything; just report what it would remove."
-msgstr ""
+msgstr "在使用`prune`时，不会删除任何文件；只会报告它要删除的东西。"
 
 #. type: Plain text
 #: en/git-worktree.txt:230
@@ -61516,37 +61516,37 @@ msgstr "以易于解析的格式给出脚本的输出。  这类似于简短的�
 #: en/git-worktree.txt:236
 #, priority:240
 msgid "Terminate each line with a NUL rather than a newline when `--porcelain` is specified with `list`. This makes it possible to parse the output when a worktree path contains a newline character."
-msgstr ""
+msgstr "当`--porcelain`与`list`一起指定时，用NUL而不是换行来结束每一行。这使得在工作区路径包含换行符时，可以解析输出。"
 
 #. type: Plain text
 #: en/git-worktree.txt:240
 #, priority:240
 msgid "With `add`, suppress feedback messages."
-msgstr ""
+msgstr "用`add`，抑制反馈信息。"
 
 #. type: Plain text
 #: en/git-worktree.txt:244
 #, priority:240
 msgid "With `prune`, report all removals."
-msgstr ""
+msgstr "使用`prune`，报告所有的移除情况。"
 
 #. type: Plain text
 #: en/git-worktree.txt:246
 #, priority:240
 msgid "With `list`, output additional information about worktrees (see below)."
-msgstr ""
+msgstr "用`list`，输出关于工作区的额外信息（见下文）。"
 
 #. type: Plain text
 #: en/git-worktree.txt:249
 #, priority:240
 msgid "With `prune`, only expire unused worktrees older than `<time>`."
-msgstr ""
+msgstr "使用 `prune`，只对超过`<时间>`未使用的工作区进行淘汰。"
 
 #. type: Plain text
 #: en/git-worktree.txt:252
 #, priority:240
 msgid "With `list`, annotate missing worktrees as prunable if they are older than `<time>`."
-msgstr ""
+msgstr "使用`list`，如果丢失的工作区比`<时间>`早，则将其注释为可修剪。"
 
 #. type: Labeled list
 #: en/git-worktree.txt:253
@@ -61558,7 +61558,7 @@ msgstr "--reason <string>"
 #: en/git-worktree.txt:256
 #, priority:240
 msgid "With `lock` or with `add --lock`, an explanation why the worktree is locked."
-msgstr ""
+msgstr "用`lock`或用`add --lock`，解释为什么工作区被锁定。"
 
 #. type: Labeled list
 #: en/git-worktree.txt:257
@@ -61570,13 +61570,13 @@ msgstr "<worktree>"
 #: en/git-worktree.txt:259
 #, priority:240
 msgid "Worktrees can be identified by path, either relative or absolute."
-msgstr ""
+msgstr "工作区可以通过相对或绝对路径来识别。"
 
 #. type: Plain text
 #: en/git-worktree.txt:264
 #, priority:240
 msgid "If the last path components in the worktree's path is unique among worktrees, it can be used to identify a worktree. For example if you only have two worktrees, at `/abc/def/ghi` and `/abc/def/ggg`, then `ghi` or `def/ghi` is enough to point to the former worktree."
-msgstr ""
+msgstr "如果工作区路径中的后几个层次在工作树中是唯一的，则它可以用来识别一个工作树。例如，如果你只有两个工作区，在`/abc/def/ghi`和`/abc/def/ggg`，那么使用`ghi`或`def/ghi`就足以指向前一个工作区。"
 
 #. type: Title -
 #: en/git-worktree.txt:266
@@ -61588,43 +61588,43 @@ msgstr "参考"
 #: en/git-worktree.txt:271
 #, priority:240
 msgid "When using multiple worktrees, some refs are shared between all worktrees, but others are specific to an individual worktree. One example is `HEAD`, which is different for each worktree. This section is about the sharing rules and how to access refs of one worktree from another."
-msgstr ""
+msgstr "当使用多个工作区时，一些引用在所有工作区之间共享，但其他引用是特定于单个工作区的。比如：`HEAD`，它对每个工作树都是不同的。本节是关于共享规则，以及如何从另一个工作区访问一个工作区的引用。"
 
 #. type: Plain text
 #: en/git-worktree.txt:276
 #, priority:240
 msgid "In general, all pseudo refs are per-worktree and all refs starting with `refs/` are shared. Pseudo refs are ones like `HEAD` which are directly under `$GIT_DIR` instead of inside `$GIT_DIR/refs`. There are exceptions, however: refs inside `refs/bisect` and `refs/worktree` are not shared."
-msgstr ""
+msgstr "一般来说，所有的伪引用都是工作区特有的，所有以`refs/`开头的引用都是共享的。伪引用是像`HEAD`那样直接在`$GIT_DIR`下，而不是在`$GIT_DIR/refs`内的引用。但也有例外：`refs/bisect`和`refs/worktree`内的引用不被共享。"
 
 #. type: Plain text
 #: en/git-worktree.txt:281
 #, priority:240
 msgid "Refs that are per-worktree can still be accessed from another worktree via two special paths, `main-worktree` and `worktrees`. The former gives access to per-worktree refs of the main worktree, while the latter to all linked worktrees."
-msgstr ""
+msgstr "每个工作区的引用仍然可以通过两个特殊的路径，即 `主工作区`和 `从工作区`，从另一个工作区访问。前者可以访问主工作区的每个工作区的引用，而后者可以访问所有链接的工作区。"
 
 #. type: Plain text
 #: en/git-worktree.txt:288
 #, priority:240
 msgid "For example, `main-worktree/HEAD` or `main-worktree/refs/bisect/good` resolve to the same value as the main worktree's `HEAD` and `refs/bisect/good` respectively. Similarly, `worktrees/foo/HEAD` or `worktrees/bar/refs/bisect/bad` are the same as `$GIT_COMMON_DIR/worktrees/foo/HEAD` and `$GIT_COMMON_DIR/worktrees/bar/refs/bisect/bad`."
-msgstr ""
+msgstr "例如，`main-worktree/HEAD`或`main-worktree/refs/bisect/good`分别解析到与主工作区的`HEAD`和`refs/bisect/good`相同的值。类似地，`worktrees/foo/HEAD`或`worktrees/bar/refs/bisect/bad`与`$GIT_COMMON_DIR/worktrees/foo/HEAD`和`$GIT_COMMON_DIR/worktrees/bar/refs/bisect/bad`相同。"
 
 #. type: Plain text
 #: en/git-worktree.txt:292
 #, priority:240
 msgid "To access refs, it's best not to look inside `$GIT_DIR` directly. Instead use commands such as linkgit:git-rev-parse[1] or linkgit:git-update-ref[1] which will handle refs correctly."
-msgstr ""
+msgstr "要访问引用，最好不要直接在 `$GIT_DIR` 中查找。相反，使用 linkgit:git-rev-parse[1] 或 linkgit:git-update-ref[1] 这样的命令可以正确处理引用。"
 
 #. type: Plain text
 #: en/git-worktree.txt:299
 #, priority:240
 msgid "By default, the repository `config` file is shared across all worktrees.  If the config variables `core.bare` or `core.worktree` are present in the common config file and `extensions.worktreeConfig` is disabled, then they will be applied to the main worktree only."
-msgstr ""
+msgstr "默认情况下，资源库的`config`文件在所有工作区上共享。  如果配置变量`core.bare`或`core.worktree`存在于公共配置文件中，并且`extensions.worktreeConfig`被禁用，那么它们将只应用于主工作区。"
 
 #. type: Plain text
 #: en/git-worktree.txt:302
 #, priority:240
 msgid "In order to have worktree-specific configuration, you can turn on the `worktreeConfig` extension, e.g.:"
-msgstr ""
+msgstr "为了对工作区进行特定配置，你可以打开`worktreeConfig`扩展，例如："
 
 #. type: delimited block -
 #: en/git-worktree.txt:305
@@ -61636,37 +61636,37 @@ msgstr "$ git config extensions.worktreeConfig true\n"
 #: en/git-worktree.txt:311
 #, priority:240
 msgid "In this mode, specific configuration stays in the path pointed by `git rev-parse --git-path config.worktree`. You can add or update configuration in this file with `git config --worktree`. Older Git versions will refuse to access repositories with this extension."
-msgstr ""
+msgstr "在这种模式下，特定的配置保持在`git rev-parse --git-path config.worktree`所指向的路径中。你可以用`git config --worktree`添加或更新该文件中的配置。旧版本的Git会拒绝访问带有这个扩展的仓库。"
 
 #. type: Plain text
 #: en/git-worktree.txt:317
 #, priority:240
 msgid "Note that in this file, the exception for `core.bare` and `core.worktree` is gone. If they exist in `$GIT_DIR/config`, you must move them to the `config.worktree` of the main worktree. You may also take this opportunity to review and move other configuration that you do not want to share to all worktrees:"
-msgstr ""
+msgstr "注意，在这个文件中，`core.bare`和`core.worktree`的例外情况已经消失。如果它们存在于`$GIT_DIR/config`中，你必须把它们移到主工作区的`config.worktree`中。你也可以借此机会审查和移动其他你不想共享到所有工作区的配置："
 
 #. type: Plain text
 #: en/git-worktree.txt:319
 #, priority:240
 msgid "`core.worktree` should never be shared."
-msgstr ""
+msgstr "`core.worktree`不应该被共享。"
 
 #. type: Plain text
 #: en/git-worktree.txt:321
 #, priority:240
 msgid "`core.bare` should not be shared if the value is `core.bare=true`."
-msgstr ""
+msgstr "如果`core.bare`的值为`core.bare=true`，则不应共享。"
 
 #. type: Plain text
 #: en/git-worktree.txt:324
 #, priority:240
 msgid "`core.sparseCheckout` should not be shared, unless you are sure you always use sparse checkout for all worktrees."
-msgstr ""
+msgstr "`core.sparseCheckout`不应该被共享，除非你确信你总是对所有工作区使用稀疏检出。"
 
 #. type: Plain text
 #: en/git-worktree.txt:327
 #, priority:240
 msgid "See the documentation of `extensions.worktreeConfig` in linkgit:git-config[1] for more details."
-msgstr ""
+msgstr "更多细节请参见 linkgit:git-config[1] 中的 `extensions.worktreeConfig` 文档。"
 
 #. type: Title -
 #: en/git-worktree.txt:329
@@ -61678,55 +61678,55 @@ msgstr "细节"
 #: en/git-worktree.txt:338
 #, priority:240
 msgid "Each linked worktree has a private sub-directory in the repository's `$GIT_DIR/worktrees` directory.  The private sub-directory's name is usually the base name of the linked worktree's path, possibly appended with a number to make it unique.  For example, when `$GIT_DIR=/path/main/.git` the command `git worktree add /path/other/test-next next` creates the linked worktree in `/path/other/test-next` and also creates a `$GIT_DIR/worktrees/test-next` directory (or `$GIT_DIR/worktrees/test-next1` if `test-next` is already taken)."
-msgstr ""
+msgstr "每个链接工作区在仓库的`$GIT_DIR/worktrees`目录下都有一个私有子目录。  私有子目录的名称通常是被链接的工作树路径的基本名称，但可能加上一个数字以使成为唯一目录。  例如，当`$GIT_DIR=/path/main/.git`时，命令`git worktree add /path/other/test-next next`会在`/path/other/test-next`中创建链接工作区，同时创建一个`$GIT_DIR/worktrees/test-next`目录（如果`test-next`已经被占用，则创建`$GIT_DIR/worktrees/test-next1`）。"
 
 #. type: Plain text
 #: en/git-worktree.txt:344
 #, priority:240
 msgid "Within a linked worktree, `$GIT_DIR` is set to point to this private directory (e.g. `/path/main/.git/worktrees/test-next` in the example) and `$GIT_COMMON_DIR` is set to point back to the main worktree's `$GIT_DIR` (e.g. `/path/main/.git`). These settings are made in a `.git` file located at the top directory of the linked worktree."
-msgstr ""
+msgstr "在一个链接工作区中，`$GIT_DIR`设置为指向这个私有目录（例如，例子中的`/path/main/.git/worktrees/test-next`），`$GIT_COMMON_DIR`会被设置为指向主工作区的`$GIT_DIR`（例如，`/path/main/.git`）。这些设置是在位于链接工作区顶级目录的`.git`文件中进行的。"
 
 #. type: Plain text
 #: en/git-worktree.txt:354
 #, priority:240
 msgid "Path resolution via `git rev-parse --git-path` uses either `$GIT_DIR` or `$GIT_COMMON_DIR` depending on the path. For example, in the linked worktree `git rev-parse --git-path HEAD` returns `/path/main/.git/worktrees/test-next/HEAD` (not `/path/other/test-next/.git/HEAD` or `/path/main/.git/HEAD`) while `git rev-parse --git-path refs/heads/master` uses `$GIT_COMMON_DIR` and returns `/path/main/.git/refs/heads/master`, since refs are shared across all worktrees, except `refs/bisect` and `refs/worktree`."
-msgstr ""
+msgstr "通过`git rev-parse --git-path`进行的路径解析使用`$GIT_DIR`或`$GIT_COMMON_DIR`，取决于路径。例如，在链接工作区中，`git rev-parse --git-path HEAD`命令返回`/path/main/.git/worktrees/test-next/HEAD`（而不是`/path/other/test-next/.git/HEAD`或者`/path/main/.git/HEAD`），而`git rev-parse --git-path refs/heads/master`则使用`$GIT_COMMON_DIR`并返回`/path/main/.git/refs/heads/master`，因为除了`refs/bisect`和`refs/worktree`，所有工作区都共享引用。"
 
 #. type: Plain text
 #: en/git-worktree.txt:359
 #, priority:240
 msgid "See linkgit:gitrepository-layout[5] for more information. The rule of thumb is do not make any assumption about whether a path belongs to `$GIT_DIR` or `$GIT_COMMON_DIR` when you need to directly access something inside `$GIT_DIR`. Use `git rev-parse --git-path` to get the final path."
-msgstr ""
+msgstr "更多信息见 linkgit:gitrepository-layout[5]。经验法则是，当你需要直接访问`$GIT_DIR`或`$GIT_COMMON_DIR`内的东西时，不要对路径是否属于`$GIT_DIR`做出任何假设。使用`git rev-parse --git-path`来获得最终路径。"
 
 #. type: Plain text
 #: en/git-worktree.txt:367
 #, priority:240
 msgid "If you manually move a linked worktree, you need to update the `gitdir` file in the entry's directory. For example, if a linked worktree is moved to `/newpath/test-next` and its `.git` file points to `/path/main/.git/worktrees/test-next`, then update `/path/main/.git/worktrees/test-next/gitdir` to reference `/newpath/test-next` instead. Better yet, run `git worktree repair` to reestablish the connection automatically."
-msgstr ""
+msgstr "如果你手动移动一个链接工作区，你需要更新该条目目录下的`gitdir`文件。例如，如果一个链接工作区被移到`/newpath/test-next`，而它的`.git`文件指向`/path/main/.git/worktrees/test-next`，那么更新`/path/main/.git/worktrees/test-next/gitdir`以引用`/newpath/test-next`。除此之外，更好的选择是，运行`git worktree repair`来自动重新建立连接。"
 
 #. type: Plain text
 #: en/git-worktree.txt:378
 #, priority:240
 msgid "To prevent a `$GIT_DIR/worktrees` entry from being pruned (which can be useful in some situations, such as when the entry's worktree is stored on a portable device), use the `git worktree lock` command, which adds a file named `locked` to the entry's directory. The file contains the reason in plain text. For example, if a linked worktree's `.git` file points to `/path/main/.git/worktrees/test-next` then a file named `/path/main/.git/worktrees/test-next/locked` will prevent the `test-next` entry from being pruned.  See linkgit:gitrepository-layout[5] for details."
-msgstr ""
+msgstr "为了防止`$GIT_DIR/worktrees`条目被修剪（这在某些情况下很有用，比如该条目的工作区存储在便携设备上），使用`git worktree lock`命令，它会在条目的目录中添加一个名为`locked`的文件。该文件包含纯文本的原因。例如，如果一个链接工作区的`.git`文件指向`/path/main/.git/worktrees/test-next`，那么一个名为`/path/main/.git/worktrees/test-next/locked`的文件将阻止`test-next`条目被剪除。  详情见linkgit:gitrepository-layout[5]。"
 
 #. type: Plain text
 #: en/git-worktree.txt:381
 #, priority:240
 msgid "When `extensions.worktreeConfig` is enabled, the config file `.git/worktrees/<id>/config.worktree` is read after `.git/config` is."
-msgstr ""
+msgstr "当`extensions.worktreeConfig`被启用时，在`.git/config`之后会读取`.git/worktrees/<id>/config.worktree`的配置文件。"
 
 #. type: Title -
 #: en/git-worktree.txt:383
 #, no-wrap, priority:240
 msgid "LIST OUTPUT FORMAT"
-msgstr ""
+msgstr "列表输出格式"
 
 #. type: Plain text
 #: en/git-worktree.txt:386
 #, priority:240
 msgid "The `worktree list` command has two output formats. The default format shows the details on a single line with columns.  For example:"
-msgstr ""
+msgstr "`worktree list` 命令有两种输出格式。默认的格式是在单行上显示细节，并带有列。  例如："
 
 #. type: delimited block -
 #: en/git-worktree.txt:392
@@ -61746,19 +61746,19 @@ msgstr ""
 #: en/git-worktree.txt:396
 #, priority:240
 msgid "The command also shows annotations for each worktree, according to its state.  These annotations are:"
-msgstr ""
+msgstr "该命令还根据每个工作区的状态，显示其注释。  这些注释是："
 
 #. type: Plain text
 #: en/git-worktree.txt:398
 #, priority:240
 msgid "`locked`, if the worktree is locked."
-msgstr ""
+msgstr "`locked`，如果工作区被锁定。"
 
 #. type: Plain text
 #: en/git-worktree.txt:399
 #, priority:240
 msgid "`prunable`, if the worktree can be pruned via `git worktree prune`."
-msgstr ""
+msgstr "`prunable`，如果工作区可以通过`git worktree prune`进行修剪。"
 
 #. type: delimited block -
 #: en/git-worktree.txt:405
@@ -61776,9 +61776,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-worktree.txt:410
-#, priority:240
+#, fuzzy, priority:240
 msgid "For these annotations, a reason might also be available and this can be seen using the verbose mode. The annotation is then moved to the next line indented followed by the additional information."
-msgstr ""
+msgstr "对于这些注释，也可能有一个原因，这可以通过verbose模式看到。然后注释被移到下一行缩进，后面是附加信息。"
 
 #. type: delimited block -
 #: en/git-worktree.txt:419
@@ -61804,19 +61804,19 @@ msgstr ""
 #: en/git-worktree.txt:424
 #, priority:240
 msgid "Note that the annotation is moved to the next line if the additional information is available, otherwise it stays on the same line as the worktree itself."
-msgstr ""
+msgstr "注意，如果有额外的信息，注释将被移到下一行，否则它将与工作区本身保持在同一行。"
 
 #. type: Title ~
 #: en/git-worktree.txt:426
 #, no-wrap, priority:240
 msgid "Porcelain Format"
-msgstr ""
+msgstr "上层命令格式"
 
 #. type: Plain text
 #: en/git-worktree.txt:435
 #, priority:240
 msgid "The porcelain format has a line per attribute.  If `-z` is given then the lines are terminated with NUL rather than a newline.  Attributes are listed with a label and value separated by a single space.  Boolean attributes (like `bare` and `detached`) are listed as a label only, and are present only if the value is true.  Some attributes (like `locked`) can be listed as a label only or with a value depending upon whether a reason is available.  The first attribute of a worktree is always `worktree`, an empty line indicates the end of the record.  For example:"
-msgstr ""
+msgstr "上层命令的每个属性有一行。  如果给了`-z`，那么这几行将以NUL（空字符）而不是换行来结束。  属性以标签和值的形式列出，用一个空格隔开。  布尔属性（如`bare`和`detached`）仅作为标签列出，并且仅在值为真时出现。  一些属性（如`locked'）可以只作为标签列出，也可以根据是否有理由列出一个值。  工作区的第一个属性总是`工作树'，一个空行表示记录的结束。  比如说："
 
 #. type: delimited block -
 #: en/git-worktree.txt:440
@@ -61838,6 +61838,9 @@ msgid ""
 "HEAD abcd1234abcd1234abcd1234abcd1234abcd1234\n"
 "branch refs/heads/master\n"
 msgstr ""
+"worktree /path/to/linked-worktree\n"
+"HEAD abcd1234abcd1234abcd1234abcd1234abcd1234\n"
+"branch refs/heads/master\n"
 
 #. type: delimited block -
 #: en/git-worktree.txt:448
@@ -61847,6 +61850,9 @@ msgid ""
 "HEAD 1234abc1234abc1234abc1234abc1234abc1234a\n"
 "detached\n"
 msgstr ""
+"worktree /path/to/other-linked-worktree\n"
+"HEAD 1234abc1234abc1234abc1234abc1234abc1234a\n"
+"detached\n"
 
 #. type: delimited block -
 #: en/git-worktree.txt:453
@@ -61857,6 +61863,10 @@ msgid ""
 "branch refs/heads/locked-no-reason\n"
 "locked\n"
 msgstr ""
+"worktree /path/to/linked-worktree-locked-no-reason\n"
+"HEAD 5678abc5678abc5678abc5678abc5678abc5678c\n"
+"branch refs/heads/locked-no-reason\n"
+"locked\n"
 
 #. type: delimited block -
 #: en/git-worktree.txt:458
@@ -61867,6 +61877,10 @@ msgid ""
 "branch refs/heads/locked-with-reason\n"
 "locked reason why is locked\n"
 msgstr ""
+"worktree /path/to/linked-worktree-locked-with-reason\n"
+"HEAD 3456def3456def3456def3456def3456def3456b\n"
+"branch refs/heads/locked-with-reason\n"
+"locked reason why is locked\n"
 
 #. type: delimited block -
 #: en/git-worktree.txt:463
@@ -61877,12 +61891,16 @@ msgid ""
 "detached\n"
 "prunable gitdir file points to non-existent location\n"
 msgstr ""
+"worktree /path/to/linked-worktree-prunable\n"
+"HEAD 1233def1234def1234def1234def1234def1234b\n"
+"detached\n"
+"修剪的gitdir文件指向不存在的位置\n"
 
 #. type: Plain text
 #: en/git-worktree.txt:470
-#, fuzzy, priority:240
+#, priority:240
 msgid "Unless `-z` is used any \"unusual\" characters in the lock reason such as newlines are escaped and the entire reason is quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1]).  For Example:"
-msgstr "如果没有这个选项，带 \"不常见\" 字符的路径名会被引用，正如配置变量 `core.quotePath` 所解释的那样（参见 linkgit:git-config[1]）。"
+msgstr "除非使用`-z`，否则锁定的原因中任何 \"不寻常\"的字符，如换行，都会被转义，并且整个原因被引用为配置变量`core.quotePath`（见linkgit:git-config[1]）。  举例来说："
 
 #. type: delimited block -
 #: en/git-worktree.txt:476
@@ -61902,7 +61920,7 @@ msgstr ""
 #: en/git-worktree.txt:488
 #, priority:240
 msgid "You are in the middle of a refactoring session and your boss comes in and demands that you fix something immediately. You might typically use linkgit:git-stash[1] to store your changes away temporarily, however, your working tree is in such a state of disarray (with new, moved, and removed files, and other bits and pieces strewn around) that you don't want to risk disturbing any of it. Instead, you create a temporary linked worktree to make the emergency fix, remove it when done, and then resume your earlier refactoring session."
-msgstr ""
+msgstr "你正在进行重构工作，你的老板进来了，要求你立即修复一些东西。你通常会使用linkgit:git-stash[1]来暂时存储你的修改，然而你的工作树处于如此混乱的状态（有新的、被移动的、被删除的文件，以及其他散落的碎片），你不想冒险去打扰它。相反，你创建了一个临时的链接工作树来进行紧急修复，完成后将其删除，然后继续你先前的重构会话。"
 
 #. type: delimited block -
 #: en/git-worktree.txt:496
@@ -61915,12 +61933,18 @@ msgid ""
 "$ popd\n"
 "$ git worktree remove ../temp\n"
 msgstr ""
+"$ git worktree add -b emergency-fix ../temp master\n"
+"$ pushd ../temp\n"
+"# ... 嗨骇害 ...\n"
+"$ git commit -a -m '老板让我赶紧修复的问题'\n"
+"$ popd\n"
+"$ git worktree remove ../temp\n"
 
 #. type: Plain text
 #: en/git-worktree.txt:503
 #, priority:240
 msgid "Multiple checkout in general is still experimental, and the support for submodules is incomplete. It is NOT recommended to make multiple checkouts of a superproject."
-msgstr ""
+msgstr "多重检出总体上仍处于试验阶段，对子模块的支持也不完整。我们 ⌈不⌋ 建议对一个父项目进行多重检出。"
 
 #. type: Title =
 #: en/git-write-tree.txt:2
@@ -63441,49 +63465,49 @@ msgstr "追踪由'<start>,<end>'给出的行的范围，或由函数名称重合
 #: en/merge-options.txt:5
 #, priority:240
 msgid "Perform the merge and commit the result. This option can be used to override --no-commit."
-msgstr ""
+msgstr "执行合并并提交结果。这个选项可以用来覆盖 --no-commit。"
 
 #. type: Plain text
 #: en/merge-options.txt:7 en/merge-options.txt:100 en/merge-options.txt:141
 #, no-wrap, priority:240
 msgid "\tOnly useful when merging.\n"
-msgstr ""
+msgstr "\t只有在合并的时候才有用。\n"
 
 #. type: Plain text
 #: en/merge-options.txt:12
 #, priority:240
 msgid "With --no-commit perform the merge and stop just before creating a merge commit, to give the user a chance to inspect and further tweak the merge result before committing."
-msgstr ""
+msgstr "用 --no-commit 来执行合并，并在创建合并提交前停止，以便让用户有机会在提交前检查和进一步调整合并结果。"
 
 #. type: Plain text
 #: en/merge-options.txt:17
 #, priority:240
 msgid "Note that fast-forward updates do not create a merge commit and therefore there is no way to stop those merges with --no-commit.  Thus, if you want to ensure your branch is not changed or updated by the merge command, use --no-ff with --no-commit."
-msgstr ""
+msgstr "请注意，快进更新并不产生合并提交，因此没有办法用 --no-commit 停止这些合并。  因此，如果你想确保你的分支不被合并命令改变或更新，请一起使用 --no-ff 和 --no-commit选项。"
 
 #. type: Plain text
 #: en/merge-options.txt:26
 #, priority:240
 msgid "Invoke an editor before committing successful mechanical merge to further edit the auto-generated merge message, so that the user can explain and justify the merge. The `--no-edit` option can be used to accept the auto-generated message (this is generally discouraged)."
-msgstr ""
+msgstr "在提交成功的机械合并之前，调用一个编辑器来进一步编辑自动生成的合并信息，以便用户可以解释和证明合并的合理性。可以使用`--no-edit`选项来接受自动生成的信息（但是不鼓励亲这么做）。"
 
 #. type: Plain text
 #: en/merge-options.txt:30
 #, priority:240
 msgid "The `--edit` (or `-e`) option is still useful if you are giving a draft message with the `-m` option from the command line and want to edit it in the editor."
-msgstr ""
+msgstr "如果你在命令行中用`-m`选项给出一个草稿信息，并想在编辑器中编辑它，`--edit`（或`-e`）选项仍然有用。"
 
 #. type: Plain text
 #: en/merge-options.txt:37
 #, priority:240
 msgid "Older scripts may depend on the historical behaviour of not allowing the user to edit the merge log message. They will see an editor opened when they run `git merge`. To make it easier to adjust such scripts to the updated behaviour, the environment variable `GIT_MERGE_AUTOEDIT` can be set to `no` at the beginning of them."
-msgstr ""
+msgstr "旧的脚本可能依赖于不允许用户编辑合并日志信息的历史行为。他们会在运行`git merge`时看到一个编辑器被打开。为了使这些脚本更容易调整到最新的行为，可以在脚本的开头将环境变量`GIT_MERGE_AUTOEDIT`设置为`no`。"
 
 #. type: Plain text
 #: en/merge-options.txt:44
 #, priority:240
 msgid "This option determines how the merge message will be cleaned up before committing. See linkgit:git-commit[1] for more details. In addition, if the '<mode>' is given a value of `scissors`, scissors will be appended to `MERGE_MSG` before being passed on to the commit machinery in the case of a merge conflict."
-msgstr ""
+msgstr "这个选项决定了在提交前如何清理合并信息。更多细节见linkgit:git-commit[1]。此外，如果`<模式>`的值为 `scissors`，在发生合并冲突时，scissors将被附加到 \"MERGE_MSG \"上，然后传递给提交机制。"
 
 #. type: Labeled list
 #: en/merge-options.txt:48 en/merge-options.txt:56
@@ -63495,67 +63519,67 @@ msgstr "--ff-only"
 #: en/merge-options.txt:54
 #, priority:240
 msgid "Specifies how a merge is handled when the merged-in history is already a descendant of the current history.  `--ff` is the default unless merging an annotated (and possibly signed) tag that is not stored in its natural place in the `refs/tags/` hierarchy, in which case `--no-ff` is assumed."
-msgstr ""
+msgstr "指定当被合并的历史已经是当前历史的后代时，如何处理合并的问题。  默认为`--ff`，除非合并的是一个有注释的（可能是有签名的）标签，在这种情况下，`--no-ff`假设这个标签并没有存储在`refs/tags/`层次结构中的自然位置。"
 
 #. type: Plain text
 #: en/merge-options.txt:60
 #, priority:240
 msgid "Only update to the new history if there is no divergent local history.  This is the default when no method for reconciling divergent histories is provided (via the --rebase=* flags)."
-msgstr ""
+msgstr "只有在没有分歧的本地历史时才更新到新的历史。  当没有提供调和分歧历史的方法时（通过--rebase=*标志），这是默认的。"
 
 #. type: Plain text
 #: en/merge-options.txt:69
 #, priority:240
 msgid "When merging rather than rebasing, specifies how a merge is handled when the merged-in history is already a descendant of the current history.  If merging is requested, `--ff` is the default unless merging an annotated (and possibly signed) tag that is not stored in its natural place in the `refs/tags/` hierarchy, in which case `--no-ff` is assumed."
-msgstr ""
+msgstr "当合并而不是变基时，指定当被合并的历史已经是当前历史的后代时如何处理合并。  如果要求合并，`--ff`是默认的，除非合并的是一个有注释的（可能是有签名的）标签，而这个标签没有存储在`refs/tags/`层次结构中的自然位置，在这种情况下，假定`--no-ff`。"
 
 #. type: Plain text
 #: en/merge-options.txt:75
 #, priority:240
 msgid "With `--ff`, when possible resolve the merge as a fast-forward (only update the branch pointer to match the merged branch; do not create a merge commit).  When not possible (when the merged-in history is not a descendant of the current history), create a merge commit."
-msgstr ""
+msgstr "如果使用 `--ff`，可能的话，以快进方式解决合并问题（只更新分支指针以匹配合并后的分支；不创建合并提交）。  当不可能时（当合并的历史不是当前历史的后代），创建一个合并提交。"
 
 #. type: Plain text
 #: en/merge-options.txt:78
 #, priority:240
 msgid "With `--no-ff`, create a merge commit in all cases, even when the merge could instead be resolved as a fast-forward."
-msgstr ""
+msgstr "使用`--no-ff`，在所有情况下都创建一个合并提交，即使该合并可以作为一个快进解决。"
 
 #. type: Plain text
 #: en/merge-options.txt:82
 #, priority:240
 msgid "With `--ff-only`, resolve the merge as a fast-forward when possible.  When not possible, refuse to merge and exit with a non-zero status."
-msgstr ""
+msgstr "使用`--ff-only`，在可能的情况下，以快进的方式解决合并的问题。  当不可能时，拒绝合并并以非零状态退出。"
 
 #. type: Plain text
 #: en/merge-options.txt:92
 #, priority:240
 msgid "GPG-sign the resulting merge commit. The `keyid` argument is optional and defaults to the committer identity; if specified, it must be stuck to the option without a space. `--no-gpg-sign` is useful to countermand both `commit.gpgSign` configuration variable, and earlier `--gpg-sign`."
-msgstr ""
+msgstr "对合并后的提交进行GPG签名。`keyid`参数是可选的，默认为提交者的身份；如果指定，它必须与选项连在一起，不能有空格。`--no-gpg-sign`对于反命令`commit.gpgSign`配置变量和早期的`--gpg-sign`都很有用。"
 
 #. type: Plain text
 #: en/merge-options.txt:98
 #, priority:240
 msgid "In addition to branch names, populate the log message with one-line descriptions from at most <n> actual commits that are being merged. See also linkgit:git-fmt-merge-msg[1]."
-msgstr ""
+msgstr "除了分支名称外，在日志信息中最多只用<n>个正在合并的实际提交的单行描述来填充。参见 linkgit:git-fmt-merge-msg[1]。"
 
 #. type: Plain text
 #: en/merge-options.txt:104
 #, priority:240
 msgid "With --no-log do not list one-line descriptions from the actual commits being merged."
-msgstr ""
+msgstr "如果使用 --no-log，则不列出被合并的实际提交内容的单行描述。"
 
 #. type: Plain text
 #: en/merge-options.txt:112
 #, priority:240
 msgid "Show a diffstat at the end of the merge. The diffstat is also controlled by the configuration option merge.stat."
-msgstr ""
+msgstr "在合并结束时显示一个差异状态。差异状态也由配置选项merge.stat控制。"
 
 #. type: Plain text
 #: en/merge-options.txt:115
 #, priority:240
 msgid "With -n or --no-stat do not show a diffstat at the end of the merge."
-msgstr ""
+msgstr "使用-n或--no-stat，在合并结束时不显示差异状态。"
 
 #. type: Labeled list
 #: en/merge-options.txt:116
@@ -63573,49 +63597,49 @@ msgstr "--no-squash"
 #: en/merge-options.txt:125
 #, priority:240
 msgid "Produce the working tree and index state as if a real merge happened (except for the merge information), but do not actually make a commit, move the `HEAD`, or record `$GIT_DIR/MERGE_HEAD` (to cause the next `git commit` command to create a merge commit).  This allows you to create a single commit on top of the current branch whose effect is the same as merging another branch (or more in case of an octopus)."
-msgstr ""
+msgstr "产生工作区和索引状态，就像发生了真正的合并一样（除了合并信息），但不实际提交，不移动`HEAD`，也不记录`$GIT_DIR/Merge_HEAD`（以导致下一个`git commit`命令创建一个合并提交）。  这允许你在当前分支的基础上创建一个单一的提交，其效果与合并另一个分支相同（如果是多路分支，则更多）。"
 
 #. type: Plain text
 #: en/merge-options.txt:128
 #, priority:240
 msgid "With --no-squash perform the merge and commit the result. This option can be used to override --squash."
-msgstr ""
+msgstr "使用 --no-squash 进行合并并提交结果。这个选项可以用来覆盖 --quash 选项。"
 
 #. type: Plain text
 #: en/merge-options.txt:130
 #, priority:240
 msgid "With --squash, --commit is not allowed, and will fail."
-msgstr ""
+msgstr "使用 --squash，--commit 是不允许的，而且会失败。"
 
 #. type: Plain text
 #: en/merge-options.txt:133 en/merge-options.txt:166 en/merge-options.txt:210
 #, priority:240
 msgid "Only useful when merging."
-msgstr ""
+msgstr "只有在合并的时候才有用。"
 
 #. type: Plain text
 #: en/merge-options.txt:139
 #, priority:240
 msgid "By default, the pre-merge and commit-msg hooks are run.  When `--no-verify` is given, these are bypassed.  See also linkgit:githooks[5]."
-msgstr ""
+msgstr "默认情况下，会运行 pre-merge 和 commit-msg 事件hook。  当给定 `--no-verify`时，这些将不会执行。  参见 linkgit:githooks[5]。"
 
 #. type: Plain text
 #: en/merge-options.txt:150
 #, priority:240
 msgid "Use the given merge strategy; can be supplied more than once to specify them in the order they should be tried.  If there is no `-s` option, a built-in list of strategies is used instead (`ort` when merging a single head, `octopus` otherwise)."
-msgstr ""
+msgstr "使用给定的合并策略；可以多次提供，以指定它们应该被尝试的顺序。  如果没有`-s`选项，则使用一个内置的策略列表（当合并单个头时使用`ort`，否则使用`octopus`）。"
 
 #. type: Labeled list
 #: en/merge-options.txt:151
 #, no-wrap, priority:240
 msgid "-X <option>"
-msgstr ""
+msgstr "-X <选项>"
 
 #. type: Plain text
 #: en/merge-options.txt:155
 #, priority:240
 msgid "Pass merge strategy specific option through to the merge strategy."
-msgstr ""
+msgstr "将合并策略的特定选项传递给合并策略。"
 
 #. type: Labeled list
 #: en/merge-options.txt:156
@@ -63633,7 +63657,7 @@ msgstr "--no-verify-signatures"
 #: en/merge-options.txt:163
 #, priority:240
 msgid "Verify that the tip commit of the side branch being merged is signed with a valid key, i.e. a key that has a valid uid: in the default trust model, this means the signing key has been signed by a trusted key.  If the tip commit of the side branch is not signed with a valid key, the merge is aborted."
-msgstr ""
+msgstr "验证被合并的侧边分支的提示提交是否用有效的密钥签署，即一个具有有效uid的密钥：在默认的信任模型中，这意味着签署密钥是由一个受信任的密钥签署。  如果侧边分支的提示提交没有用有效的密钥签名，则合并被终止。"
 
 #. type: Labeled list
 #: en/merge-options.txt:169
@@ -63645,19 +63669,19 @@ msgstr "--no-summary"
 #: en/merge-options.txt:172
 #, priority:240
 msgid "Synonyms to --stat and --no-stat; these are deprecated and will be removed in the future."
-msgstr ""
+msgstr "与 --stat 和 --no-stat 同义；这些都弃用了，将来会被删除。"
 
 #. type: Plain text
 #: en/merge-options.txt:177
 #, priority:240
 msgid "Operate quietly. Implies --no-progress."
-msgstr ""
+msgstr "安静地操作。暗指 --no-progress。"
 
 #. type: Plain text
 #: en/merge-options.txt:188
 #, priority:240
 msgid "Turn progress on/off explicitly. If neither is specified, progress is shown if standard error is connected to a terminal.  Note that not all merge strategies may support progress reporting."
-msgstr ""
+msgstr "明确地打开/关闭进度。如果两者都没有指定，如果标准错误连接到终端，就会显示进度。  注意，并非所有的合并策略都支持进度报告。"
 
 #. type: Plain text
 #: en/merge-options.txt:199
@@ -63670,19 +63694,19 @@ msgstr "当设置为 \"true \"时，在操作开始前自动创建一个临时�
 #: en/merge-options.txt:207
 #, priority:240
 msgid "By default, `git merge` command refuses to merge histories that do not share a common ancestor.  This option can be used to override this safety when merging histories of two projects that started their lives independently. As that is a very rare occasion, no configuration variable to enable this by default exists and will not be added."
-msgstr ""
+msgstr "默认情况下，`git merge`命令拒绝合并那些没有共同祖先的历史。  当合并两个独立开始的项目的历史时，这个选项可以用来覆盖这个安全性。由于这是一个非常罕见的情况，没有配置变量来默认启用，也不会被添加。"
 
 #. type: Title -
 #: en/merge-strategies.txt:2
 #, no-wrap, priority:240
 msgid "MERGE STRATEGIES"
-msgstr ""
+msgstr "合并战略"
 
 #. type: Plain text
 #: en/merge-strategies.txt:8
 #, priority:240
 msgid "The merge mechanism (`git merge` and `git pull` commands) allows the backend 'merge strategies' to be chosen with `-s` option.  Some strategies can also take their own options, which can be passed by giving `-X<option>` arguments to `git merge` and/or `git pull`."
-msgstr ""
+msgstr "合并机制（`git merge`和`git pull`命令）允许用`s`选项来选择后端'合并策略'。  一些策略也可以采取自己的选项，可以通过给`git merge`和/或`git pull`的`-X<选项>`参数来传递。"
 
 #. type: Labeled list
 #: en/merge-strategies.txt:9
@@ -63694,13 +63718,13 @@ msgstr "或"
 #: en/merge-strategies.txt:24
 #, priority:240
 msgid "This is the default merge strategy when pulling or merging one branch.  This strategy can only resolve two heads using a 3-way merge algorithm.  When there is more than one common ancestor that can be used for 3-way merge, it creates a merged tree of the common ancestors and uses that as the reference tree for the 3-way merge.  This has been reported to result in fewer merge conflicts without causing mismerges by tests done on actual merge commits taken from Linux 2.6 kernel development history.  Additionally this strategy can detect and handle merges involving renames.  It does not make use of detected copies.  The name for this algorithm is an acronym (\"Ostensibly Recursive's Twin\") and came from the fact that it was written as a replacement for the previous default algorithm, `recursive`."
-msgstr ""
+msgstr "这是拉取或合并一个分支时的默认合并策略。  这个策略只能使用三方合并算法解决两个头。  当有一个以上的共同祖先可用于三方合并时，它会创建一个共同祖先的合并树，并将其作为三方合并的参考树。  据报道，通过对Linux 2.6内核开发历史中的实际合并提交的测试，这导致了较少的合并冲突，而不会引起错误的合并。  此外，这个策略可以检测并处理涉及重命名的合并。  它并不使用检测到的副本。  这个算法的名字是一个缩写（\"Ostensibly Recursive's Twin\"），来自于它是作为以前的默认算法`recursive`的替代而编写的。"
 
 #. type: Plain text
 #: en/merge-strategies.txt:26
 #, priority:240
 msgid "The 'ort' strategy can take the following options:"
-msgstr ""
+msgstr "'ort' 策略可以采取以下选项："
 
 #. type: Labeled list
 #: en/merge-strategies.txt:27 en/merge-strategies.txt:132
@@ -63712,13 +63736,13 @@ msgstr "ours"
 #: en/merge-strategies.txt:32
 #, priority:240
 msgid "This option forces conflicting hunks to be auto-resolved cleanly by favoring 'our' version.  Changes from the other tree that do not conflict with our side are reflected in the merge result.  For a binary file, the entire contents are taken from our side."
-msgstr ""
+msgstr "这个选项通过倾向于 \"我们\" 的版本，迫使冲突的猎物被自动解决。  另一棵目录树上与我们这边不冲突的变化会反映在合并结果中。  对于一个二进制文件，整个内容都来自我们这边。"
 
 #. type: Plain text
 #: en/merge-strategies.txt:36
 #, priority:240
 msgid "This should not be confused with the 'ours' merge strategy, which does not even look at what the other tree contains at all.  It discards everything the other tree did, declaring 'our' history contains all that happened in it."
-msgstr ""
+msgstr "这不应该与 \"我们的\" 合并策略相混淆，后者甚至根本不看另一棵目录树包含了什么。  它抛弃了其他树所做的一切，宣布 \"我们的\" 历史包含了其中所发生的一切。"
 
 #. type: Labeled list
 #: en/merge-strategies.txt:37
@@ -63730,7 +63754,7 @@ msgstr "theirs"
 #: en/merge-strategies.txt:40
 #, priority:240
 msgid "This is the opposite of 'ours'; note that, unlike 'ours', there is no 'theirs' merge strategy to confuse this merge option with."
-msgstr ""
+msgstr "这与 \"我们的\" 相反；注意，与 \"我们的\" 不同，没有 \"他们的\" 合并策略来混淆这个合并选项。"
 
 #. type: Labeled list
 #: en/merge-strategies.txt:44
@@ -63742,25 +63766,25 @@ msgstr "ignore-cr-at-eol"
 #: en/merge-strategies.txt:50
 #, priority:240
 msgid "Treats lines with the indicated type of whitespace change as unchanged for the sake of a three-way merge.  Whitespace changes mixed with other changes to a line are not ignored.  See also linkgit:git-diff[1] `-b`, `-w`, `--ignore-space-at-eol`, and `--ignore-cr-at-eol`."
-msgstr ""
+msgstr "为了进行三方合并，将具有指定类型的空白变化的行视为没有变化。  但混合了其他改动的行的空白改动不会被忽略。  参见linkgit:git-diff[1] `-b`, `-w`, `-ignore-space-at-eol`, 和 `-ignore-cr-at-eol`。"
 
 #. type: Plain text
 #: en/merge-strategies.txt:53
 #, priority:240
 msgid "If 'their' version only introduces whitespace changes to a line, 'our' version is used;"
-msgstr ""
+msgstr "如果 \"他们的\" 版本只在一行中引入了空白的变化，则使用 \"我们的\" 版本；"
 
 #. type: Plain text
 #: en/merge-strategies.txt:55
 #, priority:240
 msgid "If 'our' version introduces whitespace changes but 'their' version includes a substantial change, 'their' version is used;"
-msgstr ""
+msgstr "如果 \"我们的\" 版本引入了空白的变化，但 \"他们的\" 版本包括一个实质性的变化，则使用 \"他们的\" 版本;"
 
 #. type: Plain text
 #: en/merge-strategies.txt:56
 #, priority:240
 msgid "Otherwise, the merge proceeds in the usual way."
-msgstr ""
+msgstr "否则，合并将以常规方式进行。"
 
 #. type: Labeled list
 #: en/merge-strategies.txt:57
@@ -63772,7 +63796,7 @@ msgstr "renormalize"
 #: en/merge-strategies.txt:64
 #, priority:240
 msgid "This runs a virtual check-out and check-in of all three stages of a file when resolving a three-way merge.  This option is meant to be used when merging branches with different clean filters or end-of-line normalization rules.  See \"Merging branches with differing checkin/checkout attributes\" in linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "在解决三方合并时，这将对一个文件的所有三个阶段运行虚拟检出和检入。  这个选项是为了在合并具有不同清洁过滤器或行末规范化规则的分支时使用。  详情见 linkgit:gitattributes[5] 中的 \"合并具有不同检入/检出属性的分支\"。"
 
 #. type: Labeled list
 #: en/merge-strategies.txt:65
@@ -63784,7 +63808,7 @@ msgstr "no-renormalize"
 #: en/merge-strategies.txt:68
 #, priority:240
 msgid "Disables the `renormalize` option.  This overrides the `merge.renormalize` configuration variable."
-msgstr ""
+msgstr "禁用 `renormalize` 选项。  这覆盖了 `merge.renormalize` 配置变量。"
 
 #. type: Labeled list
 #: en/merge-strategies.txt:69
@@ -63796,31 +63820,31 @@ msgstr "find-renames[=<n>]"
 #: en/merge-strategies.txt:74
 #, priority:240
 msgid "Turn on rename detection, optionally setting the similarity threshold.  This is the default. This overrides the 'merge.renames' configuration variable.  See also linkgit:git-diff[1] `--find-renames`."
-msgstr ""
+msgstr "开启重名检测，可选择设置相似度阈值。  这是默认的。这覆盖了 'merge.renames' 配置变量。  参见linkgit:git-diff[1] `--find-renames`。"
 
 #. type: Labeled list
 #: en/merge-strategies.txt:75
 #, no-wrap, priority:240
 msgid "rename-threshold=<n>"
-msgstr ""
+msgstr "rename-threshold=<n>"
 
 #. type: Plain text
 #: en/merge-strategies.txt:77
 #, priority:240
 msgid "Deprecated synonym for `find-renames=<n>`."
-msgstr ""
+msgstr "废弃的，`find-renames=<n>` 的同义词。"
 
 #. type: Labeled list
 #: en/merge-strategies.txt:78
 #, no-wrap, priority:240
 msgid "subtree[=<path>]"
-msgstr ""
+msgstr "subtree[=<路径>]"
 
 #. type: Plain text
 #: en/merge-strategies.txt:84
 #, priority:240
 msgid "This option is a more advanced form of 'subtree' strategy, where the strategy makes a guess on how two trees must be shifted to match with each other when merging.  Instead, the specified path is prefixed (or stripped from the beginning) to make the shape of two trees to match."
-msgstr ""
+msgstr "这个选项是 '子树' 策略的更高级形式，该策略对两棵树在合并时必须如何移位以相互匹配进行猜测。  相反，指定的路径是前缀（或从开始剥离），以使两棵树的形状相匹配。"
 
 #. type: Labeled list
 #: en/merge-strategies.txt:85
@@ -63832,13 +63856,13 @@ msgstr "recursive"
 #: en/merge-strategies.txt:98
 #, priority:240
 msgid "This can only resolve two heads using a 3-way merge algorithm.  When there is more than one common ancestor that can be used for 3-way merge, it creates a merged tree of the common ancestors and uses that as the reference tree for the 3-way merge.  This has been reported to result in fewer merge conflicts without causing mismerges by tests done on actual merge commits taken from Linux 2.6 kernel development history.  Additionally this can detect and handle merges involving renames.  It does not make use of detected copies.  This was the default strategy for resolving two heads from Git v0.99.9k until v2.33.0."
-msgstr ""
+msgstr "这只能用三方合并算法解决两个头。  当有一个以上的共同祖先可用于三方合并时，它会创建一个共同祖先的合并树，并使用它作为三方合并的参考树。  据报道，通过对Linux 2.6内核开发历史中的实际合并提交的测试，这导致了较少的合并冲突，而不会引起错误的合并。  此外，它可以检测并处理涉及重命名的合并。  它并不使用检测到的副本。  从Git v0.99.9k到v2.33.0，这是解决双头的默认策略。"
 
 #. type: Plain text
 #: en/merge-strategies.txt:102
 #, priority:240
 msgid "The 'recursive' strategy takes the same options as 'ort'.  However, there are three additional options that 'ort' ignores (not documented above) that are potentially useful with the 'recursive' strategy:"
-msgstr ""
+msgstr "'recursive'  策略采用与 'ort' 相同的选项。  然而，有三个 'ort' 忽略的额外选项（上面没有记录），对 'recursive' 策略有潜在的作用："
 
 #. type: Labeled list
 #: en/merge-strategies.txt:103
@@ -63850,7 +63874,7 @@ msgstr "patience"
 #: en/merge-strategies.txt:105
 #, priority:240
 msgid "Deprecated synonym for `diff-algorithm=patience`."
-msgstr ""
+msgstr "废弃的，`diff-algorithm=patience` 的同义词。"
 
 #. type: Labeled list
 #: en/merge-strategies.txt:106
@@ -63862,7 +63886,7 @@ msgstr "diff-algorithm=[patience|minimal|histogram|myers]"
 #: en/merge-strategies.txt:113
 #, priority:240
 msgid "Use a different diff algorithm while merging, which can help avoid mismerges that occur due to unimportant matching lines (such as braces from distinct functions).  See also linkgit:git-diff[1] `--diff-algorithm`.  Note that `ort` specifically uses `diff-algorithm=histogram`, while `recursive` defaults to the `diff.algorithm` config setting."
-msgstr ""
+msgstr "在合并时使用不同的差异算法，这可以帮助避免由于不重要的匹配行（比如不同函数的大括号）而发生的错误合并。  参见linkgit:git-diff[1] `--diff-algorithm`。  注意，`ort` 特定 `diff-algorithm=histogram`，而`recursive`默认为`diff.algorithm`配置设置。"
 
 #. type: Labeled list
 #: en/merge-strategies.txt:114
@@ -63874,7 +63898,7 @@ msgstr "no-renames"
 #: en/merge-strategies.txt:118
 #, priority:240
 msgid "Turn off rename detection. This overrides the `merge.renames` configuration variable.  See also linkgit:git-diff[1] `--no-renames`."
-msgstr ""
+msgstr "关闭重名检测。这覆盖了 `merge.renames` 的配置变量。  参见linkgit:git-diff[1] `--no-renames`。"
 
 #. type: Labeled list
 #: en/merge-strategies.txt:119
@@ -63886,7 +63910,7 @@ msgstr "resolve"
 #: en/merge-strategies.txt:124
 #, priority:240
 msgid "This can only resolve two heads (i.e. the current branch and another branch you pulled from) using a 3-way merge algorithm.  It tries to carefully detect criss-cross merge ambiguities.  It does not handle renames."
-msgstr ""
+msgstr "这只能用三方合并算法解决两个头（即当前分支和你拉来的另一个分支）。  它试图仔细检测纵横交错的合并歧义。  它不处理重名。"
 
 #. type: Labeled list
 #: en/merge-strategies.txt:125
@@ -63898,13 +63922,13 @@ msgstr "octopus"
 #: en/merge-strategies.txt:131
 #, priority:240
 msgid "This resolves cases with more than two heads, but refuses to do a complex merge that needs manual resolution.  It is primarily meant to be used for bundling topic branch heads together.  This is the default merge strategy when pulling or merging more than one branch."
-msgstr ""
+msgstr "这可以解决有两个以上头的情况，但拒绝做复杂的合并，需要手动解决。  它主要是用于将主题分支头捆绑在一起。  当拉动或合并一个以上的分支时，这是默认的合并策略。"
 
 #. type: Plain text
 #: en/merge-strategies.txt:139
 #, priority:240
 msgid "This resolves any number of heads, but the resulting tree of the merge is always that of the current branch head, effectively ignoring all changes from all other branches.  It is meant to be used to supersede old development history of side branches.  Note that this is different from the -Xours option to the 'recursive' merge strategy."
-msgstr ""
+msgstr "这可以解决任何数量的头，但合并的结果总是当前分支头的树，有效地忽略了所有其他分支的变化。  它是用来取代侧边分支的旧开发历史的。  注意，这与 'recursive' 合并策略的-Xours选项不同。"
 
 #. type: Labeled list
 #: en/merge-strategies.txt:140
@@ -63916,13 +63940,13 @@ msgstr "subtree"
 #: en/merge-strategies.txt:146
 #, priority:240
 msgid "This is a modified `ort` strategy. When merging trees A and B, if B corresponds to a subtree of A, B is first adjusted to match the tree structure of A, instead of reading the trees at the same level. This adjustment is also done to the common ancestor tree."
-msgstr ""
+msgstr "这是一个修正的 `ort` 策略。当合并树A和B时，如果B对应于A的子树，B首先被调整为与A的树结构相匹配，而不是在同一级别读取树。这种调整也是针对共同祖先树进行的。"
 
 #. type: Plain text
 #: en/merge-strategies.txt:153
 #, priority:240
 msgid "With the strategies that use 3-way merge (including the default, 'ort'), if a change is made on both branches, but later reverted on one of the branches, that change will be present in the merged result; some people find this behavior confusing.  It occurs because only the heads and the merge base are considered when performing a merge, not the individual commits.  The merge algorithm therefore considers the reverted change as no change at all, and substitutes the changed version instead."
-msgstr ""
+msgstr "对于使用三方合并的策略（包括默认的 'ort' 策略），如果在两个分支上都做了修改，但后来在其中一个分支上被撤销，那么这个修改就会出现在合并后的结果中；有些人觉得这种行为令人困惑。  出现这种情况是因为在执行合并时只考虑头部和合并基数，而不是单个提交。  因此，合并算法认为被恢复的修改根本就没有变化，而是用被修改的版本来代替。"
 
 #. type: Labeled list
 #: en/mergetools-merge.txt:1
@@ -65926,7 +65950,7 @@ msgstr "--no-rerere-autoupdate"
 #: en/rerere-options.txt:9
 #, priority:240
 msgid "After the rerere mechanism reuses a recorded resolution on the current conflict to update the files in the working tree, allow it to also update the index with the result of resolution.  `--no-rerere-autoupdate` is a good way to double-check what `rerere` did and catch potential mismerges, before committing the result to the index with a separate `git add`."
-msgstr ""
+msgstr "在 rerere 机制重用当前冲突的记录解析来更新工作树中的文件后，允许它也用解析的结果来更新索引。  `--no-rerere-auto-oupdate`是一个很好的方法，在用单独的 `git add` 提交结果到索引之前，可以反复检查 `rerere` 所做的事情，并抓住潜在的错误合并。"
 
 #. type: Title -
 #: en/revisions.txt:2
