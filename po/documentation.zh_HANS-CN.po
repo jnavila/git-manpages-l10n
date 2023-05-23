@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-02-26 14:06+0100\nPO-Revision-Date: 2023-05-22 06:28+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.18-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-02-26 14:06+0100\nPO-Revision-Date: 2023-05-24 14:40+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.18-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:769 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:146 en/git-status.txt:31
@@ -40738,25 +40738,25 @@ msgstr "请注意，除了`--force-with-lease=< 引用名 >:< 期望 >`以外的
 #: en/git-push.txt:283
 #, priority:220
 msgid "\"--no-force-with-lease\" will cancel all the previous --force-with-lease on the command line."
-msgstr ""
+msgstr "\"--no-force-with-lease \" 将取消之前在命令行上所有的 --force-with-lease。"
 
 #. type: Plain text
 #: en/git-push.txt:289
 #, priority:220
 msgid "A general note on safety: supplying this option without an expected value, i.e. as `--force-with-lease` or `--force-with-lease=<refname>` interacts very badly with anything that implicitly runs `git fetch` on the remote to be pushed to in the background, e.g. `git fetch origin` on your repository in a cronjob."
-msgstr ""
+msgstr "关于安全性的一般说明：在没有预期值的情况下提供这个选项，即 `--force-with-lease` 或`--force-with-lease=< 引用名 >`，会与任何在后台隐式运行 `git fetch` 的远端推送的进程产生非常不好的互动，例如仓库中 cronjob 的 `git fetch origin`。"
 
 #. type: Plain text
 #: en/git-push.txt:296
 #, priority:220
 msgid "The protection it offers over `--force` is ensuring that subsequent changes your work wasn't based on aren't clobbered, but this is trivially defeated if some background process is updating refs in the background. We don't have anything except the remote tracking info to go by as a heuristic for refs you're expected to have seen & are willing to clobber."
-msgstr ""
+msgstr "与 `--force` 相比，它提供的保护是确保你的工作不基于后续的变化，但如果有后台进程在后台更新引用，这一点就很容易被破坏。除了远程跟踪信息外，我们没有任何你期望看到并愿意去破解可以作为启发式引用的东西。"
 
 #. type: Plain text
 #: en/git-push.txt:300
 #, priority:220
 msgid "If your editor or some other system is running `git fetch` in the background for you a way to mitigate this is to simply set up another remote:"
-msgstr ""
+msgstr "如果你的编辑器或其他系统在后台为你运行`git fetch`，减轻这种情况的方法是简单地设置另一个远程："
 
 #. type: Plain text
 #: en/git-push.txt:303
@@ -40764,13 +40764,13 @@ msgstr ""
 msgid ""
 "\tgit remote add origin-push $(git config remote.origin.url)\n"
 "\tgit fetch origin-push\n"
-msgstr ""
+msgstr "\tgit remote add origin-push $(git config remote.origin.url)\n\tgit fetch origin-push\n"
 
 #. type: Plain text
 #: en/git-push.txt:306
 #, priority:220
 msgid "Now when the background process runs `git fetch origin` the references on `origin-push` won't be updated, and thus commands like:"
-msgstr ""
+msgstr "现在，当后台进程运行 `git fetch origin` 时，`origin-push`上的引用将不会被更新，因此，像这样的命令："
 
 #. type: Plain text
 #: en/git-push.txt:308
@@ -40782,7 +40782,7 @@ msgstr "\tgit push --force-with-lease origin-push\n"
 #: en/git-push.txt:313
 #, priority:220
 msgid "Will fail unless you manually run `git fetch origin-push`. This method is of course entirely defeated by something that runs `git fetch --all`, in that case you'd need to either disable it or do something more tedious like:"
-msgstr ""
+msgstr "除非你手动运行 `git fetch origin-push`，否则会失败。当然，这种方法完全可以被运行 `git fetch --all` 的东西打败，在这种情况下，你需要禁用它或者做一些更繁琐的事情，比如："
 
 #. type: Plain text
 #: en/git-push.txt:318
@@ -40792,37 +40792,37 @@ msgid ""
 "\tgit tag base master    # mark our base point\n"
 "\tgit rebase -i master   # rewrite some commits\n"
 "\tgit push --force-with-lease=master:base master:master\n"
-msgstr ""
+msgstr "\tgit fetch              # 从远程仓库更新 'master' 分支\n\tgit tag base master    # 标记基点\n\tgit rebase -i master   # 重写某些提交\n\tgit push --force-with-lease=master:base master:master\n"
 
 #. type: Plain text
 #: en/git-push.txt:324
 #, priority:220
 msgid "I.e. create a `base` tag for versions of the upstream code that you've seen and are willing to overwrite, then rewrite history, and finally force push changes to `master` if the remote version is still at `base`, regardless of what your local `remotes/origin/master` has been updated to in the background."
-msgstr ""
+msgstr "也就是说，为你已经看到并愿意覆盖的上游仓库创建一个`base` 标签，然后重写历史，最后如果远程版本仍然在 `base`，则强制推送修改到`master`，不管你本地的 `remotes/origin/master` 在后台更新了什么。"
 
 #. type: Plain text
 #: en/git-push.txt:332
 #, priority:220
 msgid "Alternatively, specifying `--force-if-includes` as an ancillary option along with `--force-with-lease[=<refname>]` (i.e., without saying what exact commit the ref on the remote side must be pointing at, or which refs on the remote side are being protected) at the time of \"push\" will verify if updates from the remote-tracking refs that may have been implicitly updated in the background are integrated locally before allowing a forced update."
-msgstr ""
+msgstr "另外，在“推送”时将 `--force-if-includes` 作为辅助选项与 `--force-with-lease[=< 引用名 >]` 一起指定（即不说远程的引用必须指向什么确切的提交，或远程的哪些引用被保护），将验证远程跟踪引用的更新是否在允许强制更新之前被整合在本地。"
 
 #. type: Plain text
 #: en/git-push.txt:340
 #, priority:220
 msgid "Usually, the command refuses to update a remote ref that is not an ancestor of the local ref used to overwrite it.  Also, when `--force-with-lease` option is used, the command refuses to update a remote ref whose current value does not match what is expected."
-msgstr ""
+msgstr "通常情况下，命令会拒绝更新一个不属于用来覆盖它的本地引用祖先的远程引用。  另外，当使用 `--force-with-lease` 选项时，命令会拒绝更新一个当前值与预期不符的远程引用。"
 
 #. type: Plain text
 #: en/git-push.txt:343
 #, priority:220
 msgid "This flag disables these checks, and can cause the remote repository to lose commits; use it with care."
-msgstr ""
+msgstr "这个标志禁用了这些检查，并可能导致远程版本库丢失提交，使用时要小心。"
 
 #. type: Plain text
 #: en/git-push.txt:352
 #, ignore-ellipsis, priority:220
 msgid "Note that `--force` applies to all the refs that are pushed, hence using it with `push.default` set to `matching` or with multiple push destinations configured with `remote.*.push` may overwrite refs other than the current branch (including local refs that are strictly behind their remote counterpart).  To force a push to only one branch, use a `+` in front of the refspec to push (e.g `git push origin +master` to force a push to the `master` branch). See the `<refspec>...` section above for details."
-msgstr ""
+msgstr "注意，`--force` 适用于所有被推送的引用，因此在 `push.default` 设置为 `matching` 的情况下使用它，或者在 `remote.*.push` 配置了多个推送目的地的情况下，可能会覆盖当前分支以外的引用（包括严格落后于其远程对应的本地引用）。  要强制推送到一个分支，请在推送的引用规范前面使用 `+`（例如 `git push origin +master`，强制推送到 `master` 分支）。详情见上面的 `< 引用规范 >...` 部分。"
 
 #. type: Labeled list
 #: en/git-push.txt:353
@@ -40834,25 +40834,25 @@ msgstr "--[no-]force-if-includes"
 #: en/git-push.txt:356
 #, priority:220
 msgid "Force an update only if the tip of the remote-tracking ref has been integrated locally."
-msgstr ""
+msgstr "只有远程跟踪的引用顶端被整合到本地才强制更新。"
 
 #. type: Plain text
 #: en/git-push.txt:362
 #, priority:220
 msgid "This option enables a check that verifies if the tip of the remote-tracking ref is reachable from one of the \"reflog\" entries of the local branch based in it for a rewrite. The check ensures that any updates from the remote have been incorporated locally by rejecting the forced update if that is not the case."
-msgstr ""
+msgstr "这个选项启用了一个检查，以验证远程跟踪引用的顶端是否可以从本地分支的“引用日志”条目中到达，以便进行重写。该检查确保来自远程的任何更新都已纳入本地，如果不是这样，则拒绝强制更新。"
 
 #. type: Plain text
 #: en/git-push.txt:366
 #, priority:220
 msgid "If the option is passed without specifying `--force-with-lease`, or specified along with `--force-with-lease=<refname>:<expect>`, it is a \"no-op\"."
-msgstr ""
+msgstr "如果该选项没有指定 `--force-with-lease`，或者与 `--force-with-lease=< 引用名 >:< 期望 >`一起指定，则是“无选项”的。"
 
 #. type: Plain text
 #: en/git-push.txt:368
 #, priority:220
 msgid "Specifying `--no-force-if-includes` disables this behavior."
-msgstr ""
+msgstr "指定 `---no-force-if-includes` 就可以禁止这种行为。"
 
 #. type: Labeled list
 #: en/git-push.txt:369
@@ -40864,13 +40864,13 @@ msgstr "--repo=<repository>"
 #: en/git-push.txt:372
 #, priority:220
 msgid "This option is equivalent to the <repository> argument. If both are specified, the command-line argument takes precedence."
-msgstr ""
+msgstr "这个选项等同于 < 仓库 > 参数。如果两者都被指定，则以命令行参数为优先。"
 
 #. type: Plain text
 #: en/git-push.txt:379
 #, priority:220
 msgid "For every branch that is up to date or successfully pushed, add upstream (tracking) reference, used by argument-less linkgit:git-pull[1] and other commands. For more information, see `branch.<name>.merge` in linkgit:git-config[1]."
-msgstr ""
+msgstr "对于每一个已经更新或成功推送的分支，添加上游（跟踪）引用，由无参数的 linkgit:git-pull[1] 和其他命令使用。更多信息，见 linkgit:git-config[1] 中的 `branch.< 分支名 >.merge`。"
 
 #. type: Labeled list
 #: en/git-push.txt:380
@@ -40882,13 +40882,13 @@ msgstr "--[no-]thin"
 #: en/git-push.txt:385
 #, priority:220
 msgid "These options are passed to linkgit:git-send-pack[1]. A thin transfer significantly reduces the amount of sent data when the sender and receiver share many of the same objects in common. The default is `--thin`."
-msgstr ""
+msgstr "这些选项被传递给 linkgit:git-send-pack[1]。当发送方和接收方有许多共同的对象时，稀松传输会大大减少发送的数据量。默认是 `--thin`。"
 
 #. type: Plain text
 #: en/git-push.txt:391
 #, priority:220
 msgid "Suppress all output, including the listing of updated refs, unless an error occurs. Progress is not reported to the standard error stream."
-msgstr ""
+msgstr "抑制所有的输出，包括更新的引用的列表，除非发生错误。进度不会报告给标准错误流。"
 
 #. type: Labeled list
 #: en/git-push.txt:403
@@ -40900,19 +40900,19 @@ msgstr "--recurse-submodules=check|on-demand|only|no"
 #: en/git-push.txt:417
 #, priority:220
 msgid "May be used to make sure all submodule commits used by the revisions to be pushed are available on a remote-tracking branch.  If 'check' is used Git will verify that all submodule commits that changed in the revisions to be pushed are available on at least one remote of the submodule. If any commits are missing the push will be aborted and exit with non-zero status. If 'on-demand' is used all submodules that changed in the revisions to be pushed will be pushed. If on-demand was not able to push all necessary revisions it will also be aborted and exit with non-zero status. If 'only' is used all submodules will be pushed while the superproject is left unpushed. A value of 'no' or using `--no-recurse-submodules` can be used to override the push.recurseSubmodules configuration variable when no submodule recursion is required."
-msgstr ""
+msgstr "可以用来确保要推送的修订版所使用的所有子模块提交都在远程跟踪分支上可用。  如果使用 'check'，Git 将验证所有在要推送的修订版中发生变化的子模块提交是否在该子模块的至少一个远程上可用。如果缺少任何提交，推送将被中止并以非零状态退出。如果使用 'on-demand'，所有在要推送的修订版中发生变化的子模块都会被推送。如果 on-demand 不能推送所有必要的修订版，它也将被中止并以非零状态退出。如果使用 'only'，所有的子模块将被推送，父级项目则不被推送。当不需要子模块递归时，一个 \"no\" 的值或使用 `--no-recurse-submodules` 可以用来覆盖 push.recurseSubmodules 配置变量。"
 
 #. type: Plain text
 #: en/git-push.txt:421
 #, priority:220
 msgid "When using 'on-demand' or 'only', if a submodule has a \"push.recurseSubmodules={on-demand,only}\" or \"submodule.recurse\" configuration, further recursion will occur. In this case, \"only\" is treated as \"on-demand\"."
-msgstr ""
+msgstr "当使用 \"on-demand\" 或 \"only\" 时，如果一个子模块有 \"push.recurseSubmodules={on-demand,only}\" 或 \"submodule.recurse\"配置，将发生进一步递归。在这种情况下，\"only\" 被视为 \"on-demand\"。"
 
 #. type: Plain text
 #: en/git-push.txt:426
 #, priority:220
 msgid "Toggle the pre-push hook (see linkgit:githooks[5]).  The default is --verify, giving the hook a chance to prevent the push.  With --no-verify, the hook is bypassed completely."
-msgstr ""
+msgstr "切换 pre-push 钩子（见 linkgit:githooks[5]）。  默认是 --verify，给钩子一个机会来阻止推送。  如果使用 --no-verify，钩子会被完全绕过。"
 
 #. type: Plain text
 #: en/git-push.txt:443
@@ -40924,7 +40924,7 @@ msgstr "The output of \"git push\" depends on the transport method used; this se
 #: en/git-push.txt:446
 #, priority:220
 msgid "The status of the push is output in tabular form, with each line representing the status of a single ref. Each line is of the form:"
-msgstr ""
+msgstr "推送的状态以表格的形式输出，每一行代表一个引用的状态。每一行的形式是："
 
 #. type: delimited block -
 #: en/git-push.txt:449
@@ -40936,7 +40936,7 @@ msgstr " <flag> <summary> <from> -> <to> (<reason>)\n"
 #: en/git-push.txt:452
 #, priority:220
 msgid "If --porcelain is used, then each line of the output is of the form:"
-msgstr ""
+msgstr "如果使用了 --porcelain ，那么输出的每一行都是这样的："
 
 #. type: delimited block -
 #: en/git-push.txt:455
@@ -40948,49 +40948,49 @@ msgstr " <flag> \\t <from>:<to> \\t <summary> (<reason>)\n"
 #: en/git-push.txt:459
 #, priority:220
 msgid "The status of up-to-date refs is shown only if --porcelain or --verbose option is used."
-msgstr ""
+msgstr "只有在使用 --porcelain 或 --verbose 选项时，才会显示最新引用的状态。"
 
 #. type: Plain text
 #: en/git-push.txt:463
 #, priority:220
 msgid "for a successfully pushed fast-forward;"
-msgstr ""
+msgstr "表示推送成功的快速合并；"
 
 #. type: Plain text
 #: en/git-push.txt:465
 #, priority:220
 msgid "for a successfully deleted ref;"
-msgstr ""
+msgstr "表示一个成功删除的引用；"
 
 #. type: Plain text
 #: en/git-push.txt:466
 #, priority:220
 msgid "for a successfully pushed new ref;"
-msgstr ""
+msgstr "表示成功推送的引用；"
 
 #. type: Plain text
 #: en/git-push.txt:467
 #, priority:220
 msgid "for a ref that was rejected or failed to push; and"
-msgstr ""
+msgstr "表示一个被拒绝或推送失败的引用；并且"
 
 #. type: Plain text
 #: en/git-push.txt:468
 #, priority:220
 msgid "for a ref that was up to date and did not need pushing."
-msgstr ""
+msgstr "表示一个最新的、不需要推送的引用。"
 
 #. type: Plain text
 #: en/git-push.txt:474
 #, ignore-ellipsis, priority:220
 msgid "For a successfully pushed ref, the summary shows the old and new values of the ref in a form suitable for using as an argument to `git log` (this is `<old>..<new>` in most cases, and `<old>...<new>` for forced non-fast-forward updates)."
-msgstr ""
+msgstr "对于一个成功获取的引用，摘要以适合作为 `git log` 参数的形式显示该引用的新旧值（在大多数情况下是 `<旧>..<新>`，对于强制非快速合并是 `<旧>...<新>`）。"
 
 #. type: Plain text
 #: en/git-push.txt:476
 #, priority:220
 msgid "For a failed update, more details are given:"
-msgstr ""
+msgstr "对于失败的更新，会给出更多的细节："
 
 #. type: Labeled list
 #: en/git-push.txt:478
@@ -41002,73 +41002,73 @@ msgstr "已拒绝"
 #: en/git-push.txt:481
 #, priority:220
 msgid "Git did not try to send the ref at all, typically because it is not a fast-forward and you did not force the update."
-msgstr ""
+msgstr "Git 根本没有尝试发送引用，典型的原因是它不是快速合并并且你没有强制更新。"
 
 #. type: Labeled list
 #: en/git-push.txt:482
 #, no-wrap, priority:220
 msgid "remote rejected"
-msgstr ""
+msgstr "远程拒绝"
 
 #. type: Plain text
 #: en/git-push.txt:490
 #, priority:220
 msgid "The remote end refused the update.  Usually caused by a hook on the remote side, or because the remote repository has one of the following safety options in effect: `receive.denyCurrentBranch` (for pushes to the checked out branch), `receive.denyNonFastForwards` (for forced non-fast-forward updates), `receive.denyDeletes` or `receive.denyDeleteCurrent`.  See linkgit:git-config[1]."
-msgstr ""
+msgstr "远程仓库拒绝更新。  通常是由远程仓库的钩子引起的，或者是因为远程仓库有以下安全选项：`receive.denyCurrentBranch`（用于推送到已检出的分支），`receive.denyNonFastForwards`（用于强制非快进更新），`receive.denyDeletes` 或者 `receive.denyDeleteCurrent`。  见 linkgit:git-config[1]。"
 
 #. type: Labeled list
 #: en/git-push.txt:491
 #, no-wrap, priority:220
 msgid "remote failure"
-msgstr ""
+msgstr "远程故障"
 
 #. type: Plain text
 #: en/git-push.txt:495
 #, priority:220
 msgid "The remote end did not report the successful update of the ref, perhaps because of a temporary error on the remote side, a break in the network connection, or other transient error."
-msgstr ""
+msgstr "远程端没有报告引用的成功更新，可能是因为远程端的临时错误，网络连接中断，或其他瞬时错误。"
 
 #. type: Plain text
 #: en/git-push.txt:501
 #, priority:220
 msgid "The name of the local ref being pushed, minus its `refs/<type>/` prefix. In the case of deletion, the name of the local ref is omitted."
-msgstr ""
+msgstr "被推送的本地引用的名称，减去其 `refs/< 类型 >/` 前缀。在删除的情况下，本地引用的名称被省略。"
 
 #. type: Plain text
 #: en/git-push.txt:505
 #, priority:220
 msgid "The name of the remote ref being updated, minus its `refs/<type>/` prefix."
-msgstr ""
+msgstr "被更新的本地引用的名称，去掉其 `refs/< 类型 >/` 前缀。"
 
 #. type: Plain text
 #: en/git-push.txt:510
 #, priority:220
 msgid "A human-readable explanation. In the case of successfully pushed refs, no explanation is needed. For a failed ref, the reason for failure is described."
-msgstr ""
+msgstr "一个人类可读的解释。在成功推送引用的情况下，不需要解释。对于操作失败的引用，要描述失败的原因。"
 
 #. type: Title -
 #: en/git-push.txt:512
 #, no-wrap, priority:220
 msgid "NOTE ABOUT FAST-FORWARDS"
-msgstr ""
+msgstr "关于快速合并的说明"
 
 #. type: Plain text
 #: en/git-push.txt:517
 #, priority:220
 msgid "When an update changes a branch (or more in general, a ref) that used to point at commit A to point at another commit B, it is called a fast-forward update if and only if B is a descendant of A."
-msgstr ""
+msgstr "当一个更新将原来指向提交 A 的分支（或更普遍的，一个引用）改为指向另一个提交 B 时，当且仅当 B 是 A 的后代时，它被称为快速合并。"
 
 #. type: Plain text
 #: en/git-push.txt:521
 #, priority:220
 msgid "In a fast-forward update from A to B, the set of commits that the original commit A built on top of is a subset of the commits the new commit B builds on top of.  Hence, it does not lose any history."
-msgstr ""
+msgstr "在从 A 到 B 的快速合并中，原始提交 A 所建立的提交集是新提交 B 所建立的提交集的一个子集。  因此，它不会丢失任何历史。"
 
 #. type: Plain text
 #: en/git-push.txt:526
 #, priority:220
 msgid "In contrast, a non-fast-forward update will lose history.  For example, suppose you and somebody else started at the same commit X, and you built a history leading to commit B while the other person built a history leading to commit A.  The history looks like this:"
-msgstr ""
+msgstr "相反，非快速合并更新会丢失历史。  例如，假设你和别人从同一个提交 X 开始，你建立了一个通往提交 B 的历史，而另一个人建立了一个通往提交 A 的历史。  这段历史看起来像这样："
 
 #. type: delimited block -
 #: en/git-push.txt:532
@@ -41077,43 +41077,43 @@ msgid ""
 "      B\n"
 "     /\n"
 " ---X---A\n"
-msgstr ""
+msgstr "      B\n     /\n ---X---A\n"
 
 #. type: Plain text
 #: en/git-push.txt:538
 #, priority:220
 msgid "Further suppose that the other person already pushed changes leading to A back to the original repository from which you two obtained the original commit X."
-msgstr ""
+msgstr "进一步假设对方已经将 A 导致的修改推送回原仓库，你们俩从原仓库中获得原始提交 X。"
 
 #. type: Plain text
 #: en/git-push.txt:541
 #, priority:220
 msgid "The push done by the other person updated the branch that used to point at commit X to point at commit A.  It is a fast-forward."
-msgstr ""
+msgstr "另一个人所做的推送，将原来指向提交 X 的分支更新为指向提交 A 的分支。"
 
 #. type: Plain text
 #: en/git-push.txt:546
 #, priority:220
 msgid "But if you try to push, you will attempt to update the branch (that now points at A) with commit B.  This does _not_ fast-forward.  If you did so, the changes introduced by commit A will be lost, because everybody will now start building on top of B."
-msgstr ""
+msgstr "但如果你试图推送，你会试图用提交 B 来更新分支（现在指向 A）。这不是快速合并。  如果你这样做了，提交 A 引入的修改就会丢失，因为大家现在都会在 B 的基础上开始构建。"
 
 #. type: Plain text
 #: en/git-push.txt:549
 #, priority:220
 msgid "The command by default does not allow an update that is not a fast-forward to prevent such loss of history."
-msgstr ""
+msgstr "该命令默认不允许非快速合并的更新，以防止这种历史的损失。"
 
 #. type: Plain text
 #: en/git-push.txt:554
 #, priority:220
 msgid "If you do not want to lose your work (history from X to B) or the work by the other person (history from X to A), you would need to first fetch the history from the repository, create a history that contains changes done by both parties, and push the result back."
-msgstr ""
+msgstr "如果你不想丢失你的工作（从 X 到 B 的历史）或对方的工作（从 X 到 A 的历史），你需要先从仓库中获取历史，创建一个包含双方修改的历史，并将结果推送回去。"
 
 #. type: Plain text
 #: en/git-push.txt:558
 #, priority:220
 msgid "You can perform \"git pull\", resolve potential conflicts, and \"git push\" the result.  A \"git pull\" will create a merge commit C between commits A and B."
-msgstr ""
+msgstr "您可以执行 \"git pull\"，解决潜在的冲突，然后将结果 \"git push\"。  一个 \"git pull \"会在提交 A 和 B 之间创建一个合并提交 C。"
 
 #. type: delimited block -
 #: en/git-push.txt:564
@@ -41122,19 +41122,19 @@ msgid ""
 "      B---C\n"
 "     /   /\n"
 " ---X---A\n"
-msgstr ""
+msgstr "      B---C\n     /   /\n ---X---A\n"
 
 #. type: Plain text
 #: en/git-push.txt:569
 #, priority:220
 msgid "Updating A with the resulting merge commit will fast-forward and your push will be accepted."
-msgstr ""
+msgstr "用所产生的合并提交更新 A，将快速合并，你的推送将被接受。"
 
 #. type: Plain text
 #: en/git-push.txt:574
 #, priority:220
 msgid "Alternatively, you can rebase your change between X and B on top of A, with \"git pull --rebase\", and push the result back.  The rebase will create a new commit D that builds the change between X and B on top of A."
-msgstr ""
+msgstr "另外，你也可以用 \"git pull --rebase\" 将 X 和 B 之间的改动重新归档到 A 之上，然后将结果推送回来。  重置将创建一个新的提交 D，将 X 和 B 之间的修改建立在 A 的基础上。"
 
 #. type: delimited block -
 #: en/git-push.txt:580
@@ -41143,19 +41143,19 @@ msgid ""
 "      B   D\n"
 "     /   /\n"
 " ---X---A\n"
-msgstr ""
+msgstr "      B   D\n     /   /\n ---X---A\n"
 
 #. type: Plain text
 #: en/git-push.txt:585
 #, priority:220
 msgid "Again, updating A with this commit will fast-forward and your push will be accepted."
-msgstr ""
+msgstr "同样的，用这个提交更新 A 会快速合并，你的推送会被接受。"
 
 #. type: Plain text
 #: en/git-push.txt:596
 #, priority:220
 msgid "There is another common situation where you may encounter non-fast-forward rejection when you try to push, and it is possible even when you are pushing into a repository nobody else pushes into. After you push commit A yourself (in the first picture in this section), replace it with \"git commit --amend\" to produce commit B, and you try to push it out, because forgot that you have pushed A out already. In such a case, and only if you are certain that nobody in the meantime fetched your earlier commit A (and started building on top of it), you can run \"git push --force\" to overwrite it. In other words, \"git push --force\" is a method reserved for a case where you do mean to lose history."
-msgstr ""
+msgstr "还有一种常见的情况是，当你试图推送时，可能会遇到非快速合并拒绝，即使你推送到一个没有人推送的版本库中也有可能。在你自己推送了提交 A（在本节的第一幅图中），用 \"git commit --amend\" 替换后产生了提交 B，你试图推送它，因为忘记了你已经推送了 A。在这种情况下，只有当您确定在此期间没有人取走您先前的提交 A（并在其基础上开始构建），您才能运行 \"git push --force\" 来覆盖它。换句话说，\"git push --force\" 是一种保留给你确实想失去历史的情况的方法。"
 
 #. type: Labeled list
 #: en/git-push.txt:601
@@ -41167,7 +41167,7 @@ msgstr "`git push`"
 #: en/git-push.txt:605
 #, priority:220
 msgid "Works like `git push <remote>`, where <remote> is the current branch's remote (or `origin`, if no remote is configured for the current branch)."
-msgstr ""
+msgstr "像`git push < 远端 >`那样工作，其中 < 远端 > 是当前分支的远程仓库（或者`origin`，如果没有为当前分支配置远程仓库）。"
 
 #. type: Labeled list
 #: en/git-push.txt:606
@@ -41179,19 +41179,19 @@ msgstr "`git push origin`"
 #: en/git-push.txt:611
 #, priority:220
 msgid "Without additional configuration, pushes the current branch to the configured upstream (`branch.<name>.merge` configuration variable) if it has the same name as the current branch, and errors out without pushing otherwise."
-msgstr ""
+msgstr "不需要额外配置，如果它与当前分支同名，并且错误输出而不推送其他分支，则将其推送到配置过的上游仓库（`branch.<分支名>.merge` 配置变量）。"
 
 #. type: Plain text
 #: en/git-push.txt:615
 #, priority:220
 msgid "The default behavior of this command when no <refspec> is given can be configured by setting the `push` option of the remote, or the `push.default` configuration variable."
-msgstr ""
+msgstr "当没有给出< 引用规范 >时，该命令的默认行为可以通过设置远程仓库的 `push` 选项或 `push.default`配置变量来配置。"
 
 #. type: Plain text
 #: en/git-push.txt:620
 #, priority:220
 msgid "For example, to default to pushing only the current branch to `origin` use `git config remote.origin.push HEAD`.  Any valid <refspec> (like the ones in the examples below) can be configured as the default for `git push origin`."
-msgstr ""
+msgstr "例如，要默认只将当前分支推送到 `origin`，使用 `git config remote.origin.push HEAD`。  任何有效的< 引用规范 >（比如下面例子中的那些）都可以被配置为 `git push origin` 的默认值。"
 
 #. type: Labeled list
 #: en/git-push.txt:621
@@ -41203,19 +41203,19 @@ msgstr "`git push origin :`"
 #: en/git-push.txt:625
 #, priority:220
 msgid "Push \"matching\" branches to `origin`. See <refspec> in the <<OPTIONS,OPTIONS>> section above for a description of \"matching\" branches."
-msgstr ""
+msgstr "将 “匹配” 的分支推送到 `origin`。关于 “匹配” 分支的描述，请参见上面 <<选项,OPTIONS>> 部分的 <<引用规范>>。"
 
 #. type: Labeled list
 #: en/git-push.txt:626
 #, no-wrap, priority:220
 msgid "`git push origin master`"
-msgstr ""
+msgstr "`git push origin master`"
 
 #. type: Plain text
 #: en/git-push.txt:632
 #, priority:220
 msgid "Find a ref that matches `master` in the source repository (most likely, it would find `refs/heads/master`), and update the same ref (e.g. `refs/heads/master`) in `origin` repository with it.  If `master` did not exist remotely, it would be created."
-msgstr ""
+msgstr "在源仓库中找到一个与 `master` 相匹配的引用（最可能的是找到 `refs/heads/master`），并在 `origin` 仓库中用它更新相同的引用（例如`refs/heads/master`）。  如果 `master` 不存在，它将被创建。"
 
 #. type: Labeled list
 #: en/git-push.txt:633
@@ -41227,7 +41227,7 @@ msgstr "`git push origin HEAD`"
 #: en/git-push.txt:636
 #, priority:220
 msgid "A handy way to push the current branch to the same name on the remote."
-msgstr ""
+msgstr "一个方便的方法是将当前分支推送到远程的相同名称。"
 
 #. type: Labeled list
 #: en/git-push.txt:637
@@ -41239,25 +41239,25 @@ msgstr "`git push mothership master:satellite/master dev:satellite/dev`"
 #: en/git-push.txt:642
 #, priority:220
 msgid "Use the source ref that matches `master` (e.g. `refs/heads/master`)  to update the ref that matches `satellite/master` (most probably `refs/remotes/satellite/master`) in the `mothership` repository; do the same for `dev` and `satellite/dev`."
-msgstr ""
+msgstr "使用与 \"master\" 相匹配的源引用（例如，`refs/heads/master`）来更新 `mothership` 仓库中与 `satellite/master` 相匹配的引用（很可能是 `refs/remotes/satellite/master`）；对 `dev` 和 `satellite/dev`做同样的操作。"
 
 #. type: Plain text
 #: en/git-push.txt:645
 #, ignore-ellipsis, priority:220
 msgid "See the section describing `<refspec>...` above for a discussion of the matching semantics."
-msgstr ""
+msgstr "关于匹配语义的讨论，请参见上面描述 `<引用规范>...` 的部分。"
 
 #. type: Plain text
 #: en/git-push.txt:652
 #, priority:220
 msgid "This is to emulate `git fetch` run on the `mothership` using `git push` that is run in the opposite direction in order to integrate the work done on `satellite`, and is often necessary when you can only make connection in one way (i.e. satellite can ssh into mothership but mothership cannot initiate connection to satellite because the latter is behind a firewall or does not run sshd)."
-msgstr ""
+msgstr "这是为了模拟在`母舰` 上运行的 `git fetch` ，使用 `git push` 以相反的方向运行，以便整合 `卫星` 上完成的工作，当你只能以一种方式进行连接时（即卫星可以ssh到母舰，但母舰不能启动与卫星的连接，因为后者在防火墙后面或不运行 sshd），这往往是必要的。"
 
 #. type: Plain text
 #: en/git-push.txt:657
 #, priority:220
 msgid "After running this `git push` on the `satellite` machine, you would ssh into the `mothership` and run `git merge` there to complete the emulation of `git pull` that were run on `mothership` to pull changes made on `satellite`."
-msgstr ""
+msgstr "在 `卫星` 机器上运行这个 `git push` 后，你将 ssh 进入 `母舰` 并在那里运行 `git merge` ，以完成对 `母舰` 上运行的 `git pull` 的模拟，以拉取 `卫星` 上的修改。"
 
 #. type: Labeled list
 #: en/git-push.txt:658
@@ -41269,7 +41269,7 @@ msgstr "`git push origin HEAD:master`"
 #: en/git-push.txt:662
 #, priority:220
 msgid "Push the current branch to the remote ref matching `master` in the `origin` repository. This form is convenient to push the current branch without thinking about its local name."
-msgstr ""
+msgstr "推送当前分支到远程引用匹配 `master` 的 `origin` 仓库中。这种形式可以方便地推送当前分支，而不必考虑其本地名称。"
 
 #. type: Labeled list
 #: en/git-push.txt:663
@@ -41281,19 +41281,19 @@ msgstr "`git push origin master:refs/heads/experimental`"
 #: en/git-push.txt:669
 #, priority:220
 msgid "Create the branch `experimental` in the `origin` repository by copying the current `master` branch.  This form is only needed to create a new branch or tag in the remote repository when the local name and the remote name are different; otherwise, the ref name on its own will work."
-msgstr ""
+msgstr "通过复制当前的 `master` 分支，在 `origin` 仓库创建 `experimental` 分支。  只有在本地名称和远程名称不同的情况下，在远程仓库中创建新的分支或标签时才需要这个表单；否则，参考名称本身就可以了。"
 
 #. type: Labeled list
 #: en/git-push.txt:670
 #, no-wrap, priority:220
 msgid "`git push origin :experimental`"
-msgstr ""
+msgstr "`git push origin :experimental`"
 
 #. type: Plain text
 #: en/git-push.txt:673
 #, priority:220
 msgid "Find a ref that matches `experimental` in the `origin` repository (e.g. `refs/heads/experimental`), and delete it."
-msgstr ""
+msgstr "在 `origin` 仓库（例如`refs/heads/experimental`）中找到一个与 `experimental` 相匹配的引用，并将其删除。"
 
 #. type: Labeled list
 #: en/git-push.txt:674
@@ -41305,7 +41305,7 @@ msgstr "`git push origin +dev:master`"
 #: en/git-push.txt:679
 #, priority:220
 msgid "Update the origin repository's master branch with the dev branch, allowing non-fast-forward updates.  *This can leave unreferenced commits dangling in the origin repository.* Consider the following situation, where a fast-forward is not possible:"
-msgstr ""
+msgstr "用开发分支更新仓库的主分支，允许非快速合并更新。  *这可能会使未引用的提交在源码库中悬空。*考虑以下情况，即不可能进行快速合并："
 
 #. type: delimited block -
 #: en/git-push.txt:684
@@ -45416,7 +45416,7 @@ msgstr "git-remote - Manage set of tracked repositories"
 
 #. type: Plain text
 #: en/git-remote.txt:25
-#, ignore-ellipsis, no-wrap, priority:220
+#, fuzzy, ignore-ellipsis, no-wrap, priority:220
 msgid ""
 "'git remote' [-v | --verbose]\n"
 "'git remote add' [-t <branch>] [-m <master>] [-f] [--[no-]tags] [--mirror=(fetch|push)] <name> <URL>\n"
@@ -45431,13 +45431,13 @@ msgid ""
 "'git remote' [-v | --verbose] 'show' [-n] <name>...\n"
 "'git remote prune' [-n | --dry-run] <name>...\n"
 "'git remote' [-v | --verbose] 'update' [-p | --prune] [(<group> | <remote>)...]\n"
-msgstr ""
+msgstr "'git remote' [-v | --verbose]\n'git remote add' [-t <分支>] [-m <master>] [-f] [--[no-]tags] [--mirror=(fetch|push)] <名称> <URL>\n'git remote rename' [--[no-]progress] <旧名> <新名>\n'git remote remove' <名称>\n'git remote set-head' <名称> (-a | --auto | -d | --delete | <分支>)\n'git remote set-branches' [--add] <名称> <branch>...\n'git remote get-url' [--push] [--all] <名称>\n'git remote set-url' [--push] <名称> <新url> [<旧url>]\n'git remote set-url --add' [--push] <名称> <新url>\n'git remote set-url --delete' [--push] <名称> <URL>\n'git remote' [-v | --verbose] 'show' [-n] <名称>...\n'git remote prune' [-n | --dry-run] <名称>...\n'git remote' [-v | --verbose] 'update' [-p | --prune] [(<组> | <remote>)...]\n"
 
 #. type: Plain text
 #: en/git-remote.txt:30
 #, priority:220
 msgid "Manage the set of repositories (\"remotes\") whose branches you track."
-msgstr ""
+msgstr "管理仓库（\"远程\"）的集合，这些仓库的分支由你跟踪。"
 
 #. type: Plain text
 #: en/git-remote.txt:41
@@ -45503,13 +45503,13 @@ msgstr ""
 #: en/git-remote.txt:81
 #, priority:220
 msgid "When a fetch mirror is created with `--mirror=fetch`, the refs will not be stored in the 'refs/remotes/' namespace, but rather everything in 'refs/' on the remote will be directly mirrored into 'refs/' in the local repository. This option only makes sense in bare repositories, because a fetch would overwrite any local commits."
-msgstr ""
+msgstr "当用 `--mirror=fetch` 创建一个 fetch 镜像时， 引用不会被存储在 'refs/remotes/' 命名空间中，而是远程的 'refs/' 中的所有内容将直接被镜像到本地版本库的 'refs/' 中。这个选项只有在裸库中才有意义，因为获取会覆盖任何本地提交。"
 
 #. type: Plain text
 #: en/git-remote.txt:84
 #, priority:220
 msgid "When a push mirror is created with `--mirror=push`, then `git push` will always behave as if `--mirror` was passed."
-msgstr ""
+msgstr "当用 `--mirror=push` 创建推送镜像时，`git push` 的行为就像传递 `--mirror` 一样。"
 
 #. type: Labeled list
 #: en/git-remote.txt:85
@@ -45521,13 +45521,13 @@ msgstr "'rebase'"
 #: en/git-remote.txt:89
 #, priority:220
 msgid "Rename the remote named <old> to <new>. All remote-tracking branches and configuration settings for the remote are updated."
-msgstr ""
+msgstr "将名为 < 旧名称 > 的远程重命名为 < 新名称 > 。所有远程跟踪的分支和远程的配置设置都被更新。"
 
 #. type: Plain text
 #: en/git-remote.txt:93
 #, priority:220
 msgid "In case <old> and <new> are the same, and <old> is a file under `$GIT_DIR/remotes` or `$GIT_DIR/branches`, the remote is converted to the configuration file format."
-msgstr ""
+msgstr "如果 <旧名称 >和< 新名称 >相同，并且< 旧名称 >是 `$GIT_DIR/remotes` 或 `$GIT_DIR/branches` 下的文件，远程将被转换为配置文件格式。"
 
 #. type: Labeled list
 #: en/git-remote.txt:94
@@ -45545,7 +45545,7 @@ msgstr "'rm'"
 #: en/git-remote.txt:99
 #, priority:220
 msgid "Remove the remote named <name>. All remote-tracking branches and configuration settings for the remote are removed."
-msgstr ""
+msgstr "删除名为 < 名称 > 的远程。该远程的所有远程跟踪分支和配置设置都被删除。"
 
 #. type: Labeled list
 #: en/git-remote.txt:100
