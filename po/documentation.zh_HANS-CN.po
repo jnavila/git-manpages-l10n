@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-02-26 14:06+0100\nPO-Revision-Date: 2023-06-06 16:08+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.18-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-02-26 14:06+0100\nPO-Revision-Date: 2023-06-07 17:13+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.18-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:769 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:146 en/git-status.txt:31
@@ -30809,25 +30809,25 @@ msgstr "`GIT_HTTP_EXPORT_ALL` 环境变量可以传递给 'git-http-backend'，�
 #: en/git-http-backend.txt:280
 #, priority:100
 msgid "The `GIT_HTTP_MAX_REQUEST_BUFFER` environment variable (or the `http.maxRequestBuffer` config variable) may be set to change the largest ref negotiation request that git will handle during a fetch; any fetch requiring a larger buffer will not succeed.  This value should not normally need to be changed, but may be helpful if you are fetching from a repository with an extremely large number of refs.  The value can be specified with a unit (e.g., `100M` for 100 megabytes). The default is 10 megabytes."
-msgstr ""
+msgstr "`GIT_HTTP_MAX_REQUEST_BUFFER` 环境变量（或 `http.maxRequestBuffer` 配置变量）可以被设置为改变 git 在获取过程中所处理的最大引用协商请求；任何需要更大缓冲区的获取将不会成功。 这个值通常不需要改变，但如果你从一个有大量引用的仓库中获取，可能会有帮助。 这个值可以指定一个单位（例如，`100M` 表示 100 兆字节）。默认是 10 兆字节。"
 
 #. type: Plain text
 #: en/git-http-backend.txt:290
 #, priority:100
 msgid "Clients may probe for optional protocol capabilities (like the v2 protocol) using the `Git-Protocol` HTTP header. In order to support these, the contents of that header must appear in the `GIT_PROTOCOL` environment variable. Most webservers will pass this header to the CGI via the `HTTP_GIT_PROTOCOL` variable, and `git-http-backend` will automatically copy that to `GIT_PROTOCOL`. However, some webservers may be more selective about which headers they'll pass, in which case they need to be configured explicitly (see the mention of `Git-Protocol` in the Apache config from the earlier EXAMPLES section)."
-msgstr ""
+msgstr "客户端可以使用 `Git-Protocol` HTTP 头来探测可选的协议能力（如 v2 协议）。为了支持这些，该标头的内容必须出现在 `GIT_PROTOCOL` 环境变量中。大多数网络服务器将通过 `HTTP_GIT_PROTOCOL` 变量把这个头传递给 CGI，`git-http-backend` 将自动把它复制到 `GIT_PROTOCOL`。然而，一些网络服务器可能对他们要传递的头信息更有选择性，在这种情况下，他们需要明确配置（见前面例子部分的 Apache 配置中对 `Git-Protocol` 的提及）。"
 
 #. type: Plain text
 #: en/git-http-backend.txt:295
 #, priority:100
 msgid "The backend process sets GIT_COMMITTER_NAME to '$REMOTE_USER' and GIT_COMMITTER_EMAIL to '$\\{REMOTE_USER}@http.$\\{REMOTE_ADDR\\}', ensuring that any reflogs created by 'git-receive-pack' contain some identifying information of the remote user who performed the push."
-msgstr ""
+msgstr "后台进程将 GIT_COMMITTER_NAME 设置为 '$REMOTE_USER'，将 GIT_COMMITTER_EMAIL 设置为 '$\\{REMOTE_USER}\\@http.${REMOTE_ADDR\\}'，确保任何由 'git-receive-pack' 创建的引用日志包含执行推送的远程用户的一些识别信息。"
 
 #. type: Plain text
 #: en/git-http-backend.txt:298
 #, priority:100
 msgid "All `CGI` environment variables are available to each of the hooks invoked by the 'git-receive-pack'."
-msgstr ""
+msgstr "所有 `CGI` 环境变量对 'git-receive-pack' 调用的每个钩子都是可用的。"
 
 #. type: Title =
 #: en/git-http-fetch.txt:2
@@ -30857,7 +30857,7 @@ msgstr "通过HTTP下载远程Git存储库。"
 #: en/git-http-fetch.txt:21
 #, priority:100
 msgid "This command always gets all objects. Historically, there were three options `-a`, `-c` and `-t` for choosing which objects to download. They are now silently ignored."
-msgstr ""
+msgstr "这个命令总是获取所有的对象。在过去，有三个选项 `-a`、`-c` 和 `-t`用于选择下载哪些对象。现在它们被默默地忽略了。"
 
 #. type: Labeled list
 #: en/git-http-fetch.txt:24
@@ -30869,25 +30869,25 @@ msgstr "commit-id"
 #: en/git-http-fetch.txt:27
 #, priority:100
 msgid "Either the hash or the filename under [URL]/refs/ to pull."
-msgstr ""
+msgstr "在 [URL]/refs/ 下的哈希值或文件名来拉取。"
 
 #. type: Labeled list
 #: en/git-http-fetch.txt:28
 #, no-wrap, priority:100
 msgid "-a, -c, -t"
-msgstr ""
+msgstr "-a, -c, -t"
 
 #. type: Plain text
 #: en/git-http-fetch.txt:30
 #, priority:100
 msgid "These options are ignored for historical reasons."
-msgstr ""
+msgstr "由于历史原因，这些选项被忽略了。"
 
 #. type: Plain text
 #: en/git-http-fetch.txt:32
 #, priority:100
 msgid "Report what is downloaded."
-msgstr ""
+msgstr "报告所下载的内容。"
 
 #. type: Labeled list
 #: en/git-http-fetch.txt:33
@@ -30899,13 +30899,13 @@ msgstr "-w <filename>"
 #: en/git-http-fetch.txt:36
 #, priority:100
 msgid "Writes the commit-id into the filename under $GIT_DIR/refs/<filename> on the local end after the transfer is complete."
-msgstr ""
+msgstr "转移完成后，在本地端将 commit-id 写入 $GIT_DIR/refs/<文件名>下的文件名。"
 
 #. type: Plain text
 #: en/git-http-fetch.txt:40
 #, priority:100
 msgid "Instead of a commit id on the command line (which is not expected in this case), 'git http-fetch' expects lines on stdin in the format"
-msgstr ""
+msgstr "'git http-fetch' 希望在标准输入流上看到格式为以下的行，而不是命令行上的提交 ID（在这种情况下不需要提交 ID）"
 
 #. type: Plain text
 #: en/git-http-fetch.txt:42
@@ -30935,7 +30935,7 @@ msgstr "--export-pack-edges=<file>"
 #: en/git-http-fetch.txt:55
 #, priority:100
 msgid "For internal use only. The command to run on the contents of the downloaded pack. Arguments are URL-encoded separated by spaces."
-msgstr ""
+msgstr "仅供内部使用。对下载的包的内容运行的命令。参数为 URL 编码，以空格分隔。"
 
 #. type: Labeled list
 #: en/git-http-fetch.txt:56
@@ -30947,7 +30947,7 @@ msgstr "--recover"
 #: en/git-http-fetch.txt:59
 #, priority:100
 msgid "Verify that everything reachable from target is fetched.  Used after an earlier fetch is interrupted."
-msgstr ""
+msgstr "验证所有可以从目标地可达的东西都被取走了。 在一个较早的获取被中断后使用。"
 
 #. type: Title =
 #: en/git-http-push.txt:2
@@ -30971,7 +30971,7 @@ msgstr "'git http-push' [--all] [--dry-run] [--force] [--verbose] <url> <ref> [<
 #: en/git-http-push.txt:18
 #, priority:100
 msgid "Sends missing objects to remote repository, and updates the remote branch."
-msgstr ""
+msgstr "将丢失的对象发送到远程仓库，并更新远程分支。"
 
 #. type: Plain text
 #: en/git-http-push.txt:22
@@ -30980,19 +30980,19 @@ msgid ""
 "*NOTE*: This command is temporarily disabled if your libcurl\n"
 "is older than 7.16, as the combination has been reported\n"
 "not to work and sometimes corrupts repository.\n"
-msgstr ""
+msgstr "*注意*： 如果你的 libcurl 的版本超过 7.16，这个命令会暂时失效。\n早于 7.16，这个命令会被暂时禁用，因为有报告说这个组合\n不起作用，并且有时会破坏仓库。\n"
 
 #. type: Plain text
 #: en/git-http-push.txt:29
 #, priority:100
 msgid "Do not assume that the remote repository is complete in its current state, and verify all objects in the entire local ref's history exist in the remote repository."
-msgstr ""
+msgstr "不要假设远程仓库的当前状态是完整的，要验证整个本地引用的历史中的所有对象是否存在于远程仓库。"
 
 #. type: Plain text
 #: en/git-http-push.txt:36 en/git-send-pack.txt:61
 #, priority:100
 msgid "Usually, the command refuses to update a remote ref that is not an ancestor of the local ref used to overwrite it.  This flag disables the check.  What this means is that the remote repository can lose commits; use it with care."
-msgstr ""
+msgstr "通常情况下，命令拒绝更新一个不是用来覆盖它的本地引用的祖先远程引用。 这个标志可以禁止这种检查。 这意味着远程仓库可能会丢失提交，使用时要小心。"
 
 #. type: Plain text
 #: en/git-http-push.txt:39 en/git-push.txt:176 en/git-send-pack.txt:54
@@ -31004,31 +31004,31 @@ msgstr "做除了实际发送更新外的所有事。"
 #: en/git-http-push.txt:43
 #, priority:100
 msgid "Report the list of objects being walked locally and the list of objects successfully sent to the remote repository."
-msgstr ""
+msgstr "报告正在本地行走的对象的列表和成功发送到远程仓库的对象的列表。"
 
 #. type: Plain text
 #: en/git-http-push.txt:49
 #, priority:100
 msgid "Remove <ref> from remote repository.  The specified branch cannot be the remote HEAD.  If -d is specified the following other conditions must also be met:"
-msgstr ""
+msgstr "从远程仓库中删除 <引用>。 指定的分支不能是远程的 HEAD。 如果指定了 -d，还必须满足以下其他条件："
 
 #. type: Plain text
 #: en/git-http-push.txt:51
 #, priority:100
 msgid "Remote HEAD must resolve to an object that exists locally"
-msgstr ""
+msgstr "远程 HEAD 必须解析到一个本地存在的对象"
 
 #. type: Plain text
 #: en/git-http-push.txt:52
 #, priority:100
 msgid "Specified branch resolves to an object that exists locally"
-msgstr ""
+msgstr "指定的分支解析到一个本地存在的对象"
 
 #. type: Plain text
 #: en/git-http-push.txt:53
 #, priority:100
 msgid "Specified branch is an ancestor of the remote HEAD"
-msgstr ""
+msgstr "指定的分支是远程 HEAD 的一个祖先"
 
 #. type: Labeled list
 #: en/git-http-push.txt:54 en/git-send-pack.txt:99
@@ -31040,67 +31040,67 @@ msgstr "<ref>..."
 #: en/git-http-push.txt:56 en/git-send-pack.txt:101
 #, priority:100
 msgid "The remote refs to update."
-msgstr ""
+msgstr "要更新的远程引用。"
 
 #. type: Title -
 #: en/git-http-push.txt:59 en/git-send-pack.txt:104
 #, no-wrap, priority:100
 msgid "SPECIFYING THE REFS"
-msgstr ""
+msgstr "指定引用"
 
 #. type: Plain text
 #: en/git-http-push.txt:65
 #, priority:100
 msgid "A '<ref>' specification can be either a single pattern, or a pair of such patterns separated by a colon \":\" (this means that a ref name cannot have a colon in it).  A single pattern '<name>' is just a shorthand for '<name>:<name>'."
-msgstr ""
+msgstr "一个 '<引用>' 规范既可以是一个单一的模式，也可以是一对由冒号 \":\" 隔开的模式（这意味着一个引用名称中不能有冒号）。 一个单一的模式 '<名称>' 只是 '<名称>:<名称>' 的一个缩写。"
 
 #. type: Plain text
 #: en/git-http-push.txt:70
 #, priority:100
 msgid "Each pattern pair '<src>:<dst>' consists of the source side (before the colon) and the destination side (after the colon).  The ref to be pushed is determined by finding a match that matches the source side, and where it is pushed is determined by using the destination side."
-msgstr ""
+msgstr "每个模式对 '<src>:<dst>' 由源端（冒号之前）和目标端（冒号之后）组成。 要推送的引用是通过找到与源端相匹配的匹配物来确定的，而推送的位置是通过目的地端来确定的。"
 
 #. type: Plain text
 #: en/git-http-push.txt:73
 #, priority:100
 msgid "It is an error if '<src>' does not match exactly one of the local refs."
-msgstr ""
+msgstr "如果 '<src>' 与本地引用中的一个不完全匹配，则是一个错误。"
 
 #. type: Plain text
 #: en/git-http-push.txt:75
 #, priority:100
 msgid "If '<dst>' does not match any remote ref, either"
-msgstr ""
+msgstr "如果 '<dst>' 不匹配任何远程引用，或者"
 
 #. type: Plain text
 #: en/git-http-push.txt:78 en/git-send-pack.txt:139
 #, priority:100
 msgid "it has to start with \"refs/\"; <dst> is used as the destination literally in this case."
-msgstr ""
+msgstr "它必须以 \"refs/\" 开头；在这种情况下，<dst> 被用作目标字面。"
 
 #. type: Plain text
 #: en/git-http-push.txt:82 en/git-send-pack.txt:143
 #, priority:100
 msgid "<src> == <dst> and the ref that matched the <src> must not exist in the set of remote refs; the ref matched <src> locally is used as the name of the destination."
-msgstr ""
+msgstr "<src> == <dst>，并且与 <src> 相匹配的引用必须不存在于远程引用集合中；本地匹配的 <src>引用被用作目的地的名称。"
 
 #. type: Plain text
 #: en/git-http-push.txt:88 en/git-send-pack.txt:149
 #, priority:100
 msgid "Without `--force`, the <src> ref is stored at the remote only if <dst> does not exist, or <dst> is a proper subset (i.e. an ancestor) of <src>.  This check, known as \"fast-forward check\", is performed in order to avoid accidentally overwriting the remote ref and lose other peoples' commits from there."
-msgstr ""
+msgstr "如果没有 `--force`，只有当 <dst> 不存在，或者 <dst> 是 <src> 的适当子集（即祖先）时，<src> 的引用才会被保存在远程。 这个检查被称为 “快速检查”，是为了避免不小心覆盖了远程引用而丢失其他人在那里的提交。"
 
 #. type: Plain text
 #: en/git-http-push.txt:90 en/git-send-pack.txt:151
 #, priority:100
 msgid "With `--force`, the fast-forward check is disabled for all refs."
-msgstr ""
+msgstr "使用 `--force`，所有裁判的快进检查都被禁用。"
 
 #. type: Plain text
 #: en/git-http-push.txt:93 en/git-send-pack.txt:154
 #, priority:100
 msgid "Optionally, a <ref> parameter can be prefixed with a plus '+' sign to disable the fast-forward check only on that ref."
-msgstr ""
+msgstr "可以选择在 <ref> 参数前加上一个加号 '+' 号，以便仅在该引用上禁用快进检查。"
 
 #. type: Title =
 #: en/git-imap-send.txt:2
@@ -31124,19 +31124,19 @@ msgstr "'git imap-send' [-v] [-q] [--[no-]curl]\n"
 #: en/git-imap-send.txt:23
 #, priority:100
 msgid "This command uploads a mailbox generated with 'git format-patch' into an IMAP drafts folder.  This allows patches to be sent as other email is when using mail clients that cannot read mailbox files directly. The command also works with any general mailbox in which emails have the fields \"From\", \"Date\", and \"Subject\" in that order."
-msgstr ""
+msgstr "这条命令将用 'git format-patch' 生成的邮箱上传到 IMAP 的 drafts 文件夹。 这允许在使用不能直接读取邮箱文件的邮件客户端时，将补丁作为其他邮件发送。该命令也适用于任何一般的邮箱，其中的邮件按顺序有 \"Form\"、\"Date\" 和 \"Subject\" 字段。"
 
 #. type: Plain text
 #: en/git-imap-send.txt:25
 #, priority:100
 msgid "Typical usage is something like:"
-msgstr ""
+msgstr "典型的用法是这样的："
 
 #. type: Plain text
 #: en/git-imap-send.txt:27
 #, priority:100
 msgid "git format-patch --signoff --stdout --attach origin | git imap-send"
-msgstr ""
+msgstr "git format-patch --signoff --stdout --attach origin | git imap-send"
 
 #. type: Plain text
 #: en/git-imap-send.txt:39
@@ -31154,7 +31154,7 @@ msgstr "--curl"
 #: en/git-imap-send.txt:44
 #, priority:100
 msgid "Use libcurl to communicate with the IMAP server, unless tunneling into it.  Ignored if Git was built without the USE_CURL_FOR_IMAP_SEND option set."
-msgstr ""
+msgstr "使用 libcurl 与 IMAP 服务器通信，除非通过隧道进入。 如果 Git 在构建时没有设置 USE_CURL_FOR_IMAP_SEND 选项，则会被忽略。"
 
 #. type: Labeled list
 #: en/git-imap-send.txt:45
@@ -31166,19 +31166,19 @@ msgstr "--no-curl"
 #: en/git-imap-send.txt:49
 #, priority:100
 msgid "Talk to the IMAP server using git's own IMAP routines instead of using libcurl.  Ignored if Git was built with the NO_OPENSSL option set."
-msgstr ""
+msgstr "使用 git 自己的 IMAP 例程与 IMAP 服务器对话，而不是使用 libcurl。 如果 Git 在构建时设置了 NO_OPENSSL 选项，则忽略。"
 
 #. type: Plain text
 #: en/git-imap-send.txt:56
 #, priority:100
 msgid "To use the tool, `imap.folder` and either `imap.tunnel` or `imap.host` must be set to appropriate values."
-msgstr ""
+msgstr "要使用该工具，`imap.folder` 和 `imap.tunnel` 或 `imap.host` 必须被设置为适当的值。"
 
 #. type: Plain text
 #: en/git-imap-send.txt:64
 #, priority:100
 msgid "Using tunnel mode:"
-msgstr ""
+msgstr "使用隧道模式："
 
 #. type: delimited block .
 #: en/git-imap-send.txt:69
@@ -31196,7 +31196,7 @@ msgstr ""
 #: en/git-imap-send.txt:72
 #, priority:100
 msgid "Using direct mode:"
-msgstr ""
+msgstr "使用直接模式："
 
 #. type: delimited block .
 #: en/git-imap-send.txt:79
@@ -31218,7 +31218,7 @@ msgstr ""
 #: en/git-imap-send.txt:82
 #, priority:100
 msgid "Using direct mode with SSL:"
-msgstr ""
+msgstr "使用 SSL 的直接模式："
 
 #. type: delimited block .
 #: en/git-imap-send.txt:91
@@ -31231,19 +31231,19 @@ msgid ""
 "    pass = p4ssw0rd\n"
 "    port = 123\n"
 "    ; sslVerify = false\n"
-msgstr ""
+msgstr "[imap]\n    folder = \"INBOX.Drafts\"\n    host = imaps://imap.example.com\n    user = bob\n    pass = p4ssw0rd\n    port = 123\n    ; sslVerify = false\n"
 
 #. type: Plain text
 #: en/git-imap-send.txt:100
 #, priority:100
 msgid "You may want to use `sslVerify=false` while troubleshooting, if you suspect that the reason you are having trouble connecting is because the certificate you use at the private server `example.com` you are trying to set up (or have set up) may not be verified correctly."
-msgstr ""
+msgstr "在排除故障时，如果你怀疑连接有问题的原因是你在试图建立（或已经建立）的私人服务器 `example.com`上使用的证书可能没有被正确验证，你可能想使用 `sslVerify=false`。"
 
 #. type: Plain text
 #: en/git-imap-send.txt:102
 #, priority:100
 msgid "Using Gmail's IMAP interface:"
-msgstr ""
+msgstr "使用 Gmail 的 IMAP 界面："
 
 #. type: delimited block -
 #: en/git-imap-send.txt:109
@@ -31265,19 +31265,19 @@ msgstr ""
 #: en/git-imap-send.txt:114
 #, priority:100
 msgid "You might need to instead use: `folder = \"[Google Mail]/Drafts\"` if you get an error that the \"Folder doesn't exist\"."
-msgstr ""
+msgstr "如果你得到一个错误，即 “文件夹不存在”，你可能需要改用： `folder = \"[Google Mail]/Drafts\"` 。"
 
 #. type: Plain text
 #: en/git-imap-send.txt:118
 #, priority:100
 msgid "If your Gmail account is set to another language than English, the name of the \"Drafts\" folder will be localized."
-msgstr ""
+msgstr "如果你的 Gmail 账户被设置为英语以外的其他语言，\"Drafts\" 文件夹的名称将被本地化。"
 
 #. type: Plain text
 #: en/git-imap-send.txt:120
 #, priority:100
 msgid "Once the commits are ready to be sent, run the following command:"
-msgstr ""
+msgstr "一旦准备好发送提交，请运行以下命令："
 
 #. type: Plain text
 #: en/git-imap-send.txt:122
@@ -31289,7 +31289,7 @@ msgstr "  $ git format-patch --cover-letter -M --stdout origin/master | git imap
 #: en/git-imap-send.txt:126
 #, priority:100
 msgid "Just make sure to disable line wrapping in the email client (Gmail's web interface will wrap lines no matter what, so you need to use a real IMAP client)."
-msgstr ""
+msgstr "只要确保禁用电子邮件客户端的换行功能（Gmail 的网络界面无论如何都会换行，所以你需要使用真正的 IMAP 客户端）。"
 
 #. type: Title -
 #: en/git-imap-send.txt:128
@@ -31301,7 +31301,7 @@ msgstr "小心"
 #: en/git-imap-send.txt:135
 #, priority:100
 msgid "It is still your responsibility to make sure that the email message sent by your email program meets the standards of your project.  Many projects do not like patches to be attached.  Some mail agents will transform patches (e.g. wrap lines, send them as format=flowed) in ways that make them fail.  You will get angry flames ridiculing you if you don't check this."
-msgstr ""
+msgstr "你仍然有责任确保你的电子邮件程序所发送的电子邮件符合你的项目的标准。 许多项目不喜欢附加补丁。 一些邮件代理会对补丁进行转换（例如，包行，以 format=flowed 的方式发送），使其失败。 如果你不检查这个，你会得到愤怒的火苗。"
 
 #. type: Plain text
 #: en/git-imap-send.txt:139
@@ -31310,13 +31310,13 @@ msgid ""
 "Thunderbird in particular is known to be problematic.  Thunderbird\n"
 "users may wish to visit this web page for more information:\n"
 "  http://kb.mozillazine.org/Plain_text_e-mail_-_Thunderbird#Completely_plain_email\n"
-msgstr ""
+msgstr "尤其是Thunderbird，众所周知，它存在问题。 Thunderbird\n用户可能希望访问这个网页以了解更多信息：\n  http://kb.mozillazine.org/Plain_text_e-mail_-_Thunderbird#Completely_plain_email\n"
 
 #. type: Plain text
 #: en/git-imap-send.txt:143
 #, priority:100
 msgid "linkgit:git-format-patch[1], linkgit:git-send-email[1], mbox(5)"
-msgstr ""
+msgstr "linkgit:git-format-patch[1], linkgit:git-send-email[1], mbox(5)"
 
 #. type: Title =
 #: en/git-index-pack.txt:2
@@ -31332,36 +31332,36 @@ msgstr "git-index-pack - Build pack index file for an existing packed archive"
 
 #. type: Plain text
 #: en/git-index-pack.txt:15
-#, no-wrap, priority:100
+#, fuzzy, no-wrap, priority:100
 msgid ""
 "'git index-pack' [-v] [-o <index-file>] [--[no-]rev-index] <pack-file>\n"
 "'git index-pack' --stdin [--fix-thin] [--keep] [-v] [-o <index-file>]\n"
 "\t\t  [--[no-]rev-index] [<pack-file>]\n"
-msgstr ""
+msgstr "'git index-pack' [-v] [-o <index-file>] [--[no-]rev-index] <pack-file>\n'git index-pack' --stdin [--fix-thin] [--keep] [-v] [-o <index-file>]\n\t\t  [--[no-]rev-index] [<pack-file>]\n"
 
 #. type: Plain text
 #: en/git-index-pack.txt:24
 #, priority:100
 msgid "Reads a packed archive (.pack) from the specified file, and builds a pack index file (.idx) for it. Optionally writes a reverse-index (.rev) for the specified pack. The packed archive together with the pack index can then be placed in the objects/pack/ directory of a Git repository."
-msgstr ""
+msgstr "从指定的文件中读取一个打包的档案（.pack），并为其建立一个打包索引文件（.idx）。可以选择为指定的包写一个反向索引（.rev）。打包后的归档文件连同打包索引可以放在 Git 仓库的 objects/pack/ 目录中。"
 
 #. type: Plain text
 #: en/git-index-pack.txt:30
 #, priority:100
 msgid "Be verbose about what is going on, including progress status."
-msgstr ""
+msgstr "对正在发生的事情要言之有物，包括进度状态。"
 
 #. type: Labeled list
 #: en/git-index-pack.txt:31
 #, no-wrap, priority:100
 msgid "-o <index-file>"
-msgstr ""
+msgstr "-o <index-file>"
 
 #. type: Plain text
 #: en/git-index-pack.txt:38
 #, priority:100
 msgid "Write the generated pack index into the specified file.  Without this option the name of pack index file is constructed from the name of packed archive file by replacing .pack with .idx (and the program fails if the name of packed archive does not end with .pack)."
-msgstr ""
+msgstr "将生成的数据包索引写入指定的文件中。 如果没有这个选项，打包索引文件的名称是根据打包档案文件的名称构建的，将 .pack 替换为 .idx（如果打包档案的名称不是以 .pack 结尾，程序将失败）。"
 
 #. type: Labeled list
 #: en/git-index-pack.txt:39
@@ -31373,13 +31373,13 @@ msgstr "--[no-]rev-index"
 #: en/git-index-pack.txt:45
 #, priority:100
 msgid "When this flag is provided, generate a reverse index (a `.rev` file) corresponding to the given pack. If `--verify` is given, ensure that the existing reverse index is correct. Takes precedence over `pack.writeReverseIndex`."
-msgstr ""
+msgstr "当提供这个标志时，生成一个与给定包对应的反向索引（一个 `.rev` 文件）。如果给了 `--verify`，确保现有的反向索引是正确的。优先于 `pack.writeReverseIndex`。"
 
 #. type: Plain text
 #: en/git-index-pack.txt:55
 #, priority:100
 msgid "When this flag is provided, the pack is read from stdin instead and a copy is then written to <pack-file>. If <pack-file> is not specified, the pack is written to objects/pack/ directory of the current Git repository with a default name determined from the pack content.  If <pack-file> is not specified consider using --keep to prevent a race condition between this process and 'git repack'."
-msgstr ""
+msgstr "当提供这个标志时，数据包将从标注输入流读取，然后将副本写入 <pack-file>。如果没有指定 <pack-file>，数据包会被写入当前 Git 仓库的 objects/pack/ 目录中，其默认名称由数据包内容决定。 如果没有指定 <pack-file>，可以考虑使用 --keep 来防止这个过程和 'git repack' 之间出现竞争状态。"
 
 #. type: Labeled list
 #: en/git-index-pack.txt:56
@@ -31391,13 +31391,13 @@ msgstr "--fix-thin"
 #: en/git-index-pack.txt:61
 #, priority:100
 msgid "Fix a \"thin\" pack produced by `git pack-objects --thin` (see linkgit:git-pack-objects[1] for details) by adding the excluded objects the deltified objects are based on to the pack. This option only makes sense in conjunction with --stdin."
-msgstr ""
+msgstr "修正由 `git pack-objects --thin` 产生的 “轻量” 包（详见 linkgit:git-pack-objects[1]），将被删除的对象所基于的排除对象加入包中。这个选项只有在与 --stdin 结合时才有意义。"
 
 #. type: Plain text
 #: en/git-index-pack.txt:69
 #, priority:100
 msgid "Before moving the index into its final destination create an empty .keep file for the associated pack file.  This option is usually necessary with --stdin to prevent a simultaneous 'git repack' process from deleting the newly constructed pack and index before refs can be updated to use objects contained in the pack."
-msgstr ""
+msgstr "在将索引移到其最终目的地之前，为相关的包文件创建一个空的 .keep 文件。 这个选项通常需要和 --stdin一起使用，以防止同时进行的 \"git repack\" 进程在更新引用以使用 pack 中包含的对象之前删除新建的 pack 和 index。"
 
 #. type: Labeled list
 #: en/git-index-pack.txt:70
@@ -31409,7 +31409,7 @@ msgstr "--keep=<msg>"
 #: en/git-index-pack.txt:76
 #, priority:100
 msgid "Like --keep create a .keep file before moving the index into its final destination, but rather than creating an empty file place '<msg>' followed by an LF into the .keep file.  The '<msg>' message can later be searched for within all .keep files to locate any which have outlived their usefulness."
-msgstr ""
+msgstr "像 --keep 一样，在将索引移到最终目的地之前创建一个 .keep 文件，但不是创建一个空文件，而是在 .keep 文件中放入 '<msg>' 和一个 LF。 以后可以在所有的 .keep 文件中搜索 '<msg>' 信息，以找到任何已经失去作用的文件。"
 
 #. type: Labeled list
 #: en/git-index-pack.txt:77 en/git-pack-objects.txt:291
@@ -31421,13 +31421,13 @@ msgstr "--index-version=<version>[,<offset>]"
 #: en/git-index-pack.txt:81 en/git-pack-objects.txt:295
 #, priority:100
 msgid "This is intended to be used by the test suite only. It allows to force the version for the generated pack index, and to force 64-bit index entries on objects located above the given offset."
-msgstr ""
+msgstr "这是为测试套件准备的。它允许为生成的数据包索引强制选择版本，并对位于给定偏移量以上的对象强制选择 64 位索引条目。"
 
 #. type: Plain text
 #: en/git-index-pack.txt:84
 #, priority:100
 msgid "Die, if the pack contains broken objects or links."
-msgstr ""
+msgstr "死亡，如果该包包含破碎的对象或链接。"
 
 #. type: Labeled list
 #: en/git-index-pack.txt:85
@@ -31439,19 +31439,19 @@ msgstr "--progress-title"
 #: en/git-index-pack.txt:87 en/git-index-pack.txt:96
 #, priority:100
 msgid "For internal use only."
-msgstr ""
+msgstr "仅供内部使用。"
 
 #. type: Plain text
 #: en/git-index-pack.txt:90
 #, priority:100
 msgid "Set the title of the progress bar. The title is \"Receiving objects\" by default and \"Indexing objects\" when `--stdin` is specified."
-msgstr ""
+msgstr "设置进度条的标题。标题默认为 \"Receiving objects\"，当指定 `--stdin` 时为 \"Indexing objects\"。"
 
 #. type: Plain text
 #: en/git-index-pack.txt:93
 #, priority:100
 msgid "Die if the pack contains broken links. For internal use only."
-msgstr ""
+msgstr "如果数据包中包含无法链接的链接则死亡。仅供内部使用。"
 
 #. type: Labeled list
 #: en/git-index-pack.txt:94
@@ -31463,7 +31463,7 @@ msgstr "--fsck-objects"
 #: en/git-index-pack.txt:101
 #, priority:100
 msgid "Die if the pack contains broken objects. If the pack contains a tree pointing to a .gitmodules blob that does not exist, prints the hash of that blob (for the caller to check) after the hash that goes into the name of the pack/idx file (see \"Notes\")."
-msgstr ""
+msgstr "如果数据包中包含破损的对象，则死亡。如果数据包包含一个指向不存在的 .gitmodules blob 的树，则在进入数据包 /idx 文件名的哈希值之后打印该 blob 的哈希值（供调用者检查）（见 “注意事项”）。"
 
 #. type: Labeled list
 #: en/git-index-pack.txt:102 en/git-pack-objects.txt:281 en/git-repack.txt:120
@@ -31475,7 +31475,7 @@ msgstr "--threads=<n>"
 #: en/git-index-pack.txt:111
 #, priority:100
 msgid "Specifies the number of threads to spawn when resolving deltas. This requires that index-pack be compiled with pthreads otherwise this option is ignored with a warning.  This is meant to reduce packing time on multiprocessor machines. The required amount of memory for the delta search window is however multiplied by the number of threads.  Specifying 0 will cause Git to auto-detect the number of CPU's and use maximum 3 threads."
-msgstr ""
+msgstr "指定解析 deltas 时产生的线程数量。这要求 index-pack 在编译时使用 pthreads，否则这个选项会被忽略并发出警告。 这是为了减少多处理器机器上的打包时间。然而，delta 搜索窗口所需的内存量要乘以线程的数量。 指定为 0 将导致 Git 自动检测 CPU 的数量并使用最多 3 个线程。"
 
 #. type: Labeled list
 #: en/git-index-pack.txt:112 en/git-unpack-objects.txt:47
@@ -31487,7 +31487,7 @@ msgstr "--max-input-size=<size>"
 #: en/git-index-pack.txt:114 en/git-unpack-objects.txt:49
 #, priority:100
 msgid "Die, if the pack is larger than <size>."
-msgstr ""
+msgstr "如果数据包大于 <size>，则死亡。"
 
 #. type: Labeled list
 #: en/git-index-pack.txt:115 en/git-show-index.txt:42
@@ -31519,25 +31519,25 @@ msgstr "-m <message>"
 #: en/git-index-pack.txt:132
 #, priority:100
 msgid "Before committing the pack-index, create a .promisor file for this pack. Particularly helpful when writing a promisor pack with --fix-thin since the name of the pack is not final until the pack has been fully written. If a `<message>` is provided, then that content will be written to the .promisor file for future reference. See link:technical/partial-clone.html[partial clone] for more information."
-msgstr ""
+msgstr "在提交 pack-index 之前，为这个 pack 创建一个 .promosor 文件。在用 --fix-thin 编写 pack 时特别有帮助，因为在完全编写完 pack 之前，pack 的名字还不是最终的。如果提供了 `<message>`，那么该内容将被写入 .promosor 文件，供将来参考。参见 link:technical/partial-clone.html[partial clone] 以了解更多信息。"
 
 #. type: Plain text
 #: en/git-index-pack.txt:140
 #, priority:100
 msgid "Once the index has been created, the hash that goes into the name of the pack/idx file is printed to stdout. If --stdin was also used then this is prefixed by either \"pack\\t\", or \"keep\\t\" if a new .keep file was successfully created. This is useful to remove a"
-msgstr ""
+msgstr "一旦索引被创建，进入 pack/idx 文件名的哈希值将被打印到标准输出流。如果还使用了 --stdin，那么它的前缀是 \"pack\\t\"，或者 \"keep\\t\"（如果成功创建了一个新的 .keep 文件）。这对于删除一个"
 
 #. type: Block title
 #: en/git-index-pack.txt:140
 #, no-wrap, priority:100
 msgid "keep file used as a lock to prevent the race with 'git repack'"
-msgstr ""
+msgstr "用一个锁来持有文件，以防止与 'git repack' 竞争"
 
 #. type: Plain text
 #: en/git-index-pack.txt:142
 #, priority:100
 msgid "mentioned above."
-msgstr ""
+msgstr "上述提到的。"
 
 #. type: Title =
 #: en/git-init-db.txt:2
@@ -31549,7 +31549,7 @@ msgstr "git-init-db(1)"
 #: en/git-init-db.txt:7
 #, priority:100
 msgid "git-init-db - Creates an empty Git repository"
-msgstr ""
+msgstr "git-init-db - 创建一个空的 Git 仓库"
 
 #. type: Plain text
 #: en/git-init-db.txt:13
@@ -31561,7 +31561,7 @@ msgstr "'git init-db' [-q | --quiet] [--bare] [--template=<template_directory>] 
 #: en/git-init-db.txt:20
 #, priority:100
 msgid "This is a synonym for linkgit:git-init[1].  Please refer to the documentation of that command."
-msgstr ""
+msgstr "这是 linkgit:git-init[1] 的一个同义词。 请参考该命令的文档。"
 
 #. type: Title =
 #: en/git-init.txt:2
@@ -31874,19 +31874,19 @@ msgid ""
 "'git instaweb' [--local] [--httpd=<httpd>] [--port=<port>]\n"
 "               [--browser=<browser>]\n"
 "'git instaweb' [--start] [--stop] [--restart]\n"
-msgstr ""
+msgstr "'git instaweb' [--local] [--httpd=<httpd>] [--port=<端口>]\n               [--browser=<浏览器>]\n'git instaweb' [--start] [--stop] [--restart]\n"
 
 #. type: Plain text
 #: en/git-instaweb.txt:19
 #, priority:100
 msgid "A simple script to set up `gitweb` and a web server for browsing the local repository."
-msgstr ""
+msgstr "一个简单的脚本，用来设置 `gitweb` 和浏览本地仓库的网络服务器。"
 
 #. type: Plain text
 #: en/git-instaweb.txt:26
 #, priority:100
 msgid "Only bind the web server to the local IP (127.0.0.1)."
-msgstr ""
+msgstr "只将 Web 服务器绑定到本地 IP（127.0.0.1）。"
 
 #. type: Labeled list
 #: en/git-instaweb.txt:28
@@ -31898,7 +31898,7 @@ msgstr "--httpd"
 #: en/git-instaweb.txt:35
 #, priority:100
 msgid "The HTTP daemon command-line that will be executed.  Command-line options may be specified here, and the configuration file will be added at the end of the command-line.  Currently apache2, lighttpd, mongoose, plackup, python and webrick are supported.  (Default: lighttpd)"
-msgstr ""
+msgstr "将被执行的 HTTP 守护程序的命令行。 命令行选项可以在这里指定，配置文件将被添加到命令行的最后。 目前支持 apache2、lighttpd、mongoose、plackup、python 和 webrick。 (默认：lighttpd)"
 
 #. type: Labeled list
 #: en/git-instaweb.txt:37
@@ -31910,7 +31910,7 @@ msgstr "--module-path"
 #: en/git-instaweb.txt:40
 #, priority:100
 msgid "The module path (only needed if httpd is Apache).  (Default: /usr/lib/apache2/modules)"
-msgstr ""
+msgstr "模块路径（只有当 httpd 是 Apache 时才需要）。 (默认：/usr/lib/apache2/modules)"
 
 #. type: Labeled list
 #: en/git-instaweb.txt:42
@@ -31922,7 +31922,7 @@ msgstr "--port"
 #: en/git-instaweb.txt:44
 #, priority:100
 msgid "The port number to bind the httpd to.  (Default: 1234)"
-msgstr ""
+msgstr "绑定 httpd 的端口号。 (默认：1234)"
 
 #. type: Labeled list
 #: en/git-instaweb.txt:46
@@ -31934,7 +31934,7 @@ msgstr "--browser"
 #: en/git-instaweb.txt:52
 #, priority:100
 msgid "The web browser that should be used to view the gitweb page. This will be passed to the 'git web{litdd}browse' helper script along with the URL of the gitweb instance. See linkgit:git-web{litdd}browse[1] for more information about this. If the script fails, the URL will be printed to stdout."
-msgstr ""
+msgstr "查看 gitweb 页面时应使用的网络浏览器。这将与 gitweb 实例的 URL 一起传递给 'git web{litdd}browse' 辅助脚本。参见 linkgit:git-web{litdd}browse[1] 获取更多相关信息。如果脚本失败，URL 会被打印到标准输出流。"
 
 #. type: Labeled list
 #: en/git-instaweb.txt:53 en/git-update-ref.txt:125
@@ -31952,7 +31952,7 @@ msgstr "--start"
 #: en/git-instaweb.txt:57
 #, priority:100
 msgid "Start the httpd instance and exit.  Regenerate configuration files as necessary for spawning a new instance."
-msgstr ""
+msgstr "启动 httpd 实例并退出。 根据需要重新生成配置文件以生成新的实例。"
 
 #. type: Labeled list
 #: en/git-instaweb.txt:58
@@ -31970,7 +31970,7 @@ msgstr "--stop"
 #: en/git-instaweb.txt:63
 #, priority:100
 msgid "Stop the httpd instance and exit.  This does not generate any of the configuration files for spawning a new instance, nor does it close the browser."
-msgstr ""
+msgstr "停止 httpd 实例并退出。 这不会生成任何用于生成新实例的配置文件，也不会关闭浏览器。"
 
 #. type: Labeled list
 #: en/git-instaweb.txt:64
@@ -31988,13 +31988,13 @@ msgstr "--restart"
 #: en/git-instaweb.txt:68
 #, priority:100
 msgid "Restart the httpd instance and exit.  Regenerate configuration files as necessary for spawning a new instance."
-msgstr ""
+msgstr "重新启动 httpd 实例并退出。 根据需要重新生成配置文件以生成新的实例。"
 
 #. type: Plain text
 #: en/git-instaweb.txt:73
 #, priority:100
 msgid "You may specify configuration in your .git/config"
-msgstr ""
+msgstr "你可以在你的 .git/config 中指定配置"
 
 #. type: delimited block -
 #: en/git-instaweb.txt:81
@@ -32018,7 +32018,7 @@ msgstr ""
 #: en/git-instaweb.txt:87
 #, priority:100
 msgid "If the configuration variable `instaweb.browser` is not set, `web.browser` will be used instead if it is defined. See linkgit:git-web{litdd}browse[1] for more information about this."
-msgstr ""
+msgstr "如果配置变量 `instaweb.browser` 没有设置，如果定义了 `web.browser`，将使用它来代替。参见 linkgit:git-web{litdd}browse[1] 以了解更多相关信息。"
 
 #. type: Title =
 #: en/git-interpret-trailers.txt:2
@@ -63542,7 +63542,7 @@ msgstr "使用`--ff-only`，在可能的情况下，以快进的方式解决合�
 #: en/merge-options.txt:92
 #, priority:240
 msgid "GPG-sign the resulting merge commit. The `keyid` argument is optional and defaults to the committer identity; if specified, it must be stuck to the option without a space. `--no-gpg-sign` is useful to countermand both `commit.gpgSign` configuration variable, and earlier `--gpg-sign`."
-msgstr "对合并后的提交进行GPG签名。`keyid`参数是可选的，默认为提交者的身份；如果指定，它必须与选项连在一起，不能有空格。`--no-gpg-sign`对于反命令`commit.gpgSign`配置变量和早期的`--gpg-sign`都很有用。"
+msgstr "对合并后的提交进行 GPG 签名。`keyid` 参数是可选的，默认为提交者的身份；如果指定，它必须与选项连在一起，不能有空格。`--no-gpg-sign` 对于反命令 `commit.gpgSign` 配置变量和早期的 `--gpg-sign` 都很有用。"
 
 #. type: Plain text
 #: en/merge-options.txt:98
