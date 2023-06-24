@@ -1,5 +1,5 @@
 # GIT Documentation Translations
-
+mervekaya1992/git-manpages-l10n
 This project holds the translations for the documentation of Git. This document describes how you can contribute to the effort of enhancing the language coverage and maintaining the translation.
 
 This project is *not* about translating Git itself although the base content (the manpages) is extracted from it. Git uses a workflow for translations which is different from the one used by Git Manpages. If you feel interested, please refer to the [specific instructions][].
