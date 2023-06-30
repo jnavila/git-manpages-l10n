@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-02-26 14:06+0100\nPO-Revision-Date: 2023-06-29 22:37+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.18.1\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-02-26 14:06+0100\nPO-Revision-Date: 2023-07-01 04:52+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.0-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:769 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:146 en/git-status.txt:31
@@ -35782,13 +35782,13 @@ msgstr "如果没有传递 `-z`："
 #: en/git-merge-tree.txt:185
 #, priority:100
 msgid "This section starts with a blank line to separate it from the previous sections, and then only contains the <conflict-message> information from the previous section (separated by newlines).  These are non-stable strings that should not be parsed by scripts, and are just meant for human consumption.  Also, note that while <conflict-message> strings usually do not contain embedded newlines, they sometimes do.  (However, the free-form messages will never have an embedded NUL character).  So, the entire block of information is meant for human readers as an agglomeration of all conflict messages."
-msgstr ""
+msgstr "这一节以空行开始，与前几节分开，然后只包含前一节的 <conflict-message> 信息（用换行符分开）。 这些是不稳定的字符串，不应该被脚本解析，只是为了供人使用。 另外，请注意，虽然 <conflict-message> 字符串通常不包含嵌入式换行符，但有时也会包含。 (然而，自由格式的信息永远不会有一个嵌入的 NUL 字符）。 所以，整个信息块是作为所有冲突信息的集合体提供给人类阅读的。"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:196
 #, priority:100
 msgid "For a successful, non-conflicted merge, the exit status is 0.  When the merge has conflicts, the exit status is 1.  If the merge is not able to complete (or start) due to some kind of error, the exit status is something other than 0 or 1 (and the output is unspecified).  When --stdin is passed, the return status is 0 for both successful and conflicted merges, and something other than 0 or 1 if it cannot complete all the requested merges."
-msgstr ""
+msgstr "如果合并成功，没有冲突，退出状态为 0；如果合并有冲突，退出状态为 1；如果合并由于某种错误而无法完成（或开始），退出状态为 0 或 1 以外的内容（而且输出结果未指明）。 当传递 --stdin 时，对于成功的合并和有冲突的合并，返回状态都是 0，如果不能完成所有要求的合并，则返回 0 或 1 以外的其他状态。"
 
 #. type: Title -
 #: en/git-merge-tree.txt:198
@@ -35800,7 +35800,7 @@ msgstr "注释"
 #: en/git-merge-tree.txt:205
 #, priority:100
 msgid "This command is intended as low-level plumbing, similar to linkgit:git-hash-object[1], linkgit:git-mktree[1], linkgit:git-commit-tree[1], linkgit:git-write-tree[1], linkgit:git-update-ref[1], and linkgit:git-mktag[1].  Thus, it can be used as a part of a series of steps such as:"
-msgstr ""
+msgstr "这个命令旨在作为低级的底层命令，类似于 linkgit:git-hash-object[1]，linkgit:git-mktree[1]， linkgit:git-commit-tree[1]， linkgit:git-write-tree[1]，linkgit:git-update-ref[1] 和 linkgit:git-mktag[1]。 因此，它可以作为一系列步骤的一部分来使用，比如："
 
 #. type: Plain text
 #: en/git-merge-tree.txt:210
@@ -35810,97 +35810,97 @@ msgid ""
 "       test $? -eq 0 || die \"There were conflicts...\"\n"
 "       NEWCOMMIT=$(git commit-tree $NEWTREE -p $BRANCH1 -p $BRANCH2)\n"
 "       git update-ref $BRANCH1 $NEWCOMMIT\n"
-msgstr ""
+msgstr "       NEWTREE=$(git merge-tree --write-tree $BRANCH1 $BRANCH2)\n       test $? -eq 0 || die \"There were conflicts...\"\n       NEWCOMMIT=$(git commit-tree $NEWTREE -p $BRANCH1 -p $BRANCH2)\n       git update-ref $BRANCH1 $NEWCOMMIT\n"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:213
 #, priority:100
 msgid "Note that when the exit status is non-zero, `NEWTREE` in this sequence will contain a lot more output than just a tree."
-msgstr ""
+msgstr "注意，当退出状态为非零时，这个序列中的 `NEWTREE` 将包含很多输出，而不仅仅是一棵目录树。"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:216
 #, priority:100
 msgid "For conflicts, the output includes the same information that you'd get with linkgit:git-merge[1]:"
-msgstr ""
+msgstr "对于冲突，输出包括你用 linkgit:git-merge[1] 得到的相同信息："
 
 #. type: Plain text
 #: en/git-merge-tree.txt:219
 #, priority:100
 msgid "what would be written to the working tree (the <<OIDTLT,OID of toplevel tree>>)"
-msgstr ""
+msgstr "什么会被写入工作区（<<OIDTLT,顶层目录树树的 OID>>）"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:221
 #, priority:100
 msgid "the higher order stages that would be written to the index (the <<CFI,Conflicted file info>>)"
-msgstr ""
+msgstr "将被写入索引的高阶阶段（<<CFI,冲突的文件信息>>）"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:223
 #, priority:100
 msgid "any messages that would have been printed to stdout (the <<IM,Informational messages>>)"
-msgstr ""
+msgstr "任何会被打印到标准输出流的信息（<<IM,信息性信息>>）。"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:228
 #, priority:100
 msgid "'git merge-tree --stdin' input format is fully text based. Each line has this format:"
-msgstr ""
+msgstr "'git merge-tree --stdin' 的输入格式是完全基于文本的。每一行都有这样的格式："
 
 #. type: Plain text
 #: en/git-merge-tree.txt:230
 #, no-wrap, priority:100
 msgid "\t[<base-commit> -- ]<branch1> <branch2>\n"
-msgstr ""
+msgstr "\t[<基础提交> -- ]<分支1> <分支2>\n"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:234
 #, priority:100
 msgid "If one line is separated by `--`, the string before the separator is used for specifying a merge-base for the merge and the string after the separator describes the branches to be merged."
-msgstr ""
+msgstr "如果一行被 `--` 分隔，分隔符前的字符串用于指定合并的基础，分隔符后的字符串描述要合并的分支。"
 
 #. type: Title -
 #: en/git-merge-tree.txt:236
 #, no-wrap, priority:100
 msgid "MISTAKES TO AVOID"
-msgstr ""
+msgstr "应避免的错误"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:245
 #, priority:100
 msgid "Do NOT look through the resulting toplevel tree to try to find which files conflict; parse the <<CFI,Conflicted file info>> section instead.  Not only would parsing an entire tree be horrendously slow in large repositories, there are numerous types of conflicts not representable by conflict markers (modify/delete, mode conflict, binary file changed on both sides, file/directory conflicts, various rename conflict permutations, etc.)"
-msgstr ""
+msgstr "不要在产生的顶层目录树中寻找哪些文件有冲突，而要解析 <<CFI,冲突文件信息>> 部分。 在大型存储库中，不仅解析整个目录树会慢得吓人，而且有许多冲突类型无法用冲突标记来表示（修改/删除，模式冲突，二进制文件在两边都有改变，文件/目录冲突，各种重命名冲突的变种，等等。）"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:251
 #, priority:100
 msgid "Do NOT interpret an empty <<CFI,Conflicted file info>> list as a clean merge; check the exit status.  A merge can have conflicts without having individual files conflict (there are a few types of directory rename conflicts that fall into this category, and others might also be added in the future)."
-msgstr ""
+msgstr "不要把一个空的 <<CFI,冲突文件信息>> 列表理解为一个干净的合并；检查退出状态。 一个合并可以有冲突而没有单个文件的冲突（有几种类型的目录重命名冲突属于这个类别，其他的也可能在将来被添加）。"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:265
 #, priority:100
 msgid "Do NOT attempt to guess or make the user guess the conflict types from the <<CFI,Conflicted file info>> list.  The information there is insufficient to do so.  For example: Rename/rename(1to2) conflicts (both sides renamed the same file differently) will result in three different file having higher order stages (but each only has one higher order stage), with no way (short of the <<IM,Informational messages>> section)  to determine which three files are related.  File/directory conflicts also result in a file with exactly one higher order stage.  Possibly-involved-in-directory-rename conflicts (when \"merge.directoryRenames\" is unset or set to \"conflicts\") also result in a file with exactly one higher order stage.  In all cases, the <<IM,Informational messages>> section has the necessary info, though it is not designed to be machine parseable."
-msgstr ""
+msgstr "不要试图猜测或让用户猜测 <<CFI,冲突文件信息>> 列表中的冲突类型。 那里的信息不足以做到这一点。 比如说： Rname/rename（ 1 对 2 ）冲突（双方以不同方式重命名同一文件）将导致三个不同的文件具有高阶阶段(但每个文件只有一个高阶阶段），没有办法（除了 <<IM,信息消息>> 部分）确定哪三个文件是相关的。 文件/目录冲突也会导致一个文件正好有一个高阶阶段。 可能涉及目录重命名的冲突（当 \"merge.directoryRenames\" 未设置或设置为 \"conflict\" 时）也会导致一个文件正好有一个高阶阶段。 在所有情况下，<<IM,消息性信息>> 部分都有必要的信息，尽管它不是被设计为可被机器解析的。"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:272
 #, priority:100
 msgid "Do NOT assume that each paths from <<CFI,Conflicted file info>>, and the logical conflicts in the <<IM,Informational messages>> have a one-to-one mapping, nor that there is a one-to-many mapping, nor a many-to-one mapping.  Many-to-many mappings exist, meaning that each path can have many logical conflict types in a single merge, and each logical conflict type can affect many paths."
-msgstr ""
+msgstr "不要假设 <<CFI,冲突文件信息>> 中的每个路径和 <<IM,信息消息>> 中的逻辑冲突有一对一的映射，也不要假设存在一对多的映射，更不要假设存在多对一的映射。 存在多对多的映射，意味着每个路径在一次合并中可以有许多逻辑冲突类型，每个逻辑冲突类型可以影响许多路径。"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:276
 #, priority:100
 msgid "Do NOT assume all filenames listed in the <<IM,Informational messages>> section had conflicts.  Messages can be included for files that have no conflicts, such as \"Auto-merging <file>\"."
-msgstr ""
+msgstr "不要认为 <<IM,信息消息>> 部分列出的所有文件名都有冲突。 对于没有冲突的文件，可以包括信息，如 \"Auto-merging <文件>\"。"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:287
 #, priority:100
 msgid "AVOID taking the OIDS from the <<CFI,Conflicted file info>> and re-merging them to present the conflicts to the user.  This will lose information.  Instead, look up the version of the file found within the <<OIDTLT,OID of toplevel tree>> and show that instead.  In particular, the latter will have conflict markers annotated with the original branch/commit being merged and, if renames were involved, the original filename.  While you could include the original branch/commit in the conflict marker annotations when re-merging, the original filename is not available from the <<CFI,Conflicted file info>> and thus you would be losing information that might help the user resolve the conflict."
-msgstr ""
+msgstr "避免从 <<CFI,冲突文件信息>> 中提取 OIDS，并将它们重新合并以向用户展示冲突。 这将丢失信息。 相反，在 <<OIDTLT,顶层目录树的OID>> 中查找文件的版本，并显示它。 特别是，后者将有冲突标记，并标明被合并的原始分支/提交，如果涉及重名，则标明原始文件名。 虽然你可以在重新合并时将原始分支/提交包括在冲突标记的注释中，但原始文件名不能从 <<CFI,冲突文件信息>> 中获得，因此你会失去可能帮助用户解决冲突的信息。"
 
 #. type: Title -
 #: en/git-merge-tree.txt:290
@@ -35913,25 +35913,25 @@ msgstr "描述"
 #: en/git-merge-tree.txt:295
 #, priority:100
 msgid "Per the <<NEWMERGE,DESCRIPTION>> and unlike the rest of this documentation, this section describes the deprecated `--trivial-merge` mode."
-msgstr ""
+msgstr "根据 <<NEWMERGE,DESCRIPTION>>，与本文档的其他部分不同，本节描述了被废弃的 `--trivial-merge` 模式。"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:298
 #, priority:100
 msgid "Other than the optional `--trivial-merge`, this mode accepts no options."
-msgstr ""
+msgstr "除了可选的 `--trivial-merge` 外，该模式不接受任何选项。"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:306
 #, priority:100
 msgid "This mode reads three tree-ish, and outputs trivial merge results and conflicting stages to the standard output in a semi-diff format.  Since this was designed for higher level scripts to consume and merge the results back into the index, it omits entries that match <branch1>.  The result of this second form is similar to what three-way 'git read-tree -m' does, but instead of storing the results in the index, the command outputs the entries to the standard output."
-msgstr ""
+msgstr "这种模式读取三个树状的，并将琐碎的合并结果和冲突的阶段以 semi-diff 格式输出到标准输出。 由于这是为更高级别的脚本设计的，以消耗并将结果合并回索引中，所以它省略了与 <branch1> 相匹配的条目。 第二种形式的结果类似于三方 \"git read-tree -m\" 的做法，但该命令不是将结果存储在索引中，而是将条目输出到标准输出。"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:313
 #, priority:100
 msgid "This form not only has limited applicability (a trivial merge cannot handle content merges of individual files, rename detection, proper directory/file conflict handling, etc.), the output format is also difficult to work with, and it will generally be less performant than the first form even on successful merges (especially if working in large repositories)."
-msgstr ""
+msgstr "这种形式不仅适用性有限（一个琐碎的合并不能处理单个文件的内容合并、重命名检测、适当的目录/文件冲突处理等），输出格式也很难处理，而且即使在成功的合并中，它的性能一般也不如第一种形式（特别是在大型仓库中工作）。"
 
 #. type: Title =
 #: en/git-merge.txt:2
@@ -36540,7 +36540,7 @@ msgstr ""
 #: en/git-mktag.txt:23
 #, priority:100
 msgid "This command is mostly equivalent to linkgit:git-hash-object[1] invoked with `-t tag -w --stdin`. I.e. both of these will create and write a tag found in `my-tag`:"
-msgstr ""
+msgstr "这个命令主要等同于 linkgit:git-hash-object[1] 与 `-t tag -w -stdin` 一起调用。也就是说，这两个命令都会创建并写入一个在 `my-tag` 中找到的标签："
 
 #. type: Plain text
 #: en/git-mktag.txt:26
@@ -36548,37 +36548,37 @@ msgstr ""
 msgid ""
 "    git mktag <my-tag\n"
 "    git hash-object -t tag -w --stdin <my-tag\n"
-msgstr ""
+msgstr "    git mktag <my-tag\n    git hash-object -t tag -w --stdin <my-tag\n"
 
 #. type: Plain text
 #: en/git-mktag.txt:29
 #, priority:100
 msgid "The difference is that mktag will die before writing the tag if the tag doesn't pass a linkgit:git-fsck[1] check."
-msgstr ""
+msgstr "不同的是，如果标签没有通过 linkgit:git-fsck[1] 的检查，mktag 进程会在写入标签前结束。"
 
 #. type: Plain text
 #: en/git-mktag.txt:33
 #, priority:100
 msgid "The \"fsck\" check done mktag is stricter than what linkgit:git-fsck[1] would run by default in that all `fsck.<msg-id>` messages are promoted from warnings to errors (so e.g. a missing \"tagger\" line is an error)."
-msgstr ""
+msgstr "mktag 的 \"fsck\" 检查比 linkgit:git-fsck[1] 默认运行的更严格，因为所有的 `fsck.<msg-id>` 信息都从警告提升为错误（所以例如，缺少 \"tagger\" 行就是一个错误）。"
 
 #. type: Plain text
 #: en/git-mktag.txt:37
 #, priority:100
 msgid "Extra headers in the object are also an error under mktag, but ignored by linkgit:git-fsck[1]. This extra check can be turned off by setting the appropriate `fsck.<msg-id>` varible:"
-msgstr ""
+msgstr "对象中的额外头文件在 mktag 下也是一个错误，但被 linkgit:git-fsck[1] 忽略。这个额外的检查可以通过设置适当的 `fsck.<msg-id>` 变量来关闭："
 
 #. type: Plain text
 #: en/git-mktag.txt:39
 #, no-wrap, priority:100
 msgid "    git -c fsck.extraHeaderEntry=ignore mktag <my-tag-with-headers\n"
-msgstr ""
+msgstr "    git -c fsck.extraHeaderEntry=ignore mktag <my-tag-with-headers\n"
 
 #. type: Plain text
 #: en/git-mktag.txt:47
 #, priority:100
 msgid "By default mktag turns on the equivalent of linkgit:git-fsck[1] `--strict` mode. Use `--no-strict` to disable it."
-msgstr ""
+msgstr "默认情况下，mktag 打开了相当于 linkgit:git-fsck[1] 的 `--strict` 模式。使用 `--no-strict` 来禁用它。"
 
 #. type: Title -
 #: en/git-mktag.txt:49
@@ -36590,7 +36590,7 @@ msgstr "标签格式"
 #: en/git-mktag.txt:52
 #, priority:100
 msgid "A tag signature file, to be fed to this command's standard input, has a very simple fixed format: four lines of"
-msgstr ""
+msgstr "将被送入该命令的标准输入的标签签名文件有一个非常简单的固定格式：四行的"
 
 #. type: Plain text
 #: en/git-mktag.txt:57
@@ -36600,13 +36600,13 @@ msgid ""
 "  type <typename>\n"
 "  tag <tagname>\n"
 "  tagger <tagger>\n"
-msgstr ""
+msgstr "  object <hash>\n  type <typename>\n  tag <tagname>\n  tagger <tagger>\n"
 
 #. type: Plain text
 #: en/git-mktag.txt:63
 #, priority:100
 msgid "followed by some 'optional' free-form message (some tags created by older Git may not have `tagger` line).  The message, when it exists, is separated by a blank line from the header.  The message part may contain a signature that Git itself doesn't care about, but that can be verified with gpg."
-msgstr ""
+msgstr "后面是一些 \"可选的\" 自由形式的信息（一些由旧版 Git 创建的标签可能没有 `tagger` 行）。 当信息存在时，会用一行空行与标头分开。 消息部分可能包含一个 Git 自己并不关心的签名，但可以用 gpg 验证。"
 
 #. type: Title =
 #: en/git-mktree.txt:2
@@ -36630,13 +36630,13 @@ msgstr "'git mktree' [-z] [--missing] [--batch]\n"
 #: en/git-mktree.txt:20
 #, priority:100
 msgid "Reads standard input in non-recursive `ls-tree` output format, and creates a tree object.  The order of the tree entries is normalized by mktree so pre-sorting the input is not required.  The object name of the tree object built is written to the standard output."
-msgstr ""
+msgstr "以非递归的 `ls-tree` 输出格式读取标准输入，并创建一个树形对象。 树条目的顺序由 mktree 规范化，所以不需要对输入进行预先排序。 建立的树形对象的对象名称被写入标准输出。"
 
 #. type: Plain text
 #: en/git-mktree.txt:25
 #, priority:100
 msgid "Read the NUL-terminated `ls-tree -z` output instead."
-msgstr ""
+msgstr "读取以 NUL 结尾的 `ls-tree -z` 输出。"
 
 #. type: Labeled list
 #: en/git-mktree.txt:26
@@ -39166,25 +39166,25 @@ msgstr "将无法到达的对象打包到一个单独的 \"cruft\" 包中，以 
 #: en/git-pack-objects.txt:116
 #, priority:100
 msgid "When the input lists a pack containing all reachable objects (and lists all other packs as pending deletion), the corresponding cruft pack will contain all unreachable objects (with mtime newer than the `--cruft-expiration`) along with any unreachable objects whose mtime is older than the `--cruft-expiration`, but are reachable from an unreachable object whose mtime is newer than the `--cruft-expiration`)."
-msgstr ""
+msgstr "当输入列出一个包含所有可达对象的包（并将所有其他包列为待删除），相应的 cruft 包将包含所有不可达对象（其 mtime 比 `--cruft-expiration` 新），以及任何 mtime 比 `--cruft-expiration` 早，但可从 mtime 比 `--cruft-expiration` 新的不可达对象到达的不可达对象）。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:122
 #, priority:100
 msgid "Incompatible with `--unpack-unreachable`, `--keep-unreachable`, `--pack-loose-unreachable`, `--stdin-packs`, as well as any other options which imply `--revs`. Also incompatible with `--max-pack-size`; when this option is set, the maximum pack size is not inferred from `pack.packSizeLimit`."
-msgstr ""
+msgstr "与 `--unpack-unreachable`, `--keep-unreachable`, `--pack-loose-unreachable`, `--stdin-packs`，以及任何其他暗指 `--revs` 的选项不兼容。也与 `--max-pack-size` 不兼容；当这个选项被设置时，最大的包尺寸不会从`pack.packSizeLimit`中推断出来。"
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:123 en/git-repack.txt:72
 #, no-wrap, priority:100
 msgid "--cruft-expiration=<approxidate>"
-msgstr ""
+msgstr "--cruft-expiration=<approxidate>"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:127
 #, priority:100
 msgid "If specified, objects are eliminated from the cruft pack if they have an mtime older than `<approxidate>`. If unspecified (and given `--cruft`), then no objects are eliminated."
-msgstr ""
+msgstr "如果指定了，且对象的 mtime 超过 `<approxidate>`，就会从 cruft 包中剔除。如果没有指定（并给出 `--cruft'），那么没有对象被淘汰。"
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:128 en/git-repack.txt:107
@@ -39196,7 +39196,7 @@ msgstr "--window=<n>"
 #: en/git-pack-objects.txt:139
 #, priority:100
 msgid "These two options affect how the objects contained in the pack are stored using delta compression.  The objects are first internally sorted by type, size and optionally names and compared against the other objects within --window to see if using delta compression saves space.  --depth limits the maximum delta depth; making it too deep affects the performance on the unpacker side, because delta data needs to be applied that many times to get to the necessary object."
-msgstr ""
+msgstr "这两个选项影响了使用 delta 压缩法存储数据包中的对象的方式。 这些对象首先按照类型、大小和可选的名称进行内部排序，并与 --window 内的其他对象进行比较，看使用 delta 压缩是否节省了空间。 --depth 限制了最大的 delta 深度；使其过深会影响到解包方的性能，因为 delta 数据需要应用那么多次才能到达必要的对象。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:142 en/git-repack.txt:119
@@ -39208,19 +39208,19 @@ msgstr "--window 的默认值为 10，-depth 的默认值为 50。最大深度�
 #: en/git-pack-objects.txt:143 en/git-repack.txt:123
 #, no-wrap, priority:100
 msgid "--window-memory=<n>"
-msgstr ""
+msgstr "--window-memory=<n>"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:153
 #, priority:100
 msgid "This option provides an additional limit on top of `--window`; the window size will dynamically scale down so as to not take up more than '<n>' bytes in memory.  This is useful in repositories with a mix of large and small objects to not run out of memory with a large window, but still be able to take advantage of the large window for the smaller objects.  The size can be suffixed with \"k\", \"m\", or \"g\".  `--window-memory=0` makes memory usage unlimited.  The default is taken from the `pack.windowMemory` configuration variable."
-msgstr ""
+msgstr "这个选项在 `--window` 的基础上提供了一个额外的限制；窗口的大小将动态地缩小，以便不占用超过 '<n>' 字节的内存。 这对有大有小的对象的存储库很有用，它不会因为大窗口而耗尽内存，但仍然能够利用大窗口来处理小对象。 大小可以以 \"k\"、\"m \"或 \"g \"为后缀。 `--window-memory=0` 使内存使用不受限制。 默认值取自`pack.windowMemory` 配置变量。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:165
 #, priority:100
 msgid "In unusual scenarios, you may not be able to create files larger than a certain size on your filesystem, and this option can be used to tell the command to split the output packfile into multiple independent packfiles, each not larger than the given size. The size can be suffixed with \"k\", \"m\", or \"g\". The minimum size allowed is limited to 1 MiB.  The default is unlimited, unless the config variable `pack.packSizeLimit` is set. Note that this option may result in a larger and slower repository; see the discussion in `pack.packSizeLimit`."
-msgstr ""
+msgstr "在不寻常的情况下，你可能无法在你的文件系统上创建大于一定大小的文件，这个选项可以用来告诉命令将输出的 packfile 分割成多个独立的 packfile，每个 packfile 都不大于给定的大小。大小可以以 \"k\"、\"m \"或 \"g \"为后缀。允许的最小尺寸被限制为1 MiB。 默认是无限制的，除非配置变量`pack.packSizeLimit` 被设置。注意，这个选项可能会导致仓库变大变慢；参见 `pack.packSizeLimit`中的讨论。"
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:166
@@ -39232,7 +39232,7 @@ msgstr "--honor-pack-keep"
 #: en/git-pack-objects.txt:170
 #, priority:100
 msgid "This flag causes an object already in a local pack that has a .keep file to be ignored, even if it would have otherwise been packed."
-msgstr ""
+msgstr "这个标志会使一个已经在本地打包的对象被忽略，即使它本来会被打包。"
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:171 en/git-repack.txt:164
@@ -39244,19 +39244,19 @@ msgstr "--keep-pack=<pack-name>"
 #: en/git-pack-objects.txt:177
 #, priority:100
 msgid "This flag causes an object already in the given pack to be ignored, even if it would have otherwise been packed. `<pack-name>` is the pack file name without leading directory (e.g. `pack-123.pack`). The option could be specified multiple times to keep multiple packs."
-msgstr ""
+msgstr "这个标志使已经在给定包中的对象被忽略，即使它本来已经被打包。`<pack-name>` 是不带前导目录的包文件名（例如：`pack-123.pack`）。该选项可以被多次指定以保留多个包。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:181
 #, priority:100
 msgid "This flag causes an object already in a pack to be ignored even if it would have otherwise been packed."
-msgstr ""
+msgstr "这个标志使已经在包装中的对象被忽略，即使它本来会被包装。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:186
 #, priority:100
 msgid "This flag causes an object that is borrowed from an alternate object store to be ignored even if it would have otherwise been packed."
-msgstr ""
+msgstr "这个标志导致从另一个对象存储空间借来的对象被忽略，即使它本来会被打包。"
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:187
@@ -39268,7 +39268,7 @@ msgstr "--non-empty"
 #: en/git-pack-objects.txt:190
 #, priority:100
 msgid "Only create a packed archive if it would contain at least one object."
-msgstr ""
+msgstr "只有在至少包含一个对象的情况下才会创建一个打包的档案。"
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:197
@@ -39280,7 +39280,7 @@ msgstr "--all-progress"
 #: en/git-pack-objects.txt:207
 #, priority:100
 msgid "When --stdout is specified then progress report is displayed during the object count and compression phases but inhibited during the write-out phase. The reason is that in some cases the output stream is directly linked to another command which may wish to display progress status of its own as it processes incoming pack data.  This flag is like --progress except that it forces progress report for the write-out phase as well even if --stdout is used."
-msgstr ""
+msgstr "当指定 --stdout 时，在对象计数和压缩阶段会显示进度报告，但在写出阶段会被抑制。原因是在某些情况下，输出流直接与另一个命令相连，而后者在处理输入的数据时可能希望显示自己的进度状态。 这个标志和 --progress 一样，只是它在写出阶段也强制显示进度报告，即使使用了 --stdout。"
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:208
