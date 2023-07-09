@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: PACKAGE VERSION\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-05-18 19:52+0200\nPO-Revision-Date: 2023-07-02 15:57+0000\nLast-Translator: Salvador Peña <salvadorp74@hotmail.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.0-dev\n"
+msgstr "Project-Id-Version: PACKAGE VERSION\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-05-18 19:52+0200\nPO-Revision-Date: 2023-07-10 03:07+0000\nLast-Translator: Salvador Peña <salvadorp74@hotmail.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 5.0-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:769 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:146 en/git-status.txt:31
@@ -3088,7 +3088,7 @@ msgstr "Es `<marca-de-tiempo-unix> <diferencia-zona-horaria>`, donde `<marca-de-
 
 #. type: Labeled list
 #: en/date-formats.txt:13
-#, fuzzy, no-wrap, priority:280
+#, no-wrap, priority:280
 msgid "RFC 2822"
 msgstr "RFC 2822"
 
@@ -3100,7 +3100,7 @@ msgstr "El formato estándar de correo electrónico como se describe en el RFC 2
 
 #. type: Labeled list
 #: en/date-formats.txt:17
-#, fuzzy, no-wrap, priority:280
+#, no-wrap, priority:280
 msgid "ISO 8601"
 msgstr "ISO 8601"
 
@@ -3430,7 +3430,7 @@ msgstr "Ejemplos para `-c` and `--cc` sin `--combined-all-paths`:"
 
 #. type: delimited block -
 #: en/diff-format.txt:110
-#, fuzzy, no-wrap, priority:280
+#, no-wrap, priority:280
 msgid ""
 "::100644 100644 100644 fabadb8 cc95eb0 4866510 MM\tdesc.c\n"
 "::100755 100755 100755 52b7a2d 6d1ac04 d2ac7d7 RM\tbar.sh\n"
@@ -3445,7 +3445,7 @@ msgstr "Ejemplos cuando se agrega `--combined-all-paths` a `-c` o `--cc`:"
 
 #. type: delimited block -
 #: en/diff-format.txt:118
-#, fuzzy, no-wrap, priority:280
+#, no-wrap, priority:280
 msgid ""
 "::100644 100644 100644 fabadb8 cc95eb0 4866510 MM\tdesc.c\tdesc.c\tdesc.c\n"
 "::100755 100755 100755 52b7a2d 6d1ac04 d2ac7d7 RM\tfoo.sh\tbar.sh\tbar.sh\n"
@@ -3478,7 +3478,7 @@ msgstr "Cuando se muestra un cambio que involucra un renombrado o copia, la sali
 
 #. type: delimited block -
 #: en/diff-format.txt:142
-#, fuzzy, no-wrap, priority:280
+#, no-wrap, priority:280
 msgid "arch/{i386 => x86}/Makefile    |   4 +--\n"
 msgstr "arch/{i386 => x86}/Makefile    |   4 +--\n"
 
@@ -3721,7 +3721,7 @@ msgstr "Un formato \"diff combinado\" se ve así:"
 
 #. type: delimited block -
 #: en/diff-generate-patch.txt:104
-#, fuzzy, no-wrap, priority:280
+#, no-wrap, priority:280
 msgid ""
 "diff --combined describe.c\n"
 "index fabadb8,cc95eb0..4866510\n"
@@ -3734,7 +3734,7 @@ msgstr "diff --combined describe.c\nindex fabadb8,cc95eb0..4866510\n--- a/descri
 
 #. type: delimited block -
 #: en/diff-generate-patch.txt:114
-#, fuzzy, no-wrap, priority:280
+#, no-wrap, priority:280
 msgid ""
 "- static void describe(char *arg)\n"
 " -static void describe(struct commit *cmit, int last_one)\n"
@@ -3749,7 +3749,7 @@ msgstr "- static void describe(char *arg)\n -static void describe(struct commit 
 
 #. type: delimited block -
 #: en/diff-generate-patch.txt:124
-#, fuzzy, no-wrap, priority:280
+#, no-wrap, priority:280
 msgid ""
 " +\tif (get_sha1(arg, sha1) < 0)\n"
 " +\t\tusage(describe_usage);\n"
@@ -4134,7 +4134,7 @@ msgstr "-U<n>"
 
 #. type: Labeled list
 #: en/diff-options.txt:113
-#, fuzzy, no-wrap, priority:280
+#, no-wrap, priority:280
 msgid "--unified=<n>"
 msgstr "--unified=<n>"
 
@@ -5120,7 +5120,7 @@ msgid ""
 "\t0.5, and is thus the same as `-M50%`.  Similarly, `-M05` is\n"
 "\tthe same as `-M5%`.  To limit detection to exact renames, use\n"
 "\t`-M100%`.  The default similarity index is 50%.\n"
-msgstr ""
+msgstr "\tSi se especifica `n`, es un límite sobre el índice de semejanza\n\t(ej. la cantidad de adiciones/eliminaciones comparadas con\n\tel tamaño del fichero). Por ejemplo, `-M90%` significa que Git\n\tdebe considerar un par eliminación/adición como un renombramiento\n\tsi mas del 90% del fichero no ha cambiado. Sin el signo `%`, el número\n\tse leerá como una fraccion, con un punto decimal antes de él. Ej., `-M5`\n\tserá 0.5, que por lo tanto es lo mismo que `-M50%`. Similarmente, `-M05` es\n\tlo mismo que `-M5%`. Para limitar la detección a renombramientos exactos,\n\tuse `-M100%`. El índice de semejanza predeterminado es 50%.\n"
 
 #. type: Labeled list
 #: en/diff-options.txt:581
@@ -5138,7 +5138,7 @@ msgstr "--find-copies[=<n>]"
 #: en/diff-options.txt:585
 #, priority:280
 msgid "Detect copies as well as renames.  See also `--find-copies-harder`.  If `n` is specified, it has the same meaning as for `-M<n>`."
-msgstr ""
+msgstr "Detecta tanto copias como renombramientos. Ver también `--find-copies-harder`. Si se especifica `n`, tiene el mismo significado que `-M<n>`."
 
 #. type: Labeled list
 #: en/diff-options.txt:586 en/git-svn.txt:626
@@ -5150,7 +5150,7 @@ msgstr "--find-copies-harder"
 #: en/diff-options.txt:594
 #, priority:280
 msgid "For performance reasons, by default, `-C` option finds copies only if the original file of the copy was modified in the same changeset.  This flag makes the command inspect unmodified files as candidates for the source of copy.  This is a very expensive operation for large projects, so use it with caution.  Giving more than one `-C` option has the same effect."
-msgstr ""
+msgstr "Por razones de desempeño, predeterminadamente, la opción `-C` busca copias sólo si el fichero original de la copia fue modificado en el mismo conjunto de cambios. Esta bandera hace que el comando inspeccione ficheros sin modificar como candidatos a fuente de copia. Esta es una operación muy costosa para proyectos grandes, así que usarla con precaución. Dar más de una opción `-C` tiene el mismo efecto."
 
 #. type: Labeled list
 #: en/diff-options.txt:595 en/git-branch.txt:104 en/git-http-push.txt:45
@@ -5222,19 +5222,19 @@ msgstr "-S<cadena>"
 #: en/diff-options.txt:644
 #, priority:280
 msgid "Look for differences that change the number of occurrences of the specified string (i.e. addition/deletion) in a file.  Intended for the scripter's use."
-msgstr ""
+msgstr "Busca diferencias que cambian el número de ocurrencias de la cadena especificada (ej. adición/eliminación) en un fichero. Destinada para el uso de creadores de scripts."
 
 #. type: Plain text
 #: en/diff-options.txt:650
 #, priority:280
 msgid "It is useful when you're looking for an exact block of code (like a struct), and want to know the history of that block since it first came into being: use the feature iteratively to feed the interesting block in the preimage back into `-S`, and keep going until you get the very first version of the block."
-msgstr ""
+msgstr "Es útil cuando buscas un bloque exacto de código (como un struct), y quieres conocer el historial de ese bloque desde la primera vez que entró en existencia: use la característica iterativamente para alimentar el bloque de interés de vuelta a la preimagen `-S`, y seguir hasta que obtengas la primera versión del bloque."
 
 #. type: Plain text
 #: en/diff-options.txt:652
 #, priority:280
 msgid "Binary files are searched as well."
-msgstr ""
+msgstr "También se buscan ficheros binarios."
 
 #. type: Labeled list
 #: en/diff-options.txt:653
@@ -5246,13 +5246,13 @@ msgstr "-G<expresión regular>"
 #: en/diff-options.txt:656
 #, priority:280
 msgid "Look for differences whose patch text contains added/removed lines that match <regex>."
-msgstr ""
+msgstr "Busca diferencias cuyo texto de parche contenga líneas agregadas/quitadas que coincidan <expresión-regular>."
 
 #. type: Plain text
 #: en/diff-options.txt:660
 #, priority:280
 msgid "To illustrate the difference between `-S<regex> --pickaxe-regex` and `-G<regex>`, consider a commit with the following diff in the same file:"
-msgstr ""
+msgstr "Para ilustrar la diferencia entre `-S<expresión-regular> --pickaxe-regex` y `-G<expresión-regular>`, considere un commit con el diff siguiente en el mismo fichero:"
 
 #. type: delimited block -
 #: en/diff-options.txt:665
@@ -5261,25 +5261,25 @@ msgid ""
 "+    return frotz(nitfol, two->ptr, 1, 0);\n"
 "...\n"
 "-    hit = frotz(nitfol, mf2.ptr, 1, 0);\n"
-msgstr ""
+msgstr "+    return frotz(nitfol, two->ptr, 1, 0);\n...\n-    hit = frotz(nitfol, mf2.ptr, 1, 0);\n"
 
 #. type: Plain text
 #: en/diff-options.txt:670
 #, priority:280
 msgid "While `git log -G\"frotz\\(nitfol\"` will show this commit, `git log -S\"frotz\\(nitfol\" --pickaxe-regex` will not (because the number of occurrences of that string did not change)."
-msgstr ""
+msgstr "Mientras `git log -G\"frotz\\(nitfol\"` mostrará éste commit, `git log -S\"frotz\\(nitfol\" --pickaxe-regex` no lo hará (porque el número de ocurrencias de esa cadena no cambió)."
 
 #. type: Plain text
 #: en/diff-options.txt:673
 #, priority:280
 msgid "Unless `--text` is supplied patches of binary files without a textconv filter will be ignored."
-msgstr ""
+msgstr "A menos que se proporcione `--text`, parches de ficheros binarios sin un filtro de conversión de texto serán ignorados."
 
 #. type: Plain text
 #: en/diff-options.txt:676
 #, priority:280
 msgid "See the 'pickaxe' entry in linkgit:gitdiffcore[7] for more information."
-msgstr ""
+msgstr "Ver la entrada 'pickaxe' en linkgit:gitdiffcore[7] para mas información."
 
 #. type: Labeled list
 #: en/diff-options.txt:677
@@ -5291,13 +5291,13 @@ msgstr "--find-object=<id-de-objeto>"
 #: en/diff-options.txt:682
 #, priority:280
 msgid "Look for differences that change the number of occurrences of the specified object. Similar to `-S`, just the argument is different in that it doesn't search for a specific string but for a specific object id."
-msgstr ""
+msgstr "Busca diferencias que cambien el número de ocurrencias del objeto especificado. Similar a `-S`, solo que el argumento es diferente en que no busca una cadena específica, sino un identificador de objeto específico."
 
 #. type: Plain text
 #: en/diff-options.txt:685
 #, priority:280
 msgid "The object can be a blob or a submodule commit. It implies the `-t` option in `git-log` to also find trees."
-msgstr ""
+msgstr "El objeto puede ser un blob o un commit de submódulo. Implica la opción `-t` en `git-log` para también buscar árboles."
 
 #. type: Labeled list
 #: en/diff-options.txt:686
@@ -5309,7 +5309,7 @@ msgstr "--pickaxe-all"
 #: en/diff-options.txt:690
 #, priority:280
 msgid "When `-S` or `-G` finds a change, show all the changes in that changeset, not just the files that contain the change in <string>."
-msgstr ""
+msgstr "Cuando `-S` o `-G` encuentra un cambio, muestra todos los cambios en ese conjunto de cambios, no sólo los ficheros que contienen el cambio en <cadena>."
 
 #. type: Labeled list
 #: en/diff-options.txt:691
@@ -5321,7 +5321,7 @@ msgstr "--pickaxe-regex"
 #: en/diff-options.txt:694
 #, priority:280
 msgid "Treat the <string> given to `-S` as an extended POSIX regular expression to match."
-msgstr ""
+msgstr "Trata la <cadena> dada en `-S` como una expresión regular extendida de POSIX para coincidir."
 
 #. type: Labeled list
 #: en/diff-options.txt:697 en/git-mergetool.txt:96
@@ -15130,7 +15130,7 @@ msgstr "El nombre de un nuevo directorio para clonar hacia. Se usa la parte \"hu
 
 #. type: Labeled list
 #: en/git-clone.txt:331
-#, fuzzy, no-wrap, priority:300
+#, no-wrap, priority:300
 msgid "--bundle-uri=<uri>"
 msgstr "--bundle-uri=<uri>"
 
