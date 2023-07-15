@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-02-26 14:06+0100\nPO-Revision-Date: 2023-07-02 15:57+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.0-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-02-26 14:06+0100\nPO-Revision-Date: 2023-07-17 15:06+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.0-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:769 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:146 en/git-status.txt:31
@@ -39382,13 +39382,13 @@ msgstr "打包后的归档文件可以用 20 字节的对象名称或流中的�
 #: en/git-pack-objects.txt:280
 #, priority:100
 msgid "Note: Porcelain commands such as `git gc` (see linkgit:git-gc[1]), `git repack` (see linkgit:git-repack[1]) pass this option by default in modern Git when they put objects in your repository into pack files.  So does `git bundle` (see linkgit:git-bundle[1]) when it creates a bundle."
-msgstr ""
+msgstr "注意: 在现版本 Git 中，诸如 `git gc` (参见 linkgit:git-gc[1])、`git repack` (参见 linkgit:git-repack[1])之类的上层命令在将仓库中的对象放入打包文件时，默认会传递这个选项。 当 `git bundle` (参见 linkgit:git-bundle[1])创建一个捆绑包时也会这样做。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:290
 #, priority:100
 msgid "Specifies the number of threads to spawn when searching for best delta matches.  This requires that pack-objects be compiled with pthreads otherwise this option is ignored with a warning.  This is meant to reduce packing time on multiprocessor machines.  The required amount of memory for the delta search window is however multiplied by the number of threads.  Specifying 0 will cause Git to auto-detect the number of CPU's and set the number of threads accordingly."
-msgstr ""
+msgstr "指定搜索最佳 delta 匹配时产生的线程数。 这要求 pack-objects 使用 pthreads 编译，否则该选项将被忽略并发出警告。 这样做的目的是在多处理器机器上减少打包时间。 然而，delta 搜索窗口所需的内存会乘以线程数。 指定 0 将导致 Git 自动检测 CPU 数量并相应设置线程数量。"
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:296
@@ -39406,7 +39406,7 @@ msgstr ""
 #: en/git-pack-objects.txt:304
 #, priority:100
 msgid "Requires `--stdout`.  Omits certain objects (usually blobs) from the resulting packfile.  See linkgit:git-rev-list[1] for valid `<filter-spec>` forms."
-msgstr ""
+msgstr "需要 `--stdout`。 从生成的 packfile 中省略某些对象（通常是 blobs）。 参见 linkgit:git-rev-list[1] 以了解有效的 `<filter-spec>` 形式。"
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:305 en/rev-list-options.txt:986
@@ -39418,7 +39418,7 @@ msgstr "--no-filter"
 #: en/git-pack-objects.txt:307
 #, priority:100
 msgid "Turns off any previous `--filter=` argument."
-msgstr ""
+msgstr "关闭之前的 `--filter=` 参数。"
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:308 en/rev-list-options.txt:998
@@ -39436,19 +39436,19 @@ msgstr "一个调试选项，帮助未来的 \"部分克隆 \"开发。  这个�
 #: en/git-pack-objects.txt:316
 #, priority:100
 msgid "The form '--missing=error' requests that pack-objects stop with an error if a missing object is encountered.  If the repository is a partial clone, an attempt to fetch missing objects will be made before declaring them missing.  This is the default action."
-msgstr ""
+msgstr "表格 '--missing=error' 请求在遇到丢失对象时以错误停止 pack-objects。 如果仓库是部分克隆，在宣布丢失之前会尝试获取丢失的对象。 这是默认行为。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:320
 #, priority:100
 msgid "The form '--missing=allow-any' will allow object traversal to continue if a missing object is encountered.  No fetch of a missing object will occur.  Missing objects will silently be omitted from the results."
-msgstr ""
+msgstr "形式 '--missing=allow-any' 将允许在遇到丢失对象时继续遍历对象。 不会获取丢失的对象。 缺少的对象将从结果中被静默省略。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:325
 #, priority:100
 msgid "The form '--missing=allow-promisor' is like 'allow-any', but will only allow object traversal to continue for EXPECTED promisor missing objects.  No fetch of a missing object will occur.  An unexpected missing object will raise an error."
-msgstr ""
+msgstr "形式 '--missing=allow-promisor' 类似于 'allow-any'，但只允许继续遍历预期 promisor 丢失的对象。 不会获取丢失的对象。 意外丢失的对象将引发错误。"
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:326 en/rev-list-options.txt:1016
@@ -39460,7 +39460,7 @@ msgstr "--exclude-promisor-objects"
 #: en/git-pack-objects.txt:332
 #, priority:100
 msgid "Omit objects that are known to be in the promisor remote.  (This option has the purpose of operating only on locally created objects, so that when we repack, we still maintain a distinction between locally created objects [without .promisor] and objects from the promisor remote [with .promisor].)  This is used with partial clone."
-msgstr ""
+msgstr "省略已知在远程 promisor 中的对象。 （该选项的目的是只对本地创建的对象执行操作，这样当我们重新打包时，仍然可以区分本地创建的对象 [不含 .promisor] 和来自远程 promisor [含 .promisor] 的对象)。 该选项与部分克隆一起使用。"
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:333 en/git-repack.txt:178
@@ -39472,7 +39472,7 @@ msgstr "--keep-unreachable"
 #: en/git-pack-objects.txt:338
 #, priority:100
 msgid "Objects unreachable from the refs in packs named with --unpacked= option are added to the resulting pack, in addition to the reachable objects that are not in packs marked with *.keep files. This implies `--revs`."
-msgstr ""
+msgstr "除了标有 *.keep 文件的包中没有的可到达对象之外，用 --unpacked= 选项命名的包中的引用无法到达的对象也会被添加到生成的包中。这意味着`--revs`。"
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:339
@@ -39484,7 +39484,7 @@ msgstr "--pack-loose-unreachable"
 #: en/git-pack-objects.txt:342
 #, priority:100
 msgid "Pack unreachable loose objects (and their loose counterparts removed). This implies `--revs`."
-msgstr ""
+msgstr "打包不可达的松散对象（并移除它们的松散对应对象）。这意味着`--revs`."
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:343
@@ -39496,7 +39496,7 @@ msgstr "--unpack-unreachable"
 #: en/git-pack-objects.txt:345
 #, priority:100
 msgid "Keep unreachable objects in loose form. This implies `--revs`."
-msgstr ""
+msgstr "以松散的形式保存无法访问的对象。这意味着 `--revs`。"
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:346 en/git-repack.txt:185
@@ -39520,43 +39520,43 @@ msgstr "DELTA ISLANDS"
 #: en/git-pack-objects.txt:364
 #, priority:100
 msgid "When possible, `pack-objects` tries to reuse existing on-disk deltas to avoid having to search for new ones on the fly. This is an important optimization for serving fetches, because it means the server can avoid inflating most objects at all and just send the bytes directly from disk. This optimization can't work when an object is stored as a delta against a base which the receiver does not have (and which we are not already sending). In that case the server \"breaks\" the delta and has to find a new one, which has a high CPU cost. Therefore it's important for performance that the set of objects in on-disk delta relationships match what a client would fetch."
-msgstr ""
+msgstr "在可能的情况下， `pack-objects` 尝试重用现有的磁盘上的 deltas，以避免临时搜索新的 deltas。这对于服务获取来说是一个重要的优化，因为它意味着服务器可以完全避免膨胀大多数对象，而只是直接从磁盘发送字节。当一个对象以 delta 的形式存储，而接收者并不拥有（而且我们也没有发送）这个基数时，这种优化就不起作用了。在这种情况下，服务器将 “中断” delta，并必须找到一个新的delta，这将产生很高的 CPU 成本。因此，磁盘上 delta 关系中的对象集必须与客户端获取的对象相匹配，这对性能非常重要。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:369
 #, priority:100
 msgid "In a normal repository, this tends to work automatically. The objects are mostly reachable from the branches and tags, and that's what clients fetch. Any deltas we find on the server are likely to be between objects the client has or will have."
-msgstr ""
+msgstr "在正常的仓库中，这往往是自动进行的。对象大多可以从分支和标签中获取，这也是客户端获取的内容。我们在服务器上发现的任何脱节都可能是客户端已经拥有或将要拥有的对象之间的脱节。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:379
 #, priority:100
 msgid "But in some repository setups, you may have several related but separate groups of ref tips, with clients tending to fetch those groups independently. For example, imagine that you are hosting several \"forks\" of a repository in a single shared object store, and letting clients view them as separate repositories through `GIT_NAMESPACE` or separate repos using the alternates mechanism. A naive repack may find that the optimal delta for an object is against a base that is only found in another fork. But when a client fetches, they will not have the base object, and we'll have to find a new delta on the fly."
-msgstr ""
+msgstr "但在某些仓库设置中，您可能有几个相关但独立的引用提示组，客户端倾向于独立获取这些组。例如，假设你在一个共享对象存储空间中托管了多个版本库的 \"fork\"，并通过`GIT_NAMESPACE`或使用替代机制的独立仓库让客户端将它们视为独立的仓库。天真的 repack 可能会发现，一个对象的最佳 delta 是针对只有在另一个 fork 中才能找到的基数。但是，当客户端获取时，他们将没有基础对象，我们将不得不临时找到一个新的 delta。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:385
 #, priority:100
 msgid "A similar situation may exist if you have many refs outside of `refs/heads/` and `refs/tags/` that point to related objects (e.g., `refs/pull` or `refs/changes` used by some hosting providers). By default, clients fetch only heads and tags, and deltas against objects found only in those other groups cannot be sent as-is."
-msgstr ""
+msgstr "如果在 `refs/heads/` 和 `refs/tags/` 之外有许多指向相关对象的引用（例如，某些托管提供商使用的 `refs/pull` 或 `refs/changes`），也可能存在类似的情况。默认情况下，客户端只获取 heads 和 tags，因此不能发送只在这些组中找到的对象的 deltas。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:393
 #, priority:100
 msgid "Delta islands solve this problem by allowing you to group your refs into distinct \"islands\". Pack-objects computes which objects are reachable from which islands, and refuses to make a delta from an object `A` against a base which is not present in all of `A`'s islands. This results in slightly larger packs (because we miss some delta opportunities), but guarantees that a fetch of one island will not have to recompute deltas on the fly due to crossing island boundaries."
-msgstr ""
+msgstr "Delta 岛解决了这个问题，它允许您将您的引用分组为不同的 “岛”。Pack-objects 会计算哪些对象可以从哪些岛屿到达，并拒绝从对象 `A` 针对不存在于所有 `A` 岛屿中的基准进行 delta。这会导致数据包略微变大(因为我们错过了一些 delta 机会)，但保证了对一个岛的取值不会因为跨越岛的边界而不得不重新计算 delta。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:399
 #, priority:100
 msgid "When repacking with delta islands the delta window tends to get clogged with candidates that are forbidden by the config. Repacking with a big --window helps (and doesn't take as long as it otherwise might because we can reject some object pairs based on islands before doing any computation on the content)."
-msgstr ""
+msgstr "当使用 delta 岛重新打包时，delta 窗口往往会被配置禁止的候选对象堵塞。使用大的 --window 进行重新打包会有所帮助（而且不会像其他情况下花费那么长的时间，因为在对内容进行任何计算之前，我们可以根据岛拒绝一些对象对）。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:403
 #, priority:100
 msgid "Islands are configured via the `pack.island` option, which can be specified multiple times. Each value is a left-anchored regular expressions matching refnames. For example:"
-msgstr ""
+msgstr "岛是通过 `pack.island` 选项配置的，可以多次指定。每个值都是匹配 refnames 的左锚正则表达式。例如 :"
 
 #. type: delimited block -
 #: en/git-pack-objects.txt:408
@@ -39574,19 +39574,19 @@ msgstr ""
 #: en/git-pack-objects.txt:415
 #, priority:100
 msgid "puts heads and tags into an island (whose name is the empty string; see below for more on naming). Any refs which do not match those regular expressions (e.g., `refs/pull/123`) is not in any island. Any object which is reachable only from `refs/pull/` (but not heads or tags) is therefore not a candidate to be used as a base for `refs/heads/`."
-msgstr ""
+msgstr "将 heads 和 tags 放入一个 “岛” 中（其名称为空字符串；有关命名的更多信息，请参阅下文）。任何不匹配这些正则表达式的引用（例如 `refs/pull/123`）都不在任何岛中。因此，任何只能从 `refs/pull/` (而不能从 heads 或 tags) 访问的对象都不能作为 `refs/heads/` 的基础。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:423
 #, priority:100
 msgid "Refs are grouped into islands based on their \"names\", and two regexes that produce the same name are considered to be in the same island. The names are computed from the regexes by concatenating any capture groups from the regex, with a '-' dash in between. (And if there are no capture groups, then the name is the empty string, as in the above example.) This allows you to create arbitrary numbers of islands. Only up to 14 such capture groups are supported though."
-msgstr ""
+msgstr "参考文件根据其 “名称” 分组，产生相同名称的两个 regex 被视为在同一个岛中。名称是通过连接 regex 中的任何捕获组和中间的 '-' 破折号来计算的。(如果没有捕获组，则名称为空字符串，如上例）。这允许您创建任意数量的岛屿。但最多只支持 14 个这样的捕获组。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:427
 #, priority:100
 msgid "For example, imagine you store the refs for each fork in `refs/virtual/ID`, where `ID` is a numeric identifier. You might then configure:"
-msgstr ""
+msgstr "例如，假设你在 `refs/virtual/ID` 中存储了每个 fork 的引用，其中 `ID` 是一个数字标识符。然后您可以配置 :"
 
 #. type: delimited block -
 #: en/git-pack-objects.txt:433
@@ -39606,25 +39606,25 @@ msgstr ""
 #: en/git-pack-objects.txt:438
 #, priority:100
 msgid "That puts the heads and tags for each fork in their own island (named \"1234\" or similar), and the pull refs for each go into their own \"1234-pull\"."
-msgstr ""
+msgstr "这就将每个分叉的头和标签放在自己的岛（命名为 \"1234\" 或类似的名字）中，而每个分叉的拉动参考则放在自己的 \"1234-pull \"中。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:442
 #, priority:100
 msgid "Note that we pick a single island for each regex to go into, using \"last one wins\" ordering (which allows repo-specific config to take precedence over user-wide config, and so forth)."
-msgstr ""
+msgstr "请注意，我们为每个 regex 选择一个单独的岛，使用 \"最后一个获胜\" 的排序（这允许特定于仓库的配置优先于用户范围内的配置，等等）。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:449 en/git-repack.txt:226
 #, priority:100
 msgid "Various configuration variables affect packing, see linkgit:git-config[1] (search for \"pack\" and \"delta\")."
-msgstr ""
+msgstr "各种配置变量会影响打包，参见 linkgit:git-config[1] (搜索 \"pack\" 和 \"delta\")。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:453
 #, priority:100
 msgid "Notably, delta compression is not used on objects larger than the `core.bigFileThreshold` configuration variable and on files with the attribute `delta` set to false."
-msgstr ""
+msgstr "值得注意的是，delta 压缩不用于大于 `core.bigFileThreshold` 配置变量的对象和属性 `delta` 设置为 false 的文件。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:459
@@ -39654,37 +39654,37 @@ msgstr "'git verify-pack' [-v|--verbose] [-s|--stat-only] [--] <pack>.idx ...\n"
 #: en/git-pack-redundant.txt:21
 #, priority:100
 msgid "`git pack-redundant` has been deprecated and is scheduled for removal in a future version of Git. Because it can only remove entire duplicate packs and not individual duplicate objects, it is generally not a useful tool for reducing repository size. You are better off using `git gc` to do so, which will put objects into a new pack, removing duplicates."
-msgstr ""
+msgstr "`git pack-redundant` 已被弃用，并计划在未来的 Git 版本中移除。因为它只能移除整个重复的包，而不能移除单个重复的对象，所以它通常不是减少版本库大小的有用工具。最好使用 `git gc`，它会将对象放入一个新的包，删除重复的对象。"
 
 #. type: Plain text
 #: en/git-pack-redundant.txt:27
 #, priority:100
 msgid "Running `pack-redundant` without the `--i-still-use-this` flag will fail in this release. If you believe you have a use case for which `pack-redundant` is better suited and oppose this removal, please contact the Git mailing list at git@vger.kernel.org. More information about the list is available at https://git-scm.com/community."
-msgstr ""
+msgstr "在此版本中，运行不带 `--i-still-use-this` 标志的`pack-redundant` 将失败。如果您认为 `pack-redundant` 更适合您的用例，并反对删除该标志，请联系 Git 邮件列表 git@vger.kernel.org。有关该列表的更多信息，请访问 https://git-scm.com/community。"
 
 #. type: Plain text
 #: en/git-pack-redundant.txt:33
 #, priority:100
 msgid "This program computes which packs in your repository are redundant. The output is suitable for piping to `xargs rm` if you are in the root of the repository."
-msgstr ""
+msgstr "该程序计算仓库中哪些包是多余的。如果你在仓库的根目录下，输出结果可以通过管道连接到 `xargs rm`。"
 
 #. type: Plain text
 #: en/git-pack-redundant.txt:38
 #, priority:100
 msgid "'git pack-redundant' accepts a list of objects on standard input. Any objects given will be ignored when checking which packs are required. This makes the following command useful when wanting to remove packs which contain unreachable objects."
-msgstr ""
+msgstr "'git pack-redundant' 接受标准输入的对象列表。在检查需要哪些包时，给定的对象将被忽略。这使得下面的命令在移除包含不可达对象的包时非常有用。"
 
 #. type: Plain text
 #: en/git-pack-redundant.txt:41
 #, priority:100
 msgid "git fsck --full --unreachable | cut -d ' ' -f3 | \\ git pack-redundant --all | xargs rm"
-msgstr ""
+msgstr "git fsck --full --unreachable | cut -d ' ' -f3 | \\ git pack-redundant --all | xargs rm"
 
 #. type: Plain text
 #: en/git-pack-redundant.txt:48
 #, priority:100
 msgid "Processes all packs. Any filenames on the command line are ignored."
-msgstr ""
+msgstr "处理所有数据包。忽略命令行中的任何文件名。"
 
 #. type: Labeled list
 #: en/git-pack-redundant.txt:49
@@ -39696,13 +39696,13 @@ msgstr "--alt-odb"
 #: en/git-pack-redundant.txt:52
 #, priority:100
 msgid "Don't require objects present in packs from alternate object database (odb) directories to be present in local packs."
-msgstr ""
+msgstr "不要求来自备用对象数据库（odb）目录的数据包中的对象也出现在本地数据包中。"
 
 #. type: Plain text
 #: en/git-pack-redundant.txt:55
 #, priority:100
 msgid "Outputs some statistics to stderr. Has a small performance penalty."
-msgstr ""
+msgstr "向标注错误流输出一些统计数据。对性能有一点影响。"
 
 #. type: Plain text
 #: en/git-pack-redundant.txt:61
@@ -39858,13 +39858,13 @@ msgstr "结果与 git 1.9 及更早版本产生的值不同，或者在配置了
 #: en/git-patch-id.txt:55
 #, priority:100
 msgid "All whitespace within the patch is ignored and does not affect the id."
-msgstr ""
+msgstr "补丁中的所有空白都将被忽略，并且不影响 id。"
 
 #. type: Plain text
 #: en/git-patch-id.txt:57
 #, no-wrap, priority:100
 msgid "This is the default if patchid.stable is set to true.\n"
-msgstr ""
+msgstr "如果 patchid.stable 设置为 true，则默认使用此值。\n"
 
 #. type: Labeled list
 #: en/git-patch-id.txt:58
@@ -39876,7 +39876,7 @@ msgstr "--unstable"
 #: en/git-patch-id.txt:64
 #, priority:100
 msgid "Use an \"unstable\" hash as the patch ID. With this option, the result produced is compatible with the patch-id value produced by git 1.9 and older and whitespace is ignored.  Users with pre-existing databases storing patch-ids produced by git 1.9 and older (who do not deal with reordered patches) may want to use this option."
-msgstr ""
+msgstr "使用 “不稳定” 哈希值作为补丁 ID。有了这个选项，产生的结果与 git 1.9 及更早版本产生的补丁 ID 值兼容，空白被忽略。 如果您的数据库中已有 git 1.9 及更早版本产生的补丁标识（不处理重新排序的补丁），可能需要使用此选项。"
 
 #. type: Plain text
 #: en/git-patch-id.txt:66
@@ -39906,37 +39906,37 @@ msgstr "'git prune-packed' [-n|--dry-run] [-q|--quiet]\n"
 #: en/git-prune-packed.txt:19
 #, priority:100
 msgid "This program searches the `$GIT_OBJECT_DIRECTORY` for all objects that currently exist in a pack file as well as the independent object directories."
-msgstr ""
+msgstr "这个程序会搜索 `$GIT_OBJECT_DIRECTORY` 所有当前存在于 pack 文件中的对象以及独立的对象目录。"
 
 #. type: Plain text
 #: en/git-prune-packed.txt:21
 #, priority:100
 msgid "All such extra objects are removed."
-msgstr ""
+msgstr "所有这些额外的对象都会被删除。"
 
 #. type: Plain text
 #: en/git-prune-packed.txt:24 en/git-repack.txt:24
 #, priority:100
 msgid "A pack is a collection of objects, individually compressed, with delta compression applied, stored in a single file, with an associated index file."
-msgstr ""
+msgstr "压缩包是对象的集合，单独压缩，应用 delta 压缩，存储在单个文件中，并带有相关索引文件。"
 
 #. type: Plain text
 #: en/git-prune-packed.txt:27 en/git-repack.txt:27
 #, priority:100
 msgid "Packs are used to reduce the load on mirror systems, backup engines, disk storage, etc."
-msgstr ""
+msgstr "软件包用于减少镜像系统、备份引擎、磁盘存储等的负载。"
 
 #. type: Plain text
 #: en/git-prune-packed.txt:35
 #, priority:100
 msgid "Don't actually remove any objects, only show those that would have been removed."
-msgstr ""
+msgstr "实际不删除任何对象，只显示本应删除的对象。"
 
 #. type: Plain text
 #: en/git-prune-packed.txt:39
 #, priority:100
 msgid "Squelch the progress indicator."
-msgstr ""
+msgstr "关闭进度指示器。"
 
 #. type: Plain text
 #: en/git-prune-packed.txt:44
@@ -39966,37 +39966,37 @@ msgstr "'git prune' [-n] [-v] [--progress] [--expire <time>] [--] [<head>...]\n"
 #: en/git-prune.txt:19
 #, priority:100
 msgid "In most cases, users should run 'git gc', which calls 'git prune'. See the section \"NOTES\", below."
-msgstr ""
+msgstr "在大多数情况下，用户应该运行 'git gc'，它调用 'git prune'。参见下文 “注意” 一节。"
 
 #. type: Plain text
 #: en/git-prune.txt:29
 #, priority:100
 msgid "This runs 'git fsck --unreachable' using all the refs available in `refs/`, optionally with additional set of objects specified on the command line, and prunes all unpacked objects unreachable from any of these head objects from the object database.  In addition, it prunes the unpacked objects that are also found in packs by running 'git prune-packed'.  It also removes entries from .git/shallow that are not reachable by any ref."
-msgstr ""
+msgstr "运行 'git fsck --unreachable'，使用 `refs/` 中可用的所有引用，可选地使用命令行中指定的附加对象集，并从对象数据库中删除所有从这些头对象中无法访问的未打包对象。 此外，它还会删除通过运行 'git prune-packed' 在包中找到的未打包对象。 它还会删除 .git/shallow 中任何引用都无法访问的条目。"
 
 #. type: Plain text
 #: en/git-prune.txt:32
 #, priority:100
 msgid "Note that unreachable, packed objects will remain.  If this is not desired, see linkgit:git-repack[1]."
-msgstr ""
+msgstr "需要注意的是，无法到达的打包对象将被保留。 如果不希望这样，请参见 linkgit:git-repack[1]。"
 
 #. type: Plain text
 #: en/git-prune.txt:40
 #, priority:100
 msgid "Do not remove anything; just report what it would remove."
-msgstr ""
+msgstr "不删除任何内容；只需报告将删除的内容。"
 
 #. type: Plain text
 #: en/git-prune.txt:44
 #, priority:100
 msgid "Report all removed objects."
-msgstr ""
+msgstr "报告所有移除的对象。"
 
 #. type: Plain text
 #: en/git-prune.txt:47
 #, priority:100
 msgid "Show progress."
-msgstr ""
+msgstr "显示进度。"
 
 #. type: Labeled list
 #: en/git-prune.txt:48 en/git-worktree.txt:247
@@ -40008,7 +40008,7 @@ msgstr "--expire <time>"
 #: en/git-prune.txt:50
 #, priority:100
 msgid "Only expire loose objects older than <time>."
-msgstr ""
+msgstr "仅过期超过 <时间> 的松散对象。"
 
 #. type: Labeled list
 #: en/git-prune.txt:54
@@ -40020,13 +40020,13 @@ msgstr "<head>..."
 #: en/git-prune.txt:58
 #, priority:100
 msgid "In addition to objects reachable from any of our references, keep objects reachable from listed <head>s."
-msgstr ""
+msgstr "除了可从我们的任何引用到达的对象外，还保留可从列出的 <head> 到达的对象。"
 
 #. type: Plain text
 #: en/git-prune.txt:65
 #, priority:100
 msgid "To prune objects not used by your repository or another that borrows from your repository via its `.git/objects/info/alternates`:"
-msgstr ""
+msgstr "剪切您的仓库或其他通过 `.git/objects/info/alternates` 借用您仓库的仓库不使用的对象："
 
 #. type: delimited block -
 #: en/git-prune.txt:68
@@ -40038,13 +40038,13 @@ msgstr "$ git prune $(cd ../another && git rev-parse --all)\n"
 #: en/git-prune.txt:76
 #, priority:100
 msgid "In most cases, users will not need to call 'git prune' directly, but should instead call 'git gc', which handles pruning along with many other housekeeping tasks."
-msgstr ""
+msgstr "在大多数情况下，用户不需要直接调用 'git prune'，而应该调用 'git gc'，它可以处理剪枝和许多其他内务工作。"
 
 #. type: Plain text
 #: en/git-prune.txt:79
 #, priority:100
 msgid "For a description of which objects are considered for pruning, see 'git fsck''s --unreachable option."
-msgstr ""
+msgstr "关于哪些对象会被考虑剪枝，请参见 'git fsck' 的 --unreachable 选项。"
 
 #. type: Plain text
 #: en/git-prune.txt:86
@@ -41350,7 +41350,7 @@ msgstr "git-quiltimport(1)"
 #: en/git-quiltimport.txt:7
 #, priority:100
 msgid "git-quiltimport - Applies a quilt patchset onto the current branch"
-msgstr ""
+msgstr "git-quiltimport - 在当前分支上应用被子补丁集"
 
 #. type: Plain text
 #: en/git-quiltimport.txt:14
@@ -41366,25 +41366,25 @@ msgstr ""
 #: en/git-quiltimport.txt:21
 #, priority:100
 msgid "Applies a quilt patchset onto the current Git branch, preserving the patch boundaries, patch order, and patch descriptions present in the quilt patchset."
-msgstr ""
+msgstr "在当前 Git 分支上应用拼接补丁集，保留拼接补丁集中的补丁边界、补丁顺序和补丁描述。"
 
 #. type: Plain text
 #: en/git-quiltimport.txt:27
 #, priority:100
 msgid "For each patch the code attempts to extract the author from the patch description.  If that fails it falls back to the author specified with --author.  If the --author flag was not given the patch description is displayed and the user is asked to interactively enter the author of the patch."
-msgstr ""
+msgstr "对于每个补丁，代码会尝试从补丁描述中提取作者。 如果失败，则返回到用 --author 指定的作者。 如果没有给定 --author 标志，则显示补丁描述，并要求用户交互式输入补丁的作者。"
 
 #. type: Plain text
 #: en/git-quiltimport.txt:30
 #, priority:100
 msgid "If a subject is not found in the patch description the patch name is preserved as the 1 line subject in the Git description."
-msgstr ""
+msgstr "如果在补丁描述中找不到主题，补丁名称将保留为 Git 描述中的一行主题。"
 
 #. type: Plain text
 #: en/git-quiltimport.txt:40
 #, priority:100
 msgid "Walk through the patches in the series and warn if we cannot find all of the necessary information to commit a patch.  At the time of this writing only missing author information is warned about."
-msgstr ""
+msgstr "浏览系列补丁，并在无法找到提交补丁所需的全部信息时发出警告。 在写这篇文章的时候，只有缺少作者信息的补丁才会被警告。"
 
 #. type: Labeled list
 #: en/git-quiltimport.txt:41
@@ -41396,7 +41396,7 @@ msgstr "--author Author Name <Author Email>"
 #: en/git-quiltimport.txt:44
 #, priority:100
 msgid "The author name and email address to use when no author information can be found in the patch description."
-msgstr ""
+msgstr "在补丁说明中找不到作者信息时使用的作者姓名和电子邮件地址。"
 
 #. type: Labeled list
 #: en/git-quiltimport.txt:45
@@ -41408,13 +41408,13 @@ msgstr "--patches <dir>"
 #: en/git-quiltimport.txt:47
 #, priority:100
 msgid "The directory to find the quilt patches."
-msgstr ""
+msgstr "查找被子补丁的目录。"
 
 #. type: Plain text
 #: en/git-quiltimport.txt:51
 #, priority:100
 msgid "The default for the patch directory is patches or the value of the `$QUILT_PATCHES` environment variable."
-msgstr ""
+msgstr "补丁目录的默认值是 patches 或 `$QUILT_PATCHES` 环境变量的值。"
 
 #. type: Labeled list
 #: en/git-quiltimport.txt:52
@@ -41426,13 +41426,13 @@ msgstr "--series <file>"
 #: en/git-quiltimport.txt:54
 #, priority:100
 msgid "The quilt series file."
-msgstr ""
+msgstr "被子系列文件。"
 
 #. type: Plain text
 #: en/git-quiltimport.txt:58
 #, priority:100
 msgid "The default for the series file is <patches>/series or the value of the `$QUILT_SERIES` environment variable."
-msgstr ""
+msgstr "系列文件的默认值是 <patches>/series 或 `$QUILT_SERIES` 环境变量的值。"
 
 #. type: Title =
 #: en/git-range-diff.txt:2
@@ -41444,7 +41444,7 @@ msgstr "git-range-diff(1)"
 #: en/git-range-diff.txt:7
 #, priority:100
 msgid "git-range-diff - Compare two commit ranges (e.g. two versions of a branch)"
-msgstr ""
+msgstr "git-range-diff - 比较两个提交范围（例如一个分支的两个版本）"
 
 #. type: Plain text
 #: en/git-range-diff.txt:16
@@ -41455,55 +41455,55 @@ msgid ""
 "\t[--left-only | --right-only]\n"
 "\t( <range1> <range2> | <rev1>...<rev2> | <base> <rev1> <rev2> )\n"
 "\t[[--] <path>...]\n"
-msgstr ""
+msgstr "'git range-diff' [--color=[<when>]] [--no-color] [<diff-options>]\n\t[--no-dual-color] [--creation-factor=<factor>]\n\t[--left-only | --right-only]\n\t( <range1> <range2> | <rev1>...<rev2> | <base> <rev1> <rev2> )\n\t[[--] <path>...]\n"
 
 #. type: Plain text
 #: en/git-range-diff.txt:22
 #, priority:100
 msgid "This command shows the differences between two versions of a patch series, or more generally, two commit ranges (ignoring merge commits)."
-msgstr ""
+msgstr "该命令显示补丁系列的两个版本之间的差异，或者更笼统地说，两个提交范围之间的差异（忽略合并提交）。"
 
 #. type: Plain text
 #: en/git-range-diff.txt:25
 #, priority:100
 msgid "In the presence of `<path>` arguments, these commit ranges are limited accordingly."
-msgstr ""
+msgstr "如果存在 `<path>` 参数，这些提交范围将受到相应的限制。"
 
 #. type: Plain text
 #: en/git-range-diff.txt:31
 #, priority:100
 msgid "To that end, it first finds pairs of commits from both commit ranges that correspond with each other. Two commits are said to correspond when the diff between their patches (i.e. the author information, the commit message and the commit diff) is reasonably small compared to the patches' size. See ``Algorithm`` below for details."
-msgstr ""
+msgstr "为此，它首先从两个提交范围中找到相互对应的提交对。当两个补丁之间的差值（即作者信息、提交信息和提交差值）相对于补丁的大小相当小时，这两个提交就被认为是对应的。详见下面的 ``算法``。"
 
 #. type: Plain text
 #: en/git-range-diff.txt:35
 #, priority:100
 msgid "Finally, the list of matching commits is shown in the order of the second commit range, with unmatched commits being inserted just after all of their ancestors have been shown."
-msgstr ""
+msgstr "最后，匹配的提交列表会按照第二个提交范围的顺序显示，未匹配的提交会在其所有祖先提交显示之后插入。"
 
 #. type: Plain text
 #: en/git-range-diff.txt:37
 #, priority:100
 msgid "There are three ways to specify the commit ranges:"
-msgstr ""
+msgstr "指定提交范围有三种方法 :"
 
 #. type: Plain text
 #: en/git-range-diff.txt:41
 #, priority:100
 msgid "`<range1> <range2>`: Either commit range can be of the form `<base>..<rev>`, `<rev>^!` or `<rev>^-<n>`. See `SPECIFYING RANGES` in linkgit:gitrevisions[7] for more details."
-msgstr ""
+msgstr "`<range1> <range2>`： 提交范围可以是 `<base>...<rev>`、`<rev>^!` 或 `<rev>^-<n>`。详见 linkgit:gitrevisions[7] 中的 `指定范围`。"
 
 #. type: Plain text
 #: en/git-range-diff.txt:44
 #, ignore-ellipsis, priority:100
 msgid "`<rev1>...<rev2>`. This is equivalent to `<rev2>..<rev1> <rev1>..<rev2>`."
-msgstr ""
+msgstr "`<rev1>...<rev2>`。这等同于 `<rev2>...<rev1> <rev1>...<rev2>`."
 
 #. type: Plain text
 #: en/git-range-diff.txt:47
 #, priority:100
 msgid "`<base> <rev1> <rev2>`: This is equivalent to `<base>..<rev1> <base>..<rev2>`."
-msgstr ""
+msgstr "`<base> <rev1> <rev2>`： 等同于 `<base>..<rev1> <base>..<rev2>`."
 
 #. type: Labeled list
 #: en/git-range-diff.txt:50
@@ -41515,25 +41515,25 @@ msgstr "--no-dual-color"
 #: en/git-range-diff.txt:55
 #, priority:100
 msgid "When the commit diffs differ, `git range-diff` recreates the original diffs' coloring, and adds outer -/+ diff markers with the *background* being red/green to make it easier to see e.g.  when there was a change in what exact lines were added."
-msgstr ""
+msgstr "当提交的差异不同时，`git range-diff`会重现原始差异的颜色，并添加外层的 -/+ 差异标记，*背景* 为红/绿色，以便于查看，例如，当具体添加了哪些行时。"
 
 #. type: Plain text
 #: en/git-range-diff.txt:63
 #, priority:100
 msgid "Additionally, the commit diff lines that are only present in the first commit range are shown \"dimmed\" (this can be overridden using the `color.diff.<slot>` config setting where `<slot>` is one of `contextDimmed`, `oldDimmed` and `newDimmed`), and the commit diff lines that are only present in the second commit range are shown in bold (which can be overridden using the config settings `color.diff.<slot>` with `<slot>` being one of `contextBold`, `oldBold` or `newBold`)."
-msgstr ""
+msgstr "此外，只出现在第一个提交范围内的提交差异行会显示为 \"dimmed\"（这可以使用 `color.diff. <slot>` 配置设置，其中 `<slot>` 是`contextDimmed`、`oldDimmed` 和 `newDimmed` 中的一个），而仅出现在第二个提交范围内的提交差异行以粗体显示（这可以通过配置设置 `color.diff.<slot>` 来覆盖，其中 `<slot>` 是 `contextBold`、`oldBold` 和 `newBold` 中的一个）。"
 
 #. type: Plain text
 #: en/git-range-diff.txt:67
 #, priority:100
 msgid "This is known to `range-diff` as \"dual coloring\". Use `--no-dual-color` to revert to color all lines according to the outer diff markers (and completely ignore the inner diff when it comes to color)."
-msgstr ""
+msgstr "这在 `range-diff` 中被称为 \"双重着色\"。使用 `--no-dual-color` 可以还原为根据外部差异标记对所有线条着色（在着色时完全忽略内部差异）。"
 
 #. type: Plain text
 #: en/git-range-diff.txt:75
 #, priority:100
 msgid "Set the creation/deletion cost fudge factor to `<percent>`.  Defaults to 60. Try a larger value if `git range-diff` erroneously considers a large change a total rewrite (deletion of one commit and addition of another), and a smaller one in the reverse case.  See the ``Algorithm`` section below for an explanation why this is needed."
-msgstr ""
+msgstr "将创建/删除成本误差因子设置为 `<percent>`。 默认为 60。如果 `git range-diff` 错误地认为一个大的改动是完全重写 (删除一个提交，增加另一个提交)，可以使用较大的值，反之则使用较小的值。 请参阅下面的 ``算法`` 部分以了解为什么需要这个值。"
 
 #. type: Labeled list
 #: en/git-range-diff.txt:76 en/rev-list-options.txt:282
@@ -41545,7 +41545,7 @@ msgstr "--left-only"
 #: en/git-range-diff.txt:79
 #, ignore-ellipsis, priority:100
 msgid "Suppress commits that are missing from the first specified range (or the \"left range\" when using the `<rev1>...<rev2>` format)."
-msgstr ""
+msgstr "忽略第一个指定范围（或使用 `<rev1>...<rev2>` 格式时的 \"左侧范围\"）中丢失的提交。"
 
 #. type: Labeled list
 #: en/git-range-diff.txt:80 en/rev-list-options.txt:283
@@ -41557,7 +41557,7 @@ msgstr "--right-only"
 #: en/git-range-diff.txt:83
 #, ignore-ellipsis, priority:100
 msgid "Suppress commits that are missing from the second specified range (or the \"right range\" when using the `<rev1>...<rev2>` format)."
-msgstr ""
+msgstr "忽略第二个指定范围（或使用 `<rev1>...<rev2>` 格式时的 \"右侧范围\"）中丢失的提交。"
 
 #. type: Labeled list
 #: en/git-range-diff.txt:84
@@ -41569,19 +41569,19 @@ msgstr "--notes[=<ref>]"
 #: en/git-range-diff.txt:87
 #, priority:100
 msgid "This flag is passed to the `git log` program (see linkgit:git-log[1]) that generates the patches."
-msgstr ""
+msgstr "这个标志将传递给生成补丁的 `git log` 程序（参见 linkgit:git-log[1]）。"
 
 #. type: Labeled list
 #: en/git-range-diff.txt:88
 #, no-wrap, priority:100
 msgid "<range1> <range2>"
-msgstr ""
+msgstr "<range1> <range2>"
 
 #. type: Plain text
 #: en/git-range-diff.txt:91
 #, priority:100
 msgid "Compare the commits specified by the two ranges, where `<range1>` is considered an older version of `<range2>`."
-msgstr ""
+msgstr "比较两个范围指定的提交，其中 `<range1>` 被认为是 `<range2>` 的旧版本。"
 
 #. type: Labeled list
 #: en/git-range-diff.txt:92
@@ -41593,7 +41593,7 @@ msgstr "'<rev1>..<rev2>'"
 #: en/git-range-diff.txt:94
 #, priority:100
 msgid "Equivalent to passing `<rev2>..<rev1>` and `<rev1>..<rev2>`."
-msgstr ""
+msgstr "相当于传递 `<rev2>...<rev1>` 和 `<rev1>...<rev2>`。"
 
 #. type: Labeled list
 #: en/git-range-diff.txt:95
@@ -41605,55 +41605,55 @@ msgstr "'<rev1>..<rev2>'"
 #: en/git-range-diff.txt:101
 #, priority:100
 msgid "Equivalent to passing `<base>..<rev1>` and `<base>..<rev2>`.  Note that `<base>` does not need to be the exact branch point of the branches. Example: after rebasing a branch `my-topic`, `git range-diff my-topic@{u} my-topic@{1} my-topic` would show the differences introduced by the rebase."
-msgstr ""
+msgstr "等同于传递 `<base>...<rev1>` 和 `<base>...<rev2>`。 注意 `<base>` 不需要是分支的确切分支点。例如： 在重定向分支 `my-topic` 之后， `git range-diff my-topic@{u} my-topic@{1} my-topic` 将显示重定向带来的差异。"
 
 #. type: Plain text
 #: en/git-range-diff.txt:108
 #, priority:100
 msgid "`git range-diff` also accepts the regular diff options (see linkgit:git-diff[1]), most notably the `--color=[<when>]` and `--no-color` options. These options are used when generating the \"diff between patches\", i.e. to compare the author, commit message and diff of corresponding old/new commits. There is currently no means to tweak most of the diff options passed to `git log` when generating those patches."
-msgstr ""
+msgstr "`git range-diff` 也接受常规的 diff 选项 (参见 linkgit:git-diff[1])，特别是 `--color=[<when>]` 和 `--no-color` 选项。这些选项用于生成 “补丁间的差异”，即比较新旧提交的作者、提交信息和差异。目前还没有办法调整生成补丁时传递给 `git log` 的大部分 diff 选项。"
 
 #. type: Title -
 #: en/git-range-diff.txt:110
 #, no-wrap, priority:100
 msgid "OUTPUT STABILITY"
-msgstr ""
+msgstr "输出稳定性"
 
 #. type: Plain text
 #: en/git-range-diff.txt:119
 #, priority:100
 msgid "The output of the `range-diff` command is subject to change. It is intended to be human-readable porcelain output, not something that can be used across versions of Git to get a textually stable `range-diff` (as opposed to something like the `--stable` option to linkgit:git-patch-id[1]). There's also no equivalent of linkgit:git-apply[1] for `range-diff`, the output is not intended to be machine-readable."
-msgstr ""
+msgstr "`range-diff` 命令的输出可能会改变。它的目的是提供人类可读的上层命令输出，而不是可以在不同版本的 Git 中使用以获得文本稳定的 `range-diff` (与 linkgit:git-patch-id[1] 的 `--stable` 选项不同)。对于 `range-diff` 来说，也没有与 linkgit:git-apply[1] 等价的东西，其输出不是机器可读的。"
 
 #. type: Plain text
 #: en/git-range-diff.txt:126
 #, priority:100
 msgid "This is particularly true when passing in diff options. Currently some options like `--stat` can, as an emergent effect, produce output that's quite useless in the context of `range-diff`. Future versions of `range-diff` may learn to interpret such options in a manner specific to `range-diff` (e.g. for `--stat` producing human-readable output which summarizes how the diffstat changed)."
-msgstr ""
+msgstr "当传递 diff 选项时尤其如此。目前，一些选项，例如 `--stat`，会在 `range-diff` 的上下文中产生无用的输出。未来版本的 `range-diff` 可能会学习如何以 `range-diff` 特有的方式来解释这些选项 (例如， `--stat` 产生人类可读的输出，总结了 diffstat 的变化情况)。"
 
 #. type: Plain text
 #: en/git-range-diff.txt:132
 #, priority:100
 msgid "This command uses the `diff.color.*` and `pager.range-diff` settings (the latter is on by default).  See linkgit:git-config[1]."
-msgstr ""
+msgstr "该命令使用 `diff.color.*` 和 `pager.range-diff` 设置（后者默认开启）。 参见 linkgit:git-config[1]。"
 
 #. type: Plain text
 #: en/git-range-diff.txt:139
 #, priority:100
 msgid "When a rebase required merge conflicts to be resolved, compare the changes introduced by the rebase directly afterwards using:"
-msgstr ""
+msgstr "当重置需要解决合并冲突时，直接比较重置后引入的更改，使用 :"
 
 #. type: delimited block -
 #: en/git-range-diff.txt:142
 #, no-wrap, priority:100
 msgid "$ git range-diff @{u} @{1} @\n"
-msgstr ""
+msgstr "$ git range-diff @{u} @{1} @\n"
 
 #. type: Plain text
 #: en/git-range-diff.txt:146
 #, priority:100
 msgid "A typical output of `git range-diff` would look like this:"
-msgstr ""
+msgstr "`git range-diff` 的典型输出如下："
 
 #. type: delimited block -
 #: en/git-range-diff.txt:153
@@ -41664,7 +41664,7 @@ msgid ""
 "2:  f00dbal ! 3:  decafe1 Describe a bug\n"
 "    @@ -1,3 +1,3 @@\n"
 "     Author: A U Thor <author@example.com>\n"
-msgstr ""
+msgstr "-:  ------- > 1:  0ddba11 Prepare for the inevitable!\n1:  c0debee = 2:  cab005e Add a helpful message at the start\n2:  f00dbal ! 3:  decafe1 Describe a bug\n    @@ -1,3 +1,3 @@\n     Author: A U Thor <author@example.com>\n"
 
 #. type: delimited block -
 #: en/git-range-diff.txt:158
@@ -41674,7 +41674,7 @@ msgid ""
 "    +Describe a bug\n"
 "    @@ -324,5 +324,6\n"
 "      This is expected.\n"
-msgstr ""
+msgstr "    -TODO: Describe a bug\n    +Describe a bug\n    @@ -324,5 +324,6\n      This is expected.\n"
 
 #. type: delimited block -
 #: en/git-range-diff.txt:162
@@ -41683,7 +41683,7 @@ msgid ""
 "    -+What is unexpected is that it will also crash.\n"
 "    ++Unexpectedly, it also crashes. This is a bug, and the jury is\n"
 "    ++still out there how to fix it best. See ticket #314 for details.\n"
-msgstr ""
+msgstr "    -+出乎意料的是，它也会崩溃。\n    ++出乎意料的是，它也会崩溃。这是一个bug，陪审团还在讨论如何最好地修复它。\n    ++如何最好地修复它，还没有定论。详见 #314 号记录。\n"
 
 #. type: delimited block -
 #: en/git-range-diff.txt:165
@@ -41691,85 +41691,85 @@ msgstr ""
 msgid ""
 "      Contact\n"
 "3:  bedead < -:  ------- TO-UNDO\n"
-msgstr ""
+msgstr "      Contact\n3:  bedead < -:  ------- TO-UNDO\n"
 
 #. type: Plain text
 #: en/git-range-diff.txt:170
 #, priority:100
 msgid "In this example, there are 3 old and 3 new commits, where the developer removed the 3rd, added a new one before the first two, and modified the commit message of the 2nd commit as well its diff."
-msgstr ""
+msgstr "在这个例子中，有 3 个旧提交和 3 个新提交，开发者删除了第 3 个提交，在前两个提交之前添加了一个新提交，并修改了第 2 个提交的提交信息及其差异。"
 
 #. type: Plain text
 #: en/git-range-diff.txt:177
 #, priority:100
 msgid "When the output goes to a terminal, it is color-coded by default, just like regular `git diff`'s output. In addition, the first line (adding a commit) is green, the last line (deleting a commit) is red, the second line (with a perfect match) is yellow like the commit header of `git show`'s output, and the third line colors the old commit red, the new one green and the rest like `git show`'s commit header."
-msgstr ""
+msgstr "当输出到终端时，默认是用颜色编码的，就像普通的 `git diff` 输出一样。此外，第一行（添加提交）是绿色的，最后一行（删除提交）是红色的，第二行（完全匹配）是黄色的，就像 `git show` 输出的提交头一样，第三行旧提交是红色的，新提交是绿色的，其余的就像 `git show` 的提交头一样。"
 
 #. type: Plain text
 #: en/git-range-diff.txt:182
 #, priority:100
 msgid "A naive color-coded diff of diffs is actually a bit hard to read, though, as it colors the entire lines red or green. The line that added \"What is unexpected\" in the old commit, for example, is completely red, even if the intent of the old commit was to add something."
-msgstr ""
+msgstr "不过，用颜色编码的原 diff 实际上有点难读，因为它会把整行都染成红色或绿色。例如，在旧提交中添加了 \"What is unexpected\" 的那行就完全是红色的，即使旧提交的意图是添加一些东西。"
 
 #. type: Plain text
 #: en/git-range-diff.txt:188
 #, priority:100
 msgid "To help with that, `range` uses the `--dual-color` mode by default. In this mode, the diff of diffs will retain the original diff colors, and prefix the lines with -/+ markers that have their *background* red or green, to make it more obvious that they describe how the diff itself changed."
-msgstr ""
+msgstr "为了解决这个问题，`range` 默认使用 `--dual-color` 模式。在这种模式下，diffs 的 diff 将保留原始的 diff 颜色，并在行的前缀加上 -/+ 标记，其 *背景* 为红色或绿色，以便更明显地描述 diff 本身是如何改变的。"
 
 #. type: Title -
 #: en/git-range-diff.txt:191
 #, no-wrap, priority:100
 msgid "Algorithm"
-msgstr ""
+msgstr "算法"
 
 #. type: Plain text
 #: en/git-range-diff.txt:195
 #, priority:100
 msgid "The general idea is this: we generate a cost matrix between the commits in both commit ranges, then solve the least-cost assignment."
-msgstr ""
+msgstr "总体思路是这样的：我们在两个提交范围内的提交之间生成一个成本矩阵，然后求解最小成本分配。"
 
 #. type: Plain text
 #: en/git-range-diff.txt:199
 #, priority:100
 msgid "The cost matrix is populated thusly: for each pair of commits, both diffs are generated and the \"diff of diffs\" is generated, with 3 context lines, then the number of lines in that diff is used as cost."
-msgstr ""
+msgstr "成本矩阵是这样填充的：对于每一对提交，生成两个差异，并生成 “差异的差异”，其中包含 3 行上下文，然后将差异中的行数作为成本。"
 
 #. type: Plain text
 #: en/git-range-diff.txt:204
 #, priority:100
 msgid "To avoid false positives (e.g. when a patch has been removed, and an unrelated patch has been added between two iterations of the same patch series), the cost matrix is extended to allow for that, by adding fixed-cost entries for wholesale deletes/adds."
-msgstr ""
+msgstr "为了避免假阳性（例如，当一个补丁被删除，而在同一补丁系列的两次迭代之间又添加了一个不相关的补丁），成本矩阵通过为整体删除/添加添加固定成本条目进行扩展，以考虑到这一点。"
 
 #. type: Plain text
 #: en/git-range-diff.txt:209
 #, priority:100
 msgid "Example: Let commits `1--2` be the first iteration of a patch series and `A--C` the second iteration. Let's assume that `A` is a cherry-pick of `2,` and `C` is a cherry-pick of `1` but with a small modification (say, a fixed typo). Visualize the commits as a bipartite graph:"
-msgstr ""
+msgstr "示例： 假设 `1--2` 是补丁系列的第一次迭代，`A--C`是第二次迭代。假设 `A`是从 `2` 中挑选出来的，而 `C` 是从 `1` 中挑选出来的，但做了一点修改（比如，一个固定的错别字）。将提交可视化为一个二元图："
 
 #. type: delimited block -
 #: en/git-range-diff.txt:212
 #, no-wrap, priority:100
 msgid "    1            A\n"
-msgstr ""
+msgstr "    1            A\n"
 
 #. type: delimited block -
 #: en/git-range-diff.txt:214
 #, no-wrap, priority:100
 msgid "    2            B\n"
-msgstr ""
+msgstr "    2            B\n"
 
 #. type: delimited block -
 #: en/git-range-diff.txt:216 en/git-range-diff.txt:228
 #, no-wrap, priority:100
 msgid "\t\t C\n"
-msgstr ""
+msgstr "\t\t C\n"
 
 #. type: Plain text
 #: en/git-range-diff.txt:220
 #, priority:100
 msgid "We are looking for a \"best\" explanation of the new series in terms of the old one. We can represent an \"explanation\" as an edge in the graph:"
-msgstr ""
+msgstr "我们正在寻找新系列对旧系列的 “最佳” 解释。我们可以将 “解释” 表示为图中的一条边："
 
 #. type: delimited block -
 #: en/git-range-diff.txt:226
@@ -41787,7 +41787,7 @@ msgstr ""
 #: en/git-range-diff.txt:233
 #, priority:100
 msgid "This explanation comes for \"free\" because there was no change. Similarly `C` could be explained using `1`, but that comes at some cost c>0 because of the modification:"
-msgstr ""
+msgstr "这个解释是 “免费” 的，因为没有任何改变。同样地，`C` 可以用 `1`来解释，但由于修改，这需要付出一定的代价 c>0 :"
 
 #. type: delimited block -
 #: en/git-range-diff.txt:241
@@ -41799,7 +41799,7 @@ msgid ""
 "\t  |\n"
 "\t  `----- C\n"
 "\t  c>0\n"
-msgstr ""
+msgstr "    1 ----.      A\n\t  |    /\n    2 ----+---'  B\n\t  |\n\t  `----- C\n\t  c>0\n"
 
 #. type: Plain text
 #: en/git-range-diff.txt:249
