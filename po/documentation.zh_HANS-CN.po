@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-02-26 14:06+0100\nPO-Revision-Date: 2023-07-17 15:06+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.0-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-02-26 14:06+0100\nPO-Revision-Date: 2023-07-19 15:02+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.0-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:769 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:146 en/git-status.txt:31
@@ -41805,7 +41805,7 @@ msgstr "    1 ----.      A\n\t  |    /\n    2 ----+---'  B\n\t  |\n\t  `----- C\
 #: en/git-range-diff.txt:249
 #, priority:100
 msgid "In mathematical terms, what we are looking for is some sort of a minimum cost bipartite matching; `1` is matched to `C` at some cost, etc. The underlying graph is in fact a complete bipartite graph; the cost we associate with every edge is the size of the diff between the two commits' patches. To explain also new commits, we introduce dummy nodes on both sides:"
-msgstr ""
+msgstr "用数学术语来说，我们要寻找的是某种最小代价的双栅格匹配；`1` 以某种代价匹配到 `C`，等等。底层图实际上是一个完整的双向图；我们与每条边相关联的代价是两个提交补丁之间的差值大小。为了解释新提交，我们在两边都引入了虚节点："
 
 #. type: delimited block -
 #: en/git-range-diff.txt:258
@@ -41831,19 +41831,19 @@ msgstr ""
 #: en/git-range-diff.txt:260
 #, no-wrap, priority:100
 msgid "    o            o\n"
-msgstr ""
+msgstr "    o            o\n"
 
 #. type: Plain text
 #: en/git-range-diff.txt:270
 #, priority:100
 msgid "The cost of an edge `o--C` is the size of `C`'s diff, modified by a fudge factor that should be smaller than 100%. The cost of an edge `o--o` is free. The fudge factor is necessary because even if `1` and `C` have nothing in common, they may still share a few empty lines and such, possibly making the assignment `1--C`, `o--o` slightly cheaper than `1--o`, `o--C` even if `1` and `C` have nothing in common. With the fudge factor we require a much larger common part to consider patches as corresponding."
-msgstr ""
+msgstr "边 `o--C` 的代价是 `C` 的差值大小，再加上一个应小于 100% 的修正系数。边 `o--o` 的代价是免费的。修正系数是必要的，因为即使 `1` 和 `C` 没有共同点，它们仍可能共享一些空行等，这可能会使赋值 `1--C`, `o--o` 比 `1--o`, `o--C` 稍微便宜一些，即使 `1` 和 `C` 没有共同点。有了模糊因子，我们需要更大的公共部分才能将补丁视为一对的。"
 
 #. type: Plain text
 #: en/git-range-diff.txt:277
 #, priority:100
 msgid "The overall time needed to compute this algorithm is the time needed to compute n+m commit diffs and then n*m diffs of patches, plus the time needed to compute the least-cost assignment between n and m diffs. Git uses an implementation of the Jonker-Volgenant algorithm to solve the assignment problem, which has cubic runtime complexity. The matching found in this case will look like this:"
-msgstr ""
+msgstr "计算该算法所需的总时间是计算 n+m 个提交差异和 n*m 个补丁差异所需的时间，再加上计算 n 和 m 个差异之间的最小成本赋值所需的时间。Git 使用 Jonker-Volgenant 算法来解决分配问题，该算法的运行复杂度为立方。在这种情况下找到的匹配结果是这样的 :"
 
 #. type: delimited block -
 #: en/git-range-diff.txt:286
@@ -42504,7 +42504,7 @@ msgstr "git-rebase(1)"
 #: en/git-rebase.txt:7
 #, priority:100
 msgid "git-rebase - Reapply commits on top of another base tip"
-msgstr ""
+msgstr "git-rebase - 在另一个基础提示之上重新应用提交内容"
 
 #. type: Plain text
 #: en/git-rebase.txt:16
@@ -42515,13 +42515,13 @@ msgid ""
 "'git rebase' [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase>]\n"
 "\t--root [<branch>]\n"
 "'git rebase' (--continue | --skip | --abort | --quit | --edit-todo | --show-current-patch)\n"
-msgstr ""
+msgstr "'git rebase' [-i | --interactive] [<options>] [--exec <cmd>]\n\t[--onto <newbase> | --keep-base] [<upstream> [<branch>]]\n'git rebase' [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase>]\n\t--root [<branch>]\n'git rebase' (--continue | --skip | --abort | --quit | --edit-todo | --show-current-patch)\n"
 
 #. type: Plain text
 #: en/git-rebase.txt:22
 #, priority:100
 msgid "If `<branch>` is specified, `git rebase` will perform an automatic `git switch <branch>` before doing anything else.  Otherwise it remains on the current branch."
-msgstr ""
+msgstr "如果指定了 `<branch>`，`git rebase` 会自动执行 `git switch <branch>`，然后再做其他事情。 否则，它会保留在当前分支上。"
 
 #. type: Plain text
 #: en/git-rebase.txt:28
