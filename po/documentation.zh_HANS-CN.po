@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-02-26 14:06+0100\nPO-Revision-Date: 2023-07-19 15:02+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.0-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-02-26 14:06+0100\nPO-Revision-Date: 2023-07-31 17:04+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.0-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:769 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:146 en/git-status.txt:31
@@ -36534,7 +36534,7 @@ msgstr "'git mktag'\n"
 #: en/git-mktag.txt:19
 #, priority:100
 msgid "Reads a tag contents on standard input and creates a tag object. The output is the new tag's <object> identifier."
-msgstr ""
+msgstr "读取标准输入中的标签内容并创建一个标签对象。输出是新标签的 <object> 标识符。"
 
 #. type: Plain text
 #: en/git-mktag.txt:23
@@ -39400,7 +39400,7 @@ msgstr "--keep-true-parents"
 #: en/git-pack-objects.txt:299
 #, priority:100
 msgid "With this option, parents that are hidden by grafts are packed nevertheless."
-msgstr ""
+msgstr "通过这种方法，被移植物覆盖的父母还是会被打包。"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:304
@@ -39508,7 +39508,7 @@ msgstr "--delta-islands"
 #: en/git-pack-objects.txt:349
 #, priority:100
 msgid "Restrict delta matches based on \"islands\". See DELTA ISLANDS below."
-msgstr ""
+msgstr "根据 “岛屿” 限制增量匹配。请参阅下文的增量匹配。"
 
 #. type: Title -
 #: en/git-pack-objects.txt:352
@@ -42527,43 +42527,43 @@ msgstr "如果指定了 `<branch>`，`git rebase` 会自动执行 `git switch <b
 #: en/git-rebase.txt:28
 #, priority:100
 msgid "If `<upstream>` is not specified, the upstream configured in `branch.<name>.remote` and `branch.<name>.merge` options will be used (see linkgit:git-config[1] for details) and the `--fork-point` option is assumed.  If you are currently not on any branch or if the current branch does not have a configured upstream, the rebase will abort."
-msgstr ""
+msgstr "如果未指定 `<upstream>`，将使用 `branch.<name>.remote` 和 `branch.<name>.merge` 选项中配置的上游（详见 linkgit:git-config[1]），并假定使用 `-fork-point`选项。  如果您当前不在任何分支上，或者当前分支没有配置上游，变基操作会中止。"
 
 #. type: Plain text
 #: en/git-rebase.txt:35
 #, priority:100
 msgid "All changes made by commits in the current branch but that are not in `<upstream>` are saved to a temporary area.  This is the same set of commits that would be shown by `git log <upstream>..HEAD`; or by `git log 'fork_point'..HEAD`, if `--fork-point` is active (see the description on `--fork-point` below); or by `git log HEAD`, if the `--root` option is specified."
-msgstr ""
+msgstr "当前分支中的所有提交所做的改动，但不在 `<upstream>` 中的，都会被保存到一个临时区域。  这与 `git log <upstream>..HEAD` 或 `git log 'fork_point'..HEAD` 所显示的提交相同（如果启用了 `-fork-point`，请参阅下文关于 `-fork-point`的描述）；或者，如果指定了 `--root` 选项，则与 `git log HEAD` 所显示的提交相同。"
 
 #. type: Plain text
 #: en/git-rebase.txt:40
 #, priority:100
 msgid "The current branch is reset to `<upstream>` or `<newbase>` if the `--onto` option was supplied.  This has the exact same effect as `git reset --hard <upstream>` (or `<newbase>`). `ORIG_HEAD` is set to point at the tip of the branch before the reset."
-msgstr ""
+msgstr "如果提供了 `--onto` 选项，当前分支会重置为 `<upstream>` 或 `<newbase>`。  这与 `git reset --hard <upstream>`（或 `<newbase>`）的效果完全相同。`ORIG_HEAD` 设置为指向重置前分支的顶端。"
 
 #. type: Plain text
 #: en/git-rebase.txt:47
 #, priority:100
 msgid "`ORIG_HEAD` is not guaranteed to still point to the previous branch tip at the end of the rebase if other commands that write that pseudo-ref (e.g. `git reset`) are used during the rebase. The previous branch tip, however, is accessible using the reflog of the current branch (i.e. `@{1}`, see linkgit:gitrevisions[7])."
-msgstr ""
+msgstr "如果在重置过程中使用了其他写入伪引用的命令（例如 `git reset`），就不能保证 `ORIG_HEAD` 在重置结束时仍然指向前一个分支的分支提示。不过，使用当前分支的 引用日志（即 `@{1}`，参见 linkgit:gitrevisions[7]）可以访问前一个分支的分支提示。"
 
 #. type: Plain text
 #: en/git-rebase.txt:53
 #, priority:100
 msgid "The commits that were previously saved into the temporary area are then reapplied to the current branch, one by one, in order. Note that any commits in `HEAD` which introduce the same textual changes as a commit in `HEAD..<upstream>` are omitted (i.e., a patch already accepted upstream with a different commit message or timestamp will be skipped)."
-msgstr ""
+msgstr "然后，先前保存在临时区域的提交将按顺序逐一重新应用到当前分支。请注意，`HEAD` 中任何与 `HEAD...<upstream>` 中的提交有相同文字改动的提交都会被省略（也就是说，上游已经接受的补丁，如果提交信息或时间戳不同，就会被跳过）。"
 
 #. type: Plain text
 #: en/git-rebase.txt:60
 #, priority:100
 msgid "It is possible that a merge failure will prevent this process from being completely automatic.  You will have to resolve any such merge failure and run `git rebase --continue`.  Another option is to bypass the commit that caused the merge failure with `git rebase --skip`.  To check out the original `<branch>` and remove the `.git/rebase-apply` working files, use the command `git rebase --abort` instead."
-msgstr ""
+msgstr "合并失败有可能导致该过程无法完全自动进行。  您必须解决合并失败问题，然后运行 `git rebase --continue`。  另一种方法是使用 `git rebase --skip` 绕过导致合并失败的提交。  要检查原始的 `<branch>` 并移除 `.git/rebase-apply` 工作文件，请使用 `git rebase --abort` 命令。"
 
 #. type: Plain text
 #: en/git-rebase.txt:62
 #, priority:100
 msgid "Assume the following history exists and the current branch is \"topic\":"
-msgstr ""
+msgstr "假设存在以下历史记录，当前分支为 \"topic\"："
 
 #. type: delimited block -
 #: en/git-rebase.txt:67
@@ -42572,7 +42572,7 @@ msgid ""
 "          A---B---C topic\n"
 "         /\n"
 "    D---E---F---G master\n"
-msgstr ""
+msgstr "          A---B---C topic\n         /\n    D---E---F---G master\n"
 
 #. type: Plain text
 #: en/git-rebase.txt:70
