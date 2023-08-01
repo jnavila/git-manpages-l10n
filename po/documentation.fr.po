@@ -1,6 +1,6 @@
 #
 msgid ""
-msgstr "Project-Id-Version: PACKAGE VERSION\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-05-18 19:52+0200\nPO-Revision-Date: 2023-07-31 17:04+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 5.0-dev\n"
+msgstr "Project-Id-Version: PACKAGE VERSION\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-05-18 19:52+0200\nPO-Revision-Date: 2023-08-02 19:06+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 5.0-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:769 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:146 en/git-status.txt:31
@@ -16808,11 +16808,7 @@ msgid ""
 "unmerged: hello.c\n"
 "$ edit hello.c\n"
 "$ git add hello.c\n"
-msgstr ""
-"$ git status | grep non-fusionné\n"
-"non-fusionné : hello.c\n"
-"$ edit hello.c\n"
-"$ git add hello.c\n"
+msgstr "$ git status | grep unmerged\nunmerged: hello.c\n$ edit hello.c\n$ git add hello.c\n"
 
 #. type: Plain text
 #: en/git-commit.txt:490
@@ -30750,7 +30746,7 @@ msgstr "Par défaut, seul le service `upload-pack` est activé, qui sert les cli
 #: en/git-http-backend.txt:38
 #, priority:100
 msgid "These services can be enabled/disabled using the per-repository configuration file:"
-msgstr "Ces services peuvent être activés/désactivés grâce au ficher de configuration par dépôt:"
+msgstr "Ces services peuvent être activés/désactivés grâce au ficher de configuration par dépôt :"
 
 #. type: Labeled list
 #: en/git-http-backend.txt:39
@@ -31656,31 +31652,31 @@ msgid ""
 "'git index-pack' [-v] [-o <index-file>] [--[no-]rev-index] <pack-file>\n"
 "'git index-pack' --stdin [--fix-thin] [--keep] [-v] [-o <index-file>]\n"
 "\t\t  [--[no-]rev-index] [<pack-file>]\n"
-msgstr ""
+msgstr "'git index-pack' [-v] [-o <fichier-index>] [--[no-]rev-index] <fichier-paquet>\n'git index-pack' --stdin [--fix-thin] [--keep] [-v] [-o <fichier-index>]\n\t\t  [--[no-]rev-index] [<fichier-paquet>]\n"
 
 #. type: Plain text
 #: en/git-index-pack.txt:24
 #, priority:100
 msgid "Reads a packed archive (.pack) from the specified file, and builds a pack index file (.idx) for it. Optionally writes a reverse-index (.rev) for the specified pack. The packed archive together with the pack index can then be placed in the objects/pack/ directory of a Git repository."
-msgstr ""
+msgstr "Lit une archive compressée, un paquet (.pack) à partir du fichier spécifié, et construit un fichier d'indexation (.idx) pour cette archive. Optionnellement, écrit un index inversé (.rev) pour le paquet spécifié. L'archive paquet ainsi que l'index du paquet peuvent ensuite être placés dans le répertoire objects/pack/ d'un dépôt Git."
 
 #. type: Plain text
 #: en/git-index-pack.txt:30
 #, priority:100
 msgid "Be verbose about what is going on, including progress status."
-msgstr ""
+msgstr "Mode loquace sur ce qui se passe, y compris sur l'état d'avancement."
 
 #. type: Labeled list
 #: en/git-index-pack.txt:31
 #, no-wrap, priority:100
 msgid "-o <index-file>"
-msgstr ""
+msgstr "-o <fichier-index>"
 
 #. type: Plain text
 #: en/git-index-pack.txt:38
 #, priority:100
 msgid "Write the generated pack index into the specified file.  Without this option the name of pack index file is constructed from the name of packed archive file by replacing .pack with .idx (and the program fails if the name of packed archive does not end with .pack)."
-msgstr ""
+msgstr "Écrit l'index de paquet généré dans le fichier spécifié.  Sans cette option, le nom du fichier d'index des paquet est construit à partir du nom du fichier d'archive paquet en remplaçant .pack par .idx (et le programme échoue si le nom de l'archive paquet ne se termine pas par .pack)."
 
 #. type: Labeled list
 #: en/git-index-pack.txt:39
@@ -31692,13 +31688,13 @@ msgstr "--[no-]rev-index"
 #: en/git-index-pack.txt:45
 #, priority:100
 msgid "When this flag is provided, generate a reverse index (a `.rev` file) corresponding to the given pack. If `--verify` is given, ensure that the existing reverse index is correct. Takes precedence over `pack.writeReverseIndex`."
-msgstr ""
+msgstr "Lorsque ce drapeau est fourni, génèrer un index inversé (un fichier `.rev`) correspondant au paquet donné. Si `--verify` est fourni, s'assurer que l'index inversé existant est correct. A la priorité sur `pack.writeReverseIndex`."
 
 #. type: Plain text
 #: en/git-index-pack.txt:55
 #, priority:100
 msgid "When this flag is provided, the pack is read from stdin instead and a copy is then written to <pack-file>. If <pack-file> is not specified, the pack is written to objects/pack/ directory of the current Git repository with a default name determined from the pack content.  If <pack-file> is not specified consider using --keep to prevent a race condition between this process and 'git repack'."
-msgstr ""
+msgstr "Lorsque ce drapeau est fourni, le paquet est lu à partir de stdin et une copie est ensuite écrite dans <fichier-paquet>. Si <fichier-paquet> n'est pas spécifié, le paquet est écrit dans le répertoire objects/pack/ du dépôt Git actuel avec un nom par défaut déterminé à partir du contenu du paquet.  Si <fichier-paquet> n'est pas spécifié, il est conseillé d'utiliser --keep pour éviter une condition de course entre ce processus et 'git repack'."
 
 #. type: Labeled list
 #: en/git-index-pack.txt:56
@@ -31710,43 +31706,43 @@ msgstr "--fix-thin"
 #: en/git-index-pack.txt:61
 #, priority:100
 msgid "Fix a \"thin\" pack produced by `git pack-objects --thin` (see linkgit:git-pack-objects[1] for details) by adding the excluded objects the deltified objects are based on to the pack. This option only makes sense in conjunction with --stdin."
-msgstr ""
+msgstr "Corriger un paquet \"mince\" produit par `git pack-objects --thin` (voir linkgit:git-pack-objects[1] pour les détails) en ajoutant au paquet les objets exclus sur lesquels les objets déltifiés sont basés. Cette option n'a de sens qu'en conjonction avec --stdin."
 
 #. type: Plain text
 #: en/git-index-pack.txt:69
 #, priority:100
 msgid "Before moving the index into its final destination create an empty .keep file for the associated pack file.  This option is usually necessary with --stdin to prevent a simultaneous 'git repack' process from deleting the newly constructed pack and index before refs can be updated to use objects contained in the pack."
-msgstr ""
+msgstr "Avant de déplacer l'index vers sa destination finale, créer un fichier .keep vide pour le fichier paquet associé.  Cette option est généralement nécessaire avec --stdin pour éviter qu'un processus 'git repack' simultané ne supprime le paquet et l'index nouvellement construits avant que les refs ne puissent être mis à jour pour utiliser les objets contenus dans le paquet."
 
 #. type: Labeled list
 #: en/git-index-pack.txt:70
 #, no-wrap, priority:100
 msgid "--keep=<msg>"
-msgstr ""
+msgstr "--keep=<message>"
 
 #. type: Plain text
 #: en/git-index-pack.txt:76
 #, priority:100
 msgid "Like --keep create a .keep file before moving the index into its final destination, but rather than creating an empty file place '<msg>' followed by an LF into the .keep file.  The '<msg>' message can later be searched for within all .keep files to locate any which have outlived their usefulness."
-msgstr ""
+msgstr "Comme --keep, créer un fichier .keep avant de déplacer l'index vers sa destination finale, mais au lieu de créer un fichier vide, placer '<message>' suivi d'un LF dans le fichier .keep.  Le message '<message>' peut ensuite être recherché dans tous les fichiers .keep pour localiser ceux qui n'ont plus d'utilité."
 
 #. type: Labeled list
 #: en/git-index-pack.txt:77 en/git-pack-objects.txt:291
 #, no-wrap, priority:100
 msgid "--index-version=<version>[,<offset>]"
-msgstr ""
+msgstr "--index-version=<version>[,<décalage>]"
 
 #. type: Plain text
 #: en/git-index-pack.txt:81 en/git-pack-objects.txt:295
 #, priority:100
 msgid "This is intended to be used by the test suite only. It allows to force the version for the generated pack index, and to force 64-bit index entries on objects located above the given offset."
-msgstr ""
+msgstr "Ceci est destiné à être utilisée uniquement par la suite de tests. Permet de forcer la version de l'index de paquet généré, et de forcer les entrées d'index 64 bits sur les objets situés avant le décalage donné."
 
 #. type: Plain text
 #: en/git-index-pack.txt:84
 #, priority:100
 msgid "Die, if the pack contains broken objects or links."
-msgstr ""
+msgstr "Mourir, si le paquet contient des objets ou des liens brisés."
 
 #. type: Labeled list
 #: en/git-index-pack.txt:85
@@ -31758,19 +31754,19 @@ msgstr "--progress-title"
 #: en/git-index-pack.txt:87 en/git-index-pack.txt:96
 #, priority:100
 msgid "For internal use only."
-msgstr ""
+msgstr "A usage interne uniquement."
 
 #. type: Plain text
 #: en/git-index-pack.txt:90
 #, priority:100
 msgid "Set the title of the progress bar. The title is \"Receiving objects\" by default and \"Indexing objects\" when `--stdin` is specified."
-msgstr ""
+msgstr "Définir le titre de la barre de progression. Le titre est \"Réception d'objets\" par défaut et \"Indexation d'objets\" lorsque `--stdin` est spécifié."
 
 #. type: Plain text
 #: en/git-index-pack.txt:93
 #, priority:100
 msgid "Die if the pack contains broken links. For internal use only."
-msgstr ""
+msgstr "Mourir si le paquet contient des liens brisés. A usage interne uniquement."
 
 #. type: Labeled list
 #: en/git-index-pack.txt:94
@@ -31782,7 +31778,7 @@ msgstr "--fsck-objects"
 #: en/git-index-pack.txt:101
 #, priority:100
 msgid "Die if the pack contains broken objects. If the pack contains a tree pointing to a .gitmodules blob that does not exist, prints the hash of that blob (for the caller to check) after the hash that goes into the name of the pack/idx file (see \"Notes\")."
-msgstr ""
+msgstr "Mourir si le paquet contient des objets cassés. Si le paquet contient un arbre pointant vers un blob .gitmodules qui n'existe pas, afficher l'empreinte de ce blob (pour que l'appelant puisse le vérifier) après l'empreinte qui entre dans le nom du fichier pack/idx (voir \"Notes\")."
 
 #. type: Labeled list
 #: en/git-index-pack.txt:102 en/git-pack-objects.txt:281 en/git-repack.txt:120
@@ -31794,19 +31790,19 @@ msgstr "--threads=<n>"
 #: en/git-index-pack.txt:111
 #, priority:100
 msgid "Specifies the number of threads to spawn when resolving deltas. This requires that index-pack be compiled with pthreads otherwise this option is ignored with a warning.  This is meant to reduce packing time on multiprocessor machines. The required amount of memory for the delta search window is however multiplied by the number of threads.  Specifying 0 will cause Git to auto-detect the number of CPU's and use maximum 3 threads."
-msgstr ""
+msgstr "Spécifier le nombre de fils d'exécution à lancer lors de la résolution des deltas. Cela nécessite que index-pack soit compilé avec pthreads, sinon cette option est ignorée avec un avertissement.  Ceci a pour but de réduire le temps d'empaquetage sur les machines multiprocesseurs. La quantité de mémoire requise pour la fenêtre de recherche de delta est cependant multipliée par le nombre de fils.  En spécifiant 0, Git détectera automatiquement le nombre de CPU et utilisera au maximum 3 fils."
 
 #. type: Labeled list
 #: en/git-index-pack.txt:112 en/git-unpack-objects.txt:47
 #, no-wrap, priority:100
 msgid "--max-input-size=<size>"
-msgstr ""
+msgstr "--max-input-size=<taille>"
 
 #. type: Plain text
 #: en/git-index-pack.txt:114 en/git-unpack-objects.txt:49
 #, priority:100
 msgid "Die, if the pack is larger than <size>."
-msgstr ""
+msgstr "Mourir, si le paquet est plus grand que <taille>."
 
 #. type: Labeled list
 #: en/git-index-pack.txt:115 en/git-show-index.txt:42
@@ -31836,25 +31832,25 @@ msgstr "--promisor[=<message>]"
 #: en/git-index-pack.txt:132
 #, priority:100
 msgid "Before committing the pack-index, create a .promisor file for this pack. Particularly helpful when writing a promisor pack with --fix-thin since the name of the pack is not final until the pack has been fully written. If a `<message>` is provided, then that content will be written to the .promisor file for future reference. See link:technical/partial-clone.html[partial clone] for more information."
-msgstr ""
+msgstr "Avant de livrer le pack-index, créer un fichier .promisor pour ce paquet. Particulièrement utile lors de l'écriture d'un paquet promisor avec --fix-thin puisque le nom du paquet n'est pas définitif tant que le paquet n'a pas été entièrement écrit. Si un `<message>` est fourni, son contenu sera écrit dans le fichier .promisor pour référence future. Voir link:technical/partial-clone.html [partial clone] pour plus d'informations."
 
 #. type: Plain text
 #: en/git-index-pack.txt:140
 #, priority:100
 msgid "Once the index has been created, the hash that goes into the name of the pack/idx file is printed to stdout. If --stdin was also used then this is prefixed by either \"pack\\t\", or \"keep\\t\" if a new .keep file was successfully created. This is useful to remove a"
-msgstr ""
+msgstr "Une fois l'index créé, le nom du fichier pack/idx est affiché sur stdout. Si --stdin a également été utilisé, le nom est préfixé par \"pack\\t\" ou \"keep\\t\" si un nouveau fichier .keep a été créé avec succès. Ceci est utile pour supprimer un fichier"
 
 #. type: Block title
 #: en/git-index-pack.txt:140
 #, no-wrap, priority:100
 msgid "keep file used as a lock to prevent the race with 'git repack'"
-msgstr ""
+msgstr "le fichier .keep utilisé comme verrou pour éviter la course avec 'git repack'"
 
 #. type: Plain text
 #: en/git-index-pack.txt:142
 #, priority:100
 msgid "mentioned above."
-msgstr ""
+msgstr "mentionnée ci-dessus."
 
 #. type: Title =
 #: en/git-init-db.txt:2
@@ -34104,7 +34100,7 @@ msgstr "--heads"
 
 #. type: Plain text
 #: en/git-ls-remote.txt:34
-#, fuzzy, priority:100
+#, priority:100
 msgid "Limit to only refs/heads and refs/tags, respectively.  These options are _not_ mutually exclusive; when given both, references stored in refs/heads and refs/tags are displayed.  Note that `git ls-remote -h` used without anything else on the command line gives help, consistent with other git subcommands."
 msgstr "Limiter à refs/heads et refs/tags, respectivement.  Ces options ne s'excluent pas mutuellement ; si les deux sont données, les références stockées dans refs/heads et refs/tags sont affichées.  Notez que `git ls-remote -h` utilisé sans rien d'autre sur la ligne de commande donne de l'aide, comme les autres sous-commandes de git."
 
@@ -52665,14 +52661,7 @@ msgid ""
 "$ git commit -m 'Massive'       # commit fully tested changes\n"
 "$ git switch fixup-branch       # switch to another branch\n"
 "$ git stash pop                 # to finish work on the saved changes\n"
-msgstr ""
-"# ... travail, travail, travail ...\n"
-"$ git add --patch foo            # ajouter des modifications sans relation à l'index\n"
-"$ git stash push --keep-staged    # remiser toutes les autres modifications\n"
-"$ #... code, code, code, pour finir les modifications actuelles\n"
-"$ git commit -m 'Massive'     # valider une modification complètement testée\n"
-"$ git switch branch-correctif                  # basculer sur une autre branche\n"
-"$ git stash pop                 # pour terminer de travailler sur les modifications enregistrées\n"
+msgstr "# ... travail, travail, travail ...\n$ git add --patch foo            # ajouter des modifications sans relation à l'index\n$ git stash push --keep-staged    # remiser toutes les autres modifications\n$ #... code, code, code, pour finir les modifications actuelles\n$ git commit -m 'Massive'     # valider une modification complètement testée\n$ git switch branche-correctif                  # basculer sur une autre branche\n$ git stash pop                 # pour terminer de travailler sur les modifications enregistrées\n"
 
 #. type: Labeled list
 #: en/git-stash.txt:375
