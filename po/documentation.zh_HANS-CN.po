@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-08-05 19:25+0200\nPO-Revision-Date: 2023-08-12 03:23+0000\nLast-Translator: 纪华裕 <8042833@qq.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.0-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-08-05 19:25+0200\nPO-Revision-Date: 2023-08-12 03:23+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.0-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:772 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:146 en/git-status.txt:31
@@ -43995,7 +43995,7 @@ msgstr "使用这个标记的情况可能很少，因为你只需启动交互式
 #: en/git-rebase.txt:330
 #, priority:100
 msgid "For commits which do not start empty but become empty after rebasing, see the `--empty` flag."
-msgstr ""
+msgstr "如果提交开始时不是空的，但重定向后变成空的，参阅 `--empty` 标志。"
 
 #. type: Labeled list
 #: en/git-rebase.txt:333
@@ -44013,49 +44013,49 @@ msgstr "--no-reapply-cherry-picks"
 #: en/git-rebase.txt:340
 #, priority:100
 msgid "Reapply all clean cherry-picks of any upstream commit instead of preemptively dropping them. (If these commits then become empty after rebasing, because they contain a subset of already upstream changes, the behavior towards them is controlled by the `--empty` flag.)"
-msgstr ""
+msgstr "重新应用任何上游提交中所有干净的拣选，而不是先发制人地丢弃它们。(如果这些提交在重排后成为空提交，因为它们包含了上游修改的子集，则对它们的行为由 `--empty` 标志控制）。"
 
 #. type: Plain text
 #: en/git-rebase.txt:349
 #, priority:100
 msgid "In the absence of `--keep-base` (or if `--no-reapply-cherry-picks` is given), these commits will be automatically dropped.  Because this necessitates reading all upstream commits, this can be expensive in repositories with a large number of upstream commits that need to be read. When using the 'merge' backend, warnings will be issued for each dropped commit (unless `--quiet` is given). Advice will also be issued unless `advice.skippedCherryPicks` is set to false (see linkgit:git-config[1])."
-msgstr ""
+msgstr "如果没有 `--keep-base`（或给出了 `--no-reapply-cherry-picks`），这些提交将被自动放弃。 由于这需要读取所有上游提交，对于需要读取大量上游提交的仓库来说，代价可能会很高。使用 'merge' 后端时，每次丢弃提交都会发出警告（除非给出 `--quiet`）。除非将 `advice.skippedCherryPicks` 设为 false，否则也会发出警告（参见 linkgit:git-config[1]）。"
 
 #. type: Plain text
 #: en/git-rebase.txt:352
 #, priority:100
 msgid "`--reapply-cherry-picks` allows rebase to forgo reading all upstream commits, potentially improving performance."
-msgstr ""
+msgstr "`--reapply-cherry-picks` 允许变基操作放弃读取所有上游提交，从而可能提高性能。"
 
 #. type: Plain text
 #: en/git-rebase.txt:360
 #, priority:100
 msgid "No-op.  Rebasing commits with an empty message used to fail and this option would override that behavior, allowing commits with empty messages to be rebased.  Now commits with an empty message do not cause rebasing to halt."
-msgstr ""
+msgstr "无操作。 过去，重写带空信息的提交会失败，而该选项会覆盖这一行为，允许重写带空信息的提交。 现在，带空信息的提交不会导致重定向失败。"
 
 #. type: Plain text
 #: en/git-rebase.txt:366
 #, priority:100
 msgid "Using merging strategies to rebase (default)."
-msgstr ""
+msgstr "使用合并策略重定向（默认）。"
 
 #. type: Plain text
 #: en/git-rebase.txt:372
 #, priority:100
 msgid "Note that a rebase merge works by replaying each commit from the working branch on top of the `<upstream>` branch.  Because of this, when a merge conflict happens, the side reported as 'ours' is the so-far rebased series, starting with `<upstream>`, and 'theirs' is the working branch.  In other words, the sides are swapped."
-msgstr ""
+msgstr "请注意，变基合并是通过在 `<上游>` 分支上重放工作分支的每次提交来实现的。 因此，当发生合并冲突时，被报告为 'ours' 的一方是迄今为止以 `<上游>` 为起点的重定向系列，而 'theirs' 则是工作分支。 换句话说，双方是对调的。"
 
 #. type: Plain text
 #: en/git-rebase.txt:379
 #, priority:100
 msgid "Use the given merge strategy, instead of the default `ort`.  This implies `--merge`."
-msgstr ""
+msgstr "使用给定的合并策略，而不是默认的 `ort`。暗指 `--merge`。"
 
 #. type: Plain text
 #: en/git-rebase.txt:384
 #, priority:100
 msgid "Because `git rebase` replays each commit from the working branch on top of the `<upstream>` branch using the given strategy, using the `ours` strategy simply empties all patches from the `<branch>`, which makes little sense."
-msgstr ""
+msgstr "由于 `git rebase` 会使用给定的策略在 `<上游>` 分支之上重复工作分支的每次提交，因此使用 `ours` 策略只会清空 `<分支>` 中的所有补丁，这没有什么意义。"
 
 #. type: Labeled list
 #: en/git-rebase.txt:387
@@ -44073,7 +44073,7 @@ msgstr "--strategy-option=<strategy-option>"
 #: en/git-rebase.txt:393
 #, priority:100
 msgid "Pass the <strategy-option> through to the merge strategy.  This implies `--merge` and, if no strategy has been specified, `-s ort`.  Note the reversal of 'ours' and 'theirs' as noted above for the `-m` option."
-msgstr ""
+msgstr "将 <策略选项> 传递给合并策略。 这意味着 `--merge`，如果没有指定策略，则是 `--s ort`。 请注意 'ours' 和 'theirs' 的颠倒，就像上面的 `-m`选项一样。"
 
 #. type: Plain text
 #: en/git-rebase.txt:410
@@ -44091,19 +44091,19 @@ msgstr "安静。意味着 --no-stat"
 #: en/git-rebase.txt:418
 #, priority:100
 msgid "Show a diffstat of what changed upstream since the last rebase. The diffstat is also controlled by the configuration option rebase.stat."
-msgstr ""
+msgstr "显示上次变基后上游变化的差异状态。差异状态也由配置选项 rebase.stat 控制。"
 
 #. type: Plain text
 #: en/git-rebase.txt:422
 #, priority:100
 msgid "Do not show a diffstat as part of the rebase process."
-msgstr ""
+msgstr "不要将差异状态作为变基过程的一部分。"
 
 #. type: Plain text
 #: en/git-rebase.txt:425
 #, priority:100
 msgid "This option bypasses the pre-rebase hook.  See also linkgit:githooks[5]."
-msgstr ""
+msgstr "该选项会绕过 pre-rebase 钩子。 另请参阅 linkgit:githooks[5]。"
 
 #. type: Labeled list
 #: en/git-rebase.txt:426 en/git-rev-parse.txt:98 en/git-show-ref.txt:59 en/git-tag.txt:88
@@ -44115,13 +44115,13 @@ msgstr "--verify"
 #: en/git-rebase.txt:429
 #, priority:100
 msgid "Allows the pre-rebase hook to run, which is the default.  This option can be used to override `--no-verify`.  See also linkgit:githooks[5]."
-msgstr ""
+msgstr "允许运行 pre-rebase 钩子，这是默认选项。 该选项可用于覆盖 `--no-verify`。 另请参见 linkgit:githooks[5]。"
 
 #. type: Plain text
 #: en/git-rebase.txt:435
 #, priority:100
 msgid "Ensure at least `<n>` lines of surrounding context match before and after each change.  When fewer lines of surrounding context exist they all must match.  By default no context is ever ignored.  Implies `--apply`."
-msgstr ""
+msgstr "确保每次更改前后至少有 `<n>` 行周围上下文匹配。 如果周围的上下文行数较少，则必须全部匹配。 默认情况下，不会忽略任何上下文。 暗指 `--apply`。"
 
 #. type: Labeled list
 #: en/git-rebase.txt:438 en/merge-options.txt:47 en/merge-options.txt:62
@@ -44139,13 +44139,13 @@ msgstr "--force-rebase"
 #: en/git-rebase.txt:444
 #, priority:100
 msgid "Individually replay all rebased commits instead of fast-forwarding over the unchanged ones.  This ensures that the entire history of the rebased branch is composed of new commits."
-msgstr ""
+msgstr "单独重放所有重定向的提交，而不是快进不变的提交。 这样就能确保重建分支的整个历史都是由新提交组成的。"
 
 #. type: Plain text
 #: en/git-rebase.txt:450
 #, priority:100
 msgid "You may find this helpful after reverting a topic branch merge, as this option recreates the topic branch with fresh commits so it can be remerged successfully without needing to \"revert the reversion\" (see the link:howto/revert-a-faulty-merge.html[revert-a-faulty-merge How-To] for details)."
-msgstr ""
+msgstr "在还原主题分支合并后，你可能会发现这很有帮助，因为该选项会用新提交的内容重新创建主题分支，这样就可以成功地重新合并，而无需 “恢复原状”（详见link:howto/revert-a-faulty-merge.html[如何还原故障合并]）。"
 
 #. type: Labeled list
 #: en/git-rebase.txt:452
@@ -44157,13 +44157,13 @@ msgstr "--no-fork-point"
 #: en/git-rebase.txt:456
 #, priority:100
 msgid "Use reflog to find a better common ancestor between `<upstream>` and `<branch>` when calculating which commits have been introduced by `<branch>`."
-msgstr ""
+msgstr "在计算哪些提交由 `<分支>` 引入时，使用引用日志在 `<上游仓库>` 和 `<分支>` 之间找到更好的共同祖先。"
 
 #. type: Plain text
 #: en/git-rebase.txt:462
 #, priority:100
 msgid "When `--fork-point` is active, 'fork_point' will be used instead of `<upstream>` to calculate the set of commits to rebase, where 'fork_point' is the result of `git merge-base --fork-point <upstream> <branch>` command (see linkgit:git-merge-base[1]).  If 'fork_point' ends up being empty, the `<upstream>` will be used as a fallback."
-msgstr ""
+msgstr "当启用 `--fork-point` 时，将使用 'fork_point' 而不是 `<上游仓库>` 来计算要重置的提交集，其中 'fork_point' 是 `git merge-base --fork-point <上游仓库> <分支>` 命令的结果（参见 linkgit:git-merge-base[1]）。 如果 'fork_point' 最终为空，`<上游仓库>` 将作为备用。"
 
 #. type: Plain text
 #: en/git-rebase.txt:466
