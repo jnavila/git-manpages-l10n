@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-08-05 19:25+0200\nPO-Revision-Date: 2023-08-12 03:23+0000\nLast-Translator: taotieren <admin@taotieren.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.0-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-08-05 19:25+0200\nPO-Revision-Date: 2023-08-12 07:46+0000\nLast-Translator: 纪华裕 <8042833@qq.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.0-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:772 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:146 en/git-status.txt:31
@@ -33640,7 +33640,7 @@ msgstr "--decorate-refs=<pattern>"
 
 #. type: Labeled list
 #: en/git-log.txt:47
-#, fuzzy, no-wrap, priority:260
+#, no-wrap, priority:260
 msgid "--decorate-refs-exclude=<pattern>"
 msgstr "--decorate-refs-exclude=<pattern>"
 
@@ -33648,13 +33648,13 @@ msgstr "--decorate-refs-exclude=<pattern>"
 #: en/git-log.txt:54
 #, priority:260
 msgid "For each candidate reference, do not use it for decoration if it matches any patterns given to `--decorate-refs-exclude` or if it doesn't match any of the patterns given to `--decorate-refs`. The `log.excludeDecoration` config option allows excluding refs from the decorations, but an explicit `--decorate-refs` pattern will override a match in `log.excludeDecoration`."
-msgstr "对于每个候选者，如果它与`--decorate-refs-exclude`给出的任何模式相匹配，或者它与`--decorate-refs`给出的任何模式不匹配，就不要将其用于装饰。`log.excludeDecoration`配置选项允许从装饰中排除参考文献，但明确的`--decorate-refs`模式将覆盖`log.excludeDecoration`的匹配。"
+msgstr "对于每个候选引用，在以下情况下不要将其用于装饰（decorate）：若它与`--decorate-refs-exclude`指定的任何模式匹配，或者若它不与`--decorate-refs`指定的任何模式匹配。配置选项`log.excludeDecoration`允许从装饰中排除引用，但是在`log.excludeDecoration`中的匹配项将被`--decorate-refs`模式中的显式指定所覆盖。"
 
 #. type: Plain text
 #: en/git-log.txt:58
 #, priority:260
 msgid "If none of these options or config settings are given, then references are used as decoration if they match `HEAD`, `refs/heads/`, `refs/remotes/`, `refs/stash/`, or `refs/tags/`."
-msgstr "如果没有给出这些选项或配置设置，那么如果引用与`HEAD`、`refs/heads/`、`refs/remotes/`、`refs/stash/`或`refs/tags/`相匹配，则被用作装饰引用。"
+msgstr "如果没有给出这些选项或配置设置中的任何一个，那么如果引用与 `HEAD` 、`refs/heads/`、`refs/remotes/` 、`refs/stash/` 或 `refs/tags/` 匹配，则使用引用作为装饰。"
 
 #. type: Labeled list
 #: en/git-log.txt:59
@@ -33666,7 +33666,7 @@ msgstr "--clear-decorations"
 #: en/git-log.txt:65
 #, priority:260
 msgid "When specified, this option clears all previous `--decorate-refs` or `--decorate-refs-exclude` options and relaxes the default decoration filter to include all references. This option is assumed if the config value `log.initialDecorationSet` is set to `all`."
-msgstr "当指定时，这个选项会清除之前所有的`--decorate-refs`或`--decorate-refs-exclude`选项，并释放默认的装饰过滤器，包括所有的引用。该选项假设配置值`log.initialDecorationSet`被设置为`all`。"
+msgstr "当指定了该选项时，它会清除所有先前的 `--decorate-refs` 或 `--decorate-refs-exclude` 选项，并放宽默认的装饰过滤器以包括所有引用。如果配置值 `log.initialDecorationSet` 设置为 `all`，则假定使用此选项。"
 
 #. type: Labeled list
 #: en/git-log.txt:66
@@ -33678,13 +33678,13 @@ msgstr "--source"
 #: en/git-log.txt:69
 #, priority:260
 msgid "Print out the ref name given on the command line by which each commit was reached."
-msgstr "打印出命令行上给出的每一次提交所依据的参考名称。"
+msgstr "打印出通过命令行给定的引用名称，以便触及每个提交。"
 
 #. type: Plain text
 #: en/git-log.txt:75
 #, priority:260
 msgid "Use mailmap file to map author and committer names and email addresses to canonical real names and email addresses. See linkgit:git-shortlog[1]."
-msgstr "使用 mailmap 文件将作者和提交者的名字和电子邮件地址映射为规范的真实姓名和电子邮件地址。参见 linkgit:git-shortlog[1]。"
+msgstr "使用 mailmap 文件将作者和提交者的名称和电子邮件地址映射到规范的真实名称和电子邮件地址。请参阅 linkgit:git-shortlog[1]。"
 
 #. type: Labeled list
 #: en/git-log.txt:76
@@ -33696,13 +33696,13 @@ msgstr "--full-diff"
 #: en/git-log.txt:82
 #, ignore-ellipsis, priority:260
 msgid "Without this flag, `git log -p <path>...` shows commits that touch the specified paths, and diffs about the same specified paths.  With this, the full diff is shown for commits that touch the specified paths; this means that \"<path>...\" limits only commits, and doesn't limit diff for those commits."
-msgstr "没有这个标志，`git log -p <path>...`会显示触及指定路径的提交，以及关于相同指定路径的差异。  有了这个，就会显示触及指定路径的提交的全部差异；这意味着\"<path>... \"只限制提交，而不限制这些提交的差异。"
+msgstr "如果不使用此标志， `git log -p <path>...` 将显示与指定路径相关的提交，并显示关于相同指定路径的差异。使用此标志，将显示与指定路径相关的提交的完整差异；这意味着 \"<path>...\" 将仅限定提交，并不限定这些提交的差异。"
 
 #. type: Plain text
 #: en/git-log.txt:85
 #, priority:260
 msgid "Note that this affects all diff-based output types, e.g. those produced by `--stat`, etc."
-msgstr "请注意，这将影响所有基于diff的输出类型，例如那些由`--stat`产生的输出。"
+msgstr "请注意，这会影响所有基于差异的输出类型。例如：由 `--stat` 等产生的输出。"
 
 #. type: Labeled list
 #: en/git-log.txt:86
@@ -33714,27 +33714,25 @@ msgstr "--log-size"
 #: en/git-log.txt:91
 #, priority:260
 msgid "Include a line ``log size <number>'' in the output for each commit, where <number> is the length of that commit's message in bytes.  Intended to speed up tools that read log messages from `git log` output by allowing them to allocate space in advance."
-msgstr "在每次提交的输出中包括一行\"`日志大小<number>'\"，其中<number>是该提交信息的长度，单位为字节。  旨在加快从`git log`输出中读取日志信息的工具的速度，允许它们提前分配空间。"
+msgstr "在每个提交的输出中包含一行 ``log size <number>\"\" ，其中 <number> 是该提交消息的字节长度。旨在通过允许工具预先分配空间，加快从 `git log` 输出中读取日志消息的工具的速度。"
 
 #. type: Labeled list
 #: en/git-log.txt:94 en/git-shortlog.txt:100
-#, fuzzy, no-wrap, priority:260
-#| msgid "<revision range>"
+#, no-wrap, priority:260
 msgid "<revision-range>"
-msgstr "<修订版范围>。"
+msgstr "<revision-range>"
 
 #. type: Plain text
 #: en/git-log.txt:102
-#, fuzzy, priority:260
-#| msgid "Show only commits in the specified revision range.  When no <revision range> is specified, it defaults to `HEAD` (i.e. the whole history leading to the current commit).  `origin..HEAD` specifies all the commits reachable from the current commit (i.e. `HEAD`), but not from `origin`. For a complete list of ways to spell <revision range>, see the 'Specifying Ranges' section of linkgit:gitrevisions[7]."
+#, priority:260
 msgid "Show only commits in the specified revision range.  When no <revision-range> is specified, it defaults to `HEAD` (i.e. the whole history leading to the current commit).  `origin..HEAD` specifies all the commits reachable from the current commit (i.e. `HEAD`), but not from `origin`. For a complete list of ways to spell <revision-range>, see the 'Specifying Ranges' section of linkgit:gitrevisions[7]."
-msgstr "只显示指定修订范围内的提交。  当没有指定<修订范围>时，默认为`HEAD`（即导致当前提交的整个历史）。  `origin...HEAD`指定从当前提交（即`HEAD`）开始的所有提交，但不是从`origin`开始。关于<revision range>的完整拼写方式，请参见linkgit:gitrevisions[7]的 \"指定范围 \"部分。"
+msgstr "仅显示指定修订范围内的提交。当没有指定 <revision-range> 时，默认为 `HEAD`（即导致当前提交的整个历史记录）。`origin..HEAD` 指定从当前提交（即 `HEAD` ）可达的所有提交，但不包括从 `origin` 可达的提交。有关拼写 <revision-range> 的完整列表，请参阅 linkgit:gitrevisions[7] 的 \"Specifying Ranges\" 部分。"
 
 #. type: Labeled list
 #: en/git-log.txt:103 en/git-shortlog.txt:109
 #, ignore-ellipsis, no-wrap, priority:260
 msgid "[--] <path>..."
-msgstr "[--] <路径>..."
+msgstr "[--] <path>..."
 
 #. type: Plain text
 #: en/git-log.txt:108
