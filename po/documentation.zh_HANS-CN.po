@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-08-05 19:25+0200\nPO-Revision-Date: 2023-08-12 07:46+0000\nLast-Translator: 纪华裕 <8042833@qq.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.0-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-08-05 19:25+0200\nPO-Revision-Date: 2023-08-17 10:45+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.0-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:772 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:146 en/git-status.txt:31
@@ -44215,7 +44215,7 @@ msgstr "这个标志被传递给应用补丁的 `git apply` 程序（参阅 link
 #: en/git-rebase.txt:502
 #, priority:100
 msgid "Instead of using the current time as the committer date, use the author date of the commit being rebased as the committer date. This option implies `--force-rebase`."
-msgstr ""
+msgstr "不使用当前时间作为提交者日期，而是使用被重定向的提交的作者日期作为提交者日期。该选项暗含 `--force-rebase` 选项。"
 
 #. type: Labeled list
 #: en/git-rebase.txt:504
@@ -44227,25 +44227,25 @@ msgstr "--reset-author-date"
 #: en/git-rebase.txt:508
 #, priority:100
 msgid "Instead of using the author date of the original commit, use the current time as the\tauthor date of the rebased commit.  This option implies `--force-rebase`."
-msgstr ""
+msgstr "不使用原始提交的作者日期，而使用当前时间作为重建提交的作者日期。 此选项暗含 `--force-rebase` 选项。"
 
 #. type: Plain text
 #: en/git-rebase.txt:515
 #, priority:100
 msgid "Add a `Signed-off-by` trailer to all the rebased commits. Note that if `--interactive` is given then only commits marked to be picked, edited or reworded will have the trailer added."
-msgstr ""
+msgstr "在所有重写的提交中添加 `Signed-off-by` 尾注。请注意，如果给定了 `--interactive`，则只有标记为被选中、编辑或重写的提交才会添加尾注。"
 
 #. type: Plain text
 #: en/git-rebase.txt:523
 #, priority:100
 msgid "Make a list of the commits which are about to be rebased.  Let the user edit that list before rebasing.  This mode can also be used to split commits (see SPLITTING COMMITS below)."
-msgstr ""
+msgstr "列出即将重写的提交列表。 让用户在重写前编辑该列表。 这种模式也可用于拆分提交（见下文的拆分提交）。"
 
 #. type: Plain text
 #: en/git-rebase.txt:527
 #, priority:100
 msgid "The commit list format can be changed by setting the configuration option rebase.instructionFormat.  A customized instruction format will automatically have the long commit hash prepended to the format."
-msgstr ""
+msgstr "提交列表格式可通过设置配置选项 rebase.instructionFormat 进行更改。 自定义的指令格式会自动在格式前加上长提交哈希值。"
 
 #. type: Labeled list
 #: en/git-rebase.txt:531
@@ -44263,19 +44263,19 @@ msgstr "--no-rebase-merges"
 #: en/git-rebase.txt:542
 #, priority:100
 msgid "By default, a rebase will simply drop merge commits from the todo list, and put the rebased commits into a single, linear branch.  With `--rebase-merges`, the rebase will instead try to preserve the branching structure within the commits that are to be rebased, by recreating the merge commits. Any resolved merge conflicts or manual amendments in these merge commits will have to be resolved/re-applied manually. `--no-rebase-merges` can be used to countermand both the `rebase.rebaseMerges` config option and a previous `--rebase-merges`."
-msgstr ""
+msgstr "默认情况下，变基操作会简单地从待办事项列表中删除合并提交，并将被重置的提交放入一个单一的线性分支中。 使用 `--rebase-merges` 后，变基操作会通过重新创建合并提交，尝试保留要被重置的提交中的分支结构。在这些合并提交中，任何已解决的合并冲突或手动修正都必须手动解决/重新应用。`--no--rebase-merges` 可以用来抵消 `rebase.rebaseMerges` 配置选项和之前的 `--rebase-merges 选项。"
 
 #. type: Plain text
 #: en/git-rebase.txt:551
 #, priority:100
 msgid "When rebasing merges, there are two modes: `rebase-cousins` and `no-rebase-cousins`. If the mode is not specified, it defaults to `no-rebase-cousins`. In `no-rebase-cousins` mode, commits which do not have `<upstream>` as direct ancestor will keep their original branch point, i.e.  commits that would be excluded by linkgit:git-log[1]'s `--ancestry-path` option will keep their original ancestry by default. In `rebase-cousins` mode, such commits are instead rebased onto `<upstream>` (or `<onto>`, if specified)."
-msgstr ""
+msgstr "重定向合并时，有两种模式： `rebase-cousins` 和 `no-rebase-cousins`。如果未指定模式，则默认为 `no-rebase-cousins`。在 `no-rebase-cousins` 模式下，没有 `<上游仓库>` 作为直接祖先的提交将保留其原始分支点，也就是说，被 linkgit:git-log[1] 的 `--ancestry-path` 选项排除在外的提交将默认保留其原始祖先。在 `rebase-cousins` 模式下，此类提交会被重定向到 `<上游仓库>`（或是`<onto>`，如果指定了）。"
 
 #. type: Plain text
 #: en/git-rebase.txt:555
 #, ignore-ellipsis, priority:100
 msgid "It is currently only possible to recreate the merge commits using the `ort` merge strategy; different merge strategies can be used only via explicit `exec git merge -s <strategy> [...]` commands."
-msgstr ""
+msgstr "目前只能使用 `ort` 合并策略重新创建合并提交；只有通过明确的 `exec git merge -s <strategy> [...]` 命令才能使用不同的合并策略。"
 
 #. type: Plain text
 #: en/git-rebase.txt:557
