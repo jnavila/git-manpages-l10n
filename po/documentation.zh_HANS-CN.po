@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-08-05 19:25+0200\nPO-Revision-Date: 2023-09-27 11:02+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.1-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-08-05 19:25+0200\nPO-Revision-Date: 2023-09-28 12:01+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.1-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:772 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:146 en/git-status.txt:31
@@ -57093,7 +57093,7 @@ msgstr "为简单起见并与 Subversion 互操作，建议所有 'git svn' 用�
 #: en/git-svn.txt:1012
 #, priority:100
 msgid "Running 'git merge' or 'git pull' is NOT recommended on a branch you plan to 'dcommit' from because Subversion users cannot see any merges you've made.  Furthermore, if you merge or pull from a Git branch that is a mirror of an SVN branch, 'dcommit' may commit to the wrong branch."
-msgstr ""
+msgstr "不建议在计划 'dcommit' 的分支上运行 'git merge' 或 'git pull'，因为 Subversion 用户无法看到你所做的任何合并。 此外，如果您从 SVN 分支的镜像 Git 分支合并或拉取，'dcommit' 可能会提交到错误的分支。"
 
 #. type: Plain text
 #: en/git-svn.txt:1015
@@ -57105,43 +57105,43 @@ msgstr ""
 #: en/git-svn.txt:1017
 #, no-wrap, priority:100
 msgid "git log --grep=^git-svn-id: --first-parent -1\n"
-msgstr ""
+msgstr "git log --grep=^git-svn-id: --first-parent -1\n"
 
 #. type: Plain text
 #: en/git-svn.txt:1022
 #, priority:100
 msgid "You 'must' therefore ensure that the most recent commit of the branch you want to dcommit to is the 'first' parent of the merge.  Chaos will ensue otherwise, especially if the first parent is an older commit on the same SVN branch."
-msgstr ""
+msgstr "因此，您 “必须” 确保您要提交到的分支的最新提交是合并的 'first' 父提交。 否则就会出现混乱，尤其是当第一父提交是同一 SVN 分支上的旧提交时。"
 
 #. type: Plain text
 #: en/git-svn.txt:1027
 #, priority:100
 msgid "'git clone' does not clone branches under the refs/remotes/ hierarchy or any 'git svn' metadata, or config.  So repositories created and managed with using 'git svn' should use 'rsync' for cloning, if cloning is to be done at all."
-msgstr ""
+msgstr "'git clone' 不会克隆 refs/remotes/ 层次结构下的分支，也不会克隆任何 'git svn' 元数据或配置。 因此，如果要克隆，使用 'git svn' 创建和管理的仓库应该使用 'rsync' 来克隆。"
 
 #. type: Plain text
 #: en/git-svn.txt:1032
 #, priority:100
 msgid "Since 'dcommit' uses rebase internally, any Git branches you 'git push' to before 'dcommit' on will require forcing an overwrite of the existing ref on the remote repository.  This is generally considered bad practice, see the linkgit:git-push[1] documentation for details."
-msgstr ""
+msgstr "由于 'dcommit' 在内部使用变基操作，因此在 'dcommit' 之前 'git push' 的任何 Git 分支都需要强制覆盖远程仓库中的现有引用。 这通常被认为是不好的做法，详见 linkgit:git-push[1] 文档。"
 
 #. type: Plain text
 #: en/git-svn.txt:1037
 #, priority:100
 msgid "Do not use the --amend option of linkgit:git-commit[1] on a change you've already dcommitted.  It is considered bad practice to --amend commits you've already pushed to a remote repository for other users, and dcommit with SVN is analogous to that."
-msgstr ""
+msgstr "不要在已经提交的变更上使用 linkgit:git-commit[1] 的 --amend 选项。 为其他用户修改已推送到远程仓库的提交被认为是不好的做法，SVN 中的 dcommit 就类似于这种做法。"
 
 #. type: Plain text
 #: en/git-svn.txt:1052
 #, priority:100
 msgid "When cloning an SVN repository, if none of the options for describing the repository layout is used (--trunk, --tags, --branches, --stdlayout), 'git svn clone' will create a Git repository with completely linear history, where branches and tags appear as separate directories in the working copy.  While this is the easiest way to get a copy of a complete repository, for projects with many branches it will lead to a working copy many times larger than just the trunk. Thus for projects using the standard directory structure (trunk/branches/tags), it is recommended to clone with option `--stdlayout`. If the project uses a non-standard structure, and/or if branches and tags are not required, it is easiest to only clone one directory (typically trunk), without giving any repository layout options.  If the full history with branches and tags is required, the options `--trunk` / `--branches` / `--tags` must be used."
-msgstr ""
+msgstr "克隆 SVN 仓库时，如果没有使用描述仓库布局的选项（--trunk、--tags、--branches、--stdlayout），'git svn clone' 将创建一个完全线性历史的 Git 仓库，其中分支和标签在工作副本中显示为单独的目录。 虽然这是获取完整版本库副本的最简单方法，但对于有很多分支的项目来说，这会导致工作副本比主干大很多倍。因此，对于使用标准目录结构（trunk/branches/tags）的项目，建议克隆时使用选项 `--stdlayout`。如果项目使用非标准结构，和/或不需要分支和标签，最简单的做法是只克隆一个目录（通常是主干），而不提供任何仓库布局选项。 如果需要包含分支和标签的完整历史，则必须使用选项 `-trunk` / `-branches` / `-tags`。"
 
 #. type: Plain text
 #: en/git-svn.txt:1059
 #, priority:100
 msgid "When using multiple --branches or --tags, 'git svn' does not automatically handle name collisions (for example, if two branches from different paths have the same name, or if a branch and a tag have the same name).  In these cases, use 'init' to set up your Git repository then, before your first 'fetch', edit the $GIT_DIR/config file so that the branches and tags are associated with different name spaces.  For example:"
-msgstr ""
+msgstr "当使用多个 --branches 或 --tags 时，'git svn' 不会自动处理名称碰撞（例如，来自不同路径的两个分支具有相同的名称，或者一个分支和一个标签具有相同的名称）。 在这种情况下，使用 'init' 设置 Git 仓库，然后在第一次 'fetch' 之前，编辑 $GIT_DIR/config 文件，将分支和标签关联到不同的名称空间。 例如:"
 
 #. type: Plain text
 #: en/git-svn.txt:1062
@@ -57149,13 +57149,13 @@ msgstr ""
 msgid ""
 "\tbranches = stable/*:refs/remotes/svn/stable/*\n"
 "\tbranches = debug/*:refs/remotes/svn/debug/*\n"
-msgstr ""
+msgstr "\tbranches = stable/*:refs/remotes/svn/stable/*\n\tbranches = debug/*:refs/remotes/svn/debug/*\n"
 
 #. type: Plain text
 #: en/git-svn.txt:1073
 #, priority:100
 msgid "'git svn' stores [svn-remote] configuration information in the repository $GIT_DIR/config file.  It is similar the core Git [remote] sections except 'fetch' keys do not accept glob arguments; but they are instead handled by the 'branches' and 'tags' keys.  Since some SVN repositories are oddly configured with multiple projects glob expansions such those listed below are allowed:"
-msgstr ""
+msgstr "'git svn' 在版本库 $GIT_DIR/config 文件中存储 [svn-remote] 配置信息。 除了 'fetch' 键不接受通配符参数外，它与 Git 核心的 [remote] 部分类似，但它们由 'branch' 和 'tags' 键处理。 由于有些 SVN 仓库的配置比较奇怪，有多个项目，因此允许使用下面列出的通配符扩展："
 
 #. type: delimited block -
 #: en/git-svn.txt:1082
@@ -57187,43 +57187,43 @@ msgid ""
 "independent path component (surrounded by `/` or EOL).   This\n"
 "type of configuration is not automatically created by 'init' and\n"
 "should be manually entered with a text-editor or using 'git config'.\n"
-msgstr ""
+msgstr "请记住，本地引用中的 `*`（星号）通配符（位于 `:` 右边）*必须*是最右边的路径组件；*必须*是最右边的路径组件。\n(`:`右边）的通配符必须是最右边的路径组件；\n但是，远程通配符可以是任何地方的通配符，只要它是一个独立的路径组件（由 `:` 包围）。\n但远程通配符可以是任何位置，只要它是一个独立的路径组件（由 `/` 或 EOL 包围）。  这种\n类型的配置不会由 \"init \"自动创建，而\n应使用文本编辑器或 'git config' 手动输入。\n"
 
 #. type: Plain text
 #: en/git-svn.txt:1092
 #, priority:100
 msgid "Also note that only one asterisk is allowed per word. For example:"
-msgstr ""
+msgstr "另请注意，每个单词只允许使用一个星号。例如："
 
 #. type: Plain text
 #: en/git-svn.txt:1094
 #, no-wrap, priority:100
 msgid "\tbranches = branches/re*se:refs/remotes/project-a/branches/*\n"
-msgstr ""
+msgstr "\tbranches = branches/re*se:refs/remotes/project-a/branches/*\n"
 
 #. type: Plain text
 #: en/git-svn.txt:1096
 #, priority:100
 msgid "will match branches 'release', 'rese', 're123se', however"
-msgstr ""
+msgstr "将匹配分支 'release'、'rese'、're123se'，但"
 
 #. type: Plain text
 #: en/git-svn.txt:1098
 #, no-wrap, priority:100
 msgid "\tbranches = branches/re*s*e:refs/remotes/project-a/branches/*\n"
-msgstr ""
+msgstr "\tbranches = branches/re*s*e:refs/remotes/project-a/branches/*\n"
 
 #. type: Plain text
 #: en/git-svn.txt:1100
 #, priority:100
 msgid "will produce an error."
-msgstr ""
+msgstr "会产生错误。"
 
 #. type: Plain text
 #: en/git-svn.txt:1103
 #, priority:100
 msgid "It is also possible to fetch a subset of branches or tags by using a comma-separated list of names within braces. For example:"
-msgstr ""
+msgstr "也可以使用大括号中以逗号分隔的名称列表来获取分支或标记的子集。例如："
 
 #. type: delimited block -
 #: en/git-svn.txt:1110
@@ -57245,7 +57245,7 @@ msgstr ""
 #: en/git-svn.txt:1113
 #, priority:100
 msgid "Multiple fetch, branches, and tags keys are supported:"
-msgstr ""
+msgstr "支持多个提取、分支和标记键："
 
 #. type: delimited block -
 #: en/git-svn.txt:1122
@@ -57271,7 +57271,7 @@ msgstr ""
 #: en/git-svn.txt:1126
 #, priority:100
 msgid "Creating a branch in such a configuration requires disambiguating which location to use using the -d or --destination flag:"
-msgstr ""
+msgstr "在这种配置下创建分支，需要使用 -d 或 --destination 标志来明确使用哪个位置："
 
 #. type: delimited block -
 #: en/git-svn.txt:1129
@@ -57283,19 +57283,19 @@ msgstr "$ git svn branch -d branches/server release-2-3-0\n"
 #: en/git-svn.txt:1135
 #, priority:100
 msgid "Note that git-svn keeps track of the highest revision in which a branch or tag has appeared. If the subset of branches or tags is changed after fetching, then $GIT_DIR/svn/.metadata must be manually edited to remove (or reset) branches-maxRev and/or tags-maxRev as appropriate."
-msgstr ""
+msgstr "请注意，git-svn 会记录分支或标签出现过的最高修订版本。如果分支或标签的子集在获取后发生了变化，则必须手动编辑 $GIT_DIR/svn/.metadata，以根据情况移除（或重置）分支-最高修订和/或标签-最高修订。"
 
 #. type: Labeled list
 #: en/git-svn.txt:1138
 #, no-wrap, priority:100
 msgid "$GIT_DIR/svn/\\**/.rev_map.*"
-msgstr ""
+msgstr "$GIT_DIR/svn/\\**/.rev_map.*"
 
 #. type: Plain text
 #: en/git-svn.txt:1144
 #, priority:100
 msgid "Mapping between Subversion revision numbers and Git commit names.  In a repository where the noMetadata option is not set, this can be rebuilt from the git-svn-id: lines that are at the end of every commit (see the 'svn.noMetadata' section above for details)."
-msgstr ""
+msgstr "Subversion 版本号与 Git 提交名之间的映射。 在未设置 noMetadata 选项的仓库中，可以根据每次提交末尾的 git-svn-id: 行重建该映射（详见上文 'svn.noMetadata' 部分）。"
 
 #. type: Plain text
 #: en/git-svn.txt:1148
@@ -57307,19 +57307,19 @@ msgstr "'git svn fetch' and 'git svn rebase' automatically update the rev_map if
 #: en/git-svn.txt:1154
 #, priority:100
 msgid "We ignore all SVN properties except svn:executable.  Any unhandled properties are logged to $GIT_DIR/svn/<refname>/unhandled.log"
-msgstr ""
+msgstr "我们会忽略除 svn:executable 之外的所有 SVN 属性。 任何未处理的属性都会记录到 $GIT_DIR/svn/<引用名>/unhandled.log 中"
 
 #. type: Plain text
 #: en/git-svn.txt:1161
 #, priority:100
 msgid "Renamed and copied directories are not detected by Git and hence not tracked when committing to SVN.  I do not plan on adding support for this as it's quite difficult and time-consuming to get working for all the possible corner cases (Git doesn't do it, either).  Committing renamed and copied files is fully supported if they're similar enough for Git to detect them."
-msgstr ""
+msgstr "重命名和复制的目录不会被 Git 检测到，因此在提交到 SVN 时也不会被跟踪。 我不打算添加这方面的支持，因为要在所有可能的情况下都能正常工作是相当困难和耗时的（Git 也做不到这一点）。 如果重命名和复制的文件足够相似，Git 可以检测到它们，那么我们就完全支持提交这些文件。"
 
 #. type: Plain text
 #: en/git-svn.txt:1167
 #, priority:100
 msgid "In SVN, it is possible (though discouraged) to commit changes to a tag (because a tag is just a directory copy, thus technically the same as a branch). When cloning an SVN repository, 'git svn' cannot know if such a commit to a tag will happen in the future. Thus it acts conservatively and imports all SVN tags as branches, prefixing the tag name with 'tags/'."
-msgstr ""
+msgstr "在 SVN 中，提交修改到标签是可能的（尽管不鼓励）（因为标签只是一个目录副本，因此在技术上与分支相同）。在克隆 SVN 仓库时，'git svn' 无法知道将来是否会发生对标签的提交。因此它会采取保守做法，将所有 SVN 标签作为分支导入，并在标签名称前加上 'tags/'。"
 
 #. type: Title =
 #: en/git-switch.txt:2
@@ -57331,7 +57331,7 @@ msgstr "git-switch(1)"
 #: en/git-switch.txt:7
 #, priority:100
 msgid "git-switch - Switch branches"
-msgstr ""
+msgstr "git-switch - 切换分支"
 
 #. type: Plain text
 #: en/git-switch.txt:15
@@ -57341,19 +57341,19 @@ msgid ""
 "'git switch' [<options>] --detach [<start-point>]\n"
 "'git switch' [<options>] (-c|-C) <new-branch> [<start-point>]\n"
 "'git switch' [<options>] --orphan <new-branch>\n"
-msgstr ""
+msgstr "'git switch' [<选项>] [--no-guess] <分支>\n'git switch' [<选项>] --detach [<起点>]\n'git switch' [<选项>] (-c|-C) <新分支> [<起点>]\n'git switch' [<选项>] --orphan <新分支>\n"
 
 #. type: Plain text
 #: en/git-switch.txt:21
 #, priority:100
 msgid "Switch to a specified branch. The working tree and the index are updated to match the branch. All new commits will be added to the tip of this branch."
-msgstr ""
+msgstr "切换到指定分支。工作区和索引会更新以匹配该分支。所有新提交的内容都会添加到该分支的顶端。"
 
 #. type: Plain text
 #: en/git-switch.txt:26
 #, priority:100
 msgid "Optionally a new branch could be created with either `-c`, `-C`, automatically from a remote branch of same name (see `--guess`), or detach the working tree from any branch with `--detach`, along with switching."
-msgstr ""
+msgstr "可选择使用 `-c`、`-C`，自动从同名的远程分支创建新分支（参见 `--guess`），或使用 `--detach`，从任何分支分离工作区，同时进行切换。"
 
 #. type: Plain text
 #: en/git-switch.txt:31
