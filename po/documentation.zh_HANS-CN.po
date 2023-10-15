@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-08-05 19:25+0200\nPO-Revision-Date: 2023-10-08 15:52+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.1-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-08-05 19:25+0200\nPO-Revision-Date: 2023-10-16 11:01+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.1-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:772 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:146 en/git-status.txt:31
@@ -18253,7 +18253,7 @@ msgstr "git-credential-cache--daemon(1)"
 #: en/git-credential-cache--daemon.txt:7
 #, priority:90
 msgid "git-credential-cache--daemon - Temporarily store user credentials in memory"
-msgstr ""
+msgstr "git-credential-cache--daemon - 在内存中临时存储用户证书"
 
 #. type: Plain text
 #: en/git-credential-cache--daemon.txt:12
@@ -18266,19 +18266,19 @@ msgstr "'git credential-cache{litdd}daemon' [--debug] <socket-path>\n"
 #: en/git-credential-cache--daemon.txt:18
 #, priority:90
 msgid "You probably don't want to invoke this command yourself; it is started automatically when you use linkgit:git-credential-cache[1]."
-msgstr ""
+msgstr "您可能不想自己调用这条命令；当您使用 linkgit:git-credential-cache[1] 时，它会自动启动。"
 
 #. type: Plain text
 #: en/git-credential-cache--daemon.txt:23
 #, priority:90
 msgid "This command listens on the Unix domain socket specified by `<socket-path>` for `git-credential-cache` clients. Clients may store and retrieve credentials. Each credential is held for a timeout specified by the client; once no credentials are held, the daemon exits."
-msgstr ""
+msgstr "此命令通过 `<套接字路径>` 指定的 Unix 域套接字监听 `git-credential-cache` 客户端。客户端可以存储和检索证书。每个凭据的保留时间由客户端指定；一旦没有凭据保留，守护进程就会退出。"
 
 #. type: Plain text
 #: en/git-credential-cache--daemon.txt:27
 #, priority:90
 msgid "If the `--debug` option is specified, the daemon does not close its stderr stream, and may output extra diagnostics to it even after it has begun listening for clients."
-msgstr ""
+msgstr "如果指定了 `--debug` 选项，守护进程不会关闭标准错误流，甚至在开始监听客户端后仍可能向其输出额外的诊断信息。"
 
 #. type: Title =
 #: en/git-credential-cache.txt:2
@@ -18296,19 +18296,19 @@ msgstr "git-credential-cache - Helper to temporarily store passwords in memory"
 #: en/git-credential-cache.txt:12
 #, no-wrap, priority:90
 msgid "git config credential.helper 'cache [<options>]'\n"
-msgstr ""
+msgstr "git config credential.helper 'cache [<多个选项>]'\n"
 
 #. type: Plain text
 #: en/git-credential-cache.txt:24
 #, priority:90
 msgid "This command caches credentials for use by future Git programs.  The stored credentials are kept in memory of the cache-daemon process (instead of written to a file) and are forgotten after a configurable timeout. Credentials are forgotten sooner if the cache-daemon dies, for example if the system restarts. The cache is accessible over a Unix domain socket, restricted to the current user by filesystem permissions."
-msgstr ""
+msgstr "该命令会缓存凭证，供未来的 Git 程序使用。  存储的凭据保存在 cache-daemon 进程的内存中（而不是写入文件），并在可配置的超时后被遗忘。如果 cache-daemon 死机，例如系统重启，证书会更快被遗忘。缓存可通过 Unix 域套接字访问，并通过文件系统权限限制为当前用户访问。"
 
 #. type: Plain text
 #: en/git-credential-cache.txt:28
 #, priority:90
 msgid "You probably don't want to invoke this command directly; it is meant to be used as a credential helper by other parts of Git. See linkgit:gitcredentials[7] or `EXAMPLES` below."
-msgstr ""
+msgstr "你可能不想直接调用这条命令；它的目的是作为 Git 其他部分的凭证助手。请参阅 linkgit:gitcredentials[7] 或下面的 `例子`。"
 
 #. type: Labeled list
 #: en/git-credential-cache.txt:32
@@ -18320,37 +18320,37 @@ msgstr "--timeout <seconds>"
 #: en/git-credential-cache.txt:35
 #, priority:90
 msgid "Number of seconds to cache credentials (default: 900)."
-msgstr ""
+msgstr "缓存证书的秒数（默认值：900）。"
 
 #. type: Labeled list
 #: en/git-credential-cache.txt:36
 #, no-wrap, priority:90
 msgid "--socket <path>"
-msgstr ""
+msgstr "--socket <路径>"
 
 #. type: Plain text
 #: en/git-credential-cache.txt:46
 #, priority:90
 msgid "Use `<path>` to contact a running cache daemon (or start a new cache daemon if one is not started).  Defaults to `$XDG_CACHE_HOME/git/credential/socket` unless `~/.git-credential-cache/` exists in which case `~/.git-credential-cache/socket` is used instead.  If your home directory is on a network-mounted filesystem, you may need to change this to a local filesystem. You must specify an absolute path."
-msgstr ""
+msgstr "使用 `<路径>` 联系正在运行的缓存守护进程（或在未启动缓存守护进程的情况下启动新的缓存守护进程）。  默认路径是 `$XDG_CACHE_HOME/git/credential/socket`，除非存在 `~/.git-credential-cache/`，在这种情况下会使用 `~/.git-credential-cache/socket`。  如果您的主目录位于网络挂载的文件系统上，可能需要将其更改为本地文件系统。必须指定绝对路径。"
 
 #. type: Title -
 #: en/git-credential-cache.txt:48
 #, no-wrap, priority:90
 msgid "CONTROLLING THE DAEMON"
-msgstr ""
+msgstr "控制守护进程"
 
 #. type: Plain text
 #: en/git-credential-cache.txt:52
 #, priority:90
 msgid "If you would like the daemon to exit early, forgetting all cached credentials before their timeout, you can issue an `exit` action:"
-msgstr ""
+msgstr "如果希望守护进程提前退出，在超时前忘记所有缓存的凭据，可以发出 `exit`操作："
 
 #. type: delimited block -
 #: en/git-credential-cache.txt:55
 #, no-wrap, priority:90
 msgid "git credential-cache exit\n"
-msgstr ""
+msgstr "git credential-cache exit\n"
 
 #. type: Plain text
 #: en/git-credential-cache.txt:62 en/git-credential-store.txt:75
@@ -18366,7 +18366,7 @@ msgid ""
 "$ git push http://example.com/repo.git\n"
 "Username: <type your username>\n"
 "Password: <type your password>\n"
-msgstr ""
+msgstr "$ git config credential.helper cache\n$ git push http://example.com/repo.git\nUsername: <输入你的用户名>\nPassword: <输入你的密码>\n"
 
 #. type: delimited block -
 #: en/git-credential-cache.txt:72
@@ -18384,7 +18384,7 @@ msgstr ""
 #: en/git-credential-cache.txt:76
 #, priority:90
 msgid "You can provide options via the credential.helper configuration variable (this example increases the cache time to 1 hour):"
-msgstr ""
+msgstr "您可以通过 credential.helper 配置变量提供选项（本例将缓存时间增加到 1 小时）："
 
 #. type: delimited block -
 #: en/git-credential-cache.txt:79
@@ -18865,7 +18865,7 @@ msgstr "git-cvsexportcommit(1)"
 #: en/git-cvsexportcommit.txt:7
 #, priority:90
 msgid "git-cvsexportcommit - Export a single commit to a CVS checkout"
-msgstr ""
+msgstr "git-cvsexportcommit - 将单个提交导出为 CVS 检出"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:14
@@ -18873,103 +18873,103 @@ msgstr ""
 msgid ""
 "'git cvsexportcommit' [-h] [-u] [-v] [-c] [-P] [-p] [-a] [-d <cvsroot>]\n"
 "\t[-w <cvs-workdir>] [-W] [-f] [-m <msgprefix>] [<parent-commit>] <commit-id>\n"
-msgstr ""
+msgstr "'git cvsexportcommit' [-h] [-u] [-v] [-c] [-P] [-p] [-a] [-d <CVS 根>]\n\t[-w <CVS 工作目录>] [-W] [-f] [-m <消息前缀>] [<父提交>] <提交 ID>\n"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:20
 #, priority:90
 msgid "Exports a commit from Git to a CVS checkout, making it easier to merge patches from a Git repository into a CVS repository."
-msgstr ""
+msgstr "将提交从 Git 导出到 CVS 检出，从而更轻松地将补丁从 Git 仓库合并到 CVS 仓库。"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:24
 #, priority:90
 msgid "Specify the name of a CVS checkout using the -w switch or execute it from the root of the CVS working copy. In the latter case GIT_DIR must be defined. See examples below."
-msgstr ""
+msgstr "使用 -w 开关指定 CVS 检出的名称，或从 CVS 工作副本的根目录执行。在后一种情况下，必须定义 GIT_DIR。请参阅下面的示例。"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:28
 #, priority:90
 msgid "It does its best to do the safe thing, it will check that the files are unchanged and up to date in the CVS checkout, and it will not autocommit by default."
-msgstr ""
+msgstr "它会尽最大努力做到安全，它会检查文件是否在 CVS 签出中保持不变且是最新的，而且默认情况下不会自动提交。"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:30
 #, priority:90
 msgid "Supports file additions, removals, and commits that affect binary files."
-msgstr ""
+msgstr "支持影响二进制文件的文件添加、删除和提交。"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:33
 #, priority:90
 msgid "If the commit is a merge commit, you must tell 'git cvsexportcommit' what parent the changeset should be done against."
-msgstr ""
+msgstr "如果该提交是合并提交，则必须告诉 'git cvsexportcommit' 该变更集应针对哪个父级提交。"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:40
 #, priority:90
 msgid "Commit automatically if the patch applied cleanly. It will not commit if any hunks fail to apply or there were other problems."
-msgstr ""
+msgstr "如果补丁应用无误，则自动提交。如果有任何缺口未能应用或出现其他问题，则不会提交。"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:44
 #, priority:90
 msgid "Be pedantic (paranoid) when applying patches. Invokes patch with --fuzz=0"
-msgstr ""
+msgstr "打补丁时要迂腐（偏执）。以 --fuzz=0 调用补丁"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:48
 #, priority:90
 msgid "Add authorship information. Adds Author line, and Committer (if different from Author) to the message."
-msgstr ""
+msgstr "添加作者信息。在邮件中添加作者行和提交者（如果与作者不同）。"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:53
 #, priority:90
 msgid "Set an alternative CVSROOT to use.  This corresponds to the CVS -d parameter.  Usually users will not want to set this, except if using CVS in an asymmetric fashion."
-msgstr ""
+msgstr "设置要使用的另一个 CVSROOT。  这相当于 CVS -d 参数。  通常情况下，除非以非对称方式使用 CVS，否则用户不会希望设置该参数。"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:56
 #, priority:90
 msgid "Force the merge even if the files are not up to date."
-msgstr ""
+msgstr "即使文件不是最新的，也可强制合并。"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:59
 #, priority:90
 msgid "Force the parent commit, even if it is not a direct parent."
-msgstr ""
+msgstr "强制父提交，即使它不是直接父代。"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:63
 #, priority:90
 msgid "Prepend the commit message with the provided prefix.  Useful for patch series and the like."
-msgstr ""
+msgstr "用提供的前缀作为提交信息的前缀。  适用于补丁系列等。"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:66
 #, priority:90
 msgid "Update affected files from CVS repository before attempting export."
-msgstr ""
+msgstr "在尝试导出之前，更新 CVS 仓库中受影响的文件。"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:70
 #, priority:90
 msgid "Reverse CVS keyword expansion (e.g. $Revision: 1.2.3.4$ becomes $Revision$) in working CVS checkout before applying patch."
-msgstr ""
+msgstr "在应用补丁之前，在工作的 CVS 签出中反转 CVS 关键字扩展（例如，$Revision: 1.2.3.4$ 变为 $Revision$）。"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:76
 #, priority:90
 msgid "Specify the location of the CVS checkout to use for the export. This option does not require GIT_DIR to be set before execution if the current directory is within a Git repository.  The default is the value of 'cvsexportcommit.cvsdir'."
-msgstr ""
+msgstr "指定用于导出的 CVS 签出位置。如果当前目录位于 Git 仓库中，则执行前无需设置 GIT_DIR。  默认值为 'cvsexportcommit.cvsdir'。"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:81
 #, priority:90
 msgid "Tell cvsexportcommit that the current working directory is not only a Git checkout, but also the CVS checkout.  Therefore, Git will reset the working directory to the parent commit before proceeding."
-msgstr ""
+msgstr "告诉 cvsexportcommit 当前工作目录不仅是 Git 签出目录，也是 CVS 签出目录。  因此，Git 会在继续之前将工作目录重置为父提交。"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:84
@@ -18981,13 +18981,13 @@ msgstr "Verbose."
 #: en/git-cvsexportcommit.txt:87
 #, no-wrap, priority:90
 msgid "cvsexportcommit.cvsdir"
-msgstr ""
+msgstr "cvsexportcommit.cvsdir"
 
 #. type: Plain text
 #: en/git-cvsexportcommit.txt:89
 #, priority:90
 msgid "The default location of the CVS checkout to use for the export."
-msgstr ""
+msgstr "用于导出的 CVS 签出的默认位置。"
 
 #. type: Labeled list
 #: en/git-cvsexportcommit.txt:93
@@ -19013,7 +19013,7 @@ msgstr ""
 #: en/git-cvsexportcommit.txt:102
 #, no-wrap, priority:90
 msgid "Merge one patch into CVS (-c and -w options). The working directory is within the Git Repo"
-msgstr ""
+msgstr "将一个补丁合并到 CVS（-c 和 -w 选项）。工作目录在 Git 仓库中"
 
 #. type: delimited block -
 #: en/git-cvsexportcommit.txt:106
@@ -19025,7 +19025,7 @@ msgstr "\t$ git cvsexportcommit -v -c -w ~/project_cvs_checkout <commit-sha1>\n"
 #: en/git-cvsexportcommit.txt:108
 #, no-wrap, priority:90
 msgid "Merge pending patches into CVS automatically -- only if you really know what you are doing"
-msgstr ""
+msgstr "自动将待处理的补丁合并到 CVS ——只有当你真正了解自己在做什么时才会这样做"
 
 #. type: delimited block -
 #: en/git-cvsexportcommit.txt:114
@@ -19049,7 +19049,7 @@ msgstr "git-cvsimport(1)"
 #: en/git-cvsimport.txt:7
 #, priority:90
 msgid "git-cvsimport - Salvage your data out of another SCM people love to hate"
-msgstr ""
+msgstr "git-cvsimport - 从另一个让人由爱生恨的 SCM 中获取数据"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:17
@@ -19060,7 +19060,7 @@ msgid ""
 "\t      [-C <git-repository>] [-z <fuzz>] [-i] [-k] [-u] [-s <subst>]\n"
 "\t      [-a] [-m] [-M <regex>] [-S <regex>] [-L <commit-limit>]\n"
 "\t      [-r <remote>] [-R] [<CVS-module>]\n"
-msgstr ""
+msgstr "'git cvsimport' [-o <HEAD 分支>] [-h] [-v] [-d <CVSROOT>]\n\t      [-A <author-conv-file>] [-p <options-for-cvsps>] [-P <文件>]\n\t      [-C <Git 仓库>] [-z <fuzz>] [-i] [-k] [-u] [-s <subst>]\n\t      [-a] [-m] [-M <正则表达式>] [-S <正则表达式>] [-L <提交范围>]\n\t      [-r <远程仓库>] [-R] [<CVS 模块>]\n"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:26
@@ -19071,19 +19071,19 @@ msgid ""
 "performing a one-shot import of a CVS repository consider using\n"
 "http://cvs2svn.tigris.org/cvs2git.html[cvs2git] or\n"
 "http://www.catb.org/esr/cvs-fast-export/[cvs-fast-export].\n"
-msgstr ""
+msgstr "*警告：* `git cvsimport` 使用 cvsps 第 2 版，该版本已被视为弃用；\n它不能用于 cvsps 第 3 版及更高版本。  \n如果要一次性导入 CVS 仓库，\n请考虑使用 http://cvs2svn.tigris.org/cvs2git.html[cvs2git] \n或 http://www.catb.org/esr/cvs-fast-export/[cvs-fast-export]。\n"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:29
 #, priority:90
 msgid "Imports a CVS repository into Git. It will either create a new repository, or incrementally import into an existing one."
-msgstr ""
+msgstr "将 CVS 仓库导入 Git。它既可以创建一个新的仓库，也可以增量导入现有仓库。"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:32
 #, priority:90
 msgid "Splitting the CVS log into patch sets is done by 'cvsps'.  At least version 2.1 is required."
-msgstr ""
+msgstr "将 CVS 日志分割成补丁集由 'cvsps' 完成。  至少需要 2.1 版本。"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:35
@@ -19091,25 +19091,25 @@ msgstr ""
 msgid ""
 "*WARNING:* for certain situations the import leads to incorrect results.\n"
 "Please see the section <<issues,ISSUES>> for further reference.\n"
-msgstr ""
+msgstr "*警告：* 在某些情况下，导入会导致不正确的结果。\n请参阅 <<issue,ISSUES>> 部分以获取更多参考。\n"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:42
 #, priority:90
 msgid "You should *never* do any work of your own on the branches that are created by 'git cvsimport'.  By default initial import will create and populate a \"master\" branch from the CVS repository's main branch which you're free to work with; after that, you need to 'git merge' incremental imports, or any CVS branches, yourself.  It is advisable to specify a named remote via -r to separate and protect the incoming branches."
-msgstr ""
+msgstr "您*绝对不*应该在 'git cvsimport' 创建的分支上做任何自己的工作。  默认情况下，初始导入会从 CVS 仓库的主分支创建并填充一个 \"master\" 分支，您可以自由使用该分支；之后，您需要自己 'git merge' 增量导入或任何 CVS 分支。  建议通过 -r 指定一个命名的远程分支，以分隔和保护导入的分支。"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:48
 #, priority:90
 msgid "If you intend to set up a shared public repository that all developers can read/write, or if you want to use linkgit:git-cvsserver[1], then you probably want to make a bare clone of the imported repository, and use the clone as the shared repository.  See linkgit:gitcvs-migration[7]."
-msgstr ""
+msgstr "如果你打算建立一个所有开发者都能读写的共享公共仓库，或者如果你想使用 linkgit:git-cvsserver[1]，那么你可能想做一个导入仓库的裸克隆，并将该克隆作为共享仓库。  参见 linkgit:gitcvs-migration[7]。"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:54
 #, priority:90
 msgid "Verbosity: let 'cvsimport' report what it is doing."
-msgstr ""
+msgstr "Verbosity: 让 'cvsimport' 报告他正在做什么。"
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:55
@@ -19121,7 +19121,7 @@ msgstr "-d <CVSROOT>"
 #: en/git-cvsimport.txt:61
 #, priority:90
 msgid "The root of the CVS archive. May be local (a simple path) or remote; currently, only the :local:, :ext: and :pserver: access methods are supported. If not given, 'git cvsimport' will try to read it from `CVS/Root`. If no such file exists, it checks for the `CVSROOT` environment variable."
-msgstr ""
+msgstr "CVS 存档的根目录。可以是本地（简单路径）或远程；目前只支持 :local:、:ext: 和 :pserver: 访问方法。如果没有给出，'git cvsimport' 将尝试从 'CVS/Root' 中读取。如果没有此类文件，则会检查 `CVSROOT` 环境变量。"
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:62
@@ -19133,7 +19133,7 @@ msgstr "<CVS_module>"
 #: en/git-cvsimport.txt:66
 #, priority:90
 msgid "The CVS module you want to import. Relative to <CVSROOT>.  If not given, 'git cvsimport' tries to read it from `CVS/Repository`."
-msgstr ""
+msgstr "要导入的 CVS 模块。相对于 <CVSROOT>。  如果没有给出，/git cvsimport' 会尝试从 `CVS/Repository` 中读取。"
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:67
@@ -19157,7 +19157,7 @@ msgstr "-r <remote>"
 #: en/git-cvsimport.txt:75
 #, priority:90
 msgid "The Git remote to import this CVS repository into.  Moves all CVS branches into remotes/<remote>/<branch> akin to the way 'git clone' uses 'origin' by default."
-msgstr ""
+msgstr "要导入此 CVS 仓库的 Git 远程仓库。  将所有 CVS 分支移至 remotes/<远程仓库>/<分支>，类似于 'git clone' 默认使用 'origin' 的方式。"
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:76
@@ -19169,31 +19169,31 @@ msgstr "-o <branch-for-HEAD>"
 #: en/git-cvsimport.txt:84
 #, priority:90
 msgid "When no remote is specified (via -r) the `HEAD` branch from CVS is imported to the 'origin' branch within the Git repository, as `HEAD` already has a special meaning for Git.  When a remote is specified the `HEAD` branch is named remotes/<remote>/master mirroring 'git clone' behaviour.  Use this option if you want to import into a different branch."
-msgstr ""
+msgstr "如果没有指定远程分支（通过 -r），CVS 中的 `HEAD` 分支会被导入 Git 仓库中的 'origin' 分支，因为 `HEAD` 对 Git 已经有了特殊含义。  如果指定了一个远程分支，`HEAD` 分支就会被命名为 remotes/<远程仓库>/master，以反映 'git clone' 行为。  如果要导入不同的分支，请使用此选项。"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:87
 #, priority:90
 msgid "Use '-o master' for continuing an import that was initially done by the old cvs2git tool."
-msgstr ""
+msgstr "使用 '-o master' 继续导入最初由旧版 cvs2git 工具完成的导入。"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:92
 #, priority:90
 msgid "Import-only: don't perform a checkout after importing.  This option ensures the working directory and index remain untouched and will not create them if they do not exist."
-msgstr ""
+msgstr "仅导入：导入后不执行检出。  该选项可确保工作目录和索引保持不变，如果不存在也不会创建。"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:97
 #, priority:90
 msgid "Kill keywords: will extract files with '-kk' from the CVS archive to avoid noisy changesets. Highly recommended, but off by default to preserve compatibility with early imported trees."
-msgstr ""
+msgstr "杀死关键字：将从 CVS 存档中提取带有 '-kk' 的文件，以避免出现嘈杂的更改集。强烈建议使用，但默认为关闭，以保持与早期导入树的兼容性。"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:100
 #, priority:90
 msgid "Convert underscores in tag and branch names to dots."
-msgstr ""
+msgstr "将标记和分支名称中的下划线转换为点。"
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:101
@@ -19205,7 +19205,7 @@ msgstr "-s <subst>"
 #: en/git-cvsimport.txt:103
 #, priority:90
 msgid "Substitute the character \"/\" in branch names with <subst>"
-msgstr ""
+msgstr "用 <subst> 代替分支名称中的字符\"/\""
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:104
@@ -19217,13 +19217,13 @@ msgstr "-p <options-for-cvsps>"
 #: en/git-cvsimport.txt:107
 #, priority:90
 msgid "Additional options for cvsps.  The options `-u` and '-A' are implicit and should not be used here."
-msgstr ""
+msgstr "cvsps 的附加选项。  选项 `-u` 和 '-A' 是隐含的，不应在此使用。"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:109
 #, priority:90
 msgid "If you need to pass multiple options, separate them with a comma."
-msgstr ""
+msgstr "如果需要传递多个选项，请用逗号分隔。"
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:110
@@ -19235,25 +19235,25 @@ msgstr "-z <fuzz>"
 #: en/git-cvsimport.txt:113
 #, priority:90
 msgid "Pass the timestamp fuzz factor to cvsps, in seconds. If unset, cvsps defaults to 300s."
-msgstr ""
+msgstr "向 cvsps 传递时间戳模糊因子，单位为秒。如果未设置，cvsps 默认为 300 秒。"
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:114
 #, no-wrap, priority:90
 msgid "-P <cvsps-output-file>"
-msgstr ""
+msgstr "-P <cvsps 输出文件>"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:117
 #, priority:90
 msgid "Instead of calling cvsps, read the provided cvsps output file. Useful for debugging or when cvsps is being handled outside cvsimport."
-msgstr ""
+msgstr "不调用 cvsps，而是读取提供的 cvsps 输出文件。在调试或在 cvsimport 之外处理 cvsps 时非常有用。"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:122
 #, priority:90
 msgid "Attempt to detect merges based on the commit message. This option will enable default regexes that try to capture the source branch name from the commit message."
-msgstr ""
+msgstr "尝试根据提交信息检测合并。该选项将启用默认的 regexes，尝试从提交信息中捕捉源分支名称。"
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:123
@@ -19265,37 +19265,37 @@ msgstr "-M <regex>"
 #: en/git-cvsimport.txt:127
 #, priority:90
 msgid "Attempt to detect merges based on the commit message with a custom regex. It can be used with `-m` to enable the default regexes as well. You must escape forward slashes."
-msgstr ""
+msgstr "尝试使用自定义正则表达式根据提交信息检测合并。也可与 `-m` 搭配使用，启用默认的 regexes。必须转义为正斜杠。"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:129
 #, priority:90
 msgid "The regex must capture the source branch name in $1."
-msgstr ""
+msgstr "正则表达式必须在 $1 中捕获源分支名称。"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:131
 #, priority:90
 msgid "This option can be used several times to provide several detection regexes."
-msgstr ""
+msgstr "该选项可多次使用，以提供多个检测 regexes。"
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:132
 #, no-wrap, priority:90
 msgid "-S <regex>"
-msgstr ""
+msgstr "-S <正则表达式>"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:134
 #, priority:90
 msgid "Skip paths matching the regex."
-msgstr ""
+msgstr "跳过与正则表达式匹配的路径。"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:138
 #, priority:90
 msgid "Import all commits, including recent ones. cvsimport by default skips commits that have a timestamp less than 10 minutes ago."
-msgstr ""
+msgstr "cvsimport 默认跳过时间戳少于 10 分钟的提交。"
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:139
@@ -19307,13 +19307,13 @@ msgstr "-L <limit>"
 #: en/git-cvsimport.txt:142
 #, priority:90
 msgid "Limit the number of commits imported. Workaround for cases where cvsimport leaks memory."
-msgstr ""
+msgstr "限制导入的提交次数。针对 cvsimport 泄露内存情况的解决方法。"
 
 #. type: Labeled list
 #: en/git-cvsimport.txt:143
 #, no-wrap, priority:90
 msgid "-A <author-conv-file>"
-msgstr ""
+msgstr "-A <作者的 conv 文件>"
 
 #. type: Plain text
 #: en/git-cvsimport.txt:148
@@ -67417,31 +67417,31 @@ msgstr "结构体 '@{-<n>}' 表示在当前分支/提交之前签出的第 <n> �
 #: en/revisions.txt:119
 #, no-wrap, priority:100
 msgid "'[<branchname>]@\\{upstream\\}', e.g. 'master@\\{upstream\\}', '@\\{u\\}'"
-msgstr ""
+msgstr "'[<分支名>]@\\{upstream\\}', e.g. 'master@\\{upstream\\}', '@\\{u\\}'"
 
 #. type: Plain text
 #: en/revisions.txt:124
 #, priority:100
 msgid "A branch B may be set up to build on top of a branch X (configured with `branch.<name>.merge`) at a remote R (configured with `branch.<name>.remote`). B@{u} refers to the remote-tracking branch for the branch X taken from remote R, typically found at `refs/remotes/R/X`."
-msgstr ""
+msgstr "分支 B 可以设置为在远程 R 的分支 X（使用 `branch.<名称>.merge` 配置）（使用 `branch.<名称>.remote`配置）之上构建。B@{u} 指的是远程 R 分支 X 的远程跟踪分支，通常位于 `refs/remotes/R/X`。"
 
 #. type: Labeled list
 #: en/revisions.txt:125
 #, no-wrap, priority:100
 msgid "'[<branchname>]@\\{push\\}', e.g. 'master@\\{push\\}', '@\\{push\\}'"
-msgstr ""
+msgstr "'[<分支名>]@\\{push\\}', e.g. 'master@\\{push\\}', '@\\{push\\}'"
 
 #. type: Plain text
 #: en/revisions.txt:130
 #, priority:100
 msgid "The suffix '@\\{push}' reports the branch \"where we would push to\" if `git push` were run while `branchname` was checked out (or the current `HEAD` if no branchname is specified). Like for '@\\{upstream\\}', we report the remote-tracking branch that corresponds to that branch at the remote."
-msgstr ""
+msgstr "后缀 '@\\{push}' 报告的是在 `branchname` 签出时运行 `git push` 时 “我们会推送到哪里” 的分支（如果没有指定分支名，则报告当前的 `HEAD`）。就像 '@\\{upstream\\}' 一样，我们会报告与该分支相对应的远程跟踪分支。"
 
 #. type: Plain text
 #: en/revisions.txt:132
 #, priority:100
 msgid "Here's an example to make it more clear:"
-msgstr ""
+msgstr "这里有一个例子，可以更清楚地说明这一点:"
 
 #. type: delimited block -
 #: en/revisions.txt:137
@@ -67479,25 +67479,25 @@ msgstr ""
 #: en/revisions.txt:148
 #, priority:100
 msgid "Note in the example that we set up a triangular workflow, where we pull from one location and push to another. In a non-triangular workflow, '@\\{push}' is the same as '@\\{upstream}', and there is no need for it."
-msgstr ""
+msgstr "请注意，我们在示例中设置了一个三角工作流，即从一个位置提取数据，然后推送到另一个位置。在非三角工作流中，'@\\{push}' 与 '@\\{upstream}' 相同，没有必要使用。"
 
 #. type: Plain text
 #: en/revisions.txt:151
 #, priority:100
 msgid "This suffix is also accepted when spelled in uppercase, and means the same thing no matter the case."
-msgstr ""
+msgstr "这个后缀用大写字母拼写时也被接受，无论大小写，意思都一样。"
 
 #. type: Labeled list
 #: en/revisions.txt:152
 #, no-wrap, priority:100
 msgid "'<rev>{caret}[<n>]', e.g. 'HEAD{caret}, v1.5.1{caret}0'"
-msgstr ""
+msgstr "'<修订号>{caret}[<n>]'，例如 'HEAD{caret}, v1.5.1{caret}0'"
 
 #. type: Plain text
 #: en/revisions.txt:159
 #, priority:100
 msgid "A suffix '{caret}' to a revision parameter means the first parent of that commit object.  '{caret}<n>' means the <n>th parent (i.e.  '<rev>{caret}' is equivalent to '<rev>{caret}1').  As a special rule, '<rev>{caret}0' means the commit itself and is used when '<rev>' is the object name of a tag object that refers to a commit object."
-msgstr ""
+msgstr "修订参数的后缀 '{caret}' 表示该提交对象的第一个父对象。  '{caret}<n>'表示第 <n> 个父提交（即 '<rev>{caret}' 等同于 '<rev>{caret}1'）。  作为一条特殊规则，'<rev>{caret}0' 表示提交本身，在 '<rev>' 是指向提交对象的标记对象的对象名时使用。"
 
 #. type: Labeled list
 #: en/revisions.txt:160
@@ -67509,31 +67509,31 @@ msgstr "'<rev>{tilde}[<n>]', e.g. 'HEAD{tilde}, master{tilde}3'"
 #: en/revisions.txt:169
 #, priority:100
 msgid "A suffix '{tilde}' to a revision parameter means the first parent of that commit object.  A suffix '{tilde}<n>' to a revision parameter means the commit object that is the <n>th generation ancestor of the named commit object, following only the first parents.  I.e. '<rev>{tilde}3' is equivalent to '<rev>{caret}{caret}{caret}' which is equivalent to '<rev>{caret}1{caret}1{caret}1'.  See below for an illustration of the usage of this form."
-msgstr ""
+msgstr "修订参数的后缀 '{tilde}' 表示该提交对象的第一代父对象。  修订参数的后缀 '{tilde}<n>' 表示该提交对象的 <n> 代祖先，仅次于第一代父对象。  例如，'<rev>{tilde}3' 等同于 '<rev>{caret}{caret}{caret}'，后者等同于 '<rev>{caret}1{caret}1{caret}1'。  请参阅下面的示例，了解这种形式的用法。"
 
 #. type: Labeled list
 #: en/revisions.txt:170
 #, no-wrap, priority:100
 msgid "'<rev>{caret}{<type>}', e.g. 'v0.99.8{caret}\\{commit\\}'"
-msgstr ""
+msgstr "'<修订>{caret}{<类型>}', e.g. 'v0.99.8{caret}\\{commit\\}'"
 
 #. type: Plain text
 #: en/revisions.txt:181
 #, priority:100
 msgid "A suffix '{caret}' followed by an object type name enclosed in brace pair means dereference the object at '<rev>' recursively until an object of type '<type>' is found or the object cannot be dereferenced anymore (in which case, barf).  For example, if '<rev>' is a commit-ish, '<rev>{caret}\\{commit\\}' describes the corresponding commit object.  Similarly, if '<rev>' is a tree-ish, '<rev>{caret}\\{tree\\}' describes the corresponding tree object.  '<rev>{caret}0' is a short-hand for '<rev>{caret}\\{commit\\}'."
-msgstr ""
+msgstr "后缀 '{caret}' 后跟有一对括号的对象类型名称，表示在 '<修订>' 处递归引用该对象，直到找到 '<类型>' 类型的对象或该对象无法再被引用（在这种情况下，barf）。  例如，如果 '<修订>' 是一个提交对象，那么 '<修订>{caret}/{commit/}' 就描述了相应的提交对象。  同样，如果 '<修订>' 是一个树对象，那么 '<修订>{caret}/{tree/}' 就描述了相应的树对象。  '<修订>{caret}0' 是 '<rev>{caret}/{commit/}' 的简写。"
 
 #. type: Plain text
 #: en/revisions.txt:186
 #, priority:100
 msgid "'<rev>{caret}\\{object\\}' can be used to make sure '<rev>' names an object that exists, without requiring '<rev>' to be a tag, and without dereferencing '<rev>'; because a tag is already an object, it does not have to be dereferenced even once to get to an object."
-msgstr ""
+msgstr "'<修订>{caret}/{object/}' 可以用来确保 '<修订>' 命名了一个存在的对象，而不要求 '<修订>' 是一个标记，也不需要取消引用 '<修订>'；因为一个标记已经是一个对象，所以即使取消引用一次也不一定能找到一个对象。"
 
 #. type: Plain text
 #: en/revisions.txt:189
 #, priority:100
 msgid "'<rev>{caret}\\{tag\\}' can be used to ensure that '<rev>' identifies an existing tag object."
-msgstr ""
+msgstr "可以使用 '<修订>{caret}/{tag\\}' 来确保 '<修订>' 标识现有的标记对象。"
 
 #. type: Labeled list
 #: en/revisions.txt:190
@@ -67545,43 +67545,43 @@ msgstr "'<rev>{caret}{}', e.g. 'v0.99.8{caret}{}'"
 #: en/revisions.txt:195
 #, priority:100
 msgid "A suffix '{caret}' followed by an empty brace pair means the object could be a tag, and dereference the tag recursively until a non-tag object is found."
-msgstr ""
+msgstr "后缀 '{caret}' 后跟一个空括号对，表示该对象可能是一个标记，并递归引用该标记，直到找到一个非标记对象。"
 
 #. type: Labeled list
 #: en/revisions.txt:196
 #, no-wrap, priority:100
 msgid "'<rev>{caret}{/<text>}', e.g. 'HEAD^{/fix nasty bug}'"
-msgstr ""
+msgstr "'<修订>{caret}{/<文本>}'，例如 'HEAD^{/fix nasty bug（修复讨厌的 BUG）}'"
 
 #. type: Plain text
 #: en/revisions.txt:202
 #, priority:100
 msgid "A suffix '{caret}' to a revision parameter, followed by a brace pair that contains a text led by a slash, is the same as the ':/fix nasty bug' syntax below except that it returns the youngest matching commit which is reachable from the '<rev>' before '{caret}'."
-msgstr ""
+msgstr "版本参数的后缀 '{caret}'，后面是包含以斜线为首的文本的括号对，与下面的 ':/fix nasty bug' 语法相同，但它返回的是 '{caret}' 之前的 '<修订>' 中最年轻的匹配提交。"
 
 #. type: Labeled list
 #: en/revisions.txt:203
 #, no-wrap, priority:100
 msgid "':/<text>', e.g. ':/fix nasty bug'"
-msgstr ""
+msgstr "':/<文本>'，例如 ':/fix nasty bug'"
 
 #. type: Plain text
 #: en/revisions.txt:216
 #, priority:100
 msgid "A colon, followed by a slash, followed by a text, names a commit whose commit message matches the specified regular expression.  This name returns the youngest matching commit which is reachable from any ref, including HEAD.  The regular expression can match any part of the commit message. To match messages starting with a string, one can use e.g. ':/^foo'. The special sequence ':/!' is reserved for modifiers to what is matched. ':/!-foo' performs a negative match, while ':/!!foo' matches a literal '!' character, followed by 'foo'. Any other sequence beginning with ':/!' is reserved for now.  Depending on the given text, the shell's word splitting rules might require additional quoting."
-msgstr ""
+msgstr "冒号后的斜线和文本，用于命名提交信息与指定正则表达式匹配的提交。  该名称会返回可从任何引用（包括 HEAD）到达的最年轻的匹配提交。  正则表达式可以匹配提交信息的任何部分。要匹配以字符串开头的提交信息，可以使用 ':/^foo'。特殊序列 ':/!' 用于修饰匹配内容。':/!-foo' 执行负匹配，而 ':/!!foo' 则匹配字面意义上的 '!' 字符，后接 'foo'。以 ':/!' 开头的其他序列暂时保留。  根据给定的文本，shell 的分词规则可能需要额外的引号。"
 
 #. type: Labeled list
 #: en/revisions.txt:217
 #, no-wrap, priority:100
 msgid "'<rev>:<path>', e.g. 'HEAD:README', 'master:./README'"
-msgstr ""
+msgstr "'<修订>:<路径>'，例如 'HEAD:README', 'master:./README'"
 
 #. type: Plain text
 #: en/revisions.txt:225
 #, priority:100
 msgid "A suffix ':' followed by a path names the blob or tree at the given path in the tree-ish object named by the part before the colon.  A path starting with './' or '../' is relative to the current working directory.  The given path will be converted to be relative to the working tree's root directory.  This is most useful to address a blob or tree from a commit or tree that has the same tree structure as the working tree."
-msgstr ""
+msgstr "后缀 ':' 和路径会在冒号前的树状对象中命名给定路径上的 blob 或树。  以'./' 或 '../' 开头的路径是相对于当前工作目录的。  给定路径将转换为相对于工作树根目录的路径。  这对于从与工作树具有相同树形结构的提交或树中查找 blob 或树最为有用。"
 
 #. type: Labeled list
 #: en/revisions.txt:226
@@ -67593,13 +67593,13 @@ msgstr "':[<n>:]<path>', e.g. ':0:README', ':README'"
 #: en/revisions.txt:234
 #, priority:100
 msgid "A colon, optionally followed by a stage number (0 to 3) and a colon, followed by a path, names a blob object in the index at the given path. A missing stage number (and the colon that follows it) names a stage 0 entry. During a merge, stage 1 is the common ancestor, stage 2 is the target branch's version (typically the current branch), and stage 3 is the version from the branch which is being merged."
-msgstr ""
+msgstr "一个冒号（可选）后面跟一个阶段编号（0 至 3）和一个冒号，冒号后面跟一个路径，用于命名索引中位于给定路径的 Blob 对象。如果缺少阶段号（以及后面的冒号），则命名为阶段 0 条目。在合并过程中，阶段 1 是共同祖先，阶段 2 是目标分支的版本（通常是当前分支），阶段 3 是被合并分支的版本。"
 
 #. type: Plain text
 #: en/revisions.txt:238
 #, priority:100
 msgid "Here is an illustration, by Jon Loeliger.  Both commit nodes B and C are parents of commit node A.  Parent commits are ordered left-to-right."
-msgstr ""
+msgstr "下面是 Jon Loeliger 绘制的一幅插图。  提交节点 B 和 C 都是提交节点 A 的父节点。  父提交从左到右排序。"
 
 #. type: delimited block .
 #: en/revisions.txt:250
@@ -67615,7 +67615,7 @@ msgid ""
 "       \\   /\n"
 "        \\ /\n"
 "         A\n"
-msgstr ""
+msgstr "G   H   I   J\n \\ /     \\ /\n  D   E   F\n   \\  |  / \\\n    \\ | /   |\n     \\|/    |\n      B     C\n       \\   /\n        \\ /\n         A\n"
 
 #. type: Plain text
 #: en/revisions.txt:262
@@ -67631,109 +67631,109 @@ msgid ""
 "    H = D^2  = B^^2    = A^^^2  = A~2^2\n"
 "    I = F^   = B^3^    = A^^3^\n"
 "    J = F^2  = B^3^2   = A^^3^2\n"
-msgstr ""
+msgstr "    A =      = A^0\n    B = A^   = A^1     = A~1\n    C =      = A^2\n    D = A^^  = A^1^1   = A~2\n    E = B^2  = A^^2\n    F = B^3  = A^^3\n    G = A^^^ = A^1^1^1 = A~3\n    H = D^2  = B^^2    = A^^^2  = A~2^2\n    I = F^   = B^3^    = A^^3^\n    J = F^2  = B^3^2   = A^^3^2\n"
 
 #. type: Plain text
 #: en/revisions.txt:269
 #, priority:100
 msgid "History traversing commands such as `git log` operate on a set of commits, not just a single commit."
-msgstr ""
+msgstr "历史记录遍历命令，如 `git log` 会对一组提交进行操作，而不仅仅是单个提交。"
 
 #. type: Plain text
 #: en/revisions.txt:274
 #, priority:100
 msgid "For these commands, specifying a single revision, using the notation described in the previous section, means the set of commits `reachable` from the given commit."
-msgstr ""
+msgstr "对于这些命令，使用上一节中描述的符号指定一个修订版本，意味着从给定的提交开始 `可达到` 的一组提交。"
 
 #. type: Plain text
 #: en/revisions.txt:277
 #, priority:100
 msgid "Specifying several revisions means the set of commits reachable from any of the given commits."
-msgstr ""
+msgstr "指定多个修订版本指的是可从任何给定的提交版本到达的提交版本集。"
 
 #. type: Plain text
 #: en/revisions.txt:280
 #, priority:100
 msgid "A commit's reachable set is the commit itself and the commits in its ancestry chain."
-msgstr ""
+msgstr "提交的可达集合是指提交本身及其祖先链中的提交。"
 
 #. type: Plain text
 #: en/revisions.txt:283
 #, priority:100
 msgid "There are several notations to specify a set of connected commits (called a \"revision range\"), illustrated below."
-msgstr ""
+msgstr "有几种符号可以指定一组相连的提交（称为 “修订范围”），如下图所示。"
 
 #. type: Title ~
 #: en/revisions.txt:286
 #, no-wrap, priority:100
 msgid "Commit Exclusions"
-msgstr ""
+msgstr "排除提交"
 
 #. type: Labeled list
 #: en/revisions.txt:288
 #, no-wrap, priority:100
 msgid "'{caret}<rev>' (caret) Notation"
-msgstr ""
+msgstr "'{caret}<修订号>'（catet）表示"
 
 #. type: Plain text
 #: en/revisions.txt:293
 #, priority:100
 msgid "To exclude commits reachable from a commit, a prefix '{caret}' notation is used.  E.g. '{caret}r1 r2' means commits reachable from 'r2' but exclude the ones reachable from 'r1' (i.e. 'r1' and its ancestors)."
-msgstr ""
+msgstr "要排除某个提交中可触及的提交，可使用前缀 '{caret}' 表示。  例如，'{caret}r1 r2' 表示可从 'r2' 到达的提交，但不包括可从 'r1' 到达的提交（即 'r1' 及其祖先）。"
 
 #. type: Title ~
 #: en/revisions.txt:295
 #, no-wrap, priority:100
 msgid "Dotted Range Notations"
-msgstr ""
+msgstr "虚线范围符号"
 
 #. type: Labeled list
 #: en/revisions.txt:297
 #, no-wrap, priority:100
 msgid "The '..' (two-dot) Range Notation"
-msgstr ""
+msgstr "'..'（双点）范围符号"
 
 #. type: Plain text
 #: en/revisions.txt:303
 #, priority:100
 msgid "The '{caret}r1 r2' set operation appears so often that there is a shorthand for it.  When you have two commits 'r1' and 'r2' (named according to the syntax explained in SPECIFYING REVISIONS above), you can ask for commits that are reachable from r2 excluding those that are reachable from r1 by '{caret}r1 r2' and it can be written as 'r1..r2'."
-msgstr ""
+msgstr "由于 '{caret}r1 r2' 的设置操作经常出现，所以有了一种速记方法。  当你有两个提交 'r1' 和 'r2'（根据上文 “指定修订” 中解释的语法命名）时，你可以通过 '{caret}r1 r2' 请求从 r2 可以访问的提交，但不包括从 r1 可以访问的提交，可以写成 'r1...r2'。"
 
 #. type: Labeled list
 #: en/revisions.txt:304
 #, ignore-ellipsis, no-wrap, priority:100
 msgid "The '\\...' (three-dot) Symmetric Difference Notation"
-msgstr ""
+msgstr "'\\...'（三点）对称差符号"
 
 #. type: Plain text
 #: en/revisions.txt:310
 #, ignore-ellipsis, priority:100
 msgid "A similar notation 'r1\\...r2' is called symmetric difference of 'r1' and 'r2' and is defined as 'r1 r2 --not $(git merge-base --all r1 r2)'.  It is the set of commits that are reachable from either one of 'r1' (left side) or 'r2' (right side) but not from both."
-msgstr ""
+msgstr "类似的符号 'r1\\...r2' 被称为 'r1' 和 'r2' 的对称差值，定义为 'r1 r2 --not $(git merge-base --all r1 r2)'。  它是可以从 'r1'（左侧）或 'r2'（右侧）之一到达，但不能同时从两处到达的提交的集合。"
 
 #. type: Plain text
 #: en/revisions.txt:317
 #, priority:100
 msgid "In these two shorthand notations, you can omit one end and let it default to HEAD.  For example, 'origin..' is a shorthand for 'origin..HEAD' and asks \"What did I do since I forked from the origin branch?\" Similarly, '..origin' is a shorthand for 'HEAD..origin' and asks \"What did the origin do since I forked from them?\" Note that '..' would mean 'HEAD..HEAD' which is an empty range that is both reachable and unreachable from HEAD."
-msgstr ""
+msgstr "在这两种速记符号中，你可以省略一端，让它默认为 HEAD。  例如，'origin..' 是 'origin..HEAD' 的简写，问的是 “我从起源分支分叉后做了什么？” 同样，'..origin' 是 'HEAD..origin' 的简写，问的是 “我从起源分支分叉后做了什么？” 请注意，'..' 指的是 'HEAD..HEAD'，它是一个空范围，既可从 HEAD 访问，也不可从 HEAD 访问。"
 
 #. type: Plain text
 #: en/revisions.txt:324
 #, priority:100
 msgid "Commands that are specifically designed to take two distinct ranges (e.g. \"git range-diff R1 R2\" to compare two ranges) do exist, but they are exceptions.  Unless otherwise noted, all \"git\" commands that operate on a set of commits work on a single revision range.  In other words, writing two \"two-dot range notation\" next to each other, e.g."
-msgstr ""
+msgstr "也有专门针对两个不同范围的命令（例如 \"git range-diff R1 R2\"，用于比较两个范围），但它们都是例外。  除非另有说明，否则所有对一组提交进行操作的 \"git \"命令都是针对单一修订范围的。  换句话说，将两个 “双点范围符号” 写在一起，例如"
 
 #. type: Plain text
 #: en/revisions.txt:326
 #, no-wrap, priority:100
 msgid "    $ git log A..B C..D\n"
-msgstr ""
+msgstr "    $ git log A..B C..D\n"
 
 #. type: Plain text
 #: en/revisions.txt:331
 #, priority:100
 msgid "does *not* specify two revision ranges for most commands.  Instead it will name a single connected set of commits, i.e. those that are reachable from either B or D but are reachable from neither A or C.  In a linear history like this:"
-msgstr ""
+msgstr "*不* 会为大多数命令指定两个修订范围。  取而代之的是，它将命名单个相连的提交集，即那些从 B 或 D 可以到达，但从 A 或 C 都不能到达的提交集："
 
 #. type: Plain text
 #: en/revisions.txt:333
@@ -67745,49 +67745,49 @@ msgstr "    ---A---B---o---o---C---D\n"
 #: en/revisions.txt:336
 #, priority:100
 msgid "because A and B are reachable from C, the revision range specified by these two dotted ranges is a single commit D."
-msgstr ""
+msgstr "因为 A 和 B 可以从 C 处到达，所以这两个虚线范围指定的修订范围是单一的提交 D。"
 
 #. type: Title ~
 #: en/revisions.txt:339
 #, no-wrap, priority:100
 msgid "Other <rev>{caret} Parent Shorthand Notations"
-msgstr ""
+msgstr "其他 <修订号>{caret}父级速记符号"
 
 #. type: Plain text
 #: en/revisions.txt:342
 #, priority:100
 msgid "Three other shorthands exist, particularly useful for merge commits, for naming a set that is formed by a commit and its parent commits."
-msgstr ""
+msgstr "还有其他三种简称，特别适用于合并提交，用于命名由提交及其父提交组成的集合。"
 
 #. type: Plain text
 #: en/revisions.txt:344
 #, priority:100
 msgid "The 'r1{caret}@' notation means all parents of 'r1'."
-msgstr ""
+msgstr "'r1{caret}@' 表示 'r1' 的所有父代。"
 
 #. type: Plain text
 #: en/revisions.txt:347
 #, priority:100
 msgid "The 'r1{caret}!' notation includes commit 'r1' but excludes all of its parents.  By itself, this notation denotes the single commit 'r1'."
-msgstr ""
+msgstr "'r1{caret}!' 表示包含提交 'r1'，但不包括其所有父提交。  就其本身而言，该符号表示单个提交 'r1'。"
 
 #. type: Plain text
 #: en/revisions.txt:354
 #, priority:100
 msgid "The '<rev>{caret}-[<n>]' notation includes '<rev>' but excludes the <n>th parent (i.e. a shorthand for '<rev>{caret}<n>..<rev>'), with '<n>' = 1 if not given. This is typically useful for merge commits where you can just pass '<commit>{caret}-' to get all the commits in the branch that was merged in merge commit '<commit>' (including '<commit>' itself)."
-msgstr ""
+msgstr "'<修订号>{caret}-[<n>]' 符号包括 '<修订号>' ，但不包括第 <n> 次父提交（即 '<修订号>{caret}<n>..<修订号>' 的速记形式），如果没有给出，则 '<n>'= 1。这对合并提交非常有用，只需传递 '<提交号>{caret}-'，就能获得在合并提交 '<提交号>' 中被合并的分支的所有提交（包括 '<提交号>' 本身）。"
 
 #. type: Plain text
 #: en/revisions.txt:358
 #, priority:100
 msgid "While '<rev>{caret}<n>' was about specifying a single commit parent, these three notations also consider its parents. For example you can say 'HEAD{caret}2{caret}@', however you cannot say 'HEAD{caret}@{caret}2'."
-msgstr ""
+msgstr "虽然 '<修订号>{caret}<n>' 是指定单个提交的父提交，但这三种符号也会考虑其父提交。例如，你可以说 'HEAD{caret}2{caret}@'，但不能说 'HEAD{caret}@{caret}2'。"
 
 #. type: Title -
 #: en/revisions.txt:360
 #, no-wrap, priority:100
 msgid "Revision Range Summary"
-msgstr ""
+msgstr "修订范围摘要"
 
 #. type: Labeled list
 #: en/revisions.txt:362
@@ -67799,19 +67799,19 @@ msgstr "'<rev>'"
 #: en/revisions.txt:365
 #, priority:100
 msgid "Include commits that are reachable from <rev> (i.e. <rev> and its ancestors)."
-msgstr ""
+msgstr "包括可从 <修订号> 到达的提交（即 <修订号> 及其祖先）。"
 
 #. type: Labeled list
 #: en/revisions.txt:366
 #, no-wrap, priority:100
 msgid "'{caret}<rev>'"
-msgstr ""
+msgstr "'{caret}<修订号>'"
 
 #. type: Plain text
 #: en/revisions.txt:369
 #, priority:100
 msgid "Exclude commits that are reachable from <rev> (i.e. <rev> and its ancestors)."
-msgstr ""
+msgstr "排除可从 <修订号> 到达的提交（即 <修订号> 及其祖先）。"
 
 #. type: Labeled list
 #: en/revisions.txt:370
@@ -67823,19 +67823,19 @@ msgstr "'<rev1>..<rev2>'"
 #: en/revisions.txt:374
 #, priority:100
 msgid "Include commits that are reachable from <rev2> but exclude those that are reachable from <rev1>.  When either <rev1> or <rev2> is omitted, it defaults to `HEAD`."
-msgstr ""
+msgstr "包括可从 <修订号2> 进入的提交，但不包括可从 <修订号1> 进入的提交。  如果省略 <修订号1> 或 <修订号2>，则默认为 `HEAD`。"
 
 #. type: Labeled list
 #: en/revisions.txt:375
 #, ignore-ellipsis, no-wrap, priority:100
 msgid "'<rev1>\\...<rev2>'"
-msgstr ""
+msgstr "'<修订号1>\\...<修订号2>'"
 
 #. type: Plain text
 #: en/revisions.txt:379
 #, priority:100
 msgid "Include commits that are reachable from either <rev1> or <rev2> but exclude those that are reachable from both.  When either <rev1> or <rev2> is omitted, it defaults to `HEAD`."
-msgstr ""
+msgstr "包括 <修订号1> 或 <修订号2> 均可访问的提交，但不包括 <修订号1> 和 <修订号2> 均可访问的提交。  省略 <修订号1> 或 <修订号2> 时，默认为 `HEAD`。"
 
 #. type: Labeled list
 #: en/revisions.txt:380
@@ -67847,37 +67847,37 @@ msgstr "'<rev>{caret}@', e.g. 'HEAD{caret}@'"
 #: en/revisions.txt:384
 #, priority:100
 msgid "A suffix '{caret}' followed by an at sign is the same as listing all parents of '<rev>' (meaning, include anything reachable from its parents, but not the commit itself)."
-msgstr ""
+msgstr "后缀 '{caret}' 后跟一个 at(@) 符号，就等于列出了 '<修订号>' 的所有父提交（意思是，包括父提交中可触及的任何内容，但不包括提交本身）。"
 
 #. type: Labeled list
 #: en/revisions.txt:385
 #, no-wrap, priority:100
 msgid "'<rev>{caret}!', e.g. 'HEAD{caret}!'"
-msgstr ""
+msgstr "'<修订号>{caret}!'，例如 'HEAD{caret}!'"
 
 #. type: Plain text
 #: en/revisions.txt:389
 #, priority:100
 msgid "A suffix '{caret}' followed by an exclamation mark is the same as giving commit '<rev>' and all its parents prefixed with '{caret}' to exclude them (and their ancestors)."
-msgstr ""
+msgstr "带感叹号的后缀 '{caret}' 与提交 '<修订号>' 及其所有前缀为 '{caret}' 的父节点相同，都是为了排除它们（及其祖先）。"
 
 #. type: Labeled list
 #: en/revisions.txt:390
 #, no-wrap, priority:100
 msgid "'<rev>{caret}-<n>', e.g. 'HEAD{caret}-, HEAD{caret}-2'"
-msgstr ""
+msgstr "'<修订号>{caret}-<n>'，例如 'HEAD{caret}-, HEAD{caret}-2'"
 
 #. type: Plain text
 #: en/revisions.txt:393
 #, priority:100
 msgid "Equivalent to '<rev>{caret}<n>..<rev>', with '<n>' = 1 if not given."
-msgstr ""
+msgstr "等价于 '<修订号>{caret}<n>..<修订号>'，如果未给出，则 '<n>'= 1。"
 
 #. type: Plain text
 #: en/revisions.txt:397
 #, priority:100
 msgid "Here are a handful of examples using the Loeliger illustration above, with each step in the notation's expansion and selection carefully spelt out:"
-msgstr ""
+msgstr "下面是一些使用上述 Loeliger 插图的示例，其中仔细说明了符号扩展和选择的每个步骤："
 
 #. type: delimited block .
 #: en/revisions.txt:421
@@ -67905,7 +67905,7 @@ msgid ""
 "\t  = B ^B^1 ^B^2 ^B^3\n"
 "\t  = B ^D ^E ^F          B\n"
 "   F^! D  = F ^I ^J D           G H D F\n"
-msgstr ""
+msgstr "   参数   扩展参数    选定的提交\n   D                            G H D\n   D F                          G H I J D F\n   ^G D                         H D\n   ^D B                         E I J F B\n   ^D B C                       E I J F B C\n   C                            I J F C\n   B..C   = ^B C                C\n   B...C  = B ^F C              G H D E B C\n   B^-    = B^..B\n\t  = ^B^1 B              E I J F B\n   C^@    = C^1\n\t  = F                   I J F\n   B^@    = B^1 B^2 B^3\n\t  = D E F               D G H E F I J\n   C^!    = C ^C^@\n\t  = C ^C^1\n\t  = C ^F                C\n   B^!    = B ^B^@\n\t  = B ^B^1 ^B^2 ^B^3\n\t  = B ^D ^E ^F          B\n   F^! D  = F ^I ^J D           G H D F\n"
 
 #. type: Plain text
 #: en/rev-list-description.txt:5
@@ -70742,7 +70742,7 @@ msgstr "请注意，我们将使用的例子实际上是一个小型例子，我
 #: en/git-bisect-lk2009.txt:231
 #, no-wrap, priority:100
 msgid "Driving a bisection manually"
-msgstr ""
+msgstr "手动驱动二分"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.txt:236
