@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-08-05 19:25+0200\nPO-Revision-Date: 2023-10-23 09:02+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.1.1-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-08-05 19:25+0200\nPO-Revision-Date: 2023-10-25 10:01+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.1.1-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:772 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:146 en/git-status.txt:31
@@ -23289,25 +23289,25 @@ msgstr "其中 `<引用>` 是要提交的分支名称。 在 Git 中，分支名
 #: en/git-fast-import.txt:460
 #, priority:90
 msgid "A `mark` command may optionally appear, requesting fast-import to save a reference to the newly created commit for future use by the frontend (see below for format).  It is very common for frontends to mark every commit they create, thereby allowing future branch creation from any imported commit."
-msgstr ""
+msgstr "`mark`（标记）命令可能会出现，要求 fast-import 保存新创建提交的引用，供前端将来使用（格式见下文）。 前端通常会标记他们创建的每个提交，从而允许将来从任何导入的提交中创建分支。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:466
 #, priority:90
 msgid "The `data` command following `committer` must supply the commit message (see below for `data` command syntax).  To import an empty commit message use a 0 length data.  Commit messages are free-form and are not interpreted by Git.  Currently they must be encoded in UTF-8, as fast-import does not permit other encodings to be specified."
-msgstr ""
+msgstr "在 `committer` 之后的 `data` 命令必须提供提交信息（请参阅下面的 `data` 命令语法）。 要导入空的提交信息，请使用长度为 0 的数据。 提交信息是自由格式的，Git 无法解释。 目前它们必须以 UTF-8 编码，因为 fast-import 不允许指定其他编码。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:474
 #, priority:90
 msgid "Zero or more `filemodify`, `filedelete`, `filecopy`, `filerename`, `filedeleteall` and `notemodify` commands may be included to update the contents of the branch prior to creating the commit.  These commands may be supplied in any order.  However it is recommended that a `filedeleteall` command precede all `filemodify`, `filecopy`, `filerename` and `notemodify` commands in the same commit, as `filedeleteall` wipes the branch clean (see below)."
-msgstr ""
+msgstr "在创建提交之前，可以包含零个或多个 `filemodify`, `filedelete`, `filecopy`, `filerename`, `filedeleteall` 和 `notemodify` 命令来更新分支的内容。 这些命令可以任意顺序提供。 不过，我们建议在同一提交中的所有 `filemodify`, `filecopy`, `filerename` 和 `notemodify` 命令之前都加上 `filedeleteall` 命令，因为 `filedeleteall` 会将分支清除干净（见下文）。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:481
 #, priority:90
 msgid "The `LF` after the command is optional (it used to be required).  Note that for reasons of backward compatibility, if the commit ends with a `data` command (i.e. it has no `from`, `merge`, `filemodify`, `filedelete`, `filecopy`, `filerename`, `filedeleteall` or `notemodify` commands) then two `LF` commands may appear at the end of the command instead of just one."
-msgstr ""
+msgstr "命令后的 `LF` 是可选的（以前是必须的）。 请注意，出于向后兼容性的考虑，如果提交以一条 `data` 命令结束（即没有 `from`、`mmerge`、`filemodify`、`filedelete`、`filecopy`、`filerename`、`filedeleteall` 或 `notemodify` 命令），那么命令末尾可能会出现两条 `LF` 命令，而不是只有一条。"
 
 #. type: Title ^
 #: en/git-fast-import.txt:483
@@ -23319,7 +23319,7 @@ msgstr "`author`"
 #: en/git-fast-import.txt:489
 #, priority:90
 msgid "An `author` command may optionally appear, if the author information might differ from the committer information.  If `author` is omitted then fast-import will automatically use the committer's information for the author portion of the commit.  See below for a description of the fields in `author`, as they are identical to `committer`."
-msgstr ""
+msgstr "如果作者信息可能与提交者信息不同，可选择使用 `author` 命令。 如果省略了 `author` 命令，那么 fast-import 将自动使用提交者的信息来处理提交的作者部分。 有关 `author` 字段的描述，请参阅下文，因为它们与 `committer` 相同。"
 
 #. type: Title ^
 #: en/git-fast-import.txt:491
@@ -23331,19 +23331,19 @@ msgstr "`committer`"
 #: en/git-fast-import.txt:494
 #, priority:90
 msgid "The `committer` command indicates who made this commit, and when they made it."
-msgstr ""
+msgstr "`committer` 命令会显示谁提交了该提交，以及提交的时间。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:502
 #, priority:90
 msgid "Here `<name>` is the person's display name (for example ``Com M Itter'') and `<email>` is the person's email address (``\\cm@example.com'').  `LT` and `GT` are the literal less-than (\\x3c)  and greater-than (\\x3e) symbols.  These are required to delimit the email address from the other fields in the line.  Note that `<name>` and `<email>` are free-form and may contain any sequence of bytes, except `LT`, `GT` and `LF`.  `<name>` is typically UTF-8 encoded."
-msgstr ""
+msgstr "这里的`<名称>`是个人的显示名（例如 ''Com M Itter''），`<email>`是个人的电子邮件地址（''\\cm@example.com''）。 `LT` 和 `GT` 是字面上的小于（\\x3c）和大于（\\x3e）符号。 需要使用这些符号将电子邮件地址与行中的其他字段分隔开来。 请注意，`<名称>` 和 `<email>`是自由格式，可以包含任何字节序列，但 `LT`、`GT` 和`LF` 除外。 `<名称>` 通常采用 UTF-8 编码。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:507
 #, priority:90
 msgid "The time of the change is specified by `<when>` using the date format that was selected by the --date-format=<fmt> command-line option.  See ``Date Formats'' above for the set of supported formats, and their syntax."
-msgstr ""
+msgstr "更改的时间由 `<when>`指定，并使用 --date-format=<日期格式> 命令行选项选择的日期格式。 有关支持的格式及其语法，请参阅上文的 ''日期格式''。"
 
 #. type: Title ^
 #: en/git-fast-import.txt:509
@@ -23355,7 +23355,7 @@ msgstr "`encoding`"
 #: en/git-fast-import.txt:513
 #, priority:90
 msgid "The optional `encoding` command indicates the encoding of the commit message.  Most commits are UTF-8 and the encoding is omitted, but this allows importing commit messages into git without first reencoding them."
-msgstr ""
+msgstr "可选的 `encoding` 命令表示提交信息的编码。 大多数提交信息都是 UTF-8 编码，编码可以省略，但这样就可以将提交信息导入 git 而无需先重新编码。"
 
 #. type: Title ^
 #: en/git-fast-import.txt:515
@@ -23367,85 +23367,85 @@ msgstr "`from`"
 #: en/git-fast-import.txt:521
 #, priority:90
 msgid "The `from` command is used to specify the commit to initialize this branch from.  This revision will be the first ancestor of the new commit.  The state of the tree built at this commit will begin with the state at the `from` commit, and be altered by the content modifications in this commit."
-msgstr ""
+msgstr "`from` 命令用于指定从哪个提交开始初始化分支。 此修订将成为新提交的第一个祖先。 在此提交中构建的树的状态将从 `from` 提交中的状态开始，并由此提交中的内容修改所改变。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:531
 #, priority:90
 msgid "Omitting the `from` command in the first commit of a new branch will cause fast-import to create that commit with no ancestor. This tends to be desired only for the initial commit of a project.  If the frontend creates all files from scratch when making a new branch, a `merge` command may be used instead of `from` to start the commit with an empty tree.  Omitting the `from` command on existing branches is usually desired, as the current commit on that branch is automatically assumed to be the first ancestor of the new commit."
-msgstr ""
+msgstr "在新分支的第一次提交中省略 `from` 命令会导致 fast-import 创建的提交没有祖先。这往往只适用于项目的首次提交。 如果前端在创建新分支时从头开始创建所有文件，则可以使用 `merge` 命令代替 `from` 命令，以空树开始提交。 在现有分支上，通常希望省略 `from` 命令，因为该分支上的当前提交会被自动假定为新提交的第一个祖先。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:534
 #, priority:90
 msgid "As `LF` is not valid in a Git refname or SHA-1 expression, no quoting or escaping syntax is supported within `<commit-ish>`."
-msgstr ""
+msgstr "由于 `LF` 在 Git 引用名称或 SHA-1 表达式中无效，因此 `<提交号>` 中不支持引号或转义语法。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:536
 #, priority:90
 msgid "Here `<commit-ish>` is any of the following:"
-msgstr ""
+msgstr "这里的 `<提交号>` 是指以下任何一种："
 
 #. type: Plain text
 #: en/git-fast-import.txt:540
 #, priority:90
 msgid "The name of an existing branch already in fast-import's internal branch table.  If fast-import doesn't know the name, it's treated as a SHA-1 expression."
-msgstr ""
+msgstr "fast-import 内部分支表中现有分支的名称。 如果 fast-import 不知道该名称，则将其视为 SHA-1 表达式。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:542
 #, priority:90
 msgid "A mark reference, `:<idnum>`, where `<idnum>` is the mark number."
-msgstr ""
+msgstr "标记引用，`<idnum>`，其中 `<idnum>`是标记编号。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:548
 #, priority:90
 msgid "The reason fast-import uses `:` to denote a mark reference is this character is not legal in a Git branch name.  The leading `:` makes it easy to distinguish between the mark 42 (`:42`) and the branch 42 (`42` or `refs/heads/42`), or an abbreviated SHA-1 which happened to consist only of base-10 digits."
-msgstr ""
+msgstr "fast-import 使用 `:` 表示标记引用的原因是，这个字符在 Git 分支名称中是不合法的。 前导的 `:` 便于区分标记 42 (`:42`)和分支 42 (`42` 或 `refs/heads/42`)，或缩写的 SHA-1，而后者恰好只由基数为 10 的数字组成。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:550
 #, priority:90
 msgid "Marks must be declared (via `mark`) before they can be used."
-msgstr ""
+msgstr "标记必须先声明（通过 `mark` ）才能使用。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:552
 #, priority:90
 msgid "A complete 40 byte or abbreviated commit SHA-1 in hex."
-msgstr ""
+msgstr "以十六进制表示的完整的 40 字节或缩写的 SHA-1 提交。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:555
 #, priority:90
 msgid "Any valid Git SHA-1 expression that resolves to a commit.  See ``SPECIFYING REVISIONS'' in linkgit:gitrevisions[7] for details."
-msgstr ""
+msgstr "任何解析为提交的有效 Git SHA-1 表达式。 详见 linkgit:gitrevisions[7] 中的 ''指定修订格式''。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:558
 #, priority:90
 msgid "The special null SHA-1 (40 zeros) specifies that the branch is to be removed."
-msgstr ""
+msgstr "特殊的空 SHA-1（40 个零）表示要删除分支。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:561
 #, priority:90
 msgid "The special case of restarting an incremental import from the current branch value should be written as:"
-msgstr ""
+msgstr "从当前分支值重新开始增量导入的特殊情况应写为："
 
 #. type: delimited block -
 #: en/git-fast-import.txt:563
 #, no-wrap, priority:90
 msgid "\tfrom refs/heads/branch^0\n"
-msgstr ""
+msgstr "\tfrom refs/heads/branch^0\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:570
 #, priority:90
 msgid "The `^0` suffix is necessary as fast-import does not permit a branch to start from itself, and the branch is created in memory before the `from` command is even read from the input.  Adding `^0` will force fast-import to resolve the commit through Git's revision parsing library, rather than its internal branch table, thereby loading in the existing value of the branch."
-msgstr ""
+msgstr "后缀 `^0` 是必要的，因为 fast-import 不允许分支从自身开始，分支会在从输入的 `from` 命令读取之前在内存中创建。 添加 `^0` 会强制 fast-import 通过 Git 的修订解析库而非内部分支表来解析提交，从而加载分支的现有值。"
 
 #. type: Title ^
 #: en/git-fast-import.txt:572
@@ -23457,13 +23457,13 @@ msgstr "`merge`"
 #: en/git-fast-import.txt:580
 #, priority:90
 msgid "Includes one additional ancestor commit.  The additional ancestry link does not change the way the tree state is built at this commit.  If the `from` command is omitted when creating a new branch, the first `merge` commit will be the first ancestor of the current commit, and the branch will start out with no files.  An unlimited number of `merge` commands per commit are permitted by fast-import, thereby establishing an n-way merge."
-msgstr ""
+msgstr "包括一个额外的祖先提交。 额外的祖先链接不会改变本次提交的树状态构建方式。 如果在创建新分支时省略了 `from` 命令，则第一个 `merge` 提交将是当前提交的第一个祖先，分支开始时将没有文件。 fast-import 允许在每次提交中使用不限次数的 `merge` 命令，从而建立 n 路合并。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:583
 #, priority:90
 msgid "Here `<commit-ish>` is any of the commit specification expressions also accepted by `from` (see above)."
-msgstr ""
+msgstr "这里的 `<提交号>` 是`from` 也接受的任何提交规范表达式（见上文）。"
 
 #. type: Title ^
 #: en/git-fast-import.txt:585
@@ -23475,19 +23475,19 @@ msgstr "`filemodify`"
 #: en/git-fast-import.txt:589
 #, priority:90
 msgid "Included in a `commit` command to add a new file or change the content of an existing file.  This command has two different means of specifying the content of the file."
-msgstr ""
+msgstr "包含在 `commit` 命令中，用于添加新文件或更改现有文件的内容。 该命令有两种指定文件内容的不同方式。"
 
 #. type: Labeled list
 #: en/git-fast-import.txt:590 en/git-fast-import.txt:757
 #, no-wrap, priority:90
 msgid "External data format"
-msgstr ""
+msgstr "外部数据格式"
 
 #. type: Plain text
 #: en/git-fast-import.txt:593
 #, priority:90
 msgid "The data content for the file was already supplied by a prior `blob` command.  The frontend just needs to connect it."
-msgstr ""
+msgstr "文件的数据内容已由之前的 `blob` 命令提供。 前台只需将其连接起来即可。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:596
@@ -23499,19 +23499,19 @@ msgstr "\t'M' SP <mode> SP <dataref> SP <path> LF\n"
 #: en/git-fast-import.txt:603
 #, priority:90
 msgid "Here usually `<dataref>` must be either a mark reference (`:<idnum>`)  set by a prior `blob` command, or a full 40-byte SHA-1 of an existing Git blob object.  If `<mode>` is `040000`` then `<dataref>` must be the full 40-byte SHA-1 of an existing Git tree object or a mark reference set with `--import-marks`."
-msgstr ""
+msgstr "通常情况下，`<数据引用>` 必须是由之前的 `blob` 命令设置的标记引用 (`:<idnum>`)，或者是现有 Git blob 对象的完整 40 字节 SHA-1 值。 如果 `<模式>` 是 `040000``，则 `<数据引用>` 必须是现有 Git 树对象的完整 40 字节 SHA-1 或用 `--import-marks` 设置的标记引用。"
 
 #. type: Labeled list
 #: en/git-fast-import.txt:604 en/git-fast-import.txt:770
 #, no-wrap, priority:90
 msgid "Inline data format"
-msgstr ""
+msgstr "内联数据格式"
 
 #. type: Plain text
 #: en/git-fast-import.txt:608
 #, priority:90
 msgid "The data content for the file has not been supplied yet.  The frontend wants to supply it as part of this modify command."
-msgstr ""
+msgstr "文件的数据内容尚未提供。 前台希望将其作为该修改命令的一部分提供。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:612
@@ -23519,109 +23519,109 @@ msgstr ""
 msgid ""
 "\t'M' SP <mode> SP 'inline' SP <path> LF\n"
 "\tdata\n"
-msgstr ""
+msgstr "\t'M' SP <模式> SP 'inline' SP <路径> LF\n\tdata\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:615 en/git-fast-import.txt:781
 #, priority:90
 msgid "See below for a detailed description of the `data` command."
-msgstr ""
+msgstr "有关 `data` 命令的详细说明，请参阅下文。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:618
 #, priority:90
 msgid "In both formats `<mode>` is the type of file entry, specified in octal.  Git only supports the following modes:"
-msgstr ""
+msgstr "在这两种格式中，`<模式>` 都是以八进制指定的文件类型。 Git 仅支持以下模式："
 
 #. type: Plain text
 #: en/git-fast-import.txt:622
 #, priority:90
 msgid "`100644` or `644`: A normal (not-executable) file.  The majority of files in most projects use this mode.  If in doubt, this is what you want."
-msgstr ""
+msgstr "`100644` 或 `644`： 普通（不可执行）文件。 大多数项目中的大部分文件都使用这种模式。 如果不知道用什么格式，请使用这种模式。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:623
 #, priority:90
 msgid "`100755` or `755`: A normal, but executable, file."
-msgstr ""
+msgstr "`100755` 或 `755`： 一个普通但可执行的文件。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:624
 #, priority:90
 msgid "`120000`: A symlink, the content of the file will be the link target."
-msgstr ""
+msgstr "`120000` ：符号链接，文件内容将成为链接目标。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:627
 #, priority:90
 msgid "`160000`: A gitlink, SHA-1 of the object refers to a commit in another repository. Git links can only be specified by SHA or through a commit mark. They are used to implement submodules."
-msgstr ""
+msgstr "`160000` ： 一个 Git 链接，对象的 SHA-1 指向另一个仓库中的提交。Git 链接只能通过 SHA 或提交标记指定。它们用于实现子模块。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:629
 #, priority:90
 msgid "`040000`: A subdirectory.  Subdirectories can only be specified by SHA or through a tree mark set with `--import-marks`."
-msgstr ""
+msgstr "`040000` ：子目录。 子目录只能通过 SHA 或使用 `--import-marks` 设置的树形标记来指定。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:632
 #, priority:90
 msgid "In both formats `<path>` is the complete path of the file to be added (if not already existing) or modified (if already existing)."
-msgstr ""
+msgstr "在这两种格式中，`<路径>` 都是要添加（如果尚未存在）或修改（如果已经存在）的文件的完整路径。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:636
 #, priority:90
 msgid "A `<path>` string must use UNIX-style directory separators (forward slash `/`), may contain any byte other than `LF`, and must not start with double quote (`\"`)."
-msgstr ""
+msgstr "`<路径>` 字符串必须使用 UNIX 风格的目录分隔符（正斜杠 `/`），可以包含除 `LF` 以外的任何字节，且不得以双引号 (`\"`) 开头。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:643
 #, priority:90
 msgid "A path can use C-style string quoting; this is accepted in all cases and mandatory if the filename starts with double quote or contains `LF`. In C-style quoting, the complete name should be surrounded with double quotes, and any `LF`, backslash, or double quote characters must be escaped by preceding them with a backslash (e.g., `\"path/with\\n, \\\\ and \\\" in it\"`)."
-msgstr ""
+msgstr "路径可以使用 C 风格字符串引号；在任何情况下都可以使用，如果文件名以双引号开头或包含 `LF`，则必须使用。在 C 风格引号中，完整的名称应该用双引号括起来，任何 `LF`、反斜杠或双引号字符都必须用反斜杠括起来（例如，`\"path/with\\n, \\\\ and \\\" in it\"`）。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:645
 #, priority:90
 msgid "The value of `<path>` must be in canonical form. That is it must not:"
-msgstr ""
+msgstr "`<路径>` 的值必须是规范格式。也就是说，绝不能是："
 
 #. type: Plain text
 #: en/git-fast-import.txt:647
 #, priority:90
 msgid "contain an empty directory component (e.g. `foo//bar` is invalid),"
-msgstr ""
+msgstr "包含一个空目录组件（如 `foo//bar` 就是无效的），"
 
 #. type: Plain text
 #: en/git-fast-import.txt:648
 #, priority:90
 msgid "end with a directory separator (e.g. `foo/` is invalid),"
-msgstr ""
+msgstr "以目录分隔符结尾（如 `foo/` 是无效的），"
 
 #. type: Plain text
 #: en/git-fast-import.txt:649
 #, priority:90
 msgid "start with a directory separator (e.g. `/foo` is invalid),"
-msgstr ""
+msgstr "以目录分隔符开头（如 `/foo` 是无效的），"
 
 #. type: Plain text
 #: en/git-fast-import.txt:651
 #, priority:90
 msgid "contain the special component `.` or `..` (e.g. `foo/./bar` and `foo/../bar` are invalid)."
-msgstr ""
+msgstr "包含特殊成分 `.` 或 `..`（例如，`foo/./bar` 和 `foo/../bar` 是无效的）。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:653
 #, priority:90
 msgid "The root of the tree can be represented by an empty string as `<path>`."
-msgstr ""
+msgstr "树根可以用空字符 `<路径>` 表示。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:655
 #, priority:90
 msgid "It is recommended that `<path>` always be encoded using UTF-8."
-msgstr ""
+msgstr "建议始终使用 UTF-8 对 `<路径>` 进行编码。"
 
 #. type: Title ^
 #: en/git-fast-import.txt:657
@@ -23633,19 +23633,19 @@ msgstr "`filedelete`"
 #: en/git-fast-import.txt:663
 #, priority:90
 msgid "Included in a `commit` command to remove a file or recursively delete an entire directory from the branch.  If the file or directory removal makes its parent directory empty, the parent directory will be automatically removed too.  This cascades up the tree until the first non-empty directory or the root is reached."
-msgstr ""
+msgstr "包含在 `commit` 命令中，用于从分支中删除文件或递归删除整个目录。 如果文件或目录删除后其父级目录为空，父级目录也会自动删除。 这将沿着树向上逐级进行，直到到达第一个非空目录或根目录为止。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:666
 #, no-wrap, priority:90
 msgid "\t'D' SP <path> LF\n"
-msgstr ""
+msgstr "\t'D' SP <路径> LF\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:671
 #, priority:90
 msgid "here `<path>` is the complete path of the file or subdirectory to be removed from the branch.  See `filemodify` above for a detailed description of `<path>`."
-msgstr ""
+msgstr "这里的 `<路劲>` 是要从分支中删除的文件或子目录的完整路径。 有关 `<路径>` 的详细说明，请参阅上文的 `filemodify` 。"
 
 #. type: Title ^
 #: en/git-fast-import.txt:673
@@ -23657,7 +23657,7 @@ msgstr "`filecopy`"
 #: en/git-fast-import.txt:678
 #, priority:90
 msgid "Recursively copies an existing file or subdirectory to a different location within the branch.  The existing file or directory must exist.  If the destination exists it will be completely replaced by the content copied from the source."
-msgstr ""
+msgstr "递归复制现有文件或子目录到分支内的不同位置。 现有文件或目录必须存在。 如果目标位置存在，它将被从源位置复制的内容完全取代。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:681
@@ -23669,13 +23669,13 @@ msgstr "\t'C' SP <path> SP <path> LF\n"
 #: en/git-fast-import.txt:687 en/git-fast-import.txt:707
 #, priority:90
 msgid "here the first `<path>` is the source location and the second `<path>` is the destination.  See `filemodify` above for a detailed description of what `<path>` may look like.  To use a source path that contains SP the path must be quoted."
-msgstr ""
+msgstr "这里第一个 `<路径>` 是源位置，第二个 `<路径>` 是目标位置。 关于 `<路径>` 的详细说明，请参阅上文的 `filemodify` 。 要使用包含 SP 的源路径，路径必须加引号。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:692
 #, priority:90
 msgid "A `filecopy` command takes effect immediately.  Once the source location has been copied to the destination any future commands applied to the source location will not impact the destination of the copy."
-msgstr ""
+msgstr "`filecopy`（文件复制）命令会立即生效。 一旦源位置被复制到目标位置，今后应用于源位置的任何命令都不会影响复制的目标位置。"
 
 #. type: Title ^
 #: en/git-fast-import.txt:694
@@ -23687,7 +23687,7 @@ msgstr "`filerename`"
 #: en/git-fast-import.txt:698
 #, priority:90
 msgid "Renames an existing file or subdirectory to a different location within the branch.  The existing file or directory must exist. If the destination exists it will be replaced by the source directory."
-msgstr ""
+msgstr "将现有文件或子目录重命名到分支内的不同位置。 现有文件或目录必须存在。如果目标目录存在，它将被源目录取代。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:701
@@ -23699,13 +23699,13 @@ msgstr "\t'R' SP <path> SP <path> LF\n"
 #: en/git-fast-import.txt:712
 #, priority:90
 msgid "A `filerename` command takes effect immediately.  Once the source location has been renamed to the destination any future commands applied to the source location will create new files there and not impact the destination of the rename."
-msgstr ""
+msgstr "`filename`（文件重命名）命令会立即生效。 一旦源位置被重命名为目标位置，今后应用于源位置的任何命令都将在该位置创建新文件，而不会影响重命名的目标位置。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:721
 #, priority:90
 msgid "Note that a `filerename` is the same as a `filecopy` followed by a `filedelete` of the source location.  There is a slight performance advantage to using `filerename`, but the advantage is so small that it is never worth trying to convert a delete/add pair in source material into a rename for fast-import.  This `filerename` command is provided just to simplify frontends that already have rename information and don't want bother with decomposing it into a `filecopy` followed by a `filedelete`."
-msgstr ""
+msgstr "请注意，`filerename` 等同于源位置的 `filecopy` 和 `filedelete`。 使用 `filerename` 在性能上略有优势，但优势非常小，不值得为了快速导入而尝试将源材料中的删除/添加对转换为重命名。 提供这个 `fileerename` 命令只是为了简化已经有重命名信息的前端程序，而不需要将其分解为 `filecopy` 和 `filedelete` 命令。"
 
 #. type: Title ^
 #: en/git-fast-import.txt:723
@@ -23717,25 +23717,25 @@ msgstr "`filedeleteall`"
 #: en/git-fast-import.txt:728
 #, priority:90
 msgid "Included in a `commit` command to remove all files (and also all directories) from the branch.  This command resets the internal branch structure to have no files in it, allowing the frontend to subsequently add all interesting files from scratch."
-msgstr ""
+msgstr "包含在 `commit` 命令中，用于删除分支中的所有文件（以及所有目录）。 该命令会重置内部分支结构，使其不包含任何文件，从而允许前台随后从头开始添加所有感兴趣的文件。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:731
 #, no-wrap, priority:90
 msgid "\t'deleteall' LF\n"
-msgstr ""
+msgstr "\t'deleteall' LF\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:737
 #, priority:90
 msgid "This command is extremely useful if the frontend does not know (or does not care to know) what files are currently on the branch, and therefore cannot generate the proper `filedelete` commands to update the content."
-msgstr ""
+msgstr "如果前台不知道（或不关心知道）当前分支上有哪些文件，因而无法生成适当的 `filedelete` 命令来更新内容，那么这条命令就非常有用。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:745
 #, priority:90
 msgid "Issuing a `filedeleteall` followed by the needed `filemodify` commands to set the correct content will produce the same results as sending only the needed `filemodify` and `filedelete` commands.  The `filedeleteall` approach may however require fast-import to use slightly more memory per active branch (less than 1 MiB for even most large projects); so frontends that can easily obtain only the affected paths for a commit are encouraged to do so."
-msgstr ""
+msgstr "在发出 `filedeleteall` 命令后，再发出所需的 `filemodify` 命令来设置正确的内容，与只发出所需的 `filemodify` 和 `filedelete` 命令产生的结果是一样的。 不过，`filedeleteall` 方法可能会要求 fast-import 在每个活动分支上使用稍多的内存（对于大多数大型项目而言，内存都小于 1MB）；因此，我们鼓励能够轻松获取提交中仅受影响路径的前端这样做。"
 
 #. type: Title ^
 #: en/git-fast-import.txt:747
@@ -23747,13 +23747,13 @@ msgstr "`notemodify`"
 #: en/git-fast-import.txt:756
 #, priority:90
 msgid "Included in a `commit` `<notes_ref>` command to add a new note annotating a `<commit-ish>` or change this annotation contents.  Internally it is similar to filemodify 100644 on `<commit-ish>` path (maybe split into subdirectories). It's not advised to use any other commands to write to the `<notes_ref>` tree except `filedeleteall` to delete all existing notes in this tree.  This command has two different means of specifying the content of the note."
-msgstr ""
+msgstr "包含在`commit` `<引用笔记>`命令中，用于为 `<提交号>` 添加新注释或更改注释内容。 在内部，它类似于在 `<提交号>` 路径（可能分成子目录）上的文件修改 100644。除了使用 `filedeleteall` 命令删除`<notes_ref>` 树中的所有现有注释外，不建议使用任何其他命令向 `<引用笔记>` 树中写入注释。 该命令有两种指定笔记内容的不同方法。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:761
 #, priority:90
 msgid "The data content for the note was already supplied by a prior `blob` command.  The frontend just needs to connect it to the commit that is to be annotated."
-msgstr ""
+msgstr "注释的数据内容已由先前的 `blob` 命令提供。 前台只需将其连接到要注释的提交。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:764
@@ -23765,13 +23765,13 @@ msgstr "\t'N' SP <dataref> SP <commit-ish> LF\n"
 #: en/git-fast-import.txt:769
 #, priority:90
 msgid "Here `<dataref>` can be either a mark reference (`:<idnum>`)  set by a prior `blob` command, or a full 40-byte SHA-1 of an existing Git blob object."
-msgstr ""
+msgstr "这里的 `<数据引用>` 既可以是之前的 `blob` 命令设置的标记引用（`:<idnum>`），也可以是现有 Git blob 对象的完整 40 字节 SHA-1 值。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:774
 #, priority:90
 msgid "The data content for the note has not been supplied yet.  The frontend wants to supply it as part of this modify command."
-msgstr ""
+msgstr "备注的数据内容尚未提供。 前台希望将其作为该修改命令的一部分提供。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:778
@@ -23779,13 +23779,13 @@ msgstr ""
 msgid ""
 "\t'N' SP 'inline' SP <commit-ish> LF\n"
 "\tdata\n"
-msgstr ""
+msgstr "\t'N' SP 'inline' SP <提交号> LF\n\tdata\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:784
 #, priority:90
 msgid "In both formats `<commit-ish>` is any of the commit specification expressions also accepted by `from` (see above)."
-msgstr ""
+msgstr "在这两种格式中，`<提交号>` 是 `from` 也接受的任何提交规范表达式（见上文）。"
 
 #. type: Title ~
 #: en/git-fast-import.txt:786
@@ -23797,7 +23797,7 @@ msgstr "`mark`"
 #: en/git-fast-import.txt:792
 #, priority:90
 msgid "Arranges for fast-import to save a reference to the current object, allowing the frontend to recall this object at a future point in time, without knowing its SHA-1.  Here the current object is the object creation command the `mark` command appears within.  This can be `commit`, `tag`, and `blob`, but `commit` is the most common usage."
-msgstr ""
+msgstr "安排快速导入保存当前对象的引用，以便前端在未来某个时间点调用该对象，而无需知道其 SHA-1。 在这里，当前对象指的是 `mark` 命令中出现的对象创建命令。 这可以是 `commit`、`tag` 和 `blob`，但 `commit` 是最常见的用法。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:795
@@ -23809,13 +23809,13 @@ msgstr "\t'mark' SP ':' <idnum> LF\n"
 #: en/git-fast-import.txt:801
 #, priority:90
 msgid "where `<idnum>` is the number assigned by the frontend to this mark.  The value of `<idnum>` is expressed as an ASCII decimal integer.  The value 0 is reserved and cannot be used as a mark.  Only values greater than or equal to 1 may be used as marks."
-msgstr ""
+msgstr "其中，`<idnum>` 是前台分配给此标记的编号。 `<idnum>` 的值用 ASCII 十进制整数表示。 0 是保留值，不能用作标记。 只有大于或等于 1 的值才能用作标记。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:805
 #, priority:90
 msgid "New marks are created automatically.  Existing marks can be moved to another object simply by reusing the same `<idnum>` in another `mark` command."
-msgstr ""
+msgstr "新标记会自动创建。 只需在另一个 `mark` 命令中重复使用相同的 `<idnum>`，即可将现有标记移动到另一个对象上。"
 
 #. type: Title ~
 #: en/git-fast-import.txt:807
@@ -23827,25 +23827,25 @@ msgstr "`original-oid`"
 #: en/git-fast-import.txt:812
 #, priority:90
 msgid "Provides the name of the object in the original source control system.  fast-import will simply ignore this directive, but filter processes which operate on and modify the stream before feeding to fast-import may have uses for this information"
-msgstr ""
+msgstr "提供原始源码控制系统中对象的名称。fast-import 将直接忽略此指令，但在向 fast-import 输入数据流之前对其进行操作和修改的过滤进程可能会使用此信息"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:815
 #, no-wrap, priority:90
 msgid "\t'original-oid' SP <object-identifier> LF\n"
-msgstr ""
+msgstr "\t'original-oid' SP <对象标识符> LF\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:818
 #, priority:90
 msgid "where `<object-identifier>` is any string not containing LF."
-msgstr ""
+msgstr "其中，`<对象标识符>` 是任何不包含 LF 的字符串。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:823
 #, priority:90
 msgid "Creates an annotated tag referring to a specific commit.  To create lightweight (non-annotated) tags see the `reset` command below."
-msgstr ""
+msgstr "创建指向特定提交的注释标记。 要创建轻量级（无注释）标签，请参阅下面的 `reset` 命令。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:831
@@ -23857,49 +23857,49 @@ msgid ""
 "\toriginal-oid?\n"
 "\t'tagger' (SP <name>)? SP LT <email> GT SP <when> LF\n"
 "\tdata\n"
-msgstr ""
+msgstr "\t'tag' SP <名称> LF\n\tmark?\n\t'from' SP <提交号> LF\n\toriginal-oid?\n\t'tagger' (SP <名称>)? SP LT <email> GT SP <when> LF\n\tdata\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:834
 #, priority:90
 msgid "where `<name>` is the name of the tag to create."
-msgstr ""
+msgstr "其中 `<名称>` 是要创建的标记的名称。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:839
 #, priority:90
 msgid "Tag names are automatically prefixed with `refs/tags/` when stored in Git, so importing the CVS branch symbol `RELENG-1_0-FINAL` would use just `RELENG-1_0-FINAL` for `<name>`, and fast-import will write the corresponding ref as `refs/tags/RELENG-1_0-FINAL`."
-msgstr ""
+msgstr "因此，导入 CVS 分支符号 `RELENG-1_0-FINAL` 时，只需在 `<名称>` 中使用 `RELENG-1_0-FINAL`，而 fast-import 会将相应的引用写成 `refs/tags/RELENG-1_0-FINAL`。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:843
 #, priority:90
 msgid "The value of `<name>` must be a valid refname in Git and therefore may contain forward slashes.  As `LF` is not valid in a Git refname, no quoting or escaping syntax is supported here."
-msgstr ""
+msgstr "在 Git 中，`<名称>` 的值必须是有效的引用名称，因此可能包含正斜杠。 由于 `LF` 在 Git 引用名称中无效，因此此处不支持引号或转义语法。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:846
 #, priority:90
 msgid "The `from` command is the same as in the `commit` command; see above for details."
-msgstr ""
+msgstr "`from` 命令与 `commit` 命令相同，详见上文。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:849
 #, priority:90
 msgid "The `tagger` command uses the same format as `committer` within `commit`; again see above for details."
-msgstr ""
+msgstr "`tagger` 命令使用的格式与 `commit` 中的 `committer` 相同；详情参见上文。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:855
 #, priority:90
 msgid "The `data` command following `tagger` must supply the annotated tag message (see below for `data` command syntax).  To import an empty tag message use a 0 length data.  Tag messages are free-form and are not interpreted by Git.  Currently they must be encoded in UTF-8, as fast-import does not permit other encodings to be specified."
-msgstr ""
+msgstr "在 `tagger` 之后的 `data` 命令必须提供已注释的标记信息（请参阅下面的 `data` 命令语法）。 要导入空标签信息，请使用长度为 0 的数据。 标签信息是自由格式的，不会被 Git 解释。 目前，它们必须以 UTF-8 编码，因为 fast-import 不允许指定其他编码。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:863
 #, priority:90
 msgid "Signing annotated tags during import from within fast-import is not supported.  Trying to include your own PGP/GPG signature is not recommended, as the frontend does not (easily) have access to the complete set of bytes which normally goes into such a signature.  If signing is required, create lightweight tags from within fast-import with `reset`, then create the annotated versions of those tags offline with the standard 'git tag' process."
-msgstr ""
+msgstr "不支持在 fast-import 中导入时对已注释的标记进行签名。 不建议尝试加入自己的 PGP/GPG 签名，因为前端无法（轻易）获取通常用于签名的完整字节集。 如果需要签名，请使用 `reset` 在 fast-import 中创建轻量级标签，然后使用标准的 'git tag' 流程离线创建这些标签的注释版本。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:870
