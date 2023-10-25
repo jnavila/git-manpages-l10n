@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-08-05 19:25+0200\nPO-Revision-Date: 2023-10-25 10:01+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.1.1-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-08-05 19:25+0200\nPO-Revision-Date: 2023-10-26 12:01+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.1.1\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:772 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:146 en/git-status.txt:31
@@ -23905,7 +23905,7 @@ msgstr "不支持在 fast-import 中导入时对已注释的标记进行签名�
 #: en/git-fast-import.txt:870
 #, priority:90
 msgid "Creates (or recreates) the named branch, optionally starting from a specific revision.  The reset command allows a frontend to issue a new `from` command for an existing branch, or to create a new branch from an existing commit without creating a new commit."
-msgstr ""
+msgstr "创建（或重新创建）指定的分支，可选择从特定版本开始。  重置命令允许前台为现有分支发布新的 `from` 命令，或从现有提交创建新分支，而无需创建新提交。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:875
@@ -23914,25 +23914,25 @@ msgid ""
 "\t'reset' SP <ref> LF\n"
 "\t('from' SP <commit-ish> LF)?\n"
 "\tLF?\n"
-msgstr ""
+msgstr "\t'reset' SP <引用> LF\n\t('from' SP <提交号> LF)?\n\tLF?\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:879
 #, priority:90
 msgid "For a detailed description of `<ref>` and `<commit-ish>` see above under `commit` and `from`."
-msgstr ""
+msgstr "有关 `<引用>` 和 `<提交号>` 的详细说明，请参阅上文 `commit` 和 `from` 部分。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:881 en/git-fast-import.txt:1008
 #, priority:90
 msgid "The `LF` after the command is optional (it used to be required)."
-msgstr ""
+msgstr "命令后的 `LF` 是可选项（以前是必选项）。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:884
 #, priority:90
 msgid "The `reset` command can also be used to create lightweight (non-annotated) tags.  For example:"
-msgstr ""
+msgstr "`reset` （重置）命令还可用于创建轻量级（无注释）标记。  例如："
 
 #. type: delimited block =
 #: en/git-fast-import.txt:888
@@ -23940,19 +23940,19 @@ msgstr ""
 msgid ""
 "\treset refs/tags/938\n"
 "\tfrom :938\n"
-msgstr ""
+msgstr "\treset refs/tags/938\n\tfrom :938\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:892
 #, priority:90
 msgid "would create the lightweight tag `refs/tags/938` referring to whatever commit mark `:938` references."
-msgstr ""
+msgstr "将创建轻量级标记 `refs/tags/938`，并引用提交标记 `:938`。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:899
 #, priority:90
 msgid "Requests writing one file revision to the packfile.  The revision is not connected to any commit; this connection must be formed in a subsequent `commit` command by referencing the blob through an assigned mark."
-msgstr ""
+msgstr "请求向包文件写入一个文件修订。  修订版与任何提交都没有关联；这种关联必须在随后的 `commit` 命令中通过指定标记引用 blob 来形成。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:905
@@ -23962,13 +23962,13 @@ msgid ""
 "\tmark?\n"
 "\toriginal-oid?\n"
 "\tdata\n"
-msgstr ""
+msgstr "\t'blob' LF\n\tmark?\n\toriginal-oid?\n\tdata\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:911
 #, priority:90
 msgid "The mark command is optional here as some frontends have chosen to generate the Git SHA-1 for the blob on their own, and feed that directly to `commit`.  This is typically more work than it's worth however, as marks are inexpensive to store and easy to use."
-msgstr ""
+msgstr "这里的标记命令是可选的，因为有些前端选择自己为 blob 生成 Git SHA-1，并直接将其输入到 `commit` 中。  这通常是得不偿失的，因为标记的存储成本很低，而且易于使用。"
 
 #. type: Title ~
 #: en/git-fast-import.txt:913
@@ -23980,25 +23980,25 @@ msgstr "`data`"
 #: en/git-fast-import.txt:920
 #, priority:90
 msgid "Supplies raw data (for use as blob/file content, commit messages, or annotated tag messages) to fast-import.  Data can be supplied using an exact byte count or delimited with a terminating line.  Real frontends intended for production-quality conversions should always use the exact byte count format, as it is more robust and performs better.  The delimited format is intended primarily for testing fast-import."
-msgstr ""
+msgstr "向 fast-import 提供原始数据（用作 blob/文件内容、提交信息或注释标签信息）。  提供的数据可以使用精确的字节数，也可以用终止行分隔。  用于生产质量转换的真正前端应始终使用精确字节数格式，因为这种格式更稳健、性能更好。  分隔格式主要用于测试快速导入。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:925
 #, priority:90
 msgid "Comment lines appearing within the `<raw>` part of `data` commands are always taken to be part of the body of the data and are therefore never ignored by fast-import.  This makes it safe to import any file/message content whose lines might start with `#`."
-msgstr ""
+msgstr "在 `data` 命令的 `<raw>` 部分中出现的注释行总是被视为数据正文的一部分，因此 fast-import 不会忽略这些注释行。  这样就可以安全导入任何可能以 `#` 开头的文件/信息内容。"
 
 #. type: Labeled list
 #: en/git-fast-import.txt:926
 #, no-wrap, priority:90
 msgid "Exact byte count format"
-msgstr ""
+msgstr "精确字节计数格式"
 
 #. type: Plain text
 #: en/git-fast-import.txt:928
 #, priority:90
 msgid "The frontend must specify the number of bytes of data."
-msgstr ""
+msgstr "前台必须指定数据的字节数。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:932
@@ -24006,31 +24006,31 @@ msgstr ""
 msgid ""
 "\t'data' SP <count> LF\n"
 "\t<raw> LF?\n"
-msgstr ""
+msgstr "\t'data' SP <count> LF\n\t<raw> LF?\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:938
 #, priority:90
 msgid "where `<count>` is the exact number of bytes appearing within `<raw>`.  The value of `<count>` is expressed as an ASCII decimal integer.  The `LF` on either side of `<raw>` is not included in `<count>` and will not be included in the imported data."
-msgstr ""
+msgstr "其中，`<count>` 是出现在 `<raw>` 中的确切字节数。 `<count>` 的值用 ASCII 十进制整数表示。  `<raw>` 两侧的 `LF` 不包含在 `<count>` 中，也不会包含在导入的数据中。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:943
 #, priority:90
 msgid "The `LF` after `<raw>` is optional (it used to be required) but recommended.  Always including it makes debugging a fast-import stream easier as the next command always starts in column 0 of the next line, even if `<raw>` did not end with an `LF`."
-msgstr ""
+msgstr "在 `<raw>` 后面的 `LF` 是可选的（以前是必须的），但建议使用。  始终包含它可以使调试快速导入流变得更容易，因为下一条命令总是从下一行的第 0 列开始，即使 `<raw>` 没有以 `LF` 结束。"
 
 #. type: Labeled list
 #: en/git-fast-import.txt:944
 #, no-wrap, priority:90
 msgid "Delimited format"
-msgstr ""
+msgstr "分隔格式"
 
 #. type: Plain text
 #: en/git-fast-import.txt:949
 #, priority:90
 msgid "A delimiter string is used to mark the end of the data.  fast-import will compute the length by searching for the delimiter.  This format is primarily useful for testing and is not recommended for real data."
-msgstr ""
+msgstr "fast-import 将通过搜索分隔符来计算长度。  这种格式主要用于测试，不建议用于真实数据。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:955
@@ -24040,25 +24040,25 @@ msgid ""
 "\t<raw> LF\n"
 "\t<delim> LF\n"
 "\tLF?\n"
-msgstr ""
+msgstr "\t'data' SP '<<' <delim> LF\n\t<raw> LF\n\t<delim> LF\n\tLF?\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:963
 #, priority:90
 msgid "where `<delim>` is the chosen delimiter string.  The string `<delim>` must not appear on a line by itself within `<raw>`, as otherwise fast-import will think the data ends earlier than it really does.  The `LF` immediately trailing `<raw>` is part of `<raw>`.  This is one of the limitations of the delimited format, it is impossible to supply a data chunk which does not have an LF as its last byte."
-msgstr ""
+msgstr "其中 `<delim>` 是选定的分隔符字符串。  字符串 `<delim>` 不能单独出现在 `<raw>` 中的一行，否则 fast-import 会认为数据结束的时间比实际时间早。  紧跟在 `<raw>` 后面的 `LF` 是 `<raw>` 的一部分。  这是分隔格式的限制之一，不可能提供最后一个字节没有 LF 的数据块。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:965
 #, priority:90
 msgid "The `LF` after `<delim> LF` is optional (it used to be required)."
-msgstr ""
+msgstr "在 `<delim> LF` 后面的 `LF` 是可选的（以前是必须的）。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:970
 #, priority:90
 msgid "Record that a mark refers to a given object without first creating any new object."
-msgstr ""
+msgstr "记录标记指向某个对象，而无需先创建任何新对象。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:976
@@ -24068,19 +24068,19 @@ msgid ""
 "\tmark\n"
 "\t'to' SP <commit-ish> LF\n"
 "\tLF?\n"
-msgstr ""
+msgstr "\t'alias' LF\n\tmark\n\t'to' SP <提交号> LF\n\tLF?\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:979
 #, priority:90
 msgid "For a detailed description of `<commit-ish>` see above under `from`."
-msgstr ""
+msgstr "有关 `<提交号>` 的详细说明，请参阅上文 `from` 部分。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:985
 #, priority:90
 msgid "Forces fast-import to close the current packfile, start a new one, and to save out all current branch refs, tags and marks."
-msgstr ""
+msgstr "强制 fast-import 关闭当前的打包文件，启动一个新文件，并保存所有当前的分支参考、标记和标记。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:989
@@ -24088,31 +24088,31 @@ msgstr ""
 msgid ""
 "\t'checkpoint' LF\n"
 "\tLF?\n"
-msgstr ""
+msgstr "\t'checkpoint' LF\n\tLF?\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:995
 #, priority:90
 msgid "Note that fast-import automatically switches packfiles when the current packfile reaches --max-pack-size, or 4 GiB, whichever limit is smaller.  During an automatic packfile switch fast-import does not update the branch refs, tags or marks."
-msgstr ""
+msgstr "请注意，当当前包文件达到 --max-pack-size 或 4 GiB（以较小者为准）时，fast-import 会自动切换包文件。  在自动切换打包文件期间，fast-import 不会更新分支引用、标记或标记。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1000
 #, priority:90
 msgid "As a `checkpoint` can require a significant amount of CPU time and disk IO (to compute the overall pack SHA-1 checksum, generate the corresponding index file, and update the refs) it can easily take several minutes for a single `checkpoint` command to complete."
-msgstr ""
+msgstr "由于一个 `checkpoint` （检查点）可能需要大量的 CPU 时间和磁盘 IO（计算整个包的 SHA-1 校验和、生成相应的索引文件并更新引用），因此一条 `checkpoint` 命令可能需要几分钟才能完成。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1006
 #, priority:90
 msgid "Frontends may choose to issue checkpoints during extremely large and long running imports, or when they need to allow another Git process access to a branch.  However given that a 30 GiB Subversion repository can be loaded into Git through fast-import in about 3 hours, explicit checkpointing may not be necessary."
-msgstr ""
+msgstr "前端可能会选择在超大、超长的导入过程中，或需要允许另一个 Git 进程访问某个分支时，发出检查点。  不过，通过 fast-import 将一个 30GB 的 Subversion 仓库加载到 Git 大约只需要 3 个小时，因此可能不需要明确的检查点。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1015
 #, priority:90
 msgid "Causes fast-import to print the entire `progress` line unmodified to its standard output channel (file descriptor 1) when the command is processed from the input stream.  The command otherwise has no impact on the current import, or on any of fast-import's internal state."
-msgstr ""
+msgstr "在处理输入流中的命令时，使 fast-import 将整个 `progress` 行未经修改地打印到标准输出通道（文件描述符 1）。  除此之外，该命令不会对当前导入或 fast-import 的任何内部状态产生影响。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:1019
@@ -24120,49 +24120,49 @@ msgstr ""
 msgid ""
 "\t'progress' SP <any> LF\n"
 "\tLF?\n"
-msgstr ""
+msgstr "\t'progress' SP <任意> LF\n\tLF?\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1025
 #, priority:90
 msgid "The `<any>` part of the command may contain any sequence of bytes that does not contain `LF`.  The `LF` after the command is optional.  Callers may wish to process the output through a tool such as sed to remove the leading part of the line, for example:"
-msgstr ""
+msgstr "命令的 `<任意>` 部分可包含不含 `LF` 的任何字节序列。  命令后的 `LF` 是可选的。  调用者可能希望通过 sed 等工具处理输出，例如删除行的前导部分："
 
 #. type: delimited block =
 #: en/git-fast-import.txt:1028
 #, no-wrap, priority:90
 msgid "\tfrontend | git fast-import | sed 's/^progress //'\n"
-msgstr ""
+msgstr "\tfrontend | git fast-import | sed 's/^progress //'\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1033
 #, priority:90
 msgid "Placing a `progress` command immediately after a `checkpoint` will inform the reader when the `checkpoint` has been completed and it can safely access the refs that fast-import updated."
-msgstr ""
+msgstr "在 `checkpoint` 之后紧接一个 `progress` 命令，可以通知阅读器 `checkpoint` 何时完成，阅读器可以安全地访问快速导入更新的引用。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1041
 #, priority:90
 msgid "Causes fast-import to print the SHA-1 corresponding to a mark to stdout or to the file descriptor previously arranged with the `--cat-blob-fd` argument. The command otherwise has no impact on the current import; its purpose is to retrieve SHA-1s that later commits might want to refer to in their commit messages."
-msgstr ""
+msgstr "命令 fast-import 将标记对应的 SHA-1 打印到标准输出流或之前用 `--cat-blob-fd` 参数安排的文件描述符。该命令不会对当前导入产生任何影响；其目的是检索 SHA-1，供以后的提交在提交信息中参考。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:1044
 #, no-wrap, priority:90
 msgid "\t'get-mark' SP ':' <idnum> LF\n"
-msgstr ""
+msgstr "\t'get-mark' SP ':' <idnum> LF\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1048 en/git-fast-import.txt:1079 en/git-fast-import.txt:1132
 #, priority:90
 msgid "See ``Responses To Commands'' below for details about how to read this output safely."
-msgstr ""
+msgstr "有关如何安全读取输出结果的详细信息，请参阅下文 ''对命令的回复''。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1056
 #, priority:90
 msgid "Causes fast-import to print a blob to a file descriptor previously arranged with the `--cat-blob-fd` argument.  The command otherwise has no impact on the current import; its main purpose is to retrieve blobs that may be in fast-import's memory but not accessible from the target repository."
-msgstr ""
+msgstr "使 fast-import 将 blob 打印到先前用 `--cat-blob-fd` 参数安排的文件描述符。  该命令不会对当前导入产生任何影响；其主要目的是检索 fast-import 内存中的 blob，但目标存储库无法访问这些 blob。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:1059
@@ -24174,13 +24174,13 @@ msgstr "\t'cat-blob' SP <dataref> LF\n"
 #: en/git-fast-import.txt:1064
 #, priority:90
 msgid "The `<dataref>` can be either a mark reference (`:<idnum>`)  set previously or a full 40-byte SHA-1 of a Git blob, preexisting or ready to be written."
-msgstr ""
+msgstr "`<数据引用>` 可以是之前设置的标记引用 (`:<idnum>`)，也可以是 Git blob 的完整 40 字节 SHA-1，可以是预先存在的，也可以是准备写入的。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1066
 #, priority:90
 msgid "Output uses the same format as `git cat-file --batch`:"
-msgstr ""
+msgstr "输出格式与 `git cat-file --batch` 相同："
 
 #. type: delimited block =
 #: en/git-fast-import.txt:1070
@@ -24188,37 +24188,37 @@ msgstr ""
 msgid ""
 "\t<sha1> SP 'blob' SP <size> LF\n"
 "\t<contents> LF\n"
-msgstr ""
+msgstr "\t<sha1> SP 'blob' SP <尺寸> LF\n\t<内容> LF\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1076
 #, priority:90
 msgid "This command can be used where a `filemodify` directive can appear, allowing it to be used in the middle of a commit.  For a `filemodify` using an inline directive, it can also appear right before the `data` directive."
-msgstr ""
+msgstr "该命令可用于出现 `filemodify` 指令的地方，允许在提交中间使用。  对于使用内联指令的 `filemodify`，它也可以出现在 `data` 指令之前。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1087
 #, priority:90
 msgid "Prints information about the object at a path to a file descriptor previously arranged with the `--cat-blob-fd` argument.  This allows printing a blob from the active commit (with `cat-blob`) or copying a blob or tree from a previous commit for use in the current one (with `filemodify`)."
-msgstr ""
+msgstr "打印文件描述符路径上的对象信息，该文件描述符是之前用 `--cat-blob-fd` 参数安排的。  这样就可以打印当前提交中的 blob（使用 `cat-blob` 时），或复制先前提交中的 blob 或树以用于当前提交（使用 `filemodify` 时）。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1090
 #, priority:90
 msgid "The `ls` command can also be used where a `filemodify` directive can appear, allowing it to be used in the middle of a commit."
-msgstr ""
+msgstr "`ls` 命令也可用于出现 `filemodify` 指令的地方，允许在提交过程中使用。"
 
 #. type: Labeled list
 #: en/git-fast-import.txt:1091
 #, no-wrap, priority:90
 msgid "Reading from the active commit"
-msgstr ""
+msgstr "从活动提交中读取"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1095
 #, priority:90
 msgid "This form can only be used in the middle of a `commit`.  The path names a directory entry within fast-import's active commit.  The path must be quoted in this case."
-msgstr ""
+msgstr "这种形式只能在 `commit` 过程中使用。  路径命名 fast-import 活动提交中的目录条目。  在这种情况下，路径必须加引号。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:1098
@@ -24230,13 +24230,13 @@ msgstr "\t'ls' SP <path> LF\n"
 #: en/git-fast-import.txt:1100
 #, no-wrap, priority:90
 msgid "Reading from a named tree"
-msgstr ""
+msgstr "从命名树读取数据"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1106
 #, priority:90
 msgid "The `<dataref>` can be a mark reference (`:<idnum>`) or the full 40-byte SHA-1 of a Git tag, commit, or tree object, preexisting or waiting to be written.  The path is relative to the top level of the tree named by `<dataref>`."
-msgstr ""
+msgstr "`<数据引用>` 可以是一个标记引用 ( `:<idnum>` )，也可以是 Git 标签、提交或树对象的完整 40 字节 SHA-1，可以是已存在的，也可以是等待写入的。  路径是相对于由 `<数据引用>` 命名的树的顶层的。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:1109
@@ -24248,13 +24248,13 @@ msgstr "\t'ls' SP <dataref> SP <path> LF\n"
 #: en/git-fast-import.txt:1112
 #, priority:90
 msgid "See `filemodify` above for a detailed description of `<path>`."
-msgstr ""
+msgstr "有关 `<路径>` 的详细说明，请参阅上文的 `filemodify` 。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1114
 #, priority:90
 msgid "Output uses the same format as `git ls-tree <tree> -- <path>`:"
-msgstr ""
+msgstr "输出格式与 `git ls-tree <目录树> -- <路径>`相同："
 
 #. type: delimited block =
 #: en/git-fast-import.txt:1117
@@ -24266,49 +24266,49 @@ msgstr "\t<mode> SP ('blob' | 'tree' | 'commit') SP <dataref> HT <path> LF\n"
 #: en/git-fast-import.txt:1122
 #, priority:90
 msgid "The <dataref> represents the blob, tree, or commit object at <path> and can be used in later 'get-mark', 'cat-blob', 'filemodify', or 'ls' commands."
-msgstr ""
+msgstr "<数据引用> 表示 <路劲> 中的 blob、树或提交对象，可用于后面的 'get-mark'、'cat-blob'、'filemodify' 或 'ls' 命令。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1125
 #, priority:90
 msgid "If there is no file or subtree at that path, 'git fast-import' will instead report"
-msgstr ""
+msgstr "如果该路径下没有文件或子树，'git fast-import' 将报告"
 
 #. type: delimited block =
 #: en/git-fast-import.txt:1128
 #, no-wrap, priority:90
 msgid "\tmissing SP <path> LF\n"
-msgstr ""
+msgstr "\tmissing SP <路径> LF\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1137
 #, priority:90
 msgid "Require that fast-import supports the specified feature, or abort if it does not."
-msgstr ""
+msgstr "要求 fast-import 支持指定的功能，如果不支持则终止。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:1140
 #, no-wrap, priority:90
 msgid "\t'feature' SP <feature> ('=' <argument>)? LF\n"
-msgstr ""
+msgstr "\t'feature' SP <功能> ('=' <参数>)? LF\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1143
 #, priority:90
 msgid "The <feature> part of the command may be any one of the following:"
-msgstr ""
+msgstr "命令的 <功能> 部分可以是以下任何一种："
 
 #. type: Plain text
 #: en/git-fast-import.txt:1144 en/git-fast-import.txt:1211
 #, no-wrap, priority:90
 msgid "date-format"
-msgstr ""
+msgstr "date-format（日期格式）"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1145 en/git-fast-import.txt:1213
 #, no-wrap, priority:90
 msgid "export-marks"
-msgstr ""
+msgstr "export-marks（出口标记）"
 
 #. type: Labeled list
 #: en/git-fast-import.txt:1146
@@ -24332,25 +24332,25 @@ msgstr "力"
 #: en/git-fast-import.txt:1152
 #, priority:90
 msgid "Act as though the corresponding command-line option with a leading `--` was passed on the command line (see OPTIONS, above)."
-msgstr ""
+msgstr "就像在命令行中传递了带前导 `--` 的相应命令行选项一样（见上文选项）。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1153 en/git-fast-import.txt:1212
 #, no-wrap, priority:90
 msgid "import-marks"
-msgstr ""
+msgstr "import-marks（入口标记）"
 
 #. type: Labeled list
 #: en/git-fast-import.txt:1154
 #, no-wrap, priority:90
 msgid "import-marks-if-exists"
-msgstr ""
+msgstr "import-marks-if-exists（导入标记是否存在）"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1162
 #, priority:90
 msgid "Like --import-marks except in two respects: first, only one \"feature import-marks\" or \"feature import-marks-if-exists\" command is allowed per stream; second, an --import-marks= or --import-marks-if-exists command-line option overrides any of these \"feature\" commands in the stream; third, \"feature import-marks-if-exists\" like a corresponding command-line option silently skips a nonexistent file."
-msgstr ""
+msgstr "与 --import-marks 类似，但有两点不同：第一，每个数据流只允许一条 \"feature import-marks\" 或 \"feature import-marks-if-exists\" 命令；第二，命令行选项 --import-marks= 或 --import-marks-if-exists 会覆盖数据流中的任何这些 \"feature\" 命令；第三，\"feature import-marks-if-exists\" 与相应的命令行选项一样，会静默地跳过一个不存在的文件。"
 
 #. type: Labeled list
 #: en/git-fast-import.txt:1163
@@ -24374,7 +24374,7 @@ msgstr "ls"
 #: en/git-fast-import.txt:1173
 #, priority:90
 msgid "Require that the backend support the 'get-mark', 'cat-blob', or 'ls' command respectively.  Versions of fast-import not supporting the specified command will exit with a message indicating so.  This lets the import error out early with a clear message, rather than wasting time on the early part of an import before the unsupported command is detected."
-msgstr ""
+msgstr "要求后端分别支持 'get-mark'、'cat-blob' 或 'ls' 命令。  不支持指定命令的 fast-import 版本在退出时会给出提示信息。  这样，导入过程中就不会在检测到不支持的命令之前浪费时间，而会在早期就出现明确的错误信息。"
 
 #. type: Labeled list
 #: en/git-fast-import.txt:1174
@@ -24386,7 +24386,7 @@ msgstr "备注"
 #: en/git-fast-import.txt:1179
 #, priority:90
 msgid "Require that the backend support the 'notemodify' (N)  subcommand to the 'commit' command.  Versions of fast-import not supporting notes will exit with a message indicating so."
-msgstr ""
+msgstr "要求后端支持 'commit' 命令的 'notemodify'（N）子命令。  不支持备注的 fast-import 版本在退出时会显示相关信息。"
 
 #. type: Labeled list
 #: en/git-fast-import.txt:1180
@@ -24398,19 +24398,19 @@ msgstr "完成"
 #: en/git-fast-import.txt:1187
 #, priority:90
 msgid "Error out if the stream ends without a 'done' command.  Without this feature, errors causing the frontend to end abruptly at a convenient point in the stream can go undetected.  This may occur, for example, if an import front end dies in mid-operation without emitting SIGTERM or SIGKILL at its subordinate git fast-import instance."
-msgstr ""
+msgstr "如果数据流在没有 'done' （完成）命令的情况下结束，就会出错。  如果没有这项功能，导致前端在流中某个适当位置突然结束的错误就可能不会被发现。  例如，如果一个导入前端在操作中途死亡，而没有在其下属的 git fast-import 实例中发出 SIGTERM 或 SIGKILL，就可能发生这种情况。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1194
 #, priority:90
 msgid "Processes the specified option so that git fast-import behaves in a way that suits the frontend's needs.  Note that options specified by the frontend are overridden by any options the user may specify to git fast-import itself."
-msgstr ""
+msgstr "处理指定的选项，使 Git fast-import 的行为符合前端的需要。  注意，前端指定的选项会被用户为 Git fast-import 本身指定的任何选项所覆盖。"
 
 #. type: delimited block .
 #: en/git-fast-import.txt:1197
 #, no-wrap, priority:90
 msgid "    'option' SP <option> LF\n"
-msgstr ""
+msgstr "    'option' SP <选项> LF\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1202
@@ -24422,49 +24422,49 @@ msgstr "`<option>` 命令的一部分可能包含选项部分中列出的不更�
 #: en/git-fast-import.txt:1206
 #, priority:90
 msgid "Option commands must be the first commands on the input (not counting feature commands), to give an option command after any non-option command is an error."
-msgstr ""
+msgstr "选项命令必须是输入的第一条命令（不包括功能命令），在任何非选项命令之后给出选项命令都是错误的。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1209
 #, priority:90
 msgid "The following command-line options change import semantics and may therefore not be passed as option:"
-msgstr ""
+msgstr "以下命令行选项会改变导入语义，因此不能作为选项传递："
 
 #. type: Plain text
 #: en/git-fast-import.txt:1214
 #, priority:90
 msgid "cat-blob-fd"
-msgstr ""
+msgstr "cat-blob-fd"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1220
 #, priority:90
 msgid "If the `done` feature is not in use, treated as if EOF was read.  This can be used to tell fast-import to finish early."
-msgstr ""
+msgstr "如果未使用 `done` 功能，则视作已读取 EOF。  这可以用来告诉 fast-import 提前结束。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1224
 #, priority:90
 msgid "If the `--done` command-line option or `feature done` command is in use, the `done` command is mandatory and marks the end of the stream."
-msgstr ""
+msgstr "如果使用了 `--done` 命令行选项或 `feature done` 命令，则 `done` 命令是强制性的，标志着数据流的结束。"
 
 #. type: Title -
 #: en/git-fast-import.txt:1226
 #, no-wrap, priority:90
 msgid "RESPONSES TO COMMANDS"
-msgstr ""
+msgstr "对命令的响应"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1233
 #, priority:90
 msgid "New objects written by fast-import are not available immediately.  Most fast-import commands have no visible effect until the next checkpoint (or completion).  The frontend can send commands to fill fast-import's input pipe without worrying about how quickly they will take effect, which improves performance by simplifying scheduling."
-msgstr ""
+msgstr "快速导入写入的新对象不能立即使用。  大多数 fast-import 命令在下一个检查点（或完成）之前都不会有明显的效果。  前端可以发送命令来填充 fast-import 的输入管道，而不必担心这些命令的生效速度，这样可以简化调度，从而提高性能。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1240
 #, priority:90
 msgid "For some frontends, though, it is useful to be able to read back data from the current repository as it is being updated (for example when the source material describes objects in terms of patches to be applied to previously imported objects).  This can be accomplished by connecting the frontend and fast-import via bidirectional pipes:"
-msgstr ""
+msgstr "不过，对于某些前端来说，在更新时从当前资源库读回数据是非常有用的（例如，当源材料以补丁的形式描述要应用到先前导入对象的对象时）。  这可以通过双向管道连接前端和快速导入来实现："
 
 #. type: delimited block =
 #: en/git-fast-import.txt:1245
@@ -24473,49 +24473,49 @@ msgid ""
 "\tmkfifo fast-import-output\n"
 "\tfrontend <fast-import-output |\n"
 "\tgit fast-import >fast-import-output\n"
-msgstr ""
+msgstr "\tmkfifo fast-import-output\n\tfrontend <fast-import-output |\n\tgit fast-import >fast-import-output\n"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1249
 #, priority:90
 msgid "A frontend set up this way can use `progress`, `get-mark`, `ls`, and `cat-blob` commands to read information from the import in progress."
-msgstr ""
+msgstr "以这种方式设置的前端可以使用 `progress`、`get-mark`、`ls` 和 `cat-blob` 命令从正在进行的导入中读取信息。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1253
 #, priority:90
 msgid "To avoid deadlock, such frontends must completely consume any pending output from `progress`, `ls`, `get-mark`, and `cat-blob` before performing writes to fast-import that might block."
-msgstr ""
+msgstr "为避免死锁，此类前端在向 fast-import 写入可能阻塞的内容之前，必须完全耗尽来自 `progress`、`ls`、`get-mark` 和 `cat-blob` 的任何待处理输出。"
 
 #. type: Title -
 #: en/git-fast-import.txt:1255
 #, no-wrap, priority:90
 msgid "CRASH REPORTS"
-msgstr ""
+msgstr "事故报告"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1261
 #, priority:90
 msgid "If fast-import is supplied invalid input it will terminate with a non-zero exit status and create a crash report in the top level of the Git repository it was importing into.  Crash reports contain a snapshot of the internal fast-import state as well as the most recent commands that lead up to the crash."
-msgstr ""
+msgstr "如果 fast-import 收到无效输入，它将以非零的退出状态终止，并在导入的 Git 仓库顶层创建一份崩溃报告。  崩溃报告包含 fast-import 内部状态的快照，以及导致崩溃的最新命令。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1268
 #, priority:90
 msgid "All recent commands (including stream comments, file changes and progress commands) are shown in the command history within the crash report, but raw file data and commit messages are excluded from the crash report.  This exclusion saves space within the report file and reduces the amount of buffering that fast-import must perform during execution."
-msgstr ""
+msgstr "所有最近的命令（包括流注释、文件更改和进度命令）都会显示在崩溃报告中的命令历史记录中，但原始文件数据和提交信息不会显示在崩溃报告中。  这种排除可以节省报告文件的空间，并减少 fast-import 在执行过程中必须执行的缓冲量。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1276
 #, priority:90
 msgid "After writing a crash report fast-import will close the current packfile and export the marks table.  This allows the frontend developer to inspect the repository state and resume the import from the point where it crashed.  The modified branches and tags are not updated during a crash, as the import did not complete successfully.  Branch and tag information can be found in the crash report and must be applied manually if the update is needed."
-msgstr ""
+msgstr "写完崩溃报告后，fast-import 会关闭当前的包文件并导出标记表。  这样，前端开发人员就可以检查仓库状态，并从崩溃的位置继续导入。  由于导入未成功完成，因此崩溃期间不会更新已修改的分支和标记。  分支和标记信息可在崩溃报告中找到，如果需要更新，必须手动应用。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1278
 #, priority:90
 msgid "An example crash:"
-msgstr ""
+msgstr "崩溃实例："
 
 #. type: delimited block =
 #: en/git-fast-import.txt:1294
@@ -24583,7 +24583,7 @@ msgstr ""
 #: en/git-fast-import.txt:1306
 #, no-wrap, priority:90
 msgid "\tfatal: Corrupt mode: M 777 inline bob\n"
-msgstr ""
+msgstr "\tfatal: Corrupt mode: M 777 inline bob（失败：错误的模式：M 777 ）\n"
 
 #. type: delimited block =
 #: en/git-fast-import.txt:1316
@@ -24598,7 +24598,7 @@ msgid ""
 "\t  data <<EOF\n"
 "\t  M 644 inline .gitignore\n"
 "\t  data <<EOF\n"
-msgstr ""
+msgstr "\tMost Recent Commands Before Crash\n\t---------------------------------\n\t  # my very first test commit（我最开始的测试提交）\n\t  commit refs/heads/master\n\t  committer Shawn O. Pearce <spearce> 19283 -0400\n\t  # who is that guy anyway?（这是什么？）\n\t  data <<EOF\n\t  M 644 inline .gitignore\n\t  data <<EOF\n"
 
 #. type: delimited block =
 #: en/git-fast-import.txt:1317
@@ -24613,7 +24613,7 @@ msgid ""
 "Active Branch LRU\n"
 "-----------------\n"
 "active_branches = 1 cur, 5 max\n"
-msgstr ""
+msgstr "Active Branch LRU\n-----------------\nactive_branches = 1 cur, 5 max\n"
 
 #. type: delimited block =
 #: en/git-fast-import.txt:1324
@@ -24640,7 +24640,7 @@ msgid ""
 "cur tree    : 0000000000000000000000000000000000000000\n"
 "commit clock: 0\n"
 "last pack   :\n"
-msgstr ""
+msgstr "Inactive Branches\n-----------------\nrefs/heads/master:\nstatus      : active loaded dirty\ntip commit  : 0000000000000000000000000000000000000000\nold tree    : 0000000000000000000000000000000000000000\ncur tree    : 0000000000000000000000000000000000000000\ncommit clock: 0\nlast pack   :\n"
 
 #. type: delimited block =
 #: en/git-fast-import.txt:1339
@@ -24652,151 +24652,151 @@ msgstr "------------------- END OF CRASH REPORT"
 #: en/git-fast-import.txt:1342
 #, no-wrap, priority:90
 msgid "TIPS AND TRICKS"
-msgstr ""
+msgstr "提示和技巧"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1345
 #, priority:90
 msgid "The following tips and tricks have been collected from various users of fast-import, and are offered here as suggestions."
-msgstr ""
+msgstr "以下提示和技巧是从 fast-import 的不同用户那里收集的，在此作为建议提供。"
 
 #. type: Title ~
 #: en/git-fast-import.txt:1347
 #, no-wrap, priority:90
 msgid "Use One Mark Per Commit"
-msgstr ""
+msgstr "每次承诺使用一个标记"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1355
 #, priority:90
 msgid "When doing a repository conversion, use a unique mark per commit (`mark :<n>`) and supply the --export-marks option on the command line.  fast-import will dump a file which lists every mark and the Git object SHA-1 that corresponds to it.  If the frontend can tie the marks back to the source repository, it is easy to verify the accuracy and completeness of the import by comparing each Git commit to the corresponding source revision."
-msgstr ""
+msgstr "在进行仓转换时，每个提交使用一个唯一的标记（`标记 :<n>`），并在命令行中提供 --export-marks 选项。  如果前端能将标记与源代码仓库绑定，就能通过比较每个 Git 提交和相应的源代码版本，轻松验证导入的准确性和完整性。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1359
 #, priority:90
 msgid "Coming from a system such as Perforce or Subversion this should be quite simple, as the fast-import mark can also be the Perforce changeset number or the Subversion revision number."
-msgstr ""
+msgstr "从 Perforce 或 Subversion 等系统导入时，这应该非常简单，因为快速导入标记也可以是 Perforce 更改集编号或 Subversion 修订编号。"
 
 #. type: Title ~
 #: en/git-fast-import.txt:1361
 #, no-wrap, priority:90
 msgid "Freely Skip Around Branches"
-msgstr ""
+msgstr "自由跳转分支"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1366
 #, priority:90
 msgid "Don't bother trying to optimize the frontend to stick to one branch at a time during an import.  Although doing so might be slightly faster for fast-import, it tends to increase the complexity of the frontend code considerably."
-msgstr ""
+msgstr "在导入过程中，不要费心去优化前端，使其一次只针对一个分支。  虽然这样做可能会稍微加快快速导入的速度，但往往会大大增加前端代码的复杂性。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1370
 #, priority:90
 msgid "The branch LRU builtin to fast-import tends to behave very well, and the cost of activating an inactive branch is so low that bouncing around between branches has virtually no impact on import performance."
-msgstr ""
+msgstr "fast-import 内置的分支 LRU 通常表现非常出色，而且激活非活动分支的成本很低，在分支间跳来跳去对导入性能几乎没有影响。"
 
 #. type: Title ~
 #: en/git-fast-import.txt:1372
 #, no-wrap, priority:90
 msgid "Handling Renames"
-msgstr ""
+msgstr "处理重命名"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1377
 #, priority:90
 msgid "When importing a renamed file or directory, simply delete the old name(s) and modify the new name(s) during the corresponding commit.  Git performs rename detection after-the-fact, rather than explicitly during a commit."
-msgstr ""
+msgstr "在导入重命名的文件或目录时，只需在相应的提交过程中删除旧名称并修改新名称即可。  Git 会在事后执行重命名检测，而不是在提交时明确执行。"
 
 #. type: Title ~
 #: en/git-fast-import.txt:1379
 #, no-wrap, priority:90
 msgid "Use Tag Fixup Branches"
-msgstr ""
+msgstr "使用标签修复分支"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1383
 #, priority:90
 msgid "Some other SCM systems let the user create a tag from multiple files which are not from the same commit/changeset.  Or to create tags which are a subset of the files available in the repository."
-msgstr ""
+msgstr "其他一些 SCM 系统允许用户从多个文件创建标签，而这些文件并非来自同一提交/变更集。  或者创建的标签是仓库中可用文件的子集。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1390
 #, priority:90
 msgid "Importing these tags as-is in Git is impossible without making at least one commit which ``fixes up'' the files to match the content of the tag.  Use fast-import's `reset` command to reset a dummy branch outside of your normal branch space to the base commit for the tag, then commit one or more file fixup commits, and finally tag the dummy branch."
-msgstr ""
+msgstr "如果不至少提交一次 ''修'' 文件以匹配标签内容，就无法在 Git 中原样导入这些标签。  使用 fast-import 的 `reset` 命令，在正常分支空间外重置一个假分支，使其与标签的基本提交一致，然后提交一次或多次文件修复提交，最后给假分支打上标签。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1396
 #, priority:90
 msgid "For example since all normal branches are stored under `refs/heads/` name the tag fixup branch `TAG_FIXUP`.  This way it is impossible for the fixup branch used by the importer to have namespace conflicts with real branches imported from the source (the name `TAG_FIXUP` is not `refs/heads/TAG_FIXUP`)."
-msgstr ""
+msgstr "例如，由于所有正常分支都存储在 `refs/heads/` 下，因此将标记修复分支命名为 `TAG_FIXUP`。  这样，导入程序使用的修复分支就不可能与从源代码导入的真正分支发生命名空间冲突（名称 `TAG_FIXUP` 不是 `refs/heads/TAG_FIXUP`）。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1402
 #, priority:90
 msgid "When committing fixups, consider using `merge` to connect the commit(s) which are supplying file revisions to the fixup branch.  Doing so will allow tools such as 'git blame' to track through the real commit history and properly annotate the source files."
-msgstr ""
+msgstr "提交修复时，请考虑使用 `merge` 将提供文件修订的提交连接到修复分支。  这样做可以让 'git blame' 等工具追踪真实的提交历史，并正确地注释源文件。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1405
 #, priority:90
 msgid "After fast-import terminates the frontend will need to do `rm .git/TAG_FIXUP` to remove the dummy branch."
-msgstr ""
+msgstr "快速导入结束后，前台需要执行 `rm .git/TAG_FIXUP` 来移除虚拟分支。"
 
 #. type: Title ~
 #: en/git-fast-import.txt:1407
 #, no-wrap, priority:90
 msgid "Import Now, Repack Later"
-msgstr ""
+msgstr "立即导入，稍后重新打包"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1411
 #, priority:90
 msgid "As soon as fast-import completes the Git repository is completely valid and ready for use.  Typically this takes only a very short time, even for considerably large projects (100,000+ commits)."
-msgstr ""
+msgstr "快速导入完成后，Git 仓库就完全有效，可以随时使用。  通常这只需要很短的时间，即使对于相当大的项目（100,000+ 次提交）也是如此。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1418
 #, priority:90
 msgid "However repacking the repository is necessary to improve data locality and access performance.  It can also take hours on extremely large projects (especially if -f and a large --window parameter is used).  Since repacking is safe to run alongside readers and writers, run the repack in the background and let it finish when it finishes.  There is no reason to wait to explore your new Git project!"
-msgstr ""
+msgstr "不过，为了提高数据的位置性和访问性能，有必要重新打包仓库。  在超大型项目中，这也可能需要数小时（尤其是在使用 -f 和较大的 --window 参数时）。  由于重新打包可以安全地与读写器同时运行，因此请在后台运行重新打包，并让它在完成时完成。  没有理由等待探索新的 Git 项目！"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1423
 #, priority:90
 msgid "If you choose to wait for the repack, don't try to run benchmarks or performance tests until repacking is completed.  fast-import outputs suboptimal packfiles that are simply never seen in real use situations."
-msgstr ""
+msgstr "如果您选择等待重新打包，在重新打包完成之前不要尝试运行基准或性能测试。"
 
 #. type: Title ~
 #: en/git-fast-import.txt:1425
 #, no-wrap, priority:90
 msgid "Repacking Historical Data"
-msgstr ""
+msgstr "重新打包历史数据"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1432
 #, priority:90
 msgid "If you are repacking very old imported data (e.g. older than the last year), consider expending some extra CPU time and supplying --window=50 (or higher) when you run 'git repack'.  This will take longer, but will also produce a smaller packfile.  You only need to expend the effort once, and everyone using your project will benefit from the smaller repository."
-msgstr ""
+msgstr "如果您要重新打包非常旧的导入数据（例如，比去年更旧的数据），可以考虑在运行 'git repack' 时花费一些额外的 CPU 时间并提供 --window=50（或更高）的参数。  这样会花费更多时间，但生成的打包文件也会更小。  您只需花费一次精力，而使用您项目的每个人都将受益于更小的仓库。"
 
 #. type: Title ~
 #: en/git-fast-import.txt:1434
 #, no-wrap, priority:90
 msgid "Include Some Progress Messages"
-msgstr ""
+msgstr "包括一些进展信息"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1441
 #, priority:90
 msgid "Every once in a while have your frontend emit a `progress` message to fast-import.  The contents of the messages are entirely free-form, so one suggestion would be to output the current month and year each time the current commit date moves into the next month.  Your users will feel better knowing how much of the data stream has been processed."
-msgstr ""
+msgstr "每隔一段时间，让你的前端向快速导入发出一条 `progress`（进度）信息。  消息的内容可以完全自由发挥，因此建议在当前提交日期进入下一个月时，输出当前月份和年份。  这样，用户就能更好地了解数据流的处理情况。"
 
 #. type: Title -
 #: en/git-fast-import.txt:1444
 #, no-wrap, priority:90
 msgid "PACKFILE OPTIMIZATION"
-msgstr ""
+msgstr "包文件优化"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1450
