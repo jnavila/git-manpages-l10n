@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-08-05 19:25+0200\nPO-Revision-Date: 2023-10-26 12:01+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.1.1\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-08-05 19:25+0200\nPO-Revision-Date: 2023-11-03 05:13+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.2-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:772 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:146 en/git-status.txt:31
@@ -24802,151 +24802,151 @@ msgstr "包文件优化"
 #: en/git-fast-import.txt:1450
 #, priority:90
 msgid "When packing a blob fast-import always attempts to deltify against the last blob written.  Unless specifically arranged for by the frontend, this will probably not be a prior version of the same file, so the generated delta will not be the smallest possible.  The resulting packfile will be compressed, but will not be optimal."
-msgstr ""
+msgstr "在打包 blob 时，fast-import 总是尝试根据最后写入的 blob 进行 deltify。 除非前端特别安排，否则这很可能不是同一文件的先前版本，因此生成的 delta 不会是尽可能小的。 生成的打包文件将被压缩，但不会达到最佳效果。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1458
 #, priority:90
 msgid "Frontends which have efficient access to all revisions of a single file (for example reading an RCS/CVS ,v file) can choose to supply all revisions of that file as a sequence of consecutive `blob` commands.  This allows fast-import to deltify the different file revisions against each other, saving space in the final packfile.  Marks can be used to later identify individual file revisions during a sequence of `commit` commands."
-msgstr ""
+msgstr "可以高效访问单个文件所有修订版本的前端（例如读取 RCS/CVS ,v 文件），可以选择以连续的 `blob` 命令序列提供该文件的所有修订版本。 这样，快速导入程序就能将不同的文件修订版本相互区分开来，从而节省最终打包文件的空间。 标记可用于以后在一连串 `commit` 命令中识别单个文件修订版。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1465
 #, priority:90
 msgid "The packfile(s) created by fast-import do not encourage good disk access patterns.  This is caused by fast-import writing the data in the order it is received on standard input, while Git typically organizes data within packfiles to make the most recent (current tip) data appear before historical data.  Git also clusters commits together, speeding up revision traversal through better cache locality."
-msgstr ""
+msgstr "fast-import 创建的包文件不支持良好的磁盘访问模式。 这是因为 fast-import 是按照标准输入的顺序写入数据的，而 Git 通常会在包文件中组织数据，使最新的（当前提示）数据出现在历史数据之前。 Git 还会将提交聚类在一起，通过更好的缓存定位加快版本遍历速度。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1472
 #, priority:90
 msgid "For this reason it is strongly recommended that users repack the repository with `git repack -a -d` after fast-import completes, allowing Git to reorganize the packfiles for faster data access.  If blob deltas are suboptimal (see above) then also adding the `-f` option to force recomputation of all deltas can significantly reduce the final packfile size (30-50% smaller can be quite typical)."
-msgstr ""
+msgstr "因此，强烈建议用户在 fast-import 完成后使用 `git repack -a -d` 重新打包仓库，让 Git 重新组织打包文件以加快数据访问速度。 如果 blob deltas 是次优的（见上文），那么添加 `-f` 选项来强制重新计算所有 deltas，也能显著减少最终打包文件的大小（通常能减少 30-50%）。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1480
 #, priority:90
 msgid "Instead of running `git repack` you can also run `git gc --aggressive`, which will also optimize other things after an import (e.g. pack loose refs). As noted in the \"AGGRESSIVE\" section in linkgit:git-gc[1] the `--aggressive` option will find new deltas with the `-f` option to linkgit:git-repack[1]. For the reasons elaborated on above using `--aggressive` after a fast-import is one of the few cases where it's known to be worthwhile."
-msgstr ""
+msgstr "你也可以不运行 `git repack` 而运行 `git gc--aggressive`，它也会在导入后优化其他事情（比如打包松散的引用）。正如 linkgit:git-gc[1] 中的 \"AGRESSIVE \"部分所述，`--aggressive` 选项会在 linkgit:git-repack[1] 中使用 `-f` 选项找到新的 deltas。由于上述原因，在快速导入后使用 `--aggressive` 是为数不多的值得这么做的情况。"
 
 #. type: Title -
 #: en/git-fast-import.txt:1482
 #, no-wrap, priority:90
 msgid "MEMORY UTILIZATION"
-msgstr ""
+msgstr "内存利用率"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1488
 #, priority:90
 msgid "There are a number of factors which affect how much memory fast-import requires to perform an import.  Like critical sections of core Git, fast-import uses its own memory allocators to amortize any overheads associated with malloc.  In practice fast-import tends to amortize any malloc overheads to 0, due to its use of large block allocations."
-msgstr ""
+msgstr "影响 fast-import 导入所需内存的因素有很多。 与核心 Git 的关键部分一样，fast-import 使用自己的内存分配器来摊销与 malloc 相关的开销。 在实践中，由于 fast-import 使用了大量的块分配，它往往会将 malloc 的开销摊销为 0。"
 
 #. type: Title ~
 #: en/git-fast-import.txt:1490
 #, no-wrap, priority:90
 msgid "per object"
-msgstr ""
+msgstr "每个对象"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1497
 #, priority:90
 msgid "fast-import maintains an in-memory structure for every object written in this execution.  On a 32 bit system the structure is 32 bytes, on a 64 bit system the structure is 40 bytes (due to the larger pointer sizes).  Objects in the table are not deallocated until fast-import terminates.  Importing 2 million objects on a 32 bit system will require approximately 64 MiB of memory."
-msgstr ""
+msgstr "fast-import 会为本次执行中写入的每个对象维护一个内存结构。 在 32 位系统中，该结构为 32 字节，在 64 位系统中，该结构为 40 字节（由于指针尺寸较大）。 表中的对象在 fast-import 终止前不会被重新分配。 在 32 位系统上导入 200 万个对象大约需要 64 MiB 内存。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1503
 #, priority:90
 msgid "The object table is actually a hashtable keyed on the object name (the unique SHA-1).  This storage configuration allows fast-import to reuse an existing or already written object and avoid writing duplicates to the output packfile.  Duplicate blobs are surprisingly common in an import, typically due to branch merges in the source."
-msgstr ""
+msgstr "对象表实际上是一个以对象名称（唯一的 SHA-1）为键的哈希表。 这种存储配置允许 fast-import 重用现有或已写入的对象，避免将重复的对象写入输出包文件。 在导入过程中，重复的 blob 会非常常见，这通常是由于源代码中的分支合并造成的。"
 
 #. type: Title ~
 #: en/git-fast-import.txt:1505
 #, no-wrap, priority:90
 msgid "per mark"
-msgstr ""
+msgstr "每个标记"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1511
 #, priority:90
 msgid "Marks are stored in a sparse array, using 1 pointer (4 bytes or 8 bytes, depending on pointer size) per mark.  Although the array is sparse, frontends are still strongly encouraged to use marks between 1 and n, where n is the total number of marks required for this import."
-msgstr ""
+msgstr "标记存储在一个稀疏数组中，每个标记使用 1 个指针（4 字节或 8 字节，取决于指针大小）。  虽然数组是稀疏的，但仍强烈建议前端使用 1 到 n 之间的标记，其中 n 是本次导入所需的标记总数。"
 
 #. type: Title ~
 #: en/git-fast-import.txt:1513
 #, no-wrap, priority:90
 msgid "per branch"
-msgstr ""
+msgstr "每个分支"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1516
 #, priority:90
 msgid "Branches are classified as active and inactive.  The memory usage of the two classes is significantly different."
-msgstr ""
+msgstr "分支分为活动分支和非活动分支。 这两类分支的内存使用量差别很大。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1522
 #, priority:90
 msgid "Inactive branches are stored in a structure which uses 96 or 120 bytes (32 bit or 64 bit systems, respectively), plus the length of the branch name (typically under 200 bytes), per branch.  fast-import will easily handle as many as 10,000 inactive branches in under 2 MiB of memory."
-msgstr ""
+msgstr "非活动分支存储在一个结构中，每个分支使用 96 或 120 字节（分别用于 32 位或 64 位系统），外加分支名称的长度（通常小于 200 字节）。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1529
 #, priority:90
 msgid "Active branches have the same overhead as inactive branches, but also contain copies of every tree that has been recently modified on that branch.  If subtree `include` has not been modified since the branch became active, its contents will not be loaded into memory, but if subtree `src` has been modified by a commit since the branch became active, then its contents will be loaded in memory."
-msgstr ""
+msgstr "活动分支的开销与非活动分支相同，但也包含该分支上最近修改过的每棵树的副本。 如果子树 `include` 在分支变为活动后没有被修改过，其内容就不会被加载到内存中，但如果子树 `src` 在分支变为活动后被提交修改过，其内容就会被加载到内存中。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1533
 #, priority:90
 msgid "As active branches store metadata about the files contained on that branch, their in-memory storage size can grow to a considerable size (see below)."
-msgstr ""
+msgstr "由于活动分支存储的是该分支所含文件的元数据，因此其内存存储容量可能会相当大（见下文）。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1538
 #, priority:90
 msgid "fast-import automatically moves active branches to inactive status based on a simple least-recently-used algorithm.  The LRU chain is updated on each `commit` command.  The maximum number of active branches can be increased or decreased on the command line with --active-branches=."
-msgstr ""
+msgstr "fast-import 根据一种简单的最近最少使用算法，自动将活动分支移至非活动状态。 LRU 链会在每一条 `commit` 命令中更新。 可以在命令行中使用 --active-branches= 来增加或减少活动分支的最大数量。"
 
 #. type: Title ~
 #: en/git-fast-import.txt:1540
 #, no-wrap, priority:90
 msgid "per active tree"
-msgstr ""
+msgstr "每个活动目录树"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1545
 #, priority:90
 msgid "Trees (aka directories) use just 12 bytes of memory on top of the memory required for their entries (see ``per active file'' below).  The cost of a tree is virtually 0, as its overhead amortizes out over the individual file entries."
-msgstr ""
+msgstr "树（又称目录）在其条目（见下文 ''每个活动文件''）所需内存之外，仅占用 12 字节内存。 树的成本几乎为零，因为其开销会在单个文件条目中摊销。"
 
 #. type: Title ~
 #: en/git-fast-import.txt:1547
 #, no-wrap, priority:90
 msgid "per active file entry"
-msgstr ""
+msgstr "每个活动文件条目"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1553
 #, priority:90
 msgid "Files (and pointers to subtrees) within active trees require 52 or 64 bytes (32/64 bit platforms) per entry.  To conserve space, file and tree names are pooled in a common string table, allowing the filename ``Makefile'' to use just 16 bytes (after including the string header overhead) no matter how many times it occurs within the project."
-msgstr ""
+msgstr "活动树中的文件（和指向子树的指针）每个条目需要 52 或 64 字节（32/64 位平台）。 为了节省空间，文件名和树名被集中到一个通用的字符串表中，这样无论文件名\n''Makefile'' 在项目中出现多少次，都只需使用 16 个字节（包括字符串头开销）。"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1558
 #, priority:90
 msgid "The active branch LRU, when coupled with the filename string pool and lazy loading of subtrees, allows fast-import to efficiently import projects with 2,000+ branches and 45,114+ files in a very limited memory footprint (less than 2.7 MiB per active branch)."
-msgstr ""
+msgstr "活动分支 LRU 与文件名字符串池和子树的懒加载相结合，使 fast-import 能够在非常有限的内存空间内（每个活动分支小于 2.7 MiB）高效导入包含 2,000 多个分支和 45,114 多个文件的项目。"
 
 #. type: Title -
 #: en/git-fast-import.txt:1560
 #, no-wrap, priority:90
 msgid "SIGNALS"
-msgstr ""
+msgstr "信号"
 
 #. type: Plain text
 #: en/git-fast-import.txt:1566
 #, priority:90
 msgid "Sending *SIGUSR1* to the 'git fast-import' process ends the current packfile early, simulating a `checkpoint` command.  The impatient operator can use this facility to peek at the objects and refs from an import in progress, at the cost of some added running time and worse compression."
-msgstr ""
+msgstr "向 'git fast-import' 进程发送 *SIGUSR1* 会提前结束当前的打包文件，模拟一个 `checkpoint` 命令。 没有耐心的操作员可以使用这一工具来偷看正在导入的对象和引用，但代价是增加运行时间和降低压缩率。"
 
 #. type: Title =
 #: en/git-fetch-pack.txt:2
@@ -24968,55 +24968,55 @@ msgid ""
 "\t[--upload-pack=<git-upload-pack>]\n"
 "\t[--depth=<n>] [--no-progress]\n"
 "\t[-v] <repository> [<refs>...]\n"
-msgstr ""
+msgstr "'git fetch-pack' [--all] [--quiet|-q] [--keep|-k] [--thin] [--include-tag]\n\t[--upload-pack=<git-upload-pack>]\n\t[--depth=<n>] [--no-progress]\n\t[-v] <仓库> [<多个引用>...]\n"
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:21
 #, priority:90
 msgid "Usually you would want to use 'git fetch', which is a higher level wrapper of this command, instead."
-msgstr ""
+msgstr "通常情况下，您需要使用 'git fetch'，它是该命令的更高级封装。"
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:27
 #, priority:90
 msgid "Invokes 'git-upload-pack' on a possibly remote repository and asks it to send objects missing from this repository, to update the named heads.  The list of commits available locally is found out by scanning the local refs/ hierarchy and sent to 'git-upload-pack' running on the other end."
-msgstr ""
+msgstr "在可能的远程仓库中调用 'git-upload-pack'，并要求它发送该仓库中缺失的对象，以更新指定的头。 通过扫描本地 refs/ 层次结构，找出本地可用的提交列表，然后发送给另一端运行的 'git-upload-pack'。"
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:31
 #, priority:90
 msgid "This command degenerates to download everything to complete the asked refs from the remote side when the local side does not have a common ancestor commit."
-msgstr ""
+msgstr "当本地端没有共同祖先提交时，该命令会退化为从远程端下载所有内容以完成所请求的引用。"
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:37
 #, priority:90
 msgid "Fetch all remote refs."
-msgstr ""
+msgstr "获取所有远程引用。"
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:43 en/git-send-pack.txt:47
 #, priority:90
 msgid "Take the list of refs from stdin, one per line. If there are refs specified on the command line in addition to this option, then the refs from stdin are processed after those on the command line."
-msgstr ""
+msgstr "从标准输入流获取各个引用列表，每行一个。如果命令行中除此选项外还指定了其他引用，则会在处理命令行中的引用后再处理来自标准输入流的多个引用。"
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:47 en/git-send-pack.txt:51
 #, priority:90
 msgid "If `--stateless-rpc` is specified together with this option then the list of refs must be in packet format (pkt-line). Each ref must be in a separate packet, and the list must end with a flush packet."
-msgstr ""
+msgstr "如果与此选项一起指定了 `--stateless-rpc`，那么引用列表必须是数据包格式（pkt-line）。每个引用必须在一个单独的数据包中，并且列表必须以清除数据包结束。"
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:52
 #, priority:90
 msgid "Pass `-q` flag to 'git unpack-objects'; this makes the cloning process less verbose."
-msgstr ""
+msgstr "向 'git unpack-objects' 传递 `-q` 标志；这会使克隆过程不那么冗长。"
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:59
 #, priority:90
 msgid "Do not invoke 'git unpack-objects' on received data, but create a single packfile out of it instead, and store it in the object database. If provided twice then the pack is locked against repacking."
-msgstr ""
+msgstr "不要对接收到的数据调用 'git unpack-objects'，而是将其创建为一个单独的数据包文件，并将其存储在对象数据库中。如果提供两次，则会锁定数据包，防止重新打包。"
 
 #. type: Labeled list
 #: en/git-fetch-pack.txt:60 en/git-pack-objects.txt:250 en/git-send-pack.txt:65
@@ -25028,7 +25028,7 @@ msgstr "--thin"
 #: en/git-fetch-pack.txt:63
 #, priority:90
 msgid "Fetch a \"thin\" pack, which records objects in deltified form based on objects not included in the pack to reduce network traffic."
-msgstr ""
+msgstr "获取 “精简” 数据包，根据未包含在数据包中的对象，以简化形式记录对象，以减少网络流量。"
 
 #. type: Labeled list
 #: en/git-fetch-pack.txt:64 en/git-pack-objects.txt:84
@@ -25040,7 +25040,7 @@ msgstr "--include-tag"
 #: en/git-fetch-pack.txt:69
 #, priority:90
 msgid "If the remote side supports it, annotated tags objects will be downloaded on the same connection as the other objects if the object the tag references is downloaded.  The caller must otherwise determine the tags this option made available."
-msgstr ""
+msgstr "如果远端支持该选项，则在下载标记引用的对象时，注释标记对象将与其他对象在同一连接上下载。 否则，调用者必须确定该选项提供的标记。"
 
 #. type: Labeled list
 #: en/git-fetch-pack.txt:70
@@ -25052,7 +25052,7 @@ msgstr "--upload-pack=<git-upload-pack>"
 #: en/git-fetch-pack.txt:81
 #, priority:90
 msgid "Use this to specify the path to 'git-upload-pack' on the remote side, if is not found on your $PATH.  Installations of sshd ignores the user's environment setup scripts for login shells (e.g. .bash_profile) and your privately installed git may not be found on the system default $PATH.  Another workaround suggested is to set up your $PATH in \".bashrc\", but this flag is for people who do not want to pay the overhead for non-interactive shells by having a lean .bashrc file (they set most of the things up in .bash_profile)."
-msgstr ""
+msgstr "如果在您的 $PATH 中找不到 'git-upload-pack'，则用它来指定远端 'git-upload-pack' 的路径。 安装 sshd 时会忽略用户登录 shell 的环境设置脚本（例如 .bash_profile），因此系统默认的 $PATH 中可能找不到用户自行安装的 git。 另一种变通方法是在 \".bashrc\" 中设置 $PATH，但这种方法只适用于不想为非交互式 shell 支付额外费用的用户（他们会在 .bash_profile 中设置大部分内容）。"
 
 #. type: Labeled list
 #: en/git-fetch-pack.txt:82
@@ -25064,13 +25064,13 @@ msgstr "--exec=<git-upload-pack>"
 #: en/git-fetch-pack.txt:84
 #, priority:90
 msgid "Same as --upload-pack=<git-upload-pack>."
-msgstr ""
+msgstr "与 --upload-pack=<git-upload-pack> 相同。"
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:89
 #, priority:90
 msgid "Limit fetching to ancestor-chains not longer than n.  'git-upload-pack' treats the special depth 2147483647 as infinite even if there is an ancestor-chain that long."
-msgstr ""
+msgstr "'git-upload-pack' 将特殊深度 2147483647 视为无穷大，即使存在这么长的祖先链。"
 
 #. type: Labeled list
 #: en/git-fetch-pack.txt:99
@@ -25082,19 +25082,19 @@ msgstr "--deepen-relative"
 #: en/git-fetch-pack.txt:103
 #, priority:90
 msgid "Argument --depth specifies the number of commits from the current shallow boundary instead of from the tip of each remote branch history."
-msgstr ""
+msgstr "参数 --depth 指定从当前浅边界开始的提交次数，而不是从每个远程分支历史的顶端开始的提交次数。"
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:107
 #, priority:90
 msgid "Skips negotiating commits with the server in order to fetch all matching objects. Use to reapply a new partial clone blob/tree filter."
-msgstr ""
+msgstr "跳过与服务器的协商提交，以获取所有匹配对象。用于重新应用新的部分克隆 blob/tree 过滤器。"
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:110
 #, priority:90
 msgid "Do not show the progress."
-msgstr ""
+msgstr "不要显示进度。"
 
 #. type: Labeled list
 #: en/git-fetch-pack.txt:111 en/git-index-pack.txt:91
@@ -25106,7 +25106,7 @@ msgstr "--check-self-contained-and-connected"
 #: en/git-fetch-pack.txt:114
 #, priority:90
 msgid "Output \"connectivity-ok\" if the received pack is self-contained and connected."
-msgstr ""
+msgstr "如果接收到的数据包是独立的且已连接，则输出 \"connectivity-ok\"（连接正常）。"
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:117 en/git-push.txt:395 en/git-send-pack.txt:64
@@ -25118,7 +25118,7 @@ msgstr "详细运行。"
 #: en/git-fetch-pack.txt:120
 #, priority:90
 msgid "The URL to the remote repository."
-msgstr ""
+msgstr "远程仓库的 URL。"
 
 #. type: Labeled list
 #: en/git-fetch-pack.txt:121
@@ -25130,13 +25130,13 @@ msgstr "<refs>..."
 #: en/git-fetch-pack.txt:125
 #, priority:90
 msgid "The remote heads to update from. This is relative to $GIT_DIR (e.g. \"HEAD\", \"refs/heads/master\").  When unspecified, update from all heads the remote side has."
-msgstr ""
+msgstr "要更新的远程头。这是相对于 $GIT_DIR（例如 \"HEAD\"、\"refs/heads/master\"）而言的。 如果未指定，则对远端所有头进行更新。"
 
 #. type: Plain text
 #: en/git-fetch-pack.txt:129
 #, priority:90
 msgid "If the remote has enabled the options `uploadpack.allowTipSHA1InWant`, `uploadpack.allowReachableSHA1InWant`, or `uploadpack.allowAnySHA1InWant`, they may alternatively be 40-hex sha1s present on the remote."
-msgstr ""
+msgstr "如果远程已启用选项 `uploadpack.allowTipSHA1InWant`、`uploadpack.allowReachableSHA1InWant` 或 `uploadpack.allowAnySHA1InWant`，它们也可以是远程仓库上的 40-hex sha1。"
 
 #. type: Title =
 #: en/git-fetch.txt:2
@@ -25648,7 +25648,7 @@ msgstr "git-filter-branch(1)"
 #: en/git-filter-branch.txt:7
 #, priority:90
 msgid "git-filter-branch - Rewrite branches"
-msgstr ""
+msgstr "git-filter-branch - 重写分支"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:18
@@ -25661,7 +25661,7 @@ msgid ""
 "\t[--tag-name-filter <command>] [--prune-empty]\n"
 "\t[--original <namespace>] [-d <directory>] [-f | --force]\n"
 "\t[--state-branch <branch>] [--] [<rev-list options>...]\n"
-msgstr ""
+msgstr "'git filter-branch' [--setup <命令>] [--subdirectory-filter <目录>]\n\t[--env-filter <命令>] [--tree-filter <命令>]\n\t[--index-filter <命令>] [--parent-filter <命令>]\n\t[--msg-filter <命令>] [--commit-filter <命令>]\n\t[--tag-name-filter <命令>] [--prune-empty]\n\t[--original <命名空间>] [-d <目录>] [-f | --force]\n\t[--state-branch <分支>] [--] [<rev-list options>...]\n"
 
 #. type: Title -
 #: en/git-filter-branch.txt:20 en/git-pack-redundant.txt:15
@@ -25673,19 +25673,19 @@ msgstr "警告"
 #: en/git-filter-branch.txt:31
 #, priority:90
 msgid "'git filter-branch' has a plethora of pitfalls that can produce non-obvious manglings of the intended history rewrite (and can leave you with little time to investigate such problems since it has such abysmal performance).  These safety and performance issues cannot be backward compatibly fixed and as such, its use is not recommended.  Please use an alternative history filtering tool such as https://github.com/newren/git-filter-repo/[git filter-repo].  If you still need to use 'git filter-branch', please carefully read <<SAFETY>> (and <<PERFORMANCE>>) to learn about the land mines of filter-branch, and then vigilantly avoid as many of the hazards listed there as reasonably possible."
-msgstr ""
+msgstr "'git filter-branch' 存在大量隐患，可能会对预期的历史重写产生不明显的误差（而且由于其性能糟糕，你几乎没有时间去研究这些问题）。 这些安全和性能问题无法向后兼容修复，因此不建议使用。 请使用其他历史过滤工具，如 https://github.com/newren/git-filter-repo/[git filter-repo]。 如果您仍然需要使用 'git filter-branch'，请仔细阅读 <<SAFETY>>（和 <<PERFORMANCE>>）以了解 filter-branch 的隐患，然后尽可能合理地避免其中列出的危险。"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:40
 #, priority:90
 msgid "Lets you rewrite Git revision history by rewriting the branches mentioned in the <rev-list options>, applying custom filters on each revision.  Those filters can modify each tree (e.g. removing a file or running a perl rewrite on all files) or information about each commit.  Otherwise, all information (including original commit times or merge information) will be preserved."
-msgstr ""
+msgstr "让你可以通过重写 <rev-list 选项> 中提到的分支来重写 Git 修订历史，并对每个修订应用自定义过滤器。 这些过滤器可以修改每棵树（例如删除文件或在所有文件上运行 perl 重写）或每个提交的信息。 否则，所有信息（包括原始提交时间或合并信息）都将被保留。"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:47
 #, priority:90
 msgid "The command will only rewrite the _positive_ refs mentioned in the command line (e.g. if you pass 'a..b', only 'b' will be rewritten).  If you specify no filters, the commits will be recommitted without any changes, which would normally have no effect.  Nevertheless, this may be useful in the future for compensating for some Git bugs or such, therefore such a usage is permitted."
-msgstr ""
+msgstr "该命令只会重写命令行中提到的 _positive_ refs（例如，如果您传递 'a..b'，则只会重写 'b'）。 如果不指定过滤器，提交将在不做任何改动的情况下重新提交，这通常不会产生任何影响。 不过，这在将来补偿某些 Git bug 或类似问题时可能会有用，因此允许使用这种方法。"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:52
@@ -25695,7 +25695,7 @@ msgid ""
 "the `refs/replace/` namespace.\n"
 "If you have any grafts or replacement refs defined, running this command\n"
 "will make them permanent.\n"
-msgstr ""
+msgstr "*注意*： 此命令尊重 `.git/info/grafts` 文件\n和 `refs/replace/` 命名空间中的引用。\n如果您定义了任何移植物或替换引用，运行此命令\n将使其永久生效。\n"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:61
@@ -25709,19 +25709,19 @@ msgid ""
 "would suffice to fix your problem.  (See the \"RECOVERING FROM UPSTREAM\n"
 "REBASE\" section in linkgit:git-rebase[1] for further information about\n"
 "rewriting published history.)\n"
-msgstr ""
+msgstr "*警告*！重写后的历史记录中，所有对象的名称都会不同，并且不会与原始分支趋同。\n对象的名称也会不同，并且不会与原始分支一致。 您将无法\n在原始分支的基础上推送和分发重写分支。\n原始分支。 如果不了解该命令的全部影响，请不要使用它。\n如果简单的单次提交就能解决您的问题，请尽量避免使用该命令。\n就能解决问题的话，请避免使用该命令。 (请参阅 linkgit:git-rebase[1] 中的\n\"RECOVERING FROM UPSTREAM\"\n重写已发布历史）。\n"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:65
 #, priority:90
 msgid "Always verify that the rewritten version is correct: The original refs, if different from the rewritten ones, will be stored in the namespace 'refs/original/'."
-msgstr ""
+msgstr "请务必验证重写版本是否正确：原始参考文件（如果与重写版本不同）将存储在命名空间 'refs/original/' 中。"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:69
 #, priority:90
 msgid "Note that since this operation is very I/O expensive, it might be a good idea to redirect the temporary directory off-disk with the `-d` option, e.g. on tmpfs.  Reportedly the speedup is very noticeable."
-msgstr ""
+msgstr "需要注意的是，由于该操作的 I/O 成本很高，因此最好使用 `-d` 选项将临时目录重定向到磁盘外，例如在 tmpfs 上。 据报道，速度提升非常明显。"
 
 #. type: Title ~
 #: en/git-filter-branch.txt:72
@@ -25733,31 +25733,31 @@ msgstr "筛选"
 #: en/git-filter-branch.txt:84
 #, priority:90
 msgid "The filters are applied in the order as listed below.  The <command> argument is always evaluated in the shell context using the 'eval' command (with the notable exception of the commit filter, for technical reasons).  Prior to that, the `$GIT_COMMIT` environment variable will be set to contain the id of the commit being rewritten.  Also, GIT_AUTHOR_NAME, GIT_AUTHOR_EMAIL, GIT_AUTHOR_DATE, GIT_COMMITTER_NAME, GIT_COMMITTER_EMAIL, and GIT_COMMITTER_DATE are taken from the current commit and exported to the environment, in order to affect the author and committer identities of the replacement commit created by linkgit:git-commit-tree[1] after the filters have run."
-msgstr ""
+msgstr "过滤器的应用顺序如下。 <命令> 参数总是在 shell 上下文中使用 'eval' 命令进行评估（由于技术原因，提交过滤器是个明显的例外）。 在此之前，`$GIT_COMMIT` 环境变量将被设置为包含被改写提交的 id。 此外，GIT_AUTHOR_NAME、GIT_AUTHOR_EMAIL、GIT_AUTHOR_DATE、GIT_COMMITTER_NAME、GIT_COMMITTER_EMAIL 和 GIT_COMMITTER_DATE 会从当前提交中提取并导出到环境中，以便在过滤器运行后影响 linkgit:git-commit-tree[1] 创建的替换提交的作者和提交者身份。"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:87
 #, priority:90
 msgid "If any evaluation of <command> returns a non-zero exit status, the whole operation will be aborted."
-msgstr ""
+msgstr "如果对 <命令> 的任何评估返回非零的退出状态，则整个操作将被终止。"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:93
 #, priority:90
 msgid "A 'map' function is available that takes an \"original sha1 id\" argument and outputs a \"rewritten sha1 id\" if the commit has been already rewritten, and \"original sha1 id\" otherwise; the 'map' function can return several ids on separate lines if your commit filter emitted multiple commits."
-msgstr ""
+msgstr "我们提供了一个 'map' 函数，它接收 '原始 sha1 id' 参数，如果提交已被改写，则输出 '改写后的 sha1 id'，否则输出 '原始 sha1 id'。"
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:98
 #, no-wrap, priority:90
 msgid "--setup <command>"
-msgstr ""
+msgstr "--setup <命令>"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:104
 #, priority:90
 msgid "This is not a real filter executed for each commit but a one time setup just before the loop. Therefore no commit-specific variables are defined yet.  Functions or variables defined here can be used or modified in the following filter steps except the commit filter, for technical reasons."
-msgstr ""
+msgstr "这不是为每次提交执行的真正过滤器，而是在循环之前的一次性设置。因此还没有定义特定于提交的变量。 由于技术原因，此处定义的函数或变量可以在除提交过滤器之外的后续过滤器步骤中使用或修改。"
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:105
@@ -25769,19 +25769,19 @@ msgstr "--subdirectory-filter <directory>"
 #: en/git-filter-branch.txt:109
 #, priority:90
 msgid "Only look at the history which touches the given subdirectory.  The result will contain that directory (and only that) as its project root. Implies <<Remap_to_ancestor>>."
-msgstr ""
+msgstr "只查看涉及给定子目录的历史记录。 结果将包含作为项目根目录的该目录（且仅包含该目录）。隐含 <<Remap_to_ancestor>>。"
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:110
 #, no-wrap, priority:90
 msgid "--env-filter <command>"
-msgstr ""
+msgstr "--env-filter <命令>"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:115
 #, priority:90
 msgid "This filter may be used if you only need to modify the environment in which the commit will be performed.  Specifically, you might want to rewrite the author/committer name/email/time environment variables (see linkgit:git-commit-tree[1] for details)."
-msgstr ""
+msgstr "如果只需要修改提交的环境，可以使用这个过滤器。 具体来说，你可能想重写作者/提交者姓名/电子邮件/时间等环境变量（详见 linkgit:git-commit-tree[1]）。"
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:116
@@ -25793,31 +25793,31 @@ msgstr "--tree-filter <command>"
 #: en/git-filter-branch.txt:123
 #, priority:90
 msgid "This is the filter for rewriting the tree and its contents.  The argument is evaluated in shell with the working directory set to the root of the checked out tree.  The new tree is then used as-is (new files are auto-added, disappeared files are auto-removed - neither .gitignore files nor any other ignore rules *HAVE ANY EFFECT*!)."
-msgstr ""
+msgstr "这是重写树及其内容的过滤器。 参数在 shell 中评估，工作目录设置为签出树的根目录。 新的签出树将按原样使用（自动添加新文件，自动删除已消失的文件--无论是 .gitignore 文件还是任何其他忽略规则都不会 *产生任何影响*！）。"
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:124
 #, no-wrap, priority:90
 msgid "--index-filter <command>"
-msgstr ""
+msgstr "--index-filter <命令>"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:130
 #, ignore-ellipsis, priority:90
 msgid "This is the filter for rewriting the index.  It is similar to the tree filter but does not check out the tree, which makes it much faster.  Frequently used with `git rm --cached --ignore-unmatch ...`, see EXAMPLES below.  For hairy cases, see linkgit:git-update-index[1]."
-msgstr ""
+msgstr "这是用于重写索引的过滤器。 它与树过滤器类似，但不检查树，因此速度更快。 经常与 `git rm --cached --ignore-unmatch ... ` 一起使用，参见下面的示例。 如需了解更多信息，请参阅 linkgit:git-update-index[1]。"
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:131
 #, no-wrap, priority:90
 msgid "--parent-filter <command>"
-msgstr ""
+msgstr "--parent-filter <命令>"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:138
 #, ignore-ellipsis, priority:90
 msgid "This is the filter for rewriting the commit's parent list.  It will receive the parent string on stdin and shall output the new parent string on stdout.  The parent string is in the format described in linkgit:git-commit-tree[1]: empty for the initial commit, \"-p parent\" for a normal commit and \"-p parent1 -p parent2 -p parent3 ...\" for a merge commit."
-msgstr ""
+msgstr "这是重写提交父级列表的过滤器。 它通过 stdin 接收父级字符串，并在标准输出流输出新的父级字符串。 父级字符串的格式如 linkgit:git-commit-tree[1] 所述：空表示初始提交，\"-p parent\" 表示正常提交，\"-p parent1 -p parent2 -p parent3 ...\" 表示合并提交。"
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:139
@@ -25829,7 +25829,7 @@ msgstr "--msg-filter <command>"
 #: en/git-filter-branch.txt:144
 #, priority:90
 msgid "This is the filter for rewriting the commit messages.  The argument is evaluated in the shell with the original commit message on standard input; its standard output is used as the new commit message."
-msgstr ""
+msgstr "这是重写提交信息的过滤器。 该参数在 shell 中与标准输入的原始提交信息一起进行评估；其标准输出将用作新的提交信息。"
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:145
@@ -25841,25 +25841,25 @@ msgstr "--commit-filter <command>"
 #: en/git-filter-branch.txt:151
 #, ignore-ellipsis, priority:90
 msgid "This is the filter for performing the commit.  If this filter is specified, it will be called instead of the 'git commit-tree' command, with arguments of the form \"<TREE_ID> [(-p <PARENT_COMMIT_ID>)...]\" and the log message on stdin.  The commit id is expected on stdout."
-msgstr ""
+msgstr "这是执行提交的过滤器。 如果指定了该过滤器，它将代替 'git commit-tree' 命令被调用，参数形式为 \"<TREE_ID> [(-p <PARENT_COMMIT_ID>)...]\" 并在标准输入流上显示日志信息。 提交 ID 将显示在标准输出流上。"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:155
 #, priority:90
 msgid "As a special extension, the commit filter may emit multiple commit ids; in that case, the rewritten children of the original commit will have all of them as parents."
-msgstr ""
+msgstr "作为一种特殊扩展，提交过滤器可能会发出多个提交 ID；在这种情况下，原始提交的重写子代将以所有这些提交为父代。"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:160
 #, priority:90
 msgid "You can use the 'map' convenience function in this filter, and other convenience functions, too.  For example, calling 'skip_commit \"$@\"' will leave out the current commit (but not its changes! If you want that, use 'git rebase' instead)."
-msgstr ""
+msgstr "您可以在此过滤器中使用 'map' 便利函数，也可以使用其他便利函数。 例如，调用 'skip_commit \"$@\"' 会忽略当前提交（但不会忽略其更改！如果想这样做，请使用 'git rebase'）。"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:164
 #, priority:90
 msgid "You can also use the `git_commit_non_empty_tree \"$@\"` instead of `git commit-tree \"$@\"` if you don't wish to keep commits with a single parent and that makes no change to the tree."
-msgstr ""
+msgstr "如果不希望保留单父提交，也可以使用 `git_commit_non_empty_tree \"$@\"` 代替 `git commit-tree \"$@\"`，这样不会对提交树造成任何改变。"
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:165
@@ -25871,19 +25871,19 @@ msgstr "--tag-name-filter <command>"
 #: en/git-filter-branch.txt:171
 #, priority:90
 msgid "This is the filter for rewriting tag names. When passed, it will be called for every tag ref that points to a rewritten object (or to a tag object which points to a rewritten object).  The original tag name is passed via standard input, and the new tag name is expected on standard output."
-msgstr ""
+msgstr "这是重写标记名的过滤器。当传递时，它将对指向重写对象的每个标签引用（或指向重写对象的标签对象）进行调用。 原始标签名通过标准输入传递，新标签名则通过标准输出传递。"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:176
 #, priority:90
 msgid "The original tags are not deleted, but can be overwritten; use \"--tag-name-filter cat\" to simply update the tags.  In this case, be very careful and make sure you have the old tags backed up in case the conversion has run afoul."
-msgstr ""
+msgstr "原始标签不会被删除，但可以被覆盖；使用 \"--tag-name-filter cat \" 可以简单地更新标签。 在这种情况下，要非常小心，确保备份了旧标签，以防转换出现问题。"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:187
 #, priority:90
 msgid "Nearly proper rewriting of tag objects is supported. If the tag has a message attached, a new tag object will be created with the same message, author, and timestamp. If the tag has a signature attached, the signature will be stripped. It is by definition impossible to preserve signatures. The reason this is \"nearly\" proper, is because ideally if the tag did not change (points to the same object, has the same name, etc.)  it should retain any signature. That is not the case, signatures will always be removed, buyer beware. There is also no support for changing the author or timestamp (or the tag message for that matter). Tags which point to other tags will be rewritten to point to the underlying commit."
-msgstr ""
+msgstr "几乎支持标签对象的正确重写。如果标签附有信息，则将创建一个具有相同信息、作者和时间戳的新标签对象。如果标签附有签名，签名将被删除。根据定义，不可能保留签名。之所以说这 “几乎” 是正确的，是因为在理想情况下，如果标签没有改变（指向相同的对象、具有相同的名称等），就应该保留任何签名。但实际情况并非如此，签名总是会被移除，买家要小心。此外，也不支持更改作者或时间戳（或标签信息）。指向其他标记的标记将被重写为指向底层提交。"
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:188
@@ -25895,7 +25895,7 @@ msgstr "--prune-empty"
 #: en/git-filter-branch.txt:195
 #, priority:90
 msgid "Some filters will generate empty commits that leave the tree untouched.  This option instructs git-filter-branch to remove such commits if they have exactly one or zero non-pruned parents; merge commits will therefore remain intact.  This option cannot be used together with `--commit-filter`, though the same effect can be achieved by using the provided `git_commit_non_empty_tree` function in a commit filter."
-msgstr ""
+msgstr "某些过滤器会产生空提交，从而使树保持原样。 此选项指示 git-filter-branch，如果这些提交的父提交中正好有一个或零个未剪枝，则删除这些提交；因此，合并提交将保持不变。 此选项不能与 `--commit-filter` 一起使用，不过在提交过滤器中使用所提供的 `git_commit_non_empty_tree` 函数可以达到同样的效果。"
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:196
@@ -25907,7 +25907,7 @@ msgstr "--original <namespace>"
 #: en/git-filter-branch.txt:199
 #, priority:90
 msgid "Use this option to set the namespace where the original commits will be stored. The default value is 'refs/original'."
-msgstr ""
+msgstr "使用此选项可设置存储原始提交的命名空间。默认值为 'refs/original'。"
 
 #. type: Labeled list
 #: en/git-filter-branch.txt:200
@@ -25919,7 +25919,7 @@ msgstr "-d <directory>"
 #: en/git-filter-branch.txt:207
 #, priority:90
 msgid "Use this option to set the path to the temporary directory used for rewriting.  When applying a tree filter, the command needs to temporarily check out the tree to some directory, which may consume considerable space in case of large projects.  By default it does this in the `.git-rewrite/` directory but you can override that choice by this parameter."
-msgstr ""
+msgstr "使用该选项可设置用于重写的临时目录路径。 在应用树过滤器时，命令需要将树临时签出到某个目录，这可能会占用大型项目的大量空间。 默认情况下，它会在 `.git-rewrite/`目录下进行，但你可以用这个参数来覆盖这个选择。"
 
 #. type: Plain text
 #: en/git-filter-branch.txt:213
