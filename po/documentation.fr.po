@@ -1,6 +1,6 @@
 #
 msgid ""
-msgstr "Project-Id-Version: PACKAGE VERSION\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-11-04 20:14+0100\nPO-Revision-Date: 2023-11-15 22:08+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 5.2-dev\n"
+msgstr "Project-Id-Version: PACKAGE VERSION\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-11-04 20:14+0100\nPO-Revision-Date: 2023-12-10 12:03+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 5.3-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:780 en/git-instaweb.txt:45 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:180 en/git-status.txt:31
@@ -40049,7 +40049,7 @@ msgstr "Cette option fournit une limite supplémentaire par dessus `--window` ;
 #: en/git-pack-objects.txt:163
 #, priority:100
 msgid "In unusual scenarios, you may not be able to create files larger than a certain size on your filesystem, and this option can be used to tell the command to split the output packfile into multiple independent packfiles, each not larger than the given size. The size can be suffixed with \"k\", \"m\", or \"g\". The minimum size allowed is limited to 1 MiB.  The default is unlimited, unless the config variable `pack.packSizeLimit` is set. Note that this option may result in a larger and slower repository; see the discussion in `pack.packSizeLimit`."
-msgstr ""
+msgstr "Dans des scénarios inhabituels, il se peut que vous ne puissiez pas créer des fichiers plus grands qu'une certaine taille sur votre système de fichiers, et cette option peut être utilisée pour dire à la commande de diviser le fichier de sortie en plusieurs paquets indépendants, chacun pas plus grand que la taille donnée. La taille peut être suffixée avec \"k\", \"m\", ou \"g\". La taille minimale autorisée est limitée à 1 MiB. La valeur par défaut est illimitée, sauf si la variable config `pack.packSizeLimit` est définie. Notez que cette option peut entraîner un dépôt plus gros et plus lent ; voir la discussion dans `pack.packSizeLimit`."
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:164
@@ -40061,19 +40061,19 @@ msgstr "--honor-pack-keep"
 #: en/git-pack-objects.txt:168
 #, priority:100
 msgid "This flag causes an object already in a local pack that has a .keep file to be ignored, even if it would have otherwise been packed."
-msgstr ""
+msgstr "Ce drapeau fait ignorer un objet déjà dans un paquet local qui a un fichier .keep, même si il aurait été empaqueté par ailleurs."
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:169 en/git-repack.txt:198
 #, no-wrap, priority:100
 msgid "--keep-pack=<pack-name>"
-msgstr ""
+msgstr "--keep-pack=<nom-de-paquet>"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:175
 #, priority:100
 msgid "This flag causes an object already in the given pack to be ignored, even if it would have otherwise been packed. `<pack-name>` is the pack file name without leading directory (e.g. `pack-123.pack`). The option could be specified multiple times to keep multiple packs."
-msgstr ""
+msgstr "Ce drapeau fait ignorer un objet déjà dans le paquet donné, même s'il aurait été empaqueté par ailleurs. `nom-de-paquet` est le nom du fichier paquet sans répertoire (par exemple `pack-123.pack`). L'option peut être spécifiée plusieurs fois pour garder plusieurs paquets."
 
 #. type: Plain text
 #: en/git-pack-objects.txt:179
@@ -40145,13 +40145,13 @@ msgstr "--no-reuse-object"
 #: en/git-pack-objects.txt:228
 #, priority:100
 msgid "This flag tells the command not to reuse existing object data at all, including non deltified object, forcing recompression of everything.  This implies --no-reuse-delta. Useful only in the obscure case where wholesale enforcement of a different compression level on the packed data is desired."
-msgstr ""
+msgstr "Ce drapeau indique à la commande de ne pas réutiliser les données d'objet existantes, y compris l'objet non déltifié, forçant la recompression de tout. Cela implique --no-reuse-delta. Utile seulement dans le cas obscur où l'exécution en gros d'un niveau de compression différent sur les données emballées est souhaitée."
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:229
 #, no-wrap, priority:100
 msgid "--compression=<n>"
-msgstr ""
+msgstr "--compression=<n>"
 
 #. type: Plain text
 #: en/git-pack-objects.txt:236
@@ -40175,13 +40175,13 @@ msgstr "Activer l'algorithme \"sparse\" pour déterminer quels objets inclure da
 #: en/git-pack-objects.txt:252
 #, priority:100
 msgid "Create a \"thin\" pack by omitting the common objects between a sender and a receiver in order to reduce network transfer. This option only makes sense in conjunction with --stdout."
-msgstr ""
+msgstr "Créer un paquet \"fin\" en omettant les objets communs entre un expéditeur et un récepteur afin de réduire le transfert sur le réseau. Cette option n'a de sens qu'avec --stdout."
 
 #. type: Plain text
 #: en/git-pack-objects.txt:257
 #, priority:100
 msgid "Note: A thin pack violates the packed archive format by omitting required objects and is thus unusable by Git without making it self-contained. Use `git index-pack --fix-thin` (see linkgit:git-index-pack[1]) to restore the self-contained property."
-msgstr ""
+msgstr "Note : Un paquet mince viole le format d'archive empaquetée en omettant les objets requis et est donc inutilisable par Git sans le rendre autonome. Utilisez `git index-pack --fix-thin` (voir linkgit:git-index-pack[1]) pour restaurer la propriété autonome."
 
 #. type: Labeled list
 #: en/git-pack-objects.txt:258
@@ -58073,7 +58073,7 @@ msgstr "Afficher la version de la suite Git de laquelle le programme 'git' provi
 #: en/git.txt:48
 #, ignore-ellipsis, priority:100
 msgid "This option is internally converted to `git version ...` and accepts the same options as the linkgit:git-version[1] command. If `--help` is also given, it takes precedence over `--version`."
-msgstr ""
+msgstr "Cette option est convertie en interne en `git version...` et accepte les mêmes options que la commande linkgit:git-version[1]. Si l'on `--help` est donnée aussi , elle a préséance sur `--version`."
 
 #. type: Plain text
 #: en/git.txt:55
@@ -58143,19 +58143,19 @@ msgstr "--config-env=<nom>=<var-env>"
 #: en/git.txt:97
 #, priority:100
 msgid "Like `-c <name>=<value>`, give configuration variable '<name>' a value, where <envvar> is the name of an environment variable from which to retrieve the value. Unlike `-c` there is no shortcut for directly setting the value to an empty string, instead the environment variable itself must be set to the empty string.  It is an error if the `<envvar>` does not exist in the environment. `<envvar>` may not contain an equals sign to avoid ambiguity with `<name>` containing one."
-msgstr ""
+msgstr "À l'instar de `-c <nom>=<valeur>`, donner une valeur à la variable de configuration '<nom>', où <envvar> est le nom d'une variable d'environnement depuis laquelle récupérer la valeur. Contrairement à `-c` il n'y a pas de raccourci pour définir directement la valeur à une chaîne vide, la variable d'environnement elle-même doit être définie à la chaîne vide. Il s'agit d'une erreur si le `envvar` n'existe pas dans l'environnement. `<envvar>` ne peut pas contenir un signe égal pour éviter toute ambiguïté avec `<nom>` en contenant un."
 
 #. type: Plain text
 #: en/git.txt:104
 #, priority:100
 msgid "This is useful for cases where you want to pass transitory configuration options to git, but are doing so on operating systems where other processes might be able to read your command line (e.g. `/proc/self/cmdline`), but not your environment (e.g. `/proc/self/environ`). That behavior is the default on Linux, but may not be on your system."
-msgstr ""
+msgstr "Ceci est utile pour les cas où vous voulez passer des options de configuration transitoires à git, mais le faire sur les systèmes d'exploitation où d'autres processus pourraient être en mesure de lire votre ligne de commande (par exemple `/proc/self/cmdline`), mais pas votre environnement (par exemple `/proc/self/environ`). C'est le comportement par défaut sur Linux, mais peut ne pas l'être sur votre système."
 
 #. type: Plain text
 #: en/git.txt:109
 #, priority:100
 msgid "Note that this might add security for variables such as `http.extraHeader` where the sensitive information is part of the value, but not e.g. `url.<base>.insteadOf` where the sensitive information can be part of the key."
-msgstr ""
+msgstr "Notez que cela pourrait ajouter de la sécurité pour des variables telles que `http.extraHeader` où les informations sensibles font partie de la valeur, mais pas par exemple `url. <base>.insteadOf` où les informations sensibles peuvent faire partie de la clé."
 
 #. type: Labeled list
 #: en/git.txt:110
@@ -58245,13 +58245,13 @@ msgstr "Règle le chemin vers le dépôt (répertoire \".git\"). Ceci peut aussi
 #: en/git.txt:154
 #, priority:100
 msgid "Specifying the location of the \".git\" directory using this option (or `GIT_DIR` environment variable) turns off the repository discovery that tries to find a directory with \".git\" subdirectory (which is how the repository and the top-level of the working tree are discovered), and tells Git that you are at the top level of the working tree.  If you are not at the top-level directory of the working tree, you should tell Git where the top-level of the working tree is, with the `--work-tree=<path>` option (or `GIT_WORK_TREE` environment variable)"
-msgstr ""
+msgstr "Spécifier l'emplacement du répertoire \".git\" en utilisant cette option (ou la variable d'environnement `GIT_DIR`) désactive la découverte de dépôt, qui tente de trouver un répertoire avec un sous-répertoire \".git\" (ce qui est la façon dont le dépôt et le niveau supérieur de l'arbre de travail sont découverts), et indique à Git que vous êtes au niveau supérieur de l'arbre de travail. Si vous n'êtes pas dans le répertoire de niveau supérieur de l'arbre de travail, vous devez dire à Git où se trouve le niveau supérieur de l'arbre de travail, avec l'option `--work-tree=<chemin> (ou la variable d'environnement`GIT_WORK_TREE`)"
 
 #. type: Plain text
 #: en/git.txt:157
 #, priority:100
 msgid "If you just want to run git as if it was started in `<path>` then use `git -C <path>`."
-msgstr ""
+msgstr "Si vous voulez juste lancer git comme s'il était démarré dans `<chemin>`, utilisez `git -C <chemin>`."
 
 #. type: Labeled list
 #: en/git.txt:158
@@ -58353,19 +58353,19 @@ msgstr "--no-optional-locks"
 #: en/git.txt:204
 #, priority:100
 msgid "Do not perform optional operations that require locks. This is equivalent to setting the `GIT_OPTIONAL_LOCKS` to `0`."
-msgstr ""
+msgstr "Ne pas effectuer des opérations optionnelles qui nécessitent des verrouillages. Ceci équivaut à mettre `GIT_OPTIONAL_LOCKS` à `0`."
 
 #. type: Labeled list
 #: en/git.txt:205
 #, ignore-ellipsis, no-wrap, priority:100
 msgid "--list-cmds=group[,group...]"
-msgstr ""
+msgstr "--list-cmds=groupe[,groupe...]"
 
 #. type: Plain text
 #: en/git.txt:214
 #, priority:100
 msgid "List commands by group. This is an internal/experimental option and may change or be removed in the future. Supported groups are: builtins, parseopt (builtin commands that use parse-options), main (all commands in libexec directory), others (all other commands in `$PATH` that have git- prefix), list-<category> (see categories in command-list.txt), nohelpers (exclude helper commands), alias and config (retrieve command list from config variable completion.commands)"
-msgstr ""
+msgstr "Liste les commandes par groupe. Il s'agit d'une option interne/expérimentale et peut changer ou être retirée à l'avenir. Les groupes pris en charge sont les suivants : builtins, parseopt (commandes intégrées qui utilisent parse-options), main (toutes commandes dans le répertoire libexec), autres (toutes autres commandes dans `$PATH` qui ont un préfixe git), list-<catégorie> (voir les catégories dans command-list.txt), nohelpers (exclure les commandes assistantes), alias et config (récupère la liste de commandes depuis la variable de configuration completion.commands)"
 
 #. type: Labeled list
 #: en/git.txt:215
@@ -58383,25 +58383,25 @@ msgstr "Lire les gitattributs depuis <arbre-esque> au lieu de l'arbre-de-travail
 #: en/git.txt:221
 #, no-wrap, priority:100
 msgid "GIT COMMANDS"
-msgstr ""
+msgstr "COMMANDES GIT"
 
 #. type: Plain text
 #: en/git.txt:225
 #, priority:100
 msgid "We divide Git into high level (\"porcelain\") commands and low level (\"plumbing\") commands."
-msgstr ""
+msgstr "Nous divisons Git entre les commandes de haut niveau (\"porcelaine\") et de bas niveau (\"plomberie\")."
 
 #. type: Title -
 #: en/git.txt:227
 #, no-wrap, priority:100
 msgid "High-level commands (porcelain)"
-msgstr ""
+msgstr "Commandes de haut niveau (porcelaine)"
 
 #. type: Plain text
 #: en/git.txt:231
 #, priority:100
 msgid "We separate the porcelain commands into the main commands and some ancillary user utilities."
-msgstr ""
+msgstr "Nous séparerons les commandes de porcelaine entre commandes principales et quelques utilitaires auxiliaires."
 
 #. type: Title ~
 #: en/git.txt:233
@@ -58413,19 +58413,19 @@ msgstr "Commandes Porcelaine Principales"
 #: en/git.txt:238
 #, no-wrap, priority:100
 msgid "Ancillary Commands"
-msgstr ""
+msgstr "Commandes auxiliaires"
 
 #. type: Plain text
 #: en/git.txt:240
 #, priority:100
 msgid "Manipulators:"
-msgstr ""
+msgstr "Manipulateurs :"
 
 #. type: Plain text
 #: en/git.txt:244
 #, priority:100
 msgid "Interrogators:"
-msgstr ""
+msgstr "Interrogateurs :"
 
 #. type: Title ~
 #: en/git.txt:249
@@ -58437,109 +58437,109 @@ msgstr "Interaction avec d'autres développeurs"
 #: en/git.txt:253
 #, priority:100
 msgid "These commands are to interact with foreign SCM and with other people via patch over e-mail."
-msgstr ""
+msgstr "Ces commandes permettent d'interagir avec autre SCM et avec d'autres personnes via rustines envoyées par courriel."
 
 #. type: Title ~
 #: en/git.txt:257
 #, no-wrap, priority:100
 msgid "Reset, restore and revert"
-msgstr ""
+msgstr "Réinitialiser, restaurer et revenir"
 
 #. type: Plain text
 #: en/git.txt:260
 #, priority:100
 msgid "There are three commands with similar names: `git reset`, `git restore` and `git revert`."
-msgstr ""
+msgstr "Il y a trois commandes avec des noms similaires : `git reset`, `git restore` et `git revert`."
 
 #. type: Plain text
 #: en/git.txt:263
 #, priority:100
 msgid "linkgit:git-revert[1] is about making a new commit that reverts the changes made by other commits."
-msgstr ""
+msgstr "linkgit:git-revert[1] sert à faire un nouveau commit qui inverse les modifications apportées par d'autres commits."
 
 #. type: Plain text
 #: en/git.txt:268
 #, priority:100
 msgid "linkgit:git-restore[1] is about restoring files in the working tree from either the index or another commit. This command does not update your branch. The command can also be used to restore files in the index from another commit."
-msgstr ""
+msgstr "linkgit:git-restore[1] consiste à restaurer des fichiers dans l'arbre de travail à partir de l'index ou d'un autre commit. Cette commande ne met pas à jour votre branche. La commande peut également être utilisée pour restaurer des fichiers dans l'index depuis un autre commit."
 
 #. type: Plain text
 #: en/git.txt:272
 #, priority:100
 msgid "linkgit:git-reset[1] is about updating your branch, moving the tip in order to add or remove commits from the branch. This operation changes the commit history."
-msgstr ""
+msgstr "linkgit:git-reset[1] consiste à mettre à jour votre branche, en déplaçant le sommet afin d'ajouter ou de supprimer des commits de la branche. Cette opération modifie l'historique des commits."
 
 #. type: Plain text
 #: en/git.txt:275
 #, priority:100
 msgid "`git reset` can also be used to restore the index, overlapping with `git restore`."
-msgstr ""
+msgstr "`git reset` peut également être utilisé pour restaurer l'index, à la manière de `git restore`."
 
 #. type: Title -
 #: en/git.txt:278
 #, no-wrap, priority:100
 msgid "Low-level commands (plumbing)"
-msgstr ""
+msgstr "Commandes de bas niveau (plomberie)"
 
 #. type: Plain text
 #: en/git.txt:285
 #, priority:100
 msgid "Although Git includes its own porcelain layer, its low-level commands are sufficient to support development of alternative porcelains.  Developers of such porcelains might start by reading about linkgit:git-update-index[1] and linkgit:git-read-tree[1]."
-msgstr ""
+msgstr "Bien que Git comprend sa propre couche de porcelaine, ses commandes de bas niveau sont suffisantes pour développer de porcelaines alternatives. Les développeurs de ces porcelaines devraient commencer par la lecture de linkgit:git-update-index[1] et linkgit:git-read-tree[1]."
 
 #. type: Plain text
 #: en/git.txt:292
 #, priority:100
 msgid "The interface (input, output, set of options and the semantics)  to these low-level commands are meant to be a lot more stable than Porcelain level commands, because these commands are primarily for scripted use.  The interface to Porcelain commands on the other hand are subject to change in order to improve the end user experience."
-msgstr ""
+msgstr "L'interface (entrée, sortie, ensemble d'options et sémantique) à ces commandes de bas niveau est censée être beaucoup plus stable que les commandes de niveau Porcelaine, parce que ces commandes sont principalement destinées à une utilisation scriptée. L'interface des commandes Porcelaine en revanche est sujette à changement afin d'améliorer l'expérience de l'utilisateur final."
 
 #. type: Plain text
 #: en/git.txt:298
 #, priority:100
 msgid "The following description divides the low-level commands into commands that manipulate objects (in the repository, index, and working tree), commands that interrogate and compare objects, and commands that move objects and references between repositories."
-msgstr ""
+msgstr "La description suivante divise les commandes de bas niveau en commandes qui manipulent les objets (dans le dépôt, l'index et l'arbre de travail), celles qui interrogent et comparent les objets, et les commandes qui déplacent les objets et les références entre les dépôts."
 
 #. type: Title ~
 #: en/git.txt:301
 #, no-wrap, priority:100
 msgid "Manipulation commands"
-msgstr ""
+msgstr "Commandes de manipulation"
 
 #. type: Title ~
 #: en/git.txt:307
 #, no-wrap, priority:100
 msgid "Interrogation commands"
-msgstr ""
+msgstr "Commandes d'interrogation"
 
 #. type: Plain text
 #: en/git.txt:313
 #, priority:100
 msgid "In general, the interrogate commands do not touch the files in the working tree."
-msgstr ""
+msgstr "En général, les commandes d'interrogation ne modifient pas les fichiers dans l'arbre de travail."
 
 #. type: Title ~
 #: en/git.txt:316
 #, no-wrap, priority:100
 msgid "Syncing repositories"
-msgstr ""
+msgstr "Synchronisation des dépôts"
 
 #. type: Plain text
 #: en/git.txt:322
 #, priority:100
 msgid "The following are helper commands used by the above; end users typically do not use them directly."
-msgstr ""
+msgstr "Les commandes suivantes sont des utilitaires utilisés par celles ci-dessus ; les utilisateurs finaux ne les utilisent généralement pas directement."
 
 #. type: Title ~
 #: en/git.txt:327
 #, no-wrap, priority:100
 msgid "Internal helper commands"
-msgstr ""
+msgstr "Commandes assistantes internes"
 
 #. type: Plain text
 #: en/git.txt:331
 #, priority:100
 msgid "These are internal helper commands used by other commands; end users typically do not use them directly."
-msgstr ""
+msgstr "Ce sont des commandes assistantes internes utilisées par d'autres commandes ; les utilisateurs finaux ne les utilisent généralement pas directement."
 
 #. type: Title -
 #: en/git.txt:335
@@ -58551,19 +58551,19 @@ msgstr "Guides"
 #: en/git.txt:338
 #, priority:100
 msgid "The following documentation pages are guides about Git concepts."
-msgstr ""
+msgstr "Les pages de documentation suivantes sont des guides sur les concepts Git."
 
 #. type: Title -
 #: en/git.txt:342
 #, no-wrap, priority:100
 msgid "Repository, command and file interfaces"
-msgstr ""
+msgstr "Interfaces de dépôt, de commande et de fichiers"
 
 #. type: Plain text
 #: en/git.txt:347
 #, priority:100
 msgid "This documentation discusses repository and command interfaces which users are expected to interact with directly. See `--user-formats` in linkgit:git-help[1] for more details on the criteria."
-msgstr ""
+msgstr "Cette documentation traite des interfaces de dépôt et de commande que les utilisateurs sont censés utiliser directement. Pour plus de détails sur les critères, consultez `--user-formats` dans linkgit:git-help[1]."
 
 #. type: Title -
 #: en/git.txt:351
@@ -58575,7 +58575,7 @@ msgstr "formats de fichiers, protocoles et interfaces de niveau développeur"
 #: en/git.txt:356
 #, priority:100
 msgid "This documentation discusses file formats, over-the-wire protocols and other git developer interfaces. See `--developer-interfaces` in linkgit:git-help[1]."
-msgstr ""
+msgstr "Cette documentation traite des formats de fichiers, des protocoles de communication et d'autres interfaces pour les développeur de git. Voir `--developer-interfaces` dans linkgit:git-help[1]."
 
 #. type: Title -
 #: en/git.txt:360
@@ -58587,7 +58587,7 @@ msgstr "Mécanisme de configuration"
 #: en/git.txt:365
 #, priority:100
 msgid "Git uses a simple text format to store customizations that are per repository and are per user.  Such a configuration file may look like this:"
-msgstr ""
+msgstr "Git utilise un format texte simple pour stocker les personnalisations qui sont spécifique au dépôt et à l'utilisateur. Un tel fichier de configuration peut ressembler à ceci :"
 
 #. type: delimited block -
 #: en/git.txt:370
@@ -58596,7 +58596,7 @@ msgid ""
 "#\n"
 "# A '#' or ';' character indicates a comment.\n"
 "#\n"
-msgstr ""
+msgstr "#\n# Un caractère A '#' ou ';' indique un commentaire.\n#\n"
 
 #. type: delimited block -
 #: en/git.txt:380
@@ -58606,55 +58606,55 @@ msgid ""
 "[user]\n"
 "\tname = \"Junio C Hamano\"\n"
 "\temail = \"gitster@pobox.com\"\n"
-msgstr ""
+msgstr "; identité de l'utilisateur\n[user]\n\tname = \"Junio C Hamano\"\n\temail = \"gitster@pobox.com\"\n"
 
 #. type: Plain text
 #: en/git.txt:386
 #, priority:100
 msgid "Various commands read from the configuration file and adjust their operation accordingly.  See linkgit:git-config[1] for a list and more details about the configuration mechanism."
-msgstr ""
+msgstr "Diverses commandes lisent le fichier de configuration et modifient leur comportement en conséquence. Voir linkgit:git-config[1] pour une liste et plus de détails sur le mécanisme de configuration."
 
 #. type: Title -
 #: en/git.txt:389
 #, no-wrap, priority:100
 msgid "Identifier Terminology"
-msgstr ""
+msgstr "Terminologie des identifiants"
 
 #. type: Plain text
 #: en/git.txt:392
 #, priority:100
 msgid "Indicates the object name for any type of object."
-msgstr ""
+msgstr "Indique le nom de l'objet pour tout type d'objet."
 
 #. type: Labeled list
 #: en/git.txt:393 en/git-unpack-file.txt:23
 #, no-wrap, priority:100
 msgid "<blob>"
-msgstr ""
+msgstr "<blob>"
 
 #. type: Plain text
 #: en/git.txt:395
 #, priority:100
 msgid "Indicates a blob object name."
-msgstr ""
+msgstr "Indique un nom d'objet blob."
 
 #. type: Plain text
 #: en/git.txt:398
 #, priority:100
 msgid "Indicates a tree object name."
-msgstr ""
+msgstr "Indique un nom d'objet d'arbre."
 
 #. type: Plain text
 #: en/git.txt:401
 #, priority:100
 msgid "Indicates a commit object name."
-msgstr ""
+msgstr "Indique un nom d'objet commit."
 
 #. type: Plain text
 #: en/git.txt:407
 #, priority:100
 msgid "Indicates a tree, commit or tag object name.  A command that takes a <tree-ish> argument ultimately wants to operate on a <tree> object but automatically dereferences <commit> and <tag> objects that point at a <tree>."
-msgstr ""
+msgstr "Indique un nom d'objet arbre, commit ou étiquette. Une commande qui prend un argument <arbre-esque> veut finalement opérer sur un objet <arbre> mais déréférences automatiquement les objets <commit> et <étiquette> qui pointent sur un <arbre>."
 
 #. type: Labeled list
 #: en/git.txt:408
@@ -58666,55 +58666,55 @@ msgstr "<commit-esque>"
 #: en/git.txt:413
 #, priority:100
 msgid "Indicates a commit or tag object name.  A command that takes a <commit-ish> argument ultimately wants to operate on a <commit> object but automatically dereferences <tag> objects that point at a <commit>."
-msgstr ""
+msgstr "Indique un nom d'objet commit ou étiquette. Une commande qui prend un argument <commit-esque> veut ultimement opérer sur un objet <commit>, mais déréférence automatiquement des objets <étiquette> qui pointent sur un <commit>."
 
 #. type: Plain text
 #: en/git.txt:417
 #, priority:100
 msgid "Indicates that an object type is required.  Currently one of: `blob`, `tree`, `commit`, or `tag`."
-msgstr ""
+msgstr "Indique qu'un type d'objet est requis. Actuellement,  soit`blob`, `arbre`, `commit`, ou `étiquette`."
 
 #. type: Plain text
 #: en/git.txt:421
 #, priority:100
 msgid "Indicates a filename - almost always relative to the root of the tree structure `GIT_INDEX_FILE` describes."
-msgstr ""
+msgstr "Indique un nom de fichier - presque toujours relatif à la racine de la structure de l'arbre que`GIT_INDEX_FILE` décrit."
 
 #. type: Title -
 #: en/git.txt:423
 #, no-wrap, priority:100
 msgid "Symbolic Identifiers"
-msgstr ""
+msgstr "Identificateurs symboliques"
 
 #. type: Plain text
 #: en/git.txt:426
 #, priority:100
 msgid "Any Git command accepting any <object> can also use the following symbolic notation:"
-msgstr ""
+msgstr "Toute commande Git acceptant n'importe quel <objet> peut également utiliser la notation symbolique suivante :"
 
 #. type: Plain text
 #: en/git.txt:429
 #, priority:100
 msgid "indicates the head of the current branch."
-msgstr ""
+msgstr "indique la tête de la branche actuelle."
 
 #. type: Labeled list
 #: en/git.txt:430
 #, no-wrap, priority:100
 msgid "<tag>"
-msgstr ""
+msgstr "<étiquette>"
 
 #. type: Plain text
 #: en/git.txt:433
 #, priority:100
 msgid "a valid tag 'name' (i.e. a `refs/tags/<tag>` reference)."
-msgstr ""
+msgstr "un 'nom' valide d'étiquette (c.-à-d. une référence `refs/tags/<étiquette>`)."
 
 #. type: Plain text
 #: en/git.txt:437
 #, priority:100
 msgid "a valid head 'name' (i.e. a `refs/heads/<head>` reference)."
-msgstr ""
+msgstr "un 'nom' valide de tête (c.-à-d. une référence `refs/heads/<tête>`)."
 
 #. type: Plain text
 #: en/git.txt:440
@@ -58726,61 +58726,61 @@ msgstr "Pour une liste plus complète des façons d'épeler les noms d'objets, v
 #: en/git.txt:443
 #, no-wrap, priority:100
 msgid "File/Directory Structure"
-msgstr ""
+msgstr "Structure de fichier/répertoire"
 
 #. type: Plain text
 #: en/git.txt:446
 #, priority:100
 msgid "Please see the linkgit:gitrepository-layout[5] document."
-msgstr ""
+msgstr "Veuillez consulter le document linkgit:gitrepository-layout[5]."
 
 #. type: Plain text
 #: en/git.txt:448
 #, priority:100
 msgid "Read linkgit:githooks[5] for more details about each hook."
-msgstr ""
+msgstr "Lire linkgit:githooks[5] pour plus de détails sur chaque crochet."
 
 #. type: Plain text
 #: en/git.txt:451
 #, priority:100
 msgid "Higher level SCMs may provide and manage additional information in the `$GIT_DIR`."
-msgstr ""
+msgstr "Les SCM de niveau supérieur peuvent fournir et gérer des informations supplémentaires dans le `$GIT_DIR`."
 
 #. type: Title -
 #: en/git.txt:454
 #, no-wrap, priority:100
 msgid "Terminology"
-msgstr ""
+msgstr "Terminologie"
 
 #. type: Plain text
 #: en/git.txt:456
 #, priority:100
 msgid "Please see linkgit:gitglossary[7]."
-msgstr ""
+msgstr "Veuillez consulter linkgit:gitglossary[7]."
 
 #. type: Plain text
 #: en/git.txt:464
 #, priority:100
 msgid "Various Git commands pay attention to environment variables and change their behavior.  The environment variables marked as \"Boolean\" take their values the same way as Boolean valued configuration variables, e.g.  \"true\", \"yes\", \"on\" and positive numbers are taken as \"yes\"."
-msgstr ""
+msgstr "Diverses commandes Git sont sensibles aux variables d'environnement et modifient leur comportement. Les variables d'environnement marquées comme \"Booléenne\" prennent leurs valeurs de la même manière que les variables de configuration évaluées comme Booléenne, p.ex. \"true\", \"yes\", \"on\" et les chiffres positifs sont pris comme \"yes\"."
 
 #. type: Plain text
 #: en/git.txt:466
 #, priority:100
 msgid "Here are the variables:"
-msgstr ""
+msgstr "Voici les variables :"
 
 #. type: Title ~
 #: en/git.txt:468
 #, no-wrap, priority:100
 msgid "The Git Repository"
-msgstr ""
+msgstr "Le dépôt Git"
 
 #. type: Plain text
 #: en/git.txt:472
 #, priority:100
 msgid "These environment variables apply to 'all' core Git commands. Nb: it is worth noting that they may be used/overridden by SCMS sitting above Git so take care if using a foreign front-end."
-msgstr ""
+msgstr "Ces variables d'environnement s'appliquent à 'toutes' les commandes du cœur de Git. Nb : il est intéressant de noter qu'elles peuvent être utilisées/surchargées par les SCMS agissant par-dessus Git alors faites attention si vous utilisez un frontal externe."
 
 #. type: Labeled list
 #: en/git.txt:473
@@ -58792,7 +58792,7 @@ msgstr "`GIT_INDEX_FILE`"
 #: en/git.txt:477
 #, priority:100
 msgid "This environment variable specifies an alternate index file. If not specified, the default of `$GIT_DIR/index` is used."
-msgstr ""
+msgstr "Cette variable d'environnement spécifie un fichier d'index alternatif. Si elle n'est pas spécifiée, la valeur par défaut `$GIT_DIR/index` est utilisée."
 
 #. type: Labeled list
 #: en/git.txt:478
@@ -58804,7 +58804,7 @@ msgstr "`GIT_INDEX_VERSION`"
 #: en/git.txt:483
 #, priority:100
 msgid "This environment variable specifies what index version is used when writing the index file out.  It won't affect existing index files.  By default index file version 2 or 3 is used. See linkgit:git-update-index[1] for more information."
-msgstr ""
+msgstr "Cette variable d'environnement spécifie quelle version index est utilisée lors de l'écriture du fichier index. Il n'affectera pas les fichiers d'index existants. Par défaut index version 2 ou 3 est utilisé. Voir linkgit:git-update-index[1] pour plus d'informations."
 
 #. type: Labeled list
 #: en/git.txt:484
@@ -58828,13 +58828,13 @@ msgstr "`GIT_ALTERNATE_OBJECT_DIRECTORIES`"
 #: en/git.txt:496
 #, priority:100
 msgid "Due to the immutable nature of Git objects, old objects can be archived into shared, read-only directories. This variable specifies a \":\" separated (on Windows \";\" separated) list of Git object directories which can be used to search for Git objects. New objects will not be written to these directories."
-msgstr ""
+msgstr "En raison de la nature immuable des objets Git, de vieux objets peuvent être archivés dans des répertoires partagés en lecture seule. Cette variable spécifie une liste avec \":\" pour séparateur (\";\" sur Windows) des répertoires d'objets Git qui peuvent être utilisés pour rechercher des objets Git. Aucun nouvel objet ne sera écrit dans ces répertoires."
 
 #. type: Plain text
 #: en/git.txt:502
 #, priority:100
 msgid "Entries that begin with `\"` (double-quote) will be interpreted as C-style quoted paths, removing leading and trailing double-quotes and respecting backslash escapes. E.g., the value `\"path-with-\\\"-and-:-in-it\":vanilla-path` has two paths: `path-with-\"-and-:-in-it` and `vanilla-path`."
-msgstr ""
+msgstr "Les entrées qui commencent par `\"` (double-guillemets) seront interprétées comme des chemins cités de type C, en éliminant les guillemets et les doubles guillemets et en respectant les échappements par barre oblique inverse. Par exemple, la valeur `\"chemin-avec-\\\"-et-:-a-l-interieur\":chemin-simple` a deux chemins : `chemin-avec-\"-et-:-a-l-interieur` et `chemin-simple`."
 
 #. type: Labeled list
 #: en/git.txt:503
@@ -58846,7 +58846,7 @@ msgstr "`GIT_DIR`"
 #: en/git.txt:508
 #, priority:100
 msgid "If the `GIT_DIR` environment variable is set then it specifies a path to use instead of the default `.git` for the base of the repository.  The `--git-dir` command-line option also sets this value."
-msgstr ""
+msgstr "Si la variable d'environnement `GIT_DIR' est définie, elle spécifie un chemin à utiliser au lieu de `.git` par défaut pour la base du dépôt. L'option de ligne de commande `--git-dir` définit également cette valeur."
 
 #. type: Labeled list
 #: en/git.txt:509
@@ -58858,7 +58858,7 @@ msgstr "`GIT_WORK_TREE`"
 #: en/git.txt:513
 #, priority:100
 msgid "Set the path to the root of the working tree.  This can also be controlled by the `--work-tree` command-line option and the core.worktree configuration variable."
-msgstr ""
+msgstr "Régler le chemin vers la racine de l'arbre de travail. Cela peut également être contrôlé par l'option de ligne de commande `--work-tree` et la variable de configuration de core.worktree."
 
 #. type: Labeled list
 #: en/git.txt:514
@@ -58870,7 +58870,7 @@ msgstr "`GIT_NAMESPACE`"
 #: en/git.txt:517
 #, priority:100
 msgid "Set the Git namespace; see linkgit:gitnamespaces[7] for details.  The `--namespace` command-line option also sets this value."
-msgstr ""
+msgstr "Définir l'espace de nom Git ; voir linkgit:gitnamespaces[7] pour plus de détails. L'option de ligne de commande `--namespace` définit également cette valeur."
 
 #. type: Labeled list
 #: en/git.txt:518
@@ -58882,7 +58882,7 @@ msgstr "`GIT_CEILING_DIRECTORIES`"
 #: en/git.txt:532
 #, priority:100
 msgid "This should be a colon-separated list of absolute paths.  If set, it is a list of directories that Git should not chdir up into while looking for a repository directory (useful for excluding slow-loading network directories).  It will not exclude the current working directory or a GIT_DIR set on the command line or in the environment.  Normally, Git has to read the entries in this list and resolve any symlink that might be present in order to compare them with the current directory.  However, if even this access is slow, you can add an empty entry to the list to tell Git that the subsequent entries are not symlinks and needn't be resolved; e.g., `GIT_CEILING_DIRECTORIES=/maybe/symlink::/very/slow/non/symlink`."
-msgstr ""
+msgstr "Cela devrait être une liste  des chemins absolus séparés par des caractères deux point. Si elle est définie, il s'agit d'une liste de répertoires que Git ne devrait pas visiter pendant la recherche d'un répertoire de dépôt (utile pour exclure les répertoires sur réseau lents). Elle n'exclura pas le répertoire de travail actuel ou un GIT_DIR indiqué sur la ligne de commande ou dans l'environnement. Normalement, Git doit lire les entrées dans cette liste et résoudre tout lien symbolique qui pourrait être présent pour les comparer avec le répertoire courant. Cependant, si même cet accès est lent, vous pouvez ajouter une entrée vide à la liste pour dire à Git que les entrées subséquentes ne sont pas des liens symboliques et ne doivent pas être résolues ; par exemple, `GIT_CEILING_DIRECTORIES=/peutetre/symlink://non/symlink/mais/lent`."
 
 #. type: Labeled list
 #: en/git.txt:533
@@ -58894,7 +58894,7 @@ msgstr "`GIT_DISCOVERY_ACROSS_FILESYSTEM`"
 #: en/git.txt:542
 #, priority:100
 msgid "When run in a directory that does not have \".git\" repository directory, Git tries to find such a directory in the parent directories to find the top of the working tree, but by default it does not cross filesystem boundaries.  This Boolean environment variable can be set to true to tell Git not to stop at filesystem boundaries.  Like `GIT_CEILING_DIRECTORIES`, this will not affect an explicit repository directory set via `GIT_DIR` or on the command line."
-msgstr ""
+msgstr "Lorsque Git se trouve dans un répertoire qui n'a pas de répertoire \".git\", Git tente de trouver un tel répertoire dans les répertoires parent pour trouver le sommet de l'arbre de travail, mais par défaut il ne dépasse pas les limites du système de fichiers actuel. Cette variable d'environnement Booléenne peut être définie à true pour dire à Git de ne pas s'arrêter aux limites des systèmes de fichiers. Comme `GIT_CEILING_DIRECTORIES`, cela n'affectera pas un répertoire de dépôt explicite indiqué via `GIT_DIR` ou sur la ligne de commande."
 
 #. type: Labeled list
 #: en/git.txt:543
@@ -58906,7 +58906,7 @@ msgstr "`GIT_COMMON_DIR`"
 #: en/git.txt:551
 #, ignore-ellipsis, priority:100
 msgid "If this variable is set to a path, non-worktree files that are normally in $GIT_DIR will be taken from this path instead. Worktree-specific files such as HEAD or index are taken from $GIT_DIR. See linkgit:gitrepository-layout[5] and linkgit:git-worktree[1] for details. This variable has lower precedence than other path variables such as GIT_INDEX_FILE, GIT_OBJECT_DIRECTORY..."
-msgstr ""
+msgstr "Si cette variable est définie comme un chemin, les fichiers hos de l'arbre-de-travail qui sont normalement dans $GIT_DIR seront pris depuis ce chemin à la place. Les fichiers spécifiques à des arbres-de-travail tels que HEAD ou index sont extraits de $GIT_DIR. Voir linkgit:gitrepository-layout[5] et linkgit:git-worktree[1] pour plus de détails. Cette variable a une préséance inférieure à d'autres variables de chemin comme GIT_INDEX_FILE, GIT_OBJECT_DIRECTORY..."
 
 #. type: Labeled list
 #: en/git.txt:552
@@ -58918,7 +58918,7 @@ msgstr "`GIT_DEFAULT_HASH`"
 #: en/git.txt:558
 #, priority:100
 msgid "If this variable is set, the default hash algorithm for new repositories will be set to this value. This value is ignored when cloning and the setting of the remote repository is always used. The default is \"sha1\".  See `--object-format` in linkgit:git-init[1]."
-msgstr ""
+msgstr "Si cette variable est définie, l'algorithme d'empreinte par défaut pour les nouveaux dépôts sera défini à cette valeur. Cette valeur est ignorée lors du clonage et le réglage du dépôt distant est toujours utilisé. La valeur par défaut est \"sha1\". Voir `--object-format` dans linkgit:git-init[1]."
 
 #. type: Title ~
 #: en/git.txt:560
@@ -58936,7 +58936,7 @@ msgstr "`GIT_AUTHOR_NAME`"
 #: en/git.txt:565
 #, priority:100
 msgid "The human-readable name used in the author identity when creating commit or tag objects, or when writing reflogs. Overrides the `user.name` and `author.name` configuration settings."
-msgstr ""
+msgstr "Le nom lisible utilisé dans l'identité de l'auteur lors de la création d'objets de commit ou d'étiquette, ou lors de l'écriture des reflogs. Surcharge les paramètres de configuration `user.name` et `author.name`."
 
 #. type: Labeled list
 #: en/git.txt:566
@@ -58948,7 +58948,7 @@ msgstr "`GIT_AUTHOR_EMAIL`"
 #: en/git.txt:570
 #, priority:100
 msgid "The email address used in the author identity when creating commit or tag objects, or when writing reflogs. Overrides the `user.email` and `author.email` configuration settings."
-msgstr ""
+msgstr "L'adresse courriel utilisée dans l'identité de l'auteur lors de la création d'objets commit ou étiquette, ou lors de l'écriture de reflogs. Surcharge les paramètres de configuration `user.email` et `author.email`."
 
 #. type: Labeled list
 #: en/git.txt:571
@@ -58960,7 +58960,7 @@ msgstr "`GIT_AUTHOR_DATE`"
 #: en/git.txt:574
 #, priority:100
 msgid "The date used for the author identity when creating commit or tag objects, or when writing reflogs. See linkgit:git-commit[1] for valid formats."
-msgstr ""
+msgstr "La date utilisée pour l'identité de l'auteur lors de la création d'objets commit ou étiquette, ou lors de l'écriture de reflogs. Voir linkgit:git-commit[1] pour les formats valides."
 
 #. type: Labeled list
 #: en/git.txt:575
@@ -58972,7 +58972,7 @@ msgstr "`GIT_COMMITTER_NAME`"
 #: en/git.txt:579
 #, priority:100
 msgid "The human-readable name used in the committer identity when creating commit or tag objects, or when writing reflogs. Overrides the `user.name` and `committer.name` configuration settings."
-msgstr ""
+msgstr "Le nom lisible utilisé dans l'identité du validateur lors de la création d'objets commit ou étiquette, ou lors de l'écriture de reflogs. Surcharge les paramètres de configuration `user.name` et `committer.name`."
 
 #. type: Labeled list
 #: en/git.txt:580
@@ -58984,7 +58984,7 @@ msgstr "`GIT_COMMITTER_EMAIL`"
 #: en/git.txt:584
 #, priority:100
 msgid "The email address used in the author identity when creating commit or tag objects, or when writing reflogs. Overrides the `user.email` and `committer.email` configuration settings."
-msgstr ""
+msgstr "L'adresse courriel utilisée dans l'identité de l'auteur lors de la création d'objets commit ou étiquette, ou lors de l'écriture de reflogs. Surcharge les paramètres de configuration `user.email` et `committer.email`."
 
 #. type: Labeled list
 #: en/git.txt:585
@@ -58996,7 +58996,7 @@ msgstr "`GIT_COMMITTER_DATE`"
 #: en/git.txt:588
 #, priority:100
 msgid "The date used for the committer identity when creating commit or tag objects, or when writing reflogs. See linkgit:git-commit[1] for valid formats."
-msgstr ""
+msgstr "La date utilisée pour l'identité du validateur lors de la création d'objets commit ou étiquette, ou lors de l'écriture de reflogs. Voir linkgit:git-commit[1] pour les formats valides."
 
 #. type: Labeled list
 #: en/git.txt:589
@@ -59008,7 +59008,7 @@ msgstr "`EMAIL`"
 #: en/git.txt:592
 #, priority:100
 msgid "The email address used in the author and committer identities if no other relevant environment variable or configuration setting has been set."
-msgstr ""
+msgstr "L'adresse de courriel utilisée dans les identités de l'auteur et du validateur si aucune autre variable d'environnement ou configuration pertinente n'a été définie."
 
 #. type: Title ~
 #: en/git.txt:594
@@ -59026,7 +59026,7 @@ msgstr "`GIT_DIFF_OPTS`"
 #: en/git.txt:600
 #, priority:100
 msgid "Only valid setting is \"--unified=??\" or \"-u??\" to set the number of context lines shown when a unified diff is created.  This takes precedence over any \"-U\" or \"--unified\" option value passed on the Git diff command line."
-msgstr ""
+msgstr "Seul le paramètre valide est \"--unified=??\" ou \"-u??\" pour définir le nombre de lignes de contexte affichées lors de la création d'une diff unifiée. Cela a préséance sur toute valeur d'option \"-U\" ou \"-unified\" passée sur la ligne de commande Git diff."
 
 #. type: Labeled list
 #: en/git.txt:601
@@ -59038,73 +59038,73 @@ msgstr "`GIT_EXTERNAL_DIFF`"
 #: en/git.txt:607
 #, priority:100
 msgid "When the environment variable `GIT_EXTERNAL_DIFF` is set, the program named by it is called to generate diffs, and Git does not use its builtin diff machinery.  For a path that is added, removed, or modified, `GIT_EXTERNAL_DIFF` is called with 7 parameters:"
-msgstr ""
+msgstr "Lorsque la variable d'environnement `GIT_EXTERNAL_DIFF` est définie, le programme nommé par elle est appelé pour générer des diffs, et Git n'utilise pas sa machinerie de diff intégrée. Pour un chemin qui est ajouté, enlevé ou modifié, `GIT_EXTERNAL_DIFF` est appelé avec 7 paramètres :"
 
 #. type: Plain text
 #: en/git.txt:609
 #, priority:100
 msgid "path old-file old-hex old-mode new-file new-hex new-mode"
-msgstr ""
+msgstr "chemin vieux-fichier vieux-hex vieux-mode nouveau-fichier nouveau-hex nouveau-mode"
 
 #. type: Plain text
 #: en/git.txt:611
 #, priority:100
 msgid "where:"
-msgstr ""
+msgstr "où :"
 
 #. type: Labeled list
 #: en/git.txt:612
 #, no-wrap, priority:100
 msgid "<old|new>-file"
-msgstr ""
+msgstr "vieux-fichier et nouveau-fichier"
 
 #. type: Plain text
 #: en/git.txt:614
 #, priority:100
 msgid "are files GIT_EXTERNAL_DIFF can use to read the contents of <old|new>,"
-msgstr ""
+msgstr "sont des fichiers que GIT_EXTERNAL_DIFF peut utiliser pour lire le contenu de vieux et nouveau"
 
 #. type: Labeled list
 #: en/git.txt:614
 #, no-wrap, priority:100
 msgid "<old|new>-hex"
-msgstr ""
+msgstr "vieux-hex et nouveau-hex"
 
 #. type: Plain text
 #: en/git.txt:615
 #, priority:100
 msgid "are the 40-hexdigit SHA-1 hashes,"
-msgstr ""
+msgstr "sont les empreintes SHA-1 de 40 caractère hexadécimaux,"
 
 #. type: Labeled list
 #: en/git.txt:615
 #, no-wrap, priority:100
 msgid "<old|new>-mode"
-msgstr ""
+msgstr "vieux-mode et nouveau-mode"
 
 #. type: Plain text
 #: en/git.txt:616
 #, priority:100
 msgid "are the octal representation of the file modes."
-msgstr ""
+msgstr "sont la représentation octale des modes de fichiers."
 
 #. type: Plain text
 #: en/git.txt:622
 #, priority:100
 msgid "The file parameters can point at the user's working file (e.g. `new-file` in \"git-diff-files\"), `/dev/null` (e.g. `old-file` when a new file is added), or a temporary file (e.g. `old-file` in the index).  `GIT_EXTERNAL_DIFF` should not worry about unlinking the temporary file -- it is removed when `GIT_EXTERNAL_DIFF` exits."
-msgstr ""
+msgstr "Les paramètres de fichier peuvent indiquer le fichier de travail de l'utilisateur (par exemple `nouveau-fichier` dans \"git-diff-files\"), `/dev/null` (par exemple `vieux-fichier` quand un nouveau fichier est ajouté), ou un fichier temporaire (par exemple `vieux-fichier` dans l'index). `GIT_EXTERNAL_DIFF` n'a pas à se soucier de supprimer le fichier temporaire --il le sera quand `GIT_EXTERNAL_DIFF` se terminera."
 
 #. type: Plain text
 #: en/git.txt:625
 #, priority:100
 msgid "For a path that is unmerged, `GIT_EXTERNAL_DIFF` is called with 1 parameter, <path>."
-msgstr ""
+msgstr "Pour un chemin qui n'est pas fusionné, `GIT_EXTERNAL_DIFF` est appelé avec 1 paramètre, <chemin>."
 
 #. type: Plain text
 #: en/git.txt:628
 #, priority:100
 msgid "For each path `GIT_EXTERNAL_DIFF` is called, two environment variables, `GIT_DIFF_PATH_COUNTER` and `GIT_DIFF_PATH_TOTAL` are set."
-msgstr ""
+msgstr "Pour chaque chemin `GIT_EXTERNAL_DIFF` appelé, deux variables d`environnement, `GIT_DIFF_PATH_COUNTER` et `GIT_DIFF_PATH_TOTAL` sont définies."
 
 #. type: Labeled list
 #: en/git.txt:629
@@ -59116,7 +59116,7 @@ msgstr "`GIT_DIFF_PATH_COUNTER`"
 #: en/git.txt:631
 #, priority:100
 msgid "A 1-based counter incremented by one for every path."
-msgstr ""
+msgstr "Un compteur basé sur 1 incrémenté d'un pour chaque chemin."
 
 #. type: Labeled list
 #: en/git.txt:632
@@ -59128,7 +59128,7 @@ msgstr "`GIT_DIFF_PATH_TOTAL`"
 #: en/git.txt:634
 #, priority:100
 msgid "The total number of paths."
-msgstr ""
+msgstr "Le nombre total de chemins."
 
 #. type: Title ~
 #: en/git.txt:636
@@ -59146,7 +59146,7 @@ msgstr "`GIT_MERGE_VERBOSITY`"
 #: en/git.txt:641
 #, priority:100
 msgid "A number controlling the amount of output shown by the recursive merge strategy.  Overrides merge.verbosity.  See linkgit:git-merge[1]"
-msgstr ""
+msgstr "Un nombre contrôlant la quantité de production affichée par la stratégie de fusion récursive. Surcharge merge.verbosity. Voir linkgit:git-merge[1]"
 
 #. type: Labeled list
 #: en/git.txt:642
@@ -59158,7 +59158,7 @@ msgstr "`GIT_PAGER`"
 #: en/git.txt:647
 #, priority:100
 msgid "This environment variable overrides `$PAGER`. If it is set to an empty string or to the value \"cat\", Git will not launch a pager.  See also the `core.pager` option in linkgit:git-config[1]."
-msgstr ""
+msgstr "Cette variable d'environnement remplace `$PAGER`. Si elle est définie à une chaîne vide ou à la valeur \"cat\", Git ne lancera pas de pager. Voir aussi l'option `core.pager` dans linkgit:git-config[1]."
 
 #. type: Labeled list
 #: en/git.txt:648
@@ -59170,7 +59170,7 @@ msgstr "`GIT_PROGRESS_DELAY`"
 #: en/git.txt:651
 #, priority:100
 msgid "A number controlling how many seconds to delay before showing optional progress indicators. Defaults to 2."
-msgstr ""
+msgstr "Un nombre qui contrôle le nombre de secondes à retarder avant d'afficher des indicateurs de progrès optionnels. Valeur par défaut à 2."
 
 #. type: Labeled list
 #: en/git.txt:652
@@ -59182,7 +59182,7 @@ msgstr "`GIT_EDITOR`"
 #: en/git.txt:657
 #, priority:100
 msgid "This environment variable overrides `$EDITOR` and `$VISUAL`.  It is used by several Git commands when, on interactive mode, an editor is to be launched. See also linkgit:git-var[1] and the `core.editor` option in linkgit:git-config[1]."
-msgstr ""
+msgstr "Cette variable d'environnement remplace `$EDITOR` et `$VISUAL`. Elle est utilisée par plusieurs commandes Git lorsque, en mode interactif, un éditeur doit être lancé. Voir aussi linkgit:git-var[1] et l'option `core.editor` dans linkgit:git-config[1]."
 
 #. type: Labeled list
 #: en/git.txt:658
@@ -59194,7 +59194,7 @@ msgstr "`GIT_SEQUENCE_EDITOR`"
 #: en/git.txt:663
 #, priority:100
 msgid "This environment variable overrides the configured Git editor when editing the todo list of an interactive rebase. See also linkgit:git-rebase[1] and the `sequence.editor` option in linkgit:git-config[1]."
-msgstr ""
+msgstr "Cette variable d'environnement remplace l'éditeur Git configuré lors de l'édition de la liste de todo d'un rebasage interactif. Voir aussi linkgit:git-rebase[1] et l'option `sequence.editor` dans linkgit:git-config[1]."
 
 #. type: Labeled list
 #: en/git.txt:664
@@ -59212,19 +59212,19 @@ msgstr "`GIT_SSH_COMMAND`"
 #: en/git.txt:672
 #, priority:100
 msgid "If either of these environment variables is set then 'git fetch' and 'git push' will use the specified command instead of 'ssh' when they need to connect to a remote system.  The command-line parameters passed to the configured command are determined by the ssh variant.  See `ssh.variant` option in linkgit:git-config[1] for details."
-msgstr ""
+msgstr "Si l'une de ces variables d'environnement est définie, 'git fetch' et 'git push' utiliseront la commande spécifiée au lieu de 'ssh' lorsqu'elles doivent se connecter à un système distant. Les paramètres de ligne de commande passés à la commande configurée sont déterminés par la variante de ssh. Voir l'option `ssh.variant` dans linkgit:git-config[1] pour plus de détails."
 
 #. type: Plain text
 #: en/git.txt:678
 #, priority:100
 msgid "`$GIT_SSH_COMMAND` takes precedence over `$GIT_SSH`, and is interpreted by the shell, which allows additional arguments to be included.  `$GIT_SSH` on the other hand must be just the path to a program (which can be a wrapper shell script, if additional arguments are needed)."
-msgstr ""
+msgstr "`$GIT_SSH_COMMAND` a priorité sur `$GIT_SSH`, et est interprété par le shell, ce qui permet d'inclure des arguments supplémentaires. `$GIT_SSH' d'autre part doit être juste le chemin vers un programme (qui peut être un script shell d'emballage, si des arguments supplémentaires sont nécessaires)."
 
 #. type: Plain text
 #: en/git.txt:682
 #, priority:100
 msgid "Usually it is easier to configure any desired options through your personal `.ssh/config` file.  Please consult your ssh documentation for further details."
-msgstr ""
+msgstr "Habituellement, il est plus facile de configurer toutes les options souhaitées à travers votre fichier `.ssh/config` personnel. Veuillez consulter votre documentation pour plus de détails."
 
 #. type: Labeled list
 #: en/git.txt:683
@@ -59236,7 +59236,7 @@ msgstr "`GIT_SSH_VARIANT`"
 #: en/git.txt:688
 #, priority:100
 msgid "If this environment variable is set, it overrides Git's autodetection whether `GIT_SSH`/`GIT_SSH_COMMAND`/`core.sshCommand` refer to OpenSSH, plink or tortoiseplink. This variable overrides the config setting `ssh.variant` that serves the same purpose."
-msgstr ""
+msgstr "Si cette variable d'environnement est définie, elle remplace l'autodétection de Git pour définir si `GIT_SSH`/`GIT_SSH_COMMAND`/`core.sshCommand` se réfère à OpenSSH, plink ou tortoiseplink. Cette variable remplace le paramètre de configuration `ssh.variant` qui sert le même but."
 
 #. type: Labeled list
 #: en/git.txt:689
@@ -59248,7 +59248,7 @@ msgstr "`GIT_SSL_NO_VERIFY`"
 #: en/git.txt:693
 #, priority:100
 msgid "Setting and exporting this environment variable to any value tells Git not to verify the SSL certificate when fetching or pushing over HTTPS."
-msgstr ""
+msgstr "Régler et exporter de cette variable d'environnement avec n'importe quelle valeur indique à Git de ne pas vérifier le certificat SSL lors de la récupération ou de la poussée sur HTTPS."
 
 #. type: Labeled list
 #: en/git.txt:694
@@ -59260,7 +59260,7 @@ msgstr "`GIT_ATTR_SOURCE`"
 #: en/git.txt:696
 #, priority:100
 msgid "Sets the treeish that gitattributes will be read from."
-msgstr ""
+msgstr "Définit l'arbre-esque dont gitattributes sera lu."
 
 #. type: Labeled list
 #: en/git.txt:697
@@ -59272,7 +59272,7 @@ msgstr "`GIT_ASKPASS`"
 #: en/git.txt:703
 #, priority:100
 msgid "If this environment variable is set, then Git commands which need to acquire passwords or passphrases (e.g. for HTTP or IMAP authentication)  will call this program with a suitable prompt as command-line argument and read the password from its STDOUT. See also the `core.askPass` option in linkgit:git-config[1]."
-msgstr ""
+msgstr "Si cette variable d'environnement est définie, les commandes Git qui doivent acquérir des mots de passe ou des phrases de passe (p. ex. pour l'authentification HTTP ou IMAP) appellent ce programme avec un prompt approprié comme argument de ligne de commande et lisent le mot de passe de son STDOUT. Voir aussi l'option `core.askPass` dans linkgit:git-config[1]."
 
 #. type: Labeled list
 #: en/git.txt:704
@@ -59284,7 +59284,7 @@ msgstr "`GIT_TERMINAL_PROMPT`"
 #: en/git.txt:707
 #, priority:100
 msgid "If this Boolean environment variable is set to false, git will not prompt on the terminal (e.g., when asking for HTTP authentication)."
-msgstr ""
+msgstr "Si cette variable d'environnement booléenne est définie à false, git ne posera pas de questions sur le terminal (p. ex., lors de la demande d'authentification HTTP)."
 
 #. type: Labeled list
 #: en/git.txt:708
@@ -59302,7 +59302,7 @@ msgstr "`GIT_CONFIG_SYSTEM`"
 #: en/git.txt:717
 #, priority:100
 msgid "Take the configuration from the given files instead from global or system-level configuration files. If `GIT_CONFIG_SYSTEM` is set, the system config file defined at build time (usually `/etc/gitconfig`)  will not be read. Likewise, if `GIT_CONFIG_GLOBAL` is set, neither `$HOME/.gitconfig` nor `$XDG_CONFIG_HOME/git/config` will be read. Can be set to `/dev/null` to skip reading configuration files of the respective level."
-msgstr ""
+msgstr "Prendre la configuration à partir des fichiers donnés au lieu des fichiers de configuration globaux ou au niveau système. Si `GIT_CONFIG_SYSTEM` est défini, le fichier de configuration du système défini au moment de la compilation (généralement `/etc/gitconfig`) ne sera pas lu. De même, si `GIT_CONFIG_GLOBAL` est défini, ni `$HOME/.gitconfig` ni `$XDG_CONFIG_HOME/git/config` ne seront pas lus. Peut être défini à `/dev/null` pour sauter les fichiers de configuration du niveau correspondant."
 
 #. type: Labeled list
 #: en/git.txt:718
@@ -59314,7 +59314,7 @@ msgstr "`GIT_CONFIG_NOSYSTEM`"
 #: en/git.txt:725
 #, priority:100
 msgid "Whether to skip reading settings from the system-wide `$(prefix)/etc/gitconfig` file.  This Boolean environment variable can be used along with `$HOME` and `$XDG_CONFIG_HOME` to create a predictable environment for a picky script, or you can set it to true to temporarily avoid using a buggy `/etc/gitconfig` file while waiting for someone with sufficient permissions to fix it."
-msgstr ""
+msgstr "Indique qu'il faut sauter la lecture des paramètres du fichier au niveau système `$(prefix)/etc/gitconfig` . Cette variable d'environnement booléenne peut être utilisée avec `$HOME` et `$XDG_CONFIG_HOME` pour créer un environnement prévisible pour un script pointilleux, ou vous pouvez la définir à true pour éviter temporairement d'utiliser un fichier `/etc/gitconfig` buggé en attendant que quelqu'un avec suffisamment de permissions puisse le réparer."
 
 #. type: Labeled list
 #: en/git.txt:726
@@ -59336,7 +59336,7 @@ msgid ""
 "using completely buffered I/O.   If this environment variable is\n"
 "not set, Git will choose buffered or record-oriented flushing\n"
 "based on whether stdout appears to be redirected to a file or not.\n"
-msgstr ""
+msgstr "Si cette variable d'environnement est définie à \"1\", alors les commande telles\nque 'git blame' (en mode différentiel), 'git rev-list', 'git log',\n'git check-attr' et 'git check-ignore'\nforceront un vidage du flux de sortie après que chaque enregistrement\na été écrit. Si cette\nvariable est définie à \"0\", la sortie de ces commandes sera faite\nen utilisant des E/S complètement tamponnés. Si cette variable d'environnement n'est\npas réglée, Git choisira un vidage à chaque tampon ou à chaque enregistrement\nselon que stdout semble être redirigé vers un fichier ou non.\n"
 
 #. type: Labeled list
 #: en/git.txt:738
@@ -59348,31 +59348,31 @@ msgstr "`GIT_TRACE`"
 #: en/git.txt:741
 #, priority:100
 msgid "Enables general trace messages, e.g. alias expansion, built-in command execution and external command execution."
-msgstr ""
+msgstr "Active des messages généraux de trace, comme par exemple l'expansion d'alias, l'exécution de commandes intégrées et l'exécution de commandes externes."
 
 #. type: Plain text
 #: en/git.txt:745 en/git.txt:825
 #, priority:100
 msgid "If this variable is set to \"1\", \"2\" or \"true\" (comparison is case insensitive), trace messages will be printed to stderr."
-msgstr ""
+msgstr "Si cette variable est définie à \"1, \"2\" ou \"true\" (la comparaison est insensible à la casse), les messages de trace seront imprimés sur stderr."
 
 #. type: Plain text
 #: en/git.txt:750 en/git.txt:830
 #, priority:100
 msgid "If the variable is set to an integer value greater than 2 and lower than 10 (strictly) then Git will interpret this value as an open file descriptor and will try to write the trace messages into this file descriptor."
-msgstr ""
+msgstr "Si la variable est définie à une valeur entière supérieure à 2 et inférieure à 10 (strictement) alors Git interprétera cette valeur comme un descripteur de fichier ouvert et tentera d'écrire les messages de trace dans ce descripteur de fichier."
 
 #. type: Plain text
 #: en/git.txt:755
 #, priority:100
 msgid "Alternatively, if the variable is set to an absolute path (starting with a '/' character), Git will interpret this as a file path and will try to append the trace messages to it."
-msgstr ""
+msgstr "Sinon, si la variable est définie à un chemin absolu (démarrant avec un caractère '/'), Git l'interprétera comme un chemin de fichier et tentera d'y ajouter les messages de trace."
 
 #. type: Plain text
 #: en/git.txt:758 en/git.txt:847
 #, priority:100
 msgid "Unsetting the variable, or setting it to empty, \"0\" or \"false\" (case insensitive) disables trace messages."
-msgstr ""
+msgstr "Désinitialiser la variable, ou la définir à vide, \"0\" ou \"false\" (casse insensible) désactive les messages de trace."
 
 #. type: Labeled list
 #: en/git.txt:759
@@ -59384,7 +59384,7 @@ msgstr "`GIT_TRACE_FSMONITOR`"
 #: en/git.txt:762
 #, priority:100
 msgid "Enables trace messages for the filesystem monitor extension.  See `GIT_TRACE` for available trace output options."
-msgstr ""
+msgstr "Permet de tracer des messages pour l'extension de moniteur du système de fichiers. Voir `GIT_TRACE` pour les options de sortie de trace disponibles."
 
 #. type: Labeled list
 #: en/git.txt:763
@@ -59396,7 +59396,7 @@ msgstr "`GIT_TRACE_PACK_ACCESS`"
 #: en/git.txt:769
 #, priority:100
 msgid "Enables trace messages for all accesses to any packs. For each access, the pack file name and an offset in the pack is recorded. This may be helpful for troubleshooting some pack-related performance problems.  See `GIT_TRACE` for available trace output options."
-msgstr ""
+msgstr "Active la trace des messages pour tous les accès aux paquets. Pour chaque accès, le nom du fichier paquet et un décalage dans le paquet sont enregistrés. Cela peut être utile pour résoudre certains problèmes de performance liés aux paquets. Voir `GIT_TRACE` pour les options de sortie de trace disponibles."
 
 #. type: Labeled list
 #: en/git.txt:770
@@ -59408,7 +59408,7 @@ msgstr "`GIT_TRACE_PACKET`"
 #: en/git.txt:776
 #, priority:100
 msgid "Enables trace messages for all packets coming in or out of a given program. This can help with debugging object negotiation or other protocol issues. Tracing is turned off at a packet starting with \"PACK\" (but see `GIT_TRACE_PACKFILE` below).  See `GIT_TRACE` for available trace output options."
-msgstr ""
+msgstr "Active les messages de trace pour tous les paquets entrant ou sortant d'un programme donné. Cela peut aider à déboguer la négociation d'objets ou d'autres questions de protocole. Le traçage est désactivé dans un paquet commençant par \"PACK\" (mais voir `GIT_TRACE_PACKFILE` ci-dessous). Voir `GIT_TRACE` pour les options de sortie de trace disponibles."
 
 #. type: Labeled list
 #: en/git.txt:777
@@ -59420,13 +59420,13 @@ msgstr "`GIT_TRACE_PACKFILE`"
 #: en/git.txt:784
 #, priority:100
 msgid "Enables tracing of packfiles sent or received by a given program. Unlike other trace output, this trace is verbatim: no headers, and no quoting of binary data. You almost certainly want to direct into a file (e.g., `GIT_TRACE_PACKFILE=/tmp/my.pack`) rather than displaying it on the terminal or mixing it with other trace output."
-msgstr ""
+msgstr "Active la trace des paquets envoyés ou reçus par un programme donné. Contrairement à d'autres sorties de trace, cette trace est verbatim : pas d'en-têtes, et pas de citation de données binaires. Vous voulez presque certainement diriger cette sortie dans un fichier (par exemple, `GIT_TRACE_PACKFILE=/tmp/mon.pack`) plutôt que de l'afficher sur le terminal ou de le mélanger avec d'autres sorties de trace."
 
 #. type: Plain text
 #: en/git.txt:787
 #, priority:100
 msgid "Note that this is currently only implemented for the client side of clones and fetches."
-msgstr ""
+msgstr "Notez que ce n'est actuellement mis en œuvre que pour le côté client des clonages et des récupurations."
 
 #. type: Labeled list
 #: en/git.txt:788
@@ -59438,7 +59438,7 @@ msgstr "`GIT_TRACE_PERFORMANCE`"
 #: en/git.txt:792
 #, priority:100
 msgid "Enables performance related trace messages, e.g. total execution time of each Git command.  See `GIT_TRACE` for available trace output options."
-msgstr ""
+msgstr "Active les messages de trace liés à la performance, par exemple le temps d'exécution total de chaque commande Git. Voir `GIT_TRACE` pour les options de sortie de trace disponibles."
 
 #. type: Labeled list
 #: en/git.txt:793
@@ -59450,7 +59450,7 @@ msgstr "`GIT_TRACE_REFS`"
 #: en/git.txt:796
 #, priority:100
 msgid "Enables trace messages for operations on the ref database.  See `GIT_TRACE` for available trace output options."
-msgstr ""
+msgstr "Active les messages de trace pour les opérations sur la base de données de références. Voir `GIT_TRACE` pour les options de sortie de trace disponibles."
 
 #. type: Labeled list
 #: en/git.txt:797
@@ -59462,7 +59462,7 @@ msgstr "`GIT_TRACE_SETUP`"
 #: en/git.txt:801
 #, priority:100
 msgid "Enables trace messages printing the .git, working tree and current working directory after Git has completed its setup phase.  See `GIT_TRACE` for available trace output options."
-msgstr ""
+msgstr "Active les messages de trace .git, l'arbre de travail et le répertoire de travail courant après que Git a terminé sa phase de configuration. Voir `GIT_TRACE` pour les options de sortie de trace disponibles."
 
 #. type: Labeled list
 #: en/git.txt:802
@@ -59474,7 +59474,7 @@ msgstr "`GIT_TRACE_SHALLOW`"
 #: en/git.txt:806
 #, priority:100
 msgid "Enables trace messages that can help debugging fetching / cloning of shallow repositories.  See `GIT_TRACE` for available trace output options."
-msgstr ""
+msgstr "Active les messages de trace qui peuvent aider à déboguer des récupérations / clonage de dépôts superficiels. Voir `GIT_TRACE` pour les options de sortie de trace disponibles."
 
 #. type: Labeled list
 #: en/git.txt:807
@@ -59486,7 +59486,7 @@ msgstr "`GIT_TRACE_CURL`"
 #: en/git.txt:812
 #, priority:100
 msgid "Enables a curl full trace dump of all incoming and outgoing data, including descriptive information, of the git transport protocol.  This is similar to doing curl `--trace-ascii` on the command line.  See `GIT_TRACE` for available trace output options."
-msgstr ""
+msgstr "Permet un traçage complet par curl de toutes les données entrantes et sortantes, y compris les informations descriptives, du protocole de transport git. Ceci est similaire à faire du curl `--trace-ascii` sur la ligne de commande. Voir `GIT_TRACE` pour les options de sortie de trace disponibles."
 
 #. type: Labeled list
 #: en/git.txt:813
@@ -59498,7 +59498,7 @@ msgstr "`GIT_TRACE_CURL_NO_DATA`"
 #: en/git.txt:816
 #, priority:100
 msgid "When a curl trace is enabled (see `GIT_TRACE_CURL` above), do not dump data (that is, only dump info lines and headers)."
-msgstr ""
+msgstr "Lorsqu'une trace de curl est activée (voir `GIT_TRACE_CURL` ci-dessus), ne pas décharger les données (c'est-à-dire que seules les lignes d'info et les en-têtes sont tracés)."
 
 #. type: Labeled list
 #: en/git.txt:817
@@ -59510,25 +59510,25 @@ msgstr "`GIT_TRACE2`"
 #: en/git.txt:821
 #, priority:100
 msgid "Enables more detailed trace messages from the \"trace2\" library.  Output from `GIT_TRACE2` is a simple text-based format for human readability."
-msgstr ""
+msgstr "Active des messages de trace plus détaillés par la bibliothèque \"trace2\". La sortie de `GIT_TRACE2` est un simple format texte pour consommation humaine."
 
 #. type: Plain text
 #: en/git.txt:839
 #, priority:100
 msgid "Alternatively, if the variable is set to an absolute path (starting with a '/' character), Git will interpret this as a file path and will try to append the trace messages to it.  If the path already exists and is a directory, the trace messages will be written to files (one per process)  in that directory, named according to the last component of the SID and an optional counter (to avoid filename collisions)."
-msgstr ""
+msgstr "Sinon, si la variable est définie à un chemin absolu (démarrant avec un caractère '/'), Git l'interprétera comme un chemin de fichier et tentera d'y ajouter les messages de trace. Si le chemin existe déjà et est un répertoire, les messages de trace seront écrits sur des fichiers (un par processus) dans ce répertoire, nommés selon le dernier composant du SID et un compteur optionnel (pour éviter les collisions de nom de fichier)."
 
 #. type: Plain text
 #: en/git.txt:844
 #, priority:100
 msgid "In addition, if the variable is set to `af_unix:[<socket_type>:]<absolute-pathname>`, Git will try to open the path as a Unix Domain Socket.  The socket type can be either `stream` or `dgram`."
-msgstr ""
+msgstr "En outre, si la variable est définie à `af_unix:[<type-de-socket>]<chemin-absolu>, Git va essayer d'ouvrir le chemin en tant que socket de domaine Unix. Le type de socket peut être soit `stream` ou `dgram`."
 
 #. type: Plain text
 #: en/git.txt:850
 #, priority:100
 msgid "See link:technical/api-trace2.html[Trace2 documentation] for full details."
-msgstr ""
+msgstr "Voir la link:technical/api-trace2.html[ documentation de Trace2] pour tous les détails."
 
 #. type: Labeled list
 #: en/git.txt:852
@@ -59540,7 +59540,7 @@ msgstr "`GIT_TRACE2_EVENT`"
 #: en/git.txt:857
 #, priority:100
 msgid "This setting writes a JSON-based format that is suited for machine interpretation.  See `GIT_TRACE2` for available trace output options and link:technical/api-trace2.html[Trace2 documentation] for full details."
-msgstr ""
+msgstr "Ce réglage écrit un format JSON adapté à l'interprétation automatique. Voir `GIT_TRACE2` pour les options de sortie de trace disponibles et la link:technical/api-trace2.html[documentation de Trace2] pour tous les détails."
 
 #. type: Labeled list
 #: en/git.txt:858
@@ -59552,7 +59552,7 @@ msgstr "`GIT_TRACE2_PERF`"
 #: en/git.txt:864
 #, priority:100
 msgid "In addition to the text-based messages available in `GIT_TRACE2`, this setting writes a column-based format for understanding nesting regions.  See `GIT_TRACE2` for available trace output options and link:technical/api-trace2.html[Trace2 documentation] for full details."
-msgstr ""
+msgstr "En plus des messages texte disponibles dans `GIT_TRACE2`, ce paramètre écrit un format à colonne pour comprendre les régions de nidification. Voir `GIT_TRACE2` pour les options de sortie de trace disponibles et la link:technical/api-trace2.html[documentation de Trace2] pour tous les détails."
 
 #. type: Labeled list
 #: en/git.txt:865
@@ -59564,7 +59564,7 @@ msgstr "`GIT_TRACE_REDACT`"
 #: en/git.txt:870
 #, priority:100
 msgid "By default, when tracing is activated, Git redacts the values of cookies, the \"Authorization:\" header, the \"Proxy-Authorization:\" header and packfile URIs. Set this Boolean environment variable to false to prevent this redaction."
-msgstr ""
+msgstr "Par défaut, lorsque le traçage est activé, Git caviarde les valeurs des cookies, l'en-tête \"Authorization:\", l'en-tête \"Proxy-Authorization:\" et les URIs de paquets. Définissez cette variable d'environnement booléenne à false pour empêcher ce caviardage."
 
 #. type: Labeled list
 #: en/git.txt:871
@@ -59576,7 +59576,7 @@ msgstr "`GIT_LITERAL_PATHSPECS`"
 #: en/git.txt:879
 #, priority:100
 msgid "Setting this Boolean environment variable to true will cause Git to treat all pathspecs literally, rather than as glob patterns. For example, running `GIT_LITERAL_PATHSPECS=1 git log -- '*.c'` will search for commits that touch the path `*.c`, not any paths that the glob `*.c` matches. You might want this if you are feeding literal paths to Git (e.g., paths previously given to you by `git ls-tree`, `--raw` diff output, etc)."
-msgstr ""
+msgstr "Régler cette variable d'environnement booléenne à true va forcer Git à traiter tous les spécificateurs de chemin littéralement, plutôt que comme des motifs glob. Par exemple, exécuter `GIT_LITERAL_PATHSPECS=1 git log -- `\\*.c` cherchera des commits qui touchent le chemin `*.c`, pas des chemins auquels le glob `*.c` correspond. Vous pourriez vouloir cela si vous fournissez des chemins littéraux vers Git (p. ex., des chemins précédemment donnés par `git ls-tree`, `--raw` sortie diff, etc.)."
 
 #. type: Labeled list
 #: en/git.txt:880
@@ -59588,7 +59588,7 @@ msgstr "`GIT_GLOB_PATHSPECS`"
 #: en/git.txt:883
 #, priority:100
 msgid "Setting this Boolean environment variable to true will cause Git to treat all pathspecs as glob patterns (aka \"glob\" magic)."
-msgstr ""
+msgstr "Régler cette variable d'environnement booléenne à true va indiquer à Git de traiter tous les spécificateurs de chemin comme des motifs glob (aka magie \"glob\")."
 
 #. type: Labeled list
 #: en/git.txt:884
@@ -59600,7 +59600,7 @@ msgstr "`GIT_NOGLOB_PATHSPECS`"
 #: en/git.txt:887
 #, priority:100
 msgid "Setting this Boolean environment variable to true will cause Git to treat all pathspecs as literal (aka \"literal\" magic)."
-msgstr ""
+msgstr "Régler cette variable d'environnement booléenne à vrai indique à Git de traiter tous les spécificateurs de chemin comme littéral (aka magie \"littérale\")."
 
 #. type: Labeled list
 #: en/git.txt:888
@@ -59612,7 +59612,7 @@ msgstr "`GIT_ICASE_PATHSPECS`"
 #: en/git.txt:891
 #, priority:100
 msgid "Setting this Boolean environment variable to true will cause Git to treat all pathspecs as case-insensitive."
-msgstr ""
+msgstr "Régler cette variable d'environnement booléenne à true va indiquer à Git de traiter tous les spécificateurs de chemins comme insensibles à la casse."
 
 #. type: Labeled list
 #: en/git.txt:892
@@ -59624,7 +59624,7 @@ msgstr "`GIT_REFLOG_ACTION`"
 #: en/git.txt:901
 #, priority:100
 msgid "When a ref is updated, reflog entries are created to keep track of the reason why the ref was updated (which is typically the name of the high-level command that updated the ref), in addition to the old and new values of the ref.  A scripted Porcelain command can use set_reflog_action helper function in `git-sh-setup` to set its name to this variable when it is invoked as the top level command by the end user, to be recorded in the body of the reflog."
-msgstr ""
+msgstr "Lorsqu'une réf est mis à jour, des entrées de reflog sont créées pour suivre la raison pour laquelle la réf a été mise à jour (ce qui est généralement le nom de la commande de haut niveau qui a mis à jour la réf), en plus des anciennes et nouvelles valeurs de la réf. Une commande scriptée de porcelaine peut utiliser la fonction set_reflog_action helper dans `git-sh-setup` pour définir son nom à cette variable lorsqu'elle est invoquée comme commande de niveau supérieur par l'utilisateur final, pour l'enregistrer dans le corps du reflog."
 
 #. type: Labeled list
 #: en/git.txt:902
@@ -59636,7 +59636,7 @@ msgstr "`GIT_REF_PARANOIA`"
 #: en/git.txt:913
 #, priority:100
 msgid "If this Boolean environment variable is set to false, ignore broken or badly named refs when iterating over lists of refs. Normally Git will try to include any such refs, which may cause some operations to fail. This is usually preferable, as potentially destructive operations (e.g., linkgit:git-prune[1]) are better off aborting rather than ignoring broken refs (and thus considering the history they point to as not worth saving). The default value is `1` (i.e., be paranoid about detecting and aborting all operations). You should not normally need to set this to `0`, but it may be useful when trying to salvage data from a corrupted repository."
-msgstr ""
+msgstr "Si cette variable d'environnement booléenne est définie à false, ignorer les réfs cassées ou mal nommées lors de l'itération sur les listes de réfs. Habituellement, Git tentera d'inclure tous ces réfs, ce qui peut entraîner l'échec de certaines opérations. Cela est généralement préférable, car il vaut mieux abandonner les opérations potentiellement destructrices (par exemple, linkgit:git-prune[1]) plutôt que d'ignorer les réfs cassées (et donc considérer l'histoire qu'elles pointent comme inutiles à sauver). La valeur par défaut est `1` (c'est-à-dire être paranoïaque sur la détection et abandon de toutes les opérations). Vous ne devriez normalement pas avoir besoin de définir ceci à `0`, mais ceci peut être utile quand vous essayez de sauver des données d'un dépôt corrompu."
 
 #. type: Labeled list
 #: en/git.txt:914
@@ -59648,7 +59648,7 @@ msgstr "`GIT_ALLOW_PROTOCOL`"
 #: en/git.txt:920
 #, priority:100
 msgid "If set to a colon-separated list of protocols, behave as if `protocol.allow` is set to `never`, and each of the listed protocols has `protocol.<name>.allow` set to `always` (overriding any existing configuration). See the description of `protocol.allow` in linkgit:git-config[1] for more details."
-msgstr ""
+msgstr "Si elle est définie comme une liste de protocoles séparés par des deux-points, se comporter comme si `protocol.allow` est défini à `never` , et définit `protocol.<nom>.allow` de chacun des protocoles énumérés à `always`(ce qui surcharge toute configuration existante). Voir la description de `protocol.allow` dans linkgit:git-config[1] pour plus de détails."
 
 #. type: Labeled list
 #: en/git.txt:921
@@ -59660,7 +59660,7 @@ msgstr "`GIT_PROTOCOL_FROM_USER`"
 #: en/git.txt:927
 #, priority:100
 msgid "Set this Boolean environment variable to false to prevent protocols used by fetch/push/clone which are configured to the `user` state.  This is useful to restrict recursive submodule initialization from an untrusted repository or for programs which feed potentially-untrusted URLS to git commands.  See linkgit:git-config[1] for more details."
-msgstr ""
+msgstr "Définir cette variable d'environnement booléenne à false pour empêcher les protocoles utilisés par fetch/push/clone qui sont configurés à l'état `utilisateur`. Ceci est utile pour limiter l'initialisation récursive des sous-modules à partir d'un dépôt non fiable ou pour des programmes qui fournissentdes URLS potentiellement non fiables aux commandes git. Voir linkgit:git-config[1] pour plus de détails."
 
 #. type: Labeled list
 #: en/git.txt:928 en/git-upload-pack.txt:53
@@ -59672,19 +59672,19 @@ msgstr "`GIT_PROTOCOL`"
 #: en/git.txt:933
 #, priority:100
 msgid "For internal use only.  Used in handshaking the wire protocol.  Contains a colon ':' separated list of keys with optional values 'key[=value]'.  Presence of unknown keys and values must be ignored."
-msgstr ""
+msgstr "Pour usage interne seulement. Utilisé pour établir la liaison en protocole filaire. Contient une liste séparée par deux-point ':' des clés avec des valeurs facultatives 'clé[=valeur]'. La présence de clés et de valeurs inconnues doit être ignorée."
 
 #. type: Plain text
 #: en/git.txt:942
 #, priority:100
 msgid "Note that servers may need to be configured to allow this variable to pass over some transports. It will be propagated automatically when accessing local repositories (i.e., `file://` or a filesystem path), as well as over the `git://` protocol. For git-over-http, it should work automatically in most configurations, but see the discussion in linkgit:git-http-backend[1]. For git-over-ssh, the ssh server may need to be configured to allow clients to pass this variable (e.g., by using `AcceptEnv GIT_PROTOCOL` with OpenSSH)."
-msgstr ""
+msgstr "Notez que les serveurs peuvent devoir être configurés pour permettre à cette variable de passer sur certains transports. Elle sera propagée automatiquement lors de l'accès aux dépôts locaux (c'est-à-dire `file:// ' ou un chemin de système de fichiers), ainsi que via le protocole `git://`. Pour git-over-http, elle devrait fonctionner automatiquement dans la plupart des configurations, mais voir la discussion dans linkgit:git-http-backend[1]. Pour git-over-ssh, le serveur ssh peut être configuré pour permettre aux clients de passer cette variable (par exemple, en utilisant `AcceptEnv GIT_PROTOCOL` avec OpenSSH)."
 
 #. type: Plain text
 #: en/git.txt:948
 #, priority:100
 msgid "This configuration is optional. If the variable is not propagated, then clients will fall back to the original \"v0\" protocol (but may miss out on some performance improvements or features). This variable currently only affects clones and fetches; it is not yet used for pushes (but may be in the future)."
-msgstr ""
+msgstr "Cette configuration est facultative. Si la variable n'est pas propagée, les clients retomberont sur le protocole original \"v0\" (mais ils peuvent manquer certaines améliorations ou caractéristiques de performance). Cette variable n'affecte actuellement que les clonages et les récupérations ; elle n'est pas encore utilisée pour les poussées (mais peut-être à l'avenir)."
 
 #. type: Labeled list
 #: en/git.txt:949
@@ -59696,7 +59696,7 @@ msgstr "`GIT_OPTIONAL_LOCKS`"
 #: en/git.txt:956
 #, priority:100
 msgid "If this Boolean environment variable is set to false, Git will complete any requested operation without performing any optional sub-operations that require taking a lock.  For example, this will prevent `git status` from refreshing the index as a side effect. This is useful for processes running in the background which do not want to cause lock contention with other operations on the repository.  Defaults to `1`."
-msgstr ""
+msgstr "Si cette variable d'environnement booléenne est définie à false, Git effectuera toute opération demandée sans effectuer de sous-opérations facultatives qui nécessitent un verrouillage. Par exemple, cela empêchera `git status` de rafraîchir l'index comme effet secondaire. Ceci est utile pour les processus fonctionnant en arrière-plan qui ne veulent pas provoquer la contention de verrouillage avec d'autres opérations sur le dépôt. Par défaut à `1`."
 
 #. type: Labeled list
 #: en/git.txt:957
@@ -59720,19 +59720,19 @@ msgstr "`GIT_REDIRECT_STDERR`"
 #: en/git.txt:969
 #, priority:100
 msgid "Windows-only: allow redirecting the standard input/output/error handles to paths specified by the environment variables. This is particularly useful in multi-threaded applications where the canonical way to pass standard handles via `CreateProcess()` is not an option because it would require the handles to be marked inheritable (and consequently *every* spawned process would inherit them, possibly blocking regular Git operations). The primary intended use case is to use named pipes for communication (e.g. `\\\\.\\pipe\\my-git-stdin-123`)."
-msgstr ""
+msgstr "Windows seulement : permettre de rediriger les sockets standard d'entrée/sortie/erreur sur les chemins spécifiés par les variables d'environnement. Ceci est particulièrement utile dans les applications multithread où le moyen canonique de passer les poignées standard via `CreateProcess()` n'est pas possible parce qu'il exigerait que les poignées soient héritées (et par conséquent *chaque processus démarré en hériterait, en bloquant éventuellement les opérations régulières de Git). Le principal cas d'utilisation prévu est d'utiliser des tuyaux nommés pour la communication (par exemple `\\\\.\\pipe\\mon-git-stdin-123`)."
 
 #. type: Plain text
 #: en/git.txt:974
 #, priority:100
 msgid "Two special values are supported: `off` will simply close the corresponding standard handle, and if `GIT_REDIRECT_STDERR` is `2>&1`, standard error will be redirected to the same handle as standard output."
-msgstr ""
+msgstr "Deux valeurs spéciales sont supportées : `off` va tout simplement fermer la poignée standard correspondante, et si `GIT_REDIRECT_STDERR` est `2>&1`, l'erreur standard sera redirigée vers la même poignée que la sortie standard."
 
 #. type: Labeled list
 #: en/git.txt:975
 #, no-wrap, priority:100
 msgid "`GIT_PRINT_SHA1_ELLIPSIS` (deprecated)"
-msgstr ""
+msgstr "`GIT_PRINT_SHA1_ELLIPSIS` (obsolète)"
 
 #. type: Plain text
 #: en/git.txt:983
@@ -59810,73 +59810,73 @@ msgstr ""
 #: en/git.txt:1043
 #, priority:100
 msgid "See the references in the \"description\" section to get started using Git.  The following is probably more detail than necessary for a first-time user."
-msgstr ""
+msgstr "Voir les références dans la section \"description\" pour commencer à utiliser Git. Ce qui suit est probablement plus détaillé que nécessaire pour un utilisateur débutant."
 
 #. type: Plain text
 #: en/git.txt:1047
 #, priority:100
 msgid "The link:user-manual.html#git-concepts[Git concepts chapter of the user-manual] and linkgit:gitcore-tutorial[7] both provide introductions to the underlying Git architecture."
-msgstr ""
+msgstr "Le link:user-manual.html#git-concepts [chapitre Concepts Git du manuel d'utilisateur] and linkgit:gitcore-tutorial[7] fournissent tout deux des introductions à l'architecture sous-jacente de Git."
 
 #. type: Plain text
 #: en/git.txt:1049
 #, priority:100
 msgid "See linkgit:gitworkflows[7] for an overview of recommended workflows."
-msgstr ""
+msgstr "Voir linkgit:gitworkflows[7] pour un aperçu des modes de travail recommandés."
 
 #. type: Plain text
 #: en/git.txt:1052
 #, priority:100
 msgid "See also the link:howto-index.html[howto] documents for some useful examples."
-msgstr ""
+msgstr "Voir aussi les documents de link:howto-index.html[howto] pour quelques exemples utiles."
 
 #. type: Plain text
 #: en/git.txt:1055
 #, priority:100
 msgid "The internals are documented in the link:technical/api-index.html[Git API documentation]."
-msgstr ""
+msgstr "Le fonctionnement interne est documenté dans la link:technical/api-index.html[documentation d'API de Git]."
 
 #. type: Plain text
 #: en/git.txt:1058
 #, priority:100
 msgid "Users migrating from CVS may also want to read linkgit:gitcvs-migration[7]."
-msgstr ""
+msgstr "Les utilisateurs qui migrent depuis CVS peuvent également vouloir lire linkgit:gitcvs-migration[7]."
 
 #. type: Title -
 #: en/git.txt:1061
 #, no-wrap, priority:100
 msgid "Authors"
-msgstr ""
+msgstr "Auteurs"
 
 #. type: Plain text
 #: en/git.txt:1066
 #, priority:100
 msgid "Git was started by Linus Torvalds, and is currently maintained by Junio C Hamano. Numerous contributions have come from the Git mailing list <git@vger.kernel.org>.  http://www.openhub.net/p/git/contributors/summary gives you a more complete list of contributors."
-msgstr ""
+msgstr "Git a été initialement développé par Linus Torvalds, et est actuellement maintenu par Junio C Hamano. De nombreuses contributions proviennent de la liste de diffusion de Git. http://www.openhub.net/p/git/contributors/summary vous donne une liste plus complète des contributeurs."
 
 #. type: Plain text
 #: en/git.txt:1070
 #, priority:100
 msgid "If you have a clone of git.git itself, the output of linkgit:git-shortlog[1] and linkgit:git-blame[1] can show you the authors for specific parts of the project."
-msgstr ""
+msgstr "Si vous avez un clone de git.git lui-même, la sortie de linkgit:git-shortlog[1] et linkgit:git-blame[1] peut vous montrer les auteurs pour des parties spécifiques du projet."
 
 #. type: Title -
 #: en/git.txt:1072
 #, no-wrap, priority:100
 msgid "Reporting Bugs"
-msgstr ""
+msgstr "Signaler des bogues"
 
 #. type: Plain text
 #: en/git.txt:1079
 #, priority:100
 msgid "Report bugs to the Git mailing list <git@vger.kernel.org> where the development and maintenance is primarily done.  You do not have to be subscribed to the list to send a message there.  See the list archive at https://lore.kernel.org/git for previous bug reports and other discussions."
-msgstr ""
+msgstr "Signaler des bogues à la liste de diffusion de Git <git@vger.kernel.org> où le développement et la maintenance sont principalement effectués. Vous n'avez pas à être abonné à la liste pour y envoyer un message. Voir l'archive de la liste à l'adresse https://lore.kernel.org/git pour les précédents rapports sur les bogues et autres débats."
 
 #. type: Plain text
 #: en/git.txt:1082
 #, priority:100
 msgid "Issues which are security relevant should be disclosed privately to the Git Security mailing list <git-security@googlegroups.com>."
-msgstr ""
+msgstr "Les questions de sécurité pertinentes devraient être divulguées en privé à la liste de diffusion de Sécurité Git <git-security@googlegroups.com>."
 
 #. type: Plain text
 #: en/git.txt:1090
