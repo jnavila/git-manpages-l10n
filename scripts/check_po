@@ -1,0 +1,61 @@
+#!/usr/bin/python3
+
+import polib
+import sys
+import re
+import argparse
+
+LINKGIT_REGEX = re.compile(r'linkgit:([^\[]+)\[([^\]]+)\]' +
+	r'|' +
+        r'\$\{[a-zA-Z0-9_]+\}' +
+	r'|' +
+        r'<<[a-zA-Z0-9_]+(>>|,)' +
+	r'|' +
+	r'\$[a-zA-Z][a-zA-Z0-9_]+' +
+	r'|' +
+	r'\$\([a-zA-Z][a-zA-Z0-9_]+\)' +
+	r'|' +
+	r'\b([a-zA-Z]+\.)+[a-z][a-zA-Z]+\b'
+	r'|' +
+	r'\b[a-zA-Z0-9_]+_[a-zA-Z0-9]+\b' +
+	r'|' +
+	r'\bgit-[a-z-]+'
+	r'|' +
+	r'\bgit [a-z]+-[a-z-]+' +
+	r'|' +
+	r'\b[a-z-]+--[a-z-]+' +
+	r'|' +
+	r'--[a-zA-Z0-9-=]+' +
+	r'|' +
+	r'%%\(.*?\)')
+
+FALSE_POSITIVES = re.compile('example\\.(com|org)|git-(related|foo|branch|rev-list-args|repository|dir|upload-archive|stdin)|i\\.e|section\\.subsection|my_script|object--potentially|executable--these|file\\.bundle|full\\.bundle|\\$newbranch|\\$(name|command|rev_name)|repository--the|(repo|project)\\.git|host\\.xz|section\\.key|project_cvs_checkout|TAG_FIXUP|refspecs--they|A_PATH_TO|filename-as-in--w|(sample|file)\\.txt|omitted--such|ORIG_PATH|num_lines|HEAD_name|host_or_ipaddr|(dir|module)_name|notes_ref|email.address|--listen=hostname|--user-path=path|upstream_branch|hook_command_pathname|key_id|my\\.pack|chapter_1|socket_type|pond\\.org|foo\\.example|SOME_ENVRONMENT_VARIABLE|figure_1|--list-cmds=group')
+
+def main(filename: str, modify: bool = False):
+    '''check that the segments that contain known fixed strings are translated with the same fixed strings '''
+
+    po = polib.pofile(filename)
+    modified = False
+    for entry in po:
+        if entry.msgstr != "" and not entry.obsolete and not entry.fuzzy:
+            for matched in LINKGIT_REGEX.finditer(entry.msgid):
+                g = matched.group(0)
+                if not FALSE_POSITIVES.findall(g) and matched.group(0) not in entry.msgstr:
+                    print(f"ERROR {filename}: {entry.msgid}, {entry.msgstr}:\n  {matched.group(0)} not found in translation")
+                    if entry.tcomment != "":
+                        entry.tcomment += "\n"
+                    entry.tcomment += f"ERROR: {matched.group(0)} not found in translation"
+                    flags = set(entry.flags)
+                    flags.add("fuzzy")
+                    entry.flags = list(flags)
+                    modified = True
+    if modified and modify:
+        po.save(filename)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Check that the segments that contain known fixed strings are translated with the same fixed strings')
+    parser.add_argument('filename', metavar='filename', type=str, help='the file to check')
+    parser.add_argument('--modify', action='store_true', help='modify the file in place')
+    args = parser.parse_args()
+    main(args.filename, args.modify)
