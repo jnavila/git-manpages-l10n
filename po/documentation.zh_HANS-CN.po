@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-11-04 20:14+0100\nPO-Revision-Date: 2024-01-25 15:02+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.4-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-11-04 20:14+0100\nPO-Revision-Date: 2024-01-28 03:55+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.4-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:780 en/git-instaweb.txt:45
@@ -59880,13 +59880,13 @@ msgid ""
 "If `-m` is specified, 'git read-tree' can perform 3 kinds of merge, a single"
 " tree merge if only 1 tree is given, a fast-forward merge with 2 trees, or a"
 " 3-way merge if 3 or more trees are provided."
-msgstr ""
+msgstr "如果指定了 `-m` 选项，'git read-tree' 可以执行 3 种合并：如果只提供了 1 个目录树，则执行单棵目录树合并；如果提供了 2 棵目录树，则执行快进合并；如果提供了 3 棵或更多的目录树，则执行 3 方合并。"
 
 #. type: Title ~
 #: en/git-read-tree.txt:134
 #, no-wrap, priority:80
 msgid "Single Tree Merge"
-msgstr ""
+msgstr "单棵树合并"
 
 #. type: Plain text
 #: en/git-read-tree.txt:140
@@ -59897,7 +59897,7 @@ msgid ""
 "pathname, and the contents of the path match with the tree being read, the "
 "stat info from the index is used. (In other words, the index's stat()s take "
 "precedence over the merged tree's)."
-msgstr ""
+msgstr "如果只指定了一棵树，'git read-tree' 就会像用户未指定 `-m` 一样运行，但如果原始索引中有给定路径名的条目，且该路径的内容与正在读取的树相匹配，则会使用索引中的统计信息。换句话说，索引的 stat() 优先于合并目录树的 stat()）。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:144
@@ -59906,7 +59906,7 @@ msgid ""
 "That means that if you do a `git read-tree -m <newtree>` followed by a `git "
 "checkout-index -f -u -a`, the 'git checkout-index' only checks out the stuff"
 " that really changed."
-msgstr ""
+msgstr "这就意味着，如果先执行 `git read-tree -m <新目录树>`，然后再执行 `git checkout-index -f -u -a`，'git checkout-index' 只会检查出真正发生变化的内容。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:147
@@ -59914,13 +59914,13 @@ msgstr ""
 msgid ""
 "This is used to avoid unnecessary false hits when 'git diff-files' is run "
 "after 'git read-tree'."
-msgstr ""
+msgstr "当在 'git read-tree' 之后运行 'git diff-files' 时，可避免不必要的误报。"
 
 #. type: Title ~
 #: en/git-read-tree.txt:150
 #, no-wrap, priority:80
 msgid "Two Tree Merge"
-msgstr ""
+msgstr "两棵目录树合并"
 
 #. type: Plain text
 #: en/git-read-tree.txt:156
@@ -59929,7 +59929,7 @@ msgid ""
 "Typically, this is invoked as `git read-tree -m $H $M`, where $H is the head"
 " commit of the current repository, and $M is the head of a foreign tree, "
 "which is simply ahead of $H (i.e. we are in a fast-forward situation)."
-msgstr ""
+msgstr "通常的调用方式是 `git read-tree -m $H $M`，其中 $H 是当前仓库的头提交，$M 是另一棵目录树的头提交，它只是在 $H 之前（即我们处于快速合并状态）。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:159
@@ -59937,25 +59937,25 @@ msgstr ""
 msgid ""
 "When two trees are specified, the user is telling 'git read-tree' the "
 "following:"
-msgstr ""
+msgstr "当指定了两棵目录树时，用户就是在告诉 'git read-tree' 以下内容："
 
 #. type: Plain text
 #: en/git-read-tree.txt:161
 #, priority:80
 msgid "The current index and work tree is derived from $H, but"
-msgstr ""
+msgstr "当前索引和工作区来自 $H，但"
 
 #. type: Plain text
 #: en/git-read-tree.txt:162
 #, priority:80
 msgid "the user may have local changes in them since $H."
-msgstr ""
+msgstr "用户可能在 $H 后对其进行了本地更改。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:164
 #, priority:80
 msgid "The user wants to fast-forward to $M."
-msgstr ""
+msgstr "用户希望快速合并到 $M。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:170
@@ -59966,7 +59966,7 @@ msgid ""
 "forward\" rules, where \"I\" denotes the index, \"clean\" means that index "
 "and work tree coincide, and \"exists\"/\"nothing\" refer to the presence of "
 "a path in the specified commit:"
-msgstr ""
+msgstr "在这种情况下，`git read-tree -m $H $M` 命令会确保 \"merge\" （合并）不会丢失任何本地变更。  以下是 “结转” 规则，其中 \"I\" 表示索引，\"clean\" 表示索引和工作区重合，\"exists\"/\"nothing\" 表示指定提交中存在路径："
 
 #. type: delimited block .
 #: en/git-read-tree.txt:181
@@ -59981,7 +59981,7 @@ msgid ""
 "\t\t\t\t     H == M   keep index otherwise\n"
 "\t\t\t\t     exists,  fail\n"
 "\t\t\t\t     H != M\n"
-msgstr ""
+msgstr "\tI                   H        M        结果\n       -------------------------------------------------------\n     0  无             无  无  (不会出现这种情况)\n     1  无             无  有   使用 M\n     2  无             有   无  从索引中移除路径\n     3  无             有   有,  如果是 “初次检出”，则使用 M\n\t\t\t\t     H == M   keep index otherwise\n\t\t\t\t     exists,  fail\n\t\t\t\t     H != M\n"
 
 #. type: delimited block .
 #: en/git-read-tree.txt:186
@@ -59991,7 +59991,7 @@ msgid ""
 "       ------------------\n"
 "     4  yes   N/A   N/A     nothing  nothing  keep index\n"
 "     5  no    N/A   N/A     nothing  nothing  keep index\n"
-msgstr ""
+msgstr "        clean I==H  I==M\n       ------------------\n     4  yes   N/A   N/A     无  无  保持索引\n     5  no    N/A   N/A     无  无  保持索引\n"
 
 #. type: delimited block .
 #: en/git-read-tree.txt:191
@@ -60001,7 +60001,7 @@ msgid ""
 "     7  no    N/A   yes     nothing  exists   keep index\n"
 "     8  yes   N/A   no      nothing  exists   fail\n"
 "     9  no    N/A   no      nothing  exists   fail\n"
-msgstr ""
+msgstr "     6  yes   N/A   yes     无  有   保持索引\n     7  no    N/A   yes     无  有   保持索引\n     8  yes   N/A   no      无  有   失败\n     9  no    N/A   no      无  有   失败\n"
 
 #. type: delimited block .
 #: en/git-read-tree.txt:196
@@ -60011,7 +60011,7 @@ msgid ""
 "     11 no    yes   N/A     exists   nothing  fail\n"
 "     12 yes   no    N/A     exists   nothing  fail\n"
 "     13 no    no    N/A     exists   nothing  fail\n"
-msgstr ""
+msgstr "     10 yes   yes   N/A     有   无  从索引中移除目录\n     11 no    yes   N/A     有   无  失败\n     12 yes   no    N/A     有   无  失败\n     13 no    no    N/A     有   无  失败\n"
 
 #. type: delimited block .
 #: en/git-read-tree.txt:201
@@ -60021,7 +60021,7 @@ msgid ""
 "       ------\n"
 "     14 yes                 exists   exists   keep index\n"
 "     15 no                  exists   exists   keep index\n"
-msgstr ""
+msgstr "\tclean (H==M)\n       ------\n     14 yes                 有   有   保持索引\n     15 no                  有   有   保持索引\n"
 
 #. type: delimited block .
 #: en/git-read-tree.txt:210
@@ -60035,7 +60035,7 @@ msgid ""
 "     19 no    no    yes     exists   exists   keep index\n"
 "     20 yes   yes   no      exists   exists   use M\n"
 "     21 no    yes   no      exists   exists   fail\n"
-msgstr ""
+msgstr "        clean I==H  I==M (H!=M)\n       ------------------\n     16 yes   no    no      有   有   失败\n     17 no    no    no      有   有   失败\n     18 yes   no    yes     有   有   保持索引\n     19 no    no    yes     有   有   保持索引\n     20 yes   yes   no      有   有   使用 M\n     21 no    yes   no      有   有   失败\n"
 
 #. type: Plain text
 #: en/git-read-tree.txt:216
@@ -60044,7 +60044,7 @@ msgid ""
 "In all \"keep index\" cases, the index entry stays as in the original index "
 "file.  If the entry is not up to date, 'git read-tree' keeps the copy in the"
 " work tree intact when operating under the -u flag."
-msgstr ""
+msgstr "在所有 “保留索引” 的情况下，索引条目都会保留在原始索引文件中。  如果条目不是最新的，在使用 -u 标志时，'git read-tree' 会在工作树中保留完整的副本。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:227
@@ -60059,7 +60059,7 @@ msgid ""
 "index --cached $H` would have told you about the change before this merge, "
 "but it would not show in `git diff-index --cached $M` output after the two-"
 "tree merge."
-msgstr ""
+msgstr "当这种形式的 'git read-tree' 成功返回时，你可以通过运行 `git diff-index --cached $M` 来查看你所做的哪些 “本地改动” 被继承了下来。  请注意，这并不一定与 `git diff-index --cached $H` 在两棵目录树合并前的结果一致。  这是因为第 18 和 19 种情况 -- 如果 $M 中已经有了这些改动 (例如，你通过电子邮件以补丁的形式获取了它)，`git diff-index --cached $H` 会在合并前告诉你这些改动，但两个目录树合并后，它不会显示在 `git diff-index --cached $M` 的输出中。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:234
@@ -60071,13 +60071,13 @@ msgid ""
 "initial checkout from happening, so the rule is modified to use M (new tree)"
 " only when the content of the index is empty.  Otherwise the removal of the "
 "path is kept as long as $H and $M are the same."
-msgstr ""
+msgstr "情况 3 稍显棘手，需要解释一下。  如果用户分阶段删除路径，然后切换到新的分支，那么从逻辑上讲，这条规则的结果应该是删除路径。  然而，这将阻止初始检出的发生，因此该规则被修改为只有在索引内容为空时才使用 M（新目录树）。  否则，只要 $H 和 $M 相同，就会保留路径的删除。"
 
 #. type: Title ~
 #: en/git-read-tree.txt:236
 #, no-wrap, priority:80
 msgid "3-Way Merge"
-msgstr ""
+msgstr "三方合并"
 
 #. type: Plain text
 #: en/git-read-tree.txt:239
@@ -60085,7 +60085,7 @@ msgstr ""
 msgid ""
 "Each \"index\" entry has two bits worth of \"stage\" state. stage 0 is the "
 "normal one, and is the only one you'd see in any kind of normal use."
-msgstr ""
+msgstr "每个 “索引” 条目都有两个比特的 “阶段” 状态。“阶段 0” 是正常状态，也是你在任何正常使用中唯一会看到的状态。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:242
@@ -60093,13 +60093,13 @@ msgstr ""
 msgid ""
 "However, when you do 'git read-tree' with three trees, the \"stage\" starts "
 "out at 1."
-msgstr ""
+msgstr "但是，当您使用 'git read-tree' 读取三棵树时，“阶段” 会从 1 开始。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:244
 #, priority:80
 msgid "This means that you can do"
-msgstr ""
+msgstr "这意味着您可以"
 
 #. type: delimited block -
 #: en/git-read-tree.txt:247
@@ -60116,7 +60116,7 @@ msgid ""
 "entries in \"stage3\".  When performing a merge of another branch into the "
 "current branch, we use the common ancestor tree as <tree1>, the current "
 "branch head as <tree2>, and the other branch head as <tree3>."
-msgstr ""
+msgstr "最终，您将得到一个包含 “阶段 1” 中所有 <目录树 1> 条目，“阶段 2” 中所有 <目录树 2> 条目和 “阶段 3” 中所有 <目录树 3> 条目的索引。  在将另一个分支合并到当前分支时，我们使用共同祖先树作为 <目录树 1>，当前分支头作为 <目录树 2>，另一个分支头作为 <目录树 3>。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:259
@@ -60125,7 +60125,7 @@ msgid ""
 "Furthermore, 'git read-tree' has special-case logic that says: if you see a "
 "file that matches in all respects in the following states, it \"collapses\" "
 "back to \"stage0\":"
-msgstr ""
+msgstr "此外，'git read-tree' 还有一个特殊情况逻辑：如果你看到一个文件在以下状态中各方面都符合要求，它就会 “折叠” 回 “阶段 0” ："
 
 #. type: Plain text
 #: en/git-read-tree.txt:263
@@ -60134,7 +60134,7 @@ msgid ""
 "stage 2 and 3 are the same; take one or the other (it makes no difference - "
 "the same work has been done on our branch in stage 2 and their branch in "
 "stage 3)"
-msgstr ""
+msgstr "第 2 阶段和第 3 阶段是相同的，可以选择其中之一（这没有区别--第 2 阶段我们的分支和第 3 阶段他们的分支所做的工作是相同的）"
 
 #. type: Plain text
 #: en/git-read-tree.txt:268
@@ -60143,7 +60143,7 @@ msgid ""
 "stage 1 and stage 2 are the same and stage 3 is different; take stage 3 (our"
 " branch in stage 2 did not do anything since the ancestor in stage 1 while "
 "their branch in stage 3 worked on it)"
-msgstr ""
+msgstr "阶段 1 和阶段 2 相同，阶段 3 不同；取阶段 3（我们在阶段 2 中的分支没有对阶段 1 中的祖先做任何事情，而他们在阶段 3 中的分支在做这件事）"
 
 #. type: Plain text
 #: en/git-read-tree.txt:271
@@ -60151,7 +60151,7 @@ msgstr ""
 msgid ""
 "stage 1 and stage 3 are the same and stage 2 is different take stage 2 (we "
 "did something while they did nothing)"
-msgstr ""
+msgstr "第 1 阶段和第 3 阶段相同，第 2 阶段与第 2 阶段不同（我们做了一些事情，而他们什么也没做）"
 
 #. type: Plain text
 #: en/git-read-tree.txt:275
@@ -60160,7 +60160,7 @@ msgid ""
 "The 'git write-tree' command refuses to write a nonsensical tree, and it "
 "will complain about unmerged entries if it sees a single entry that is not "
 "stage 0."
-msgstr ""
+msgstr "'git write-tree' 命令会拒绝写入无意义的树，如果它看到一个非第 0 阶段的条目，就会抱怨存在未合并条目。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:281
@@ -60171,7 +60171,7 @@ msgid ""
 "stages represent the \"result tree\" (stage 0, aka \"merged\"), the original"
 " tree (stage 1, aka \"orig\"), and the two trees you are trying to merge "
 "(stage 2 and 3 respectively)."
-msgstr ""
+msgstr "好吧，这听起来像是一堆毫无意义的规则，但实际上这正是快速合并所需要的。不同的阶段分别代表 “结果树”（第 0 阶段，又名 “合并”）、原始树（第 1 阶段，又名 “原始”）和你要合并的两棵树（分别为第 2 阶段和第 3 阶段）。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:286
@@ -60181,7 +60181,7 @@ msgid ""
 "line arguments) are significant when you start a 3-way merge with an index "
 "file that is already populated.  Here is an outline of how the algorithm "
 "works:"
-msgstr ""
+msgstr "当你使用一个已经填充好的索引文件开始 3 向合并时，第 1、2 和 3 阶段的顺序（因此是三个 <树状对象> 命令行参数的顺序）非常重要。  以下是该算法的工作原理概要："
 
 #. type: Plain text
 #: en/git-read-tree.txt:289
@@ -60189,7 +60189,7 @@ msgstr ""
 msgid ""
 "if a file exists in identical format in all three trees, it will "
 "automatically collapse to \"merged\" state by 'git read-tree'."
-msgstr ""
+msgstr "如果一个文件以完全相同的格式存在于三棵目录树中，它将通过 'git read-tree' 自动折叠为 “合并” 状态。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:294
@@ -60198,7 +60198,7 @@ msgid ""
 "a file that has _any_ difference what-so-ever in the three trees will stay "
 "as separate entries in the index. It's up to \"porcelain policy\" to "
 "determine how to remove the non-0 stages, and insert a merged version."
-msgstr ""
+msgstr "如果文件在三棵目录树中存在任何差异，都将作为独立条目保留在索引中。至于如何删除非 0 阶段，并插入合并版本，则由 “上层命令的策略” 决定。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:299
@@ -60208,7 +60208,7 @@ msgid ""
 "merge things incrementally, but as long as it has entries in stages 1/2/3 "
 "(i.e., \"unmerged entries\") you can't write the result. So now the merge "
 "algorithm ends up being really simple:"
-msgstr ""
+msgstr "索引文件在保存和恢复时会包含所有这些信息，因此可以逐步合并，但只要索引文件中的条目还处于第 1/2/3 阶段（即 “未合并条目”），就无法写入合并结果。因此，现在的合并算法非常简单："
 
 #. type: Plain text
 #: en/git-read-tree.txt:302
@@ -60216,7 +60216,7 @@ msgstr ""
 msgid ""
 "you walk the index in order, and ignore all entries of stage 0, since "
 "they've already been done."
-msgstr ""
+msgstr "你会按顺序执行索引，并忽略第 0 阶段的所有条目，因为它们已经执行过了。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:306
@@ -60225,7 +60225,7 @@ msgid ""
 "if you find a \"stage1\", but no matching \"stage2\" or \"stage3\", you know"
 " it's been removed from both trees (it only existed in the original tree), "
 "and you remove that entry."
-msgstr ""
+msgstr "如果找到了 “阶段 1”，但没有找到匹配的 “阶段 2” 或 “阶段 3”，就说明它已从两棵目录树中删除（它只存在于原始目录树中），因此要删除该条目。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:311
@@ -60234,7 +60234,7 @@ msgid ""
 "if you find a matching \"stage2\" and \"stage3\" tree, you remove one of "
 "them, and turn the other into a \"stage0\" entry. Remove any matching "
 "\"stage1\" entry if it exists too.  .. all the normal trivial rules .."
-msgstr ""
+msgstr "如果找到匹配的 “阶段 2” 和 “阶段 3” 树，则删除其中一个，并将另一个变成 “阶段 0” 条目。如果还存在匹配的“阶段 1” 条目，则将其删除。  ... 这些就是所有琐碎但正常的规则 ..."
 
 #. type: Plain text
 #: en/git-read-tree.txt:316
@@ -60243,7 +60243,7 @@ msgid ""
 "You would normally use 'git merge-index' with supplied 'git merge-one-file' "
 "to do this last step.  The script updates the files in the working tree as "
 "it merges each path and at the end of a successful merge."
-msgstr ""
+msgstr "通常，你会使用 'git merge-index' 和 'git merge-one-file' 来完成最后一步。  脚本会在合并每个路径和合并成功后更新工作区中的文件。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:324
@@ -60255,7 +60255,7 @@ msgid ""
 "is further assumed that this state is \"derived\" from the stage 2 tree.  "
 "The 3-way merge refuses to run if it finds an entry in the original index "
 "file that does not match stage 2."
-msgstr ""
+msgstr "当你使用一个已填充的索引文件开始 3 向合并时，我们假定它代表了工作区中文件的状态，你甚至可以拥有索引文件中未记录更改的文件。  此外，我们还假定这种状态是从第二阶段树中 “派生” 出来的。  如果在原始索引文件中发现与第二阶段不匹配的条目，三方合并就会拒绝运行。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:329
@@ -60264,7 +60264,7 @@ msgid ""
 "This is done to prevent you from losing your work-in-progress changes, and "
 "mixing your random changes in an unrelated merge commit.  To illustrate, "
 "suppose you start from what has been committed last to your repository:"
-msgstr ""
+msgstr "这样做是为了防止丢失正在进行中的更改，以及将随机更改混入不相关的合并提交中。  举例说明，假设你从上次提交到仓库的内容开始："
 
 #. type: delimited block -
 #: en/git-read-tree.txt:333
@@ -60283,7 +60283,7 @@ msgid ""
 "You do random edits, without running 'git update-index'.  And then you "
 "notice that the tip of your \"upstream\" tree has advanced since you pulled "
 "from him:"
-msgstr ""
+msgstr "你在没有运行 'git update-index' 的情况下进行了随机编辑。  然后你会发现，你的 “上游” 目录树的顶端在你从他那里拉出来之后又前进了一步："
 
 #. type: delimited block -
 #: en/git-read-tree.txt:342
@@ -60303,7 +60303,7 @@ msgid ""
 "since.  Three-way merge makes sure that you have not added or modified index"
 " entries since $JC, and if you haven't, then does the right thing.  So with "
 "the following sequence:"
-msgstr ""
+msgstr "你的工作区仍然基于你的 HEAD ($JC)，但你在此之后进行了一些编辑。  三方合并会确保你在 $JC 之后没有添加或修改索引项，如果没有，就会做正确的事情。  因此，顺序如下："
 
 #. type: delimited block -
 #: en/git-read-tree.txt:354
@@ -60326,7 +60326,7 @@ msgid ""
 "what you would commit is a pure merge between $JC and $LT without your work-"
 "in-progress changes, and your work tree would be updated to the result of "
 "the merge."
-msgstr ""
+msgstr "你要提交的是 $JC 和 $LT 之间的纯合并，不包含你正在进行的工作修改，你的工作区将被更新为合并后的结果。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:363
@@ -60335,7 +60335,7 @@ msgid ""
 "However, if you have local changes in the working tree that would be "
 "overwritten by this merge, 'git read-tree' will refuse to run to prevent "
 "your changes from being lost."
-msgstr ""
+msgstr "不过，如果您在工作树中的本地改动会被此次合并覆盖，'git read-tree' 将拒绝运行，以防止您的改动丢失。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:373
@@ -60349,7 +60349,7 @@ msgid ""
 " such a case, you can simply continue doing what you were in the middle of "
 "doing, and when your working tree is ready (i.e. you have finished your "
 "work-in-progress), attempt the merge again."
-msgstr ""
+msgstr "换句话说，无需担心只存在于工作区中的内容。  当你对项目中不参与合并的部分进行本地修改时，你的修改不会干扰合并，而是保持原样。  如果这些改动 *干扰了* 合并，那么合并甚至都不会开始（'git read-tree' 会大声抱怨，并在不修改任何内容的情况下失败）。  在这种情况下，你只需继续做你正在做的事情，当你的工作区准备就绪时（即你已经完成了正在进行的工作），再尝试合并。"
 
 #. type: Title -
 #: en/git-read-tree.txt:376
@@ -60367,7 +60367,7 @@ msgid ""
 "these plumbing commands for sparse-checkout/skip-worktree related needs.  "
 "However, the information below might be useful to users trying to understand"
 " the pattern style used in non-cone mode of the `sparse-checkout` command."
-msgstr ""
+msgstr "注意：linkgit:git-update-index[1] 和 `read-tree` 中的跳过工作区功能早于 linkgit:git-sparse-checkout[1] 的引入。  我们鼓励用户优先使用 `sparse-checkout` 命令，而不是这些底层命令来满足稀疏校验/跳转工作树的相关需求。  不过，以下信息对于试图理解 `sparse-checkout` 命令的非锥形模式中使用的模式样式的用户可能会有所帮助。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:389
@@ -60376,7 +60376,7 @@ msgid ""
 "\"Sparse checkout\" allows populating the working directory sparsely.  It "
 "uses the skip-worktree bit (see linkgit:git-update-index[1]) to tell Git "
 "whether a file in the working directory is worth looking at."
-msgstr ""
+msgstr "“稀疏签出” 允许稀疏地填充工作目录。  它使用 skip-worktree 位（参见 linkgit:git-update-index[1]）来告诉 Git 工作目录中的文件是否值得查看。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:399
@@ -60391,7 +60391,7 @@ msgid ""
 "matches a pattern in this file, or the entry corresponds to a file present "
 "in the working tree, then skip-worktree will not be set on that entry. "
 "Otherwise, skip-worktree will be set."
-msgstr ""
+msgstr "'git read-tree' 和其他基于合并的命令（'git merge'、'git checkout'...）可以帮助维护 skip-worktree 位图和工作目录更新。`$GIT_DIR/info/sparse-checkout` 用于定义跳过工作树的参考位图。当 'git read-tree' 需要更新工作目录时，它会根据该文件重置索引中的跳过工作树位，其语法与 .gitignore 文件相同。  如果某个条目与该文件中的模式匹配，或者该条目与工作树中的某个文件相对应，则不会在该条目上设置跳过工作树。否则，将设置跳过工作区。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:403
@@ -60400,7 +60400,7 @@ msgid ""
 "Then it compares the new skip-worktree value with the previous one. If skip-"
 "worktree turns from set to unset, it will add the corresponding file back. "
 "If it turns from unset to set, that file will be removed."
-msgstr ""
+msgstr "然后将新的 skip-worktree 值与之前的值进行比较。如果 skip-worktree 从已设变成未设，它就会重新添加相应的文件。如果从未设改为已设，则会删除该文件。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:407
@@ -60409,7 +60409,7 @@ msgid ""
 "While `$GIT_DIR/info/sparse-checkout` is usually used to specify what files "
 "are in, you can also specify what files are _not_ in, using negate patterns."
 " For example, to remove the file `unwanted`:"
-msgstr ""
+msgstr "虽然 `$GIT_DIR/info/sparse-checkout` 通常用于指定包含哪些文件，但也可以使用否定模式来指定 _not_ 包含哪些文件。例如，要删除文件 `unwanted`："
 
 #. type: delimited block -
 #: en/git-read-tree.txt:411
@@ -60430,7 +60430,7 @@ msgid ""
 "because skip-worktree bits are still in the index and your working directory"
 " is still sparsely populated. You should re-populate the working directory "
 "with the `$GIT_DIR/info/sparse-checkout` file content as follows:"
-msgstr ""
+msgstr "另一个棘手的问题是，当你不再需要稀疏检出时，如何完全重新填充工作目录。你不能直接禁用 “稀疏检出”，因为跳过的工作区位仍在索引中，你的工作目录仍是稀疏填充的。你应该用 `$GIT_DIR/info/sparse-checkout` 文件内容重新填充工作目录，如下所示："
 
 #. type: delimited block -
 #: en/git-read-tree.txt:422
@@ -60445,7 +60445,7 @@ msgid ""
 "Then you can disable sparse checkout. Sparse checkout support in 'git read-"
 "tree' and similar commands is disabled by default. You need to turn "
 "`core.sparseCheckout` on in order to have sparse checkout support."
-msgstr ""
+msgstr "然后就可以禁用稀疏签出。'git read-tree' 和类似命令中的稀疏签出支持默认是禁用的。你需要打开 `core.sparseCheckout` 才能获得稀疏签出支持。"
 
 #. type: Plain text
 #: en/git-read-tree.txt:434
@@ -68372,13 +68372,13 @@ msgstr "$ git rebase -i HEAD~5\n"
 msgid ""
 "Print the list of commits on this branch, but not present in the upstream "
 "branch."
-msgstr ""
+msgstr "打印该分支上但上游分支中没有的提交列表。"
 
 #. type: delimited block -
 #: en/git-rev-list.txt:48
 #, no-wrap, priority:80
 msgid "git rev-list @{upstream}..HEAD\n"
-msgstr ""
+msgstr "git rev-list @{上游仓库}..HEAD\n"
 
 #. type: Plain text
 #: en/git-rev-list.txt:52
@@ -68386,7 +68386,7 @@ msgstr ""
 msgid ""
 "Format commits with their author and commit message (see also the porcelain "
 "linkgit:git-log[1])."
-msgstr ""
+msgstr "将提交格式化为作者和提交信息（另见上层命令 linkgit:git-log[1]）。"
 
 #. type: delimited block -
 #: en/git-rev-list.txt:55
@@ -68400,7 +68400,7 @@ msgstr "$ git rev-parse --verify HEAD\n"
 msgid ""
 "Format commits along with their diffs (see also the porcelain linkgit:git-"
 "log[1], which can do this in a single process)."
-msgstr ""
+msgstr "格式化提交及其差异（另请参阅上层命令 linkgit:git-log[1]，它可以在单个进程中完成此操作）。"
 
 #. type: delimited block -
 #: en/git-rev-list.txt:63
@@ -68408,7 +68408,7 @@ msgstr ""
 msgid ""
 "git rev-list HEAD |\n"
 "git diff-tree --stdin --format=medium -p\n"
-msgstr ""
+msgstr "git rev-list HEAD |\ngit diff-tree --stdin --format=medium -p\n"
 
 #. type: Plain text
 #: en/git-rev-list.txt:67
@@ -68416,7 +68416,7 @@ msgstr ""
 msgid ""
 "Print the list of commits on the current branch that touched any file in the"
 " `Documentation` directory."
-msgstr ""
+msgstr "打印当前分支中触及 `Documentation` 目录中任何文件的提交列表。"
 
 #. type: delimited block -
 #: en/git-rev-list.txt:70
@@ -68430,13 +68430,13 @@ msgstr "git rev-list HEAD -- Documentation/\n"
 msgid ""
 "Print the list of commits authored by you in the past year, on any branch, "
 "tag, or other ref."
-msgstr ""
+msgstr "打印您在过去一年中在任何分支、标记或其他引用上提交的提交列表。"
 
 #. type: delimited block -
 #: en/git-rev-list.txt:77
 #, no-wrap, priority:80
 msgid "git rev-list --author=you@example.com --since=1.year.ago --all\n"
-msgstr ""
+msgstr "git rev-list --author=you@example.com --since=1.year.ago --all\n"
 
 #. type: Plain text
 #: en/git-rev-list.txt:81
@@ -68444,7 +68444,7 @@ msgstr ""
 msgid ""
 "Print the list of objects reachable from the current branch (i.e., all "
 "commits and the blobs and trees they contain)."
-msgstr ""
+msgstr "打印可从当前分支到达的对象列表（即所有提交及其包含的 blobs 和目录树）。"
 
 #. type: delimited block -
 #: en/git-rev-list.txt:84
@@ -68460,7 +68460,7 @@ msgid ""
 "reflogs, versus the total packed size. This can tell you whether running "
 "`git repack -ad` might reduce the repository size (by dropping unreachable "
 "objects), and whether expiring reflogs might help."
-msgstr ""
+msgstr "比较所有可到达对象的磁盘大小、可从引用日志到达的对象的磁盘大小以及打包后的总大小。这可以告诉你运行 `git repack -ad` 是否会减少仓库的大小（通过丢弃无法访问的对象），以及过期的引用日志是否会有帮助。"
 
 #. type: delimited block -
 #: en/git-rev-list.txt:101
