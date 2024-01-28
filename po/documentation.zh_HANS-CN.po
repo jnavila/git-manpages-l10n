@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-11-04 20:14+0100\nPO-Revision-Date: 2024-01-28 03:55+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.4-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-11-04 20:14+0100\nPO-Revision-Date: 2024-01-29 15:01+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.4-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:780 en/git-instaweb.txt:45
@@ -68474,7 +68474,7 @@ msgid ""
 "du -c .git/objects/pack/*.pack .git/objects/??/*\n"
 "# alternative to du: add up \"size\" and \"size-pack\" fields\n"
 "git count-objects -v\n"
-msgstr ""
+msgstr "# 可达对象\ngit rev-list --disk-usage --objects --all\n# 加上 reflog\ngit rev-list --disk-usage --objects --all --reflog\n# 所有占用的磁盘空间\ndu -c .git/objects/pack/*.pack .git/objects/??/*\n# 切换到 du: 将 \"size\" 和 \"size-pack\" 字段合计\ngit count-objects -v\n"
 
 #. type: Plain text
 #: en/git-rev-list.txt:107
@@ -68484,7 +68484,7 @@ msgid ""
 "current branch. This can find outliers that are contributing to a bloated "
 "repository size (e.g., because somebody accidentally committed large build "
 "artifacts)."
-msgstr ""
+msgstr "报告每个分支的磁盘大小，不包括当前分支使用的对象。这样就能发现导致仓库大小臃肿的异常值（例如，因为有人不小心提交了大容量的构建工件）。"
 
 #. type: delimited block -
 #: en/git-rev-list.txt:116
@@ -68497,7 +68497,7 @@ msgid ""
 "\techo \"$size $branch\"\n"
 "done |\n"
 "sort -n\n"
-msgstr ""
+msgstr "git for-each-ref --format='%(引用名)' |\nwhile read branch\ndo\n\tsize=$(git rev-list --disk-usage --objects HEAD..$branch)\n\techo \"$size $branch\"\ndone |\nsort -n\n"
 
 #. type: Plain text
 #: en/git-rev-list.txt:122
