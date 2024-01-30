@@ -1,6 +1,6 @@
 #
 msgid ""
-msgstr "Project-Id-Version: PACKAGE VERSION\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-11-04 2u0:14+0100\nPO-Revision-Date: 2024-01-28 03:55+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 5.4-dev\n"
+msgstr "Project-Id-Version: PACKAGE VERSION\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-11-04 2u0:14+0100\nPO-Revision-Date: 2024-01-30 23:02+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 5.4-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:780 en/git-instaweb.txt:45
@@ -64729,7 +64729,7 @@ msgid ""
 "something like the `--stable` option to linkgit:git-patch-id[1]). There's "
 "also no equivalent of linkgit:git-apply[1] for `range-diff`, the output is "
 "not intended to be machine-readable."
-msgstr ""
+msgstr "La sortie de la commande `range-diff` est sujette à changement. Elle est destiné à être la production de porcelaine humainement lisible, pas quelque chose qui peut être utilisé à travers les versions de Git pour obtenir un `range-diff` textuellement stable (par opposition à quelque chose comme l'option `--stable` de linkgit:git-patch-id[1]). Il n'y a pas d'équivalent de linkgit:git-apply[1] pour `range-diff`, la sortie n'est pas destinée à être consommable par une machine."
 
 #. type: Plain text
 #: en/git-range-diff.txt:126
@@ -64766,13 +64766,13 @@ msgstr ""
 msgid ""
 "When a rebase required merge conflicts to be resolved, compare the changes "
 "introduced by the rebase directly afterwards using:"
-msgstr ""
+msgstr "Quand un rebasage nécessite la résolution d'un conflit de fusion, comparer les modifications introduites par le rebasage directement après, en utilisant :"
 
 #. type: delimited block -
 #: en/git-range-diff.txt:142
 #, no-wrap, priority:100
 msgid "$ git range-diff @{u} @{1} @\n"
-msgstr ""
+msgstr "$ git range-diff @{u} @{1} @\n"
 
 #. type: Plain text
 #: en/git-range-diff.txt:146
@@ -64804,7 +64804,7 @@ msgid ""
 "    +Describe a bug\n"
 "    @@ -324,5 +324,6\n"
 "      This is expected.\n"
-msgstr ""
+msgstr "    -TODO: Décrire un bogue\n    +Décrire un bogue\n    @@ -324,5 +324,6\n      C'est attendu.\n"
 
 #. type: delimited block -
 #: en/git-range-diff.txt:162
@@ -64852,7 +64852,7 @@ msgid ""
 " it colors the entire lines red or green. The line that added \"What is "
 "unexpected\" in the old commit, for example, is completely red, even if the "
 "intent of the old commit was to add something."
-msgstr ""
+msgstr "Une diff naïve de diffs codée en couleur est en fait un peu difficile à lire, cependant, car elle colorie l'ensemble des lignes rouges ou vertes. La ligne qui a ajouté \"Ce qui est inattendu\" dans l'ancien commit, par exemple, est complètement rouge, même si l'intention de l'ancien commit était d'ajouter quelque chose."
 
 #. type: Plain text
 #: en/git-range-diff.txt:188
@@ -64862,13 +64862,13 @@ msgid ""
 "mode, the diff of diffs will retain the original diff colors, and prefix the"
 " lines with -/+ markers that have their *background* red or green, to make "
 "it more obvious that they describe how the diff itself changed."
-msgstr ""
+msgstr "Pour arranger cela, `range` utilise le mode `--dual-color` par défaut. Dans ce mode, la diff de diffs conservera les couleurs diff originales, et préfixera les lignes avec des marqueurs -/+ qui ont leur *fond* en rouge ou vert, pour rendre plus évident qu'ils décrivent comment la diff elle-même a changé."
 
 #. type: Title -
 #: en/git-range-diff.txt:191
 #, no-wrap, priority:100
 msgid "Algorithm"
-msgstr ""
+msgstr "Algorithme"
 
 #. type: Plain text
 #: en/git-range-diff.txt:195
@@ -64876,7 +64876,7 @@ msgstr ""
 msgid ""
 "The general idea is this: we generate a cost matrix between the commits in "
 "both commit ranges, then solve the least-cost assignment."
-msgstr ""
+msgstr "L'idée générale est ceci : nous générons une matrice de coûts entre les commits dans les deux plages de commits, puis résolvons l'affectation la moins coûteuse."
 
 #. type: Plain text
 #: en/git-range-diff.txt:199
@@ -64905,7 +64905,7 @@ msgid ""
 "--C` the second iteration. Let's assume that `A` is a cherry-pick of `2,` "
 "and `C` is a cherry-pick of `1` but with a small modification (say, a fixed "
 "typo). Visualize the commits as a bipartite graph:"
-msgstr ""
+msgstr "Exemple : supposons que les commits `1--2` sont la première itération d'une série de rustines et que `A-C` sont ceux de la deuxième itération. Supposons que `A` est un picorage de `2,` et `C` est un picorage de `1` mais avec une petite modification (disons, une correction de frappe). Visualisons les commits comme un graphique bipartite :"
 
 #. type: delimited block -
 #: en/git-range-diff.txt:212
@@ -64923,7 +64923,7 @@ msgstr "    2            B\n"
 #: en/git-range-diff.txt:216 en/git-range-diff.txt:228
 #, no-wrap, priority:100
 msgid "\t\t C\n"
-msgstr ""
+msgstr "\t\t C\n"
 
 #. type: Plain text
 #: en/git-range-diff.txt:220
@@ -64931,7 +64931,7 @@ msgstr ""
 msgid ""
 "We are looking for a \"best\" explanation of the new series in terms of the "
 "old one. We can represent an \"explanation\" as an edge in the graph:"
-msgstr ""
+msgstr "Nous cherchons une « meilleure » explication de la nouvelle série à partir de l'ancienne. Nous pouvons représenter une « explication » comme un lien dans le graphe :"
 
 #. type: delimited block -
 #: en/git-range-diff.txt:226
@@ -64952,7 +64952,7 @@ msgid ""
 "This explanation comes for \"free\" because there was no change. Similarly "
 "`C` could be explained using `1`, but that comes at some cost c>0 because of"
 " the modification:"
-msgstr ""
+msgstr "Cette explication est « gratuite » parce qu'il n'y avait pas de changement. De même `C` peut être expliqué en utilisant `1`, mais cela vient à un certain coût c>0 en raison de la modification :"
 
 #. type: delimited block -
 #: en/git-range-diff.txt:241
@@ -64982,7 +64982,7 @@ msgid ""
 "associate with every edge is the size of the diff between the two commits' "
 "patches. To explain also new commits, we introduce dummy nodes on both "
 "sides:"
-msgstr ""
+msgstr "En termes mathématiques, ce que nous cherchons est une sorte de coût minimum bipartite correspondant ; `1` est égal à `C` à un certain coût, etc. Le graphe sous-jacent est en fait un graphe bipartite complet ; le coût que nous associons à chaque arête est la taille de la diff entre les rustines des deux commits. Pour expliquer aussi les nouveaux commits, nous présentons des nœuds vides des deux côtés :"
 
 #. type: delimited block -
 #: en/git-range-diff.txt:258
@@ -65021,7 +65021,7 @@ msgid ""
 " assignment `1--C`, `o--o` slightly cheaper than `1--o`, `o--C` even if `1` "
 "and `C` have nothing in common. With the fudge factor we require a much "
 "larger common part to consider patches as corresponding."
-msgstr ""
+msgstr "Le coût d'une arête `o--C` est la taille de la diff `c`, modifiée d'un facteur d'adaptation qui devrait être inférieur à 100%. Une arête `o--o` est gratuite. Le facteur d'adaptation est nécessaire parce que même si `1` et`C` n'ont rien en commun, ils peuvent tout de même contenir des lignes vides et autres, rendant probablement l'affectation `1--C`, `o--o` légèrement moins chère que `1--o`, `o--C` même si `1` et `C` n'ont rien en commun. Avec le facteur d'adaptation, nous exigeons qu'une part plus importante soit commune pour considérer les rustines comme correspondantes."
 
 #. type: Plain text
 #: en/git-range-diff.txt:277
@@ -65033,7 +65033,7 @@ msgid ""
 "implementation of the Jonker-Volgenant algorithm to solve the assignment "
 "problem, which has cubic runtime complexity. The matching found in this case"
 " will look like this:"
-msgstr ""
+msgstr "Le temps total nécessaire au calcul de cet algorithme est le temps nécessaire au calcul de n+m diffs de commits, suivi de m*n diffs de rustines, plus le temps nécessaire au calcul de l'affectation de moindre coût entre n et m diffs. Git utilise un implantation de l'algorithme de Jonker-Volgenant pour résoudre le problème d'affectation, qui de complexité cubique. La correspondance trouvée dans ce cas ressemble à ceci :"
 
 #. type: delimited block -
 #: en/git-range-diff.txt:286
@@ -65059,7 +65059,7 @@ msgstr ""
 #: en/git-range-diff.txt:288
 #, no-wrap, priority:100
 msgid "    o ---------- o\n"
-msgstr ""
+msgstr "    o ---------- o\n"
 
 #. type: Title =
 #: en/git-read-tree.txt:2
@@ -66064,7 +66064,7 @@ msgstr ""
 #: en/git-rebase.txt:101
 #, priority:100
 msgid "will result in:"
-msgstr ""
+msgstr "donnera :"
 
 #. type: delimited block -
 #: en/git-rebase.txt:106
@@ -66073,7 +66073,7 @@ msgid ""
 "                   B'---C' topic\n"
 "                  /\n"
 "    D---E---A'---F master\n"
-msgstr ""
+msgstr "                   B'---C' sujet\n                  /\n    D---E---A'---F master\n"
 
 #. type: Plain text
 #: en/git-rebase.txt:111
