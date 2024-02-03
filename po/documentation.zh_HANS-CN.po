@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Git package.
 # Matthias Aßhauer <mha1993@live.de>, 2019.
 msgid ""
-msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-11-04 20:14+0100\nPO-Revision-Date: 2024-02-03 14:06+0000\nLast-Translator: taotieren <admin@taotieren.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.4-dev\n"
+msgstr "Project-Id-Version: git documentation\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2023-11-04 20:14+0100\nPO-Revision-Date: 2024-02-03 14:06+0000\nLast-Translator: 秃头灯笼鱼 <ttdlyu@163.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: zh_HANS-CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.4-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:780 en/git-instaweb.txt:45
@@ -3523,14 +3523,7 @@ msgstr "merge.conflictStyle"
 
 #. type: Plain text
 #: en/config/merge.txt:15
-#, fuzzy, priority:240
-#| msgid ""
-#| "Specify the style in which conflicted hunks are written out to working tree "
-#| "files upon merge.  The default is \"merge\", which shows a `<<<<<<<` "
-#| "conflict marker, changes made by one side, a `=======` marker, changes made "
-#| "by the other side, and then a `>>>>>>>` marker.  An alternate style, "
-#| "\"diff3\", adds a `|||||||` marker and the original text before the "
-#| "`=======` marker."
+#, priority:240
 msgid ""
 "Specify the style in which conflicted hunks are written out to working tree "
 "files upon merge.  The default is \"merge\", which shows a `<<<<<<<` "
@@ -3544,10 +3537,7 @@ msgid ""
 " to diff3 but removes matching lines on the two sides from the conflict "
 "region when those matching lines appear near either the beginning or end of "
 "a conflict region."
-msgstr ""
-"指定在合并时将冲突块写入工作树文件的样式。  默认是 "
-"\"merge\"，显示一个`<<<<<<<`冲突标记，一方的修改，一个`=======`标记，另一方的修改，然后是`>>>>>>>`标记。  "
-"另一种样式，\"diff3\"，增加了一个`|||||||`标记，并在`=======`标记前增加了原始文本。"
+msgstr "指定合并时将冲突块写入工作目录树文件的样式。  默认样式是 \"merge\"（合并），它会显示一个 `<<<<<<<` 冲突标记、一方所做的更改、一个 `=======` 标记、另一方所做的更改，然后是一个 `>>>>>>>` 标记。  另一种样式 \"diff3\" 会在 \"=======\" 标记前添加 \"|||||||\" 标记和原文。  “合并” 样式产生的冲突区域往往比 diff3 小，一是因为不包含原始文本，二是因为当双方有子集行匹配时，这些行会被从冲突区域中拉出。  另一种样式是 \"zdiff3\"，它与 diff3 类似，但会在冲突区域的开头或结尾附近出现匹配行时，将这些匹配行从冲突区域中移除。"
 
 #. type: Labeled list
 #: en/config/merge.txt:16
@@ -3557,15 +3547,7 @@ msgstr "merge.defaultToUpstream"
 
 #. type: Plain text
 #: en/config/merge.txt:25
-#, fuzzy, priority:240
-#| msgid ""
-#| "If merge is called without any commit argument, merge the upstream branches "
-#| "configured for the current branch by using their last observed values stored"
-#| " in their remote-tracking branches.  The values of the `branch.<current "
-#| "branch>.merge` that name the branches at the remote named by "
-#| "`branch.<current branch>.remote` are consulted, and then they are mapped via"
-#| " `remote.<remote>.fetch` to their corresponding remote-tracking branches, "
-#| "and the tips of these tracking branches are merged."
+#, priority:240
 msgid ""
 "If merge is called without any commit argument, merge the upstream branches "
 "configured for the current branch by using their last observed values stored"
@@ -3574,10 +3556,7 @@ msgid ""
 "`branch.<current branch>.remote` are consulted, and then they are mapped via"
 " `remote.<remote>.fetch` to their corresponding remote-tracking branches, "
 "and the tips of these tracking branches are merged. Defaults to true."
-msgstr ""
-"如果调用 merge 时没有任何提交参数，则通过使用存储在其远程跟踪分支中的最后观察值来合并为当前分支配置的上游分支。  "
-"`branch.<current branch>.merge`的值会被查阅，这些值命名了由`branch.<current "
-"branch>.remote`命名的远程分支，然后通过`remote.<remote>.fetch`将它们映射到相应的远程跟踪分支，并合并这些跟踪分支的提示。"
+msgstr "如果调用 merge 时没有任何提交参数，则通过使用存储在其远程跟踪分支中的最后观察值来合并为当前分支配置的上游分支。  `branch.<当前分支>.merge` 的值会被查阅，这些值命名了由 `branch.<当前分支>.remote` 命名的远程分支，然后通过 `remote.<远程仓库>.fetch` 将它们映射到相应的远程跟踪分支，并合并这些跟踪分支的提示。默认为 true。"
 
 #. type: Labeled list
 #: en/config/merge.txt:26
@@ -3623,19 +3602,14 @@ msgstr "merge.renameLimit"
 
 #. type: Plain text
 #: en/config/merge.txt:49
-#, fuzzy, priority:240
-#| msgid ""
-#| "The number of files to consider when performing rename detection during a "
-#| "merge; if not specified, defaults to the value of diff.renameLimit. This "
-#| "setting has no effect if rename detection is turned off."
+#, priority:240
 msgid ""
 "The number of files to consider in the exhaustive portion of rename "
 "detection during a merge.  If not specified, defaults to the value of "
 "diff.renameLimit.  If neither merge.renameLimit nor diff.renameLimit are "
 "specified, currently defaults to 7000.  This setting has no effect if rename"
 " detection is turned off."
-msgstr ""
-"在合并过程中执行重名检测时要考虑的文件数量；如果没有指定，默认为diff.renameLimit的值。如果重名检测被关闭，这个设置就没有作用。"
+msgstr "合并过程中重命名检测穷举部分要考虑的文件数量。  如果未指定，默认值为 diff.renameLimit 的值。  如果既未指定 merge.renameLimit 也未指定 diff.renameLimit，则默认值为 7000。  如果重命名检测已关闭，则此设置无效。"
 
 #. type: Labeled list
 #: en/config/merge.txt:50
@@ -3821,9 +3795,9 @@ msgstr "定义实现自定义低级合并驱动程序的命令。详见链接 li
 
 #. type: Labeled list
 #: en/config/merge.txt:122
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid "merge.<driver>.recursive"
-msgstr "merge.<driver>.recursive"
+msgstr "merge.<驱动程序>.recursive"
 
 #. type: Plain text
 #: en/config/merge.txt:125
@@ -3841,7 +3815,7 @@ msgstr "merge.branchdesc"
 
 #. type: Plain text
 #: en/config/fmt-merge-msg.txt:5
-#, fuzzy, priority:240
+#, priority:240
 msgid ""
 "In addition to branch names, populate the log message with the branch "
 "description text associated with them.  Defaults to false."
@@ -3855,12 +3829,12 @@ msgstr "merge.log"
 
 #. type: Plain text
 #: en/config/fmt-merge-msg.txt:11
-#, fuzzy, priority:240
+#, priority:240
 msgid ""
 "In addition to branch names, populate the log message with at most the "
 "specified number of one-line descriptions from the actual commits that are "
 "being merged.  Defaults to false, and true is a synonym for 20."
-msgstr "除了分支名称外，在日志信息中最多加入指定数量的被合并的实际提交的单行描述。  默认为false，true是20的同义词。"
+msgstr "除了分支名称外，在日志信息中最多加入指定数量的被合并的实际提交的单行描述。  默认为 false，true 是2 0 的同义词。"
 
 #. type: Labeled list
 #: en/config/fmt-merge-msg.txt:12
@@ -3870,15 +3844,13 @@ msgstr "merge.suppressDest"
 
 #. type: Plain text
 #: en/config/fmt-merge-msg.txt:18
-#, fuzzy, priority:240
+#, priority:240
 msgid ""
 "By adding a glob that matches the names of integration branches to this "
 "multi-valued configuration variable, the default merge message computed for "
 "merges into these integration branches will omit \"into <branch name>\" from"
 " its title."
-msgstr ""
-"通过向这个多值配置变量添加一个匹配集成分支名称的 glob，为合并到这些集成分支计算的默认合并消息将在其标题中省略“into <branch "
-"name>”。"
+msgstr "通过向这个多值配置变量添加一个匹配集成分支名称的通配符，为合并到这些集成分支计算的默认合并消息将在其标题中省略 \"into <分支名>\"。"
 
 #. type: Plain text
 #: en/config/fmt-merge-msg.txt:22
@@ -17945,21 +17917,13 @@ msgstr "git-checkout(1)"
 
 #. type: Plain text
 #: en/git-checkout.txt:7
-#, fuzzy, priority:240
+#, priority:240
 msgid "git-checkout - Switch branches or restore working tree files"
-msgstr "git-checkout - Switch branches or restore working tree files"
+msgstr "git-checkout - 切换分支或恢复工作目录树文件"
 
 #. type: Plain text
 #: en/git-checkout.txt:20
-#, fuzzy, ignore-ellipsis, no-wrap, priority:240
-#| msgid ""
-#| "'git checkout' [-q] [-f] [-m] [<branch>]\n"
-#| "'git checkout' [-q] [-f] [-m] --detach [<branch>]\n"
-#| "'git checkout' [-q] [-f] [-m] [--detach] <commit>\n"
-#| "'git checkout' [-q] [-f] [-m] [[-b|-B|--orphan] <new-branch>] [<start-point>]\n"
-#| "'git checkout' [-f|--ours|--theirs|-m|--conflict=<style>] [<tree-ish>] [--] <pathspec>...\n"
-#| "'git checkout' [-f|--ours|--theirs|-m|--conflict=<style>] [<tree-ish>] --pathspec-from-file=<file> [--pathspec-file-nul]\n"
-#| "'git checkout' (-p|--patch) [<tree-ish>] [--] [<pathspec>...]\n"
+#, ignore-ellipsis, no-wrap, priority:240
 msgid ""
 "'git checkout' [-q] [-f] [-m] [<branch>]\n"
 "'git checkout' [-q] [-f] [-m] --detach [<branch>]\n"
@@ -17970,14 +17934,7 @@ msgid ""
 "'git checkout' [-f|--ours|--theirs|-m|--conflict=<style>] [--] <pathspec>...\n"
 "'git checkout' [-f|--ours|--theirs|-m|--conflict=<style>] --pathspec-from-file=<file> [--pathspec-file-nul]\n"
 "'git checkout' (-p|--patch) [<tree-ish>] [--] [<pathspec>...]\n"
-msgstr ""
-"'git checkout' [-q] [-f] [-m] [<分支>]\n"
-"'git checkout' [-q] [-f] [-m] --detach [<分支>]\n"
-"'git checkout' [-q] [-f] [-m] [--detach] <提交>\n"
-"'git checkout' [-q] [-f] [-m] [[-b|-B|--orphan] <新分支>] [<起点>]\n"
-"'git checkout' [-f|--ours|--theirs|-m|--conflict=<样式>] [<树状对象>] [--] <修饰符>...\n"
-"'git checkout' [-f|--ours|--theirs|-m|--conflict=<样式>] [<树状对象>] --pathspec-from-file=<文件> [--pathspec-file-nul]\n"
-"'git checkout' (-p|--patch) [<树状对象>] [--] [<修饰符>...]\n"
+msgstr "'git checkout' [-q] [-f] [-m] [<分支>]\n'git checkout' [-q] [-f] [-m] --detach [<分支>]\n'git checkout' [-q] [-f] [-m] [--detach] <提交>\n'git checkout' [-q] [-f] [-m] [[-b|-B|--orphan] <新分支>] [<起点>]\n'git checkout' [-f|--ours|--theirs|-m|--conflict=<样式>] [<树状对象>] [--] <修饰符>...\n'git checkout' [-f|--ours|--theirs|-m|--conflict=<样式>] [<树状对象>] --pathspec-from-file=<文件> [--pathspec-file-nul]\n'git checkout' (-p|--patch) [<树状对象>] [--] [<修饰符>...]\n"
 
 #. type: Plain text
 #: en/git-checkout.txt:27
@@ -18020,27 +17977,25 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-checkout.txt:41 en/git-checkout.txt:189
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid "$ git checkout -b <branch> --track <remote>/<branch>\n"
-msgstr "$ git checkout -b <branch> --track <remote>/<branch>\n"
+msgstr "$ git checkout -b <分支> --track <远程仓库>/<分支>\n"
 
 #. type: Plain text
 #: en/git-checkout.txt:47
-#, fuzzy, priority:240
+#, priority:240
 msgid ""
 "You could omit `<branch>`, in which case the command degenerates to \"check "
 "out the current branch\", which is a glorified no-op with rather expensive "
 "side-effects to show only the tracking information, if it exists, for the "
 "current branch."
-msgstr ""
-"你可以省略`<分支>`，在这种情况下，该命令会退化为 "
-"\"检查出当前分支\"，这是一个美化的无操作，具有非常大的副作用，如果存在当前分支的话，只显示当前分支的跟踪信息。"
+msgstr "你可以省略 `<分支>`，在这种情况下，该命令会退化为 “检出当前分支”，这是一个美化的无操作，具有非常大的副作用，如果存在当前分支的话，只显示当前分支的跟踪信息。"
 
 #. type: Labeled list
 #: en/git-checkout.txt:48
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid "'git checkout' -b|-B <new-branch> [<start-point>]"
-msgstr "'git checkout' -b|-B <new_branch> [<start point>]"
+msgstr "'git checkout' -b|-B <新分支> [<起始点>]"
 
 #. type: Plain text
 #: en/git-checkout.txt:56
@@ -18066,13 +18021,11 @@ msgstr "如果给定了`-B'，如果不存在`<新分支>`，就会创建；否�
 
 #. type: delimited block -
 #: en/git-checkout.txt:63
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid ""
 "$ git branch -f <branch> [<start-point>]\n"
 "$ git checkout <branch>\n"
-msgstr ""
-"$ git branch -f <branch> [<start point>]\n"
-"$ git checkout <branch>\n"
+msgstr "$ git branch -f <分支> [<起始点>]\n$ git checkout <分支>\n"
 
 #. type: Plain text
 #: en/git-checkout.txt:67
@@ -18126,13 +18079,11 @@ msgstr "省略`<分支>`会在当前分支的顶端分离`HEAD`。"
 
 #. type: Labeled list
 #: en/git-checkout.txt:84
-#, fuzzy, ignore-ellipsis, no-wrap, priority:240
+#, ignore-ellipsis, no-wrap, priority:240
 msgid ""
 "'git checkout' [-f|--ours|--theirs|-m|--conflict=<style>] [<tree-ish>] [--] "
 "<pathspec>..."
-msgstr ""
-"'git checkout' [-f|--ours|--theirs|-m|--conflict=<style>] [<tree-ish>] [--] "
-"<pathspec>..."
+msgstr "'git checkout' [-f|--ours|--theirs|-m|--conflict=<样式>] [<目录树对象>] [--] <路径规范>..."
 
 #. type: Labeled list
 #: en/git-checkout.txt:85
@@ -18285,9 +18236,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-checkout.txt:150 en/git-worktree.txt:189
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid "-b <new-branch>"
-msgstr "-b <new-branch>"
+msgstr "-b <新分支>"
 
 #. type: Plain text
 #: en/git-checkout.txt:154
@@ -18425,9 +18376,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-checkout.txt:217 en/git-switch.txt:173
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid "--orphan <new-branch>"
-msgstr "--orphan <new-branch>"
+msgstr "--orphan <新分支>"
 
 #. type: Plain text
 #: en/git-checkout.txt:223
@@ -18526,15 +18477,12 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-checkout.txt:267
-#, fuzzy, priority:240
-#| msgid ""
-#| "When checking out paths from the index, this option lets you recreate the "
-#| "conflicted merge in the specified paths."
+#, priority:240
 msgid ""
 "When checking out paths from the index, this option lets you recreate the "
 "conflicted merge in the specified paths.  This option cannot be used when "
 "checking out paths from a tree-ish."
-msgstr "当从索引中检查出路径时，这个选项让你在指定的路径中重新创建冲突的合并。"
+msgstr "从索引中检出路径时，该选项可让你在指定路径中重新创建冲突的合并。  该选项不能用于从目录树对象路径中检出路径。"
 
 #. type: Plain text
 #: en/git-checkout.txt:269
@@ -18669,9 +18617,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-checkout.txt:333 en/git-rebase.txt:282 en/git-switch.txt:36
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid "<branch>"
-msgstr "<branch>"
+msgstr "<分支>"
 
 #. type: Plain text
 #: en/git-checkout.txt:339
@@ -18847,13 +18795,11 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-checkout.txt:417
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid ""
 "$ git checkout v2.0  # or\n"
 "$ git checkout master^^\n"
-msgstr ""
-"$ git checkout v2.0  # or\n"
-"$ git checkout master^^\n"
+msgstr "$ git checkout v2.0  # 或\n$ git checkout master^^\n"
 
 #. type: delimited block -
 #: en/git-checkout.txt:425
@@ -18992,15 +18938,12 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-checkout.txt:488
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid ""
 "$ git checkout -b foo  # or \"git switch -c foo\"  <1>\n"
 "$ git branch foo                                 <2>\n"
 "$ git tag foo                                    <3>\n"
-msgstr ""
-"$ git checkout -b foo   <1>\n"
-"$ git branch foo        <2>\n"
-"$ git tag foo           <3>\n"
+msgstr "$ git checkout -b foo   <1>\n$ git branch foo        <2>\n$ git tag foo           <3>\n"
 
 #. type: Plain text
 #: en/git-checkout.txt:492
@@ -19042,19 +18985,17 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-checkout.txt:505
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid ""
 "$ git reflog -2 HEAD # or\n"
 "$ git log -g -2 HEAD\n"
-msgstr ""
-"$ git reflog -2 HEAD # or\n"
-"$ git log -g -2 HEAD\n"
+msgstr "$ git reflog -2 HEAD # 或\n$ git log -g -2 HEAD\n"
 
 #. type: Title -
 #: en/git-checkout.txt:508
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid "ARGUMENT DISAMBIGUATION"
-msgstr "论点消歧"
+msgstr "参数消歧义"
 
 #. type: Plain text
 #: en/git-checkout.txt:518
@@ -19158,10 +19099,9 @@ msgstr "$ git checkout -- hello.c\n"
 
 #. type: Title ===
 #: en/git-checkout.txt:558
-#, fuzzy, no-wrap, priority:240
-#| msgid "merge"
+#, no-wrap, priority:240
 msgid "2. Merge"
-msgstr "merge"
+msgstr "2. Merge"
 
 #. type: Plain text
 #: en/git-checkout.txt:562 en/git-switch.txt:203
@@ -19188,13 +19128,11 @@ msgstr "然而，你的 \"错误\"分支和正确的`mytopic`分支可能在你�
 
 #. type: delimited block -
 #: en/git-checkout.txt:574
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid ""
 "$ git checkout mytopic\n"
 "error: You have local changes to 'frotz'; not switching branches.\n"
-msgstr ""
-"$ git checkout mytopic\n"
-"error: You have local changes to 'frotz'; not switching branches.\n"
+msgstr "$ git checkout mytopic\n错误：您对 'footz' 有本地更改；未切换分支。\n"
 
 #. type: Plain text
 #: en/git-checkout.txt:578 en/git-switch.txt:219
@@ -19206,13 +19144,11 @@ msgstr "你可以给命令加上 `-m`标志，这样就可以尝试三方合并�
 
 #. type: delimited block -
 #: en/git-checkout.txt:582
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid ""
 "$ git checkout -m mytopic\n"
 "Auto-merging frotz\n"
-msgstr ""
-"$ git checkout -m mytopic\n"
-"Auto-merging frotz\n"
+msgstr "$ git checkout -m mytopic\n自动合并 frotz 分支\n"
 
 #. type: Plain text
 #: en/git-checkout.txt:587 en/git-switch.txt:228
@@ -19225,10 +19161,9 @@ msgstr "在这个三方合并之后，本地的修改并「没有」登记在你
 
 #. type: Title ===
 #: en/git-checkout.txt:588
-#, fuzzy, no-wrap, priority:240
-#| msgid "merge.conflictStyle"
+#, no-wrap, priority:240
 msgid "3. Merge conflict"
-msgstr "merge.conflictStyle"
+msgstr "3. Merge 冲突"
 
 #. type: Plain text
 #: en/git-checkout.txt:592
@@ -19240,17 +19175,13 @@ msgstr "当使用`-m`选项切换分支时发生合并冲突，你会看到类�
 
 #. type: delimited block -
 #: en/git-checkout.txt:598
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid ""
 "$ git checkout -m mytopic\n"
 "Auto-merging frotz\n"
 "ERROR: Merge conflict in frotz\n"
 "fatal: merge program failed\n"
-msgstr ""
-"$ git checkout -m mytopic\n"
-"Auto-merging frotz\n"
-"ERROR: Merge conflict in frotz\n"
-"fatal: merge program failed\n"
+msgstr "$ git checkout -m mytopic\n自动合并 frotz 分支\n错误：对 frotz 分支的合并冲突\n失败：merge 程序终止\n"
 
 #. type: Plain text
 #: en/git-checkout.txt:604
@@ -19679,9 +19610,9 @@ msgstr "参见 linkgit:git-merge[1] 以了解一些解决此类冲突的提示�
 #. type: Labeled list
 #: en/git-cherry-pick.txt:43 en/git-merge.txt:127 en/git-revert.txt:36
 #: en/git-verify-commit.txt:27
-#, fuzzy, ignore-ellipsis, no-wrap, priority:240
+#, ignore-ellipsis, no-wrap, priority:240
 msgid "<commit>..."
-msgstr "<commit>..."
+msgstr "<提交>..."
 
 #. type: Plain text
 #: en/git-cherry-pick.txt:52
@@ -19908,9 +19839,9 @@ msgstr "-X<option>"
 
 #. type: Labeled list
 #: en/git-cherry-pick.txt:155 en/git-revert.txt:111 en/merge-options.txt:152
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid "--strategy-option=<option>"
-msgstr "--strategy-option=<option>"
+msgstr "--strategy-option=<选项>"
 
 #. type: Plain text
 #: en/git-cherry-pick.txt:158 en/git-revert.txt:114
@@ -29039,15 +28970,15 @@ msgstr "开始显示给定路径的差异，跳过前面所有的路径。"
 
 #. type: Labeled list
 #: en/git-difftool.txt:45 en/git-mergetool.txt:27
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid "-t <tool>"
-msgstr "-t <tool>"
+msgstr "-t <工具>"
 
 #. type: Labeled list
 #: en/git-difftool.txt:46 en/git-mergetool.txt:28
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid "--tool=<tool>"
-msgstr "--tool=<tool>"
+msgstr "--tool=<工具>"
 
 #. type: Plain text
 #: en/git-difftool.txt:50
@@ -36677,9 +36608,9 @@ msgstr "在日志信息的第一行使用 <message> 而不是分支名称。 与
 
 #. type: Labeled list
 #: en/git-fmt-merge-msg.txt:47 en/git-merge.txt:81
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid "--into-name <branch>"
-msgstr "--state-branch <branch>"
+msgstr "--state-branch <分支>"
 
 #. type: Plain text
 #: en/git-fmt-merge-msg.txt:50
@@ -49394,13 +49325,11 @@ msgstr "git-mergetool(1)"
 
 #. type: Plain text
 #: en/git-mergetool.txt:7
-#, fuzzy, priority:240
+#, priority:240
 msgid ""
 "git-mergetool - Run merge conflict resolution tools to resolve merge "
 "conflicts"
-msgstr ""
-"git-mergetool - Run merge conflict resolution tools to resolve merge "
-"conflicts"
+msgstr "git-mergetool - 运行合并冲突解决工具以解决合并冲突"
 
 #. type: Plain text
 #: en/git-mergetool.txt:12
@@ -49418,22 +49347,14 @@ msgstr "使用`git mergetool`来运行几个合并工具中的一个来解决合
 
 #. type: Plain text
 #: en/git-mergetool.txt:24
-#, fuzzy, priority:240
-#| msgid ""
-#| "If one or more <file> parameters are given, the merge tool program will be "
-#| "run to resolve differences on each file (skipping those without conflicts)."
-#| "  Specifying a directory will include all unresolved files in that path.  If"
-#| " no <file> names are specified, 'git mergetool' will run the merge tool "
-#| "program on every file with merge conflicts."
+#, priority:240
 msgid ""
 "If one or more <file> parameters are given, the merge tool program will be "
 "run to resolve differences in each file (skipping those without conflicts)."
 "  Specifying a directory will include all unresolved files in that path.  If"
 " no <file> names are specified, 'git mergetool' will run the merge tool "
 "program on every file with merge conflicts."
-msgstr ""
-"如果给出一个或多个<文件>参数，合并工具程序会运行以解决每个文件的差异（跳过那些没有冲突的文件）。  指定一个目录将包括该路径中所有未解决的文件。  "
-"如果没有指定<文件>名称，'git mergetool'将对每个有合并冲突的文件运行合并工具程序。"
+msgstr "如果给出一个或多个 <文件> 参数，合并工具程序会运行以解决每个文件的差异（跳过那些没有冲突的文件）。  指定一个目录将包括该路径中所有未解决的文件。  如果没有指定 <文件> 名称，'git mergetool' 将对每个有合并冲突的文件运行合并工具程序。"
 
 #. type: Plain text
 #: en/git-mergetool.txt:33
@@ -49482,17 +49403,7 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-mergetool.txt:60
-#, fuzzy, priority:240
-#| msgid ""
-#| "When 'git mergetool' is invoked with this tool (either through the `-t` or "
-#| "`--tool` option or the `merge.tool` configuration variable) the configured "
-#| "command line will be invoked with `$BASE` set to the name of a temporary "
-#| "file containing the common base for the merge, if available; `$LOCAL` set to"
-#| " the name of a temporary file containing the contents of the file on the "
-#| "current branch; `$REMOTE` set to the name of a temporary file containing the"
-#| " contents of the file to be merged, and `$MERGED` set to the name of the "
-#| "file to which the merge tool should write the result of the merge "
-#| "resolution."
+#, priority:240
 msgid ""
 "When 'git mergetool' is invoked with this tool (either through the `-t` or "
 "`--tool` option or the `merge.tool` configuration variable), the configured "
@@ -49503,9 +49414,7 @@ msgid ""
 " contents of the file to be merged, and `$MERGED` set to the name of the "
 "file to which the merge tool should write the result of the merge "
 "resolution."
-msgstr ""
-"当'git "
-"mergetool'与该工具一起被调用时（通过`-t`或`--tool`选项或`merge.tool`配置变量），配置的命令行将被调用，`$BASE`被设置为临时文件的名称，包含合并的共同基础（如果有的话）；`$LOCAL`被设置为包含当前分支上的文件内容的临时文件名称；`$REMOTE`被设置为包含要合并文件内容的临时文件名称，以及合并工具应该将合并的结果写入`$MERGED`设置的文件中。"
+msgstr "当 'git mergetool' 与该工具一起被调用时（通过 `-t` 或 `--tool` 选项或 `merge.tool` 配置变量），配置的命令行将被调用， `$BASE` 被设置为临时文件的名称，包含合并的共同基础（如果有的话）； `$LOCAL` 被设置为包含当前分支上的文件内容的临时文件名称；`$REMOTE` 被设置为包含要合并文件内容的临时文件名称，以及合并工具应该将合并的结果写入 `$MERGED` 设置的文件中。"
 
 #. type: Plain text
 #: en/git-mergetool.txt:66
@@ -49552,21 +49461,14 @@ msgstr "--gui"
 
 #. type: Plain text
 #: en/git-mergetool.txt:90
-#, fuzzy, priority:240
-#| msgid ""
-#| "When 'git-mergetool' is invoked with the `-g` or `--gui` option the default "
-#| "merge tool will be read from the configured `merge.guitool` variable instead"
-#| " of `merge.tool`. If `merge.guitool` is not set, we will fallback to the "
-#| "tool configured under `merge.tool`."
+#, priority:240
 msgid ""
 "When 'git-mergetool' is invoked with the `-g` or `--gui` option, the default"
 " merge tool will be read from the configured `merge.guitool` variable "
 "instead of `merge.tool`. If `merge.guitool` is not set, we will fallback to "
 "the tool configured under `merge.tool`. This may be autoselected using the "
 "configuration variable `mergetool.guiDefault`."
-msgstr ""
-"当'git-"
-"mergetool'以`-g`或`--gui`选项调用时，默认的合并工具将从配置的`merge.guitool`变量读取，而不是`merge.tool`。如果`merge.guitool`没有设置，git将会使用`merge.tool`配置的工具。"
+msgstr "当使用 `-g` 或 `--gui` 选项调用 'git-mergetool' 时，默认的合并工具将从配置的 `merge.guitool` 变量中读取，而不是 `merge.tool` 变量。如果未设置 `merge.guitool` 变量，我们将退回到在 `merge.tool` 下配置的工具。这可以通过配置变量 `mergetool.guiDefault` 自动选择。"
 
 #. type: Labeled list
 #: en/git-mergetool.txt:91
@@ -49576,15 +49478,12 @@ msgstr "--no-gui"
 
 #. type: Plain text
 #: en/git-mergetool.txt:95
-#, fuzzy, priority:240
-#| msgid ""
-#| "This overrides a previous `-g` or `--gui` setting and reads the default "
-#| "merge tool will be read from the configured `merge.tool` variable."
+#, priority:240
 msgid ""
 "This overrides a previous `-g` or `--gui` setting or `mergetool.guiDefault` "
 "configuration and reads the default merge tool from the configured "
 "`merge.tool` variable."
-msgstr "这将覆盖之前的`-g`或`-gui`设置，并将从配置的`merge.tool`变量读取默认的合并工具。"
+msgstr "这将覆盖之前的 `-g` 或 `--gui` 设置，并将从配置的 `merge.tool` 变量读取默认的合并工具。"
 
 #. type: Plain text
 #: en/git-mergetool.txt:102
@@ -49617,20 +49516,16 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-mergetool.txt:120
-#, fuzzy, priority:240
-#| msgid ""
-#| "Setting the `mergetool.keepBackup` configuration variable to `false` causes "
-#| "`git mergetool` to automatically remove the backup as files are successfully"
-#| " merged."
+#, priority:240
 msgid ""
 "Setting the `mergetool.keepBackup` configuration variable to `false` causes "
 "`git mergetool` to automatically remove the backup files as files are "
 "successfully merged."
-msgstr "将`mergetool.keepBackup`配置变量设置为`false`会使`git mergetool`在文件成功合并后自动删除备份。"
+msgstr "将 `mergetool.keepBackup` 配置变量设置为 `false` 会使 `git mergetool` 在文件成功合并后自动删除备份。"
 
 #. type: Title -
 #: en/git-mergetool.txt:122
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid "BACKEND SPECIFIC HINTS"
 msgstr "后端特定提示"
 
@@ -50388,13 +50283,13 @@ msgstr "git-merge(1)"
 
 #. type: Plain text
 #: en/git-merge.txt:7
-#, fuzzy, priority:240
+#, priority:240
 msgid "git-merge - Join two or more development histories together"
-msgstr "git-merge - Join two or more development histories together"
+msgstr "git-merge - 将两个或多个开发历史合并在一起"
 
 #. type: Plain text
 #: en/git-merge.txt:18
-#, fuzzy, ignore-ellipsis, no-wrap, priority:240
+#, ignore-ellipsis, no-wrap, priority:240
 msgid ""
 "'git merge' [-n] [--stat] [--no-commit] [--squash] [--[no-]edit]\n"
 "\t[--no-verify] [-s <strategy>] [-X <strategy-option>] [-S[<keyid>]]\n"
@@ -50402,13 +50297,7 @@ msgid ""
 "\t[--[no-]rerere-autoupdate] [-m <msg>] [-F <file>]\n"
 "\t[--into-name <branch>] [<commit>...]\n"
 "'git merge' (--continue | --abort | --quit)\n"
-msgstr ""
-"'git merge' [-n] [-stat] [--no-commit] [--squash] [--[no-]edit] [--[no-] edit\n"
-"\t[--no-verify] [-s <strategy>] [-X <strategy-option>] [-S[<keyid>]] 。\n"
-"\t[--[no-]allow-unrelated-histories] [--[no-]allow-unrelated-histories]。\n"
-"\t[--[no-]reer-autoupdate] [-m <msg>] [-F <file>] 。\n"
-"\t[--into-name <branch>] [<commit>...］\n"
-"'git merge' (--continue |-abort |-quit)\n"
+msgstr "'git merge' [-n] [-stat] [--no-commit] [--squash] [--[no-]edit] [--[no-] edit\n\t[--no-verify] [-s <策略>] [-X <策略选项>] [-S[<键 ID>]] 。\n\t[--[no-]allow-unrelated-histories] [--[no-]allow-unrelated-histories]。\n\t[--[no-]reer-autoupdate] [-m <信息>] [-F <文件>] 。\n\t[--into-name <分支>] [<提交>...］\n'git merge' (--continue |-abort |-quit)\n"
 
 #. type: Plain text
 #: en/git-merge.txt:26
@@ -50521,15 +50410,12 @@ msgstr "如果指定了`--log`，正在合并的提交的简短日志将被附�
 
 #. type: Plain text
 #: en/git-merge.txt:80
-#, fuzzy, priority:240
+#, priority:240
 msgid ""
 "The 'git fmt-merge-msg' command can be used to give a good default for "
 "automated 'git merge' invocations. The automated message can include the "
 "branch description."
-msgstr ""
-"The 'git fmt-merge-msg' command can be used to give a good default for "
-"automated 'git merge' invocations. The automated message can include the "
-"branch description."
+msgstr "'git fmt-merge-msg' 命令可以为自动 'git merge' 调用提供一个良好的默认值。自动信息可以包括分支描述。"
 
 #. type: Plain text
 #: en/git-merge.txt:85
@@ -50577,17 +50463,13 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-merge.txt:116
-#, fuzzy, priority:240
+#, priority:240
 msgid ""
 "'git merge --abort' is equivalent to 'git reset --merge' when `MERGE_HEAD` "
 "is present unless `MERGE_AUTOSTASH` is also present in which case 'git merge"
 " --abort' applies the stash entry to the worktree whereas 'git reset "
 "--merge' will save the stashed changes in the stash list."
-msgstr ""
-"'git merge --abort' is equivalent to 'git reset --merge' when `MERGE_HEAD` "
-"is present unless `MERGE_AUTOSTASH` is also present in which case 'git merge"
-" --abort' applies the stash entry to the worktree whereas 'git reset "
-"--merge' will save the stashed changes in the stash list."
+msgstr "当 `MERGE_HEAD` 存在时，'git merge --abort' 等同于 'git reset --merge' ，除非 `MERGE_AUTOSTASH`也存在，在这种情况下 'git merge --abort' 会将暂存项应用到工作区重，而 'git reset --merge' 则会将暂存的改动保存在暂存列表中。"
 
 #. type: Plain text
 #: en/git-merge.txt:121
@@ -50762,23 +50644,14 @@ msgstr "合并干净的路径在索引文件和你的工作区中都更新了。
 
 #. type: Plain text
 #: en/git-merge.txt:199
-#, fuzzy, priority:240
-#| msgid ""
-#| "For conflicting paths, the index file records up to three versions: stage 1 "
-#| "stores the version from the common ancestor, stage 2 from `HEAD`, and stage "
-#| "3 from `MERGE_HEAD` (you can inspect the stages with `git ls-files -u`).  "
-#| "The working tree files contain the result of the \"merge\" program; i.e. "
-#| "3-way merge results with familiar conflict markers `<<<` `===` `>>>`."
+#, priority:240
 msgid ""
 "For conflicting paths, the index file records up to three versions: stage 1 "
 "stores the version from the common ancestor, stage 2 from `HEAD`, and stage "
 "3 from `MERGE_HEAD` (you can inspect the stages with `git ls-files -u`).  "
 "The working tree files contain the result of the merge operation; i.e. 3-way"
 " merge results with familiar conflict markers `<<<` `===` `>>>`."
-msgstr ""
-"对于冲突的路径，索引文件最多记录三个版本：第1阶段存储来自共同祖先的版本，第2阶段来自`HEAD`，第3阶段来自`MERGE_HEAD`（你可以用`git"
-" ls-files -u`检查这些阶段）。  工作区文件包含了\"合并\"程序的结果；即带有熟悉的冲突标记`<<<` "
-"`===``>>>`的三方合并结果。"
+msgstr "对于冲突的路径，索引文件最多记录三个版本：第1阶段存储来自共同祖先的版本，第2阶段来自 `HEAD` ，第3阶段来自 `MERGE_HEAD` （你可以用`git ls-files -u` 检查这些阶段）。  工作目录树文件包含了 “合并” 程序的结果；即带有熟悉的冲突标记 `<<<` `===` `>>>` 的三方合并结果。"
 
 #. type: Plain text
 #: en/git-merge.txt:203
@@ -50860,9 +50733,9 @@ msgstr ""
 
 #. type: Title -
 #: en/git-merge.txt:236
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid "HOW CONFLICTS ARE PRESENTED"
-msgstr "冲突是如何出现的"
+msgstr "冲突如何呈现"
 
 #. type: Plain text
 #: en/git-merge.txt:245
@@ -50985,14 +50858,13 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-merge.txt:294
-#, fuzzy, priority:240
-#| msgid "A \"combined diff\" format looks like this:"
+#, priority:240
 msgid "while in \"zdiff3\" style, it may look like this:"
-msgstr "\"合并的差异\" 的格式如下："
+msgstr "而在 \"zdiff3\" 样式中，它可能看起来像这样："
 
 #. type: delimited block -
 #: en/git-merge.txt:309
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid ""
 "Here are lines that are either unchanged from the common\n"
 "ancestor, or cleanly resolved because only one side changed,\n"
@@ -51007,20 +50879,7 @@ msgid ""
 "Git makes conflict resolution easy.\n"
 ">>>>>>> theirs:sample.txt\n"
 "And here is another line that is cleanly resolved or unmodified.\n"
-msgstr ""
-"这里是与共同的祖先相比没有变化的行。\n"
-"祖先没有变化，或者因为只有一方发生了变化而得到干净的解决、\n"
-"或者因为两边都有相同的变化而被干净地解决了。\n"
-"<<<<<<< yours:sample.txt\n"
-"冲突的解决是困难的；\n"
-"让我们去购物吧。\n"
-"||||||| base:sample.txt\n"
-"或干净利落地解决，因为双方的变化都一样。\n"
-"冲突的解决是很难的。\n"
-"=======\n"
-"Git让冲突解决变得简单。\n"
-">>>>>>> theirs:sample.txt\n"
-"而这里是另一行被干净地解决或未修改的内容。\n"
+msgstr "这里是与共同的祖先相比没有变化的行。\n祖先没有变化，或者因为只有一方发生了变化而得到干净的解决、\n或者因为两边都有相同的变化而被干净地解决了。\n<<<<<<< yours:sample.txt\n冲突的解决是困难的；\n让我们去购物吧。\n||||||| base:sample.txt\n或干净利落地解决，因为双方的变化都一样。\n冲突的解决是很难的。\n=======\nGit 让冲突解决变得简单。\n>>>>>>> theirs:sample.txt\n而这里是另一行被干净地解决或未修改的内容。\n"
 
 #. type: Plain text
 #: en/git-merge.txt:317
@@ -51081,27 +50940,21 @@ msgstr "你可以用一些工具来解决冲突："
 
 #. type: Plain text
 #: en/git-merge.txt:340
-#, fuzzy, priority:240
-#| msgid ""
-#| "Use a mergetool.  `git mergetool` to launch a graphical mergetool which will"
-#| " work you through the merge."
+#, priority:240
 msgid ""
 "Use a mergetool.  `git mergetool` to launch a graphical mergetool which will"
 " work through the merge with you."
-msgstr "使用一个mergetool。  `git mergetool`启动一个图形化的mergetool，它将帮助你完成合并工作。"
+msgstr "使用一个合并工具。  `git mergetool`启动一个图形化的合并工具，它将帮助你完成合并工作。"
 
 #. type: Plain text
 #: en/git-merge.txt:345
-#, fuzzy, priority:240
-#| msgid ""
-#| "Look at the diffs.  `git diff` will show a three-way diff, highlighting "
-#| "changes from both the `HEAD` and `MERGE_HEAD` versions."
+#, priority:240
 msgid ""
 "Look at the diffs.  `git diff` will show a three-way diff, highlighting "
 "changes from both the `HEAD` and `MERGE_HEAD` versions. `git diff "
 "AUTO_MERGE` will show what changes you've made so far to resolve textual "
 "conflicts."
-msgstr "查看差异。`git diff`将会显示一个三向差异，突出显示从`HEAD`和`MERGE_HEAD`版本的变化。"
+msgstr "查看差异。`git diff` 将会显示一个三向差异，突出显示从`HEAD` 和 `MERGE_HEAD` 版本的变化。"
 
 #. type: Plain text
 #: en/git-merge.txt:349
@@ -51133,9 +50986,9 @@ msgstr "合并分支 `fixes` 和 `enhancements`到当前分支之上, 进行多�
 
 #. type: delimited block -
 #: en/git-merge.txt:364
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid "$ git merge fixes enhancements\n"
-msgstr "$ git merge fixes enhancements\n"
+msgstr "$ git merge 修复增强功能\n"
 
 #. type: Plain text
 #: en/git-merge.txt:368
@@ -56150,9 +56003,9 @@ msgstr "显示进度。"
 
 #. type: Labeled list
 #: en/git-prune.txt:48 en/git-worktree.txt:261
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid "--expire <time>"
-msgstr "--expire <time>"
+msgstr "--expire <时间>"
 
 #. type: Plain text
 #: en/git-prune.txt:50
@@ -72391,15 +72244,15 @@ msgstr "git-show(1)"
 
 #. type: Plain text
 #: en/git-show.txt:7
-#, fuzzy, priority:240
+#, priority:240
 msgid "git-show - Show various types of objects"
-msgstr "git-show - Show various types of objects"
+msgstr "git-show - 显示各种类型的对象"
 
 #. type: Plain text
 #: en/git-show.txt:13
-#, fuzzy, ignore-ellipsis, no-wrap, priority:240
+#, ignore-ellipsis, no-wrap, priority:240
 msgid "'git show' [<options>] [<object>...]\n"
-msgstr "'git show' [<options>] [<object>...]\n"
+msgstr "'git show' [<选项>] [<对象>...]\n"
 
 #. type: Plain text
 #: en/git-show.txt:17
@@ -72409,11 +72262,11 @@ msgstr "显示一个或多个对象（Blobs、树、标签和提交）。"
 
 #. type: Plain text
 #: en/git-show.txt:21
-#, fuzzy, priority:240
+#, priority:240
 msgid ""
 "For commits it shows the log message and textual diff. It also presents the "
 "merge commit in a special format as produced by 'git diff-tree --cc'."
-msgstr "对于提交，它显示日志信息和文本差异。并会以一种特殊的格式显示合并提交，就像 \"git diff-tree --cc \"所产生的信息那样。"
+msgstr "对于提交，它显示日志信息和文本差异。并会以一种特殊的格式显示合并提交，就像 'git diff-tree --cc' 所产生的信息那样。"
 
 #. type: Plain text
 #: en/git-show.txt:23
@@ -72437,14 +72290,11 @@ msgstr "对于普通二进制对象，它显示普通内容。"
 
 #. type: Plain text
 #: en/git-show.txt:31
-#, fuzzy, priority:240
-#| msgid ""
-#| "The command takes options applicable to the 'git diff-tree' command to "
-#| "control how the changes the commit introduces are shown."
+#, priority:240
 msgid ""
 "Some options that 'git log' command understands can be used to control how "
 "the changes the commit introduces are shown."
-msgstr "该命令采用适用于'git diff-tree'命令的选项来控制提交所带来的变化的显示方式。"
+msgstr "'git log' 命令理解的一些选项可以用来控制如何显示提交带来的改动。"
 
 #. type: Plain text
 #: en/git-show.txt:33
@@ -72485,11 +72335,9 @@ msgstr "`git show v1.0.0`"
 
 #. type: Plain text
 #: en/git-show.txt:66
-#, fuzzy, priority:240
-#| msgid ""
-#| "Shows the tag `v1.0.0`, along with the object the tags points at."
+#, priority:240
 msgid "Shows the tag `v1.0.0`, along with the object the tag points at."
-msgstr "显示标签`v1.0.0`，以及标签指向的对象。"
+msgstr "显示标签 `v1.0.0`，以及标签指向的对象。"
 
 #. type: Labeled list
 #: en/git-show.txt:67
@@ -72807,7 +72655,7 @@ msgstr "git-stash - 将变化藏在一个脏工作区中"
 
 #. type: Plain text
 #: en/git-stash.txt:26
-#, fuzzy, ignore-ellipsis, no-wrap, priority:240
+#, ignore-ellipsis, no-wrap, priority:240
 msgid ""
 "'git stash' list [<log-options>]\n"
 "'git stash' show [-u | --include-untracked | --only-untracked] [<diff-options>] [<stash>]\n"
@@ -72824,22 +72672,7 @@ msgid ""
 "'git stash' clear\n"
 "'git stash' create [<message>]\n"
 "'git stash' store [(-m | --message) <message>] [-q | --quiet] <commit>\n"
-msgstr ""
-"'git stash' list [<log-options>]\n"
-"'git stash' show [-u | --include-untracked | --only-untracked] [<diff-options>] [<stash>]\n"
-"'git stash' drop [-q | --quiet] [<stash>]\n"
-"'git stash' pop [--index] [-q | --quiet] [<stash>]\n"
-"'git stash' apply [--index] [-q | --quiet] [<stash>]\n"
-"'git stash' branch <branchname> [<stash>]\n"
-"'git stash' [push [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-q | --quiet]\n"
-"\t     [-u | --include-untracked] [-a | --all] [(-m | --message) <message>]\n"
-"\t     [--pathspec-from-file=<file> [--pathspec-file-nul]]\n"
-"\t     [--] [<pathspec>...]]\n"
-"'git stash' save [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-q | --quiet]\n"
-"\t     [-u | --include-untracked] [-a | --all] [<message>]\n"
-"'git stash' clear\n"
-"'git stash' create [<message>]\n"
-"'git stash' store [(-m | --message) <message>] [-q | --quiet] <commit>\n"
+msgstr "'git stash' list [<日志选项>]\n'git stash' show [-u | --include-untracked | --only-untracked] [<差异选项>] [<暂存>]\n'git stash' drop [-q | --quiet] [<暂存>]\n'git stash' pop [--index] [-q | --quiet] [<暂存>]\n'git stash' apply [--index] [-q | --quiet] [<暂存>]\n'git stash' branch <分支名> [<暂存>]\n'git stash' [push [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-q | --quiet]\n\t     [-u | --include-untracked] [-a | --all] [(-m | --message) <信息>]\n\t     [--pathspec-from-file=<文件> [--pathspec-file-nul]]\n\t     [--] [<路径规范>...]]\n'git stash' save [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-q | --quiet]\n\t     [-u | --include-untracked] [-a | --all] [<信息>]\n'git stash' clear\n'git stash' create [<信息>]\n'git stash' store [(-m | --message) <信息>] [-q | --quiet] <提交>\n"
 
 #. type: Plain text
 #: en/git-stash.txt:34
@@ -72883,15 +72716,12 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-stash.txt:53
-#, fuzzy, ignore-ellipsis, no-wrap, priority:240
+#, ignore-ellipsis, no-wrap, priority:240
 msgid ""
 "push [-p|--patch] [-S|--staged] [-k|--[no-]keep-index] [-u|--include-"
 "untracked] [-a|--all] [-q|--quiet] [(-m|--message) <message>] [--pathspec-"
 "from-file=<file> [--pathspec-file-nul]] [--] [<pathspec>...]"
-msgstr ""
-"push [-p|--patch] [-S|--staged] [-k|--[no-]keep-index] [-u|--include-"
-"untracked] [-a|--all] [-q|--quiet] [-m|--message <message>] [--pathspec-"
-"from-file=<file> [--pathspec-file-nul]] [--] [<pathspec>...]"
+msgstr "push [-p|--patch] [-S|--staged] [-k|--[no-]keep-index] [-u|--include-untracked] [-a|--all] [-q|--quiet] [-m|--message <信息>] [--pathspec-from-file=<文件> [--pathspec-file-nul]] [--] [<路径规范>...]"
 
 #. type: Plain text
 #: en/git-stash.txt:59
@@ -95890,9 +95720,9 @@ msgstr "这意味着默认情况下是`--topo-order`选项，但也可以指定`
 
 #. type: Labeled list
 #: en/rev-list-options.txt:1191
-#, fuzzy, no-wrap, priority:260
+#, no-wrap, priority:260
 msgid "--show-linear-break[=<barrier>]"
-msgstr "--show-linear-break[=<barrier>]"
+msgstr "--show-linear-break[=<阻隔>]"
 
 #. type: Plain text
 #: en/rev-list-options.txt:1197
@@ -95910,17 +95740,14 @@ msgstr ""
 # ERROR: --left-right not found in translation
 #. type: Plain text
 #: en/rev-list-options.txt:1207
-#, priority:260, fuzzy
+#, priority:260
 msgid ""
 "Print a number stating how many commits would have been listed, and suppress"
 " all other output.  When used together with `--left-right`, instead print "
 "the counts for left and right commits, separated by a tab. When used "
 "together with `--cherry-mark`, omit patch equivalent commits from these "
 "counts and print the count for equivalent commits separated by a tab."
-msgstr ""
-"打印一个数字，说明有多少提交会被列出，并抑制所有其他输出。  当与`--左--"
-"右'一起使用时，会打印左和右的提交计数，用制表符分开。当与`--cherry-"
-"mark`一起使用时，从这些计数中省略补丁等价提交，而打印等价提交的计数，用tab分隔。"
+msgstr "打印一个数字，说明有多少提交会被列出，并抑制所有其他输出。  当与 `-left-right` 选项一起使用时，会打印左和右的提交计数，用制表符分开。当与 `--cherry-mark` 一起使用时，从这些计数中省略补丁等价提交，而打印等价提交的计数，用制表符分隔。"
 
 #. type: Plain text
 #: en/sequencer.txt:5
