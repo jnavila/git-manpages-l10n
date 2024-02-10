@@ -34,7 +34,7 @@ FALSE_POSITIVES = re.compile('example\\.(com|org)|git-(related|foo|branch|rev-li
 def main(filename: str, modify: bool = False):
     '''check that the segments that contain known fixed strings are translated with the same fixed strings '''
 
-    po = polib.pofile(filename)
+    po = polib.pofile(filename, wrapwidth=0)
     modified = False
     for entry in po:
         if entry.msgstr != "" and not entry.obsolete and not entry.fuzzy:
