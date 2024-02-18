@@ -25,11 +25,15 @@ LINKGIT_REGEX = re.compile(r'linkgit:([^\[]+)\[([^\]]+)\]' +
 	r'|' +
 	r'\b[a-z-]+--[a-z-]+' +
 	r'|' +
-	r'--[a-zA-Z0-9-=]+' +
+	r'--[a-zA-Z0-9-=[\]()\|]+' +
 	r'|' +
-	r'%%\(.*?\)')
+	r'%%\(.*?\)'
+	r'|' +
+	r'HEAD'
+	r'|' +
+	r'(https?://|\blink:)[^\s[]+\[')
 
-FALSE_POSITIVES = re.compile('example\\.(com|org)|git-(related|foo|branch|rev-list-args|repository|dir|upload-archive|stdin)|i\\.e|section\\.subsection|my_script|object--potentially|executable--these|file\\.bundle|full\\.bundle|\\$newbranch|\\$(name|command|rev_name)|repository--the|(repo|project)\\.git|host\\.xz|section\\.key|project_cvs_checkout|TAG_FIXUP|refspecs--they|A_PATH_TO|filename-as-in--w|(sample|file)\\.txt|omitted--such|ORIG_PATH|num_lines|HEAD_name|host_or_ipaddr|(dir|module)_name|notes_ref|email.address|--listen=hostname|--user-path=path|upstream_branch|hook_command_pathname|key_id|my\\.pack|chapter_1|socket_type|pond\\.org|foo\\.example|SOME_ENVRONMENT_VARIABLE|figure_1|--list-cmds=group')
+FALSE_POSITIVES = re.compile('example\\.(com|org)|git-(related|foo|branch|rev-list-args|repository|dir|upload-archive|stdin)|i\\.e|section\\.subsection|my_script|object--potentially|executable--these|file\\.bundle|full\\.bundle|\\$newbranch|\\$(name|command|rev_name)|repository--the|(repo|project)\\.git|host\\.xz|section\\.key|project_cvs_checkout|TAG_FIXUP|refspecs--they|A_PATH_TO|filename-as-in--w|(sample|file)\\.txt|omitted--such|ORIG_PATH|num_lines|HEAD_name|host_or_ipaddr|(dir|module)_name|notes_ref|email.address|--listen=hostname|--user-path=path|upstream_branch|hook_command_pathname|key_id|my\\.pack|chapter_1|socket_type|pond\\.org|foo\\.example|SOME_ENVIRONMENT_VARIABLE|figure_1|--list-cmds=group')
 
 def main(filename: str, modify: bool = False):
     '''check that the segments that contain known fixed strings are translated with the same fixed strings '''
@@ -38,17 +42,29 @@ def main(filename: str, modify: bool = False):
     modified = False
     for entry in po:
         if entry.msgstr != "" and not entry.obsolete and not entry.fuzzy:
-            for matched in LINKGIT_REGEX.finditer(entry.msgid):
-                g = matched.group(0)
-                if not FALSE_POSITIVES.findall(g) and matched.group(0) not in entry.msgstr:
-                    print(f"ERROR {filename}: {entry.msgid}, {entry.msgstr}:\n  {matched.group(0)} not found in translation")
-                    if entry.tcomment != "":
-                        entry.tcomment += "\n"
-                    entry.tcomment += f"ERROR: {matched.group(0)} not found in translation"
-                    flags = set(entry.flags)
-                    flags.add("fuzzy")
-                    entry.flags = list(flags)
-                    modified = True
+              for matched in LINKGIT_REGEX.finditer(entry.msgid):
+                  g = matched.group(0)
+                  if not FALSE_POSITIVES.findall(g) and matched.group(0) not in entry.msgstr:
+                      print(f"ERROR {filename}: {entry.msgid}, {entry.msgstr}:\n  {matched.group(0)} not found in translation")
+                      if entry.tcomment != "":
+                          entry.tcomment += "\n"
+                      entry.tcomment += f"ERROR: {matched.group(0)} not found in translation"
+                      flags = set(entry.flags)
+                      flags.add("fuzzy")
+                      entry.flags = list(flags)
+                      modified = True
+        placeholders = []
+        for matched in LINKGIT_REGEX.finditer(entry.msgid):
+            g = matched.group(0)
+            ''' if the string is present, tag it as a placeholder for weblate '''
+            if not FALSE_POSITIVES.findall(g):
+                placeholders.append(g)
+        if len(placeholders):
+            modified = True
+            flags = [f for f in entry.flags if not f.startswith("placeholders:")]
+            flags.append("placeholders:'" + "':'".join(placeholders) + "'")
+            entry.flags = flags
+
     if modified and modify:
         po.save(filename)
 
