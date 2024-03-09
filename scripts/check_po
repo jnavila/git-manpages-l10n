@@ -46,35 +46,27 @@ def main(filename: str, modify: bool = False):
     translated with the same fixed strings'''
 
     po = polib.pofile(filename, wrapwidth=0)
-    file_modified = False
     for entry in po:
         flags = set(entry.flags)
-        flags_modified= False
-        if entry.msgstr != "" and not entry.obsolete and not entry.fuzzy:
-            for matched in LINKGIT_REGEX.finditer(entry.msgid):
-                g = matched.group(0)
-                if not FALSE_POSITIVES.findall(g) and matched.group(0) not in entry.msgstr:
-                    print(f"ERROR {filename}: {entry.msgid}, {entry.msgstr}:\n  {matched.group(0)} not found in translation")
-                    if entry.tcomment != "":
-                        entry.tcomment += "\n"
-                    entry.tcomment += f"ERROR: {matched.group(0)} not found in translation"
-                    flags.add("fuzzy")
-                    flags_modified = True
         placeholders = []
         for matched in LINKGIT_REGEX.finditer(entry.msgid):
             g = matched.group(0)
             # if the string is present, tag it as a placeholder for weblate
             if not FALSE_POSITIVES.findall(g):
                 placeholders.append(g)
+                if entry.msgstr != "" and not entry.obsolete and not entry.fuzzy and matched.group(0) not in entry.msgstr:
+                    print(f"ERROR {filename}: {entry.msgid}, {entry.msgstr}:\n  {matched.group(0)} not found in translation")
+                    if entry.tcomment != "":
+                        entry.tcomment += "\n"
+                    entry.tcomment += f"ERROR: {matched.group(0)} not found in translation"
+                    flags.add("fuzzy")
+        flags = {x for x in flags if x.startswith("priority") or x in ["fuzzy", "no-wrap", "ignore-same", "ignore-ellipsis"]}
         if len(placeholders) > 0:
-            flags_modified = True
-            flags = {x for x in flags if not x.startswith("placeholders:")}
             flags.add("placeholders:'" + "':'".join(placeholders) + "'")
-
-        if flags_modified:
-            file_modified = True
-            entry.flags = list(flags)
-    if file_modified and modify:
+        flags = list(flags)
+        flags.sort()
+        entry.flags = flags
+    if modify:
         po.save(filename)
 
 
