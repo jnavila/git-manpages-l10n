@@ -3,41 +3,97 @@
 import polib
 import re
 import sys
+LINKGIT_REGEX = re.compile(r'linkgit:([^\[]+)\[([^\]]+)\]' +
+                           r'|' +
+                           r'\$?\{[-a-zA-Z0-9_]+\}' +
+                           r'|' +
+                           r'<<[a-zA-Z0-9_]+(>>|,)' +
+                           r'|' +
+                           r'\$[a-zA-Z][a-zA-Z0-9_]+' +
+                           r'|' +
+                           r'\$\([a-zA-Z][a-zA-Z0-9_]+\)' +
+                           r'|' +
+                           r'\b([a-zA-Z]+\.)+[a-z][a-zA-Z]+\b'
+                           r'|' +
+                           r'\b[a-zA-Z0-9_]+_[a-zA-Z0-9]+\b' +
+                           r'|' +
+                           r'\bgit-[a-z-]+'
+                           r'|' +
+                           r'\bgit [a-z]+-[a-z-]+' +
+                           r'|' +
+                           r'\b[a-z-]+--[a-z-]+' +
+                           r'|' +
+                           r'[\[`]?--[a-zA-Z0-9-]+(=[\[\]()\|a-zA-Z0-9+-]*)?(\[=[\[\]()\|a-zA-Z0-9-]+\])?[\]`]?' +
+                           r'|' +
+                           r'`-[a-zA-Z]`' +
+                           r'|' +
+                           r'%%\(.*?\)'
+                           r'|' +
+                           r'HEAD'
+                           r'|' +
+                           r'\[\[.*?\]\]\]?'
+                           r'|' +
+                           r'\.git(/[A-Z_]+|attributes|ignore|/info/exclude)'
+                           r'|' +
+                           r'(https?://|\blink:)[^\s[]+\[')
+
+FALSE_POSITIVES = re.compile('example\\.(com|org)|git-(related|foo|branch|rev-list-args|repository|dir|upload-archive|stdin)|i\\.e|section\\.subsection|my_script|object--potentially|executable--these|file\\.bundle|full\\.bundle|\\$newbranch|\\$(name|command|rev_name)|repository--the|(repo|project)\\.git|host\\.xz|section\\.key|project_cvs_checkout|TAG_FIXUP|refspecs--they|A_PATH_TO|filename-as-in--w|(sample|file)\\.txt|omitted--such|ORIG_PATH|num_lines|HEAD_name|host_or_ipaddr|(dir|module)_name|notes_ref|email.address|--listen=hostname|--user-path=path|upstream_branch|hook_command_pathname|key_id|my\\.pack|chapter_1|socket_type|pond\\.org|foo\\.example|SOME_ENVIRONMENT_VARIABLE|figure_1|--list-cmds=group')
 
 def main (f, d=None):
     po = polib.pofile(f, wrapwidth=0)
-    option_re = re.compile(r'(-[-a-z0-9[\]\|()]+)|--exec=<git-upload-archive>')
+    option_re = re.compile(r'([\[`]?-[-a-zA-Z0-9]+(=[\[\]()\|a-zA-Z0-9+-]*)?(\[=[\[\]()\|a-zA-Z0-9-]+\])?[\]`]?)|--exec=<git-upload-archive>')
     linkgit_re = re.compile(r'((linkgit:)?(git[-a-z0-9[\]]+|mail)(\[[157]\]|\([157]\))(,|;)?(\n| )?)+\.?')
     quoted_re = re.compile(r'\'?%[a-zA-Z]+\'?|(`[a-zA-Z-_]+`(, )?)+|\'(oneline|short|medium|full(er)?|email|raw|(un)?set|unspecified|init|fetch|clone|rebase|dcommit|branch|tag|log|blame|find-rev|set-tree|(create|show)-ignore|mkdirs|commit-diff)\'|(user|transfer|submodule|stash|status|splitIndex|showbranch|sendemail|repack|remote|receive|push|merge(tool)?|mailinfo|log|interactive|instaweb|i18n|help|gui|gitweb|fastimport|format|fetch|diff(tool)?|credential|commit|column|core|branch|apply|color|git-p4)\.[a-zA-Z_.]+|araxis|bc[34]?|codecompare|deltawalker|guiffy|meld|diff(use|merge)|(exam|[gn]?vim|t?k|open|xx)?diff[123]?|(ec?|p4|s|tortoise|win)merge|update|create|delete|verify|option|resolve|recursive|octopus|ours|subtree|theirs|patience|diff-algorithm=\[[a-z\|]+\]|ignore-(space-change|all-space|(cr|space)-at-eol)|(no-)?renormalize|no-renames|no|default|plain|blocks|(dimmed-)?zebra|allow-indentation-change|color|porcelain|none|list|(un)?lock|(re)?move|prune|die|usage|set_reflog_action|git_editor|cd_to_toplevel|require_work_tree(_exists)?|get_author_ident_from_commit|create_virtual_base|add|copy|append|edit|show|merge|get-ref')
     env_var_re = re.compile(r'`?GIT_[A-Z_\d]+`?')
     if not d is None:
-            po_file=polib.pofile(d, wrapwidth=0)
-            pod = [(re.compile(entry.msgid), entry.msgstr) for entry in po_file]
+        po_file=polib.pofile(d, wrapwidth=0)
+        pod = [(re.compile(entry.msgid), entry.msgstr) for entry in po_file]
+    else:
+         pod = None
     for entry in po:
+        flags = set(entry.flags)
+        # polib does not understand advanced flags used by weblate (basic split on ',')
+        # so we filter them before
+        flags = {x for x in flags if x.startswith("priority") or x in ["fuzzy", "no-wrap"]}
         if option_re.fullmatch(entry.msgid) \
            or linkgit_re.fullmatch(entry.msgid) \
            or quoted_re.fullmatch(entry.msgid) \
            or env_var_re.fullmatch(entry.msgid):
             entry.msgstr = entry.msgid
-            entry.flags.append("ignore-same")
-            flags = sorted(set(entry.flags))
-            entry.flags = list(flags)
-            remove_fuzzy(entry)
-        elif not d is None:
+            flags.add("ignore-same")
+            flags.discard("fuzzy")
+            entry.previous_msgid = None
+        elif pod is not None:
             for (entryre, entryrep) in pod:
                 if entryre.fullmatch(entry.msgid):
                     entry.msgstr = entryre.sub(entryrep, entry.msgid)
-                    remove_fuzzy(entry)
-                    break
-        if "..." in entry.msgid:
-            entry.flags = list(sorted(set(entry.flags + ["ignore-ellipsis"])))
+                    flags.add("ignore-same")
+                    flags.discard("fuzzy")
+                    entry.previous_msgid = None
+        else:
+            placeholders = []
+            for matched in LINKGIT_REGEX.finditer(entry.msgid):
+                g = matched.group(0)
+                # if the string is present, tag it as a placeholder for weblate
+                if not FALSE_POSITIVES.findall(g):
+                    placeholders.append(g)
+                    if entry.msgstr != "" and not entry.obsolete and not entry.fuzzy and matched.group(0) not in entry.msgstr:
+                        print(f"ERROR {f}: {entry.msgid}, {entry.msgstr}:\n  {matched.group(0)} not found in translation")
+                        if entry.tcomment != "":
+                            entry.tcomment += "\n"
+                        entry.tcomment += f"ERROR: {matched.group(0)} not found in translation"
+                        flags.add("fuzzy")
+
+            if len(placeholders) > 0:
+                flags.add("placeholders:'" + "':'".join(placeholders) + "'")
+
+            if "..." in entry.msgid:
+                flags.add("ignore-ellipsis")
+        flags = list(flags)
+        flags.sort()
+        entry.flags = flags
+
     po.save(f)
-
-def remove_fuzzy (entry):
-            if 'fuzzy' in entry.flags:
-                entry.flags.remove('fuzzy')
-                entry.previous_msgid = None
-
 
 if __name__ == '__main__':
     if len(sys.argv)>2:
