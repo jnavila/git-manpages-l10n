@@ -14,10 +14,10 @@ module Git
           "<ulink url=\"#{prefix}#{target}.html\">" \
           "#{target}(#{attrs[1]})</ulink>"
         elsif parent.document.basebackend? 'html'
-          %(<a href="#{prefix}#{target}.html">#{target}(#{attrs[1]})</a>)
+          %(<a href="#{prefix}#{target}.html"><b>#{target}</b>(#{attrs[1]})</a>)
         elsif parent.document.basebackend? 'manpage'
-          "#{target}(#{attrs[1]})"
-	end
+          "\\fB#{target}\\fR(#{attrs[1]})"
+        end
       end
     end
   end
