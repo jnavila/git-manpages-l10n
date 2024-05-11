@@ -11285,9 +11285,9 @@ msgstr ""
 msgid "Note that this will create the new branch, but it will not switch the working tree to it; use \"git switch <newbranch>\" to switch to the new branch."
 msgstr "Beachten Sie, dass dies einen neuen Branch anlegt, aber der aktuelle Arbeitsbereich nicht auf diesen umgeschaltet wird. Dies kann mit \"git switch <Neuer-Zweig>\" erreicht werden."
 
-#. type: Plain text
 # ERROR: `--track` not found in translation
 # ERROR: `--no-track` not found in translation
+#. type: Plain text
 #: en/git-branch.txt:74
 #, fuzzy, placeholders:'branch.autoSetupMerge':'`--track`':'`--no-track`':'--set-upstream-to`', priority:260
 msgid "When a local branch is started off a remote-tracking branch, Git sets up the branch (specifically the `branch.<name>.remote` and `branch.<name>.merge` configuration entries) so that 'git pull' will appropriately merge from the remote-tracking branch. This behavior may be changed via the global `branch.autoSetupMerge` configuration flag. That setting can be overridden by using the `--track` and `--no-track` options, and changed later using `git branch --set-upstream-to`."
@@ -14954,7 +14954,6 @@ msgstr "$ git checkout mytopic\n"
 msgid "However, your \"wrong\" branch and correct `mytopic` branch may differ in files that you have modified locally, in which case the above checkout would fail like this:"
 msgstr "Der \"falsche\" Branch und der korrekte Branch \"mytopic\" können sich in lokal geänderten Dateien unterscheiden, was daz führt, dass der obige Checkout folgendermaßen fehlschlägt:"
 
-#. type: delimited block -
 # git-checkout.txt is not up to date. The fuzzy msgid is the message prior to
 # 142183d0 2010-07-09 "checkout: accord documentation to what git does", the
 # msgid is the message in the documentation afterwards.
@@ -14964,6 +14963,7 @@ msgstr "Der \"falsche\" Branch und der korrekte Branch \"mytopic\" können sich 
 # The current message is "Your local changes to the following files would be
 # overwritten by merge:\n%%s" as of 2e3926b9 2016-05-13 "i18n: unpack-trees:
 # avoid substituting only a verb in sentences"
+#. type: delimited block -
 #: en/git-checkout.txt:576
 #, fuzzy, no-wrap, priority:240
 msgid ""
@@ -17953,8 +17953,8 @@ msgstr "Einer Option können mehrere Zeilen hinzugefügt werden, indem Sie die O
 msgid "The `--type=<type>` option instructs 'git config' to ensure that incoming and outgoing values are canonicalize-able under the given <type>. If no `--type=<type>` is given, no canonicalization will be performed. Callers may unset an existing `--type` specifier with `--no-type`."
 msgstr "Die Option `--type=<Typ>` veranlasst 'git config' zu überprüfen, ob ein- und ausgehende Werte unter den angegebenen <Typ> zulässig sind. Wenn kein `--type=<Typ>` angegeben ist, wird keine Kanonisierung durchgeführt. Benutzer können einen bestehenden `--type` Bezeichner mit `--no-type` aufheben."
 
-#. type: Plain text
 # ERROR: `--worktree` not found in translation
+#. type: Plain text
 #: en/git-config.txt:54
 #, fuzzy, placeholders:'`--system`':'`--global`':'`--local`':'`--worktree`':'`--file':'<<FILES>>', priority:100
 msgid "When reading, the values are read from the system, global and repository local configuration files by default, and options `--system`, `--global`, `--local`, `--worktree` and `--file <filename>` can be used to tell the command to read from only that location (see <<FILES>>)."
@@ -37947,8 +37947,8 @@ msgstr "Die Bereitstellung wird nach erfolgreichem Beenden aktualisiert, die Än
 msgid "Force renaming or moving of a file even if the <destination> exists."
 msgstr "Erzwinge Umbenennen oder Verschieben einer Datei, selbst wenn das Ziel bereits existiert"
 
-#. type: Plain text
 # ERROR: `-f` not found in translation
+#. type: Plain text
 #: en/git-mv.txt:39
 #, fuzzy, placeholders:'`-f`', priority:280
 msgid "Skip move or rename actions which would lead to an error condition. An error happens when a source is neither existing nor controlled by Git, or when it would overwrite an existing file unless `-f` is given."
@@ -41395,9 +41395,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-pull.txt:90
-#, no-wrap, priority:220
+#, ignore-same, no-wrap, priority:220
 msgid "--[no-]recurse-submodules[=yes|on-demand|no]"
-msgstr ""
+msgstr "--[no-]recurse-submodules[=yes|on-demand|no]"
 
 #. type: Plain text
 #: en/git-pull.txt:95
@@ -48318,7 +48318,7 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-reset.txt:246
-#, ignore-ellipsis, no-wrap, placeholders:'----':'--merge':'ORIG_HEAD', priority:280
+#, ignore-ellipsis, no-wrap, placeholders:'++----':'--merge':'ORIG_HEAD', priority:280
 msgid ""
 "$ git pull                         <1>\n"
 "Auto-merging nitfol\n"
@@ -56113,8 +56113,8 @@ msgstr "-F <Datei>"
 msgid "--file=<filename>"
 msgstr "--file=<Datei>"
 
-#. type: Plain text
 # ERROR: --edit not found in translation
+#. type: Plain text
 #: en/git-svn.txt:477
 #, fuzzy, placeholders:'`--edit`', priority:100
 msgid "Take the commit message from the given file. This option disables the `--edit` option."
@@ -59033,8 +59033,8 @@ msgstr ""
 msgid "`GIT_COMMON_DIR`"
 msgstr "`GIT_COMMON_DIR`"
 
-#. type: Plain text
 # noqa
+#. type: Plain text
 #: en/git.txt:551
 #, ignore-ellipsis, placeholders:'$GIT_DIR':'HEAD':'$GIT_DIR':'linkgit:gitrepository-layout[5]':'linkgit:git-worktree[1]':'GIT_INDEX_FILE':'GIT_OBJECT_DIRECTORY', priority:100
 msgid "If this variable is set to a path, non-worktree files that are normally in $GIT_DIR will be taken from this path instead. Worktree-specific files such as HEAD or index are taken from $GIT_DIR. See linkgit:gitrepository-layout[5] and linkgit:git-worktree[1] for details. This variable has lower precedence than other path variables such as GIT_INDEX_FILE, GIT_OBJECT_DIRECTORY..."
