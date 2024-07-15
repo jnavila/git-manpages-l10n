@@ -9,7 +9,7 @@ git-rev-parse - Pick out and massage parameters
 SYNOPSIS
 --------
 [verse]
-'git rev-parse' [<options>] <args>...
+'git rev-parse' [<options>] <arg>...
 
 DESCRIPTION
 -----------
@@ -18,8 +18,15 @@ Many Git porcelainish commands take a mixture of flags
 (i.e. parameters that begin with a dash '-') and parameters
 meant for the underlying 'git rev-list' command they use internally
 and flags and parameters for the other commands they use
-downstream of 'git rev-list'.  This command is used to
-distinguish between them.
+downstream of 'git rev-list'.  The primary purpose of this command
+is to allow calling programs to distinguish between them.  There are
+a few other operation modes that have nothing to do with the above
+"help parse command line options".
+
+Unless otherwise specified, most of the options and operation modes
+require you to run this command inside a git repository or a working
+tree that is under the control of a git repository, and will give you
+a fatal error otherwise.
 
 
 OPTIONS
@@ -32,11 +39,15 @@ Each of these options must appear first on the command line.
 
 --parseopt::
 	Use 'git rev-parse' in option parsing mode (see PARSEOPT section below).
+	The command in this mode can be used outside a repository or
+	a working tree controlled by a repository.
 
 --sq-quote::
 	Use 'git rev-parse' in shell quoting mode (see SQ-QUOTE
 	section below). In contrast to the `--sq` option below, this
 	mode only does quoting. Nothing else is done to command input.
+	The command in this mode can be used outside a repository or
+	a working tree controlled by a repository.
 
 Options for --parseopt
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -130,7 +141,7 @@ for another option.
 	'git diff-{asterisk}'). In contrast to the `--sq-quote` option,
 	the command input is still interpreted as usual.
 
---short[=length]::
+--short[=<length>]::
 	Same as `--verify` but shortens the object name to a unique
 	prefix with at least `length` characters. The minimum length
 	is 4, the default is the effective value of the `core.abbrev`
@@ -159,15 +170,27 @@ for another option.
 	unfortunately named tag "master"), and shows them as full
 	refnames (e.g. "refs/heads/master").
 
+--output-object-format=(sha1|sha256|storage)::
+
+	Allow oids to be input from any object format that the current
+	repository supports.
+
+	Specifying "sha1" translates if necessary and returns a sha1 oid.
+
+	Specifying "sha256" translates if necessary and returns a sha256 oid.
+
+	Specifying "storage" translates if necessary and returns an oid in
+	encoded in the storage hash algorithm.
+
 Options for Objects
 ~~~~~~~~~~~~~~~~~~~
 
 --all::
 	Show all refs found in `refs/`.
 
---branches[=pattern]::
---tags[=pattern]::
---remotes[=pattern]::
+--branches[=<pattern>]::
+--tags[=<pattern>]::
+--remotes[=<pattern>]::
 	Show all branches, tags, or remote-tracking branches,
 	respectively (i.e., refs found in `refs/heads`,
 	`refs/tags`, or `refs/remotes`, respectively).
@@ -176,7 +199,7 @@ If a `pattern` is given, only refs matching the given shell glob are
 shown.  If the pattern does not contain a globbing character (`?`,
 `*`, or `[`), it is turned into a prefix match by appending `/*`.
 
---glob=pattern::
+--glob=<pattern>::
 	Show all refs matching the shell glob pattern `pattern`. If
 	the pattern does not start with `refs/`, this is automatically
 	prepended.  If the pattern does not contain a globbing
@@ -197,7 +220,7 @@ respectively, and they must begin with `refs/` when applied to `--glob`
 or `--all`. If a trailing '/{asterisk}' is intended, it must be given
 explicitly.
 
---exclude-hidden=[fetch|receive|uploadpack]::
+--exclude-hidden=(fetch|receive|uploadpack)::
 	Do not include refs that would be hidden by `git-fetch`,
 	`git-receive-pack` or `git-upload-pack` by consulting the appropriate
 	`fetch.hideRefs`, `receive.hideRefs` or `uploadpack.hideRefs`
@@ -314,17 +337,17 @@ The following options are unaffected by `--path-format`:
 Other Options
 ~~~~~~~~~~~~~
 
---since=datestring::
---after=datestring::
+--since=<datestring>::
+--after=<datestring>::
 	Parse the date string, and output the corresponding
 	--max-age= parameter for 'git rev-list'.
 
---until=datestring::
---before=datestring::
+--until=<datestring>::
+--before=<datestring>::
 	Parse the date string, and output the corresponding
 	--min-age= parameter for 'git rev-list'.
 
-<args>...::
+<arg>...::
 	Flags and parameters to be parsed.
 
 
