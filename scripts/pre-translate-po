@@ -37,7 +37,7 @@ LINKGIT_REGEX = re.compile(r'linkgit:([^\[]+)\[([^\]]+)\]' +
                            r'|' +
                            r'(https?://|\blink:)[^\s[]+\[')
 
-FALSE_POSITIVES = re.compile('example\\.(com|org)|git-(related|foo|branch|rev-list-args|repository|dir|upload-archive|stdin)|i\\.e|section\\.subsection|my_script|object--potentially|executable--these|file\\.bundle|full\\.bundle|\\$newbranch|\\$(name|command|rev_name)|repository--the|(repo|project)\\.git|host\\.xz|section\\.key|project_cvs_checkout|TAG_FIXUP|refspecs--they|A_PATH_TO|filename-as-in--w|(sample|file)\\.txt|omitted--such|ORIG_PATH|num_lines|HEAD_name|host_or_ipaddr|(dir|module)_name|notes_ref|email.address|--listen=hostname|--user-path=path|upstream_branch|hook_command_pathname|key_id|my\\.pack|chapter_1|socket_type|pond\\.org|foo\\.example|SOME_ENVIRONMENT_VARIABLE|figure_1|--list-cmds=group')
+FALSE_POSITIVES = re.compile('example\\.(com|org)|git-(related|foo|branch|rev-list-args|repository|dir|upload-archive|stdin)|i\\.e|section\\.subsection|my_script|object--potentially|executable--these|file\\.bundle|full\\.bundle|\\$newbranch|\\$(name|command|rev_name)|repository--the|(repo|project)\\.git|host\\.xz|section\\.key|project_cvs_checkout|TAG_FIXUP|refspecs--they|A_PATH_TO|filename-as-in--w|(sample|file)\\.txt|omitted--such|ORIG_PATH|num_lines|HEAD_name|host_or_ipaddr|(dir|module)_name|notes_ref|email.address|--listen=hostname|--user-path=path|upstream_branch|hook_command_pathname|key_id|my\\.pack|chapter_1|socket_type|pond\\.org|foo\\.example|SOME_ENVIRONMENT_VARIABLE|figure_1|--list-cmds=group|\\{Nth\\}')
 
 def main (f, d=None):
     po = polib.pofile(f, wrapwidth=0)
