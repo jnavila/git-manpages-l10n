@@ -3,23 +3,26 @@
 import polib
 import re
 import sys
+
+from typing import List, Optional
+
 LINKGIT_REGEX = re.compile(r'linkgit:([^\[]+)\[([^\]]+)\]' +
                            r'|' +
-                           r'\$?\{[-a-zA-Z0-9_]+\}' +
+                           r'`?\$?\{[-a-zA-Z0-9_]+\}`?' +
                            r'|' +
                            r'<<[a-zA-Z0-9_]+(>>|,)' +
                            r'|' +
-                           r'\$[a-zA-Z][a-zA-Z0-9_]+' +
+                           r'`?\$[a-zA-Z][a-zA-Z0-9_]+(/[a-z0-9-/]+)?`?' +
                            r'|' +
-                           r'\$\([a-zA-Z][a-zA-Z0-9_]+\)' +
+                           r'`?\$\([a-zA-Z][a-zA-Z0-9_]+\)`?' +
                            r'|' +
                            r'\b`?([a-zA-Z]+\.)+[a-z][a-zA-Z]+`?\b'
                            r'|' +
-                           r'\b[a-zA-Z0-9_]+_[a-zA-Z0-9]+\b' +
+                           r'\b`?[a-zA-Z0-9_]+_[a-zA-Z0-9]+`?\b' +
                            r'|' +
-                           r'\bgit-[a-z-]+'
+                           r'\b`?git-[a-z-]+`?'
                            r'|' +
-                           r'\bgit [a-z]+-[a-z-]+' +
+                           r'\b`?git [a-z]+-[a-z-]+`?' +
                            r'|' +
                            r'\b[a-z-]+--[a-z-]+' +
                            r'|' +
@@ -27,19 +30,21 @@ LINKGIT_REGEX = re.compile(r'linkgit:([^\[]+)\[([^\]]+)\]' +
                            r'|' +
                            r'`-[a-zA-Z]`' +
                            r'|' +
+                           r'`--[a-z-]+`' +
+                           r'|' +
                            r'%%\(.*?\)'
                            r'|' +
-                           r'HEAD'
+                           r'`?HEAD(@\{[0-9a-z.]+\})?``?'
                            r'|' +
                            r'\[\[.*?\]\]\]?'
                            r'|' +
-                           r'\.git(/[A-Z_]+|attributes|ignore|/info/exclude)'
+                           r'`?\.git(/[A-Z_]+|attributes|ignore|/info/exclude)`?'
                            r'|' +
                            r'(https?://|\blink:)[^\s[]+\[')
 
-FALSE_POSITIVES = re.compile('example\\.(com|org)|git-(related|foo|branch|rev-list-args|repository|dir|upload-archive|stdin)|i\\.e|section\\.subsection|my_script|object--potentially|executable--these|file\\.bundle|full\\.bundle|\\$newbranch|\\$(name|command|rev_name)|repository--the|(repo|project)\\.git|host\\.xz|section\\.key|project_cvs_checkout|TAG_FIXUP|refspecs--they|A_PATH_TO|filename-as-in--w|(sample|file)\\.txt|omitted--such|ORIG_PATH|num_lines|HEAD_name|host_or_ipaddr|(dir|module)_name|notes_ref|email.address|--listen=hostname|--user-path=path|upstream_branch|hook_command_pathname|key_id|my\\.pack|chapter_1|socket_type|pond\\.org|foo\\.example|SOME_ENVIRONMENT_VARIABLE|figure_1|--list-cmds=group|\\{Nth\\}')
+FALSE_POSITIVES = re.compile('example\\.(com|org)|git-(related|foo|branch|rev-list-args|repository|dir|upload-archive|stdin|repo)|i\\.e|section\\.subsection|my_script|object--potentially|executable--these|file\\.bundle|full\\.bundle|\\$newbranch|\\$(name|command|rev_name)|repository--the|(repo|project)\\.git|host\\.xz|section\\.key|project_cvs_checkout|TAG_FIXUP|refspecs--they|A_PATH_TO|filename-as-in--w|(sample|file)\\.txt|omitted--such|ORIG_PATH|num_lines|HEAD_name|host_or_ipaddr|(dir|module)_name|notes_ref|email.address|--listen=hostname|--user-path=path|upstream_branch|hook_command_pathname|key_id|my\\.pack|chapter_1|socket_type|pond\\.org|foo\\.example|SOME_ENVIRONMENT_VARIABLE|figure_1|--list-cmds=group|\\{Nth\\}|to/group')
 
-def main (f, d=None):
+def main (f: str, d:Optional[str]=None):
     po = polib.pofile(f, wrapwidth=0)
     option_re = re.compile(r'([\[`]?-(-\[no-\])?[-a-zA-Z0-9]+(=[\[\]()\|a-zA-Z0-9+-]*)?(\[=[\[\]()\|a-zA-Z0-9-]+\])?[\]`]?)|--exec=<git-upload-archive>')
     linkgit_re = re.compile(r'((linkgit:)?(git[-a-z0-9[\]]+|mail)(\[[157]\]|\([157]\))(,|;)?(\n| )?)+\.?')
@@ -71,7 +76,7 @@ def main (f, d=None):
                     flags.discard("fuzzy")
                     entry.previous_msgid = None
         else:
-            placeholders = []
+            placeholders = []  # type: List[str]
             for matched in LINKGIT_REGEX.finditer(entry.msgid):
                 g = matched.group(0)
                 # if the string is present, tag it as a placeholder for weblate
