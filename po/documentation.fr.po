@@ -1,6 +1,6 @@
 #
 msgid ""
-msgstr "Project-Id-Version: PACKAGE VERSION\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2024-07-15 22:01+0200\nPO-Revision-Date: 2024-08-19 10:28+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 5.7\n"
+msgstr "Project-Id-Version: PACKAGE VERSION\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2024-07-15 22:01+0200\nPO-Revision-Date: 2024-08-20 20:09+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 5.7\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:781 en/git-instaweb.txt:45 en/git-ls-remote.txt:24 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:180 en/git-status.txt:31
@@ -49084,25 +49084,25 @@ msgid ""
 "'git replace' [-f] --convert-graft-file\n"
 "'git replace' -d <object>...\n"
 "'git replace' [--format=<format>] [-l [<pattern>]]\n"
-msgstr ""
+msgstr "'git replace' [-f] <objet> <remplacement>\n'git replace' [-f] --edit <objet>\n'git replace' [-f] --graft <commit> [<parent>...]\n'git replace' [-f] --convert-graft-file\n'git replace' -d <objet>...\n'git replace' [--format=<format>] [-l [<motif>]]\n"
 
 #. type: Plain text
 #: en/git-replace.txt:21
 #, priority:100
 msgid "Adds a 'replace' reference in `refs/replace/` namespace."
-msgstr ""
+msgstr "Ajoute une référence 'replace' dans l'espace de nom `refs/replace/`."
 
 #. type: Plain text
 #: en/git-replace.txt:25
 #, priority:100
 msgid "The name of the 'replace' reference is the SHA-1 of the object that is replaced. The content of the 'replace' reference is the SHA-1 of the replacement object."
-msgstr ""
+msgstr "Le nom de la référence 'replace' est le SHA-1 de l'objet qui est remplacé. Le contenu de la référence 'replace' est le SHA-1 de l'objet de remplacement."
 
 #. type: Plain text
 #: en/git-replace.txt:28
 #, placeholders:'`-f`', priority:100
 msgid "The replaced object and the replacement object must be of the same type. This restriction can be bypassed using `-f`."
-msgstr ""
+msgstr "L'objet remplacé et l'objet de remplacement doivent être du même type. Cette restriction peut être contournée en utilisant `-f`."
 
 #. type: Plain text
 #: en/git-replace.txt:30
@@ -49114,25 +49114,25 @@ msgstr "A moins que le `-f` ne soit donné, la référence 'replace' ne doit pas
 #: en/git-replace.txt:33
 #, priority:100
 msgid "There is no other restriction on the replaced and replacement objects. Merge commits can be replaced by non-merge commits and vice versa."
-msgstr ""
+msgstr "Il n'y a aucune autre restriction sur les objets remplacés et de remplacement. Les commits de fusion peuvent être remplacés par des commits non fusionnés et vice versa."
 
 #. type: Plain text
 #: en/git-replace.txt:37
 #, priority:100
 msgid "Replacement references will be used by default by all Git commands except those doing reachability traversal (prune, pack transfer and fsck)."
-msgstr ""
+msgstr "Les références de remplacement seront utilisées par défaut par toutes les commandes Git, à l'exception de celles faisant la traversée d'accessibilité (prune, transfert de paquet et fsck)."
 
 #. type: Plain text
 #: en/git-replace.txt:40
 #, placeholders:'`--no-replace-objects`', priority:100
 msgid "It is possible to disable the use of replacement references for any command using the `--no-replace-objects` option just after 'git'."
-msgstr ""
+msgstr "Il est possible de désactiver l'utilisation de références de remplacement pour toute commande en utilisant l'option `--no-replace-objects` juste après 'git'."
 
 #. type: Plain text
 #: en/git-replace.txt:42
 #, priority:100
 msgid "For example if commit 'foo' has been replaced by commit 'bar':"
-msgstr ""
+msgstr "Par exemple, si le commit 'foo' a été remplacé par le commit 'bar' :"
 
 #. type: delimited block -
 #: en/git-replace.txt:45
@@ -49144,7 +49144,7 @@ msgstr "$ git --no-replace-objects cat-file commit foo\n"
 #: en/git-replace.txt:48
 #, priority:100
 msgid "shows information about commit 'foo', while:"
-msgstr ""
+msgstr "montre des informations sur le commit 'foo', tandis que :"
 
 #. type: delimited block -
 #: en/git-replace.txt:51
@@ -49156,31 +49156,31 @@ msgstr "$ git cat-file commit foo\n"
 #: en/git-replace.txt:54
 #, priority:100
 msgid "shows information about commit 'bar'."
-msgstr ""
+msgstr "montre des informations sur le commit 'bar'."
 
 #. type: Plain text
 #: en/git-replace.txt:57
 #, placeholders:'GIT_NO_REPLACE_OBJECTS':'`--no-replace-objects`', priority:100
 msgid "The `GIT_NO_REPLACE_OBJECTS` environment variable can be set to achieve the same effect as the `--no-replace-objects` option."
-msgstr ""
+msgstr "La variable d'environnement `GIT_NO_REPLACE_OBJECTS` peut être définie pour atteindre le même effet que l'option `--no-replace-objects`."
 
 #. type: Plain text
 #: en/git-replace.txt:64
 #, priority:100
 msgid "If an existing replace ref for the same object exists, it will be overwritten (instead of failing)."
-msgstr ""
+msgstr "Si un remplaçant existant pour le même objet existe déjà, il sera écrasé (au lieu de provoquer un échec)."
 
 #. type: Plain text
 #: en/git-replace.txt:68
 #, priority:100
 msgid "Delete existing replace refs for the given objects."
-msgstr ""
+msgstr "Supprimer les réfs de remplacement existants pour les objets donnés."
 
 #. type: Labeled list
 #: en/git-replace.txt:69
 #, no-wrap, placeholders:'--edit', priority:100
 msgid "--edit <object>"
-msgstr ""
+msgstr "--edit <objet>"
 
 #. type: Plain text
 #: en/git-replace.txt:77
