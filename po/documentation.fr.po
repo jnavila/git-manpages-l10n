@@ -1,6 +1,6 @@
 #
 msgid ""
-msgstr "Project-Id-Version: PACKAGE VERSION\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2024-09-29 21:35+0200\nPO-Revision-Date: 2024-10-01 11:16+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 5.8-dev\n"
+msgstr "Project-Id-Version: PACKAGE VERSION\nReport-Msgid-Bugs-To: jn.avila@free.fr\nPOT-Creation-Date: 2024-09-29 21:35+0200\nPO-Revision-Date: 2024-10-03 20:16+0000\nLast-Translator: Jean-Noël Avila <jn.avila@free.fr>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 5.8-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/diff-options.txt:781 en/git-instaweb.txt:45 en/git-ls-remote.txt:24 en/git-mailinfo.txt:49 en/git-mailsplit.txt:35 en/git-repack.txt:180 en/git-status.txt:31
@@ -49735,7 +49735,7 @@ msgid ""
 "\t$ ... work on both topic and master branches\n"
 "\t$ git switch master\n"
 "\t$ git merge topic\n"
-msgstr ""
+msgstr "\t$ git switch sujet\n\t$ git merge master\n\t$ ... travail sur la branche thématique et sur la branche master\n\t$ git switch master\n\t$ git merge sujet\n"
 
 #. type: delimited block -
 #: en/git-rerere.txt:125
@@ -49744,19 +49744,19 @@ msgid ""
 "              o---*---o---+---o---o topic\n"
 "             /           /         \\\n"
 "    o---o---o---*---o---o---o---o---+ master\n"
-msgstr ""
+msgstr "              o---*---o---+---o---o sujet\n             /           /         \\\n    o---o---o---*---o---o---o---o---+ master\n"
 
 #. type: Plain text
 #: en/git-rerere.txt:133
 #, priority:100
 msgid "When your topic branch is long-lived, however, your topic branch would end up having many such \"Merge from master\" commits on it, which would unnecessarily clutter the development history. Readers of the Linux kernel mailing list may remember that Linus complained about such too frequent test merges when a subsystem maintainer asked to pull from a branch full of \"useless merges\"."
-msgstr ""
+msgstr "Lorsque votre branche thématique est au long cours, cependant, votre branche thématique finirait par avoir beaucoup de tels commits de \"fusion depuis master\" sur elle, qui encombreraient inutilement l'historique de développement. Les lecteurs de la liste de diffusion du noyau Linux se rappellent peut-être que Linus s'est plaint de fusions de tests trop fréquentes lorsqu'un mainteneur d'un sous-système a demandé de tirer d'une branche pleine de « fusions inutiles »."
 
 #. type: Plain text
 #: en/git-rerere.txt:137
 #, priority:100
 msgid "As an alternative, to keep the topic branch clean of test merges, you could blow away the test merge, and keep building on top of the tip before the test merge:"
-msgstr ""
+msgstr "Comme alternative, pour garder la branche thématique exempte de fusions d'essai, vous pourriez exploser la fusion d'essai, et continuer à construire sur le sommet de la branche avant la fusion d'essai :"
 
 #. type: delimited block -
 #: en/git-rerere.txt:145
@@ -49768,7 +49768,7 @@ msgid ""
 "\t$ ... work on both topic and master branches\n"
 "\t$ git switch master\n"
 "\t$ git merge topic\n"
-msgstr ""
+msgstr "\t$ git switch sujet\n\t$ git merge master\n\t$ git reset --hard HEAD^ ;# rembobine la fusion de test\n\t$ ... travail sur les deux branches thématique et master\n\t$ git switch master\n\t$ git merge sujet\n"
 
 #. type: delimited block -
 #: en/git-rerere.txt:149
@@ -49777,19 +49777,19 @@ msgid ""
 "              o---*---o-------o---o topic\n"
 "             /                     \\\n"
 "    o---o---o---*---o---o---o---o---+ master\n"
-msgstr ""
+msgstr "              o---*---o-------o---o sujet\n             /                     \\\n    o---o---o---*---o---o---o---o---+ master\n"
 
 #. type: Plain text
 #: en/git-rerere.txt:159
 #, priority:100
 msgid "This would leave only one merge commit when your topic branch is finally ready and merged into the master branch. This merge would require you to resolve the conflict, introduced by the commits marked with `*`. However, this conflict is often the same conflict you resolved when you created the test merge you blew away. 'git rerere' helps you resolve this final conflicted merge using the information from your earlier hand resolve."
-msgstr ""
+msgstr "Cela ne laisserait qu’un seul commit de fusion lorsque votre branche thématique est enfin prête et fusionnée dans la branche master. Cette fusion vous obligerait à résoudre le conflit introduit par les commits marqués d’un `*`. Cependant, il s’agit souvent du même conflit que celui que vous avez résolu lors de la création de la fusion de test que vous avez explosée. 'git rerere' vous aide à résoudre cette fusion finale conflictuelle en utilisant les informations de votre résolution à la main précédente."
 
 #. type: Plain text
 #: en/git-rerere.txt:167
 #, priority:100
 msgid "Running the 'git rerere' command immediately after a conflicted automerge records the conflicted working tree files, with the usual conflict markers `<<<<<<<`, `=======`, and `>>>>>>>` in them. Later, after you are done resolving the conflicts, running 'git rerere' again will record the resolved state of these files. Suppose you did this when you created the test merge of master into the topic branch."
-msgstr ""
+msgstr "Lancer la commande 'git rerere' immédiatement après une autofusion conflictuelle enregistre les fichiers d'arbres de travail en conflit, avec les marqueurs de conflit habituels `<<<<<<<`, `=======` and `>>>>>>>`. Plus tard, après que vous avez fini de résoudre les conflits, exécuter 'git rerere' à nouveau enregistrera l'état résolu de ces fichiers. Supposez que vous avez fait cela lorsque vous avez créé la fusion de test de master dans la branche thématique."
 
 #. type: Plain text
 #: en/git-rerere.txt:177
@@ -49837,7 +49837,7 @@ msgid ""
 "\t\t\t\t  o---*---o-------o---o topic\n"
 "\t\t\t\t /\n"
 "    o---o---o---*---o---o---o---o   master\n"
-msgstr ""
+msgstr "\t\t\t\t  o---*---o-------o---o sujet\n\t\t\t\t /\n    o---o---o---*---o---o---o---o   master\n"
 
 #. type: Plain text
 #: en/git-rerere.txt:213
