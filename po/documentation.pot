@@ -5,7 +5,7 @@
 #
 #, fuzzy
 msgid ""
-msgstr "Project-Id-Version: PACKAGE VERSION\nPOT-Creation-Date: 2024-12-17 15:04+0100\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: \nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+msgstr "Project-Id-Version: PACKAGE VERSION\nPOT-Creation-Date: 2024-12-25 19:35+0100\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: \nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
 
 #. type: Labeled list
 #: en/blame-options.txt:1 en/git-instaweb.txt:45 en/git-ls-remote.txt:24
@@ -4230,48 +4230,49 @@ msgstr ""
 msgid "It is followed by one or more extended header lines:"
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:46
-msgid "old mode <mode> new mode <mode> deleted file mode <mode> new file mode <mode> copy from <path> copy to <path> rename from <path> rename to <path> similarity index <number> dissimilarity index <number> index <hash>..<hash> <mode>"
+#, no-wrap
+msgid "old mode <mode>\nnew mode <mode>\ndeleted file mode <mode>\nnew file mode <mode>\ncopy from <path>\ncopy to <path>\nrename from <path>\nrename to <path>\nsimilarity index <number>\ndissimilarity index <number>\nindex <hash>..<hash> <mode>\n"
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:49
 msgid "File modes _<mode>_ are printed as 6-digit octal numbers including the file type and file permission bits."
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:51
 msgid "Path names in extended headers do not include the `a/` and `b/` prefixes."
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:58
 msgid "The similarity index is the percentage of unchanged lines, and the dissimilarity index is the percentage of changed lines. It is a rounded down integer, followed by a percent sign. The similarity index value of 100% is thus reserved for two equal files, while 100% dissimilarity means that no line from the old file made it into the new one."
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:62
 msgid "The index line includes the blob object names before and after the change. The _<mode>_ is included if the file mode does not change; otherwise, separate lines indicate the old and the new mode."
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:66
 msgid "Pathnames with \"unusual\" characters are quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1])."
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:71
 msgid "All the `file1` files in the output refer to files before the commit, and all the `file2` files refer to files after the commit. It is incorrect to apply each change to each file sequentially. For example, this patch will swap a and b:"
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:78
 #, no-wrap
 msgid "diff --git a/a b/b\nrename from a\nrename to b\ndiff --git a/b b/a\nrename from b\nrename to a\n"
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:83
 msgid "Hunk headers mention the name of the function to which the hunk applies. See \"Defining a custom hunk-header\" in linkgit:gitattributes[5] for details of how to tailor this to specific languages."
 msgstr ""
@@ -4337,79 +4338,80 @@ msgstr ""
 msgid "It is followed by one or more extended header lines (this example shows a merge with two parents):"
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:144
-msgid "index <hash>,<hash>..<hash> mode <mode>,<mode>`..`<mode> new file mode <mode> deleted file mode <mode>,<mode>"
+#, no-wrap
+msgid "index <hash>,<hash>..<hash>\nmode <mode>,<mode>`..`<mode>\nnew file mode <mode>\ndeleted file mode <mode>,<mode>\n"
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:150
 msgid "The `mode <mode>,<mode>..<mode>` line appears only if at least one of the <mode> is different from the rest. Extended headers with information about detected content movement (renames and copying detection) are designed to work with the diff of two _<tree-ish>_ and are not used by combined diff format."
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:152
 msgid "It is followed by a two-line from-file/to-file header:"
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:154 en/diff-generate-patch.txt:165
 #: en/diff-generate-patch.txt:166 en/diff-generate-patch.txt:167
 msgid "a/file"
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:155 en/diff-generate-patch.txt:168
 msgid "b/file"
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:159
 msgid "Similar to the two-line header for the traditional 'unified' diff format, `/dev/null` is used to signal created or deleted files."
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:163
 msgid "However, if the --combined-all-paths option is provided, instead of a two-line from-file/to-file, you get an N+1 line from-file/to-file header, where N is the number of parents in the merge commit:"
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:172
 msgid "This extended format can be useful if rename or copy detection is active, to allow you to see the original name of the file in different parents."
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:178
 msgid "Chunk header format is modified to prevent people from accidentally feeding it to `patch -p1`. Combined diff format was created for review of merge commit changes, and was not meant to be applied. The change is similar to the change in the extended 'index' header:"
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:180
 #, no-wrap
 msgid "@@@ <from-file-range> <from-file-range> <to-file-range> @@@\n"
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:183
 msgid "There are (number of parents + 1) `@` characters in the chunk header for combined diff format."
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:192
 msgid "Unlike the traditional 'unified' diff format, which shows two files A and B with a single column that has `-` (minus -- appears in A but removed in B), `+` (plus -- missing in A but added to B), or `\" \"` (space -- unchanged) prefix, this format compares two or more files file1, file2,... with one file X, and shows how X differs from each of fileN. One column for each of fileN is prepended to the output line to note how X's line is different from it."
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:198
 msgid "A `-` character in the column N means that the line appears in fileN but it does not appear in the result. A `+` character in the column N means that the line appears in the result, and fileN does not have that line (in other words, the line was added, from the point of view of that parent)."
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:204
 msgid "In the above example output, the function signature was changed from both files (hence two `-` removals from both file1 and file2, plus `++` to mean one line that was added does not appear in either file1 or file2). Also, eight other lines are the same from file1 but do not appear in file2 (hence prefixed with `+`)."
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/diff-generate-patch.txt:210
 msgid "When shown by `git diff-tree -c`, it compares the parents of a merge commit with the merge result (i.e. file1..fileN are the parents). When shown by `git diff-files -c`, it compares the two unresolved merge parents with the working tree file (i.e. file1 is stage 2 aka \"our version\", file2 is stage 3 aka \"their version\")."
 msgstr ""
@@ -7295,7 +7297,7 @@ msgstr ""
 msgid "git-add - Add file contents to the index"
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/git-add.txt:16
 #, no-wrap
 msgid "git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]\n\t[--edit | -e] [--[no-]all | -A | --[no-]ignore-removal | [--update | -u]] [--sparse]\n\t[--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]\n\t[--chmod=(+|-)x] [--pathspec-from-file=<file> [--pathspec-file-nul]]\n\t[--] [<pathspec>...]\n"
@@ -7993,7 +7995,7 @@ msgstr ""
 msgid "git-am - Apply a series of patches from a mailbox"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-am.txt:22
 #, no-wrap
 msgid "'git am' [--signoff] [--keep] [--[no-]keep-cr] [--[no-]utf8] [--no-verify]\n\t [--[no-]3way] [--interactive] [--committer-date-is-author-date]\n\t [--ignore-date] [--ignore-space-change | --ignore-whitespace]\n\t [--whitespace=<action>] [-C<n>] [-p<n>] [--directory=<dir>]\n\t [--exclude=<path>] [--include=<path>] [--reject] [-q | --quiet]\n\t [--[no-]scissors] [-S[<keyid>]] [--patch-format=<format>]\n\t [--quoted-cr=<action>]\n\t [--empty=(stop|drop|keep)]\n\t [(<mbox> | <Maildir>)...]\n'git am' (--continue | --skip | --abort | --quit | --retry | --show-current-patch[=(diff|raw)] | --allow-empty)\n"
@@ -8588,7 +8590,7 @@ msgstr ""
 msgid "git-annotate - Annotate file lines with commit information"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-annotate.txt:12
 #, no-wrap
 msgid "'git annotate' [<options>] [<rev-opts>] [<rev>] [--] <file>\n"
@@ -8615,7 +8617,7 @@ msgstr ""
 msgid "git-apply - Apply a patch to files and/or to the index"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-apply.txt:21
 #, no-wrap
 msgid "'git apply' [--stat] [--numstat] [--summary] [--check]\n\t  [--index | --intent-to-add] [--3way] [--ours | --theirs | --union]\n\t  [--apply] [--no-add] [--build-fake-ancestor=<file>] [-R | --reverse]\n\t  [--allow-binary-replacement | --binary] [--reject] [-z]\n\t  [-p<n>] [-C<n>] [--inaccurate-eof] [--recount] [--cached]\n\t  [--ignore-space-change | --ignore-whitespace]\n\t  [--whitespace=(nowarn|warn|fix|error|error-all)]\n\t  [--exclude=<path>] [--include=<path>] [--directory=<root>]\n\t  [--verbose | --quiet] [--unsafe-paths] [--allow-empty] [<patch>...]\n"
@@ -9048,7 +9050,7 @@ msgstr ""
 msgid "git-archimport - Import a GNU Arch repository into Git"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-archimport.txt:14
 #, no-wrap
 msgid "'git archimport' [-h] [-v] [-o] [-a] [-f] [-T] [-D <depth>] [-t <tempdir>]\n\t       <archive>/<branch>[:<git-branch>]...\n"
@@ -9192,7 +9194,7 @@ msgstr ""
 msgid "git-archive - Create an archive of files from a named tree"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-archive.txt:16
 #, no-wrap
 msgid "'git archive' [--format=<fmt>] [--list] [--prefix=<prefix>/] [<extra>]\n\t      [-o <file> | --output=<file>] [--worktree-attributes]\n\t      [--remote=<repo> [--exec=<git-upload-archive>]] <tree-ish>\n\t      [<path>...]\n"
@@ -9600,7 +9602,7 @@ msgstr ""
 msgid "git-bisect - Use binary search to find the commit that introduced a bug"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-bisect.txt:13
 #, no-wrap
 msgid "'git bisect' <subcommand> <options>\n"
@@ -10247,7 +10249,7 @@ msgstr ""
 msgid "git-blame - Show what revision and author last modified each line of a file"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-blame.txt:16
 #, no-wrap
 msgid "'git blame' [-c] [-b] [-l] [--root] [-t] [-f] [-n] [-s] [-e] [-p] [-w] [--incremental]\n\t    [-L <range>] [-S <revs-file>] [-M] [-C] [-C] [-C] [--since=<date>]\n\t    [--ignore-rev <rev>] [--ignore-revs-file <file>]\n\t    [--color-lines] [--color-by-age] [--progress] [--abbrev=<n>]\n\t    [ --contents <file> ] [<rev> | --reverse <rev>..<rev>] [--] <file>\n"
@@ -10597,7 +10599,7 @@ msgstr ""
 msgid "and thus it is really quite easy to parse for some line- and word-oriented parser (which should be quite natural for most scripting languages)."
 msgstr ""
 
-#. type: Plain text
+#. type: NOTE
 #: en/git-blame.txt:237
 msgid "For people who do parsing: to make it more robust, just ignore any lines between the first and last one (\"<sha1>\" and \"filename\" lines) where you do not recognize the tag words (or care about that particular one) at the beginning of the \"extended information\" lines. That way, if there is ever added information (like the commit encoding or extended commit commentary), a blame viewer will not care."
 msgstr ""
@@ -10624,7 +10626,7 @@ msgstr ""
 msgid "git-branch - List, create, or delete branches"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-branch.txt:27
 #, no-wrap
 msgid "'git branch' [--color[=<when>] | --no-color] [--show-current]\n\t[-v [--abbrev=<n> | --no-abbrev]]\n\t[--column[=<options>] | --no-column] [--sort=<key>]\n\t[--merged [<commit>]] [--no-merged [<commit>]]\n\t[--contains [<commit>]] [--no-contains [<commit>]]\n\t[--points-at <object>] [--format=<format>]\n\t[(-r | --remotes) | (-a | --all)]\n\t[--list] [<pattern>...]\n'git branch' [--track[=(direct|inherit)] | --no-track] [-f]\n\t[--recurse-submodules] <branchname> [<start-point>]\n'git branch' (--set-upstream-to=<upstream> | -u <upstream>) [<branchname>]\n'git branch' --unset-upstream [<branchname>]\n'git branch' (-m | -M) [<oldbranch>] <newbranch>\n'git branch' (-c | -C) [<oldbranch>] <newbranch>\n'git branch' (-d | -D) [-r] <branchname>...\n'git branch' --edit-description [<branchname>]\n"
@@ -11271,7 +11273,7 @@ msgstr ""
 msgid "git-bugreport - Collect information for user to file a bug report"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-bugreport.txt:14
 #, no-wrap
 msgid "'git bugreport' [(-o | --output-directory) <path>]\n\t\t[(-s | --suffix) <format> | --no-suffix]\n\t\t[--diagnose[=<mode>]]\n"
@@ -11415,7 +11417,7 @@ msgstr ""
 msgid "git-bundle - Move objects and refs by archive"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-bundle.txt:17
 #, no-wrap
 msgid "'git bundle' create [-q | --quiet | --progress]\n\t\t    [--version=<version>] <file> <git-rev-list-args>\n'git bundle' verify [-q | --quiet] <file>\n'git bundle' list-heads <file> [<refname>...]\n'git bundle' unbundle [--progress] <file> [<refname>...]\n"
@@ -11876,7 +11878,7 @@ msgstr ""
 msgid "git-cat-file - Provide contents or details of repository objects"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-cat-file.txt:19
 #, no-wrap
 msgid "'git cat-file' <type> <object>\n'git cat-file' (-e | -p) <object>\n'git cat-file' (-t | -s) [--allow-unknown-type] <object>\n'git cat-file' (--textconv | --filters)\n\t     [<rev>:<path|tree-ish> | --path=<path|tree-ish> <rev>]\n'git cat-file' (--batch | --batch-check | --batch-command) [--batch-all-objects]\n\t     [--buffer] [--follow-symlinks] [--unordered]\n\t     [--textconv | --filters] [-Z]\n"
@@ -12518,7 +12520,7 @@ msgstr ""
 msgid "git-check-attr - Display gitattributes information"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-check-attr.txt:14
 #, no-wrap
 msgid "'git check-attr' [--source <tree-ish>] [-a | --all | <attr>...] [--] <pathname>...\n'git check-attr' --stdin [-z] [--source <tree-ish>] [-a | --all | <attr>...]\n"
@@ -12744,7 +12746,7 @@ msgstr ""
 msgid "git-check-ignore - Debug gitignore / exclude files"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-check-ignore.txt:14
 #, no-wrap
 msgid "'git check-ignore' [<options>] <pathname>...\n'git check-ignore' [<options>] --stdin\n"
@@ -12910,7 +12912,7 @@ msgstr ""
 msgid "git-check-mailmap - Show canonical names and email addresses of contacts"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-check-mailmap.txt:13
 #, no-wrap
 msgid "'git check-mailmap' [<options>] <contact>...\n"
@@ -12969,7 +12971,7 @@ msgstr ""
 msgid "git-checkout-index - Copy files from the index to the working tree"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-checkout-index.txt:18
 #, no-wrap
 msgid "'git checkout-index' [-u] [-q] [-a] [-f] [-n] [--prefix=<string>]\n\t\t   [--stage=<number>|all]\n\t\t   [--temp]\n\t\t   [--ignore-skip-worktree-bits]\n\t\t   [-z] [--stdin]\n\t\t   [--] [<file>...]\n"
@@ -13223,7 +13225,7 @@ msgstr ""
 msgid "git-checkout - Switch branches or restore working tree files"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-checkout.txt:20
 #, no-wrap
 msgid "'git checkout' [-q] [-f] [-m] [<branch>]\n'git checkout' [-q] [-f] [-m] --detach [<branch>]\n'git checkout' [-q] [-f] [-m] [--detach] <commit>\n'git checkout' [-q] [-f] [-m] [[-b|-B|--orphan] <new-branch>] [<start-point>]\n'git checkout' [-f] <tree-ish> [--] <pathspec>...\n'git checkout' [-f] <tree-ish> --pathspec-from-file=<file> [--pathspec-file-nul]\n'git checkout' [-f|--ours|--theirs|-m|--conflict=<style>] [--] <pathspec>...\n'git checkout' [-f|--ours|--theirs|-m|--conflict=<style>] --pathspec-from-file=<file> [--pathspec-file-nul]\n'git checkout' (-p|--patch) [<tree-ish>] [--] [<pathspec>...]\n"
@@ -13996,7 +13998,7 @@ msgstr ""
 msgid "git-check-ref-format - Ensures that a reference name is well formed"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-check-ref-format.txt:15
 #, no-wrap
 msgid "'git check-ref-format' [--normalize]\n       [--[no-]allow-onelevel] [--refspec-pattern]\n       <refname>\n'git check-ref-format' --branch <branchname-shorthand>\n"
@@ -14163,7 +14165,7 @@ msgstr ""
 msgid "git-cherry-pick - Apply the changes introduced by some existing commits"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-cherry-pick.txt:14
 #, no-wrap
 msgid "'git cherry-pick' [--edit] [-n] [-m <parent-number>] [-s] [-x] [--ff]\n\t\t  [-S[<keyid>]] <commit>...\n'git cherry-pick' (--continue | --skip | --abort | --quit)\n"
@@ -14530,7 +14532,7 @@ msgstr ""
 msgid "git-cherry - Find commits yet to be applied to upstream"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-cherry.txt:12
 #, no-wrap
 msgid "'git cherry' [-v] [<upstream> [<head> [<limit>]]]\n"
@@ -14689,7 +14691,7 @@ msgstr ""
 msgid "git-citool - Graphical alternative to git-commit"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-citool.txt:12
 #, no-wrap
 msgid "'git citool'\n"
@@ -14716,7 +14718,7 @@ msgstr ""
 msgid "git-clean - Remove untracked files from the working tree"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-clean.txt:12
 #, no-wrap
 msgid "'git clean' [-d] [-f] [-i] [-n] [-q] [-e <pattern>] [-x | -X] [--] [<pathspec>...]\n"
@@ -14900,7 +14902,7 @@ msgstr ""
 msgid "git-clone - Clone a repository into a new directory"
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/git-clone.txt:21
 #, no-wrap
 msgid "git clone [--template=<template-directory>]\n\t  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]\n\t  [-o <name>] [-b <name>] [-u <upload-pack>] [--reference <repository>]\n\t  [--dissociate] [--separate-git-dir <git-dir>]\n\t  [--depth <depth>] [--[no-]single-branch] [--no-tags]\n\t  [--recurse-submodules[=<pathspec>]] [--[no-]shallow-submodules]\n\t  [--[no-]remote-submodules] [--jobs <n>] [--sparse] [--[no-]reject-shallow]\n\t  [--filter=<filter-spec>] [--also-filter-submodules]] [--] <repository>\n\t  [<directory>]\n"
@@ -15451,7 +15453,7 @@ msgstr ""
 msgid "git-column - Display data in columns"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-column.txt:13
 #, no-wrap
 msgid "'git column' [--command=<name>] [--[raw-]mode=<mode>] [--width=<width>]\n\t     [--indent=<string>] [--nl=<string>] [--padding=<n>]\n"
@@ -15583,7 +15585,7 @@ msgstr ""
 msgid "git-commit-tree - Create a new commit object"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-commit-tree.txt:15
 #, no-wrap
 msgid "'git commit-tree' <tree> [(-p <parent>)...]\n'git commit-tree' [(-p <parent>)...] [-S[<keyid>]] [(-m <message>)...]\n\t\t  [(-F <file>)...] <tree>\n"
@@ -15735,7 +15737,7 @@ msgstr ""
 msgid "git-commit - Record changes to the repository"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-commit.txt:19
 #, no-wrap
 msgid "'git commit' [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]\n\t   [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>]\n\t   [-F <file> | -m <msg>] [--reset-author] [--allow-empty]\n\t   [--allow-empty-message] [--no-verify] [-e] [--author=<author>]\n\t   [--date=<date>] [--cleanup=<mode>] [--[no-]status]\n\t   [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]\n\t   [(--trailer <token>[(=|:)<value>])...] [-S[<keyid>]]\n\t   [--] [<pathspec>...]\n"
@@ -16451,7 +16453,7 @@ msgstr ""
 msgid "git-config - Get and set repository or global options"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-config.txt:20
 #, no-wrap
 msgid "'git config list' [<file-option>] [<display-option>] [--includes]\n'git config get' [<file-option>] [<display-option>] [--includes] [--all] [--regexp] [--value=<value>] [--fixed-value] [--default=<default>] <name>\n'git config set' [<file-option>] [--type=<type>] [--all] [--value=<value>] [--fixed-value] <name> <value>\n'git config unset' [<file-option>] [--all] [--value=<value>] [--fixed-value] <name>\n'git config rename-section' [<file-option>] <old-name> <new-name>\n'git config remove-section' [<file-option>] <name>\n'git config edit' [<file-option>]\n'git config' [<file-option>] --get-colorbool <name> [<stdout-is-tty>]\n"
@@ -17568,7 +17570,7 @@ msgstr ""
 msgid "git-count-objects - Count unpacked number of objects and their disk consumption"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-count-objects.txt:12
 #, no-wrap
 msgid "'git count-objects' [-v] [-H | --human-readable]\n"
@@ -17652,7 +17654,7 @@ msgstr ""
 msgid "git-credential-cache--daemon - Temporarily store user credentials in memory"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-credential-cache--daemon.txt:12
 #, no-wrap
 msgid "'git credential-cache{litdd}daemon' [--debug] <socket-path>\n"
@@ -18280,7 +18282,7 @@ msgstr ""
 msgid "git-cvsexportcommit - Export a single commit to a CVS checkout"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-cvsexportcommit.txt:14
 #, no-wrap
 msgid "'git cvsexportcommit' [-h] [-u] [-v] [-c] [-P] [-p] [-a] [-d <cvsroot>]\n\t[-w <cvs-workdir>] [-W] [-f] [-m <msgprefix>] [<parent-commit>] <commit-id>\n"
@@ -18435,7 +18437,7 @@ msgstr ""
 msgid "git-cvsimport - Salvage your data out of another SCM people love to hate"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-cvsimport.txt:17
 #, no-wrap
 msgid "'git cvsimport' [-o <branch-for-HEAD>] [-h] [-v] [-d <CVSROOT>]\n\t      [-A <author-conv-file>] [-p <options-for-cvsps>] [-P <file>]\n\t      [-C <git-repository>] [-z <fuzz>] [-i] [-k] [-u] [-s <subst>]\n\t      [-a] [-m] [-M <regex>] [-S <regex>] [-L <commit-limit>]\n\t      [-r <remote>] [-R] [<CVS-module>]\n"
@@ -18803,29 +18805,29 @@ msgstr ""
 msgid "SSH:"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-cvsserver.txt:16
 #, no-wrap
 msgid "export CVS_SERVER=\"git cvsserver\"\n'cvs' -d :ext:user@server/path/repo.git co <HEAD_name>\n"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-cvsserver.txt:18
 msgid "pserver (/etc/inetd.conf):"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-cvsserver.txt:21
 #, no-wrap
 msgid "cvspserver stream tcp nowait nobody /usr/bin/git-cvsserver git-cvsserver pserver\n"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-cvsserver.txt:23
 msgid "Usage:"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-cvsserver.txt:26
 #, no-wrap
 msgid "'git-cvsserver' [<options>] [pserver|server] [<directory> ...]\n"
@@ -19448,7 +19450,7 @@ msgstr ""
 msgid "git-daemon - A really simple server for Git repositories"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-daemon.txt:25
 #, no-wrap
 msgid "'git daemon' [--verbose] [--syslog] [--export-all]\n\t     [--timeout=<n>] [--init-timeout=<n>] [--max-connections=<n>]\n\t     [--strict-paths] [--base-path=<path>] [--base-path-relaxed]\n\t     [--user-path | --user-path=<path>]\n\t     [--interpolated-path=<pathtemplate>]\n\t     [--reuseaddr] [--detach] [--pid-file=<file>]\n\t     [--enable=<service>] [--disable=<service>]\n\t     [--allow-override=<service>] [--forbid-override=<service>]\n\t     [--access-hook=<path>] [--[no-]informative-errors]\n\t     [--inetd |\n\t      [--listen=<host-or-ipaddr>] [--port=<n>]\n\t      [--user=<user> [--group=<group>]]]\n\t     [--log-destination=(stderr|syslog|none)]\n\t     [<directory>...]\n"
@@ -19940,7 +19942,7 @@ msgstr ""
 msgid "git-describe - Give an object a human readable name based on an available ref"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-describe.txt:14
 #, no-wrap
 msgid "'git describe' [--all] [--tags] [--contains] [--abbrev=<n>] [<commit-ish>...]\n'git describe' [--all] [--tags] [--contains] [--abbrev=<n>] --dirty[=<mark>]\n'git describe' <blob>\n"
@@ -20194,7 +20196,7 @@ msgstr ""
 msgid "git-diff-files - Compares files in the working tree and the index"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-diff-files.txt:13
 #, no-wrap
 msgid "'git diff-files' [-q] [-0 | -1 | -2 | -3 | -c | --cc] [<common-diff-options>] [<path>...]\n"
@@ -20260,7 +20262,7 @@ msgstr ""
 msgid "git-diff-index - Compare a tree to the working tree or index"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-diff-index.txt:13
 #, no-wrap
 msgid "'git diff-index' [-m] [--cached] [--merge-base] [<common-diff-options>] <tree-ish> [<path>...]\n"
@@ -20421,7 +20423,7 @@ msgstr ""
 msgid "git-difftool - Show changes using common diff tools"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-difftool.txt:12
 #, no-wrap
 msgid "'git difftool' [<options>] [<commit> [<commit>]] [--] [<path>...]\n"
@@ -20645,7 +20647,7 @@ msgstr ""
 msgid "git-diff-tree - Compares the content and mode of blobs found via two tree objects"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-diff-tree.txt:15
 #, no-wrap
 msgid "'git diff-tree' [--stdin] [-m] [-s] [-v] [--no-commit-id] [--pretty]\n\t      [-t] [-r] [-c | --cc] [--combined-all-paths] [--root] [--merge-base]\n\t      [<common-diff-options>] <tree-ish> [<tree-ish>] [<path>...]\n"
@@ -20779,9 +20781,10 @@ msgstr ""
 msgid "git-diff - Show changes between commits, commit and working tree, etc"
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/git-diff.txt:18
-msgid "git diff [<options>] [<commit>] [--] [<path>...] git diff [<options>] --cached [--merge-base] [<commit>] [--] [<path>...] git diff [<options>] [--merge-base] <commit> [<commit>...] <commit> [--] [<path>...] git diff [<options>] <commit>...<commit> [--] [<path>...] git diff [<options>] <blob> <blob> git diff [<options>] --no-index [--] <path> <path>"
+#, no-wrap
+msgid "git diff [<options>] [<commit>] [--] [<path>...]\ngit diff [<options>] --cached [--merge-base] [<commit>] [--] [<path>...]\ngit diff [<options>] [--merge-base] <commit> [<commit>...] <commit> [--] [<path>...]\ngit diff [<options>] <commit>...<commit> [--] [<path>...]\ngit diff [<options>] <blob> <blob>\ngit diff [<options>] --no-index [--] <path> <path>\n"
 msgstr ""
 
 #. type: Plain text
@@ -21148,7 +21151,7 @@ msgstr ""
 msgid "git-fast-export - Git data exporter"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-fast-export.txt:13
 #, no-wrap
 msgid "'git fast-export' [<options>] | 'git fast-import'\n"
@@ -21499,7 +21502,7 @@ msgstr ""
 msgid "git-fast-import - Backend for fast Git data importers"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-fast-import.txt:13
 #, no-wrap
 msgid "frontend | 'git fast-import' [<options>]\n"
@@ -23527,7 +23530,7 @@ msgstr ""
 msgid "git-fetch-pack - Receive missing objects from another repository"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-fetch-pack.txt:16
 #, no-wrap
 msgid "'git fetch-pack' [--all] [--quiet|-q] [--keep|-k] [--thin] [--include-tag]\n\t[--upload-pack=<git-upload-pack>]\n\t[--depth=<n>] [--no-progress]\n\t[-v] <repository> [<refs>...]\n"
@@ -23698,7 +23701,7 @@ msgstr ""
 msgid "git-fetch - Download objects and refs from another repository"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-fetch.txt:16
 #, no-wrap
 msgid "'git fetch' [<options>] [<repository> [<refspec>...]]\n'git fetch' [<options>] <group>\n'git fetch' --multiple [<options>] [(<repository> | <group>)...]\n'git fetch' --all [<options>]\n"
@@ -24109,7 +24112,7 @@ msgstr ""
 msgid "git-filter-branch - Rewrite branches"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-filter-branch.txt:18
 #, no-wrap
 msgid "'git filter-branch' [--setup <command>] [--subdirectory-filter <directory>]\n\t[--env-filter <command>] [--tree-filter <command>]\n\t[--index-filter <command>] [--parent-filter <command>]\n\t[--msg-filter <command>] [--commit-filter <command>]\n\t[--tag-name-filter <command>] [--prune-empty]\n\t[--original <namespace>] [-d <directory>] [-f | --force]\n\t[--state-branch <branch>] [--] [<rev-list-options>...]\n"
@@ -24815,7 +24818,7 @@ msgstr ""
 msgid "git-fmt-merge-msg - Produce a merge commit message"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-fmt-merge-msg.txt:14
 #, no-wrap
 msgid "'git fmt-merge-msg' [-m <message>] [--into-name <branch>] [--log[=<n>] | --no-log]\n'git fmt-merge-msg' [-m <message>] [--log[=<n>] | --no-log] -F <file>\n"
@@ -24930,7 +24933,7 @@ msgstr ""
 msgid "git-for-each-ref - Output information on each ref"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-for-each-ref.txt:18
 #, no-wrap
 msgid "'git for-each-ref' [--count=<count>] [--shell|--perl|--python|--tcl]\n\t\t   [(--sort=<key>)...] [--format=<format>]\n\t\t   [--include-root-refs] [ --stdin | <pattern>... ]\n\t\t   [--points-at=<object>]\n\t\t   [--merged[=<object>]] [--no-merged[=<object>]]\n\t\t   [--contains[=<object>]] [--no-contains[=<object>]]\n\t\t   [--exclude=<pattern> ...]\n"
@@ -25699,7 +25702,7 @@ msgstr ""
 msgid "git-format-patch - Prepare patches for e-mail submission"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-format-patch.txt:35
 #, no-wrap
 msgid "'git format-patch' [-k] [(-o|--output-directory) <dir> | --stdout]\n\t\t   [--no-thread | --thread[=<style>]]\n\t\t   [(--attach|--inline)[=<boundary>] | --no-attach]\n\t\t   [-s | --signoff]\n\t\t   [--signature=<signature> | --no-signature]\n\t\t   [--signature-file=<file>]\n\t\t   [-n | --numbered | -N | --no-numbered]\n\t\t   [--start-number <n>] [--numbered-files]\n\t\t   [--in-reply-to=<message-id>] [--suffix=.<sfx>]\n\t\t   [--ignore-if-in-upstream] [--always]\n\t\t   [--cover-from-description=<mode>]\n\t\t   [--rfc[=<rfc>]] [--subject-prefix=<subject-prefix>]\n\t\t   [(--reroll-count|-v) <n>]\n\t\t   [--to=<email>] [--cc=<email>]\n\t\t   [--[no-]cover-letter] [--quiet]\n\t\t   [--[no-]encode-email-headers]\n\t\t   [--no-notes | --notes[=<ref>]]\n\t\t   [--interdiff=<previous>]\n\t\t   [--range-diff=<previous> [--creation-factor=<percent>]]\n\t\t   [--filename-max-length=<n>]\n\t\t   [--progress]\n\t\t   [<common-diff-options>]\n\t\t   [ <since> | <revision-range> ]\n"
@@ -26808,7 +26811,7 @@ msgstr ""
 msgid "git-fsck-objects - Verifies the connectivity and validity of the objects in the database"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-fsck-objects.txt:13
 #, no-wrap
 msgid "'git fsck-objects' ...\n"
@@ -26830,7 +26833,7 @@ msgstr ""
 msgid "git-fsck - Verifies the connectivity and validity of the objects in the database"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-fsck.txt:16
 #, no-wrap
 msgid "'git fsck' [--tags] [--root] [--unreachable] [--cache] [--no-reflogs]\n\t [--[no-]full] [--strict] [--verbose] [--lost-found]\n\t [--[no-]dangling] [--[no-]progress] [--connectivity-only]\n\t [--[no-]name-objects] [<object>...]\n"
@@ -27096,7 +27099,7 @@ msgstr ""
 msgid "git-gc - Cleanup unnecessary files and optimize the local repository"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-gc.txt:13
 #, no-wrap
 msgid "'git gc' [--aggressive] [--auto] [--[no-]detach] [--quiet] [--prune=<date> | --no-prune] [--force] [--keep-largest-pack]\n"
@@ -27297,7 +27300,7 @@ msgstr ""
 msgid "git-get-tar-commit-id - Extract commit ID from an archive created using git-archive"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-get-tar-commit-id.txt:13
 #, no-wrap
 msgid "'git get-tar-commit-id'\n"
@@ -27324,7 +27327,7 @@ msgstr ""
 msgid "git-grep - Print lines matching a pattern"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-grep.txt:33
 #, no-wrap
 msgid "'git grep' [-a | --text] [-I] [--textconv] [-i | --ignore-case] [-w | --word-regexp]\n\t   [-v | --invert-match] [-h|-H] [--full-name]\n\t   [-E | --extended-regexp] [-G | --basic-regexp]\n\t   [-P | --perl-regexp]\n\t   [-F | --fixed-strings] [-n | --line-number] [--column]\n\t   [-l | --files-with-matches] [-L | --files-without-match]\n\t   [(-O | --open-files-in-pager) [<pager>]]\n\t   [-z | --null]\n\t   [ -o | --only-matching ] [-c | --count] [--all-match] [-q | --quiet]\n\t   [--max-depth <depth>] [--[no-]recursive]\n\t   [--color[=<when>] | --no-color]\n\t   [--break] [--heading] [-p | --show-function]\n\t   [-A <post-context>] [-B <pre-context>] [-C <context>]\n\t   [-W | --function-context]\n\t   [(-m | --max-count) <num>]\n\t   [--threads <num>]\n\t   [-f <file>] [-e] <pattern>\n\t   [--and|--or|--not|(|)|-e <pattern>...]\n\t   [--recurse-submodules] [--parent-basename <basename>]\n\t   [ [--[no-]exclude-standard] [--cached | --untracked | --no-index] | <tree>...]\n\t   [--] [<pathspec>...]\n"
@@ -27970,7 +27973,7 @@ msgstr ""
 msgid "git-gui - A portable graphical interface to Git"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-gui.txt:12
 #, no-wrap
 msgid "'git gui' [<command>] [<arguments>]\n"
@@ -28167,7 +28170,7 @@ msgstr ""
 msgid "git-hash-object - Compute object ID and optionally create an object from a file"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-hash-object.txt:15
 #, no-wrap
 msgid "'git hash-object' [-t <type>] [-w] [--path=<file> | --no-filters]\n\t\t[--stdin [--literally]] [--] <file>...\n'git hash-object' [-t <type>] [-w] --stdin-paths [--no-filters]\n"
@@ -28248,7 +28251,7 @@ msgstr ""
 msgid "git-help - Display help information about Git"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-help.txt:17
 #, no-wrap
 msgid "'git help' [-a|--all] [--[no-]verbose] [--[no-]external-commands] [--[no-]aliases]\n'git help' [[-i|--info] [-m|--man] [-w|--web]] [<command>|<doc>]\n'git help' [-g|--guides]\n'git help' [-c|--config]\n'git help' [--user-interfaces]\n'git help' [--developer-interfaces]\n"
@@ -28612,7 +28615,7 @@ msgstr ""
 msgid "git-http-backend - Server side implementation of Git over HTTP"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-http-backend.txt:12
 #, no-wrap
 msgid "'git http-backend'\n"
@@ -28943,7 +28946,7 @@ msgstr ""
 msgid "git-http-fetch - Download from a remote Git repository via HTTP"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-http-fetch.txt:13
 #, no-wrap
 msgid "'git http-fetch' [-c] [-t] [-a] [-d] [-v] [-w <filename>] [--recover] [--stdin | --packfile=<hash> | <commit>] <URL>\n"
@@ -29052,7 +29055,7 @@ msgstr ""
 msgid "git-http-push - Push objects over HTTP/DAV to another repository"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-http-push.txt:13
 #, no-wrap
 msgid "'git http-push' [--all] [--dry-run] [--force] [--verbose] <URL> <ref> [<ref>...]\n"
@@ -29181,7 +29184,7 @@ msgstr ""
 msgid "git-imap-send - Send a collection of patches from stdin to an IMAP folder"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-imap-send.txt:13
 #, no-wrap
 msgid "'git imap-send' [-v] [-q] [--[no-]curl]\n"
@@ -29267,12 +29270,12 @@ msgstr ""
 msgid "[imap]\n    folder = \"INBOX.Drafts\"\n    host = imaps://imap.example.com\n    user = bob\n    pass = p4ssw0rd\n    port = 123\n    ; sslVerify = false\n"
 msgstr ""
 
-#. type: Plain text
+#. type: NOTE
 #: en/git-imap-send.txt:100
 msgid "You may want to use `sslVerify=false` while troubleshooting, if you suspect that the reason you are having trouble connecting is because the certificate you use at the private server `example.com` you are trying to set up (or have set up) may not be verified correctly."
 msgstr ""
 
-#. type: Plain text
+#. type: NOTE
 #: en/git-imap-send.txt:102
 msgid "Using Gmail's IMAP interface:"
 msgstr ""
@@ -29283,28 +29286,28 @@ msgstr ""
 msgid "[imap]\n\tfolder = \"[Gmail]/Drafts\"\n\thost = imaps://imap.gmail.com\n\tuser = user@gmail.com\n\tport = 993\n"
 msgstr ""
 
-#. type: Plain text
+#. type: NOTE
 #: en/git-imap-send.txt:114
 msgid "You might need to instead use: `folder = \"[Google Mail]/Drafts\"` if you get an error that the \"Folder doesn't exist\"."
 msgstr ""
 
-#. type: Plain text
+#. type: NOTE
 #: en/git-imap-send.txt:118
 msgid "If your Gmail account is set to another language than English, the name of the \"Drafts\" folder will be localized."
 msgstr ""
 
-#. type: Plain text
+#. type: NOTE
 #: en/git-imap-send.txt:120
 msgid "Once the commits are ready to be sent, run the following command:"
 msgstr ""
 
-#. type: Plain text
+#. type: NOTE
 #: en/git-imap-send.txt:122
 #, no-wrap
 msgid "  $ git format-patch --cover-letter -M --stdout origin/master | git imap-send\n"
 msgstr ""
 
-#. type: Plain text
+#. type: NOTE
 #: en/git-imap-send.txt:126
 msgid "Just make sure to disable line wrapping in the email client (Gmail's web interface will wrap lines no matter what, so you need to use a real IMAP client)."
 msgstr ""
@@ -29342,7 +29345,7 @@ msgstr ""
 msgid "git-index-pack - Build pack index file for an existing packed archive"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-index-pack.txt:15
 #, no-wrap
 msgid "'git index-pack' [-v] [-o <index-file>] [--[no-]rev-index] <pack-file>\n'git index-pack' --stdin [--fix-thin] [--keep] [-v] [-o <index-file>]\n\t\t  [--[no-]rev-index] [<pack-file>]\n"
@@ -29546,7 +29549,7 @@ msgstr ""
 msgid "git-init-db - Creates an empty Git repository"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-init-db.txt:13
 #, no-wrap
 msgid "'git init-db' [-q | --quiet] [--bare] [--template=<template-directory>] [--separate-git-dir <git-dir>] [--shared[=<permissions>]]\n"
@@ -29568,7 +29571,7 @@ msgstr ""
 msgid "git-init - Create an empty Git repository or reinitialize an existing one"
 msgstr ""
 
-#. type: Plain text
+#. type: synopsis
 #: en/git-init.txt:17
 #, no-wrap
 msgid "git init [-q | --quiet] [--bare] [--template=<template-directory>]\n\t [--separate-git-dir <git-dir>] [--object-format=<format>]\n\t [--ref-format=<format>]\n\t [-b <branch-name> | --initial-branch=<branch-name>]\n\t [--shared[=<permissions>]] [<directory>]\n"
@@ -29841,7 +29844,7 @@ msgstr ""
 msgid "git-instaweb - Instantly browse your working repository in gitweb"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-instaweb.txt:14
 #, no-wrap
 msgid "'git instaweb' [--local] [--httpd=<httpd>] [--port=<port>]\n               [--browser=<browser>]\n'git instaweb' [--start] [--stop] [--restart]\n"
@@ -29979,7 +29982,7 @@ msgstr ""
 msgid "git-interpret-trailers - Add or parse structured information in commit messages"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-interpret-trailers.txt:14
 #, no-wrap
 msgid "'git interpret-trailers' [--in-place] [--trim-empty]\n\t\t\t[(--trailer (<key>|<key-alias>)[(=|:)<value>])...]\n\t\t\t[--parse] [<file>...]\n"
@@ -30665,7 +30668,7 @@ msgstr ""
 msgid "git-log - Show commit logs"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-log.txt:13
 #, no-wrap
 msgid "'git log' [<options>] [<revision-range>] [[--] <path>...]\n"
@@ -30976,7 +30979,7 @@ msgstr ""
 msgid "git-ls-files - Show information about files in the index and the working tree"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-ls-files.txt:25
 #, no-wrap
 msgid "'git ls-files' [-z] [-t] [-v] [-f]\n\t\t[-c|--cached] [-d|--deleted] [-o|--others] [-i|--ignored]\n\t\t[-s|--stage] [-u|--unmerged] [-k|--killed] [-m|--modified]\n\t\t[--resolve-undo]\n\t\t[--directory [--no-empty-directory]] [--eol]\n\t\t[--deduplicate]\n\t\t[-x <pattern>|--exclude=<pattern>]\n\t\t[-X <file>|--exclude-from=<file>]\n\t\t[--exclude-per-directory=<file>]\n\t\t[--exclude-standard]\n\t\t[--error-unmatch] [--with-tree=<tree-ish>]\n\t\t[--full-name] [--recurse-submodules]\n\t\t[--abbrev[=<n>]] [--format=<format>] [--] [<file>...]\n"
@@ -31569,7 +31572,7 @@ msgstr ""
 msgid "git-ls-remote - List references in a remote repository"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-ls-remote.txt:15
 #, no-wrap
 msgid "'git ls-remote' [--branches] [--tags] [--refs] [--upload-pack=<exec>]\n\t      [-q | --quiet] [--exit-code] [--get-url] [--sort=<key>]\n\t      [--symref] [<repository> [<patterns>...]]\n"
@@ -31742,7 +31745,7 @@ msgstr ""
 msgid "git-ls-tree - List the contents of a tree object"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-ls-tree.txt:15
 #, no-wrap
 msgid "'git ls-tree' [-d] [-r] [-t] [-l] [-z]\n\t    [--name-only] [--name-status] [--object-only] [--full-name] [--full-tree] [--abbrev[=<n>]] [--format=<format>]\n\t    <tree-ish> [<path>...]\n"
@@ -31936,7 +31939,7 @@ msgstr ""
 msgid "git-mailinfo - Extracts patch and authorship from a single e-mail message"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-mailinfo.txt:15
 #, no-wrap
 msgid "'git mailinfo' [-k|-b] [-u | --encoding=<encoding> | -n]\n\t       [--[no-]scissors] [--quoted-cr=<action>]\n\t       <msg> <patch>\n"
@@ -32100,7 +32103,7 @@ msgstr ""
 msgid "git-mailsplit - Simple UNIX mbox splitter program"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-mailsplit.txt:13
 #, no-wrap
 msgid "'git mailsplit' [-b] [-f<nn>] [-d<prec>] [--keep-cr] [--mboxrd]\n\t\t-o<directory> [--] [(<mbox>|<Maildir>)...]\n"
@@ -32209,7 +32212,7 @@ msgstr ""
 msgid "git-merge-base - Find as good common ancestors as possible for a merge"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-merge-base.txt:17
 #, no-wrap
 msgid "'git merge-base' [-a | --all] <commit> <commit>...\n'git merge-base' [-a | --all] --octopus <commit>...\n'git merge-base' --is-ancestor <commit> <commit>\n'git merge-base' --independent <commit>...\n'git merge-base' --fork-point <ref> [<commit>]\n"
@@ -32483,7 +32486,7 @@ msgstr ""
 msgid "git-merge-file - Run a three-way file merge"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-merge-file.txt:15
 #, no-wrap
 msgid "'git merge-file' [-L <current-name> [-L <base-name> [-L <other-name>]]]\n\t[--ours|--theirs|--union] [-p|--stdout] [-q|--quiet] [--marker-size=<n>]\n\t[--[no-]diff3] [--object-id] <current> <base> <other>\n"
@@ -32644,7 +32647,7 @@ msgstr ""
 msgid "git-merge-index - Run a merge for files needing merging"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-merge-index.txt:13
 #, no-wrap
 msgid "'git merge-index' [-o] [-q] <merge-program> (-a | ( [--] <file>...) )\n"
@@ -32690,7 +32693,7 @@ msgstr ""
 msgid "ALERT ALERT ALERT! The Git \"merge object order\" is different from the RCS 'merge' program merge object order. In the above ordering, the original is first. But the argument order to the 3-way merge program 'merge' is to have the original in the middle. Don't ask me why."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-merge-index.txt:56 en/git-svn.txt:171
 msgid "Examples:"
 msgstr ""
@@ -32728,7 +32731,7 @@ msgstr ""
 msgid "git-merge-one-file - The standard helper program to use with git-merge-index"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-merge-one-file.txt:13
 #, no-wrap
 msgid "'git merge-one-file'\n"
@@ -32750,7 +32753,7 @@ msgstr ""
 msgid "git-mergetool--lib - Common Git merge tool shell scriptlets"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-mergetool--lib.txt:12
 #, no-wrap
 msgid "'TOOL_MODE=(diff|merge) . \"$(git --exec-path)/git-mergetool{litdd}lib\"'\n"
@@ -32843,7 +32846,7 @@ msgstr ""
 msgid "git-mergetool - Run merge conflict resolution tools to resolve merge conflicts"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-mergetool.txt:12
 #, no-wrap
 msgid "'git mergetool' [--tool=<tool>] [-y | --[no-]prompt] [<file>...]\n"
@@ -32976,7 +32979,7 @@ msgstr ""
 msgid "git-merge-tree - Perform merge without touching index or working tree"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-merge-tree.txt:14
 #, no-wrap
 msgid "'git merge-tree' [--write-tree] [<options>] <branch1> <branch2>\n'git merge-tree' [--trivial-merge] <base-tree> <branch1> <branch2> (deprecated)\n"
@@ -33397,7 +33400,7 @@ msgstr ""
 msgid "git-merge - Join two or more development histories together"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-merge.txt:18
 #, no-wrap
 msgid "'git merge' [-n] [--stat] [--no-commit] [--squash] [--[no-]edit]\n\t[--no-verify] [-s <strategy>] [-X <strategy-option>] [-S[<keyid>]]\n\t[--[no-]allow-unrelated-histories]\n\t[--[no-]rerere-autoupdate] [-m <msg>] [-F <file>]\n\t[--into-name <branch>] [<commit>...]\n'git merge' (--continue | --abort | --quit)\n"
@@ -33810,7 +33813,7 @@ msgstr ""
 msgid "git-mktag - Creates a tag object with extra validation"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-mktag.txt:13
 #, no-wrap
 msgid "'git mktag'\n"
@@ -33891,7 +33894,7 @@ msgstr ""
 msgid "git-mktree - Build a tree-object from ls-tree formatted text"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-mktree.txt:13
 #, no-wrap
 msgid "'git mktree' [-z] [--missing] [--batch]\n"
@@ -33934,7 +33937,7 @@ msgstr ""
 msgid "git-mv - Move or rename a file, a directory, or a symlink"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-mv.txt:13
 #, no-wrap
 msgid "'git mv' [<options>] <source>... <destination>\n"
@@ -34002,7 +34005,7 @@ msgstr ""
 msgid "git-name-rev - Find symbolic names for given revs"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-name-rev.txt:14
 #, no-wrap
 msgid "'git name-rev' [--tags] [--refs=<pattern>]\n\t       ( --all | --annotate-stdin | <commit-ish>... )\n"
@@ -34145,7 +34148,7 @@ msgstr ""
 msgid "git-notes - Add or inspect object notes"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-notes.txt:23
 #, no-wrap
 msgid "'git notes' [list [<object>]]\n'git notes' add [-f] [--allow-empty] [--[no-]separator | --separator=<paragraph-break>] [--[no-]stripspace] [-F <file> | -m <msg> | (-c | -C) <object>] [-e] [<object>]\n'git notes' copy [-f] ( --stdin | <from-object> [<to-object>] )\n'git notes' append [--allow-empty] [--[no-]separator | --separator=<paragraph-break>] [--[no-]stripspace] [-F <file> | -m <msg> | (-c | -C) <object>] [-e] [<object>]\n'git notes' edit [--allow-empty] [<object>] [--[no-]stripspace]\n'git notes' show [<object>]\n'git notes' merge [-v | -q] [-s <strategy> ] <notes-ref>\n'git notes' merge --commit [-v | -q]\n'git notes' merge --abort [-v | -q]\n'git notes' remove [--ignore-missing] [--stdin] [<object>...]\n'git notes' prune [-n] [-v]\n'git notes' get-ref\n"
@@ -34611,7 +34614,7 @@ msgstr ""
 msgid "git-p4 - Import from and submit to Perforce repositories"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-p4.txt:16
 #, no-wrap
 msgid "'git p4 clone' [<sync-options>] [<clone-options>] <p4-depot-path>...\n'git p4 sync' [<sync-options>] [<p4-depot-path>...]\n'git p4 rebase'\n'git p4 submit' [<submit-options>] [<master-branch-name>]\n"
@@ -35984,7 +35987,7 @@ msgstr ""
 msgid "git-pack-objects - Create a packed archive of objects"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-pack-objects.txt:19
 #, no-wrap
 msgid "'git pack-objects' [-q | --progress | --all-progress] [--all-progress-implied]\n\t[--no-reuse-delta] [--delta-base-offset] [--non-empty]\n\t[--local] [--incremental] [--window=<n>] [--depth=<n>]\n\t[--revs [--unpacked | --all]] [--keep-pack=<pack-name>]\n\t[--cruft] [--cruft-expiration=<time>]\n\t[--stdout [--filter=<filter-spec>] | <base-name>]\n\t[--shallow] [--keep-true-parents] [--[no-]sparse] < <object-list>\n"
@@ -36513,7 +36516,7 @@ msgstr ""
 msgid "git-pack-redundant - Find redundant pack files"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-pack-redundant.txt:13
 #, no-wrap
 msgid "'git pack-redundant' [--verbose] [--alt-odb] (--all | <pack-filename>...)\n"
@@ -36581,7 +36584,7 @@ msgstr ""
 msgid "git-pack-refs - Pack heads and tags for efficient repository access"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-pack-refs.txt:12
 #, no-wrap
 msgid "'git pack-refs' [--all] [--no-prune] [--auto] [--include <pattern>] [--exclude <pattern>]\n"
@@ -36674,7 +36677,7 @@ msgstr ""
 msgid "git-patch-id - Compute unique ID for a patch"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-patch-id.txt:12
 #, no-wrap
 msgid "'git patch-id' [--stable | --unstable | --verbatim]\n"
@@ -36775,7 +36778,7 @@ msgstr ""
 msgid "git-prune-packed - Remove extra objects that are already in pack files"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-prune-packed.txt:13
 #, no-wrap
 msgid "'git prune-packed' [-n | --dry-run] [-q | --quiet]\n"
@@ -36827,7 +36830,7 @@ msgstr ""
 msgid "git-prune - Prune all unreachable objects from the object database"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-prune.txt:13
 #, no-wrap
 msgid "'git prune' [-n] [-v] [--progress] [--expire <time>] [--] [<head>...]\n"
@@ -36922,7 +36925,7 @@ msgstr ""
 msgid "git-pull - Fetch from and integrate with another repository or a local branch"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-pull.txt:13
 #, no-wrap
 msgid "'git pull' [<options>] [<repository> [<refspec>...]]\n"
@@ -37053,7 +37056,7 @@ msgstr ""
 msgid "See `pull.rebase`, `branch.<name>.rebase` and `branch.autoSetupRebase` in linkgit:git-config[1] if you want to make `git pull` always use `--rebase` instead of merging."
 msgstr ""
 
-#. type: Plain text
+#. type: NOTE
 #: en/git-pull.txt:132
 msgid "This is a potentially _dangerous_ mode of operation. It rewrites history, which does not bode well when you published that history already. Do *not* use this option unless you have read linkgit:git-rebase[1] carefully."
 msgstr ""
@@ -37064,7 +37067,7 @@ msgstr ""
 msgid "--no-rebase"
 msgstr ""
 
-#. type: Plain text
+#. type: NOTE
 #: en/git-pull.txt:135
 msgid "This is shorthand for --rebase=false."
 msgstr ""
@@ -37201,7 +37204,7 @@ msgstr ""
 msgid "git-push - Update remote refs along with associated objects"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-push.txt:18
 #, no-wrap
 msgid "'git push' [--all | --branches | --mirror | --tags] [--follow-tags] [--atomic] [-n | --dry-run] [--receive-pack=<git-receive-pack>]\n\t   [--repo=<repository>] [-f | --force] [-d | --delete] [--prune] [-q | --quiet] [-v | --verbose]\n\t   [-u | --set-upstream] [-o <string> | --push-option=<string>]\n\t   [--[no-]signed|--signed=(true|false|if-asked)]\n\t   [--force-with-lease[=<refname>[:<expect>]] [--force-if-includes]]\n\t   [--no-verify] [<repository> [<refspec>...]]\n"
@@ -38019,7 +38022,7 @@ msgstr ""
 msgid "git-quiltimport - Applies a quilt patchset onto the current branch"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-quiltimport.txt:14
 #, no-wrap
 msgid "'git quiltimport' [--dry-run | -n] [--author <author>] [--patches <dir>]\n\t\t[--series <file>] [--keep-non-patch]\n"
@@ -38099,7 +38102,7 @@ msgstr ""
 msgid "git-range-diff - Compare two commit ranges (e.g. two versions of a branch)"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-range-diff.txt:16
 #, no-wrap
 msgid "'git range-diff' [--color=[<when>]] [--no-color] [<diff-options>]\n\t[--no-dual-color] [--creation-factor=<factor>]\n\t[--left-only | --right-only]\n\t( <range1> <range2> | <rev1>...<rev2> | <base> <rev1> <rev2> )\n\t[[--] <path>...]\n"
@@ -38439,7 +38442,7 @@ msgstr ""
 msgid "git-read-tree - Reads tree information into the index"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-read-tree.txt:15
 #, no-wrap
 msgid "'git read-tree' [(-m [--trivial] [--aggressive] | --reset | --prefix=<prefix>)\n\t\t[-u | -i]] [--index-output=<file>] [--no-sparse-checkout]\n\t\t(--empty | <tree-ish1> [<tree-ish2> [<tree-ish3>]])\n"
@@ -38936,7 +38939,7 @@ msgstr ""
 msgid "git-rebase - Reapply commits on top of another base tip"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-rebase.txt:16
 #, no-wrap
 msgid "'git rebase' [-i | --interactive] [<options>] [--exec <cmd>]\n\t[--onto <newbase> | --keep-base] [<upstream> [<branch>]]\n'git rebase' [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase>]\n\t--root [<branch>]\n'git rebase' (--continue|--skip|--abort|--quit|--edit-todo|--show-current-patch)\n"
@@ -38962,22 +38965,22 @@ msgstr ""
 msgid "The current branch is reset to `<upstream>` or `<newbase>` if the `--onto` option was supplied. This has the exact same effect as `git reset --hard <upstream>` (or `<newbase>`). `ORIG_HEAD` is set to point at the tip of the branch before the reset."
 msgstr ""
 
-#. type: Plain text
+#. type: NOTE
 #: en/git-rebase.txt:47
 msgid "`ORIG_HEAD` is not guaranteed to still point to the previous branch tip at the end of the rebase if other commands that write that pseudo-ref (e.g. `git reset`) are used during the rebase. The previous branch tip, however, is accessible using the reflog of the current branch (i.e. `@{1}`, see linkgit:gitrevisions[7])."
 msgstr ""
 
-#. type: Plain text
+#. type: NOTE
 #: en/git-rebase.txt:53
 msgid "The commits that were previously saved into the temporary area are then reapplied to the current branch, one by one, in order. Note that any commits in `HEAD` which introduce the same textual changes as a commit in `HEAD..<upstream>` are omitted (i.e., a patch already accepted upstream with a different commit message or timestamp will be skipped)."
 msgstr ""
 
-#. type: Plain text
+#. type: NOTE
 #: en/git-rebase.txt:60
 msgid "It is possible that a merge failure will prevent this process from being completely automatic. You will have to resolve any such merge failure and run `git rebase --continue`. Another option is to bypass the commit that caused the merge failure with `git rebase --skip`. To check out the original `<branch>` and remove the `.git/rebase-apply` working files, use the command `git rebase --abort` instead."
 msgstr ""
 
-#. type: Plain text
+#. type: NOTE
 #: en/git-rebase.txt:62
 msgid "Assume the following history exists and the current branch is \"topic\":"
 msgstr ""
@@ -40554,7 +40557,7 @@ msgstr ""
 msgid "git-receive-pack - Receive what is pushed into the repository"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-receive-pack.txt:13
 #, no-wrap
 msgid "'git receive-pack' <git-dir>\n"
@@ -40918,7 +40921,7 @@ msgstr ""
 msgid "git-reflog - Manage reflog information"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-reflog.txt:20
 #, no-wrap
 msgid "'git reflog' [show] [<log-options>] [<ref>]\n'git reflog list'\n'git reflog expire' [--expire=<time>] [--expire-unreachable=<time>]\n\t[--rewrite] [--updateref] [--stale-fix]\n\t[--dry-run | -n] [--verbose] [--all [--single-worktree] | <refs>...]\n'git reflog delete' [--rewrite] [--updateref]\n\t[--dry-run | -n] [--verbose] <ref>@{<specifier>}...\n'git reflog exists' <ref>\n"
@@ -41084,7 +41087,7 @@ msgstr ""
 msgid "git-remote-ext - Bridge smart transport to external command."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-remote-ext.txt:12
 #, no-wrap
 msgid "git remote add <nick> \"ext::<command>[ <arguments>...]\"\n"
@@ -41378,7 +41381,7 @@ msgstr ""
 msgid "git-remote - Manage set of tracked repositories"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-remote.txt:25
 #, no-wrap
 msgid "'git remote' [-v | --verbose]\n'git remote add' [-t <branch>] [-m <master>] [-f] [--[no-]tags] [--mirror=(fetch|push)] <name> <URL>\n'git remote rename' [--[no-]progress] <old> <new>\n'git remote remove' <name>\n'git remote set-head' <name> (-a | --auto | -d | --delete | <branch>)\n'git remote set-branches' [--add] <name> <branch>...\n'git remote get-url' [--push] [--all] <name>\n'git remote set-url' [--push] <name> <newurl> [<oldurl>]\n'git remote set-url --add' [--push] <name> <newurl>\n'git remote set-url --delete' [--push] <name> <URL>\n'git remote' [-v | --verbose] 'show' [-n] <name>...\n'git remote prune' [-n | --dry-run] <name>...\n'git remote' [-v | --verbose] 'update' [-p | --prune] [(<group> | <remote>)...]\n"
@@ -41693,7 +41696,7 @@ msgstr ""
 msgid "git-repack - Pack unpacked objects in a repository"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-repack.txt:13
 #, no-wrap
 msgid "'git repack' [-a] [-A] [-d] [-f] [-F] [-l] [-n] [-q] [-b] [-m] [--window=<n>] [--depth=<n>] [--threads=<n>] [--keep-pack=<pack-name>] [--write-midx]\n"
@@ -41944,7 +41947,7 @@ msgstr ""
 msgid "git-replace - Create, list, delete refs to replace objects"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-replace.txt:17
 #, no-wrap
 msgid "'git replace' [-f] <object> <replacement>\n'git replace' [-f] --edit <object>\n'git replace' [-f] --graft <commit> [<parent>...]\n'git replace' [-f] --convert-graft-file\n'git replace' -d <object>...\n'git replace' [--format=<format>] [-l [<pattern>]]\n"
@@ -42176,7 +42179,7 @@ msgstr ""
 msgid "git-request-pull - Generates a summary of pending changes"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-request-pull.txt:12
 #, no-wrap
 msgid "'git request-pull' [-p] <start> <URL> [<end>]\n"
@@ -42295,7 +42298,7 @@ msgstr ""
 msgid "git-rerere - Reuse recorded resolution of conflicted merges"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-rerere.txt:12
 #, no-wrap
 msgid "'git rerere' [clear | forget <pathspec>... | diff | status | remaining | gc]\n"
@@ -42311,7 +42314,7 @@ msgstr ""
 msgid "This command assists the developer in this process by recording conflicted automerge results and corresponding hand resolve results on the initial manual merge, and applying previously recorded hand resolutions to their corresponding automerge results."
 msgstr ""
 
-#. type: Plain text
+#. type: NOTE
 #: en/git-rerere.txt:29
 msgid "You need to set the configuration variable `rerere.enabled` in order to enable this command."
 msgstr ""
@@ -42528,7 +42531,7 @@ msgstr ""
 msgid "git-reset - Reset current HEAD to the specified state"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-reset.txt:15
 #, no-wrap
 msgid "'git reset' [-q] [<tree-ish>] [--] <pathspec>...\n'git reset' [-q] [--pathspec-from-file=<file> [--pathspec-file-nul]] [<tree-ish>]\n'git reset' (--patch | -p) [<tree-ish>] [--] [<pathspec>...]\n'git reset' [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [<commit>]\n"
@@ -43098,7 +43101,7 @@ msgstr ""
 msgid "git-restore - Restore working tree files"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-restore.txt:14
 #, no-wrap
 msgid "'git restore' [<options>] [--source=<tree>] [--staged] [--worktree] [--] <pathspec>...\n'git restore' [<options>] [--source=<tree>] [--staged] [--worktree] --pathspec-from-file=<file> [--pathspec-file-nul]\n'git restore' (-p|--patch) [<options>] [--source=<tree>] [--staged] [--worktree] [--] [<pathspec>...]\n"
@@ -43322,7 +43325,7 @@ msgstr ""
 msgid "git-revert - Revert some existing commits"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-revert.txt:13
 #, no-wrap
 msgid "'git revert' [--[no-]edit] [-n] [-m <parent-number>] [-s] [-S[<keyid>]] <commit>...\n'git revert' (--continue | --skip | --abort | --quit)\n"
@@ -43439,7 +43442,7 @@ msgstr ""
 msgid "git-rev-list - Lists commit objects in reverse chronological order"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-rev-list.txt:13
 #, no-wrap
 msgid "'git rev-list' [<options>] <commit>... [--] [<path>...]\n"
@@ -43571,7 +43574,7 @@ msgstr ""
 msgid "git-rev-parse - Pick out and massage parameters"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-rev-parse.txt:13
 #, no-wrap
 msgid "'git rev-parse' [<options>] <arg>...\n"
@@ -44474,7 +44477,7 @@ msgstr ""
 msgid "git-rm - Remove files from the working tree and from the index"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-rm.txt:14
 #, no-wrap
 msgid "'git rm' [-f | --force] [-n] [-r] [--cached] [--ignore-unmatch]\n\t  [--quiet] [--pathspec-from-file=<file> [--pathspec-file-nul]]\n\t  [--] [<pathspec>...]\n"
@@ -44681,7 +44684,7 @@ msgstr ""
 msgid "git-send-email - Send a collection of patches as emails"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-send-email.txt:16
 #, no-wrap
 msgid "'git send-email' [<options>] (<file>|<directory>)...\n'git send-email' [<options>] <format-patch-options>\n'git send-email' --dump-aliases\n'git send-email' --translate-aliases\n"
@@ -45560,7 +45563,7 @@ msgstr ""
 msgid "git-send-pack - Push objects over Git protocol to another repository"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-send-pack.txt:17
 #, no-wrap
 msgid "'git send-pack' [--mirror] [--dry-run] [--force]\n\t\t[--receive-pack=<git-receive-pack>]\n\t\t[--verbose] [--thin] [--atomic]\n\t\t[--[no-]signed | --signed=(true|false|if-asked)]\n\t\t[<host>:]<directory> (--all | <ref>...)\n"
@@ -45684,7 +45687,7 @@ msgstr ""
 msgid "git-shell - Restricted login shell for Git-only SSH access"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-shell.txt:15
 #, no-wrap
 msgid "'chsh' -s $(command -v git-shell) <user>\n'git clone' <user>`@localhost:/path/to/repo.git`\n'ssh' <user>`@localhost`\n"
@@ -45803,7 +45806,7 @@ msgstr ""
 msgid "git-sh-i18n--envsubst - Git's own envsubst(1) for i18n fallbacks"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-sh-i18n--envsubst.txt:17
 #, no-wrap
 msgid "eval_gettext () {\n\tprintf \"%s\" \"$1\" | (\n\t\texport PATH $('git sh-i18n{litdd}envsubst' --variables \"$1\");\n\t\t'git sh-i18n{litdd}envsubst' \"$1\"\n\t)\n}\n"
@@ -45835,7 +45838,7 @@ msgstr ""
 msgid "git-sh-i18n - Git's i18n setup code for shell scripts"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-sh-i18n.txt:12
 #, no-wrap
 msgid "'. \"$(git --exec-path)/git-sh-i18n\"'\n"
@@ -45879,7 +45882,7 @@ msgstr ""
 msgid "git-shortlog - Summarize 'git log' output"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-shortlog.txt:13
 #, no-wrap
 msgid "'git shortlog' [<options>] [<revision-range>] [[--] <path>...]\ngit log --pretty=short | 'git shortlog' [<options>]\n"
@@ -46047,7 +46050,7 @@ msgstr ""
 msgid "git-show-branch - Show branches and their commits"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-show-branch.txt:17
 #, no-wrap
 msgid "'git show-branch' [-a | --all] [-r | --remotes] [--topo-order | --date-order]\n\t\t[--current] [--color[=<when>] | --no-color] [--sparse]\n\t\t[--more=<n> | --list | --independent | --merge-base]\n\t\t[--no-name | --sha1-name] [--topics]\n\t\t[(<rev> | <glob>)...]\n'git show-branch' (-g | --reflog)[=<n>[,<base>]] [--list] [<ref>]\n"
@@ -46293,7 +46296,7 @@ msgstr ""
 msgid "git-show-index - Show packed archive index"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-show-index.txt:13
 #, no-wrap
 msgid "'git show-index' [--object-format=<hash-algorithm>]\n"
@@ -46345,7 +46348,7 @@ msgstr ""
 msgid "git-show-ref - List references in a local repository"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-show-ref.txt:19
 #, no-wrap
 msgid "'git show-ref' [--head] [-d | --dereference]\n\t     [-s | --hash[=<n>]] [--abbrev[=<n>]] [--branches] [--tags]\n\t     [--] [<pattern>...]\n'git show-ref' --verify [-q | --quiet] [-d | --dereference]\n\t     [-s | --hash[=<n>]] [--abbrev[=<n>]]\n\t     [--] [<ref>...]\n'git show-ref' --exclude-existing[=<pattern>]\n'git show-ref' --exists <ref>\n"
@@ -46610,7 +46613,7 @@ msgstr ""
 msgid "git-show - Show various types of objects"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-show.txt:13
 #, no-wrap
 msgid "'git show' [<options>] [<object>...]\n"
@@ -46733,7 +46736,7 @@ msgstr ""
 msgid "git-sh-setup - Common Git shell script setup code"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-sh-setup.txt:12
 #, no-wrap
 msgid "'. \"$(git --exec-path)/git-sh-setup\"'\n"
@@ -46892,7 +46895,7 @@ msgstr ""
 msgid "git-stage - Add file contents to the staging area"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-stage.txt:13
 #, no-wrap
 msgid "'git stage' <arg>...\n"
@@ -46914,7 +46917,7 @@ msgstr ""
 msgid "git-stash - Stash the changes in a dirty working directory away"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-stash.txt:26
 #, no-wrap
 msgid "'git stash' list [<log-options>]\n'git stash' show [-u | --include-untracked | --only-untracked] [<diff-options>] [<stash>]\n'git stash' drop [-q | --quiet] [<stash>]\n'git stash' pop [--index] [-q | --quiet] [<stash>]\n'git stash' apply [--index] [-q | --quiet] [<stash>]\n'git stash' branch <branchname> [<stash>]\n'git stash' [push [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-q | --quiet]\n\t     [-u | --include-untracked] [-a | --all] [(-m | --message) <message>]\n\t     [--pathspec-from-file=<file> [--pathspec-file-nul]]\n\t     [--] [<pathspec>...]]\n'git stash' save [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-q | --quiet]\n\t     [-u | --include-untracked] [-a | --all] [<message>]\n'git stash' clear\n'git stash' create [<message>]\n'git stash' store [(-m | --message) <message>] [-q | --quiet] <commit>\n"
@@ -47342,7 +47345,7 @@ msgstr ""
 msgid "git-status - Show the working tree status"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-status.txt:13
 #, no-wrap
 msgid "'git status' [<options>] [--] [<pathspec>...]\n"
@@ -47989,7 +47992,7 @@ msgstr ""
 msgid "git-stripspace - Remove unnecessary whitespace"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-stripspace.txt:14
 #, no-wrap
 msgid "'git stripspace' [-s | --strip-comments]\n'git stripspace' [-c | --comment-lines]\n"
@@ -48101,7 +48104,7 @@ msgstr ""
 msgid "git-submodule - Initialize, update or inspect submodules"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-submodule.txt:24
 #, no-wrap
 msgid "'git submodule' [--quiet] [--cached]\n'git submodule' [--quiet] add [<options>] [--] <repository> [<path>]\n'git submodule' [--quiet] status [--cached] [--recursive] [--] [<path>...]\n'git submodule' [--quiet] init [--] [<path>...]\n'git submodule' [--quiet] deinit [-f|--force] (--all|[--] <path>...)\n'git submodule' [--quiet] update [<options>] [--] [<path>...]\n'git submodule' [--quiet] set-branch [<options>] [--] <path>\n'git submodule' [--quiet] set-url [--] <path> <newurl>\n'git submodule' [--quiet] summary [<options>] [--] [<path>...]\n'git submodule' [--quiet] foreach [--recursive] <command>\n'git submodule' [--quiet] sync [--recursive] [--] [<path>...]\n'git submodule' [--quiet] absorbgitdirs [--] [<path>...]\n"
@@ -48680,7 +48683,7 @@ msgstr ""
 msgid "git-svn - Bidirectional operation between a Subversion repository and Git"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:12
 #, no-wrap
 msgid "'git svn' <command> [<options>] [<arguments>]\n"
@@ -48890,7 +48893,7 @@ msgstr ""
 msgid "Fetch unfetched revisions from the Subversion remote we are tracking. The name of the [svn-remote \"...\"] section in the $GIT_DIR/config file may be specified as an optional command-line argument."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:130 en/git-svn.txt:243
 msgid "This automatically updates the rev_map if needed (see '$GIT_DIR/svn/\\**/.rev_map.*' in the FILES section below for details)."
 msgstr ""
@@ -48927,29 +48930,29 @@ msgstr ""
 msgid "Ignore refs for branches or tags matching the Perl regular expression. A \"negative look-ahead assertion\" like `^refs/remotes/origin/(?!tags/wanted-tag|wanted-branch).*$` can be used to allow only certain refs."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:153
 #, no-wrap
 msgid "config key: svn-remote.<name>.ignore-refs\n"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:156
 msgid "If the ignore-refs configuration key is set, and the command-line option is also given, both regular expressions will be used."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:163
 msgid "This allows one to specify a Perl regular expression that will cause skipping of all matching paths from checkout from SVN. The `--ignore-paths` option should match for every 'fetch' (including automatic fetches due to 'clone', 'dcommit', 'rebase', etc) on a given repository."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:166
 #, no-wrap
 msgid "config key: svn-remote.<name>.ignore-paths\n"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:169
 msgid "If the ignore-paths configuration key is set, and the command-line option is also given, both regular expressions will be used."
 msgstr ""
@@ -48983,7 +48986,7 @@ msgstr ""
 msgid "This allows one to specify a Perl regular expression that will cause the inclusion of only matching paths from checkout from SVN. The `--include-paths` option should match for every 'fetch' (including automatic fetches due to 'clone', 'dcommit', 'rebase', etc) on a given repository. `--ignore-paths` takes precedence over `--include-paths`."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:196
 #, no-wrap
 msgid "config key: svn-remote.<name>.include-paths\n"
@@ -48995,7 +48998,7 @@ msgstr ""
 msgid "--log-window-size=<n>"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:203
 msgid "Fetch <n> log entries per request when scanning Subversion history. The default is 100. For very large Subversion repositories, larger values may be needed for 'clone'/'fetch' to complete in reasonable time. But overly large values may lead to higher memory usage and request timeouts."
 msgstr ""
@@ -49006,7 +49009,7 @@ msgstr ""
 msgid "'clone'"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:214
 msgid "Runs 'init' and 'fetch'. It will automatically create a directory based on the basename of the URL passed to it; or if a second argument is passed; it will create a directory and work within that. It accepts all arguments that the 'init' and 'fetch' commands accept; with the exception of `--fetch-all` and `--parent`. After a repository is cloned, the 'fetch' command will be able to update revisions without affecting the working tree; and the 'rebase' command will be able to update the working tree with the latest changes."
 msgstr ""
@@ -49017,7 +49020,7 @@ msgstr ""
 msgid "--preserve-empty-dirs"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:221
 msgid "Create a placeholder file in the local Git repository for each empty directory fetched from Subversion. This includes directories that become empty by removing all entries in the Subversion repository (but not the directory itself). The placeholder files are also tracked and removed when no longer necessary."
 msgstr ""
@@ -49028,7 +49031,7 @@ msgstr ""
 msgid "--placeholder-filename=<filename>"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:225
 msgid "Set the name of placeholder files created by --preserve-empty-dirs. Default: \".gitignore\""
 msgstr ""
@@ -49039,27 +49042,27 @@ msgstr ""
 msgid "'rebase'"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:229
 msgid "This fetches revisions from the SVN parent of the current HEAD and rebases the current (uncommitted to SVN) work against it."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:233
 msgid "This works similarly to `svn update` or 'git pull' except that it preserves linear history with 'git rebase' instead of 'git merge' for ease of dcommitting with 'git svn'."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:237
 msgid "This accepts all options that 'git svn fetch' and 'git rebase' accept. However, `--fetch-all` only fetches from the current [svn-remote], and not all [svn-remote] definitions."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:240
 msgid "Like 'git rebase'; this requires that the working tree be clean and have no uncommitted changes."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:248
 msgid "Do not fetch remotely; only run 'git rebase' against the last fetched commit from the upstream SVN."
 msgstr ""
@@ -49070,22 +49073,22 @@ msgstr ""
 msgid "'dcommit'"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:254
 msgid "Commit each diff from the current branch directly to the SVN repository, and then rebase or reset (depending on whether or not there is a diff between SVN and head). This will create a revision in SVN for each commit in Git."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:258
 msgid "When an optional Git branch name (or a Git commit object name) is specified as an argument, the subcommand works on the specified branch, not on the current branch."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:260
 msgid "Use of 'dcommit' is preferred to 'set-tree' (below)."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:263
 msgid "After committing, do not rebase or reset."
 msgstr ""
@@ -49096,23 +49099,23 @@ msgstr ""
 msgid "--commit-url <URL>"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:269
 msgid "Commit to this SVN URL (the full path). This is intended to allow existing 'git svn' repositories created with one transport method (e.g. `svn://` or `http://` for anonymous read) to be reused if a user is later given access to an alternate transport method (e.g. `svn+ssh://` or `https://`) for commit."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:273
 #, no-wrap
 msgid "config key: svn-remote.<name>.commiturl\nconfig key: svn.commiturl (overwrites all svn-remote.<name>.commiturl options)\n"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:277
 msgid "Note that the SVN URL of the commiturl config key includes the SVN branch. If you rather want to set the commit URL for an entire SVN repository use svn-remote.<name>.pushurl instead."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:280
 msgid "Using this option for any other purpose (don't ask) is very strongly discouraged."
 msgstr ""
@@ -49123,28 +49126,28 @@ msgstr ""
 msgid "--mergeinfo=<mergeinfo>"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:288
 msgid "Add the given merge information during the dcommit (e.g. `--mergeinfo=\"/branches/foo:1-10\"`). All svn server versions can store this information (as a property), and svn clients starting from version 1.5 can make use of it. To specify merge information from multiple branches, use a single space character between the branches (`--mergeinfo=\"/branches/foo:1-10 /branches/bar:3,5-6,8\"`)"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:291
 #, no-wrap
 msgid "config key: svn.pushmergeinfo\n"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:296
 msgid "This option will cause git-svn to attempt to automatically populate the svn:mergeinfo property in the SVN repository when possible. Currently, this can only be done when dcommitting non-fast-forward merges where all parents but the first have already been pushed into SVN."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:301
 msgid "Ask the user to confirm that a patch set should actually be sent to SVN. For each patch, one may answer \"yes\" (accept this patch), \"no\" (discard this patch), \"all\" (accept all patches), or \"quit\"."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:304
 msgid "'git svn dcommit' returns immediately if answer is \"no\" or \"quit\", without committing anything to SVN."
 msgstr ""
@@ -49155,7 +49158,7 @@ msgstr ""
 msgid "'branch'"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:307
 msgid "Create a branch in the SVN repository."
 msgstr ""
@@ -49166,7 +49169,7 @@ msgstr ""
 msgid "--message"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:311
 msgid "Allows to specify the commit message."
 msgstr ""
@@ -49177,7 +49180,7 @@ msgstr ""
 msgid "--tag"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:316
 msgid "Create a tag by using the tags_subdir instead of the branches_subdir specified during git svn init."
 msgstr ""
@@ -49194,17 +49197,17 @@ msgstr ""
 msgid "--destination=<path>"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:326
 msgid "If more than one --branches (or --tags) option was given to the 'init' or 'clone' command, you must provide the location of the branch (or tag) you wish to create in the SVN repository. <path> specifies which path to use to create the branch or tag and should match the pattern on the left-hand side of one of the configured branches or tags refspecs. You can see these refspecs with the commands"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:329
 msgid "git config --get-all svn-remote.<name>.branches git config --get-all svn-remote.<name>.tags"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:332
 msgid "where <name> is the name of the SVN repository as specified by the -R option to 'init' (or \"svn\" by default)."
 msgstr ""
@@ -49215,7 +49218,7 @@ msgstr ""
 msgid "--username"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:336
 msgid "Specify the SVN username to perform the commit as. This option overrides the 'username' configuration property."
 msgstr ""
@@ -49226,12 +49229,12 @@ msgstr ""
 msgid "--commit-url"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:342
 msgid "Use the specified URL to connect to the destination Subversion repository. This is useful in cases where the source SVN repository is read-only. This option overrides configuration property 'commiturl'."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:344
 msgid "git config --get-all svn-remote.<name>.commiturl"
 msgstr ""
@@ -49242,7 +49245,7 @@ msgstr ""
 msgid "--parents"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:350
 msgid "Create parent folders. This parameter is equivalent to the parameter --parents on svn cp commands and is useful for non-standard repository layouts."
 msgstr ""
@@ -49253,7 +49256,7 @@ msgstr ""
 msgid "'tag'"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:354
 msgid "Create a tag in the SVN repository. This is a shorthand for 'branch -t'."
 msgstr ""
@@ -49264,12 +49267,12 @@ msgstr ""
 msgid "'log'"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:358
 msgid "This should make it easy to look up svn log messages when svn users refer to -r/--revision numbers."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:360
 msgid "The following features from `svn log' are supported:"
 msgstr ""
@@ -49286,12 +49289,12 @@ msgstr ""
 msgid "--revision=<n>[:<n>]"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:366
 msgid "is supported, non-numeric args are not: HEAD, NEXT, BASE, PREV, etc ..."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:370
 msgid "it's not completely compatible with the --verbose output in svn log, but reasonably close."
 msgstr ""
@@ -49302,17 +49305,17 @@ msgstr ""
 msgid "--limit=<n>"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:373
 msgid "is NOT the same as --max-count, doesn't count merged/excluded commits"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:375
 msgid "supported"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:378
 msgid "New features:"
 msgstr ""
@@ -49323,7 +49326,7 @@ msgstr ""
 msgid "--show-commit"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:382
 msgid "shows the Git commit sha1, as well"
 msgstr ""
@@ -49334,17 +49337,17 @@ msgstr ""
 msgid "--oneline"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:384
 msgid "our version of --pretty=oneline"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:389
 msgid "SVN itself only stores times in UTC and nothing else. The regular svn client converts the UTC time to the local time (or based on the TZ= environment). This command has the same behaviour."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:391
 msgid "Any other arguments are passed directly to 'git log'"
 msgstr ""
@@ -49355,7 +49358,7 @@ msgstr ""
 msgid "'blame'"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:399
 msgid "Show what revision and author last modified each line of a file. The output of this mode is format-compatible with the output of `svn blame' by default. Like the SVN blame command, local uncommitted changes in the working tree are ignored; the version of the file in the HEAD revision is annotated. Unknown arguments are passed directly to 'git blame'."
 msgstr ""
@@ -49366,7 +49369,7 @@ msgstr ""
 msgid "--git-format"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:405
 msgid "Produce output in the same format as 'git blame', but with SVN revision numbers instead of Git commit hashes. In this mode, changes that haven't been committed to SVN (including local working-copy edits) are shown as revision 0."
 msgstr ""
@@ -49377,7 +49380,7 @@ msgstr ""
 msgid "'find-rev'"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:411
 msgid "When given an SVN revision number of the form 'rN', returns the corresponding Git commit hash (this can optionally be followed by a tree-ish to specify which branch should be searched). When given a tree-ish, returns the corresponding SVN revision number."
 msgstr ""
@@ -49394,7 +49397,7 @@ msgstr ""
 msgid "--before"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:417
 msgid "Don't require an exact match if given an SVN revision, instead find the commit corresponding to the state of the SVN repository (on the current branch) at the specified revision."
 msgstr ""
@@ -49405,7 +49408,7 @@ msgstr ""
 msgid "--after"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:423
 msgid "Don't require an exact match if given an SVN revision; if there is not an exact match return the closest match searching forward in the history."
 msgstr ""
@@ -49416,7 +49419,7 @@ msgstr ""
 msgid "'set-tree'"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:432
 msgid "You should consider using 'dcommit' instead of this command. Commit specified commit or tree objects to SVN. This relies on your imported fetch data being up to date. This makes absolutely no attempts to do patching when committing to SVN, it simply overwrites files with those specified in the tree or commit. All merging is assumed to have taken place independently of 'git svn' functions."
 msgstr ""
@@ -49427,7 +49430,7 @@ msgstr ""
 msgid "'create-ignore'"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:438
 msgid "Recursively finds the svn:ignore and svn:global-ignores properties on directories and creates matching .gitignore files. The resulting files are staged to be committed, but are not committed. Use -r/--revision to refer to a specific revision."
 msgstr ""
@@ -49438,7 +49441,7 @@ msgstr ""
 msgid "'show-ignore'"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:443
 msgid "Recursively finds and lists the svn:ignore and svn:global-ignores properties on directories. The output is suitable for appending to the $GIT_DIR/info/exclude file."
 msgstr ""
@@ -49449,7 +49452,7 @@ msgstr ""
 msgid "'mkdirs'"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:452
 msgid "Attempts to recreate empty directories that core Git cannot track based on information in $GIT_DIR/svn/<refname>/unhandled.log files. Empty directories are automatically recreated when using \"git svn clone\" and \"git svn rebase\", so \"mkdirs\" is intended for use after commands like \"git checkout\" or \"git reset\". (See the svn-remote.<name>.automkdirs config file option for more information.)"
 msgstr ""
@@ -49460,17 +49463,17 @@ msgstr ""
 msgid "'commit-diff'"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:462
 msgid "Commits the diff of two tree-ish arguments from the command-line. This command does not rely on being inside a `git svn init`-ed repository. This command takes three arguments, (a) the original tree to diff against, (b) the new tree result, (c) the URL of the target Subversion repository. The final argument (URL) may be omitted if you are working from a 'git svn'-aware repository (that has been `init`-ed with 'git svn'). The -r<revision> option is required for this."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:467
 msgid "The commit message is supplied either directly with the `-m` or `-F` option, or indirectly from the tag or commit when the second tree-ish denotes such an object, or it is requested by invoking an editor (see `--edit` option below)."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:472
 msgid "Use the given `msg` as the commit message. This option disables the `--edit` option."
 msgstr ""
@@ -49487,7 +49490,7 @@ msgstr ""
 msgid "--file=<filename>"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:477
 msgid "Take the commit message from the given file. This option disables the `--edit` option."
 msgstr ""
@@ -49498,7 +49501,7 @@ msgstr ""
 msgid "'info'"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:483
 msgid "Shows information about a file or directory similar to what `svn info' provides. Does not currently support a -r/--revision argument. Use the --url option to output only the value of the 'URL:' field."
 msgstr ""
@@ -49509,7 +49512,7 @@ msgstr ""
 msgid "'proplist'"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:488
 msgid "Lists the properties stored in the Subversion repository about a given file or directory. Use -r/--revision to refer to a specific Subversion revision."
 msgstr ""
@@ -49520,7 +49523,7 @@ msgstr ""
 msgid "'propget'"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:492
 msgid "Gets the Subversion property given as the first argument, for a file. A specific revision can be specified with -r/--revision."
 msgstr ""
@@ -49531,7 +49534,7 @@ msgstr ""
 msgid "'propset'"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:497
 msgid "Sets the Subversion property given as the first argument, to the value given as the second argument for the file given as the third argument."
 msgstr ""
@@ -49617,7 +49620,7 @@ msgstr ""
 msgid "Fix the ignore-paths or SVN permissions problem that caused \"r2\" to be incomplete in the first place. Then:"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:554
 #, no-wrap
 msgid "git svn reset -r2 -p\ngit svn fetch\n"
@@ -49634,7 +49637,7 @@ msgstr ""
 msgid "Then fixup \"master\" with 'git rebase'. Do NOT use 'git merge' or your history will not be compatible with a future 'dcommit'!"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:567
 #, no-wrap
 msgid "git rebase --onto remotes/git-svn A^ master\n"
@@ -49712,7 +49715,7 @@ msgstr ""
 msgid "--rmdir"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:604 en/git-svn.txt:617 en/git-svn.txt:628
 msgid "Only used with the 'dcommit', 'set-tree' and 'commit-diff' commands."
 msgstr ""
@@ -49722,18 +49725,18 @@ msgstr ""
 msgid "Remove directories from the SVN tree if there are no files left behind. SVN can version empty directories, and they are not removed by default if there are no files left in them. Git cannot version empty directories. Enabling this flag will make the commit to SVN act like Git."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:613
 #, no-wrap
 msgid "config key: svn.rmdir\n"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:621
 msgid "Edit the commit message before committing to SVN. This is off by default for objects that are commits, and forced on when committing tree objects."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:624
 #, no-wrap
 msgid "config key: svn.edit\n"
@@ -49751,12 +49754,12 @@ msgstr ""
 msgid "--find-copies-harder"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:631
 msgid "They are both passed directly to 'git diff-tree'; see linkgit:git-diff-tree[1] for more information."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:635
 #, no-wrap
 msgid "config key: svn.l\nconfig key: svn.findcopiesharder\n"
@@ -49774,7 +49777,7 @@ msgstr ""
 msgid "--authors-file=<filename>"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:640
 msgid "Syntax is compatible with the file used by 'git cvsimport' but an empty email address can be supplied with '<>':"
 msgstr ""
@@ -49790,7 +49793,7 @@ msgstr ""
 msgid "If this option is specified and 'git svn' encounters an SVN committer name that does not exist in the authors-file, 'git svn' will abort operation. The user will then have to add the appropriate entry. Re-running the previous 'git svn' command after the authors-file is modified should continue operation."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:653
 #, no-wrap
 msgid "config key: svn.authorsfile\n"
@@ -49802,23 +49805,23 @@ msgstr ""
 msgid "--authors-prog=<filename>"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:661
 msgid "If this option is specified, for each SVN committer name that does not exist in the authors file, the given file is executed with the committer name as the first argument. The program is expected to return a single line of the form \"Name <email>\" or \"Name <>\", which will be treated as if included in the authors file."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:666
 msgid "Due to historical reasons a relative 'filename' is first searched relative to the current directory for 'init' and 'clone' and relative to the root of the working tree for 'fetch'. If 'filename' is not found, it is searched like any other command in '$PATH'."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:669
 #, no-wrap
 msgid "config key: svn.authorsProg\n"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:674
 msgid "Make 'git svn' less verbose. Specify a second time to make it even less verbose."
 msgstr ""
@@ -49829,32 +49832,32 @@ msgstr ""
 msgid "-s<strategy>"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:682
 msgid "These are only used with the 'dcommit' and 'rebase' commands."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:685
 msgid "Passed directly to 'git rebase' when using 'dcommit' if a 'git reset' cannot be used (see 'dcommit')."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:690
 msgid "This can be used with the 'dcommit', 'rebase', 'branch' and 'tag' commands."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:693
 msgid "For 'dcommit', print out the series of Git arguments that would show which diffs would be committed to SVN."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:697
 msgid "For 'rebase', display the local branch associated with the upstream svn repository associated with the current branch and the URL of svn repository that will be fetched from."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:700
 msgid "For 'branch' and 'tag', display the urls that will be used for copying when creating the branch or tag."
 msgstr ""
@@ -49865,12 +49868,12 @@ msgstr ""
 msgid "--use-log-author"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:705
 msgid "When retrieving svn commits into Git (as part of 'fetch', 'rebase', or 'dcommit' operations), look for the first `From:` line or `Signed-off-by` trailer in the log message and use that as the author string."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:708
 #, no-wrap
 msgid "config key: svn.useLogAuthor\n"
@@ -49882,12 +49885,12 @@ msgstr ""
 msgid "--add-author-from"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:715
 msgid "When committing to svn from Git (as part of 'set-tree' or 'dcommit' operations), if the existing log message doesn't already have a `From:` or `Signed-off-by` trailer, append a `From:` line based on the Git commit's author string. If you use this, then `--use-log-author` will retrieve a valid author string for all commits."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:718
 #, no-wrap
 msgid "config key: svn.addAuthorFrom\n"
@@ -49944,7 +49947,7 @@ msgstr ""
 msgid "This option is only relevant if we are tracking branches (using one of the repository layout options --trunk, --tags, --branches, --stdlayout). For each tracked branch, try to find out where its revision was copied from, and set a suitable parent in the first Git commit for the branch. This is especially helpful when we're tracking a directory that has been moved around within the repository. If this feature is disabled, the branches created by 'git svn' will all be linear and not share any history, meaning that there will be no information on where branches were branched off or merged. However, following long/convoluted histories can take a long time, so disabling this feature may speed up the cloning process. This feature is enabled by default, use --no-follow-parent to disable it."
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-svn.txt:753
 #, no-wrap
 msgid "config key: svn.followparent\n"
@@ -50380,7 +50383,7 @@ msgstr ""
 msgid "git-switch - Switch branches"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-switch.txt:15
 #, no-wrap
 msgid "'git switch' [<options>] [--no-guess] <branch>\n'git switch' [<options>] --detach [<start-point>]\n'git switch' [<options>] (-c|-C) <new-branch> [<start-point>]\n'git switch' [<options>] --orphan <new-branch>\n"
@@ -50635,7 +50638,7 @@ msgstr ""
 msgid "git-symbolic-ref - Read, modify and delete symbolic refs"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-symbolic-ref.txt:14
 #, no-wrap
 msgid "'git symbolic-ref' [-m <reason>] <name> <ref>\n'git symbolic-ref' [-q] [--short] [--no-recurse] <name>\n'git symbolic-ref' --delete [-q] <name>\n"
@@ -50719,7 +50722,7 @@ msgstr ""
 msgid "git-tag - Create, list, delete or verify a tag object signed with GPG"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-tag.txt:21
 #, no-wrap
 msgid "'git tag' [-a | -s | -u <key-id>] [-f] [-m <msg> | -F <file>] [-e]\n\t[(--trailer <token>[(=|:)<value>])...]\n\t<tagname> [<commit> | <object>]\n'git tag' -d <tagname>...\n'git tag' [-n[<num>]] -l [--contains <commit>] [--no-contains <commit>]\n\t[--points-at <object>] [--column[=<options>] | --no-column]\n\t[--create-reflog] [--sort=<key>] [--format=<format>]\n\t[--merged <commit>] [--no-merged <commit>] [<pattern>...]\n'git tag' -v [--format=<format>] <tagname>...\n"
@@ -51186,7 +51189,7 @@ msgstr ""
 msgid "git - the stupid content tracker"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git.txt:18
 #, no-wrap
 msgid "'git' [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n    [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n    [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n    [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n    [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n    <command> [<args>]\n"
@@ -52966,7 +52969,7 @@ msgstr ""
 msgid "git-unpack-file - Creates a temporary file with a blob's contents"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-unpack-file.txt:14
 #, no-wrap
 msgid "'git unpack-file' <blob>\n"
@@ -52994,7 +52997,7 @@ msgstr ""
 msgid "git-unpack-objects - Unpack objects from a packed archive"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-unpack-objects.txt:13
 #, no-wrap
 msgid "'git unpack-objects' [-n] [-q] [-r] [--strict]\n"
@@ -53046,7 +53049,7 @@ msgstr ""
 msgid "git-update-index - Register file contents in the working tree to the index"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-update-index.txt:31
 #, no-wrap
 msgid "'git update-index'\n\t     [--add] [--remove | --force-remove] [--replace]\n\t     [--refresh] [-q] [--unmerged] [--ignore-missing]\n\t     [(--cacheinfo <mode>,<object>,<file>)...]\n\t     [--chmod=(+|-)x]\n\t     [--[no-]assume-unchanged]\n\t     [--[no-]skip-worktree]\n\t     [--[no-]ignore-skip-worktree-entries]\n\t     [--[no-]fsmonitor-valid]\n\t     [--ignore-submodules]\n\t     [--[no-]split-index]\n\t     [--[no-|test-|force-]untracked-cache]\n\t     [--[no-]fsmonitor]\n\t     [--really-refresh] [--unresolve] [--again | -g]\n\t     [--info-only] [--index-info]\n\t     [-z] [--stdin] [--index-version <n>]\n\t     [--show-index-version]\n\t     [--verbose]\n\t     [--] [<file>...]\n"
@@ -53820,7 +53823,7 @@ msgstr ""
 msgid "git-update-ref - Update the object name stored in a ref safely"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-update-ref.txt:12
 #, no-wrap
 msgid "'git update-ref' [-m <reason>] [--no-deref] (-d <ref> [<old-oid>] | [--create-reflog] <ref> <new-oid> [<old-oid>] | --stdin [-z])\n"
@@ -54076,7 +54079,7 @@ msgstr ""
 msgid "git-update-server-info - Update auxiliary info file to help dumb servers"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-update-server-info.txt:13
 #, no-wrap
 msgid "'git update-server-info' [-f | --force]\n"
@@ -54118,7 +54121,7 @@ msgstr ""
 msgid "git-upload-archive - Send archive back to git-archive"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-upload-archive.txt:13
 #, no-wrap
 msgid "'git upload-archive' <repository>\n"
@@ -54180,7 +54183,7 @@ msgstr ""
 msgid "git-upload-pack - Send objects packed back to git-fetch-pack"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-upload-pack.txt:14
 #, no-wrap
 msgid "'git-upload-pack' [--[no-]strict] [--timeout=<n>] [--stateless-rpc]\n\t\t  [--advertise-refs] <directory>\n"
@@ -54275,7 +54278,7 @@ msgstr ""
 msgid "git-var - Show a Git logical variable"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-var.txt:13
 #, no-wrap
 msgid "'git var' (-l | <variable>)\n"
@@ -54450,7 +54453,7 @@ msgstr ""
 msgid "git-verify-commit - Check the GPG signature of commits"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-verify-commit.txt:12
 #, no-wrap
 msgid "'git verify-commit' [-v | --verbose] [--raw] <commit>...\n"
@@ -54487,7 +54490,7 @@ msgstr ""
 msgid "git-verify-pack - Validate packed Git archive files"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-verify-pack.txt:13
 #, no-wrap
 msgid "'git verify-pack' [-v | --verbose] [-s | --stat-only] [--] <pack>.idx...\n"
@@ -54569,7 +54572,7 @@ msgstr ""
 msgid "git-verify-tag - Check the GPG signature of tags"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-verify-tag.txt:12
 #, no-wrap
 msgid "'git verify-tag' [-v | --verbose] [--format=<format>] [--raw] <tag>...\n"
@@ -54607,7 +54610,7 @@ msgstr ""
 msgid "git-web--browse - Git helper script to launch a web browser"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-web--browse.txt:12
 #, no-wrap
 msgid "'git web{litdd}browse' [<options>] (<URL>|<file>)...\n"
@@ -54848,7 +54851,7 @@ msgstr ""
 msgid "git-whatchanged - Show logs with differences each commit introduces"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-whatchanged.txt:13
 #, no-wrap
 msgid "'git whatchanged' <option>...\n"
@@ -54902,7 +54905,7 @@ msgstr ""
 msgid "git-worktree - Manage multiple working trees"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-worktree.txt:21
 #, no-wrap
 msgid "'git worktree add' [-f] [--detach] [--checkout] [--lock [--reason <string>]]\n\t\t   [--orphan] [(-b | -B) <new-branch>] <path> [<commit-ish>]\n'git worktree list' [-v | --porcelain [-z]]\n'git worktree lock' [--reason <string>] <worktree>\n'git worktree move' <worktree> <new-path>\n'git worktree prune' [-n] [-v] [--expire <expire>]\n'git worktree remove' [-f] <worktree>\n'git worktree repair' [<path>...]\n'git worktree unlock' <worktree>\n"
@@ -55474,7 +55477,7 @@ msgstr ""
 msgid "git-write-tree - Create a tree object from the current index"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/git-write-tree.txt:13
 #, no-wrap
 msgid "'git write-tree' [--missing-ok] [--prefix=<prefix>/]\n"
@@ -59129,12 +59132,12 @@ msgstr ""
 msgid "As with pushing with linkgit:git-push[1], all of the rules described above about what's not allowed as an update can be overridden by adding an optional leading `+` to a refspec (or using the `--force` command line option). The only exception to this is that no amount of forcing will make the `refs/heads/*` namespace accept a non-commit object."
 msgstr ""
 
-#. type: Plain text
+#. type: NOTE
 #: en/pull-fetch-param.txt:100
 msgid "When the remote branch you want to fetch is known to be rewound and rebased regularly, it is expected that its new tip will not be a descendant of its previous tip (as stored in your remote-tracking branch the last time you fetched). You would want to use the `+` sign to indicate non-fast-forward updates will be needed for such branches. There is no way to determine or declare that a branch will be made available in a repository with this behavior; the pulling user simply must know this is the expected usage pattern for a branch."
 msgstr ""
 
-#. type: Plain text
+#. type: NOTE
 #: en/pull-fetch-param.txt:120
 msgid "There is a difference between listing multiple <refspec> directly on 'git pull' command line and having multiple `remote.<repository>.fetch` entries in your configuration for a <repository> and running a 'git pull' command without any explicit <refspec> parameters. <refspec>s listed explicitly on the command line are always merged into the current branch after fetching. In other words, if you list more than one remote ref, 'git pull' will create an Octopus merge. On the other hand, if you do not list any explicit <refspec> parameter on the command line, 'git pull' will fetch all the <refspec>s it finds in the `remote.<repository>.fetch` configuration and merge only the first <refspec> found into the current branch. This is because making an Octopus from remote refs is rarely done, while keeping track of multiple remote heads in one-go by fetching more than one is often useful."
 msgstr ""
@@ -61824,13 +61827,13 @@ msgstr ""
 msgid "If there are a large number of similarly-named remote repositories and you want to use a different format for them (such that the URLs you use will be rewritten into URLs that work), you can create a configuration section of the form:"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/urls.txt:79
 #, no-wrap
 msgid "\t[url \"__<actual-url-base>__\"]\n\t\tinsteadOf = _<other-url-base>_\n"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/urls.txt:82 en/urls.txt:102
 msgid "For example, with this:"
 msgstr ""
@@ -61851,7 +61854,7 @@ msgstr ""
 msgid "If you want to rewrite URLs for push only, you can create a configuration section of the form:"
 msgstr ""
 
-#. type: Plain text
+#. type: verse
 #: en/urls.txt:99
 #, no-wrap
 msgid "\t[url \"__<actual-url-base>__\"]\n\t\tpushInsteadOf = _<other-url-base>_\n"
