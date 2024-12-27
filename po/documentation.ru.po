@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2024-12-25 19:35+0100\n"
-"PO-Revision-Date: 2024-12-26 12:52+0000\n"
+"PO-Revision-Date: 2024-12-28 00:00+0000\n"
 "Last-Translator: Golubev Alexander <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -3200,7 +3200,7 @@ msgstr "commit.cleanup"
 #: en/config/commit.txt:9
 #, placeholders:'`--cleanup`':'linkgit:git-commit[1]':'commit.cleanup', priority:280
 msgid "This setting overrides the default of the `--cleanup` option in `git commit`. See linkgit:git-commit[1] for details. Changing the default can be useful when you always want to keep lines that begin with the comment character `#` in your log message, in which case you would do `git config commit.cleanup whitespace` (note that you will have to remove the help lines that begin with `#` in the commit log template yourself, if you do this)."
-msgstr ""
+msgstr "Этот параметр переопределяет значение по умолчанию параметра `--cleanup` в `git commit`. См. подробности в linkgit:git-commit[1]. Изменение значения по умолчанию может быть полезно, если вы всегда хотите сохранять строки, которые начинаются с символа комментария `#` в своих сообщениях коммитов; для этого выполните `git config commit.cleanup whitespace` (обратите внимание, что если вы это сделаете, вам придётся самостоятельно удалять вспомогательные строки, начинающиеся с `#` в шаблоне сообщения коммита)."
 
 #. type: Labeled list
 #: en/config/commit.txt:10
@@ -3212,7 +3212,7 @@ msgstr "commit.gpgSign"
 #: en/config/commit.txt:17
 #, priority:280
 msgid "A boolean to specify whether all commits should be GPG signed. Use of this option when doing operations such as rebase can result in a large number of commits being signed. It may be convenient to use an agent to avoid typing your GPG passphrase several times."
-msgstr ""
+msgstr "Логическое значение, указывающее, должны ли все коммиты подписываться с помощью GPG. Использование этого параметра при выполнении таких операций как перемещение на другую ветку (rebase), может привести к тому, что подпись потребуется сразу большому количеству коммитов. Так что дабы избежать необходимости вводить пароль GPG по несколько раз, может быть удобно использовать GPG-агент."
 
 #. type: Labeled list
 #: en/config/commit.txt:18
@@ -3224,7 +3224,7 @@ msgstr "commit.status"
 #: en/config/commit.txt:22
 #, priority:280
 msgid "A boolean to enable/disable inclusion of status information in the commit message template when using an editor to prepare the commit message. Defaults to true."
-msgstr ""
+msgstr "Логическое значение, для включения/отключения вывода информации о состоянии в шаблоне сообщения коммита при использовании редактора для подготовки сообщения. По умолчанию: включено."
 
 #. type: Labeled list
 #: en/config/commit.txt:23
@@ -3236,7 +3236,7 @@ msgstr "commit.template"
 #: en/config/commit.txt:26
 #, priority:280
 msgid "Specify the pathname of a file to use as the template for new commit messages."
-msgstr ""
+msgstr "Указывает путь к файлу, который будет использоваться в качестве шаблона для новых сообщений коммитов."
 
 #. type: Labeled list
 #: en/config/commit.txt:27
@@ -3248,7 +3248,7 @@ msgstr "commit.verbose"
 #: en/config/commit.txt:29
 #, placeholders:'linkgit:git-commit[1]', priority:280
 msgid "A boolean or int to specify the level of verbosity with `git commit`. See linkgit:git-commit[1]."
-msgstr ""
+msgstr "Логическое или целочисленное значение, задающее уровень подробностей, добавляемых `git commit` в шаблон сообщений коммитов. См. описание `--verbose` в linkgit:git-commit[1]."
 
 #. type: Labeled list
 #: en/config/diff.txt:1
@@ -4192,61 +4192,61 @@ msgstr ""
 #: en/date-formats.txt:2
 #, no-wrap, priority:280
 msgid "DATE FORMATS"
-msgstr ""
+msgstr "ФОРМАТЫ ДАТЫ"
 
 #. type: Plain text
 #: en/date-formats.txt:6
 #, placeholders:'GIT_AUTHOR_DATE':'GIT_COMMITTER_DATE', priority:280
 msgid "The `GIT_AUTHOR_DATE` and `GIT_COMMITTER_DATE` environment variables support the following date formats:"
-msgstr ""
+msgstr "Переменные среды `GIT_AUTHOR_DATE` и `GIT_COMMITTER_DATE` поддерживают следующие форматы дат:"
 
 #. type: Labeled list
 #: en/date-formats.txt:7
 #, no-wrap, priority:280
 msgid "Git internal format"
-msgstr ""
+msgstr "Внутренний формат Git"
 
 #. type: Plain text
 #: en/date-formats.txt:12
 #, priority:280
 msgid "It is `<unix-timestamp> <time-zone-offset>`, where `<unix-timestamp>` is the number of seconds since the UNIX epoch. `<time-zone-offset>` is a positive or negative offset from UTC. For example CET (which is 1 hour ahead of UTC) is `+0100`."
-msgstr ""
+msgstr "`<unix-timestamp> <time-zone-offset>`, где `<unix-timestamp>` — количество секунд, прошедших с эпохи UNIX (00:00:00 UTC 1 января 1970 года). А `<time-zone-offset>` является положительным или отрицательным смещением относительно UTC. Например, для CET (центральноевропейское время которое на 1 час опережает UTC) значение будет `+0100`."
 
 #. type: Labeled list
 #: en/date-formats.txt:13
 #, no-wrap, priority:280
 msgid "RFC 2822"
-msgstr ""
+msgstr "RFC 2822"
 
 #. type: Plain text
 #: en/date-formats.txt:16
 #, priority:280
 msgid "The standard date format as described by RFC 2822, for example `Thu, 07 Apr 2005 22:13:13 +0200`."
-msgstr ""
+msgstr "Стандартный формат даты, описанный RFC 2822, например, `Thu, 07 Apr 2005 22:13:13 +0200`."
 
 #. type: Labeled list
 #: en/date-formats.txt:17
 #, no-wrap, priority:280
 msgid "ISO 8601"
-msgstr ""
+msgstr "ISO 8601"
 
 #. type: Plain text
 #: en/date-formats.txt:23
 #, priority:280
 msgid "Time and date specified by the ISO 8601 standard, for example `2005-04-07T22:13:13`. The parser accepts a space instead of the `T` character as well. Fractional parts of a second will be ignored, for example `2005-04-07T22:13:13.019` will be treated as `2005-04-07T22:13:13`."
-msgstr ""
+msgstr "Время и дата, согласно стандарту ISO 8601, например, `2005-04-07T22:13:13'. Принимается также пробел вместо `Т`. Дробные доли секунды будут отброшены, например `2005-04-07T22:13:13.019' будет восприниматься как `2005-04-07T22:13:13'."
 
 #. type: Plain text
 #: en/date-formats.txt:26
 #, priority:280
 msgid "In addition, the date part is accepted in the following formats: `YYYY.MM.DD`, `MM/DD/YYYY` and `DD.MM.YYYY`."
-msgstr ""
+msgstr "Кроме того, часть представляющая дату принимается в следующих форматах: `ГГГГ.ММ.ДД`, `ММ/ДД/ГГГГ` и `ДД.ММ.ГГГГ`."
 
 #. type: Plain text
 #: en/date-formats.txt:31
 #, placeholders:'`--date`', priority:280
 msgid "In addition to recognizing all date formats above, the `--date` option will also try to make sense of other, more human-centric date formats, such as relative dates like \"yesterday\" or \"last Friday at noon\"."
-msgstr ""
+msgstr "В дополнение к форматам даты перечисленным выше, параметр `--date` также попытается распознать и другие, более ориентированные на человека, форматы дат такие, как относительные даты, вроде \"yesterday\" («вчера») или \"last Friday at noon\" («в прошлую пятницу в полдень»)."
 
 #. type: Title -
 #: en/diff-format.txt:2
@@ -4287,9 +4287,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/diff-format.txt:15
-#, fuzzy, priority:280
+#, priority:280
 msgid "compares the _<tree-ish>_ and the index."
-msgstr "Сравнение седержимого файлов в рабочем каталоге с файлами в индексе"
+msgstr "сравнивает содержимое файлов по _<указателю-дерева>_ и в индексе."
 
 #. type: Labeled list
 #: en/diff-format.txt:16
@@ -5295,9 +5295,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/diff-options.txt:130
-#, fuzzy, no-wrap, placeholders:'`--output=', priority:280
+#, no-wrap, placeholders:'`--output=', priority:280
 msgid "`--output=<file>`"
-msgstr "--pathspec-from-file=<файл>"
+msgstr "`--output=<файл>`"
 
 #. type: Plain text
 #: en/diff-options.txt:132
@@ -6079,9 +6079,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/diff-options.txt:540
-#, fuzzy, no-wrap, placeholders:'`--abbrev', priority:280
+#, no-wrap, placeholders:'`--abbrev', priority:280
 msgid "`--abbrev[=<n>]`"
-msgstr "номер-родителя"
+msgstr "`--abbrev[=<n>]`"
 
 #. type: Plain text
 #: en/diff-options.txt:549
@@ -6418,15 +6418,15 @@ msgstr ""
 
 #. type: Labeled list
 #: en/diff-options.txt:746
-#, fuzzy, no-wrap, placeholders:'`--skip-to=', priority:280
+#, no-wrap, placeholders:'`--skip-to=', priority:280
 msgid "`--skip-to=<file>`"
-msgstr "--pathspec-from-file=<файл>"
+msgstr "`--skip-to=<файл>`"
 
 #. type: Labeled list
 #: en/diff-options.txt:747
-#, fuzzy, no-wrap, placeholders:'`--rotate-to=', priority:280
+#, no-wrap, placeholders:'`--rotate-to=', priority:280
 msgid "`--rotate-to=<file>`"
-msgstr "--pathspec-from-file=<файл>"
+msgstr "`--rotate-to=<файл>`"
 
 #. type: Plain text
 #: en/diff-options.txt:753
@@ -7772,7 +7772,7 @@ msgstr "git-add — Добавить содержимое файла в инде
 
 #. type: synopsis
 #: en/git-add.txt:16
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'[--verbose':'[--dry-run':'[--force':'[--interactive':'[--patch':'[--edit':'[--update':'[--sparse]':'[--intent-to-add':'[--refresh]':'[--ignore-errors]':'[--ignore-missing]':'[--renormalize]':'[--chmod=(+|-)x]':'[--pathspec-from-file=':'[--pathspec-file-nul]', priority:300
+#, ignore-ellipsis, no-wrap, placeholders:'[--verbose':'[--dry-run':'[--force':'[--interactive':'[--patch':'[--edit':'[--update':'[--sparse]':'[--intent-to-add':'[--refresh]':'[--ignore-errors]':'[--ignore-missing]':'[--renormalize]':'[--chmod=(+|-)x]':'[--pathspec-from-file=':'[--pathspec-file-nul]', priority:300
 msgid ""
 "git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]\n"
 "\t[--edit | -e] [--[no-]all | -A | --[no-]ignore-removal | [--update | -u]] [--sparse]\n"
@@ -7781,10 +7781,10 @@ msgid ""
 "\t[--] [<pathspec>...]\n"
 msgstr ""
 "'git add' [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]\n"
-"\t  [--edit | -e] [--[no-]all | --[no-]ignore-removal | [--update | -u]]\n"
-"\t  [--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]\n"
-"\t  [--chmod=(+|-)x] [--pathspec-from-file=<файл> [--pathspec-file-nul]]\n"
-"\t  [--] [<спецификатор-пути>...]\n"
+"\t[--edit | -e] [--[no-]all | -A | --[no-]ignore-removal | [--update | -u]] [--sparse]\n"
+"\t[--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]\n"
+"\t[--chmod=(+|-)x] [--pathspec-from-file=<файл> [--pathspec-file-nul]]\n"
+"\t[--] [<спецификатор-пути>...]\n"
 
 #. type: Plain text
 #: en/git-add.txt:25
@@ -7812,8 +7812,7 @@ msgstr "Команда `git status` может быть использована
 
 #. type: Plain text
 #: en/git-add.txt:46
-#, fuzzy, placeholders:'`-f`', priority:300
-#| msgid "The `git add` command will not add ignored files by default.  If any ignored files were explicitly specified on the command line, `git add` will fail with a list of ignored files.  Ignored files reached by directory recursion or filename globbing performed by Git (quote your globs before the shell) will be silently ignored.  The 'git add' command can be used to add ignored files with the `-f` (force) option."
+#, placeholders:'`-f`', priority:300
 msgid "The `git add` command will not add ignored files by default. If any ignored files were explicitly specified on the command line, `git add` will fail with a list of ignored files. Ignored files reached by directory recursion or filename globbing performed by Git (quote your globs before the shell) will be silently ignored. The `git add` command can be used to add ignored files with the `-f` (force) option."
 msgstr "Команда `git add` по умолчанию не добавляет игнорируемые файлы. Если какие-либо игнорируемые файлы были явно указаны в командной строке, `git add` завершится ошибкой со списком игнорируемых файлов. Игнорируемые файлы, найденные в результате рекурсивного обхода каталогов или подстановки шаблонов имён (globbing), которые выполняет сам Git (заключите шаблон в кавычки, чтобы он не обрабатывался оболочкой), будут проигнорированы без вывода дополнительных уведомлений. Заставить команду `git add` обрабатывать игнорируемые файлы можно с помощью параметра `-f` (force, принудительно)."
 
@@ -7831,10 +7830,9 @@ msgstr "ПАРАМЕТРЫ"
 
 #. type: Labeled list
 #: en/git-add.txt:53
-#, fuzzy, ignore-ellipsis, no-wrap, priority:300
-#| msgid "<pathspec>..."
+#, ignore-ellipsis, no-wrap, priority:300
 msgid "`<pathspec>...`"
-msgstr "<спецификатор-пути>…"
+msgstr "`<спецификатор-пути>…`"
 
 #. type: Plain text
 #: en/git-add.txt:65
@@ -7844,10 +7842,9 @@ msgstr "Файлы для добавления. Маска (например, `*
 
 #. type: Plain text
 #: en/git-add.txt:68
-#, fuzzy, placeholders:'linkgit:gitglossary[7]', priority:300
-#| msgid "For more details about the <pathspec> syntax, see the 'pathspec' entry in linkgit:gitglossary[7]."
+#, placeholders:'linkgit:gitglossary[7]', priority:300
 msgid "For more details about the _<pathspec>_ syntax, see the 'pathspec' entry in linkgit:gitglossary[7]."
-msgstr "Более детально синтаксис <спецификатора-пути> рассматривается в разделе 'pathspec' в linkgit:gitglossary[7]."
+msgstr "Более детально синтаксис _<спецификатора-пути>_ рассматривается в разделе «спецификатор пути (pathspec)» в linkgit:gitglossary[7]."
 
 #. type: Labeled list
 #: en/git-add.txt:69 en/git-clone.txt:159
@@ -7907,7 +7904,7 @@ msgstr "`--sparse`"
 #: en/git-add.txt:88
 #, placeholders:'linkgit:git-sparse-checkout[1]', priority:300
 msgid "Allow updating index entries outside of the sparse-checkout cone. Normally, `git add` refuses to update index entries whose paths do not fit within the sparse-checkout cone, since those files might be removed from the working tree without warning. See linkgit:git-sparse-checkout[1] for more details."
-msgstr ""
+msgstr "Разрешить обновление объектов индекса за пределами области частичного переключения (sparse-checkout). Обычно `git add` отказывается обновлять данные индекса, не входящие в область, извлечённую sparse-checkout, поскольку эти файлы могут быть удалены из рабочей копии без предупреждения. См. подробности в linkgit:git-sparse-checkout[1]."
 
 #. type: Labeled list
 #: en/git-add.txt:89
@@ -7925,20 +7922,19 @@ msgstr "`--interactive`"
 #: en/git-add.txt:95
 #, priority:300
 msgid "Add modified contents in the working tree interactively to the index. Optional path arguments may be supplied to limit operation to a subset of the working tree. See ``Interactive mode'' for details."
-msgstr "Добавление измененных файлов рабочего каталога в индекс в интерактивном режиме. Для работы с отдельным подкаталогом рабочего каталога вы можете указать путь дополнительным аргументом. Более детально смотрите в ``Interactive mode''."
+msgstr "Добавление изменённых файлов рабочего каталога в индекс в интерактивном режиме. Для работы с отдельными подкаталогами рабочего каталога вы можете указать пути в виде дополнительных аргументом. См. подробности в разделе «Интерактивный режим»."
 
 #. type: Plain text
 #: en/git-add.txt:102
 #, priority:300
 msgid "Interactively choose hunks of patch between the index and the work tree and add them to the index. This gives the user a chance to review the difference before adding modified contents to the index."
-msgstr "Вручную выбрать отличия между индексом и рабочим каталогом и добавить их в индекс. Это дает возможность пользователю увидеть изменения перед добавлением файлов в индекс."
+msgstr "Вручную, по кусочкам отобрать из всех измерений между индексом и рабочим каталогом те, которые будут добавлены в индекс. Это даёт пользователю возможность перепроверить изменения перед добавлением изменённого содержимого в индекс."
 
 #. type: Plain text
 #: en/git-add.txt:106
-#, fuzzy, placeholders:'--interactive`', priority:300
-#| msgid "This effectively runs `add --interactive`, but bypasses the initial command menu and directly jumps to the `patch` subcommand.  See ``Interactive mode'' for details."
+#, placeholders:'--interactive`', priority:300
 msgid "This effectively runs `add --interactive`, but bypasses the initial command menu and directly jumps to the `patch` subcommand. See ``Interactive mode'' for details."
-msgstr "По сути запустится `add --interactive`, но пропустит начальное меню команд и сразу перейдет к подкоманде `patch`. Подробно см. ``Интерактивный режим''."
+msgstr "По сути это запускает `add --interactive`, но пропускает начальное меню и сразу переходит к подкоманде `patch`. См. подробности в разделе «Интерактивный режим»."
 
 #. type: Labeled list
 #: en/git-add.txt:107
@@ -7954,16 +7950,15 @@ msgstr "`--edit`"
 
 #. type: Plain text
 #: en/git-add.txt:112
-#, fuzzy, priority:300
-#| msgid "Open the diff vs. the index in an editor and let the user edit it.  After the editor was closed, adjust the hunk headers and apply the patch to the index."
+#, priority:300
 msgid "Open the diff vs. the index in an editor and let the user edit it. After the editor was closed, adjust the hunk headers and apply the patch to the index."
-msgstr "Открыть отличия от индекса в редакторе и дать возможность пользователю редактировать их. После закрытия редактора, установить заголовки блока и применить патч к индексу."
+msgstr "Открыть отличия от индекса в редакторе в виде патча и дать пользователю возможность отредактировать его. После закрытия редактора, подправить заголовки блоков изменений и применить этот патч к индексу."
 
 #. type: Plain text
 #: en/git-add.txt:118
 #, priority:300
 msgid "The intent of this option is to pick and choose lines of the patch to apply, or even to modify the contents of lines to be staged. This can be quicker and more flexible than using the interactive hunk selector. However, it is easy to confuse oneself and create a patch that does not apply to the index. See EDITING PATCHES below."
-msgstr ""
+msgstr "Назначение этого параметра состоит в том, чтобы отобрать для применения и добавления в индекс только некоторых строк патча или даже изменения их содержимого. Это может быть более быстрый и гибкий подход, чем использование интерактивный выбор блоков кода. Однако при таком подходе довольно легко запутаться и создать патч, который не получится применить к индексу. См. раздел «РЕДАКТИРОВАНИЕ ПАТЧЕЙ» далее."
 
 #. type: Labeled list
 #: en/git-add.txt:120
@@ -7975,13 +7970,13 @@ msgstr "`--update`"
 #: en/git-add.txt:124
 #, priority:300
 msgid "Update the index just where it already has an entry matching _<pathspec>_. This removes as well as modifies index entries to match the working tree, but adds no new files."
-msgstr ""
+msgstr "Обновить индекс только для тех _<спецификаторов-пути>_, которые уже содержатся в нём. Это удаляет, а также изменяет записи индекса так, чтобы он соответствовал рабочему каталогу, но не добавляет в него никаких новых файлов."
 
 #. type: Plain text
 #: en/git-add.txt:129
 #, placeholders:'`-u`', priority:300
 msgid "If no _<pathspec>_ is given when `-u` option is used, all tracked files in the entire working tree are updated (old versions of Git used to limit the update to the current directory and its subdirectories)."
-msgstr ""
+msgstr "Если совместно с параметром `-u` не задан ни один _<спецификатор-пути>_, обновляются все отслеженные файлы во всём рабочем каталоге (более старые версии Git ограничивались обновлением только текущего рабочего каталога и его подкаталогов)."
 
 #. type: Labeled list
 #: en/git-add.txt:130
@@ -8005,13 +8000,13 @@ msgstr "`--no-ignore-removal`"
 #: en/git-add.txt:137
 #, priority:300
 msgid "Update the index not only where the working tree has a file matching _<pathspec>_ but also where the index already has an entry. This adds, modifies, and removes index entries to match the working tree."
-msgstr ""
+msgstr "Обновить индекс не только для тех файлов в рабочем каталоге, для которых заданы _<спецификаторы-путей>_, но и для всех файлов, которые уже содержатся в индексе. Это удаляет, изменяет и добавляет записи в индекс так, чтобы он соответствовал рабочей копии."
 
 #. type: Plain text
 #: en/git-add.txt:142
 #, placeholders:'`-A`', priority:300
 msgid "If no _<pathspec>_ is given when `-A` option is used, all files in the entire working tree are updated (old versions of Git used to limit the update to the current directory and its subdirectories)."
-msgstr ""
+msgstr "Если совместно с параметром `-A` не задан ни один _<спецификатор-пути>_, обновляются все файлы во всём рабочем каталоге (более старые версии Git ограничивались обновлением только текущего рабочего каталога и его подкаталогов)."
 
 #. type: Labeled list
 #: en/git-add.txt:143
@@ -8029,13 +8024,13 @@ msgstr "`--ignore-removal`"
 #: en/git-add.txt:149
 #, priority:300
 msgid "Update the index by adding new files that are unknown to the index and files modified in the working tree, but ignore files that have been removed from the working tree. This option is a no-op when no _<pathspec>_ is used."
-msgstr ""
+msgstr "Обновить индекс добавив новые файлы, которые пока неизвестны индексу, и файлы, изменённые в рабочей копии, но игнорируйте файлы, которые были удалены из рабочего каталога. Если совместно с данным параметром не задан ни один _<спецификатор-пути>_, то не будет произведено ни каких действий."
 
 #. type: Plain text
 #: en/git-add.txt:153
 #, ignore-ellipsis, placeholders:'--no-all', priority:300
 msgid "This option is primarily to help users who are used to older versions of Git, whose `git add <pathspec>...` was a synonym for `git add --no-all <pathspec>...`, i.e. ignored removed files."
-msgstr ""
+msgstr "Этот параметр, в первую очередь, призван помочь тем пользователям, которые привыкли к более старым версиям Git, в которых `git add <спецификатор-пути>...` работал как `git add --no-all <спецификатор-пути>...`, т.е. игнорировал удалённые файлы."
 
 #. type: Labeled list
 #: en/git-add.txt:154
@@ -8053,7 +8048,7 @@ msgstr "`--intent-to-add`"
 #: en/git-add.txt:161
 #, priority:300
 msgid "Record only the fact that the path will be added later. An entry for the path is placed in the index with no content. This is useful for, among other things, showing the unstaged content of such files with `git diff` and committing them with `git commit -a`."
-msgstr ""
+msgstr "Записать только тот факт, что путь будет добавлен позже. Путь будет добавлен в индекс, но не содержимое файла. Это полезно, среди прочего, для того, чтобы выводить неиндексированное содержимое таких файлов с помощью `git diff`, а также возможности их закоммитить с помощью `git commit -a`."
 
 #. type: Labeled list
 #: en/git-add.txt:162
@@ -8063,10 +8058,9 @@ msgstr "`--refresh`"
 
 #. type: Plain text
 #: en/git-add.txt:165
-#, fuzzy, priority:300
-#| msgid "Don't add the file(s), but only refresh their stat()  information in the index."
+#, priority:300
 msgid "Don't add the file(s), but only refresh their stat() information in the index."
-msgstr "Не добавлять файл(ы), а только обновить в индексе их информацию stat()."
+msgstr "Не добавлять файл(ы), а только обновить в индексе stat()-информацию о них."
 
 #. type: Labeled list
 #: en/git-add.txt:166
@@ -9252,16 +9246,7 @@ msgstr "git-apply - Применить патч к файлам и/или инд
 
 #. type: verse
 #: en/git-apply.txt:21
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'[--stat]':'[--numstat]':'[--summary]':'[--check]':'[--index':'--intent-to-add]':'[--3way]':'[--ours':'--theirs':'--union]':'[--apply]':'[--no-add]':'[--build-fake-ancestor=':'--reverse]':'[--allow-binary-replacement':'--binary]':'[--reject]':'[--inaccurate-eof]':'[--recount]':'[--cached]':'[--ignore-space-change':'--ignore-whitespace]':'[--whitespace=(nowarn|warn|fix|error|error-all)]':'[--exclude=':'[--include=':'[--directory=':'[--verbose':'--quiet]':'[--unsafe-paths]':'[--allow-empty]', priority:100
-#| msgid ""
-#| "'git apply' [--stat] [--numstat] [--summary] [--check] [--index | --intent-to-add] [--3way]\n"
-#| "\t  [--apply] [--no-add] [--build-fake-ancestor=<file>] [-R | --reverse]\n"
-#| "\t  [--allow-binary-replacement | --binary] [--reject] [-z]\n"
-#| "\t  [-p<n>] [-C<n>] [--inaccurate-eof] [--recount] [--cached]\n"
-#| "\t  [--ignore-space-change | --ignore-whitespace]\n"
-#| "\t  [--whitespace=(nowarn|warn|fix|error|error-all)]\n"
-#| "\t  [--exclude=<path>] [--include=<path>] [--directory=<root>]\n"
-#| "\t  [--verbose | --quiet] [--unsafe-paths] [--allow-empty] [<patch>...]\n"
+#, ignore-ellipsis, no-wrap, placeholders:'[--stat]':'[--numstat]':'[--summary]':'[--check]':'[--index':'--intent-to-add]':'[--3way]':'[--ours':'--theirs':'--union]':'[--apply]':'[--no-add]':'[--build-fake-ancestor=':'--reverse]':'[--allow-binary-replacement':'--binary]':'[--reject]':'[--inaccurate-eof]':'[--recount]':'[--cached]':'[--ignore-space-change':'--ignore-whitespace]':'[--whitespace=(nowarn|warn|fix|error|error-all)]':'[--exclude=':'[--include=':'[--directory=':'[--verbose':'--quiet]':'[--unsafe-paths]':'[--allow-empty]', priority:100
 msgid ""
 "'git apply' [--stat] [--numstat] [--summary] [--check]\n"
 "\t  [--index | --intent-to-add] [--3way] [--ours | --theirs | --union]\n"
@@ -9273,7 +9258,8 @@ msgid ""
 "\t  [--exclude=<path>] [--include=<path>] [--directory=<root>]\n"
 "\t  [--verbose | --quiet] [--unsafe-paths] [--allow-empty] [<patch>...]\n"
 msgstr ""
-"'git apply' [--stat] [--numstat] [--summary] [--check] [--index | --intent-to-add] [--3way]\n"
+"'git apply' [--stat] [--numstat] [--summary] [--check]\n"
+"\t  [--index | --intent-to-add] [--3way] [--ours | --theirs | --union]\n"
 "\t  [--apply] [--no-add] [--build-fake-ancestor=<файл>] [-R | --reverse]\n"
 "\t  [--allow-binary-replacement | --binary] [--reject] [-z]\n"
 "\t  [-p<n>] [-C<n>] [--inaccurate-eof] [--recount] [--cached]\n"
@@ -10000,9 +9986,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-archive.txt:62
-#, fuzzy, no-wrap, placeholders:'--add-file=', priority:100
+#, no-wrap, placeholders:'--add-file=', priority:100
 msgid "--add-file=<file>"
-msgstr "--pathspec-from-file=<файл>"
+msgstr "--add-file=<файл>"
 
 #. type: Plain text
 #: en/git-archive.txt:67
@@ -10102,9 +10088,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-archive.txt:111 en/git-checkout.txt:361 en/git-diff-index.txt:26 en/git-diff-tree.txt:29 en/git-ls-tree.txt:38 en/git.txt:415
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid "<tree-ish>"
-msgstr "указатель-дерева"
+msgstr "<указатель-дерева>"
 
 #. type: Plain text
 #: en/git-archive.txt:113
@@ -13811,9 +13797,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-check-attr.txt:39
-#, fuzzy, no-wrap, placeholders:'--source=', priority:100
+#, no-wrap, placeholders:'--source=', priority:100
 msgid "--source=<tree-ish>"
-msgstr "--source"
+msgstr "--source=<указатель-дерева>"
 
 #. type: Plain text
 #: en/git-check-attr.txt:43
@@ -14226,9 +14212,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-check-mailmap.txt:30
-#, fuzzy, no-wrap, placeholders:'--mailmap-file=', priority:100
+#, no-wrap, placeholders:'--mailmap-file=', priority:100
 msgid "--mailmap-file=<file>"
-msgstr "--pathspec-from-file=<файл>"
+msgstr "--mailmap-file=<файл>"
 
 #. type: Plain text
 #: en/git-check-mailmap.txt:34
@@ -14676,9 +14662,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-checkout.txt:86
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'--ours':'--theirs':'--conflict=', priority:240
+#, ignore-ellipsis, no-wrap, placeholders:'--ours':'--theirs':'--conflict=', priority:240
 msgid "'git checkout' [-f|--ours|--theirs|-m|--conflict=<style>] [<tree-ish>] [--] <pathspec>..."
-msgstr "'git checkout' [-f|--ours|--theirs|-m|--conflict=<стиль>] [<tree-ish>] [--] <pathspec>..."
+msgstr "'git checkout' [-f|--ours|--theirs|-m|--conflict=<стиль>] [<указатель-дерева>] [--] <спецификатор-пути>..."
 
 #. type: Labeled list
 #: en/git-checkout.txt:87
@@ -14700,9 +14686,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-checkout.txt:103
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'--patch', priority:240
+#, ignore-ellipsis, no-wrap, placeholders:'--patch', priority:240
 msgid "'git checkout' (-p|--patch) [<tree-ish>] [--] [<pathspec>...]"
-msgstr "git reset --patch [<указатель-дерева>] [--] [<спецификатор-пути>…]"
+msgstr "'git checkout' (-p|--patch) [<указатель-дерева>] [--] [<спецификатор-пути>...]"
 
 #. type: Plain text
 #: en/git-checkout.txt:108
@@ -16339,9 +16325,9 @@ msgstr "Удаление неотслеживаемых файлов из раб
 
 #. type: verse
 #: en/git-clean.txt:12
-#, fuzzy, ignore-ellipsis, no-wrap, priority:100
+#, ignore-ellipsis, no-wrap, priority:100
 msgid "'git clean' [-d] [-f] [-i] [-n] [-q] [-e <pattern>] [-x | -X] [--] [<pathspec>...]\n"
-msgstr "git clean [-d] [-f] [-i] [-n] [-q] [-e <шаблон>] [-x | -X] [--] <пути>…"
+msgstr "'git clean' [-d] [-f] [-i] [-n] [-q] [-e <шаблон>] [-x | -X] [--] [<спецификатор-пути>...]\n"
 
 #. type: Plain text
 #: en/git-clean.txt:18
@@ -16548,7 +16534,7 @@ msgstr "git-clone - Клонирование репозитория в новы�
 
 #. type: synopsis
 #: en/git-clone.txt:21
-#, fuzzy, no-wrap, placeholders:'[--template=':'[--no-hardlinks]':'[--bare]':'[--mirror]':'[--reference':'[--dissociate]':'[--depth':'[--no-tags]':'[--recurse-submodules':'[--jobs':'[--sparse]':'[--filter=':'[--also-filter-submodules]', priority:300
+#, no-wrap, placeholders:'[--template=':'[--no-hardlinks]':'[--bare]':'[--mirror]':'[--reference':'[--dissociate]':'[--depth':'[--no-tags]':'[--recurse-submodules':'[--jobs':'[--sparse]':'[--filter=':'[--also-filter-submodules]', priority:300
 msgid ""
 "git clone [--template=<template-directory>]\n"
 "\t  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]\n"
@@ -16562,12 +16548,12 @@ msgid ""
 msgstr ""
 "'git clone' [--template=<каталог_шаблонов>]\n"
 "\t  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]\n"
-"\t  [-o <имя>] [-b <ветка>] [-u <путь>] [--reference <репозиторий>]\n"
+"\t  [-o <имя>] [-b <ветка>] [-u <путь-загрузки>] [--reference <репозиторий>]\n"
 "\t  [--dissociate] [--separate-git-dir <каталог_git>]\n"
 "\t  [--depth <глубина>] [--[no-]single-branch] [--no-tags]\n"
-"\t  [--recurse-submodules[=<спецификатор_пути>]]\n"
-"\t  [--[no-]shallow-submodules] [--[no-]remote-submodules]\n"
-"\t  [--jobs <xb>] [--sparse] [--] <репозиторий>\n"
+"\t  [--recurse-submodules[=<спецификатор_пути>]] [--[no-]shallow-submodules]\n"
+"\t  [--[no-]remote-submodules] [--jobs <n>] [--sparse] [--[no-]reject-shallow]\n"
+"\t  [--filter=<спецификатор-фильтра>] [--also-filter-submodules]] [--] <репозиторий>\n"
 "\t  [<каталог>]\n"
 
 #. type: Plain text
@@ -16790,9 +16776,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-clone.txt:186
-#, fuzzy, no-wrap, placeholders:'`--filter=', priority:300
+#, no-wrap, placeholders:'`--filter=', priority:300
 msgid "`--filter=<filter-spec>`"
-msgstr "--pathspec-from-file=<файл>"
+msgstr "`--filter=<спецификатор-фильтра>`"
 
 #. type: Plain text
 #: en/git-clone.txt:195
@@ -16990,9 +16976,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-clone.txt:288
-#, fuzzy, no-wrap, placeholders:'`--recurse-submodules', priority:300
+#, no-wrap, placeholders:'`--recurse-submodules', priority:300
 msgid "`--recurse-submodules[=<pathspec>]`"
-msgstr "--recurse-submodules"
+msgstr "`--recurse-submodules[=<спецификатор-фильтра>]`"
 
 #. type: Plain text
 #: en/git-clone.txt:296
@@ -18102,31 +18088,31 @@ msgstr "'all' — показывать каждый отдельный файл 
 #: en/git-commit.txt:354
 #, placeholders:'status.showUntrackedFiles':'linkgit:git-config[1]', priority:280
 msgid "All usual spellings for Boolean value `true` are taken as `normal` and `false` as `no`. The default can be changed using the status.showUntrackedFiles configuration variable documented in linkgit:git-config[1]."
-msgstr "Все обычные значения для логических величин для истины вроде `true` рассматриваются как `normal` и для лжи вроде `false` — как `no`. Значение по умолчанию можно изменить с помощью переменной конфигурации status.showUntrackedFiles, описанной в linkgit:git-config[1]."
+msgstr "Все обычные значения для логических величин для истины вроде `true` рассматриваются как `normal` и для лжи вроде `false` — как `no`. Значение по умолчанию можно изменить с помощью переменной конфигурации `status.showUntrackedFiles`, описанной в linkgit:git-config[1]."
 
 #. type: Plain text
 #: en/git-commit.txt:366
 #, placeholders:'commit.verbose':'linkgit:git-config[1]', priority:280
 msgid "Show unified diff between the HEAD commit and what would be committed at the bottom of the commit message template to help the user describe the commit by reminding what changes the commit has. Note that this diff output doesn't have its lines prefixed with '#'. This diff will not be a part of the commit message. See the `commit.verbose` configuration variable in linkgit:git-config[1]."
-msgstr ""
+msgstr "Показывать список изменений (в унифицированном формате) между HEAD и тем, что будет закоммичено в конце шаблона сообщения коммита, дабы помочь пользователю описать коммит, напомнив какие изменения в нём содержатся. Обратите внимание, что в этом списке сравнения перед началом строк добавляется символ «#», так что этот список изменений не будет частью сообщения коммита. См. переменную конфигурации `commit.verbose` в linkgit:git-config[1]."
 
 #. type: Plain text
 #: en/git-commit.txt:370
 #, priority:280
 msgid "If specified twice, show in addition the unified diff between what would be committed and the worktree files, i.e. the unstaged changes to tracked files."
-msgstr ""
+msgstr "Если этот параметр указан дважды, в дополнение к этому показать список изменений между тем что будет закоммичено и текущем состоянием рабочего каталога, т.е. изменения в отслеживаемых файлах, которые не были проиндексированы."
 
 #. type: Plain text
 #: en/git-commit.txt:374
 #, priority:280
 msgid "Suppress commit summary message."
-msgstr ""
+msgstr "Не выводить сводку изменений коммита."
 
 #. type: Plain text
 #: en/git-commit.txt:379
 #, priority:280
 msgid "Do not create a commit, but show a list of paths that are to be committed, paths with local changes that will be left uncommitted and paths that are untracked."
-msgstr ""
+msgstr "Не создавать коммит, но показать список путей, которые будут закоммичены, пути с локальными изменениями, которые не будут добавлены в коммит, и пути, которые не отслеживаются."
 
 #. type: Labeled list
 #: en/git-commit.txt:380
@@ -18138,7 +18124,7 @@ msgstr "--status"
 #: en/git-commit.txt:385
 #, placeholders:'linkgit:git-status[1]':'commit.status', priority:280
 msgid "Include the output of linkgit:git-status[1] in the commit message template when using an editor to prepare the commit message. Defaults to on, but can be used to override configuration variable commit.status."
-msgstr ""
+msgstr "Включить вывод linkgit:git-status[1] в шаблон сообщения коммита при использовании редактора для подготовки сообщения. По умолчанию этот параметр включён, но может быть использован для переопределения поведения задаваемого переменной конфигурации `commit.status`."
 
 #. type: Labeled list
 #: en/git-commit.txt:386
@@ -18150,19 +18136,19 @@ msgstr "--no-status"
 #: en/git-commit.txt:390
 #, placeholders:'linkgit:git-status[1]', priority:280
 msgid "Do not include the output of linkgit:git-status[1] in the commit message template when using an editor to prepare the default commit message."
-msgstr ""
+msgstr "Не включать вывод linkgit:git-status[1] в шаблон сообщения коммита при использовании редактора для подготовки сообщения."
 
 #. type: Plain text
 #: en/git-commit.txt:408
 #, priority:280
 msgid "When pathspec is given on the command line, commit the contents of the files that match the pathspec without recording the changes already added to the index. The contents of these files are also staged for the next commit on top of what have been staged before."
-msgstr ""
+msgstr "Когда в командной строке указан спецификатор пути, в коммит добавляется содержимое файлов, соответствующих этому спецификатору, другие изменения, добавленные в индекс не будут добавлены в коммит. Изменения, которые уже находятся в индексе, но небыли зафиксированы останутся в индексе и могут быть зафиксированы следующим коммитом."
 
 #. type: Plain text
 #: en/git-commit.txt:424
 #, placeholders:'--staged', priority:280
 msgid "When recording your own work, the contents of modified files in your working tree are temporarily stored to a staging area called the \"index\" with 'git add'. A file can be reverted back, only in the index but not in the working tree, to that of the last commit with `git restore --staged <file>`, which effectively reverts 'git add' and prevents the changes to this file from participating in the next commit. After building the state to be committed incrementally with these commands, `git commit` (without any pathname parameter) is used to record what has been staged so far. This is the most basic form of the command. An example:"
-msgstr ""
+msgstr "Когда вы записываете свою работу, содержимое модифицированных файлов в вашем рабочем каталоге временно сохраняется (с помощью 'git add') в буферную зону, называемую «индексом». Можно отменить изменения добавленные в индекс для конкретного файла (изменения только в индексе, но не в рабочем каталоге), к состоянию последнего коммита с помощью 'git restore --staged <файл>`, что фактически отменяет эффект произведённый 'git add' и исключает изменениям в этом файле из следующего коммита. После приведение индекса в то состояние, которое должно быть закомиченно (с помощью последовательного выполнения этих команд), созданное к этому моменту состояние может быть зафиксировано с помощью `git commit` (без какого-либо аргументов с путями). Это самая основная форма данной команды. Пример:"
 
 #. type: delimited block -
 #: en/git-commit.txt:430
@@ -18173,12 +18159,16 @@ msgid ""
 "$ git add hello.c\n"
 "$ git commit\n"
 msgstr ""
+"$ edit hello.c     # отредактируйте файл\n"
+"$ git rm goodbye.c\n"
+"$ git add hello.c\n"
+"$ git commit\n"
 
 #. type: Plain text
 #: en/git-commit.txt:438
 #, priority:280
 msgid "Instead of staging files after each individual change, you can tell `git commit` to notice the changes to the files whose contents are tracked in your working tree and do corresponding `git add` and `git rm` for you. That is, this example does the same as the earlier example if there is no other change in your working tree:"
-msgstr ""
+msgstr "Вместо того чтобы вручную индексировать файлы после каждого отдельного изменения, вы можете сказать `git commit`, чтобы он сам нашёл изменения в файлах (содержимое которых отслеживается в вашем рабочей копии) и сделал соответствующее `git add` и `git add` за вас. То есть, этот пример делает то же самое, что и предыдущий пример, если в вашем рабочем каталоге не было ни каких других изменений:"
 
 #. type: delimited block -
 #: en/git-commit.txt:443
@@ -18188,18 +18178,21 @@ msgid ""
 "$ rm goodbye.c\n"
 "$ git commit -a\n"
 msgstr ""
+"$ edit hello.c  # отредактируйте файл\n"
+"$ rm goodbye.c  # удалите файл\n"
+"$ git commit -a\n"
 
 #. type: Plain text
 #: en/git-commit.txt:448
 #, priority:280
 msgid "The command `git commit -a` first looks at your working tree, notices that you have modified hello.c and removed goodbye.c, and performs necessary `git add` and `git rm` for you."
-msgstr ""
+msgstr "Команда `git commit -a` сначала смотрит на вашу рабочую копию, замечает, что вы изменили hello.c и удалили goodbye.c, и сама выполняет необходимые `git add` и `git rm` за вас."
 
 #. type: Plain text
 #: en/git-commit.txt:453
 #, priority:280
 msgid "After staging changes to many files, you can alter the order the changes are recorded in, by giving pathnames to `git commit`. When pathnames are given, the command makes a commit that only records the changes made to the named paths:"
-msgstr ""
+msgstr "После внесения изменений в несколько файлов, вы можете изменить порядок, в котором изменения записываются в историю, передав `git commit`, пути к файлом. Когда команде передаются имена путей, она делает коммит, который содержит только изменения, внесённые в указанные файлы:"
 
 #. type: delimited block -
 #: en/git-commit.txt:459
@@ -18210,30 +18203,34 @@ msgid ""
 "$ edit Makefile\n"
 "$ git commit Makefile\n"
 msgstr ""
+"$ edit hello.c hello.h    # отредактировать файлы\n"
+"$ git add hello.c hello.h\n"
+"$ edit Makefile           # отредактировать другой файл\n"
+"$ git commit Makefile\n"
 
 #. type: Plain text
 #: en/git-commit.txt:466
 #, priority:280
 msgid "This makes a commit that records the modification to `Makefile`. The changes staged for `hello.c` and `hello.h` are not included in the resulting commit. However, their changes are not lost -- they are still staged and merely held back. After the above sequence, if you do:"
-msgstr ""
+msgstr "Это создаёт коммит, который фиксирует изменение только в `Makefile`. Проиндексированные изменения в `hello.c` и `hello.h` в полученный коммит, не включаются. Однако эти изменения не теряются: они всё ещё находятся в индексе и всего лишь придержаны на время. После приведённой последовательности команд, если вы сделаете:"
 
 #. type: delimited block -
 #: en/git-commit.txt:469 en/git-commit.txt:495
 #, no-wrap, priority:280
 msgid "$ git commit\n"
-msgstr ""
+msgstr "$ git commit\n"
 
 #. type: Plain text
 #: en/git-commit.txt:473
 #, priority:280
 msgid "this second commit would record the changes to `hello.c` and `hello.h` as expected."
-msgstr ""
+msgstr "этот второй коммит зафиксирует изменения в `hello.c' и `hello.h', как и ожидалось."
 
 #. type: Plain text
 #: en/git-commit.txt:481
 #, priority:280
 msgid "After a merge (initiated by 'git merge' or 'git pull') stops because of conflicts, cleanly merged paths are already staged to be committed for you, and paths that conflicted are left in unmerged state. You would have to first check which paths are conflicting with 'git status' and after fixing them manually in your working tree, you would stage the result as usual with 'git add':"
-msgstr ""
+msgstr "После того как слияние (начатого 'git merge' или 'git pull') будет остановлено из-за конфликта, файлы, которые были удачно слиты уже проиндексированы для коммита за вас, а файлы, в которых есть конфликты остаются в не слитом состоянии. Вы должны сначала проверить, в каких файлах есть конфликты с помощью 'git status', а после того, как вы исправите их вручную в вашем рабочем каталоге, вы можете проиндексировать результат как обычно, с помощью 'git add':"
 
 #. type: delimited block -
 #: en/git-commit.txt:487
@@ -18244,30 +18241,34 @@ msgid ""
 "$ edit hello.c\n"
 "$ git add hello.c\n"
 msgstr ""
+"$ git status | grep unmerged\n"
+"unmerged: hello.c\n"
+"$ edit hello.c               # отредактируйте файл\n"
+"$ git add hello.c\n"
 
 #. type: Plain text
 #: en/git-commit.txt:492
 #, placeholders:'git ls-files', priority:280
 msgid "After resolving conflicts and staging the result, `git ls-files -u` would stop mentioning the conflicted path. When you are done, run `git commit` to finally record the merge:"
-msgstr ""
+msgstr "После разрешения конфликтов и индексирования результата, `git ls-files -u` перестанет выводить пути по которым есть конфликты. Когда вы закончите, выполните `git commit`, чтобы, наконец, зафиксировать слияние:"
 
 #. type: Plain text
 #: en/git-commit.txt:503
 #, placeholders:'`-a`':'`-i`', priority:280
 msgid "As with the case to record your own changes, you can use `-a` option to save typing. One difference is that during a merge resolution, you cannot use `git commit` with pathnames to alter the order the changes are committed, because the merge should be recorded as a single commit. In fact, the command refuses to run when given pathnames (but see `-i` option)."
-msgstr ""
+msgstr "Как и в случае с фиксацией своих собственных изменений, вы можете использовать параметр `-a`, если хотите сэкономить несколько нажатий на клавиши. Одно из различий заключается в том, что во время разрешения слияния вы не можете передавать `git commit` именами путей в качестве аргументов, дабы изменить порядок, в котором фиксируются изменения, потому что слияние должно быть записано как единый коммит. На самом деле, команда даже откажется запускаться при передаче путей в качестве аргументов (но см. параметр `-i`)."
 
 #. type: Title -
 #: en/git-commit.txt:505
-#, fuzzy, no-wrap, priority:280
+#, no-wrap, priority:280
 msgid "COMMIT INFORMATION"
-msgstr "КОНФИГУРАЦИЯ"
+msgstr "ИНФОРМАЦИЯ ДЛЯ КОММИТА"
 
 #. type: Plain text
 #: en/git-commit.txt:509
 #, priority:280
 msgid "Author and committer information is taken from the following environment variables, if set:"
-msgstr ""
+msgstr "Информация об авторе и коммиттере берётся из следующих переменных среды, если они установлены:"
 
 #. type: Plain text
 #: en/git-commit.txt:516
@@ -18280,72 +18281,80 @@ msgid ""
 "\tGIT_COMMITTER_EMAIL\n"
 "\tGIT_COMMITTER_DATE\n"
 msgstr ""
+"\tGIT_AUTHOR_NAME\n"
+"\tGIT_AUTHOR_EMAIL\n"
+"\tGIT_AUTHOR_DATE\n"
+"\tGIT_COMMITTER_NAME\n"
+"\tGIT_COMMITTER_EMAIL\n"
+"\tGIT_COMMITTER_DATE\n"
 
 #. type: Plain text
 #: en/git-commit.txt:518
 #, priority:280
 msgid "(nb \"<\", \">\" and \"\\n\"s are stripped)"
 msgstr ""
+"(следует отметить, что \"<\", \">\" и \"\\n"
+"\" удаляются)"
 
 #. type: Plain text
 #: en/git-commit.txt:524
 #, placeholders:'credential.username':'linkgit:git-config[1]', priority:280
 msgid "The author and committer names are by convention some form of a personal name (that is, the name by which other humans refer to you), although Git does not enforce or require any particular form. Arbitrary Unicode may be used, subject to the constraints listed above. This name has no effect on authentication; for that, see the `credential.username` variable in linkgit:git-config[1]."
-msgstr ""
+msgstr "Имена автора и коммиттера по общепринятым нормам являются той или иной формой личного имени (т.е. именем, по которому другие люди обращаются к вам), однако Git и не заставляет вас придерживаться какой-либо конкретной формы. Могут использоваться произвольные символы Unicode (с учётом ограничений, перечисленных выше). Это имя ни как не влияет на аутентификацию; для этого см. описание переменной `credential.username` в linkgit:git-config[1]."
 
 #. type: Plain text
 #: en/git-commit.txt:531
 #, placeholders:'user.name':'user.email', priority:280
 msgid "In case (some of) these environment variables are not set, the information is taken from the configuration items `user.name` and `user.email`, or, if not present, the environment variable EMAIL, or, if that is not set, system user name and the hostname used for outgoing mail (taken from `/etc/mailname` and falling back to the fully qualified hostname when that file does not exist)."
-msgstr ""
+msgstr "В случае если эти переменные среды (или некоторые из них) не установлены, информация берётся из переменных конфигурации `user.name` и `user.email`; или, если они также не установлены, из переменной среды EMAIL; или, если и она не установлена, из имени пользователя системы, а для исходящей почты используется имя хоста (из `/etc/mailname` или, если этого файла не существуют, из полного имени хоста)."
 
 #. type: Plain text
 #: en/git-commit.txt:535
 #, placeholders:'author.name':'committer.name':'user.name':'user.email', priority:280
 msgid "The `author.name` and `committer.name` and their corresponding email options override `user.name` and `user.email` if set and are overridden themselves by the environment variables."
-msgstr ""
+msgstr "`author.name` и `committer.name` и соответствующие им переменные конфигурации для электронной почты переопределяют `user.name` и `user.email`, если они установлены, а сами они в свою очередь переопределяются переменными среды."
 
 #. type: Plain text
 #: en/git-commit.txt:538
 #, placeholders:'user.name':'user.email', priority:280
 msgid "The typical usage is to set just the `user.name` and `user.email` variables; the other options are provided for more complex use cases."
-msgstr ""
+msgstr "Типичное использование — установить только переменные конфигурации `user.name и `user.email; остальные опции предусмотрены для более сложных вариантов использования."
 
 #. type: Plain text
 #: en/git-commit.txt:552
 #, placeholders:'linkgit:git-format-patch[1]', priority:280
 msgid "Though not required, it's a good idea to begin the commit message with a single short (no more than 50 characters) line summarizing the change, followed by a blank line and then a more thorough description. The text up to the first blank line in a commit message is treated as the commit title, and that title is used throughout Git. For example, linkgit:git-format-patch[1] turns a commit into email, and it uses the title on the Subject line and the rest of the commit in the body."
-msgstr ""
+msgstr "Хотя это, строго говоря, и не требуется, хорошей идеей является начинать сообщение коммита с одной короткой (не более 50 символов) строки, резюмирующей изменения, за этой строкой обычно следует одна пустая строка, а затем более подробное описание. Текст до первой пустой строки в сообщении коммита рассматривается как его заголовок, и этот заголовок используется в Git во многих местах. Например, linkgit:git-format-patch[1], который превращает коммит в сообщение электронной почты, использует этот заголовок в качестве Темы письма, а остальное содержимое коммита — в качестве тела."
 
 #. type: Title -
 #: en/git-commit.txt:556
 #, no-wrap, priority:280
 msgid "ENVIRONMENT AND CONFIGURATION VARIABLES"
-msgstr ""
+msgstr "ПЕРЕМЕННЫЕ СРЕДЫ И КОНФИГУАЦИИ"
 
 #. type: Plain text
 #: en/git-commit.txt:561
 #, placeholders:'GIT_EDITOR':'core.editor':'linkgit:git-var[1]', priority:280
 msgid "The editor used to edit the commit log message will be chosen from the `GIT_EDITOR` environment variable, the core.editor configuration variable, the `VISUAL` environment variable, or the `EDITOR` environment variable (in that order). See linkgit:git-var[1] for details."
-msgstr ""
+msgstr "Редактор, используемый для редактирования сообщения коммита, будет взят из (в порядки приоритетности) переменной среды `GIT_EDITOR`, переменной конфигурации `core.editor`, переменной среды `VISUAL` или переменной среды `EDITOR`. См. подробности в linkgit:git-var[1]."
 
 #. type: Plain text
 #: en/git-commit.txt:571
 #, placeholders:'linkgit:githooks[5]', priority:280
 msgid "This command can run `commit-msg`, `prepare-commit-msg`, `pre-commit`, `post-commit` and `post-rewrite` hooks. See linkgit:githooks[5] for more information."
-msgstr ""
+msgstr "Эта команда может запускать следующие перехватчики: `commit-msg`, `prepare-commit-msg`, `pre-commit`, `post-commit` и `post-rewrite`. См. подробности в linkgit:githooks[5]."
 
 #. type: Labeled list
 #: en/git-commit.txt:575
 #, no-wrap, placeholders:'`$GIT_DIR':'COMMIT_EDITMSG', priority:280
 msgid "`$GIT_DIR/COMMIT_EDITMSG`"
-msgstr ""
+msgstr "`$GIT_DIR/COMMIT_EDITMSG`"
 
 #. type: Plain text
 #: en/git-commit.txt:581
 #, priority:280
 msgid "This file contains the commit message of a commit in progress. If `git commit` exits due to an error before creating a commit, any commit message that has been provided by the user (e.g., in an editor session) will be available in this file, but will be overwritten by the next invocation of `git commit`."
-msgstr ""
+msgstr "Этот файл содержит сообщение коммита для текущего коммита (который в данный момент находится в процессе создания). Если `git commit` завершится с ошибкой до, собственно, создания коммита, то то сообщение коммита, которое пользователь ввёл (например, в редакторе), будет доступно в этом файле, но имейте в виду, что оно будет перезаписано при следующем выполнение `git commit`."
 
 #. type: Plain text
 #: en/git-commit.txt:589
@@ -18711,9 +18720,9 @@ msgstr "-S <revs-file>"
 
 #. type: Labeled list
 #: en/git-config.txt:187
-#, fuzzy, no-wrap, placeholders:'--file', priority:100
+#, no-wrap, placeholders:'--file', priority:100
 msgid "--file <config-file>"
-msgstr "--pathspec-from-file=<файл>"
+msgstr ""
 
 #. type: Plain text
 #: en/git-config.txt:190
@@ -19337,15 +19346,15 @@ msgstr "GIT_CONFIG_COUNT"
 
 #. type: Labeled list
 #: en/git-config.txt:463
-#, fuzzy, no-wrap, priority:100
+#, no-wrap, priority:100
 msgid "GIT_CONFIG_KEY_<n>"
-msgstr "GIT_CONFIG"
+msgstr "GIT_CONFIG_KEY_<n>"
 
 #. type: Labeled list
 #: en/git-config.txt:464
-#, fuzzy, no-wrap, priority:100
+#, no-wrap, priority:100
 msgid "GIT_CONFIG_VALUE_<n>"
-msgstr "GIT_CONFIG"
+msgstr "GIT_CONFIG_VALUE_<n>"
 
 #. type: Plain text
 #: en/git-config.txt:473
@@ -22091,9 +22100,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-daemon.txt:159
-#, fuzzy, no-wrap, placeholders:'--pid-file=', priority:100
+#, no-wrap, placeholders:'--pid-file=', priority:100
 msgid "--pid-file=<file>"
-msgstr "--pathspec-from-file=<файл>"
+msgstr "--pid-file=<файл>"
 
 #. type: Plain text
 #: en/git-daemon.txt:162
@@ -22762,9 +22771,9 @@ msgstr ""
 
 #. type: verse
 #: en/git-diff-index.txt:13
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'git diff-index':'[--cached]':'[--merge-base]', priority:80
+#, ignore-ellipsis, no-wrap, placeholders:'git diff-index':'[--cached]':'[--merge-base]', priority:80
 msgid "'git diff-index' [-m] [--cached] [--merge-base] [<common-diff-options>] <tree-ish> [<path>...]\n"
-msgstr "'git diff-files' [-q] [-0|-1|-2|-3|-c|--cc] [<common diff options>] [<путь>...]\n"
+msgstr "'git diff-index' [-m] [--cached] [--merge-base] [<обычные параметры diff>] <указатель-дерева> [<путь>...]\n"
 
 #. type: Plain text
 #: en/git-diff-index.txt:21
@@ -29338,9 +29347,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-format-patch.txt:128
-#, fuzzy, priority:100
+#, priority:100
 msgid "Start numbering the patches at <n> instead of 1."
-msgstr "начать нумерацию патчей с <n>, а не с 1"
+msgstr "Начать нумерацию патчей с <n>, а не с 1."
 
 #. type: Labeled list
 #: en/git-format-patch.txt:129
@@ -29518,9 +29527,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-format-patch.txt:218
-#, fuzzy, no-wrap, placeholders:'--description-file=', priority:100
+#, no-wrap, placeholders:'--description-file=', priority:100
 msgid "--description-file=<file>"
-msgstr "--pathspec-from-file=<файл>"
+msgstr "--description-file=<файл>"
 
 #. type: Plain text
 #: en/git-format-patch.txt:221
@@ -29752,9 +29761,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-format-patch.txt:366 en/pretty-options.txt:62
-#, fuzzy, no-wrap, placeholders:'--notes', priority:260
+#, no-wrap, placeholders:'--notes', priority:260
 msgid "--notes[=<ref>]"
-msgstr "--show-notes[=<ссылка>]"
+msgstr "--notes[=<ссылка>]"
 
 #. type: Labeled list
 #: en/git-format-patch.txt:367 en/pretty-options.txt:83
@@ -37468,7 +37477,7 @@ msgstr ""
 #: en/git-mergetool--lib.txt:19 en/git-sh-i18n.txt:19 en/git-sh-setup.txt:19
 #, priority:100
 msgid "This is not a command the end user would want to run. Ever. This documentation is meant for people who are studying the Porcelain-ish scripts and/or are writing new ones."
-msgstr ""
+msgstr "Это не та команда, которая может представлять интерес для конечного пользователя. Никогда. Этот документ предназначен для людей, которые изучают и/или пишут новый сценарий, работающий с высокоуровневым «фарфоровым» программным интерфейсом Git."
 
 #. type: Plain text
 #: en/git-mergetool--lib.txt:23
@@ -37486,7 +37495,7 @@ msgstr ""
 #: en/git-mergetool--lib.txt:29 en/git-sh-i18n.txt:28 en/git-sh-setup.txt:34
 #, no-wrap, priority:100
 msgid "FUNCTIONS"
-msgstr ""
+msgstr "ФУНКЦИИ"
 
 #. type: Labeled list
 #: en/git-mergetool--lib.txt:30
@@ -37810,9 +37819,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-merge-tree.txt:67
-#, fuzzy, no-wrap, placeholders:'--merge-base=', priority:100
+#, no-wrap, placeholders:'--merge-base=', priority:100
 msgid "--merge-base=<tree-ish>"
-msgstr "--no-commit"
+msgstr "--merge-base=<указатель дерева>"
 
 #. type: Plain text
 #: en/git-merge-tree.txt:71
@@ -43814,9 +43823,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-range-diff.txt:84
-#, fuzzy, no-wrap, priority:100
+#, no-wrap, priority:100
 msgid "--[no-]notes[=<ref>]"
-msgstr "--show-notes[=<ссылка>]"
+msgstr "--[no-]notes[=<ссылка>]"
 
 #. type: Plain text
 #: en/git-range-diff.txt:87
@@ -44121,12 +44130,15 @@ msgstr ""
 
 #. type: verse
 #: en/git-read-tree.txt:15
-#, fuzzy, no-wrap, placeholders:'git read-tree':'[--trivial]':'[--aggressive]':'--reset':'--prefix=':'[--index-output=':'[--no-sparse-checkout]':'--empty', priority:80
+#, no-wrap, placeholders:'git read-tree':'[--trivial]':'[--aggressive]':'--reset':'--prefix=':'[--index-output=':'[--no-sparse-checkout]':'--empty', priority:80
 msgid ""
 "'git read-tree' [(-m [--trivial] [--aggressive] | --reset | --prefix=<prefix>)\n"
 "\t\t[-u | -i]] [--index-output=<file>] [--no-sparse-checkout]\n"
 "\t\t(--empty | <tree-ish1> [<tree-ish2> [<tree-ish3>]])\n"
-msgstr "git read-tree [(-m [--trivial] [--aggressive] | --reset | --prefix=<префикс>) [-u [--exclude-per-directory=<gitignore>] | -i]] [--no-sparse-checkout] [--index-output=<файл>] (--empty | <указатель-дерева-1> [<указатель-дерева-2> [<указатель-дерева-3>]])"
+msgstr ""
+"'git read-tree' [(-m [--trivial] [--aggressive] | --reset | --prefix=<префикс>)\n"
+"\t\t[-u | -i]] [--index-output=<файл>] [--no-sparse-checkout]\n"
+"\t\t(--empty | <указатель-дерева-1> [<указатель-дерева-2> [<указатель-дерева-3>])\n"
 
 #. type: Plain text
 #: en/git-read-tree.txt:22
@@ -44286,9 +44298,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-read-tree.txt:121
-#, fuzzy, no-wrap, priority:80
+#, no-wrap, priority:80
 msgid "<tree-ish#>"
-msgstr "указатель-дерева"
+msgstr "<указатель-дерева-№>"
 
 #. type: Plain text
 #: en/git-read-tree.txt:123
@@ -52915,43 +52927,43 @@ msgstr "git-sh-i18n(1)"
 #: en/git-sh-i18n.txt:7
 #, placeholders:'git-sh-i', priority:90
 msgid "git-sh-i18n - Git's i18n setup code for shell scripts"
-msgstr ""
+msgstr "git-sh-i18n — Код настройки интернационализации для сценариев оболочки Git"
 
 #. type: verse
 #: en/git-sh-i18n.txt:12
-#, fuzzy, no-wrap, placeholders:'--exec-path':'git-sh-i', priority:90
+#, no-wrap, placeholders:'--exec-path':'git-sh-i', priority:90
 msgid "'. \"$(git --exec-path)/git-sh-i18n\"'\n"
-msgstr "'. \"$(git --exec-path)/git-parse-remote\"'\n"
+msgstr "'. \"$(git --exec-path)/git-sh-i18n\"'\n"
 
 #. type: Plain text
 #: en/git-sh-i18n.txt:26
 #, placeholders:'git sh-i':'eval_gettext':'gettext.sh', priority:90
 msgid "The 'git sh-i18n scriptlet is designed to be sourced (using `.`) by Git's porcelain programs implemented in shell script. It provides wrappers for the GNU `gettext` and `eval_gettext` functions accessible through the `gettext.sh` script, and provides pass-through fallbacks on systems without GNU gettext."
-msgstr ""
+msgstr "Сценарий `git sh-i18n` предназначен для импорта в среду оболочки (c помощью `source` или `.`) «фарфоровых» программ Git, которые сами реализованны в виде сценариев оболочки. Он предоставляет обёртку для функций GNU `gettext` и `eval_gettext`, доступных в сценарии `gettext.sh`, а также предоставляет и резервные решения, используемые вместо них, на системах, где GNU gettext отсутствует."
 
 #. type: Labeled list
 #: en/git-sh-i18n.txt:30
 #, no-wrap, priority:90
 msgid "gettext"
-msgstr ""
+msgstr "gettext"
 
 #. type: Plain text
 #: en/git-sh-i18n.txt:34
 #, priority:90
 msgid "Currently a dummy fall-through function implemented as a wrapper around `printf(1)`. Will be replaced by a real gettext implementation in a later version."
-msgstr ""
+msgstr "В настоящее время это лишь фиктивная обёртка над `printf(1)`, которая просто передаёт ей свои аргументы. В более поздних версиях она будет заменена реальной реализацией gettext."
 
 #. type: Labeled list
 #: en/git-sh-i18n.txt:35
 #, no-wrap, placeholders:'eval_gettext', priority:90
 msgid "eval_gettext"
-msgstr ""
+msgstr "eval_gettext"
 
 #. type: Plain text
 #: en/git-sh-i18n.txt:40
 #, placeholders:'linkgit:git-sh-i18n{litdd}envsubst[1]', priority:90
 msgid "Currently a dummy fall-through function implemented as a wrapper around `printf(1)` with variables expanded by the linkgit:git-sh-i18n{litdd}envsubst[1] helper. Will be replaced by a real gettext implementation in a later version."
-msgstr ""
+msgstr "В настоящее время это лишь фиктивная обёртка над `printf(1)`, которая разворачивает переменные в своих аргументах с помощью linkgit:git-sh-i18n{litdd}envsubst[1] и передаёт их `printf(1)`. В более поздних версиях она будет заменена реальной реализацией gettext."
 
 #. type: Title =
 #: en/git-shortlog.txt:2
@@ -53161,7 +53173,7 @@ msgstr ""
 
 #. type: verse
 #: en/git-show-branch.txt:17
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'git show-branch':'--all]':'--remotes]':'[--topo-order':'--date-order]':'[--current]':'[--color':'--no-color]':'[--sparse]':'[--more=':'--list':'--independent':'--merge-base]':'[--no-name':'--sha1-name]':'[--topics]':'git show-branch':'--reflog':'[--list]', priority:100
+#, ignore-ellipsis, no-wrap, placeholders:'git show-branch':'--all]':'--remotes]':'[--topo-order':'--date-order]':'[--current]':'[--color':'--no-color]':'[--sparse]':'[--more=':'--list':'--independent':'--merge-base]':'[--no-name':'--sha1-name]':'[--topics]':'git show-branch':'--reflog':'[--list]', priority:100
 msgid ""
 "'git show-branch' [-a | --all] [-r | --remotes] [--topo-order | --date-order]\n"
 "\t\t[--current] [--color[=<when>] | --no-color] [--sparse]\n"
@@ -53173,7 +53185,9 @@ msgstr ""
 "git show-branch [-a | --all] [-r | --remotes] [--topo-order | --date-order]\n"
 "\t\t[--current] [--color[=<когда>] | --no-color] [--sparse]\n"
 "\t\t[--more=<n> | --list | --independent | --merge-base]\n"
-"\t\t[--no-name | --sha1-name] [--topics] [(<редакция> | <шаблон>)…]"
+"\t\t[--no-name | --sha1-name] [--topics]\n"
+"\t\t[(<редакция> | <glob-шаблон>)…]\n"
+"'git show-branch' (-g | --reflog)[=<n>[,<база>]] [--list] [<ссылка>]\n"
 
 #. type: Plain text
 #: en/git-show-branch.txt:24
@@ -54721,10 +54735,9 @@ msgstr ""
 
 #. type: verse
 #: en/git-status.txt:13
-#, fuzzy, ignore-ellipsis, no-wrap, priority:280
-#| msgid "'git status' [<options>...] [--] [<pathspec>...]\n"
+#, ignore-ellipsis, no-wrap, priority:280
 msgid "'git status' [<options>] [--] [<pathspec>...]\n"
-msgstr "'git status' [<опции>...] [--] [<спецификатор-пути>…]\n"
+msgstr "'git status' [<параметры>] [--] [<спецификатор-пути>…]\n"
 
 #. type: Plain text
 #: en/git-status.txt:23
@@ -59643,9 +59656,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git.txt:228
-#, fuzzy, no-wrap, placeholders:'--attr-source=', priority:100
+#, no-wrap, placeholders:'--attr-source=', priority:100
 msgid "--attr-source=<tree-ish>"
-msgstr "--source"
+msgstr "--attr-source=<указатель-дерева>"
 
 #. type: Plain text
 #: en/git.txt:232
@@ -62753,9 +62766,9 @@ msgstr "не проверять <каталог>/.git/ если <каталог>
 
 #. type: Plain text
 #: en/git-upload-pack.txt:33
-#, fuzzy, priority:100
+#, priority:100
 msgid "Interrupt transfer after <n> seconds of inactivity."
-msgstr "прервать передачу после <кол> секунд простоя"
+msgstr "Прервать передачу после <n> секунд простоя."
 
 #. type: Labeled list
 #: en/git-upload-pack.txt:34
@@ -64297,10 +64310,9 @@ msgstr "gitglossary - Глоссарий Git"
 
 #. type: Plain text
 #: en/gitglossary.txt:11
-#, fuzzy, priority:310
-#| msgid "*\n"
+#, priority:310
 msgid "*"
-msgstr "*\n"
+msgstr "*"
 
 #. type: Plain text
 #: en/gitglossary.txt:24
@@ -64330,7 +64342,7 @@ msgstr "[[def_bare_repository]]голый репозиторий (bare repositor
 #: en/glossary-content.txt:16
 #, placeholders:'<<def_directory,':'repository.git', priority:310
 msgid "A bare repository is normally an appropriately named <<def_directory,directory>> with a `.git` suffix that does not have a locally checked-out copy of any of the files under revision control. That is, all of the Git administrative and control files that would normally be present in the hidden `.git` sub-directory are directly present in the `repository.git` directory instead, and no other files are present and checked out. Usually publishers of public repositories make bare repositories available."
-msgstr ""
+msgstr "Как правило, голым репозиторием называется <<def_directory,каталог>> с суффиксом `.git`, который не имеет каких-либо локальных извлечённых копий файлов, находящихся под контролем СКВ. То есть все служебные и конфигурационные файлы Git, которые обычно находятся в скрытом подкаталоге `.git`, находятся вместо этого непосредственно в каталоге `repository.git', и кроме них нет ни каких других файлов, извлечённых из СКВ. Обычно люди, которые публикуют свои репозитории делают голые репозитории общедоступными."
 
 #. type: Labeled list
 #: en/glossary-content.txt:17
@@ -64427,9 +64439,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/glossary-content.txt:64
-#, placeholders:'<<def_working_tree,':'<<def_revision,':'<<def_head,':'<<def_dirty,', priority:310
+#, ', ':'<<def_dirty, ':'<<def_head, ':'<<def_revision, fuzzy, placeholders:'<<def_working_tree, priority:310
 msgid "A <<def_working_tree,working tree>> is clean, if it corresponds to the <<def_revision,revision>> referenced by the current <<def_head,head>>. Also see \"<<def_dirty,dirty>>\"."
-msgstr ""
+msgstr "<<def_working_tree,Рабочий каталог>> является чистым, если он соответствует своей <<def_revision,ревизии>>, на которую ссылается текущая <<def_head,голова>>. Также см. «<<def_dirty,грязный>>»."
 
 #. type: Labeled list
 #: en/glossary-content.txt:65
@@ -65715,43 +65727,43 @@ msgstr ""
 #: en/i18n.txt:2
 #, priority:280
 msgid "Git is to some extent character encoding agnostic."
-msgstr ""
+msgstr "Git до некоторой степени агностичен в отношении кодировок символов."
 
 #. type: Plain text
 #: en/i18n.txt:6
 #, priority:280
 msgid "The contents of the blob objects are uninterpreted sequences of bytes. There is no encoding translation at the core level."
-msgstr ""
+msgstr "Содержимое blob-объектов — простая последовательность байтов, которая ни как не интерпретируется особым образом. На уровне ядра Git ни какая перекодировка не производится."
 
 #. type: Plain text
 #: en/i18n.txt:13
 #, placeholders:'linkgit:git-config[1]':'linkgit:gitignore[5]':'linkgit:gitattributes[5]':'linkgit:gitmodules[5]', priority:280
 msgid "Path names are encoded in UTF-8 normalization form C. This applies to tree objects, the index file, ref names, as well as path names in command line arguments, environment variables and config files (`.git/config` (see linkgit:git-config[1]), linkgit:gitignore[5], linkgit:gitattributes[5] and linkgit:gitmodules[5])."
-msgstr ""
+msgstr "Пути кодируются в UTF-8 в форме нормализации C. Это относится к объектам-деревьям, файлу индекса, именам ссылок, а также к путям в аргументах командной строки, переменных среды и файлах конфигурации (`.git/config` (см. linkgit:git-config[1]), linkgit:gitignore[5], linkgit:gitattributes[5] и linkgit:gitmodules[5])."
 
 #. type: Plain text
 #: en/i18n.txt:23
 #, priority:280
 msgid "Note that Git at the core level treats path names simply as sequences of non-NUL bytes, there are no path name encoding conversions (except on Mac and Windows). Therefore, using non-ASCII path names will mostly work even on platforms and file systems that use legacy extended ASCII encodings. However, repositories created on such systems will not work properly on UTF-8-based systems (e.g. Linux, Mac, Windows) and vice versa. Additionally, many Git-based tools simply assume path names to be UTF-8 and will fail to display other encodings correctly."
-msgstr ""
+msgstr "Обратите внимание, что Git на базовом уровне рассматривает имена путей просто как последовательности ненулевых байтов, ни каких перекодировок путей не происходит (за исключением Mac и Windows). Таким образом, использование путей, содержащих не-ASCII символы, будет по большей части работать даже на платформах и файловых системах, использующих устаревшие расширенные ASCII-кодировки. Однако репозитории, созданные на таких системах, не будут корректно работать на системах с UTF-8 (например, Linux, Mac, Windows) и наоборот. Кроме того, многие инструменты, основанные на Git, предполагают, что пути передаются в UTF-8, и не умеют корректно отображать другие кодировки."
 
 #. type: Plain text
 #: en/i18n.txt:29
 #, priority:280
 msgid "Commit log messages are typically encoded in UTF-8, but other extended ASCII encodings are also supported. This includes ISO-8859-x, CP125x and many others, but _not_ UTF-16/32, EBCDIC and CJK multi-byte encodings (GBK, Shift-JIS, Big5, EUC-x, CP9xx etc.)."
-msgstr ""
+msgstr "Сообщения коммитов, как правило, кодируются в UTF-8, но другие расширенные ASCII-кодировки также поддерживаются, в частности это включает: ISO-8859-x, CP125x и многие другие, но _не включает_ UTF-16/32, EBCDIC и многобайтовые кодировки CJK (GBK, Shift-JIS, Big5, EUC-x, CP9xx и т.д.)."
 
 #. type: Plain text
 #: en/i18n.txt:36
 #, priority:280
 msgid "Although we encourage that the commit log messages are encoded in UTF-8, both the core and Git Porcelain are designed not to force UTF-8 on projects. If all participants of a particular project find it more convenient to use legacy encodings, Git does not forbid it. However, there are a few things to keep in mind."
-msgstr ""
+msgstr "Хотя мы и поощряем, использование UTF-8 в качестве кодировки сообщений коммитов, но и ядро Git, и высокоуровневый программный интерфейс разработаны так, чтобы не принуждать к обязательному использованию UTF-8 в проектах. Если все участники конкретного проекта считают более удобным использовать устаревшие кодировки, Git не запрещает это. Однако есть несколько моментов, которые стоит иметь в виду."
 
 #. type: Plain text
 #: en/i18n.txt:42
 #, placeholders:'git commit-tree', priority:280
 msgid "'git commit' and 'git commit-tree' issue a warning if the commit log message given to it does not look like a valid UTF-8 string, unless you explicitly say your project uses a legacy encoding. The way to say this is to have `i18n.commitEncoding` in `.git/config` file, like this:"
-msgstr ""
+msgstr "'git commit' и 'git commit-tree' будут выдавать предупреждение, если переданное ему сообщение коммита не похоже на корректную строку UTF-8, если только вы явно не объявили, что ваш проект использует устаревшую кодировку. Это можно сделать, добавив переменную конфигурации `i18n.commitEncoding` в файл `.git/config`, например:"
 
 #. type: delimited block -
 #: en/i18n.txt:46
@@ -65760,18 +65772,20 @@ msgid ""
 "[i18n]\n"
 "\tcommitEncoding = ISO-8859-1\n"
 msgstr ""
+"[i18n]\n"
+"\tcommitEncoding = ISO-8859-1\n"
 
 #. type: Plain text
 #: en/i18n.txt:52
 #, priority:280
 msgid "Commit objects created with the above setting record the value of `i18n.commitEncoding` in their `encoding` header. This is to help other people who look at them later. Lack of this header implies that the commit log message is encoded in UTF-8."
-msgstr ""
+msgstr "Объекты-коммиты, которые будут созданные пока включена приведённая выше настройка, будут записывать значение `i18n.commitEncoding` в своём заголовке `encoding`. Это поможет другим людям, которые будут просматривать их позже. Отсутствие этого заголовка означает, что сообщение коммита использует кодировку в UTF-8."
 
 #. type: Plain text
 #: en/i18n.txt:58
 #, priority:280
 msgid "'git log', 'git show', 'git blame' and friends look at the `encoding` header of a commit object, and try to re-code the log message into UTF-8 unless otherwise specified. You can specify the desired output encoding with `i18n.logOutputEncoding` in `.git/config` file, like this:"
-msgstr ""
+msgstr "'git log', 'git show', 'git blame' и другие подобные команды смотрят на заголовок 'encoding' объекта-коммита, и пытаются перекодировать сообщение журнала в UTF-8, если не указано иное. Вы можете указать нужную кодировку вывода с помощью `i18n.logOutputEncoding` в файле `.git/config', например:"
 
 #. type: delimited block -
 #: en/i18n.txt:62
@@ -65780,18 +65794,20 @@ msgid ""
 "[i18n]\n"
 "\tlogOutputEncoding = ISO-8859-1\n"
 msgstr ""
+"[i18n]\n"
+"\tlogOutputEncoding = ISO-8859-1\n"
 
 #. type: Plain text
 #: en/i18n.txt:66
 #, priority:280
 msgid "If you do not have this configuration variable, the value of `i18n.commitEncoding` is used instead."
-msgstr ""
+msgstr "Если эта переменная конфигурации у вас не установлена, то вместо ней используется значение `i18n.commitEncoding`."
 
 #. type: Plain text
 #: en/i18n.txt:70
 #, priority:280
 msgid "Note that we deliberately chose not to re-code the commit log message when a commit is made to force UTF-8 at the commit object level, because re-coding to UTF-8 is not necessarily a reversible operation."
-msgstr ""
+msgstr "Заметьте, что мы сознательно решили не перекодировать сообщения коммитов прямо во время создания коммита (т.е. не принуждать к использованию UTF-8 на уровне объектов-коммитов), потому что перекодировка в UTF-8 не обязательно является обратимой операцией."
 
 #. type: Plain text
 #: en/includes/cmd-config-section-all.txt:3
@@ -65803,7 +65819,7 @@ msgstr ""
 #: en/includes/cmd-config-section-rest.txt:3
 #, placeholders:'linkgit:git-config[1]', priority:280
 msgid "Everything above this line in this section isn't included from the linkgit:git-config[1] documentation. The content that follows is the same as what's found there:"
-msgstr ""
+msgstr "Дальнейшее содержание этого раздела (в отличие от того, что было описано до данной строки), повторяет то, что может быть найдено в linkgit:git-config[1]:"
 
 #. type: Plain text
 #: en/line-range-format.txt:2
@@ -68167,7 +68183,7 @@ msgstr ""
 #: en/pretty-options.txt:47
 #, no-wrap, placeholders:'--expand-tabs=', priority:260
 msgid "--expand-tabs=<n>"
-msgstr "--expand-tabs=<число>"
+msgstr "--expand-tabs=<n>"
 
 #. type: Labeled list
 #: en/pretty-options.txt:48
@@ -71219,13 +71235,13 @@ msgstr "--no-signoff"
 #: en/signoff-option.txt:16
 #, placeholders:'developercertificate.org', priority:280
 msgid "Add a `Signed-off-by` trailer by the committer at the end of the commit log message. The meaning of a signoff depends on the project to which you're committing. For example, it may certify that the committer has the rights to submit the work under the project's license or agrees to some contributor representation, such as a Developer Certificate of Origin. (See https://developercertificate.org for the one used by the Linux kernel and Git projects.) Consult the documentation or leadership of the project to which you're contributing to understand how the signoffs are used in that project."
-msgstr ""
+msgstr "Добавить завершитель `Signed-off-by` в конец сообщения коммита. Смысл этого действия зависит от проекта, с которым вы сотрудничаете. Например, это может удостоверять, что коммиттер имеет все права на то, чтобы предоставить данную работу в проект под его лицензией, или что он соглашается с каким-нибудь соглашением участника, вроде Сертификата Происхождения Разработчика (тот что используется в проектах Linux и Git см. в https://developercertificate.org). Проконсультируйтесь с документацией или руководством проекта, в который вы хотите внести свой вклад, чтобы понять, какой именно смысл эта приписка имеет в конкретном проекте."
 
 #. type: Plain text
 #: en/signoff-option.txt:18
 #, placeholders:'--no-signoff':'--signoff', priority:280
 msgid "The --no-signoff option can be used to countermand an earlier --signoff option on the command line."
-msgstr ""
+msgstr "С помощью параметра --no-signoff можно отменить параметр --signoff, указанный раннее в командной строке."
 
 #. type: Plain text
 #: en/transfer-data-leaks.txt:11
