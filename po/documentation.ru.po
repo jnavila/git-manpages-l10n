@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2024-12-25 19:35+0100\n"
-"PO-Revision-Date: 2024-12-28 00:00+0000\n"
+"PO-Revision-Date: 2024-12-28 05:05+0000\n"
 "Last-Translator: Golubev Alexander <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -8072,7 +8072,7 @@ msgstr "`--ignore-errors`"
 #: en/git-add.txt:172
 #, placeholders:'add.ignoreErrors', priority:300
 msgid "If some files could not be added because of errors indexing them, do not abort the operation, but continue adding the others. The command shall still exit with non-zero status. The configuration variable `add.ignoreErrors` can be set to true to make this the default behaviour."
-msgstr ""
+msgstr "Если некоторые файлы не могут быть добавлены из-за ошибок при их индексации, не прерывать операцию, а продолжить добавление остальных файлов. Тем не менее, команда должна завершится с ненулевым статусом. Переменную конфигурации `add.ignoreErrors` может быть установлена в `true`, дабы сделать это поведением по умолчанию."
 
 #. type: Labeled list
 #: en/git-add.txt:173
@@ -8084,7 +8084,7 @@ msgstr "`--ignore-missing`"
 #: en/git-add.txt:178
 #, placeholders:'`--dry-run`', priority:300
 msgid "This option can only be used together with `--dry-run`. By using this option the user can check if any of the given files would be ignored, no matter if they are already present in the work tree or not."
-msgstr ""
+msgstr "Этот параметр может использоваться только совместно с `--dry-run`. Используя этот параметр, пользователь может проверить, будет ли какой-либо из заданных файлов проигнорирован, независимо от того, присутствуют ли они уже в рабочем каталоге или нет."
 
 #. type: Labeled list
 #: en/git-add.txt:179
@@ -8108,7 +8108,7 @@ msgstr "`--renormalize`"
 #: en/git-add.txt:194
 #, placeholders:'core.autocrlf':'`-u`', priority:300
 msgid "Apply the \"clean\" process freshly to all tracked files to forcibly add them again to the index. This is useful after changing `core.autocrlf` configuration or the `text` attribute in order to correct files added with wrong _CRLF/LF_ line endings. This option implies `-u`. Lone CR characters are untouched, thus while a _CRLF_ cleans to _LF_, a _CRCRLF_ sequence is only partially cleaned to _CRLF_."
-msgstr ""
+msgstr "Применить процесс «очистки» заново ко всем отслеживаемым файлам, чтобы снова принудительно добавить их в индекс. Это полезно после изменения переменной конфигурации `core.autocrlf` или атрибута `text`, дабы исправить файлы, добавленные с неправильными окончаниями строк (_CRLF/LF_). Этот параметр подразумевает `-u`. Одинокие CR-символы не будут затронуты, поэтому в то время как _CRLF_ будут очищены до _LF_, последовательность _CRCRLF_ будет только частично очищаться до _CRLF_."
 
 #. type: Labeled list
 #: en/git-add.txt:195
@@ -8120,20 +8120,19 @@ msgstr "`--chmod=(+|-)x`"
 #: en/git-add.txt:199
 #, priority:300
 msgid "Override the executable bit of the added files. The executable bit is only changed in the index, the files on disk are left unchanged."
-msgstr ""
+msgstr "Переопределить исполняемый бит добавленных файлов. Исполняемый бит изменяется только в индексе, файлы на диске не изменяются."
 
 #. type: Labeled list
 #: en/git-add.txt:200
-#, fuzzy, no-wrap, placeholders:'`--pathspec-from-file=', priority:300
-#| msgid "--pathspec-from-file=<file>"
+#, no-wrap, placeholders:'`--pathspec-from-file=', priority:300
 msgid "`--pathspec-from-file=<file>`"
-msgstr "--pathspec-from-file=<файл>"
+msgstr "`--pathspec-from-file=<файл>`"
 
 #. type: Plain text
 #: en/git-add.txt:207
 #, placeholders:'core.quotePath':'linkgit:git-config[1]':'`--pathspec-file-nul`':'`--literal-pathspecs`', priority:300
 msgid "Pathspec is passed in _<file>_ instead of commandline args. If _<file>_ is exactly `-` then standard input is used. Pathspec elements are separated by _LF_ or _CR/LF_. Pathspec elements can be quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1]). See also `--pathspec-file-nul` and global `--literal-pathspecs`."
-msgstr ""
+msgstr "Спецификатор пути передаётся в _<файле>_, а не в аргументах командной строки. Если в качестве _<файла>_ указано в точности `-`, то используется стандартный поток ввода. Элементы спецификатора пути отделяются друг от друга символами _LF_ или _CR/LF_. Элементы спецификатора пути могут указываться в кавычках, как объясняется в описании переменной конфигурации `core.quotePath` (см. linkgit:git-config[1]). См. также `--pathspec-file-nul` и глобальный параметр `--literal-pathspecs`."
 
 #. type: Labeled list
 #: en/git-add.txt:208
@@ -8145,7 +8144,7 @@ msgstr "`--pathspec-file-nul`"
 #: en/git-add.txt:212
 #, placeholders:'`--pathspec-from-file`', priority:300
 msgid "Only meaningful with `--pathspec-from-file`. Pathspec elements are separated with _NUL_ character and all other characters are taken literally (including newlines and quotes)."
-msgstr ""
+msgstr "Имеет значение только при указании `--pathspec-from-file`. Элементы спецификатора пути отделяются друг от друга с помощью _NUL_-символа, а все остальные символы интерпретируются буквально (включая кавычки и переводы строк)."
 
 #. type: Labeled list
 #: en/git-add.txt:213
@@ -8161,10 +8160,9 @@ msgstr "Этот параметр — разделитель, который м�
 
 #. type: Plain text
 #: en/git-add.txt:224
-#, fuzzy, priority:300
-#| msgid "Adds content from all `*.txt` files under `Documentation` directory and its subdirectories:"
+#, priority:300
 msgid "Adds content from all ++*.txt++ files under `Documentation` directory and its subdirectories:"
-msgstr "Добавляет содержимое из всех файлов `*.txt` в каталоге `Documentation` и его подкаталогах:"
+msgstr "Добавляет содержимое из всех файлов ++*.txt++ в каталоге `Documentation` и его подкаталогах:"
 
 #. type: delimited block -
 #: en/git-add.txt:227
@@ -8174,17 +8172,15 @@ msgstr "$ git add Documentation/\\*.txt\n"
 
 #. type: Plain text
 #: en/git-add.txt:232
-#, fuzzy, priority:300
-#| msgid "Note that the asterisk `*` is quoted from the shell in this example; this lets the command include the files from subdirectories of `Documentation/` directory."
+#, priority:300
 msgid "Note that the asterisk ++*++ is quoted from the shell in this example; this lets the command include the files from subdirectories of `Documentation/` directory."
-msgstr "Обратите внимание, что в этом примере звездочка `*` экранируется от обработки в системной оболочке; это позволяет команде включать файлы из подкаталогов каталога `Documentation /`."
+msgstr "Обратите внимание, что в этом примере звёздочка ++*++ экранируется от обработки системной оболочкой; это позволяет команде включать файлы из подкаталогов каталога `Documentation/`."
 
 #. type: Plain text
 #: en/git-add.txt:234
-#, fuzzy, priority:300
-#| msgid "Considers adding content from all git-*.sh scripts:"
+#, priority:300
 msgid "Considers adding content from all ++git-*.sh++ scripts:"
-msgstr "Рассмотрим добавление содержимого всех скриптов с именем git-*.sh:"
+msgstr "Рассмотрим добавление содержимого всех скриптов с именем ++git-*.sh++:"
 
 #. type: delimited block -
 #: en/git-add.txt:237
@@ -8212,10 +8208,9 @@ msgstr "Когда команда входит в интерактивный р�
 
 #. type: Plain text
 #: en/git-add.txt:253 en/git-clean.txt:89
-#, fuzzy, priority:300
-#| msgid "The command loop shows the list of subcommands available, and gives a prompt \"What now> \".  In general, when the prompt ends with a single '>', you can pick only one of the choices given and type return, like this:"
+#, priority:300
 msgid "The command loop shows the list of subcommands available, and gives a prompt \"What now> \". In general, when the prompt ends with a single '>', you can pick only one of the choices given and type return, like this:"
-msgstr "Цикл команд показывает список доступных подкоманд и подсказку \"What now> \" (Что теперь?). В общем, когда приглашение заканчивается одним символом '>', вы можете выбрать только один из предложенных вариантов и нажать Enter, например:"
+msgstr "Цикл команд показывает список доступных подкоманд и приглашение \"Что теперь> \". Обычно, когда приглашение заканчивается одним символом '>', вы можете выбрать только один из предложенных вариантов и нажать Enter, например:"
 
 #. type: delimited block -
 #: en/git-add.txt:259
@@ -8226,10 +8221,10 @@ msgid ""
 "      5: patch        6: diff         7: quit         8: help\n"
 "    What now> 1\n"
 msgstr ""
-"    *** Commands ***\n"
+"    *** Команды ***\n"
 "      1: status       2: update       3: revert       4: add untracked\n"
 "      5: patch        6: diff         7: quit         8: help\n"
-"    What now> 1\n"
+"    Что теперь> 1\n"
 
 #. type: Plain text
 #: en/git-add.txt:263
@@ -8245,35 +8240,33 @@ msgstr "Основной цикл команд содержит 6 подкома
 
 #. type: Labeled list
 #: en/git-add.txt:266
-#, fuzzy, no-wrap, priority:300
+#, no-wrap, priority:300
 msgid "status"
 msgstr "status"
 
 #. type: Plain text
 #: en/git-add.txt:273
-#, fuzzy, placeholders:'`HEAD`', priority:300
-#| msgid "This shows the change between HEAD and index (i.e. what will be committed if you say `git commit`), and between index and working tree files (i.e. what you could stage further before `git commit` using `git add`) for each path.  A sample output looks like this:"
+#, placeholders:'`HEAD`', priority:300
 msgid "This shows the change between `HEAD` and index (i.e. what will be committed if you say `git commit`), and between index and working tree files (i.e. what you could stage further before `git commit` using `git add`) for each path. A sample output looks like this:"
-msgstr "Эта команда показывает различия между HEAD и индексом (т.е. что будет зафиксировано при выполнении `git commit`) и между рабочей копией и индексом (т.е. что вы еще можете добавить в индекс с помощью `git add`, прежде чем выполните `git commit`) для каждого файла. Пример вывода:"
+msgstr "Эта команда показывает различия между `HEAD` и индексом (т.е. что будет зафиксировано при выполнении `git commit`) и между рабочей копией и индексом (т.е. что вы ещё можете добавить в индекс с помощью `git add`, прежде чем выполнить `git commit`) для каждого файла. Пример вывода:"
 
 #. type: delimited block -
 #: en/git-add.txt:278
-#, fuzzy, no-wrap, placeholders:'foo.png', priority:300
+#, no-wrap, placeholders:'foo.png', priority:300
 msgid ""
 "              staged     unstaged path\n"
 "     1:       binary      nothing foo.png\n"
 "     2:     +403/-35        +1/-1 add-interactive.c\n"
 msgstr ""
-"              staged     unstaged path\n"
-"     1:       binary      nothing foo.png\n"
-"     2:     +403/-35        +1/-1 git-add--interactive.perl\n"
+"              в индексе не в индексе путь\n"
+"     1:     двоичный       ничего foo.png\n"
+"     2:     +403/-35        +1/-1 add-interactive.c\n"
 
 #. type: Plain text
 #: en/git-add.txt:289
-#, fuzzy, placeholders:'foo.png':'`HEAD`', priority:300
-#| msgid "It shows that foo.png has differences from HEAD (but that is binary so line count cannot be shown) and there is no difference between indexed copy and the working tree version (if the working tree version were also different, 'binary' would have been shown in place of 'nothing').  The other file, git-add{litdd}interactive.perl, has 403 lines added and 35 lines deleted if you commit what is in the index, but working tree file has further modifications (one addition and one deletion)."
+#, placeholders:'foo.png':'`HEAD`', priority:300
 msgid "It shows that `foo.png` has differences from `HEAD` (but that is binary so line count cannot be shown) and there is no difference between indexed copy and the working tree version (if the working tree version were also different, 'binary' would have been shown in place of 'nothing'). The other file, `add-interactive.c`, has 403 lines added and 35 lines deleted if you commit what is in the index, but working tree file has further modifications (one addition and one deletion)."
-msgstr "Из этого видно, что foo.png отличается от HEAD (но, т.к. это двоичный (binary) файл, количество отличающихся строк не подсчитывается), а версии в рабочей копии и в индексе не отличаются (если бы версия в индексе отличалась от рабочей копии, то вместо 'nothing' (ничего) была бы надпись 'binary'). Для файла git-add{litdd}interactive.perl в индекс добавлены изменения (403 добавленных и 35 удаленных строк), но в рабочей копии есть еще изменения этого файла (1 добавленная и 1 удаленная строка)."
+msgstr "Из этого видно, что в `foo.png` есть отличия от версии в `HEAD` (но, т.к. это двоичный файл, количество отличающихся строк не подсчитывается), а версии в рабочей копии и в индексе не отличаются (если бы версия в индексе отличалась от рабочей копии, то вместо 'ничего' была бы надпись 'двоичный'). Для файла `add-interactive.c` в индекс добавлены изменения (403 добавленных и 35 удалённых строк), но в рабочей копии есть ещё изменения этого файла (1 добавленная и 1 удалённая строка)."
 
 #. type: Labeled list
 #: en/git-add.txt:290 en/git-update-ref.txt:89
@@ -8283,27 +8276,26 @@ msgstr "update"
 
 #. type: Plain text
 #: en/git-add.txt:299
-#, fuzzy, priority:300
-#| msgid "This shows the status information and issues an \"Update>>\" prompt.  When the prompt ends with double '>>', you can make more than one selection, concatenated with whitespace or comma.  Also you can say ranges.  E.g. \"2-5 7,9\" to choose 2,3,4,5,7,9 from the list.  If the second number in a range is omitted, all remaining patches are taken.  E.g. \"7-\" to choose 7,8,9 from the list.  You can say '*' to choose everything."
+#, priority:300
 msgid "This shows the status information and issues an \"Update>>\" prompt. When the prompt ends with double '>>', you can make more than one selection, concatenated with whitespace or comma. Also you can say ranges. E.g. \"2-5 7,9\" to choose 2,3,4,5,7,9 from the list. If the second number in a range is omitted, all remaining patches are taken. E.g. \"7-\" to choose 7,8,9 from the list. You can say '*' to choose everything."
-msgstr "Эта команда показывает информацию о состоянии и выводит приглашение ввода \"Update>>\". Когда приглашение ввода оканчивается на '>>', вы можете выбирать несколько патчей, разделяя номера пробелом или запятой. Также можно указывать диапазоны. Например, \"2-5 7,9\" выберет из списка патчи 2,3,4,5,7,9. Если второе число диапазона опущено, то берутся оставшиеся патчи до конца. Например, \"7-\" выберет 7,8,9. Чтобы выбрать все, можно указать '*'."
+msgstr "Эта команда показывает информацию о состоянии и выводит приглашение ввода \"Обновить>>\". Когда приглашение ввода оканчивается на '>>', вы можете выбирать несколько элементов, разделяя их номера пробелом или запятой. Также можно указывать диапазоны. Например, \"2-5 7,9\" выберет из списка элементы 2,3,4,5,7,9. Если второе число диапазона опущено, то выбираются оставшиеся элементы до конца. Например, \"7-\" выберет 7,8,9. Чтобы выбрать все, можно указать '*'."
 
 #. type: Plain text
 #: en/git-add.txt:302
 #, priority:300
 msgid "What you chose are then highlighted with '*', like this:"
-msgstr "Всё, что вы выберете, помечается знаком '*', например:"
+msgstr "Всё, что вы выберете, будет помечаться знаком '*', например:"
 
 #. type: delimited block -
 #: en/git-add.txt:307
-#, fuzzy, no-wrap, placeholders:'foo.png', priority:300
+#, no-wrap, placeholders:'foo.png', priority:300
 msgid ""
 "           staged     unstaged path\n"
 "  1:       binary      nothing foo.png\n"
 "* 2:     +403/-35        +1/-1 add-interactive.c\n"
 msgstr ""
-"           staged     unstaged path\n"
-"  1:       binary      nothing foo.png\n"
+"           в индексе не в индексе путь\n"
+"  1:     двоичный       ничего foo.png\n"
 "* 2:     +403/-35        +1/-1 git-add--interactive.perl\n"
 
 #. type: Plain text
@@ -51419,7 +51411,7 @@ msgstr "Заврешить работу с нулевым кодом возвр�
 #: en/git-rm.txt:80
 #, placeholders:'linkgit:git-sparse-checkout[1]', priority:280
 msgid "Allow updating index entries outside of the sparse-checkout cone. Normally, `git rm` refuses to update index entries whose paths do not fit within the sparse-checkout cone. See linkgit:git-sparse-checkout[1] for more."
-msgstr ""
+msgstr "Разрешить обновление объектов индекса за пределами области частичного переключения (sparse-checkout). Обычно `git rm` отказывается обновлять данные индекса, не входящие в область, извлечённую sparse-checkout. См. подробности в linkgit:git-sparse-checkout[1]."
 
 #. type: Plain text
 #: en/git-rm.txt:85
