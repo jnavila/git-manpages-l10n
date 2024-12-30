@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2024-12-25 19:35+0100\n"
-"PO-Revision-Date: 2024-12-30 19:00+0000\n"
+"PO-Revision-Date: 2024-12-30 22:11+0000\n"
 "Last-Translator: Golubev Alexander <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -16754,7 +16754,7 @@ msgstr "`--filter=<спецификатор-фильтра>`"
 #: en/git-clone.txt:195
 #, placeholders:'`--filter`':'`--filter=blob':'`--filter=blob':'`--filter`':'linkgit:git-rev-list[1]', priority:300
 msgid "Use the partial clone feature and request that the server sends a subset of reachable objects according to a given object filter. When using `--filter`, the supplied _<filter-spec>_ is used for the partial clone filter. For example, `--filter=blob:none` will filter out all blobs (file contents) until needed by Git. Also, `--filter=blob:limit=<size>` will filter out all blobs of size at least _<size>_. For more details on filter specifications, see the `--filter` option in linkgit:git-rev-list[1]."
-msgstr ""
+msgstr "Использовать функцию неполного клонирования и попросить сервер отправлять только подмножество достижимых объектов, удовлетворяющих заданной _<спецификатору-фильтра>_. При использовании `--filter` указанный _<спецификатор-фильтра>_ используется в качестве фильтра неполного клонирования. Например, `--filter=blob:none` отфильтрует все blob-объекты (содержимое файлов), пока они не понадобятся Git. А, например, `--filter=blob:limit=<размер>` отфильтрует все blob-объекты объёмом не меньше _<размера>_. Дополнительные сведения о спецификаторах фильтра см. в описании параметра `--filter` команды linkgit:git-rev-list[1]."
 
 #. type: Labeled list
 #: en/git-clone.txt:196
@@ -16766,7 +16766,7 @@ msgstr "`--also-filter-submodules`"
 #: en/git-clone.txt:200
 #, placeholders:'`--filter`':'`--recurse-submodules`':'clone.filterSubmodules', priority:300
 msgid "Also apply the partial clone filter to any submodules in the repository. Requires `--filter` and `--recurse-submodules`. This can be turned on by default by setting the `clone.filterSubmodules` config option."
-msgstr ""
+msgstr "Также применять фильтр неполного клонирования ко всем подмодулям в репозитории. Требует указания `--filter` и `--recurse-submodules`. Данный параметр может быть включён по умолчанию с помощью переменной конфигурации `clone.filterSubmodules`."
 
 #. type: Labeled list
 #: en/git-clone.txt:201
@@ -16778,47 +16778,43 @@ msgstr "`--mirror`"
 #: en/git-clone.txt:208
 #, placeholders:'`--bare`':'`--bare`':'`--mirror`', priority:300
 msgid "Set up a mirror of the source repository. This implies `--bare`. Compared to `--bare`, `--mirror` not only maps local branches of the source to local branches of the target, it maps all refs (including remote-tracking branches, notes etc.) and sets up a refspec configuration such that all these refs are overwritten by a `git remote update` in the target repository."
-msgstr ""
+msgstr "Создать зеркало исходного репозитория. Это подразумевает `--bare`. В сравнении с `--bare`, `--mirror` не только переносит локальные ветки источника на локальные ветки цели, но он также переносит и все другие ссылки (включая отслеживаемые внешние ветки, заметки и т.д.) и устанавливает спецификаторы ссылок таким образом, чтобы все эти ссылки были перезаписаны `git remote update` в целевом репозитории."
 
 #. type: Labeled list
 #: en/git-clone.txt:209
-#, fuzzy, no-wrap, placeholders:'`-o`', priority:300
-#| msgid "-o <name>"
+#, no-wrap, placeholders:'`-o`', priority:300
 msgid "`-o` _<name>_"
-msgstr "-o <имя>"
+msgstr "`-o` _<имя>_"
 
 #. type: Labeled list
 #: en/git-clone.txt:210
-#, fuzzy, no-wrap, placeholders:'`--origin`', priority:300
-#| msgid "--origin <name>"
+#, no-wrap, placeholders:'`--origin`', priority:300
 msgid "`--origin` _<name>_"
-msgstr "--origin <имя>"
+msgstr "`--origin` _<имя>_"
 
 #. type: Plain text
 #: en/git-clone.txt:214
 #, placeholders:'clone.defaultRemoteName', priority:300
 msgid "Instead of using the remote name `origin` to keep track of the upstream repository, use _<name>_. Overrides `clone.defaultRemoteName` from the config."
-msgstr "Вместо имени удалённого источника `origin` для вышестоящего репозитория, теперь используется _<имя>_. Это можно изменить с помощью параметра `clone.defaultRemoteName` в `config`."
+msgstr "Вместо имени `origin` для вышестоящего репозитория, использовать _<имя>_ в качестве имени удалённого источника. Это переопределяет значение заданное в переменной конфигурации `clone.defaultRemoteName`."
 
 #. type: Labeled list
 #: en/git-clone.txt:215
-#, fuzzy, no-wrap, placeholders:'`-b`', priority:300
-#| msgid "-b <name>"
+#, no-wrap, placeholders:'`-b`', priority:300
 msgid "`-b` _<name>_"
-msgstr "-b <ветка>"
+msgstr "`-b` _<имя>_"
 
 #. type: Labeled list
 #: en/git-clone.txt:216
-#, fuzzy, no-wrap, placeholders:'`--branch`', priority:300
-#| msgid "--branch <name>"
+#, no-wrap, placeholders:'`--branch`', priority:300
 msgid "`--branch` _<name>_"
-msgstr "--branch <ветка>"
+msgstr "`--branch` _<имя>_"
 
 #. type: Plain text
 #: en/git-clone.txt:223
 #, placeholders:'`HEAD`':'`HEAD`':'`--branch`':'`HEAD`', priority:300
 msgid "Instead of pointing the newly created `HEAD` to the branch pointed to by the cloned repository's `HEAD`, point to _<name>_ branch instead. In a non-bare repository, this is the branch that will be checked out. `--branch` can also take tags and detaches the `HEAD` at that commit in the resulting repository."
-msgstr ""
+msgstr "Вместо того, чтобы вновь созданный `HEAD` указывал, на ту же ветку, на которую указывает `HEAD` клонировуемого репозитория, направить его на ветку с указанным _<именем>_. Не голый репозиторий будет также и переключен на эту ветку. Параметр `--branch` также принимает и _<имя>_ метки в качестве аргумента; в таком случае после клонирования полученный репозиторий будет находится в состоянии с отсоединённым указателем `HEAD`."
 
 #. type: Labeled list
 #: en/git-clone.txt:224
@@ -16836,13 +16832,13 @@ msgstr "`--upload-pack` _<upload-pack>_"
 #: en/git-clone.txt:229
 #, priority:300
 msgid "When given, and the repository to clone from is accessed via ssh, this specifies a non-default path for the command run on the other end."
-msgstr ""
+msgstr "При доступе к клонируемому репозиторию по ssh, этот параметр задаёт путь (отличный от пути по умолчанию) к команде `git-upload-pack`, которая будет запускаться на удалённом конце."
 
 #. type: Labeled list
 #: en/git-clone.txt:230 en/git-init.txt:65
-#, fuzzy, no-wrap, placeholders:'`--template=', priority:300
+#, no-wrap, placeholders:'`--template=', priority:300
 msgid "`--template=<template-directory>`"
-msgstr "--template=<каталог_шаблонов>"
+msgstr "`--template=<каталог-шаблонов>`"
 
 #. type: Plain text
 #: en/git-clone.txt:233
@@ -16866,51 +16862,49 @@ msgstr "`--config` `<ключ>=<значение>`"
 #: en/git-clone.txt:244
 #, placeholders:'linkgit:git-config[1]':'core.eol', priority:300
 msgid "Set a configuration variable in the newly-created repository; this takes effect immediately after the repository is initialized, but before the remote history is fetched or any files checked out. The _<key>_ is in the same format as expected by linkgit:git-config[1] (e.g., `core.eol=true`). If multiple values are given for the same key, each value will be written to the config file. This makes it safe, for example, to add additional fetch refspecs to the origin remote."
-msgstr ""
+msgstr "Устанавливает переменную конфигурации во вновь созданном репозитории; эта переменная устанавливается сразу после инициализации репозитория, но до того, как будет получена внешняя история или будут извлечены какие-либо файлы. _<ключ>_ должен быть в том же формате, что и для linkgit:git-config[1] (например, `core.eol=true`). Если для одного и того же _<ключа>_ даны несколько _<значений>_, каждое значение будет записано в файл конфигурации. Так что это позволяет, например, добавить дополнительные спецификаторы ссылок, которые должны быть извлечены из внешнего источнику origin."
 
 #. type: Plain text
 #: en/git-clone.txt:250
 #, placeholders:'`--mirror`':'`--no-tags`', priority:300
 msgid "Due to limitations of the current implementation, some configuration variables do not take effect until after the initial fetch and checkout. Configuration variables known to not take effect are: `remote.<name>.mirror` and `remote.<name>.tagOpt`. Use the corresponding `--mirror` and `--no-tags` options instead."
-msgstr ""
+msgstr "Из-за ограничений текущей реализации, некоторые переменные конфигурации не вступают в силу до тех пор, пока не будут произведены первоначальные загрузка и извлечение состояния. В частности это относится к таким переменным конфигурации, как `remote.<имя>.mirror' и `remote.<имя>.tagOpt`. Вместо них следует использовать соответственно параметры `--mirror` и `--no-tags`."
 
 #. type: Labeled list
 #: en/git-clone.txt:251
 #, no-wrap, placeholders:'`--depth', priority:300
 msgid "`--depth <depth>`"
-msgstr ""
+msgstr "`--depth <глубина>`"
 
 #. type: Plain text
 #: en/git-clone.txt:257
 #, placeholders:'`--single-branch`':'`--no-single-branch`':'`--shallow-submodules`', priority:300
 msgid "Create a 'shallow' clone with a history truncated to the specified number of commits. Implies `--single-branch` unless `--no-single-branch` is given to fetch the histories near the tips of all branches. If you want to clone submodules shallowly, also pass `--shallow-submodules`."
-msgstr ""
+msgstr "Создаёт «частичный» (shallow) клон с историей, усечённой до указанного количество коммитов. Ясли явно не передано `--no-single-branch` (что приведёт к загрузке последней истории всех ветвей), то данный параметр подразумевает `--single-branch`. Если вы хотите, чтобы подмодули тоже клонировались частично, то передайте также `--shallow-submodules`."
 
 #. type: Labeled list
 #: en/git-clone.txt:258
-#, fuzzy, no-wrap, placeholders:'`--shallow-since=', priority:300
-#| msgid "--shallow-since=<date>"
+#, no-wrap, placeholders:'`--shallow-since=', priority:300
 msgid "`--shallow-since=<date>`"
-msgstr "--shallow-since=<дата>"
+msgstr "`--shallow-since=<дата>`"
 
 #. type: Plain text
 #: en/git-clone.txt:260
 #, priority:300
 msgid "Create a shallow clone with a history after the specified time."
-msgstr ""
+msgstr "Создать частичный клон с историей начиная с указанной _<даты>_."
 
 #. type: Labeled list
 #: en/git-clone.txt:261
-#, fuzzy, no-wrap, placeholders:'`--shallow-exclude=', priority:300
-#| msgid "--shallow-exclude=<revision>"
+#, no-wrap, placeholders:'`--shallow-exclude=', priority:300
 msgid "`--shallow-exclude=<ref>`"
-msgstr "--shallow-exclude=<ревизия>"
+msgstr "`--shallow-exclude=<ссылка>`"
 
 #. type: Plain text
 #: en/git-clone.txt:265
 #, priority:300
 msgid "Create a shallow clone with a history, excluding commits reachable from a specified remote branch or tag. This option can be specified multiple times."
-msgstr ""
+msgstr "Создать частичный клон с историей, в которую не будут включены коммиты, достижимые из указанной внешней ветки или метки. Этот параметр может быть задан несколько раз."
 
 #. type: Labeled list
 #: en/git-clone.txt:266
@@ -16922,7 +16916,7 @@ msgstr "`--[no-]single-branch`"
 #: en/git-clone.txt:275
 #, placeholders:'`--branch`':'`HEAD`':'`HEAD`':'`--single-branch`', priority:300
 msgid "Clone only the history leading to the tip of a single branch, either specified by the `--branch` option or the primary branch remote's `HEAD` points at. Further fetches into the resulting repository will only update the remote-tracking branch for the branch this option was used for the initial cloning. If the `HEAD` at the remote did not point at any branch when `--single-branch` clone was made, no remote-tracking branch is created."
-msgstr ""
+msgstr "Клонировать только историю, ведущую к верхушке одной конкретной ветки (либо заданной параметром `--branch`, либо той, на которую указывает `HEAD` внешнего репозитория). Дальнейшие вызовы `fetch` в полученном репозитории будут обновлять отслеживаемую внешнюю ветку только для этой самой ветки, которая была создана при изначальном клонировании репозитория с данным параметром. Если во время клонирования с `--single-branch` `HEAD` во внешнем репозитории не указывает ни на одну ветку, то ни одной отслеживаемой внешней ветки создано не будет."
 
 #. type: Labeled list
 #: en/git-clone.txt:276
@@ -16934,13 +16928,13 @@ msgstr "`--no-tags`"
 #: en/git-clone.txt:282
 #, placeholders:'--no-tags`':'linkgit:git-fetch[1]', priority:300
 msgid "Don't clone any tags, and set `remote.<remote>.tagOpt=--no-tags` in the config, ensuring that future `git pull` and `git fetch` operations won't follow any tags. Subsequent explicit tag fetches will still work, (see linkgit:git-fetch[1])."
-msgstr ""
+msgstr "Не клонировать ни какие удалённые метки и установить переменную конфигурации `remote.<имя>.tagOpt=--no-tags`, что гарантирует, что будущие операции `git pull` и `git fetch` не будут отслеживать какие-либо метки. Однако в дальнейшем, будет возможна явная загрузка меток (см. linkgit:git-fetch[1])."
 
 #. type: Plain text
 #: en/git-clone.txt:287
 #, placeholders:'`--single-branch`', priority:300
 msgid "Can be used in conjunction with `--single-branch` to clone and maintain a branch with no references other than a single cloned branch. This is useful e.g. to maintain minimal clones of the default branch of some repository for search indexing."
-msgstr ""
+msgstr "Может использоваться совместно с `--single-branch` для клонирования и дальнейшей работы только с одной веткой, без каких-либо других ссылок. Это полезно, например, если есть потребность держать рядом минимальную копию ветки по умолчанию из некоторого репозитория для её индексации и поиска в ней."
 
 #. type: Labeled list
 #: en/git-clone.txt:288
