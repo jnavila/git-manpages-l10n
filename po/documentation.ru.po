@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2024-12-25 19:35+0100\n"
-"PO-Revision-Date: 2024-12-30 22:11+0000\n"
+"PO-Revision-Date: 2024-12-31 13:20+0000\n"
 "Last-Translator: Golubev Alexander <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -1032,7 +1032,7 @@ msgstr "linkgit:gitremote-helpers[7]"
 #: en/cmds-guide.txt:27
 #, priority:100
 msgid "Helper programs to interact with remote repositories."
-msgstr ""
+msgstr "Вспомогательные программы ля взаимодействия с внешними репозиториями."
 
 #. type: Labeled list
 #: en/cmds-guide.txt:28
@@ -1212,7 +1212,7 @@ msgstr "linkgit:git-clone[1]"
 #: en/cmds-mainporcelain.txt:33
 #, priority:100
 msgid "Clone a repository into a new directory."
-msgstr "Клонирует репозиторий в новую директорию."
+msgstr "Клонировать репозиторий в новый каталог."
 
 #. type: Labeled list
 #: en/cmds-mainporcelain.txt:34
@@ -16940,19 +16940,19 @@ msgstr "Может использоваться совместно с `--single-
 #: en/git-clone.txt:288
 #, no-wrap, placeholders:'`--recurse-submodules', priority:300
 msgid "`--recurse-submodules[=<pathspec>]`"
-msgstr "`--recurse-submodules[=<спецификатор-фильтра>]`"
+msgstr "`--recurse-submodules[=<спецификатор-пути>]`"
 
 #. type: Plain text
 #: en/git-clone.txt:296
 #, placeholders:'submodule.active', priority:300
 msgid "After the clone is created, initialize and clone submodules within based on the provided _<pathspec>_. If no `=<pathspec>` is provided, all submodules are initialized and cloned. This option can be given multiple times for pathspecs consisting of multiple entries. The resulting clone has `submodule.active` set to the provided pathspec, or \"`.`\" (meaning all submodules) if no pathspec is provided."
-msgstr ""
+msgstr "После того, как клон будет создан, инициализировать и клонировать его подмодули, соответствующие указанному _<спецификатору-пути>_. Если `=<спецификатор-пути>` не задан, то инициализируются и клонируются все подмодули. Этот параметр может быть указан несколько раз, чтобы задать спецификатор, состоящий из нескольких записей. В полученном клоне устанавливается переменная конфигурации 'submodule.active`, в качестве значения которой используется итоговый спецификатор пути или \"`.`\", если ни один не задан, что означает «все подмодули»."
 
 #. type: Plain text
 #: en/git-clone.txt:303
 #, placeholders:'--init':'--recursive':'`--no-checkout`':'`-n`':'`--bare`':'`--mirror`', priority:300
 msgid "Submodules are initialized and cloned using their default settings. This is equivalent to running `git submodule update --init --recursive <pathspec>` immediately after the clone is finished. This option is ignored if the cloned repository does not have a worktree/checkout (i.e. if any of `--no-checkout`/`-n`, `--bare`, or `--mirror` is given)"
-msgstr ""
+msgstr "При инициализации и клонировании подмодулей используются их параметры по умолчанию. Данный параметр эквивалентен запуску `git submodule update --init --recursive <спецификатор-пути>` сразу после завершения клонирования. Если у клонированного репозитория нет рабочей копии или если переключение на текущую ветку после извлечения отключено (т.е. если задан один из параметров: `--no-checkout`/`-n`, `--bare` или `--mirror`), то этот параметр игнорируется."
 
 #. type: Labeled list
 #: en/git-clone.txt:304
@@ -16964,7 +16964,7 @@ msgstr "`--[no-]shallow-submodules`"
 #: en/git-clone.txt:306
 #, priority:300
 msgid "All submodules which are cloned will be shallow with a depth of 1."
-msgstr ""
+msgstr "Клонировать все (выбранные) подмодули как частичные с глубиной 1."
 
 #. type: Labeled list
 #: en/git-clone.txt:307
@@ -16976,7 +16976,7 @@ msgstr "`--[no-]remote-submodules`"
 #: en/git-clone.txt:312
 #, placeholders:'`--remote`', priority:300
 msgid "All submodules which are cloned will use the status of the submodule's remote-tracking branch to update the submodule, rather than the superproject's recorded SHA-1. Equivalent to passing `--remote` to `git submodule update`."
-msgstr ""
+msgstr "Все клонируемые подмодули, будут использовать статус из отслеживаемой внешней ветки своих репозиториев, а не SHA-1, сохранённый в надпроекте. Это эквивалентно передаче параметра `--remote` в `git submodule update`."
 
 #. type: Labeled list
 #: en/git-clone.txt:313 en/git-init.txt:69
@@ -16988,7 +16988,7 @@ msgstr "`--separate-git-dir=<каталог-git>`"
 #: en/git-clone.txt:319
 #, priority:300
 msgid "Instead of placing the cloned repository where it is supposed to be, place the cloned repository at the specified directory, then make a filesystem-agnostic Git symbolic link to there. The result is Git repository can be separated from working tree."
-msgstr ""
+msgstr "Вместо того, чтобы размещать клонированный репозиторий там, где он должен быть, поместить его в указанный каталог, а затем сделать на него независящую от файловой системы символическую ссылку Git. В результате репозиторий Git может находится отдельно от рабочей копии."
 
 #. type: Labeled list
 #: en/git-clone.txt:320
@@ -17018,50 +17018,49 @@ msgstr "`--jobs` _<n>_"
 #: en/git-clone.txt:330
 #, placeholders:'submodule.fetchJobs', priority:300
 msgid "The number of submodules fetched at the same time. Defaults to the `submodule.fetchJobs` option."
-msgstr ""
+msgstr "Количество подмодулей, которые будут загружаться одновременно. По умолчанию равно значению переменной конфигурации `submodule.fetchJobs`."
 
 #. type: Labeled list
 #: en/git-clone.txt:331
-#, fuzzy, no-wrap, priority:300
-#| msgid "<repository>"
+#, no-wrap, priority:300
 msgid "_<repository>_"
-msgstr "<репозиторий>"
+msgstr "_<репозиторий>_"
 
 #. type: Plain text
 #: en/git-clone.txt:335
 #, placeholders:'<<URLS,', priority:300
 msgid "The (possibly remote) _<repository>_ to clone from. See the <<URLS,GIT URLS>> section below for more information on specifying repositories."
-msgstr ""
+msgstr "(Возможно удалённый) _<репозиторий>_, который должен быть склонирован. См. подробности о том как задавать адрес репозитория в разделе <<URLS,URL-АДРЕСА GIT>> ниже."
 
 #. type: Labeled list
 #: en/git-clone.txt:336
-#, fuzzy, no-wrap, priority:300
+#, no-wrap, priority:300
 msgid "_<directory>_"
-msgstr "--directory"
+msgstr "_<каталог>_"
 
 #. type: Plain text
 #: en/git-clone.txt:342
 #, priority:300
 msgid "The name of a new directory to clone into. The \"humanish\" part of the source repository is used if no _<directory>_ is explicitly given (`repo` for `/path/to/repo.git` and `foo` for `host.xz:foo/.git`). Cloning into an existing directory is only allowed if the directory is empty."
-msgstr ""
+msgstr "Название нового каталога в который репозиторий должен быть склонирован. Если _<каталог>_ не задан, то используется «человеская» часть ссылки на исходный репозиторий (например, `репо` for `/путь/к/репо.git` и `foo` для `host.xz:foo/.git`). Клонирование в существующий каталог разрешается только, если этот каталог пуст."
 
 #. type: Labeled list
 #: en/git-clone.txt:343
 #, no-wrap, placeholders:'`--bundle-uri=', priority:300
 msgid "`--bundle-uri=<uri>`"
-msgstr ""
+msgstr "`--bundle-uri=<uri>`"
 
 #. type: Plain text
 #: en/git-clone.txt:349
 #, placeholders:'`--depth`':'`--shallow-since`':'`--shallow-exclude`', priority:300
 msgid "Before fetching from the remote, fetch a bundle from the given _<uri>_ and unbundle the data into the local repository. The refs in the bundle will be stored under the hidden `refs/bundle/*` namespace. This option is incompatible with `--depth`, `--shallow-since`, and `--shallow-exclude`."
-msgstr ""
+msgstr "Прежде чем извлекать данные из внешнего репозитория, сначала скачать пакет (bundle) из указанного _<uri>_ и распаковать его в локальный репозиторий. Ссылки из пакета будут храниться в скрытым пространстве имён `refs/bundle/*`. Этот параметр несовместим с `--depth`, `--shallow-since` и `--shallow-exclude`."
 
 #. type: Plain text
 #: en/git-clone.txt:357
 #, priority:300
 msgid "Clone from upstream:"
-msgstr ""
+msgstr "Клонирование из вышестоящего репозитория:"
 
 #. type: delimited block -
 #: en/git-clone.txt:362
@@ -17071,12 +17070,15 @@ msgid ""
 "$ cd my-linux\n"
 "$ make\n"
 msgstr ""
+"$ git clone git://git.kernel.org/pub/scm/.../linux.git my-linux\n"
+"$ cd my-linux\n"
+"$ make\n"
 
 #. type: Plain text
 #: en/git-clone.txt:366
 #, priority:300
 msgid "Make a local clone that borrows from the current directory, without checking things out:"
-msgstr ""
+msgstr "Создать локальный клон, который «заимствует» объекты из репозитория в текущем каталоге и не извлекает рабочую копию:"
 
 #. type: delimited block -
 #: en/git-clone.txt:371
@@ -17086,12 +17088,15 @@ msgid ""
 "$ cd ../copy\n"
 "$ git show-branch\n"
 msgstr ""
+"$ git clone -l -s -n . ../copy\n"
+"$ cd ../copy\n"
+"$ git show-branch\n"
 
 #. type: Plain text
 #: en/git-clone.txt:375
 #, priority:300
 msgid "Clone from upstream while borrowing from an existing local directory:"
-msgstr ""
+msgstr "Клонировать из вышестоящего репозитория, «заимствуя» объекты для совместного использования из существующего локального каталога:"
 
 #. type: delimited block -
 #: en/git-clone.txt:381
@@ -17102,31 +17107,34 @@ msgid ""
 "\tmy-linux\n"
 "$ cd my-linux\n"
 msgstr ""
+"$ git clone --reference /git/linux.git \\\n"
+"\tgit://git.kernel.org/pub/scm/.../linux.git \\\n"
+"\tmy-linux\n"
+"$ cd my-linux\n"
 
 #. type: Plain text
 #: en/git-clone.txt:385
 #, priority:300
 msgid "Create a bare repository to publish your changes to the public:"
-msgstr ""
+msgstr "Создать голый репозиторий, чтобы опубликовать ваши изменения для общественности:"
 
 #. type: delimited block -
 #: en/git-clone.txt:388
 #, no-wrap, placeholders:'--bare':'proj.git', priority:300
 msgid "$ git clone --bare -l /home/proj/.git /pub/scm/proj.git\n"
-msgstr ""
+msgstr "$ git clone --bare -l /home/proj/.git /pub/scm/proj.git\n"
 
 #. type: Plain text
 #: en/git-clone.txt:391
-#, fuzzy, priority:300
-#| msgid "Clone a repository into a new directory."
+#, priority:300
 msgid "Clone a local repository from a different user:"
-msgstr "Клонирует репозиторий в новую директорию."
+msgstr "Клонировать локальный репозиторий у другого пользователя:"
 
 #. type: delimited block -
 #: en/git-clone.txt:394
 #, no-wrap, placeholders:'--no-local':'proj.git':'proj.git', priority:300
 msgid "$ git clone --no-local /home/otheruser/proj.git /pub/scm/proj.git\n"
-msgstr ""
+msgstr "$ git clone --no-local /home/otheruser/proj.git /pub/scm/proj.git\n"
 
 #. type: Title =
 #: en/git-column.txt:2
@@ -68374,13 +68382,13 @@ msgstr ""
 #: en/ref-storage-format.txt:2
 #, priority:300
 msgid "`files` for loose files with packed-refs. This is the default."
-msgstr ""
+msgstr "`files`: ссылки хранятся в виде несвязанного набора файлов и файла `packed-refs`. Это формат по умолчанию."
 
 #. type: Plain text
 #: en/ref-storage-format.txt:3
 #, priority:300
 msgid "`reftable` for the reftable format. This format is experimental and its internals are subject to change."
-msgstr ""
+msgstr "`reftable`: reftable-формат. Этот формат является экспериментальным, и его внутреннее устройство может измениться."
 
 #. type: Labeled list
 #: en/rerere-options.txt:1
@@ -71378,133 +71386,133 @@ msgstr ""
 #: en/urls.txt:2
 #, no-wrap, placeholders:'[[URLS]]', priority:300
 msgid "GIT URLS[[URLS]]"
-msgstr ""
+msgstr "URL-АДРЕСА GIT[[URLS]]"
 
 #. type: Plain text
 #: en/urls.txt:8
 #, priority:300
 msgid "In general, URLs contain information about the transport protocol, the address of the remote server, and the path to the repository. Depending on the transport protocol, some of this information may be absent."
-msgstr ""
+msgstr "В целом, URL-адреса содержат информацию о транспортном протоколе, адресе удалённого сервера и пути к репозиторию. В зависимости от транспортного протокола, некоторые из этих элементов могут отсутствовать."
 
 #. type: Plain text
 #: en/urls.txt:12
 #, priority:300
 msgid "Git supports ssh, git, http, and https protocols (in addition, ftp and ftps can be used for fetching, but this is inefficient and deprecated; do not use them)."
-msgstr ""
+msgstr "Git поддерживает следующие протоколы: ssh, git, http и https (кроме того, ftp и ftps могут быть использованы для извлечения из репозиториев, но это неэффективно и является устаревшей (deprecated) возможностью; не используйте эти протоколы)."
 
 #. type: Plain text
 #: en/urls.txt:15
 #, priority:300
 msgid "The native transport (i.e. `git://` URL) does no authentication and should be used with caution on unsecured networks."
-msgstr ""
+msgstr "Родной транспорт (т.е. адреса вида `git://`) не имеет аутентификации и должен использоваться с осторожностью в незащищённых сетях."
 
 #. type: Plain text
 #: en/urls.txt:17
 #, priority:300
 msgid "The following syntaxes may be used with them:"
-msgstr ""
+msgstr "Для этих протоколов может использоваться следующий синтаксис:"
 
 #. type: Plain text
 #: en/urls.txt:19
 #, priority:300
 msgid "`ssh://[<user>@]<host>[:<port>]/<path-to-git-repo>`"
-msgstr ""
+msgstr "`ssh://[<пользователь>@]<хост>[:<порт>]/<путь-к-репозиторию-git>`"
 
 #. type: Plain text
 #: en/urls.txt:20
 #, priority:300
 msgid "`git://<host>[:<port>]/<path-to-git-repo>`"
-msgstr ""
+msgstr "`git://<хост>[:<порт>]/<путь-к-репозиторию-git>`"
 
 #. type: Plain text
 #: en/urls.txt:21
 #, priority:300
 msgid "`http[s]://<host>[:<port>]/<path-to-git-repo>`"
-msgstr ""
+msgstr "`http[s]://<хост>[:<порт>]/<путь-к-репозиторию-git>`"
 
 #. type: Plain text
 #: en/urls.txt:22
 #, priority:300
 msgid "`ftp[s]://<host>[:<port>]/<path-to-git-repo>`"
-msgstr ""
+msgstr "`ftp[s]://<хост>[:<порт>]/<путь-к-репозиторию-git>`"
 
 #. type: Plain text
 #: en/urls.txt:24
 #, priority:300
 msgid "An alternative scp-like syntax may also be used with the ssh protocol:"
-msgstr ""
+msgstr "В качестве альтернативы для протокола ssh можно также использовать scp-подобный синтаксис:"
 
 #. type: Plain text
 #: en/urls.txt:26
 #, priority:300
 msgid "`[<user>@]<host>:/<path-to-git-repo>`"
-msgstr ""
+msgstr "`[<пользователь>@]<хост>:/<путь-к-репозиторию-git>`"
 
 #. type: Plain text
 #: en/urls.txt:32
 #, priority:300
 msgid "This syntax is only recognized if there are no slashes before the first colon. This helps differentiate a local path that contains a colon. For example the local path `foo:bar` could be specified as an absolute path or `./foo:bar` to avoid being misinterpreted as an ssh url."
-msgstr ""
+msgstr "Этот синтаксис распознаётся только в том случае, если перед первым двоеточием нет слэшей. Это позволяет отличить его от локального пути, который содержит двоеточие. Например, локальный путь `foo:bar` можно записан как `./foo:bar` или как абсолютный путь, дабы он не был бы ошибочно интерпретирован как ssh-адреса."
 
 #. type: Plain text
 #: en/urls.txt:34
 #, priority:300
 msgid "The ssh and git protocols additionally support `~<username>` expansion:"
-msgstr ""
+msgstr "Кроме того протоколы ssh и git поддерживают расширение `~<имени-пользователя>`:"
 
 #. type: Plain text
 #: en/urls.txt:36
 #, priority:300
 msgid "`ssh://[<user>@]<host>[:<port>]/~<user>/<path-to-git-repo>`"
-msgstr ""
+msgstr "`ssh://[<пользователь>@]<хост>[:<порт>]/~<имя-пользователя>/<путь-к-репозиторию-git>`"
 
 #. type: Plain text
 #: en/urls.txt:37
 #, priority:300
 msgid "`git://<host>[:<port>]/~<user>/<path-to-git-repo>`"
-msgstr ""
+msgstr "`git://<хост>[:<порт>]/~<имя-пользователя>/<путь-к-репозиторию-git>`"
 
 #. type: Plain text
 #: en/urls.txt:38
 #, priority:300
 msgid "`[<user>@]<host>:~<user>/<path-to-git-repo>`"
-msgstr ""
+msgstr "`[<пользователь>@]<хост>:/~<имя-пользователя>/<путь-к-репозиторию-git>`"
 
 #. type: Plain text
 #: en/urls.txt:41
 #, priority:300
 msgid "For local repositories, also supported by Git natively, the following syntaxes may be used:"
-msgstr ""
+msgstr "Для локальных репозиториев, для которых поддержка у Git также родная, могут использоваться следующие варианты синтаксиса:"
 
 #. type: Plain text
 #: en/urls.txt:43
 #, priority:300
 msgid "`/path/to/repo.git/`"
-msgstr ""
+msgstr "`/путь/к/репозиторию.git/`"
 
 #. type: Plain text
 #: en/urls.txt:44
 #, priority:300
 msgid "`file:///path/to/repo.git/`"
-msgstr ""
+msgstr "`file:///путь/к/репозиторию.git/`"
 
 #. type: Plain text
 #: en/urls.txt:49
 #, placeholders:'`--local`':'linkgit:git-clone[1]', priority:300
 msgid "These two syntaxes are mostly equivalent, except when cloning, when the former implies `--local` option. See linkgit:git-clone[1] for details."
-msgstr ""
+msgstr "Эти два синтаксиса по большей части эквивалентны, кроме как при клонировании; в этом случае первый подразумевает параметр `--local`. См. подробности в linkgit:git-clone[1]."
 
 #. type: Plain text
 #: en/urls.txt:54
 #, placeholders:'`--local`', priority:300
 msgid "These two syntaxes are mostly equivalent, except the former implies `--local` option."
-msgstr ""
+msgstr "Эти два синтаксиса по большей части эквивалентны, кроме того что первый подразумевает параметр `--local`."
 
 #. type: Plain text
 #: en/urls.txt:58
 #, placeholders:'linkgit:git-bundle[1]', priority:300
 msgid "`git clone`, `git fetch` and `git pull`, but not `git push`, will also accept a suitable bundle file. See linkgit:git-bundle[1]."
-msgstr ""
+msgstr "`git clone`, `git fetch` и `git pull`, но не `git push`, также примут сформированный соответствующим образом pack-файл. См. linkgit:git-bundle[1]."
 
 #. type: Plain text
 #: en/urls.txt:63
