@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2024-12-25 19:35+0100\n"
-"PO-Revision-Date: 2024-12-29 06:00+0000\n"
+"PO-Revision-Date: 2024-12-30 19:00+0000\n"
 "Last-Translator: Golubev Alexander <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -1378,9 +1378,9 @@ msgstr "linkgit:git-notes[1]"
 
 #. type: Plain text
 #: en/cmds-mainporcelain.txt:75
-#, fuzzy, priority:100
+#, priority:100
 msgid "Add or inspect object notes."
-msgstr "Добавление или просмотр заметок объекта"
+msgstr "Добавление или просмотр заметок объекта."
 
 #. type: Plain text
 #: en/cmds-mainporcelain.txt:76 en/git-fetch.txt:314
@@ -2015,7 +2015,7 @@ msgstr "linkgit:git-prune-packed[1]"
 
 #. type: Plain text
 #: en/cmds-plumbingmanipulators.txt:39
-#, fuzzy, priority:100
+#, priority:100
 msgid "Remove extra objects that are already in pack files."
 msgstr "Удаление дополнительных объектов, которые уже содержатся в файлах пакетов"
 
@@ -6998,7 +6998,7 @@ msgstr "--keep"
 #: en/fetch-options.txt:115
 #, priority:220
 msgid "Keep downloaded pack."
-msgstr "Оставить загруженный пакет данных."
+msgstr "Сохранять загруженный pack-файл."
 
 #. type: Labeled list
 #: en/fetch-options.txt:117
@@ -7268,7 +7268,7 @@ msgstr ""
 #: en/fetch-options.txt:276
 #, no-wrap, placeholders:'--upload-pack', priority:220
 msgid "--upload-pack <upload-pack>"
-msgstr "--upload-pack <путь>"
+msgstr "--upload-pack <upload-pack>"
 
 #. type: Plain text
 #: en/fetch-options.txt:281
@@ -16518,12 +16518,12 @@ msgid ""
 "\t  [--filter=<filter-spec>] [--also-filter-submodules]] [--] <repository>\n"
 "\t  [<directory>]\n"
 msgstr ""
-"'git clone' [--template=<каталог_шаблонов>]\n"
+"'git clone' [--template=<каталог-шаблонов>]\n"
 "\t  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]\n"
 "\t  [-o <имя>] [-b <ветка>] [-u <путь-загрузки>] [--reference <репозиторий>]\n"
-"\t  [--dissociate] [--separate-git-dir <каталог_git>]\n"
+"\t  [--dissociate] [--separate-git-dir <каталог-git>]\n"
 "\t  [--depth <глубина>] [--[no-]single-branch] [--no-tags]\n"
-"\t  [--recurse-submodules[=<спецификатор_пути>]] [--[no-]shallow-submodules]\n"
+"\t  [--recurse-submodules[=<спецификатор-пути>]] [--[no-]shallow-submodules]\n"
 "\t  [--[no-]remote-submodules] [--jobs <n>] [--sparse] [--[no-]reject-shallow]\n"
 "\t  [--filter=<спецификатор-фильтра>] [--also-filter-submodules]] [--] <репозиторий>\n"
 "\t  [<каталог>]\n"
@@ -16568,25 +16568,25 @@ msgstr "Когда репозиторий с которого производи
 #: en/git-clone.txt:60
 #, placeholders:'`--local`':'`--no-local`', priority:300
 msgid "If the repository is specified as a local path (e.g., `/path/to/repo`), this is the default, and `--local` is essentially a no-op. If the repository is specified as a URL, then this flag is ignored (and we never use the local optimizations). Specifying `--no-local` will override the default when `/path/to/repo` is given, using the regular Git transport instead."
-msgstr ""
+msgstr "Если в качестве репозитория задан локальный путь (например, `/путь/к/репо`), то это является поведением по умолчанию, и `--local`, по сути, ничего не делает. Если в качестве репозитория задан URL, то этот флаг игнорируется (и мы никогда не используем локальные оптимизации в таких случаях). Параметр `--no-local` позволяет переопределить поведение по умолчанию: и при передаче локальных путей (вроде `/путь/к/репо`), будет использоваться обычный транспорт Git."
 
 #. type: Plain text
 #: en/git-clone.txt:65
 #, placeholders:'`$GIT_DIR/objects`', priority:300
 msgid "If the repository's `$GIT_DIR/objects` has symbolic links or is a symbolic link, the clone will fail. This is a security measure to prevent the unintentional copying of files by dereferencing the symbolic links."
-msgstr ""
+msgstr "Если в `$GIT_DIR/objects` в репозитории есть символические ссылки или сам является символической ссылкой, то клонирование завершится ошибкой. Это сделано ради безопасности, чтобы предотвратить непреднамеренное копирование файлов при разыменовании этих ссылок."
 
 #. type: Plain text
 #: en/git-clone.txt:68
 #, placeholders:'`--no-local`', priority:300
 msgid "This option does not work with repositories owned by other users for security reasons, and `--no-local` must be specified for the clone to succeed."
-msgstr ""
+msgstr "Данный параметр не работает с репозиториями, принадлежащими другим пользователям по соображениям безопасности, так что, чтобы клонирование завершилось успешно, нужно будет указать `--no-local`."
 
 #. type: Plain text
 #: en/git-clone.txt:72
 #, priority:300
 msgid "*NOTE*: this operation can race with concurrent modification to the source repository, similar to running `cp -r <src> <dst>` while modifying _<src>_."
-msgstr ""
+msgstr "*ПРИМЕЧАНИЕ*: при выполнении данной операции может возникнуть состояние гонки с параллельными модификациями в исходном репозитории, аналогично тому, как это может происходить при выполнении `cp -r <источник> <назначение>` одновременно с изменениями в _<источнике>_."
 
 #. type: Labeled list
 #: en/git-clone.txt:73
@@ -16598,7 +16598,7 @@ msgstr "`--no-hardlinks`"
 #: en/git-clone.txt:78
 #, priority:300
 msgid "Force the cloning process from a repository on a local filesystem to copy the files under the `.git/objects` directory instead of using hardlinks. This may be desirable if you are trying to make a back-up of your repository."
-msgstr ""
+msgstr "При клонировании из репозитория на локальной файловой системе, принудительно использовать копирование для файлов в каталоге `.git/objects`, а не жёсткие ссылки. Это может быть желательно, если вы пытаетесь сделать резервную копию вашего репозитория."
 
 #. type: Labeled list
 #: en/git-clone.txt:80
@@ -16610,44 +16610,43 @@ msgstr "`--shared`"
 #: en/git-clone.txt:86
 #, priority:300
 msgid "When the repository to clone is on the local machine, instead of using hard links, automatically setup `.git/objects/info/alternates` to share the objects with the source repository. The resulting repository starts out without any object of its own."
-msgstr ""
+msgstr "Когда клонируемый репозиторий находится на локальной машине, вместо использования жёстких ссылок, автоматически настроить `.git/objects/info/alternates` для совместного использования объектов с исходным репозиторием. Изначально в полученном репозитории не будет ни каких собственных объектов."
 
 #. type: Plain text
 #: en/git-clone.txt:96
 #, placeholders:'--auto`':'linkgit:git-maintenance[1]', priority:300
 msgid "*NOTE*: this is a possibly dangerous operation; do *not* use it unless you understand what it does. If you clone your repository using this option and then delete branches (or use any other Git command that makes any existing commit unreferenced) in the source repository, some objects may become unreferenced (or dangling). These objects may be removed by normal Git operations (such as `git commit`) which automatically call `git maintenance run --auto`. (See linkgit:git-maintenance[1].) If these objects are removed and were referenced by the cloned repository, then the cloned repository will become corrupt."
-msgstr ""
+msgstr "*ПРИМЕЧАНИЕ*: это может быть опасной операцией; *не* используйте её, если вы не понимаете, что она делает. Если вы клонируете свой репозиторий, используя этот параметр, а затем удаляете ветки (или используете любые другие команды Git, которые могут привести к удалению всех ссылок на какие-либо существующие коммиты) в исходном репозитории, то некоторые объекты могут стать изолированными (или болтающимися). Эти объекты могут быть удалены в результате обычных операций Git (таких как `git commit`), которые автоматически вызывают `git maintenance run --auto` (см. linkgit:git-maintenance[1]). Если эти объекты будут удалены и на них останутся ссылки в клонированном репозиторий, то клонированный репозиторий будет испорчен."
 
 #. type: Plain text
 #: en/git-clone.txt:102
 #, placeholders:'`--local`':'`--shared`':'--shared`':'`--local`', priority:300
 msgid "Note that running `git repack` without the `--local` option in a repository cloned with `--shared` will copy objects from the source repository into a pack in the cloned repository, removing the disk space savings of `clone --shared`. It is safe, however, to run `git gc`, which uses the `--local` option by default."
-msgstr ""
+msgstr "Обратите внимание, что при запуске `git repack` без параметра `--local` в репозитории, клонированном с `--shared`, разделяемые объекты из исходного репозитория будут скопированы в pack-файлы клонированного репозитория, из-за чего экономия дискового пространства от `clone --shared` будет потеряна. Однако, запускать `git gc`, который использует параметр `--local` по умолчанию, — безопасно."
 
 #. type: Plain text
 #: en/git-clone.txt:106
 #, placeholders:'`--shared`', priority:300
 msgid "If you want to break the dependency of a repository cloned with `--shared` on its source repository, you can simply run `git repack -a` to copy all objects from the source repository into a pack in the cloned repository."
-msgstr ""
+msgstr "Если вы хотите избавиться от зависимостей репозитория, клонированного с `--shared`, от его исходного репозитория, вы можете просто запустить `git repack -a`, который скопирует все объекты из исходного репозитория в pack-файлы клонированного."
 
 #. type: Labeled list
 #: en/git-clone.txt:107
-#, fuzzy, no-wrap, placeholders:'`--reference', priority:300
-#| msgid "--reference <repository>"
+#, no-wrap, placeholders:'`--reference', priority:300
 msgid "`--reference[-if-able] <repository>`"
-msgstr "--reference <репозиторий>"
+msgstr "`--reference[-if-able] <репозиторий>`"
 
 #. type: Plain text
 #: en/git-clone.txt:117
 #, placeholders:'`--reference-if-able`', priority:300
 msgid "If the reference _<repository>_ is on the local machine, automatically setup `.git/objects/info/alternates` to obtain objects from the reference _<repository>_. Using an already existing repository as an alternate will require fewer objects to be copied from the repository being cloned, reducing network and local storage costs. When using the `--reference-if-able`, a non existing directory is skipped with a warning instead of aborting the clone."
-msgstr ""
+msgstr "Если _<репозиторий>_ (заданный как аргумент параметра) находится на локальной машине, автоматически настроить `.git/objects/info/alternates` для получения объектов из этого _<репозитория>_. Использование уже существующего репозиторий как дополнительного потребует копирования меньшего количества объектов из клонируемого репозитория, что уменьшит сетевой трафик и локальные затраты на хранение. С `--reference-if-able`, если каталог _<репозитория>_ не существует, то это вызовет предупреждением, а не ошибку, и клонирование не будет из-за этого прервано."
 
 #. type: Plain text
 #: en/git-clone.txt:120
 #, placeholders:'`--shared`':'`--dissociate`', priority:300
 msgid "*NOTE*: see the NOTE for the `--shared` option, and also the `--dissociate` option."
-msgstr ""
+msgstr "*ПРИМЕЧАНИЕ*: см. ПРИМЕЧАНИЕ для параметра `--shared`, а также описание параметра `--dissociate`."
 
 #. type: Labeled list
 #: en/git-clone.txt:121
@@ -16659,7 +16658,7 @@ msgstr "`--dissociate`"
 #: en/git-clone.txt:131
 #, placeholders:'`--reference`', priority:300
 msgid "Borrow the objects from reference repositories specified with the `--reference` options only to reduce network transfer, and stop borrowing from them after a clone is made by making necessary local copies of borrowed objects. This option can also be used when cloning locally from a repository that already borrows objects from another repository--the new repository will borrow objects from the same repository, and this option can be used to stop the borrowing."
-msgstr ""
+msgstr "Заимствовать объекты из дополнительных репозиториев, заданных в параметрах `--reference` для того, чтобы уменьшить использование сетевого трафика, и прекратить совместное использование объектов после того, как клонирование будет закончено, скопировав все необходимые объекты в клонированный репозиторий. Этот параметр также может использован при клонировании из локального репозитория, у которого уже есть свой дополнительный репозиторий. В таком случае в новый репозиторий будут скопированы объекты из дополнительного, так что этот параметр можно использовать для создания копии репозитория, которая более не зависит от дополнительных репозиториев."
 
 #. type: Labeled list
 #: en/git-clone.txt:132 en/git-init.txt:44
@@ -16671,13 +16670,13 @@ msgstr "`-q`"
 #: en/git-clone.txt:136
 #, priority:300
 msgid "Operate quietly. Progress is not reported to the standard error stream."
-msgstr ""
+msgstr "Тихий режим. Не выводить информацию о ходе выполнения в стандартный поток ошибок."
 
 #. type: Plain text
 #: en/git-clone.txt:141
 #, priority:300
 msgid "Run verbosely. Does not affect the reporting of progress status to the standard error stream."
-msgstr ""
+msgstr "Включение подробного режима. Не влияет на вывод информацию о ходе выполнения в стандартный поток ошибок."
 
 #. type: Labeled list
 #: en/git-clone.txt:142
@@ -16689,7 +16688,7 @@ msgstr "`--progress`"
 #: en/git-clone.txt:147
 #, placeholders:'`--quiet`', priority:300
 msgid "Progress status is reported on the standard error stream by default when it is attached to a terminal, unless `--quiet` is specified. This flag forces progress status even if the standard error stream is not directed to a terminal."
-msgstr ""
+msgstr "По умолчанию информация о ходе выполнения выводится в стандартный поток ошибок, когда он привязан к терминалу, если только не задан параметр `--quiet`. Данный флаг принудительно включает вывод этой информации даже если стандартный поток ошибок направлен не в терминал."
 
 #. type: Labeled list
 #: en/git-clone.txt:148
@@ -16713,7 +16712,7 @@ msgstr "`--no-checkout`"
 #: en/git-clone.txt:162
 #, placeholders:'`HEAD`', priority:300
 msgid "No checkout of `HEAD` is performed after the clone is complete."
-msgstr ""
+msgstr "После завершения клонирования, переход на какую-либо ветку не производится и указатель `HEAD` не устанавливается."
 
 #. type: Labeled list
 #: en/git-clone.txt:163
@@ -16725,7 +16724,7 @@ msgstr "`--`[`no-`]`reject-shallow`"
 #: en/git-clone.txt:167
 #, placeholders:'clone.rejectShallow', priority:300
 msgid "Fail if the source repository is a shallow repository. The `clone.rejectShallow` configuration variable can be used to specify the default."
-msgstr ""
+msgstr "Завершиться с ошибкой, если репозиторий, из которого происходит клонирование, является частичным. Для указания значения по умолчанию можно использовать переменную конфигурации `clone.rejectShallow`."
 
 #. type: Labeled list
 #: en/git-clone.txt:168 en/git-init.txt:49
@@ -16737,13 +16736,13 @@ msgstr "`--bare`"
 #: en/git-clone.txt:179
 #, placeholders:'`$GIT_DIR`':'`--no-checkout`', priority:300
 msgid "Make a 'bare' Git repository. That is, instead of creating _<directory>_ and placing the administrative files in `<directory>/.git`, make the _<directory>_ itself the `$GIT_DIR`. This obviously implies the `--no-checkout` because there is nowhere to check out the working tree. Also the branch heads at the remote are copied directly to corresponding local branch heads, without mapping them to `refs/remotes/origin/`. When this option is used, neither remote-tracking branches nor the related configuration variables are created."
-msgstr ""
+msgstr "Создать голый («bare») репозиторий Git. То есть вместо создания _<каталога>_ и размещения административных файлов в `<каталог>/.git`, использовать сам _<каталог>_ в качестве `$GIT_DIR`. Это, очевидно, подразумевает `--no-checkout`, потому что нет подходящего места для размещения рабочей копии. Кроме того, головы веток внешнего репозитория копируются непосредственно в соответствующие им локальные головы веток, без отображений в `refs/remotes/origin/`. При использовании этого параметра не создаются ни отслеживаемые внешние ветви, ни связанные с ними переменные конфигурации."
 
 #. type: Plain text
 #: en/git-clone.txt:185
 #, placeholders:'linkgit:git-sparse-checkout[1]', priority:300
 msgid "Employ a sparse-checkout, with only files in the toplevel directory initially being present. The linkgit:git-sparse-checkout[1] command can be used to grow the working directory as needed."
-msgstr ""
+msgstr "Задействовать режим разреженного состояния, изначально извлекая файлы только в каталоге верхнего уровня. Для расширения рабочего каталога по мере необходимости, можно использовать команду linkgit:git-sparse-checkout[1]."
 
 #. type: Labeled list
 #: en/git-clone.txt:186
@@ -16823,17 +16822,15 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-clone.txt:224
-#, fuzzy, no-wrap, placeholders:'`-u`', priority:300
-#| msgid "--upload-pack <upload-pack>"
+#, no-wrap, placeholders:'`-u`', priority:300
 msgid "`-u` _<upload-pack>_"
-msgstr "--upload-pack <путь>"
+msgstr "`-u` _<upload-pack>_"
 
 #. type: Labeled list
 #: en/git-clone.txt:225
-#, fuzzy, no-wrap, placeholders:'`--upload-pack`', priority:300
-#| msgid "--upload-pack <upload-pack>"
+#, no-wrap, placeholders:'`--upload-pack`', priority:300
 msgid "`--upload-pack` _<upload-pack>_"
-msgstr "--upload-pack <путь>"
+msgstr "`--upload-pack` _<upload-pack>_"
 
 #. type: Plain text
 #: en/git-clone.txt:229
@@ -16989,9 +16986,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-clone.txt:313 en/git-init.txt:69
-#, fuzzy, no-wrap, priority:300
+#, no-wrap, priority:300
 msgid "`--separate-git-dir=<git-dir>`"
-msgstr "--separate-git-dir=<каталог-git>"
+msgstr "`--separate-git-dir=<каталог-git>`"
 
 #. type: Plain text
 #: en/git-clone.txt:319
@@ -29538,9 +29535,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-format-patch.txt:241
-#, fuzzy, no-wrap, placeholders:'--rfc', priority:100
+#, no-wrap, placeholders:'--rfc', priority:100
 msgid "--rfc[=<rfc>]"
-msgstr "--show-notes[=<ссылка>]"
+msgstr "--rfc[=<rfc>]"
 
 #. type: Plain text
 #: en/git-format-patch.txt:245
@@ -33229,9 +33226,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-imap-send.txt:39
-#, fuzzy, priority:100
+#, priority:100
 msgid "Be quiet."
-msgstr "тихий режим"
+msgstr "Тихий режим."
 
 #. type: Labeled list
 #: en/git-imap-send.txt:40
@@ -33639,9 +33636,9 @@ msgstr "git-init-db - Создание пустого репозитория Git
 
 #. type: verse
 #: en/git-init-db.txt:13
-#, fuzzy, no-wrap, placeholders:'git init-db':'--quiet]':'[--bare]':'[--template=':'[--shared', priority:100
+#, no-wrap, placeholders:'git init-db':'--quiet]':'[--bare]':'[--template=':'[--shared', priority:100
 msgid "'git init-db' [-q | --quiet] [--bare] [--template=<template-directory>] [--separate-git-dir <git-dir>] [--shared[=<permissions>]]\n"
-msgstr "'git init-db' [-q | --quiet] [--bare] [--template=<каталог_шаблонов>] [--separate-git-dir <каталог_git>] [--shared[=<права_доступа>]]\n"
+msgstr "'git init-db' [-q | --quiet] [--bare] [--template=<каталог-шаблонов>] [--separate-git-dir <каталог-git>] [--shared[=<права-доступа>]]\n"
 
 #. type: Plain text
 #: en/git-init-db.txt:20
@@ -33672,11 +33669,11 @@ msgid ""
 "\t [-b <branch-name> | --initial-branch=<branch-name>]\n"
 "\t [--shared[=<permissions>]] [<directory>]\n"
 msgstr ""
-"'git init' [-q | --quiet] [--bare] [--template=<каталог_шаблонов>]\n"
-"\t[--separate-git-dir <каталог_git>] [--object-format=<формат>]\n"
+"'git init' [-q | --quiet] [--bare] [--template=<каталог-шаблонов>]\n"
+"\t[--separate-git-dir <каталог-git>] [--object-format=<формат>]\n"
 "\t[--ref-format=<формат>]\n"
 "\t[-b <ветка> | --initial-branch=<ветка>]\n"
-"\t[--shared[=<права_доступа>]] [каталог]\n"
+"\t[--shared[=<права-доступа>]] [каталог]\n"
 
 #. type: Plain text
 #: en/git-init.txt:27
@@ -33686,10 +33683,9 @@ msgstr "Эта команда создаёт пустой репозиторий
 
 #. type: Plain text
 #: en/git-init.txt:30
-#, fuzzy, placeholders:'GIT_DIR', priority:300
-#| msgid "If the `$GIT_DIR` environment variable is set then it specifies a path to use instead of `./.git` for the base of the repository."
+#, placeholders:'GIT_DIR', priority:300
 msgid "If the `GIT_DIR` environment variable is set then it specifies a path to use instead of `./.git` for the base of the repository."
-msgstr "Если переменная среды `$GIT_DIR` установлена, то она задаёт путь, который будет использоваться вместо `./.git` в качестве основы для создания репозитория."
+msgstr "Если переменная среды `GIT_DIR` установлена, то она задаёт путь, который будет использоваться вместо `.git` в качестве базового пути для создания репозитория."
 
 #. type: Plain text
 #: en/git-init.txt:35
@@ -37205,9 +37201,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-merge-file.txt:82
-#, fuzzy, priority:90
+#, priority:90
 msgid "Quiet; do not warn about conflicts."
-msgstr "не предупреждать о конфликтах"
+msgstr "Тихий режим; не предупреждать о конфликтах."
 
 #. type: Labeled list
 #: en/git-merge-file.txt:83
@@ -42112,9 +42108,9 @@ msgstr ""
 
 #. type: verse
 #: en/git-prune-packed.txt:13
-#, fuzzy, no-wrap, placeholders:'git prune-packed':'--dry-run]':'--quiet]', priority:100
+#, no-wrap, placeholders:'git prune-packed':'--dry-run]':'--quiet]', priority:100
 msgid "'git prune-packed' [-n | --dry-run] [-q | --quiet]\n"
-msgstr "git prune-packed [-n | --dry-run] [-q | --quiet]"
+msgstr "'git prune-packed' [-n | --dry-run] [-q | --quiet]\n"
 
 #. type: Plain text
 #: en/git-prune-packed.txt:19
@@ -46648,10 +46644,9 @@ msgstr ""
 
 #. type: verse
 #: en/git-receive-pack.txt:13
-#, fuzzy, no-wrap, placeholders:'git receive-pack', priority:90
-#| msgid "git-receive-pack(1)"
+#, no-wrap, placeholders:'git receive-pack', priority:90
 msgid "'git receive-pack' <git-dir>\n"
-msgstr "git-receive-pack(1)"
+msgstr "'git receive-pack' <каталог-git>\n"
 
 #. type: Plain text
 #: en/git-receive-pack.txt:18
@@ -46691,10 +46686,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-receive-pack.txt:41
-#, fuzzy, no-wrap, priority:90
-#| msgid "--git-dir"
+#, no-wrap, priority:90
 msgid "<git-dir>"
-msgstr "--git-dir"
+msgstr "<каталог-git>"
 
 #. type: Plain text
 #: en/git-receive-pack.txt:43
@@ -49130,9 +49124,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-reset.txt:110
-#, fuzzy, priority:280
+#, priority:280
 msgid "Be quiet, only report errors."
-msgstr "тихий режим, выводить только ошибки"
+msgstr "Тихий режим, выводить только ошибки."
 
 #. type: Labeled list
 #: en/git-reset.txt:111 en/git-update-index.txt:55
@@ -59275,7 +59269,7 @@ msgstr ""
 "    [--exec-path[=<путь>]] [--html-path] [--man-path] [--info-path]\n"
 "    [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n"
 "    [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<путь>]\n"
-"    [--work-tree=<путь>] [--namespace=<имя>] [--config-env=<имя>=<переменная_среды>]\n"
+"    [--work-tree=<путь>] [--namespace=<имя>] [--config-env=<имя>=<переменная-среды>]\n"
 "    <команда> [<аргументы>]\n"
 
 #. type: Plain text
@@ -60105,10 +60099,9 @@ msgstr "`GIT_DIR`"
 
 #. type: Plain text
 #: en/git.txt:521
-#, fuzzy, placeholders:'GIT_DIR', priority:100
-#| msgid "If the `$GIT_DIR` environment variable is set then it specifies a path to use instead of `./.git` for the base of the repository."
+#, placeholders:'GIT_DIR', priority:100
 msgid "If the `GIT_DIR` environment variable is set then it specifies a path to use instead of the default `.git` for the base of the repository. The `--git-dir` command-line option also sets this value."
-msgstr "Если переменная среды `$GIT_DIR` установлена, то она задаёт путь, который будет использоваться вместо `./.git` в качестве основы для создания репозитория."
+msgstr "Если переменная среды `GIT_DIR` установлена, то она задаёт путь, который будет использоваться вместо `.git` в качестве базового пути для создания репозитория. Параметр командной строки `--git-dir` также устанавливает это значение."
 
 #. type: Labeled list
 #: en/git.txt:522
@@ -64316,7 +64309,7 @@ msgstr "[[def_bare_repository]]голый репозиторий (bare repositor
 #: en/glossary-content.txt:16
 #, placeholders:'<<def_directory,':'repository.git', priority:310
 msgid "A bare repository is normally an appropriately named <<def_directory,directory>> with a `.git` suffix that does not have a locally checked-out copy of any of the files under revision control. That is, all of the Git administrative and control files that would normally be present in the hidden `.git` sub-directory are directly present in the `repository.git` directory instead, and no other files are present and checked out. Usually publishers of public repositories make bare repositories available."
-msgstr "Как правило, голым репозиторием называется <<def_directory,каталог>> с суффиксом `.git`, который не имеет каких-либо локальных извлечённых копий файлов, находящихся под контролем СКВ. То есть все служебные и конфигурационные файлы Git, которые обычно находятся в скрытом подкаталоге `.git`, находятся вместо этого непосредственно в каталоге `repository.git', и кроме них нет ни каких других файлов, извлечённых из СКВ. Обычно люди, которые публикуют свои репозитории делают голые репозитории общедоступными."
+msgstr "Голым репозиторием является <<def_directory,каталог>> (как правило, названный соответствующим образом, с суффиксом `.git`), который не имеет каких-либо локальных извлечённых копий файлов, находящихся под контролем СКВ. То есть все служебные и управляющие файлы Git, которые обычно находятся в скрытом подкаталоге `.git`, находятся вместо этого непосредственно в каталоге `repository.git', и кроме них нет ни каких других файлов, извлечённых из СКВ. Обычно люди, которые публикуют свои репозитории делают голые репозитории общедоступными."
 
 #. type: Labeled list
 #: en/glossary-content.txt:17
@@ -64908,25 +64901,25 @@ msgstr ""
 #: en/glossary-content.txt:340
 #, no-wrap, placeholders:'[[def_pack]]', priority:310
 msgid "[[def_pack]]pack"
-msgstr ""
+msgstr "[[def_pack]]пакет, pack-файл (pack)"
 
 #. type: Plain text
 #: en/glossary-content.txt:343
 #, priority:310
 msgid "A set of objects which have been compressed into one file (to save space or to transmit them efficiently)."
-msgstr ""
+msgstr "Набор объектов, которые были сжаты в один файл (для экономии дискового пространства или эффективной передачи)."
 
 #. type: Labeled list
 #: en/glossary-content.txt:344
 #, no-wrap, placeholders:'[[def_pack_index]]', priority:310
 msgid "[[def_pack_index]]pack index"
-msgstr ""
+msgstr "[[def_pack_index]]индекс пакета (pack index)"
 
 #. type: Plain text
 #: en/glossary-content.txt:348
 #, placeholders:'<<def_pack,', priority:310
 msgid "The list of identifiers, and other information, of the objects in a <<def_pack,pack>>, to assist in efficiently accessing the contents of a pack."
-msgstr ""
+msgstr "Список идентификаторов объектов (и другая связанная с ними информация), хранимый в <<def_pack, пакете>>, чтобы доступе к его содержимому был более эффективным."
 
 #. type: Labeled list
 #: en/glossary-content.txt:349
@@ -65478,7 +65471,7 @@ msgstr "[[def_shallow_clone]]частичный клон (shallow clone)"
 #: en/glossary-content.txt:642
 #, ignore-ellipsis, placeholders:'<<def_shallow_repository,':'--depth=', priority:310
 msgid "Mostly a synonym to <<def_shallow_repository,shallow repository>> but the phrase makes it more explicit that it was created by running `git clone --depth=...` command."
-msgstr ""
+msgstr "По большей части, это синоним для «<<def_shallow_repository,частичный репозиторий>>», но эта формулировка делает акцент на том, что он был создан с помощью команды вроде `git clone --depth=...`."
 
 #. type: Labeled list
 #: en/glossary-content.txt:643
@@ -65490,7 +65483,7 @@ msgstr "[[def_shallow_repository]]частичный репозиторий (sha
 #: en/glossary-content.txt:653
 #, placeholders:'<<def_repository,':'<<def_commit,':'<<def_parent,':'<<def_commit_object,':'`--depth`':'linkgit:git-clone[1]':'linkgit:git-fetch[1]', priority:310
 msgid "A shallow <<def_repository,repository>> has an incomplete history some of whose <<def_commit,commits>> have <<def_parent,parents>> cauterized away (in other words, Git is told to pretend that these commits do not have the parents, even though they are recorded in the <<def_commit_object,commit object>>). This is sometimes useful when you are interested only in the recent history of a project even though the real history recorded in the upstream is much larger. A shallow repository is created by giving the `--depth` option to linkgit:git-clone[1], and its history can be later deepened with linkgit:git-fetch[1]."
-msgstr "Частичный <<def_repository,репозиторий>> имеет неполную историю: ссылки на <<def_parent,родителей>> некоторых из его <<def_commit,коммитов>> были «ампутированы» (другими словами, Git'у сказано делать вид, что эти коммиты не имеют родителей, несмотря на то, что в <<def_commit_object,коммите-объекте>> эти записи всё ещё присутствуют). Иногда это может быть полезно, например, когда вас интересует только недавняя история проекта, даже если реальная история, хранящаяся в вышестоящем репозитории, куда больше. Частичный репозиторий можно создать, передав параметр `--depth` в linkgit:git-clone[1], и его история может быть позже углублена с помощью linkgit:git-fetch[1]."
+msgstr "Частичный <<def_repository,репозиторий>> имеет неполную историю: ссылки на <<def_parent,родителей>> некоторых из его <<def_commit,коммитов>> были «ампутированы» (другими словами, Git'у сказано делать вид, что эти коммиты не имеют родителей, несмотря на то, что в <<def_commit_object,объектном предаставлении этого коммита>> эти записи всё ещё присутствуют). Иногда это может быть полезно, например, когда вас интересует только недавняя история проекта, даже если реальная история, хранящаяся в вышестоящем репозитории, куда больше. Частичный репозиторий можно создать, передав параметр `--depth` в linkgit:git-clone[1], и его история может быть позже углублена с помощью linkgit:git-fetch[1]."
 
 #. type: Labeled list
 #: en/glossary-content.txt:654
