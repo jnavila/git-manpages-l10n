@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2024-12-25 19:35+0100\n"
-"PO-Revision-Date: 2025-01-02 21:34+0000\n"
+"PO-Revision-Date: 2025-01-03 01:25+0000\n"
 "Last-Translator: Golubev Alexander <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -16814,7 +16814,7 @@ msgstr "`--branch` _<имя>_"
 #: en/git-clone.txt:223
 #, placeholders:'`HEAD`':'`HEAD`':'`--branch`':'`HEAD`', priority:300
 msgid "Instead of pointing the newly created `HEAD` to the branch pointed to by the cloned repository's `HEAD`, point to _<name>_ branch instead. In a non-bare repository, this is the branch that will be checked out. `--branch` can also take tags and detaches the `HEAD` at that commit in the resulting repository."
-msgstr "Вместо того, чтобы вновь созданный `HEAD` указывал, на ту же ветку, на которую указывает `HEAD` клонировуемого репозитория, направить его на ветку с указанным _<именем>_. Не голый репозиторий будет также и переключен на эту ветку. Параметр `--branch` также принимает и _<имя>_ метки в качестве аргумента; в таком случае после клонирования полученный репозиторий будет находится в состоянии с отсоединённым указателем `HEAD`."
+msgstr "Вместо того, чтобы вновь созданный `HEAD` указывал, на ту же ветку, на которую указывает `HEAD` клонировуемого репозитория, направить его на ветку с указанным _<именем>_. Репозиторий (не являющийся голым) будет также переключен на эту ветку. Параметр `--branch` также принимает _<имена>_ меток; в таком случае после клонирования полученный репозиторий будет находится в состоянии с отсоединённым указателем `HEAD`."
 
 #. type: Labeled list
 #: en/git-clone.txt:224
@@ -33771,26 +33771,25 @@ msgstr "`--initial-branch=<имя-ветки>`"
 #: en/git-init.txt:83
 #, placeholders:'init.defaultBranch', priority:300
 msgid "Use _<branch-name>_ for the initial branch in the newly created repository. If not specified, fall back to the default name (currently `master`, but this is subject to change in the future; the name can be customized via the `init.defaultBranch` configuration variable)."
-msgstr ""
+msgstr "Использовать _<имя-ветки>_ для исходной ветки вновь созданного репозитория. Если не указано, будет использован параметр по умолчанию (в настоящее время — это «`master`», но это может быть изменено в будущем; это имя можно изменить в переменной конфигурации `init.defaultBranch`)."
 
 #. type: Labeled list
 #: en/git-init.txt:84
-#, fuzzy, no-wrap, placeholders:'`--shared', priority:300
-#| msgid "--shared[=(false|true|umask|group|all|world|everybody)]"
+#, no-wrap, placeholders:'`--shared', priority:300
 msgid "`--shared[=(false|true|umask|group|all|world|everybody|<perm>)]`"
-msgstr "--shared[=(false|true|umask|group|all|world|everybody)]"
+msgstr "`--shared[=(false|true|umask|group|all|world|everybody|<права-доступа>)]`"
 
 #. type: Plain text
 #: en/git-init.txt:92
 #, placeholders:'core.sharedRepository':'`$GIT_DIR`', priority:300
 msgid "Specify that the Git repository is to be shared amongst several users. This allows users belonging to the same group to push into that repository. When specified, the config variable `core.sharedRepository` is set so that files and directories under `$GIT_DIR` are created with the requested permissions. When not specified, Git will use permissions reported by `umask`(2)."
-msgstr ""
+msgstr "Указывает, что репозиторий Git будет использоваться совместно несколькими пользователями. Это позволит пользователям, принадлежащим к одной группе, отправлять (`push`) изменения в этот репозиторий. При передаче этого параметра, переменная конфигурации `core.sharedRepository` устанавливается таким образом, чтобы файлы и каталоги в каталоге `$GIT_DIR` создавались с указанными правами доступа. В противном случае, Git будет использовать права доступа согласно `umask`(2)."
 
 #. type: Plain text
 #: en/git-init.txt:95
 #, priority:300
 msgid "The option can have the following values, defaulting to `group` if no value is given:"
-msgstr ""
+msgstr "Данный параметр может принимать следующие значения аргумента (если значение не указано, то по умолчанию — `group'):"
 
 #. type: Labeled list
 #: en/git-init.txt:97
@@ -33808,7 +33807,7 @@ msgstr "`false`"
 #: en/git-init.txt:102
 #, placeholders:'`--shared`', priority:300
 msgid "Use permissions reported by `umask`(2). The default, when `--shared` is not specified."
-msgstr ""
+msgstr "Использовать права доступа согласно `umask`(2). Значение по умолчанию, если параметр `--shared` не задан."
 
 #. type: Labeled list
 #: en/git-init.txt:103
@@ -33826,7 +33825,7 @@ msgstr "`true`"
 #: en/git-init.txt:112
 #, priority:300
 msgid "Make the repository group-writable, (and `g+sx`, since the git group may not be the primary group of all users). This is used to loosen the permissions of an otherwise safe `umask`(2) value. Note that the umask still applies to the other permission bits (e.g. if umask is `0022`, using `group` will not remove read privileges from other (non-group) users). See `0xxx` for how to exactly specify the repository permissions."
-msgstr ""
+msgstr "Разрешить запись в репозиторий для группы (а также `g+sx`, так как группа git может быть основной группой не для всех пользователей). Это нужно, чтобы ослабить требования к правам на запись для в остальном безопасного значения `umask`(2). Обратите внимание, что umask по-прежнему применяется к остальным битам прав доступа (например, если umask равен `0022`, использование `group` не удалит разрешение на чтение для других (не входящих в группу) пользователей). Чтобы указать права доступа явно, см. `0xxx`."
 
 #. type: Labeled list
 #: en/git-init.txt:113
@@ -33850,31 +33849,31 @@ msgstr "`everybody`"
 #: en/git-init.txt:118
 #, priority:300
 msgid "Same as `group`, but make the repository readable by all users."
-msgstr ""
+msgstr "То же, что и `group`, но также сделать репозиторий доступным на чтение для всех пользователей."
 
 #. type: Labeled list
 #: en/git-init.txt:119
 #, no-wrap, priority:300
 msgid "_<perm>_"
-msgstr ""
+msgstr "_<права-доступа>_"
 
 #. type: Plain text
 #: en/git-init.txt:129
 #, priority:300
 msgid "_<perm>_ is a 3-digit octal number prefixed with `0` and each file will have mode _<perm>_. _<perm>_ will override users' `umask`(2) value (and not only loosen permissions as `group` and `all` do). `0640` will create a repository which is group-readable, but not group-writable or accessible to others. `0660` will create a repo that is readable and writable to the current user and group, but inaccessible to others (directories and executable files get their `x` bit from the `r` bit for corresponding classes of users)."
-msgstr ""
+msgstr "_<права-доступа>_ — это 3-значное восьмеричное число с префиксом `0`; каждый файл будет иметь режим доступа равный _<правам-доступа>_. Значение _<прав-доступа>_ будет полностью перекрывать значение `umask`(2) пользователя (а не только ослаблять разрешения как это происходит с `group` и `all`). Так, `0640` создаст репозиторий, доступный группе на чтение, но не на запись или на исполнения для всех остальных; `0660` — доступный на чтение и запись текущему пользователю и его группе, но недоступный для остальных (каталоги и исполняемые файлы получат свой бит `x` при указании `r` для соответствующих классов пользователей)."
 
 #. type: Plain text
 #: en/git-init.txt:134
 #, placeholders:'receive.denyNonFastForwards', priority:300
 msgid "By default, the configuration flag `receive.denyNonFastForwards` is enabled in shared repositories, so that you cannot force a non fast-forwarding push into it."
-msgstr ""
+msgstr "В общих репозиториях флаг конфигурации `receive.denyNonFastForwards` по умолчанию включён, так что вы не cможете принудительно отправить в него (`git push -f`) изменения, которые не могут быть применены с помощью быстрой перемотки."
 
 #. type: Plain text
 #: en/git-init.txt:137
 #, priority:300
 msgid "If you provide a _<directory>_, the command is run inside it. If this directory does not exist, it will be created."
-msgstr ""
+msgstr "Если вы задали _<каталог>_, команда будет выполняться внутри него. Если этот каталог ещё не существует, он будет создан."
 
 #. type: Title -
 #: en/git-init.txt:139
@@ -33928,19 +33927,19 @@ msgstr "Каталог шаблонов по умолчанию уже соде�
 #: en/git-init.txt:159
 #, priority:300
 msgid "The sample hooks are all disabled by default. To enable one of the sample hooks rename it by removing its `.sample` suffix."
-msgstr ""
+msgstr "Примеры файлов-перехватчиков по умолчанию отключены. Чтобы включить один из них, переименуйте его, удалив суффикс `.sample`."
 
 #. type: Plain text
 #: en/git-init.txt:161
 #, placeholders:'linkgit:githooks[5]', priority:300
 msgid "See linkgit:githooks[5] for more general info on hook execution."
-msgstr ""
+msgstr "См. подробности того, как происходит вызов перехватчиков в linkgit:githooks[5]."
 
 #. type: Labeled list
 #: en/git-init.txt:165
 #, no-wrap, priority:300
 msgid "Start a new Git repository for an existing code base"
-msgstr ""
+msgstr "Создание нового репозитория Git для существующей кодовой базы"
 
 #. type: delimited block -
 #: en/git-init.txt:172
@@ -33951,24 +33950,28 @@ msgid ""
 "$ git add .     <2>\n"
 "$ git commit    <3>\n"
 msgstr ""
+"$ cd /путь/к/моей/кодовой/базе\n"
+"$ git init      <1>\n"
+"$ git add .     <2>\n"
+"$ git commit    <3>\n"
 
 #. type: Plain text
 #: en/git-init.txt:175
 #, priority:300
 msgid "Create a `/path/to/my/codebase/.git` directory."
-msgstr ""
+msgstr "Создать каталог `/путь/к/моей/кодовой/базе/.git`."
 
 #. type: Plain text
 #: en/git-init.txt:176
 #, priority:300
 msgid "Add all existing files to the index."
-msgstr ""
+msgstr "Добавить все существующие файлы в индекс."
 
 #. type: Plain text
 #: en/git-init.txt:177
 #, priority:300
 msgid "Record the pristine state as the first commit in the history."
-msgstr ""
+msgstr "Записать первоначальное состояние как первый коммит в истории."
 
 #. type: Title =
 #: en/git-instaweb.txt:2
