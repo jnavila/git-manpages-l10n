@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2024-12-25 19:35+0100\n"
-"PO-Revision-Date: 2025-01-03 01:41+0000\n"
+"PO-Revision-Date: 2025-01-03 03:33+0000\n"
 "Last-Translator: Golubev Alexander <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -26,7 +26,7 @@ msgstr "-b"
 #: en/blame-options.txt:4
 #, placeholders:'blame.blankBoundary', priority:100
 msgid "Show blank SHA-1 for boundary commits. This can also be controlled via the `blame.blankBoundary` config option."
-msgstr ""
+msgstr "Выводить пустое пространство вместо SHA-1 для граничных коммитов. Этим также можно управлять, используя переменную конфигурации `blame.blankBoundary`."
 
 #. type: Labeled list
 #: en/blame-options.txt:5 en/git-diff-tree.txt:42 en/git-format-patch.txt:421 en/git-fsck.txt:38 en/git-rebase.txt:591
@@ -38,7 +38,7 @@ msgstr "--root"
 #: en/blame-options.txt:8
 #, placeholders:'blame.showRoot', priority:100
 msgid "Do not treat root commits as boundaries. This can also be controlled via the `blame.showRoot` config option."
-msgstr ""
+msgstr "Не обрабатывать корневой коммит, как граничный. Этим также можно управлять, используя переменную конфигурации `blame.showRoot`."
 
 #. type: Labeled list
 #: en/blame-options.txt:9
@@ -50,31 +50,31 @@ msgstr "--show-stats"
 #: en/blame-options.txt:11
 #, priority:100
 msgid "Include additional statistics at the end of blame output."
-msgstr ""
+msgstr "Включить дополнительную статистику в конец вывода информации об авторах изменений (`blame`)."
 
 #. type: Labeled list
 #: en/blame-options.txt:12
 #, no-wrap, priority:100
 msgid "-L <start>,<end>"
-msgstr ""
+msgstr "-L <начало>,<конец>"
 
 #. type: Labeled list
 #: en/blame-options.txt:13
 #, no-wrap, priority:100
 msgid "-L :<funcname>"
-msgstr ""
+msgstr "-L :<имя-функции>"
 
 #. type: Plain text
 #: en/blame-options.txt:17
 #, priority:100
 msgid "Annotate only the line range given by '<start>,<end>', or by the function name regex '<funcname>'. May be specified multiple times. Overlapping ranges are allowed."
-msgstr ""
+msgstr "Вывести аннотацию только для диапазона строк от <начала> и до <конца>» или для функции, заданной регулярным выражением «<имя-функции>». Может быть указан несколько раз. Диапазоны могут перекрывать друг друга."
 
 #. type: Plain text
 #: en/blame-options.txt:20
 #, priority:100
 msgid "'<start>' and '<end>' are optional. `-L <start>` or `-L <start>,` spans from '<start>' to end of file. `-L ,<end>` spans from start of file to '<end>'."
-msgstr ""
+msgstr "<начало> и <конец> являются необязательными. `-L <начало>` или `-L <начало>,` охватывает диапазон от <начала> до конца файла; `-L ,<конец>` — от начала до <конца>."
 
 #. type: Labeled list
 #: en/blame-options.txt:23 en/git-archive.txt:45 en/git-branch.txt:181 en/git-checkout.txt:207 en/git-config.txt:304 en/git-grep.txt:164 en/git-instaweb.txt:23 en/git-ls-tree.txt:51 en/git-repack.txt:94 en/git-svn.txt:244 en/git-tag.txt:100 en/git-var.txt:21
@@ -116,7 +116,7 @@ msgstr "Использовать ревизии из <revs-file> вместо в
 #: en/blame-options.txt:32
 #, no-wrap, placeholders:'--reverse', priority:100
 msgid "--reverse <rev>..<rev>"
-msgstr ""
+msgstr "--reverse <редакция>..<редакция>"
 
 #. type: Plain text
 #: en/blame-options.txt:39
@@ -266,7 +266,7 @@ msgstr ""
 #: en/blame-options.txt:118
 #, no-wrap, placeholders:'--ignore-rev', priority:100
 msgid "--ignore-rev <rev>"
-msgstr "--ignore-rev <ревизия>"
+msgstr "--ignore-rev <редакция>"
 
 #. type: Plain text
 #: en/blame-options.txt:129
@@ -9187,10 +9187,9 @@ msgstr "git-annotate - Аннотирование строк файла инфо
 
 #. type: verse
 #: en/git-annotate.txt:12
-#, fuzzy, no-wrap, priority:100
-#| msgid "'git annotate' [<options>] <file> [<revision>]\n"
+#, no-wrap, priority:100
 msgid "'git annotate' [<options>] [<rev-opts>] [<rev>] [--] <file>\n"
-msgstr "'git annotate' [<опции>] <файл> [<ревизия>]\n"
+msgstr "'git annotate' [<параметры>] [<параметры-редакция>] [<редакция>] [--] <файл>\n"
 
 #. type: Plain text
 #: en/git-annotate.txt:17
