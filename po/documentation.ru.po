@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2024-12-25 19:35+0100\n"
-"PO-Revision-Date: 2025-01-03 03:33+0000\n"
+"PO-Revision-Date: 2025-01-03 18:57+0000\n"
 "Last-Translator: Golubev Alexander <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -122,7 +122,7 @@ msgstr "--reverse <редакция>..<редакция>"
 #: en/blame-options.txt:39
 #, placeholders:'--reverse':'--reverse':'HEAD`', priority:100
 msgid "Walk history forward instead of backward. Instead of showing the revision in which a line appeared, this shows the last revision in which a line has existed. This requires a range of revision like START..END where the path to blame exists in START. `git blame --reverse START` is taken as `git blame --reverse START..HEAD` for convenience."
-msgstr ""
+msgstr "Идти вперёд по историю, а не назад. Вместо того, чтобы показать, в какой редакции появилась строка, с этим параметром будет показана последня редакция, в которой строка всё ещё существовала. Для этого требуется указать диапазон редакций в виде НАЧАЛО..КОНЕЦ, где путь для которого будут искаться изменения существует в НАЧАЛЕ. Для удобства, `git blame --reverse НАЧАЛО` работает как `git blame --reverse НАЧАЛО..HEAD`."
 
 #. type: Labeled list
 #: en/blame-options.txt:40 en/git-bisect.txt:375 en/git-describe.txt:122 en/rev-list-options.txt:129
@@ -134,7 +134,7 @@ msgstr "--first-parent"
 #: en/blame-options.txt:45
 #, priority:100
 msgid "Follow only the first parent commit upon seeing a merge commit. This option can be used to determine when a line was introduced to a particular integration branch, rather than when it was introduced to the history overall."
-msgstr ""
+msgstr "При обработке коммита-слияния, прослеживать только первый родительский коммит. Этот параметр можно использовать для определения того, когда некая линия изменений была привнесена в определённую интеграционную ветку, а не когда эти изменения были в принципе добавлены в историю."
 
 #. type: Labeled list
 #: en/blame-options.txt:46 en/diff-options.txt:16 en/fetch-options.txt:137 en/git-cat-file.txt:55 en/git-checkout.txt:278 en/git-commit.txt:73 en/git-cvsexportcommit.txt:41 en/git-grep.txt:217 en/git-instaweb.txt:41 en/git-merge-file.txt:76 en/git-request-pull.txt:29 en/git-restore.txt:48 en/git-stash.txt:196 en/git-svn.txt:535 en/git-svn.txt:679 en/git.txt:129
@@ -194,13 +194,13 @@ msgstr "Указывает кодировку для вывода имени а�
 #: en/blame-options.txt:66
 #, no-wrap, placeholders:'--contents', priority:100
 msgid "--contents <file>"
-msgstr ""
+msgstr "--contents <файл>"
 
 #. type: Plain text
 #: en/blame-options.txt:70
 #, priority:100
 msgid "Annotate using the contents from the named file, starting from <rev> if it is specified, and HEAD otherwise. You may specify '-' to make the command read from the standard input for the file contents."
-msgstr ""
+msgstr "Вывести аннотацию, используя содержимое из указанного файла, начиная с <редакции> (если она задана, иначе с HEAD). Вы можете передать «-» в качастве имени файла, чтобы команда читала из стандартного ввода."
 
 #. type: Labeled list
 #: en/blame-options.txt:71
@@ -224,7 +224,7 @@ msgstr "--[no-]progress"
 #: en/blame-options.txt:84
 #, placeholders:'`--progress`':'`--porcelain`':'`--incremental`', priority:100
 msgid "Progress status is reported on the standard error stream by default when it is attached to a terminal. This flag enables progress reporting even if not attached to a terminal. Can't use `--progress` together with `--porcelain` or `--incremental`."
-msgstr ""
+msgstr "По умолчанию информация о ходе выполнения выводится в стандартный поток ошибок, когда он привязан к терминалу. Этот флаг позволяет выводить эту информацию, даже когда он привязан не к терминалу. Использовать `--progress` совместно с `--porcelain` или `--incremental` невозможно."
 
 #. type: Labeled list
 #: en/blame-options.txt:85
@@ -236,13 +236,13 @@ msgstr "-M[<число>]"
 #: en/blame-options.txt:95
 #, priority:100
 msgid "Detect moved or copied lines within a file. When a commit moves or copies a block of lines (e.g. the original file has A and then B, and the commit changes it to B and then A), the traditional 'blame' algorithm notices only half of the movement and typically blames the lines that were moved up (i.e. B) to the parent and assigns blame to the lines that were moved down (i.e. A) to the child commit. With this option, both groups of lines are blamed on the parent by running extra passes of inspection."
-msgstr ""
+msgstr "Выявлять перемещение и копирование строк внутри одного файла. Когда коммит перемещает или копирует блок строк (например, в исходном файле идёт сначала А, а затем Б, а коммит меняет их местами: сначала Б, а затем A), традиционный алгоритм 'blame' замечает только половину этого перемещения и, как правило, приписывает изменения в строках, которые двигаются вверх (т.е. Б) родителю, а тех, которые были перемещены вниз (т.е. А) — дочернему коммиту. С этим параметром, благодаря запуску дополнительных проверок, обе группы строк будут приписаны родителю."
 
 #. type: Plain text
 #: en/blame-options.txt:100
 #, priority:100
 msgid "<num> is optional but it is the lower bound on the number of alphanumeric characters that Git must detect as moving/copying within a file for it to associate those lines with the parent commit. The default value is 20."
-msgstr ""
+msgstr "Аргумент <число> является необязательным; это то минимальное количество буквенно-цифровых символов, которые Git должен определить как передвинутые/скопированные внутри файла, чтобы он связывал эти строки с родительским коммитом. Значение по умолчанию — 20."
 
 #. type: Labeled list
 #: en/blame-options.txt:101
@@ -254,13 +254,13 @@ msgstr "-C[<число>]"
 #: en/blame-options.txt:110
 #, placeholders:'`-M`', priority:100
 msgid "In addition to `-M`, detect lines moved or copied from other files that were modified in the same commit. This is useful when you reorganize your program and move code around across files. When this option is given twice, the command additionally looks for copies from other files in the commit that creates the file. When this option is given three times, the command additionally looks for copies from other files in any commit."
-msgstr ""
+msgstr "В дополнение к `-M`, выявлять строки, перемещённые или скопированные из других файлов, которые были изменены в том же коммите. Это полезно, когда вы реорганизуете свою программу и перемещаете код между файлам. Если этот параметр задан дважды, команда дополнительно ищет строки, скопированные из других файлов в коммитах, которые создают файлы. Если этот параметр задан три раза, команда дополнительно ищет копии из других файлов в любом коммите."
 
 #. type: Plain text
 #: en/blame-options.txt:117
 #, placeholders:'`-C`':'`-C`', priority:100
 msgid "<num> is optional but it is the lower bound on the number of alphanumeric characters that Git must detect as moving/copying between files for it to associate those lines with the parent commit. And the default value is 40. If there are more than one `-C` options given, the <num> argument of the last `-C` will take effect."
-msgstr ""
+msgstr "Аргумент <число> является необязательным; это то минимальное количество буквенно-цифровых символов, которые Git должен определить как передвинутые/скопированные между файлами, чтобы он связывал эти строки с родительским коммитом. И значение по умолчанию — 40. Если параметр `-C` задан более одного раза, то используется аргумент <число> последнего указанного `-C`."
 
 #. type: Labeled list
 #: en/blame-options.txt:118
@@ -272,7 +272,7 @@ msgstr "--ignore-rev <редакция>"
 #: en/blame-options.txt:129
 #, placeholders:'blame.markIgnoredLines':'blame.markUnblamableLines', priority:100
 msgid "Ignore changes made by the revision when assigning blame, as if the change never happened. Lines that were changed or added by an ignored commit will be blamed on the previous commit that changed that line or nearby lines. This option may be specified multiple times to ignore more than one revision. If the `blame.markIgnoredLines` config option is set, then lines that were changed by an ignored commit and attributed to another commit will be marked with a `?` in the blame output. If the `blame.markUnblamableLines` config option is set, then those lines touched by an ignored commit that we could not attribute to another revision are marked with a '*'."
-msgstr ""
+msgstr "Игнорировать изменения, внесённые редакцией при поиске авторов изменений, как будто этих изменений никогда не было. Строки, которые были изменены или добавлены проигнорированным коммитом, будут приписаны предыдущему коммиту, который изменил эту строку или близлежащие строки. Этот параметр может быть задан несколько раз, чтобы проигнорировать более одной ревизии. Если переменная конфигурации `blame.markIgnoredLines` установлена, то строки, которые принадлежали проигнорированному коммиту, а затем приписаны к другому, будут помечены знаком вопроса (`?`) при выводе. Если переменная конфигурации `blame.markUnblamableLines` установлена, то строки, принадлежавшие проигнорированному коммиту, но которые алгоритм не смог приписать какому-либо другому, будут помечены звёздочкой (`*`)."
 
 #. type: Labeled list
 #: en/blame-options.txt:130
@@ -284,7 +284,7 @@ msgstr "--ignore-revs-file <file>"
 #: en/blame-options.txt:136
 #, placeholders:'fsck.skipList':'blame.ignoreRevsFile', priority:100
 msgid "Ignore revisions listed in `file`, which must be in the same format as an `fsck.skipList`. This option may be repeated, and these files will be processed after any files specified with the `blame.ignoreRevsFile` config option. An empty file name, `\"\"`, will clear the list of revs from previously processed files."
-msgstr ""
+msgstr "Игнорировать редакции, перечисленные в `файле`, который должен быть в том же формате, что и `fsck.skipList`. Этот параметр может быть повторён несколько раз; все эти файлы будут обрабатываться после файлов, указанных в переменной конфигурации `blame.ignoreRevsFile`. Пустое имя файла, `\"\"`, очистит список редакций из ранее обработанных файлов."
 
 #. type: Labeled list
 #: en/blame-options.txt:137
@@ -296,7 +296,7 @@ msgstr "--color-lines"
 #: en/blame-options.txt:142
 #, placeholders:'color.blame.repeatedLines', priority:100
 msgid "Color line annotations in the default format differently if they come from the same commit as the preceding line. This makes it easier to distinguish code blocks introduced by different commits. The color defaults to cyan and can be adjusted using the `color.blame.repeatedLines` config option."
-msgstr ""
+msgstr "Окрашивать аннотации строк в формате по умолчанию другим цветом, если они происходят из того же коммита, что и предыдущая строка. Это облегчает различение блоков кода, добавленных различными коммитами. Цвет по умолчанию — циановый, и его можно настроить с помощью параметра конфигурации `color.blame.repeatedLines`."
 
 #. type: Labeled list
 #: en/blame-options.txt:143
@@ -308,7 +308,7 @@ msgstr "--color-by-age"
 #: en/blame-options.txt:147
 #, placeholders:'color.blame.highlightRecent', priority:100
 msgid "Color line annotations depending on the age of the line in the default format. The `color.blame.highlightRecent` config option controls what color is used for each range of age."
-msgstr ""
+msgstr "Окрашивать аннотации строк в формате по умолчанию в зависимости от возраста строки. Какой цвет используется для каждого диапазона возрастов управляется параметром конфигурации `color.blame.highlightRecent`."
 
 #. type: Labeled list
 #: en/blame-options.txt:148 en/git-archimport.txt:71 en/git-cvsimport.txt:184 en/git-cvsserver.txt:60 en/git-grep.txt:122 en/git.txt:50
@@ -6218,9 +6218,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/diff-options.txt:620
-#, fuzzy, no-wrap, priority:280
+#, no-wrap, priority:280
 msgid "`-l<num>`"
-msgstr "-C[<число>]"
+msgstr "`-l<число>`"
 
 #. type: Plain text
 #: en/diff-options.txt:632
@@ -31450,15 +31450,15 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-grep.txt:225
-#, fuzzy, no-wrap, priority:100
+#, no-wrap, priority:100
 msgid "-<num>"
-msgstr "-C[<число>]"
+msgstr "-<число>"
 
 #. type: Labeled list
 #: en/git-grep.txt:226
-#, fuzzy, no-wrap, priority:100
+#, no-wrap, priority:100
 msgid "-C <num>"
-msgstr "-C[<число>]"
+msgstr "-C <число>"
 
 #. type: Labeled list
 #: en/git-grep.txt:227
@@ -31474,9 +31474,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-grep.txt:231
-#, fuzzy, no-wrap, priority:100
+#, no-wrap, priority:100
 msgid "-A <num>"
-msgstr "-C[<число>]"
+msgstr "-A <число>"
 
 #. type: Labeled list
 #: en/git-grep.txt:232
@@ -31492,9 +31492,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-grep.txt:236
-#, fuzzy, no-wrap, priority:100
+#, no-wrap, priority:100
 msgid "-B <num>"
-msgstr "-C[<число>]"
+msgstr "-B <число>"
 
 #. type: Labeled list
 #: en/git-grep.txt:237
@@ -31522,9 +31522,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-grep.txt:250
-#, fuzzy, no-wrap, priority:100
+#, no-wrap, priority:100
 msgid "-m <num>"
-msgstr "-C[<число>]"
+msgstr "-m <число>"
 
 #. type: Labeled list
 #: en/git-grep.txt:251
@@ -57527,9 +57527,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-svn.txt:625
-#, fuzzy, no-wrap, priority:100
+#, no-wrap, priority:100
 msgid "-l<num>"
-msgstr "-C[<число>]"
+msgstr "-l<число>"
 
 #. type: Labeled list
 #: en/git-svn.txt:626
@@ -58836,9 +58836,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-tag.txt:92
-#, fuzzy, no-wrap, priority:240
+#, no-wrap, priority:240
 msgid "-n<num>"
-msgstr "-C[<число>]"
+msgstr "-n<число>"
 
 #. type: Plain text
 #: en/git-tag.txt:95
