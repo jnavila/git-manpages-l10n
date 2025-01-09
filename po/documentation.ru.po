@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2024-12-25 19:35+0100\n"
-"PO-Revision-Date: 2025-01-09 14:54+0000\n"
+"PO-Revision-Date: 2025-01-09 17:02+0000\n"
 "Last-Translator: Golubev Alexander <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -3315,7 +3315,7 @@ msgstr "`changes`"
 #: en/config/diff.txt:33 en/diff-options.txt:270
 #, priority:280
 msgid "Compute the dirstat numbers by counting the lines that have been removed from the source, or added to the destination. This ignores the amount of pure code movements within a file. In other words, rearranging lines in a file is not counted as much as other changes. This is the default behavior when no parameter is given."
-msgstr ""
+msgstr "Подсчитывать количество строк, которые были удалены или добавлены. Этот алгоритм игнорирует чистые перемещения кода внутри файла. Другими словами, строки перемещённые внутри файла без изменений не учитываются в отличии от других правок. Это поведение по умолчанию, когда аргумент не указан."
 
 #. type: Labeled list
 #: en/config/diff.txt:33 en/diff-options.txt:270
@@ -3327,7 +3327,7 @@ msgstr "`lines`"
 #: en/config/diff.txt:41 en/diff-options.txt:278
 #, placeholders:'`--dirstat`', priority:280
 msgid "Compute the dirstat numbers by doing the regular line-based diff analysis, and summing the removed/added line counts. (For binary files, count 64-byte chunks instead, since binary files have no natural concept of lines). This is a more expensive `--dirstat` behavior than the `changes` behavior, but it does count rearranged lines within a file as much as other changes. The resulting output is consistent with what you get from the other `--*stat` options."
-msgstr ""
+msgstr "Подсчитывает количество строк с использованием обычного алгоритма поиска изменений, основываясь на строках и суммируя количество удалённых/добавленных строк. (Для бинарных файлов подсчитываются 64-байтовые блоки, так как у них нет естественного понятия «строк»). Это более затратный алгоритм работы `--dirstat`, чем `changes`, но он учитывает переставленные строки внутри файла так же, как и другие изменения. Вывод с этим алгоритмом лучше согласуется с теми данными, которые вы получаете от других параметров `--*stat`."
 
 #. type: Labeled list
 #: en/config/diff.txt:41 en/diff-options.txt:278
@@ -3339,7 +3339,7 @@ msgstr "`files`"
 #: en/config/diff.txt:46 en/diff-options.txt:283
 #, placeholders:'`--dirstat`', priority:280
 msgid "Compute the dirstat numbers by counting the number of files changed. Each changed file counts equally in the dirstat analysis. This is the computationally cheapest `--dirstat` behavior, since it does not have to look at the file contents at all."
-msgstr ""
+msgstr "Подсчитывает количество изменённых файлов. При анализе каждый изменённый файл учитывается в равной степени. Это наиболее экономичный алгоритм `--dirstat`, так как он не требует просмотра содержимого файлов."
 
 #. type: Labeled list
 #: en/config/diff.txt:46 en/diff-options.txt:283
@@ -3351,7 +3351,7 @@ msgstr "`cumulative`"
 #: en/config/diff.txt:51 en/diff-options.txt:288
 #, priority:280
 msgid "Count changes in a child directory for the parent directory as well. Note that when using `cumulative`, the sum of the percentages reported may exceed 100%. The default (non-cumulative) behavior can be specified with the `noncumulative` parameter."
-msgstr ""
+msgstr "Для родительского каталога также учитывает изменения в дочерних подкаталогах. Обратите внимание, что при использовании `cumulative` сумма процентов может превышать 100%. Поведение по умолчанию (некумулятивное) можно задать с помощью аргумента `noncumulative`."
 
 #. type: Labeled list
 #: en/config/diff.txt:51 en/diff-options.txt:288
