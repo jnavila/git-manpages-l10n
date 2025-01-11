@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2024-12-25 19:35+0100\n"
-"PO-Revision-Date: 2025-01-11 13:19+0000\n"
+"PO-Revision-Date: 2025-01-11 15:54+0000\n"
 "Last-Translator: Golubev Alexander <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -3606,45 +3606,44 @@ msgid ""
 "\tIf `diff.orderFile` is a relative pathname, it is treated as\n"
 "\trelative to the top of the working tree.\n"
 msgstr ""
+"\tЕсли `diff.orderFile` является относительным путём, то он\n"
+"\tрассматривается как путь относительно корня рабочего каталога.\n"
 
 #. type: Labeled list
 #: en/config/diff.txt:151
-#, fuzzy, no-wrap, placeholders:'diff.renameLimit', priority:280
-#| msgid "diff.renameLimit"
+#, no-wrap, placeholders:'diff.renameLimit', priority:280
 msgid "`diff.renameLimit`"
-msgstr "diff.renameLimit"
+msgstr "`diff.renameLimit`"
 
 #. type: Plain text
 #: en/config/diff.txt:156
 #, placeholders:'`-l`', priority:280
 msgid "The number of files to consider in the exhaustive portion of copy/rename detection; equivalent to the `git diff` option `-l`. If not set, the default value is currently 1000. This setting has no effect if rename detection is turned off."
-msgstr ""
+msgstr "Количество файлов, которые следует рассматривать, когда поиск копирований/переименований переходит в свою «исчерпывающую» стадию; эквивалентно параметру `-l` команды `git diff`. Если переменная не установлена, то на данный момент значение по умолчанию равно 1000. Эта переменная не имеет эффекта, если поиск переименований отключён."
 
 #. type: Labeled list
 #: en/config/diff.txt:157
-#, fuzzy, no-wrap, placeholders:'diff.renames', priority:280
-#| msgid "diff.renames"
+#, no-wrap, placeholders:'diff.renames', priority:280
 msgid "`diff.renames`"
-msgstr "diff.renames"
+msgstr "`diff.renames`"
 
 #. type: Plain text
 #: en/config/diff.txt:165
 #, placeholders:'linkgit:git-diff[1]':'linkgit:git-log[1]':'linkgit:git-diff-files[1]', priority:280
 msgid "Whether and how Git detects renames. If set to `false`, rename detection is disabled. If set to `true`, basic rename detection is enabled. If set to `copies` or `copy`, Git will detect copies, as well. Defaults to `true`. Note that this affects only `git diff` Porcelain like linkgit:git-diff[1] and linkgit:git-log[1], and not lower level commands such as linkgit:git-diff-files[1]."
-msgstr ""
+msgstr "Должен ли Git пытаться найти переименования файлов и если да, то как именно. При значении `false`, обнаружение переименований отключено. При значении `true`, включён базовый поиск переименований. При значении `copies` или `copy`, Git также ищет копии. Значение по умолчанию установлено в `true`. Обратите внимание, что это влияет только на высокоуровневую команду linkgit:git-diff[1] и linkgit:git-log[1], но не на команды сравнения более низкого уровня, такие как linkgit:git-diff-files[1]."
 
 #. type: Labeled list
 #: en/config/diff.txt:166
-#, fuzzy, no-wrap, placeholders:'diff.suppressBlankEmpty', priority:280
-#| msgid "diff.suppressBlankEmpty"
+#, no-wrap, placeholders:'diff.suppressBlankEmpty', priority:280
 msgid "`diff.suppressBlankEmpty`"
-msgstr "diff.suppressBlankEmpty"
+msgstr "`diff.suppressBlankEmpty`"
 
 #. type: Plain text
 #: en/config/diff.txt:169
 #, priority:280
 msgid "A boolean to inhibit the standard behavior of printing a space before each empty output line. Defaults to `false`."
-msgstr ""
+msgstr "Логическое значение, указывающее, что не нужно выводить пробел на пустых строках (что является стандартным поведением). По умолчанию установлено в `false`."
 
 #. type: Labeled list
 #: en/config/diff.txt:170
@@ -3656,132 +3655,127 @@ msgstr "`diff.submodule`"
 #: en/config/diff.txt:177
 #, placeholders:'linkgit:git-submodule[1]', priority:280
 msgid "Specify the format in which differences in submodules are shown. The `short` format just shows the names of the commits at the beginning and end of the range. The `log` format lists the commits in the range like linkgit:git-submodule[1] `summary` does. The `diff` format shows an inline diff of the changed contents of the submodule. Defaults to `short`."
-msgstr ""
+msgstr "Указывает формат, в котором отображаются различия в подмодулях. В формате `short` выводятся только имена коммитов в начале и конце диапазона. В формате `log` перечисляются коммиты в диапазоне, как в `summary` в linkgit:git-submodule[1] . Формат `diff` показывает встроенный список изменений содержимого подмодуля. Значение по умолчанию: `short`."
 
 #. type: Labeled list
 #: en/config/diff.txt:178
-#, fuzzy, no-wrap, placeholders:'diff.wordRegex', priority:280
-#| msgid "diff.wordRegex"
+#, no-wrap, placeholders:'diff.wordRegex', priority:280
 msgid "`diff.wordRegex`"
-msgstr "diff.wordRegex"
+msgstr "`diff.wordRegex`"
 
 #. type: Plain text
 #: en/config/diff.txt:183
 #, priority:280
 msgid "A POSIX Extended Regular Expression used to determine what is a \"word\" when performing word-by-word difference calculations. Character sequences that match the regular expression are \"words\", all other characters are *ignorable* whitespace."
-msgstr ""
+msgstr "Расширенное регулярное выражение POSIX, которое определяет, что является «словом», при построении пословного списка изменений. Последовательности символов, которые сопоставляются этому регулярному выражению, являются «cловами», все остальные символы считаются пробельными символами, которые могут быть *проигнорированы*."
 
 #. type: Labeled list
 #: en/config/diff.txt:184
 #, no-wrap, priority:280
 msgid "`diff.<driver>.command`"
-msgstr ""
+msgstr "`diff.<драйвер>.command`"
 
 #. type: Plain text
 #: en/config/diff.txt:187
 #, placeholders:'linkgit:gitattributes[5]', priority:280
 msgid "The custom diff driver command. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "Команда драйвера пользовательской утилиты сравнения. См. подробности в linkgit:gitattributes[5]."
 
 #. type: Labeled list
 #: en/config/diff.txt:188
-#, fuzzy, no-wrap, priority:280
-#| msgid "diff.trustExitCode"
+#, no-wrap, priority:280
 msgid "`diff.<driver>.trustExitCode`"
-msgstr "diff.trustExitCode"
+msgstr "`diff.<драйвер>.trustExitCode`"
 
 #. type: Plain text
 #: en/config/diff.txt:196
 #, priority:280
 msgid "If this boolean value is set to `true` then the `diff.<driver>.command` command is expected to return exit code 0 if it considers the input files to be equal or 1 if it considers them to be different, like `diff`(1). If it is set to `false`, which is the default, then the command is expected to return exit code 0 regardless of equality. Any other exit code causes Git to report a fatal error."
-msgstr ""
+msgstr "Если это логическое значение установлено в `true`, то ожидается, что команда `diff.<драйвер>.command` будет завершаться с кодом `0`, если она считает переданные ей файлы равными, или `1`, если разными, как это делает `diff`(1). Если оно установлено в `false`, что является значением по умолчанию, то ожидается, что эта команда будет завершаться с кодом `0` независимо от того, различаются ли файлы или нет. При завершении с любым другим кодом Git будет сообщать о фатальной ошибке."
 
 #. type: Labeled list
 #: en/config/diff.txt:197
 #, no-wrap, priority:280
 msgid "`diff.<driver>.xfuncname`"
-msgstr ""
+msgstr "`diff.<драйвер>.xfuncname`"
 
 #. type: Plain text
 #: en/config/diff.txt:201
 #, placeholders:'linkgit:gitattributes[5]', priority:280
 msgid "The regular expression that the diff driver should use to recognize the hunk header. A built-in pattern may also be used. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "Регулярное выражение, которое драйвер утилиты сравнения должен использовать для распознавания заголовка блока списка изменений. В качестве значения также может использоваться один из встроенных шаблонов. См. подробности в linkgit:gitattributes[5]."
 
 #. type: Labeled list
 #: en/config/diff.txt:202
 #, no-wrap, priority:280
 msgid "`diff.<driver>.binary`"
-msgstr ""
+msgstr "`diff.<драйвер>.binary`"
 
 #. type: Plain text
 #: en/config/diff.txt:205
 #, placeholders:'linkgit:gitattributes[5]', priority:280
 msgid "Set this option to `true` to make the diff driver treat files as binary. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "Установите эту переменную конфигурации в значение `true`, чтобы драйвер утилиты сравнения обрабатывал файлы как двоичные. См. подробности в linkgit:gitattributes[5]."
 
 #. type: Labeled list
 #: en/config/diff.txt:206
 #, no-wrap, priority:280
 msgid "`diff.<driver>.textconv`"
-msgstr ""
+msgstr "`diff.<драйвер>.textconv`"
 
 #. type: Plain text
 #: en/config/diff.txt:211
 #, placeholders:'linkgit:gitattributes[5]', priority:280
 msgid "The command that the diff driver should call to generate the text-converted version of a file. The result of the conversion is used to generate a human-readable diff. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "Команда, которую драйвер утилиты сравнения должен вызвать для генерации текстовой версии файла. Результат преобразования используется для создания списка изменений в виде удобоваримом для чтения человеком. См. подробности в linkgit:gitattributes[5]."
 
 #. type: Labeled list
 #: en/config/diff.txt:212
-#, fuzzy, no-wrap, priority:280
-#| msgid "diff.wordRegex"
+#, no-wrap, priority:280
 msgid "`diff.<driver>.wordRegex`"
-msgstr "diff.wordRegex"
+msgstr "`diff.<драйвер>.wordRegex`"
 
 #. type: Plain text
 #: en/config/diff.txt:216
 #, placeholders:'linkgit:gitattributes[5]', priority:280
 msgid "The regular expression that the diff driver should use to split words in a line. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "Регулярное выражение, которое драйвер утилиты сравнения должен использовать для разделения слов в строке. См. подробности в linkgit:gitattributes[5]."
 
 #. type: Labeled list
 #: en/config/diff.txt:217
 #, no-wrap, priority:280
 msgid "`diff.<driver>.cachetextconv`"
-msgstr ""
+msgstr "`diff.<драйвер>.cachetextconv`"
 
 #. type: Plain text
 #: en/config/diff.txt:220
 #, placeholders:'linkgit:gitattributes[5]', priority:280
 msgid "Set this option to `true` to make the diff driver cache the text conversion outputs. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "Установите эту переменную конфигурации в значение `true`, чтобы драйвер утилиты сравнения кэшировал результаты преобразования текста. См. подробности в linkgit:gitattributes[5]."
 
 #. type: Labeled list
 #: en/config/diff.txt:223
-#, fuzzy, no-wrap, placeholders:'diff.indentHeuristic', priority:280
-#| msgid "diff.indentHeuristic"
+#, no-wrap, placeholders:'diff.indentHeuristic', priority:280
 msgid "`diff.indentHeuristic`"
-msgstr "diff.indentHeuristic"
+msgstr "`diff.indentHeuristic`"
 
 #. type: Plain text
 #: en/config/diff.txt:226
 #, priority:280
 msgid "Set this option to `false` to disable the default heuristics that shift diff hunk boundaries to make patches easier to read."
-msgstr ""
+msgstr "Установите эту переменную конфигурации в значение `false`, чтобы отключить стандартные эвристики, которые сдвигают границы блоков списков изменений, дабы патчи были более читаемыми."
 
 #. type: Labeled list
 #: en/config/diff.txt:227
-#, fuzzy, no-wrap, placeholders:'diff.algorithm', priority:280
-#| msgid "diff.algorithm"
+#, no-wrap, placeholders:'diff.algorithm', priority:280
 msgid "`diff.algorithm`"
-msgstr "diff.algorithm"
+msgstr "`diff.algorithm`"
 
 #. type: Plain text
 #: en/config/diff.txt:229 en/diff-options.txt:196
 #, priority:280
 msgid "Choose a diff algorithm. The variants are as follows:"
-msgstr ""
+msgstr "Выберите алгоритм для получения списка изменений. Доступны следующие варианты:"
 
 #. type: Labeled list
 #: en/config/diff.txt:231 en/diff-options.txt:198 en/diff-options.txt:383
@@ -3799,7 +3793,7 @@ msgstr "`myers`"
 #: en/config/diff.txt:234 en/diff-options.txt:201
 #, priority:280
 msgid "The basic greedy diff algorithm. Currently, this is the default."
-msgstr ""
+msgstr "Базовый жадный алгоритм, используемый в стандартной утилите сравнения (`diff`). В настоящее время это значение по умолчанию."
 
 #. type: Labeled list
 #: en/config/diff.txt:234 en/diff-options.txt:201
@@ -3811,7 +3805,7 @@ msgstr "`minimal`"
 #: en/config/diff.txt:237 en/diff-options.txt:177 en/diff-options.txt:204
 #, priority:280
 msgid "Spend extra time to make sure the smallest possible diff is produced."
-msgstr ""
+msgstr "Потратить дополнительное время, чтобы гарантировать, что будет сгенерирован минимально возможный список изменений."
 
 #. type: Labeled list
 #: en/config/diff.txt:237 en/diff-options.txt:204
@@ -3823,7 +3817,7 @@ msgstr "`patience`"
 #: en/config/diff.txt:239 en/diff-options.txt:206
 #, priority:280
 msgid "Use \"patience diff\" algorithm when generating patches."
-msgstr ""
+msgstr "Используйте «терпеливый» алгоритм сравнения (\"patience diff\") для генерации патчей."
 
 #. type: Labeled list
 #: en/config/diff.txt:239 en/diff-options.txt:206
@@ -3835,45 +3829,43 @@ msgstr "`histogram`"
 #: en/config/diff.txt:242 en/diff-options.txt:209
 #, priority:280
 msgid "This algorithm extends the patience algorithm to \"support low-occurrence common elements\"."
-msgstr ""
+msgstr "Этот алгоритм расширяет «терпеливый» алгоритм так, что он «поддерживает общие элементы с низкой частотой встречаемости»."
 
 #. type: Labeled list
 #: en/config/diff.txt:245
-#, fuzzy, no-wrap, placeholders:'diff.wsErrorHighlight', priority:280
-#| msgid "diff.wsErrorHighlight"
+#, no-wrap, placeholders:'diff.wsErrorHighlight', priority:280
 msgid "`diff.wsErrorHighlight`"
-msgstr "diff.wsErrorHighlight"
+msgstr "`diff.wsErrorHighlight`"
 
 #. type: Plain text
 #: en/config/diff.txt:253
 #, placeholders:'color.diff.whitespace':'`--ws-error-highlight=', priority:280
 msgid "Highlight whitespace errors in the `context`, `old` or `new` lines of the diff. Multiple values are separated by comma, `none` resets previous values, `default` reset the list to `new` and `all` is a shorthand for `old,new,context`. The whitespace errors are colored with `color.diff.whitespace`. The command line option `--ws-error-highlight=<kind>` overrides this setting."
-msgstr ""
+msgstr "Выделять цветом ошибки в пробелах в контекстных (`context`), старых (`old`) или новых (`new`) строках списков изменений. Допустимо несколько значений, разделённых запятыми; `none` сбрасывает предыдущие значения, `default` сбрасывает список до `new`, а `all` — это сокращение для `old,new,context`. Ошибки в пробельных символах будут выделяться с помощью `color.diff.whitespace`. Параметр командной строки `--ws-error-highlight=<тип>` переопределяет эту переменную конфигурации."
 
 #. type: Labeled list
 #: en/config/diff.txt:254
-#, fuzzy, no-wrap, placeholders:'diff.colorMoved', priority:280
-#| msgid "diff.colorMoved"
+#, no-wrap, placeholders:'diff.colorMoved', priority:280
 msgid "`diff.colorMoved`"
-msgstr "diff.colorMoved"
+msgstr "`diff.colorMoved`"
 
 #. type: Plain text
 #: en/config/diff.txt:257
 #, priority:280
 msgid "If set to either a valid _<mode>_ or a `true` value, moved lines in a diff are colored differently."
-msgstr ""
+msgstr "Если в качестве значения этой переменной установлено допустимый `<режим>` или «`true`», перемещённые строки в списке изменений будут выделяться другим цветом."
 
 #. type: Plain text
 #: en/config/diff.txt:259
 #, no-wrap, placeholders:'`--color-moved`', priority:280
 msgid "\tFor details of valid modes see `--color-moved`.\n"
-msgstr ""
+msgstr "\tПодробности о допустимых режимах см. в описании параметра `--color-moved`.\n"
 
 #. type: Plain text
 #: en/config/diff.txt:262
 #, no-wrap, placeholders:'`--color-moved`':'linkgit:git-diff[1]', priority:280
 msgid "\tFor details of valid modes see `--color-moved` in linkgit:git-diff[1].\n"
-msgstr ""
+msgstr "\tПодробности о допустимых режимах см. в описании параметра `--color-moved` команды linkgit:git-diff[1].\n"
 
 #. type: Plain text
 #: en/config/diff.txt:265
@@ -3882,19 +3874,20 @@ msgid ""
 "\tIf simply set to `true` the default color mode will be used. When\n"
 "\tset to `false`, moved lines are not colored.\n"
 msgstr ""
+"\tЕсли в качестве значения установлено порсто `true`, будет использован режим выделения\n"
+"\tпо умолчанию. Если установлено `false`, перемещённые строки не выделяются.\n"
 
 #. type: Labeled list
 #: en/config/diff.txt:266
-#, fuzzy, no-wrap, placeholders:'diff.colorMovedWS', priority:280
-#| msgid "diff.colorMovedWS"
+#, no-wrap, placeholders:'diff.colorMovedWS', priority:280
 msgid "`diff.colorMovedWS`"
-msgstr "diff.colorMovedWS"
+msgstr "`diff.colorMovedWS`"
 
 #. type: Plain text
 #: en/config/diff.txt:269
 #, placeholders:'diff.colorMoved':'`--color-moved-ws`':'linkgit:git-diff[1]', priority:280
 msgid "When moved lines are colored using e.g. the `diff.colorMoved` setting, this option controls the mode how spaces are treated. For details of valid modes see `--color-moved-ws` in linkgit:git-diff[1]."
-msgstr ""
+msgstr "Когда перемещённые строки выделяются цветом, например при установке `diff.colorMoved`, эта переменная конфигурации задаёт режим, в котором должный обрабатываться пробелы. Подробности о допустимых режимов см. в описании параметра `--color-moved-ws` команды linkgit:git-diff[1]."
 
 #. type: Labeled list
 #: en/config/init.txt:6
