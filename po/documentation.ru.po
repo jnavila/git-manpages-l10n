@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2024-12-25 19:35+0100\n"
-"PO-Revision-Date: 2025-01-11 20:59+0000\n"
+"PO-Revision-Date: 2025-01-12 07:05+0000\n"
 "Last-Translator: Golubev Alexander <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -4589,25 +4589,25 @@ msgstr "Другие форматы списка изменений"
 #: en/diff-format.txt:134
 #, placeholders:'`--summary`':'`--stat`':'`-p`', priority:280
 msgid "The `--summary` option describes newly added, deleted, renamed and copied files. The `--stat` option adds `diffstat`(1) graph to the output. These options can be combined with other options, such as `-p`, and are meant for human consumption."
-msgstr "Параметр `--summary` выводит, какие файлы были созданы, удалены, переименованы и скопированы. Этот параметр полезен для быстрого обзора изменений в файлах."
+msgstr "Параметр `--summary` выводит, какие файлы были созданы, удалены, переименованы и скопированы. А параметром `--stat` добавляет к выходу графики `diffstat`(1). Эти параметры могут использоваться совместно с другими, такими как `-p`, а их вывод предназначен для чтения человеком."
 
 #. type: Plain text
 #: en/diff-format.txt:139
 #, placeholders:'`--stat`', priority:280
 msgid "When showing a change that involves a rename or a copy, `--stat` output formats the pathnames compactly by combining common prefix and suffix of the pathnames. For example, a change that moves `arch/i386/Makefile` to `arch/x86/Makefile` while modifying 4 lines will be shown like this:"
-msgstr ""
+msgstr "Когда отображаются изменения, связанное с переименованием или копированием, вывод `--stat` компактно форматирует пути, объединяя их общие префиксы и суффиксы. Например, если файл `arch/i386/Makefile` был перемещён в `arch/x86/Makefile` с изменением 4-х строк, это будет отображено как:"
 
 #. type: delimited block -
 #: en/diff-format.txt:142
 #, no-wrap, priority:280
 msgid "arch/{i386 => x86}/Makefile    |   4 +--\n"
-msgstr ""
+msgstr "arch/{i386 => x86}/Makefile    |   4 +--\n"
 
 #. type: Plain text
 #: en/diff-format.txt:147
 #, placeholders:'`--numstat`':'`--numstat`', priority:280
 msgid "The `--numstat` option gives the diffstat(1) information but is designed for easier machine consumption. An entry in `--numstat` output looks like this:"
-msgstr ""
+msgstr "Параметр `--numstat` также выдаёт информацию в виде `diffstat`(1), но его вывод больше подходит для машинного чтения. Запись в выводе `--numstat` выглядит как:"
 
 #. type: delimited block -
 #: en/diff-format.txt:151
@@ -4616,48 +4616,50 @@ msgid ""
 "1\t2\tREADME\n"
 "3\t1\tarch/{i386 => x86}/Makefile\n"
 msgstr ""
+"1\t2\tREADME\n"
+"3\t1\tarch/{i386 => x86}/Makefile\n"
 
 #. type: Plain text
 #: en/diff-format.txt:154
 #, priority:280
 msgid "That is, from left to right:"
-msgstr ""
+msgstr "Где, слева направо идут:"
 
 #. type: Plain text
 #: en/diff-format.txt:156 en/diff-format.txt:172
 #, priority:280
 msgid "the number of added lines;"
-msgstr ""
+msgstr "rоличество добавленных строк;"
 
 #. type: Plain text
 #: en/diff-format.txt:157 en/diff-format.txt:159 en/diff-format.txt:173 en/diff-format.txt:175
 #, priority:280
 msgid "a tab;"
-msgstr ""
+msgstr "табуляция;"
 
 #. type: Plain text
 #: en/diff-format.txt:158 en/diff-format.txt:174
 #, priority:280
 msgid "the number of deleted lines;"
-msgstr ""
+msgstr "количество удалённых строк;"
 
 #. type: Plain text
 #: en/diff-format.txt:160
 #, priority:280
 msgid "pathname (possibly with rename/copy information);"
-msgstr ""
+msgstr "путь (возможно с информацией о переименовании/копировании);"
 
 #. type: Plain text
 #: en/diff-format.txt:161
 #, priority:280
 msgid "a newline."
-msgstr ""
+msgstr "символ перехода на новую строку."
 
 #. type: Plain text
 #: en/diff-format.txt:163
 #, placeholders:'`-z`', priority:280
 msgid "When `-z` output option is in effect, the output is formatted this way:"
-msgstr ""
+msgstr "Если также используется параметр `-z`, то вывод форматируется следующим образом:"
 
 #. type: delimited block -
 #: en/diff-format.txt:167
@@ -4666,42 +4668,44 @@ msgid ""
 "1\t2\tREADME NUL\n"
 "3\t1\tNUL arch/i386/Makefile NUL arch/x86/Makefile NUL\n"
 msgstr ""
+"1\t2\tREADME NUL\n"
+"3\t1\tNUL arch/i386/Makefile NUL arch/x86/Makefile NUL\n"
 
 #. type: Plain text
 #: en/diff-format.txt:170
 #, priority:280
 msgid "That is:"
-msgstr ""
+msgstr "Где:"
 
 #. type: Plain text
 #: en/diff-format.txt:176 en/diff-format.txt:178
 #, priority:280
 msgid "a NUL (only exists if renamed/copied);"
-msgstr ""
+msgstr "NUL-символ (только для переименований/копирований);"
 
 #. type: Plain text
 #: en/diff-format.txt:177
 #, priority:280
 msgid "pathname in preimage;"
-msgstr ""
+msgstr "путь исходного состояния;"
 
 #. type: Plain text
 #: en/diff-format.txt:179
 #, priority:280
 msgid "pathname in postimage (only exists if renamed/copied);"
-msgstr ""
+msgstr "пути целевого состояния (только для переименований/копирований);"
 
 #. type: Plain text
 #: en/diff-format.txt:180
 #, priority:280
 msgid "a NUL."
-msgstr ""
+msgstr "NUL-символ."
 
 #. type: Plain text
 #: en/diff-format.txt:185
 #, priority:280
 msgid "The extra `NUL` before the preimage path in renamed case is to allow scripts that read the output to tell if the current record being read is a single-path record or a rename/copy record without reading ahead. After reading added and deleted lines, reading up to `NUL` would yield the pathname, but if that is `NUL`, the record will show two paths."
-msgstr ""
+msgstr "Дополнительный NUL-символ перед именем пути исходного файла в случае переименования позволяет сценариям, которые читают этот вывод, определить, содержит ли текущая запись только один путь или является записью переименования/копирования (с двумя путями), не прибегая к упреждающему чтению. После чтения количества добавленных и удалённых строк чтение до NUL-символа в обычной ситуации выдаёт путь к файлу, но если он оказывается пустым, то это означает, что в записи есть два пути."
 
 #. type: Title -
 #: en/diff-generate-patch.txt:3
