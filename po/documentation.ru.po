@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2024-12-25 19:35+0100\n"
-"PO-Revision-Date: 2025-01-11 15:54+0000\n"
+"PO-Revision-Date: 2025-01-11 20:59+0000\n"
 "Last-Translator: Golubev Alexander <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -4235,38 +4235,37 @@ msgstr "В дополнение к форматам даты перечисле�
 #: en/diff-format.txt:2
 #, no-wrap, priority:280
 msgid "Raw output format"
-msgstr ""
+msgstr "Сырой формат вывода"
 
 #. type: Plain text
 #: en/diff-format.txt:6
 #, placeholders:'git-diff-index`':'git-diff-tree`':'git-diff-files`':'--raw`', priority:280
 msgid "The raw output format from `git-diff-index`, `git-diff-tree`, `git-diff-files` and `git diff --raw` are very similar."
-msgstr ""
+msgstr "Сырой формат вывода команд `git-diff-index`, `git-diff-tree`, `git-diff-files` и `git diff --raw` очень похож."
 
 #. type: Plain text
 #: en/diff-format.txt:9
 #, priority:280
 msgid "These commands all compare two sets of things; what is compared differs:"
-msgstr ""
+msgstr "Все эти команды сравнивают два набора объектов, но то, что именно они сравнивают, отличается:"
 
 #. type: Labeled list
 #: en/diff-format.txt:10
-#, fuzzy, no-wrap, placeholders:'git-diff-index', priority:280
-#| msgid "git-diff-index(1)"
+#, no-wrap, placeholders:'git-diff-index', priority:280
 msgid "`git-diff-index <tree-ish>`"
-msgstr "git-diff-index(1)"
+msgstr "`git-diff-index <указатель-дерева>`"
 
 #. type: Plain text
 #: en/diff-format.txt:12
 #, priority:280
 msgid "compares the _<tree-ish>_ and the files on the filesystem."
-msgstr ""
+msgstr "cравнивает _<указатель-дерева>_ и файлы в файловой системе."
 
 #. type: Labeled list
 #: en/diff-format.txt:13
 #, no-wrap, placeholders:'git-diff-index':'--cached', priority:280
 msgid "`git-diff-index --cached <tree-ish>`"
-msgstr ""
+msgstr "`git-diff-index --cached <указатель-дерева>`"
 
 #. type: Plain text
 #: en/diff-format.txt:15
@@ -4278,13 +4277,13 @@ msgstr "сравнивает содержимое файлов по _<указа
 #: en/diff-format.txt:16
 #, ignore-ellipsis, no-wrap, placeholders:'git-diff-tree', priority:280
 msgid "`git-diff-tree [-r] <tree-ish-1> <tree-ish-2> [<pattern>...]`"
-msgstr "`git-diff-tree [-r] <казатель-дерева-1> <казатель-дерева-2> [<шаблон>...]`"
+msgstr "`git-diff-tree [-r] <указатель-дерева-1> <указатель-дерева-2> [<шаблон>...]`"
 
 #. type: Plain text
 #: en/diff-format.txt:18
 #, priority:280
 msgid "compares the trees named by the two arguments."
-msgstr ""
+msgstr "сравнивает деревья, на которые указывают два аргумента."
 
 #. type: Labeled list
 #: en/diff-format.txt:19
@@ -4296,19 +4295,19 @@ msgstr "`git-diff-files [<шаблон>...]`"
 #: en/diff-format.txt:21
 #, priority:280
 msgid "compares the index and the files on the filesystem."
-msgstr ""
+msgstr "сравнивает индекс и файлы в файловой системе."
 
 #. type: Plain text
 #: en/diff-format.txt:25
 #, placeholders:'git-diff-tree`', priority:280
 msgid "The `git-diff-tree` command begins its output by printing the hash of what is being compared. After that, all the commands print one output line per changed file."
-msgstr ""
+msgstr "Команда `git-diff-tree` начинает свой вывод с печати хэша того, что сравнивается. После чего она как и все остальные команды выводят информацию об изменённых файлах: по одной строке на файл."
 
 #. type: Plain text
 #: en/diff-format.txt:27
 #, priority:280
 msgid "An output line is formatted this way:"
-msgstr ""
+msgstr "Строки вывода выглядят следующим образом:"
 
 #. type: delimited block -
 #: en/diff-format.txt:35
@@ -4321,222 +4320,228 @@ msgid ""
 "delete         :100644 000000 1234567 0000000 D file5\n"
 "unmerged       :000000 000000 0000000 0000000 U file6\n"
 msgstr ""
+"изменения           :100644 100644 bcd1234 0123456 M файл0\n"
+"копирование-правка  :100644 100644 abcd123 1234567 C68 файл1 файл2\n"
+"переимещение-правка :100644 100644 abcd123 1234567 R86 файл1 файл3\n"
+"создание            :000000 100644 0000000 1234567 A файл4\n"
+"удаление            :100644 000000 1234567 0000000 D файл5\n"
+"не-слитый           :000000 000000 0000000 0000000 U файл6\n"
 
 #. type: Plain text
 #: en/diff-format.txt:38
 #, priority:280
 msgid "That is, from the left to the right:"
-msgstr ""
+msgstr "Где, слева направо идут:"
 
 #. type: Plain text
 #: en/diff-format.txt:40
 #, priority:280
 msgid "a colon."
-msgstr ""
+msgstr "двоеточие (`:`)."
 
 #. type: Plain text
 #: en/diff-format.txt:41
 #, priority:280
 msgid "mode for \"src\"; 000000 if creation or unmerged."
-msgstr ""
+msgstr "режим доступа «исходного» состояния; 000000 при создании файла или когда он не слит."
 
 #. type: Plain text
 #: en/diff-format.txt:42 en/diff-format.txt:44 en/diff-format.txt:46 en/diff-format.txt:48
 #, priority:280
 msgid "a space."
-msgstr ""
+msgstr "пробел."
 
 #. type: Plain text
 #: en/diff-format.txt:43
 #, priority:280
 msgid "mode for \"dst\"; 000000 if deletion or unmerged."
-msgstr ""
+msgstr "режим доступа «целевого» состояния; 000000 при удалении файла или когда он не слит."
 
 #. type: Plain text
 #: en/diff-format.txt:45
 #, priority:280
 msgid "sha1 for \"src\"; 0\\{40\\} if creation or unmerged."
-msgstr ""
+msgstr "SHA1 для «исходного» состояния; 0\\{40\\} при создании файла или когда он не слит."
 
 #. type: Plain text
 #: en/diff-format.txt:47
 #, priority:280
 msgid "sha1 for \"dst\"; 0\\{40\\} if deletion, unmerged or \"work tree out of sync with the index\"."
-msgstr ""
+msgstr "SHA1 для «целевого» состояния; 0\\{40\\} при удалении файла, когда он не слит или когда рабочая копия не синхронизирована с индексом."
 
 #. type: Plain text
 #: en/diff-format.txt:49
 #, priority:280
 msgid "status, followed by optional \"score\" number."
-msgstr ""
+msgstr "статус за которым может следовать «рейтинг схожести» («score»)."
 
 #. type: Plain text
 #: en/diff-format.txt:50
 #, placeholders:'`-z`', priority:280
 msgid "a tab or a NUL when `-z` option is used."
-msgstr ""
+msgstr "табуляция или NUL-символ (с параметром `-z`)."
 
 #. type: Plain text
 #: en/diff-format.txt:51
 #, priority:280
 msgid "path for \"src\""
-msgstr ""
+msgstr "«исходный» путь"
 
 #. type: Plain text
 #: en/diff-format.txt:52
 #, placeholders:'`-z`', priority:280
 msgid "a tab or a NUL when `-z` option is used; only exists for C or R."
-msgstr ""
+msgstr "табуляция или NUL-символ (с параметром `-z`); только для статусов C и R."
 
 #. type: Plain text
 #: en/diff-format.txt:53
 #, priority:280
 msgid "path for \"dst\"; only exists for C or R."
-msgstr ""
+msgstr "«целевой» путь; только для статусов C и R."
 
 #. type: Plain text
 #: en/diff-format.txt:54
 #, placeholders:'`-z`', priority:280
 msgid "an LF or a NUL when `-z` option is used, to terminate the record."
-msgstr ""
+msgstr "символ LF или NUL (с параметром `-z`), который завершает запись."
 
 #. type: Plain text
 #: en/diff-format.txt:56
 #, priority:280
 msgid "Possible status letters are:"
-msgstr ""
+msgstr "Возможные обозначения для статуса:"
 
 #. type: Plain text
 #: en/diff-format.txt:58
 #, priority:280
 msgid "`A`: addition of a file"
-msgstr ""
+msgstr "`A`: добавление файла (addition)"
 
 #. type: Plain text
 #: en/diff-format.txt:59
 #, priority:280
 msgid "`C`: copy of a file into a new one"
-msgstr ""
+msgstr "`C`: копирование файла в новый (copy)"
 
 #. type: Plain text
 #: en/diff-format.txt:60
 #, priority:280
 msgid "`D`: deletion of a file"
-msgstr ""
+msgstr "`D': удаление файла (deletion)"
 
 #. type: Plain text
 #: en/diff-format.txt:61
 #, priority:280
 msgid "`M`: modification of the contents or mode of a file"
-msgstr ""
+msgstr "`M': изменение содержимого или режима доступа к файлу (modification)"
 
 #. type: Plain text
 #: en/diff-format.txt:62
 #, priority:280
 msgid "`R`: renaming of a file"
-msgstr ""
+msgstr "`R': переименование файла (renaming)"
 
 #. type: Plain text
 #: en/diff-format.txt:63
 #, priority:280
 msgid "`T`: change in the type of the file (regular file, symbolic link or submodule)"
-msgstr ""
+msgstr "`T`: изменение типа файла: обычный файл, символическая ссылка или подмодуль (type)"
 
 #. type: Plain text
 #: en/diff-format.txt:65
 #, priority:280
 msgid "`U`: file is unmerged (you must complete the merge before it can be committed)"
-msgstr ""
+msgstr "`U`: файл не слит: вы должны будете завершить слияние, прежде чем будет возможно закоммитить файл (unmerged)"
 
 #. type: Plain text
 #: en/diff-format.txt:66
 #, priority:280
 msgid "`X`: \"unknown\" change type (most probably a bug, please report it)"
-msgstr ""
+msgstr "`X`: «неизвестный» тип изменения (вероятно это ошибка, пожалуйста, сообщите о ней)"
 
 #. type: Plain text
 #: en/diff-format.txt:71
 #, priority:280
 msgid "Status letters `C` and `R` are always followed by a score (denoting the percentage of similarity between the source and target of the move or copy). Status letter `M` may be followed by a score (denoting the percentage of dissimilarity) for file rewrites."
-msgstr ""
+msgstr "Статусы `C` и `R` всегда сопровождаются рейтингом схожести (обозначающим процент сходства между исходным и целевым состоянием при перемещении или копировании). Статус `M` также может сопровождаться рейтингом (обозначающим процент различий) для изменений файла."
 
 #. type: Plain text
 #: en/diff-format.txt:74
 #, priority:280
 msgid "The sha1 for \"dst\" is shown as all 0's if a file on the filesystem is out of sync with the index."
-msgstr ""
+msgstr "Если файл в файловой системе ещё не синхронизирован с индексом, то SHA1 для «целевого» состояния будет отображается как строка из нулей."
 
 #. type: Labeled list
 #: en/diff-format.txt:76 en/git-svn.txt:499 en/git-svn.txt:539
 #, no-wrap, priority:280
 msgid "Example:"
-msgstr ""
+msgstr "Пример:"
 
 #. type: delimited block -
 #: en/diff-format.txt:79
 #, no-wrap, priority:280
 msgid ":100644 100644 5be4a4a 0000000 M file.c\n"
-msgstr ""
+msgstr ":100644 100644 5be4a4a 0000000 M файл.c\n"
 
 #. type: Plain text
 #: en/diff-format.txt:85 en/git-ls-files.txt:257 en/git-ls-tree.txt:134
 #, placeholders:'`-z`':'core.quotePath':'linkgit:git-config[1]':'`-z`', priority:280
 msgid "Without the `-z` option, pathnames with \"unusual\" characters are quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1]). Using `-z` the filename is output verbatim and the line is terminated by a NUL byte."
-msgstr ""
+msgstr "Без параметра `-z` пути с «необычными» символами берутся в кавычки, как это описано для переменной конфигурации `core.quotePath` (см. linkgit:git-config[1]). С параметром `-z` имя файла выводится без изменений, а строка завершается байтом NUL."
 
 #. type: Title -
 #: en/diff-format.txt:87
 #, no-wrap, priority:280
 msgid "diff format for merges"
-msgstr ""
+msgstr "Формат списков изменений для слияний"
 
 #. type: Plain text
 #: en/diff-format.txt:93
 #, placeholders:'git-diff-tree`':'git-diff-files`':'git-diff':'--raw`':'`-c`':'`--cc`', priority:280
 msgid "`git-diff-tree`, `git-diff-files` and `git-diff --raw` can take `-c` or `--cc` option to generate diff output also for merge commits. The output differs from the format described above in the following way:"
-msgstr ""
+msgstr "Команды `git-diff-tree`, `git-diff-files` и `git-diff --raw` принимают параметры `-c` или `--cc`, которые позволяют выводить списки изменений также и для коммитов слияний. Вывод отличается от описанного выше формата:"
 
 #. type: Plain text
 #: en/diff-format.txt:95
 #, priority:280
 msgid "there is a colon for each parent"
-msgstr ""
+msgstr "для каждого родителя добавляется дополнительное двоеточие"
 
 #. type: Plain text
 #: en/diff-format.txt:96
 #, priority:280
 msgid "there are more \"src\" modes and \"src\" sha1"
-msgstr ""
+msgstr "добавляются дополнительные режимы и SHA1 для «исходных» состояний"
 
 #. type: Plain text
 #: en/diff-format.txt:97
 #, priority:280
 msgid "status is concatenated status characters for each parent"
-msgstr ""
+msgstr "статус представляет собой строку из символов статусов для каждого родителя"
 
 #. type: Plain text
 #: en/diff-format.txt:98
 #, priority:280
 msgid "no optional \"score\" number"
-msgstr ""
+msgstr "нет (необязательного) значения «рейтинга схожести» («score»)"
 
 #. type: Plain text
 #: en/diff-format.txt:99
 #, priority:280
 msgid "tab-separated pathname(s) of the file"
-msgstr ""
+msgstr "несколько путей файлов, разделённых табуляциями"
 
 #. type: Plain text
 #: en/diff-format.txt:104
 #, placeholders:'`-c`':'`--cc`':'`--combined-all-paths`', priority:280
 msgid "For `-c` and `--cc`, only the destination or final path is shown even if the file was renamed on any side of history. With `--combined-all-paths`, the name of the path in each parent is shown followed by the name of the path in the merge commit."
-msgstr ""
+msgstr "Для параметров `-c` и `--cc` показываются только целевой или конечный путь к файлу, даже если файл был переименован в одном из предков. С `--combined-all-paths` будут также выводиться пути в каждом из родителей, за которыми последует путь в коммите слияния."
 
 #. type: Plain text
 #: en/diff-format.txt:106
 #, placeholders:'`-c`':'`--cc`':'`--combined-all-paths`', priority:280
 msgid "Examples for `-c` and `--cc` without `--combined-all-paths`:"
-msgstr ""
+msgstr "Примеры для `-c` и `--cc` без `--combined-all-paths`:"
 
 #. type: delimited block -
 #: en/diff-format.txt:110
@@ -4546,12 +4551,15 @@ msgid ""
 "::100755 100755 100755 52b7a2d 6d1ac04 d2ac7d7 RM\tbar.sh\n"
 "::100644 100644 100644 e07d6c5 9042e82 ee91881 RR\tphooey.c\n"
 msgstr ""
+"::100644 100644 100644 fabadb8 cc95eb0 4866510 MM\tопис.c\n"
+"::100755 100755 100755 52b7a2d 6d1ac04 d2ac7d7 RM\tбар.sh\n"
+"::100644 100644 100644 e07d6c5 9042e82 ee91881 RR\tтьфу.c\n"
 
 #. type: Plain text
 #: en/diff-format.txt:113
 #, placeholders:'`--combined-all-paths`':'`-c`':'`--cc`', priority:280
 msgid "Examples when `--combined-all-paths` added to either `-c` or `--cc`:"
-msgstr ""
+msgstr "Примеры, когда к `-c` или `--cc` добавляется `--combined-all-paths`:"
 
 #. type: delimited block -
 #: en/diff-format.txt:118
@@ -4561,24 +4569,27 @@ msgid ""
 "::100755 100755 100755 52b7a2d 6d1ac04 d2ac7d7 RM\tfoo.sh\tbar.sh\tbar.sh\n"
 "::100644 100644 100644 e07d6c5 9042e82 ee91881 RR\tfooey.c\tfuey.c\tphooey.c\n"
 msgstr ""
+"::100644 100644 100644 fabadb8 cc95eb0 4866510 MM\tопис.c\tопис.c\tопис.c\n"
+"::100755 100755 100755 52b7a2d 6d1ac04 d2ac7d7 RM\tфуу.sh\tбар.sh\tбар.sh\n"
+"::100644 100644 100644 e07d6c5 9042e82 ee91881 RR\tтьфа.c\tтьфы.c\tтьфу.c\n"
 
 #. type: Plain text
 #: en/diff-format.txt:122
 #, priority:280
 msgid "Note that 'combined diff' lists only files which were modified from all parents."
-msgstr ""
+msgstr "Обратите внимание, что «комбинированный вариант» (с `--combined-all-paths`) перечисляет только те файлы, которые были изменены относительно всех родителей."
 
 #. type: Title -
 #: en/diff-format.txt:128
 #, no-wrap, priority:280
 msgid "other diff formats"
-msgstr ""
+msgstr "Другие форматы списка изменений"
 
 #. type: Plain text
 #: en/diff-format.txt:134
 #, placeholders:'`--summary`':'`--stat`':'`-p`', priority:280
 msgid "The `--summary` option describes newly added, deleted, renamed and copied files. The `--stat` option adds `diffstat`(1) graph to the output. These options can be combined with other options, such as `-p`, and are meant for human consumption."
-msgstr ""
+msgstr "Параметр `--summary` выводит, какие файлы были созданы, удалены, переименованы и скопированы. Этот параметр полезен для быстрого обзора изменений в файлах."
 
 #. type: Plain text
 #: en/diff-format.txt:139
@@ -8112,7 +8123,7 @@ msgstr "`--pathspec-from-file=<файл>`"
 #: en/git-add.txt:207
 #, placeholders:'core.quotePath':'linkgit:git-config[1]':'`--pathspec-file-nul`':'`--literal-pathspecs`', priority:300
 msgid "Pathspec is passed in _<file>_ instead of commandline args. If _<file>_ is exactly `-` then standard input is used. Pathspec elements are separated by _LF_ or _CR/LF_. Pathspec elements can be quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1]). See also `--pathspec-file-nul` and global `--literal-pathspecs`."
-msgstr "Спецификатор пути передаётся в _<файле>_, а не в аргументах командной строки. Если в качестве _<файла>_ указано в точности `-`, то используется стандартный поток ввода. Элементы спецификатора пути отделяются друг от друга символами _LF_ или _CR/LF_. Элементы спецификатора пути могут указываться в кавычках, как объясняется в описании переменной конфигурации `core.quotePath` (см. linkgit:git-config[1]). См. также `--pathspec-file-nul` и глобальный параметр `--literal-pathspecs`."
+msgstr "Спецификатор пути передаётся в _<файле>_, а не в аргументах командной строки. Если в качестве _<файла>_ указано в точности `-`, то используется стандартный поток ввода. Элементы спецификатора пути отделяются друг от друга символами _LF_ или _CR/LF_. Элементы спецификатора пути могут указываться в кавычках, как это описано для переменной конфигурации `core.quotePath` (см. linkgit:git-config[1]). См. также `--pathspec-file-nul` и глобальный параметр `--literal-pathspecs`."
 
 #. type: Labeled list
 #: en/git-add.txt:208
