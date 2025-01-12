@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2024-12-25 19:35+0100\n"
-"PO-Revision-Date: 2025-01-12 13:54+0000\n"
+"PO-Revision-Date: 2025-01-12 16:29+0000\n"
 "Last-Translator: Golubev Alexander <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -4983,55 +4983,55 @@ msgstr "Строка `mode <режим>,<режим>..<режим>` присут
 #: en/diff-generate-patch.txt:152
 #, priority:280
 msgid "It is followed by a two-line from-file/to-file header:"
-msgstr ""
+msgstr "Далее следуют две строки заголовка, с указанием исходного и целевого файлов (из-файла/в-файл):"
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:154 en/diff-generate-patch.txt:165 en/diff-generate-patch.txt:166 en/diff-generate-patch.txt:167
 #, priority:280
 msgid "a/file"
-msgstr ""
+msgstr "a/файл"
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:155 en/diff-generate-patch.txt:168
 #, priority:280
 msgid "b/file"
-msgstr ""
+msgstr "b/файл"
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:159
 #, priority:280
 msgid "Similar to the two-line header for the traditional 'unified' diff format, `/dev/null` is used to signal created or deleted files."
-msgstr ""
+msgstr "Аналогично тому как это делается и в традиционном формате объединённого («unified») списка изменений, `/dev/null` используется для обозначения созданных или удалённых файлов."
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:163
 #, placeholders:'--combined-all-paths', priority:280
 msgid "However, if the --combined-all-paths option is provided, instead of a two-line from-file/to-file, you get an N+1 line from-file/to-file header, where N is the number of parents in the merge commit:"
-msgstr ""
+msgstr "Однако, если задан параметр `--combined-all-paths`, то вместо этих двух строк заголовка с из-файла/в-файл, вы получите расширенный заголовок из N+1 строки, где N — это количество родителей в коммите слияния:"
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:172
 #, priority:280
 msgid "This extended format can be useful if rename or copy detection is active, to allow you to see the original name of the file in different parents."
-msgstr ""
+msgstr "Этот расширенный формат может быть полезен, если у вас включено обнаружение переименований и копирований, так как это позволяет увидеть, как назывался файл в разных родителях до слияния."
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:178
 #, priority:280
 msgid "Chunk header format is modified to prevent people from accidentally feeding it to `patch -p1`. Combined diff format was created for review of merge commit changes, and was not meant to be applied. The change is similar to the change in the extended 'index' header:"
-msgstr ""
+msgstr "Формат заголовка блока списка изменений был специально модифицирован, чтобы предотвратить случайное применение его с помощью `patch -p1`. Комбинированный формат списков изменений был создан для рецензирования изменений в коммитах слияния и не предназначен для прямого применения в виде патчей. Эти модификации аналогичны тем, что были сделаны в расширенном заголовке `index`:"
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:180
 #, no-wrap, priority:280
 msgid "@@@ <from-file-range> <from-file-range> <to-file-range> @@@\n"
-msgstr ""
+msgstr "@@@ <исходный-диапазон> <исходный-диапазон> <результирующий-диапазон> @@@\n"
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:183
 #, priority:280
 msgid "There are (number of parents + 1) `@` characters in the chunk header for combined diff format."
-msgstr ""
+msgstr "В заголовке блока для комбинированного формата (количество родителей + 1) символов `@`."
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:192
