@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2024-12-25 19:35+0100\n"
-"PO-Revision-Date: 2025-01-12 07:05+0000\n"
+"PO-Revision-Date: 2025-01-12 13:54+0000\n"
 "Last-Translator: Golubev Alexander <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -4577,7 +4577,7 @@ msgstr ""
 #: en/diff-format.txt:122
 #, priority:280
 msgid "Note that 'combined diff' lists only files which were modified from all parents."
-msgstr "Обратите внимание, что «комбинированный вариант» (с `--combined-all-paths`) перечисляет только те файлы, которые были изменены относительно всех родителей."
+msgstr "Обратите внимание, что в «комбинированном» формате в списке изменений перечисляются только те файлы, которые были изменены относительно всех родителей."
 
 #. type: Title -
 #: en/diff-format.txt:128
@@ -4711,49 +4711,49 @@ msgstr "Дополнительный NUL-символ перед именем п
 #: en/diff-generate-patch.txt:3
 #, no-wrap, priority:280
 msgid "Generating patch text with -p"
-msgstr ""
+msgstr "Создание патчей с помощью -p"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:16
 #, placeholders:'linkgit:git-diff[1]':'linkgit:git-log[1]':'linkgit:git-show[1]':'linkgit:git-diff-index[1]':'linkgit:git-diff-tree[1]':'linkgit:git-diff-files[1]':'`-p`':'GIT_EXTERNAL_DIFF':'GIT_DIFF_OPTS':'linkgit:git[1]':'linkgit:gitattributes[5]', priority:280
 msgid "Running linkgit:git-diff[1], linkgit:git-log[1], linkgit:git-show[1], linkgit:git-diff-index[1], linkgit:git-diff-tree[1], or linkgit:git-diff-files[1] with the `-p` option produces patch text. You can customize the creation of patch text via the `GIT_EXTERNAL_DIFF` and the `GIT_DIFF_OPTS` environment variables (see linkgit:git[1]), and the `diff` attribute (see linkgit:gitattributes[5])."
-msgstr ""
+msgstr "Запуск команд linkgit:git-diff[1], linkgit:git-log[1], linkgit:git-show[1], linkgit:git-diff-index[1], linkgit:git-diff-tree[1], или linkgit:git-diff-files[1] с параметром `-p` выдаёт текст патча. Вы можете изменить некоторые аспекты этого создаваемого текста с помощью переменных окружения `GIT_EXTERNAL_DIFF` и `GIT_DIFF_OPTS` (см. linkgit:git[1]), а также атрибута `diff` (см. linkgit:gitattributes[5])."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:19
 #, placeholders:'`-p`', priority:280
 msgid "What the `-p` option produces is slightly different from the traditional diff format:"
-msgstr ""
+msgstr "Тот текст, которые получается на выходе при запуске с параметром `-p`, немного отличается от традиционного формата списка изменений:"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:21
 #, priority:280
 msgid "It is preceded by a \"git diff\" header that looks like this:"
-msgstr ""
+msgstr "В начале идёт заголовок «git diff», который выглядит следующим образом:"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:23
 #, no-wrap, placeholders:'--git', priority:280
 msgid "diff --git a/file1 b/file2\n"
-msgstr ""
+msgstr "diff --git a/файл1 b/файл2\n"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:27
 #, priority:280
 msgid "The `a/` and `b/` filenames are the same unless rename/copy is involved. Especially, even for a creation or a deletion, `/dev/null` is _not_ used in place of the `a/` or `b/` filenames."
-msgstr ""
+msgstr "Имена файлов `a/` и `b/` одинаковы, если изменения не связаны с переименованием или копированием. В частности, даже для создания или удаления вместо имён файлов `a/` или `b/` _не_ используется `/dev/null` ."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:31
 #, priority:280
 msgid "When a rename/copy is involved, `file1` and `file2` show the name of the source file of the rename/copy and the name of the file that the rename/copy produces, respectively."
-msgstr ""
+msgstr "Когда же изменения являются переименование или копирование, `file1` и `file2` отображают имена исходного файла и того, который получается в результате переименования/копирования, соответственно."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:33
 #, priority:280
 msgid "It is followed by one or more extended header lines:"
-msgstr ""
+msgstr "Далее следуют одна или несколько строк расширенного заголовка:"
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:46
@@ -4771,42 +4771,53 @@ msgid ""
 "dissimilarity index <number>\n"
 "index <hash>..<hash> <mode>\n"
 msgstr ""
+"old mode <режим>\n"
+"new mode <режим>\n"
+"deleted file mode <режим>\n"
+"new file mode <режим>\n"
+"copy from <путь>\n"
+"copy to <путь>\n"
+"rename from <путь>\n"
+"rename to <путь>\n"
+"similarity index <число>\n"
+"dissimilarity index <число>\n"
+"index <хэш>..<хэш> <режим>\n"
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:49
 #, priority:280
 msgid "File modes _<mode>_ are printed as 6-digit octal numbers including the file type and file permission bits."
-msgstr ""
+msgstr "Режимы файлов _`<режим>`_ печатаются как 6-значные восьмеричные числа, включающие тип файла и биты разрешений."
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:51
 #, priority:280
 msgid "Path names in extended headers do not include the `a/` and `b/` prefixes."
-msgstr ""
+msgstr "Пути в расширенных заголовках не включают префиксы `a/` и `b/`."
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:58
 #, priority:280
 msgid "The similarity index is the percentage of unchanged lines, and the dissimilarity index is the percentage of changed lines. It is a rounded down integer, followed by a percent sign. The similarity index value of 100% is thus reserved for two equal files, while 100% dissimilarity means that no line from the old file made it into the new one."
-msgstr ""
+msgstr "Индекс сходства — это процент не изменённых строк, а индекс различия — процент изменённых. Он представляет собой округлённое вниз целое число, за которым следует знак процента. Индекс сходства в 100% зарезервирован для двух абсолютно одинаковых файлов, а 100% различий означает, что ни одна строка из старого файла не вошла в новый."
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:62
 #, priority:280
 msgid "The index line includes the blob object names before and after the change. The _<mode>_ is included if the file mode does not change; otherwise, separate lines indicate the old and the new mode."
-msgstr ""
+msgstr "Строка индекса включает имена бинарных объектов до и после изменения. Строка _<режима>_ добавляется, если режим файла не был изменён; в противном случае старый и новый режимы приводятся в отдельных строках."
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:66
 #, placeholders:'core.quotePath':'linkgit:git-config[1]', priority:280
 msgid "Pathnames with \"unusual\" characters are quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1])."
-msgstr ""
+msgstr "Путей с «необычными» символами берутся в кавычки, как это описано для переменной конфигурации `core.quotePath` (см. linkgit:git-config[1])."
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:71
 #, priority:280
 msgid "All the `file1` files in the output refer to files before the commit, and all the `file2` files refer to files after the commit. It is incorrect to apply each change to each file sequentially. For example, this patch will swap a and b:"
-msgstr ""
+msgstr "Все файлы `файл1` в выводе относятся к файлам до коммита, а все файлы `файл2` — к файлам после коммита. Неправильно было бы применять каждое изменение к каждому файлу последовательно. Например, следующий патч поменяет местами `a` и `b`:"
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:78
@@ -4819,30 +4830,36 @@ msgid ""
 "rename from b\n"
 "rename to a\n"
 msgstr ""
+"diff --git a/a b/b\n"
+"rename from a\n"
+"rename to b\n"
+"diff --git a/b b/a\n"
+"rename from b\n"
+"rename to a\n"
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:83
 #, placeholders:'linkgit:gitattributes[5]', priority:280
 msgid "Hunk headers mention the name of the function to which the hunk applies. See \"Defining a custom hunk-header\" in linkgit:gitattributes[5] for details of how to tailor this to specific languages."
-msgstr ""
+msgstr "Заголовки отдельных блоков изменений упоминают имя функции, к которой применяется этот блок. См. подробности, о том, как это можно адаптировать для конкретного языка программирования в разделе «Определение пользовательского заголовка блока» в linkgit:gitattributes[5]."
 
 #. type: Title -
 #: en/diff-generate-patch.txt:86
 #, no-wrap, priority:280
 msgid "Combined diff format"
-msgstr ""
+msgstr "Комбинированный формат списка изменений"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:94
 #, placeholders:'`-c`':'`--cc`':'linkgit:git-diff[1]':'linkgit:git-show[1]':'`--diff-merges`', priority:280
 msgid "Any diff-generating command can take the `-c` or `--cc` option to produce a 'combined diff' when showing a merge. This is the default format when showing merges with linkgit:git-diff[1] or linkgit:git-show[1]. Note also that you can give suitable `--diff-merges` option to any of these commands to force generation of diffs in a specific format."
-msgstr ""
+msgstr "Любая команда, выводящая список изменений, принимает параметры `-c` или `--cc`, которые приводят к созданию списка изменений для слияний в «комбинированном» формате («combined diff»). Это формат по умолчанию при выводе слияний с помощью linkgit:git-diff[1] или linkgit:git-show[1]. Также обратите внимание, что для того, чтобы заставить эти команды выводить списки изменений в каком-либо другом формате, можно использовать параметр `--diff-merges` с соответствующими аргументами."
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:96
 #, priority:280
 msgid "A \"combined diff\" format looks like this:"
-msgstr ""
+msgstr "Комбинированный формат списков изменений выглядит следующим образом:"
 
 #. type: delimited block -
 #: en/diff-generate-patch.txt:105
@@ -4856,6 +4873,13 @@ msgid ""
 "\treturn (a_date > b_date) ? -1 : (a_date == b_date) ? 0 : 1;\n"
 "  }\n"
 msgstr ""
+"diff --combined describe.c\n"
+"index fabadb8,cc95eb0..4866510\n"
+"--- a/describe.c\n"
+"+++ b/describe.c\n"
+"@@@ -98,20 -98,12 +98,20 @@@\n"
+"\treturn (a_date > b_date) ? -1 : (a_date == b_date) ? 0 : 1;\n"
+"  }\n"
 
 #. type: delimited block -
 #: en/diff-generate-patch.txt:115
@@ -4871,6 +4895,15 @@ msgid ""
 "\tstatic int initialized = 0;\n"
 "\tstruct commit_name *n;\n"
 msgstr ""
+"- static void describe(char *arg)\n"
+" -static void describe(struct commit *cmit, int last_one)\n"
+"++static void describe(char *arg, int last_one)\n"
+"  {\n"
+" +\tunsigned char sha1[20];\n"
+" +\tstruct commit *cmit;\n"
+"\tstruct commit_list *list;\n"
+"\tstatic int initialized = 0;\n"
+"\tstruct commit_name *n;\n"
 
 #. type: delimited block -
 #: en/diff-generate-patch.txt:125
@@ -4886,36 +4919,45 @@ msgid ""
 "\t\tinitialized = 1;\n"
 "\t\tfor_each_ref(get_name);\n"
 msgstr ""
+" +\tif (get_sha1(arg, sha1) < 0)\n"
+" +\t\tusage(describe_usage);\n"
+" +\tcmit = lookup_commit_reference(sha1);\n"
+" +\tif (!cmit)\n"
+" +\t\tusage(describe_usage);\n"
+" +\n"
+"\tif (!initialized) {\n"
+"\t\tinitialized = 1;\n"
+"\t\tfor_each_ref(get_name);\n"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:129
 #, placeholders:'`-c`', priority:280
 msgid "It is preceded by a \"git diff\" header, that looks like this (when the `-c` option is used):"
-msgstr ""
+msgstr "В начале идёт заголовок «git diff», который выглядит следующим образом (при использовании параметра `-c`):"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:131
 #, no-wrap, placeholders:'--combined', priority:280
 msgid "diff --combined file\n"
-msgstr ""
+msgstr "diff --combined файл\n"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:133
 #, placeholders:'`--cc`', priority:280
 msgid "or like this (when the `--cc` option is used):"
-msgstr ""
+msgstr "или следующим (при использовании параметра `--cc`):"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:135
 #, no-wrap, placeholders:'--cc', priority:280
 msgid "       diff --cc file\n"
-msgstr ""
+msgstr "       diff --cc файл\n"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:138
 #, priority:280
 msgid "It is followed by one or more extended header lines (this example shows a merge with two parents):"
-msgstr ""
+msgstr "Далее следуют одна или несколько строк расширенного заголовка (в данном примере показано слияние с двумя родителями):"
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:144
@@ -4926,12 +4968,16 @@ msgid ""
 "new file mode <mode>\n"
 "deleted file mode <mode>,<mode>\n"
 msgstr ""
+"index <хэш>,<хэш>..<хэш>\n"
+"mode <режим>,<режим>`..`<режим>\n"
+"new file mode <режим>\n"
+"deleted file mode <режим>,<режим>\n"
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:150
 #, priority:280
 msgid "The `mode <mode>,<mode>..<mode>` line appears only if at least one of the <mode> is different from the rest. Extended headers with information about detected content movement (renames and copying detection) are designed to work with the diff of two _<tree-ish>_ and are not used by combined diff format."
-msgstr ""
+msgstr "Строка `mode <режим>,<режим>..<режим>` присутствует только если хотя бы один из <режимов> отличается от остальных. Расширенные заголовки с информацией о найденных перемещениях содержимого (обнаруженных переименованиях и копированиях) предназначены для работы только со списком изменений строго двух _<указателей-дерева>_ и не используются в комбинированном формате."
 
 #. type: synopsis
 #: en/diff-generate-patch.txt:152
@@ -6443,10 +6489,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/diff-options.txt:760
-#, fuzzy, no-wrap, placeholders:'`--relative', priority:280
-#| msgid "--relative-date"
+#, no-wrap, placeholders:'`--relative', priority:280
 msgid "`--relative[=<path>]`"
-msgstr "--relative-date"
+msgstr "`--relative[=<путь>]`"
 
 #. type: Labeled list
 #: en/diff-options.txt:761
@@ -12386,15 +12431,15 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-bugreport.txt:48
-#, fuzzy, no-wrap, priority:100
+#, no-wrap, priority:100
 msgid "-o <path>"
-msgstr "-o <опция>"
+msgstr "-o <путь>"
 
 #. type: Labeled list
 #: en/git-bugreport.txt:49
-#, fuzzy, no-wrap, placeholders:'--output-directory', priority:100
+#, no-wrap, placeholders:'--output-directory', priority:100
 msgid "--output-directory <path>"
-msgstr "--no-empty-directory"
+msgstr "--output-directory <путь>"
 
 #. type: Plain text
 #: en/git-bugreport.txt:52
@@ -15002,7 +15047,7 @@ msgstr "--pathspec-from-file=<файл>"
 #: en/git-checkout.txt:329 en/git-commit.txt:329 en/git-reset.txt:122 en/git-restore.txt:139 en/git-rm.txt:93 en/git-stash.txt:230
 #, placeholders:'core.quotePath':'linkgit:git-config[1]':'`--pathspec-file-nul`':'`--literal-pathspecs`', priority:280
 msgid "Pathspec is passed in `<file>` instead of commandline args. If `<file>` is exactly `-` then standard input is used. Pathspec elements are separated by LF or CR/LF. Pathspec elements can be quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1]). See also `--pathspec-file-nul` and global `--literal-pathspecs`."
-msgstr "Спецификатор пути передаётся в `<файле>`, а не в аргументах командной строки. Если в качестве `<файла>` указано в точности `-`, то используется стандартный поток ввода. Элементы спецификатора пути отделяются друг от друга символами LF или CR/LF. Элементы спецификатора пути могут указываться в кавычках, как объясняется в описании переменной конфигурации `core.quotePath` (см. linkgit:git-config[1]). См. также `--pathspec-file-nul` и глобальный параметр `--literal-pathspecs`."
+msgstr "Спецификатор пути передаётся в `<файле>`, а не в аргументах командной строки. Если в качестве `<файла>` указано в точности `-`, то используется стандартный поток ввода. Элементы спецификатора пути отделяются друг от друга символами LF или CR/LF. Элементы спецификатора пути могут указываться в кавычках, как это описано для переменной конфигурации `core.quotePath` (см. linkgit:git-config[1]). См. также `--pathspec-file-nul` и глобальный параметр `--literal-pathspecs`."
 
 #. type: Labeled list
 #: en/git-checkout.txt:330 en/git-commit.txt:330 en/git-reset.txt:123 en/git-restore.txt:140 en/git-rm.txt:94 en/git-stash.txt:231
@@ -17777,7 +17822,7 @@ msgstr "--null"
 #: en/git-commit.txt:166
 #, placeholders:'`--porcelain`':'`-z`':'core.quotePath':'linkgit:git-config[1]', priority:280
 msgid "When showing `short` or `porcelain` status output, print the filename verbatim and terminate the entries with NUL, instead of LF. If no format is given, implies the `--porcelain` output format. Without the `-z` option, filenames with \"unusual\" characters are quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1])."
-msgstr "При выводе информации в коротком (`short`) или машиночитаемом (`porcelain`) формате, печатать имя файла дословно и завершать вывод символом NUL вместо LF. Если формат вывода на был указан, то подразумевается `--porcelain`. Без параметра `-z` «необычные» символы в именах файлов экранируются, в соответствии со значением переменной конфигурации `core.quotePath' (см. linkgit:git-config[1])."
+msgstr "При выводе информации в коротком (`short`) или машиночитаемом (`porcelain`) формате, печатать имя файла дословно и завершать вывод символом NUL вместо LF. Если формат вывода на был указан, то подразумевается `--porcelain`. Без параметра `-z` «необычные» символы в именах файлов берутся в кавычки, как это описано для переменной конфигурации `core.quotePath` (см. linkgit:git-config[1])."
 
 #. type: Labeled list
 #: en/git-commit.txt:168 en/git-merge.txt:87 en/git-notes.txt:152 en/git-tag.txt:176
@@ -22730,9 +22775,9 @@ msgstr "git-diff-files - Сравнить файлы в рабочем ката�
 
 #. type: verse
 #: en/git-diff-files.txt:13
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'git diff-files':'--cc]', priority:100
+#, ignore-ellipsis, no-wrap, placeholders:'git diff-files':'--cc]', priority:100
 msgid "'git diff-files' [-q] [-0 | -1 | -2 | -3 | -c | --cc] [<common-diff-options>] [<path>...]\n"
-msgstr "'git diff-files' [-q] [-0|-1|-2|-3|-c|--cc] [<common diff options>] [<путь>...]\n"
+msgstr "'git diff-files' [-q] [-0|-1|-2|-3|-c|--cc] [<обычные-параметры-diff>] [<путь>...]\n"
 
 #. type: Plain text
 #: en/git-diff-files.txt:20
@@ -22804,7 +22849,7 @@ msgstr ""
 #: en/git-diff-index.txt:13
 #, ignore-ellipsis, no-wrap, placeholders:'git diff-index':'[--cached]':'[--merge-base]', priority:80
 msgid "'git diff-index' [-m] [--cached] [--merge-base] [<common-diff-options>] <tree-ish> [<path>...]\n"
-msgstr "'git diff-index' [-m] [--cached] [--merge-base] [<обычные параметры diff>] <указатель-дерева> [<путь>...]\n"
+msgstr "'git diff-index' [-m] [--cached] [--merge-base] [<обычные-параметры-diff>] <указатель-дерева> [<путь>...]\n"
 
 #. type: Plain text
 #: en/git-diff-index.txt:21
@@ -22991,9 +23036,9 @@ msgstr ""
 
 #. type: verse
 #: en/git-difftool.txt:12
-#, fuzzy, ignore-ellipsis, no-wrap, priority:100
+#, ignore-ellipsis, no-wrap, priority:100
 msgid "'git difftool' [<options>] [<commit> [<commit>]] [--] [<path>...]\n"
-msgstr "git difftool [<опции>] [<коммит> [<коммит>]] [--] [<путь>…]"
+msgstr "'git difftool' [<параметры>] [<коммит> [<коммит>]] [--] [<путь>...]\n"
 
 #. type: Plain text
 #: en/git-difftool.txt:19
@@ -23414,10 +23459,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-diff.txt:26
-#, fuzzy, ignore-ellipsis, no-wrap, priority:280
-#| msgid "'git status' [<options>...] [--] [<pathspec>...]\n"
+#, ignore-ellipsis, no-wrap, priority:280
 msgid "`git diff [<options>] [--] [<path>...]`"
-msgstr "'git status' [<опции>...] [--] [<спецификатор-пути>…]\n"
+msgstr "`git diff [<параметры>] [--] [<путь>...]`"
 
 #. type: Plain text
 #: en/git-diff.txt:33
@@ -23427,9 +23471,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-diff.txt:34
-#, fuzzy, no-wrap, placeholders:'--no-index', priority:280
+#, no-wrap, placeholders:'--no-index', priority:280
 msgid "`git diff [<options>] --no-index [--] <path> <path>`"
-msgstr "'git diff' [<опции>] <коммит> <коммит> [--] [<путь>…]"
+msgstr "`git diff [<параметры>] --no-index [--] <путь> <путь>`"
 
 #. type: Plain text
 #: en/git-diff.txt:42
@@ -23439,9 +23483,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-diff.txt:43
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'--cached':'[--merge-base]', priority:280
+#, ignore-ellipsis, no-wrap, placeholders:'--cached':'[--merge-base]', priority:280
 msgid "`git diff [<options>] --cached [--merge-base] [<commit>] [--] [<path>...]`"
-msgstr "'git diff' [<опции>] --cached [<коммит>] [--] [<путь>…]"
+msgstr "`git diff [<параметры>] --cached [--merge-base] [<коммит>] [--] [<путь>...]`"
 
 #. type: Plain text
 #: en/git-diff.txt:52
@@ -23457,9 +23501,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-diff.txt:57
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'[--merge-base]', priority:280
+#, ignore-ellipsis, no-wrap, placeholders:'[--merge-base]', priority:280
 msgid "`git diff [<options>] [--merge-base] <commit> [--] [<path>...]`"
-msgstr "'git diff' [<опции>] <коммит> <коммит> [--] [<путь>…]"
+msgstr "`git diff [<параметры>] [--merge-base] <коммит> [--] [<путь>...]`"
 
 #. type: Plain text
 #: en/git-diff.txt:64
@@ -23475,9 +23519,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-diff.txt:69
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'[--merge-base]', priority:280
+#, ignore-ellipsis, no-wrap, placeholders:'[--merge-base]', priority:280
 msgid "`git diff [<options>] [--merge-base] <commit> <commit> [--] [<path>...]`"
-msgstr "'git diff' [<опции>] <коммит> <коммит> [--] [<путь>…]"
+msgstr "`git diff [<параметры>] [--merge-base] <коммит> <коммит> [--] [<путь>...]`"
 
 #. type: Plain text
 #: en/git-diff.txt:73
@@ -23493,9 +23537,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-diff.txt:78
-#, fuzzy, ignore-ellipsis, no-wrap, priority:280
+#, ignore-ellipsis, no-wrap, priority:280
 msgid "`git diff [<options>] <commit> <commit>...<commit> [--] [<path>...]`"
-msgstr "'git diff [<опции>] <коммит>\\... <коммит> [--] [<путь>…]"
+msgstr "`git diff [<параметры>] <коммит> <коммит>...<коммит> [--] [<путь>...]`"
 
 #. type: Plain text
 #: en/git-diff.txt:86
@@ -23505,10 +23549,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-diff.txt:87
-#, fuzzy, ignore-ellipsis, no-wrap, priority:280
-#| msgid "'git diff' [<options>] <commit>..<commit> [--] [<path>...]"
+#, ignore-ellipsis, no-wrap, priority:280
 msgid "`git diff [<options>] <commit>..<commit> [--] [<path>...]`"
-msgstr "'git diff' [<опции>] <коммит>..<коммит> [--] [<путь>…]"
+msgstr "`git diff [<параметры>] <коммит>..<коммит> [--] [<путь>...]`"
 
 #. type: Plain text
 #: en/git-diff.txt:93
@@ -23518,10 +23561,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-diff.txt:94
-#, fuzzy, ignore-ellipsis, no-wrap, priority:280
-#| msgid "'git diff' [<options>] <commit>\\...<commit> [--] [<path>...]"
+#, ignore-ellipsis, no-wrap, priority:280
 msgid "`git diff [<options>] <commit>...<commit> [--] [<path>...]`"
-msgstr "'git diff [<опции>] <коммит>\\... <коммит> [--] [<путь>…]"
+msgstr "`git diff [<параметры>] <коммит>...<коммит> [--] [<путь>...]`"
 
 #. type: Plain text
 #: en/git-diff.txt:101
@@ -23633,10 +23675,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-diff.txt:151
-#, fuzzy, ignore-ellipsis, no-wrap, priority:280
-#| msgid "<pathspec>..."
+#, ignore-ellipsis, no-wrap, priority:280
 msgid "`<path>...`"
-msgstr "<спецификатор-пути>…"
+msgstr "`<путь>…`"
 
 #. type: Plain text
 #: en/git-diff.txt:155
@@ -28833,9 +28874,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-for-each-ref.txt:319
-#, fuzzy, no-wrap, priority:80
+#, no-wrap, priority:80
 msgid "abbrev=<number>"
-msgstr "номер-родителя"
+msgstr "abbrev=<число>"
 
 #. type: Plain text
 #: en/git-for-each-ref.txt:322
@@ -35048,9 +35089,9 @@ msgstr ""
 
 #. type: verse
 #: en/git-log.txt:13
-#, fuzzy, ignore-ellipsis, no-wrap, priority:260
+#, ignore-ellipsis, no-wrap, priority:260
 msgid "'git log' [<options>] [<revision-range>] [[--] <path>...]\n"
-msgstr "'git log' [<опции>] [<диапазон ревизий>] [[--] <путь>…]\n"
+msgstr "'git log' [<параметры>] [<диапазон-редакций>] [[--] <путь>…]\n"
 
 #. type: Plain text
 #: en/git-log.txt:17
@@ -40224,9 +40265,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-p4.txt:292
-#, fuzzy, no-wrap, priority:90
+#, no-wrap, priority:90
 msgid "-/ <path>"
-msgstr "-o <опция>"
+msgstr "-/ <путь>"
 
 #. type: Plain text
 #: en/git-p4.txt:294
@@ -50190,9 +50231,9 @@ msgstr "Вывод списка объектов коммита в обратн�
 
 #. type: verse
 #: en/git-rev-list.txt:13
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'git rev-list', priority:80
+#, ignore-ellipsis, no-wrap, placeholders:'git rev-list', priority:80
 msgid "'git rev-list' [<options>] <commit>... [--] [<path>...]\n"
-msgstr "git difftool [<опции>] [<коммит> [<коммит>]] [--] [<путь>…]"
+msgstr "'git rev-list' [<параметры>] <коммит>... [--] [<путь>...]\n"
 
 #. type: Plain text
 #: en/git-rev-list.txt:25
@@ -53004,11 +53045,13 @@ msgstr ""
 
 #. type: verse
 #: en/git-shortlog.txt:13
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'--pretty=short', priority:260
+#, ignore-ellipsis, no-wrap, placeholders:'--pretty=short', priority:260
 msgid ""
 "'git shortlog' [<options>] [<revision-range>] [[--] <path>...]\n"
 "git log --pretty=short | 'git shortlog' [<options>]\n"
-msgstr "'git log' [<опции>] [<диапазон ревизий>] [[--] <путь>…]\n"
+msgstr ""
+"'git shortlog' [<параметры>] [<диапазон-редакций>] [[--] <путь>...]\n"
+"git log --pretty=short | 'git shortlog' [<параметры>]\n"
 
 #. type: Plain text
 #: en/git-shortlog.txt:18
@@ -56969,9 +57012,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-svn.txt:317
-#, fuzzy, no-wrap, priority:100
+#, no-wrap, priority:100
 msgid "-d<path>"
-msgstr "-o <опция>"
+msgstr "-d<путь>"
 
 #. type: Labeled list
 #: en/git-svn.txt:318
@@ -59390,9 +59433,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git.txt:62
-#, fuzzy, no-wrap, priority:100
+#, no-wrap, priority:100
 msgid "-C <path>"
-msgstr "-o <опция>"
+msgstr "-C <путь>"
 
 #. type: Plain text
 #: en/git.txt:68
@@ -66915,7 +66958,7 @@ msgid ""
 "Author: <author>\n"
 "Date:   <author-date>\n"
 msgstr ""
-"commit <хеш>\n"
+"commit <хэш>\n"
 "Author: <автор>\n"
 "Date:   <дата-создания>\n"
 
@@ -66939,7 +66982,7 @@ msgid ""
 "Author: <author>\n"
 "Commit: <committer>\n"
 msgstr ""
-"commit <хеш>\n"
+"commit <хэш>\n"
 "Author: <автор>\n"
 "Commit: <коммитер>\n"
 
@@ -66959,11 +67002,11 @@ msgid ""
 "Commit:     <committer>\n"
 "CommitDate: <committer-date>\n"
 msgstr ""
-"commit <хеш>\n"
+"commit <хэш>\n"
 "Author:     <автор>\n"
 "AuthorDate: <дата-создания>\n"
 "Commit:     <коммиттер>\n"
-"CommitDate: <дата-комита>\n"
+"CommitDate: <дата-коммита>\n"
 
 #. type: Plain text
 #: en/pretty-formats.txt:67
