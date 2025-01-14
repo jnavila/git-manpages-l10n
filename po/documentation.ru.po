@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2024-12-25 19:35+0100\n"
-"PO-Revision-Date: 2025-01-14 19:50+0000\n"
+"PO-Revision-Date: 2025-01-15 20:00+0000\n"
 "Last-Translator: Golubev Alexander <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -464,7 +464,7 @@ msgstr "linkgit:git-show-branch[1]"
 #: en/cmds-ancillaryinterrogators.txt:36
 #, priority:100
 msgid "Show branches and their commits."
-msgstr "Отображение веток и их коммитов."
+msgstr "Вывод веток и их коммитов."
 
 #. type: Labeled list
 #: en/cmds-ancillaryinterrogators.txt:37
@@ -3817,7 +3817,7 @@ msgstr "`patience`"
 #: en/config/diff.txt:239 en/diff-options.txt:206
 #, priority:280
 msgid "Use \"patience diff\" algorithm when generating patches."
-msgstr "Используйте «терпеливый» алгоритм сравнения (\"patience diff\") для генерации патчей."
+msgstr "Используйте «терпеливый» алгоритм сравнения (patience diff) для генерации патчей."
 
 #. type: Labeled list
 #: en/config/diff.txt:239 en/diff-options.txt:206
@@ -3874,7 +3874,7 @@ msgid ""
 "\tIf simply set to `true` the default color mode will be used. When\n"
 "\tset to `false`, moved lines are not colored.\n"
 msgstr ""
-"\tЕсли в качестве значения установлено порсто `true`, будет использован режим выделения\n"
+"\tЕсли в качестве значения установлено просто `true`, будет использован режим выделения\n"
 "\tпо умолчанию. Если установлено `false`, перемещённые строки не выделяются.\n"
 
 #. type: Labeled list
@@ -4847,7 +4847,7 @@ msgstr "Заголовки отдельных блоков изменений у
 #: en/diff-generate-patch.txt:86
 #, no-wrap, priority:280
 msgid "Combined diff format"
-msgstr "Комбинированный формат списка изменений"
+msgstr "Комбинированный формат списков изменений"
 
 #. type: Plain text
 #: en/diff-generate-patch.txt:94
@@ -5115,7 +5115,7 @@ msgstr "`--no-patch`"
 #: en/diff-options.txt:36
 #, placeholders:'`--patch`':'`--stat`', priority:280
 msgid "Suppress all output from the diff machinery. Useful for commands like `git show` that show the patch by default to squelch their output, or to cancel the effect of options like `--patch`, `--stat` earlier on the command line in an alias."
-msgstr "Подавлять весь вывод от утилиты сравнения (включая в частности собственно список изменений). Полезно для команд, вроде `git show`, чтобы подавить вывод патча, который иначе показывается по умолчанию; или чтобы отменить эффект таких параметров, как `--patch`, или `--stat`, указанных ранее в командной строке (например в псевдониме (alias) для этой команды)."
+msgstr "Подавлять весь вывод от утилиты сравнения (включая в частности собственно список изменений). Полезно для команд, вроде `git show`, чтобы подавить вывод патча, который иначе показывается по умолчанию; или чтобы отменить эффект таких параметров, как `--patch`, или `--stat`, указанных ранее в командной строке (например для команды сокращения (alias))."
 
 #. type: Labeled list
 #: en/diff-options.txt:40 en/git-am.txt:83 en/git-branch.txt:131 en/git-checkout.txt:250 en/git-cvsexportcommit.txt:60 en/git-cvsimport.txt:118 en/git-diff-index.txt:37 en/git-diff-tree.txt:71 en/git-help.txt:96 en/git-instaweb.txt:36 en/git-ls-files.txt:48 en/git-mailinfo.txt:71 en/git-read-tree.txt:33 en/git-rebase.txt:371 en/git-repack.txt:247 en/git-restore.txt:88 en/git-svn.txt:308 en/git-svn.txt:675 en/git-switch.txt:126 en/git-symbolic-ref.txt:58
@@ -5151,7 +5151,7 @@ msgstr "--cc"
 #: en/diff-options.txt:52
 #, placeholders:'`--diff-merges=dense-combined', priority:280
 msgid "Produce dense combined diff output for merge commits. Shortcut for `--diff-merges=dense-combined -p`."
-msgstr ""
+msgstr "Для коммитов слияния выводить список изменений в уплотнённом комбинированном формате. Краткая версия для `--diff-merges=combined -p`."
 
 #. type: Labeled list
 #: en/diff-options.txt:53
@@ -5163,7 +5163,7 @@ msgstr "--dd"
 #: en/diff-options.txt:57
 #, placeholders:'`--diff-merges=first-parent', priority:280
 msgid "Produce diff with respect to first parent for both merge and regular commits. Shortcut for `--diff-merges=first-parent -p`."
-msgstr ""
+msgstr "И для обычных коммитов и для коммитов слияния выводить список изменений относительно только первого родителя. Краткая версия для `--diff-merges=first-parent -p`."
 
 #. type: Labeled list
 #: en/diff-options.txt:58
@@ -5175,7 +5175,7 @@ msgstr "--remerge-diff"
 #: en/diff-options.txt:61
 #, placeholders:'`--diff-merges=remerge', priority:280
 msgid "Produce remerge-diff output for merge commits. Shortcut for `--diff-merges=remerge -p`."
-msgstr ""
+msgstr "Для коммитов слияния выводить список изменений результата относительно переслитого коммита. Краткая версия для `--diff-merges=remerge -p`."
 
 #. type: Labeled list
 #: en/diff-options.txt:62
@@ -5185,52 +5185,51 @@ msgstr "--no-diff-merges"
 
 #. type: Plain text
 #: en/diff-options.txt:64
-#, fuzzy, placeholders:'`--diff-merges=off`', priority:280
+#, placeholders:'`--diff-merges=off`', priority:280
 msgid "Synonym for `--diff-merges=off`."
-msgstr "diffmerge"
+msgstr "Синоним для `--diff-merges=off`."
 
 #. type: Labeled list
 #: en/diff-options.txt:65
-#, fuzzy, no-wrap, placeholders:'--diff-merges=', priority:280
+#, no-wrap, placeholders:'--diff-merges=', priority:280
 msgid "--diff-merges=<format>"
-msgstr "diffmerge"
+msgstr "--diff-merges=<формат>"
 
 #. type: Plain text
 #: en/diff-options.txt:69
 #, placeholders:'{diff-merges-default}':'`--first-parent`', priority:280
 msgid "Specify diff format to be used for merge commits. Default is {diff-merges-default} unless `--first-parent` is in use, in which case `first-parent` is the default."
-msgstr ""
+msgstr "Задаёт формат diff, который будет использоваться для коммитов слияния. По умолчанию используется {diff-merges-default}, если только не задан параметр `--first-parent`, в таком случае по умолчанию используется `first-parent`."
 
 #. type: Plain text
 #: en/diff-options.txt:71
 #, priority:280
 msgid "The following formats are supported:"
-msgstr ""
+msgstr "Поддерживаются следующие форматы:"
 
 #. type: Labeled list
 #: en/diff-options.txt:73
-#, fuzzy, no-wrap, priority:280
-#| msgid "none"
+#, no-wrap, priority:280
 msgid "off, none"
-msgstr "none"
+msgstr "off, none"
 
 #. type: Plain text
 #: en/diff-options.txt:76
 #, priority:280
 msgid "Disable output of diffs for merge commits. Useful to override implied value."
-msgstr ""
+msgstr "Отключать вывод списков изменений для коммитов слияния. Полезно если параметр `--diff-merges=<формат>` подразумевается другим параметром."
 
 #. type: Labeled list
 #: en/diff-options.txt:77
 #, no-wrap, priority:280
 msgid "on, m"
-msgstr ""
+msgstr "on, m"
 
 #. type: Plain text
 #: en/diff-options.txt:82
 #, placeholders:'log.diffMerges', priority:280
 msgid "Make diff output for merge commits to be shown in the default format. The default format can be changed using `log.diffMerges` configuration variable, whose default value is `separate`."
-msgstr ""
+msgstr "Выводить список изменений для коммитов слияния в формате по умолчанию. Формат по умолчанию можно изменить с помощью переменной конфигурации `log.diffMerges`; её значение по умолчанию: `separate`."
 
 #. type: Labeled list
 #: en/diff-options.txt:83
@@ -5242,62 +5241,61 @@ msgstr "first-parent, 1"
 #: en/diff-options.txt:86
 #, placeholders:'`--patch`', priority:280
 msgid "Show full diff with respect to first parent. This is the same format as `--patch` produces for non-merge commits."
-msgstr ""
+msgstr "Показывать полный список изменений относительно первого родителя. Этот формат такой же, как тот что выводит `--patch` для коммитов не являющихся коммитами слияния."
 
 #. type: Labeled list
 #: en/diff-options.txt:87
 #, no-wrap, priority:280
 msgid "separate"
-msgstr ""
+msgstr "separate"
 
 #. type: Plain text
 #: en/diff-options.txt:90
 #, priority:280
 msgid "Show full diff with respect to each of parents. Separate log entry and diff is generated for each parent."
-msgstr ""
+msgstr "Показывать полный список изменений относительно каждого из родителей. Отдельные списки изменений с их сообщениями коммитов создаются для каждого родителя."
 
 #. type: Labeled list
 #: en/diff-options.txt:91
 #, no-wrap, priority:280
 msgid "combined, c"
-msgstr ""
+msgstr "combined, c"
 
 #. type: Plain text
 #: en/diff-options.txt:96
 #, priority:280
 msgid "Show differences from each of the parents to the merge result simultaneously instead of showing pairwise diff between a parent and the result one at a time. Furthermore, it lists only files which were modified from all parents."
-msgstr ""
+msgstr "Показывать отличия каждого из родителей от результата слияния одновременно, а не отдельные попарные списки изменений между каждым родителем и результатом. Кроме того, будут показаны только те файлы, которые отличаются от всех своих родителей."
 
 #. type: Labeled list
 #: en/diff-options.txt:97
-#, fuzzy, no-wrap, priority:280
+#, no-wrap, priority:280
 msgid "dense-combined, cc"
-msgstr "diffmerge"
+msgstr "dense-combined, cc"
 
 #. type: Plain text
 #: en/diff-options.txt:102
 #, placeholders:'`--diff-merges=combined`', priority:280
 msgid "Further compress output produced by `--diff-merges=combined` by omitting uninteresting hunks whose contents in the parents have only two variants and the merge result picks one of them without modification."
-msgstr ""
+msgstr "Ещё сильнее уплотнить вывод, получаемый с ключом `--diff-merges=combined`, пропуская неинтересные блоки, для которых в родительских коммитах есть только две версии, а результат слияния просто выбирает одну из них, не изменяя её."
 
 #. type: Labeled list
 #: en/diff-options.txt:103
-#, fuzzy, no-wrap, priority:280
-#| msgid "emerge"
+#, no-wrap, priority:280
 msgid "remerge, r"
-msgstr "emerge"
+msgstr "remerge, r"
 
 #. type: Plain text
 #: en/diff-options.txt:108
 #, priority:280
 msgid "Remerge two-parent merge commits to create a temporary tree object--potentially containing files with conflict markers and such. A diff is then shown between that temporary tree and the actual merge commit."
-msgstr ""
+msgstr "Заново слить коммиты слияния, у которых ровно два родителя, чтобы создать временный объект-дерево — потенциально содержащий файлы с маркерами конфликтов и т. п., а затем показать разницу между этим временным деревом и фактическим коммитом слияния."
 
 #. type: Plain text
 #: en/diff-options.txt:112
 #, priority:280
 msgid "The output emitted when this option is used is subject to change, and so is its interaction with other options (unless explicitly documented)."
-msgstr ""
+msgstr "Вывод при использовании этого параметра, может быть изменён, также как и его взаимодействие с другими параметрами (если иное не документировано явно)."
 
 #. type: Labeled list
 #: en/diff-options.txt:114 en/git-diff-tree.txt:113
@@ -5309,31 +5307,31 @@ msgstr "--combined-all-paths"
 #: en/diff-options.txt:120
 #, placeholders:'`--diff-merges=[dense-]combined`', priority:280
 msgid "Cause combined diffs (used for merge commits) to list the name of the file from all parents. It thus only has effect when `--diff-merges=[dense-]combined` is in use, and is likely only useful if filename changes are detected (i.e. when either rename or copy detection have been requested)."
-msgstr ""
+msgstr "Для комбинированных списков изменений (те которые используются для коммитов слияния) перечислять имена файла изо всех родителей. Это имеет эффект только при использовании совместно с `--diff-merges=[dense-]combined` и, вероятно, полезно только если будут обнаружены изменения имён файлов (т.е. когда включено обнаружение переименований или копирований)."
 
 #. type: Labeled list
 #: en/diff-options.txt:122
 #, no-wrap, priority:280
 msgid "`-U<n>`"
-msgstr ""
+msgstr "`-U<n>`"
 
 #. type: Labeled list
 #: en/diff-options.txt:123
 #, no-wrap, placeholders:'`--unified=', priority:280
 msgid "`--unified=<n>`"
-msgstr ""
+msgstr "`--unified=<n>`"
 
 #. type: Plain text
 #: en/diff-options.txt:126
 #, priority:280
 msgid "Generate diffs with _<n>_ lines of context instead of the usual three."
-msgstr ""
+msgstr "Генерировать списки изменений с _<n>_ строками контекста вместо обычных трёх."
 
 #. type: Plain text
 #: en/diff-options.txt:128 en/diff-options.txt:538
 #, no-wrap, placeholders:'`--patch`', priority:280
 msgid "\tImplies `--patch`.\n"
-msgstr ""
+msgstr "\tПодразумевает `--patch`.\n"
 
 #. type: Labeled list
 #: en/diff-options.txt:130
@@ -5345,31 +5343,31 @@ msgstr "`--output=<файл>`"
 #: en/diff-options.txt:132
 #, priority:280
 msgid "Output to a specific file instead of stdout."
-msgstr ""
+msgstr "Выводить в указанный файл вместо стандартного вывода."
 
 #. type: Labeled list
 #: en/diff-options.txt:133
-#, fuzzy, no-wrap, placeholders:'`--output-indicator-new=', priority:280
+#, no-wrap, placeholders:'`--output-indicator-new=', priority:280
 msgid "`--output-indicator-new=<char>`"
-msgstr "--no-empty-directory"
+msgstr "`--output-indicator-new=<символ>`"
 
 #. type: Labeled list
 #: en/diff-options.txt:134
-#, fuzzy, no-wrap, placeholders:'`--output-indicator-old=', priority:280
+#, no-wrap, placeholders:'`--output-indicator-old=', priority:280
 msgid "`--output-indicator-old=<char>`"
-msgstr "--no-empty-directory"
+msgstr "`--output-indicator-old=<символ>`"
 
 #. type: Labeled list
 #: en/diff-options.txt:135
-#, fuzzy, no-wrap, placeholders:'`--output-indicator-context=', priority:280
+#, no-wrap, placeholders:'`--output-indicator-context=', priority:280
 msgid "`--output-indicator-context=<char>`"
-msgstr "--no-empty-directory"
+msgstr "`--output-indicator-context=<символ>`"
 
 #. type: Plain text
 #: en/diff-options.txt:139
 #, priority:280
 msgid "Specify the character used to indicate new, old or context lines in the generated patch. Normally they are `+`, `-` and ' ' respectively."
-msgstr ""
+msgstr "Задаёт символ, используемый для обозначения новых, старых или контекстных строк в сгенерированном патче. Обычно это `+`, `-` и ` ` соответственно."
 
 #. type: Labeled list
 #: en/diff-options.txt:141
@@ -5381,7 +5379,7 @@ msgstr "`--raw`"
 #: en/diff-options.txt:144
 #, no-wrap, priority:280
 msgid "\tGenerate the diff in raw format.\n"
-msgstr ""
+msgstr "\tСгенерировать список изменений в сыром формате.\n"
 
 #. type: Plain text
 #: en/diff-options.txt:154
@@ -5393,6 +5391,11 @@ msgid ""
 "\titself in raw format, which you can achieve with\n"
 "\t`--format=raw`.\n"
 msgstr ""
+"\tДля каждого коммита показывать сводку изменений,\n"
+"\tиспользуя сырой формат. См. раздел «СЫРОЙ ФОРМАТ ВЫВОДА»\n"
+"\tв linkgit:git-diff[1]. Это не то же самое, что вывод\n"
+"\tжурнала в сыром формате, который используется при\n"
+"\tпередаче параметра `--format=raw`.\n"
 
 #. type: Labeled list
 #: en/diff-options.txt:158
@@ -5414,9 +5417,9 @@ msgstr "`-t`"
 
 #. type: Plain text
 #: en/diff-options.txt:165
-#, fuzzy, priority:280
+#, priority:280
 msgid "Show the tree objects in the diff output."
-msgstr "показывать удаленные файлы при выводе"
+msgstr "Показывать объекты дерева при выводе списка изменений."
 
 #. type: Labeled list
 #: en/diff-options.txt:167
@@ -5428,7 +5431,7 @@ msgstr "`--indent-heuristic`"
 #: en/diff-options.txt:170
 #, priority:280
 msgid "Enable the heuristic that shifts diff hunk boundaries to make patches easier to read. This is the default."
-msgstr ""
+msgstr "Применять эвристику, которая сдвигает границы блоков списков изменений, дабы сделать патчи более удобными для чтения. Это поведение включено по умолчанию."
 
 #. type: Labeled list
 #: en/diff-options.txt:171
@@ -5440,7 +5443,7 @@ msgstr "`--no-indent-heuristic`"
 #: en/diff-options.txt:173
 #, priority:280
 msgid "Disable the indent heuristic."
-msgstr ""
+msgstr "Не применять эвристику сдвига границ блоков."
 
 #. type: Labeled list
 #: en/diff-options.txt:174
@@ -5458,7 +5461,7 @@ msgstr "`--patience`"
 #: en/diff-options.txt:180
 #, priority:280
 msgid "Generate a diff using the \"patience diff\" algorithm."
-msgstr ""
+msgstr "Генерировать списки изменений с помощью «терпеливого» алгоритма (patience diff)."
 
 #. type: Labeled list
 #: en/diff-options.txt:181
@@ -5470,31 +5473,31 @@ msgstr "`--histogram`"
 #: en/diff-options.txt:183
 #, priority:280
 msgid "Generate a diff using the \"histogram diff\" algorithm."
-msgstr ""
+msgstr "Генерировать списки изменений с помощью «гистограммного» алгоритма (histogram diff)."
 
 #. type: Labeled list
 #: en/diff-options.txt:184
 #, no-wrap, placeholders:'`--anchored=', priority:280
 msgid "`--anchored=<text>`"
-msgstr ""
+msgstr "`--anchored=<текст>`"
 
 #. type: Plain text
 #: en/diff-options.txt:186
 #, priority:280
 msgid "Generate a diff using the \"anchored diff\" algorithm."
-msgstr ""
+msgstr "Генерировать списки изменений с помощью алгоритма поиска различий «с якорем» (anchored diff)."
 
 #. type: Plain text
 #: en/diff-options.txt:188
 #, priority:280
 msgid "This option may be specified more than once."
-msgstr ""
+msgstr "Этот параметр может быть указана несколько раз."
 
 #. type: Plain text
 #: en/diff-options.txt:193
 #, priority:280
 msgid "If a line exists in both the source and destination, exists only once, and starts with _<text>_, this algorithm attempts to prevent it from appearing as a deletion or addition in the output. It uses the \"patience diff\" algorithm internally."
-msgstr ""
+msgstr "Если строка существует как в источнике, так и в назначении, встречается только один раз и начинается с _<текста>_, этот алгоритм пытается не допустить, чтобы эта строка была обозначена в выводе как удаляемая или добавляемая. Для собственно поиска отличий используется «терпеливый» алгоритм."
 
 #. type: Labeled list
 #: en/diff-options.txt:194
@@ -5506,25 +5509,25 @@ msgstr "`--diff-algorithm=(patience|minimal|histogram|myers)`"
 #: en/diff-options.txt:214
 #, placeholders:'diff.algorithm':'`--diff-algorithm=default`', priority:280
 msgid "For instance, if you configured the `diff.algorithm` variable to a non-default value and want to use the default one, then you have to use `--diff-algorithm=default` option."
-msgstr ""
+msgstr "В частности, если вы настроили переменную `diff.algorithm` на нестандартное значение и хотите использовать стандартный алгоритм, то следует задать параметр `--diff-algorithm=default`."
 
 #. type: Labeled list
 #: en/diff-options.txt:215
 #, no-wrap, placeholders:'`--stat', priority:280
 msgid "`--stat[=<width>[,<name-width>[,<count>]]]`"
-msgstr ""
+msgstr "`--stat[=<ширина>[,<ширина-имени>[,<число>]]]`"
 
 #. type: Plain text
 #: en/diff-options.txt:230
 #, ignore-ellipsis, placeholders:'diff.statNameWidth':'`--stat-graph-width=':'diff.statGraphWidth':'`--stat`':'`--stat-graph-width`':'diff.statNameWidth':'diff.statGraphWidth':'git format-patch`', priority:280
 msgid "Generate a diffstat. By default, as much space as necessary will be used for the filename part, and the rest for the graph part. Maximum width defaults to terminal width, or 80 columns if not connected to a terminal, and can be overridden by _<width>_. The width of the filename part can be limited by giving another width _<name-width>_ after a comma or by setting `diff.statNameWidth=<name-width>`. The width of the graph part can be limited by using `--stat-graph-width=<graph-width>` or by setting `diff.statGraphWidth=<graph-width>`. Using `--stat` or `--stat-graph-width` affects all commands generating a stat graph, while setting `diff.statNameWidth` or `diff.statGraphWidth` does not affect `git format-patch`. By giving a third parameter _<count>_, you can limit the output to the first _<count>_ lines, followed by `...` if there are more."
-msgstr ""
+msgstr "Генерировать статистику изменений diffstat. По умолчанию для имени файла используется столько места, сколько необходимо, а остаток — для графика. Максимальная _<ширина>_ по умолчанию равна ширине терминала или 80 столбцам, если вывод производится не на терминал. Ширину части, отводящейся под имя файла, можно ограничить, указав _<ширину-имени>_ после запятой или установив переменную конфигурации `diff.statNameWidth=<ширина-имени>`. Ширина части, отводящейся под график также можно ограничить с помощью `--stat-graph-width=<ширина-графика>` или переменной конфигурации `diff.statGraphWidth=<ширина-графика>`. Все команды, генерирующие статистические графики принимают параметры `--stat` или `--stat-graph-width`, а установка переменных `diff.statNameWidth` или `diff.statGraphWidth` влияет на все команды кроме `git format-patch`. При указании третьей части аргумента вывод ограничивается указанным _<числом>_ строк, а при его превышении вместо оставшихся строк будет выведено `...`."
 
 #. type: Plain text
 #: en/diff-options.txt:233
 #, placeholders:'`--stat-width=':'`--stat-name-width=':'`--stat-count=', priority:280
 msgid "These parameters can also be set individually with `--stat-width=<width>`, `--stat-name-width=<name-width>` and `--stat-count=<count>`."
-msgstr ""
+msgstr "Эти параметры также могут быть установлены в индивидуальном порядке с помощью `--stat-width=<ширина>`, `--stat-name-width=<ширина-имени>` и `--stat-count=<число>`."
 
 #. type: Labeled list
 #: en/diff-options.txt:234
@@ -5536,7 +5539,7 @@ msgstr "`--compact-summary`"
 #: en/diff-options.txt:241
 #, placeholders:'`-x`':'`--stat`', priority:280
 msgid "Output a condensed summary of extended header information such as file creations or deletions (\"new\" or \"gone\", optionally `+l` if it's a symlink) and mode changes (`+x` or `-x` for adding or removing executable bit respectively) in diffstat. The information is put between the filename part and the graph part. Implies `--stat`."
-msgstr ""
+msgstr "Выводить в статистике diffstat краткую выжимку информации, содержащейся в расширенном заголовке, в частности, был ли файл создан или удалён («new» или «gone», и возможно с «`+l`», если это символическая ссылка) и был ли изменён режим доступа к нему (`+x` или `-x` для добавления или удаления исполняемого бита соответственно). Эта информация помещается между имени файла и графиком. Подразумевает `--stat`."
 
 #. type: Labeled list
 #: en/diff-options.txt:242
@@ -5548,7 +5551,7 @@ msgstr "`--numstat`"
 #: en/diff-options.txt:248
 #, placeholders:'`--stat`', priority:280
 msgid "Similar to `--stat`, but shows number of added and deleted lines in decimal notation and pathname without abbreviation, to make it more machine friendly. For binary files, outputs two `-` instead of saying `0 0`."
-msgstr ""
+msgstr "Аналогичен `--stat`, но показывает количество добавленных и удалённых строк в десятичном формате и полный путь к файлу без сокращения, что делает его более удобным для машинной обработки. Для бинарных файлов выводит две чёрточки `-` вместо `0 0`."
 
 #. type: Labeled list
 #: en/diff-options.txt:249
@@ -5560,7 +5563,7 @@ msgstr "`--shortstat`"
 #: en/diff-options.txt:253
 #, placeholders:'`--stat`', priority:280
 msgid "Output only the last line of the `--stat` format containing total number of modified files, as well as number of added and deleted lines."
-msgstr ""
+msgstr "Выводить только последнюю строку, выводимую `--stat`, содержащую общее количество изменённых файлов, а также количество добавленных и удалённых строк."
 
 #. type: Labeled list
 #: en/diff-options.txt:254
@@ -5620,7 +5623,7 @@ msgstr "`--summary`"
 #: en/diff-options.txt:308
 #, priority:280
 msgid "Output a condensed summary of extended header information such as creations, renames and mode changes."
-msgstr ""
+msgstr "Вывести краткую сводку из информации, содержащейся в расширенных заголовках списков изменений. В частности, информацию о создании, переименовании и изменении режима доступа к файлу."
 
 #. type: Labeled list
 #: en/diff-options.txt:310
@@ -5632,7 +5635,7 @@ msgstr "`--patch-with-stat`"
 #: en/diff-options.txt:312
 #, placeholders:'--stat`', priority:280
 msgid "Synonym for `-p --stat`."
-msgstr ""
+msgstr "Синоним для `-p --stat`."
 
 #. type: Labeled list
 #: en/diff-options.txt:316
@@ -5644,13 +5647,13 @@ msgstr "`-z`"
 #: en/diff-options.txt:319
 #, no-wrap, placeholders:'__NUL__s', priority:280
 msgid "\tSeparate the commits with __NUL__s instead of newlines.\n"
-msgstr ""
+msgstr "\tРазделять коммиты __NUL__-символами вместо переводов строк.\n"
 
 #. type: Plain text
 #: en/diff-options.txt:322
 #, placeholders:'`--raw`':'`--numstat`':'__NUL__s', priority:280
 msgid "Also, when `--raw` or `--numstat` has been given, do not munge pathnames and use __NUL__s as output field terminators."
-msgstr ""
+msgstr "Также, когда заданы параметры `--raw` или `--numstat`, не вносить ни какие изменения в пути файлов и использовать __NUL__-символ в качестве разделителя полей вывода."
 
 #. type: Plain text
 #: en/diff-options.txt:326
@@ -5659,12 +5662,14 @@ msgid ""
 "\tWhen `--raw`, `--numstat`, `--name-only` or `--name-status` has been\n"
 "\tgiven, do not munge pathnames and use NULs as output field terminators.\n"
 msgstr ""
+"\tКогда заданы параметры `--raw`, `--numstat`, `--name-only` или `--name-status`, не вносить ни\n"
+"\tкакие изменения в пути файлов и использовать NUL-символ в качестве разделителя полей вывода.\n"
 
 #. type: Plain text
 #: en/diff-options.txt:331 en/git-apply.txt:130
 #, placeholders:'core.quotePath':'linkgit:git-config[1]', priority:280
 msgid "Without this option, pathnames with \"unusual\" characters are quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1])."
-msgstr ""
+msgstr "Без данного параметра пути с «необычными» символами берутся в кавычки, как это описано для переменной конфигурации `core.quotePath` (см. linkgit:git-config[1])."
 
 #. type: Labeled list
 #: en/diff-options.txt:332
@@ -5674,9 +5679,9 @@ msgstr "`--name-only`"
 
 #. type: Plain text
 #: en/diff-options.txt:337
-#, fuzzy, placeholders:'linkgit:git-log[1]', priority:280
+#, placeholders:'linkgit:git-log[1]', priority:280
 msgid "Show only the name of each changed file in the post-image tree. The file names are often encoded in UTF-8. For more information see the discussion about encoding in the linkgit:git-log[1] manual page."
-msgstr "Указывает кодировку для вывода имени автора и информации коммита. Если выставить в `none`, тогда blame выводит неизмененные данные. Для подробностей см. обсуждение кодировки на странице руководства linkgit:git-log[1]."
+msgstr "Выводить только имена изменённых файлов в результирующем дереве. Имена файлов обычно используют кодировку UTF-8. Для более подробной информации о кодировках см. обсуждение на справочной странице linkgit:git-log[1]."
 
 #. type: Labeled list
 #: en/diff-options.txt:338
@@ -5688,7 +5693,7 @@ msgstr "`--name-status`"
 #: en/diff-options.txt:342
 #, placeholders:'`--diff-filter`':'`--name-only`', priority:280
 msgid "Show only the name(s) and status of each changed file. See the description of the `--diff-filter` option on what the status letters mean. Just like `--name-only` the file names are often encoded in UTF-8."
-msgstr ""
+msgstr "Показывать только имя/имена и статус каждого изменённого файла. См., что означают буквы статуса, в описании параметра `--diff-filter`. Как и для `--name-only`, имена файлов обычно используют кодировку UTF-8."
 
 #. type: Labeled list
 #: en/diff-options.txt:343
@@ -5700,19 +5705,19 @@ msgstr "`--submodule[=<формат>]`"
 #: en/diff-options.txt:354
 #, placeholders:'`--submodule=short`':'`--submodule`':'`--submodule=log`':'linkgit:git-submodule[1]':'`--submodule=diff`':'diff.submodule', priority:280
 msgid "Specify how differences in submodules are shown. When specifying `--submodule=short` the `short` format is used. This format just shows the names of the commits at the beginning and end of the range. When `--submodule` or `--submodule=log` is specified, the `log` format is used. This format lists the commits in the range like linkgit:git-submodule[1] `summary` does. When `--submodule=diff` is specified, the `diff` format is used. This format shows an inline diff of the changes in the submodule contents between the commit range. Defaults to `diff.submodule` or the `short` format if the config option is unset."
-msgstr ""
+msgstr "Задаёт, как должны отображаться различия в подмодулях. При указании `--submodule=short`, используется формат `short`. Этот формат показывает только имена коммитов в начале и конце диапазона. При указании `--submodule` или `--submodule=log` используется формат `log`. Этот формат перечисляет все коммиты в диапазоне, как это делает linkgit:git-submodule[1] `summary`. При указании `--submodule=diff` используется формат `diff`. Этот формат показывает различия в содержимом подмодуля между началом и концом диапазона в виде списка изменений, встроенного в основной. По умолчанию используется формат указанный в переменной конфигурации `diff.submodule` или `short`, если переменная не установлена."
 
 #. type: Labeled list
 #: en/diff-options.txt:355
 #, no-wrap, placeholders:'`--color', priority:280
 msgid "`--color[=<when>]`"
-msgstr ""
+msgstr "`--color[=<когда>]`"
 
 #. type: Plain text
 #: en/diff-options.txt:359
 #, placeholders:'`--color`':'`--color=always`', priority:280
 msgid "Show colored diff. `--color` (i.e. without `=<when>`) is the same as `--color=always`. _<when>_ can be one of `always`, `never`, or `auto`."
-msgstr ""
+msgstr "Выводить список изменений в цвете. `--color` (т.е. без аргумента `=<когда>`) эквивалентно `--color=always`. _<когда>_ может быть одним из: `always`, `never` или `auto`."
 
 #. type: Plain text
 #: en/diff-options.txt:362
@@ -5721,6 +5726,8 @@ msgid ""
 "\tIt can be changed by the `color.ui` and `color.diff`\n"
 "\tconfiguration settings.\n"
 msgstr ""
+"\tЭто значение также можно изменить с помощью\n"
+"\tпеременных конфигурации `color.ui` и `color.diff`.\n"
 
 #. type: Labeled list
 #: en/diff-options.txt:364
@@ -5732,38 +5739,37 @@ msgstr "`--no-color`"
 #: en/diff-options.txt:366
 #, priority:280
 msgid "Turn off colored diff."
-msgstr ""
+msgstr "Выключить выделение цветом при выводе списка изменений."
 
 #. type: Plain text
 #: en/diff-options.txt:368
 #, no-wrap, priority:280
 msgid "\tThis can be used to override configuration settings.\n"
-msgstr ""
+msgstr "\tЭтот параметр можно использовать для переопределения значений, заданных в переменных конфигурации.\n"
 
 #. type: Plain text
 #: en/diff-options.txt:370
 #, no-wrap, placeholders:'`--color=never`', priority:280
 msgid "\tIt is the same as `--color=never`.\n"
-msgstr ""
+msgstr "\tЭквивалентно `--color=never`.\n"
 
 #. type: Labeled list
 #: en/diff-options.txt:371
-#, fuzzy, no-wrap, placeholders:'`--color-moved', priority:280
-#| msgid "--no-color-moved"
+#, no-wrap, placeholders:'`--color-moved', priority:280
 msgid "`--color-moved[=<mode>]`"
-msgstr "--no-color-moved"
+msgstr "`--color-moved[=<режим>]`"
 
 #. type: Plain text
 #: en/diff-options.txt:373
 #, priority:280
 msgid "Moved lines of code are colored differently."
-msgstr ""
+msgstr "Перемещённые строки кода выделяются другим цветом."
 
 #. type: Plain text
 #: en/diff-options.txt:375
 #, no-wrap, placeholders:'diff.colorMoved', priority:280
 msgid "\tIt can be changed by the `diff.colorMoved` configuration setting.\n"
-msgstr ""
+msgstr "\tЭто значение можно также изменить с помощью переменной конфигурации `diff.colorMoved`.\n"
 
 #. type: Plain text
 #: en/diff-options.txt:379
@@ -5773,6 +5779,9 @@ msgid ""
 "\tand to `zebra` if the option with no mode is given.\n"
 "\tThe mode must be one of:\n"
 msgstr ""
+"\tЕсли параметр не задан, то _<режим>_ по умолчанию: `no`; если\n"
+"\tзадан, но без явного указания _<режима>_ — то `zebra`.\n"
+"\tЗначение _<режима>_ может быть одним из:\n"
 
 #. type: Labeled list
 #: en/diff-options.txt:381 en/diff-options.txt:423
@@ -5784,13 +5793,13 @@ msgstr "`no`"
 #: en/diff-options.txt:383
 #, priority:280
 msgid "Moved lines are not highlighted."
-msgstr ""
+msgstr "Перемещённые строки ни как не выделяются."
 
 #. type: Plain text
 #: en/diff-options.txt:386
 #, priority:280
 msgid "Is a synonym for `zebra`. This may change to a more sensible mode in the future."
-msgstr ""
+msgstr "Синоним для `zebra`. В будущем это может измениться, если появится режим получше."
 
 #. type: Labeled list
 #: en/diff-options.txt:386 en/diff-options.txt:454
@@ -5802,7 +5811,7 @@ msgstr "`plain`"
 #: en/diff-options.txt:393
 #, placeholders:'color.diff.newMoved':'color.diff.oldMoved', priority:280
 msgid "Any line that is added in one location and was removed in another location will be colored with `color.diff.newMoved`. Similarly `color.diff.oldMoved` will be used for removed lines that are added somewhere else in the diff. This mode picks up any moved line, but it is not very useful in a review to determine if a block of code was moved without permutation."
-msgstr ""
+msgstr "Любая строка, добавленная в одном месте и удалённая в другом, будет окрашена с помощью `color.diff.newMoved`. Аналогично `color.diff.oldMoved` будет использоваться для удалённых строк, которые добавлены в каком-то другом месте. Этот режим подсвечивает все перемещённые строки, но при рецензировании кода знать был ли блок перемещён и при этом без какой-либо информации о перестановках не так уж и полезно."
 
 #. type: Labeled list
 #: en/diff-options.txt:393
@@ -5814,7 +5823,7 @@ msgstr "`blocks`"
 #: en/diff-options.txt:398
 #, placeholders:'color.diff', priority:280
 msgid "Blocks of moved text of at least 20 alphanumeric characters are detected greedily. The detected blocks are painted using either the `color.diff.(old|new)Moved` color. Adjacent blocks cannot be told apart."
-msgstr ""
+msgstr "Для поиска блоков перемещённого текста (из не мене чем 20-и алфавитно-цифровых символов) используется жадный алгоритм. Найденные блоки окрашиваются с помощью `color.diff.(old|new)Moved`. Возможности различить смежные блоки нет."
 
 #. type: Labeled list
 #: en/diff-options.txt:398
@@ -5826,7 +5835,7 @@ msgstr "`zebra`"
 #: en/diff-options.txt:403
 #, placeholders:'color.diff':'color.diff', priority:280
 msgid "Blocks of moved text are detected as in `blocks` mode. The blocks are painted using either the `color.diff.(old|new)Moved` color or `color.diff.(old|new)MovedAlternative`. The change between the two colors indicates that a new block was detected."
-msgstr ""
+msgstr "Поиск блоков перемещённого текста происходит так же, как и в режиме `blocks`. Блоки окрашиваются с помощью `color.diff.(old|new)Moved` или `color.diff.(old|new)MovedAlternative`. Изменение цвета с одного на другой указывает на то, что был найден новый блок."
 
 #. type: Labeled list
 #: en/diff-options.txt:403
@@ -5838,7 +5847,7 @@ msgstr "`dimmed-zebra`"
 #: en/diff-options.txt:408
 #, placeholders:'dimmed_zebra', priority:280
 msgid "Similar to `zebra`, but additional dimming of uninteresting parts of moved code is performed. The bordering lines of two adjacent blocks are considered interesting, the rest is uninteresting. `dimmed_zebra` is a deprecated synonym."
-msgstr ""
+msgstr "Аналогично `zebra`, но также выполняется дополнительное затемнение «неинтересных» частей перемещённого кода. Интересными считаются пограничные строки двух соседних блоков, остальное — неинтересным. `dimmed_zebra` — устаревший синоним."
 
 #. type: Labeled list
 #: en/diff-options.txt:410
@@ -5850,38 +5859,37 @@ msgstr "`--no-color-moved`"
 #: en/diff-options.txt:413
 #, placeholders:'`--color-moved=no`', priority:280
 msgid "Turn off move detection. This can be used to override configuration settings. It is the same as `--color-moved=no`."
-msgstr ""
+msgstr "Отключить поиск перемещений. Этот параметр можно использовать для переопределения настроек, заданных переменными конфигурации. Эквивалентно `--color-moved=no`."
 
 #. type: Labeled list
 #: en/diff-options.txt:414
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'`--color-moved-ws=', priority:280
-#| msgid "--no-color-moved-ws"
+#, ignore-ellipsis, no-wrap, placeholders:'`--color-moved-ws=', priority:280
 msgid "`--color-moved-ws=<mode>,...`"
-msgstr "--no-color-moved-ws"
+msgstr "`--color-moved-ws=<режим>,...`"
 
 #. type: Plain text
 #: en/diff-options.txt:417
 #, placeholders:'`--color-moved`', priority:280
 msgid "This configures how whitespace is ignored when performing the move detection for `--color-moved`."
-msgstr ""
+msgstr "Задаёт должны ли игнорироваться пробелы при поиске перемещений для `--color-moved`."
 
 #. type: Plain text
 #: en/diff-options.txt:419
 #, no-wrap, placeholders:'diff.colorMovedWS', priority:280
 msgid "\tIt can be set by the `diff.colorMovedWS` configuration setting.\n"
-msgstr ""
+msgstr "\tЭто можно также задать с помощью переменной конфигурации `diff.colorMovedWS`.\n"
 
 #. type: Plain text
 #: en/diff-options.txt:421
 #, no-wrap, priority:280
 msgid "\tThese modes can be given as a comma separated list:\n"
-msgstr ""
+msgstr "\tСледующие режимы могут быть указаны через запятую:\n"
 
 #. type: Plain text
 #: en/diff-options.txt:425
 #, priority:280
 msgid "Do not ignore whitespace when performing move detection."
-msgstr ""
+msgstr "Не игнорировать пробелы при поиске перемещений."
 
 #. type: Labeled list
 #: en/diff-options.txt:425
@@ -5893,7 +5901,7 @@ msgstr "`ignore-space-at-eol`"
 #: en/diff-options.txt:427 en/diff-options.txt:780
 #, priority:280
 msgid "Ignore changes in whitespace at EOL."
-msgstr ""
+msgstr "Игнорировать изменения пробелов на концах строк."
 
 #. type: Labeled list
 #: en/diff-options.txt:427
@@ -5905,7 +5913,7 @@ msgstr "`ignore-space-change`"
 #: en/diff-options.txt:431 en/diff-options.txt:786
 #, priority:280
 msgid "Ignore changes in amount of whitespace. This ignores whitespace at line end, and considers all other sequences of one or more whitespace characters to be equivalent."
-msgstr ""
+msgstr "Игнорировать изменения количества пробелов. Этот режим игнорирует пробелы на концах строк и считает все остальные последовательности одного или более пробельных символов эквивалентными."
 
 #. type: Labeled list
 #: en/diff-options.txt:431
@@ -5917,7 +5925,7 @@ msgstr "`ignore-all-space`"
 #: en/diff-options.txt:434 en/diff-options.txt:792
 #, priority:280
 msgid "Ignore whitespace when comparing lines. This ignores differences even if one line has whitespace where the other line has none."
-msgstr ""
+msgstr "Игнорировать все пробелы при сравнении строк. Это игнорирует различия даже если в одной строке пробелы есть там, где в другой их нет."
 
 #. type: Labeled list
 #: en/diff-options.txt:434
@@ -5929,7 +5937,7 @@ msgstr "`allow-indentation-change`"
 #: en/diff-options.txt:439
 #, priority:280
 msgid "Initially ignore any whitespace in the move detection, then group the moved code blocks only into a block if the change in whitespace is the same per line. This is incompatible with the other modes."
-msgstr ""
+msgstr "Сначала игнорировать любые пробелы при обнаружении перемещений, а затем группировать перемещённые блоки кода в один только, если изменение пробелов одинаково для каждой строки блока. Этот режим несовместим с остальными."
 
 #. type: Labeled list
 #: en/diff-options.txt:441
@@ -14177,7 +14185,7 @@ msgstr ""
 #: en/git-check-ignore.txt:107 en/git-filter-branch.txt:239 en/git-merge-tree.txt:195 en/git-remote.txt:209
 #, no-wrap, priority:220
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "КОД ЗАВЕРШЕНИЯ"
 
 #. type: Labeled list
 #: en/git-check-ignore.txt:109
@@ -53237,7 +53245,7 @@ msgstr "git-show-branch(1)"
 #: en/git-show-branch.txt:7
 #, placeholders:'git-show-branch', priority:100
 msgid "git-show-branch - Show branches and their commits"
-msgstr ""
+msgstr "git-show-branch - Вывод веток и их коммитов"
 
 #. type: verse
 #: en/git-show-branch.txt:17
