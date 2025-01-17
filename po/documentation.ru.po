@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2024-12-25 19:35+0100\n"
-"PO-Revision-Date: 2025-01-17 18:28+0000\n"
+"PO-Revision-Date: 2025-01-18 02:05+0000\n"
 "Last-Translator: Golubev Alexander <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -6309,31 +6309,31 @@ msgstr "Также если вместо этих прописных букв з
 #: en/diff-options.txt:651
 #, priority:280
 msgid "Note that not all diffs can feature all types. For instance, copied and renamed entries cannot appear if detection for those types is disabled."
-msgstr ""
+msgstr "Обратите внимание, что не все списки изменений могут обеспечить доступ ко всем типам изменений. В частности, записи о переименованиях и копированиях не будут доступны, если обнаружение для этих типов не было включено."
 
 #. type: Labeled list
 #: en/diff-options.txt:652
 #, no-wrap, priority:280
 msgid "`-S<string>`"
-msgstr ""
+msgstr "`-S<строка>`"
 
 #. type: Plain text
 #: en/diff-options.txt:656
 #, priority:280
 msgid "Look for differences that change the number of occurrences of the specified _<string>_ (i.e. addition/deletion) in a file. Intended for the scripter's use."
-msgstr ""
+msgstr "Искать различия, которые изменяют количество вхождений указанной _<строки>_ в файле (т.е. её добавления/удаления, но не изменения/перемещения). Предназначено для использования в скриптах."
 
 #. type: Plain text
 #: en/diff-options.txt:662
 #, placeholders:'`-S`', priority:280
 msgid "It is useful when you're looking for an exact block of code (like a struct), and want to know the history of that block since it first came into being: use the feature iteratively to feed the interesting block in the preimage back into `-S`, and keep going until you get the very first version of the block."
-msgstr ""
+msgstr "Это полезно, если вы ищете точный блок кода (например, структуру), и хотите знать историю этого блока с момента его появления: вызывайте эту функцию последовательно несколько раз, передавая полученный на очередном шаге интересующий вас блок обратно в `-S`, и продолжайте так до тех пор, пока не получите самую первую версию этого блока."
 
 #. type: Plain text
 #: en/diff-options.txt:664
 #, priority:280
 msgid "Binary files are searched as well."
-msgstr ""
+msgstr "Поиск происходит также и в бинарных файлах."
 
 #. type: Labeled list
 #: en/diff-options.txt:665
@@ -6345,13 +6345,13 @@ msgstr "`-G<регулярное-выражение>`"
 #: en/diff-options.txt:668
 #, priority:280
 msgid "Look for differences whose patch text contains added/removed lines that match _<regex>_."
-msgstr ""
+msgstr "Искать списки изменений, текст патча которых содержит добавление/удаление строк, соответствующих _<регулярному_выражению>_."
 
 #. type: Plain text
 #: en/diff-options.txt:672
 #, placeholders:'`--pickaxe-regex`', priority:280
 msgid "To illustrate the difference between `-S<regex>` `--pickaxe-regex` and `-G<regex>`, consider a commit with the following diff in the same file:"
-msgstr ""
+msgstr "Чтобы проиллюстрировать разницу между `-S<регулярное_выражение>` `--pickaxe-regex` и `-G<регулярное_выражение>`, рассмотрим коммит со следующими различиями в одном и том же файле:"
 
 #. type: delimited block -
 #: en/diff-options.txt:677
@@ -6361,24 +6361,27 @@ msgid ""
 "...\n"
 "-    hit = frotz(nitfol, mf2.ptr, 1, 0);\n"
 msgstr ""
+"+    return frotz(nitfol, two->ptr, 1, 0);\n"
+"...\n"
+"-    hit = frotz(nitfol, mf2.ptr, 1, 0);\n"
 
 #. type: Plain text
 #: en/diff-options.txt:682
 #, placeholders:'--pickaxe-regex`', priority:280
 msgid "While `git log -G\"frotz\\(nitfol\"` will show this commit, `git log -S\"frotz\\(nitfol\" --pickaxe-regex` will not (because the number of occurrences of that string did not change)."
-msgstr ""
+msgstr "В то время как команда `git log -G\"frotz$$nitfol\"` выведет этот коммит, `git log -S\"frotz$$nitfol\" --pickaxe-regex` — не выведет (потому что количество вхождений этой строки не изменилось)."
 
 #. type: Plain text
 #: en/diff-options.txt:685
 #, placeholders:'`--text`', priority:280
 msgid "Unless `--text` is supplied patches of binary files without a textconv filter will be ignored."
-msgstr ""
+msgstr "Если не указан параметр `--text` и для данного типа файлов нет фильтра textconv, изменения вносимые патчами в бинарные файлы будут проигнорированы."
 
 #. type: Plain text
 #: en/diff-options.txt:688
 #, placeholders:'linkgit:gitdiffcore[7]', priority:280
 msgid "See the 'pickaxe' entry in linkgit:gitdiffcore[7] for more information."
-msgstr ""
+msgstr "См. раздел 'pickaxe' в linkgit:gitdiffcore[7] для более подробной информации."
 
 #. type: Labeled list
 #: en/diff-options.txt:689
@@ -6390,13 +6393,13 @@ msgstr ""
 #: en/diff-options.txt:694
 #, placeholders:'`-S`', priority:280
 msgid "Look for differences that change the number of occurrences of the specified object. Similar to `-S`, just the argument is different in that it doesn't search for a specific string but for a specific object id."
-msgstr ""
+msgstr "Искать различия, которые меняют количество вхождений указанного объекта. Аналогично `-S`, но в качестве аргумента вместо конкретной строки для поиска передаётся идентификатор конкретного объекта."
 
 #. type: Plain text
 #: en/diff-options.txt:697
 #, placeholders:'`-t`':'git-log`', priority:280
 msgid "The object can be a blob or a submodule commit. It implies the `-t` option in `git-log` to also find trees."
-msgstr ""
+msgstr "Объект может быть blob-объектом или коммитом в подмодуле. Этот параметр также подразумевает `-t` в `git-log`, для поиска деревьев."
 
 #. type: Labeled list
 #: en/diff-options.txt:698
