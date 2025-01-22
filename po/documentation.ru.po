@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2024-12-25 19:35+0100\n"
-"PO-Revision-Date: 2025-01-18 02:05+0000\n"
+"PO-Revision-Date: 2025-01-23 07:02+0000\n"
 "Last-Translator: Golubev Alexander <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -2183,9 +2183,9 @@ msgstr "linkgit:git-credential-cache[1]"
 
 #. type: Plain text
 #: en/cmds-purehelpers.txt:21
-#, fuzzy, priority:100
+#, priority:100
 msgid "Helper to temporarily store passwords in memory."
-msgstr "Помощник для временного хранения паролей в памяти"
+msgstr "Помощник для временного хранения паролей в памяти."
 
 #. type: Labeled list
 #: en/cmds-purehelpers.txt:22
@@ -2195,9 +2195,9 @@ msgstr "linkgit:git-credential-store[1]"
 
 #. type: Plain text
 #: en/cmds-purehelpers.txt:24
-#, fuzzy, priority:100
+#, priority:100
 msgid "Helper to store credentials on disk."
-msgstr "Помощник для хранения учетных записей на диске"
+msgstr "Помощник для хранения учётных записей на диске."
 
 #. type: Labeled list
 #: en/cmds-purehelpers.txt:25
@@ -6411,7 +6411,7 @@ msgstr "`--pickaxe-all`"
 #: en/diff-options.txt:702
 #, placeholders:'`-S`':'`-G`', priority:280
 msgid "When `-S` or `-G` finds a change, show all the changes in that changeset, not just the files that contain the change in _<string>_."
-msgstr ""
+msgstr "Когда поиске с помощью параметров `-S` или `-G` находит изменения, показывать все изменения в данном наборе, а не только в тех файлах, которые содержат изменения в заданной _<строке>_."
 
 #. type: Labeled list
 #: en/diff-options.txt:703
@@ -6423,56 +6423,55 @@ msgstr "`--pickaxe-regex`"
 #: en/diff-options.txt:706
 #, placeholders:'`-S`', priority:280
 msgid "Treat the _<string>_ given to `-S` as an extended POSIX regular expression to match."
-msgstr ""
+msgstr "Обрабатывать _<строку>_, переданную в `-S`, как расширенное регулярное выражение POSIX с котором должно производится сопоставление."
 
 #. type: Labeled list
 #: en/diff-options.txt:709
-#, fuzzy, no-wrap, priority:280
-#| msgid "-S <revs-file>"
+#, no-wrap, priority:280
 msgid "`-O<orderfile>`"
-msgstr "-S <revs-file>"
+msgstr "`-O<файл-порядка>`"
 
 #. type: Plain text
 #: en/diff-options.txt:714
 #, placeholders:'diff.orderFile':'linkgit:git-config[1]':'diff.orderFile', priority:280
 msgid "Control the order in which files appear in the output. This overrides the `diff.orderFile` configuration variable (see linkgit:git-config[1]). To cancel `diff.orderFile`, use `-O/dev/null`."
-msgstr ""
+msgstr "Контролирует порядок, в котором файлы появляются в выводе. Этот параметр переопределяет значение указанное в переменной конфигурации `diff.orderFile` (см. linkgit:git-config[1]). Чтобы отменить использование файла указанного в `diff.orderFile`, используйте `-O/dev/null`."
 
 #. type: Plain text
 #: en/diff-options.txt:726
 #, priority:280
 msgid "The output order is determined by the order of glob patterns in _<orderfile>_. All files with pathnames that match the first pattern are output first, all files with pathnames that match the second pattern (but not the first) are output next, and so on. All files with pathnames that do not match any pattern are output last, as if there was an implicit match-all pattern at the end of the file. If multiple pathnames have the same rank (they match the same pattern but no earlier patterns), their output order relative to each other is the normal order."
-msgstr ""
+msgstr "Порядок вывода определяется порядком glob-шаблонов в _<файле-порядка>_. Первыми выводятся все файлы, пути которых соответствуют первому шаблону, затем файлы, соответствующие второму шаблону (но не первому), и так далее. Все файлы, которые не соответствуют ни одному из шаблонов, выводятся в конце, как если бы в конце файла был неявно задан шаблон, который сопоставляется всем путям. Пути одного ранка (которые соответствуют какому-либо одному шаблону, но не одному из предыдущих) относительно друг друга выводятся в нормальном порядке."
 
 #. type: Plain text
 #: en/diff-options.txt:728
 #, priority:280
 msgid "_<orderfile>_ is parsed as follows:"
-msgstr ""
+msgstr "Синтаксис _<файла-порядка>_ следующий:"
 
 #. type: Plain text
 #: en/diff-options.txt:732
 #, priority:280
 msgid "Blank lines are ignored, so they can be used as separators for readability."
-msgstr ""
+msgstr "Пустые строки игнорируются, так что их можно использовать для улучшения читаемости."
 
 #. type: Plain text
 #: en/diff-options.txt:736
 #, priority:280
 msgid "Lines starting with a hash (\"`#`\") are ignored, so they can be used for comments. Add a backslash (\"`\\`\") to the beginning of the pattern if it starts with a hash."
-msgstr ""
+msgstr "Строки, начинающиеся с символа решётки («`#`»), игнорируются, их можно использовать для комментариев. Если шаблон начинается с решётки, добавьте обратный слэш («`\\`») перед ней."
 
 #. type: Plain text
 #: en/diff-options.txt:738
 #, priority:280
 msgid "Each other line contains a single pattern."
-msgstr ""
+msgstr "Все остальные строки являются шаблонами; по одному на строку."
 
 #. type: Plain text
 #: en/diff-options.txt:745
 #, placeholders:'FNM_PATHNAME', priority:280
 msgid "Patterns have the same syntax and semantics as patterns used for `fnmatch`(3) without the `FNM_PATHNAME` flag, except a pathname also matches a pattern if removing any number of the final pathname components matches the pattern. For example, the pattern \"`foo*bar`\" matches \"`fooasdfbar`\" and \"`foo/bar/baz/asdf`\" but not \"`foobarx`\"."
-msgstr ""
+msgstr "Синтаксис и семантика у этих шаблонов те же, что и у шаблонов, используемых для `fnmatch`(3) без флага `FNM_PATHNAME`, за исключением того, что путь к файлу также сопоставляются шаблону; при этом в качестве пути к файлу сопоставляется путь к его родительскому каталогу любого уровня. Например, шаблону «`foo*bar`» будет соответствовать как `fooasdfbar`, так и «`foo/bar/baz/asdf`», но не «`foobarx`»."
 
 #. type: Labeled list
 #: en/diff-options.txt:746
@@ -6490,7 +6489,7 @@ msgstr "`--rotate-to=<файл>`"
 #: en/diff-options.txt:753
 #, priority:280
 msgid "Discard the files before the named _<file>_ from the output (i.e. 'skip to'), or move them to the end of the output (i.e. 'rotate to'). These options were invented primarily for the use of the `git difftool` command, and may not be very useful otherwise."
-msgstr ""
+msgstr "Пропускать в выводе файлы до указанного _<файла>_ (со `--skip-to`), или вывести их в конец (с `--rotate-to`). Эти параметры были добавлены в первую очередь для использования в команде `git difftool` и, вероятно, от них будет не так много пользы в других командах."
 
 #. type: Labeled list
 #: en/diff-options.txt:755
@@ -6502,7 +6501,7 @@ msgstr "`-R`"
 #: en/diff-options.txt:758
 #, priority:280
 msgid "Swap two inputs; that is, show differences from index or on-disk file to tree contents."
-msgstr ""
+msgstr "Поменять местами два входных файла; т.е. показывать, какие изменения произошли бы при переходя от версии файла в индексе или на диске к той, что содержится в дереве коммита."
 
 #. type: Labeled list
 #: en/diff-options.txt:760
@@ -6520,7 +6519,7 @@ msgstr "`--no-relative`"
 #: en/diff-options.txt:770
 #, placeholders:'`--no-relative`':'diff.relative':'`--relative`', priority:280
 msgid "When run from a subdirectory of the project, it can be told to exclude changes outside the directory and show pathnames relative to it with this option. When you are not in a subdirectory (e.g. in a bare repository), you can name which subdirectory to make the output relative to by giving a _<path>_ as an argument. `--no-relative` can be used to countermand both `diff.relative` config option and previous `--relative`."
-msgstr ""
+msgstr "При запуске из одного из подкаталогов проекта этот параметр позволяет исключить изменения за пределами этого каталога и отображать пути относительно него. Если вы не находитесь в каком-либо подкаталоге (например, в голом репозитории), можно указать подкаталог, относительно которого будет производиться вывод, передав _<путь>_ в качестве аргумента. Параметр `--no-relative` можно использовать как для отмены эффекта от переменной конфигурации `diff.relative`, так и предшествующего параметра `--relative`."
 
 #. type: Labeled list
 #: en/diff-options.txt:771
@@ -6538,7 +6537,7 @@ msgstr "`--text`"
 #: en/diff-options.txt:774
 #, priority:280
 msgid "Treat all files as text."
-msgstr ""
+msgstr "Обрабатывать все файлы как текстовые."
 
 #. type: Labeled list
 #: en/diff-options.txt:775
@@ -6550,7 +6549,7 @@ msgstr "`--ignore-cr-at-eol`"
 #: en/diff-options.txt:777
 #, priority:280
 msgid "Ignore carriage-return at the end of line when doing a comparison."
-msgstr ""
+msgstr "Игнорировать символы возврата каретки в конце строк при сравнении."
 
 #. type: Labeled list
 #: en/diff-options.txt:778
@@ -6610,19 +6609,19 @@ msgstr "`--ignore-matching-lines=<регулярное-выражение>`"
 #: en/diff-options.txt:801
 #, priority:280
 msgid "Ignore changes whose all lines match _<regex>_. This option may be specified more than once."
-msgstr ""
+msgstr "Игнорировать изменения, в которых все строки сопоставляются _<регулярному-выражению>_. Этот параметр может быть указан несколько раз."
 
 #. type: Labeled list
 #: en/diff-options.txt:802
 #, no-wrap, placeholders:'`--inter-hunk-context=', priority:280
 msgid "`--inter-hunk-context=<number>`"
-msgstr ""
+msgstr "`--inter-hunk-context=<число>`"
 
 #. type: Plain text
 #: en/diff-options.txt:807
 #, placeholders:'diff.interHunkContext', priority:280
 msgid "Show the context between diff hunks, up to the specified _<number>_ of lines, thereby fusing hunks that are close to each other. Defaults to `diff.interHunkContext` or 0 if the config option is unset."
-msgstr ""
+msgstr "Выводить в качестве контекста между блоками изменений до указанного _<числа>_ строк, тем самым объединяя близкие блоки изменений. По умолчанию равно значению переменной конфигурации `diff.interHunkContext` или 0, если оно не установлено."
 
 #. type: Labeled list
 #: en/diff-options.txt:808
@@ -6640,7 +6639,7 @@ msgstr "`--function-context`"
 #: en/diff-options.txt:814
 #, placeholders:'linkgit:gitattributes[5]', priority:280
 msgid "Show whole function as context lines for each change. The function names are determined in the same way as `git diff` works out patch hunk headers (see \"Defining a custom hunk-header\" in linkgit:gitattributes[5])."
-msgstr ""
+msgstr "Показывать всю функцию в качестве контекста для каждого изменения. Для определения имён функций используется тот же механизм, что и для определения заголовков блоков изменений командой `git diff` (см. «Определение пользовательского заголовка блока» в linkgit:gitattributes[5])."
 
 #. type: Labeled list
 #: en/diff-options.txt:817
@@ -6652,7 +6651,7 @@ msgstr "`--exit-code`"
 #: en/diff-options.txt:821
 #, priority:280
 msgid "Make the program exit with codes similar to `diff`(1). That is, it exits with 1 if there were differences and 0 means no differences."
-msgstr ""
+msgstr "Сделать так, чтобы программа завершалась с определённым кодом, аналогично тому, как это делает команда `diff`(1). То есть при наличии различий она будет завершаться с кодом 1, а при отсутствии — с кодом 0."
 
 #. type: Labeled list
 #: en/diff-options.txt:822 en/git-clone.txt:133 en/git-init.txt:45
@@ -6664,7 +6663,7 @@ msgstr "`--quiet`"
 #: en/diff-options.txt:829
 #, placeholders:'`--exit-code`':'diff.trustExitCode':'GIT_EXTERNAL_DIFF_TRUST_EXIT_CODE', priority:280
 msgid "Disable all output of the program. Implies `--exit-code`. Disables execution of external diff helpers whose exit code is not trusted, i.e. their respective configuration option `diff.trustExitCode` or ++diff.++__<driver>__++.trustExitCode++ or environment variable `GIT_EXTERNAL_DIFF_TRUST_EXIT_CODE` is false."
-msgstr ""
+msgstr "Отключить весь вывод у данной программы. Подразумевает `--exit-code`. Также отключает выполнение вспомогательных сторонних утилит сравнения, коду завершения которых нельзя доверять, т.е. если для них не установлена переменная конфигурации `diff.trustExitCode` или ++diff.++__<драйвер>__++.trustExitCode++, а также если переменная окружения `GIT_EXTERNAL_DIFF_TRUST_EXIT_CODE` ложна."
 
 #. type: Labeled list
 #: en/diff-options.txt:832
@@ -6676,7 +6675,7 @@ msgstr "`--ext-diff`"
 #: en/diff-options.txt:836
 #, placeholders:'linkgit:gitattributes[5]':'linkgit:git-log[1]', priority:280
 msgid "Allow an external diff helper to be executed. If you set an external diff driver with linkgit:gitattributes[5], you need to use this option with linkgit:git-log[1] and friends."
-msgstr ""
+msgstr "Разрешить выполнение вспомогательных сторонних утилит сравнения. Если вы настроили драйвер сторонней утилиты сравнения с помощью linkgit:gitattributes[5], то вам нужно будет использовать этот параметр с командой linkgit:git-log[1] и другими подобными."
 
 #. type: Labeled list
 #: en/diff-options.txt:837
@@ -6688,7 +6687,7 @@ msgstr "`--no-ext-diff`"
 #: en/diff-options.txt:839
 #, priority:280
 msgid "Disallow external diff drivers."
-msgstr ""
+msgstr "Запретить драйверы сторонних утилит сравнения."
 
 #. type: Labeled list
 #: en/diff-options.txt:840
@@ -23466,6 +23465,12 @@ msgid ""
 "git diff [<options>] <blob> <blob>\n"
 "git diff [<options>] --no-index [--] <path> <path>\n"
 msgstr ""
+"git diff [<параметры>] [<commit>] [--] [<путь>...]\n"
+"git diff [<параметры>] --cached [--merge-base] [<коммит>] [--] [<путь>...]\n"
+"git diff [<параметры>] [--merge-base] <коммит> [<коммит>...] <коммит> [--] [<путь>...]\n"
+"git diff [<параметры>] <коммит>...<коммит> [--] [<путь>...]\n"
+"git diff [<параметры>] <blob> <blob>\n"
+"git diff [<параметры>] --no-index [--] <путь> <путь>\n"
 
 #. type: Plain text
 #: en/git-diff.txt:25
