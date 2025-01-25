@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2024-12-25 19:35+0100\n"
-"PO-Revision-Date: 2025-01-24 08:01+0000\n"
+"PO-Revision-Date: 2025-01-25 14:43+0000\n"
 "Last-Translator: Golubev Alexander <fatzer2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -1943,9 +1943,9 @@ msgstr "linkgit:git-merge-file[1]"
 
 #. type: Plain text
 #: en/cmds-plumbingmanipulators.txt:21
-#, fuzzy, priority:100
+#, priority:100
 msgid "Run a three-way file merge."
-msgstr "Запуск трёхходового слияния файлов"
+msgstr "Запуск трёхходового слияния файлов."
 
 #. type: Labeled list
 #: en/cmds-plumbingmanipulators.txt:22
@@ -23590,31 +23590,31 @@ msgstr "`git diff [<параметры>] <коммит>...<коммит> [--] [<
 #: en/git-diff.txt:101
 #, ignore-ellipsis, placeholders:'git merge-base':'`HEAD`', priority:280
 msgid "This form is to view the changes on the branch containing and up to the second _<commit>_, starting at a common ancestor of both _<commit>_. `git diff A...B` is equivalent to `git diff $(git merge-base A B) B`. You can omit any one of _<commit>_, which has the same effect as using `HEAD` instead."
-msgstr ""
+msgstr "Эта форма команды используется для просмотра изменений, произошедших в ветке, содержащей второй _<коммит>_, между общим предком обоих _<коммитов>_ и вторым коммитом. Команда `git diff A...B` эквивалентна `git diff $(git merge-base A B) B`. Если один из _<коммитов>_ опущен, это будет означать то же самое, что и указание `HEAD` на его месте."
 
 #. type: Plain text
 #: en/git-diff.txt:110
 #, placeholders:'`--merge-base`':'AUTO_MERGE':'linkgit:git-merge[1]':'AUTO_MERGE', priority:280
 msgid "Just in case you are doing something exotic, it should be noted that all of the _<commit>_ in the above description, except in the `--merge-base` case and in the last two forms that use `..` notations, can be any _<tree>_. A tree of interest is the one pointed to by the ref named `AUTO_MERGE`, which is written by the `ort` merge strategy upon hitting merge conflicts (see linkgit:git-merge[1]). Comparing the working tree with `AUTO_MERGE` shows changes you've made so far to resolve textual conflicts (see the examples below)."
-msgstr ""
+msgstr "На случай, если вы делаете что-то экзотическое, следует отметить, что вместо любого аргумента _<коммит>_ в вышеприведённом списке (за исключении формы с `--merge-base`, а также в двух последних форм с нотацией через точки `..`), может использоваться любой _<дерево>_. В частности, одно из деревьев, которое представляет интерес, — это то, на которое указывает ссылка с именем `AUTO_MERGE`, которая записывается стратегией слияния `ort` при возникновении конфликтов слияния (см. linkgit:git-merge[1]). Сравнение рабочего каталога с `AUTO_MERGE` покажет те изменения, которые вы на данный момент сделали для разрешения конфликтов в тексте (см. примеры ниже)."
 
 #. type: Plain text
 #: en/git-diff.txt:117
 #, ignore-ellipsis, placeholders:'linkgit:gitrevisions[7]':'linkgit:gitrevisions[7]', priority:280
 msgid "For a more complete list of ways to spell _<commit>_, see \"SPECIFYING REVISIONS\" section in linkgit:gitrevisions[7]. However, `diff` is about comparing two _endpoints_, not ranges, and the range notations (`<commit>..<commit>` and `<commit>...<commit>`) do not mean a range as defined in the \"SPECIFYING RANGES\" section in linkgit:gitrevisions[7]."
-msgstr ""
+msgstr "Для более полного списка способов указания _<коммитов>_, см. раздел «УКАЗАНИЕ РЕДАКЦИЙ» в linkgit:gitrevisions[7]. Однако команда `diff` предназначена для сравнения двух _конечных точек_, а не диапазонов; так что нотация с указанием диапазона (`<коммит>..<коммит>` и `<коммит>...<коммит>`) на самом деле не означают «диапазон», как это постулируется в разделе «УКАЗАНИЕ РЕДАКЦИЙ» в linkgit:gitrevisions[7]."
 
 #. type: Labeled list
 #: en/git-diff.txt:118
 #, no-wrap, priority:280
 msgid "`git diff [<options>] <blob> <blob>`"
-msgstr ""
+msgstr "`git diff [<параметры>] <blob> <blob>`"
 
 #. type: Plain text
 #: en/git-diff.txt:122
 #, priority:280
 msgid "This form is to view the differences between the raw contents of two blob objects."
-msgstr ""
+msgstr "Эта форма используется для просмотра различий между сырыми содержимыми двух blob-объектов."
 
 #. type: Labeled list
 #: en/git-diff.txt:128
@@ -23654,33 +23654,33 @@ msgstr "`--theirs`"
 
 #. type: Plain text
 #: en/git-diff.txt:135
-#, fuzzy, priority:280
+#, priority:280
 msgid "Compare the working tree with"
-msgstr "Сравнение дерева файлов с рабочим каталогом или индексом"
+msgstr "Сравнение рабочего каталога с:"
 
 #. type: Plain text
 #: en/git-diff.txt:138
 #, placeholders:'`--base`', priority:280
 msgid "the \"base\" version (stage #1) when using `-1` or `--base`,"
-msgstr ""
+msgstr "«базовой» версией (индекс №1) при использовании `-1` или `--base`,"
 
 #. type: Plain text
 #: en/git-diff.txt:139
 #, placeholders:'`--ours`', priority:280
 msgid "\"our branch\" (stage #2) when using `-2` or `--ours`, or"
-msgstr ""
+msgstr "«нашей веткой» (индекс №2) при использовании `-2` или `--ours`, или"
 
 #. type: Plain text
 #: en/git-diff.txt:140
 #, placeholders:'`--theirs`', priority:280
 msgid "\"their branch\" (stage #3) when using `-3` or `--theirs`."
-msgstr ""
+msgstr "«их веткой» (индекс №3) при использовании `-3` или `--theirs`."
 
 #. type: Plain text
 #: en/git-diff.txt:145
 #, placeholders:'linkgit:git-read-tree[1]', priority:280
 msgid "The index contains these stages only for unmerged entries i.e. while resolving conflicts. See linkgit:git-read-tree[1] section \"3-Way Merge\" for detailed information."
-msgstr ""
+msgstr "Все эти три индекса существуют только для не слитых записей, т.е. при разрешении конфликтов. См. подробности в linkgit:git-read-tree[1] в разделе «Трёхходовое слияние»."
 
 #. type: Labeled list
 #: en/git-diff.txt:146
@@ -23692,7 +23692,7 @@ msgstr "`-0`"
 #: en/git-diff.txt:150
 #, priority:280
 msgid "Omit diff output for unmerged entries and just show \"Unmerged\". Can be used only when comparing the working tree with the index."
-msgstr ""
+msgstr "Опускать вывод списка изменений для не слитых записей и вместо этого просто выводить «Unmerged» («Не слит»). Данный параметр может использоваться только при сравнении рабочего каталога с индексом."
 
 #. type: Labeled list
 #: en/git-diff.txt:151
@@ -23704,13 +23704,13 @@ msgstr "`<путь>…`"
 #: en/git-diff.txt:155
 #, priority:280
 msgid "The _<path>_ parameters, when given, are used to limit the diff to the named paths (you can give directory names and get diff for all files under them)."
-msgstr ""
+msgstr "При указании _<путей>_ в аргументах выводимый список изменений ограничивается изменениями только в указанных путях (можно также указать имена каталогов и получить список изменений для всех файлов внутри этих каталогах)."
 
 #. type: Labeled list
 #: en/git-diff.txt:162
 #, no-wrap, priority:280
 msgid "Various ways to check your working tree"
-msgstr ""
+msgstr "Различные способы проверить состояние вашего рабочего каталога"
 
 #. type: delimited block -
 #: en/git-diff.txt:169
@@ -23721,36 +23721,40 @@ msgid ""
 "$ git diff HEAD       <3>\n"
 "$ git diff AUTO_MERGE <4>\n"
 msgstr ""
+"$ git diff            <1>\n"
+"$ git diff --cached   <2>\n"
+"$ git diff HEAD       <3>\n"
+"$ git diff AUTO_MERGE <4>\n"
 
 #. type: Plain text
 #: en/git-diff.txt:172
 #, priority:280
 msgid "Changes in the working tree not yet staged for the next commit."
-msgstr ""
+msgstr "Изменения в рабочем каталоге, которые ещё не были проиндексированы для следующего коммита."
 
 #. type: Plain text
 #: en/git-diff.txt:174
 #, placeholders:'`-a`', priority:280
 msgid "Changes between the index and your last commit; what you would be committing if you run `git commit` without `-a` option."
-msgstr ""
+msgstr "Изменения между вашим последним коммитом и индексом; то, что будет закоммичено, если вы выполните `git commit` без параметра `-a`."
 
 #. type: Plain text
 #: en/git-diff.txt:176
 #, priority:280
 msgid "Changes in the working tree since your last commit; what you would be committing if you run `git commit -a`"
-msgstr ""
+msgstr "Изменения в рабочем каталоге с момента вашего последнего коммита; то, что будет закоммичено, если вы выполните `git commit -a`."
 
 #. type: Plain text
 #: en/git-diff.txt:178
 #, priority:280
 msgid "Changes in the working tree you've made to resolve textual conflicts so far."
-msgstr ""
+msgstr "Изменения в рабочем каталоге, которые вы на данный момент сделали для разрешения конфликтов в текстах."
 
 #. type: Labeled list
 #: en/git-diff.txt:179
 #, no-wrap, priority:280
 msgid "Comparing with arbitrary commits"
-msgstr ""
+msgstr "Сравнение с произвольными коммитами"
 
 #. type: delimited block -
 #: en/git-diff.txt:185
@@ -23760,30 +23764,33 @@ msgid ""
 "$ git diff HEAD -- ./test  <2>\n"
 "$ git diff HEAD^ HEAD      <3>\n"
 msgstr ""
+"$ git diff test            <1>\n"
+"$ git diff HEAD -- ./test  <2>\n"
+"$ git diff HEAD^ HEAD      <3>\n"
 
 #. type: Plain text
 #: en/git-diff.txt:189
 #, priority:280
 msgid "Instead of using the tip of the current branch, compare with the tip of \"test\" branch."
-msgstr ""
+msgstr "Вместо верхушки текущей ветки, сравнить с верхушкой ветки «test»."
 
 #. type: Plain text
 #: en/git-diff.txt:192
 #, priority:280
 msgid "Instead of comparing with the tip of \"test\" branch, compare with the tip of the current branch, but limit the comparison to the file \"test\"."
-msgstr ""
+msgstr "Вместо сравнения с верхушкой ветки «test», сравнить с верхушкой текущей ветки, но ограничиться сравнением только файла «test»."
 
 #. type: Plain text
 #: en/git-diff.txt:193
 #, priority:280
 msgid "Compare the version before the last commit and the last commit."
-msgstr ""
+msgstr "Сравнить состояние перед последним коммитом и после него."
 
 #. type: Labeled list
 #: en/git-diff.txt:194
 #, no-wrap, priority:280
 msgid "Comparing branches"
-msgstr ""
+msgstr "Сравнение веток"
 
 #. type: delimited block -
 #: en/git-diff.txt:200
@@ -23793,30 +23800,33 @@ msgid ""
 "$ git diff topic..master   <2>\n"
 "$ git diff topic...master  <3>\n"
 msgstr ""
+"$ git diff topic master    <1>\n"
+"$ git diff topic..master   <2>\n"
+"$ git diff topic...master  <3>\n"
 
 #. type: Plain text
 #: en/git-diff.txt:203
 #, priority:280
 msgid "Changes between the tips of the topic and the master branches."
-msgstr ""
+msgstr "Изменения между верхушками веток topic и master."
 
 #. type: Plain text
 #: en/git-diff.txt:204 en/git-remote-fd.txt:44 en/git-remote-fd.txt:52 en/git-web--browse.txt:52
 #, priority:280
 msgid "Same as above."
-msgstr ""
+msgstr "То же, что и предыдущее."
 
 #. type: Plain text
 #: en/git-diff.txt:206
 #, priority:280
 msgid "Changes that occurred on the master branch since when the topic branch was started off it."
-msgstr ""
+msgstr "Изменения, которые произошли в ветке master с момента ответвления от неё ветки topic."
 
 #. type: Labeled list
 #: en/git-diff.txt:207
 #, no-wrap, priority:280
 msgid "Limiting the diff output"
-msgstr ""
+msgstr "Ограничение вывода diff"
 
 #. type: delimited block -
 #: en/git-diff.txt:213
@@ -23826,30 +23836,33 @@ msgid ""
 "$ git diff --name-status                <2>\n"
 "$ git diff arch/i386 include/asm-i386   <3>\n"
 msgstr ""
+"$ git diff --diff-filter=MRC            <1>\n"
+"$ git diff --name-status                <2>\n"
+"$ git diff arch/i386 include/asm-i386   <3>\n"
 
 #. type: Plain text
 #: en/git-diff.txt:217
 #, priority:280
 msgid "Show only modification, rename, and copy, but not addition or deletion."
-msgstr ""
+msgstr "Показать только изменения, переименования и копирования, но не добавления или удаления."
 
 #. type: Plain text
 #: en/git-diff.txt:219
 #, priority:280
 msgid "Show only names and the nature of change, but not actual diff output."
-msgstr ""
+msgstr "Показать только имена и характер изменений, но не сами изменения."
 
 #. type: Plain text
 #: en/git-diff.txt:220
 #, priority:280
 msgid "Limit diff output to named subtrees."
-msgstr ""
+msgstr "Ограничиться только изменениями в заданных поддеревьями при выводе списка изменений."
 
 #. type: Labeled list
 #: en/git-diff.txt:221
 #, no-wrap, priority:280
 msgid "Munging the diff output"
-msgstr ""
+msgstr "Изменение вывода diff"
 
 #. type: delimited block -
 #: en/git-diff.txt:226
@@ -23858,24 +23871,26 @@ msgid ""
 "$ git diff --find-copies-harder -B -C  <1>\n"
 "$ git diff -R                          <2>\n"
 msgstr ""
+"$ git diff --find-copies-harder -B -C  <1>\n"
+"$ git diff -R                          <2>\n"
 
 #. type: Plain text
 #: en/git-diff.txt:230
 #, priority:280
 msgid "Spend extra cycles to find renames, copies and complete rewrites (very expensive)."
-msgstr ""
+msgstr "Потратить дополнительные ресурсы на поиск переименований, копирований и изменений, которые полностью переписывают файл (очень затратно)."
 
 #. type: Plain text
 #: en/git-diff.txt:231
 #, priority:280
 msgid "Output diff in reverse."
-msgstr ""
+msgstr "Выводить diff в обратном порядке."
 
 #. type: Plain text
 #: en/git-diff.txt:249
-#, fuzzy, placeholders:'linkgit:git-difftool[1]':'linkgit:git-log[1]':'linkgit:gitdiffcore[7]':'linkgit:git-format-patch[1]':'linkgit:git-apply[1]':'linkgit:git-show[1]', priority:280
+#, placeholders:'linkgit:git-difftool[1]':'linkgit:git-log[1]':'linkgit:gitdiffcore[7]':'linkgit:git-format-patch[1]':'linkgit:git-apply[1]':'linkgit:git-show[1]', priority:280
 msgid "`diff`(1), linkgit:git-difftool[1], linkgit:git-log[1], linkgit:gitdiffcore[7], linkgit:git-format-patch[1], linkgit:git-apply[1], linkgit:git-show[1]"
-msgstr "linkgit:git-status[1] linkgit:git-rm[1] linkgit:git-reset[1] linkgit:git-mv[1] linkgit:git-commit[1] linkgit:git-update-index[1]"
+msgstr "`diff`(1), linkgit:git-difftool[1], linkgit:git-log[1], linkgit:gitdiffcore[7], linkgit:git-format-patch[1], linkgit:git-apply[1], linkgit:git-show[1]"
 
 #. type: Title =
 #: en/git-fast-export.txt:2
@@ -44562,7 +44577,7 @@ msgstr ""
 #: en/git-read-tree.txt:236
 #, no-wrap, priority:80
 msgid "3-Way Merge"
-msgstr ""
+msgstr "Трёхходовое слияние"
 
 #. type: Plain text
 #: en/git-read-tree.txt:239
@@ -68542,7 +68557,7 @@ msgstr ""
 #: en/revisions.txt:2
 #, no-wrap, priority:100
 msgid "SPECIFYING REVISIONS"
-msgstr ""
+msgstr "УКАЗАНИЕ РЕДАКЦИЙ"
 
 #. type: Plain text
 #: en/revisions.txt:9
