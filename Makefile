@@ -1,8 +1,8 @@
-EN_SOURCES = $(wildcard en/*.txt)
+EN_SOURCES = $(wildcard en/*.adoc)
 LANGUAGE_PO = $(wildcard po/documentation.*.po)
 ALL_LANGUAGES = $(subst po/documentation.,,$(subst .po,,$(LANGUAGE_PO)))
 
-L10N_BUILD_TARGETS = all man html install doc-l10n install-l10n install-txt
+L10N_BUILD_TARGETS = all man html install doc-l10n install-l10n install-adoc
 L10N_CLEAN_TARGETS = clean mrproper
 L10N_TARGETS = $(L10N_CLEAN_TARGETS) $(L10N_BUILD_TARGETS)
 

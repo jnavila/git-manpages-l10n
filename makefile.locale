@@ -1,12 +1,12 @@
 vpath GIT-VERSION-FILE . ..
 
-MAN1_SOURCE = $(wildcard git-*.txt)
-MAN1_SOURCE += $(wildcard git.txt*)
+MAN1_SOURCE = $(wildcard git-*.adoc)
+MAN1_SOURCE += $(wildcard git.adoc*)
 
-MAN7_SOURCE = $(wildcard gitglossary.txt*)
+MAN7_SOURCE = $(wildcard gitglossary.adoc*)
 
 MAN_FILTER = $(MAN1_SOURCE) $(MAN7_SOURCE)
-HTML_FILTER = $(patsubst %.txt,%.html,$(MAN_FILTER))
+HTML_FILTER = $(patsubst %.adoc,%.html,$(MAN_FILTER))
 
 
 ifeq ($(wildcard ../../build-docdep.perl),../../build-docdep.perl)
@@ -56,25 +56,25 @@ ASCIIDOC_EXTRA += -amanmanual='Git Manual' \
 ASCIIDOC_EXTRA += -alitdd='\--'
 ASCIIDOC_EXTRA += -acompat-mode -atabsize=8
 
-$(HTML_FILTER): %.html: %.txt
+$(HTML_FILTER): %.html: %.adoc
 	$(QUIET_ASCIIDOC)asciidoctor -b xhtml5 \
         $(ASCIIDOC_EXTRA) $<
 
-MAN1_PAGES=$(patsubst %.txt,%.1,$(MAN1_SOURCE))
-MAN5_PAGES=$(patsubst %.txt,%.5,$(MAN5_SOURCE))
-MAN7_PAGES=$(patsubst %.txt,%.7,$(MAN7_SOURCE))
+MAN1_PAGES=$(patsubst %.adoc,%.1,$(MAN1_SOURCE))
+MAN5_PAGES=$(patsubst %.adoc,%.5,$(MAN5_SOURCE))
+MAN7_PAGES=$(patsubst %.adoc,%.7,$(MAN7_SOURCE))
 
 MANPAGES=$(MAN1_PAGES) $(MAN5_PAGES) $(MAN7_PAGES)
 
-$(MAN1_PAGES): %.1: %.txt
+$(MAN1_PAGES): %.1: %.adoc
 	$(QUIET_ASCIIDOC)asciidoctor -b manpage -o $@ \
         $(ASCIIDOC_EXTRA)  -amanvolnum=1 $<
 
-$(MAN5_PAGES): %.5: %.txt
+$(MAN5_PAGES): %.5: %.adoc
 	$(QUIET_ASCIIDOC)asciidoctor -b manpage -o $@ \
         $(ASCIIDOC_EXTRA)  -amanvolnum=5 $<
 
-$(MAN7_PAGES): %.7: %.txt
+$(MAN7_PAGES): %.7: %.adoc
 	$(QUIET_ASCIIDOC)asciidoctor -b manpage -o $@ \
         $(ASCIIDOC_EXTRA)  -amanvolnum=7 $<
 
@@ -83,16 +83,19 @@ html: $(HTML_FILTER)
 
 all doc-l10n: man html
 
-install-txt:
+install-adoc:
 	install -d -m 755 $(prefix)/$(lang)
-	[ -z "$$(ls *.txt 2>/dev/null)" ] || install *.txt -m 644 $(prefix)/$(lang)
-	[ -z "$$(ls *.html 2>/dev/null)" ] || install *.html -m 644 $(prefix)/$(lang)
+	[ -n "$$(ls *.adoc 2>/dev/null)" ] && install *.adoc -m 644 $(prefix)/$(lang) || true
+	[ -n "$$(ls *.html 2>/dev/null)" ] && install *.html -m 644 $(prefix)/$(lang) || true
+	install -d -m 755 $(prefix)/$(lang)/includes
+	[ -n "$$(ls includes/*.adoc 2>/dev/null)" ] && install includes/*.adoc -m 644 $(prefix)/$(lang)/includes || true
+	[ -n "$$(ls includes/*.html 2>/dev/null)" ] && install includes/*.html -m 644 $(prefix)/$(lang)/includes || true
 
 clean:
-	rm -f *.1 *.5 *7 *.html
+	rm -f *.1 *.5 *7 *.html .man .all .translated
 
 endif
 
 
 mrproper: clean
-	rm -f *.txt
+	rm -f *.adoc
