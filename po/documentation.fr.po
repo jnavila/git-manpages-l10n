@@ -5,7 +5,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2025-03-01 16:40+0100\n"
 "PO-Revision-Date: 2025-03-03 19:26+0000\n"
-"Last-Translator: Phantomwise <phantomwise67@protonmail.com>\n"
+"Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -3249,10 +3249,9 @@ msgstr "commit.cleanup"
 
 #. type: Plain text
 #: en/config/commit.adoc:15
-#, fuzzy, placeholders:'`--cleanup`':'{see-git-commit}':'commit.cleanup', priority:280
-#| msgid "This setting overrides the default of the `--cleanup` option in `git commit`. See linkgit:git-commit[1] for details. Changing the default can be useful when you always want to keep lines that begin with the comment character `#` in your log message, in which case you would do `git config commit.cleanup whitespace` (note that you will have to remove the help lines that begin with `#` in the commit log template yourself, if you do this)."
+#, placeholders:'`--cleanup`':'{see-git-commit}':'commit.cleanup', priority:280
 msgid "This setting overrides the default of the `--cleanup` option in `git commit`. {see-git-commit} Changing the default can be useful when you always want to keep lines that begin with the comment character `#` in your log message, in which case you would do `git config commit.cleanup whitespace` (note that you will have to remove the help lines that begin with `#` in the commit log template yourself, if you do this)."
-msgstr "Ce paramètre surcharge la valeur par défaut de l'option `--cleanup` dans `git commit`. Voir linkgit:git-commit[1] pour plus de détails. Changer la valeur par défaut peut être utile lorsque vous voulez toujours garder des lignes qui commencent par le caractère de commentaire `#` dans votre message de journal, auquel cas vous feriez `git config commit.cleanup whitespace` (notez que vous devrez supprimer les lignes d'aide qui commencent par `#` dans le modèle de journal de commit vous-même, si vous le faites)."
+msgstr "Ce paramètre surcharge la valeur par défaut de l'option `--cleanup` dans `git commit`. {see-git-commit} Changer la valeur par défaut peut être utile lorsque vous voulez toujours garder des lignes qui commencent par le caractère de commentaire `#` dans votre message de journal, auquel cas vous feriez `git config commit.cleanup whitespace` (notez que vous devrez supprimer les lignes d'aide qui commencent par `#` dans le modèle de journal de commit vous-même, si vous le faites)."
 
 #. type: Labeled list
 #: en/config/commit.adoc:16
@@ -3303,10 +3302,9 @@ msgstr "commit.verbose"
 
 #. type: Plain text
 #: en/config/commit.adoc:34
-#, fuzzy, placeholders:'{see-git-commit}', priority:280
-#| msgid "A boolean or int to specify the level of verbosity with `git commit`. See linkgit:git-commit[1]."
+#, placeholders:'{see-git-commit}', priority:280
 msgid "A boolean or int to specify the level of verbosity with `git commit`. {see-git-commit}"
-msgstr "Un booléen ou un int pour préciser le niveau de verbosité avec `git commit`. Voir linkgit:git-commit[1]."
+msgstr "Un booléen ou un int pour préciser le niveau de verbosité avec `git commit`. {see-git-commit}"
 
 #. type: Labeled list
 #: en/config/diff.adoc:1
@@ -4815,19 +4813,7 @@ msgstr "Suivent un ligne ou plus d'entête étendu :"
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:46
-#, fuzzy, priority:280
-#| msgid ""
-#| "old mode <mode>\n"
-#| "new mode <mode>\n"
-#| "deleted file mode <mode>\n"
-#| "new file mode <mode>\n"
-#| "copy from <path>\n"
-#| "copy to <path>\n"
-#| "rename from <path>\n"
-#| "rename to <path>\n"
-#| "similarity index <number>\n"
-#| "dissimilarity index <number>\n"
-#| "index <hash>..<hash> <mode>\n"
+#, priority:280
 msgid "old mode <mode> new mode <mode> deleted file mode <mode> new file mode <mode> copy from <path> copy to <path> rename from <path> rename to <path> similarity index <number> dissimilarity index <number> index <hash>..<hash> <mode>"
 msgstr ""
 "old mode <mode>\n"
@@ -4840,7 +4826,7 @@ msgstr ""
 "rename to <chemin>\n"
 "similarity index <nombre>\n"
 "dissimilarity index <nombre>\n"
-"index <empreinte>..<empreinte> <mode>\n"
+"index <empreinte>..<empreinte> <mode>"
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:49
@@ -5020,18 +5006,13 @@ msgstr "Il est suivi par une ligne d'entête étendu ou plus (cet exemple montre
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:144
-#, fuzzy, priority:280
-#| msgid ""
-#| "index <hash>,<hash>..<hash>\n"
-#| "mode <mode>,<mode>`..`<mode>\n"
-#| "new file mode <mode>\n"
-#| "deleted file mode <mode>,<mode>\n"
+#, priority:280
 msgid "index <hash>,<hash>..<hash> mode <mode>,<mode>`..`<mode> new file mode <mode> deleted file mode <mode>,<mode>"
 msgstr ""
 "index <empreinte>,<empreinte>..<empreinte>\n"
 "mode <mode>,<mode>..<mode>\n"
 "new file mode <mode>\n"
-"deleted file mode <mode>,<mode>\n"
+"deleted file mode <mode>,<mode>"
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:150
@@ -17197,7 +17178,7 @@ msgstr "`--server-option=<option>`"
 # ERROR: ++--server-option=++ not found in translation
 #. type: Plain text
 #: en/git-clone.adoc:158
-#, fuzzy, placeholders:'`--server-option=':'++--server-option=++', priority:300
+#, placeholders:'`--server-option=':'++--server-option=++', priority:300
 msgid "Transmit the given string to the server when communicating using protocol version 2. The given string must not contain a NUL or LF character. The server's handling of server options, including unknown ones, is server-specific. When multiple `--server-option=<option>` are given, they are all sent to the other side in the order listed on the command line. When no ++--server-option=++__<option>__ is given from the command line, the values of configuration variable `remote.<name>.serverOption` are used instead."
 msgstr "Transmettre la chaîne donnée au serveur lors d'une communication utilisant la version 2 du protocole. La chaîne donnée ne doit pas contenir de caractère NUL ou LF. La gestion par le serveur des options du serveur, y compris les options inconnues, est spécifique au serveur. Lorsque plusieurs `--server-option=<option>` sont donnés, ils sont tous envoyés à l'autre côté dans l'ordre indiqué sur la ligne de commande. Quand `--server-option=<option>` est fourni sur la ligne de commande, les valeurs de la variable de configuration `remote.<nom>.serverOption` sont utilisées à la place."
 
@@ -17317,10 +17298,9 @@ msgstr "Au lieu de pointer la `HEAD` nouvellement créée sur la branche pointé
 
 #. type: Labeled list
 #: en/git-clone.adoc:224
-#, fuzzy, no-wrap, placeholders:'`--revision=', priority:300
-#| msgid "<revision-range>"
+#, no-wrap, placeholders:'`--revision=', priority:300
 msgid "`--revision=<rev>`"
-msgstr "<plage-de-révisions>"
+msgstr "`--revision=<rév>`"
 
 #. type: Plain text
 #: en/git-clone.adoc:232
@@ -17362,7 +17342,7 @@ msgstr "Spécifier le répertoire depuis lequel les modèles vont être tirés 
 # ERROR: `-c` not found in translation
 #. type: Labeled list
 #: en/git-clone.adoc:243
-#, fuzzy, no-wrap, placeholders:'`-c`', priority:300
+#, no-wrap, placeholders:'`-c`', priority:300
 msgid "`-c` `<key>=<value>`"
 msgstr "`-c <nom>=<valeur>`"
 
@@ -17370,7 +17350,7 @@ msgstr "`-c <nom>=<valeur>`"
 # ERROR: `--config` not found in translation
 #. type: Labeled list
 #: en/git-clone.adoc:244
-#, fuzzy, no-wrap, placeholders:'`--config`', priority:300
+#, no-wrap, placeholders:'`--config`', priority:300
 msgid "`--config` `<key>=<value>`"
 msgstr "`--config <clé>=<valeur>`"
 
@@ -17442,10 +17422,9 @@ msgstr "`--[no-]tags`"
 
 #. type: Plain text
 #: en/git-clone.adoc:291
-#, fuzzy, placeholders:'`--no-tags`':'--no-tags`':'linkgit:git-fetch[1]', priority:300
-#| msgid "Don't clone any tags, and set `remote.<remote>.tagOpt=--no-tags` in the config, ensuring that future `git pull` and `git fetch` operations won't follow any tags. Subsequent explicit tag fetches will still work, (see linkgit:git-fetch[1])."
+#, placeholders:'`--no-tags`':'--no-tags`':'linkgit:git-fetch[1]', priority:300
 msgid "Control whether or not tags will be cloned. When `--no-tags` is given, the option will be become permanent by setting the `remote.<remote>.tagOpt=--no-tags` configuration. This ensures that future `git pull` and `git fetch` won't follow any tags. Subsequent explicit tag fetches will still work (see linkgit:git-fetch[1])."
-msgstr "Ne cloner aucune étiquette et positionner `remote.<distant>.tagOpt=--no-tags` en configuration, de sorte que les futures opérations `git pull` et `git fetch` ne tireront aucune étiquette. Les récupérations explicites d'étiquette fonctionneront toujours (voir linkgit:git-fetch[1])."
+msgstr "Contrôler si les étiquettes seront clonées ou non. Quand `--no-tags` est fourni, l'option devient permanente en réglant le paramètre de configuration `remote.<distant>.tagOpt=--no-tags`, de sorte que les futurs `git pull` et `git fetch` ne tireront aucune étiquette. Les récupérations explicites d'étiquette fonctionneront toujours (voir linkgit:git-fetch[1])."
 
 #. type: Plain text
 #: en/git-clone.adoc:294
@@ -18021,16 +18000,7 @@ msgstr "git-commit - Enregistrer les modifications dans le dépôt"
 
 #. type: synopsis
 #: en/git-commit.adoc:19
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'--interactive':'--patch]':'[--amend]':'[--dry-run]':'--squash':'--fixup':'[--reset-author]':'[--allow-empty]':'[--allow-empty-message]':'[--no-verify]':'[--author=':'[--date=':'[--cleanup=':'[--pathspec-from-file=':'[--pathspec-file-nul]':'--trailer', priority:280
-#| msgid ""
-#| "'git commit' [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]\n"
-#| "\t   [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>]\n"
-#| "\t   [-F <file> | -m <msg>] [--reset-author] [--allow-empty]\n"
-#| "\t   [--allow-empty-message] [--no-verify] [-e] [--author=<author>]\n"
-#| "\t   [--date=<date>] [--cleanup=<mode>] [--[no-]status]\n"
-#| "\t   [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]\n"
-#| "\t   [(--trailer <token>[(=|:)<value>])...] [-S[<keyid>]]\n"
-#| "\t   [--] [<pathspec>...]\n"
+#, ignore-ellipsis, no-wrap, placeholders:'--interactive':'--patch]':'[--amend]':'[--dry-run]':'--squash':'--fixup':'[--reset-author]':'[--allow-empty]':'[--allow-empty-message]':'[--no-verify]':'[--author=':'[--date=':'[--cleanup=':'[--pathspec-from-file=':'[--pathspec-file-nul]':'--trailer', priority:280
 msgid ""
 "git commit [-a | --interactive | --patch] [-s] [-v] [-u[<mode>]] [--amend]\n"
 "\t   [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>]\n"
@@ -18041,7 +18011,7 @@ msgid ""
 "\t   [(--trailer <token>[(=|:)<value>])...] [-S[<keyid>]]\n"
 "\t   [--] [<pathspec>...]\n"
 msgstr ""
-"'git commit' [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]\n"
+"git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]\n"
 "\t   [--dry-run] [(-c | -C | --squash) <commit>] | --fixup [(amend|reword):]<commit>]\n"
 "\t   [-F <fichier> | -m <msg>] [--reset-author] [--allow-empty]\n"
 "\t   [--allow-empty-message] [--no-verify] [-e] [--author=<auteur>]\n"
@@ -18052,10 +18022,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-commit.adoc:28
-#, fuzzy, placeholders:'`HEAD`':'linkgit:git-checkout[1]', priority:280
-#| msgid "Create a new commit containing the current contents of the index and the given log message describing the changes. The new commit is a direct child of HEAD, usually the tip of the current branch, and the branch is updated to point to it (unless no branch is associated with the working tree, in which case HEAD is \"detached\" as described in linkgit:git-checkout[1])."
+#, placeholders:'`HEAD`':'linkgit:git-checkout[1]', priority:280
 msgid "Create a new commit containing the current contents of the index and the given log message describing the changes. The new commit is a direct child of HEAD, usually the tip of the current branch, and the branch is updated to point to it (unless no branch is associated with the working tree, in which case `HEAD` is \"detached\" as described in linkgit:git-checkout[1])."
-msgstr "Crée un nouveau commit contenant le contenu actuel de l'index et avec le message de validation décrivant la modification. Le nouveau commit est un fils direct de HEAD, habituellement au sommet de la branche actuelle et la branche est mise à jour pour pointer dessus (à moins qu'aucune branche ne soit associée avec l'arbre de travail actuel, auquel cas HEAD est « détachée » comme décrit dans linkgit:git-checkout[1])."
+msgstr "Crée un nouveau commit contenant le contenu actuel de l'index et avec le message de validation décrivant la modification. Le nouveau commit est un fils direct de HEAD, habituellement au sommet de la branche actuelle et la branche est mise à jour pour pointer dessus (à moins qu'aucune branche ne soit associée avec l'arbre de travail actuel, auquel cas `HEAD` est « détachée » comme décrit dans linkgit:git-checkout[1])."
 
 #. type: Plain text
 #: en/git-commit.adoc:30
@@ -18065,38 +18034,33 @@ msgstr "Le contenu à valider peut être spécifié de différentes manières :
 
 #. type: Plain text
 #: en/git-commit.adoc:34
-#, fuzzy, placeholders:'linkgit:git-add[1]', priority:280
-#| msgid "by using linkgit:git-add[1] to incrementally \"add\" changes to the index before using the 'commit' command (Note: even modified files must be \"added\");"
+#, placeholders:'linkgit:git-add[1]', priority:280
 msgid "by using linkgit:git-add[1] to incrementally \"add\" changes to the index before using the `commit` command (Note: even modified files must be \"added\");"
-msgstr "en utilisant linkgit:git-add[1] pour « ajouter » de manière incrémentale des modifications à l'index avant d'utiliser la commande 'commit' (Note : les fichiers doivent être « ajoutés » pour faire partie du commit, même s'ils ont été modifiés);"
+msgstr "en utilisant linkgit:git-add[1] pour « ajouter » de manière incrémentale des modifications à l'index avant d'utiliser la commande '`commit` (Note : les fichiers doivent être « ajoutés » pour faire partie du commit, même s'ils ont été modifiés);"
 
 #. type: Plain text
 #: en/git-commit.adoc:37
-#, fuzzy, placeholders:'linkgit:git-rm[1]', priority:280
-#| msgid "by using linkgit:git-rm[1] to remove files from the working tree and the index, again before using the 'commit' command;"
+#, placeholders:'linkgit:git-rm[1]', priority:280
 msgid "by using linkgit:git-rm[1] to remove files from the working tree and the index, again before using the `commit` command;"
-msgstr "en utilisant linkgit:git-rm[1] pour supprimer des fichiers de l'arbre de travail et de l'index, encore une fois avant d'utiliser la commande 'commit';"
+msgstr "en utilisant linkgit:git-rm[1] pour supprimer des fichiers de l'arbre de travail et de l'index, encore une fois avant d'utiliser la commande `commit` ;"
 
 #. type: Plain text
 #: en/git-commit.adoc:43
-#, fuzzy, placeholders:'`--interactive`':'`--patch`', priority:280
-#| msgid "by listing files as arguments to the 'commit' command (without --interactive or --patch switch), in which case the commit will ignore changes staged in the index, and instead record the current content of the listed files (which must already be known to Git);"
+#, placeholders:'`--interactive`':'`--patch`', priority:280
 msgid "by listing files as arguments to the `commit` command (without `--interactive` or `--patch` switch), in which case the commit will ignore changes staged in the index, and instead record the current content of the listed files (which must already be known to Git);"
-msgstr "en listant les fichiers comme arguments de la commande 'commit' (sans les options --interactive ou --patch), auquel cas la validation ignorera les modifications indexées et enregistrera plutôt le contenu actuel des fichiers listés (qui doivent être déjà connus de Git);"
+msgstr "en listant les fichiers comme arguments de la commande `commit` (sans les options `--interactive` ou `--patch`), auquel cas la validation ignorera les modifications indexées et enregistrera plutôt le contenu actuel des fichiers listés (qui doivent être déjà connus de Git);"
 
 #. type: Plain text
 #: en/git-commit.adoc:49
-#, fuzzy, placeholders:'`-a`', priority:280
-#| msgid "by using the -a switch with the 'commit' command to automatically \"add\" changes from all known files (i.e. all files that are already listed in the index) and to automatically \"rm\" files in the index that have been removed from the working tree, and then perform the actual commit;"
+#, placeholders:'`-a`', priority:280
 msgid "by using the `-a` switch with the `commit` command to automatically \"add\" changes from all known files (i.e. all files that are already listed in the index) and to automatically \"rm\" files in the index that have been removed from the working tree, and then perform the actual commit;"
-msgstr "en utilisant l'option -a avec la commande 'commit' pour « ajouter » automatiquement les modifications de tous les fichiers connus (c'est-à-dire les fichiers déjà listés dans l'index) et supprimer ('rm') automatiquement les fichiers de l'index qui ont été supprimés dans l'arbre de travail, puis d'effectuer la validation ;"
+msgstr "en utilisant l'option `-a` avec la commande `commit` pour « ajouter » automatiquement les modifications de tous les fichiers connus (c'est-à-dire les fichiers déjà listés dans l'index) et supprimer ('rm') automatiquement les fichiers de l'index qui ont été supprimés dans l'arbre de travail, puis d'effectuer la validation ;"
 
 #. type: Plain text
 #: en/git-commit.adoc:55
-#, fuzzy, placeholders:'`--interactive`':'`--patch`':'linkgit:git-add[1]', priority:280
-#| msgid "by using the --interactive or --patch switches with the 'commit' command to decide one by one which files or hunks should be part of the commit in addition to contents in the index, before finalizing the operation. See the ``Interactive Mode'' section of linkgit:git-add[1] to learn how to operate these modes."
+#, placeholders:'`--interactive`':'`--patch`':'linkgit:git-add[1]', priority:280
 msgid "by using the `--interactive` or `--patch` switches with the `commit` command to decide one by one which files or hunks should be part of the commit in addition to contents in the index, before finalizing the operation. See the ``Interactive Mode'' section of linkgit:git-add[1] to learn how to operate these modes."
-msgstr "en utilisant les options --interactive ou --patch avec la commande 'commit' pour choisir quels fichiers ou sections de fichier doivent être inclus dans le commit en plus de l'index, avant finalisation de l'opération. Référez-vous à la section « Mode interactif » de linkgit:git-add[1] pour la description de ces modes."
+msgstr "en utilisant les options `--interactive` ou `--patch` avec la commande `commit` pour choisir quels fichiers ou sections de fichier doivent être inclus dans le commit en plus de l'index, avant finalisation de l'opération. Référez-vous à la section « Mode interactif » de linkgit:git-add[1] pour la description de ces modes."
 
 #. type: Plain text
 #: en/git-commit.adoc:59
@@ -18133,10 +18097,9 @@ msgstr "-C <commit>"
 
 #. type: Labeled list
 #: en/git-commit.adoc:80
-#, fuzzy, no-wrap, placeholders:'`--reuse-message=', priority:280
-#| msgid "--reuse-message=<commit>"
+#, no-wrap, placeholders:'`--reuse-message=', priority:280
 msgid "`--reuse-message=<commit>`"
-msgstr "--reuse-message=<commit>"
+msgstr "`--reuse-message=<commit>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:84
@@ -18154,24 +18117,21 @@ msgstr "-c <commit>"
 
 #. type: Labeled list
 #: en/git-commit.adoc:86
-#, fuzzy, no-wrap, placeholders:'`--reedit-message=', priority:280
-#| msgid "--reedit-message=<commit>"
+#, no-wrap, placeholders:'`--reedit-message=', priority:280
 msgid "`--reedit-message=<commit>`"
-msgstr "--reedit-message=<commit>"
+msgstr "`--reedit-message=<commit>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:89
-#, fuzzy, placeholders:'`-C`':'`-c`', priority:280
-#| msgid "Like '-C', but with `-c` the editor is invoked, so that the user can further edit the commit message."
+#, placeholders:'`-C`':'`-c`', priority:280
 msgid "Like `-C`, but with `-c` the editor is invoked, so that the user can further edit the commit message."
-msgstr "Comme '-C', mais avec `-c`, l'éditeur est appelé pour permettre à l'utilisateur de modifier le message de validation."
+msgstr "Comme `-C`, mais avec `-c`, l'éditeur est appelé pour permettre à l'utilisateur de modifier le message de validation."
 
 #. type: Labeled list
 #: en/git-commit.adoc:90
-#, fuzzy, no-wrap, placeholders:'`--fixup=[(amend|reword)', priority:280
-#| msgid "--fixup=[(amend|reword):]<commit>"
+#, no-wrap, placeholders:'`--fixup=[(amend|reword)', priority:280
 msgid "`--fixup=[(amend|reword):]<commit>`"
-msgstr "--fixup=[(amend|reword):]<commit>"
+msgstr "`--fixup=[(amend|reword):]<commit>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:100
@@ -18196,15 +18156,14 @@ msgstr "Le commit créé par `--fixup=amend:<commit>` est similaire mais son suj
 
 #. type: Plain text
 #: en/git-commit.adoc:124
-#, fuzzy, no-wrap, placeholders:'`--fixup=reword':'`--fixup=amend':'--only`':'--autosquash`', priority:280
-#| msgid "`--fixup=reword:<commit>` is shorthand for `--fixup=amend:<commit> --only`. It creates an \"amend!\" commit with only a log message (ignoring any changes staged in the index). When squashed by `git rebase --autosquash`, it replaces the log message of `<commit>` without making any other changes."
+#, no-wrap, placeholders:'`--fixup=reword':'`--fixup=amend':'--only`':'--autosquash`', priority:280
 msgid ""
 "`--fixup=reword:<commit>` is shorthand for `--fixup=amend:<commit>\n"
 " --only`. It creates an \"amend!\" commit with only a log message\n"
 "(ignoring any changes staged in the index). When squashed by `git\n"
 "rebase --autosquash`, it replaces the log message of _<commit>_\n"
 "without making any other changes.\n"
-msgstr "`--fixup=reword:<commit>` est un raccourci pour `--fixup=amend:<commit> --only`. Il crée un commit \"amend!\" qui touche seulement au message de validation (en ignorant les changements mis en place dans l'index). Lorsqu'il est écrasé par `git rebase --autosquash`, il remplace le message du validation de `<commit>` sans faire d'autres changements."
+msgstr "`--fixup=reword:<commit>` est un raccourci pour `--fixup=amend:<commit> --only`. Il crée un commit \"amend!\" qui touche seulement au message de validation (en ignorant les changements mis en place dans l'index). Lorsqu'il est écrasé par `git rebase --autosquash`, il remplace le message du validation de `<commit>` sans faire d'autres changements.\n"
 
 #. type: Plain text
 #: en/git-commit.adoc:128
@@ -18215,17 +18174,15 @@ msgstr "Ni les commits \"fixup!\" ni les commits \"amend!\" ne changent la pater
 
 #. type: Labeled list
 #: en/git-commit.adoc:129
-#, fuzzy, no-wrap, placeholders:'`--squash=', priority:280
-#| msgid "--squash=<commit>"
+#, no-wrap, placeholders:'`--squash=', priority:280
 msgid "`--squash=<commit>`"
-msgstr "--squash=<commit>"
+msgstr "`--squash=<commit>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:135
-#, fuzzy, placeholders:'--autosquash`':'`-m`':'`-c`':'`-C`':'`-F`':'linkgit:git-rebase[1]', priority:280
-#| msgid "Construct a commit message for use with `rebase --autosquash`. The commit message subject line is taken from the specified commit with a prefix of \"squash! \". Can be used with additional commit message options (`-m`/`-c`/`-C`/`-F`). See linkgit:git-rebase[1] for details."
+#, placeholders:'--autosquash`':'`-m`':'`-c`':'`-C`':'`-F`':'linkgit:git-rebase[1]', priority:280
 msgid "Construct a commit message for use with `git rebase --autosquash`. The commit message title is taken from the specified commit with a prefix of \"squash! \". Can be used with additional commit message options (`-m`/`-c`/`-C`/`-F`). See linkgit:git-rebase[1] for details."
-msgstr "Construire un message de validation pour une utilisation avec `rebase --autosquash`. La ligne de titre du message de validation est tirée du commit spécifié préfixée par « squash! ». Peut être utilisée avec d'autres options de 'commit' (`-m`/`-c`/`-C`/`-F`). Référez-vous à linkgit:git-rebase[1] pour plus de détails."
+msgstr "Construire un message de validation pour une utilisation avec `git rebase --autosquash`. La ligne de titre du message de validation est tirée du commit spécifié préfixée par « squash! ». Peut être utilisée avec d'autres options de 'commit' (`-m`/`-c`/`-C`/`-F`). Référez-vous à linkgit:git-rebase[1] pour plus de détails."
 
 #. type: Labeled list
 #: en/git-commit.adoc:136
@@ -18235,10 +18192,9 @@ msgstr "`--reset-author`"
 
 #. type: Plain text
 #: en/git-commit.adoc:141
-#, fuzzy, placeholders:'`-C`':'`-c`':'`--amend`', priority:280
-#| msgid "When used with -C/-c/--amend options, or when committing after a conflicting cherry-pick, declare that the authorship of the resulting commit now belongs to the committer. This also renews the author timestamp."
+#, placeholders:'`-C`':'`-c`':'`--amend`', priority:280
 msgid "When used with `-C`/`-c`/`--amend` options, or when committing after a conflicting cherry-pick, declare that the authorship of the resulting commit now belongs to the committer. This also renews the author timestamp."
-msgstr "Utilisé avec les options -C/-c/--amend ou lors de validation après un picorage conflictuel, déclarer que la paternité du commit résultant appartient à présent au validateur avec un horodatage mis à jour."
+msgstr "Utilisé avec les options `-C`/`-c`/`--amend` ou lors de validation après un picorage conflictuel, déclarer que la paternité du commit résultant appartient à présent au validateur avec un horodatage mis à jour."
 
 #. type: Labeled list
 #: en/git-commit.adoc:142
@@ -18312,10 +18268,9 @@ msgstr "-F <fichier>"
 
 #. type: Labeled list
 #: en/git-commit.adoc:168 en/git-notes.adoc:152
-#, fuzzy, no-wrap, placeholders:'`--file=', priority:280
-#| msgid "--file=<file>"
+#, no-wrap, placeholders:'`--file=', priority:280
 msgid "`--file=<file>`"
-msgstr "--file=<fichier>"
+msgstr "`--file=<fichier>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:171
@@ -18326,24 +18281,21 @@ msgstr "Prendre le message de validation depuis le fichier indiqué. Utilisez '-
 
 #. type: Labeled list
 #: en/git-commit.adoc:172
-#, fuzzy, no-wrap, placeholders:'`--author=', priority:280
-#| msgid "--author=<author>"
+#, no-wrap, placeholders:'`--author=', priority:280
 msgid "`--author=<author>`"
-msgstr "--author=<auteur>"
+msgstr "`--author=<auteur>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:178
-#, fuzzy, placeholders:'git rev-list':'--all':'--author=', priority:280
-#| msgid "Override the commit author. Specify an explicit author using the standard `A U Thor <author@example.com>` format. Otherwise <author> is assumed to be a pattern and is used to search for an existing commit by that author (i.e. rev-list --all -i --author=<author>); the commit author is then copied from the first such commit found."
+#, placeholders:'git rev-list':'--all':'--author=', priority:280
 msgid "Override the commit author. Specify an explicit author using the standard `A U Thor <author@example.com>` format. Otherwise _<author>_ is assumed to be a pattern and is used to search for an existing commit by that author (i.e. `git rev-list --all -i --author=<author>`); the commit author is then copied from the first such commit found."
-msgstr "Surcharger l'auteur du commit. Spécifier un auteur explicite avec le format standard `Prénom Nom <auteur@exemple.com>`. Sinon <auteur> est considéré comme un patron utilisé pour chercher un commit existant par cet auteur (c-à-d rev-list --all -i --author=<auteur>) ; l'auteur du commit est alors copié depuis le premier commit trouvé."
+msgstr "Surcharger l'auteur du commit. Spécifier un auteur explicite avec le format standard `Prénom Nom <auteur@exemple.com>`. Sinon `<auteur>` est considéré comme un patron utilisé pour chercher un commit existant par cet auteur (c-à-d `git rev-list --all -i --author=<auteur>`) ; l'auteur du commit est alors copié depuis le premier commit trouvé."
 
 #. type: Labeled list
 #: en/git-commit.adoc:179
-#, fuzzy, no-wrap, placeholders:'`--date=', priority:280
-#| msgid "--date=<date>"
+#, no-wrap, placeholders:'`--date=', priority:280
 msgid "`--date=<date>`"
-msgstr "--date=<date>"
+msgstr "`--date=<date>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:181
@@ -18360,10 +18312,9 @@ msgstr "-m <msg>"
 
 #. type: Labeled list
 #: en/git-commit.adoc:183 en/git-notes.adoc:143
-#, fuzzy, no-wrap, placeholders:'`--message=', priority:280
-#| msgid "--message=<msg>"
+#, no-wrap, placeholders:'`--message=', priority:280
 msgid "`--message=<msg>`"
-msgstr "--message=<msg>"
+msgstr "`--message=<msg>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:187
@@ -18387,10 +18338,9 @@ msgstr "-t <fichier>"
 
 #. type: Labeled list
 #: en/git-commit.adoc:191
-#, fuzzy, no-wrap, placeholders:'`--template=', priority:280
-#| msgid "--template=<file>"
+#, no-wrap, placeholders:'`--template=', priority:280
 msgid "`--template=<file>`"
-msgstr "--template=<fichier>"
+msgstr "`--template=<fichier>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:200
@@ -18401,10 +18351,9 @@ msgstr "À l'édition du message de validation, démarrer l'éditeur avec le con
 
 #. type: Labeled list
 #: en/git-commit.adoc:203
-#, fuzzy, no-wrap, placeholders:'`--trailer', priority:280
-#| msgid "--trailer <token>[(=|:)<value>]"
+#, no-wrap, placeholders:'`--trailer', priority:280
 msgid "`--trailer <token>[(=|:)<value>]`"
-msgstr "--trailer <jeton>[(=| :)<valeur>]"
+msgstr "`--trailer <jeton>[(=| :)<valeur>]`"
 
 #. type: Plain text
 #: en/git-commit.adoc:213
@@ -18452,10 +18401,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-commit.adoc:230
-#, fuzzy, no-wrap, placeholders:'`--cleanup=', priority:280
-#| msgid "--cleanup=<mode>"
+#, no-wrap, placeholders:'`--cleanup=', priority:280
 msgid "`--cleanup=<mode>`"
-msgstr "--cleanup=<mode>"
+msgstr "`--cleanup=<mode>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:234
@@ -18651,10 +18599,9 @@ msgstr "-u[<mode>]"
 
 #. type: Labeled list
 #: en/git-commit.adoc:333
-#, fuzzy, no-wrap, placeholders:'`--untracked-files', priority:280
-#| msgid "--untracked-files[=<mode>]"
+#, no-wrap, placeholders:'`--untracked-files', priority:280
 msgid "`--untracked-files[=<mode>]`"
-msgstr "--untracked-files[=<mode>]"
+msgstr "`--untracked-files[=<mode>]`"
 
 #. type: Plain text
 #: en/git-commit.adoc:335 en/git-status.adoc:61
@@ -18664,10 +18611,9 @@ msgstr "Montrer les fichiers non-suivis."
 
 #. type: Plain text
 #: en/git-commit.adoc:340
-#, fuzzy, placeholders:'`-u`', priority:280
-#| msgid "The mode parameter is optional (defaults to 'all'), and is used to specify the handling of untracked files; when -u is not used, the default is 'normal', i.e. show untracked files and directories."
+#, placeholders:'`-u`', priority:280
 msgid "The _<mode>_ parameter is optional (defaults to `all`), and is used to specify the handling of untracked files; when `-u` is not used, the default is `normal`, i.e. show untracked files and directories."
-msgstr "Le paramètre de mode est optionnel (par défaut, 'all') et sert à spécifier la gestion des fichiers non suivis ; quand -u n'est pas utilisé, le mode par défaut est 'normal', c'est-à-dire montrer les fichiers et les dossiers non-suivis."
+msgstr "Le paramètre de `<mode>` est optionnel (par défaut, `all`) et sert à spécifier la gestion des fichiers non suivis ; quand `-u` n'est pas utilisé, le mode par défaut est `normal`, c'est-à-dire montrer les fichiers et les dossiers non-suivis."
 
 #. type: Plain text
 #: en/git-commit.adoc:342 en/git-status.adoc:68 en/git-status.adoc:112
@@ -18677,10 +18623,9 @@ msgstr "Les options possibles sont :"
 
 #. type: Plain text
 #: en/git-commit.adoc:344
-#, fuzzy, priority:280
-#| msgid "Show untracked files."
+#, priority:280
 msgid "Show no untracked files"
-msgstr "Montrer les fichiers non-suivis."
+msgstr "Ne montrer aucun fichier non-suivi."
 
 #. type: Labeled list
 #: en/git-commit.adoc:344
@@ -18717,10 +18662,9 @@ msgstr "Toutes les expressions pour la valeur booléenne `true` sont interprét�
 
 #. type: Plain text
 #: en/git-commit.adoc:363
-#, fuzzy, placeholders:'`HEAD`':'commit.verbose':'linkgit:git-config[1]', priority:280
-#| msgid "Show unified diff between the HEAD commit and what would be committed at the bottom of the commit message template to help the user describe the commit by reminding what changes the commit has. Note that this diff output doesn't have its lines prefixed with '#'. This diff will not be a part of the commit message. See the `commit.verbose` configuration variable in linkgit:git-config[1]."
+#, placeholders:'`HEAD`':'commit.verbose':'linkgit:git-config[1]', priority:280
 msgid "Show unified diff between the `HEAD` commit and what would be committed at the bottom of the commit message template to help the user describe the commit by reminding what changes the commit has. Note that this diff output doesn't have its lines prefixed with `#`. This diff will not be a part of the commit message. See the `commit.verbose` configuration variable in linkgit:git-config[1]."
-msgstr "Afficher en bas du modèle de message de validation un diff unifié entre le commit HEAD et ce qui serait validé pour aider l'utilisateur à décrire le commit en lui rappelant les modifications qui seront validées. Veuillez noter que cette sortie de diff n'est pas préfixée par des '#'. Elle ne fera pas pour autant partie du message de validation. Référez-vous à la variable de configuration `commit.verbose` dans linkgit:git-config[1]."
+msgstr "Afficher en bas du modèle de message de validation un diff unifié entre le commit `HEAD` et ce qui serait validé pour aider l'utilisateur à décrire le commit en lui rappelant les modifications qui seront validées. Veuillez noter que cette sortie de diff n'est pas préfixée par des `#`. Elle ne fera pas pour autant partie du message de validation. Référez-vous à la variable de configuration `commit.verbose` dans linkgit:git-config[1]."
 
 #. type: Plain text
 #: en/git-commit.adoc:367
@@ -18774,10 +18718,9 @@ msgstr "-S[<idclé>]"
 
 #. type: Labeled list
 #: en/git-commit.adoc:389
-#, fuzzy, no-wrap, placeholders:'`--gpg-sign', priority:280
-#| msgid "--gpg-sign[=<keyid>]"
+#, no-wrap, placeholders:'`--gpg-sign', priority:280
 msgid "`--gpg-sign[=<key-id>]`"
-msgstr "--gpg-sign[=<idclé>]"
+msgstr "`--gpg-sign[=<id-clé>]`"
 
 #. type: Labeled list
 #: en/git-commit.adoc:390
