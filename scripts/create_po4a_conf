@@ -6,7 +6,7 @@ with open('po4a.conf', 'w') as f:
     langs = [ l[17:-3] for l in glob.glob('po/documentation.*.po')]
     langs.sort()
     f.write(' '.join(langs))
-    f.write('\n[po4a_paths] po/documentation.pot $lang:po/documentation.$lang.po\n[options] opt: " -k 80" opt:" -o cleanspaces=1" opt:" --wrap-po no"\n')
+    f.write('\n[po4a_paths] po/documentation.pot $lang:po/documentation.$lang.po\n[options] opt: " -k 80" opt:" -o cleanspaces=1" opt:" --wrap-po no" opt:"-o \'style=[synopsis%]\'"\n')
     with open('sources.txt', 'r') as sources:
         for source in sources:
             source = source.strip()
