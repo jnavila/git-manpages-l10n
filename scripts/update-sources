@@ -1,15 +1,20 @@
 #!/usr/bin/python
-
+import os
 import shutil
+
+## get the relative path of the files from the env var SOURCE_PATH
+relative_path = os.getenv('SOURCE_PATH')
+if relative_path is None:
+    relative_path = '..'
 
 with open('sources.txt') as f:
     sources = f.read().splitlines()
     for source in sources:
         try:
-            shutil.copy2(f"../{source}", f"en/{source}")
+            shutil.copy2(os.path.join(relative_path, source), os.path.join("en", source))
         except FileNotFoundError:
             print(f"File not found: {source}")
         except shutil.SameFileError:
             print(f"File is the same: {source}")
 
-shutil.copy2("../../GIT-VERSION-FILE", ".")
+shutil.copy2(os.path.join(relative_path, "..", "GIT-VERSION-FILE"), ".")
