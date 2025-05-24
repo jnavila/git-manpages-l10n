@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2025-03-06 18:29+0100\n"
-"PO-Revision-Date: 2025-03-22 13:08+0000\n"
-"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
+"PO-Revision-Date: 2025-04-27 09:02+0000\n"
+"Last-Translator: Salvador Peña <salvadorp74@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11-dev\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.adoc:1 en/git-instaweb.adoc:45 en/git-ls-remote.adoc:24 en/git-mailinfo.adoc:49 en/git-mailsplit.adoc:35 en/git-repack.adoc:182 en/git-status.adoc:31
@@ -3311,6 +3311,10 @@ msgid ""
 "\t(when not changed by `diff.dirstat`) are `changes,noncumulative,3`.\n"
 "\tThe following parameters are available:\n"
 msgstr ""
+"\tLos predeterminados pueden ser anulados en la línea de comandos\n"
+"\t(usando `--dirstat=<parámetro>,...`). Los predeterminados por omisión\n"
+"\t(cuando no son modificados por `diff.dirstat`) son `changes,noncumulative,3`.\n"
+"\tEsta disponibles los parámetros siguientes:\n"
 
 #. type: Labeled list
 #: en/config/diff.adoc:27 en/diff-options.adoc:264
@@ -3436,7 +3440,7 @@ msgstr "`diff.external`"
 #: en/config/diff.adoc:88
 #, placeholders:'GIT_EXTERNAL_DIFF':'linkgit:git[1]':'linkgit:gitattributes[5]', priority:280
 msgid "If this config variable is set, diff generation is not performed using the internal diff machinery, but using the given command. Can be overridden with the `GIT_EXTERNAL_DIFF` environment variable. The command is called with parameters as described under \"git Diffs\" in linkgit:git[1]. Note: if you want to use an external diff program only on a subset of your files, you might want to use linkgit:gitattributes[5] instead."
-msgstr ""
+msgstr "Si se asigna esta variable de configuración, las generación de diferencias no se hace con la maquinaria interna de diferencias, sino usando el comando dado. Puede ser anulado con la variable de ambiente `GIT_EXTERNAL_DIFF`. El comando es llamado con parámetros como se describe en \"Diferencias de Git\" en linkgit:git[1]. Nota: si quieres usar un programa de diferencias externo sólo en un subconjunto de tus ficheros, en su lugar querrías usar linkgit:gitattributes[5]."
 
 #. type: Labeled list
 #: en/config/diff.adoc:89
@@ -3460,7 +3464,7 @@ msgstr "`diff.ignoreSubmodules`"
 #: en/config/diff.adoc:110
 #, placeholders:'`--ignore-submodules`':'git diff-files`':'status.submoduleSummary':'`--ignore-submodules`', priority:280
 msgid "Sets the default value of `--ignore-submodules`. Note that this affects only `git diff` Porcelain, and not lower level `diff` commands such as `git diff-files`. `git checkout` and `git switch` also honor this setting when reporting uncommitted changes. Setting it to `all` disables the submodule summary normally shown by `git commit` and `git status` when `status.submoduleSummary` is set unless it is overridden by using the `--ignore-submodules` command-line option. The `git submodule` commands are not affected by this setting. By default this is set to untracked so that any untracked submodules are ignored."
-msgstr ""
+msgstr "Asigna el valor predeterminado de `--ignore-submodules`. Nota que esto afecta sólo a la porcelana `git diff`, y no a los comandos `diff` de mas bajo nivel como `git diff-files`. `git checkout` y `git switch` también respetan esta configuración cuando se reportan cambios sin confirmar. Asignándole `all` deshabilita el resumen de sub-módulos normalmente mostrado por `git commit` y `git status` cuando se asigna `status.submoduleSummary` a menos que sea anulado por la opción de línea de comando `--ignore-submodules`. Los comandos `git submodule` no son afectados por esta configuración. Predeterminadamente se le asigna untracked, de tal manera que cualquier sub-módulo sin rastreo es ignorado."
 
 #. type: Labeled list
 #: en/config/diff.adoc:111
@@ -3472,7 +3476,7 @@ msgstr "`diff.mnemonicPrefix`"
 #: en/config/diff.adoc:116
 #, priority:280
 msgid "If set, `git diff` uses a prefix pair that is different from the standard `a/` and `b/` depending on what is being compared. When this configuration is in effect, reverse diff output also swaps the order of the prefixes:"
-msgstr ""
+msgstr "Si se asigna, `git diff` usa un par de prefijos distintos a los estándar `a/` y `b/` dependiendo de lo que se esté comparando. Cuando ésta configuración está en efecto, la salida de la diferencia inversa también intercambia el orden de los prefijos:"
 
 #. type: Labeled list
 #: en/config/diff.adoc:116
@@ -3638,7 +3642,7 @@ msgstr "`diff.renames`"
 #: en/config/diff.adoc:165
 #, placeholders:'linkgit:git-diff[1]':'linkgit:git-log[1]':'linkgit:git-diff-files[1]', priority:280
 msgid "Whether and how Git detects renames. If set to `false`, rename detection is disabled. If set to `true`, basic rename detection is enabled. If set to `copies` or `copy`, Git will detect copies, as well. Defaults to `true`. Note that this affects only `git diff` Porcelain like linkgit:git-diff[1] and linkgit:git-log[1], and not lower level commands such as linkgit:git-diff-files[1]."
-msgstr ""
+msgstr "Si y cómo Git detecta cambios de nombre. Si se le asigna `false`, se deshabilita la detección de cambios de nombre. Si se le asigna `true, se habilita la detección básica de cambios de nombre. Si se le asigna `copies` o `copy`, Git detectará también copias. Predeterminado a `true`. Nota que esto sólo afecta a `git diff` porcelanas como linkgit:git-diff[1] y linkgit:git-log[1], y no a comandos de nivel mas bajo como linkgit:git-diff-files[1]."
 
 #. type: Labeled list
 #: en/config/diff.adoc:166
@@ -3722,7 +3726,7 @@ msgstr "`diff.<controlador>.binary`"
 #: en/config/diff.adoc:205
 #, placeholders:'linkgit:gitattributes[5]', priority:280
 msgid "Set this option to `true` to make the diff driver treat files as binary. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "Asigne a esta opción `true` para hacer que el controlador de diferencias trate a los ficheros como binarios. Ver linkgit:gitattributes[5] para detalles."
 
 #. type: Labeled list
 #: en/config/diff.adoc:206
@@ -3734,7 +3738,7 @@ msgstr "`diff.<controlador>.textconv`"
 #: en/config/diff.adoc:211
 #, placeholders:'linkgit:gitattributes[5]', priority:280
 msgid "The command that the diff driver should call to generate the text-converted version of a file. The result of the conversion is used to generate a human-readable diff. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "El comando al que el controlador de diferencias debe llamar para generar la versión convertida a texto de un fichero. El resultado de la conversión es usado para generar una diferencia legible al humano. Ver linkgit:gitattributes[5] para detalles."
 
 #. type: Labeled list
 #: en/config/diff.adoc:212
@@ -3746,7 +3750,7 @@ msgstr "`diff.<controlador>.wordRegex`"
 #: en/config/diff.adoc:216
 #, placeholders:'linkgit:gitattributes[5]', priority:280
 msgid "The regular expression that the diff driver should use to split words in a line. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "La expresión regular que el controlador de diferencias debe usar para dividir palabras en una línea. Ver linkgit:gitattributes[5] para detalles."
 
 #. type: Labeled list
 #: en/config/diff.adoc:217
@@ -3758,7 +3762,7 @@ msgstr "`diff.<controlador>.cachetextconv`"
 #: en/config/diff.adoc:220
 #, placeholders:'linkgit:gitattributes[5]', priority:280
 msgid "Set this option to `true` to make the diff driver cache the text conversion outputs. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "Asigne a esta opción `true` para hacer que el controlador de diferencias antememorice las salidas de conversión de texto. Ver linkgit:gitattributes[5] para detalles."
 
 #. type: Labeled list
 #: en/config/diff.adoc:221
@@ -3860,13 +3864,13 @@ msgstr "`diff.colorMoved`"
 #: en/config/diff.adoc:255
 #, priority:280
 msgid "If set to either a valid _<mode>_ or a `true` value, moved lines in a diff are colored differently."
-msgstr ""
+msgstr "Ya sea que se le asigne un _<modo>_ válido o el valor `true`, las líneas movidas en una diferencia se colorean diferente."
 
 #. type: Plain text
 #: en/config/diff.adoc:257
 #, no-wrap, placeholders:'`--color-moved`', priority:280
 msgid "\tFor details of valid modes see `--color-moved`.\n"
-msgstr ""
+msgstr "\tPara detalles de modos válidos ver `--color-moved`.\n"
 
 #. type: Plain text
 #: en/config/diff.adoc:260
@@ -3940,7 +3944,7 @@ msgstr "`init.defaultRefFormat`"
 #: en/config/init.adoc:20
 #, placeholders:'`--ref-format=`':'linkgit:git-init[1]':'GIT_DEFAULT_REF_FORMAT', priority:300
 msgid "Allows overriding the default ref storage format for new repositories. See `--ref-format=` in linkgit:git-init[1]. Both the command line option and the `GIT_DEFAULT_REF_FORMAT` environment variable take precedence over this config."
-msgstr ""
+msgstr "Permite anular el formato predeterminado de almacenamiento de referencias en repositorios nuevos. Ver `--ref-format=` en linkgit:git-init[1]. Tanto la opción de línea de comandos como la variable de ambiente `GIT_DEFAULT_REF_FORMAT` toman precedencia sobre ésta configuración."
 
 #. type: Labeled list
 #: en/config/merge.adoc:1
@@ -16868,7 +16872,7 @@ msgstr "`--revision=<revisión>`"
 #: en/git-clone.adoc:232
 #, placeholders:'`HEAD`':'`--branch`':'`--mirror`', priority:300
 msgid "Create a new repository, and fetch the history leading to the given revision _<rev>_ (and nothing else), without making any remote-tracking branch, and without making any local branch, and detach `HEAD` to _<rev>_. The argument can be a ref name (e.g. `refs/heads/main` or `refs/tags/v1.0`) that peels down to a commit, or a hexadecimal object name. This option is incompatible with `--branch` and `--mirror`."
-msgstr ""
+msgstr "Crea un repositorio nuevo, y trae el historial hasta la revisión _<rev>_ dada (y nada mas), sin hacer rama de rastreo remoto alguna, y sin hacer una rama local, y desprender `HEAD` de _<rev>_. El argumento puede ser un nombre de referencia (ej. `refs/heads/main` o `refs/tags/v1.0`) que llegue hasta una confirmación, o a un nombre de objeto hexadecimal. Esta opción es incompatible con `--branch` y `--mirror`."
 
 #. type: Labeled list
 #: en/git-clone.adoc:233
@@ -16988,7 +16992,7 @@ msgstr "Controla si se clonaran o no las etiquetas. Cuando no se da la opción `
 #: en/git-clone.adoc:294
 #, placeholders:'`--tags`':'`--no-tags`', priority:300
 msgid "By default, tags are cloned and passing `--tags` is thus typically a no-op, unless it cancels out a previous `--no-tags`."
-msgstr ""
+msgstr "Predeterminadamente, la etiquetas son clonadas; por lo tanto, pasar `--tags` es típicamente una no-operación, a menos que cancele un `--no-tags` previo."
 
 #. type: Plain text
 #: en/git-clone.adoc:299
@@ -64757,7 +64761,7 @@ msgstr "Linus Torvalds originalmente diseñó Git para ser un sistema de fichero
 #: en/glossary-content.adoc:199
 #, no-wrap, placeholders:'[[def_git_archive]]', priority:310
 msgid "[[def_git_archive]]Git archive"
-msgstr ""
+msgstr "[[def_git_archive]]Archivo Git"
 
 #. type: Plain text
 #: en/glossary-content.adoc:201
@@ -65009,7 +65013,7 @@ msgstr "El <<def_repository,repositorio>> de subida predeterminado. La mayoría 
 #: en/glossary-content.adoc:331
 #, no-wrap, placeholders:'[[def_overlay]]', priority:310
 msgid "[[def_overlay]]overlay"
-msgstr ""
+msgstr "[[def_overlay]]sobreponer"
 
 #. type: Plain text
 #: en/glossary-content.adoc:339
@@ -65393,7 +65397,7 @@ msgstr "Re-aplicar una serie de cambios de una <<def_branch,rama>> de una base d
 #: en/glossary-content.adoc:552
 #, no-wrap, placeholders:'[[def_ref]]', priority:310
 msgid "[[def_ref]]ref"
-msgstr ""
+msgstr "[[def_ref]]referencia"
 
 #. type: Plain text
 #: en/glossary-content.adoc:559
@@ -65405,7 +65409,7 @@ msgstr "Un nombre que apunta a un <<def_object_name,nombre de objeto>> o a otra 
 #: en/glossary-content.adoc:563
 #, priority:310
 msgid "The ref namespace is hierarchical. Ref names must either start with `refs/` or be located in the root of the hierarchy. For the latter, their name must follow these rules:"
-msgstr ""
+msgstr "El espacio de nombres de referencias es jerárquico. Los nombres de referencias deben comenzar con `refs/` o estar ubicados en la raíz de la jerarquía. Para éste último, su nombre debe cumplir las reglas siguientes:"
 
 #. type: Plain text
 #: en/glossary-content.adoc:565
@@ -68476,13 +68480,13 @@ msgstr ""
 #: en/ref-storage-format.adoc:2
 #, priority:300
 msgid "`files` for loose files with packed-refs. This is the default."
-msgstr ""
+msgstr "`files` para ficheros sueltos con referencias empaquetadas. Esto es predeterminado."
 
 #. type: Plain text
 #: en/ref-storage-format.adoc:3
 #, priority:300
 msgid "`reftable` for the reftable format. This format is experimental and its internals are subject to change."
-msgstr ""
+msgstr "`reftable` para el formato de tabla de referencias. Este formato es experimental y su contenido está sujeto a cambios."
 
 #. type: Labeled list
 #: en/rerere-options.adoc:1
