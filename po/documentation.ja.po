@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: git-manpages-l 10n\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2025-03-06 18:29+0100\n"
-"PO-Revision-Date: 2025-05-24 16:03+0000\n"
+"PO-Revision-Date: 2025-05-25 01:58+0000\n"
 "Last-Translator: yamamoto <yamamoto@kyms.jp>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -225,7 +225,7 @@ msgstr "--[no-]progress"
 #: en/blame-options.adoc:84
 #, placeholders:'`--progress`':'`--porcelain`':'`--incremental`', priority:100
 msgid "Progress status is reported on the standard error stream by default when it is attached to a terminal. This flag enables progress reporting even if not attached to a terminal. Can't use `--progress` together with `--porcelain` or `--incremental`."
-msgstr "進捗状況は、端末に接続されている場合は標準エラー出力に表示されます。このフラグを付けると、端末に接続されていなくても進捗が表示されます。`--porcelain` や `--incremental` とは併用できません。"
+msgstr "進捗状況は、デフォルトでは標準エラー出力が端末に接続されている場合に表示されます。このフラグを指定すると、端末に接続されていなくても進捗が表示されます。`--progress` は `--porcelain` や `--incremental` と同時に使用できません。"
 
 #. type: Labeled list
 #: en/blame-options.adoc:85
@@ -255,13 +255,13 @@ msgstr "-C[<数値>]"
 #: en/blame-options.adoc:110
 #, placeholders:'`-M`', priority:100
 msgid "In addition to `-M`, detect lines moved or copied from other files that were modified in the same commit. This is useful when you reorganize your program and move code around across files. When this option is given twice, the command additionally looks for copies from other files in the commit that creates the file. When this option is given three times, the command additionally looks for copies from other files in any commit."
-msgstr "-M に加えて、同じコミット内で他のファイルから移動・コピーされた行も検出します。複数回指定すると、新規作成時や過去のコミットも対象になります。大規模なリファクタリング時などに便利です。"
+msgstr "`-M` に加えて、同じコミット内で他のファイルから移動またはコピーされた行も検出します。規模が大きいリファクタリング時に便利です。このオプションを2回指定すると、ファイルを新規作成したコミット内の他のファイルからのコピーも検出対象になります。3回指定した場合は、あらゆるコミット内の他のファイルからのコピーも検出されます。"
 
 #. type: Plain text
 #: en/blame-options.adoc:117
 #, placeholders:'`-C`':'`-C`', priority:100
 msgid "<num> is optional but it is the lower bound on the number of alphanumeric characters that Git must detect as moving/copying between files for it to associate those lines with the parent commit. And the default value is 40. If there are more than one `-C` options given, the <num> argument of the last `-C` will take effect."
-msgstr "<数値>は省略可能で、ファイル間の移動やコピーとみなすために必要な英数字の最小文字数です。デフォルトは40です。複数回指定した場合は、最後の -C の <数値> が有効になります。"
+msgstr "<num> は省略可能ですが、Gitがファイル間で移動やコピーと判定するために必要な英数字の最小文字数を指定します。デフォルト値は40です。`-C` オプションが複数指定された場合、最後に指定した `-C` の <num> が有効になります。"
 
 #. type: Labeled list
 #: en/blame-options.adoc:118
@@ -5542,7 +5542,7 @@ msgstr "\"histogram diff\" アルゴリズムを用いてdiffを生成します�
 #, fuzzy, no-wrap, placeholders:'`--anchored=', priority:280
 #| msgid "--anchored=<text>"
 msgid "`--anchored=<text>`"
-msgstr "--anchored=<テキスト>"
+msgstr "`--anchored=<text>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:186
@@ -5640,7 +5640,7 @@ msgstr "-X[<param1,param2,...>]"
 #, fuzzy, ignore-ellipsis, no-wrap, placeholders:'`--dirstat', priority:280
 #| msgid "--dirstat[=<param1,param2,...>]"
 msgid "`--dirstat[=<param>,...]`"
-msgstr "--dirstat[=<param1,param2,...>]"
+msgstr "`--dirstat[=<param>,...]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:262
@@ -5664,20 +5664,20 @@ msgstr "`--cumulative`"
 #: en/diff-options.adoc:301
 #, placeholders:'`--dirstat=cumulative`', priority:280
 msgid "Synonym for `--dirstat=cumulative`."
-msgstr "--dirstat=cumulative と同義。"
+msgstr "`--dirstat=cumulative` の別名です。"
 
 #. type: Labeled list
 #: en/diff-options.adoc:302
 #, fuzzy, ignore-ellipsis, no-wrap, placeholders:'`--dirstat-by-file', priority:280
 #| msgid "--dirstat-by-file[=<param1,param2>...]"
 msgid "`--dirstat-by-file[=<param>,...]`"
-msgstr "--dirstat-by-file[=<param1,param2>...]"
+msgstr "`--dirstat-by-file[=<param>,...]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:304
 #, ignore-ellipsis, placeholders:'`--dirstat=files', priority:280
 msgid "Synonym for `--dirstat=files,<param>,...`."
-msgstr "--dirstat=files,<param1>,<param2>... と同義。"
+msgstr "`--dirstat=files,<param>,...` の別名です。"
 
 #. type: Labeled list
 #: en/diff-options.adoc:305
@@ -5711,17 +5711,15 @@ msgstr "`-z`"
 
 #. type: Plain text
 #: en/diff-options.adoc:319
-#, fuzzy, no-wrap, placeholders:'__NUL__s', priority:280
-#| msgid "\tSeparate the commits with NULs instead of newlines.\n"
+#, no-wrap, placeholders:'__NUL__s', priority:280
 msgid "\tSeparate the commits with __NUL__s instead of newlines.\n"
-msgstr "\tコミットの区切りには、改行ではなくNULを使用します。\n"
+msgstr "\tコミットの区切りには、改行ではなく __NUL__s を使用します。\n"
 
 #. type: Plain text
 #: en/diff-options.adoc:322
-#, fuzzy, placeholders:'`--raw`':'`--numstat`':'__NUL__s', priority:280
-#| msgid "Also, when `--raw` or `--numstat` has been given, do not munge pathnames and use NULs as output field terminators."
+#, placeholders:'`--raw`':'`--numstat`':'__NUL__s', priority:280
 msgid "Also, when `--raw` or `--numstat` has been given, do not munge pathnames and use __NUL__s as output field terminators."
-msgstr "また、 `--raw` や `--numstat` が指定された場合には、パス名をつぶさずに、出力フィールドの終端子に NUL を使用します。"
+msgstr "また、`--raw` や `--numstat` が指定されている場合は、パス名の変換を行わず、各出力フィールドの区切りとして __NUL__s を使用します。"
 
 # ERROR: `--numstat` not found in translation
 #. type: Plain text
@@ -5771,7 +5769,7 @@ msgstr "変更されたファイルの名前と状態のみを表示します。
 #, fuzzy, no-wrap, placeholders:'`--submodule', priority:280
 #| msgid "--submodule[=<format>]"
 msgid "`--submodule[=<format>]`"
-msgstr "--submodule[=<フォーマット>]"
+msgstr "`--submodule[=<format>]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:354
@@ -5785,7 +5783,7 @@ msgstr "サブモジュールの差分をどのように表示するかを指定
 #, fuzzy, no-wrap, placeholders:'`--color', priority:280
 #| msgid "--color[=<when>]"
 msgid "`--color[=<when>]`"
-msgstr "--color[=<いつ>]"
+msgstr "`--color[=<when>]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:359
@@ -5833,7 +5831,7 @@ msgstr "\tこれは、 `--color=never` と同じです。\n"
 #, fuzzy, no-wrap, placeholders:'`--color-moved', priority:280
 #| msgid "--color-moved[=<mode>]"
 msgid "`--color-moved[=<mode>]`"
-msgstr "--color-moved[=<モード>]"
+msgstr "`--color-moved[=<mode>]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:373
@@ -5950,7 +5948,7 @@ msgstr "移動検出をオフにします。これは、構成設定を上書き
 #, fuzzy, ignore-ellipsis, no-wrap, placeholders:'`--color-moved-ws=', priority:280
 #| msgid "--color-moved-ws=<modes>"
 msgid "`--color-moved-ws=<mode>,...`"
-msgstr "--color-moved-ws=<モード>"
+msgstr "`--color-moved-ws=<mode>,...`"
 
 #. type: Plain text
 #: en/diff-options.adoc:417
@@ -6041,7 +6039,7 @@ msgstr "移動検出を行う際に空白を無視しません。これは構成
 #, fuzzy, no-wrap, placeholders:'`--word-diff', priority:280
 #| msgid "--word-diff[=<mode>]"
 msgid "`--word-diff[=<mode>]`"
-msgstr "--word-diff[=<モード>]"
+msgstr "`--word-diff[=<mode>]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:450
@@ -6104,7 +6102,7 @@ msgstr "最初のモードの名前にもかかわらず、有効になってい
 #, fuzzy, no-wrap, placeholders:'`--word-diff-regex=', priority:280
 #| msgid "--word-diff-regex=<regex>"
 msgid "`--word-diff-regex=<regex>`"
-msgstr "--word-diff-regex=<正規表現>"
+msgstr "`--word-diff-regex=<regex>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:476
@@ -6137,7 +6135,7 @@ msgstr "正規表現は、差分ドライバーや設定オプションを通し
 #, fuzzy, no-wrap, placeholders:'`--color-words', priority:280
 #| msgid "--color-words[=<regex>]"
 msgid "`--color-words[=<regex>]`"
-msgstr "--color-words[=<正規表現>]"
+msgstr "`--color-words[=<regex>]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:496
@@ -6177,17 +6175,16 @@ msgstr "`--check`"
 
 #. type: Plain text
 #: en/diff-options.adoc:515
-#, fuzzy, placeholders:'core.whitespace':'`--exit-code`', priority:280
-#| msgid "Warn if changes introduce conflict markers or whitespace errors. What are considered whitespace errors is controlled by `core.whitespace` configuration. By default, trailing whitespaces (including lines that consist solely of whitespaces) and a space character that is immediately followed by a tab character inside the initial indent of the line are considered whitespace errors. Exits with non-zero status if problems are found. Not compatible with --exit-code."
+#, placeholders:'core.whitespace':'`--exit-code`', priority:280
 msgid "Warn if changes introduce conflict markers or whitespace errors. What are considered whitespace errors is controlled by `core.whitespace` configuration. By default, trailing whitespaces (including lines that consist solely of whitespaces) and a space character that is immediately followed by a tab character inside the initial indent of the line are considered whitespace errors. Exits with non-zero status if problems are found. Not compatible with `--exit-code`."
-msgstr "変更がコンフリクトマーカーまたは空白エラーを引き起こした場合に警告します。何が空白エラーとみなされるかは `core.whitespace` 設定によって制御されます。デフォルトでは、末尾の空白（空白のみからなる行を含む）および行の最初のインデントでタブ文字の直後に続くスペース文字が空白エラーとみなされます。問題が見つかった場合、非ゼロのステータスで終了します。 --exit-code とは互換性がありません。"
+msgstr "変更内容にコンフリクトマーカーやホワイトスペースエラーが含まれている場合に警告を表示します。ホワイトスペースエラーとして扱う内容は `core.whitespace` の設定で制御されます。デフォルトでは、行末の空白（空白のみの行を含む）や、行頭インデント部分でスペースの直後にタブが続く場合がホワイトスペースエラーと見なされます。問題が検出されると、終了ステータスが非ゼロになります。`--exit-code` とは併用できません。"
 
 #. type: Labeled list
 #: en/diff-options.adoc:516
 #, fuzzy, no-wrap, placeholders:'`--ws-error-highlight=', priority:280
 #| msgid "--ws-error-highlight=<kind>"
 msgid "`--ws-error-highlight=<kind>`"
-msgstr "--ws-error-highlight=<種類>"
+msgstr "`--ws-error-highlight=<kind>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:525
@@ -6224,7 +6221,7 @@ msgstr "`--full-index` に加えて、`git-apply` で適用可能なバイナリ
 #, fuzzy, no-wrap, placeholders:'`--abbrev', priority:280
 #| msgid "--abbrev[=<n>]"
 msgid "`--abbrev[=<n>]`"
-msgstr "--abbrev[=<n>]"
+msgstr "`--abbrev[=<n>]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:549
@@ -6245,7 +6242,7 @@ msgstr "-B[<n>][/<m>]"
 #, fuzzy, no-wrap, placeholders:'`--break-rewrites', priority:280
 #| msgid "--break-rewrites[=[<n>][/<m>]]"
 msgid "`--break-rewrites[=[<n>][/<m>]]`"
-msgstr "--break-rewrites[=[<n>][/<m>]]"
+msgstr "`--break-rewrites[=[<n>][/<m>]]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:554
@@ -9748,10 +9745,9 @@ msgstr "パッチを適用する際に、必要に応じてコンテキスト行
 
 #. type: Plain text
 #: en/git-apply.adoc:206
-#, fuzzy, placeholders:'core.whitespace', priority:100
-#| msgid "Warn if changes introduce conflict markers or whitespace errors.  What are considered whitespace errors is controlled by `core.whitespace` configuration.  By default, trailing whitespaces (including lines that consist solely of whitespaces) and a space character that is immediately followed by a tab character inside the initial indent of the line are considered whitespace errors.  Exits with non-zero status if problems are found. Not compatible with --exit-code."
+#, placeholders:'core.whitespace', priority:100
 msgid "When applying a patch, detect a new or modified line that has whitespace errors. What are considered whitespace errors is controlled by `core.whitespace` configuration. By default, trailing whitespaces (including lines that solely consist of whitespaces) and a space character that is immediately followed by a tab character inside the initial indent of the line are considered whitespace errors."
-msgstr "変更がコンフリクトマーカーまたは空白エラーを引き起こした場合に警告します。 何が空白エラーとみなされるかは `core.whitespace` 設定によって制御されます。 デフォルトでは、末尾の空白（空白のみからなる行を含む）および行の最初のインデントでタブ文字の直後に続くスペース文字が空白エラーとみなされます。 問題が見つかった場合、非ゼロのステータスで終了します。 --exit-code とは互換性がありません。"
+msgstr "パッチを適用する際、新しく追加または変更された行にホワイトスペースエラーがないか検出します。どのようなものをホワイトスペースエラーと見なすかは、`core.whitespace` の設定で制御されます。デフォルトでは、行末の空白（空白だけの行も含む）や、行頭インデント部分でスペースの直後にタブが続く場合がホワイトスペースエラーとされます。"
 
 #. type: Plain text
 #: en/git-apply.adoc:210
@@ -11428,10 +11424,9 @@ msgstr "--show-email"
 
 #. type: Plain text
 #: en/git-blame.adoc:83
-#, fuzzy, placeholders:'blame.showEmail', priority:100
-#| msgid "Do not treat root commits as boundaries.  This can also be controlled via the `blame.showRoot` config option."
+#, placeholders:'blame.showEmail', priority:100
 msgid "Show the author email instead of the author name (Default: off). This can also be controlled via the `blame.showEmail` config option."
-msgstr "ルートコミットをバウンダリーとして扱わないでください。これは、`blame.showRoot` 設定オプションで制御することもできます。"
+msgstr "作者名の代わりにメールアドレスを表示します（デフォルトは無効）。この設定は `blame.showEmail` オプションでも制御できます。"
 
 #. type: Labeled list
 #: en/git-blame.adoc:84 en/git-cvsexportcommit.adoc:71 en/git-grep.adoc:112 en/git-hash-object.adoc:31 en/git-help.adoc:106
@@ -11963,10 +11958,9 @@ msgstr "--no-color"
 
 #. type: Plain text
 #: en/git-branch.adoc:154
-#, fuzzy, placeholders:'`--color=never`', priority:260
-#| msgid "Turn off rename detection, even when the configuration file gives the default to do so."
+#, placeholders:'`--color=never`', priority:260
 msgid "Turn off branch colors, even when the configuration file gives the default to color output. Same as `--color=never`."
-msgstr "設定ファイルでデフォルトとして指定されている場合でも、名前変更の検出をオフにします。"
+msgstr "設定ファイルで出力に色を付けるよう指定されていても、ブランチの色付けを無効にします。`--color=never` と同じ動作です。"
 
 #. type: Labeled list
 #: en/git-branch.adoc:156 en/git-for-each-ref.adoc:96 en/git-grep.adoc:91 en/git-tag.adoc:132
@@ -14396,7 +14390,7 @@ msgstr ""
 #, fuzzy, no-wrap, placeholders:'--mailmap-file=', priority:100
 #| msgid "--file=<file>"
 msgid "--mailmap-file=<file>"
-msgstr "--file=<ファイル>"
+msgstr "--mailmap-file=<file>"
 
 #. type: Plain text
 #: en/git-check-mailmap.adoc:34
@@ -16667,10 +16661,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-clean.adoc:125
-#, fuzzy, priority:100
-#| msgid "This shows the status information and issues an \"Update>>\" prompt.  When the prompt ends with double '>>', you can make more than one selection, concatenated with whitespace or comma.  Also you can say ranges.  E.g. \"2-5 7,9\" to choose 2,3,4,5,7,9 from the list.  If the second number in a range is omitted, all remaining patches are taken.  E.g. \"7-\" to choose 7,8,9 from the list.  You can say '*' to choose everything."
+#, priority:100
 msgid "This shows the files and directories to be deleted and issues an \"Select items to delete>>\" prompt. When the prompt ends with double '>>' like this, you can make more than one selection, concatenated with whitespace or comma. Also you can say ranges. E.g. \"2-5 7,9\" to choose 2,3,4,5,7,9 from the list. If the second number in a range is omitted, all remaining items are selected. E.g. \"7-\" to choose 7,8,9 from the list. You can say '*' to choose everything. Also when you are satisfied with the filtered result, press ENTER (empty) back to the main menu."
-msgstr "これにより、ステータス情報が表示され、「Update>>」というプロンプトが表示されます。 プロンプトが二重の「>>」で終わっている場合は、複数の選択が可能で、空白やカンマで連結することができます。 また、範囲を指定することもできます。 例：「2-5 7,9」で2,3,4,5,7,9をリストから選択します。 範囲内の2番目の数字が省略された場合、残りのすべてのパッチが選択されます。 例：\"7-\"で7,8,9をリストから選びます。 すべてを選択するには「*」を指定します。"
+msgstr "削除対象となるファイルやディレクトリが表示され、「Select items to delete>>」というプロンプトが表示されます。プロンプトの末尾がこのように「>>」で終わっている場合、スペースやカンマで区切って複数項目をまとめて選択できます。範囲指定も可能です。たとえば「2-5 7,9」と入力すると、2・3・4・5・7・9番の項目が選択されます。範囲指定で2番目の数値を省略すると、その番号以降すべてが選択されます（例：「7-」で7・8・9を選択）。「*」と入力するとすべてを選択できます。また、絞り込み結果に満足した場合は、何も入力せずにENTERを押すとメインメニューに戻ります。"
 
 #. type: Labeled list
 #: en/git-clean.adoc:126
@@ -16928,7 +16921,7 @@ msgstr "`--server-option=<option>`：サーバーに追加オプションを渡�
 #: en/git-clone.adoc:158
 #, placeholders:'`--server-option=':'++--server-option=++', priority:300
 msgid "Transmit the given string to the server when communicating using protocol version 2. The given string must not contain a NUL or LF character. The server's handling of server options, including unknown ones, is server-specific. When multiple `--server-option=<option>` are given, they are all sent to the other side in the order listed on the command line. When no ++--server-option=++__<option>__ is given from the command line, the values of configuration variable `remote.<name>.serverOption` are used instead."
-msgstr "プロトコルバージョン 2 を使用して通信する際に、指定した文字列をサーバーに送信します。指定する文字列には、NUL 文字や LF（改行）文字を含めることはできません。サーバーオプションの解釈（未知のオプションを含む）はサーバーごとに異なります。複数の `--server-option=<option>` を指定した場合、それらはコマンドラインで指定された順序ですべてサーバーに送信されます。コマンドラインで `--server-option=<option>` が指定されていない場合は、代わりに設定変数 `remote.<name>.serverOption` の値が使用されます。"
+msgstr "プロトコルバージョン2で通信する際、指定した文字列をサーバーに送信します。この文字列にはNULやLF文字を含めることはできません。サーバーオプション（未知のものも含む）の扱いはサーバーごとに異なります。`--server-option=<option>` を複数指定した場合、それらはコマンドラインに指定した順にすべて相手側に送信されます。コマンドラインで ++--server-option=++<option> が指定されていない場合は、設定変数 remote.<name>.serverOption の値が代わりに使われます。"
 
 #. type: Labeled list
 #: en/git-clone.adoc:160
@@ -16977,10 +16970,9 @@ msgstr "sparse-checkout を採用し、最初にトップレベル・ディレ�
 
 #. type: Labeled list
 #: en/git-clone.adoc:186
-#, fuzzy, no-wrap, placeholders:'`--filter=', priority:300
-#| msgid "--filter=<filter-spec>"
+#, no-wrap, placeholders:'`--filter=', priority:300
 msgid "`--filter=<filter-spec>`"
-msgstr "--filter=<フィルタ仕様>"
+msgstr "--`--filter=<フィルタ仕様>`"
 
 #. type: Plain text
 #: en/git-clone.adoc:195
@@ -17109,7 +17101,7 @@ msgstr "`-c` `<key>=<value>`：一時的な設定値を指定する"
 #, fuzzy, no-wrap, placeholders:'`--config`', priority:300
 #| msgid "--config <key>=<value>"
 msgid "`--config` `<key>=<value>`"
-msgstr "--config <キー>=<値>"
+msgstr "`--config` `<key>=<value>`"
 
 #. type: Plain text
 #: en/git-clone.adoc:253
@@ -17130,7 +17122,7 @@ msgstr "現在の実装の制限により、一部の設定変数は最初のフ
 #, fuzzy, no-wrap, placeholders:'`--depth', priority:300
 #| msgid "--depth <depth>"
 msgid "`--depth <depth>`"
-msgstr "--depth <深さ>"
+msgstr "`--depth <depth>`"
 
 #. type: Plain text
 #: en/git-clone.adoc:266
@@ -17143,7 +17135,7 @@ msgstr "指定された数のコミットに切り詰められたヒストリー
 #, fuzzy, no-wrap, placeholders:'`--shallow-since=', priority:300
 #| msgid "--shallow-since=<date>"
 msgid "`--shallow-since=<date>`"
-msgstr "--shallow-since=<日付>"
+msgstr "`--shallow-since=<date>`"
 
 #. type: Plain text
 #: en/git-clone.adoc:269
@@ -17156,7 +17148,7 @@ msgstr "指定した日時以降の履歴を持つシャロークローンを作
 #, fuzzy, no-wrap, placeholders:'`--shallow-exclude=', priority:300
 #| msgid "--shallow-exclude=<revision>"
 msgid "`--shallow-exclude=<ref>`"
-msgstr "--shallow-exclude=<リビジョン>"
+msgstr "`--shallow-exclude=<ref>`"
 
 #. type: Plain text
 #: en/git-clone.adoc:274
@@ -17172,10 +17164,9 @@ msgstr "`--[no-]single-branch`"
 
 #. type: Plain text
 #: en/git-clone.adoc:284
-#, fuzzy, placeholders:'`--branch`':'`HEAD`':'`HEAD`':'`--single-branch`', priority:300
-#| msgid "Clone only the history leading to the tip of a single branch, either specified by the `--branch` option or the primary branch remote's `HEAD` points at. Further fetches into the resulting repository will only update the remote-tracking branch for the branch this option was used for the initial cloning. If the HEAD at the remote did not point at any branch when `--single-branch` clone was made, no remote-tracking branch is created."
+#, placeholders:'`--branch`':'`HEAD`':'`HEAD`':'`--single-branch`', priority:300
 msgid "Clone only the history leading to the tip of a single branch, either specified by the `--branch` option or the primary branch remote's `HEAD` points at. Further fetches into the resulting repository will only update the remote-tracking branch for the branch this option was used for the initial cloning. If the `HEAD` at the remote did not point at any branch when `--single-branch` clone was made, no remote-tracking branch is created."
-msgstr "`--branch` オプションで指定されたブランチ、またはリモートの `HEAD` が指し示すプライマリブランチの先端に至るまでの履歴のみをクローンします。結果として得られるリポジトリをさらにフェッチすると、最初のクローン作成時にこのオプションが使用されたブランチのリモートトラッキングブランチのみが更新されます。`--single-branch` クローンを作成したときに、リモートの HEAD がどのブランチも指していなかった場合は、リモートトラッキングブランチは作成されません。"
+msgstr "指定した単一のブランチの先端に至る履歴だけをクローンします。どのブランチを対象とするかは、`--branch` オプションで指定するか、もしくはリモートリポジトリの `HEAD` が指している主要なブランチになります。このオプションを付けてクローンした場合、その後のフェッチ操作では、初回クローン時に対象となったブランチのリモート追跡ブランチだけが更新されます。`--single-branch` でクローンした時、もしリモートの `HEAD` がどのブランチも指していなかった場合は、リモート追跡ブランチは作成されません。"
 
 #. type: Labeled list
 #: en/git-clone.adoc:285
@@ -17860,7 +17851,7 @@ msgstr "-C <コミット>"
 #, fuzzy, no-wrap, placeholders:'`--reuse-message=', priority:280
 #| msgid "--reuse-message=<commit>"
 msgid "`--reuse-message=<commit>`"
-msgstr "--reuse-message=<コミット>"
+msgstr "`--reuse-message=<commit>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:84
@@ -17880,7 +17871,7 @@ msgstr "-c <コミット>"
 #, fuzzy, no-wrap, placeholders:'`--reedit-message=', priority:280
 #| msgid "--reedit-message=<commit>"
 msgid "`--reedit-message=<commit>`"
-msgstr "--reedit-message=<コミット>"
+msgstr "`--reedit-message=<commit>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:89
@@ -17893,7 +17884,7 @@ msgstr ""
 #, fuzzy, no-wrap, placeholders:'`--fixup=[(amend|reword)', priority:280
 #| msgid "--fixup=[(amend|reword):]<commit>"
 msgid "`--fixup=[(amend|reword):]<commit>`"
-msgstr "--fixup=[(amend|reword):]<コミット>"
+msgstr "`--fixup=[(amend|reword):]<commit>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:100
@@ -17935,7 +17926,7 @@ msgstr ""
 #, fuzzy, no-wrap, placeholders:'`--squash=', priority:280
 #| msgid "--squash=<commit>"
 msgid "`--squash=<commit>`"
-msgstr "--squash=<コミット>"
+msgstr "`--squash=<commit>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:135
@@ -18011,10 +18002,9 @@ msgstr "`--null`"
 
 #. type: Plain text
 #: en/git-commit.adoc:166
-#, fuzzy, placeholders:'`--porcelain`':'`-z`':'core.quotePath':'linkgit:git-config[1]', priority:280
-#| msgid "Without this option, pathnames with \"unusual\" characters are quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1])."
+#, placeholders:'`--porcelain`':'`-z`':'core.quotePath':'linkgit:git-config[1]', priority:280
 msgid "When showing `short` or `porcelain` status output, print the filename verbatim and terminate the entries with _NUL_, instead of _LF_. If no format is given, implies the `--porcelain` output format. Without the `-z` option, filenames with \"unusual\" characters are quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1])."
-msgstr "このオプションがない場合、パス名に \"通常ではない\" 文字が含まれていても、設定変数 `core.quotePath` の解釈に従って引用されます (linkgit:git-config[1] を参照)。"
+msgstr "`short` または `porcelain` のステータス出力時、ファイル名はそのまま出力され、各エントリの区切りには *LF* の代わりに *NUL* が使われます。フォーマットが指定されていない場合、自動的に `--porcelain` 出力フォーマットになります。`-z` オプションがない場合、「特殊な」文字を含むファイル名は設定変数 `core.quotePath`（詳細は linkgit:git-config[1] を参照）の説明通りクォートされます。"
 
 #. type: Labeled list
 #: en/git-commit.adoc:167 en/git-notes.adoc:151
@@ -18028,7 +18018,7 @@ msgstr "-F <ファイル>"
 #, fuzzy, no-wrap, placeholders:'`--file=', priority:280
 #| msgid "--file=<file>"
 msgid "`--file=<file>`"
-msgstr "--file=<ファイル>"
+msgstr "`--file=<file>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:171
@@ -18042,7 +18032,7 @@ msgstr "指定された <msg> をコミットメッセージとして使用し�
 #, fuzzy, no-wrap, placeholders:'`--author=', priority:280
 #| msgid "--author=<author>"
 msgid "`--author=<author>`"
-msgstr "--author=<著作者>"
+msgstr "`--author=<author>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:178
@@ -18055,7 +18045,7 @@ msgstr ""
 #, fuzzy, no-wrap, placeholders:'`--date=', priority:280
 #| msgid "--date=<date>"
 msgid "`--date=<date>`"
-msgstr "--date=<日付>"
+msgstr "`--date=<date>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:181
@@ -18075,7 +18065,7 @@ msgstr "-m <メッセージ>"
 #, fuzzy, no-wrap, placeholders:'`--message=', priority:280
 #| msgid "--message=<msg>"
 msgid "`--message=<msg>`"
-msgstr "--message=<メッセージ>"
+msgstr "`--message=<msg>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:187
@@ -18087,9 +18077,9 @@ msgstr "指定された <メッセージ> をコミットメッセージとし�
 # ERROR: `-m` not found in translation
 #. type: Plain text
 #: en/git-commit.adoc:189
-#, fuzzy, placeholders:'`-m`':'`-c`':'`-C`':'`-F`', priority:280
+#, placeholders:'`-m`':'`-c`':'`-C`':'`-F`', priority:280
 msgid "The `-m` option is mutually exclusive with `-c`, `-C`, and `-F`."
-msgstr "`m` オプションは、`-c`、`-C`、`-F` とは相互に排他的です。"
+msgstr "`-m` オプションは、`-c`、`-C`、`-F` とは同時に指定できません。"
 
 #. type: Labeled list
 #: en/git-commit.adoc:190
@@ -18103,7 +18093,7 @@ msgstr "-t <ファイル>"
 #, fuzzy, no-wrap, placeholders:'`--template=', priority:280
 #| msgid "--template=<file>"
 msgid "`--template=<file>`"
-msgstr "--template=<ファイル>"
+msgstr "`--template=<file>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:200
@@ -18116,7 +18106,7 @@ msgstr ""
 #, fuzzy, no-wrap, placeholders:'`--trailer', priority:280
 #| msgid "--trailer <token>[(=|:)<value>]"
 msgid "`--trailer <token>[(=|:)<value>]`"
-msgstr "--trailer <トークン>[(=|:)<値>]"
+msgstr "`--trailer <token>[(=|:)<value>]`"
 
 #. type: Plain text
 #: en/git-commit.adoc:213
@@ -18165,7 +18155,7 @@ msgstr ""
 #, fuzzy, no-wrap, placeholders:'`--cleanup=', priority:280
 #| msgid "--cleanup=<mode>"
 msgid "`--cleanup=<mode>`"
-msgstr "--cleanup=<モード>"
+msgstr "`--cleanup=<mode>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:234
@@ -18357,7 +18347,7 @@ msgstr "-u[<モード>]"
 #, fuzzy, no-wrap, placeholders:'`--untracked-files', priority:280
 #| msgid "--untracked-files[=<mode>]"
 msgid "`--untracked-files[=<mode>]`"
-msgstr "--untracked-files[=<モード>]"
+msgstr "`--untracked-files[=<mode>]`"
 
 #. type: Plain text
 #: en/git-commit.adoc:335 en/git-status.adoc:61
@@ -18947,7 +18937,7 @@ msgstr ""
 #, fuzzy, no-wrap, placeholders:'--comment', priority:100
 #| msgid "<full-commit-message>"
 msgid "--comment <message>"
-msgstr "<完全なコミットメッセージ>"
+msgstr "--comment <message>"
 
 #. type: Plain text
 #: en/git-config.adoc:120
@@ -19369,7 +19359,7 @@ msgstr ""
 #, fuzzy, no-wrap, placeholders:'--get-regexp', priority:100
 #| msgid "--extended-regexp"
 msgid "--get-regexp <name-regexp>"
-msgstr "--extended-regexp"
+msgstr "--get-regexp <name-regexp>"
 
 #. type: Plain text
 #: en/git-config.adoc:318
@@ -19406,7 +19396,7 @@ msgstr ""
 #, fuzzy, no-wrap, placeholders:'--add', priority:100
 #| msgid "-c <key>=<value>"
 msgid "--add <name> <value>"
-msgstr "-c <キー>=<値>"
+msgstr "--add <name> <value>"
 
 #. type: Plain text
 #: en/git-config.adoc:327
@@ -23707,10 +23697,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:102
-#, fuzzy, placeholders:'`--stdin`':'`-m`', priority:80
-#| msgid "Show differences from each of the parents to the merge result simultaneously instead of showing pairwise diff between a parent and the result one at a time. Furthermore, it lists only files which were modified from all parents."
+#, placeholders:'`--stdin`':'`-m`', priority:80
 msgid "This flag changes the way a merge commit is displayed (which means it is useful only when the command is given one <tree-ish>, or `--stdin`). It shows the differences from each of the parents to the merge result simultaneously instead of showing pairwise diff between a parent and the result one at a time (which is what the `-m` option does). Furthermore, it lists only files which were modified from all parents."
-msgstr "親と結果のペアごとの差分を一度に1つずつ表示するのではなく、各親からの差分をマージ結果に同時に表示します。さらに、すべての親から変更されたファイルのみが一覧表示されます。"
+msgstr "このフラグは、マージコミットの表示方法を変更します（そのため、コマンドに `<tree-ish>` を1つだけ指定した場合や `--stdin` を使う場合にのみ有効です）。各親からマージ結果への差分を、個別にではなく同時に表示します（`-m` オプションでは、親ごとに順番に差分を表示します）。さらに、すべての親から変更されたファイルだけを一覧表示します。"
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:112
@@ -31518,10 +31507,9 @@ msgstr "`.gitignore` メカニズムで指定された無視されたファイ�
 
 #. type: Plain text
 #: en/git-grep.adoc:78
-#, fuzzy, placeholders:'`--untracked`':'`--no-index`', priority:100
-#| msgid "Recursively search in each submodule that is active and checked out in the repository. When used in combination with the <tree> option the prefix of all submodule output will be the name of the parent project's <tree> object. This option has no effect if `--no-index` is given."
+#, placeholders:'`--untracked`':'`--no-index`', priority:100
 msgid "Recursively search in each submodule that is active and checked out in the repository. When used in combination with the _<tree>_ option the prefix of all submodule output will be the name of the parent project's _<tree>_ object. This option cannot be used together with `--untracked`, and it has no effect if `--no-index` is specified."
-msgstr "リポジトリ内でアクティブでチェックアウトされている各サブモジュールを再帰的に検索します。<tree> オプションと組み合わせて使用すると、すべてのサブモジュール出力のプレフィックスは親プロジェクトの <tree> オブジェクトの名前になります。`--no-index` が指定されている場合、このオプションは効果がありません。"
+msgstr "リポジトリ内で有効かつチェックアウトされている各サブモジュールを再帰的に検索します。*<tree>* オプションと組み合わせて使う場合、すべてのサブモジュールの出力には親プロジェクトの *<tree>* オブジェクト名がプレフィックスとして付きます。このオプションは `--untracked` とは同時に使用できず、`--no-index` が指定されている場合は効果がありません。"
 
 #. type: Labeled list
 #: en/git-grep.adoc:80
@@ -32970,7 +32958,7 @@ msgstr ""
 #, fuzzy, no-wrap, placeholders:'http.uploadarchive', priority:100
 #| msgid "git-upload-archive(1)"
 msgid "http.uploadarchive"
-msgstr "git-upload-archive(1)"
+msgstr "http.uploadarchive"
 
 #. type: Plain text
 #: en/git-http-backend.adoc:62
@@ -34015,10 +34003,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-index-pack.adoc:130
-#, fuzzy, placeholders:'extensions.objectFormat', priority:100
-#| msgid "Specify the given object format (hash algorithm) for the repository.  The valid values are 'sha1' and (if enabled) 'sha256'.  'sha1' is the default."
+#, placeholders:'extensions.objectFormat', priority:100
 msgid "Specify the given object format (hash algorithm) for the pack. The valid values are 'sha1' and (if enabled) 'sha256'. The default is the algorithm for the current repository (set by `extensions.objectFormat`), or 'sha1' if no value is set or outside a repository."
-msgstr "リポジトリのオブジェクトフォーマット（ハッシュアルゴリズム）を指定します。 有効な値は'sha1'と（有効な場合は）'sha256'です。 'sha1'がデフォルトです。"
+msgstr "パックで使用するオブジェクトフォーマット（ハッシュアルゴリズム）を指定します。有効な値は 「sha1」と「sha256（有効になっていれば）」 です。デフォルトでは、現在のリポジトリの `extensions.objectFormat` で設定されたアルゴリズムが使われますが、値が設定されていない場合やリポジトリ外の場合は 「sha1」 になります。"
 
 #. type: Plain text
 #: en/git-index-pack.adoc:132
@@ -34158,7 +34145,7 @@ msgstr "ベアリポジトリを作成します。 `GIT_DIR` 環境が設定さ�
 #, fuzzy, no-wrap, placeholders:'`--object-format=', priority:300
 #| msgid "--object-format=<format>"
 msgid "`--object-format=<format>`"
-msgstr "--object-format=<フォーマット>"
+msgstr "`--object-format=<format>`"
 
 #. type: Plain text
 #: en/git-init.adoc:57
@@ -34172,7 +34159,7 @@ msgstr "リポジトリのオブジェクトフォーマット（ハッシュア
 #, fuzzy, no-wrap, placeholders:'`--ref-format=', priority:300
 #| msgid "--ref-format=<format>"
 msgid "`--ref-format=<format>`"
-msgstr "--ref-format=<フォーマット>"
+msgstr "`--ref-format=<format>`"
 
 #. type: Plain text
 #: en/git-init.adoc:62
@@ -34211,7 +34198,7 @@ msgstr "-b <ブランチ名>"
 #, fuzzy, no-wrap, placeholders:'`--initial-branch=', priority:300
 #| msgid "--initial-branch=<branch-name>"
 msgid "`--initial-branch=<branch-name>`"
-msgstr "--initial-branch=<ブランチ名>"
+msgstr "`--initial-branch=<branch-name>`"
 
 #. type: Plain text
 #: en/git-init.adoc:83
@@ -34228,10 +34215,9 @@ msgstr "`--shared[=(false|true|umask|group|all|world|everybody|<perm>)]`：リ�
 
 #. type: Plain text
 #: en/git-init.adoc:92
-#, fuzzy, placeholders:'core.sharedRepository':'`$GIT_DIR`', priority:300
-#| msgid "Specify that the Git repository is to be shared amongst several users. This allows users belonging to the same group to push into that repository. When specified, the config variable \"core.sharedRepository\" is set so that files and directories under `$GIT_DIR` are created with the requested permissions. When not specified, Git will use permissions reported by umask(2)."
+#, placeholders:'core.sharedRepository':'`$GIT_DIR`', priority:300
 msgid "Specify that the Git repository is to be shared amongst several users. This allows users belonging to the same group to push into that repository. When specified, the config variable `core.sharedRepository` is set so that files and directories under `$GIT_DIR` are created with the requested permissions. When not specified, Git will use permissions reported by `umask`(2)."
-msgstr "Gitリポジトリを複数のユーザーで共有することを指定します。これにより、同じグループに属するユーザーがそのリポジトリにプッシュできるようになります。指定すると、コンフィグ変数 \"core.sharedRepository\" が設定され、`$GIT_DIR` 以下のファイルやディレクトリが要求されたパーミッションで作成されるようになります。指定されていない場合、Gitはumask(2)によって報告されたパーミッションを使用します。"
+msgstr "Gitリポジトリを複数のユーザーで共有できるようにします。同じグループに属するユーザーが、そのリポジトリへ push できるようになります。このオプションを指定すると、設定変数 `core.sharedRepository` がセットされ、`$GIT_DIR` 配下のファイルやディレクトリが指定したパーミッションで作成されます。指定しない場合は、`umask(2)` の設定に従ったパーミッションが使われます。"
 
 #. type: Plain text
 #: en/git-init.adoc:95
@@ -38125,10 +38111,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:148
-#, fuzzy, placeholders:'core.quotePath':'linkgit:git-config[1]':'`--name-only`':'`-z`', priority:100
-#| msgid "Without the `-z` option, pathnames with \"unusual\" characters are quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1]).  Using `-z` the filename is output verbatim and the line is terminated by a NUL byte."
+#, placeholders:'core.quotePath':'linkgit:git-config[1]':'`--name-only`':'`-z`', priority:100
 msgid "The filename will be quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1]). However, if the `--name-only` option is passed, the mode, object, and stage will be omitted. If `-z` is passed, the \"lines\" are terminated by a NUL character instead of a newline character."
-msgstr "`-z` オプションをつけないと、設定変数 `core.quotePath` (linkgit:git-config[1]参照) の説明にしたがって、「普通でない」文字を含むパス名が引用されます。 `-z` を使うと、ファイル名はそのまま出力され、行は NUL バイトで終了します。"
+msgstr "ファイル名は、設定変数 `core.quotePath`（詳細は linkgit:git-config[1] を参照）の説明に従ってクォートされます。ただし、`--name-only` オプションを指定した場合は、mode、object、stage の情報は省略されます。`-z` オプションを指定すると、各「行」の区切りに改行文字の代わりに NUL 文字が使われます。"
 
 #. type: Title ~
 #: en/git-merge-tree.adoc:151
@@ -39588,7 +39573,7 @@ msgstr "contents <オブジェクト>"
 #, fuzzy, no-wrap, placeholders:'`--reedit-message=', priority:280
 #| msgid "--reedit-message=<commit>"
 msgid "`--reedit-message=<object>`"
-msgstr "--reedit-message=<コミット>"
+msgstr "`--reedit-message=<object>`"
 
 #. type: Plain text
 #: en/git-notes.adoc:172
@@ -39681,7 +39666,7 @@ msgstr "--strategy"
 #, fuzzy, no-wrap, placeholders:'`--strategy=', priority:280
 #| msgid "--strategy=<strategy>"
 msgid "`--strategy=<strategy>`"
-msgstr "--strategy=<戦略>"
+msgstr "`--strategy=<strategy>`"
 
 #. type: Plain text
 #: en/git-notes.adoc:220
@@ -41945,7 +41930,7 @@ msgstr ""
 #, fuzzy, no-wrap, placeholders:'--name-hash-version=', priority:100
 #| msgid "--version=<version>"
 msgid "--name-hash-version=<n>"
-msgstr "--version=<バージョン>"
+msgstr "--name-hash-version=<n>"
 
 #. type: Plain text
 #: en/git-pack-objects.adoc:357
@@ -42935,9 +42920,9 @@ msgstr ""
 # ERROR: [[OPTIONS]] not found in translation
 #. type: Title -
 #: en/git-push.adoc:49
-#, fuzzy, no-wrap, placeholders:'[[OPTIONS]]', priority:220
+#, no-wrap, placeholders:'[[OPTIONS]]', priority:220
 msgid "OPTIONS[[OPTIONS]]"
-msgstr "オプション[[オプション]]"
+msgstr "オプション[[OPTIONS]]"
 
 #. type: Plain text
 #: en/git-push.adoc:55
@@ -43145,10 +43130,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-push.adoc:227
-#, fuzzy, placeholders:'`--push-option=':'`--push-option=':'push.pushOption', priority:220
-#| msgid "Transmit the given string to the server when communicating using protocol version 2.  The given string must not contain a NUL or LF character.  The server's handling of server options, including unknown ones, is server-specific.  When multiple `--server-option=<option>` are given, they are all sent to the other side in the order listed on the command line."
+#, placeholders:'`--push-option=':'`--push-option=':'push.pushOption', priority:220
 msgid "Transmit the given string to the server, which passes them to the pre-receive as well as the post-receive hook. The given string must not contain a NUL or LF character. When multiple `--push-option=<option>` are given, they are all sent to the other side in the order listed on the command line. When no `--push-option=<option>` is given from the command line, the values of configuration variable `push.pushOption` are used instead."
-msgstr "プロトコルバージョン2を使用して通信するときに、指定された文字列をサーバーに送信します。指定された文字列には、NUL または LF 文字を含めることはできません。不明なオプションを含むサーバーオプションのサーバーの処理は、サーバー固有です。複数の `--server-option=<オプション>` が指定されている場合、それらはすべてコマンドラインにリストされている順序で反対側に送信されます。"
+msgstr "指定した文字列をサーバーに送信します。この文字列は、pre-receive フックおよび post-receive フックの両方に渡されます。この文字列には NUL や LF 文字を含めることはできません。`--push-option=<option>` を複数指定した場合、それらはコマンドラインで指定した順番にすべて相手側へ送信されます。コマンドラインで `--push-option=<option>` が指定されていない場合は、設定変数 `push.pushOption` の値が代わりに使われます。"
 
 #. type: Labeled list
 #: en/git-push.adoc:228 en/git-send-pack.adoc:29
@@ -48208,10 +48192,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-remote.adoc:207
-#, fuzzy, placeholders:'remote.origin.url':'remote.origin.fetch':'linkgit:git-config[1]', priority:220
-#| msgid "This default configuration is achieved by creating references to the remote branch heads under `refs/remotes/origin` and by initializing `remote.origin.url` and `remote.origin.fetch` configuration variables."
+#, placeholders:'remote.origin.url':'remote.origin.fetch':'linkgit:git-config[1]', priority:220
 msgid "The remote configuration is achieved using the `remote.origin.url` and `remote.origin.fetch` configuration variables. (See linkgit:git-config[1])."
-msgstr "このデフォルトの構成は、リモートブランチヘッドへの参照を `refs/remotes/origin` の下に作成し、構成変数 `remote.origin.url` と `remote.origin.fetch` を初期化することで実現しています。"
+msgstr "リモートの設定は、`remote.origin.url` および `remote.origin.fetch` の設定変数で行います（詳細は linkgit:git-config[1] を参照）。"
 
 #. type: Plain text
 #: en/git-remote.adoc:212
@@ -50079,7 +50062,7 @@ msgstr ""
 #, fuzzy, no-wrap, placeholders:'`--source=', priority:280
 #| msgid "--src-prefix=<prefix>"
 msgid "`--source=<tree>`"
-msgstr "--src-prefix=<接頭辞>"
+msgstr "`--source=<tree>`"
 
 #. type: Plain text
 #: en/git-restore.adoc:40
@@ -50182,7 +50165,7 @@ msgstr ""
 #, fuzzy, no-wrap, placeholders:'`--conflict=', priority:280
 #| msgid "--conflict=<style>"
 msgid "`--conflict=<style>`"
-msgstr "--conflict=<スタイル>"
+msgstr "`--conflict=<style>`"
 
 #. type: Plain text
 #: en/git-restore.adoc:100
@@ -50415,10 +50398,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-revert.adoc:57
-#, fuzzy, priority:100
-#| msgid "Usually you cannot cherry-pick a merge because you do not know which side of the merge should be considered the mainline.  This option specifies the parent number (starting from 1) of the mainline and allows cherry-pick to replay the change relative to the specified parent."
+#, priority:100
 msgid "Usually you cannot revert a merge because you do not know which side of the merge should be considered the mainline. This option specifies the parent number (starting from 1) of the mainline and allows revert to reverse the change relative to the specified parent."
-msgstr "通常、マージをチェリーピックすることはできません。なぜなら、マージのどちら側をメインラインとみなすべきかが分からないからです。 このオプションはメインラインの親番号（1から始まる）を指定し、指定された親に対して相対的な変更をチェリーピックで再生することを可能にします。"
+msgstr "通常、どちらを主とみなすかが分からないため、マージコミットをそのままリバートすることはできません。このオプションでは、どの親を「メインライン」として扱うか（1から始まる親番号）を指定し、その親に対する変更を取り消せるようにします。"
 
 #. type: Plain text
 #: en/git-revert.adoc:62
@@ -53713,10 +53695,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-show-branch.adoc:127
-#, fuzzy, placeholders:'`--color=never`', priority:100
-#| msgid "Turn off rename detection, even when the configuration file gives the default to do so."
+#, placeholders:'`--color=never`', priority:100
 msgid "Turn off colored output, even when the configuration file gives the default to color output. Same as `--color=never`."
-msgstr "設定ファイルでデフォルトとして指定されている場合でも、名前変更の検出をオフにします。"
+msgstr "設定ファイルで色付き出力がデフォルトになっていても、カラー表示を無効にします。`--color=never` と同じ動作です。"
 
 #. type: Plain text
 #: en/git-show-branch.adoc:130
@@ -53865,10 +53846,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-show-index.adoc:47
-#, fuzzy, placeholders:'extensions.objectFormat', priority:100
-#| msgid "Specify the given object format (hash algorithm) for the repository.  The valid values are 'sha1' and (if enabled) 'sha256'.  'sha1' is the default."
+#, placeholders:'extensions.objectFormat', priority:100
 msgid "Specify the given object format (hash algorithm) for the index file. The valid values are 'sha1' and (if enabled) 'sha256'. The default is the algorithm for the current repository (set by `extensions.objectFormat`), or 'sha1' if no value is set or outside a repository.."
-msgstr "リポジトリのオブジェクトフォーマット（ハッシュアルゴリズム）を指定します。 有効な値は'sha1'と（有効な場合は）'sha256'です。 'sha1'がデフォルトです。"
+msgstr "インデックスファイルで使用するオブジェクトフォーマット（ハッシュアルゴリズム）を指定します。有効な値は 「sha1」と「sha256（有効であれば）」です。デフォルトでは、現在のリポジトリで `extensions.objectFormat` に設定されたアルゴリズムが使われますが、値が設定されていない場合やリポジトリ外の場合は 「sha1」になります。"
 
 #. type: Title =
 #: en/git-show-ref.adoc:2
@@ -56715,10 +56695,9 @@ msgstr "--jobs <n>"
 
 #. type: Plain text
 #: en/git-submodule.adoc:449
-#, fuzzy, placeholders:'submodule.fetchJobs', priority:220
-#| msgid "The number of submodules fetched at the same time.  Defaults to the `submodule.fetchJobs` option."
+#, placeholders:'submodule.fetchJobs', priority:220
 msgid "This option is only valid for the update command. Clone new submodules in parallel with as many jobs. Defaults to the `submodule.fetchJobs` option."
-msgstr "同時に取得するサブモジュールの数です。 既定値は `submodule.fetchJobs` オプションになります。"
+msgstr "このオプションは update コマンドでのみ有効です。新しいサブモジュールを、指定したジョブ数で並列にクローンします。デフォルト値は `submodule.fetchJobs` オプションの設定が使われます。"
 
 #. type: Labeled list
 #: en/git-submodule.adoc:450
@@ -59345,17 +59324,15 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-tag.adoc:174
-#, fuzzy, placeholders:'`-m`':'`-a`':'`-a`':'`-s`', priority:240
-#| msgid "Use the given <msg> as the commit message.  If multiple `-m` options are given, their values are concatenated as separate paragraphs."
+#, placeholders:'`-m`':'`-a`':'`-a`':'`-s`', priority:240
 msgid "Use the given tag message (instead of prompting). If multiple `-m` options are given, their values are concatenated as separate paragraphs. Implies `-a` if none of `-a`, `-s`, or `-u <key-id>` is given."
-msgstr "指定された <msg> をコミットメッセージとして使用します。 複数の `-m` オプションが与えられた場合、それらの値は別々の段落として連結されます。"
+msgstr "指定したタグメッセージを使用します（入力プロンプトは表示されません）。`-m` オプションが複数指定された場合、それぞれの内容は別々の段落として連結されます。`-a`、`-s`、`-u <key-id>` のいずれも指定されていない場合は、自動的に `-a` が適用されます。"
 
 #. type: Plain text
 #: en/git-tag.adoc:181
-#, fuzzy, placeholders:'`-a`':'`-a`':'`-s`', priority:240
-#| msgid "Use the given <msg> as the commit message.  If multiple `-m` options are given, their values are concatenated as separate paragraphs."
+#, placeholders:'`-a`':'`-a`':'`-s`', priority:240
 msgid "Take the tag message from the given file. Use '-' to read the message from the standard input. Implies `-a` if none of `-a`, `-s`, or `-u <key-id>` is given."
-msgstr "指定された <msg> をコミットメッセージとして使用します。 複数の `-m` オプションが与えられた場合、それらの値は別々の段落として連結されます。"
+msgstr "指定したファイルからタグメッセージを読み込みます。`-` を指定すると、標準入力からメッセージを読み込みます。`-a`、`-s`、`-u <key-id>` のいずれも指定されていない場合は、自動的に `-a` が適用されます。"
 
 #. type: Labeled list
 #: en/git-tag.adoc:182
@@ -60535,10 +60512,9 @@ msgstr "`GIT_DIR`"
 
 #. type: Plain text
 #: en/git.adoc:530
-#, fuzzy, placeholders:'GIT_DIR', priority:100
-#| msgid "If the `$GIT_DIR` environment variable is set then it specifies a path to use instead of `./.git` for the base of the repository."
+#, placeholders:'GIT_DIR', priority:100
 msgid "If the `GIT_DIR` environment variable is set then it specifies a path to use instead of the default `.git` for the base of the repository. The `--git-dir` command-line option also sets this value."
-msgstr "環境変数 `$GIT_DIR` が設定されている場合は、リポジトリのベースとして `./.git` の代わりに使用するパスを指定します。"
+msgstr "`GIT_DIR` 環境変数が設定されている場合、リポジトリの基準ディレクトリとしてデフォルトの `.git` の代わりに、そのパスが使われます。コマンドラインオプションの `--git-dir` も同様にこの値を設定します。"
 
 #. type: Labeled list
 #: en/git.adoc:531
@@ -61467,9 +61443,9 @@ msgstr ""
 # ERROR: [[Discussion]] not found in translation
 #. type: Title -
 #: en/git.adoc:1051
-#, fuzzy, no-wrap, placeholders:'[[Discussion]]', priority:100
+#, no-wrap, placeholders:'[[Discussion]]', priority:100
 msgid "Discussion[[Discussion]]"
-msgstr "議論[[議論]]"
+msgstr "議論[[Discussion]]"
 
 #. type: Plain text
 #: en/git.adoc:1056
@@ -66684,10 +66660,9 @@ msgstr "recursive"
 
 #. type: Plain text
 #: en/merge-strategies.adoc:98
-#, fuzzy, priority:240
-#| msgid "This is the default merge strategy when pulling or merging one branch.  This strategy can only resolve two heads using a 3-way merge algorithm.  When there is more than one common ancestor that can be used for 3-way merge, it creates a merged tree of the common ancestors and uses that as the reference tree for the 3-way merge.  This has been reported to result in fewer merge conflicts without causing mismerges by tests done on actual merge commits taken from Linux 2.6 kernel development history.  Additionally this strategy can detect and handle merges involving renames.  It does not make use of detected copies.  The name for this algorithm is an acronym (\"Ostensibly Recursive's Twin\") and came from the fact that it was written as a replacement for the previous default algorithm, `recursive`."
+#, priority:240
 msgid "This can only resolve two heads using a 3-way merge algorithm. When there is more than one common ancestor that can be used for 3-way merge, it creates a merged tree of the common ancestors and uses that as the reference tree for the 3-way merge. This has been reported to result in fewer merge conflicts without causing mismerges by tests done on actual merge commits taken from Linux 2.6 kernel development history. Additionally this can detect and handle merges involving renames. It does not make use of detected copies. This was the default strategy for resolving two heads from Git v0.99.9k until v2.33.0."
-msgstr "これは、1つのブランチをプルまたはマージするときのデフォルトのマージ戦略です。 この戦略では、3方向マージアルゴリズムを使用して2つのヘッドのみを解決できます。 3方向マージに使用できる共通の祖先が複数ある場合、共通の祖先をマージしたツリーを作成し、それを 3方向マージ の参照ツリーとして使用します。 これは、Linux 2.6カーネルの開発履歴から採取した実際のマージコミットでテストした結果、誤ったマージを引き起こすことなく、マージコンフリクトが少なくなることが報告されています。 さらに、この戦略は名前の変更を伴うマージを検出して処理することができます。 検出されたコピーは利用しません。 このアルゴリズムの名前は頭文字をとったもので（\"Ostensibly Recursive's Twin\"）、以前のデフォルトアルゴリズムである `recursive` の置き換えとして書かれたことに由来しています。"
+msgstr "これは、3-wayマージアルゴリズムを使って2つのヘッドのみを解決できます。3-wayマージに利用できる共通の祖先が複数ある場合、それらの祖先同士をマージしたツリーを作り、それを3-wayマージの基準ツリーとして使います。この方法は、Linux 2.6カーネル開発史から抽出した実際のマージコミットでテストした結果、誤ったマージを生じさせることなくマージコンフリクトを減らせることが報告されています。さらに、この方法はリネームを含むマージも検出・処理できます。ただし、コピーとして検出されたものは利用しません。この戦略は、Git v0.99.9k から v2.33.0 まで2つのヘッドを解決するデフォルト戦略でした。"
 
 #. type: Plain text
 #: en/merge-strategies.adoc:102
@@ -71654,9 +71629,9 @@ msgstr ""
 # ERROR: [[REMOTES]] not found in translation
 #. type: Title -
 #: en/urls-remotes.adoc:4
-#, fuzzy, no-wrap, placeholders:'[[REMOTES]]', priority:220
+#, no-wrap, placeholders:'[[REMOTES]]', priority:220
 msgid "REMOTES[[REMOTES]]"
-msgstr "リモート[[リモート]]"
+msgstr "リモート[[REMOTES]]"
 
 #. type: Plain text
 #: en/urls-remotes.adoc:8
