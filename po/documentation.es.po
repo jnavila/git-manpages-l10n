@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2025-03-06 18:29+0100\n"
-"PO-Revision-Date: 2025-04-27 09:02+0000\n"
+"PO-Revision-Date: 2025-05-26 05:03+0000\n"
 "Last-Translator: Salvador Peña <salvadorp74@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: es\n"
@@ -3876,7 +3876,7 @@ msgstr "\tPara detalles de modos válidos ver `--color-moved`.\n"
 #: en/config/diff.adoc:260
 #, no-wrap, placeholders:'`--color-moved`':'linkgit:git-diff[1]', priority:280
 msgid "\tFor details of valid modes see `--color-moved` in linkgit:git-diff[1].\n"
-msgstr ""
+msgstr "\tPara detalles de los modos válidos ver `--color-moved` en linkgit:git-diff[1].\n"
 
 #. type: Plain text
 #: en/config/diff.adoc:263
@@ -3885,6 +3885,8 @@ msgid ""
 "\tIf simply set to `true` the default color mode will be used. When\n"
 "\tset to `false`, moved lines are not colored.\n"
 msgstr ""
+"\tSi se asigna simplemente `true` se usará el modo de color predeterminado. Cuando\n"
+"\tse asigna `false`, las líneas movidas no serán coloreadas.\n"
 
 #. type: Labeled list
 #: en/config/diff.adoc:264
@@ -3896,7 +3898,7 @@ msgstr "`diff.colorMovedWS`"
 #: en/config/diff.adoc:267
 #, placeholders:'diff.colorMoved':'`--color-moved-ws`':'linkgit:git-diff[1]', priority:280
 msgid "When moved lines are colored using e.g. the `diff.colorMoved` setting, this option controls the mode how spaces are treated. For details of valid modes see `--color-moved-ws` in linkgit:git-diff[1]."
-msgstr ""
+msgstr "Cuando las líneas movidas son coloreadas, usando por ejemplo la configuración `diff.colorMoved`, esta opción controla cómo el modo trata a los espacios. Para detalles de los modos válidos ver `--color-moved-ws` en linkgit:git-diff[1]."
 
 #. type: Labeled list
 #: en/config/init.adoc:6
@@ -6672,7 +6674,7 @@ msgstr "`--quiet`"
 #: en/diff-options.adoc:829
 #, placeholders:'`--exit-code`':'diff.trustExitCode':'GIT_EXTERNAL_DIFF_TRUST_EXIT_CODE', priority:280
 msgid "Disable all output of the program. Implies `--exit-code`. Disables execution of external diff helpers whose exit code is not trusted, i.e. their respective configuration option `diff.trustExitCode` or ++diff.++__<driver>__++.trustExitCode++ or environment variable `GIT_EXTERNAL_DIFF_TRUST_EXIT_CODE` is false."
-msgstr ""
+msgstr "Deshabilita toda salida del programa. Implica `--exit-code`. Deshabilita la ejecución de diferencias externas auxiliares cuyo código de salida no es confiable, ej. su respectiva opción de configuración `diff.trustExitCode` o ++diff.++__<controlador>__++.trustExitCode++ o la variable de ambiente `GIT_EXTERNAL_DIFF_TRUST_EXIT_CODE` es falsa."
 
 #. type: Labeled list
 #: en/diff-options.adoc:832
@@ -6726,7 +6728,7 @@ msgstr "`--ignore-submodules[=(none|untracked|dirty|all)]`"
 #: en/diff-options.adoc:863
 #, placeholders:'`HEAD`':'linkgit:git-config[1]':'linkgit:gitmodules[5]', priority:280
 msgid "Ignore changes to submodules in the diff generation. `all` is the default. Using `none` will consider the submodule modified when it either contains untracked or modified files or its `HEAD` differs from the commit recorded in the superproject and can be used to override any settings of the `ignore` option in linkgit:git-config[1] or linkgit:gitmodules[5]. When `untracked` is used submodules are not considered dirty when they only contain untracked content (but they are still scanned for modified content). Using `dirty` ignores all changes to the work tree of submodules, only changes to the commits stored in the superproject are shown (this was the behavior until 1.7.0). Using `all` hides all changes to submodules."
-msgstr ""
+msgstr "Ignora cambios en submódulos en la generación de diferencias. El predeterminado es `all`. Usando `none` considerará el submódulo modificado ya sea cuando contenga ficheros sin rastreo o modificados, o su `HEAD` difiera de la confirmación registrada en el superproyecto y pueda se usada para sobremontar cualquiera de las configuraciones de la opción `ignore` en linkgit:git-config[1] o linkgit:gitmodules[5]. Cuando se usa `untracked` los submódulos no son considerados sucios cuando sólo contienen contenido sin rastreo (pero aún son escaneados para contenido modificado). Usando `dirty`, ignora todos los cambios al árbol de trabajo de submódulos, sólo se muestran cambios a las confirmaciones almacenadas en el superproyecto (este fue el comportamiento hasta 1.7.0). Usando `all` oculta todos los cambios a submódulos."
 
 #. type: Labeled list
 #: en/diff-options.adoc:864
@@ -17735,7 +17737,7 @@ msgstr "`--reset-author`"
 #: en/git-commit.adoc:141
 #, placeholders:'`-C`':'`-c`':'`--amend`', priority:280
 msgid "When used with `-C`/`-c`/`--amend` options, or when committing after a conflicting cherry-pick, declare that the authorship of the resulting commit now belongs to the committer. This also renews the author timestamp."
-msgstr ""
+msgstr "Cuando se usa con las opciones `-C`/`-c`/`--amend`, o cuando se confirma después de una cherry-pick conflictiva, declara que la autoría de la confirmación resultante ahora pertenece al confirmante. Esto también renueva la marca de tiempo del autor."
 
 #. type: Labeled list
 #: en/git-commit.adoc:142
@@ -17927,7 +17929,7 @@ msgstr "`--allow-empty-message`"
 #: en/git-commit.adoc:229
 #, placeholders:'linkgit:git-commit-tree[1]':'`--allow-empty`', priority:280
 msgid "Create a commit with an empty commit message without using plumbing commands like linkgit:git-commit-tree[1]. Like `--allow-empty`, this command is primarily for use by foreign SCM interface scripts."
-msgstr ""
+msgstr "Crea una confirmación con un mensaje de confirmación vacío sin usar comandos plomería como linkgit:git-commit-tree[1]. Como `--allow-empty`, este comando es primordialmente para ser usado por scripts de interface de SCM externos."
 
 #. type: Labeled list
 #: en/git-commit.adoc:230
@@ -18011,7 +18013,7 @@ msgstr "El predeterminado puede cambiarse con la variable de configuración `com
 #: en/git-commit.adoc:263
 #, priority:280
 msgid "Let the user further edit the message taken from _<file>_ with `-F <file>`, command line with `-m <message>`, and from _<commit>_ with `-C <commit>`."
-msgstr ""
+msgstr "Permite al usuario editar más adelante el mensaje tomado de _<fichero>_ con `-F <fichero>`, de la línea de comando con `-m <mensaje>`, y de _<confirmación>_ con `-C <confirmación>."
 
 #. type: Labeled list
 #: en/git-commit.adoc:264
@@ -18089,7 +18091,7 @@ msgstr "`--include`"
 #: en/git-commit.adoc:304
 #, priority:280
 msgid "Before making a commit out of staged contents so far, stage the contents of paths given on the command line as well. This is usually not what you want unless you are concluding a conflicted merge."
-msgstr ""
+msgstr "Antes de hacer una confirmación con el contenido presentado al momento, presenta también el contenido de las rutas proporcionadas en la línea de comandos. Esto no es normalmente lo que quieres, a menos que estes concluyendo una fusión con conflictos."
 
 #. type: Labeled list
 #: en/git-commit.adoc:305
@@ -18107,7 +18109,7 @@ msgstr "`--only`"
 #: en/git-commit.adoc:318
 #, placeholders:'`--amend`':'`--allow-empty`', priority:280
 msgid "Make a commit by taking the updated working tree contents of the paths specified on the command line, disregarding any contents that have been staged for other paths. This is the default mode of operation of `git commit` if any paths are given on the command line, in which case this option can be omitted. If this option is specified together with `--amend`, then no paths need to be specified, which can be used to amend the last commit without committing changes that have already been staged. If used together with `--allow-empty` paths are also not required, and an empty commit will be created."
-msgstr ""
+msgstr "Crea una confirmación tomando el contenido actualizado del árbol de trabajo de las rutas especificadas en la línea de comandos, descartando cualquier contenido que haya sido presentado por otras rutas. Este es el modo de operación predeterminado de `git commit` si se da alguna ruta en la línea de comandos, en cuyo caso esta opción puede omitirse. Si esta opción se especifica junto con `--amend`, entonces no hay necesidad de especificar rutas que puedan usarse para enmendar la última confirmación sin confirmar cambios que ya hayan sido presentados. Si se usa junto con `--allow-empty`, tampoco se requieren rutas y se creará una confirmación vacía."
 
 #. type: Plain text
 #: en/git-commit.adoc:326
@@ -18185,13 +18187,13 @@ msgstr "Todas los formas comunes de escribir el valor boleano `true` se toman co
 #: en/git-commit.adoc:363
 #, placeholders:'`HEAD`':'commit.verbose':'linkgit:git-config[1]', priority:280
 msgid "Show unified diff between the `HEAD` commit and what would be committed at the bottom of the commit message template to help the user describe the commit by reminding what changes the commit has. Note that this diff output doesn't have its lines prefixed with `#`. This diff will not be a part of the commit message. See the `commit.verbose` configuration variable in linkgit:git-config[1]."
-msgstr ""
+msgstr "Muestra una diferencia unificada entre `HEAD` de la confirmación y lo que será confirmado al final de la plantilla del mensaje de confirmación; esto para ayudarle al usuario a describir la confirmación recordándole qué cambios contiene. Nota que esta salida de diferencia no tiene sus líneas con el prefijo `#`. Esta diferencia no será parte del mensaje de confirmación. Ver la variable de configuración `commit.verbose` en linkgit:git-config[1]."
 
 #. type: Plain text
 #: en/git-commit.adoc:367
 #, priority:280
 msgid "If specified twice, show in addition the unified diff between what would be committed and the worktree files, i.e. the unstaged changes to tracked files."
-msgstr ""
+msgstr "Si se especifica dos veces, muestra adicionalmente la diferencia unificada entre lo que será confirmado y los ficheros del árbol de trabajo, ej. los cambios no presentados a ficheros rastreados."
 
 #. type: Plain text
 #: en/git-commit.adoc:371
@@ -18263,7 +18265,7 @@ msgstr "Cuando se da _<especificación-de-ruta>_ en la línea de comandos, confi
 #: en/git-commit.adoc:421
 #, placeholders:'--staged', priority:280
 msgid "When recording your own work, the contents of modified files in your working tree are temporarily stored to a staging area called the \"index\" with `git add`. A file can be reverted back, only in the index but not in the working tree, to that of the last commit with `git restore --staged <file>`, which effectively reverts `git add` and prevents the changes to this file from participating in the next commit. After building the state to be committed incrementally with these commands, `git commit` (without any pathname parameter) is used to record what has been staged so far. This is the most basic form of the command. An example:"
-msgstr ""
+msgstr "Cuando grabas tu propio trabajo, el contenido de los ficheros modificados en tu árbol de trabajo es almacenado temporalmente en un área de presentación llamada \"índice\" con `git add`. Un fichero puede ser revertido, sólo en el índice mas no en el árbol de trabajo, hasta la última confirmación con `git restore --staged <fichero>`, lo cual revierte efectivamente `git add` y previene que los cambios a este fichero participen en la siguiente confirmación. Después de construir el estado a ser confirmado incrementalmente con esos comandos, se usa `git commit`(sin algún parámetro de nombre de ruta) para registrar lo que ha sido presentado al momento. Esta es la forma más básica del comando. Un ejemplo:"
 
 #. type: delimited block -
 #: en/git-commit.adoc:427
@@ -18345,7 +18347,7 @@ msgstr "la segunda confirmación registrará los cambios a `hola.c` y `hola.h` c
 #: en/git-commit.adoc:478
 #, priority:280
 msgid "After a merge (initiated by `git merge` or `git pull`) stops because of conflicts, cleanly merged paths are already staged to be committed for you, and paths that conflicted are left in unmerged state. You would have to first check which paths are conflicting with `git status` and after fixing them manually in your working tree, you would stage the result as usual with `git add`:"
-msgstr ""
+msgstr "Después que una fusión (iniciada por `git merge` o `git pull`) se detiene por conflictos, las rutas fusionadas limpiamente ya estarán presentadas para que las confirmes, y las rutas con conflicto se dejan en un estado sin fusionar. Tendrías que revisar primero qué rutas están en conflicto con `git status` para después arreglarlas manualmente en tu árbol de trabajo y presentar el resultado como de costumbre con `git add`:"
 
 #. type: delimited block -
 #: en/git-commit.adoc:484
@@ -18365,19 +18367,19 @@ msgstr ""
 #: en/git-commit.adoc:489
 #, placeholders:'git ls-files', priority:280
 msgid "After resolving conflicts and staging the result, `git ls-files -u` would stop mentioning the conflicted path. When you are done, run `git commit` to finally record the merge:"
-msgstr ""
+msgstr "Después de resolver conflictos y presentar el resultado, `git ls-files -u` dejará de mencionar la ruta en conflicto. Cuando hayas terminado, ejecuta `git commit` para grabar finalmente la fusión:"
 
 #. type: Plain text
 #: en/git-commit.adoc:500
 #, placeholders:'`-a`':'`-i`', priority:280
 msgid "As with the case to record your own changes, you can use `-a` option to save typing. One difference is that during a merge resolution, you cannot use `git commit` with pathnames to alter the order the changes are committed, because the merge should be recorded as a single commit. In fact, the command refuses to run when given pathnames (but see `-i` option)."
-msgstr ""
+msgstr "Como en el caso de grabar tus propios cambios, puedes usar la opción `-a` para ahorrar tecleo. Una diferencia es que durante una resolución de conflictos, no puedes usar `git commit` con nombres de rutas para alterar el orden en que se confirman los cambios, debido a que la fusión debe ser grabada en una sola confirmación. De hecho, el comando se niega a ejecutarse cuando se dan nombres de ruta (pero ver la opción `-i`)."
 
 #. type: Title -
 #: en/git-commit.adoc:502
 #, no-wrap, priority:280
 msgid "COMMIT INFORMATION"
-msgstr ""
+msgstr "INFORMACIÓN DE CONFIRMACIÓN"
 
 #. type: Plain text
 #: en/git-commit.adoc:506
@@ -18433,19 +18435,19 @@ msgstr ""
 #: en/git-commit.adoc:521
 #, placeholders:'credential.username':'linkgit:git-config[1]', priority:280
 msgid "The author and committer names are by convention some form of a personal name (that is, the name by which other humans refer to you), although Git does not enforce or require any particular form. Arbitrary Unicode may be used, subject to the constraints listed above. This name has no effect on authentication; for that, see the `credential.username` variable in linkgit:git-config[1]."
-msgstr ""
+msgstr "Por convención, los nombres de autor y confirmador son una forma de nombre personal (esto es, el nombre por el cual otros humanos se refieren a ti), aunque Git no impone o requiere una forma particular. Se puede usar Unicode arbitrario, sujeto a las restricciones listadas arriba. Este nombre no tiene efecto en la autenticación; para eso, ver la variable `credential.username` en linkgit:git-config[1]."
 
 #. type: Plain text
 #: en/git-commit.adoc:528
 #, placeholders:'user.name':'user.email', priority:280
 msgid "In case (some of) these environment variables are not set, the information is taken from the configuration items `user.name` and `user.email`, or, if not present, the environment variable `EMAIL`, or, if that is not set, system user name and the hostname used for outgoing mail (taken from `/etc/mailname` and falling back to the fully qualified hostname when that file does not exist)."
-msgstr ""
+msgstr "En caso de que (algunas de) esas variables de ambiente no son asignadas, la información se toma de los elementos de configuración `user.name` y `user.email`, o, si no están presentes, la variable de ambiente `EMAIL`, o, si no esta asignada, el nombre de usuario de sistema y el nombre del host usado para el correo de salida (tomado de `/etc/mailname` o de plano en el nombre completamente calificado del host cuando dicho fichero no existe)."
 
 #. type: Plain text
 #: en/git-commit.adoc:532
 #, placeholders:'author.name':'committer.name':'user.name':'user.email', priority:280
 msgid "The `author.name` and `committer.name` and their corresponding email options override `user.name` and `user.email` if set and are overridden themselves by the environment variables."
-msgstr ""
+msgstr "`author.name` y `committer.name` y sus correspondientes opciones de correo electrónico anulan `user.name` y `user.email` si se asignan y son sobrescritos por si mismos por las variables de ambiente."
 
 #. type: Plain text
 #: en/git-commit.adoc:535
