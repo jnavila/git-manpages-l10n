@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2025-05-29 13:34+0200\n"
-"PO-Revision-Date: 2025-07-15 23:04+0000\n"
+"PO-Revision-Date: 2025-07-21 01:03+0000\n"
 "Last-Translator: Salvador Peña <salvadorp74@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: es\n"
@@ -39104,13 +39104,13 @@ msgstr "Reporta los nombres de ficheros como son movidos."
 #: en/git-mv.adoc:53
 #, placeholders:'core.worktree':'linkgit:gitmodules[5]':'`-n`', priority:280
 msgid "Moving a submodule using a gitfile (which means they were cloned with a Git version 1.7.8 or newer) will update the gitfile and core.worktree setting to make the submodule work in the new location. It also will attempt to update the `submodule.<name>.path` setting in the linkgit:gitmodules[5] file and stage that file (unless `-n` is used)."
-msgstr ""
+msgstr "Al mover un submódulo usando un fichero git (lo que significa que fueron clonados con una versión de Git 1.7.8 o superior) se actualizará el fichero git y la configuración `core.worktree` para hacer que el submódulo funcione en la nueva ubicación. También intentará actualizar la configuración `submodule.<nombre>.path` en el fichero linkgit:gitmodules[5] y presentarlo (a menos que se use `-n`)."
 
 #. type: Plain text
 #: en/git-mv.adoc:65
 #, priority:280
 msgid "Each time a superproject update moves a populated submodule (e.g. when switching between commits before and after the move) a stale submodule checkout will remain in the old location and an empty directory will appear in the new location. To populate the submodule again in the new location the user will have to run \"git submodule update\" afterwards. Removing the old directory is only safe when it uses a gitfile, as otherwise the history of the submodule will be deleted too. Both steps will be obsolete when recursive submodule update has been implemented."
-msgstr ""
+msgstr "Cada vez que una actualización de superproyecto mueve un submódulo poblado (ej. cuando se alterna entre confirmaciones antes y después del movimiento) permanecerá un checkout de submódulo viciado en la ubicación anterior y aparecerá un directorio vacío en la ubicación nueva. Para poblar nuevamente el submódulo en la ubicación nueva el usuario tendrá que ejecutar después \"git submodule update\". Eliminar el directorio anterior es seguro solo cuando usa un fichero git, ya que de lo contrario el historial del submódulo también se eliminará. Ambos pasos serán obsoletos cuando se haya implementado actualización recursiva de submódulos."
 
 #. type: Title =
 #: en/git-name-rev.adoc:2
@@ -39327,43 +39327,43 @@ msgstr ""
 #: en/git-notes.adoc:29
 #, priority:280
 msgid "Adds, removes, or reads notes attached to objects, without touching the objects themselves."
-msgstr ""
+msgstr "Agrega, elimina, o lee notas adjuntadas a los objetos, sin tocar a los objetos mismos."
 
 #. type: Plain text
 #: en/git-notes.adoc:34
 #, priority:280
 msgid "By default, notes are saved to and read from `refs/notes/commits`, but this default can be overridden. See the OPTIONS, CONFIGURATION, and ENVIRONMENT sections below. If this ref does not exist, it will be quietly created when it is first needed to store a note."
-msgstr ""
+msgstr "Predeterminadamente, las notas se guardan y leen en/desde `refs/notes/commits`, pero esto se puede anular. Ver las secciones OPCIONES, CONFIGURACIÓN, y AMBIENTE mas abajo. Si esta referencia no existe, será creada silenciosamente la primera vez que se necesite guardar una nota."
 
 #. type: Plain text
 #: en/git-notes.adoc:41
 #, priority:280
 msgid "A typical use of notes is to supplement a commit message without changing the commit itself. Notes can be shown by `git log` along with the original commit message. To distinguish these notes from the message stored in the commit object, the notes are indented like the message, after an unindented line saying \"Notes (_<refname>_):\" (or \"Notes:\" for `refs/notes/commits`)."
-msgstr ""
+msgstr "Un uso típico de notas es para complementar un mensaje de confirmación sin modificar la confirmación. Las notas se pueden mostrar mediante `git log` junto con el mensaje de confirmación original. Para distinguir esas notas del mensaje almacenado en el objeto confirmación, las notas son indentadas como el mensaje, después de una línea sin indentar que dice \"Notes (_<nombre-de-referencia>_):\" (o \"Notes:\" for `refs/notes/commits`)."
 
 #. type: Plain text
 #: en/git-notes.adoc:45
 #, placeholders:'git format-patch`':'`--notes`', priority:280
 msgid "Notes can also be added to patches prepared with `git format-patch` by using the `--notes` option. Such notes are added as a patch commentary after a three dash separator line."
-msgstr ""
+msgstr "La notas también pueden agregarse a parches preparados con `git format-patch` usando la opción `--notes`. Tales notas son agregadas como una comentario de parche después de una línea separadora de tres rayas."
 
 #. type: Plain text
 #: en/git-notes.adoc:48
 #, placeholders:'notes.displayRef':'<<CONFIGURATION,', priority:280
 msgid "To change which notes are shown by `git log`, see the `notes.displayRef` discussion in <<CONFIGURATION,CONFIGURATION>>."
-msgstr ""
+msgstr "Para modificar qué notas mostrar con `git log`, ver la discusión `notes.displayRef` en <<CONFIGURATION,CONFIGURACIÓN>>."
 
 #. type: Plain text
 #: en/git-notes.adoc:51
 #, placeholders:'notes.rewrite', priority:280
 msgid "See the `notes.rewrite.<command>` configuration for a way to carry notes across commands that rewrite commits."
-msgstr ""
+msgstr "Ver la configuración `notes.rewrite.<comando>` para una manera de acarrear notas atraves de comandos que reescriben confirmaciones."
 
 #. type: Title -
 #: en/git-notes.adoc:54
 #, no-wrap, priority:280
 msgid "SUBCOMMANDS"
-msgstr ""
+msgstr "SUBCOMANDOS"
 
 #. type: Labeled list
 #: en/git-notes.adoc:56
@@ -39375,7 +39375,7 @@ msgstr "`list`"
 #: en/git-notes.adoc:61
 #, priority:280
 msgid "List the notes object for a given object. If no object is given, show a list of all note objects and the objects they annotate (in the format \"`<note-object> <annotated-object>`\"). This is the default subcommand if no subcommand is given."
-msgstr ""
+msgstr "Lista los objetos notas para un objeto dado. Si no se da objeto, muestra una lista de todos los objetos nota y los objetos que anotan (en el formato \"`<objeto-nota> <objeto-anotado>`\"). Este es el subcomando predeterminado si no se da subcomando."
 
 #. type: Labeled list
 #: en/git-notes.adoc:62
@@ -39387,7 +39387,7 @@ msgstr "`add`"
 #: en/git-notes.adoc:73
 #, placeholders:'`HEAD`':'`-f`':'`-m`':'`-F`':'`--separator`':'`-e`':'`-m`':'`-F`', priority:280
 msgid "Add notes for a given object (defaults to `HEAD`). Abort if the object already has notes (use `-f` to overwrite existing notes). However, if you're using `add` interactively (using an editor to supply the notes contents), then - instead of aborting - the existing notes will be opened in the editor (like the `edit` subcommand). If you specify multiple `-m` and `-F`, a blank line will be inserted between the messages. Use the `--separator` option to insert other delimiters. You can use `-e` to edit and fine-tune the message(s) supplied from `-m` and `-F` options interactively (using an editor) before adding the note."
-msgstr ""
+msgstr "Agrega notas a un objeto dado (predeterminado a `HEAD`). Aborta si el objeto ya tiene notas (usar `-f` para sobreescribir notas existentes). Sin embargo, si usas `add` interactivamente (usando un editor para proporcionar el contenido de las notas), entonces -en lugar de abortar- los notas existentes se abrirán en el editor (como el subcomando `edit`). Si especificas múltiples `-m` y `-F`, se insertará una línea en blanco entre mensajes. Usa la opción `--separator` para insertar otros separadores. Puedes usar `-e` para editar y afinar el(los) mensaje(s) proporcionado(s) desde las opciones `-m` y `-F` interactivamente (usando un editor) antes de agregar la nota."
 
 #. type: Labeled list
 #: en/git-notes.adoc:74
@@ -39399,25 +39399,25 @@ msgstr "`copy`"
 #: en/git-notes.adoc:80
 #, placeholders:'`HEAD`':'`-f`', priority:280
 msgid "Copy the notes for the first object onto the second object (defaults to `HEAD`). Abort if the second object already has notes, or if the first object has none (use `-f` to overwrite existing notes to the second object). This subcommand is equivalent to: `git notes add [-f] -C $(git notes list <from-object>) <to-object>`"
-msgstr ""
+msgstr "Copia las notas del primer objeto al segundo (predeterminado a `HEAD`). Aborta si el segundo objeto ya tiene notas, o si el primero no tiene (usa `-f` para sobreescribir notas existentes en el segundo objeto). Este subcomando es equivalente a: `git notes add [-f] -C $(git notes List <objeto-de>) <objeto-a>`"
 
 #. type: Plain text
 #: en/git-notes.adoc:82
 #, placeholders:'`--stdin`', priority:280
 msgid "In `--stdin` mode, take lines in the format"
-msgstr ""
+msgstr "En modo `--stdin`, toma líneas en el formato"
 
 #. type: delimited block -
 #: en/git-notes.adoc:85
 #, no-wrap, priority:280
 msgid "<from-object> SP <to-object> [ SP <rest> ] LF\n"
-msgstr ""
+msgstr "<objeto-de> SP <objeto-a> [ SP <rest> ] LF\n"
 
 #. type: Plain text
 #: en/git-notes.adoc:90
 #, priority:280
 msgid "on standard input, and copy the notes from each _<from-object>_ to its corresponding _<to-object>_. (The optional _<rest>_ is ignored so that the command can read the input given to the `post-rewrite` hook.)"
-msgstr ""
+msgstr "sobre entrada estándar, y copia las notas desde cada _<objeto-de>_ a su _<objeto-a>_ correspondiente. (El _<rest>_ opcional es ignorado para que el comando pueda leer la entrada dada al gancho `post-rewrite`.)"
 
 #. type: Labeled list
 #: en/git-notes.adoc:91
@@ -39429,7 +39429,7 @@ msgstr "`append`"
 #: en/git-notes.adoc:100
 #, placeholders:'`-m`':'`-F`':'`HEAD`':'`--separator`':'`-m`':'`-F`':'`-e`', priority:280
 msgid "Append new message(s) given by `-m` or `-F` options to an existing note, or add them as a new note if one does not exist, for the object (defaults to `HEAD`). When appending to an existing note, a blank line is added before each new message as an inter-paragraph separator. The separator can be customized with the `--separator` option. Edit the notes to be appended given by `-m` and `-F` options with `-e` interactively (using an editor) before appending the note."
-msgstr ""
+msgstr "Agrega al objeto (predeterminado a `HEAD`) nuevo(s) mensaje(s) dado(s) por las opciones `-m` o `-F` a una nota existente, o los agrega como una nota nueva si no existe alguna. Cuando se agrega a una nota existente, se agrega una línea en blanco antes de cada mensaje nuevo como un separador de párrafos. El separador puede ser personalizado con la opción `--separator`. Edita las notas a agregar dadas por las opciones `-m` y `-F` con la opción interactiva `-e` (usando un editor) antes de agregar la nota."
 
 #. type: Labeled list
 #: en/git-notes.adoc:101
@@ -39441,7 +39441,7 @@ msgstr "`edit`"
 #: en/git-notes.adoc:103
 #, placeholders:'`HEAD`', priority:280
 msgid "Edit the notes for a given object (defaults to `HEAD`)."
-msgstr ""
+msgstr "Edita las notas de un objeto dado (predeterminado a `HEAD`)."
 
 #. type: Labeled list
 #: en/git-notes.adoc:104
@@ -39453,19 +39453,19 @@ msgstr "`show`"
 #: en/git-notes.adoc:106
 #, placeholders:'`HEAD`', priority:280
 msgid "Show the notes for a given object (defaults to `HEAD`)."
-msgstr ""
+msgstr "Muestra las notas de un objeto dado (predeterminado a `HEAD`)."
 
 #. type: Plain text
 #: en/git-notes.adoc:112
 #, priority:280
 msgid "Merge the given notes ref into the current notes ref. This will try to merge the changes made by the given notes ref (called \"remote\") since the merge-base (if any) into the current notes ref (called \"local\")."
-msgstr ""
+msgstr "Fusiona la referencia de notas dada en la referencia de notas actual. Esto intentará juntar los cambios hechos por la referencia de notas dada (llamada \"remota\") desde la base de fusión (si hay) en la referencia de notas actual (llamada \"local\")."
 
 #. type: Plain text
 #: en/git-notes.adoc:121
 #, placeholders:'`.git/NOTES_MERGE_WORKTREE`':'--commit`':'--abort`', priority:280
 msgid "If conflicts arise and a strategy for automatically resolving conflicting notes (see the \"NOTES MERGE STRATEGIES\" section) is not given, the `manual` resolver is used. This resolver checks out the conflicting notes in a special worktree (`.git/NOTES_MERGE_WORKTREE`), and instructs the user to manually resolve the conflicts there. When done, the user can either finalize the merge with `git notes merge --commit`, or abort the merge with `git notes merge --abort`."
-msgstr ""
+msgstr "Si surgen conflictos entre notas y no se proporciona una estrategia para resolverlos automáticamente (ver la sección \"ESTRATEGIAS DE FUSIÓN DE NOTAS\"), se usa el resolvedor `manual`. Este resolvedor revisa la notas en conflicto en un árbol de trabajo especial (`.git/NOTES_MERGE_WORKTREE`), e instruye al usuario a resolver manualmente los conflictos ahí. Al terminar, el usuario puede tanto finalizar la fusión con `git notes merge --commit` como abortar la fusión con `git notes merge --abort`."
 
 #. type: Labeled list
 #: en/git-notes.adoc:122
@@ -39477,7 +39477,7 @@ msgstr "`remove`"
 #: en/git-notes.adoc:127
 #, placeholders:'`HEAD`', priority:280
 msgid "Remove the notes for given objects (defaults to `HEAD`). When giving zero or one object from the command line, this is equivalent to specifying an empty note message to the `edit` subcommand."
-msgstr ""
+msgstr "Elimina las notas de los objetos dados (predeterminado a `HEAD`). Cuando se da uno o ningún objeto desde la línea de comandos, equivale a especificar un mensaje de nota vacío al subcomando `edit`."
 
 #. type: Labeled list
 #: en/git-notes.adoc:128
@@ -39489,7 +39489,7 @@ msgstr "`prune`"
 #: en/git-notes.adoc:130
 #, priority:280
 msgid "Remove all notes for non-existing/unreachable objects."
-msgstr ""
+msgstr "Elimina todas las notas de objetos inexistentes o inalcanzables."
 
 #. type: Labeled list
 #: en/git-notes.adoc:131
@@ -39501,25 +39501,25 @@ msgstr "`get-ref`"
 #: en/git-notes.adoc:134
 #, priority:280
 msgid "Print the current notes ref. This provides an easy way to retrieve the current notes ref (e.g. from scripts)."
-msgstr ""
+msgstr "Imprime la referencia de notas actual. Esto ofrece una manera sencilla de obtener la referencia de notas actual (ej. desde scripts)."
 
 #. type: Plain text
 #: en/git-notes.adoc:141
 #, priority:280
 msgid "When adding notes to an object that already has notes, overwrite the existing notes (instead of aborting)."
-msgstr ""
+msgstr "Cuando se agregan notas a un objeto que ya tiene, sobreescribe las notas existentes (en lugar de abortar)."
 
 #. type: Plain text
 #: en/git-notes.adoc:150
 #, placeholders:'`-m`':'`--no-stripspace`', priority:280
 msgid "Use the given note message (instead of prompting). If multiple `-m` options are given, their values are concatenated as separate paragraphs. Lines starting with `#` and empty lines other than a single line between paragraphs will be stripped out. If you wish to keep them verbatim, use `--no-stripspace`."
-msgstr ""
+msgstr "Usar el mensaje de nota dado (en lugar de solicitarlo). Si se dan múltiples opciones `-m`, sus valores son concatenados como párrafos separados. Líneas que comienzan con `#` y líneas vacías distintas a una línea entre párrafos serán descartadas. Si quieres mantenerlas, usa `--no-stripspace`."
 
 #. type: Plain text
 #: en/git-notes.adoc:158
 #, placeholders:'`--no-stripspace`', priority:280
 msgid "Take the note message from the given file. Use `-` to read the note message from the standard input. Lines starting with `#` and empty lines other than a single line between paragraphs will be stripped out. If you wish to keep them verbatim, use `--no-stripspace`."
-msgstr ""
+msgstr "Toma el mensaje de nota desde el fichero dado. Usa `-` para leer el mensaje de nota desde la entrada estándar. Líneas que comienzan con `#` y líneas vacías distintas a una línea entre párrafos serán descartadas. Si quieres mantenerlas, usa `--no-stripspace`."
 
 #. type: Labeled list
 #: en/git-notes.adoc:159
@@ -39537,7 +39537,7 @@ msgstr "`--reuse-message=<objeto>`"
 #: en/git-notes.adoc:167
 #, placeholders:'`--stripspace`', priority:280
 msgid "Take the given blob object (for example, another note) as the note message. (Use `git notes copy <object>` instead to copy notes between objects.). By default, message will be copied verbatim, but if you wish to strip out the lines starting with `#` and empty lines other than a single line between paragraphs, use with `--stripspace` option."
-msgstr ""
+msgstr "Toma el objeto blob dado (por ejemplo, otra nota) como el mensaje de nota. (Para copiar notas entre objetos, usa en cambio `git notes copy <objeto>`.) Predeterminadamente, el mensaje será copiado verbosamente, pero si quieres eliminar las líneas que comienzan con `#` y líneas vacías distintas a líneas solas entre párrafos, usa la opción `--stripspace`."
 
 #. type: Labeled list
 #: en/git-notes.adoc:168
