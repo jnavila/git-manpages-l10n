@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2025-08-11 22:13+0200\n"
-"PO-Revision-Date: 2025-08-24 17:02+0000\n"
+"PO-Revision-Date: 2025-09-08 00:02+0000\n"
 "Last-Translator: Salvador Peña <salvadorp74@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.adoc:1 en/git-instaweb.adoc:45 en/git-ls-remote.adoc:24 en/git-mailinfo.adoc:49 en/git-mailsplit.adoc:35 en/git-repack.adoc:185 en/git-status.adoc:31
@@ -40969,7 +40969,7 @@ msgstr "`--stdin`"
 #: en/git-notes.adoc:216
 #, priority:280
 msgid "Only valid for `remove` and `copy`. See the respective subcommands."
-msgstr ""
+msgstr "Válido sólo para `remove` y `copy`. Ver los subcomandos respectivos."
 
 #. type: Plain text
 #: en/git-notes.adoc:221
@@ -41071,25 +41071,25 @@ msgstr "`ours` resuelve automáticamente notas en conflicto favoreciendo la vers
 #: en/git-notes.adoc:301
 #, priority:280
 msgid "`theirs` automatically resolves notes conflicts in favor of the remote version (i.e. the given notes ref being merged into the current notes ref)."
-msgstr ""
+msgstr "`theirs` resuelve automáticamente conflictos de notas en favor de la versión remota (ej. las referencias de notas dadas son fusionadas en la referencia de notas actual)."
 
 #. type: Plain text
 #: en/git-notes.adoc:304
 #, priority:280
 msgid "`union` automatically resolves notes conflicts by concatenating the local and remote versions."
-msgstr ""
+msgstr "`union` resuelve automáticamente conflictos de notas concatenando las versiones local y remota."
 
 #. type: Plain text
 #: en/git-notes.adoc:314
 #, placeholders:'cat_sort_uniq', priority:280
 msgid "`cat_sort_uniq` is similar to `union`, but in addition to concatenating the local and remote versions, this strategy also sorts the resulting lines, and removes duplicate lines from the result. This is equivalent to applying the \"cat | sort | uniq\" shell pipeline to the local and remote versions. This strategy is useful if the notes follow a line-based format where one wants to avoid duplicated lines in the merge result. Note that if either the local or remote version contain duplicate lines prior to the merge, these will also be removed by this notes merge strategy."
-msgstr ""
+msgstr "`cat_sort_uniq` es similar a `union`, pero además de concatenar las versiones local y remota, esta estrategia también ordena las líneas resultantes, y quita líneas duplicadas del resultado. Esto es equivalente a aplicar la tubería de shell \"cat | sort | uniq\" a las versiones local y remota. Esta estrategia es útil si las notas siguen un formato basado en línea donde uno quiere evitar líneas duplicadas en la fusión resultante. Nota que si cualquiera de las versiones local o remota contiene líneas duplicadas antes de la fusión, esas también serán quitadas por esta estrategia de fusión de notas."
 
 #. type: Plain text
 #: en/git-notes.adoc:321
 #, priority:280
 msgid "You can use notes to add annotations with information that was not available at the time a commit was written."
-msgstr ""
+msgstr "Puedes usar notas para agregar anotaciones con información que no estuvo disponible al momento de escribir la confirmación."
 
 #. type: delimited block -
 #: en/git-notes.adoc:327
@@ -41100,6 +41100,10 @@ msgid ""
 "[...]\n"
 "    Signed-off-by: Junio C Hamano <gitster@pobox.com>\n"
 msgstr ""
+"$ git notes add -m 'Tested-by: Johannes Sixt <j6t@kdbg.org>' 72a144e2\n"
+"$ git show -s 72a144e\n"
+"[...]\n"
+"    Signed-off-by: Junio C Hamano <gitster@pobox.com>\n"
 
 #. type: delimited block -
 #: en/git-notes.adoc:330
@@ -41108,12 +41112,14 @@ msgid ""
 "Notes:\n"
 "    Tested-by: Johannes Sixt <j6t@kdbg.org>\n"
 msgstr ""
+"Notes:\n"
+"    Tested-by: Johannes Sixt <j6t@kdbg.org>\n"
 
 #. type: Plain text
 #: en/git-notes.adoc:335
 #, placeholders:'git hash-object`', priority:280
 msgid "In principle, a note is a regular Git blob, and any kind of (non-)format is accepted. You can binary-safely create notes from arbitrary files using `git hash-object`:"
-msgstr ""
+msgstr "En principio, una nota es un blob Git regular, y cualquier tipo de (no)formato es aceptado. Puedes crear notas binariamente seguras desde ficheros arbitrarios usando `git hash-object`:"
 
 #. type: delimited block -
 #: en/git-notes.adoc:340
@@ -41123,12 +41129,15 @@ msgid ""
 "$ blob=$(git hash-object -w a.out)\n"
 "$ git notes --ref=built add --allow-empty -C \"$blob\" HEAD\n"
 msgstr ""
+"$ cc *.c\n"
+"$ blob=$(git hash-object -w a.out)\n"
+"$ git notes --ref=built add --allow-empty -C \"$blob\" HEAD\n"
 
 #. type: Plain text
 #: en/git-notes.adoc:347
 #, placeholders:'--ref=built':'a.out':'HEAD`', priority:280
 msgid "(You cannot simply use `git notes --ref=built add -F a.out HEAD` because that is not binary-safe.) Of course, it doesn't make much sense to display non-text-format notes with `git log`, so if you use such notes, you'll probably need to write some special-purpose tools to do something useful with them."
-msgstr ""
+msgstr "(No puedes usar simplemente `git notes --ref=built add -F a.out HEAD` porque no es binariamente seguro.) Por supuesto, no tiene mucho sentido mostrar notas en un formato no-texto con `git log`, así que si usas tales notas, probablemente necesitarás escribir algunas herramientas de propósito específico para hacer algo útil con ellas."
 
 #. type: Labeled list
 #: en/git-notes.adoc:353
