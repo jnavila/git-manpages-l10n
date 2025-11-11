@@ -61,10 +61,20 @@ OPTIONS
 	currently impacts only the `export-marks`, `import-marks`, and
 	`import-marks-if-exists` feature commands.
 +
-	Only enable this option if you trust the program generating the
-	fast-import stream! This option is enabled automatically for
-	remote-helpers that use the `import` capability, as they are
-	already trusted to run their own code.
+Only enable this option if you trust the program generating the
+fast-import stream! This option is enabled automatically for
+remote-helpers that use the `import` capability, as they are
+already trusted to run their own code.
+
+--signed-tags=(verbatim|warn-verbatim|warn-strip|strip|abort)::
+	Specify how to handle signed tags.  Behaves in the same way
+	as the same option in linkgit:git-fast-export[1], except that
+	default is 'verbatim' (instead of 'abort').
+
+--signed-commits=(verbatim|warn-verbatim|warn-strip|strip|abort)::
+	Specify how to handle signed commits.  Behaves in the same way
+	as the same option in linkgit:git-fast-export[1], except that
+	default is 'verbatim' (instead of 'abort').
 
 Options for Frontends
 ~~~~~~~~~~~~~~~~~~~~~
@@ -111,7 +121,8 @@ Locations of Marks Files
 	Like --import-marks but instead of erroring out, silently
 	skips the file if it does not exist.
 
---[no-]relative-marks::
+--relative-marks::
+--no-relative-marks::
 	After specifying --relative-marks the paths specified
 	with --import-marks= and --export-marks= are relative
 	to an internal directory in the current repository.
@@ -605,9 +616,11 @@ Marks must be declared (via `mark`) before they can be used.
 
 The special case of restarting an incremental import from the
 current branch value should be written as:
+
 ----
 	from refs/heads/branch^0
 ----
+
 The `^0` suffix is necessary as fast-import does not permit a branch to
 start from itself, and the branch is created in memory before the
 `from` command is even read from the input.  Adding `^0` will force
@@ -644,7 +657,7 @@ External data format::
 +
 Here usually `<dataref>` must be either a mark reference (`:<idnum>`)
 set by a prior `blob` command, or a full 40-byte SHA-1 of an
-existing Git blob object.  If `<mode>` is `040000`` then
+existing Git blob object.  If `<mode>` is `040000` then
 `<dataref>` must be the full 40-byte SHA-1 of an existing
 Git tree object or a mark reference set with `--import-marks`.
 
