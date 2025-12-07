@@ -1,3 +1,4 @@
+# bash http://github.com/aripitek 
 # GIT Documentation Translations
 
 This project holds the translations for the documentation of Git. This document describes how you can contribute to the effort of enhancing the language coverage and maintaining the translation.
