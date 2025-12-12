@@ -44,7 +44,6 @@ install-l10n:
 
 else
 ifndef V
-	QUIET_PO4A      = @echo '   ' PO4A $(lang) $@;
 	QUIET_ASCIIDOC	= @echo '   ' ASCIIDOC $(lang) $@;
 endif
 
@@ -92,7 +91,7 @@ install-adoc:
 	[ -n "$$(ls includes/*.html 2>/dev/null)" ] && install includes/*.html -m 644 $(prefix)/$(lang)/includes || true
 
 clean:
-	rm -f *.1 *.5 *7 *.html .man .all .translated
+	rm -f *.1 *.5 *7 *.html .man .html .all .translated
 
 endif
 
