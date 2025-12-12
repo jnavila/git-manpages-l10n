@@ -49,6 +49,7 @@ endef
 
 define PROCESS_LANG
 $(1)/.translated: po/documentation.$(1).po po/documentation.pot
+	@mkdir -p $(1)
 	$(QUIET_PO4A)PERL5LIB=./po4a/lib po4a/po4a -v -f ./po4a.conf --target-lang=$(1) --no-update
 	@touch $(1)/.translated
 
