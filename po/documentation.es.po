@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2025-11-11 22:08+0100\n"
-"PO-Revision-Date: 2025-12-13 18:29+0000\n"
+"PO-Revision-Date: 2025-12-14 12:39+0000\n"
 "Last-Translator: Salvador Peña <salvadorp74@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: es\n"
@@ -19520,7 +19520,7 @@ msgstr "`--no-gpg-sign`"
 #: en/git-commit.adoc:400
 #, placeholders:'`--no-gpg-sign`':'commit.gpgSign':'`--gpg-sign`', priority:280
 msgid "GPG-sign commits. The _<key-id>_ is optional and defaults to the committer identity; if specified, it must be stuck to the option without a space. `--no-gpg-sign` is useful to countermand both `commit.gpgSign` configuration variable, and earlier `--gpg-sign`."
-msgstr ""
+msgstr "Confirmaciones firmadas con GPG. El _<identificador-de-llave>_ es opcional y se predetermina a la identidad del confirmante; si se especifica, debe adherirse a la opción sin un espacio. `--no-gpg-sign` es útil para contraordenar tanto la variable de configuración `commit.gpgSign` como `--gpg-sign` anterior."
 
 #. type: Plain text
 #: en/git-commit.adoc:409
@@ -41230,7 +41230,7 @@ msgstr "agrega un `\\n` faltante a la última línea si es necesario."
 #: en/git-notes.adoc:202
 #, placeholders:'`--stripspace`':'`-C`':'`--reuse-message`':'`--stripspace`':'`-m`':'`-C`', priority:280
 msgid "`--stripspace` is the default except for `-C`/`--reuse-message`. However, keep in mind that this depends on the order of similar options. For example, for `-C <object> -m<message>`, `--stripspace` will be used because the default for `-m` overrides the previous `-C`. This is a known limitation that may be fixed in the future."
-msgstr ""
+msgstr "`--stripspace` es el predeterminado, exceptuando `-C`/`--reuse-message`. Sin embargo, ten en mente que esto depende del orden de opciones similares. Por ejemplo, para `-C <objeto> -m<mensaje>`, se usará `--stripspace` porque el predeterminado para `-m` anula el `-C` previo. Esta es una limitación conocida que puede corregirse a futuro."
 
 #. type: Labeled list
 #: en/git-notes.adoc:203
@@ -41434,7 +41434,7 @@ msgstr "`core.notesRef`"
 #: en/git-notes.adoc:358
 #, priority:280
 msgid "Notes ref to read and manipulate instead of `refs/notes/commits`. Must be an unabbreviated ref name. This setting can be overridden through the environment and command line."
-msgstr ""
+msgstr "Referencia de notas a leer y manipular en lugar de `refs/notes/commits`. Debe ser un nombre de referencia sin abreviar. Esta configuración puede anularse mediante el ambiente y la línea de comandos."
 
 #. type: Labeled list
 #: en/git-notes.adoc:367
@@ -41446,7 +41446,7 @@ msgstr "`GIT_NOTES_REF`"
 #: en/git-notes.adoc:370
 #, placeholders:'core.notesRef', priority:280
 msgid "Which ref to manipulate notes from, instead of `refs/notes/commits`. This overrides the `core.notesRef` setting."
-msgstr ""
+msgstr "Desde cuál referencia se manipularán las notas en lugar de `refs/notes/commits`. Esto anula la configuración `core.notesRef`."
 
 #. type: Labeled list
 #: en/git-notes.adoc:371
@@ -41458,13 +41458,13 @@ msgstr "`GIT_NOTES_DISPLAY_REF`"
 #: en/git-notes.adoc:377
 #, placeholders:'core.notesRef':'GIT_NOTES_REF':'notes.displayRef', priority:280
 msgid "Colon-delimited list of refs or globs indicating which refs, in addition to the default from `core.notesRef` or `GIT_NOTES_REF`, to read notes from when showing commit messages. This overrides the `notes.displayRef` setting."
-msgstr ""
+msgstr "Lista de referencias o globs separadas por dos puntos, adicionales a lo predeterminado desde `core.notesRef` o `GIT_NOTES_REF`, desde las cuales se leerán las notas cuando se muestren los mensajes de confirmación. Esto anula la configuración `notes.displayRef`."
 
 #. type: Plain text
 #: en/git-notes.adoc:380
 #, priority:280
 msgid "A warning will be issued for refs that do not exist, but a glob that does not match any refs is silently ignored."
-msgstr ""
+msgstr "Se emitirá una advertencia para referencias que no existan, pero se ignorará silenciosamente un glob que no coincida con alguna referencia."
 
 #. type: Labeled list
 #: en/git-notes.adoc:381
@@ -41476,7 +41476,7 @@ msgstr "`GIT_NOTES_REWRITE_MODE`"
 #: en/git-notes.adoc:386
 #, placeholders:'cat_sort_uniq':'core.rewriteMode', priority:280
 msgid "When copying notes during a rewrite, what to do if the target commit already has a note. Must be one of `overwrite`, `concatenate`, `cat_sort_uniq`, or `ignore`. This overrides the `core.rewriteMode` setting."
-msgstr ""
+msgstr "Lo que se debe hacer cuando se copian notas durante una re-escritura y la confirmación destino ya tiene una nota. Debe ser una de `overwrite`, `concatenate`, `cat_sort_uniq` o `ignore`. Esto anula la configuración `core.rewriteMode`."
 
 #. type: Labeled list
 #: en/git-notes.adoc:387
@@ -41488,13 +41488,13 @@ msgstr "`GIT_NOTES_REWRITE_REF`"
 #: en/git-notes.adoc:391
 #, priority:280
 msgid "When rewriting commits, which notes to copy from the original to the rewritten commit. Must be a colon-delimited list of refs or globs."
-msgstr ""
+msgstr "Cuando se re-escriben confirmaciones, cuáles notas se copian del original a la confirmación re-escrita. Debe ser una lista de referencias o globs separadas por dos puntos."
 
 #. type: Plain text
 #: en/git-notes.adoc:394
 #, placeholders:'notes.rewrite':'notes.rewriteRef', priority:280
 msgid "If not set in the environment, the list of notes to copy depends on the `notes.rewrite.<command>` and `notes.rewriteRef` settings."
-msgstr ""
+msgstr "Si no esta configurada en el ambiente, la lista de notas a copiar depende de las configuraciones `notes.rewrite.<comando>` y `notes.rewriteRef`."
 
 #. type: Title =
 #: en/git-p4.adoc:2
@@ -51029,12 +51029,16 @@ msgid ""
 "git reset (--patch | -p) [<tree-ish>] [--] [<pathspec>...]\n"
 "git reset [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [<commit>]\n"
 msgstr ""
+"git reset [-q] [<árbol-ismo>] [--] <especificación-de-ruta>...\n"
+"git reset [-q] [--pathspec-from-file=<fichero> [--pathspec-file-nul]] [<árbol-ismo>]\n"
+"git reset (--patch | -p) [<árbol-ismo>] [--] [<especificación-de-ruta>...]\n"
+"git reset [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [<confirmación>]\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:22
 #, placeholders:'`HEAD`':'`HEAD`', priority:280
 msgid "In the first three forms, copy entries from _<tree-ish>_ to the index. In the last form, set the current branch head (`HEAD`) to _<commit>_, optionally modifying index and working tree to match. The _<tree-ish>_/_<commit>_ defaults to `HEAD` in all forms."
-msgstr ""
+msgstr "En las primeras tres formas, copia entradas de _<árbol-ismo>_ al índice. En la última forma, establece la rama actual head (`HEAD`) a _<confirmación>_, modificando opcionalmente el índice y el árbol de trabajo para que coincidan. _<árbol-ismo>_/_<confirmación>_ están predeterminados a `HEAD` en todas las formas."
 
 #. type: Labeled list
 #: en/git-reset.adoc:23
@@ -51052,19 +51056,19 @@ msgstr "`git reset [-q] [--pathspec-from-file=<fichero> [--pathspec-file-nul]] [
 #: en/git-reset.adoc:28
 #, priority:280
 msgid "These forms reset the index entries for all paths that match the _<pathspec>_ to their state at _<tree-ish>_. (It does not affect the working tree or the current branch.)"
-msgstr ""
+msgstr "Estas formas restablecen las entradas del índice para todas las rutas que coincidan la _<especificación-de-ruta>_ al su estado en _<árbol-ismo>_. (No afecta el árbol de trabajo o la rama actual.)"
 
 #. type: Plain text
 #: en/git-reset.adoc:32
 #, ignore-ellipsis, placeholders:'[--source=':'--staged', priority:280
 msgid "This means that `git reset <pathspec>` is the opposite of `git add <pathspec>`. This command is equivalent to `git restore [--source=<tree-ish>] --staged <pathspec>...`."
-msgstr ""
+msgstr "Esto significa que `git reset <especificación-de-ruta>` es lo opuesto a `git add <especificación-de-ruta>`. Este comando equivale a `git restore [--source=<árbol-ismo>] --staged <especificación-de-ruta>...`."
 
 #. type: Plain text
 #: en/git-reset.adoc:39
 #, placeholders:'linkgit:git-restore[1]':'linkgit:git-restore[1]':'`--source`', priority:280
 msgid "After running `git reset <pathspec>` to update the index entry, you can use linkgit:git-restore[1] to check the contents out of the index to the working tree. Alternatively, using linkgit:git-restore[1] and specifying a commit with `--source`, you can copy the contents of a path out of a commit to the index and to the working tree in one go."
-msgstr ""
+msgstr "Después de ejecutar `git reset <especificación-de-ruta>` para actualizar la entrada del índice, puedes usar linkgit:git-restore[1] para poner el contenido fuera del índice en el árbol de trabajo. Alternativamente, el contenido de una ruta fuera de una confirmación lo puedes copiar al índice y al árbol de trabajo de una vez usando linkgit:git-restore[1] y especificando una confirmación con `--source`."
 
 #. type: Labeled list
 #: en/git-reset.adoc:40
@@ -51076,7 +51080,7 @@ msgstr "`git reset (--patch | -p) [<árbol-ismo>] [--] [<ruta>...]`"
 #: en/git-reset.adoc:44
 #, placeholders:'`HEAD`', priority:280
 msgid "Interactively select hunks in the difference between the index and _<tree-ish>_ (defaults to `HEAD`). The chosen hunks are applied in reverse to the index."
-msgstr ""
+msgstr "Selecciona interactivamente pedazos en la diferencia entre el índice y _<árbol-ismo>_ (predeterminado a `HEAD`). Los pedazos elegidos se aplican en reversa al índice."
 
 #. type: Plain text
 #: en/git-reset.adoc:48
@@ -51088,13 +51092,13 @@ msgstr "Esto significa que `git reset -p` es lo opuesto a `git add -p`, ej. pued
 #: en/git-reset.adoc:49
 #, no-wrap, priority:280
 msgid "`git reset [<mode>] [<commit>]`"
-msgstr ""
+msgstr "`git reset [<modo>] [<confirmación>]`"
 
 #. type: Plain text
 #: en/git-reset.adoc:55
 #, placeholders:'ORIG_HEAD':'`--mixed`', priority:280
 msgid "This form resets the current branch head to _<commit>_ and possibly updates the index (resetting it to the tree of _<commit>_) and the working tree depending on _<mode>_. Before the operation, `ORIG_HEAD` is set to the tip of the current branch. If _<mode>_ is omitted, defaults to `--mixed`. The _<mode>_ must be one of the following:"
-msgstr ""
+msgstr "Esta forma restablece la cabeza de la rama actual a _<confirmación>_ y posiblemente actualiza el índice (restableciéndolo al árbol de _<confirmación>_) y el árbol de trabajo dependiendo de _<modo>_. Antes de la operación, `ORIG_HEAD` se establece a la punta de la rama actual. Si se omite _<modo>_, se predetermina a `--mixed`. El _<modo>_ debe ser uno de los siguientes:"
 
 #. type: Labeled list
 #: en/git-reset.adoc:57
@@ -51106,7 +51110,7 @@ msgstr "`--soft`"
 #: en/git-reset.adoc:62
 #, priority:280
 msgid "Does not touch the index file or the working tree at all (but resets the head to _<commit>_, just like all modes do). This leaves all your changed files \"Changes to be committed\", as `git status` would put it."
-msgstr ""
+msgstr "No toques los ficheros del índice o del árbol de trabajo en absoluto (exceptuando restablecer la cabeza a _<confirmación>_, tal y como lo hacen todos los modos). Esto deja a todos tus ficheros modificados como \"Cambios a confirmar\", como `git status` lo haría."
 
 #. type: Labeled list
 #: en/git-reset.adoc:63
@@ -51118,13 +51122,13 @@ msgstr "`--mixed`"
 #: en/git-reset.adoc:67
 #, priority:280
 msgid "Resets the index but not the working tree (i.e., the changed files are preserved but not marked for commit) and reports what has not been updated. This is the default action."
-msgstr ""
+msgstr "Restablece el índice pero no el árbol de trabajo (p. ej. los ficheros modificados se preservan pero no se marcan para confirmar) e informa qué no se ha actualizado. Esta es la acción predeterminada."
 
 #. type: Plain text
 #: en/git-reset.adoc:70
 #, placeholders:'`-N`':'linkgit:git-add[1]', priority:280
 msgid "If `-N` is specified, removed paths are marked as intent-to-add (see linkgit:git-add[1])."
-msgstr ""
+msgstr "Si se especifica `-N`, las rutas eliminadas son marcadas como intento de inclusión (ver linkgit:git-add[1])."
 
 #. type: Labeled list
 #: en/git-reset.adoc:71
