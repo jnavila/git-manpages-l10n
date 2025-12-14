@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2025-11-11 22:08+0100\n"
-"PO-Revision-Date: 2025-12-14 12:39+0000\n"
+"PO-Revision-Date: 2025-12-15 15:00+0000\n"
 "Last-Translator: Salvador Peña <salvadorp74@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.15.1-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.adoc:1 en/git-instaweb.adoc:45 en/git-ls-remote.adoc:24 en/git-mailinfo.adoc:49 en/git-mailsplit.adoc:35 en/git-repack.adoc:185 en/git-status.adoc:31
@@ -9070,7 +9070,7 @@ msgstr "`--sparse`"
 #: en/git-add.adoc:86
 #, placeholders:'linkgit:git-sparse-checkout[1]', priority:300
 msgid "Allow updating index entries outside of the sparse-checkout cone. Normally, `git add` refuses to update index entries whose paths do not fit within the sparse-checkout cone, since those files might be removed from the working tree without warning. See linkgit:git-sparse-checkout[1] for more details."
-msgstr ""
+msgstr "Permite actualizar entradas del índice que están fuera del cono de revisión reducido. Normalmente, `git add` se niega a actualizar entradas del índice cuyas rutas no caen dentro de embudo de revisión, ya que tales ficheros pudieran ser quitados del árbol de trabajo sin advertencia. Vea linkgit:git-sparse-checkout[1] para mas detalles."
 
 #. type: Labeled list
 #: en/git-add.adoc:87 en/git-branch.adoc:155 en/git-commit.adoc:302 en/git-tag.adoc:138 en/rev-list-options.adoc:78
@@ -51140,37 +51140,37 @@ msgstr "`--hard`"
 #: en/git-reset.adoc:75
 #, priority:280
 msgid "Resets the index and working tree. Any changes to tracked files in the working tree since _<commit>_ are discarded. Any untracked files or directories in the way of writing any tracked files are simply deleted."
-msgstr ""
+msgstr "Restablece el índice y el árbol de trabajo. Cualquier cambio a ficheros con seguimiento en el árbol de trabajo desde _<confirmación>_ es descartado. Cualquier fichero sin seguimiento o directorio en camino de escribir cualquier fichero con seguimiento es simplemente eliminado."
 
 #. type: Plain text
 #: en/git-reset.adoc:83
 #, placeholders:'`HEAD`', priority:280
 msgid "Resets the index and updates the files in the working tree that are different between _<commit>_ and `HEAD`, but keeps those which are different between the index and working tree (i.e. which have changes which have not been added). If a file that is different between _<commit>_ and the index has unstaged changes, reset is aborted."
-msgstr ""
+msgstr "Restablece el índice y actualiza los ficheros en el árbol de trabajo que son diferentes entre _<confirmación>_ y `HEAD`, pero mantiene aquellos que son diferentes entre el índice y el árbol de trabajo (p. ej. aquellos cambios que no han sido agregados). Si un fichero tiene diferencias entre _<confirmación>_ y el índice tiene cambios sin presentar, se aborta el restablecimiento."
 
 #. type: Plain text
 #: en/git-reset.adoc:86
 #, placeholders:'`--merge`':'git read-tree', priority:280
 msgid "In other words, `--merge` does something like a `git read-tree -u -m <commit>`, but carries forward unmerged index entries."
-msgstr ""
+msgstr "En otras palabras, `--merge` hace algo como un `git read-tree -u -m <confirmación>`, pero acarrea hacia adelante entradas del índice sin fusionar."
 
 #. type: Plain text
 #: en/git-reset.adoc:92
 #, placeholders:'`HEAD`':'`HEAD`', priority:280
 msgid "Resets index entries and updates files in the working tree that are different between _<commit>_ and `HEAD`. If a file that is different between _<commit>_ and `HEAD` has local changes, reset is aborted."
-msgstr ""
+msgstr "Restablece entradas del índice y actualiza ficheros en el árbol de trabajo que tienen diferencias entre _<confirmación>_ y `HEAD`. Si un fichero tiene diferencias entre _<confirmación>_ y `HEAD` tiene cambios locales, se aborta el restablecimiento."
 
 #. type: Plain text
 #: en/git-reset.adoc:99
 #, placeholders:'`--recurse-submodules`':'`HEAD`', priority:280
 msgid "When the working tree is updated, using `--recurse-submodules` will also recursively reset the working tree of all active submodules according to the commit recorded in the superproject, also setting the submodules' `HEAD` to be detached at that commit."
-msgstr ""
+msgstr "Cuando se actualiza el árbol de trabajo, usar `--recurse-submodules` también restablecerá recursivamente el árbol de trabajo de todos los submódulos activos según la confirmación registrada en el superproyecto, también separando la `HEAD` de los submódulos de esa confirmación."
 
 #. type: Plain text
 #: en/git-reset.adoc:103 en/git-restore.adoc:30 en/git-revert.adoc:33
 #, placeholders:'linkgit:git[1]', priority:280
 msgid "See \"Reset, restore and revert\" in linkgit:git[1] for the differences between the three commands."
-msgstr ""
+msgstr "Ver \"Restablecer, restaurar y revertir\" en linkgit:git[1] para diferenciar los tres comandos."
 
 #. type: Plain text
 #: en/git-reset.adoc:111
@@ -51188,13 +51188,13 @@ msgstr "`--no-refresh`"
 #: en/git-reset.adoc:115
 #, priority:280
 msgid "Refresh the index after a mixed reset. Enabled by default."
-msgstr ""
+msgstr "Refresca el índice después de restablecimiento mixto. Habilitado predeterminadamente."
 
 #. type: Labeled list
 #: en/git-reset.adoc:142
 #, no-wrap, priority:280
 msgid "Undo add"
-msgstr ""
+msgstr "Deshacer inclusión"
 
 #. type: delimited block -
 #: en/git-reset.adoc:150
@@ -51206,36 +51206,41 @@ msgid ""
 "$ git reset                                <3>\n"
 "$ git pull git://info.example.com/ nitfol  <4>\n"
 msgstr ""
+"$ edit                                     <1>\n"
+"$ git add frotz.c filfre.c\n"
+"$ mailx                                    <2>\n"
+"$ git reset                                <3>\n"
+"$ git pull git://info.example.com/ nitfol  <4>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:156
 #, priority:280
 msgid "You are happily working on something, and find the changes in these files are in good order. You do not want to see them when you run `git diff`, because you plan to work on other files and changes with these files are distracting."
-msgstr ""
+msgstr "Estas felizmente trabajando en algo y los cambios en esos ficheros ya los ves bien; no quieres verlos al hacer `git diff` porque planeas trabajar en otros ficheros y los cambios a los primeros te distraen."
 
 #. type: Plain text
 #: en/git-reset.adoc:157
 #, priority:280
 msgid "Somebody asks you to pull, and the changes sound worthy of merging."
-msgstr ""
+msgstr "Alguien te pide incorporar, y parece que vale la pena fusionar esos cambios."
 
 #. type: Plain text
 #: en/git-reset.adoc:162
 #, placeholders:'`HEAD`', priority:280
 msgid "However, you already dirtied the index (i.e. your index does not match the `HEAD` commit). But you know the pull you are going to make does not affect `frotz.c` or `filfre.c`, so you revert the index changes for these two files. Your changes in working tree remain there."
-msgstr ""
+msgstr "Sin embargo, ya ensuciaste el índice (es decir, tu índice no coincide con la `HEAD` de la confirmación). Pero sabes que la incorporación que vas a hacer no afecta `frotz.c` o `filtre.c`, así que reviertes los cambios al índice para esos dos ficheros. Tus cambios en el árbol de trabajo permanecen ahí."
 
 #. type: Plain text
 #: en/git-reset.adoc:164
 #, priority:280
 msgid "Then you can pull and merge, leaving `frotz.c` and `filfre.c` changes still in the working tree."
-msgstr ""
+msgstr "Entonces puedes incorporar y fusionar, manteniendo aún los cambios en `frotz.c` y `filfre.c` en el árbol de trabajo."
 
 #. type: Labeled list
 #: en/git-reset.adoc:165
 #, no-wrap, priority:280
 msgid "Undo a commit and redo"
-msgstr ""
+msgstr "Deshacer una confirmación y rehacer"
 
 #. type: delimited block -
 #: en/git-reset.adoc:172
@@ -51246,36 +51251,40 @@ msgid ""
 "$ edit                        <2>\n"
 "$ git commit -a -c ORIG_HEAD  <3>\n"
 msgstr ""
+"$ git commit ...\n"
+"$ git reset --soft HEAD^      <1>\n"
+"$ edit                        <2>\n"
+"$ git commit -a -c ORIG_HEAD  <3>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:177
 #, priority:280
 msgid "This is most often done when you remembered what you just committed is incomplete, or you misspelled your commit message, or both. Leaves working tree as it was before \"reset\"."
-msgstr ""
+msgstr "Esto se hace mas frecuentemente cuando recuerdas que esta incompleto lo que acabas de confirmar, o escribiste mal tu mensaje de confirmación, o ambos. Deja el árbol de trabajo como estaba antes del \"reset\"."
 
 #. type: Plain text
 #: en/git-reset.adoc:178
 #, priority:280
 msgid "Make corrections to working tree files."
-msgstr ""
+msgstr "Hacer correcciones a ficheros del árbol de trabajo."
 
 #. type: Plain text
 #: en/git-reset.adoc:181
 #, placeholders:'`.git/ORIG_HEAD`':'`-C`', priority:280
 msgid "\"reset\" copies the old head to `.git/ORIG_HEAD`; redo the commit by starting with its log message. If you do not need to edit the message further, you can give `-C` option instead."
-msgstr ""
+msgstr "\"reset\" copia la cabeza anterior a `.git/ORIG_HEAD`; rehace la confirmación comenzando con su mensaje de registro. Si no necesitas editar mas el mensaje, simplemente puedes dar la opción `-C`."
 
 #. type: Plain text
 #: en/git-reset.adoc:183
 #, placeholders:'`--amend`':'linkgit:git-commit[1]', priority:280
 msgid "See also the `--amend` option to linkgit:git-commit[1]."
-msgstr ""
+msgstr "Ve también la opción `--amend` de linkgit:git-commit[1]."
 
 #. type: Labeled list
 #: en/git-reset.adoc:184
 #, no-wrap, priority:280
 msgid "Undo a commit, making it a topic branch"
-msgstr ""
+msgstr "Deshacer una confirmación, haciéndola una rama tópica"
 
 #. type: delimited block -
 #: en/git-reset.adoc:190
@@ -51285,30 +51294,33 @@ msgid ""
 "$ git reset --hard HEAD~3       <2>\n"
 "$ git switch topic/wip          <3>\n"
 msgstr ""
+"$ git branch topic/wip          <1>\n"
+"$ git reset --hard HEAD~3       <2>\n"
+"$ git switch topic/wip          <3>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:196
 #, placeholders:'`HEAD`', priority:280
 msgid "You have made some commits, but realize they were premature to be in the `master` branch. You want to continue polishing them in a topic branch, so create `topic/wip` branch off of the current `HEAD`."
-msgstr ""
+msgstr "Has hecho algunas confirmaciones, pero te das cuenta que fue prematuro hacerlo en la rama `master`. Quieres continuar puliéndolas en una rama tópica, entonces creas la rama `topic/wip` a partir de la `HEAD` actual."
 
 #. type: Plain text
 #: en/git-reset.adoc:197
 #, priority:280
 msgid "Rewind the master branch to get rid of those three commits."
-msgstr ""
+msgstr "Regresas la rama master para deshacerte de esas tres confirmaciones."
 
 #. type: Plain text
 #: en/git-reset.adoc:198
 #, priority:280
 msgid "Switch to `topic/wip` branch and keep working."
-msgstr ""
+msgstr "Cambias a la rama `topic/wip` y sigues trabajando."
 
 #. type: Labeled list
 #: en/git-reset.adoc:199
 #, no-wrap, priority:280
 msgid "Undo commits permanently"
-msgstr ""
+msgstr "Deshacer confirmaciones permanentemente"
 
 #. type: delimited block -
 #: en/git-reset.adoc:204
@@ -51317,18 +51329,20 @@ msgid ""
 "$ git commit ...\n"
 "$ git reset --hard HEAD~3   <1>\n"
 msgstr ""
+"$ git commit ...\n"
+"$ git reset --hard HEAD~3   <1>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:211
 #, placeholders:'`HEAD`':'linkgit:git-rebase[1]', priority:280
 msgid "The last three commits (`HEAD`, `HEAD^`, and `HEAD~2`) were bad and you do not want to ever see them again. Do *not* do this if you have already given these commits to somebody else. (See the \"RECOVERING FROM UPSTREAM REBASE\" section in linkgit:git-rebase[1] for the implications of doing so.)"
-msgstr ""
+msgstr "Las últimas tres confirmaciones (`HEAD`, `HEAD^` y `HEAD~2`) estuvieron mal y no quieres ni siquiera verlas otra vez. *No* hagas esto si ya le has dado esas confirmaciones a alguien mas. (Ver la sección \"Recuperándose de un rebase río arriba\" en linkgit:git-rebase[1] para las implicaciones de hacerlo.)"
 
 #. type: Labeled list
 #: en/git-reset.adoc:212
 #, no-wrap, priority:280
 msgid "Undo a merge or pull"
-msgstr ""
+msgstr "Deshacer una fusión o incorporación"
 
 #. type: delimited block -
 #: en/git-reset.adoc:224
@@ -51344,36 +51358,45 @@ msgid ""
 "Fast-forward\n"
 "$ git reset --hard ORIG_HEAD       <4>\n"
 msgstr ""
+"$ git pull                         <1>\n"
+"Auto-merging nitfol\n"
+"CONFLICT (content): Merge conflict in nitfol\n"
+"Automatic merge failed; fix conflicts and then commit the result.\n"
+"$ git reset --hard                 <2>\n"
+"$ git pull . topic/branch          <3>\n"
+"Updating from 41223... to 13134...\n"
+"Fast-forward\n"
+"$ git reset --hard ORIG_HEAD       <4>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:229
 #, priority:280
 msgid "Try to update from the upstream resulted in a lot of conflicts; you were not ready to spend a lot of time merging right now, so you decide to do that later."
-msgstr ""
+msgstr "El intento de actualizar desde el origen resultó en un montón de conflictos; y como no estabas listo para pasar mucho tiempo fusionando en el momento decides hacerlo después."
 
 #. type: Plain text
 #: en/git-reset.adoc:232
 #, placeholders:'--hard`':'--hard':'HEAD`', priority:280
 msgid "\"pull\" has not made merge commit, so `git reset --hard` which is a synonym for `git reset --hard HEAD` clears the mess from the index file and the working tree."
-msgstr ""
+msgstr "\"pull\" no confirmó la fusión, entonces `git reset --hard` que es un sinónimo de `git reset --hard HEAD` limpia el desastre partiendo del fichero del índice y el árbol de trabajo."
 
 #. type: Plain text
 #: en/git-reset.adoc:234
 #, priority:280
 msgid "Merge a topic branch into the current branch, which resulted in a fast-forward."
-msgstr ""
+msgstr "Fusiona una rama tópica en el rama actual, lo que resulta en un avance rápido."
 
 #. type: Plain text
 #: en/git-reset.adoc:239
 #, placeholders:'ORIG_HEAD', priority:280
 msgid "But you decided that the topic branch is not ready for public consumption yet. \"pull\" or \"merge\" always leaves the original tip of the current branch in `ORIG_HEAD`, so resetting hard to it brings your index file and the working tree back to that state, and resets the tip of the branch to that commit."
-msgstr ""
+msgstr "Pero decidiste que la rama tópica aún no esta lista para consumo público. \"pull\" o \"merge\" siempre dejan la punta original de la rama actual en `ORIG_HEAD`, de tal manera que restableciéndola duramente te trae de vuelta tu fichero del índice y el árbol de trabajo en ese estado, y restablece la punta de la rama a esa confirmación."
 
 #. type: Labeled list
 #: en/git-reset.adoc:240
 #, no-wrap, priority:280
 msgid "Undo a merge or pull inside a dirty working tree"
-msgstr ""
+msgstr "Deshacer una fusión o incorporación dentro de un árbol de trabajo sucio"
 
 #. type: delimited block -
 #: en/git-reset.adoc:249
@@ -51386,30 +51409,36 @@ msgid ""
 " ...\n"
 "$ git reset --merge ORIG_HEAD      <2>\n"
 msgstr ""
+"$ git pull                         <1>\n"
+"Auto-merging nitfol\n"
+"Merge made by recursive.\n"
+" nitfol                |   20 +++++----\n"
+" ...\n"
+"$ git reset --merge ORIG_HEAD      <2>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:255
 #, priority:280
 msgid "Even if you may have local modifications in your working tree, you can safely say `git pull` when you know that the change in the other branch does not overlap with them."
-msgstr ""
+msgstr "Incluso si tuvieras modificaciones locales en tu árbol de trabajo, puedes hacer con seguridad `git pull` cuando sabes que los cambios en la otra rama no se traslapan con los tuyos."
 
 #. type: Plain text
 #: en/git-reset.adoc:260
 #, placeholders:'--hard':'ORIG_HEAD':'--merge`', priority:280
 msgid "After inspecting the result of the merge, you may find that the change in the other branch is unsatisfactory. Running `git reset --hard ORIG_HEAD` will let you go back to where you were, but it will discard your local changes, which you do not want. `git reset --merge` keeps your local changes."
-msgstr ""
+msgstr "Después de inspeccionar el resultado de la fusión, podrías encontrar que el cambio en la otra rama es insatisfactorio. Ejecutar `git reset --hard ORIG_HEAD` te regresará a donde estabas, pero descartará tus cambios locales, lo cual no quieres. `git reset --merge` mantiene tus cambios locales."
 
 #. type: Labeled list
 #: en/git-reset.adoc:262 en/git-stash.adoc:335
 #, no-wrap, priority:280
 msgid "Interrupted workflow"
-msgstr ""
+msgstr "Flujo de trabajo interrumpido"
 
 #. type: Plain text
 #: en/git-reset.adoc:268
 #, priority:280
 msgid "Suppose you are interrupted by an urgent fix request while you are in the middle of a large change. The files in your working tree are not in any shape to be committed yet, but you need to get to the other branch for a quick bugfix."
-msgstr ""
+msgstr "Supón que te interrumpen para pedirte una corrección urgente cuando estas en medio de un cambio grande. Los ficheros en tu árbol de trabajo aún no están como para ser confirmados, pero necesitas obtener la otra rama para una corrección rápida."
 
 #. type: delimited block -
 #: en/git-reset.adoc:279
@@ -51425,42 +51454,51 @@ msgid ""
 "$ git reset --soft HEAD^ ;# go back to WIP state  <2>\n"
 "$ git reset                                       <3>\n"
 msgstr ""
+"$ git switch feature  ;# trabajas en la rama \"feature\" y\n"
+"$ work work work      ;# te interrumpen\n"
+"$ git commit -a -m \"snapshot WIP\"                 <1>\n"
+"$ git switch master\n"
+"$ fix fix fix\n"
+"$ git commit ;# confirma con registro real\n"
+"$ git switch feature\n"
+"$ git reset --soft HEAD^ ;# de regreso al estado de WIP  <2>\n"
+"$ git reset                                       <3>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:282
 #, priority:280
 msgid "This commit will get blown away so a throw-away log message is OK."
-msgstr ""
+msgstr "Esta confirmación explotará, así que un mensaje de desecho no va mal."
 
 #. type: Plain text
 #: en/git-reset.adoc:284
 #, priority:280
 msgid "This removes the 'WIP' commit from the commit history, and sets your working tree to the state just before you made that snapshot."
-msgstr ""
+msgstr "Esto quita la confirmación 'WIP' del historial de confirmaciones, y establece tu árbol de trabajo al estado justo antes de que hicieras esa instantánea."
 
 #. type: Plain text
 #: en/git-reset.adoc:287
 #, priority:280
 msgid "At this point the index file still has all the WIP changes you committed as 'snapshot WIP'. This updates the index to show your WIP files as uncommitted."
-msgstr ""
+msgstr "En este punto el fichero del índice aún tiene todos los cambios de WIP que confirmaste como 'snapshot WIP'. Esto actualiza el índice para mostrar tus ficheros de WIP como no confirmados."
 
 #. type: Plain text
 #: en/git-reset.adoc:289
 #, placeholders:'linkgit:git-stash[1]', priority:280
 msgid "See also linkgit:git-stash[1]."
-msgstr ""
+msgstr "Ver también linkgit:git-stash[1]."
 
 #. type: Labeled list
 #: en/git-reset.adoc:290
 #, no-wrap, priority:280
 msgid "Reset a single file in the index"
-msgstr ""
+msgstr "Restablecer un solo fichero en el índice"
 
 #. type: Plain text
 #: en/git-reset.adoc:295
 #, priority:280
 msgid "Suppose you have added a file to your index, but later decide you do not want to add it to your commit. You can remove the file from the index while keeping your changes with git reset."
-msgstr ""
+msgstr "Supón que has agregado un fichero a tu índice, pero luego decides que no quieres incluirlo en tu confirmación. Puedes quitar el fichero del índice manteniendo tus cambios con git reset."
 
 #. type: delimited block -
 #: en/git-reset.adoc:300
@@ -51470,18 +51508,21 @@ msgid ""
 "$ git commit -m \"Commit files in index\"     <2>\n"
 "$ git add frotz.c                           <3>\n"
 msgstr ""
+"$ git reset -- frotz.c                      <1>\n"
+"$ git commit -m \"Confirma ficheros en índice\"     <2>\n"
+"$ git add frotz.c                           <3>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:304
 #, priority:280
 msgid "This removes the file from the index while keeping it in the working directory."
-msgstr ""
+msgstr "Esto quita el fichero del índice mientras lo mantiene en el directorio de trabajo."
 
 #. type: Plain text
 #: en/git-reset.adoc:305
 #, priority:280
 msgid "This commits all other changes in the index."
-msgstr ""
+msgstr "Esto confirma todos los cambios en el índice."
 
 #. type: Plain text
 #: en/git-reset.adoc:306
