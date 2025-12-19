@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2025-11-11 22:08+0100\n"
-"PO-Revision-Date: 2025-12-15 15:00+0000\n"
+"PO-Revision-Date: 2025-12-19 16:00+0000\n"
 "Last-Translator: Salvador Peña <salvadorp74@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1-dev\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #. type: Labeled list
 #: en/blame-options.adoc:1 en/git-instaweb.adoc:45 en/git-ls-remote.adoc:24 en/git-mailinfo.adoc:49 en/git-mailsplit.adoc:35 en/git-repack.adoc:185 en/git-status.adoc:31
@@ -51528,19 +51528,19 @@ msgstr "Esto confirma todos los cambios en el índice."
 #: en/git-reset.adoc:306
 #, priority:280
 msgid "Adds the file to the index again."
-msgstr ""
+msgstr "Agrega el archivo de nuevo al índice."
 
 #. type: Labeled list
 #: en/git-reset.adoc:307
 #, no-wrap, priority:280
 msgid "Keep changes in working tree while discarding some previous commits"
-msgstr ""
+msgstr "Mantiene los cambios en el árbol de trabajo descartando algunas confirmaciones previas"
 
 #. type: Plain text
 #: en/git-reset.adoc:314
 #, priority:280
 msgid "Suppose you are working on something and you commit it, and then you continue working a bit more, but now you think that what you have in your working tree should be in another branch that has nothing to do with what you committed previously. You can start a new branch and reset it while keeping the changes in your working tree."
-msgstr ""
+msgstr "Supón que estas trabajando en algo y lo confirmas, luego trabajas un poco mas, pero ahora piensas que lo que acabas de hacer debería ir en otra rama que no tiene nada que ver con lo que confirmaste anteriormente. Puedes comenzar una rama nueva y restablecerla manteniendo los cambios en tu árbol de trabajo."
 
 #. type: delimited block -
 #: en/git-reset.adoc:323
@@ -51554,36 +51554,43 @@ msgid ""
 "$ git switch -c branch2                     <2>\n"
 "$ git reset --keep start                    <3>\n"
 msgstr ""
+"$ git tag start\n"
+"$ git switch -c branch1\n"
+"$ edición\n"
+"$ git commit ...                            <1>\n"
+"$ edición\n"
+"$ git switch -c branch2                     <2>\n"
+"$ git reset --keep start                    <3>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:326
 #, priority:280
 msgid "This commits your first edits in `branch1`."
-msgstr ""
+msgstr "Esto confirma tus primeras ediciones en `branch1`."
 
 #. type: Plain text
 #: en/git-reset.adoc:330
 #, priority:280
 msgid "In the ideal world, you could have realized that the earlier commit did not belong to the new topic when you created and switched to `branch2` (i.e. `git switch -c branch2 start`), but nobody is perfect."
-msgstr ""
+msgstr "En un mundo ideal, al querer crear `branch2` y cambiar a ella podrías haber notado que la confirmación anterior no pertenece al nuevo tópico (es decir, `git switch -c branch2 start`), pero nadie es perfecto."
 
 #. type: Plain text
 #: en/git-reset.adoc:332
 #, placeholders:'--keep`', priority:280
 msgid "But you can use `reset --keep` to remove the unwanted commit after you switched to `branch2`."
-msgstr ""
+msgstr "Pero ahora puedes usar `reset --keep` para quitar la confirmación no deseada después de cambiar a `branch2`."
 
 #. type: Labeled list
 #: en/git-reset.adoc:333
 #, no-wrap, priority:280
 msgid "Split a commit apart into a sequence of commits"
-msgstr ""
+msgstr "Dividir una confirmación en una secuencia de confirmaciones"
 
 #. type: Plain text
 #: en/git-reset.adoc:341
 #, priority:280
 msgid "Suppose that you have created lots of logically separate changes and committed them together. Then, later you decide that it might be better to have each logical chunk associated with its own commit. You can use git reset to rewind history without changing the contents of your local files, and then successively use `git add -p` to interactively select which hunks to include into each commit, using `git commit -c` to pre-populate the commit message."
-msgstr ""
+msgstr "Supón que has creado montones de cambios lógicamente separados y que los has confirmado en conjunto. Después decides que hubiera sido mejor tener cada grupo de pedazos lógicamente relacionados en su propia confirmación. Puedes usar git reset para rebobinar el historial sin modificar el contenido de tus ficheros locales, y hacer sucesivamente `git add -p` para seleccionar interactivamente qué pedazos se incluirán en cada confirmación, usando `git commit -c` para pre-llenar el mensaje de confirmación."
 
 #. type: delimited block -
 #: en/git-reset.adoc:351
@@ -51598,78 +51605,86 @@ msgid ""
 "$ git diff --cached                         <7>\n"
 "$ git commit ...                            <8>\n"
 msgstr ""
+"$ git reset -N HEAD^                        <1>\n"
+"$ git add -p                                <2>\n"
+"$ git diff --cached                         <3>\n"
+"$ git commit -c HEAD@{1}                    <4>\n"
+"...                                         <5>\n"
+"$ git add ...                               <6>\n"
+"$ git diff --cached                         <7>\n"
+"$ git commit ...                            <8>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:357
 #, placeholders:'`-N`':'`HEAD`', priority:280
 msgid "First, reset the history back one commit so that we remove the original commit, but leave the working tree with all the changes. The `-N` ensures that any new files added with `HEAD` are still marked so that `git add -p` will find them."
-msgstr ""
+msgstr "Primero, restablece el historial una confirmación hacia atrás para eliminar la confirmación original, pero dejando el árbol de trabajo con todos sus cambios. `-N` asegura que cualquier fichero nuevo agregado con `HEAD` quede marcado para que `git add -p` los encuentre."
 
 #. type: Plain text
 #: en/git-reset.adoc:361
 #, priority:280
 msgid "Next, we interactively select diff hunks to add using the `git add -p` facility. This will ask you about each diff hunk in sequence and you can use simple commands such as \"yes, include this\", \"No don't include this\" or even the very powerful \"edit\" facility."
-msgstr ""
+msgstr "Después, interactivamente seleccionamos los pedazos de diferencia a agregar usando la prestación `git add -p`. Esto te preguntará en secuencia por cada pedazo de diferencia y podrás simplemente usar instrucciones como \"si, incluirlo\", \"no incluirlo\" o la muy poderosa \"editar\"."
 
 #. type: Plain text
 #: en/git-reset.adoc:365
 #, placeholders:'--cached`', priority:280
 msgid "Once satisfied with the hunks you want to include, you should verify what has been prepared for the first commit by using `git diff --cached`. This shows all the changes that have been moved into the index and are about to be committed."
-msgstr ""
+msgstr "Una vez satisfecho con los pedazos que quieres incluir, deberías verificar lo que se ha preparado para la primer confirmación usando `git diff --cached`. Esto muestra todos los cambios que se han movido al índice y serán confirmados."
 
 #. type: Plain text
 #: en/git-reset.adoc:372
 #, placeholders:'`-c`':'`HEAD@{1}`':'`HEAD`':'linkgit:git-reflog[1]', priority:280
 msgid "Next, commit the changes stored in the index. The `-c` option specifies to pre-populate the commit message from the original message that you started with in the first commit. This is helpful to avoid retyping it. The `HEAD@{1}` is a special notation for the commit that `HEAD` used to be at prior to the original reset commit (1 change ago). See linkgit:git-reflog[1] for more details. You may also use any other valid commit reference."
-msgstr ""
+msgstr "Lo siguiente, confirmar los cambios almacenados en el índice. La opción `-c` especifica pre-llenar el mensaje de confirmación a partir del mensaje original que iniciaste en la primer confirmación. Esto ayuda a evitar volver a teclearlo. `HEAD@{1}` es una notación especial para referirse a la confirmación donde estaba `HEAD` antes de la confirmación original restablecida (hace 1 cambio). Ver linkgit:git-reflog[1] para mas detalles. También puedes usar cualquier otra referencia de confirmación válida."
 
 #. type: Plain text
 #: en/git-reset.adoc:374
 #, priority:280
 msgid "You can repeat steps 2-4 multiple times to break the original code into any number of commits."
-msgstr ""
+msgstr "Puedes repetir los pasos 2 a 4 varias veces para despedazar el código original en cualquier número de confirmaciones."
 
 #. type: Plain text
 #: en/git-reset.adoc:377
 #, priority:280
 msgid "Now you've split out many of the changes into their own commits, and might no longer use the patch mode of `git add`, in order to select all remaining uncommitted changes."
-msgstr ""
+msgstr "Ahora que has dividido varios cambios en sus respectivas confirmaciones, puede que ya no uses el modo de parche de `git add`, con tal de seleccionar los cambios sin confirmar restantes."
 
 #. type: Plain text
 #: en/git-reset.adoc:380
 #, priority:280
 msgid "Once again, check to verify that you've included what you want to. You may also wish to verify that git diff doesn't show any remaining changes to be committed later."
-msgstr ""
+msgstr "Una vez mas, revisa que lo incluido es lo que quieres. También querrías verificar que git diff no muestre algún cambio remanente a ser confirmado después."
 
 #. type: Plain text
 #: en/git-reset.adoc:381
 #, priority:280
 msgid "And finally create the final commit."
-msgstr ""
+msgstr "Y por último, crear la confirmación final."
 
 #. type: Plain text
 #: en/git-reset.adoc:387
 #, priority:280
 msgid "The tables below show what happens when running:"
-msgstr ""
+msgstr "Las tablas de abajo muestran lo que sucede al ejecutar:"
 
 #. type: delimited block -
 #: en/git-reset.adoc:390
 #, no-wrap, placeholders:'--option', priority:280
 msgid "git reset --option target\n"
-msgstr ""
+msgstr "git reset --option target\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:394
 #, placeholders:'`HEAD`', priority:280
 msgid "to reset the `HEAD` to another commit (`target`) with the different reset options depending on the state of the files."
-msgstr ""
+msgstr "para restablecer `HEAD` a otra confirmación (`target`) con opciones diferentes dependiendo del estado de los ficheros."
 
 #. type: Plain text
 #: en/git-reset.adoc:403
 #, placeholders:'`HEAD`':'--soft':'`HEAD`', priority:280
 msgid "In these tables, `A`, `B`, `C` and `D` are some different states of a file. For example, the first line of the first table means that if a file is in state `A` in the working tree, in state `B` in the index, in state `C` in `HEAD` and in state `D` in the target, then `git reset --soft target` will leave the file in the working tree in state `A` and in the index in state `B`. It resets (i.e. moves) the `HEAD` (i.e. the tip of the current branch, if you are on one) to `target` (which has the file in state `D`)."
-msgstr ""
+msgstr "En estas tablas, `A`, `B`, `C` y `D` son estados diferentes de un fichero. Por ejemplo, la primer línea de la primer tabla significa que si un fichero esta en estado `A` en el árbol de trabajo, en estado `B` en el índice, en estado `C` en `HEAD` y en estado `D` en target, entonces `git reset --soft target` dejará el fichero en el árbol de trabajo en estado `A` y en el índice en estado `B`. Restablece (es decir, mueve) `HEAD` (la punta de la rama actual, si no estas en una) a `target` (que tiene el fichero en estado `D`)."
 
 #. type: delimited block .
 #: en/git-reset.adoc:412
@@ -51683,6 +51698,13 @@ msgid ""
 "\t\t\t  --merge (disallowed)\n"
 "\t\t\t  --keep  (disallowed)\n"
 msgstr ""
+"árbol  índice HEAD   target         árbol  índice HEAD\n"
+"------------------------------------------------------\n"
+" A      B      C      D     --soft   A      B      D\n"
+"                            --mixed  A      D      D\n"
+"                            --hard   D      D      D\n"
+"                            --merge (no permitido)\n"
+"                            --keep  (no permitido)\n"
 
 #. type: delimited block .
 #: en/git-reset.adoc:422
@@ -51696,6 +51718,13 @@ msgid ""
 "\t\t\t  --merge (disallowed)\n"
 "\t\t\t  --keep   A       C     C\n"
 msgstr ""
+"árbol índice HEAD target         árbol índice HEAD\n"
+"----------------------------------------------------\n"
+" A     B      C    C     --soft   A     B      C\n"
+"                         --mixed  A     C      C\n"
+"                         --hard   C     C      C\n"
+"                         --merge (no permitido)\n"
+"                         --keep   A     C      C\n"
 
 #. type: delimited block .
 #: en/git-reset.adoc:432
@@ -51709,6 +51738,13 @@ msgid ""
 "\t\t\t  --merge  D       D     D\n"
 "\t\t\t  --keep  (disallowed)\n"
 msgstr ""
+"árbol índice HEAD target         árbol índice HEAD\n"
+"----------------------------------------------------\n"
+" B     B      C    D     --soft   B     B      D\n"
+"                         --mixed  B     D      D\n"
+"                         --hard   D     D      D\n"
+"                         --merge  D     D      D\n"
+"                         --keep  (no permitido)\n"
 
 #. type: delimited block .
 #: en/git-reset.adoc:442
@@ -51722,6 +51758,13 @@ msgid ""
 "\t\t\t  --merge  C       C     C\n"
 "\t\t\t  --keep   B       C     C\n"
 msgstr ""
+"árbol índice HEAD target         árbol índice HEAD\n"
+"----------------------------------------------------\n"
+" B     B      C    C     --soft   B     B      C\n"
+"                         --mixed  B     C      C\n"
+"                         --hard   C     C      C\n"
+"                         --merge  C     C      C\n"
+"                         --keep   B     C      C\n"
 
 #. type: delimited block .
 #: en/git-reset.adoc:452
@@ -51735,6 +51778,13 @@ msgid ""
 "\t\t\t  --merge (disallowed)\n"
 "\t\t\t  --keep  (disallowed)\n"
 msgstr ""
+"árbol índice HEAD target         árbol índice HEAD\n"
+"----------------------------------------------------\n"
+" B     C      C    D     --soft   B     C      D\n"
+"                         --mixed  B     D      D\n"
+"                         --hard   D     D      D\n"
+"                         --merge (no permitido)\n"
+"                         --keep  (no permitido)\n"
 
 #. type: delimited block .
 #: en/git-reset.adoc:462
@@ -51748,24 +51798,31 @@ msgid ""
 "\t\t\t  --merge  B       C     C\n"
 "\t\t\t  --keep   B       C     C\n"
 msgstr ""
+"árbol índice HEAD target         árbol índice HEAD\n"
+"----------------------------------------------------\n"
+" B     C      C    C     --soft   B     C      C\n"
+"                         --mixed  B     C      C\n"
+"                         --hard   C     C      C\n"
+"                         --merge  B     C      C\n"
+"                         --keep   B     C      C\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:472
 #, placeholders:'--merge`':'`--merge`', priority:280
 msgid "`git reset --merge` is meant to be used when resetting out of a conflicted merge. Any mergy operation guarantees that the working tree file that is involved in the merge does not have a local change with respect to the index before it starts, and that it writes the result out to the working tree. So if we see some difference between the index and the target and also between the index and the working tree, then it means that we are not resetting out from a state that a mergy operation left after failing with a conflict. That is why we disallow `--merge` option in this case."
-msgstr ""
+msgstr "`git reset --merge` es para cuando se quiere restablecer de una fusión con conflictos. Cualquier operación de fusión garantiza que, antes de iniciar, el fichero del árbol de trabajo involucrado en la fusión no tenga un cambio local con respecto al índice, y que escriba el resultado en el árbol de trabajo. Así que si vemos algunas diferencias entre el índice y target y también entre el índice y el árbol de trabajo, eso significa que no estamos restableciendo desde un estado que quedó de una operación de fusión fallida por un conflicto. Es por ello que no se permite la opción `--merge` en este caso."
 
 #. type: Plain text
 #: en/git-reset.adoc:481
 #, placeholders:'--keep`':'`HEAD`':'`HEAD`', priority:280
 msgid "`git reset --keep` is meant to be used when removing some of the last commits in the current branch while keeping changes in the working tree. If there could be conflicts between the changes in the commit we want to remove and the changes in the working tree we want to keep, the reset is disallowed. That's why it is disallowed if there are both changes between the working tree and `HEAD`, and between `HEAD` and the target. To be safe, it is also disallowed when there are unmerged entries."
-msgstr ""
+msgstr "`git reset --keep` es para cuando se eliminan algunas de las últimas confirmaciones en la rama actual mientras se mantienen los cambios en el árbol de trabajo. Si hubieran conflictos entre los cambios en la confirmación que queremos eliminar y los cambios en el árbol de trabajo que queremos mantener, no se permite restablecer. Es por eso que no se permite si hay cambios tanto entre el árbol de trabajo y `HEAD` como entre `HEAD` y target. Por seguridad, tampoco se permite cuando hay entradas sin fusionar."
 
 #. type: Plain text
 #: en/git-reset.adoc:484
 #, priority:280
 msgid "The following tables show what happens when there are unmerged entries:"
-msgstr ""
+msgstr "Las tablas siguientes muestran lo que sucede cuando hay entradas sin fusionar:"
 
 #. type: delimited block .
 #: en/git-reset.adoc:493
@@ -51779,6 +51836,13 @@ msgid ""
 "\t\t\t  --merge  B       B     B\n"
 "\t\t\t  --keep  (disallowed)\n"
 msgstr ""
+"árbol índice HEAD target         árbol índice HEAD\n"
+"----------------------------------------------------\n"
+" X     U      A    B     --soft  (no permitido)\n"
+"                         --mixed  X     B      B\n"
+"                         --hard   B     B      B\n"
+"                         --merge  B     B      B\n"
+"                         --keep  (no permitido)\n"
 
 #. type: delimited block .
 #: en/git-reset.adoc:503
@@ -51792,12 +51856,19 @@ msgid ""
 "\t\t\t  --merge  A       A     A\n"
 "\t\t\t  --keep  (disallowed)\n"
 msgstr ""
+"árbol índice HEAD target         árbol índice HEAD\n"
+"----------------------------------------------------\n"
+" X     U      A    A     --soft  (no permitido)\n"
+"                         --mixed  X     A      A\n"
+"                         --hard   A     A      A\n"
+"                         --merge  A     A      A\n"
+"                         --keep  (no permitido)\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:506
 #, priority:280
 msgid "`X` means any state and `U` means an unmerged index."
-msgstr ""
+msgstr "`X` significa cualquier estado y `U` significa un índice sin fusionar."
 
 #. type: Title =
 #: en/git-restore.adoc:2
@@ -51809,7 +51880,7 @@ msgstr "git-restore(1)"
 #: en/git-restore.adoc:7
 #, placeholders:'git-restore', priority:280
 msgid "git-restore - Restore working tree files"
-msgstr ""
+msgstr "git-restore - Restaura ficheros del árbol de trabajo"
 
 #. type: synopsis
 #: en/git-restore.adoc:14
@@ -51819,24 +51890,27 @@ msgid ""
 "git restore [<options>] [--source=<tree>] [--staged] [--worktree] --pathspec-from-file=<file> [--pathspec-file-nul]\n"
 "git restore (-p|--patch) [<options>] [--source=<tree>] [--staged] [--worktree] [--] [<pathspec>...]\n"
 msgstr ""
+"git restore [<opciones>] [--source=<árbol>] [--staged] [--worktree] [--] <especificación-de-ruta>...\n"
+"git restore [<opciones>] [--source=<árbol>] [--staged] [--worktree] --pathspec-from-file=<fichero> [--pathspec-file-nul]\n"
+"git restore (-p|--patch) [<opciones>] [--source=<árbol>] [--staged] [--worktree] [--] [<especificación-de-ruta>...]\n"
 
 #. type: Plain text
 #: en/git-restore.adoc:20
 #, priority:280
 msgid "Restore specified paths in the working tree with some contents from a restore source. If a path is tracked but does not exist in the restore source, it will be removed to match the source."
-msgstr ""
+msgstr "Restaura las rutas especificadas en el árbol de trabajo con algún contenido de una fuente de restauración. Si una ruta es rastreada pero no existe en la fuente de restauración será eliminada para coincidir con la fuente."
 
 #. type: Plain text
 #: en/git-restore.adoc:24
 #, placeholders:'`--staged`':'`--staged':'--worktree`', priority:280
 msgid "The command can also be used to restore the content in the index with `--staged`, or restore both the working tree and the index with `--staged --worktree`."
-msgstr ""
+msgstr "El comando tambien puede usarse para restaurar el contenido en el índice con `--staged`, o restaurar tanto el árbol de trabajo como el índice con `--staged --worktree`."
 
 #. type: Plain text
 #: en/git-restore.adoc:27
 #, placeholders:'`--staged`':'`HEAD`':'`--source`', priority:280
 msgid "By default, if `--staged` is given, the contents are restored from `HEAD`, otherwise from the index. Use `--source` to restore from a different commit."
-msgstr ""
+msgstr "Predeterminadamente, si se da `--staged`, el contenido es restaurado desde `HEAD`, de lo contrario desde el índice. Use `--source` para restaurar desde una confirmación diferente."
 
 #. type: Labeled list
 #: en/git-restore.adoc:33
@@ -51854,7 +51928,7 @@ msgstr "`--source=<árbol-ismo>`"
 #: en/git-restore.adoc:38
 #, priority:280
 msgid "Restore the working tree files with the content from the given tree. It is common to specify the source tree by naming a commit, branch or tag associated with it."
-msgstr ""
+msgstr "Restaura los ficheros del árbol de trabajo con el contenido de un árbol dado. Es normal especificar el árbol fuente por su nombre de confirmación, rama o etiqueta asociada."
 
 #. type: Plain text
 #: en/git-restore.adoc:41
