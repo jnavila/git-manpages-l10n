@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2025-11-11 22:08+0100\n"
-"PO-Revision-Date: 2025-12-20 21:00+0000\n"
+"PO-Revision-Date: 2025-12-31 01:00+0000\n"
 "Last-Translator: Salvador Peña <salvadorp74@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: es\n"
@@ -52012,7 +52012,7 @@ msgstr "Cuando se restauran ficheros en el árbol de trabajo desde el índice, n
 #: en/git-restore.adoc:110
 #, placeholders:'`$GIT_DIR/info/sparse-checkout`', priority:280
 msgid "In sparse checkout mode, the default is to only update entries matched by _<pathspec>_ and sparse patterns in `$GIT_DIR/info/sparse-checkout`. This option ignores the sparse patterns and unconditionally restores any files in _<pathspec>_."
-msgstr ""
+msgstr "En modo checkout escaso, lo predeterminado es solo actualizar las entradas que coincidan con _<especificación-de-ruta>_ y los patrones de escasez en `$GIT_DIR/info/sparse-checkout`. Esta opción ignora los patrones de escasez y restaura incondicionalmente cualquier fichero en _<especificación-de-ruta>_."
 
 #. type: Plain text
 #: en/git-restore.adoc:121
@@ -52041,84 +52041,88 @@ msgid ""
 "$ rm -f hello.c\n"
 "$ git restore hello.c                     <2>\n"
 msgstr ""
+"$ git switch master\n"
+"$ git restore --source master~2 Makefile  <1>\n"
+"$ rm -f hello.c\n"
+"$ git restore hello.c                     <2>\n"
 
 #. type: Plain text
 #: en/git-restore.adoc:169
 #, priority:280
 msgid "If you want to restore _all_ C source files to match the version in the index, you can say"
-msgstr ""
+msgstr "Si quieres restablecer _todos_ los ficheros de código C para que coincidan con la versión en el índice, puedes hacer"
 
 #. type: delimited block -
 #: en/git-restore.adoc:172
 #, no-wrap, priority:280
 msgid "$ git restore '*.c'\n"
-msgstr ""
+msgstr "$ git restore '*.c'\n"
 
 #. type: Plain text
 #: en/git-restore.adoc:178
 #, priority:280
 msgid "Note the quotes around `*.c`. The file `hello.c` will also be restored, even though it is no longer in the working tree, because the file globbing is used to match entries in the index (not in the working tree by the shell)."
-msgstr ""
+msgstr "Observa las comillas que rodean a `*.c`. El fichero `hello.c` también será restaurado, incluso si ya no esta en el árbol de trabajo, porque se usa glob para encontrar las entradas en el índice (mas no en el árbol de trabajo donde esta situado el intérprete de comandos)."
 
 #. type: Plain text
 #: en/git-restore.adoc:180
 #, priority:280
 msgid "To restore all files in the current directory"
-msgstr ""
+msgstr "Para restaurar todos los ficheros en el directorio actual"
 
 #. type: delimited block -
 #: en/git-restore.adoc:183
 #, no-wrap, priority:280
 msgid "$ git restore .\n"
-msgstr ""
+msgstr "$ git restore .\n"
 
 #. type: Plain text
 #: en/git-restore.adoc:187
 #, placeholders:'linkgit:gitglossary[7]', priority:280
 msgid "or to restore all working tree files with 'top' pathspec magic (see linkgit:gitglossary[7])"
-msgstr ""
+msgstr "o para restaurar todos los ficheros del árbol de trabajo con las especificación de ruta mágica 'top' (ver linkgit:gitglossary[7])"
 
 #. type: delimited block -
 #: en/git-restore.adoc:190
 #, no-wrap, priority:280
 msgid "$ git restore :/\n"
-msgstr ""
+msgstr "$ git restore :/\n"
 
 #. type: Plain text
 #: en/git-restore.adoc:194
 #, placeholders:'`HEAD`':'linkgit:git-reset[1]', priority:280
 msgid "To restore a file in the index to match the version in `HEAD` (this is the same as using linkgit:git-reset[1])"
-msgstr ""
+msgstr "Para restaurar un fichero en el índice para que coincida con la versión en `HEAD`(lo mismo que usar linkgit:git-reset[1])"
 
 #. type: delimited block -
 #: en/git-restore.adoc:197
 #, no-wrap, placeholders:'--staged', priority:280
 msgid "$ git restore --staged hello.c\n"
-msgstr ""
+msgstr "$ git restore --staged hello.c\n"
 
 #. type: Plain text
 #: en/git-restore.adoc:201
 #, placeholders:'linkgit:git-checkout[1]', priority:280
 msgid "or you can restore both the index and the working tree (this is the same as using linkgit:git-checkout[1])"
-msgstr ""
+msgstr "o puedes restaurar ambos, el índice y el árbol de trabajo (esto es lo mismo que usar linkgit:git-checkout[1])"
 
 #. type: delimited block -
 #: en/git-restore.adoc:204
 #, no-wrap, placeholders:'--source=HEAD':'--staged':'--worktree', priority:280
 msgid "$ git restore --source=HEAD --staged --worktree hello.c\n"
-msgstr ""
+msgstr "$ git restore --source=HEAD --staged --worktree hello.c\n"
 
 #. type: Plain text
 #: en/git-restore.adoc:207
 #, priority:280
 msgid "or the short form which is more practical but less readable:"
-msgstr ""
+msgstr "o la forma corta, la cual es más práctica pero menos legible:"
 
 #. type: delimited block -
 #: en/git-restore.adoc:210
 #, no-wrap, priority:280
 msgid "$ git restore -s@ -SW hello.c\n"
-msgstr ""
+msgstr "$ git restore -s@ -SW hello.c\n"
 
 #. type: Plain text
 #: en/git-restore.adoc:216
@@ -53469,25 +53473,25 @@ msgstr ""
 #: en/git-rm.adoc:29
 #, placeholders:'`-f`':'`--cached`':'linkgit:git-sparse-checkout[1]', priority:280
 msgid "Remove files matching pathspec from the index, or from the working tree and the index. `git rm` will not remove a file from just your working directory. (There is no option to remove a file only from the working tree and yet keep it in the index; use `/bin/rm` if you want to do that.) The files being removed have to be identical to the tip of the branch, and no updates to their contents can be staged in the index, though that default behavior can be overridden with the `-f` option. When `--cached` is given, the staged content has to match either the tip of the branch or the file on disk, allowing the file to be removed from just the index. When sparse-checkouts are in use (see linkgit:git-sparse-checkout[1]), `git rm` will only remove paths within the sparse-checkout patterns."
-msgstr ""
+msgstr "Elimina ficheros que coincidan con la especificación de ruta, del índice o del árbol de trabajo y el índice. `git rm` no eliminará un fichero únicamente de tu directorio de trabajo. (No hay opción para eliminar un fichero sólo del árbol de trabajo y aún mantenerlo en el índice; si quieres hacer eso usa `/bin/rm`.) Los ficheros eliminados tienen que ser idénticos a la punta de la rama, y no se pueden presentar en el índice cambios a su contenido, aunque el comportamiento predeterminado puede ser anulado con la opción `-f`. Cuando se da `--cached`, el contenido presentado tiene que coincidir ya sea con la punta de la rama o con el fichero en disco, permitiendo que el fichero sea removido solamente del índice. Cuando se usan checkouts escasos (ver linkgit:git-sparse-checkout[1]), `git rm` solo eliminará las rutas dentro de los patrones del checkout escaso."
 
 #. type: Plain text
 #: en/git-rm.adoc:38
 #, placeholders:'`-r`', priority:280
 msgid "Files to remove. A leading directory name (e.g. `dir` to remove `dir/file1` and `dir/file2`) can be given to remove all files in the directory, and recursively all sub-directories, but this requires the `-r` option to be explicitly given."
-msgstr ""
+msgstr "Ficheros a remover. Se puede dar un nombre inicial de directorio (p. ej. `dir` para eliminar `dir/fichero1` y `dir/fichero2`) para remover todos los ficheros en un directorio y recursivamente todos sus subdirectorios, pero esto requiere que se de explícitamente la opción `-r`."
 
 #. type: Plain text
 #: en/git-rm.adoc:40
 #, priority:280
 msgid "The command removes only the paths that are known to Git."
-msgstr ""
+msgstr "El comando remueve solo las rutas conocidas por Git."
 
 #. type: Plain text
 #: en/git-rm.adoc:45
 #, priority:280
 msgid "File globbing matches across directory boundaries. Thus, given two directories `d` and `d2`, there is a difference between using `git rm 'd*'` and `git rm 'd/*'`, as the former will also remove all of directory `d2`."
-msgstr ""
+msgstr "Con expresiones glob se buscan ficheros coincidentes dentro de los límites de directorio. De este modo, dados dos directorios `d` y `d2`, hay una diferencia entre usar `git rm 'd*'` y `git rm 'd/*'`, ya que el primero también removerá todo lo del directorio `d2`."
 
 #. type: Plain text
 #: en/git-rm.adoc:47
@@ -53511,7 +53515,7 @@ msgstr "Realmente no elimina fichero alguno. Sólo muestra si existen en el índ
 #: en/git-rm.adoc:61
 #, priority:280
 msgid "Allow recursive removal when a leading directory name is given."
-msgstr ""
+msgstr "Permite remoción recursiva cuando se da un nombre inicial de directorio."
 
 #. type: Labeled list
 #: en/git-rm.adoc:67
