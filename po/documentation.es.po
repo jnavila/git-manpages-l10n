@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2025-11-11 22:08+0100\n"
-"PO-Revision-Date: 2025-12-31 01:00+0000\n"
+"PO-Revision-Date: 2026-01-16 20:21+0000\n"
 "Last-Translator: Salvador Peña <salvadorp74@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. type: Labeled list
 #: en/blame-options.adoc:1 en/git-instaweb.adoc:45 en/git-ls-remote.adoc:24 en/git-mailinfo.adoc:49 en/git-mailsplit.adoc:35 en/git-repack.adoc:185 en/git-status.adoc:31
@@ -53551,7 +53551,7 @@ msgstr ""
 #: en/git-rm.adoc:85
 #, priority:280
 msgid "`git rm` normally outputs one line (in the form of an `rm` command) for each file removed. This option suppresses that output."
-msgstr ""
+msgstr "`git rm` normalmente da salida a una línea (coma la de un comando `rm`) por cada fichero eliminado. Esta opción suprime esa salida."
 
 #. type: Plain text
 #: en/git-rm.adoc:93
@@ -53563,67 +53563,67 @@ msgstr "La especificación de ruta se pasa en _<fichero>_ y no como argumento. S
 #: en/git-rm.adoc:101
 #, no-wrap, priority:280
 msgid "REMOVING FILES THAT HAVE DISAPPEARED FROM THE FILESYSTEM"
-msgstr ""
+msgstr "ELIMINANDO FICHEROS QUE HAN DESAPARECIDO DEL SISTEMA DE ARCHIVOS"
 
 #. type: Plain text
 #: en/git-rm.adoc:106
 #, priority:280
 msgid "There is no option for `git rm` to remove from the index only the paths that have disappeared from the filesystem. However, depending on the use case, there are several ways that can be done."
-msgstr ""
+msgstr "No hay opción de `git rm` para eliminar del índice solo las rutas que han desaparecido del sistema de archivos. No obstante, dependiendo del caso de uso, hay varias formas de conseguirlo."
 
 #. type: Title ~
 #: en/git-rm.adoc:108
 #, no-wrap, priority:280
 msgid "Using ``git commit -a''"
-msgstr ""
+msgstr "Usando ``git commit -a``"
 
 #. type: Plain text
 #: en/git-rm.adoc:115
 #, priority:280
 msgid "If you intend that your next commit should record all modifications of tracked files in the working tree and record all removals of files that have been removed from the working tree with `rm` (as opposed to `git rm`), use `git commit -a`, as it will automatically notice and record all removals. You can also have a similar effect without committing by using `git add -u`."
-msgstr ""
+msgstr "Si intentas que tu confirmación siguiente registre todas las modificaciones de los ficheros rastreados en el árbol de trabajo y registre todas las eliminaciones de archivos del árbol de trabajo con `rm` (lo contrario de `git rm`), usa `git commit -a`, que automáticamente notará y registrará todas las eliminaciones. También puedes obtener un efecto similar sin confirmar con `git add -u`."
 
 #. type: Title ~
 #: en/git-rm.adoc:117
 #, no-wrap, priority:280
 msgid "Using ``git add -A''"
-msgstr ""
+msgstr "Usando ``git add -A``"
 
 #. type: Plain text
 #: en/git-rm.adoc:121
 #, priority:280
 msgid "When accepting a new code drop for a vendor branch, you probably want to record both the removal of paths and additions of new paths as well as modifications of existing paths."
-msgstr ""
+msgstr "Cuando se acepta un nuevo código para la rama de un proveedor, probablemente querrás registrar tanto las rutas eliminadas como las nuevas, así como las modificaciones a rutas existentes."
 
 #. type: Plain text
 #: en/git-rm.adoc:124
 #, priority:280
 msgid "Typically you would first remove all tracked files from the working tree using this command:"
-msgstr ""
+msgstr "Típicamente, eliminarías primero todos los ficheros rastreados del árbol de trabajo usando este comando:"
 
 #. type: delimited block -
 #: en/git-rm.adoc:127
 #, no-wrap, placeholders:'git ls-files', priority:280
 msgid "git ls-files -z | xargs -0 rm -f\n"
-msgstr ""
+msgstr "git ls-files -z | xargs -0 rm -f\n"
 
 #. type: Plain text
 #: en/git-rm.adoc:131
 #, priority:280
 msgid "and then untar the new code in the working tree. Alternately you could 'rsync' the changes into the working tree."
-msgstr ""
+msgstr "y luego descomprimir el código nuevo en el árbol de trabajo. Alternativamente podrías usar un `rsync` que modifique el contenido del árbol de trabajo."
 
 #. type: Plain text
 #: en/git-rm.adoc:134
 #, priority:280
 msgid "After that, the easiest way to record all removals, additions, and modifications in the working tree is:"
-msgstr ""
+msgstr "Después de eso, la forma más fácil de registrar todas las eliminaciones, adiciones y modificaciones en el árbol de trabajo es:"
 
 #. type: delimited block -
 #: en/git-rm.adoc:137
 #, no-wrap, priority:280
 msgid "git add -A\n"
-msgstr ""
+msgstr "git add -A\n"
 
 #. type: Plain text
 #: en/git-rm.adoc:140
@@ -53635,37 +53635,37 @@ msgstr "Ver linkgit:git-add[1]."
 #: en/git-rm.adoc:142
 #, no-wrap, priority:280
 msgid "Other ways"
-msgstr ""
+msgstr "Otras maneras"
 
 #. type: Plain text
 #: en/git-rm.adoc:147
 #, priority:280
 msgid "If all you really want to do is to remove from the index the files that are no longer present in the working tree (perhaps because your working tree is dirty so that you cannot use `git commit -a`), use the following command:"
-msgstr ""
+msgstr "Si lo que realmente quieres es eliminar del índice los ficheros que ya no están presentes en el árbol de trabajo (quizás porque tu árbol de trabajo esta sucio y ya no puedes usar `git commit -a`) usa el comando siguiente:"
 
 #. type: delimited block -
 #: en/git-rm.adoc:150
 #, no-wrap, placeholders:'--name-only':'--diff-filter=D':'--cached', priority:280
 msgid "git diff --name-only --diff-filter=D -z | xargs -0 git rm --cached\n"
-msgstr ""
+msgstr "git diff --name-only --diff-filter=D -z | xargs -0 git rm --cached\n"
 
 #. type: Plain text
 #: en/git-rm.adoc:163
 #, placeholders:'linkgit:gitmodules[5]':'`--cached`':'`-n`', priority:280
 msgid "Only submodules using a gitfile (which means they were cloned with a Git version 1.7.8 or newer) will be removed from the work tree, as their repository lives inside the `.git` directory of the superproject. If a submodule (or one of those nested inside it) still uses a `.git` directory, `git rm` moves the submodules git directory into the superprojects git directory to protect the submodule's history. If it exists the `submodule.<name>` section in the linkgit:gitmodules[5] file will also be removed and that file will be staged (unless `--cached` or `-n` are used)."
-msgstr ""
+msgstr "Sólo los submódulos que usan un gitfile (lo que significa que fueron clonados con Git versión 1.7.8 o superior) serán eliminados del árbol de trabajo, ya que su repositorio vive dentro del directorio `.git` del superproyecto. Si un submódulo (o uno de ellos anidado dentro de él) aún usa un directorio `.git`, `git rm` moverá el directorio git de submódulos al directorio git del superproyecto para proteger el historial del submódulo. Si ya existe la sección `submodule.<nombre>` en el fichero linkgit:gitmodules[5] también será eliminada y ese fichero será presentado (a menos que se use `--cached` o `-n`)."
 
 #. type: Plain text
 #: en/git-rm.adoc:169
 #, placeholders:'`HEAD`', priority:280
 msgid "A submodule is considered up to date when the `HEAD` is the same as recorded in the index, no tracked files are modified and no untracked files that aren't ignored are present in the submodule's work tree. Ignored files are deemed expendable and won't stop a submodule's work tree from being removed."
-msgstr ""
+msgstr "Un submódulo es considerado actualizado cuando la `HEAD` es la misma que la registrada en el índice, no hay ficheros rastreados modificados y no hay ficheros sin rastreo que no estén ignorados y estén presentes en el árbol de trabajo del submódulo. Los ficheros ignorados son considerados desechables y no impedirán su eliminación del árbol de trabajo de un submódulo."
 
 #. type: Plain text
 #: en/git-rm.adoc:173
 #, placeholders:'linkgit:git-submodule[1]':'linkgit:gitsubmodules[7]', priority:280
 msgid "If you only want to remove the local checkout of a submodule from your work tree without committing the removal, use linkgit:git-submodule[1] `deinit` instead. Also see linkgit:gitsubmodules[7] for details on submodule removal."
-msgstr ""
+msgstr "Si solo quieres eliminar el checkout local de un submódulo de tu árbol de trabajo sin confirmar la eliminación, usa linkgit:git-submodule[1] `deinit` en su lugar. También ver linkgit:gitsubmodules[7] para detalles sobre la eliminación de submódulos."
 
 #. type: Labeled list
 #: en/git-rm.adoc:176
@@ -53677,13 +53677,13 @@ msgstr "`git rm Documentacion/\\*.txt`"
 #: en/git-rm.adoc:179
 #, priority:280
 msgid "Removes all `*.txt` files from the index that are under the `Documentation` directory and any of its subdirectories."
-msgstr ""
+msgstr "Elimina del índice a todos los ficheros `*.txt` que estén en el directorio `Documentación` y cualquiera de sus subdirectorios."
 
 #. type: Plain text
 #: en/git-rm.adoc:183
 #, priority:280
 msgid "Note that the asterisk `*` is quoted from the shell in this example; this lets Git, and not the shell, expand the pathnames of files and subdirectories under the `Documentation/` directory."
-msgstr ""
+msgstr "Nótese que el asterisco `*` esta entrecomillado en el shell de este ejemplo; esto le permite a Git, y no al shell, expandir los nombres de rutas de ficheros y subdirectorios bajo el directorio `Documentación/`."
 
 #. type: Labeled list
 #: en/git-rm.adoc:184
