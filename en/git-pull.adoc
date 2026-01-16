@@ -37,8 +37,8 @@ You can also set the configuration options `pull.rebase`, `pull.squash`,
 or `pull.ff` with your preferred behaviour.
 
 If there's a merge conflict during the merge or rebase that you don't
-want to handle, you can safely abort it with `git merge --abort` or `git
---rebase abort`.
+want to handle, you can safely abort it with `git merge --abort` or
+`git rebase --abort`.
 
 OPTIONS
 -------
@@ -177,7 +177,7 @@ uses the refspec from the configuration or
 rules apply:
 
 . If `branch.<name>.merge` configuration for the current
-  branch `<name>` exists, that is the name of the branch at the
+  branch _<name>_ exists, that is the name of the branch at the
   remote site that is merged.
 
 . If the refspec is a globbing one, nothing is merged.
@@ -197,9 +197,9 @@ $ git pull
 $ git pull origin
 ------------------------------------------------
 +
-Normally the branch merged in is the HEAD of the remote repository,
-but the choice is determined by the branch.<name>.remote and
-branch.<name>.merge options; see linkgit:git-config[1] for details.
+Normally the branch merged in is the `HEAD` of the remote repository,
+but the choice is determined by the `branch.<name>.remote` and
+`branch.<name>.merge` options; see linkgit:git-config[1] for details.
 
 * Merge into the current branch the remote branch `next`:
 +
@@ -207,7 +207,7 @@ branch.<name>.merge options; see linkgit:git-config[1] for details.
 $ git pull origin next
 ------------------------------------------------
 +
-This leaves a copy of `next` temporarily in FETCH_HEAD, and
+This leaves a copy of `next` temporarily in `FETCH_HEAD`, and
 updates the remote-tracking branch `origin/next`.
 The same can be done by invoking fetch and merge:
 +
@@ -218,14 +218,14 @@ $ git merge origin/next
 
 
 If you tried a pull which resulted in complex conflicts and
-would want to start over, you can recover with 'git reset'.
+would want to start over, you can recover with `git reset`.
 
 
 include::transfer-data-leaks.adoc[]
 
 BUGS
 ----
-Using --recurse-submodules can only fetch new commits in already checked
+Using `--recurse-submodules` can only fetch new commits in already checked
 out submodules right now. When e.g. upstream added a new submodule in the
 just fetched commits of the superproject the submodule itself cannot be
 fetched, making it impossible to check out that submodule later without
