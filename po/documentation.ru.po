@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-01-17 22:43+0000\n"
+"PO-Revision-Date: 2026-01-18 09:52+0000\n"
 "Last-Translator: Andrei Stepanov <adem4ik@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -4021,7 +4021,7 @@ msgstr "merge.defaultToUpstream"
 #: en/config/merge.adoc:25
 #, priority:240
 msgid "If merge is called without any commit argument, merge the upstream branches configured for the current branch by using their last observed values stored in their remote-tracking branches. The values of the `branch.<current branch>.merge` that name the branches at the remote named by `branch.<current-branch>.remote` are consulted, and then they are mapped via `remote.<remote>.fetch` to their corresponding remote-tracking branches, and the tips of these tracking branches are merged. Defaults to true."
-msgstr ""
+msgstr "Если merge вызывается без аргумента коммита, выполняется слияние вышестоящих веток, настроенных для текущей ветки, с использованием их последних наблюдаемых значений, сохранённых в их удалённых отслеживающих ветках. Используются значения `branch.<текущая ветка>.merge`, которые называют ветки в удалённом репозитории, указанном в `branch.<текущая ветка>.remote`, а затем они отображаются через `remote.<удалённый>.fetch` в соответствующие удалённые отслеживающие ветки, и концы этих отслеживающих веток сливаются. По умолчанию true."
 
 #. type: Labeled list
 #: en/config/merge.adoc:26
@@ -4179,10 +4179,9 @@ msgstr "`compact`"
 
 #. type: Plain text
 #: en/config/merge.adoc:91
-#, fuzzy, placeholders:'--compact-summary':'ORIG_HEAD', priority:240
-#| msgid "`--compact-summary`"
+#, placeholders:'--compact-summary':'ORIG_HEAD', priority:240
 msgid "Show `git diff --compact-summary ORIG_HEAD`."
-msgstr "`--compact-summary`"
+msgstr "Показать `git diff --compact-summary ORIG_HEAD`."
 
 #. type: Plain text
 #: en/config/merge.adoc:96
@@ -9263,13 +9262,13 @@ msgstr ""
 #: en/git-add.adoc:22
 #, priority:300
 msgid "Add contents of new or changed files to the index. The \"index\" (also known as the \"staging area\") is what you use to prepare the contents of the next commit."
-msgstr ""
+msgstr "Добавляет содержимое новых или изменённых файлов в индекс. \"Индекс\" (также известный как \"область подготовки\") используется для подготовки содержимого следующего коммита."
 
 #. type: Plain text
 #: en/git-add.adoc:26
 #, priority:300
 msgid "When you run `git commit` without any other arguments, it will only commit staged changes. For example, if you've edited `file.c` and want to commit your changes to that file, you can run:"
-msgstr ""
+msgstr "Когда вы запускаете `git commit` без каких-либо других аргументов, он закоммитит только подготовленные изменения. Например, если вы отредактировали `file.c` и хотите закоммитить свои изменения в этот файл, вы можете выполнить:"
 
 #. type: Plain text
 #: en/git-add.adoc:29
@@ -9278,12 +9277,14 @@ msgid ""
 "   git add file.c\n"
 "   git commit\n"
 msgstr ""
+"   git add file.c\n"
+"   git commit\n"
 
 #. type: Plain text
 #: en/git-add.adoc:31
 #, priority:300
 msgid "You can also add only part of your changes to a file with `git add -p`."
-msgstr ""
+msgstr "Вы также можете добавить только часть ваших изменений в файл с помощью `git add -p`."
 
 #. type: Plain text
 #: en/git-add.adoc:36
@@ -9301,7 +9302,7 @@ msgstr "Команда `git status` может быть использована
 #: en/git-add.adoc:44
 #, placeholders:'`--force`', priority:300
 msgid "The `git add` command will not add ignored files by default. You can use the `--force` option to add ignored files. If you specify the exact filename of an ignored file, `git add` will fail with a list of ignored files. Otherwise it will silently ignore the file."
-msgstr ""
+msgstr "Команда `git add` по умолчанию не добавляет игнорируемые файлы. Вы можете использовать параметр `--force` для добавления игнорируемых файлов. Если вы укажете точное имя игнорируемого файла, `git add` завершится ошибкой со списком игнорируемых файлов. В противном случае он будет молча игнорировать файл."
 
 #. type: Plain text
 #: en/git-add.adoc:47
@@ -11266,7 +11267,7 @@ msgstr ""
 #: en/git-archimport.adoc:42
 #, priority:100
 msgid "For the initial import, 'git archimport' expects to find itself in an empty directory. To follow the development of a project that uses Arch, rerun 'git archimport' with the same parameters as the initial import to perform incremental imports."
-msgstr ""
+msgstr "Для первоначального импорта 'git archimport' ожидает найти себя в пустом каталоге. Для отслеживания разработки проекта, использующего Arch, запустите 'git archimport' с теми же параметрами, что и при первоначальном импорте, чтобы выполнить инкрементный импорт."
 
 #. type: Plain text
 #: en/git-archimport.adoc:49
@@ -24537,9 +24538,9 @@ msgstr "--always"
 
 #. type: Plain text
 #: en/git-describe.adoc:121 en/git-name-rev.adoc:86
-#, fuzzy, priority:260
+#, priority:260
 msgid "Show uniquely abbreviated commit object as fallback."
-msgstr "если не найдено, показать сокращенный номер редакции коммита"
+msgstr "Показать уникально сокращённый объект коммита в качестве резервного варианта."
 
 #. type: Plain text
 #: en/git-describe.adoc:126
@@ -36209,7 +36210,7 @@ msgstr "`--initial-branch=<имя-ветки>`"
 #: en/git-init.adoc:81
 #, priority:300
 msgid "Use _<branch-name>_ for the initial branch in the newly created repository. If not specified, fall back to the default name"
-msgstr "Использовать _<имя-ветки>_ в качестве исходной ветки вновь созданного репозитория. Если не указано, будет использовано имя по умолчанию."
+msgstr "Использовать _<имя-ветки>_ в качестве исходной ветки вновь созданного репозитория. Если не указано, будет использовано имя по умолчанию"
 
 #. type: Plain text
 #: en/git-init.adoc:83
@@ -37179,9 +37180,9 @@ msgstr "'git log' [<параметры>] [<диапазон-редакций>] [
 
 #. type: Plain text
 #: en/git-log.adoc:17
-#, fuzzy, priority:260
+#, priority:260
 msgid "Shows the commit logs."
-msgstr "Вывод истории коммитов"
+msgstr "Показывает журналы коммитов."
 
 #. type: Plain text
 #: en/git-log.adoc:25
@@ -67794,7 +67795,7 @@ msgstr "<<def_working_tree,Рабочий каталог>> является чи
 #: en/glossary-content.adoc:65
 #, no-wrap, placeholders:'[[def_commit]]', priority:310
 msgid "[[def_commit]]commit"
-msgstr "[[def_commit]]коммит, фиксировать изменения, коммитить (commit)"
+msgstr "[[def_commit]]коммит"
 
 #. type: Plain text
 #: en/glossary-content.adoc:72
@@ -74791,17 +74792,15 @@ msgstr ""
 
 #. type: Plain text
 #: en/rev-list-options.adoc:1108
-#, fuzzy, placeholders:'linkgit:git-log[1]':'linkgit:git-show[1]':'linkgit:git-whatchanged[1]', priority:260
-#| msgid "linkgit:git-rev-list[1], linkgit:git-show-branch[1], linkgit:git-merge[1]"
+#, placeholders:'linkgit:git-log[1]':'linkgit:git-show[1]':'linkgit:git-whatchanged[1]', priority:260
 msgid "linkgit:git-log[1], linkgit:git-show[1], and linkgit:git-whatchanged[1]."
-msgstr "linkgit:git-rev-list[1], linkgit:git-show-branch[1], linkgit:git-merge[1]"
+msgstr "linkgit:git-log[1], linkgit:git-show[1], and linkgit:git-whatchanged[1]."
 
 #. type: Plain text
 #: en/rev-list-options.adoc:1111
-#, fuzzy, placeholders:'linkgit:git-log[1]':'linkgit:git-show[1]', priority:260
-#| msgid "linkgit:git-switch[1], linkgit:git-restore[1]"
+#, placeholders:'linkgit:git-log[1]':'linkgit:git-show[1]', priority:260
 msgid "linkgit:git-log[1] and linkgit:git-show[1]."
-msgstr "linkgit:git-switch[1], linkgit:git-restore[1]"
+msgstr "linkgit:git-log[1] и linkgit:git-show[1]."
 
 #. type: Labeled list
 #: en/rev-list-options.adoc:1116
