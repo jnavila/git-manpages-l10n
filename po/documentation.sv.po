@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-01-20 16:42+0000\n"
+"PO-Revision-Date: 2026-01-20 22:17+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -127,7 +127,7 @@ msgstr "--reverse <rev>..<rev>"
 #. type: Plain text
 #: en/blame-options.adoc:39
 msgid "Walk history forward instead of backward. Instead of showing the revision in which a line appeared, this shows the last revision in which a line has existed. This requires a range of revision like START..END where the path to blame exists in START. `git blame --reverse START` is taken as `git blame --reverse START..HEAD` for convenience."
-msgstr ""
+msgstr "Gå framåt istället för bakåt i historiken. Istället för att visa den version där en rad förekom, visar detta den senaste versionen där en rad har funnits. Detta kräver ett versionsintervall som START..SLUT där sökvägen att skylla finns i START. `git blame --reverse START` tas som `git blame --reverse START..HEAD` för enkelhetens skull."
 
 #. type: Labeled list
 #: en/blame-options.adoc:40 en/git-bisect.adoc:384 en/git-describe.adoc:122
@@ -139,7 +139,7 @@ msgstr "--first-parent"
 #. type: Plain text
 #: en/blame-options.adoc:45
 msgid "Follow only the first parent commit upon seeing a merge commit. This option can be used to determine when a line was introduced to a particular integration branch, rather than when it was introduced to the history overall."
-msgstr ""
+msgstr "Följ endast den första överordnade incheckning när en merge commit visas. Det här alternativet kan användas för att avgöra när en rad introducerades i en viss integrationsgren, snarare än när den introducerades i historiken överlag."
 
 #. type: Labeled list
 #: en/blame-options.adoc:46 en/diff-options.adoc:16 en/git-cat-file.adoc:54
@@ -173,7 +173,7 @@ msgstr "--line-porcelain"
 #. type: Plain text
 #: en/blame-options.adoc:54
 msgid "Show the porcelain format, but output commit information for each line, not just the first time a commit is referenced. Implies --porcelain."
-msgstr ""
+msgstr "Visa porslinsformatet, men mata ut incheckning-information för varje rad, inte bara första gången en incheckning refereras. Innebär --porcelain."
 
 #. type: Labeled list
 #: en/blame-options.adoc:55 en/git-pack-objects.adoc:185 en/git-svn.adoc:373
@@ -185,40 +185,40 @@ msgstr "--incremental"
 #. type: Plain text
 #: en/blame-options.adoc:58
 msgid "Show the result incrementally in a format designed for machine consumption."
-msgstr ""
+msgstr "Visa resultatet stegvis i ett format som är utformat för maskin-konsumtion."
 
 #. type: Labeled list
 #: en/blame-options.adoc:59 en/git-mailinfo.adoc:64
 #, no-wrap
 msgid "--encoding=<encoding>"
-msgstr ""
+msgstr "--encoding=<kodning>"
 
 #. type: Plain text
 #: en/blame-options.adoc:65
 msgid "Specifies the encoding used to output author names and commit summaries. Setting it to `none` makes blame output unconverted data. For more information see the discussion about encoding in the linkgit:git-log[1] manual page."
-msgstr ""
+msgstr "Anger kodningen som används för att mata ut författarnamn och inchecknings-sammanfattningar. Om den ställs in på `none` matas blame-data ut som okonverterad. För mer information, se diskussionen om kodning på manualsidan för linkgit:git-log[1]."
 
 #. type: Labeled list
 #: en/blame-options.adoc:66
 #, no-wrap
 msgid "--contents <file>"
-msgstr ""
+msgstr "--contents <fil>"
 
 #. type: Plain text
 #: en/blame-options.adoc:70
 msgid "Annotate using the contents from the named file, starting from <rev> if it is specified, and HEAD otherwise. You may specify '-' to make the command read from the standard input for the file contents."
-msgstr ""
+msgstr "Kommentera med innehållet från den namngivna filen, med början från <rev> om det anges, och HEAD annars. Du kan ange '-' för att få kommandot att läsas från standard in för filinnehållet."
 
 #. type: Labeled list
 #: en/blame-options.adoc:71
 #, no-wrap
 msgid "--date <format>"
-msgstr ""
+msgstr "--date <format>"
 
 #. type: Plain text
 #: en/blame-options.adoc:77
 msgid "Specifies the format used to output dates. If --date is not provided, the value of the blame.date config variable is used. If the blame.date config variable is also not set, the iso format is used. For supported values, see the discussion of the --date option at linkgit:git-log[1]."
-msgstr ""
+msgstr "Anger formatet som används för att mata ut datum. Om --date inte anges används värdet för konfigurationsvariabeln blame.date. Om konfigurationsvariabeln blame.date inte heller är inställd används iso-formatet. För värden som stöds, se diskussionen om alternativet --date på linkgit:git-log[1]."
 
 #. type: Labeled list
 #: en/blame-options.adoc:78 en/git-bundle.adoc:113 en/git-format-patch.adoc:432
@@ -239,61 +239,61 @@ msgstr "--no-progress"
 #. type: Plain text
 #: en/blame-options.adoc:85
 msgid "Progress status is reported on the standard error stream by default when it is attached to a terminal. This flag enables progress reporting even if not attached to a terminal. Can't use `--progress` together with `--porcelain` or `--incremental`."
-msgstr ""
+msgstr "Förloppsstatus rapporteras som standard i standardfelströmmen när den är ansluten till en terminal. Denna flagga aktiverar förloppsrapportering även om den inte är ansluten till en terminal. Det går inte att använda `--progress` tillsammans med `--porcelain` eller `--incremental`."
 
 #. type: Labeled list
 #: en/blame-options.adoc:86
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "-M[<num>]"
-msgstr ""
+msgstr "-M[<num>]"
 
 #. type: Plain text
 #: en/blame-options.adoc:96
 msgid "Detect moved or copied lines within a file. When a commit moves or copies a block of lines (e.g. the original file has A and then B, and the commit changes it to B and then A), the traditional 'blame' algorithm notices only half of the movement and typically blames the lines that were moved up (i.e. B) to the parent and assigns blame to the lines that were moved down (i.e. A) to the child commit. With this option, both groups of lines are blamed on the parent by running extra passes of inspection."
-msgstr ""
+msgstr "Identifiera flyttade eller kopierade rader i en fil. När en incheckning flyttar eller kopierar ett radblock (t.ex. originalfilen har A och sedan B, och incheckning ändrar det till B och sedan A), märker den traditionella \"skuld\"-algoritmen bara hälften av rörelsen och skyller vanligtvis de rader som flyttades upp (dvs. B) på föräldern och tilldelar skulden till de rader som flyttades ner (dvs. A) till barn-inchecking. Med det här alternativet skylls båda grupperna av rader på föräldern genom att köra extra inspektionsomgångar."
 
 #. type: Plain text
 #: en/blame-options.adoc:101
 msgid "<num> is optional but it is the lower bound on the number of alphanumeric characters that Git must detect as moving/copying within a file for it to associate those lines with the parent commit. The default value is 20."
-msgstr ""
+msgstr "<num> är valfritt men det är den nedre gränsen för antalet alfanumeriska tecken som Git måste upptäcka som flytt/kopiering inom en fil för att dessa rader ska associeras med den överordnade incheckning. Standardvärdet är 20."
 
 #. type: Labeled list
 #: en/blame-options.adoc:102
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "-C[<num>]"
-msgstr ""
+msgstr "-C[<num>]"
 
 #. type: Plain text
 #: en/blame-options.adoc:111
 msgid "In addition to `-M`, detect lines moved or copied from other files that were modified in the same commit. This is useful when you reorganize your program and move code around across files. When this option is given twice, the command additionally looks for copies from other files in the commit that creates the file. When this option is given three times, the command additionally looks for copies from other files in any commit."
-msgstr ""
+msgstr "Utöver `-M`, upptäcker rader som flyttats eller kopierats från andra filer som har ändrats i samma incheckning. Detta är användbart när du omorganiserar ditt program och flyttar kod mellan filer. När det här alternativet anges två gånger letar kommandot dessutom efter kopior från andra filer i den incheckning som skapar filen. När det här alternativet anges tre gånger letar kommandot dessutom efter kopior från andra filer i valfri incheckning."
 
 #. type: Plain text
 #: en/blame-options.adoc:118
 msgid "<num> is optional but it is the lower bound on the number of alphanumeric characters that Git must detect as moving/copying between files for it to associate those lines with the parent commit. And the default value is 40. If there are more than one `-C` options given, the <num> argument of the last `-C` will take effect."
-msgstr ""
+msgstr "<num> är valfritt men det är den nedre gränsen för antalet alfanumeriska tecken som Git måste upptäcka vid flyttning/kopiering mellan filer för att dessa rader ska associeras med den överordnade incheckningen. Och standardvärdet är 40. Om det finns fler än ett `-C`-alternativ angivet, kommer <num>-argumentet för det sista `-C` att gälla."
 
 #. type: Labeled list
 #: en/blame-options.adoc:119
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "--ignore-rev <rev>"
-msgstr ""
+msgstr "--ignore-rev <rev>"
 
 #. type: Plain text
 #: en/blame-options.adoc:131
 msgid "Ignore changes made by the revision when assigning blame, as if the change never happened. Lines that were changed or added by an ignored commit will be blamed on the previous commit that changed that line or nearby lines. This option may be specified multiple times to ignore more than one revision. If the `blame.markIgnoredLines` config option is set, then lines that were changed by an ignored commit and attributed to another commit will be marked with a `?` in the blame output. If the `blame.markUnblamableLines` config option is set, then those lines touched by an ignored commit that we could not attribute to another revision are marked with a '*'. In the porcelain modes, we print 'ignored' and 'unblamable' on a newline respectively."
-msgstr ""
+msgstr "Ignorera ändringar gjorda av revisionen när du tilldelar skuld, som om ändringen aldrig inträffade. Rader som ändrades eller lades till av en ignorerad incheckning kommer att skyllas på den föregående incheckning som ändrade den raden eller närliggande rader. Det här alternativet kan anges flera gånger för att ignorera mer än en revision. Om konfigurationsalternativet `blame.markIgnoredLines` är aktiverat, kommer rader som ändrades av en ignorerad incheckning och tillskrivits en annan incheckning att markeras med ett `?` i skuldutdata. Om konfigurationsalternativet `blame.markUnblamableLines` är aktiverat, markeras de rader som berörts av en ignorerad incheckning som vi inte kunde tillskriva en annan revision med ett '*'. I porslinslägena skriver vi 'ignored' respektive 'unblamable' på en nyrad."
 
 #. type: Labeled list
 #: en/blame-options.adoc:132
 #, no-wrap
 msgid "--ignore-revs-file <file>"
-msgstr ""
+msgstr "--ignore-revs-file <fil>"
 
 #. type: Plain text
 #: en/blame-options.adoc:138
 msgid "Ignore revisions listed in `file`, which must be in the same format as an `fsck.skipList`. This option may be repeated, and these files will be processed after any files specified with the `blame.ignoreRevsFile` config option. An empty file name, `\"\"`, will clear the list of revs from previously processed files."
-msgstr ""
+msgstr "Ignorera revisioner som listas i `fil`, vilka måste ha samma format som en `fsck.skipList`. Detta alternativ kan upprepas, och dessa filer kommer att bearbetas efter alla filer som angetts med konfigurationsalternativet `blame.ignoreRevsFile`. Ett tomt filnamn, `\"\"`, rensar listan över revideringar från tidigare bearbetade filer."
 
 #. type: Labeled list
 #: en/blame-options.adoc:139
@@ -305,7 +305,7 @@ msgstr "--color-lines"
 #. type: Plain text
 #: en/blame-options.adoc:144
 msgid "Color line annotations in the default format differently if they come from the same commit as the preceding line. This makes it easier to distinguish code blocks introduced by different commits. The color defaults to cyan and can be adjusted using the `color.blame.repeatedLines` config option."
-msgstr ""
+msgstr "Färglägg radannoteringar i standardformatet annorlunda om de kommer från samma incheckning som föregående rad. Detta gör det enklare att skilja kodblock som introduceras av olika incheckningar. Standardfärgen är cyan och kan justeras med konfigurationsalternativet `color.blame.repeatedLines`."
 
 #. type: Labeled list
 #: en/blame-options.adoc:145
@@ -317,7 +317,7 @@ msgstr "--color-by-age"
 #. type: Plain text
 #: en/blame-options.adoc:149
 msgid "Color line annotations depending on the age of the line in the default format. The `color.blame.highlightRecent` config option controls what color is used for each range of age."
-msgstr ""
+msgstr "Färglägg linjeannoteringar beroende på linjens ålder i standardformatet. Konfigurationsalternativet `color.blame.highlightRecent` styr vilken färg som används för varje åldersintervall."
 
 #. type: Labeled list
 #: en/blame-options.adoc:150 en/git-archimport.adoc:71
@@ -331,7 +331,7 @@ msgstr "-h"
 #. type: Plain text
 #: en/blame-options.adoc:151
 msgid "Show help message."
-msgstr ""
+msgstr "Visa hjälpmeddelande."
 
 #. type: Plain text
 #: en/cmds-ancillaryinterrogators.adoc:1 en/git-blame.adoc:257
@@ -439,7 +439,7 @@ msgstr "linkgit:git-instaweb[1]"
 #. type: Plain text
 #: en/cmds-ancillaryinterrogators.adoc:27
 msgid "Instantly browse your working repository in gitweb."
-msgstr "Bläddra omedelbart i din arbets-förvar med gitweb."
+msgstr "Bläddra omedelbart i din arbets-repo med gitweb."
 
 #. type: Labeled list
 #: en/cmds-ancillaryinterrogators.adoc:28
@@ -451,7 +451,7 @@ msgstr "linkgit:git-merge-tree[1]"
 #. type: Plain text
 #: en/cmds-ancillaryinterrogators.adoc:30
 msgid "Perform merge without touching index or working tree."
-msgstr "Utför sammanslagning utan att röra index eller arbetsträd."
+msgstr "Utför sammanslagning utan att röra index eller arbetande träd."
 
 #. type: Labeled list
 #: en/cmds-ancillaryinterrogators.adoc:31
@@ -547,7 +547,7 @@ msgstr "linkgit:git-config[1]"
 #. type: Plain text
 #: en/cmds-ancillarymanipulators.adoc:3
 msgid "Get and set repository or global options."
-msgstr "Hämta och ange förvar eller globala flaggor."
+msgstr "Hämta och ange repo eller globala flaggor."
 
 #. type: Plain text
 #: en/cmds-ancillarymanipulators.adoc:4 en/git-fast-import.adoc:1659
@@ -607,7 +607,7 @@ msgstr "linkgit:git-pack-refs[1]"
 #. type: Plain text
 #: en/cmds-ancillarymanipulators.adoc:18
 msgid "Pack heads and tags for efficient repository access."
-msgstr "Packa huvuden och taggar för effektiv förvars-åtkomst."
+msgstr "Packa huvuden och taggar för effektiv repo-åtkomst."
 
 #. type: Labeled list
 #: en/cmds-ancillarymanipulators.adoc:19
@@ -655,7 +655,7 @@ msgstr "linkgit:git-remote[1]"
 #. type: Plain text
 #: en/cmds-ancillarymanipulators.adoc:30
 msgid "Manage set of tracked repositories."
-msgstr "Hantera uppsättningen av spårade förvar."
+msgstr "Hantera uppsättningen av spårade repon."
 
 #. type: Labeled list
 #: en/cmds-ancillarymanipulators.adoc:31
@@ -829,7 +829,7 @@ msgstr "linkgit:git-archimport[1]"
 #. type: Plain text
 #: en/cmds-foreignscminterface.adoc:3
 msgid "Import a GNU Arch repository into Git."
-msgstr "Importera ett GNU Arch-förvar till Git."
+msgstr "Importera ett GNU Arch-repo till Git."
 
 #. type: Labeled list
 #: en/cmds-foreignscminterface.adoc:4
@@ -889,7 +889,7 @@ msgstr "linkgit:git-p4[1]"
 #. type: Plain text
 #: en/cmds-foreignscminterface.adoc:18
 msgid "Import from and submit to Perforce repositories."
-msgstr "Importera från och skicka till Perforce-förvar."
+msgstr "Importera från och skicka till Perforce-repo."
 
 #. type: Labeled list
 #: en/cmds-foreignscminterface.adoc:19
@@ -938,7 +938,7 @@ msgstr "linkgit:git-svn[1]"
 #. type: Plain text
 #: en/cmds-foreignscminterface.adoc:30
 msgid "Bidirectional operation between a Subversion repository and Git."
-msgstr "Dubbelriktad operation mellan ett Subversion-förvar och Git."
+msgstr "Dubbelriktad operation mellan ett Subversion-repo och Git."
 
 #. type: Labeled list
 #: en/cmds-guide.adoc:1
@@ -1060,7 +1060,7 @@ msgstr "linkgit:gitsubmodules[7]"
 #. type: Plain text
 #: en/cmds-guide.adoc:30
 msgid "Mounting one repository inside another."
-msgstr "Montera ett förvar inuti ett annat."
+msgstr "Montera ett repo inuti ett annat."
 
 #. type: Labeled list
 #: en/cmds-guide.adoc:31
@@ -1194,7 +1194,7 @@ msgstr "linkgit:git-checkout[1]"
 #. type: Plain text
 #: en/cmds-mainporcelain.adoc:24
 msgid "Switch branches or restore working tree files."
-msgstr "Byt grenar eller återställ filer i arbetskatalog."
+msgstr "Byt grenar eller återställ filer i aarbetskatalog."
 
 #. type: Plain text
 #: en/cmds-mainporcelain.adoc:25 en/git-revert.adoc:165
@@ -1242,7 +1242,7 @@ msgstr "linkgit:git-clone[1]"
 #. type: Plain text
 #: en/cmds-mainporcelain.adoc:36
 msgid "Clone a repository into a new directory."
-msgstr "Klona ett förvar till en ny katalog."
+msgstr "Klona ett repo till en ny katalog."
 
 #. type: Labeled list
 #: en/cmds-mainporcelain.adoc:37
@@ -1254,7 +1254,7 @@ msgstr "linkgit:git-commit[1]"
 #. type: Plain text
 #: en/cmds-mainporcelain.adoc:39
 msgid "Record changes to the repository."
-msgstr "Registrera ändringar i förvaret."
+msgstr "Registrera ändringar i repot."
 
 #. type: Labeled list
 #: en/cmds-mainporcelain.adoc:40
@@ -1290,7 +1290,7 @@ msgstr "linkgit:git-fetch[1]"
 #. type: Plain text
 #: en/cmds-mainporcelain.adoc:48
 msgid "Download objects and refs from another repository."
-msgstr "Ladda ner objekt och referenser från ett annat förvar."
+msgstr "Ladda ner objekt och referenser från ett annat repo."
 
 #. type: Labeled list
 #: en/cmds-mainporcelain.adoc:49
@@ -1314,7 +1314,7 @@ msgstr "linkgit:git-gc[1]"
 #. type: Plain text
 #: en/cmds-mainporcelain.adoc:54
 msgid "Cleanup unnecessary files and optimize the local repository."
-msgstr "Rensa bort onödiga filer och optimera det lokala förvaret."
+msgstr "Rensa bort onödiga filer och optimera det lokala repo."
 
 #. type: Labeled list
 #: en/cmds-mainporcelain.adoc:55
@@ -1350,7 +1350,7 @@ msgstr "linkgit:git-init[1]"
 #. type: Plain text
 #: en/cmds-mainporcelain.adoc:63
 msgid "Create an empty Git repository or reinitialize an existing one."
-msgstr "Skapa ett tomt Git-förvar eller initieraom ett befintligt."
+msgstr "Skapa ett tomt Git-repo eller initieraom ett befintligt."
 
 #. type: Plain text
 #: en/cmds-mainporcelain.adoc:64 en/git-range-diff.adoc:310
@@ -1424,7 +1424,7 @@ msgstr "linkgit:git-pull[1]"
 #. type: Plain text
 #: en/cmds-mainporcelain.adoc:81
 msgid "Fetch from and integrate with another repository or a local branch."
-msgstr "Hämta från och integrera med annat förvar eller en lokal gren."
+msgstr "Hämta från och integrera med annat repo eller en lokal gren."
 
 #. type: Labeled list
 #: en/cmds-mainporcelain.adoc:82
@@ -1640,12 +1640,12 @@ msgstr "Git-repo bläddrade."
 #: en/cmds-mainporcelain.adoc:133
 #, no-wrap
 msgid "linkgit:scalar[1]"
-msgstr ""
+msgstr "linkgit:scalar[1]"
 
 #. type: Plain text
 #: en/cmds-mainporcelain.adoc:135
 msgid "A tool for managing large Git repositories."
-msgstr "Ett verktyg för att hantera stora Git-förvar."
+msgstr "Ett verktyg för att hantera stora Git-repo."
 
 #. type: Labeled list
 #: en/cmds-plumbinginterrogators.adoc:1
@@ -1657,7 +1657,7 @@ msgstr "linkgit:git-cat-file[1]"
 #. type: Plain text
 #: en/cmds-plumbinginterrogators.adoc:3
 msgid "Provide contents or details of repository objects."
-msgstr "Tillhandahåll innehåll eller detaljer om objekt i förvaret."
+msgstr "Tillhandahåll innehåll eller detaljer om objekt i repo."
 
 #. type: Labeled list
 #: en/cmds-plumbinginterrogators.adoc:4
@@ -1741,7 +1741,7 @@ msgstr "linkgit:git-for-each-repo[1]"
 #. type: Plain text
 #: en/cmds-plumbinginterrogators.adoc:24
 msgid "Run a Git command on a list of repositories."
-msgstr "Kör ett Git-kommando på en lista över förvar."
+msgstr "Kör ett Git-kommando på en lista över repo."
 
 #. type: Labeled list
 #: en/cmds-plumbinginterrogators.adoc:25
@@ -2692,111 +2692,111 @@ msgstr "Ange versioner och intervall i Git"
 #: en/config.adoc:2 en/git-worktree.adoc:321
 #, no-wrap
 msgid "CONFIGURATION FILE"
-msgstr ""
+msgstr "KONFIGURATIONSFIL"
 
 #. type: Plain text
 #: en/config.adoc:12
 msgid "The Git configuration file contains a number of variables that affect the Git commands' behavior. The files `.git/config` and optionally `config.worktree` (see the \"CONFIGURATION FILE\" section of linkgit:git-worktree[1]) in each repository are used to store the configuration for that repository, and `$HOME/.gitconfig` is used to store a per-user configuration as fallback values for the `.git/config` file. The file `/etc/gitconfig` can be used to store a system-wide default configuration."
-msgstr ""
+msgstr "Git-konfigurationsfilen innehåller ett antal variabler som påverkar Git-kommandonas beteende. Filerna `.git/config` och eventuellt `config.worktree` (se avsnittet \"KONFIGURATIONSFIL\" i linkgit:git-worktree[1]) i varje repository används för att lagra konfigurationen för det repositoriet, och `$HOME/.gitconfig` används för att lagra en konfiguration per användare som reservvärden för `.git/config`-filen. Filen `/etc/gitconfig` kan användas för att lagra en systemomfattande standardkonfiguration."
 
 #. type: Plain text
 #: en/config.adoc:21
 msgid "The configuration variables are used by both the Git plumbing and the porcelain commands. The variables are divided into sections, wherein the fully qualified variable name of the variable itself is the last dot-separated segment and the section name is everything before the last dot. The variable names are case-insensitive, allow only alphanumeric characters and `-`, and must start with an alphabetic character. Some variables may appear multiple times; we say then that the variable is multivalued."
-msgstr ""
+msgstr "Konfigurationsvariablerna används av både Git Plumbing- och Porcelain-kommandona. Variablerna är indelade i sektioner, där det fullständigt kvalificerade variabelnamnet av  variabeln själv är det sista punktseparerade segmentet och sektionsnamnet är allt före den sista punkten. Variabelnamnen är Skiftlägesoberoende, tillåter endast alfanumeriska tecken och `-`, och måste börja med ett alfabetiskt tecken. Vissa variabler kan förekomma flera gånger; vi säger då att variabeln är flervärdig."
 
 #. type: Title ~
 #: en/config.adoc:23
 #, no-wrap
 msgid "Syntax"
-msgstr ""
+msgstr "Syntax"
 
 #. type: Plain text
 #: en/config.adoc:29
 msgid "The syntax is fairly flexible and permissive. Whitespace characters, which in this context are the space character (SP) and the horizontal tabulation (HT), are mostly ignored. The '#' and ';' characters begin comments to the end of line. Blank lines are ignored."
-msgstr ""
+msgstr "Syntaxen är ganska flexibel och tillåtande. Blanktecken, som i detta sammanhang är mellanslagstecknet (SP) och horisontell tabuleringstecken (HT), ignoreras oftast. Tecknen '#' och ';' börjar kommentarer till slutet av raden. Tomma rader ignoreras."
 
 #. type: Plain text
 #: en/config.adoc:36
 msgid "The file consists of sections and variables. A section begins with the name of the section in square brackets and continues until the next section begins. Section names are case-insensitive. Only alphanumeric characters, `-` and `.` are allowed in section names. Each variable must belong to some section, which means that there must be a section header before the first setting of a variable."
-msgstr ""
+msgstr "Filen består av sektioner och variabler. Ett avsnitt börjar med avsnittets namn inom hakparenteser och fortsätter tills nästa avsnitt börjar. Sektionsnamn är inte skiftlägeskänsliga. Endast alfanumeriska tecken, `-` och `.` är tillåtna i sektionsnamn. Varje variabel måste tillhöra ett avsnitt, vilket innebär att det måste finnas en sektionsrubrik före den första inställningen av en variabel."
 
 #. type: Plain text
 #: en/config.adoc:40
 msgid "Sections can be further divided into subsections. To begin a subsection put its name in double quotes, separated by space from the section name, in the section header, like in the example below:"
-msgstr ""
+msgstr "Avsnitt kan vidare delas in i underavsnitt. För att börja ett underavsnitt, skriv dess namn inom dubbla citationstecken, separerade med mellanslag från avsnittsnamnet, i avsnittsrubriken, som i exemplet nedan:"
 
 #. type: delimited block -
 #: en/config.adoc:43
 #, no-wrap
 msgid "\t[section \"subsection\"]\n"
-msgstr ""
+msgstr "\t[section \"underavsnitt\"]\n"
 
 #. type: Plain text
 #: en/config.adoc:54
 msgid "Subsection names are case sensitive and can contain any characters except newline and the null byte. Doublequote `\"` and backslash can be included by escaping them as `\\\"` and `\\\\`, respectively. Backslashes preceding other characters are dropped when reading; for example, `\\t` is read as `t` and `\\0` is read as `0`. Section headers cannot span multiple lines. Variables may belong directly to a section or to a given subsection. You can have `[section]` if you have `[section \"subsection\"]`, but you don't need to."
-msgstr ""
+msgstr "Namn på underavsnitt är skiftlägeskänsliga och kan innehålla vilka tecken som helst förutom nyrad och nullbyte. Dubbelcitat `\"` och bakåtsnedstreck kan inkluderas genom att använda escape-tecken som `\\\"` respektive `\\\\`. Bakåtsnedstreck som föregår andra tecken tas bort vid läsning; till exempel läses `\\t` som `t` och `\\0` läses som `0`. Avsnittsrubriker kan inte sträcka sig över flera rader. Variabler kan tillhöra direkt ett avsnitt eller ett givet underavsnitt. Du kan ha `[avsnitt]` om du har `[avsnitt \"underavsnitt\"]`, men du behöver inte ha det."
 
 #. type: Plain text
 #: en/config.adoc:59
 msgid "There is also a deprecated `[section.subsection]` syntax. With this syntax, the subsection name is converted to lower-case and is also compared case sensitively. These subsection names follow the same restrictions as section names."
-msgstr ""
+msgstr "Det finns också en föråldrad syntax `[section.subsection]`. Med denna syntax konverteras underavdelningsnamnet till gemener och jämförs även med gemener/skiftlägeskänslighet. Dessa underavdelningsnamn följer samma begränsningar som sektionsnamn."
 
 #. type: Plain text
 #: en/config.adoc:66
 msgid "All the other lines (and the remainder of the line after the section header) are recognized as setting variables, in the form 'name = value' (or just 'name', which is a short-hand to say that the variable is the boolean \"true\"). The variable names are case-insensitive, allow only alphanumeric characters and `-`, and must start with an alphabetic character."
-msgstr ""
+msgstr "Alla andra rader (och resten av raden efter avsnittsrubriken) känns igen som inställningsvariabler i formen 'namn = värde' (eller bara 'namn', vilket är en förkortning för att variabeln är den booleska \"sant\"). Variabelnamnen är skiftlägesoberoende, tillåter endast alfanumeriska tecken och `-` och måste börja med ett alfabetiskt tecken."
 
 #. type: Plain text
 #: en/config.adoc:73
 msgid "Whitespace characters surrounding `name`, `=` and `value` are discarded. Internal whitespace characters within 'value' are retained verbatim. Comments starting with either `#` or `;` and extending to the end of line are discarded. A line that defines a value can be continued to the next line by ending it with a backslash (`\\`); the backslash and the end-of-line characters are discarded."
-msgstr ""
+msgstr "Mellanslag som omger `name`, `=` och `value` kasseras. Interna mellanslag inom 'value' behålls ordagrant. Kommentarer som börjar med antingen `#` eller `;` och fortsätter till slutet av raden kasseras. En rad som definierar ett värde kan fortsätta till nästa rad genom att avsluta den med ett omvänt snedstreck (`\\`); det bakåtsnedstreck och radslutstecknen kasseras."
 
 #. type: Plain text
 #: en/config.adoc:78
 msgid "If `value` needs to contain leading or trailing whitespace characters, it must be enclosed in double quotation marks (`\"`). Inside double quotation marks, double quote (`\"`) and backslash (`\\`) characters must be escaped: use `\\\"` for `\"` and `\\\\` for `\\`."
-msgstr ""
+msgstr "Om `value` behöver innehålla inledande eller efterföljande blanksteg måste det omges av dubbla citattecken (`\"`). Inom dubbla citattecken måste dubbla citattecken (`\"`) och omvänt snedstreck (`\\`) omges av escape-tecken: använd `\\`` för `\"` och `\\\\` för `\\`."
 
 #. type: Plain text
 #: en/config.adoc:83
 msgid "The following escape sequences (beside `\\\"` and `\\\\`) are recognized: `\\n` for newline character (NL), `\\t` for horizontal tabulation (HT, TAB) and `\\b` for backspace (BS). Other char escape sequences (including octal escape sequences) are invalid."
-msgstr ""
+msgstr "Följande escape-sekvenser (förutom `\\\"` och `\\\\`) känns igen: `\\n` för nyradstecken (NL), `\\t` för horisontell tabulering (HT, TAB) och `\\b` för backsteg (BS). Andra tecken-escape-sekvenser (inklusive oktala escape-sekvenser) är ogiltiga."
 
 #. type: Title ~
 #: en/config.adoc:86
 #, no-wrap
 msgid "Includes"
-msgstr ""
+msgstr "Inkluderar"
 
 #. type: Plain text
 #: en/config.adoc:93
 msgid "The `include` and `includeIf` sections allow you to include config directives from another source. These sections behave identically to each other with the exception that `includeIf` sections may be ignored if their condition does not evaluate to true; see \"Conditional includes\" below."
-msgstr ""
+msgstr "Avsnitten `include` och `includeIf` låter dig inkludera konfigurationsdirektiv från en annan källa. Dessa avsnitt beter sig identiskt med varandra med undantaget att `includeIf`-avsnitt kan ignoreras om deras villkor inte utvärderas till sant; se \"Villkorliga inkluderingar\" nedan."
 
 #. type: Plain text
 #: en/config.adoc:98
 msgid "You can include a config file from another by setting the special `include.path` (or `includeIf.*.path`) variable to the name of the file to be included. The variable takes a pathname as its value, and is subject to tilde expansion. These variables can be given multiple times."
-msgstr ""
+msgstr "Du kan inkludera en konfigurationsfil från en annan genom att sätta den speciella variabeln `include.path` (eller `includeIf.*.path`) till namnet på den fil som ska inkluderas. Variabeln tar ett sökvägsnamn som värde och är föremål för tildeexpansion. Dessa variabler kan anges flera gånger."
 
 #. type: Plain text
 #: en/config.adoc:104
 msgid "The contents of the included file are inserted immediately, as if they had been found at the location of the include directive. If the value of the variable is a relative path, the path is considered to be relative to the configuration file in which the include directive was found. See below for examples."
-msgstr ""
+msgstr "Innehållet i den inkluderade filen infogas omedelbart, som om det hade hittats på platsen för include-direktivet. Om variabelns värde är en relativ sökväg anses sökvägen vara relativ till konfigurationsfilen där include-direktivet hittades. Se nedan för exempel."
 
 #. type: Title ~
 #: en/config.adoc:106
 #, no-wrap
 msgid "Conditional includes"
-msgstr ""
+msgstr "Villkorliga inkluderingar"
 
 #. type: Plain text
 #: en/config.adoc:111
 msgid "You can conditionally include a config file from another by setting an `includeIf.<condition>.path` variable to the name of the file to be included."
-msgstr ""
+msgstr "Du kan villkorligt inkludera en konfigurationsfil från en annan genom att ställa in variabeln `includeIf.<villkor>.path` i namnet på den fil som ska inkluderas."
 
 #. type: Plain text
 #: en/config.adoc:115
 msgid "The condition starts with a keyword followed by a colon and some data whose format and meaning depends on the keyword. Supported keywords are:"
-msgstr ""
+msgstr "Villkoret börjar med ett nyckelord följt av ett kolon och lite data vars format och betydelse beror på nyckelordet. Nyckelord som stöds är:"
 
 #. type: Labeled list
 #: en/config.adoc:116
@@ -2808,27 +2808,27 @@ msgstr "`gitdir`"
 #. type: Plain text
 #: en/config.adoc:120
 msgid "The data that follows the keyword `gitdir` and a colon is used as a glob pattern. If the location of the .git directory matches the pattern, the include condition is met."
-msgstr ""
+msgstr "Data som följer efter nyckelordet `gitdir` och ett kolon används som ett glob-mönster. Om platsen för .git-katalogen matchar mönstret är include-villkoret uppfyllt."
 
 #. type: Plain text
 #: en/config.adoc:126
 msgid "The .git location may be auto-discovered, or come from `$GIT_DIR` environment variable. If the repository is auto-discovered via a .git file (e.g. from submodules, or a linked worktree), the .git location would be the final location where the .git directory is, not where the .git file is."
-msgstr ""
+msgstr ".git-platsen kan vara auto-upptäckt, eller komma från miljövariabeln `$GIT_DIR`. Om arkivet auto-upptäckt via en .git-fil (t.ex. från undermoduler eller ett länkat arbetsträd), skulle .git-platsen vara den slutliga platsen där .git-katalogen finns, inte där .git-filen finns."
 
 #. type: Plain text
 #: en/config.adoc:130
 msgid "The pattern can contain standard globbing wildcards and two additional ones, `**/` and `/**`, that can match multiple path components. Please refer to linkgit:gitignore[5] for details. For convenience:"
-msgstr ""
+msgstr "Mönstret kan innehålla vanliga globbing-jokertecken och två ytterligare, `**/` och `/**`, som kan matcha flera sökvägskomponenter. Se linkgit:gitignore[5] för mer information. För enkelhetens skull:"
 
 #. type: Plain text
 #: en/config.adoc:133
 msgid "If the pattern starts with `~/`, `~` will be substituted with the content of the environment variable `HOME`."
-msgstr ""
+msgstr "Om mönstret börjar med `~/` kommer `~` att ersättas med innehållet i miljövariabeln `HOME`."
 
 #. type: Plain text
 #: en/config.adoc:136
 msgid "If the pattern starts with `./`, it is replaced with the directory containing the current config file."
-msgstr ""
+msgstr "Om mönstret börjar med `./` ersätts det med katalogen som innehåller den aktuella konfigurationsfilen."
 
 #. type: Plain text
 #: en/config.adoc:140
@@ -2838,7 +2838,7 @@ msgstr "Om mönstret inte börjar med vare sig `~/`, `./` eller `/`, kommer `**/
 #. type: Plain text
 #: en/config.adoc:144
 msgid "If the pattern ends with `/`, `**` will be automatically added. For example, the pattern `foo/` becomes `foo/**`. In other words, it matches \"foo\" and everything inside, recursively."
-msgstr ""
+msgstr "Om mönstret slutar med `/`, läggs `**` till automatiskt. Till exempel blir mönstret `foo/` till `foo/**`. Med andra ord matchar det \"foo\" och allt inuti, rekursivt."
 
 #. type: Labeled list
 #: en/config.adoc:145
@@ -2849,7 +2849,7 @@ msgstr "`gitdir`"
 #. type: Plain text
 #: en/config.adoc:148
 msgid "This is the same as `gitdir` except that matching is done case-insensitively (e.g. on case-insensitive file systems)"
-msgstr ""
+msgstr "Detta är samma sak som `gitdir` förutom att matchningen görs skiftlägesoberoende (t.ex. på filsystem som är skiftlägesoberoende)"
 
 #. type: Labeled list
 #: en/config.adoc:149
@@ -2861,135 +2861,180 @@ msgstr "`onbranch`"
 #. type: Plain text
 #: en/config.adoc:156
 msgid "The data that follows the keyword `onbranch` and a colon is taken to be a pattern with standard globbing wildcards and two additional ones, `**/` and `/**`, that can match multiple path components. If we are in a worktree where the name of the branch that is currently checked out matches the pattern, the include condition is met."
-msgstr ""
+msgstr "Data som följer nyckelordet `onbranch` och ett kolon tas som ett mönster med vanliga globbing-jokertecken och två ytterligare, `**/` och `/**`, som kan matcha flera sökvägskomponenter. Om vi befinner oss i ett arbetsträd där namnet på den gren som för närvarande är utcheckad matchar mönstret, är include-villkoret uppfyllt."
 
 #. type: Plain text
 #: en/config.adoc:162
 msgid "If the pattern ends with `/`, `**` will be automatically added. For example, the pattern `foo/` becomes `foo/**`. In other words, it matches all branches that begin with `foo/`. This is useful if your branches are organized hierarchically and you would like to apply a configuration to all the branches in that hierarchy."
-msgstr ""
+msgstr "Om mönstret slutar med `/` läggs `**` till automatiskt. Till exempel blir mönstret `foo/` till `foo/**`. Med andra ord matchar det alla grenar som börjar med `foo/`. Detta är användbart om dina grenar är organiserade hierarkiskt och du vill tillämpa en konfiguration på alla grenar i den hierarkin."
 
 #. type: Labeled list
 #: en/config.adoc:163
 #, no-wrap
 msgid "`hasconfig:remote.*.url`"
-msgstr ""
+msgstr "`hasconfig:remote.*.url`"
 
 #. type: Plain text
 #: en/config.adoc:171
 msgid "The data that follows this keyword and a colon is taken to be a pattern with standard globbing wildcards and two additional ones, `**/` and `/**`, that can match multiple components. The first time this keyword is seen, the rest of the config files will be scanned for remote URLs (without applying any values). If there exists at least one remote URL that matches this pattern, the include condition is met."
-msgstr ""
+msgstr "Data som följer efter detta nyckelord och ett kolon tas som ett mönster med vanliga globbing-jokertecken och två ytterligare, `**/` och `/**`, som kan matcha flera komponenter. Första gången detta nyckelord ses kommer resten av konfigurationsfilerna att skannas efter fjärr-URL:er (utan att tillämpa några värden). Om det finns minst en fjärr-URL som matchar detta mönster är inkluderingsvillkoret uppfyllt."
 
 #. type: Plain text
 #: en/config.adoc:174
 msgid "Files included by this option (directly or indirectly) are not allowed to contain remote URLs."
-msgstr ""
+msgstr "Filer som inkluderas av det här alternativet (direkt eller indirekt) får inte innehålla fjärr-URL:er."
 
 #. type: Plain text
 #: en/config.adoc:185
 msgid "Note that unlike other includeIf conditions, resolving this condition relies on information that is not yet known at the point of reading the condition. A typical use case is this option being present as a system-level or global-level config, and the remote URL being in a local-level config; hence the need to scan ahead when resolving this condition. In order to avoid the chicken-and-egg problem in which potentially-included files can affect whether such files are potentially included, Git breaks the cycle by prohibiting these files from affecting the resolution of these conditions (thus, prohibiting them from declaring remote URLs)."
-msgstr ""
+msgstr "Observera att till skillnad från andra includeIf-villkor, är lösningen av detta villkor beroende av information som ännu inte är känd vid tidpunkten för läsning av villkoret. Ett typiskt användningsfall är att detta alternativ finns som en konfiguration på systemnivå eller global nivå, och att fjärr-URL:en finns i en konfiguration på lokal nivå; därav behovet av att skanna framåt när detta villkor löses. För att undvika hönan-och-ägget-problemet där potentiellt inkluderade filer kan påverka huruvida sådana filer potentiellt inkluderas, bryter Git cykeln genom att förbjuda dessa filer att påverka lösningen av dessa villkor (och därmed förbjuda dem att deklarera fjärr-URL:er)."
 
 #. type: Plain text
 #: en/config.adoc:189
 msgid "As for the naming of this keyword, it is for forwards compatibility with a naming scheme that supports more variable-based include conditions, but currently Git only supports the exact keyword described above."
-msgstr ""
+msgstr "När det gäller namngivningen av detta nyckelord, så är det för framåtkompatibilitet med ett namngivningsschema som stöder mer variabelbaserade inkluderingsvillkor, men för närvarande stöder Git bara exakt det nyckelord som beskrivs ovan."
 
 #. type: Plain text
 #: en/config.adoc:191
 msgid "A few more notes on matching via `gitdir` and `gitdir/i`:"
-msgstr ""
+msgstr "Några fler anteckningar om matchning via `gitdir` och `gitdir/i`:"
 
 #. type: Plain text
 #: en/config.adoc:193
 msgid "Symlinks in `$GIT_DIR` are not resolved before matching."
-msgstr ""
+msgstr "Symlänkar i `$GIT_DIR` löses inte innan matchning."
 
 #. type: Plain text
 #: en/config.adoc:198
 msgid "Both the symlink & realpath versions of paths will be matched outside of `$GIT_DIR`. E.g. if ~/git is a symlink to /mnt/storage/git, both `gitdir:~/git` and `gitdir:/mnt/storage/git` will match."
-msgstr ""
+msgstr "Både symlänk- och realpath-versionerna av sökvägarna kommer att matchas utanför `$GIT_DIR`. T.ex. om ~/git är en symlänk till /mnt/storage/git, kommer både `gitdir:~/git` och `gitdir:/mnt/storage/git` att matcha."
 
 #. type: Plain text
 #: en/config.adoc:203
+#, fuzzy
 msgid "This was not the case in the initial release of this feature in v2.13.0, which only matched the realpath version. Configuration that wants to be compatible with the initial release of this feature needs to either specify only the realpath version, or both versions."
-msgstr ""
+msgstr "Detta var inte fallet i den första versionen av den här funktionen i v2.13.0, som bara matchade realpath-versionen. Konfiguration som vill vara kompatibel med den första versionen av den här funktionen måste antingen ange endast realpath-versionen, eller båda versionerna."
 
 #. type: Plain text
 #: en/config.adoc:206
 msgid "Note that \"../\" is not special and will match literally, which is unlikely what you want."
-msgstr ""
+msgstr "Observera att \"../\" inte är speciellt och kommer att matcha bokstavligt, vilket sannolikt inte är vad du vill ha."
 
 #. type: Title ~
 #: en/config.adoc:208 en/git-rev-parse.adoc:420 en/git-rev-parse.adoc:476
 #, no-wrap
 msgid "Example"
-msgstr ""
+msgstr "Exempel"
 
 #. type: delimited block -
 #: en/config.adoc:215
 #, no-wrap
 msgid "# Core variables\n[core]\n\t; Don't trust file modes\n\tfilemode = false\n"
 msgstr ""
+"# Kärnvariabler\n"
+"[core]\n"
+"\t; Lita inte på fillägen\n"
+"\tfilemode = false\n"
 
 #. type: delimited block -
 #: en/config.adoc:220
 #, no-wrap
 msgid "# Our diff algorithm\n[diff]\n\texternal = /usr/local/bin/diff-wrapper\n\trenames = true\n"
 msgstr ""
+"# Vår diff-algoritm\n"
+"[diff]\n"
+"\texternal = /usr/local/bin/diff-wrapper\n"
+"\trenames = true\n"
 
 #. type: delimited block -
 #: en/config.adoc:224
 #, no-wrap
 msgid "[branch \"devel\"]\n\tremote = origin\n\tmerge = refs/heads/devel\n"
 msgstr ""
+"[branch \"utveckling\"]\n"
+"\tremote = origin\n"
+"\tmerge = refs/heads/devel\n"
 
 #. type: delimited block -
 #: en/config.adoc:229
 #, no-wrap
 msgid "# Proxy settings\n[core]\n\tgitProxy=\"ssh\" for \"kernel.org\"\n\tgitProxy=default-proxy ; for the rest\n"
 msgstr ""
+"# Proxyinställningar\n"
+"[core]\n"
+"\tgitProxy=\"ssh\" for \"kernel.org\"\n"
+"\tgitProxy=default-proxy ; för resten\n"
 
 #. type: delimited block -
 #: en/config.adoc:234
 #, no-wrap
 msgid "[include]\n\tpath = /path/to/foo.inc ; include by absolute path\n\tpath = foo.inc ; find \"foo.inc\" relative to the current file\n\tpath = ~/foo.inc ; find \"foo.inc\" in your `$HOME` directory\n"
 msgstr ""
+"[include]\n"
+"\tpath = /path/to/foo.inc ; inkludera med absolut sökväg\n"
+"\tpath = foo.inc ; hitta \"foo.inc\" relativt till den aktuella filen\n"
+"\tpath = ~/foo.inc ; hitta \"foo.inc\" i din `$HOME`-katalog\n"
 
 #. type: delimited block -
 #: en/config.adoc:238
 #, no-wrap
 msgid "; include if $GIT_DIR is /path/to/foo/.git\n[includeIf \"gitdir:/path/to/foo/.git\"]\n\tpath = /path/to/foo.inc\n"
 msgstr ""
+"; inkludera om $GIT_DIR är /path/to/foo/.git\n"
+"[includeIf \"gitdir:/path/to/foo/.git\"]\n"
+"\tpath = /path/to/foo.inc\n"
 
 #. type: delimited block -
 #: en/config.adoc:242
 #, no-wrap
 msgid "; include for all repositories inside /path/to/group\n[includeIf \"gitdir:/path/to/group/\"]\n\tpath = /path/to/foo.inc\n"
 msgstr ""
+"; includera för alla repositories inuti /path/to/group\n"
+"[includeIf \"gitdir:/path/to/group/\"]\n"
+"\tpath = /path/to/foo.inc\n"
 
 #. type: delimited block -
 #: en/config.adoc:246
 #, no-wrap
 msgid "; include for all repositories inside $HOME/to/group\n[includeIf \"gitdir:~/to/group/\"]\n\tpath = /path/to/foo.inc\n"
 msgstr ""
+"; inkludera för alla arkiv i $HOME/to/group\n"
+"[includeIf \"gitdir:~/to/group/\"]\n"
+"\tpath = /path/to/foo.inc\n"
 
 #. type: delimited block -
 #: en/config.adoc:252
 #, no-wrap
 msgid "; relative paths are always relative to the including\n; file (if the condition is true); their location is not\n; affected by the condition\n[includeIf \"gitdir:/path/to/group/\"]\n\tpath = foo.inc\n"
 msgstr ""
+"; relativa sökvägar är alltid relativa till den inkluderande\n"
+"; filen (om villkoret är sant); deras plats påverkas inte\n"
+"; av villkoret\n"
+"[includeIf \"gitdir:/path/to/group/\"]\n"
+"\tpath = foo.inc\n"
 
 #. type: delimited block -
 #: en/config.adoc:257
 #, no-wrap
 msgid "; include only if we are in a worktree where foo-branch is\n; currently checked out\n[includeIf \"onbranch:foo-branch\"]\n\tpath = foo.inc\n"
 msgstr ""
+"; inkludera endast om vi är i ett arbetsträd där foo-branch är\n"
+"; för närvarande utcheckad\n"
+"[includeIf \"onbranch:foo-branch\"]\n"
+"\tpath = foo.inc\n"
 
 #. type: delimited block -
 #: en/config.adoc:265
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "; include only if a remote with the given URL exists (note\n; that such a URL may be provided later in a file or in a\n; file read after this file is read, as seen in this example)\n[includeIf \"hasconfig:remote.*.url:https://example.com/**\"]\n\tpath = foo.inc\n[remote \"origin\"]\n\turl = https://example.com/git\n"
 msgstr ""
+"; inkludera endast om en fjär med den angivna URL:en finns (observera\n"
+"; att en sådan URL kan tillhandahållas senare i en fil eller i en\n"
+"; fil som läses efter att denna fil har lästs, som ses i detta exempel)\n"
+"[includeIf \"hasconfig:remote.*.url:https://example.com/**\"]\n"
+"\tpath = foo.inc\n"
+"[remote \"origin\"]\n"
+"\turl = https://example.com/git\n"
 
 #. type: Title ~
 #: en/config.adoc:268
@@ -3000,18 +3045,18 @@ msgstr "Värde"
 #. type: Plain text
 #: en/config.adoc:273
 msgid "Values of many variables are treated as a simple string, but there are variables that take values of specific types and there are rules as to how to spell them."
-msgstr ""
+msgstr "Värden för många variabler behandlas som en enkel sträng, men det finns variabler som tar värden av specifika typer och det finns regler för hur man stavar dem."
 
 #. type: Labeled list
 #: en/config.adoc:274
 #, no-wrap
 msgid "boolean"
-msgstr ""
+msgstr "boolesk"
 
 #. type: Plain text
 #: en/config.adoc:279
 msgid "When a variable is said to take a boolean value, many synonyms are accepted for 'true' and 'false'; these are all case-insensitive."
-msgstr ""
+msgstr "När en variabel sägs anta ett booleskt värde accepteras många synonymer för 'sant' och 'falskt'; dessa är alla skiftlägesoberoende."
 
 #. type: Labeled list
 #: en/config.adoc:280
@@ -3022,34 +3067,34 @@ msgstr "träd"
 #. type: Plain text
 #: en/config.adoc:283
 msgid "Boolean true literals are `yes`, `on`, `true`, and `1`. Also, a variable defined without `= <value>` is taken as true."
-msgstr ""
+msgstr "Booleska sanna literaler är `yes`, `on`, `sant` och `1`. Dessutom tas en variabel definierad utan `= <value>` som sann."
 
 #. type: Labeled list
 #: en/config.adoc:284
 #, no-wrap
 msgid "false"
-msgstr ""
+msgstr "false"
 
 #. type: Plain text
 #: en/config.adoc:286
 msgid "Boolean false literals are `no`, `off`, `false`, `0` and the empty string."
-msgstr ""
+msgstr "Booleska falska literaler är `no`, `off`, `false`, `0` och den tomma strängen."
 
 #. type: Plain text
 #: en/config.adoc:290
 msgid "When converting a value to its canonical form using the `--type=bool` type specifier, 'git config' will ensure that the output is \"true\" or \"false\" (spelled in lowercase)."
-msgstr ""
+msgstr "När man konverterar ett värde till dess kanoniska form med typspecifikationen `--type=bool`, kommer `git config' att säkerställa att utdata är \"true\" eller \"false\" (stavat med gemener)."
 
 #. type: Labeled list
 #: en/config.adoc:291
 #, no-wrap
 msgid "integer"
-msgstr ""
+msgstr "heltal"
 
 #. type: Plain text
 #: en/config.adoc:295
 msgid "The value for many variables that specify various sizes can be suffixed with `k`, `M`,... to mean \"scale the number by 1024\", \"by 1024x1024\", etc."
-msgstr ""
+msgstr "Värdet för många variabler som anger olika storlekar kan ges suffix med `k`, `M`,... för att betyda \"skala talet med 1024\", \"med 1024x1024\", etc."
 
 #. type: Labeled list
 #: en/config.adoc:296
@@ -3061,79 +3106,80 @@ msgstr "color"
 #. type: Plain text
 #: en/config.adoc:300
 msgid "The value for a variable that takes a color is a list of colors (at most two, one for foreground and one for background) and attributes (as many as you want), separated by spaces."
-msgstr ""
+msgstr "Värdet för en variabel som tar en färg är en lista med färger (högst två, en för förgrund och en för bakgrund) och attribut (så många du vill), separerade med mellanslag."
 
 #. type: Plain text
 #: en/config.adoc:306
 msgid "The basic colors accepted are `normal`, `black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white` and `default`. The first color given is the foreground; the second is the background. All the basic colors except `normal` and `default` have a bright variant that can be specified by prefixing the color with `bright`, like `brightred`."
-msgstr ""
+msgstr "De accepterade grundfärgerna är `normal`, `black` (svart), `red` (röd), `green` (grön), `yellow` (gul), `blue` (blå), `magenta`, `cyan`, `white` (vit) and `default` (standard). Den första färgen som anges är förgrunden; den andra är bakgrunden. Alla grundfärger utom `normal` och `default` har en ljus variant som kan anges genom att prefixet `bright` (ljus) skrivs ut för färgen, som `brightred` (ljusröd)."
 
 #. type: Plain text
 #: en/config.adoc:310
 msgid "The color `normal` makes no change to the color. It is the same as an empty string, but can be used as the foreground color when specifying a background color alone (for example, \"normal red\")."
-msgstr ""
+msgstr "Färgen `normal` ändrar inte färgen. Den är samma som en tom sträng, men kan användas som förgrundsfärg när man anger enbart en bakgrundsfärg (till exempel \"normal red\" (normal röd))."
 
 #. type: Plain text
 #: en/config.adoc:314
 msgid "The color `default` explicitly resets the color to the terminal default, for example to specify a cleared background. Although it varies between terminals, this is usually not the same as setting to \"white black\"."
-msgstr ""
+msgstr "Färgen `standard` återställer explicit färgen till terminalens standardinställning, till exempel för att ange en ren bakgrund. Även om det varierar mellan terminaler är detta vanligtvis inte detsamma som att ställa in den på \"white black\" (vit svart)."
 
 #. type: Plain text
 #: en/config.adoc:320
 msgid "Colors may also be given as numbers between 0 and 255; these use ANSI 256-color mode (but note that not all terminals may support this). If your terminal supports it, you may also specify 24-bit RGB values as hex, like `#ff0ab3`, or 12-bit RGB values like `#f1b`, which is equivalent to the 24-bit color `#ff11bb`."
-msgstr ""
+msgstr "Färger kan också anges som siffror mellan 0 och 255; dessa använder ANSI 256-färgläge (men observera att inte alla terminaler stöder detta). Om din terminal stöder det kan du också ange 24-bitars RGB-värden som hexagoner, som `#ff0ab3`, eller 12-bitars RGB-värden som `#f1b`, vilket motsvarar 24-bitarsfärgen `#ff11bb`."
 
 #. type: Plain text
 #: en/config.adoc:327
 msgid "The accepted attributes are `bold`, `dim`, `ul`, `blink`, `reverse`, `italic`, and `strike` (for crossed-out or \"strikethrough\" letters). The position of any attributes with respect to the colors (before, after, or in between), doesn't matter. Specific attributes may be turned off by prefixing them with `no` or `no-` (e.g., `noreverse`, `no-ul`, etc)."
-msgstr ""
+msgstr "De accepterade attributen är `bold` (fet), `dim`, `ul` (understruken), `blink` (blinka), `reverse` (omvänd), `italic` (kursiv) och `strike` (för överstrukna eller genomstrukna bokstäver). Attributens position i förhållande till färgerna (före, efter eller däremellan) spelar ingen roll. Specifika attribut kan stängas av genom att prefixet `no` eller `no-` läggs till (t.ex. `noreverse`, `no-ul`, etc.).` och `strike` (för överstrukna eller genomstrukna bokstäver)."
 
 #. type: Plain text
 #: en/config.adoc:332
 msgid "The pseudo-attribute `reset` resets all colors and attributes before applying the specified coloring. For example, `reset green` will result in a green foreground and default background without any active attributes."
-msgstr ""
+msgstr "Pseudoattributet `reset` återställer alla färger och attribut innan den angivna färgen tillämpas. Till exempel kommer `reset green` att resultera i en grön förgrund och standardbakgrund utan några aktiva attribut."
 
 #. type: Plain text
 #: en/config.adoc:335
 msgid "An empty color string produces no color effect at all. This can be used to avoid coloring specific elements without disabling color entirely."
-msgstr ""
+msgstr "En tom färgsträng ger ingen färgeffekt alls. Detta kan användas för att undvika att färglägga specifika element utan att helt inaktivera färg."
 
 #. type: Plain text
 #: en/config.adoc:344
+#, fuzzy
 msgid "For git's pre-defined color slots, the attributes are meant to be reset at the beginning of each item in the colored output. So setting `color.decorate.branch` to `black` will paint that branch name in a plain `black`, even if the previous thing on the same output line (e.g. opening parenthesis before the list of branch names in `log --decorate` output) is set to be painted with `bold` or some other attribute. However, custom log formats may do more complicated and layered coloring, and the negated forms may be useful there."
-msgstr ""
+msgstr "För gits fördefinierade färgplatser är attributen avsedda att återställas i början av varje post i den färgade utdata. Så om du ställer in `color.decorate.branch` till `black` kommer grennamnet att målas i en vanlig `svart`, även om föregående sak på samma utdatarad (t.ex. inledande parentes före listan med grennamn i `log --decorate` utdata) är inställd på att målas med `bold` eller något annat attribut. Anpassade loggformat kan dock göra mer komplicerad och lager-på-lager-färgning, och de negerade formerna kan vara användbara där."
 
 #. type: Labeled list
 #: en/config.adoc:345
 #, no-wrap
 msgid "pathname"
-msgstr ""
+msgstr "sökvägsnamn"
 
 #. type: Plain text
 #: en/config.adoc:351
 msgid "A variable that takes a pathname value can be given a string that begins with \"`~/`\" or \"`~user/`\", and the usual tilde expansion happens to such a string: `~/` is expanded to the value of `$HOME`, and `~user/` to the specified user's home directory."
-msgstr ""
+msgstr "En variabel som tar ett sökvägsvärde kan ges en sträng som börjar med \"`~/`\" eller \"`~user/`\", och den vanliga tilde-expansionen sker för en sådan sträng: `~/` expanderas till värdet `$HOME` och `~user/` till den angivna användarens hemkatalog."
 
 #. type: Plain text
 #: en/config.adoc:360
 msgid "If a path starts with `%(prefix)/`, the remainder is interpreted as a path relative to Git's \"runtime prefix\", i.e. relative to the location where Git itself was installed. For example, `%(prefix)/bin/` refers to the directory in which the Git executable itself lives. If Git was compiled without runtime prefix support, the compiled-in prefix will be substituted instead. In the unlikely event that a literal path needs to be specified that should _not_ be expanded, it needs to be prefixed by `./`, like so: `./%(prefix)/bin`."
-msgstr ""
+msgstr "Om en sökväg börjar med `%(prefix)/` tolkas resten som en sökväg relativt till Gits \"runtime prefix\", d.v.s. relativt till platsen där Git självt installerades. Till exempel refererar `%(prefix)/bin/` till katalogen där själva Git-filen finns. Om Git kompilerades utan stöd för runtime prefix kommer det kompilerade prefixet att ersättas. I det osannolika fallet att en litteral sökväg behöver anges som _inte_ ska expanderas, måste den prefixas med `./`, så här: `./%(prefix)/bin`."
 
 #. type: Plain text
 #: en/config.adoc:363
 msgid "If prefixed with `:(optional)`, the configuration variable is treated as if it does not exist, if the named path does not exist."
-msgstr ""
+msgstr "Om prefixet `:(valfritt)` används behandlas konfigurationsvariabeln som om den inte existerar, om den namngivna sökvägen inte existerar."
 
 #. type: Title ~
 #: en/config.adoc:365
 #, no-wrap
 msgid "Variables"
-msgstr ""
+msgstr "Variabler"
 
 #. type: Plain text
 #: en/config.adoc:370
 msgid "Note that this list is non-comprehensive and not necessarily complete. For command-specific variables, you will find a more detailed description in the appropriate manual page."
-msgstr ""
+msgstr "Observera att den här listan inte är heltäckande och inte nödvändigtvis komplett. För kommandospecifika variabler hittar du en mer detaljerad beskrivning på motsvarande manualsida."
 
 #. type: Plain text
 #: en/config.adoc:375
@@ -3389,7 +3435,7 @@ msgstr ""
 #. type: Plain text
 #: en/config/diff.adoc:65
 msgid "Limit the width of the filename part in `--stat` output. If set, applies to all commands generating `--stat` output except `format-patch`."
-msgstr ""
+msgstr "Begränsa bredden på filnamnsdelen i `--stat`-utdata. Om angivet gäller det alla kommandon som genererar `--stat`-utdata förutom `format-patch`."
 
 #. type: Labeled list
 #: en/config/diff.adoc:66
@@ -3400,7 +3446,7 @@ msgstr ""
 #. type: Plain text
 #: en/config/diff.adoc:69
 msgid "Limit the width of the graph part in `--stat` output. If set, applies to all commands generating `--stat` output except `format-patch`."
-msgstr ""
+msgstr "Begränsa bredden på grafdelen i `--stat`-utdata. Om angivet gäller det alla kommandon som genererar `--stat`-utdata förutom `format-patch`."
 
 #. type: Labeled list
 #: en/config/diff.adoc:70
@@ -4230,7 +4276,7 @@ msgstr ""
 #. type: Plain text
 #: en/date-formats.adoc:23
 msgid "Time and date specified by the ISO 8601 standard, for example `2005-04-07T22:13:13`. The parser accepts a space instead of the `T` character as well. Fractional parts of a second will be ignored, for example `2005-04-07T22:13:13.019` will be treated as `2005-04-07T22:13:13`."
-msgstr ""
+msgstr "Tid och datum som anges av ISO 8601-standarden, till exempel `2005-04-07T22:13:13`. Parsern accepterar även ett mellanslag istället för tecknet `T`. Bråkdelar av en sekund kommer att ignoreras, till exempel `2005-04-07T22:13:13.019` kommer att behandlas som `2005-04-07T22:13:13`."
 
 #. type: Plain text
 #: en/date-formats.adoc:26
@@ -5376,7 +5422,7 @@ msgstr ""
 #. type: Plain text
 #: en/diff-options.adoc:217
 msgid "Generate a diffstat. By default, as much space as necessary will be used for the filename part, and the rest for the graph part. Maximum width defaults to terminal width, or 80 columns if not connected to a terminal, and can be overridden by _<width>_. The width of the filename part can be limited by giving another width _<name-width>_ after a comma or by setting `diff.statNameWidth=<name-width>`. The width of the graph part can be limited by using `--stat-graph-width=<graph-width>` or by setting `diff.statGraphWidth=<graph-width>`. Using `--stat` or `--stat-graph-width` affects all commands generating a stat graph, while setting `diff.statNameWidth` or `diff.statGraphWidth` does not affect `git format-patch`. By giving a third parameter _<count>_, you can limit the output to the first _<count>_ lines, followed by `...` if there are more."
-msgstr ""
+msgstr "Generera en diffstat. Som standard används så mycket utrymme som behövs för filnamnsdelen och resten för grafdelen. Maximal bredd är som standard terminalbredd, eller 80 kolumner om den inte är ansluten till en terminal, och kan åsidosättas av _<bredd>_. Bredden på filnamnsdelen kan begränsas genom att ge en annan bredd _<namnbredd>_ efter ett kommatecken eller genom att ställa in `diff.statNameWidth=<namnbredd>`. Bredden på grafdelen kan begränsas genom att använda `--stat-graph-width=<grafbredd>` eller genom att ställa in `diff.statGraphWidth=<grafbredd>`. Att använda `--stat` eller `--stat-graph-width` påverkar alla kommandon som genererar en statistisk graf, medan att ställa in `diff.statNameWidth` eller `diff.statGraphWidth` inte påverkar `git format-patch`. Genom att ange en tredje parameter _<count>_ kan du begränsa utdata till de första _<count>_ raderna, följt av `...` om det finns fler."
 
 #. type: Plain text
 #: en/diff-options.adoc:220
@@ -5393,7 +5439,7 @@ msgstr "`--compact-summary`"
 #. type: Plain text
 #: en/diff-options.adoc:228
 msgid "Output a condensed summary of extended header information such as file creations or deletions (\"new\" or \"gone\", optionally `+l` if it's a symlink) and mode changes (`+x` or `-x` for adding or removing executable bit respectively) in diffstat. The information is put between the filename part and the graph part. Implies `--stat`."
-msgstr ""
+msgstr "Skriv ut en komprimerad sammanfattning av utökad headerinformation, såsom skapande eller borttagning av filer (\"ny\" eller \"borta\", valfritt `+l` om det är en symbolisk länk) och lägesändringar (`+x` eller `-x` för att lägga till respektive ta bort en körbar bit) i diffstat. Informationen placeras mellan filnamnsdelen och grafdelen. Innebär `--stat`."
 
 #. type: Labeled list
 #: en/diff-options.adoc:229
@@ -17212,7 +17258,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-clone.adoc:117
 msgid "If the reference _<repository>_ is on the local machine, automatically setup `.git/objects/info/alternates` to obtain objects from the reference _<repository>_. Using an already existing repository as an alternate will require fewer objects to be copied from the repository being cloned, reducing network and local storage costs. When using the `--reference-if-able`, a non existing directory is skipped with a warning instead of aborting the clone."
-msgstr ""
+msgstr "Om referensen _<repo>_ finns på den lokala maskinen, konfigurera automatiskt `.git/objects/info/alternates` för att hämta objekt från referensen _<repo>_. Att använda ett redan befintligt repository som ett alternativ kräver att färre objekt kopieras från repository som klonas, vilket minskar nätverks- och lokallagringskostnader. När `--reference-if-able` används hoppas en icke-befintlig katalog över med en varning istället för att klonningen avbryts."
 
 #. type: Plain text
 #: en/git-clone.adoc:120
@@ -19673,9 +19719,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-config.adoc:431
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "worktree"
-msgstr "arbete-katalog"
+msgstr "arbetsträd"
 
 #. type: Labeled list
 #: en/git-config.adoc:434
@@ -27185,7 +27231,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-filter-branch.adoc:187
 msgid "Nearly proper rewriting of tag objects is supported. If the tag has a message attached, a new tag object will be created with the same message, author, and timestamp. If the tag has a signature attached, the signature will be stripped. It is by definition impossible to preserve signatures. The reason this is \"nearly\" proper, is because ideally if the tag did not change (points to the same object, has the same name, etc.) it should retain any signature. That is not the case, signatures will always be removed, buyer beware. There is also no support for changing the author or timestamp (or the tag message for that matter). Tags which point to other tags will be rewritten to point to the underlying commit."
-msgstr ""
+msgstr "Nästan korrekt omskrivning av taggobjekt stöds. Om taggen har ett bifogat meddelande skapas ett nytt taggobjekt med samma meddelande, författare och tidsstämpel. Om taggen har en signatur bifogad, tas signaturen bort. Det är per definition omöjligt att bevara signaturer. Anledningen till att detta är \"nästan\" korrekt, är att om taggen helst inte ändras (pekar på samma objekt, har samma namn, etc.) borde den behålla eventuella signaturer. Så är inte fallet, signaturer kommer alltid att tas bort, användning på egen risk. Det finns inte heller stöd för att ändra författare eller tidsstämpel (eller taggmeddelandet för den delen). Taggar som pekar på andra taggar kommer att skrivas om för att peka på den underliggande incheckning."
 
 #. type: Labeled list
 #: en/git-filter-branch.adoc:188
@@ -40314,7 +40360,7 @@ msgstr "Hämta från och integrera med annat arkiv eller en lokal gren"
 #: en/git-pull.adoc:13
 #, no-wrap
 msgid "git pull [<options>] [<repository> [<refspec>...]]\n"
-msgstr "git pull [<flaggor>] [<förvar> [<refspec>...]]\n"
+msgstr "git pull [<flaggor>] [<repo> [<refspec>...]]\n"
 
 #. type: Plain text
 #: en/git-pull.adoc:19
@@ -60331,7 +60377,7 @@ msgstr "[[def_alternate_object_database]]alternativ objektdatabas"
 #. type: Plain text
 #: en/glossary-content.adoc:5
 msgid "Via the alternates mechanism, a <<def_repository,repository>> can inherit part of its <<def_object_database,object database>> from another object database, which is called an \"alternate\"."
-msgstr "Via alternativmekanismen kan ett <<def_repository,förvar>> ärva en del av sin <<def_object_database,objektdatabas>> från en annan objektdatabas, vilket kallas ett \"alternativ\"."
+msgstr "Via alternativmekanismen kan ett <<def_repository,repo>> ärva en del av sin <<def_object_database,objektdatabas>> från en annan objektdatabas, vilket kallas ett \"alternativ\"."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:6
@@ -60353,7 +60399,7 @@ msgstr ""
 #. type: Plain text
 #: en/glossary-content.adoc:19
 msgid "Untyped <<def_object,object>>, e.g. the contents of a file."
-msgstr ""
+msgstr "Otypad <<def_object,objekt>>, t.ex. innehållet i en fil."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:20
@@ -60364,7 +60410,7 @@ msgstr ""
 #. type: Plain text
 #: en/glossary-content.adoc:30
 msgid "A \"branch\" is a line of development. The most recent <<def_commit,commit>> on a branch is referred to as the tip of that branch. The tip of the branch is <<def_ref,referenced>> by a branch <<def_head,head>>, which moves forward as additional development is done on the branch. A single Git <<def_repository,repository>> can track an arbitrary number of branches, but your <<def_working_tree,working tree>> is associated with just one of them (the \"current\" or \"checked out\" branch), and <<def_HEAD,HEAD>> points to that branch."
-msgstr ""
+msgstr "En \"gren\" är en utvecklingslinje. Den senaste <<def_commit,incheckning>> på en gren kallas för toppen av den grenen. Grenens topp <<def_ref,refereras>> av en gren <<def_head,huvud>>, som rör sig framåt allt eftersom ytterligare utveckling görs på grenen. En enda Git <<def_repository,repo>> kan spåra ett godtyckligt antal grenar, men ditt <<def_working_tree,arbetskatalog>> är associerat med bara en av dem (den \"nuvarande\" eller \"utcheckade\" grenen), och <<def_HEAD,HEAD>> pekar på den grenen."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:31
@@ -60386,7 +60432,7 @@ msgstr ""
 #. type: Plain text
 #: en/glossary-content.adoc:38
 msgid "A list of objects, where each <<def_object,object>> in the list contains a reference to its successor (for example, the successor of a <<def_commit,commit>> could be one of its <<def_parent,parents>>)."
-msgstr ""
+msgstr "En lista med objekt, där varje <<def_object,objekt>> i listan innehåller en referens till dess efterföljare (till exempel kan efterföljaren till en <<def_commit,incheckning>> vara en av dess <<def_parent,föräldrar>>)."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:39
@@ -60397,7 +60443,7 @@ msgstr ""
 #. type: Plain text
 #: en/glossary-content.adoc:43
 msgid "BitKeeper/cvsps speak for \"<<def_commit,commit>>\". Since Git does not store changes, but states, it really does not make sense to use the term \"changesets\" with Git."
-msgstr ""
+msgstr "BitKeeper/cvsps använder termen \"<<def_commit,incheckning>>\". Eftersom Git inte lagrar ändringar, utan tillstånd, är det egentligen inte meningsfullt att använda termen \"ändringsuppsättningar\" med Git."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:44
@@ -60408,7 +60454,7 @@ msgstr ""
 #. type: Plain text
 #: en/glossary-content.adoc:51
 msgid "The action of updating all or part of the <<def_working_tree,working tree>> with a <<def_tree_object,tree object>> or <<def_blob_object,blob>> from the <<def_object_database,object database>>, and updating the <<def_index,index>> and <<def_HEAD,HEAD>> if the whole working tree has been pointed at a new <<def_branch,branch>>."
-msgstr ""
+msgstr "Åtgärden att uppdatera hela eller delar av <<def_working_tree,arbetskatalog>> med ett <<def_tree_object,trädobjekt>> eller <<def_blob_object,blob>> från <<def_object_database,objektdatabas>>, och uppdatera <<def_index,index>> och <<def_HEAD,HEAD>> om hela arbetskatalogen har pekats mot en ny <<def_branch,gren>>."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:52
@@ -60419,7 +60465,7 @@ msgstr ""
 #. type: Plain text
 #: en/glossary-content.adoc:59
 msgid "In <<def_SCM,SCM>> jargon, \"cherry pick\" means to choose a subset of changes out of a series of changes (typically commits) and record them as a new series of changes on top of a different codebase. In Git, this is performed by the \"git cherry-pick\" command to extract the change introduced by an existing <<def_commit,commit>> and to record it based on the tip of the current <<def_branch,branch>> as a new commit."
-msgstr ""
+msgstr "I <<def_SCM,SCM>>-jargong betyder \"cherry pick\" att välja en delmängd av ändringar ur en serie ändringar (vanligtvis incheckning) och registrera dem som en ny serie ändringar ovanpå en annan kodbas. I Git utförs detta med kommandot \"git cherry-pick\" för att extrahera ändringen som introducerats av en befintlig <<def_commit,incheckning>> och registrera den baserat på tipset från den aktuella <<def_branch,grenen>> som en ny incheckning."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:60
@@ -60441,12 +60487,12 @@ msgstr ""
 #. type: Plain text
 #: en/glossary-content.adoc:72
 msgid "As a noun: A single point in the Git history; the entire history of a project is represented as a set of interrelated commits. The word \"commit\" is often used by Git in the same places other revision control systems use the words \"revision\" or \"version\". Also used as a short hand for <<def_commit_object,commit object>>."
-msgstr ""
+msgstr "Som substantiv: En enskild punkt i Git-historiken; hela projektets historik representeras som en uppsättning sammanhängande incheckning. Ordet \"incheckning\" används ofta av Git på samma ställen som andra revisionskontrollsystem använder orden \"revision\" eller \"version\". Används även som en förkortning för <<def_commit_object,incheckning objekt>>."
 
 #. type: Plain text
 #: en/glossary-content.adoc:77
 msgid "As a verb: The action of storing a new snapshot of the project's state in the Git history, by creating a new commit representing the current state of the <<def_index,index>> and advancing <<def_HEAD,HEAD>> to point at the new commit."
-msgstr ""
+msgstr "Som verb: Åtgärden att lagra en ny ögonblicksbild av projektets tillstånd i Git-historiken, genom att skapa en ny incheckning som representerar det aktuella tillståndet för <<def_index,index>> och flytta <<def_HEAD,HEAD>> så att den pekar på den nya incheckning."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:78
@@ -60457,7 +60503,7 @@ msgstr ""
 #. type: Plain text
 #: en/glossary-content.adoc:85
 msgid "A synonym for the <<def_DAG,DAG>> structure formed by the commits in the object database, <<def_ref,referenced>> by branch tips, using their <<def_chain,chain>> of linked commits. This structure is the definitive commit graph. The graph can be represented in other ways, e.g. the <<def_commit_graph_file,\"commit-graph\" file>>."
-msgstr ""
+msgstr "En synonym för strukturen <<def_DAG,DAG>> som bildas av commits i objektdatabasen, <<def_ref,refererad>> av branch toppen, med hjälp av deras <<def_chain,kedja>> av länkade incheckningar. Denna struktur är den definitiva inchecknings-grafen. Grafen kan representeras på andra sätt, t.ex. <<def_commit_graph_file,\"inchecknings-graph\"-filen>>."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:86
@@ -60480,7 +60526,7 @@ msgstr ""
 #. type: Plain text
 #: en/glossary-content.adoc:99
 msgid "An <<def_object,object>> which contains the information about a particular <<def_revision,revision>>, such as <<def_parent,parents>>, committer, author, date and the <<def_tree_object,tree object>> which corresponds to the top <<def_directory,directory>> of the stored revision."
-msgstr ""
+msgstr "Ett <<def_object,objekt>> som innehåller information om en specifik <<def_revision,revision>>, såsom <<def_parent,föräldrar>>, incheckare, författtare, datum och <<def_tree_object,trädobjekt> som motsvarar den översta <<def_directory,katalog>> för den lagrade revisionen."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:100
@@ -60491,7 +60537,7 @@ msgstr ""
 #. type: Plain text
 #: en/glossary-content.adoc:110
 msgid "A <<def_commit_object,commit object>> or an <<def_object,object>> that can be recursively <<def_dereference,dereferenced>> to a commit object. The following are all commit-ishes: a commit object, a <<def_tag_object,tag object>> that points to a commit object, a tag object that points to a tag object that points to a commit object, etc."
-msgstr ""
+msgstr "Ett <<def_commit_object,inchecknings-objekt>> eller ett <<def_object,objekt>> som rekursivt kan <<def_dereference,avreferera>> till ett inchecknings-objekt. Följande är alla inchecknings-aktiga: ett inchecknings-objekt, ett <<def_tag_object,tag-objekt>> som pekar på ett inchecknings-objekt, ett tag-objekt som pekar på ett tag-objekt som pekar på ett incheckning-objekt, etc."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:111
@@ -60502,7 +60548,7 @@ msgstr ""
 #. type: Plain text
 #: en/glossary-content.adoc:114
 msgid "Fundamental data structures and utilities of Git. Exposes only limited source code management tools."
-msgstr ""
+msgstr "Grundläggande datastrukturer och verktyg i Git. Erbjuder endast begränsade verktyg för källkodshantering."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:115
@@ -60513,7 +60559,7 @@ msgstr ""
 #. type: Plain text
 #: en/glossary-content.adoc:120
 msgid "Directed acyclic graph. The <<def_commit_object,commit objects>> form a directed acyclic graph, because they have parents (directed), and the graph of commit objects is acyclic (there is no <<def_chain,chain>> which begins and ends with the same <<def_object,object>>)."
-msgstr ""
+msgstr "Riktad acyklisk graf. <<def_commit_object,inchecknings-objekten>> bildar en riktad acyklisk graf, eftersom de har föräldrar (riktade), och grafen för inchecknings-objekt är acyklisk (det finns ingen <<def_chain,kedja>> som börjar och slutar med samma <<def_object,objekt>>)."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:121
@@ -60524,7 +60570,7 @@ msgstr ""
 #. type: Plain text
 #: en/glossary-content.adoc:126
 msgid "An <<def_unreachable_object,unreachable object>> which is not <<def_reachable,reachable>> even from other unreachable objects; a dangling object has no references to it from any reference or <<def_object,object>> in the <<def_repository,repository>>."
-msgstr ""
+msgstr "Ett <<def_unreachable_object,onåbart objekt>> som inte är <<def_reachable,nåbart>> ens från andra oåtkomliga objekt; ett dinglande objekt har inga referenser till sig från någon referens eller <<def_object,objekt>> i <<def_repository,repo>>."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:127
@@ -61129,7 +61175,7 @@ msgstr ""
 #. type: Plain text
 #: en/glossary-content.adoc:497
 msgid "Refs that are per-<<def_worktree,worktree>>, rather than global. This is presently only <<def_HEAD,HEAD>> and any refs that start with `refs/bisect/`, but might later include other unusual refs."
-msgstr "Referenser som är per-<<def_worktree,arbete-katalog>>, snarare än globala. Detta är för närvarande endast <<def_HEAD,HEAD>> och alla referenser som börjar med `refs/bisect/`, men kan senare inkludera andra ovanliga referenser."
+msgstr "Referenser som är per-<<def_worktree,arbetsträd>>, snarare än globala. Detta är för närvarande endast <<def_HEAD,HEAD>> och alla referenser som börjar med `refs/bisect/`, men kan senare inkludera andra ovanliga referenser."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:498
@@ -66389,7 +66435,7 @@ msgstr "`--object-names`"
 #. type: Plain text
 #: en/rev-list-options.adoc:966
 msgid "Only useful with `--objects`; print the names of the object IDs that are found. This is the default behavior. Note that the \"name\" of each object is ambiguous, and mostly intended as a hint for packing objects. In particular: no distinction is made between the names of tags, trees, and blobs; path names may be modified to remove newlines; and if an object would appear multiple times with different names, only one name is shown."
-msgstr ""
+msgstr "Endast användbart med `--objects`; skriv ut namnen på de objekt-ID:n som hittas. Detta är standardbeteendet. Observera att \"namnet\" på varje objekt är tvetydigt och mestadels avsett som en ledtråd för att packa objekt. I synnerhet: ingen skillnad görs mellan namnen på taggar, träd och blobbar; sökvägsnamn kan ändras för att ta bort radbrytningar; och om ett objekt skulle visas flera gånger med olika namn visas bara ett namn."
 
 #. type: Labeled list
 #: en/rev-list-options.adoc:967
@@ -67346,7 +67392,7 @@ msgstr ""
 #. type: delimited block _
 #: en/git-bisect-lk2009.adoc:78
 msgid "Software bugs, or errors, are so prevalent and so detrimental that they cost the U.S. economy an estimated $59.5 billion annually, or about 0.6 percent of the gross domestic product, according to a newly released study commissioned by the Department of Commerce's National Institute of Standards and Technology (NIST). At the national level, over half of the costs are borne by software users and the remainder by software developers/vendors. The study also found that, although all errors cannot be removed, more than a third of these costs, or an estimated $22.2 billion, could be eliminated by an improved testing infrastructure that enables earlier and more effective identification and removal of software defects. These are the savings associated with finding an increased percentage (but not 100 percent) of errors closer to the development stages in which they are introduced. Currently, over half of all errors are not found until \"downstream\" in the development process or during post-sale software use."
-msgstr ""
+msgstr "Programvarufel, eller buggar, är så vanliga och skadliga att de kostar den amerikanska ekonomin uppskattningsvis 59,5 miljarder dollar årligen, eller cirka 0,6 procent av bruttonationalprodukten, enligt en nyligen publicerad studie beställd av handelsdepartementets National Institute of Standards and Technology (NIST). På nationell nivå bärs över hälften av kostnaderna av programvaruanvändare och resten av programvaruutvecklare/leverantörer. Studien fann också att även om alla fel inte kan tas bort, skulle mer än en tredjedel av dessa kostnader, eller uppskattningsvis 22,2 miljarder dollar, kunna elimineras genom en förbättrad testinfrastruktur som möjliggör tidigare och mer effektiv identifiering och borttagning av programvarufel. Det är besparingarna som är förknippade med att hitta en ökad andel (men inte 100 procent) fel närmare de utvecklingsstadier där de introduceras. För närvarande hittas inte över hälften av alla fel förrän \"nedströms\" i utvecklingsprocessen eller under användning av programvara efter försäljning."
 
 #. type: Plain text
 #: en/git-bisect-lk2009.adoc:81
