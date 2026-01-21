@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Git Documentation\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-01-18 09:52+0000\n"
+"PO-Revision-Date: 2026-01-21 05:04+0000\n"
 "Last-Translator: Andrei Stepanov <adem4ik@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.15.2\n"
+"X-Generator: Weblate 5.16-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.adoc:1 en/git-instaweb.adoc:45 en/git-ls-remote.adoc:24 en/git-mailinfo.adoc:49 en/git-mailsplit.adoc:35 en/git-repack.adoc:185
@@ -4008,7 +4008,7 @@ msgstr "merge.conflictStyle"
 #: en/config/merge.adoc:15
 #, priority:240
 msgid "Specify the style in which conflicted hunks are written out to working tree files upon merge. The default is \"merge\", which shows a +<<<<<<<+ conflict marker, changes made by one side, a `=======` marker, changes made by the other side, and then a +>>>>>>>+ marker. An alternate style, \"diff3\", adds a +|||||||+ marker and the original text before the `=======` marker. The \"merge\" style tends to produce smaller conflict regions than diff3, both because of the exclusion of the original text, and because when a subset of lines match on the two sides, they are just pulled out of the conflict region. Another alternate style, \"zdiff3\", is similar to diff3 but removes matching lines on the two sides from the conflict region when those matching lines appear near either the beginning or end of a conflict region."
-msgstr ""
+msgstr "Определяет стиль, в котором конфликтные блоки записываются в файлы рабочего дерева при слиянии. По умолчанию используется «merge», который показывает маркер конфликта +<<<<<<<+, изменения одной стороны, маркер `=======`, изменения другой стороны и затем маркер +>>>>>>>+. Альтернативный стиль «diff3» добавляет маркер +|||||||+ и исходный текст перед маркером `=======`. Стиль «merge» обычно создаёт меньшие области конфликта, чем «diff3», как из-за исключения исходного текста, так и потому, что когда подмножество строк совпадает с обеих сторон, они просто выносятся из области конфликта. Ещё один альтернативный стиль, «zdiff3», похож на «diff3», но удаляет совпадающие строки с обеих сторон из области конфликта, когда эти совпадающие строки появляются ближе к началу или концу области конфликта."
 
 #. type: Labeled list
 #: en/config/merge.adoc:16
@@ -4034,7 +4034,7 @@ msgstr "merge.ff"
 #: en/config/merge.adoc:35
 #, placeholders:'`--no-ff`':'`--ff-only`', priority:240
 msgid "By default, Git does not create an extra merge commit when merging a commit that is a descendant of the current commit. Instead, the tip of the current branch is fast-forwarded. When set to `false`, this variable tells Git to create an extra merge commit in such a case (equivalent to giving the `--no-ff` option from the command line). When set to `only`, only such fast-forward merges are allowed (equivalent to giving the `--ff-only` option from the command line)."
-msgstr ""
+msgstr "По умолчанию Git не создаёт дополнительный коммит слияния при слиянии коммита, являющегося потомком текущего коммита. Вместо этого конец текущей ветки перемещается вперёд (fast-forward). При установке в `false` эта переменная указывает Git создать дополнительный коммит слияния в таком случае (эквивалентно передаче опции `--no-ff` из командной строки). При установке в `only` разрешены только такие быстрые слияния (эквивалентно передаче параметра `--ff-only` из командной строки)."
 
 #. type: Labeled list
 #: en/config/merge.adoc:36
@@ -4075,7 +4075,7 @@ msgstr "merge.renames"
 #: en/config/merge.adoc:54
 #, placeholders:'diff.renames', priority:240
 msgid "Whether Git detects renames. If set to `false`, rename detection is disabled. If set to `true`, basic rename detection is enabled. Defaults to the value of diff.renames."
-msgstr ""
+msgstr "Должен ли Git находить переименования. При значении `false` обнаружение переименований отключено. При значении `true` включено базовое обнаружение переименований. По умолчанию используется значение diff.renames."
 
 #. type: Labeled list
 #: en/config/merge.adoc:55
@@ -4088,7 +4088,7 @@ msgstr "merge.directoryRenames"
 #: en/config/merge.adoc:60
 #, priority:240
 msgid "Whether Git detects directory renames, affecting what happens at merge time to new files added to a directory on one side of history when that directory was renamed on the other side of history. Possible values are:"
-msgstr ""
+msgstr "Должен ли Git находить переименования каталогов. Влияет на обработку новых файлов, добавленных в каталог на одной стороне истории, когда этот каталог был переименован на другой стороне истории, во время слияния. Возможные значения:"
 
 #. type: Labeled list
 #: en/config/merge.adoc:62 en/config/merge.adoc:88 en/git-init.adoc:104 en/git-pull.adoc:105 en/git-push.adoc:181
@@ -4100,7 +4100,7 @@ msgstr "`false`"
 #: en/config/merge.adoc:64
 #, priority:240
 msgid "Directory rename detection is disabled, meaning that such new files will be left behind in the old directory."
-msgstr ""
+msgstr "Обнаружение переименований каталогов отключено, что означает, что такие новые файлы останутся в старом каталоге."
 
 #. type: Labeled list
 #: en/config/merge.adoc:64 en/config/merge.adoc:89 en/git-init.adoc:110 en/git-pull.adoc:96 en/git-push.adoc:184
@@ -4112,7 +4112,7 @@ msgstr "`true`"
 #: en/config/merge.adoc:66
 #, priority:240
 msgid "Directory rename detection is enabled, meaning that such new files will be moved into the new directory."
-msgstr ""
+msgstr "Обнаружение переименований каталогов включено, что означает, что такие новые файлы будут перемещены в новый каталог."
 
 #. type: Labeled list
 #: en/config/merge.adoc:66
@@ -7057,13 +7057,13 @@ msgstr "`--max-depth=2 -- foo`: `foo/bar/baz`"
 #: en/diff-options.adoc:902
 #, placeholders:'`--max-depth=0`', priority:280
 msgid "If no pathspec is given, the depth is measured as if all top-level entries were specified. Note that this is different than measuring from the root, in that `--max-depth=0` would still return `foo`. This allows you to still limit depth while asking for a subset of the top-level entries."
-msgstr ""
+msgstr "Если пути не указаны, глубина измеряется так, как если бы были указаны все элементы верхнего уровня. Обратите внимание, что это отличается от измерения от корня, так как `--max-depth=0` всё равно вернёт `foo`. Это позволяет вам всё ещё ограничивать глубину, запрашивая подмножество элементов верхнего уровня."
 
 #. type: Plain text
 #: en/diff-options.adoc:905
 #, priority:280
 msgid "Note that this option is only supported for diffs between tree objects, not against the index or working tree."
-msgstr ""
+msgstr "Обратите внимание, что этот параметр поддерживается только для сравнений между объектами дерева, а не с индексом или рабочим деревом."
 
 #. type: Plain text
 #: en/diff-options.adoc:907
@@ -14748,7 +14748,7 @@ msgstr ""
 #: en/git-cat-file.adoc:85 en/git-pack-objects.adoc:308 en/git-repack.adoc:162
 #, no-wrap, placeholders:'--filter=', priority:100
 msgid "--filter=<filter-spec>"
-msgstr ""
+msgstr "--filter=<filter-spec>"
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:86 en/git-pack-objects.adoc:313
@@ -17440,7 +17440,7 @@ msgstr ""
 #: en/git-cherry-pick.adoc:43 en/git-revert.adoc:36
 #, ignore-ellipsis, no-wrap, priority:100
 msgid "<commit>..."
-msgstr ""
+msgstr "<commit>..."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:52
@@ -17608,7 +17608,7 @@ msgstr ""
 #: en/git-cherry-pick.adoc:165 en/git-rebase.adoc:351 en/git-revert.adoc:105 en/git-svn.adoc:678
 #, no-wrap, placeholders:'--strategy=', priority:100
 msgid "--strategy=<strategy>"
-msgstr ""
+msgstr "--strategy=<strategy>"
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:169 en/git-revert.adoc:109
@@ -20334,7 +20334,7 @@ msgstr ""
 #: en/git-config.adoc:71 en/git-gui.adoc:31 en/git-p4.adoc:63 en/git-remote.adoc:44 en/git-rerere.adoc:32 en/git-shell.adoc:25 en/git-stash.adoc:53 en/git-submodule.adoc:33 en/git-svn.adoc:29 en/git-worktree.adoc:65
 #, no-wrap, priority:240
 msgid "COMMANDS"
-msgstr ""
+msgstr "КОМАНДЫ"
 
 #. type: Labeled list
 #: en/git-config.adoc:73
@@ -31164,7 +31164,7 @@ msgstr ""
 #: en/git-for-each-ref.adoc:355 en/git-for-each-ref.adoc:372 en/git-for-each-ref.adoc:387 en/git-bisect-lk2009.adoc:933
 #, no-wrap, priority:100
 msgid "#!/bin/sh\n"
-msgstr ""
+msgstr "#!/bin/sh\n"
 
 #. type: delimited block -
 #: en/git-for-each-ref.adoc:361
@@ -31259,7 +31259,7 @@ msgstr ""
 #: en/git-for-each-ref.adoc:420
 #, no-wrap, priority:80
 msgid "    $s\n"
-msgstr ""
+msgstr "    $s\n"
 
 #. type: delimited block -
 #: en/git-for-each-ref.adoc:427
@@ -31443,7 +31443,7 @@ msgstr ""
 #: en/git-format-patch.adoc:110
 #, no-wrap, priority:100
 msgid "-<n>"
-msgstr ""
+msgstr "-<n>"
 
 #. type: Plain text
 #: en/git-format-patch.adoc:112
@@ -31546,7 +31546,7 @@ msgstr ""
 #: en/git-format-patch.adoc:148
 #, no-wrap, placeholders:'--attach', priority:100
 msgid "--attach[=<boundary>]"
-msgstr ""
+msgstr "--attach[=<boundary>]"
 
 #. type: Plain text
 #: en/git-format-patch.adoc:152
@@ -31570,7 +31570,7 @@ msgstr ""
 #: en/git-format-patch.adoc:157
 #, no-wrap, placeholders:'--inline', priority:100
 msgid "--inline[=<boundary>]"
-msgstr ""
+msgstr "--inline[=<boundary>]"
 
 #. type: Plain text
 #: en/git-format-patch.adoc:161
@@ -31582,7 +31582,7 @@ msgstr ""
 #: en/git-format-patch.adoc:162
 #, no-wrap, placeholders:'--thread', priority:100
 msgid "--thread[=<style>]"
-msgstr ""
+msgstr "--thread[=<style>]"
 
 #. type: Labeled list
 #: en/git-format-patch.adoc:163 en/git-send-email.adoc:447
@@ -31756,7 +31756,7 @@ msgstr ""
 #: en/git-format-patch.adoc:258
 #, no-wrap, placeholders:'--reroll-count=', priority:100
 msgid "--reroll-count=<n>"
-msgstr ""
+msgstr "--reroll-count=<n>"
 
 #. type: Plain text
 #: en/git-format-patch.adoc:270
@@ -31768,7 +31768,7 @@ msgstr ""
 #: en/git-format-patch.adoc:271
 #, no-wrap, placeholders:'--to=', priority:100
 msgid "--to=<email>"
-msgstr ""
+msgstr "--to=<email>"
 
 #. type: Plain text
 #: en/git-format-patch.adoc:276
@@ -31780,7 +31780,7 @@ msgstr ""
 #: en/git-format-patch.adoc:277
 #, no-wrap, placeholders:'--cc=', priority:100
 msgid "--cc=<email>"
-msgstr ""
+msgstr "--cc=<email>"
 
 #. type: Plain text
 #: en/git-format-patch.adoc:282
@@ -31798,7 +31798,7 @@ msgstr "--from"
 #: en/git-format-patch.adoc:284
 #, no-wrap, placeholders:'--from=', priority:100
 msgid "--from=<ident>"
-msgstr ""
+msgstr "--from=<ident>"
 
 #. type: Plain text
 #: en/git-format-patch.adoc:290
@@ -31834,7 +31834,7 @@ msgstr ""
 #: en/git-format-patch.adoc:310
 #, no-wrap, placeholders:'--add-header=', priority:100
 msgid "--add-header=<header>"
-msgstr ""
+msgstr "--add-header=<header>"
 
 #. type: Plain text
 #: en/git-format-patch.adoc:317
@@ -31882,7 +31882,7 @@ msgstr ""
 #: en/git-format-patch.adoc:331
 #, no-wrap, placeholders:'--interdiff=', priority:100
 msgid "--interdiff=<previous>"
-msgstr ""
+msgstr "--interdiff=<previous>"
 
 #. type: Plain text
 #: en/git-format-patch.adoc:339
@@ -31894,7 +31894,7 @@ msgstr ""
 #: en/git-format-patch.adoc:340
 #, no-wrap, placeholders:'--range-diff=', priority:100
 msgid "--range-diff=<previous>"
-msgstr ""
+msgstr "--range-diff=<previous>"
 
 #. type: Plain text
 #: en/git-format-patch.adoc:351
@@ -31912,7 +31912,7 @@ msgstr ""
 #: en/git-format-patch.adoc:357 en/git-range-diff.adoc:69
 #, no-wrap, placeholders:'--creation-factor=', priority:100
 msgid "--creation-factor=<percent>"
-msgstr ""
+msgstr "--creation-factor=<percent>"
 
 #. type: Plain text
 #: en/git-format-patch.adoc:362
@@ -31979,7 +31979,7 @@ msgstr ""
 #: en/git-format-patch.adoc:391
 #, no-wrap, placeholders:'--signature-file=', priority:100
 msgid "--signature-file=<file>"
-msgstr ""
+msgstr "--signature-file=<file>"
 
 #. type: Plain text
 #: en/git-format-patch.adoc:393
@@ -31991,7 +31991,7 @@ msgstr ""
 #: en/git-format-patch.adoc:394
 #, no-wrap, placeholders:'--suffix=', priority:100
 msgid "--suffix=.<sfx>"
-msgstr ""
+msgstr "--suffix=.<sfx>"
 
 #. type: Plain text
 #: en/git-format-patch.adoc:399
@@ -32271,7 +32271,7 @@ msgstr ""
 #: en/git-format-patch.adoc:568
 #, no-wrap, priority:100
 msgid "GMail"
-msgstr ""
+msgstr "GMail"
 
 #. type: Plain text
 #: en/git-format-patch.adoc:574
@@ -32295,7 +32295,7 @@ msgstr ""
 #: en/git-format-patch.adoc:582
 #, no-wrap, priority:100
 msgid "Thunderbird"
-msgstr ""
+msgstr "Thunderbird"
 
 #. type: Plain text
 #: en/git-format-patch.adoc:586
@@ -32456,7 +32456,7 @@ msgstr ""
 #: en/git-format-patch.adoc:677
 #, no-wrap, priority:100
 msgid "KMail"
-msgstr ""
+msgstr "KMail"
 
 #. type: Plain text
 #: en/git-format-patch.adoc:679
@@ -32522,7 +32522,7 @@ msgstr ""
 #: en/git-format-patch.adoc:715
 #, no-wrap, placeholders:'---P---X---Y---Z---A---B---C', priority:100
 msgid "---P---X---Y---Z---A---B---C\n"
-msgstr ""
+msgstr "---P---X---Y---Z---A---B---C\n"
 
 #. type: Plain text
 #: en/git-format-patch.adoc:722
@@ -33133,7 +33133,7 @@ msgstr ""
 #: en/git-gc.adoc:81
 #, no-wrap, placeholders:'--prune=', priority:100
 msgid "--prune=<date>"
-msgstr ""
+msgstr "--prune=<date>"
 
 #. type: Plain text
 #: en/git-gc.adoc:88
@@ -33640,13 +33640,13 @@ msgstr ""
 #: en/git-grep.adoc:174
 #, no-wrap, priority:100
 msgid "-O[<pager>]"
-msgstr ""
+msgstr "-O[<pager>]"
 
 #. type: Labeled list
 #: en/git-grep.adoc:175
 #, no-wrap, placeholders:'--open-files-in-pager', priority:100
 msgid "--open-files-in-pager[=<pager>]"
-msgstr ""
+msgstr "--open-files-in-pager[=<pager>]"
 
 #. type: Plain text
 #: en/git-grep.adoc:183
@@ -33940,7 +33940,7 @@ msgstr ""
 #: en/git-grep.adoc:307
 #, ignore-ellipsis, no-wrap, priority:100
 msgid "<tree>..."
-msgstr ""
+msgstr "<tree>..."
 
 #. type: Plain text
 #: en/git-grep.adoc:310
@@ -34076,9 +34076,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-gui.adoc:32
-#, no-wrap, priority:100
+#, fuzzy, no-wrap, priority:100
 msgid "blame"
-msgstr ""
+msgstr "blame"
 
 #. type: Plain text
 #: en/git-gui.adoc:35
@@ -34102,7 +34102,7 @@ msgstr ""
 #: en/git-gui.adoc:41
 #, no-wrap, priority:100
 msgid "citool"
-msgstr ""
+msgstr "citool"
 
 #. type: Plain text
 #: en/git-gui.adoc:46
@@ -34126,7 +34126,7 @@ msgstr ""
 #: en/git-gui.adoc:52 en/git-whatchanged.adoc:39
 #, no-wrap, priority:100
 msgid "Examples"
-msgstr ""
+msgstr "Примеры"
 
 #. type: Labeled list
 #: en/git-gui.adoc:53
@@ -34615,7 +34615,7 @@ msgstr ""
 #: en/git-help.adoc:141
 #, no-wrap, placeholders:'man.viewer', priority:100
 msgid "man.viewer"
-msgstr ""
+msgstr "man.viewer"
 
 #. type: Plain text
 #: en/git-help.adoc:145
@@ -34684,7 +34684,7 @@ msgstr ""
 #: en/git-help.adoc:175
 #, no-wrap, priority:100
 msgid "man.<tool>.path"
-msgstr ""
+msgstr "man.<tool>.path"
 
 #. type: Plain text
 #: en/git-help.adoc:182
@@ -34696,7 +34696,7 @@ msgstr ""
 #: en/git-help.adoc:184
 #, no-wrap, priority:100
 msgid "man.<tool>.cmd"
-msgstr ""
+msgstr "man.<tool>.cmd"
 
 #. type: Plain text
 #: en/git-help.adoc:192
@@ -34816,7 +34816,7 @@ msgstr ""
 #: en/git-http-backend.adoc:39
 #, no-wrap, placeholders:'http.getanyfile', priority:100
 msgid "http.getanyfile"
-msgstr ""
+msgstr "http.getanyfile"
 
 #. type: Plain text
 #: en/git-http-backend.adoc:46
@@ -34828,7 +34828,7 @@ msgstr ""
 #: en/git-http-backend.adoc:47
 #, no-wrap, placeholders:'http.uploadpack', priority:100
 msgid "http.uploadpack"
-msgstr ""
+msgstr "http.uploadpack"
 
 #. type: Plain text
 #: en/git-http-backend.adoc:51
@@ -34840,7 +34840,7 @@ msgstr ""
 #: en/git-http-backend.adoc:52
 #, no-wrap, placeholders:'http.receivepack', priority:100
 msgid "http.receivepack"
-msgstr ""
+msgstr "http.receivepack"
 
 #. type: Plain text
 #: en/git-http-backend.adoc:58
@@ -35087,7 +35087,7 @@ msgstr ""
 #: en/git-http-backend.adoc:211
 #, no-wrap, priority:100
 msgid "Lighttpd"
-msgstr ""
+msgstr "Lighttpd"
 
 #. type: Plain text
 #: en/git-http-backend.adoc:215
@@ -35178,31 +35178,31 @@ msgstr ""
 #: en/git-http-backend.adoc:267
 #, placeholders:'REMOTE_USER', priority:100
 msgid "REMOTE_USER"
-msgstr ""
+msgstr "REMOTE_USER"
 
 #. type: Plain text
 #: en/git-http-backend.adoc:268
 #, placeholders:'REMOTE_ADDR', priority:100
 msgid "REMOTE_ADDR"
-msgstr ""
+msgstr "REMOTE_ADDR"
 
 #. type: Plain text
 #: en/git-http-backend.adoc:269
 #, placeholders:'CONTENT_TYPE', priority:100
 msgid "CONTENT_TYPE"
-msgstr ""
+msgstr "CONTENT_TYPE"
 
 #. type: Plain text
 #: en/git-http-backend.adoc:270
 #, placeholders:'QUERY_STRING', priority:100
 msgid "QUERY_STRING"
-msgstr ""
+msgstr "QUERY_STRING"
 
 #. type: Plain text
 #: en/git-http-backend.adoc:271
 #, placeholders:'REQUEST_METHOD', priority:100
 msgid "REQUEST_METHOD"
-msgstr ""
+msgstr "REQUEST_METHOD"
 
 #. type: Plain text
 #: en/git-http-backend.adoc:275
@@ -35268,7 +35268,7 @@ msgstr ""
 #: en/git-http-fetch.adoc:24
 #, no-wrap, priority:100
 msgid "commit-id"
-msgstr ""
+msgstr "commit-id"
 
 #. type: Plain text
 #: en/git-http-fetch.adoc:27
@@ -35310,7 +35310,7 @@ msgstr ""
 #: en/git-http-fetch.adoc:45
 #, no-wrap, priority:100
 msgid "<commit-id>['\\t'<filename-as-in--w>]\n"
-msgstr ""
+msgstr "<commit-id>['\\t'<filename-as-in--w>]\n"
 
 #. type: Labeled list
 #: en/git-http-fetch.adoc:46
@@ -35436,7 +35436,7 @@ msgstr ""
 #: en/git-http-push.adoc:54 en/git-send-pack.adoc:100
 #, ignore-ellipsis, no-wrap, priority:100
 msgid "<ref>..."
-msgstr ""
+msgstr "<ref>..."
 
 #. type: Plain text
 #: en/git-http-push.adoc:56 en/git-send-pack.adoc:102
@@ -35804,7 +35804,7 @@ msgstr ""
 #: en/git-imap-send.adoc:206
 #, no-wrap, priority:100
 msgid "CAUTION"
-msgstr ""
+msgstr "ВНИМАНИЕ"
 
 #. type: Plain text
 #: en/git-imap-send.adoc:213
@@ -35918,7 +35918,7 @@ msgstr ""
 #: en/git-index-pack.adoc:71
 #, no-wrap, placeholders:'--keep=', priority:100
 msgid "--keep=<msg>"
-msgstr ""
+msgstr "--keep=<msg>"
 
 #. type: Plain text
 #: en/git-index-pack.adoc:77
@@ -35930,7 +35930,7 @@ msgstr ""
 #: en/git-index-pack.adoc:78 en/git-pack-objects.adoc:299
 #, no-wrap, placeholders:'--index-version=', priority:100
 msgid "--index-version=<version>[,<offset>]"
-msgstr ""
+msgstr "--index-version=<version>[,<offset>]"
 
 #. type: Plain text
 #: en/git-index-pack.adoc:82 en/git-pack-objects.adoc:303
@@ -35996,7 +35996,7 @@ msgstr ""
 #: en/git-index-pack.adoc:113 en/git-pack-objects.adoc:289 en/git-repack.adoc:136
 #, no-wrap, placeholders:'--threads=', priority:100
 msgid "--threads=<n>"
-msgstr ""
+msgstr "--threads=<n>"
 
 #. type: Plain text
 #: en/git-index-pack.adoc:122
@@ -36008,7 +36008,7 @@ msgstr ""
 #: en/git-index-pack.adoc:123 en/git-unpack-objects.adoc:47
 #, no-wrap, placeholders:'--max-input-size=', priority:100
 msgid "--max-input-size=<size>"
-msgstr ""
+msgstr "--max-input-size=<size>"
 
 #. type: Plain text
 #: en/git-index-pack.adoc:125 en/git-unpack-objects.adoc:49
@@ -36497,7 +36497,7 @@ msgstr ""
 #: en/git-instaweb.adoc:53 en/git-update-ref.adoc:139
 #, no-wrap, priority:100
 msgid "start"
-msgstr ""
+msgstr "старт"
 
 #. type: Labeled list
 #: en/git-instaweb.adoc:54
@@ -37759,7 +37759,7 @@ msgstr ""
 #: en/git-ls-files.adoc:117
 #, no-wrap, placeholders:'--exclude-from=', priority:80
 msgid "--exclude-from=<file>"
-msgstr ""
+msgstr "--exclude-from=<file>"
 
 #. type: Plain text
 #: en/git-ls-files.adoc:119
@@ -37771,7 +37771,7 @@ msgstr ""
 #: en/git-ls-files.adoc:120
 #, no-wrap, placeholders:'--exclude-per-directory=', priority:80
 msgid "--exclude-per-directory=<file>"
-msgstr ""
+msgstr "--exclude-per-directory=<file>"
 
 #. type: Plain text
 #: en/git-ls-files.adoc:126
@@ -37801,7 +37801,7 @@ msgstr ""
 #: en/git-ls-files.adoc:135
 #, no-wrap, placeholders:'--with-tree=', priority:80
 msgid "--with-tree=<tree-ish>"
-msgstr ""
+msgstr "--with-tree=<tree-ish>"
 
 #. type: Plain text
 #: en/git-ls-files.adoc:141
@@ -37825,7 +37825,7 @@ msgstr ""
 #: en/git-ls-files.adoc:155
 #, no-wrap, priority:80
 msgid "H"
-msgstr ""
+msgstr "H"
 
 #. type: Plain text
 #: en/git-ls-files.adoc:156
@@ -37837,7 +37837,7 @@ msgstr ""
 #: en/git-ls-files.adoc:156
 #, no-wrap, priority:80
 msgid "S"
-msgstr ""
+msgstr "S"
 
 #. type: Plain text
 #: en/git-ls-files.adoc:157
@@ -37849,7 +37849,7 @@ msgstr "Удаление неотслеживаемых файлов из раб
 #: en/git-ls-files.adoc:157
 #, no-wrap, priority:80
 msgid "M"
-msgstr ""
+msgstr "M"
 
 #. type: Plain text
 #: en/git-ls-files.adoc:158
@@ -37861,7 +37861,7 @@ msgstr ""
 #: en/git-ls-files.adoc:158
 #, no-wrap, priority:80
 msgid "R"
-msgstr ""
+msgstr "R"
 
 #. type: Plain text
 #: en/git-ls-files.adoc:159
@@ -37873,7 +37873,7 @@ msgstr ""
 #: en/git-ls-files.adoc:159
 #, no-wrap, priority:80
 msgid "C"
-msgstr ""
+msgstr "C"
 
 #. type: Plain text
 #: en/git-ls-files.adoc:160
@@ -37885,7 +37885,7 @@ msgstr ""
 #: en/git-ls-files.adoc:160
 #, no-wrap, priority:80
 msgid "K"
-msgstr ""
+msgstr "K"
 
 #. type: Plain text
 #: en/git-ls-files.adoc:162
@@ -37897,7 +37897,7 @@ msgstr ""
 #: en/git-ls-files.adoc:162
 #, no-wrap, priority:80
 msgid "?"
-msgstr ""
+msgstr "?"
 
 #. type: Plain text
 #: en/git-ls-files.adoc:163
@@ -38012,7 +38012,7 @@ msgstr ""
 #: en/git-ls-files.adoc:230 en/git.adoc:432 en/git-update-index.adoc:240
 #, no-wrap, priority:100
 msgid "<file>"
-msgstr ""
+msgstr "<file>"
 
 #. type: Plain text
 #: en/git-ls-files.adoc:233
@@ -38309,7 +38309,7 @@ msgstr ""
 #: en/git-ls-remote.adoc:44
 #, no-wrap, placeholders:'--upload-pack=', priority:100
 msgid "--upload-pack=<exec>"
-msgstr ""
+msgstr "--upload-pack=<exec>"
 
 #. type: Plain text
 #: en/git-ls-remote.adoc:49
@@ -38591,7 +38591,7 @@ msgstr ""
 #: en/git-ls-tree.adoc:96
 #, ignore-ellipsis, no-wrap, priority:80
 msgid "[<path>...]"
-msgstr ""
+msgstr "[<path>...]"
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:100
@@ -38762,7 +38762,7 @@ msgstr ""
 #: en/git-mailinfo.adoc:44
 #, priority:100
 msgid "`[PATCH]`)."
-msgstr ""
+msgstr "`[PATCH]`)."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:48
@@ -38876,7 +38876,7 @@ msgstr ""
 #: en/git-mailinfo.adoc:111
 #, no-wrap, priority:100
 msgid "<msg>"
-msgstr ""
+msgstr "<msg>"
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:114
@@ -38888,7 +38888,7 @@ msgstr ""
 #: en/git-mailinfo.adoc:115
 #, no-wrap, priority:100
 msgid "<patch>"
-msgstr ""
+msgstr "<patch>"
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:117
@@ -38932,7 +38932,7 @@ msgstr ""
 #: en/git-mailsplit.adoc:24
 #, no-wrap, priority:100
 msgid "<mbox>"
-msgstr ""
+msgstr "<mbox>"
 
 #. type: Plain text
 #: en/git-mailsplit.adoc:27
@@ -38944,7 +38944,7 @@ msgstr ""
 #: en/git-mailsplit.adoc:28
 #, no-wrap, priority:100
 msgid "<Maildir>"
-msgstr ""
+msgstr "<Maildir>"
 
 #. type: Plain text
 #: en/git-mailsplit.adoc:31
@@ -38974,7 +38974,7 @@ msgstr ""
 #: en/git-mailsplit.adoc:39
 #, no-wrap, priority:100
 msgid "-d<prec>"
-msgstr ""
+msgstr "-d<prec>"
 
 #. type: Plain text
 #: en/git-mailsplit.adoc:43
@@ -38986,7 +38986,7 @@ msgstr ""
 #: en/git-mailsplit.adoc:44
 #, no-wrap, priority:100
 msgid "-f<nn>"
-msgstr ""
+msgstr "-f<nn>"
 
 #. type: Plain text
 #: en/git-mailsplit.adoc:47
@@ -39252,7 +39252,7 @@ msgstr ""
 #: en/git-merge-base.adoc:160
 #, priority:80
 msgid "instead."
-msgstr ""
+msgstr "вместо этого."
 
 #. type: Title -
 #: en/git-merge-base.adoc:162
@@ -39301,7 +39301,7 @@ msgstr ""
 #: en/git-merge-base.adoc:200
 #, priority:80
 msgid "Hence"
-msgstr ""
+msgstr "Следовательно"
 
 #. type: Plain text
 #: en/git-merge-base.adoc:202
@@ -39622,7 +39622,7 @@ msgstr ""
 #: en/git-merge-index.adoc:56 en/git-svn.adoc:171
 #, priority:100
 msgid "Examples:"
-msgstr ""
+msgstr "Примеры:"
 
 #. type: delimited block -
 #: en/git-merge-index.adoc:63
@@ -39729,7 +39729,7 @@ msgstr "ФУНКЦИИ"
 #: en/git-mergetool--lib.adoc:30
 #, no-wrap, placeholders:'get_merge_tool', priority:100
 msgid "get_merge_tool"
-msgstr ""
+msgstr "get_merge_tool"
 
 #. type: Plain text
 #: en/git-mergetool--lib.adoc:34
@@ -39741,7 +39741,7 @@ msgstr ""
 #: en/git-mergetool--lib.adoc:35
 #, no-wrap, placeholders:'get_merge_tool_cmd', priority:100
 msgid "get_merge_tool_cmd"
-msgstr ""
+msgstr "get_merge_tool_cmd"
 
 #. type: Plain text
 #: en/git-mergetool--lib.adoc:37
@@ -39753,7 +39753,7 @@ msgstr ""
 #: en/git-mergetool--lib.adoc:38
 #, no-wrap, placeholders:'get_merge_tool_path', priority:100
 msgid "get_merge_tool_path"
-msgstr ""
+msgstr "get_merge_tool_path"
 
 #. type: Plain text
 #: en/git-mergetool--lib.adoc:40
@@ -39777,7 +39777,7 @@ msgstr ""
 #: en/git-mergetool--lib.adoc:45
 #, no-wrap, placeholders:'run_merge_tool', priority:100
 msgid "run_merge_tool"
-msgstr ""
+msgstr "run_merge_tool"
 
 #. type: Plain text
 #: en/git-mergetool--lib.adoc:50
@@ -41331,7 +41331,7 @@ msgstr ""
 #: en/git-name-rev.adoc:27
 #, no-wrap, placeholders:'--refs=', priority:100
 msgid "--refs=<pattern>"
-msgstr ""
+msgstr "--refs=<pattern>"
 
 #. type: Plain text
 #: en/git-name-rev.adoc:32
@@ -41534,7 +41534,7 @@ msgstr ""
 #: en/git-notes.adoc:54
 #, no-wrap, priority:280
 msgid "SUBCOMMANDS"
-msgstr ""
+msgstr "ПОДКОМАНДЫ"
 
 #. type: Labeled list
 #: en/git-notes.adoc:56 en/git-worktree.adoc:109
@@ -42170,7 +42170,7 @@ msgstr ""
 #: en/git-p4.adoc:66
 #, no-wrap, priority:90
 msgid "Clone"
-msgstr ""
+msgstr "Клон"
 
 #. type: Plain text
 #: en/git-p4.adoc:69
@@ -42182,7 +42182,7 @@ msgstr ""
 #: en/git-p4.adoc:74
 #, priority:90
 msgid "This:"
-msgstr ""
+msgstr "Этот:"
 
 #. type: Plain text
 #: en/git-p4.adoc:76
@@ -42218,7 +42218,7 @@ msgstr ""
 #: en/git-p4.adoc:91
 #, no-wrap, priority:90
 msgid "Sync"
-msgstr ""
+msgstr "Синхронизация"
 
 #. type: Plain text
 #: en/git-p4.adoc:94
@@ -42925,7 +42925,7 @@ msgstr ""
 #: en/git-p4.adoc:456
 #, no-wrap, priority:90
 msgid "\"//depot/my/project\""
-msgstr ""
+msgstr "\"//depot/my/project\""
 
 #. type: Plain text
 #: en/git-p4.adoc:458
@@ -42935,9 +42935,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-p4.adoc:459
-#, no-wrap, priority:90
+#, fuzzy, no-wrap, priority:90
 msgid "\"//depot/my/project@all\""
-msgstr ""
+msgstr "\"//depot/my/project@all\""
 
 #. type: Plain text
 #: en/git-p4.adoc:461
@@ -42947,9 +42947,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-p4.adoc:462
-#, no-wrap, priority:90
+#, fuzzy, no-wrap, priority:90
 msgid "\"//depot/my/project@1,6\""
-msgstr ""
+msgstr "\"//depot/my/project@1,6\""
 
 #. type: Plain text
 #: en/git-p4.adoc:464
@@ -43227,7 +43227,7 @@ msgstr ""
 #: en/git-p4.adoc:632
 #, no-wrap, placeholders:'git-p', priority:90
 msgid "git-p4.ignoredP4Labels"
-msgstr ""
+msgstr "git-p4.ignoredP4Labels"
 
 #. type: Plain text
 #: en/git-p4.adoc:635
@@ -43683,9 +43683,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-pack-objects.adoc:53
-#, no-wrap, priority:80
+#, fuzzy, no-wrap, priority:80
 msgid "base-name"
-msgstr ""
+msgstr "base-name"
 
 #. type: Plain text
 #: en/git-pack-objects.adoc:60
@@ -43794,7 +43794,7 @@ msgstr ""
 #: en/git-pack-objects.adoc:135 en/git-repack.adoc:123
 #, no-wrap, placeholders:'--window=', priority:100
 msgid "--window=<n>"
-msgstr ""
+msgstr "--window=<n>"
 
 #. type: Plain text
 #: en/git-pack-objects.adoc:146
@@ -43812,7 +43812,7 @@ msgstr ""
 #: en/git-pack-objects.adoc:150 en/git-repack.adoc:139
 #, no-wrap, placeholders:'--window-memory=', priority:100
 msgid "--window-memory=<n>"
-msgstr ""
+msgstr "--window-memory=<n>"
 
 #. type: Plain text
 #: en/git-pack-objects.adoc:160
@@ -43842,7 +43842,7 @@ msgstr ""
 #: en/git-pack-objects.adoc:178 en/git-repack.adoc:203
 #, no-wrap, placeholders:'--keep-pack=', priority:100
 msgid "--keep-pack=<pack-name>"
-msgstr ""
+msgstr "--keep-pack=<pack-name>"
 
 #. type: Plain text
 #: en/git-pack-objects.adoc:184
@@ -43926,7 +43926,7 @@ msgstr ""
 #: en/git-pack-objects.adoc:238
 #, no-wrap, placeholders:'--compression=', priority:80
 msgid "--compression=<n>"
-msgstr ""
+msgstr "--compression=<n>"
 
 #. type: Plain text
 #: en/git-pack-objects.adoc:245
@@ -44022,7 +44022,7 @@ msgstr ""
 #: en/git-pack-objects.adoc:316
 #, no-wrap, placeholders:'--missing=', priority:80
 msgid "--missing=<missing-action>"
-msgstr ""
+msgstr "--missing=<missing-action>"
 
 #. type: Plain text
 #: en/git-pack-objects.adoc:319 en/rev-list-options.adoc:1040
@@ -44915,7 +44915,7 @@ msgstr ""
 #: en/git-pull.adoc:159
 #, no-wrap, priority:220
 msgid "refs/heads/*:refs/remotes/origin/*\n"
-msgstr ""
+msgstr "refs/heads/*:refs/remotes/origin/*\n"
 
 #. type: Plain text
 #: en/git-pull.adoc:166
@@ -46827,7 +46827,7 @@ msgstr ""
 #: en/git-read-tree.adoc:85 en/git-svn.adoc:75
 #, no-wrap, placeholders:'--prefix=', priority:100
 msgid "--prefix=<prefix>"
-msgstr ""
+msgstr "--prefix=<prefix>"
 
 #. type: Plain text
 #: en/git-read-tree.adoc:90
@@ -46839,7 +46839,7 @@ msgstr ""
 #: en/git-read-tree.adoc:91
 #, no-wrap, placeholders:'--index-output=', priority:80
 msgid "--index-output=<file>"
-msgstr ""
+msgstr "--index-output=<file>"
 
 #. type: Plain text
 #: en/git-read-tree.adoc:102
@@ -46899,7 +46899,7 @@ msgstr ""
 #: en/git-read-tree.adoc:127
 #, no-wrap, priority:80
 msgid "MERGING"
-msgstr ""
+msgstr "СЛИЯНИЕ"
 
 #. type: Plain text
 #: en/git-read-tree.adoc:132
@@ -47302,7 +47302,7 @@ msgstr ""
 #: en/git-read-tree.adoc:423
 #, no-wrap, priority:80
 msgid "/*\n"
-msgstr ""
+msgstr "/*\n"
 
 #. type: Plain text
 #: en/git-read-tree.adoc:429
@@ -47889,7 +47889,7 @@ msgstr "--strategy-option"
 #: en/git-rebase.adoc:363
 #, no-wrap, placeholders:'--strategy-option=', priority:100
 msgid "--strategy-option=<strategy-option>"
-msgstr ""
+msgstr "--strategy-option=<strategy-option>"
 
 #. type: Plain text
 #: en/git-rebase.adoc:368
@@ -50838,7 +50838,7 @@ msgstr ""
 #: en/git-repack.adoc:210
 #, no-wrap, placeholders:'--unpack-unreachable=', priority:100
 msgid "--unpack-unreachable=<when>"
-msgstr ""
+msgstr "--unpack-unreachable=<when>"
 
 #. type: Plain text
 #: en/git-repack.adoc:215
@@ -51138,7 +51138,7 @@ msgstr ""
 #: en/git-replace.adoc:112
 #, no-wrap, priority:100
 msgid "FORMATS"
-msgstr ""
+msgstr "ФОРМАТЫ"
 
 #. type: Plain text
 #: en/git-replace.adoc:115
@@ -51173,9 +51173,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-replace.adoc:121
-#, priority:100
+#, fuzzy, priority:100
 msgid "'long':"
-msgstr ""
+msgstr "'long':"
 
 #. type: Plain text
 #: en/git-replace.adoc:122
@@ -51259,7 +51259,7 @@ msgstr ""
 #: en/git-request-pull.adoc:32
 #, no-wrap, priority:100
 msgid "<start>"
-msgstr ""
+msgstr "<start>"
 
 #. type: Plain text
 #: en/git-request-pull.adoc:35
@@ -51283,7 +51283,7 @@ msgstr ""
 #: en/git-request-pull.adoc:39
 #, no-wrap, priority:100
 msgid "<end>"
-msgstr ""
+msgstr "<end>"
 
 #. type: Plain text
 #: en/git-request-pull.adoc:42
@@ -51397,7 +51397,7 @@ msgstr ""
 #: en/git-rerere.adoc:38
 #, no-wrap, priority:100
 msgid "'clear'"
-msgstr ""
+msgstr "'clear'"
 
 #. type: Plain text
 #: en/git-rerere.adoc:43
@@ -51419,9 +51419,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-rerere.adoc:49
-#, no-wrap, priority:100
+#, fuzzy, no-wrap, priority:100
 msgid "'diff'"
-msgstr ""
+msgstr "'diff'"
 
 #. type: Plain text
 #: en/git-rerere.adoc:55
@@ -51445,7 +51445,7 @@ msgstr ""
 #: en/git-rerere.adoc:60
 #, no-wrap, priority:100
 msgid "'remaining'"
-msgstr ""
+msgstr "'remaining'"
 
 #. type: Plain text
 #: en/git-rerere.adoc:65
@@ -51457,7 +51457,7 @@ msgstr ""
 #: en/git-rerere.adoc:66 en/git-svn.adoc:511
 #, no-wrap, priority:100
 msgid "'gc'"
-msgstr ""
+msgstr "'gc'"
 
 #. type: Plain text
 #: en/git-rerere.adoc:74
@@ -53363,7 +53363,7 @@ msgstr ""
 #: en/git-rev-parse.adoc:231
 #, no-wrap, placeholders:'--disambiguate=', priority:80
 msgid "--disambiguate=<prefix>"
-msgstr ""
+msgstr "--disambiguate=<prefix>"
 
 #. type: Plain text
 #: en/git-rev-parse.adoc:236
@@ -53728,7 +53728,7 @@ msgstr ""
 #: en/git-rev-parse.adoc:386
 #, no-wrap, priority:80
 msgid "`<opt-spec>`"
-msgstr ""
+msgstr "`<opt-spec>`"
 
 #. type: Plain text
 #: en/git-rev-parse.adoc:391
@@ -53740,7 +53740,7 @@ msgstr ""
 #: en/git-rev-parse.adoc:392
 #, no-wrap, priority:80
 msgid "`<flags>`"
-msgstr ""
+msgstr "`<flags>`"
 
 #. type: Plain text
 #: en/git-rev-parse.adoc:394
@@ -53776,7 +53776,7 @@ msgstr ""
 #: en/git-rev-parse.adoc:406
 #, no-wrap, priority:80
 msgid "`<arg-hint>`"
-msgstr ""
+msgstr "`<arg-hint>`"
 
 #. type: Plain text
 #: en/git-rev-parse.adoc:411
@@ -53885,7 +53885,7 @@ msgstr ""
 #: en/git-rev-parse.adoc:464
 #, no-wrap, priority:80
 msgid "SQ-QUOTE"
-msgstr ""
+msgstr "SQ-QUOTE"
 
 #. type: Plain text
 #: en/git-rev-parse.adoc:470
@@ -54292,7 +54292,7 @@ msgstr ""
 #: en/git-send-email.adoc:49
 #, no-wrap, priority:100
 msgid "Composing"
-msgstr ""
+msgstr "Композиция"
 
 #. type: Labeled list
 #: en/git-send-email.adoc:51
@@ -54328,7 +54328,7 @@ msgstr ""
 #: en/git-send-email.adoc:62
 #, ignore-ellipsis, no-wrap, placeholders:'--cc=', priority:100
 msgid "--cc=<address>,..."
-msgstr ""
+msgstr "--cc=<address>,..."
 
 #. type: Plain text
 #: en/git-send-email.adoc:65
@@ -54370,7 +54370,7 @@ msgstr ""
 #: en/git-send-email.adoc:83
 #, no-wrap, placeholders:'--from=', priority:100
 msgid "--from=<address>"
-msgstr ""
+msgstr "--from=<address>"
 
 #. type: Plain text
 #: en/git-send-email.adoc:90
@@ -54382,7 +54382,7 @@ msgstr ""
 #: en/git-send-email.adoc:91
 #, no-wrap, placeholders:'--reply-to=', priority:100
 msgid "--reply-to=<address>"
-msgstr ""
+msgstr "--reply-to=<address>"
 
 #. type: Plain text
 #: en/git-send-email.adoc:95
@@ -54394,7 +54394,7 @@ msgstr ""
 #: en/git-send-email.adoc:96
 #, no-wrap, placeholders:'--in-reply-to=', priority:100
 msgid "--in-reply-to=<identifier>"
-msgstr ""
+msgstr "--in-reply-to=<identifier>"
 
 #. type: Plain text
 #: en/git-send-email.adoc:102
@@ -54461,7 +54461,7 @@ msgstr ""
 #: en/git-send-email.adoc:132
 #, no-wrap, placeholders:'--subject=', priority:100
 msgid "--subject=<string>"
-msgstr ""
+msgstr "--subject=<string>"
 
 #. type: Plain text
 #: en/git-send-email.adoc:136
@@ -54473,7 +54473,7 @@ msgstr ""
 #: en/git-send-email.adoc:137
 #, ignore-ellipsis, no-wrap, placeholders:'--to=', priority:100
 msgid "--to=<address>,..."
-msgstr ""
+msgstr "--to=<address>,..."
 
 #. type: Plain text
 #: en/git-send-email.adoc:142
@@ -54503,7 +54503,7 @@ msgstr ""
 #: en/git-send-email.adoc:154
 #, no-wrap, placeholders:'--compose-encoding=', priority:100
 msgid "--compose-encoding=<encoding>"
-msgstr ""
+msgstr "--compose-encoding=<encoding>"
 
 #. type: Plain text
 #: en/git-send-email.adoc:157
@@ -54551,13 +54551,13 @@ msgstr ""
 #: en/git-send-email.adoc:177
 #, no-wrap, priority:100
 msgid "Sending"
-msgstr ""
+msgstr "Отправка"
 
 #. type: Labeled list
 #: en/git-send-email.adoc:179
 #, no-wrap, placeholders:'--envelope-sender=', priority:100
 msgid "--envelope-sender=<address>"
-msgstr ""
+msgstr "--envelope-sender=<address>"
 
 #. type: Plain text
 #: en/git-send-email.adoc:187
@@ -54581,7 +54581,7 @@ msgstr ""
 #: en/git-send-email.adoc:196
 #, no-wrap, placeholders:'--smtp-encryption=', priority:100
 msgid "--smtp-encryption=<encryption>"
-msgstr ""
+msgstr "--smtp-encryption=<encryption>"
 
 #. type: Plain text
 #: en/git-send-email.adoc:209
@@ -54593,7 +54593,7 @@ msgstr ""
 #: en/git-send-email.adoc:210
 #, no-wrap, placeholders:'--smtp-domain=', priority:100
 msgid "--smtp-domain=<FQDN>"
-msgstr ""
+msgstr "--smtp-domain=<FQDN>"
 
 #. type: Plain text
 #: en/git-send-email.adoc:216
@@ -54605,7 +54605,7 @@ msgstr ""
 #: en/git-send-email.adoc:217
 #, no-wrap, placeholders:'--smtp-auth=', priority:100
 msgid "--smtp-auth=<mechanisms>"
-msgstr ""
+msgstr "--smtp-auth=<mechanisms>"
 
 #. type: Plain text
 #: en/git-send-email.adoc:220
@@ -55546,7 +55546,7 @@ msgstr ""
 #: en/git-send-pack.adoc:29
 #, no-wrap, placeholders:'--receive-pack=':'git-receive-pack', priority:90
 msgid "--receive-pack=<git-receive-pack>"
-msgstr ""
+msgstr "--receive-pack=<git-receive-pack>"
 
 #. type: Plain text
 #: en/git-send-pack.adoc:34
@@ -55558,7 +55558,7 @@ msgstr ""
 #: en/git-send-pack.adoc:35
 #, no-wrap, placeholders:'--exec=':'git-receive-pack', priority:90
 msgid "--exec=<git-receive-pack>"
-msgstr ""
+msgstr "--exec=<git-receive-pack>"
 
 #. type: Plain text
 #: en/git-send-pack.adoc:37
@@ -56703,7 +56703,7 @@ msgstr ""
 #: en/git-show-ref.adoc:104
 #, ignore-ellipsis, no-wrap, priority:80
 msgid "<pattern>..."
-msgstr ""
+msgstr "<pattern>..."
 
 #. type: Plain text
 #: en/git-show-ref.adoc:111
@@ -63283,7 +63283,7 @@ msgstr ""
 #: en/git.adoc:441
 #, no-wrap, priority:100
 msgid "HEAD"
-msgstr ""
+msgstr "HEAD"
 
 #. type: Plain text
 #: en/git.adoc:443
