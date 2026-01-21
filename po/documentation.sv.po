@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-01-21 18:50+0000\n"
+"PO-Revision-Date: 2026-01-21 19:33+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -8688,12 +8688,12 @@ msgstr "En asterisk \"`*`\" matchar allt utom ett snedstreck. Tecknet \"`?`\" ma
 #. type: Plain text
 #: en/gitignore.adoc:118
 msgid "A backslash (\"`\\`\") can be used to escape any character. E.g., \"`\\*`\" matches a literal asterisk (and \"`\\a`\" matches \"`a`\", even though there is no need for escaping there). As with fnmatch(3), a backslash at the end of a pattern is an invalid pattern that never matches."
-msgstr ""
+msgstr "Ett omvänt snedstreck (\"`\\`\") kan användas för att undanröja vilket tecken som helst. Till exempel matchar \"`\\*`\" en asterisk (och \"`\\a`\" matchar \"`a`\", även om det inte finns något behov av att undanröja där). Precis som med fnmatch(3) är ett omvänt snedstreck i slutet av ett mönster ett ogiltigt mönster som aldrig matchar."
 
 #. type: Plain text
 #: en/gitignore.adoc:121 en/glossary-content.adoc:418
 msgid "Two consecutive asterisks (\"`**`\") in patterns matched against full pathname may have special meaning:"
-msgstr ""
+msgstr "Två asterisker i rad (\"`**`\") i mönster som matchar det fullständiga sökvägsnamnet kan ha en speciell betydelse:"
 
 #. type: Plain text
 #: en/gitignore.adoc:127
@@ -8703,12 +8703,12 @@ msgstr ""
 #. type: Plain text
 #: en/gitignore.adoc:131
 msgid "A trailing \"`/**`\" matches everything inside. For example, \"`abc/**`\" matches all files inside directory \"`abc`\", relative to the location of the `.gitignore` file, with infinite depth."
-msgstr ""
+msgstr "Ett efterföljande \"`/**`\" matchar allt inuti. Till exempel matchar \"`abc/**`\" alla filer i katalogen \"`abc`\", relativt till platsen för `.gitignore`-filen, med oändligt djup."
 
 #. type: Plain text
 #: en/gitignore.adoc:135 en/glossary-content.adoc:431
 msgid "A slash followed by two consecutive asterisks then a slash matches zero or more directories. For example, \"`a/**/b`\" matches \"`a/b`\", \"`a/x/b`\", \"`a/x/y/b`\" and so on."
-msgstr ""
+msgstr "Ett snedstreck följt av två asterisker i rad, sedan ett snedstreck, matchar noll eller fler kataloger. Till exempel matchar \"`a/**/b`\" \"`a/b`\", \"`a/x/b`\", \"`a/x/y/b`\" och så vidare."
 
 #. type: Plain text
 #: en/gitignore.adoc:138
@@ -8829,9 +8829,14 @@ msgstr ""
 
 #. type: delimited block -
 #: en/gitignore.adoc:222
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "    $ cat .gitignore\n    vmlinux*\n    $ ls arch/foo/kernel/vm*\n    arch/foo/kernel/vmlinux.lds.S\n    $ echo '!/vmlinux*' >arch/foo/kernel/.gitignore\n"
 msgstr ""
+"    $ cat .gitignore\n"
+"    vmlinux*\n"
+"    $ ls arch/foo/kernel/vm*\n"
+"    arch/foo/kernel/vmlinux.lds.S\n"
+"    $ echo '!/vmlinux*' >arch/foo/kernel/.gitignore\n"
 
 #. type: Plain text
 #: en/gitignore.adoc:226
@@ -8848,6 +8853,12 @@ msgstr ""
 #, no-wrap
 msgid "    $ cat .gitignore\n    # exclude everything except directory foo/bar\n    /*\n    !/foo\n    /foo/*\n    !/foo/bar\n"
 msgstr ""
+"    $ cat .gitignore\n"
+"    # exkludera allt utom katalogen foo/bar\n"
+"    /*\n"
+"    !/foo\n"
+"    /foo/*\n"
+"    !/foo/bar\n"
 
 #. type: Title -
 #: en/gitignore.adoc:241 en/git-add.adoc:447 en/git-am.adoc:300
@@ -9423,7 +9434,7 @@ msgstr ""
 #: en/git-add.adoc:227
 #, no-wrap
 msgid "$ git add Documentation/\\*.txt\n"
-msgstr ""
+msgstr "$ git add Documentation/\\*.txt\n"
 
 #. type: Plain text
 #: en/git-add.adoc:232
@@ -9439,7 +9450,7 @@ msgstr ""
 #: en/git-add.adoc:237
 #, no-wrap
 msgid "$ git add git-*.sh\n"
-msgstr ""
+msgstr "$ git add git-*.sh\n"
 
 #. type: Plain text
 #: en/git-add.adoc:242
@@ -10477,9 +10488,8 @@ msgstr "git-apply(1)"
 
 #. type: Plain text
 #: en/git-apply.adoc:7
-#, fuzzy
 msgid "git-apply - Apply a patch to files and/or to the index"
-msgstr "Tillämpa en patch på filer och/eller indexet"
+msgstr "git-apply - Tillämpa en patch på filer och/eller indexet"
 
 #. type: verse
 #: en/git-apply.adoc:21
@@ -11131,9 +11141,8 @@ msgstr "git-archive(1)"
 
 #. type: Plain text
 #: en/git-archive.adoc:7
-#, fuzzy
 msgid "git-archive - Create an archive of files from a named tree"
-msgstr "Skapa ett arkiv över filer från ett namngivet träd"
+msgstr "git-archive - Skapa ett arkiv över filer från ett namngivet träd"
 
 #. type: verse
 #: en/git-archive.adoc:16
@@ -11544,9 +11553,8 @@ msgstr "git-bisect(1)"
 
 #. type: Plain text
 #: en/git-bisect.adoc:7
-#, fuzzy
 msgid "git-bisect - Use binary search to find the commit that introduced a bug"
-msgstr "Använd binärsökning för att hitta ändringen som introducerade ett fel"
+msgstr "git-bisect - Använd binärsökning för att hitta ändringen som introducerade ett fel"
 
 #. type: verse
 #: en/git-bisect.adoc:25
@@ -12146,6 +12154,14 @@ msgstr ""
 #, no-wrap
 msgid "$ git bisect start HEAD <known-good-commit> [ <boundary-commit> ... ] --no-checkout\n$ git bisect run sh -c '\n\tGOOD=$(git for-each-ref \"--format=%(objectname)\" refs/bisect/good-*) &&\n\tgit rev-list --objects BISECT_HEAD --not $GOOD >tmp.$$ &&\n\tgit pack-objects --stdout >/dev/null <tmp.$$\n\trc=$?\n\trm -f tmp.$$\n\ttest $rc = 0'\n"
 msgstr ""
+"$ git bisect start HEAD <känd-bra-incheckning> [ <gräns-incheckning> ... ] --no-checkout\n"
+"$ git bisect run sh -c '\n"
+"\tBRA=$(git for-each-ref \"--format=%(objectname)\" refs/bisect/good-*) &&\n"
+"\tgit rev-list --objects BISECT_HEAD --not $BRA >tmp.$$ &&\n"
+"\tgit pack-objects --stdout >/dev/null <tmp.$$\n"
+"\trc=$?\n"
+"\trm -f tmp.$$\n"
+"\ttest $rc = 0'\n"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:492
@@ -12205,9 +12221,8 @@ msgstr "git-blame(1)"
 
 #. type: Plain text
 #: en/git-blame.adoc:7
-#, fuzzy
 msgid "git-blame - Show what revision and author last modified each line of a file"
-msgstr "Visa version och författare som sist modifierade varje rad i en fil"
+msgstr "git-blame - Visa vilken version och författare som sist modifierade varje rad i en fil"
 
 #. type: verse
 #: en/git-blame.adoc:16
@@ -12360,9 +12375,8 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-blame.adoc:108
-#, fuzzy
 msgid "line number"
-msgstr "--line-number"
+msgstr "radnummer"
 
 #. type: Plain text
 #: en/git-blame.adoc:110
@@ -13210,8 +13224,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-branch.adoc:426
+#, fuzzy
 msgid "linkgit:git-check-ref-format[1], linkgit:git-fetch[1], linkgit:git-remote[1], link:user-manual.html#what-is-a-branch[\"Understanding history: What is a branch?\"] in the Git User's Manual."
-msgstr ""
+msgstr "linkgit:git-check-ref-format[1], linkgit:git-fetch[1], linkgit:git-remote[1], link:user-manual.html#what-is-a-branch[\"Att förstå historia: Vad är en gren?\"] i Git användarmanualen."
 
 #. type: Title =
 #: en/git-bugreport.adoc:2
@@ -13222,9 +13237,8 @@ msgstr "git-bugreport(1)"
 
 #. type: Plain text
 #: en/git-bugreport.adoc:7
-#, fuzzy
 msgid "git-bugreport - Collect information for user to file a bug report"
-msgstr "Samla information från användaren för att sända en felrapport"
+msgstr "git-bugreport - Samla in information för att användaren ska kunna göra en felrapport"
 
 #. type: verse
 #: en/git-bugreport.adoc:14
@@ -13267,9 +13281,8 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-bugreport.adoc:32
-#, fuzzy
 msgid "'git version --build-options'"
-msgstr "git version [--build-options]"
+msgstr "'git version --build-options'"
 
 #. type: Plain text
 #: en/git-bugreport.adoc:33
@@ -13841,9 +13854,8 @@ msgstr "git-cat-file(1)"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:7
-#, fuzzy
 msgid "git-cat-file - Provide contents or details of repository objects"
-msgstr "Visa innehåll eller detaljer för objekt i arkivet"
+msgstr "git-cat-file - Tillhandahåller innehåll eller detaljer om repo-objekt"
 
 #. type: verse
 #: en/git-cat-file.adoc:18
@@ -14023,9 +14035,9 @@ msgstr "--batch"
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:110
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "--batch=<format>"
-msgstr "--patch-format"
+msgstr "--batch=<format>"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:114
@@ -15065,7 +15077,6 @@ msgstr "--force"
 
 #. type: Plain text
 #: en/git-checkout-index.adoc:38
-#, fuzzy
 msgid "forces overwrite of existing files"
 msgstr "tvinga överskrivning av befintliga filer"
 
@@ -15169,7 +15180,7 @@ msgstr ""
 #: en/git-checkout-index.adoc:92
 #, no-wrap
 msgid "$ find . -name '*.h' -print0 | xargs -0 git checkout-index -f --\n"
-msgstr ""
+msgstr "$ find . -name '*.h' -print0 | xargs -0 git checkout-index -f --\n"
 
 #. type: Plain text
 #: en/git-checkout-index.adoc:98
@@ -15180,7 +15191,7 @@ msgstr ""
 #: en/git-checkout-index.adoc:101
 #, no-wrap
 msgid "$ find . -name '*.h' -print0 | git checkout-index -f -z --stdin\n"
-msgstr ""
+msgstr "$ find . -name '*.h' -print0 | git checkout-index -f -z --stdin\n"
 
 #. type: Plain text
 #: en/git-checkout-index.adoc:106
@@ -15298,9 +15309,8 @@ msgstr "git-checkout(1)"
 
 #. type: Plain text
 #: en/git-checkout.adoc:7
-#, fuzzy
 msgid "git-checkout - Switch branches or restore working tree files"
-msgstr "Byt till en ny gren eller återställ filer i arbetskatalogen"
+msgstr "git-checkout - Byt gren eller återställ filer i arbetskatalogen"
 
 #. type: synopsis
 #: en/git-checkout.adoc:20
@@ -15455,9 +15465,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-checkout.adoc:102
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "`git checkout (-p|--patch) [<tree-ish>] [--] [<pathspec>...]`"
-msgstr "git reset --patch [<träd-igt>] [--] [<sökvägar>...]"
+msgstr "`git checkout (-p|--patch) [<trädlikt>] [--] [<sökvägar>...]`"
 
 #. type: Plain text
 #: en/git-checkout.adoc:107
@@ -15760,9 +15770,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-checkout.adoc:334
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "`<branch>`"
-msgstr "<gren>"
+msgstr "`<gren>`"
 
 #. type: Plain text
 #: en/git-checkout.adoc:340
@@ -15792,9 +15802,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-checkout.adoc:360
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "_<tree-ish>_"
-msgstr "<träd-igt>"
+msgstr "_<trädlikt>_"
 
 #. type: Plain text
 #: en/git-checkout.adoc:363
@@ -15980,9 +15990,8 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-checkout.adoc:540
-#, fuzzy
 msgid "switch branch"
-msgstr "Byt gren"
+msgstr "byt gren"
 
 #. type: Plain text
 #: en/git-checkout.adoc:541 en/git-restore.adoc:165
@@ -16003,7 +16012,7 @@ msgstr ""
 #: en/git-checkout.adoc:548
 #, no-wrap
 msgid "$ git checkout -- '*.c'\n"
-msgstr ""
+msgstr "$ git checkout -- '*.c'\n"
 
 #. type: Plain text
 #: en/git-checkout.adoc:554
@@ -16735,6 +16744,10 @@ msgstr ""
 #, no-wrap
 msgid "$ git checkout -b topic origin/master\n# work and create some commits\n$ git format-patch origin/master\n$ git send-email ... 00*\n"
 msgstr ""
+"$ git checkout -b topic origin/master\n"
+"# arbeta och skapa några commits\n"
+"$ git format-patch origin/master\n"
+"$ git send-email ... 00*\n"
 
 #. type: Plain text
 #: en/git-cherry.adoc:62
@@ -16760,9 +16773,20 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-cherry.adoc:86
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "$ git log --graph --oneline --decorate --boundary origin/master...topic\n* 7654321 (origin/master) upstream tip commit\n[... snip some other commits ...]\n* cccc111 cherry-pick of C\n* aaaa111 cherry-pick of A\n[... snip a lot more that has happened ...]\n| * cccc000 (topic) commit C\n| * bbbb000 commit B\n| * aaaa000 commit A\n|/\no 1234567 branch point\n"
 msgstr ""
+"$ git log --graph --oneline --decorate --boundary origin/master...topic\n"
+"* 7654321 (origin/master) upstream tip commit\n"
+"[... klipp ut några andra commits ...]\n"
+"* cccc111 cherry-pick of C\n"
+"* aaaa111 cherry-pick of A\n"
+"[... klipp ut mycket mer som har hänt ...]\n"
+"| * cccc000 (topic) incheckning C\n"
+"| * bbbb000 incheckning B\n"
+"| * aaaa000 incheckning A\n"
+"|/\n"
+"o 1234567 branch point\n"
 
 #. type: Plain text
 #: en/git-cherry.adoc:90
@@ -16793,9 +16817,23 @@ msgstr ""
 
 #. type: delimited block -
 #: en/git-cherry.adoc:126
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "$ git log --graph --oneline --decorate --boundary origin/master...topic\n* 7654321 (origin/master) upstream tip commit\n[... snip some other commits ...]\n* cccc111 cherry-pick of C\n* aaaa111 cherry-pick of A\n[... snip a lot more that has happened ...]\n| * cccc000 (topic) commit C\n| * bbbb000 commit B\n| * aaaa000 commit A\n| * 0000fff (base) unpublished stuff F\n[... snip ...]\n| * 0000aaa unpublished stuff A\n|/\no 1234567 merge-base between upstream and topic\n"
 msgstr ""
+"$ git log --graph --oneline --decorate --boundary origin/master...topic\n"
+"* 7654321 (origin/master) upstream tip commit\n"
+"[... klipp ut några andra commits ...]\n"
+"* cccc111 cherry-pick of C\n"
+"* aaaa111 cherry-pick of A\n"
+"[... klipp ut mycket mer som har hänt ...]\n"
+"| * cccc000 (topic) incheckning C\n"
+"| * bbbb000 incheckning B\n"
+"| * aaaa000 incheckning A\n"
+"| * 0000fff (base) opublicerade saker F\n"
+"[... snip ...]\n"
+"| * 0000aaa opublicerade saker A\n"
+"|/\n"
+"o 1234567 merge-base between upstream and topic\n"
 
 #. type: Plain text
 #: en/git-cherry.adoc:130
@@ -17734,6 +17772,11 @@ msgstr ""
 #, no-wrap
 msgid "$ git tag --list 'v2.4.*' --column=row,dense\nv2.4.0  v2.4.0-rc0  v2.4.0-rc1  v2.4.0-rc2  v2.4.0-rc3\nv2.4.1  v2.4.10     v2.4.11     v2.4.12     v2.4.2\nv2.4.3  v2.4.4      v2.4.5      v2.4.6      v2.4.7\nv2.4.8  v2.4.9\n"
 msgstr ""
+"$ git tag --list 'v2.4.*' --column=row,dense\n"
+"v2.4.0  v2.4.0-rc0  v2.4.0-rc1  v2.4.0-rc2  v2.4.0-rc3\n"
+"v2.4.1  v2.4.10     v2.4.11     v2.4.12     v2.4.2\n"
+"v2.4.3  v2.4.4      v2.4.5      v2.4.6      v2.4.7\n"
+"v2.4.8  v2.4.9\n"
 
 #. type: Title =
 #: en/git-commit-tree.adoc:2
@@ -26703,6 +26746,10 @@ msgstr ""
 #, no-wrap
 msgid "$ git fetch origin --prune --prune-tags\n$ git fetch origin --prune 'refs/tags/*:refs/tags/*'\n$ git fetch <url-of-origin> --prune --prune-tags\n$ git fetch <url-of-origin> --prune 'refs/tags/*:refs/tags/*'\n"
 msgstr ""
+"$ git fetch origin --prune --prune-tags\n"
+"$ git fetch origin --prune 'refs/tags/*:refs/tags/*'\n"
+"$ git fetch <url-of-origin> --prune --prune-tags\n"
+"$ git fetch <url-of-origin> --prune 'refs/tags/*:refs/tags/*'\n"
 
 #. type: Plain text
 #: en/git-fetch.adoc:199
@@ -26802,7 +26849,7 @@ msgstr ""
 #: en/git-fetch.adoc:230 en/git-push.adoc:461
 #, no-wrap
 msgid "`*`"
-msgstr ""
+msgstr "`*`"
 
 #. type: Plain text
 #: en/git-fetch.adoc:231
@@ -31858,6 +31905,12 @@ msgstr ""
 #, no-wrap
 msgid "$HTTP[\"querystring\"] =~ \"service=git-receive-pack\" {\n\tinclude \"git-auth.conf\"\n}\n$HTTP[\"url\"] =~ \"^/git/.*/git-receive-pack$\" {\n\tinclude \"git-auth.conf\"\n}\n"
 msgstr ""
+"$HTTP[\"querystring\"] =~ \"service=git-receive-pack\" {\n"
+"\tinclude \"git-auth.conf\"\n"
+"}\n"
+"$HTTP[\"url\"] =~ \"^/git/.*/git-receive-pack$\" {\n"
+"\tinclude \"git-auth.conf\"\n"
+"}\n"
 
 #. type: Plain text
 #: en/git-http-backend.adoc:239
@@ -34765,6 +34818,11 @@ msgstr ""
 #, no-wrap
 msgid "$ git ls-remote --tags http://www.kernel.org/pub/scm/git/git.git v\\*\n485a869c64a68cc5795dd99689797c5900f4716d\trefs/tags/v2.39.2\ncbf04937d5b9fcf0a76c28f69e6294e9e3ecd7e6\trefs/tags/v2.39.2^{}\nd4ca2e3147b409459955613c152220f4db848ee1\trefs/tags/v2.40.0\n73876f4861cd3d187a4682290ab75c9dccadbc56\trefs/tags/v2.40.0^{}\n"
 msgstr ""
+"$ git ls-remote --tags http://www.kernel.org/pub/scm/git/git.git v\\*\n"
+"485a869c64a68cc5795dd99689797c5900f4716d\trefs/tags/v2.39.2\n"
+"cbf04937d5b9fcf0a76c28f69e6294e9e3ecd7e6\trefs/tags/v2.39.2^{}\n"
+"d4ca2e3147b409459955613c152220f4db848ee1\trefs/tags/v2.40.0\n"
+"73876f4861cd3d187a4682290ab75c9dccadbc56\trefs/tags/v2.40.0^{}\n"
 
 #. type: Plain text
 #: en/git-ls-remote.adoc:154
@@ -37776,6 +37834,9 @@ msgstr ""
 #, no-wrap
 msgid "$ cc *.c\n$ blob=$(git hash-object -w a.out)\n$ git notes --ref=built add --allow-empty -C \"$blob\" HEAD\n"
 msgstr ""
+"$ cc *.c\n"
+"$ blob=$(git hash-object -w a.out)\n"
+"$ git notes --ref=built add --allow-empty -C \"$blob\" HEAD\n"
 
 #. type: Plain text
 #: en/git-notes.adoc:347
@@ -40673,7 +40734,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-push.adoc:109
 msgid "A refspec starting with `^` is a negative refspec. This specifies refs to exclude. A ref will be considered to match if it matches at least one positive refspec, and does not match any negative refspec. Negative refspecs can be pattern refspecs. They must only contain a _<src>_. Fully spelled out hex object names are also not supported. For example, `git push origin 'refs/heads/*' '^refs/heads/dev-*'` will push all branches except for those starting with `dev-`"
-msgstr ""
+msgstr "En refspec som börjar med `^` är en negativ refspec. Detta anger referenser som ska exkluderas. En ref kommer att anses matcha om den matchar minst en positiv refspec och inte matchar någon negativ refspec. Negativa refspecs kan vara mönsterrefspecs. De får bara innehålla ett _<src>_. Fullständigt stavade hexadecimala objektnamn stöds inte heller. Till exempel kommer `git push origin 'refs/heads/*' '^refs/heads/dev-*'` att pusha alla grenar förutom de som börjar med `dev-`"
 
 #. type: Plain text
 #: en/git-push.adoc:112
@@ -41878,7 +41939,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-range-diff.adoc:204
 msgid "To help with that, `range` uses the `--dual-color` mode by default. In this mode, the diff of diffs will retain the original diff colors, and prefix the lines with -/+ markers that have their *background* red or green, to make it more obvious that they describe how the diff itself changed."
-msgstr ""
+msgstr "För att underlätta detta använder `range` läget `--dual-color` som standard. I det här läget behåller diff-värdena de ursprungliga färgerna och prefixerar raderna med -/+ markörer som har sin *bakgrund* röd eller grön, för att göra det tydligare att de beskriver hur själva diffen ändrades."
 
 #. type: Title -
 #: en/git-range-diff.adoc:207
@@ -43981,9 +44042,13 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-rebase.adoc:1109
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "While an \"easy case recovery\" sometimes appears to be successful\n      even in the hard case, it may have unintended consequences.  For\n      example, a commit that was removed via `git rebase\n      --interactive` will be **resurrected**!\n"
 msgstr ""
+"Även om en \"enkel fall av återställning\" ibland verkar vara framgångsrik\n"
+"      även i svåra fall, kan den få oavsiktliga konsekvenser. Till\n"
+"      exempel, en incheckning som togs bort via `git rebase\n"
+"      --interactive` kommer att **återupplivas**!\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:1114
@@ -46943,7 +47008,7 @@ msgstr ""
 #: en/git-restore.adoc:172
 #, no-wrap
 msgid "$ git restore '*.c'\n"
-msgstr ""
+msgstr "$ git restore '*.c'\n"
 
 #. type: Plain text
 #: en/git-restore.adoc:178
@@ -50210,7 +50275,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-show-branch.adoc:42
 msgid "A glob pattern that matches branch or tag names under refs/. For example, if you have many topic branches under refs/heads/topic, giving `topic/*` would show all of them."
-msgstr ""
+msgstr "Ett globmönster som matchar gren- eller taggnamn under refs/. Om du till exempel har många ämnesgrenar under refs/heads/topic, skulle `topic/*` visa alla."
 
 #. type: Labeled list
 #: en/git-show-branch.adoc:44
@@ -50379,6 +50444,11 @@ msgstr ""
 #, no-wrap
 msgid "$ git show-branch master fixes mhf\n* [master] Add 'git show-branch'.\n ! [fixes] Introduce \"reset type\" flag to \"git reset\"\n  ! [mhf] Allow \"+remote:local\" refspec to cause --force when fetching.\n---\n"
 msgstr ""
+"$ git show-branch master fixes mhf\n"
+"* [master] Lägg till 'git show-branch'.\n"
+" ! [fixes] Introducera flaggan \"reset type\" till \"git reset\"\n"
+"  ! [mhf] Tillåt refspec \"+remote:local\" att orsaka --force vid hämtning.\n"
+"---\n"
 
 #. type: delimited block -
 #: en/git-show-branch.adoc:167
@@ -54785,7 +54855,7 @@ msgstr ""
 #: en/git-svn.adoc:1140
 #, no-wrap
 msgid "$GIT_DIR/svn/\\**/.rev_map.*"
-msgstr ""
+msgstr "$GIT_DIR/svn/\\**/.rev_map.*"
 
 #. type: Plain text
 #: en/git-svn.adoc:1146
@@ -57543,7 +57613,7 @@ msgstr ""
 #. type: Plain text
 #: en/git.adoc:1189
 msgid "linkgit:gittutorial[7], linkgit:gittutorial-2[7], linkgit:giteveryday[7], linkgit:gitcvs-migration[7], linkgit:gitglossary[7], linkgit:gitcore-tutorial[7], linkgit:gitcli[7], link:user-manual.html[The Git User's Manual], linkgit:gitworkflows[7]"
-msgstr ""
+msgstr "linkgit:gittutorial[7], linkgit:gittutorial-2[7], linkgit:giteveryday[7], linkgit:gitcvs-migration[7], linkgit:gitglossary[7], linkgit:gitcore-tutorial[7], linkgit:gitcli[7], link:user-manual.html[Git användarmanual], linkgit:gitworkflows[7]"
 
 #. type: Title =
 #: en/git-unpack-file.adoc:2
@@ -60244,7 +60314,7 @@ msgstr "*"
 #. type: Plain text
 #: en/gitglossary.adoc:24
 msgid "linkgit:gittutorial[7], linkgit:gittutorial-2[7], linkgit:gitcvs-migration[7], linkgit:giteveryday[7], link:user-manual.html[The Git User's Manual]"
-msgstr ""
+msgstr "linkgit:gittutorial[7], linkgit:gittutorial-2[7], linkgit:gitcvs-migration[7], linkgit:giteveryday[7], link:user-manual.html[Git användarmanual]"
 
 #. type: Labeled list
 #: en/glossary-content.adoc:1
@@ -60892,7 +60962,7 @@ msgstr ""
 #. type: Plain text
 #: en/glossary-content.adoc:404
 msgid "Wildcards in the pattern such as `*` or `?` are treated as literal characters."
-msgstr ""
+msgstr "Jokertecken i mönstret, såsom `*` eller `?`, behandlas som teckenlekter."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:405
@@ -60919,12 +60989,12 @@ msgstr "Git behandlar mönstret som en skal-glob lämplig för konsumtion av fnm
 #. type: Plain text
 #: en/glossary-content.adoc:423
 msgid "A leading \"`**`\" followed by a slash means match in all directories. For example, \"`**/foo`\" matches file or directory \"`foo`\" anywhere. \"`**/foo/bar`\" matches file or directory \"`bar`\" anywhere that is directly under directory \"`foo`\"."
-msgstr ""
+msgstr "Ett inledande \"`**`\" följt av ett snedstreck betyder matchning i alla kataloger. Till exempel matchar \"`**/foo`\" filen eller katalogen \"`foo`\" var som helst. \"`**/foo/bar`\" matchar filen eller katalogen \"`bar`\" var som helst som ligger direkt under katalogen \"`foo`\"."
 
 #. type: Plain text
 #: en/glossary-content.adoc:427
 msgid "A trailing \"`/**`\" matches everything inside. For example, \"`abc/**`\" matches all files inside directory \"abc\", relative to the location of the `.gitignore` file, with infinite depth."
-msgstr ""
+msgstr "Ett efterföljande \"`/**`\" matchar allt inuti. Till exempel matchar \"`abc/**`\" alla filer i katalogen \"abc\", relativt till platsen för `.gitignore`-filen, med oändligt djup."
 
 #. type: Plain text
 #: en/glossary-content.adoc:433
