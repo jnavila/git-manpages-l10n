@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-01-20 23:11+0000\n"
+"PO-Revision-Date: 2026-01-21 05:04+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -3303,7 +3303,7 @@ msgstr ""
 #. type: Plain text
 #: en/config/diff.adoc:10
 msgid "When using `git diff` to compare with work tree files, do not consider stat-only changes as changed. Instead, silently run `git update-index --refresh` to update the cached stat information for paths whose contents in the work tree match the contents in the index. This option defaults to `true`. Note that this affects only `git diff` Porcelain, and not lower level `diff` commands such as `git diff-files`."
-msgstr ""
+msgstr "När du använder `git diff` för att jämföra med arbetsträdfiler, betrakta inte ändringar som endast innehåller statistiska data som ändrade. Kör istället `git update-index --refresh` i tysthet för att uppdatera den cachade statistiska informationen för sökvägar vars innehåll i arbetsträdet matchar innehållet i indexet. Standardvärdet för detta alternativ är `true`. Observera att detta endast påverkar `git diff` Porcelain, och inte `diff`-kommandon på lägre nivå som `git diff-files`."
 
 #. type: Labeled list
 #: en/config/diff.adoc:11
@@ -3316,12 +3316,17 @@ msgstr ""
 #, no-wrap
 msgid "\tA comma separated list of `--dirstat` parameters specifying the\n\tdefault behavior of the `--dirstat` option to `git diff` and friends.\n"
 msgstr ""
+"\tEn kommaseparerad lista med `--dirstat`-parametrar som anger\n"
+"\tstandardbeteendet för `--dirstat`-alternativet för `git diff` och vänner.\n"
 
 #. type: Plain text
 #: en/config/diff.adoc:20
 #, no-wrap
 msgid "\tA comma separated list of `--dirstat` parameters specifying the\n\tdefault behavior of the `--dirstat` option to linkgit:git-diff[1]\n\tand friends.\n"
 msgstr ""
+"\tEn kommaseparerad lista med `--dirstat`-parametrar som anger \n"
+"\tstandardbeteendet för `--dirstat`-alternativet till linkgit:git-diff[1]\n"
+"\toch vänner.\n"
 
 #. type: Plain text
 #: en/config/diff.adoc:25
@@ -3339,7 +3344,7 @@ msgstr "`changes`"
 #. type: Plain text
 #: en/config/diff.adoc:33 en/diff-options.adoc:257
 msgid "Compute the dirstat numbers by counting the lines that have been removed from the source, or added to the destination. This ignores the amount of pure code movements within a file. In other words, rearranging lines in a file is not counted as much as other changes. This is the default behavior when no parameter is given."
-msgstr ""
+msgstr "Beräkna dirstat-talen genom att räkna raderna som har tagits bort från källan eller lagts till i destinationen. Detta ignorerar mängden rena kodförflyttningar inom en fil. Med andra ord räknas inte omarrangemang av rader i en fil lika mycket som andra ändringar. Detta är standardbeteendet när ingen parameter anges."
 
 #. type: Labeled list
 #: en/config/diff.adoc:33 en/diff-options.adoc:257
@@ -3351,7 +3356,7 @@ msgstr "`lines`"
 #. type: Plain text
 #: en/config/diff.adoc:41 en/diff-options.adoc:265
 msgid "Compute the dirstat numbers by doing the regular line-based diff analysis, and summing the removed/added line counts. (For binary files, count 64-byte chunks instead, since binary files have no natural concept of lines). This is a more expensive `--dirstat` behavior than the `changes` behavior, but it does count rearranged lines within a file as much as other changes. The resulting output is consistent with what you get from the other `--*stat` options."
-msgstr ""
+msgstr "Beräkna dirstat-talen genom att göra den vanliga radbaserade diff-analysen och summera antalet borttagna/tillagda rader. (För binära filer, räkna istället 64-byte-block, eftersom binära filer inte har något naturligt koncept för rader). Detta är ett dyrare `--dirstat`-beteende än `changes`-beteendet, men det räknar omordnade rader i en fil lika mycket som andra ändringar. Den resulterande utdata överensstämmer med vad du får från de andra `--*stat`-alternativen."
 
 #. type: Labeled list
 #: en/config/diff.adoc:41 en/diff-options.adoc:265
@@ -3831,7 +3836,7 @@ msgstr ""
 #. type: Plain text
 #: en/config/diff.adoc:251
 msgid "Highlight whitespace errors in the `context`, `old` or `new` lines of the diff. Multiple values are separated by comma, `none` resets previous values, `default` reset the list to `new` and `all` is a shorthand for `old,new,context`. The whitespace errors are colored with `color.diff.whitespace`. The command line option `--ws-error-highlight=<kind>` overrides this setting."
-msgstr ""
+msgstr "Markera mellanslagsfel i raderna `context`, `old` eller `new` i diff-filen. Flera värden separeras med kommatecken, `none` återställer tidigare värden, `default` återställer listan till `new` och `all` är en förkortning för `old,new,context`. Mellanslagsfelen är färgade med `color.diff.whitespace`. Kommandoradsalternativet `--ws-error-highlight=<kind>` åsidosätter denna inställning."
 
 #. type: Labeled list
 #: en/config/diff.adoc:252
@@ -3926,7 +3931,7 @@ msgstr ""
 #. type: Plain text
 #: en/config/merge.adoc:15
 msgid "Specify the style in which conflicted hunks are written out to working tree files upon merge. The default is \"merge\", which shows a +<<<<<<<+ conflict marker, changes made by one side, a `=======` marker, changes made by the other side, and then a +>>>>>>>+ marker. An alternate style, \"diff3\", adds a +|||||||+ marker and the original text before the `=======` marker. The \"merge\" style tends to produce smaller conflict regions than diff3, both because of the exclusion of the original text, and because when a subset of lines match on the two sides, they are just pulled out of the conflict region. Another alternate style, \"zdiff3\", is similar to diff3 but removes matching lines on the two sides from the conflict region when those matching lines appear near either the beginning or end of a conflict region."
-msgstr ""
+msgstr "Ange stilen med vilken konfliktfyllda hunks skrivs ut till arbetsträdfiler vid sammanslagning. Standardinställningen är \"merge\", som visar en +<<<<<<<+ konfliktmarkör, ändringar gjorda av ena sidan, en `=======`-markör, ändringar gjorda av den andra sidan och sedan en +>>>>>>>+ markör. En alternativ stil, \"diff3\", lägger till en +||||||||+ markör och originaltexten före `=======`-markören. Stilen \"merge\" tenderar att producera mindre konfliktområden än diff3, både på grund av att originaltexten utesluts och för att när en delmängd av rader matchar på de två sidorna, dras de bara ut ur konfliktområdet. En annan alternativ stil, \"zdiff3\", liknar diff3 men tar bort matchande rader på de två sidorna från konfliktområdet när dessa matchande rader visas nära antingen början eller slutet av ett konfliktområde."
 
 #. type: Labeled list
 #: en/config/merge.adoc:16
@@ -3937,7 +3942,7 @@ msgstr ""
 #. type: Plain text
 #: en/config/merge.adoc:25
 msgid "If merge is called without any commit argument, merge the upstream branches configured for the current branch by using their last observed values stored in their remote-tracking branches. The values of the `branch.<current branch>.merge` that name the branches at the remote named by `branch.<current-branch>.remote` are consulted, and then they are mapped via `remote.<remote>.fetch` to their corresponding remote-tracking branches, and the tips of these tracking branches are merged. Defaults to true."
-msgstr ""
+msgstr "Om merge anropas utan något inchecknings-argument, sammanfogas de uppströmsgrenar som konfigurerats för den aktuella grenen med hjälp av deras senast observerade värden som lagrats i deras fjärrspårningsgrenar. Värdena för `branch.<nuvarande gren>.merge` som namnger grenarna på fjärrvärd namngiven av `branch.<nuvarande gren>.remote` konsulteras, och sedan mappas de via `remote.<fjärrvärd>.fetch` till deras motsvarande fjärrspårningsgrenar, och tipsen för dessa spårningsgrenar sammanfogas. Standardvärdet är sant."
 
 #. type: Labeled list
 #: en/config/merge.adoc:26
@@ -3948,7 +3953,7 @@ msgstr ""
 #. type: Plain text
 #: en/config/merge.adoc:35
 msgid "By default, Git does not create an extra merge commit when merging a commit that is a descendant of the current commit. Instead, the tip of the current branch is fast-forwarded. When set to `false`, this variable tells Git to create an extra merge commit in such a case (equivalent to giving the `--no-ff` option from the command line). When set to `only`, only such fast-forward merges are allowed (equivalent to giving the `--ff-only` option from the command line)."
-msgstr ""
+msgstr "Som standard skapar Git inte en extra sammanslagnings-incheckningar när den sammanfogar en incheckning som är en underordnad till den aktuella incheckning. Istället snabbspolas spetsen för den aktuella grenen framåt. När den är satt till `false`, talar denna variabel om för Git att skapa en extra sammanslagnings-incheckning i ett sådant fall (motsvarande att ge alternativet `--no-ff` från kommandoraden). När den är satt till `only`, tillåts endast sådana snabbspolnings-sammanfogningar (motsvarande att ge alternativet `--ff-only` från kommandoraden)."
 
 #. type: Labeled list
 #: en/config/merge.adoc:36
@@ -3959,7 +3964,7 @@ msgstr ""
 #. type: Plain text
 #: en/config/merge.adoc:39
 msgid "If true, this is equivalent to the `--verify-signatures` command line option. See linkgit:git-merge[1] for details."
-msgstr ""
+msgstr "Om sant, motsvarar detta kommandoradsalternativet `--verify-signatures`. Se linkgit:git-merge[1] för mer information."
 
 #. type: Labeled list
 #: en/config/merge.adoc:42
@@ -3970,7 +3975,7 @@ msgstr ""
 #. type: Plain text
 #: en/config/merge.adoc:49
 msgid "The number of files to consider in the exhaustive portion of rename detection during a merge. If not specified, defaults to the value of `diff.renameLimit`. If neither `merge.renameLimit` nor `diff.renameLimit` are specified, currently defaults to 7000. This setting has no effect if rename detection is turned off."
-msgstr ""
+msgstr "Antalet filer som ska beaktas i den uttömmande delen av namnbytesdetektering under en sammanslagning. Om inget anges används standardvärdet `diff.renameLimit`. Om varken `merge.renameLimit` eller `diff.renameLimit` anges används standardvärdet för närvarande 7000. Denna inställning har ingen effekt om namnbytesdetektering är avstängd."
 
 #. type: Labeled list
 #: en/config/merge.adoc:50
@@ -3981,7 +3986,7 @@ msgstr ""
 #. type: Plain text
 #: en/config/merge.adoc:54
 msgid "Whether Git detects renames. If set to `false`, rename detection is disabled. If set to `true`, basic rename detection is enabled. Defaults to the value of diff.renames."
-msgstr ""
+msgstr "Huruvida Git detekterar namnbyten. Om det är satt till `false` är namnbytesdetektering inaktiverad. Om det är satt till `true` är grundläggande namnbytesdetektering aktiverad. Standardvärdet är diff.renames."
 
 #. type: Labeled list
 #: en/config/merge.adoc:55
@@ -3992,7 +3997,7 @@ msgstr ""
 #. type: Plain text
 #: en/config/merge.adoc:60
 msgid "Whether Git detects directory renames, affecting what happens at merge time to new files added to a directory on one side of history when that directory was renamed on the other side of history. Possible values are:"
-msgstr ""
+msgstr "Huruvida Git detekterar katalogbyten, vilket påverkar vad som händer vid sammanslagningstillfället med nya filer som läggs till i en katalog på ena sidan av historiken när den katalogen döptes om på den andra sidan av historiken. Möjliga värden är:"
 
 #. type: Labeled list
 #: en/config/merge.adoc:62 en/config/merge.adoc:88 en/git-init.adoc:104
@@ -4005,7 +4010,7 @@ msgstr "`false`"
 #. type: Plain text
 #: en/config/merge.adoc:64
 msgid "Directory rename detection is disabled, meaning that such new files will be left behind in the old directory."
-msgstr ""
+msgstr "Detektering av katalog-namnbyte är inaktiverat, vilket innebär att sådana nya filer kommer att lämnas kvar i den gamla katalogen."
 
 #. type: Labeled list
 #: en/config/merge.adoc:64 en/config/merge.adoc:89 en/git-init.adoc:110
@@ -4018,7 +4023,7 @@ msgstr "`true`"
 #. type: Plain text
 #: en/config/merge.adoc:66
 msgid "Directory rename detection is enabled, meaning that such new files will be moved into the new directory."
-msgstr ""
+msgstr "Detektering av katalog namnbyte är aktiverat, vilket innebär att sådana nya filer flyttas till den nya katalogen."
 
 #. type: Labeled list
 #: en/config/merge.adoc:66
@@ -4030,7 +4035,7 @@ msgstr "`conflict`"
 #. type: Plain text
 #: en/config/merge.adoc:67
 msgid "A conflict will be reported for such paths."
-msgstr ""
+msgstr "En konflikt kommer att rapporteras för sådana sökvägar."
 
 #. type: Plain text
 #: en/config/merge.adoc:71
@@ -4046,7 +4051,7 @@ msgstr ""
 #. type: Plain text
 #: en/config/merge.adoc:82
 msgid "Tell Git that canonical representation of files in the repository has changed over time (e.g. earlier commits record text files with _CRLF_ line endings, but recent ones use _LF_ line endings). In such a repository, for each file where a three-way content merge is needed, Git can convert the data recorded in commits to a canonical form before performing a merge to reduce unnecessary conflicts. For more information, see section \"Merging branches with differing checkin/checkout attributes\" in linkgit:gitattributes[5]."
-msgstr ""
+msgstr "Informera Git om att den kanoniska representationen av filer i arkivet har förändrats över tid (t.ex. tidigare incheckningar registrerade textfiler med _CRLF_ radslut, men nyare använder _LF_ radslut). I ett sådant arkiv kan Git, för varje fil där en trevägs innehållssammanslagning behövs, konvertera data som registrerats i incheckningar till en kanonisk form innan en sammanslagning utförs för att minska onödiga konflikter. För mer information, se avsnittet \"Sammanfoga grenar med olika inchecknings-/utcheckningsattribut\" i linkgit:gitattributes[5]."
 
 #. type: Labeled list
 #: en/config/merge.adoc:83
@@ -4057,17 +4062,17 @@ msgstr ""
 #. type: Plain text
 #: en/config/merge.adoc:86
 msgid "What, if anything, to print between `ORIG_HEAD` and the merge result at the end of the merge. Possible values are:"
-msgstr ""
+msgstr "Vad, om något, ska skrivas ut mellan `ORIG_HEAD` och sammanslagningsresultatet i slutet av sammanslagningen. Möjliga värden är:"
 
 #. type: Plain text
 #: en/config/merge.adoc:89
 msgid "Show nothing."
-msgstr ""
+msgstr "Visa ingenting."
 
 #. type: Plain text
 #: en/config/merge.adoc:90
 msgid "Show `git diff --diffstat --summary ORIG_HEAD`."
-msgstr ""
+msgstr "Visa `git diff --diffstat --summary ORIG_HEAD`."
 
 #. type: Labeled list
 #: en/config/merge.adoc:90
@@ -4079,12 +4084,12 @@ msgstr "`compact`"
 #. type: Plain text
 #: en/config/merge.adoc:91
 msgid "Show `git diff --compact-summary ORIG_HEAD`."
-msgstr ""
+msgstr "Visa `git diff --compact-summary ORIG_HEAD`."
 
 #. type: Plain text
 #: en/config/merge.adoc:96
 msgid "but any unrecognised value (e.g., a value added by a future version of Git) is taken as `true` instead of triggering an error. Defaults to `true`."
-msgstr ""
+msgstr "men alla okända värden (t.ex. ett värde som läggs till av en framtida version av Git) tas som `sant` istället för att utlösa ett fel. Standardvärdet är `sant`."
 
 #. type: Labeled list
 #: en/config/merge.adoc:97
@@ -4095,7 +4100,7 @@ msgstr ""
 #. type: Plain text
 #: en/config/merge.adoc:106
 msgid "When set to `true`, automatically create a temporary stash entry before the operation begins, and apply it after the operation ends. This means that you can run merge on a dirty worktree. However, use with care: the final stash application after a successful merge might result in non-trivial conflicts. This option can be overridden by the `--no-autostash` and `--autostash` options of linkgit:git-merge[1]. Defaults to `false`."
-msgstr ""
+msgstr "När den är satt till `true` skapas automatiskt en tillfällig stash-post innan operationen börjar och tillämpas efter att operationen är avslutad. Detta innebär att du kan köra merge på ett smutsigt arbetsträd. Använd dock med försiktighet: den slutliga stash-applikationen efter en lyckad merge kan resultera i icke-triviala konflikter. Detta alternativ kan åsidosättas av alternativen `--no-autostash` och `--autostash` i linkgit:git-merge[1]. Standardvärdet är `false`."
 
 #. type: Labeled list
 #: en/config/merge.adoc:107
@@ -4106,7 +4111,7 @@ msgstr ""
 #. type: Plain text
 #: en/config/merge.adoc:112
 msgid "Controls which merge tool is used by linkgit:git-mergetool[1]. The list below shows the valid built-in values. Any other value is treated as a custom merge tool and requires that a corresponding `mergetool.<tool>.cmd` variable is defined."
-msgstr ""
+msgstr "Kontrollerar vilket sammanslagningsverktyg som används av linkgit:git-mergetool[1]. Listan nedan visar de giltiga inbyggda värdena. Alla andra värden behandlas som ett anpassat sammanslagningsverktyg och kräver att en motsvarande `mergetool.<verktyg>.cmd`-variabel definieras."
 
 #. type: Labeled list
 #: en/config/merge.adoc:113
@@ -4117,7 +4122,7 @@ msgstr ""
 #. type: Plain text
 #: en/config/merge.adoc:118
 msgid "Controls which merge tool is used by linkgit:git-mergetool[1] when the `-g`/`--gui` flag is specified. The list below shows the valid built-in values. Any other value is treated as a custom merge tool and requires that a corresponding `mergetool.<guitool>.cmd` variable is defined."
-msgstr ""
+msgstr "Styr vilket sammanslagningsverktyg som används av linkgit:git-mergetool[1] när flaggan `-g`/`--gui` är specificerad. Listan nedan visar de giltiga inbyggda värdena. Alla andra värden behandlas som ett anpassat sammanslagningsverktyg och kräver att en motsvarande variabel `mergetool.<gui-verktyg>.cmd` definieras."
 
 #. type: Labeled list
 #: en/config/merge.adoc:121
@@ -4128,7 +4133,7 @@ msgstr ""
 #. type: Plain text
 #: en/config/merge.adoc:128
 msgid "Controls the amount of output shown by the recursive merge strategy. Level 0 outputs nothing except a final error message if conflicts were detected. Level 1 outputs only conflicts, 2 outputs conflicts and file changes. Level 5 and above outputs debugging information. The default is level 2. Can be overridden by the `GIT_MERGE_VERBOSITY` environment variable."
-msgstr ""
+msgstr "Styr mängden utdata som visas av den rekursiva sammanslagningsstrategin. Nivå 0 matar ut ingenting förutom ett slutligt felmeddelande om konflikter upptäcktes. Nivå 1 matar endast ut konflikter, 2 matar ut konflikter och filändringar. Nivå 5 och högre matar ut felsökningsinformation. Standardinställningen är nivå 2. Kan åsidosättas av miljövariabeln `GIT_MERGE_VERBOSITY`."
 
 #. type: Labeled list
 #: en/config/merge.adoc:129
@@ -4139,7 +4144,7 @@ msgstr ""
 #. type: Plain text
 #: en/config/merge.adoc:132
 msgid "Defines a human-readable name for a custom low-level merge driver. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "Definierar ett mänskligt läsbart namn för en anpassad lågnivå-sammanslagningsdrivrutin. Se linkgit:gitattributes[5] för mer information."
 
 #. type: Labeled list
 #: en/config/merge.adoc:133
@@ -4150,7 +4155,7 @@ msgstr ""
 #. type: Plain text
 #: en/config/merge.adoc:136
 msgid "Defines the command that implements a custom low-level merge driver. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "Definierar kommandot som implementerar en anpassad lågnivå-sammanslagningsdrivrutin. Se linkgit:gitattributes[5] för mer information."
 
 #. type: Labeled list
 #: en/config/merge.adoc:137
@@ -4161,7 +4166,7 @@ msgstr ""
 #. type: Plain text
 #: en/config/merge.adoc:140
 msgid "Names a low-level merge driver to be used when performing an internal merge between common ancestors. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "Namnger en lågnivå-sammanslagningsdrivrutin som ska användas vid intern sammanslagning mellan gemensamma förfäder. Se linkgit:gitattributes[5] för mer information."
 
 #. type: Labeled list
 #: en/config/fmt-merge-msg.adoc:1
@@ -5447,7 +5452,7 @@ msgstr ""
 #. type: Plain text
 #: en/diff-options.adoc:249
 msgid "Output the distribution of relative amount of changes for each sub-directory. The behavior of `--dirstat` can be customized by passing it a comma separated list of parameters. The defaults are controlled by the `diff.dirstat` configuration variable (see linkgit:git-config[1]). The following parameters are available:"
-msgstr ""
+msgstr "Visar fördelningen av den relativa mängden ändringar för varje underkatalog. Beteendet för `--dirstat` kan anpassas genom att skicka en kommaseparerad lista med parametrar. Standardvärdena styrs av konfigurationsvariabeln `diff.dirstat` (se linkgit:git-config[1]). Följande parametrar är tillgängliga:"
 
 #. type: Plain text
 #: en/diff-options.adoc:285
@@ -5941,7 +5946,7 @@ msgstr ""
 #. type: Plain text
 #: en/diff-options.adoc:513
 msgid "Highlight whitespace errors in the `context`, `old` or `new` lines of the diff. Multiple values are separated by comma, `none` resets previous values, `default` reset the list to `new` and `all` is a shorthand for `old,new,context`. When this option is not given, and the configuration variable `diff.wsErrorHighlight` is not set, only whitespace errors in `new` lines are highlighted. The whitespace errors are colored with `color.diff.whitespace`."
-msgstr ""
+msgstr "Markera mellanslagsfel i raderna `context`, `old` eller `new` i diff-filen. Flera värden separeras med kommatecken, `none` återställer tidigare värden, `default` återställer listan till `new` och `all` är en förkortning för `old,new,context`. När detta alternativ inte anges och konfigurationsvariabeln `diff.wsErrorHighlight` inte är angiven, markeras endast mellanslagsfel i raderna `new`. Mellanslagsfelen är färgade med `color.diff.whitespace`."
 
 #. type: Labeled list
 #: en/diff-options.adoc:516
@@ -15203,7 +15208,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-checkout-index.adoc:72
 msgid "Instead of taking a list of paths from the command line, read the list of paths from the standard input. Paths are separated by LF (i.e. one path per line) by default."
-msgstr ""
+msgstr "Istället för att hämta en lista med sökvägar från kommandoraden, läs listan med sökvägar från standardinmatningen. Sökvägar separeras som standard med LF (dvs. en sökväg per rad)."
 
 #. type: Plain text
 #: en/git-checkout-index.adoc:76
@@ -24969,7 +24974,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-fast-import.adoc:538
 msgid "The time of the change is specified by `<when>` using the date format that was selected by the --date-format=<fmt> command-line option. See ``Date Formats'' above for the set of supported formats, and their syntax."
-msgstr ""
+msgstr "Tidpunkten för ändringen anges med `<när>` med hjälp av datumformatet som valdes av kommandoradsalternativet --date-format=<fmt>. Se ``Datumformat'' ovan för uppsättningen av format som stöds och deras syntax."
 
 #. type: Title ^
 #: en/git-fast-import.adoc:540
@@ -32618,7 +32623,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-index-pack.adoc:90
 msgid "Die, if the pack contains broken objects or links. An optional comma-separated list of `<msg-id>=<severity>` can be passed to change the severity of some possible issues, e.g., `--strict=\"missingEmail=ignore,badTagName=error\"`. See the entry for the `fsck.<msg-id>` configuration options in linkgit:git-fsck[1] for more information on the possible values of `<msg-id>` and `<severity>`."
-msgstr ""
+msgstr "Dö, om paketet innehåller trasiga objekt eller länkar. En valfri kommaseparerad lista med `<msg-id>=<svårighetsgrad>` kan skickas för att ändra allvarlighetsgraden av vissa möjliga problem, t.ex. `--strict=\"missingEmail=ignore,badTagName=error\"`. Se posten för konfigurationsalternativen `fsck.<msg-id>` i linkgit:git-fsck[1] för mer information om de möjliga värdena för `<msg-id>` och `<svårighetsgrad>`."
 
 #. type: Labeled list
 #: en/git-index-pack.adoc:91
@@ -32656,7 +32661,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-index-pack.adoc:112
 msgid "An optional comma-separated list of `<msg-id>=<severity>` can be passed to change the severity of some possible issues, e.g., `--fsck-objects=\"missingEmail=ignore,badTagName=ignore\"`. See the entry for the `fsck.<msg-id>` configuration options in linkgit:git-fsck[1] for more information on the possible values of `<msg-id>` and `<severity>`."
-msgstr ""
+msgstr "En valfri kommaseparerad lista med `<msg-id>=<svårighetsgrad>` kan skickas för att ändra allvarlighetsgraden av vissa möjliga problem, t.ex. `--fsck-objects=\"missingEmail=ignore,badTagName=ignore\"`. Se posten för konfigurationsalternativen `fsck.<msg-id>` i linkgit:git-fsck[1] för mer information om de möjliga värdena för `<msg-id>` och `<svårighetsgrad>`."
 
 #. type: Labeled list
 #: en/git-index-pack.adoc:113 en/git-pack-objects.adoc:289
@@ -36587,7 +36592,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-merge-tree.adoc:345
 msgid "This form not only has limited applicability (a trivial merge cannot handle content merges of individual files, rename detection, proper directory/file conflict handling, etc.), the output format is also difficult to work with, and it will generally be less performant than the first form even on successful merges (especially if working in large repositories)."
-msgstr ""
+msgstr "Den här formen har inte bara begränsad tillämpbarhet (en trivial sammanslagning kan inte hantera innehållssammanslagningar av enskilda filer, namnbytesdetektering, korrekt hantering av katalog-/filkonflikter etc.), utdataformatet är också svårt att arbeta med, och det kommer generellt att vara mindre presterande än den första formen även vid lyckade sammanslagningar (särskilt om man arbetar i stora arkiv)."
 
 #. type: Title =
 #: en/git-merge.adoc:2
@@ -43383,7 +43388,7 @@ msgstr "--no-autostash"
 #. type: Plain text
 #: en/git-rebase.adoc:605
 msgid "Automatically create a temporary stash entry before the operation begins, and apply it after the operation ends. This means that you can run rebase on a dirty worktree. However, use with care: the final stash application after a successful rebase might result in non-trivial conflicts."
-msgstr ""
+msgstr "Skapa automatiskt en tillfällig stash-post innan operationen påbörjas och tillämpa den efter att operationen är avslutad. Det betyder att du kan köra rebase på ett smutsigt arbetsträd. Var dock försiktig: den slutliga stash-applikationen efter en lyckad rebase kan resultera i icke-triviala konflikter."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:606
@@ -43562,7 +43567,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-rebase.adoc:703
 msgid "Due to the lack of accurate tree information (arising from constructing fake ancestors with the limited information available in patches), directory rename detection is disabled in the 'apply' backend. Disabled directory rename detection means that if one side of history renames a directory and the other adds new files to the old directory, then the new files will be left behind in the old directory without any warning at the time of rebasing that you may want to move these files into the new directory."
-msgstr ""
+msgstr "På grund av bristen på korrekt trädinformation (som uppstår genom att falska förfäder konstrueras med den begränsade information som finns tillgänglig i patchar) är detektering av katalognamnsbyten inaktiverat i 'apply'-backend. Inaktiverad detektering av katalognamnsbyten innebär att om ena sidan av historiken byter namn på en katalog och den andra lägger till nya filer i den gamla katalogen, så kommer de nya filerna att lämnas kvar i den gamla katalogen utan någon varning vid tidpunkten för ombasering om att du kanske vill flytta dessa filer till den nya katalogen."
 
 #. type: Plain text
 #: en/git-rebase.adoc:706
@@ -43722,7 +43727,7 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-rebase.adoc:838 en/git-update-ref.adoc:150
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "commit"
 msgstr "incheckning"
 
@@ -54831,7 +54836,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-svn.adoc:1105
 msgid "It is also possible to fetch a subset of branches or tags by using a comma-separated list of names within braces. For example:"
-msgstr ""
+msgstr "Det är också möjligt att hämta en delmängd av grenar eller taggar genom att använda en kommaseparerad lista med namn inom klammerparenteser. Till exempel:"
 
 #. type: delimited block -
 #: en/git-svn.adoc:1112
@@ -56615,7 +56620,7 @@ msgstr "`GIT_CEILING_DIRECTORIES`"
 #. type: Plain text
 #: en/git.adoc:555
 msgid "This should be a colon-separated list of absolute paths. If set, it is a list of directories that Git should not chdir up into while looking for a repository directory (useful for excluding slow-loading network directories). It will not exclude the current working directory or a GIT_DIR set on the command line or in the environment. Normally, Git has to read the entries in this list and resolve any symlink that might be present in order to compare them with the current directory. However, if even this access is slow, you can add an empty entry to the list to tell Git that the subsequent entries are not symlinks and needn't be resolved; e.g., `GIT_CEILING_DIRECTORIES=/maybe/symlink::/very/slow/non/symlink`."
-msgstr ""
+msgstr "Detta bör vara en kolonseparerad lista med absoluta sökvägar. Om den är angiven är det en lista över kataloger som Git inte ska söka upp till när den letar efter en repo-katalog (användbart för att exkludera långsamt laddande nätverkskataloger). Den kommer inte att exkludera den aktuella arbetskatalogen eller en GIT_DIR-uppsättning på kommandoraden eller i miljön. Normalt måste Git läsa posterna i den här listan och matcha eventuella symboliska länkar som kan finnas för att jämföra dem med den aktuella katalogen. Men om även denna åtkomst är långsam kan du lägga till en tom post i listan för att tala om för Git att de efterföljande posterna inte är symboliska länkar och inte behöver matchas; t.ex. `GIT_CEILING_DIRECTORIES=/maybe/symlink::/very/slow/non/symlink`."
 
 #. type: Labeled list
 #: en/git.adoc:556
@@ -58014,7 +58019,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-update-index.adoc:162
 msgid "Instead of taking a list of paths from the command line, read a list of paths from the standard input. Paths are separated by LF (i.e. one path per line) by default."
-msgstr ""
+msgstr "Istället för att hämta en lista med sökvägar från kommandoraden, läs en lista med sökvägar från standardinmatningen. Sökvägar separeras som standard med LF (dvs. en sökväg per rad)."
 
 #. type: Plain text
 #: en/git-update-index.adoc:165
@@ -62024,7 +62029,7 @@ msgstr "`--no-autostash`"
 #. type: Plain text
 #: en/merge-options.adoc:203
 msgid "Automatically create a temporary stash entry before the operation begins, record it in the ref `MERGE_AUTOSTASH` and apply it after the operation ends. This means that you can run the operation on a dirty worktree. However, use with care: the final stash application after a successful merge might result in non-trivial conflicts."
-msgstr ""
+msgstr "Skapa automatiskt en tillfällig stash-post innan operationen börjar, registrera den i referensen `MERGE_AUTOSTASH` och tillämpa den efter att operationen är avslutad. Det betyder att du kan köra operationen på ett smutsigt arbetsträd. Använd dock försiktigt: den slutliga stash-applikationen efter en lyckad sammanslagning kan resultera i icke-triviala konflikter."
 
 #. type: Labeled list
 #: en/merge-options.adoc:204
@@ -68287,7 +68292,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-bisect-lk2009.adoc:834
 msgid "where BBBBBB is the sha1 hash of the bad merge base and [GGGGGG,...] is a comma separated list of the sha1 of the good commits."
-msgstr ""
+msgstr "där BBBBBB är sha1-hashen för den felaktiga merge-basen och [GGGGGG,...] är en kommaseparerad lista över sha1 för de bra incheckningar."
 
 #. type: Plain text
 #: en/git-bisect-lk2009.adoc:838
@@ -68306,7 +68311,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-bisect-lk2009.adoc:848
 msgid "where BBBBBB is the sha1 hash of the bad commit, MMMMMM is the sha1 hash of the merge base that is skipped and [GGGGGG,...] is a comma separated list of the sha1 of the good commits."
-msgstr ""
+msgstr "där BBBBBB är sha1-hashen för den dåliga incheckningen, MMMMMM är sha1-hashen för den sammanslagnings-bas som hoppas över och [GGGGGG,...] är en kommaseparerad lista över sha1 för de bra incheckningen."
 
 #. type: Plain text
 #: en/git-bisect-lk2009.adoc:851
