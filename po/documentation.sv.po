@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-01-21 18:42+0000\n"
+"PO-Revision-Date: 2026-01-21 18:50+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -9011,7 +9011,7 @@ msgstr ""
 #: en/git-whatchanged.adoc:53 en/git-worktree.adoc:540
 #: en/git-write-tree.adoc:42 en/gitglossary.adoc:27
 msgid "Part of the linkgit:git[1] suite"
-msgstr ""
+msgstr "En del av linkgit:git[1]-sviten"
 
 #. type: Title =
 #: en/git-add.adoc:2
@@ -9140,8 +9140,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-add.adoc:66
+#, fuzzy
 msgid "For more details about the _<pathspec>_ syntax, see the 'pathspec' entry in linkgit:gitglossary[7]."
-msgstr ""
+msgstr "För mer information om syntaxen _<sökvägsspec>_, se posten 'pathspec' i linkgit:gitglossary[7]."
 
 #. type: Plain text
 #: en/git-add.adoc:71
@@ -24835,6 +24836,18 @@ msgstr ""
 #, no-wrap
 msgid "\t'commit' SP <ref> LF\n\tmark?\n\toriginal-oid?\n\t('author' (SP <name>)? SP LT <email> GT SP <when> LF)?\n\t'committer' (SP <name>)? SP LT <email> GT SP <when> LF\n\t('gpgsig' SP <algo> SP <format> LF data)?\n\t('encoding' SP <encoding> LF)?\n\tdata\n\t('from' SP <commit-ish> LF)?\n\t('merge' SP <commit-ish> LF)*\n\t(filemodify | filedelete | filecopy | filerename | filedeleteall | notemodify)*\n\tLF?\n"
 msgstr ""
+"\t'commit' SP <ref> LF\n"
+"\tmark?\n"
+"\toriginal-oid?\n"
+"\t('author' (SP <namn>)? SP LT <e-post> GT SP <när> LF)?\n"
+"\t'committer' (SP <namn>)? SP LT <e-post> GT SP <när> LF\n"
+"\t('gpgsig' SP <algo> SP <format> LF data)?\n"
+"\t('encoding' SP <kodning> LF)?\n"
+"\tdata\n"
+"\t('from' SP <inchecknings-aktig> LF)?\n"
+"\t('merge' SP <inchecknings-aktig> LF)*\n"
+"\t(filemodify | filedelete | filecopy | filerename | filedeleteall | notemodify)*\n"
+"\tLF?\n"
 
 #. type: Plain text
 #: en/git-fast-import.adoc:485
@@ -24854,12 +24867,13 @@ msgstr ""
 #. type: Plain text
 #: en/git-fast-import.adoc:505
 msgid "Zero or more `filemodify`, `filedelete`, `filecopy`, `filerename`, `filedeleteall` and `notemodify` commands may be included to update the contents of the branch prior to creating the commit. These commands may be supplied in any order. However it is recommended that a `filedeleteall` command precede all `filemodify`, `filecopy`, `filerename` and `notemodify` commands in the same commit, as `filedeleteall` wipes the branch clean (see below)."
-msgstr ""
+msgstr "Noll eller fler `filemodify`, `filedelete`, `filecopy`, `filerename`, `filedeleteall` och `notemodify`-kommandon kan inkluderas för att uppdatera innehållet i grenen innan incheckning skapas. Dessa kommandon kan anges i valfri ordning. Det rekommenderas dock att ett `filedeleteall`-kommando föregår alla `filemodify`, `filecopy`, `filerename` och `notemodify`-kommandon i samma incheckning, eftersom `filedeleteall` rensar grenen (se nedan)."
 
 #. type: Plain text
 #: en/git-fast-import.adoc:512
+#, fuzzy
 msgid "The `LF` after the command is optional (it used to be required). Note that for reasons of backward compatibility, if the commit ends with a `data` command (i.e. it has no `from`, `merge`, `filemodify`, `filedelete`, `filecopy`, `filerename`, `filedeleteall` or `notemodify` commands) then two `LF` commands may appear at the end of the command instead of just one."
-msgstr ""
+msgstr "`LF` efter kommandot är valfritt (det var tidigare obligatoriskt). Observera att av bakåtkompatibilitetsskäl, om commit-kommandot avslutas med ett `data`-kommando (dvs. det har inga `from`-, `merge`-, `filemodify`-, `filedelete`-, `filecopy`-, `filerename`-, `filedeleteall`- eller `notemodify`-kommandon) så kan två `LF`-kommandon visas i slutet av kommandot istället för bara ett."
 
 #. type: Title ^
 #: en/git-fast-import.adoc:514
@@ -25154,7 +25168,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-fast-import.adoc:712
 msgid "When a `<path>` does not start with a double quote (`\"`), it is an unquoted string and is parsed as literal bytes without any escape sequences. However, if the filename contains `LF` or starts with double quote, it cannot be represented as an unquoted string and must be quoted. Additionally, the source `<path>` in `filecopy` or `filerename` must be quoted if it contains SP."
-msgstr ""
+msgstr "När en `<sökväg>` inte börjar med ett dubbelt citationstecken (`\"`) är det en sträng utan citationstecken och tolkas som litterala bytes utan några escape-sekvenser. Om filnamnet däremot innehåller `LF` eller börjar med dubbelt citationstecken kan det inte representeras som en sträng utan citationstecken och måste citationstecken. Dessutom måste källkoden `<sökväg>` i `filecopy` eller `filerename` citationstecken om den innehåller SP."
 
 #. type: Plain text
 #: en/git-fast-import.adoc:723
@@ -25273,7 +25287,7 @@ msgstr "Ett `filerename`-kommando träder i kraft omedelbart. När källplatsen 
 #. type: Plain text
 #: en/git-fast-import.adoc:803
 msgid "Note that a `filerename` is the same as a `filecopy` followed by a `filedelete` of the source location. There is a slight performance advantage to using `filerename`, but the advantage is so small that it is never worth trying to convert a delete/add pair in source material into a rename for fast-import. This `filerename` command is provided just to simplify frontends that already have rename information and don't want bother with decomposing it into a `filecopy` followed by a `filedelete`."
-msgstr ""
+msgstr "Observera att ett `filerename` är detsamma som en `filecopy` följt av en `filedelete` av källkoden. Det finns en liten prestandafördel med att använda `filerename`, men fördelen är så liten att det aldrig är värt att försöka konvertera ett delete/add-par i källmaterialet till ett namnbyte för snabbimport. Detta `filerename`-kommando tillhandahålls endast för att förenkla gränssnitt som redan har namnbytesinformation och inte vill bry sig om att dela upp den till en `filecopy` följt av en `filedelete`."
 
 #. type: Title ^
 #: en/git-fast-import.adoc:805
@@ -30859,8 +30873,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-grep.adoc:321
+#, fuzzy
 msgid "For more details about the <pathspec> syntax, see the 'pathspec' entry in linkgit:gitglossary[7]."
-msgstr ""
+msgstr "För mer information om syntaxen <sökvägsspec>, se posten 'pathspec' i linkgit:gitglossary[7]."
 
 #. type: Labeled list
 #: en/git-grep.adoc:325
@@ -42464,7 +42479,7 @@ msgstr ""
 #: en/git-read-tree.adoc:423
 #, no-wrap
 msgid "/*\n"
-msgstr ""
+msgstr "/*\n"
 
 #. type: Plain text
 #: en/git-read-tree.adoc:429
@@ -60219,12 +60234,12 @@ msgstr "gitglossary(7)"
 #. type: Plain text
 #: en/gitglossary.adoc:7
 msgid "gitglossary - A Git Glossary"
-msgstr ""
+msgstr "gitglossary - En Git-ordlista"
 
 #. type: Plain text
 #: en/gitglossary.adoc:11
 msgid "*"
-msgstr ""
+msgstr "*"
 
 #. type: Plain text
 #: en/gitglossary.adoc:24
