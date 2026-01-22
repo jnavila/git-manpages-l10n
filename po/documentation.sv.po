@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-01-22 23:19+0000\n"
+"PO-Revision-Date: 2026-01-22 23:35+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -4127,39 +4127,39 @@ msgstr "Namnger en lågnivå-sammanslagningsdrivrutin som ska användas vid inte
 #: en/config/fmt-merge-msg.adoc:1
 #, no-wrap
 msgid "`merge.branchdesc`"
-msgstr ""
+msgstr "`merge.branchdesc`"
 
 #. type: Plain text
 #: en/config/fmt-merge-msg.adoc:5
 msgid "In addition to branch names, populate the log message with the branch description text associated with them. Defaults to false."
-msgstr ""
+msgstr "Förutom grennamnen, fyll i loggmeddelandet med den grenbeskrivningstext som är associerad med dem. Standardvärdet är falskt."
 
 #. type: Labeled list
 #: en/config/fmt-merge-msg.adoc:6
 #, no-wrap
 msgid "`merge.log`"
-msgstr ""
+msgstr "`merge.log`"
 
 #. type: Plain text
 #: en/config/fmt-merge-msg.adoc:11
 msgid "In addition to branch names, populate the log message with at most the specified number of one-line descriptions from the actual commits that are being merged. Defaults to false, and true is a synonym for 20."
-msgstr ""
+msgstr "Förutom grennamn, fyll i loggmeddelandet med högst det angivna antalet enradsbeskrivningar från de faktiska incheckningar som sammanfogas. Standardvärdet är falskt, och sant är en synonym för 20."
 
 #. type: Labeled list
 #: en/config/fmt-merge-msg.adoc:12
 #, no-wrap
 msgid "`merge.suppressDest`"
-msgstr ""
+msgstr "`merge.suppressDest`"
 
 #. type: Plain text
 #: en/config/fmt-merge-msg.adoc:18
 msgid "By adding a glob that matches the names of integration branches to this multi-valued configuration variable, the default merge message computed for merges into these integration branches will omit \"into _<branch-name>_\" from its title."
-msgstr ""
+msgstr "Genom att lägga till en glob som matchar namnen på integrationsgrenar till denna flervärdeskonfigurationsvariabel, kommer standardmeddelandet för sammanslagningar som beräknas för sammanslagningar i dessa integrationsgrenar att utelämna \"into _<grennamn>_\" från titeln."
 
 #. type: Plain text
 #: en/config/fmt-merge-msg.adoc:22
 msgid "An element with an empty value can be used to clear the list of globs accumulated from previous configuration entries. When there is no `merge.suppressDest` variable defined, the default value of `master` is used for backward compatibility."
-msgstr ""
+msgstr "Ett element med ett tomt värde kan användas för att rensa listan över globs som ackumulerats från tidigare konfigurationsposter. När ingen variabel `merge.suppressDest` har definierats används standardvärdet `master` för bakåtkompatibilitet."
 
 #. type: Title -
 #: en/date-formats.adoc:2
@@ -35861,7 +35861,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-mergetool--lib.adoc:19 en/git-sh-i18n.adoc:19 en/git-sh-setup.adoc:19
 msgid "This is not a command the end user would want to run. Ever. This documentation is meant for people who are studying the Porcelain-ish scripts and/or are writing new ones."
-msgstr ""
+msgstr "Detta är inte ett kommando som slutanvändaren någonsin skulle vilja köra. Den här dokumentationen är avsedd för personer som studerar Porslinsliknande skript och/eller skriver nya."
 
 #. type: Plain text
 #: en/git-mergetool--lib.adoc:23
@@ -35877,7 +35877,7 @@ msgstr ""
 #: en/git-mergetool--lib.adoc:29 en/git-sh-i18n.adoc:28 en/git-sh-setup.adoc:34
 #, no-wrap
 msgid "FUNCTIONS"
-msgstr ""
+msgstr "FUNKTIONER"
 
 #. type: Labeled list
 #: en/git-mergetool--lib.adoc:30
@@ -49947,33 +49947,39 @@ msgstr ""
 #: en/git-sh-i18n--envsubst.adoc:2
 #, no-wrap
 msgid "git-sh-i18n{litdd}envsubst(1)"
-msgstr ""
+msgstr "git-sh-i18n{litdd}envsubst(1)"
 
 #. type: Plain text
 #: en/git-sh-i18n--envsubst.adoc:7
 msgid "git-sh-i18n--envsubst - Git's own envsubst(1) for i18n fallbacks"
-msgstr ""
+msgstr "git-sh-i18n--envsubst - Gits egen envsubst(1) för i18n-reservfunktioner"
 
 #. type: verse
 #: en/git-sh-i18n--envsubst.adoc:17
 #, no-wrap
 msgid "eval_gettext () {\n\tprintf \"%s\" \"$1\" | (\n\t\texport PATH $('git sh-i18n{litdd}envsubst' --variables \"$1\");\n\t\t'git sh-i18n{litdd}envsubst' \"$1\"\n\t)\n}\n"
 msgstr ""
+"eval_gettext () {\n"
+"\tprintf \"%s\" \"$1\" | (\n"
+"\t\texport PATH $('git sh-i18n{litdd}envsubst' --variables \"$1\");\n"
+"\t\t'git sh-i18n{litdd}envsubst' \"$1\"\n"
+"\t)\n"
+"}\n"
 
 #. type: Plain text
 #: en/git-sh-i18n--envsubst.adoc:24
 msgid "This is not a command the end user would want to run. Ever. This documentation is meant for people who are studying the plumbing scripts and/or are writing new ones."
-msgstr ""
+msgstr "Detta är inte ett kommando som slutanvändaren någonsin skulle vilja köra. Den här dokumentationen är avsedd för personer som studerar plumbing-skript och/eller skriver nya."
 
 #. type: Plain text
 #: en/git-sh-i18n--envsubst.adoc:29
 msgid "'git sh-i18n{litdd}envsubst' is Git's stripped-down copy of the GNU `envsubst(1)` program that comes with the GNU gettext package. It's used internally by linkgit:git-sh-i18n[1] to interpolate the variables passed to the `eval_gettext` function."
-msgstr ""
+msgstr "'git sh-i18n{litdd}envsubst' är Gits nedskalade kopia av GNU-programmet `envsubst(1)` som följer med GNU gettext-paketet. Det används internt av linkgit:git-sh-i18n[1] för att interpolera variablerna som skickas till funktionen `eval_gettext`."
 
 #. type: Plain text
 #: en/git-sh-i18n--envsubst.adoc:33
 msgid "No promises are made about the interface, or that this program won't disappear without warning in the next version of Git. Don't use it."
-msgstr ""
+msgstr "Inga löften ges om gränssnittet, eller att det här programmet inte kommer att försvinna utan förvarning i nästa version av Git. Använd det inte."
 
 #. type: Title =
 #: en/git-sh-i18n.adoc:2
@@ -49985,40 +49991,40 @@ msgstr "git-sh-i18n(1)"
 #. type: Plain text
 #: en/git-sh-i18n.adoc:7
 msgid "git-sh-i18n - Git's i18n setup code for shell scripts"
-msgstr ""
+msgstr "git-sh-i18n - Gits i18n-installationskod för shellskript"
 
 #. type: verse
 #: en/git-sh-i18n.adoc:12
 #, no-wrap
 msgid "'. \"$(git --exec-path)/git-sh-i18n\"'\n"
-msgstr ""
+msgstr "'. \"$(git --exec-path)/git-sh-i18n\"'\n"
 
 #. type: Plain text
 #: en/git-sh-i18n.adoc:26
 msgid "The 'git sh-i18n scriptlet is designed to be sourced (using `.`) by Git's porcelain programs implemented in shell script. It provides wrappers for the GNU `gettext` and `eval_gettext` functions accessible through the `gettext.sh` script, and provides pass-through fallbacks on systems without GNU gettext."
-msgstr ""
+msgstr "Skriptleten 'git sh-i18n' är utformad för att hämtas (med hjälp av `.`) från Gits porslinsprogram implementerade i shellskript. Den tillhandahåller omslag för GNU-funktionerna `gettext` och `eval_gettext` som är tillgängliga via skriptet `gettext.sh`, och tillhandahåller reservfunktioner för system utan GNU gettext."
 
 #. type: Labeled list
 #: en/git-sh-i18n.adoc:30
 #, no-wrap
 msgid "gettext"
-msgstr ""
+msgstr "gettext"
 
 #. type: Plain text
 #: en/git-sh-i18n.adoc:34
 msgid "Currently a dummy fall-through function implemented as a wrapper around `printf(1)`. Will be replaced by a real gettext implementation in a later version."
-msgstr ""
+msgstr "För närvarande en attrapp-genomgångsfunktion implementerad som en wrapper runt `printf(1)`. Kommer att ersättas av en riktig gettext-implementering i en senare version."
 
 #. type: Labeled list
 #: en/git-sh-i18n.adoc:35
 #, no-wrap
 msgid "eval_gettext"
-msgstr ""
+msgstr "eval_gettext"
 
 #. type: Plain text
 #: en/git-sh-i18n.adoc:40
 msgid "Currently a dummy fall-through function implemented as a wrapper around `printf(1)` with variables expanded by the linkgit:git-sh-i18n{litdd}envsubst[1] helper. Will be replaced by a real gettext implementation in a later version."
-msgstr ""
+msgstr "För närvarande en attrapp-genomgångsfunktion implementerad som en wrapper runt `printf(1)` med variabler expanderade av hjälpen linkgit:git-sh-i18n{litdd}envsubst[1]. Kommer att ersättas av en riktig gettext-implementering i en senare version."
 
 #. type: Title =
 #: en/git-shortlog.adoc:2
@@ -61601,69 +61607,73 @@ msgstr "Ett repository kan ha noll (dvs. ett rent repo) eller ett eller flera ar
 #. type: Plain text
 #: en/i18n.adoc:2
 msgid "Git is to some extent character encoding agnostic."
-msgstr ""
+msgstr "Git är till viss del teckenkodningsagnostisk."
 
 #. type: Plain text
 #: en/i18n.adoc:6
 msgid "The contents of the blob objects are uninterpreted sequences of bytes. There is no encoding translation at the core level."
-msgstr ""
+msgstr "Innehållet i blob-objekten är otolkade sekvenser av byte. Det finns ingen kodningsöversättning på kärnnivå."
 
 #. type: Plain text
 #: en/i18n.adoc:13
 msgid "Path names are encoded in UTF-8 normalization form C. This applies to tree objects, the index file, ref names, as well as path names in command line arguments, environment variables and config files (`.git/config` (see linkgit:git-config[1]), linkgit:gitignore[5], linkgit:gitattributes[5] and linkgit:gitmodules[5])."
-msgstr ""
+msgstr "Sökvägsnamn är kodade i UTF-8-normaliseringsform C. Detta gäller trädobjekt, indexfilen, referensnamn, såväl som sökvägsnamn i kommandoradsargument, miljövariabler och konfigurationsfiler (`.git/config` (se linkgit:git-config[1]), linkgit:gitignore[5], linkgit:gitattributes[5] och linkgit:gitmodules[5])."
 
 #. type: Plain text
 #: en/i18n.adoc:23
 msgid "Note that Git at the core level treats path names simply as sequences of non-NUL bytes, there are no path name encoding conversions (except on Mac and Windows). Therefore, using non-ASCII path names will mostly work even on platforms and file systems that use legacy extended ASCII encodings. However, repositories created on such systems will not work properly on UTF-8-based systems (e.g. Linux, Mac, Windows) and vice versa. Additionally, many Git-based tools simply assume path names to be UTF-8 and will fail to display other encodings correctly."
-msgstr ""
+msgstr "Observera att Git på kärnnivå behandlar sökvägsnamn helt enkelt som sekvenser av icke-NUL-byte, det finns inga konverteringar av sökvägskodning (förutom på Mac och Windows). Därför fungerar användning av sökvägsnamn som inte är ASCII-namn oftast även på plattformar och filsystem som använder äldre utökade ASCII-kodningar. Repos som skapas på sådana system kommer dock inte att fungera korrekt på UTF-8-baserade system (t.ex. Linux, Mac, Windows) och vice versa. Dessutom antar många Git-baserade verktyg helt enkelt att sökvägsnamn är UTF-8 och kommer inte att kunna visa andra kodningar korrekt."
 
 #. type: Plain text
 #: en/i18n.adoc:29
 msgid "Commit log messages are typically encoded in UTF-8, but other extended ASCII encodings are also supported. This includes ISO-8859-x, CP125x and many others, but _not_ UTF-16/32, EBCDIC and CJK multi-byte encodings (GBK, Shift-JIS, Big5, EUC-x, CP9xx etc.)."
-msgstr ""
+msgstr "Meddelanden i commitloggar kodas vanligtvis i UTF-8, men andra utökade ASCII-kodningar stöds också. Detta inkluderar ISO-8859-x, CP125x och många andra, men _inte_ UTF-16/32, EBCDIC och CJK multibyte-kodningar (GBK, Shift-JIS, Big5, EUC-x, CP9xx etc.)."
 
 #. type: Plain text
 #: en/i18n.adoc:36
 msgid "Although we encourage that the commit log messages are encoded in UTF-8, both the core and Git Porcelain are designed not to force UTF-8 on projects. If all participants of a particular project find it more convenient to use legacy encodings, Git does not forbid it. However, there are a few things to keep in mind."
-msgstr ""
+msgstr "Även om vi uppmuntrar att incheckning-loggmeddelandena kodas i UTF-8, är både kärnan och Git Porcelain utformade för att inte tvinga fram UTF-8 på projekt. Om alla deltagare i ett visst projekt tycker att det är bekvämare att använda äldre kodningar, förbjuder inte Git det. Det finns dock några saker att tänka på."
 
 #. type: Plain text
 #: en/i18n.adoc:42
 msgid "`git commit` and `git commit-tree` issue a warning if the commit log message given to it does not look like a valid UTF-8 string, unless you explicitly say your project uses a legacy encoding. The way to say this is to have `i18n.commitEncoding` in `.git/config` file, like this:"
-msgstr ""
+msgstr "`git commit` och `git commit-tree` utfärdar en varning om incheckning-loggmeddelandet som ges till det inte ser ut som en giltig UTF-8-sträng, såvida du inte uttryckligen anger att ditt projekt använder en äldre kodning. Sättet att säga detta är att ha `i18n.commitEncoding` i `.git/config`-filen, så här:"
 
 #. type: delimited block -
 #: en/i18n.adoc:46
 #, no-wrap
 msgid "[i18n]\n\tcommitEncoding = ISO-8859-1\n"
 msgstr ""
+"[i18n]\n"
+"\tcommitEncoding = ISO-8859-1\n"
 
 #. type: Plain text
 #: en/i18n.adoc:52
 msgid "Commit objects created with the above setting record the value of `i18n.commitEncoding` in their `encoding` header. This is to help other people who look at them later. Lack of this header implies that the commit log message is encoded in UTF-8."
-msgstr ""
+msgstr "Inchecknings-objekt som skapats med ovanstående inställning registrerar värdet för `i18n.commitEncoding` i sin `encoding`-header. Detta är för att hjälpa andra som tittar på dem senare. Avsaknaden av denna header innebär att inchecknings-loggmeddelandet är kodat i UTF-8."
 
 #. type: Plain text
 #: en/i18n.adoc:58
 msgid "`git log`, `git show`, `git blame` and friends look at the `encoding` header of a commit object, and try to re-code the log message into UTF-8 unless otherwise specified. You can specify the desired output encoding with `i18n.logOutputEncoding` in `.git/config` file, like this:"
-msgstr ""
+msgstr "`git log`, `git show`, `git blame` och vänner tittar på `encoding`-headern för ett inchecknings-objekt och försöker koda om loggmeddelandet till UTF-8 om inget annat anges. Du kan ange önskad utdatakodning med `i18n.logOutputEncoding` i `.git/config`-filen, så här:"
 
 #. type: delimited block -
 #: en/i18n.adoc:62
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "[i18n]\n\tlogOutputEncoding = ISO-8859-1\n"
 msgstr ""
+"[i18n]\n"
+"\tlogOutputEncoding = ISO-8859-1\n"
 
 #. type: Plain text
 #: en/i18n.adoc:66
 msgid "If you do not have this configuration variable, the value of `i18n.commitEncoding` is used instead."
-msgstr ""
+msgstr "Om du inte har den här konfigurationsvariabeln, används värdet för `i18n.commitEncoding` istället."
 
 #. type: Plain text
 #: en/i18n.adoc:70
 msgid "Note that we deliberately chose not to re-code the commit log message when a commit is made to force UTF-8 at the commit object level, because re-coding to UTF-8 is not necessarily a reversible operation."
-msgstr ""
+msgstr "Observera att vi medvetet valde att inte koda om incheckning-loggmeddelandet när en incheckning görs för att tvinga fram UTF-8 på inchecknings-objektnivå, eftersom omkodning till UTF-8 inte nödvändigtvis är en reversibel operation."
 
 #. type: Plain text
 #: en/includes/cmd-config-section-all.adoc:3
