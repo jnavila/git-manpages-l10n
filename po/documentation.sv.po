@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-01-23 07:40+0000\n"
+"PO-Revision-Date: 2026-01-23 07:53+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -64112,85 +64112,87 @@ msgstr ""
 #. type: Plain text
 #: en/pull-fetch-param.adoc:6
 msgid "The \"remote\" repository that is the source of a fetch or pull operation. This parameter can be either a URL (see the section <<URLS,GIT URLS>> below) or the name of a remote (see the section <<REMOTES,REMOTES>> below)."
-msgstr ""
+msgstr "Det \"fjärrlagrade\" repot som är källan för en hämtnings- eller dra-operation (fetch, pull). Denna parameter kan antingen vara en URL (se avsnittet <<URLS,GIT URLS>> nedan) eller namnet på en fjärren (se avsnittet <<REMOTES,FJÄRR>> nedan)."
 
 #. type: Labeled list
 #: en/pull-fetch-param.adoc:8
 #, no-wrap
 msgid "_<group>_"
-msgstr ""
+msgstr "_<grupp>_"
 
 #. type: Plain text
 #: en/pull-fetch-param.adoc:12
 msgid "A name referring to a list of repositories as the value of `remotes.<group>` in the configuration file. (See linkgit:git-config[1])."
-msgstr ""
+msgstr "Ett namn som refererar till en lista över arkiv som värdet för `remotes.<grupp>` i konfigurationsfilen. (Se linkgit:git-config[1])."
 
 #. type: Plain text
 #: en/pull-fetch-param.adoc:19
 msgid "Specifies which refs to fetch and which local refs to update. When no __<refspec>__s appear on the command line, the refs to fetch are read from `remote.<repository>.fetch` variables instead"
-msgstr ""
+msgstr "Anger vilka referenser som ska hämtas och vilka lokala referenser som ska uppdateras. När inga __<refspec>__s visas på kommandoraden läses referenserna som ska hämtas från variablerna `remote.<repo>.fetch` istället"
 
 #. type: Plain text
 #: en/pull-fetch-param.adoc:21
 #, no-wrap
 msgid "\t(see <<CRTB,CONFIGURED REMOTE-TRACKING BRANCHES>> below).\n"
-msgstr ""
+msgstr "\t(se <<CRTB, KONFIGURERADE FJÄRRSPÅRNINGSGRENAR>> nedan)..\n"
 
 #. type: Plain text
 #: en/pull-fetch-param.adoc:25
 #, no-wrap
 msgid "\t(see the section \"CONFIGURED REMOTE-TRACKING BRANCHES\"\n\tin linkgit:git-fetch[1]).\n"
 msgstr ""
+"\t(se avsnittet \"KONFIGURERADE FJÄRRSPÅRNINGSGRENAR\" \n"
+"\ti linkgit:git-fetch[1]).\n"
 
 #. type: Plain text
 #: en/pull-fetch-param.adoc:34
 msgid "The format of a _<refspec>_ parameter is an optional plus `+`, followed by the source _<src>_, followed by a colon `:`, followed by the destination _<dst>_. The colon can be omitted when _<dst>_ is empty. _<src>_ is typically a ref, or a glob pattern with a single `*` that is used to match a set of refs, but it can also be a fully spelled hex object name."
-msgstr ""
+msgstr "Formatet för en _<refspec>_-parameter är ett valfritt plustecken `+`, följt av källtan _<src>_, följt av ett kolon `:`, följt av målet _<dst>_. Kolonet kan utelämnas när _<mål>_ är tomt. _<src>_ är vanligtvis en referens, eller ett globmönster med ett enda `*` som används för att matcha en uppsättning referenser, men det kan också vara ett fullständigt stavat hexagonalt objektnamn."
 
 #. type: Plain text
 #: en/pull-fetch-param.adoc:40
 msgid "A _<refspec>_ may contain a `*` in its _<src>_ to indicate a simple pattern match. Such a refspec functions like a glob that matches any ref with the pattern. A pattern _<refspec>_ must have one and only one `*` in both the _<src>_ and _<dst>_. It will map refs to the destination by replacing the `*` with the contents matched from the source."
-msgstr ""
+msgstr "En _<refspec>_ kan innehålla ett `*` i sin _<src>_ för att indikera en enkel mönstermatchning. En sådan refspec fungerar som en glob som matchar vilken referens som helst med mönstret. En mönster _<refspec>_ måste ha ett och endast ett `*` i både _<src>_ och _<mål>_. Den mappar referenser till destinationen genom att ersätta `*` med innehållet som matchas från källan."
 
 #. type: Plain text
 #: en/pull-fetch-param.adoc:50
 msgid "If a refspec is prefixed by `^`, it will be interpreted as a negative refspec. Rather than specifying which refs to fetch or which local refs to update, such a refspec will instead specify refs to exclude. A ref will be considered to match if it matches at least one positive refspec, and does not match any negative refspec. Negative refspecs can be useful to restrict the scope of a pattern refspec so that it will not include specific refs. Negative refspecs can themselves be pattern refspecs. However, they may only contain a _<src>_ and do not specify a _<dst>_. Fully spelled out hex object names are also not supported."
-msgstr ""
+msgstr "Om en refspec har prefixet `^` kommer den att tolkas som en negativ refspec. Istället för att ange vilka referenser som ska hämtas eller vilka lokala referenser som ska uppdateras, kommer en sådan refspec istället att ange referenser som ska exkluderas. En ref kommer att anses matcha om den matchar minst en positiv refspec och inte matchar någon negativ refspec. Negativa refspecs kan vara användbara för att begränsa omfattningen av en mönsterrefspec så att den inte inkluderar specifika referenser. Negativa refspecs kan själva vara mönsterrefspecs. De får dock bara innehålla en _<src>_ och anger inte en _<mål>_. Fullständigt stavade hexadecimala objektnamn stöds inte heller."
 
 #. type: Plain text
 #: en/pull-fetch-param.adoc:53
 msgid "`tag <tag>` means the same as `refs/tags/<tag>:refs/tags/<tag>`; it requests fetching everything up to the given tag."
-msgstr ""
+msgstr "`tag <tagg>` betyder samma sak som `refs/tags/<tag>:refs/tags/<tagg>`; den begär att allt upp till den givna taggen hämtas."
 
 #. type: Plain text
 #: en/pull-fetch-param.adoc:57
 msgid "The remote ref that matches _<src>_ is fetched, and if _<dst>_ is not an empty string, an attempt is made to update the local ref that matches it."
-msgstr ""
+msgstr "Fjärrreferensen som matchar _<src>_ hämtas, och om _<mål>_ inte är en tom sträng görs ett försök att uppdatera den lokala referensen som matchar den."
 
 #. type: Plain text
 #: en/pull-fetch-param.adoc:64
 msgid "Whether that update is allowed without `--force` depends on the ref namespace it's being fetched to, the type of object being fetched, and whether the update is considered to be a fast-forward. Generally, the same rules apply for fetching as when pushing, see the `<refspec>...` section of linkgit:git-push[1] for what those are. Exceptions to those rules particular to `git fetch` are noted below."
-msgstr ""
+msgstr "Huruvida den uppdateringen är tillåten utan `--force` beror på referensnamnrymden den hämtas till, typen av objekt som hämtas och om uppdateringen anses vara en snabbspolning framåt. Generellt sett gäller samma regler för hämtning som vid pushing, se avsnittet `<refspec>...` i linkgit:git-push[1] för vad dessa är. Undantag från dessa regler som är specifika för `git fetch` anges nedan."
 
 #. type: Plain text
 #: en/pull-fetch-param.adoc:72
 msgid "Until Git version 2.20, and unlike when pushing with linkgit:git-push[1], any updates to `refs/tags/*` would be accepted without `+` in the refspec (or `--force`). When fetching, we promiscuously considered all tag updates from a remote to be forced fetches. Since Git version 2.20, fetching to update `refs/tags/*` works the same way as when pushing. I.e. any updates will be rejected without `+` in the refspec (or `--force`)."
-msgstr ""
+msgstr "Fram till Git version 2.20, och till skillnad från när man pushar med linkgit:git-push[1], skulle alla uppdateringar till `refs/tags/*` accepteras utan `+` i refspec (eller `--force`). Vid hämtning betraktade vi promiskuöst alla tagguppdateringar från en fjärren som tvångshämtningar. Sedan Git version 2.20 fungerar hämtning för att uppdatera `refs/tags/*` på samma sätt som vid pushing. Dvs. alla uppdateringar kommer att avvisas utan `+` i refspec (eller `--force`)."
 
 #. type: Plain text
 #: en/pull-fetch-param.adoc:78
 msgid "Unlike when pushing with linkgit:git-push[1], any updates outside of `refs/{tags,heads}/*` will be accepted without `+` in the refspec (or `--force`), whether that's swapping e.g. a tree object for a blob, or a commit for another commit that doesn't have the previous commit as an ancestor etc."
-msgstr ""
+msgstr "Till skillnad från när man pushar med linkgit:git-push[1], kommer alla uppdateringar utanför `refs/{tags,heads}/*` att accepteras utan `+` i refspec (eller `--force`), oavsett om det är att byta ut t.ex. ett trädobjekt mot en blob, eller en incheckning mot en annan incheckning som inte har den tidigare incheckning som en förfader etc."
 
 #. type: Plain text
 #: en/pull-fetch-param.adoc:82
 msgid "Unlike when pushing with linkgit:git-push[1], there is no configuration which'll amend these rules, and nothing like a `pre-fetch` hook analogous to the `pre-receive` hook."
-msgstr ""
+msgstr "Till skillnad från när man pushar med linkgit:git-push[1] finns det ingen konfiguration som ändrar dessa regler, och inget som en `pre-fetch`-krok analog med `pre-receive`-kroken."
 
 #. type: Plain text
 #: en/pull-fetch-param.adoc:89
 msgid "As with pushing with linkgit:git-push[1], all of the rules described above about what's not allowed as an update can be overridden by adding an optional leading `+` to a refspec (or using the `--force` command line option). The only exception to this is that no amount of forcing will make the `refs/heads/*` namespace accept a non-commit object."
-msgstr ""
+msgstr "Precis som med pushing med linkgit:git-push[1], kan alla regler som beskrivs ovan om vad som inte är tillåtet som en uppdatering åsidosättas genom att lägga till ett valfritt inledande `+` till en refspec (eller genom att använda kommandoradsalternativet `--force`). Det enda undantaget från detta är att ingen mängd tvång kommer att få namnrymden `refs/heads/*` att acceptera ett icke-inchecknings-objekt."
 
 #. type: NOTE
 #: en/pull-fetch-param.adoc:101
@@ -64200,7 +64202,7 @@ msgstr "När den fjärrgren du vill hämta är känd för att regelbundet spolas
 #. type: NOTE
 #: en/pull-fetch-param.adoc:121
 msgid "There is a difference between listing multiple _<refspec>_ directly on `git pull` command line and having multiple `remote.<repository>.fetch` entries in your configuration for a _<repository>_ and running a `git pull` command without any explicit _<refspec>_ parameters. __<refspec>__s listed explicitly on the command line are always merged into the current branch after fetching. In other words, if you list more than one remote ref, `git pull` will create an Octopus merge. On the other hand, if you do not list any explicit _<refspec>_ parameter on the command line, `git pull` will fetch all the __<refspec>__s it finds in the `remote.<repository>.fetch` configuration and merge only the first _<refspec>_ found into the current branch. This is because making an Octopus from remote refs is rarely done, while keeping track of multiple remote heads in one-go by fetching more than one is often useful."
-msgstr ""
+msgstr "Det är skillnad på att lista flera _<refspec>_ direkt på `git pull`-kommandoraden och att ha flera `remote.<repo>.fetch`-poster i din konfiguration för ett _<repo>_ och att köra ett `git pull`-kommando utan några explicita _<refspec>_-parametrar. __<refspec>__s som listas explicit på kommandoraden slås alltid samman med den aktuella grenen efter hämtning. Med andra ord, om du listar mer än en fjärrreferens, kommer `git pull` att skapa en bläckfisk-sammanslagning. Å andra sidan, om du inte listar någon explicit _<refspec>_-parameter på kommandoraden, kommer `git pull` att hämta alla __<refspec>__s som den hittar i `remote.<repository>.fetch`-konfigurationen och slå samman endast den första _<refspec>_ som hittas med den aktuella grenen. Detta beror på att det sällan görs att skapa en bläckfisk från fjärrreferenser, medan det ofta är användbart att hålla reda på flera fjärrreferenser samtidigt genom att hämta mer än ett."
 
 #. type: Plain text
 #: en/ref-reachability-filters.adoc:4
