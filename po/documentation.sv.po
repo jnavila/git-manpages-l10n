@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-01-22 23:52+0000\n"
+"PO-Revision-Date: 2026-01-23 04:58+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -17553,7 +17553,7 @@ msgstr ""
 #: en/pull-fetch-param.adoc:1
 #, no-wrap
 msgid "_<repository>_"
-msgstr ""
+msgstr "_<repo>_"
 
 #. type: Plain text
 #: en/git-clone.adoc:351
@@ -40307,98 +40307,98 @@ msgstr "git pull [<flaggor>] [<repo> [<refspec>...]]\n"
 #. type: Plain text
 #: en/git-pull.adoc:19
 msgid "Integrate changes from a remote repository into the current branch."
-msgstr ""
+msgstr "Integrera ändringar från ett fjärr-repo i den aktuella grenen."
 
 #. type: Plain text
 #: en/git-pull.adoc:26
 msgid "First, `git pull` runs `git fetch` with the same arguments (excluding merge options) to fetch remote branch(es). Then it decides which remote branch to integrate: if you run `git pull` with no arguments this defaults to the <<UPSTREAM-BRANCHES,upstream>> for the current branch. Then it integrates that branch into the current branch."
-msgstr ""
+msgstr "Först kör `git pull` `git fetch` med samma argument (exklusive sammanslagningsalternativ) för att hämta fjärrgren(ar). Sedan bestämmer den vilken fjärrgren som ska integreras: om du kör `git pull` utan argument används som standard <<UPSTREAM-BRANCHES,upstream>> för den aktuella grenen. Sedan integreras den grenen i den aktuella grenen."
 
 #. type: Plain text
 #: en/git-pull.adoc:28
 msgid "There are 4 main options for integrating the remote branch:"
-msgstr ""
+msgstr "Det finns fyra huvudalternativ för att integrera fjärrgrenen:"
 
 #. type: Plain text
 #: en/git-pull.adoc:32
 msgid "`git pull --ff-only` will only do \"fast-forward\" updates: it fails if your local branch has diverged from the remote branch. This is the default."
-msgstr ""
+msgstr "`git pull --ff-only` kommer bara att göra \"snabbspola framåt\"-uppdateringar: det misslyckas om din lokala gren har divergerat från fjärrgrenen. Detta är standardinställningen."
 
 #. type: Plain text
 #: en/git-pull.adoc:33
 msgid "`git pull --rebase` runs `git rebase`"
-msgstr ""
+msgstr "`git pull --rebase` kör `git rebase`"
 
 #. type: Plain text
 #: en/git-pull.adoc:34
 msgid "`git pull --no-rebase` runs `git merge`."
-msgstr ""
+msgstr "`git pull --no-rebase` kör `git merge`."
 
 #. type: Plain text
 #: en/git-pull.adoc:35
 msgid "`git pull --squash` runs `git merge --squash`"
-msgstr ""
+msgstr "`git pull --squash` kör `git merge --squash`"
 
 #. type: Plain text
 #: en/git-pull.adoc:38
 msgid "You can also set the configuration options `pull.rebase`, `pull.squash`, or `pull.ff` with your preferred behaviour."
-msgstr ""
+msgstr "Du kan också ställa in konfigurationsalternativen `pull.rebase`, `pull.squash` eller `pull.ff` med ditt föredragna beteende."
 
 #. type: Plain text
 #: en/git-pull.adoc:42
 msgid "If there's a merge conflict during the merge or rebase that you don't want to handle, you can safely abort it with `git merge --abort` or `git rebase --abort`."
-msgstr ""
+msgstr "Om det uppstår en sammanslagningskonflikt under sammanslagningen eller ombasering som du inte vill hantera, kan du säkert avbryta den med `git merge --abort` eller `git rebase --abort`."
 
 #. type: Plain text
 #: en/git-pull.adoc:50
 msgid "The \"remote\" repository to pull from. This can be either a URL (see the section <<URLS,GIT URLS>> below) or the name of a remote (see the section <<REMOTES,REMOTES>> below)."
-msgstr ""
+msgstr "\"Fjärr\"-arkivet att hämta från. Detta kan antingen vara en URL (se avsnittet <<URLS,GIT URLS>> nedan) eller namnet på en fjärrenhet (se avsnittet <<REMOTES,FJÄRR>> nedan)."
 
 #. type: Plain text
 #: en/git-pull.adoc:54
 msgid "Defaults to the configured upstream for the current branch, or `origin`. See <<UPSTREAM-BRANCHES,UPSTREAM BRANCHES>> below for more on how to configure upstreams."
-msgstr ""
+msgstr "Standardinställningen är den konfigurerade uppströmsfilen för den aktuella grenen, eller `origin`. Se <<UPSTREAM-BRANCHES,UPPSTRÖMS-GRENAR>> nedan för mer information om hur man konfigurerar uppströmsfilar."
 
 #. type: Labeled list
 #: en/git-pull.adoc:55 en/pull-fetch-param.adoc:15
 #, no-wrap
 msgid "_<refspec>_"
-msgstr ""
+msgstr "_<refspec>_"
 
 #. type: Plain text
 #: en/git-pull.adoc:59
 msgid "Which branch or other reference(s) to fetch and integrate into the current branch, for example `main` in `git pull origin main`. Defaults to the configured upstream for the current branch."
-msgstr ""
+msgstr "Vilken gren eller annan referens(er) som ska hämtas och integreras i den aktuella grenen, till exempel `main` i `git pull origin main`. Standardinställningen är den konfigurerade uppström för den aktuella grenen."
 
 #. type: Plain text
 #: en/git-pull.adoc:65
 msgid "This can be a branch, tag, or other collection of reference(s). See <<fetch-refspec,_<refspec>_>> below under \"Options related to fetching\" for the full syntax, and <<DEFAULT-BEHAVIOUR,DEFAULT BEHAVIOUR>> below for how `git pull` uses this argument to determine which remote branch to integrate."
-msgstr ""
+msgstr "Detta kan vara en gren, tagg eller annan samling av referenser. Se <<fetch-refspec,_<refspec>_>> nedan under \"Alternativ relaterade till hämtning\" för den fullständiga syntaxen, och <<DEFAULT-BEHAVIOUR,STANDARDBETEENDE>> nedan för hur `git pull` använder detta argument för att avgöra vilken fjärrgren som ska integreras."
 
 #. type: Plain text
 #: en/git-pull.adoc:71
 msgid "This is passed to both underlying git-fetch to squelch reporting of during transfer, and underlying git-merge to squelch output during merging."
-msgstr ""
+msgstr "Detta skickas till både underliggande git-fetch till kväva rapportering under överföring, och underliggande git-merge för att kväva-utdata under sammanslagning."
 
 #. type: Plain text
 #: en/git-pull.adoc:75
 msgid "Pass `--verbose` to git-fetch and git-merge."
-msgstr ""
+msgstr "Skicka `--verbose` till git-fetch och git-merge."
 
 #. type: Plain text
 #: en/git-pull.adoc:82
 msgid "This option controls if new commits of populated submodules should be fetched, and if the working trees of active submodules should be updated, too (see linkgit:git-fetch[1], linkgit:git-config[1] and linkgit:gitmodules[5])."
-msgstr ""
+msgstr "Det här alternativet styr om nya incheckningar för ifyllda undermoduler ska hämtas, och om de fungerande träden för aktiva undermoduler också ska uppdateras (se linkgit:git-fetch[1], linkgit:git-config[1] och linkgit:gitmodules[5])."
 
 #. type: Plain text
 #: en/git-pull.adoc:84
 msgid "If the checkout is done via rebase, local submodule commits are rebased as well."
-msgstr ""
+msgstr "Om utcheckningen görs via ombasering, ombaseras även lokala undermodul-incheckningar."
 
 #. type: Plain text
 #: en/git-pull.adoc:86
 msgid "If the update is done via merge, the submodule conflicts are resolved and checked out."
-msgstr ""
+msgstr "Om uppdateringen görs via sammanslagning, löses undermodulkonflikterna och de checkas ut."
 
 #. type: Title ~
 #: en/git-pull.adoc:88
@@ -40416,7 +40416,7 @@ msgstr "`--rebase[=(true|merges|false|interactive)]`"
 #. type: Plain text
 #: en/git-pull.adoc:101
 msgid "rebase the current branch on top of the upstream branch after fetching. If there is a remote-tracking branch corresponding to the upstream branch and the upstream branch was rebased since last fetched, the rebase uses that information to avoid rebasing non-local changes. This is the default."
-msgstr ""
+msgstr "Ombasera den aktuella grenen ovanpå den uppströms grenen efter hämtning. Om det finns en fjärrspårningsgren som motsvarar den uppströms grenen och den uppströms grenen har ombaserats sedan den senaste hämtningen, använder ombasen den informationen för att undvika ombasering av icke-lokala ändringar. Detta är standardinställningen."
 
 #. type: Labeled list
 #: en/git-pull.adoc:102
@@ -40428,12 +40428,12 @@ msgstr "`merges`"
 #. type: Plain text
 #: en/git-pull.adoc:105
 msgid "rebase using `git rebase --rebase-merges` so that the local merge commits are included in the rebase (see linkgit:git-rebase[1] for details)."
-msgstr ""
+msgstr "ombasering med `git rebase --rebase-merges` så att de lokala sammanslagnings-incheckningar inkluderas i rebasen (se linkgit:git-rebase[1] för detaljer)."
 
 #. type: Plain text
 #: en/git-pull.adoc:106
 msgid "merge the upstream branch into the current branch."
-msgstr ""
+msgstr "sammanfoga den uppströms grenen med den nuvarande grenen."
 
 #. type: Labeled list
 #: en/git-pull.adoc:106
@@ -40445,17 +40445,17 @@ msgstr "`interactive`"
 #. type: Plain text
 #: en/git-pull.adoc:107
 msgid "enable the interactive mode of rebase."
-msgstr ""
+msgstr "aktivera det interaktiva läget för ombasering."
 
 #. type: Plain text
 #: en/git-pull.adoc:112
 msgid "See `pull.rebase`, `branch.<name>.rebase` and `branch.autoSetupRebase` in linkgit:git-config[1] if you want to make `git pull` always use `--rebase` instead of merging."
-msgstr ""
+msgstr "Se `pull.rebase`, `branch.<name>.rebase` och `branch.autoSetupRebase` i linkgit:git-config[1] om du vill att `git pull` alltid ska använda `--rebase` istället för sammanslagning."
 
 #. type: NOTE
 #: en/git-pull.adoc:118
 msgid "This is a potentially _dangerous_ mode of operation. It rewrites history, which does not bode well when you published that history already. Do *not* use this option unless you have read linkgit:git-rebase[1] carefully."
-msgstr ""
+msgstr "Detta är ett potentiellt _farligt_ driftläge. Det skriver om historiken, vilket inte bådar gott när du redan har publicerat den historiken. Använd *inte* det här alternativet om du inte har läst linkgit:git-rebase[1] noggrant."
 
 #. type: Labeled list
 #: en/git-pull.adoc:119
@@ -40467,7 +40467,7 @@ msgstr "`--no-rebase`"
 #. type: NOTE
 #: en/git-pull.adoc:121
 msgid "This is shorthand for `--rebase=false`."
-msgstr ""
+msgstr "Detta är en förkortning för `--rebase=false`."
 
 #. type: Title ~
 #: en/git-pull.adoc:123
@@ -40479,38 +40479,38 @@ msgstr "Alternativ gällande hämtningar"
 #: en/git-pull.adoc:135
 #, no-wrap
 msgid "DEFAULT BEHAVIOUR"
-msgstr ""
+msgstr "STANDARDBETEENDE"
 
 #. type: Plain text
 #: en/git-pull.adoc:142
 msgid "Often people use `git pull` without giving any parameter. Traditionally, this has been equivalent to saying `git pull origin`. However, when configuration `branch.<name>.remote` is present while on branch `<name>`, that value is used instead of `origin`."
-msgstr ""
+msgstr "Ofta använder man `git pull` utan att ange någon parameter. Traditionellt, har detta motsvarat att säga `git pull origin`. Men när konfigurationen `branch.<namn>.remote` finns på grenen `<namn>`, används det värdet istället för `origin`."
 
 #. type: Plain text
 #: en/git-pull.adoc:147
 msgid "In order to determine what URL to use to fetch from, the value of the configuration `remote.<origin>.url` is consulted and if there is not any such variable, the value on the `URL:` line in `$GIT_DIR/remotes/<origin>` is used."
-msgstr ""
+msgstr "För att avgöra vilken URL som ska användas för att hämta från, konsulteras värdet för konfigurationen `remote.<fjärr>.url` och om det inte finns någon sådan variabel används värdet på raden `URL:` i `$GIT_DIR/remotes/<fjärr>`."
 
 #. type: Plain text
 #: en/git-pull.adoc:156
 msgid "In order to determine what remote branches to fetch (and optionally store in the remote-tracking branches) when the command is run without any refspec parameters on the command line, values of the configuration variable `remote.<origin>.fetch` are consulted, and if there aren't any, `$GIT_DIR/remotes/<origin>` is consulted and its `Pull:` lines are used. In addition to the refspec formats described in the OPTIONS section, you can have a globbing refspec that looks like this:"
-msgstr ""
+msgstr "För att avgöra vilka fjärrgrenar som ska hämtas (och eventuellt lagras i fjärrspårningsgrenarna) när kommandot körs utan några refspec-parametrar på kommandoraden, konsulteras värden för konfigurationsvariabeln `remote.<fjärr>.fetch`, och om det inte finns några konsulteras `$GIT_DIR/remotes/<fjärr>` och dess `Pull:`-rader används. Förutom refspec-formaten som beskrivs i avsnittet OPTIONS kan du ha en globbing-refspec som ser ut så här:"
 
 #. type: delimited block -
 #: en/git-pull.adoc:159
 #, no-wrap
 msgid "refs/heads/*:refs/remotes/origin/*\n"
-msgstr ""
+msgstr "refs/heads/*:refs/remotes/origin/*\n"
 
 #. type: Plain text
 #: en/git-pull.adoc:166
 msgid "A globbing refspec must have a non-empty RHS (i.e. must store what were fetched in remote-tracking branches), and its LHS and RHS must end with `/*`. The above specifies that all remote branches are tracked using remote-tracking branches in `refs/remotes/origin/` hierarchy under the same name."
-msgstr ""
+msgstr "En globbande refspec måste ha en icke-tom RHS (dvs. måste lagra det som hämtades i fjärrspårningsgrenar), och dess LHS och RHS måste sluta med `/*`. Ovanstående anger att alla fjärrgrenar spåras med hjälp av fjärrspårningsgrenar i `refs/remotes/origin/`-hierarkin under samma namn."
 
 #. type: Plain text
 #: en/git-pull.adoc:170
 msgid "The rule to determine which remote branch to merge after fetching is a bit involved, in order not to break backward compatibility."
-msgstr ""
+msgstr "Regeln för att avgöra vilken fjärrgren som ska sammanfogas efter hämtning är lite invecklad för att inte bryta bakåtkompatibiliteten."
 
 #. type: Plain text
 #: en/git-pull.adoc:173
