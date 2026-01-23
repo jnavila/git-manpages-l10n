@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-01-23 07:06+0000\n"
+"PO-Revision-Date: 2026-01-23 07:40+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -67146,176 +67146,185 @@ msgstr "Uppströms grenar kallas ibland för \"spårningsinformation\", som i \"
 #: en/urls.adoc:2
 #, no-wrap
 msgid "GIT URLS[[URLS]]"
-msgstr ""
+msgstr "GIT URLS[[URLS]]"
 
 #. type: Plain text
 #: en/urls.adoc:8
 msgid "In general, URLs contain information about the transport protocol, the address of the remote server, and the path to the repository. Depending on the transport protocol, some of this information may be absent."
-msgstr ""
+msgstr "I allmänhet innehåller URL:er information om transportprotokollet, adressen till fjärrservern och sökvägen till repot. Beroende på transportprotokollet kan en del av denna information saknas."
 
 #. type: Plain text
 #: en/urls.adoc:12
 msgid "Git supports ssh, git, http, and https protocols (in addition, ftp and ftps can be used for fetching, but this is inefficient and deprecated; do not use them)."
-msgstr ""
+msgstr "Git stöder ssh-, git-, http- och https-protokollen (dessutom kan ftp och ftps användas för hämtning, men detta är ineffektivt och föråldrat; använd dem inte)."
 
 #. type: Plain text
 #: en/urls.adoc:15
 msgid "The native transport (i.e. `git://` URL) does no authentication and should be used with caution on unsecured networks."
-msgstr ""
+msgstr "Den inbyggda transporten (dvs. `git://` URL) utför ingen autentisering och bör användas med försiktighet på osäkra nätverk."
 
 #. type: Plain text
 #: en/urls.adoc:17
 msgid "The following syntaxes may be used with them:"
-msgstr ""
+msgstr "Följande syntaxer kan användas med dem:"
 
 #. type: Plain text
 #: en/urls.adoc:19
 msgid "`ssh://[<user>@]<host>[:<port>]/<path-to-git-repo>`"
-msgstr ""
+msgstr "`ssh://[<användare>@]<värd>[:<port>]/<sökväg-till-git-repo>`"
 
 #. type: Plain text
 #: en/urls.adoc:20
 msgid "`git://<host>[:<port>]/<path-to-git-repo>`"
-msgstr ""
+msgstr "`git://<värd>[:<port>]/<sökväg-till-git-repo>`"
 
 #. type: Plain text
 #: en/urls.adoc:21
 msgid "`http[s]://<host>[:<port>]/<path-to-git-repo>`"
-msgstr ""
+msgstr "`http[s]://<värd>[:<port>]/<sökväg-till-git-repo>`"
 
 #. type: Plain text
 #: en/urls.adoc:22
 msgid "`ftp[s]://<host>[:<port>]/<path-to-git-repo>`"
-msgstr ""
+msgstr "`ftp[s]://<värd>[:<port>]/<sökväg-till-git-repo>`"
 
 #. type: Plain text
 #: en/urls.adoc:24
 msgid "An alternative scp-like syntax may also be used with the ssh protocol:"
-msgstr ""
+msgstr "En alternativ scp-liknande syntax kan också användas med ssh-protokollet:"
 
 #. type: Plain text
 #: en/urls.adoc:26
 msgid "`[<user>@]<host>:/<path-to-git-repo>`"
-msgstr ""
+msgstr "`[<användare>@]<värd>[:<port>]/<sökväg-till-git-repo>`"
 
 #. type: Plain text
 #: en/urls.adoc:32
 msgid "This syntax is only recognized if there are no slashes before the first colon. This helps differentiate a local path that contains a colon. For example the local path `foo:bar` could be specified as an absolute path or `./foo:bar` to avoid being misinterpreted as an ssh url."
-msgstr ""
+msgstr "Denna syntax känns bara igen om det inte finns några snedstreck före det första kolonet. Detta hjälper till att skilja en lokal sökväg som innehåller ett kolon. Till exempel kan den lokala sökvägen `foo:bar` anges som en absolut sökväg eller `./foo:bar` för att undvika att misstolkas som en ssh-url."
 
 #. type: Plain text
 #: en/urls.adoc:34
 msgid "The ssh and git protocols additionally support `~<username>` expansion:"
-msgstr ""
+msgstr "Protokollen ssh och git stöder dessutom `~<username>`-expansionen:"
 
 #. type: Plain text
 #: en/urls.adoc:36
 msgid "`ssh://[<user>@]<host>[:<port>]/~<user>/<path-to-git-repo>`"
-msgstr ""
+msgstr "`ssh://[<användare>@]<värd>[:<port>]/<sökväg-till-git-repo>`"
 
 #. type: Plain text
 #: en/urls.adoc:37
 msgid "`git://<host>[:<port>]/~<user>/<path-to-git-repo>`"
-msgstr ""
+msgstr "`git://[<användare>@]<värd>[:<port>]/<sökväg-till-git-repo>`"
 
 #. type: Plain text
 #: en/urls.adoc:38
 msgid "`[<user>@]<host>:~<user>/<path-to-git-repo>`"
-msgstr ""
+msgstr "`[<användare>@]<värd>[:<port>]/<sökväg-till-git-repo>`"
 
 #. type: Plain text
 #: en/urls.adoc:41
 msgid "For local repositories, also supported by Git natively, the following syntaxes may be used:"
-msgstr ""
+msgstr "För lokala repos, som också stöds nativt av Git, kan följande syntaxer användas:"
 
 #. type: Plain text
 #: en/urls.adoc:43
 msgid "`/path/to/repo.git/`"
-msgstr ""
+msgstr "`/sokvag/till/repo.git/`"
 
 #. type: Plain text
 #: en/urls.adoc:44
 msgid "`file:///path/to/repo.git/`"
-msgstr ""
+msgstr "`file:///sokvag/till/repo.git/`"
 
 #. type: Plain text
 #: en/urls.adoc:49
 msgid "These two syntaxes are mostly equivalent, except when cloning, when the former implies `--local` option. See linkgit:git-clone[1] for details."
-msgstr ""
+msgstr "Dessa två syntaxer är mestadels likvärdiga, förutom vid kloning, då den förra innebär alternativet `--local`. Se linkgit:git-clone[1] för detaljer."
 
 #. type: Plain text
 #: en/urls.adoc:54
 msgid "These two syntaxes are mostly equivalent, except the former implies `--local` option."
-msgstr ""
+msgstr "Dessa två syntaxer är mestadels likvärdiga, förutom att den förra innebär alternativet `--local`."
 
 #. type: Plain text
 #: en/urls.adoc:58
 msgid "`git clone`, `git fetch` and `git pull`, but not `git push`, will also accept a suitable bundle file. See linkgit:git-bundle[1]."
-msgstr ""
+msgstr "`git clone`, `git fetch` och `git pull`, men inte `git push`, accepterar också en lämplig bundle-fil. Se linkgit:git-bundle[1]."
 
 #. type: Plain text
 #: en/urls.adoc:63
 msgid "When Git doesn't know how to handle a certain transport protocol, it attempts to use the `remote-<transport>` remote helper, if one exists. To explicitly request a remote helper, the following syntax may be used:"
-msgstr ""
+msgstr "När Git inte vet hur ett visst transportprotokoll ska hanteras, försöker det använda fjärr-hjälparen `remote-<transport>`, om en sådan finns. För att explicit begära en fjärr-hjälpare kan följande syntax användas:"
 
 #. type: Plain text
 #: en/urls.adoc:65
 msgid "`<transport>::<address>`"
-msgstr ""
+msgstr "`<transport>::<adress>`"
 
 #. type: Plain text
 #: en/urls.adoc:69
 msgid "where _<address>_ may be a path, a server and path, or an arbitrary URL-like string recognized by the specific remote helper being invoked. See linkgit:gitremote-helpers[7] for details."
-msgstr ""
+msgstr "där _<adress>_ kan vara en sökväg, en server och sökväg, eller en godtycklig URL-liknande sträng som känns igen av den specifika fjärrhjälparen som anropas. Se linkgit:gitremote-helpers[7] för mer information."
 
 #. type: Plain text
 #: en/urls.adoc:74
 msgid "If there are a large number of similarly-named remote repositories and you want to use a different format for them (such that the URLs you use will be rewritten into URLs that work), you can create a configuration section of the form:"
-msgstr ""
+msgstr "Om det finns ett stort antal fjärrdatabaser med liknande namn och du vill använda ett annat format för dem (så att de URL:er du använder skrivs om till URL:er som fungerar), kan du skapa en konfigurationssektion i formatet:"
 
 #. type: verse
 #: en/urls.adoc:79
 #, no-wrap
 msgid "\t[url \"__<actual-url-base>__\"]\n\t\tinsteadOf = _<other-url-base>_\n"
 msgstr ""
+"\t[url \"__<faktisk-url-bas>__\"]\n"
+"\t\tinsteadOf = _<annan-url-bas>_\n"
 
 #. type: verse
 #: en/urls.adoc:82 en/urls.adoc:102
 msgid "For example, with this:"
-msgstr ""
+msgstr "Till exempel med detta:"
 
 #. type: delimited block -
 #: en/urls.adoc:87
 #, no-wrap
 msgid "\t[url \"git://git.host.xz/\"]\n\t\tinsteadOf = host.xz:/path/to/\n\t\tinsteadOf = work:\n"
 msgstr ""
+"\t[url \"git://git.host.xz/\"]\n"
+"\t\tinsteadOf = host.xz:/sokvag/till/\n"
+"\t\tinsteadOf = arbete:\n"
 
 #. type: Plain text
 #: en/urls.adoc:91
 msgid "a URL like \"work:repo.git\" or like \"host.xz:/path/to/repo.git\" will be rewritten in any context that takes a URL to be \"git://git.host.xz/repo.git\"."
-msgstr ""
+msgstr "En URL som \"arbete:repo.git\" eller \"host.xz:/sokvag/till/repo.git\" kommer att skrivas om i alla sammanhang som antar att URL:en är \"git://git.host.xz/repo.git\"."
 
 #. type: Plain text
 #: en/urls.adoc:94
 msgid "If you want to rewrite URLs for push only, you can create a configuration section of the form:"
-msgstr ""
+msgstr "Om du vill skriva om URL:er enbart för sändning (push), kan du skapa en konfigurationssektion i formen:"
 
 #. type: verse
 #: en/urls.adoc:99
 #, no-wrap
 msgid "\t[url \"__<actual-url-base>__\"]\n\t\tpushInsteadOf = _<other-url-base>_\n"
 msgstr ""
+"\t[url \"__<faktisk-url-bas>__\"]\n"
+"\t\tpushInsteadOf = _<annan-url-bas>_\n"
 
 #. type: delimited block -
 #: en/urls.adoc:106
 #, no-wrap
 msgid "\t[url \"ssh://example.org/\"]\n\t\tpushInsteadOf = git://example.org/\n"
 msgstr ""
+"\t[url \"ssh://example.org/\"]\n"
+"\t\tpushInsteadOf = git://example.org/\n"
 
 #. type: Plain text
 #: en/urls.adoc:110
 msgid "a URL like \"git://example.org/path/to/repo.git\" will be rewritten to \"ssh://example.org/path/to/repo.git\" for pushes, but pulls will still use the original URL."
-msgstr ""
+msgstr "En URL som \"git://example.org/path/to/repo.git\" kommer att skrivas om till \"ssh://example.org/path/to/repo.git\" för sändning (\"pushas\"), men pulls kommer fortfarande att använda den ursprungliga URL:en."
 
 #. type: Title =
 #: en/git-bisect-lk2009.adoc:2
