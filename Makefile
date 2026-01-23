@@ -28,6 +28,9 @@ ASCIIDOC_EXTRA += -amanmanual='Git Manual' \
 ASCIIDOC_EXTRA += -alitdd='\--'
 ASCIIDOC_EXTRA += -acompat-mode -atabsize=8
 
+# Top-level targets (only when not building in a language directory)
+ifeq ($(lang),)
+
 po4a.conf: scripts/create_po4a_conf sources.txt
 	@./scripts/create_po4a_conf
 
@@ -46,48 +49,26 @@ update-sources:
 	@./scripts/set-priorities po/documentation.*.po
 
 # Build manpages and HTML for a language after translation
-# This discovers .adoc files dynamically at build time (not parse time)
-# and compiles them in parallel using make's job control
+# Uses recursive make invocation to compile files in parallel
 define BUILD_LANG_DOCS
 $(1)/.man: $(1)/.translated asciidoctor-extensions.rb GIT-VERSION-FILE
-	@echo '   ' BUILD $(1) manpages
 	@if [ -d $(1) ]; then \
-		cd $(1) && \
-		for adoc in $$$$(find . -maxdepth 1 -name 'git-*.adoc' 2>/dev/null); do \
-			base=$$$$(basename $$$$adoc .adoc); \
-			asciidoctor -b manpage -o $$$$base.1 \
-				$(ASCIIDOC_EXTRA) -I.. -I. -amanvolnum=1 \
-				-abuild_dir=. $$$$adoc 2>&1 | grep -v "out of sequence" || true; \
-		done; \
-		for adoc in $$$$(find . -maxdepth 1 -name 'git.adoc' 2>/dev/null); do \
-			base=$$$$(basename $$$$adoc .adoc); \
-			asciidoctor -b manpage -o $$$$base.1 \
-				$(ASCIIDOC_EXTRA) -I.. -I. -amanvolnum=1 \
-				-abuild_dir=. $$$$adoc 2>&1 | grep -v "out of sequence" || true; \
-		done; \
-		for adoc in $$$$(find . -maxdepth 1 -name 'gitignore.adoc' 2>/dev/null); do \
-			base=$$$$(basename $$$$adoc .adoc); \
-			asciidoctor -b manpage -o $$$$base.5 \
-				$(ASCIIDOC_EXTRA) -I.. -I. -amanvolnum=5 \
-				-abuild_dir=. $$$$adoc 2>&1 | grep -v "out of sequence" || true; \
-		done; \
-		for adoc in $$$$(find . -maxdepth 1 -name 'gitglossary.adoc' 2>/dev/null); do \
-			base=$$$$(basename $$$$adoc .adoc); \
-			asciidoctor -b manpage -o $$$$base.7 \
-				$(ASCIIDOC_EXTRA) -I.. -I. -amanvolnum=7 \
-				-abuild_dir=. $$$$adoc 2>&1 | grep -v "out of sequence" || true; \
-		done; \
+		man1_files=$$$$(cd $(1) && find . -maxdepth 1 -name 'git-*.adoc' -o -name 'git.adoc' 2>/dev/null | sed 's/\.adoc$$$$/.1/'); \
+		man5_files=$$$$(cd $(1) && find . -maxdepth 1 -name 'gitignore.adoc' 2>/dev/null | sed 's/\.adoc$$$$/.5/'); \
+		man7_files=$$$$(cd $(1) && find . -maxdepth 1 -name 'gitglossary.adoc' 2>/dev/null | sed 's/\.adoc$$$$/.7/'); \
+		all_files="$$$$man1_files $$$$man5_files $$$$man7_files"; \
+		if [ -n "$$$$all_files" ]; then \
+			$(MAKE) -C $(1) -f ../Makefile lang=$(1) $$$$man1_files $$$$man5_files $$$$man7_files; \
+		fi; \
 	fi
 	@touch $(1)/.man
 
 $(1)/.html: $(1)/.translated asciidoctor-extensions.rb GIT-VERSION-FILE
-	@echo '   ' BUILD $(1) html
 	@if [ -d $(1) ]; then \
-		cd $(1) && \
-		for adoc in $$$$(find . -maxdepth 1 -name '*.adoc' 2>/dev/null); do \
-			asciidoctor -b xhtml5 $(ASCIIDOC_EXTRA) -I.. -I. \
-				-abuild_dir=. $$$$adoc 2>&1 | grep -v "out of sequence" || true; \
-		done; \
+		html_files=$$$$(cd $(1) && find . -maxdepth 1 -name '*.adoc' 2>/dev/null | sed 's/\.adoc$$$$/.html/'); \
+		if [ -n "$$$$html_files" ]; then \
+			$(MAKE) -C $(1) -f ../Makefile lang=$(1) $$$$html_files; \
+		fi; \
 	fi
 	@touch $(1)/.html
 
@@ -168,3 +149,29 @@ mrproper: mrproper-local $(foreach lang,$(ALL_LANGUAGES),$(lang)/.mrproper)
 
 mrproper-local:
 	rm -f po4a-stamp po4a.conf */.translated */.man */.html */.install */.doc-l10n */.install-l10n */.install-txt */.install-adoc
+
+endif  # ifeq ($(lang),)
+
+# Pattern rules for compiling .adoc files to manpages and HTML
+# These are used by the recursive make invocation in BUILD_LANG_DOCS
+ifneq ($(lang),)
+ifndef V
+	QUIET_ASCIIDOC = @echo '   ' ASCIIDOC $(lang) $@;
+endif
+
+%.1: %.adoc
+	$(QUIET_ASCIIDOC)asciidoctor -b manpage -o $@ \
+		$(ASCIIDOC_EXTRA) -I.. -I. -amanvolnum=1 -abuild_dir=. $<
+
+%.5: %.adoc
+	$(QUIET_ASCIIDOC)asciidoctor -b manpage -o $@ \
+		$(ASCIIDOC_EXTRA) -I.. -I. -amanvolnum=5 -abuild_dir=. $<
+
+%.7: %.adoc
+	$(QUIET_ASCIIDOC)asciidoctor -b manpage -o $@ \
+		$(ASCIIDOC_EXTRA) -I.. -I. -amanvolnum=7 -abuild_dir=. $<
+
+%.html: %.adoc
+	$(QUIET_ASCIIDOC)asciidoctor -b xhtml5 \
+		$(ASCIIDOC_EXTRA) -I.. -I. -abuild_dir=. $<
+endif
