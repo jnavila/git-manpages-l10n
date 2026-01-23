@@ -124,7 +124,7 @@ $(1)/.install: $(1)/.install-l10n
 
 $(1)/.clean:
 	@if [ -d $(1) ]; then \
-		cd $(1) && rm -f *.1 *.5 *.7 *.html .man .html .all .translated .install .install-l10n .install-adoc .doc-l10n; \
+		cd $(1) && rm -f *.1 *.5 *.7 *.html .man .all .translated .install .install-l10n .install-adoc .doc-l10n; \
 	fi
 
 $(1)/.cleaner: $(1)/.clean
