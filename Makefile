@@ -1,4 +1,6 @@
 EN_SOURCES = $(wildcard en/*.adoc)
+DOC_SOURCES = $(wildcard en/git*.adoc)
+DOCS = $(patsubst en/%.adoc,%.adoc,$(DOC_SOURCES))
 LANGUAGE_PO = $(wildcard po/documentation.*.po)
 ALL_LANGUAGES = $(subst po/documentation.,,$(subst .po,,$(LANGUAGE_PO)))
 
@@ -10,6 +12,7 @@ QUIET_LANG  = +$(MAKE) -C # space to separate -C and subdir
 ifneq ($(findstring $(MAKEFLAGS),s),s)
 ifndef V
 	QUIET_PO4A = @echo '   ' PO4A $(lang) $@;
+	QUIET_DEPS = @echo '   ' DEPS $(lang) $@;
 	QUIET_LANG = +@echo '   ' LANG $(2);$(MAKE) --no-print-directory -C
 	export V
 endif
@@ -47,7 +50,9 @@ endef
 define PROCESS_LANG
 $(1)/.translated: po/documentation.$(1).po po/documentation.pot
 	@mkdir -p $(1)
-	$(QUIET_PO4A)PERL5LIB=./po4a/lib po4a/po4a -f ./po4a.conf --target-lang=$(1) --no-update && touch $(1)/.translated
+	$(QUIET_PO4A)PERL5LIB=./po4a/lib po4a/po4a -f ./po4a.conf --target-lang=$(1) --no-update
+	@$(QUIET_DEPS)cd $(1) && ../scripts/generate-make-deps $(DOCS)
+	@touch $(1)/.translated
 
 $(1)/.man: asciidoctor-extensions.rb
 $(1)/.html: asciidoctor-extensions.rb

@@ -8,6 +8,7 @@ MAN7_SOURCE = $(wildcard gitglossary.adoc*)
 MAN_FILTER = $(MAN1_SOURCE) $(MAN7_SOURCE)
 HTML_FILTER = $(patsubst %.adoc,%.html,$(MAN_FILTER))
 
+-include make-deps.mk
 
 ifndef V
 	QUIET_ASCIIDOC	= @echo '   ' ASCIIDOC $(lang) $@;
@@ -22,7 +23,7 @@ ASCIIDOC_EXTRA += -amanmanual='Git Manual' \
 ASCIIDOC_EXTRA += -alitdd='\--'
 ASCIIDOC_EXTRA += -acompat-mode -atabsize=8 -abuild_dir=.
 
-$(HTML_FILTER): %.html: %.adoc ../GIT-VERSION-FILE ../asciidoctor-extensions.rb
+$(HTML_FILTER): %.html: %.adoc ../GIT-VERSION-FILE ../asciidoctor-extensions.rb ../makefile.locale
 	$(QUIET_ASCIIDOC)asciidoctor -b xhtml5 \
         $(ASCIIDOC_EXTRA) $<  $(QUIET_ASCIIDOC_ERR)
 
@@ -32,15 +33,15 @@ MAN7_PAGES=$(patsubst %.adoc,%.7,$(MAN7_SOURCE))
 
 MANPAGES=$(MAN1_PAGES) $(MAN5_PAGES) $(MAN7_PAGES)
 
-$(MAN1_PAGES): %.1: %.adoc ../GIT-VERSION-FILE ../asciidoctor-extensions.rb .translated
+$(MAN1_PAGES): %.1: %.adoc ../GIT-VERSION-FILE ../asciidoctor-extensions.rb ../makefile.locale
 	$(QUIET_ASCIIDOC)asciidoctor -b manpage -o $@ \
         $(ASCIIDOC_EXTRA)  -amanvolnum=1 $< $(QUIET_ASCIIDOC_ERR)
 
-$(MAN5_PAGES): %.5: %.adoc ../GIT-VERSION-FILE ../asciidoctor-extensions.rb .translated
+$(MAN5_PAGES): %.5: %.adoc ../GIT-VERSION-FILE ../asciidoctor-extensions.rb ../makefile.locale
 	$(QUIET_ASCIIDOC)asciidoctor -b manpage -o $@ \
         $(ASCIIDOC_EXTRA)  -amanvolnum=5 $< $(QUIET_ASCIIDOC_ERR)
 
-$(MAN7_PAGES): %.7: %.adoc ../GIT-VERSION-FILE ../asciidoctor-extensions.rb .translated
+$(MAN7_PAGES): %.7: %.adoc ../GIT-VERSION-FILE ../asciidoctor-extensions.rb ../makefile.locale
 	$(QUIET_ASCIIDOC)asciidoctor -b manpage -o $@ \
         $(ASCIIDOC_EXTRA)  -amanvolnum=7 $< $(QUIET_ASCIIDOC_ERR)
 
