@@ -1,0 +1,42 @@
+#!/usr/bin/python3
+
+import polib
+import sys
+import re
+from os.path import join, dirname
+
+INCLUDE_REGEX = re.compile('''include::(.*)\\[\\]\n''')
+
+def process_file(filename: str, deps:dict[str, list[str]|str]) -> None:
+    basedirname = dirname(filename)
+    try:
+        with open(filename, 'rt') as f:
+            for line in f.readlines():
+                match = INCLUDE_REGEX.fullmatch(line)
+                if match:
+                    included_filename = join(basedirname, match.group(1))
+                    if not included_filename in deps:
+                        process_file(included_filename, deps)
+                    if isinstance(deps[included_filename],  list):
+                        deps.setdefault(filename, [])
+                        deps[filename].append(included_filename)
+                        deps[filename].extend(deps[included_filename])
+        deps.setdefault(filename, [])
+    except FileNotFoundError:
+        deps.setdefault(filename,'none')
+
+def main(f_list):
+    deps = {}
+    for source in f_list:
+        process_file(source, deps)
+    with open('make-deps.mk', 'w') as mkfile:
+        for source in f_list:
+            included_files = deps.get(source, [])
+            if included_files and included_files != 'none':
+                for t in ['.html', '.1', '.5', '.7']:
+                    target = source.replace('.adoc', t)
+                    mkfile.write(f"{target}: {source} " + " ".join(included_files) + "\n")
+
+if __name__ == '__main__':
+    if len(sys.argv) > 1:
+        main(sys.argv[1:])

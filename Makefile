@@ -1,16 +1,18 @@
 EN_SOURCES = $(wildcard en/*.adoc)
+DOC_SOURCES = $(wildcard en/git*.adoc)
+DOCS = $(patsubst en/%.adoc,%.adoc,$(DOC_SOURCES))
 LANGUAGE_PO = $(wildcard po/documentation.*.po)
 ALL_LANGUAGES = $(subst po/documentation.,,$(subst .po,,$(LANGUAGE_PO)))
 
 L10N_BUILD_TARGETS = all man html install doc-l10n install-l10n install-adoc
-L10N_CLEAN_TARGETS = clean cleaner mrproper
-L10N_TARGETS = $(L10N_CLEAN_TARGETS) $(L10N_BUILD_TARGETS)
+L10N_TARGETS = $(L10N_BUILD_TARGETS)
 
 QUIET_LANG  = +$(MAKE) -C # space to separate -C and subdir
 
 ifneq ($(findstring $(MAKEFLAGS),s),s)
 ifndef V
 	QUIET_PO4A = @echo '   ' PO4A $(lang) $@;
+	QUIET_DEPS = @echo '   ' DEPS $(lang) $@;
 	QUIET_LANG = +@echo '   ' LANG $(2);$(MAKE) --no-print-directory -C
 	export V
 endif
@@ -37,11 +39,9 @@ define MAKE_TARGET
 
 $(2)/.$(1):
 	@mkdir -p $(2)
-	$(QUIET_LANG) $(2) -f ../makefile.locale $(1) lang=$(2)
-	@touch $(2)/.$(1)
+	$(QUIET_LANG) $(2) -f ../makefile.locale $(1) lang=$(2) && touch $(2)/.$(1)
 
-
-$(2)/.$(1): $(2)/.translated
+$(2)/.$(1): $(2)/.translated GIT-VERSION-FILE asciidoctor-extensions.rb makefile.locale
 
 $(1): $(2)/.$(1)
 
@@ -50,7 +50,8 @@ endef
 define PROCESS_LANG
 $(1)/.translated: po/documentation.$(1).po po/documentation.pot
 	@mkdir -p $(1)
-	$(QUIET_PO4A)PERL5LIB=./po4a/lib po4a/po4a -v -f ./po4a.conf --target-lang=$(1) --no-update
+	$(QUIET_PO4A)PERL5LIB=./po4a/lib po4a/po4a -f ./po4a.conf --target-lang=$(1) --no-update
+	@$(QUIET_DEPS)cd $(1) && ../scripts/generate-make-deps $(DOCS)
 	@touch $(1)/.translated
 
 $(1)/.man: asciidoctor-extensions.rb
@@ -70,4 +71,4 @@ $(foreach lang,$(ALL_LANGUAGES),$(eval $(call PROCESS_LANG,$(lang))))
 mrproper: mrproper-local
 
 mrproper-local:
-	rm -f po4a-stamp po4a.conf */.translated */.man */.html */.install */.doc-l10n */.install-l10n */.install-txt
+	@echo CLEAN && rm -f po4a-stamp po4a.conf */.translated */.man */.html */.install */.doc-l10n */.install-l10n */.install-adoc */*.1 */*.5 */*.7 */*.html
