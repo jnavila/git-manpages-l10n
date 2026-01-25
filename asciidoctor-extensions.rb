@@ -75,7 +75,7 @@ module Git
           parslet_transform.apply(parslet_parser.parse(l)).join
         end.join("\n")
       rescue Parslet::ParseFailed
-        logger&.warn "synopsis parsing failed for '#{reader.lines.join(' ')}'"
+        logger&.warn "synopsis parsing failed for '#{reader.lines.join(' ')}'" if ENV['V']
         reader.lines.map do |l|
           parslet_transform.apply(placeholder: l)
         end.join("\n")

@@ -9,42 +9,9 @@ MAN_FILTER = $(MAN1_SOURCE) $(MAN7_SOURCE)
 HTML_FILTER = $(patsubst %.adoc,%.html,$(MAN_FILTER))
 
 
-ifeq ($(wildcard ../../build-docdep.perl),../../build-docdep.perl)
-
-vpath %conf . .. ../..
-vpath %in . .. ../..
-vpath %xsl . .. ../..
-vpath %rb  . .. ../..
-
-ifdef mandir
-tmp_mandir := $(mandir)
-mandir = $(tmp_mandir)/$(lang)
-else
-mandir = $(prefix)/share/man/$(lang)
-endif
-
-include ../../Makefile
-
-XMLTO_EXTRA += --searchpath ../..
-ifdef USE_ASCIIDOCTOR
-ASCIIDOC_EXTRA += -I../.. -I. -rasciidoctor-extensions
-else
-ASCIIDOC_CONF = -f ../../asciidoc.conf
-endif
-doc-l10n: all
-
-install-l10n:
-	$(INSTALL) -d -m 755 $(DESTDIR)$(man1dir)
-	$(INSTALL) -d -m 755 $(DESTDIR)$(man5dir)
-	$(INSTALL) -d -m 755 $(DESTDIR)$(man7dir)
-	if [ ! -z "$(DOC_MAN1)" ]; then $(INSTALL) -m 644 $(DOC_MAN1) $(DESTDIR)$(man1dir); fi
-	if [ ! -z "$(DOC_MAN5)" ]; then $(INSTALL) -m 644 $(DOC_MAN5) $(DESTDIR)$(man5dir); fi
-	if [ ! -z "$(DOC_MAN7)" ]; then $(INSTALL) -m 644 $(DOC_MAN7) $(DESTDIR)$(man7dir); fi
-
-
-else
 ifndef V
 	QUIET_ASCIIDOC	= @echo '   ' ASCIIDOC $(lang) $@;
+	QUIET_ASCIIDOC_ERR	= 2>/dev/null
 endif
 
 -include ../GIT-VERSION-FILE
@@ -55,9 +22,9 @@ ASCIIDOC_EXTRA += -amanmanual='Git Manual' \
 ASCIIDOC_EXTRA += -alitdd='\--'
 ASCIIDOC_EXTRA += -acompat-mode -atabsize=8 -abuild_dir=.
 
-$(HTML_FILTER): %.html: %.adoc
+$(HTML_FILTER): %.html: %.adoc ../GIT-VERSION-FILE ../asciidoctor-extensions.rb
 	$(QUIET_ASCIIDOC)asciidoctor -b xhtml5 \
-        $(ASCIIDOC_EXTRA) $<
+        $(ASCIIDOC_EXTRA) $<  $(QUIET_ASCIIDOC_ERR)
 
 MAN1_PAGES=$(patsubst %.adoc,%.1,$(MAN1_SOURCE))
 MAN5_PAGES=$(patsubst %.adoc,%.5,$(MAN5_SOURCE))
@@ -65,17 +32,17 @@ MAN7_PAGES=$(patsubst %.adoc,%.7,$(MAN7_SOURCE))
 
 MANPAGES=$(MAN1_PAGES) $(MAN5_PAGES) $(MAN7_PAGES)
 
-$(MAN1_PAGES): %.1: %.adoc
+$(MAN1_PAGES): %.1: %.adoc ../GIT-VERSION-FILE ../asciidoctor-extensions.rb .translated
 	$(QUIET_ASCIIDOC)asciidoctor -b manpage -o $@ \
-        $(ASCIIDOC_EXTRA)  -amanvolnum=1 $<
+        $(ASCIIDOC_EXTRA)  -amanvolnum=1 $< $(QUIET_ASCIIDOC_ERR)
 
-$(MAN5_PAGES): %.5: %.adoc
+$(MAN5_PAGES): %.5: %.adoc ../GIT-VERSION-FILE ../asciidoctor-extensions.rb .translated
 	$(QUIET_ASCIIDOC)asciidoctor -b manpage -o $@ \
-        $(ASCIIDOC_EXTRA)  -amanvolnum=5 $<
+        $(ASCIIDOC_EXTRA)  -amanvolnum=5 $< $(QUIET_ASCIIDOC_ERR)
 
-$(MAN7_PAGES): %.7: %.adoc
+$(MAN7_PAGES): %.7: %.adoc ../GIT-VERSION-FILE ../asciidoctor-extensions.rb .translated
 	$(QUIET_ASCIIDOC)asciidoctor -b manpage -o $@ \
-        $(ASCIIDOC_EXTRA)  -amanvolnum=7 $<
+        $(ASCIIDOC_EXTRA)  -amanvolnum=7 $< $(QUIET_ASCIIDOC_ERR)
 
 man: $(MANPAGES)
 html: $(HTML_FILTER)
@@ -92,9 +59,6 @@ install-adoc:
 
 clean:
 	rm -f *.1 *.5 *7 *.html .man .html .all .translated
-
-endif
-
 
 mrproper: clean
 	rm -f *.adoc
