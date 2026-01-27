@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-01-27 18:34+0000\n"
+"PO-Revision-Date: 2026-01-27 22:34+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -6190,7 +6190,7 @@ msgstr ""
 #: en/diff-options.adoc:697 en/git-mergetool.adoc:96
 #, no-wrap
 msgid "`-O<orderfile>`"
-msgstr "`-O<orderfil>`"
+msgstr "`-O<ordingsfil>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:702
@@ -6200,7 +6200,7 @@ msgstr ""
 #. type: Plain text
 #: en/diff-options.adoc:714
 msgid "The output order is determined by the order of glob patterns in _<orderfile>_. All files with pathnames that match the first pattern are output first, all files with pathnames that match the second pattern (but not the first) are output next, and so on. All files with pathnames that do not match any pattern are output last, as if there was an implicit match-all pattern at the end of the file. If multiple pathnames have the same rank (they match the same pattern but no earlier patterns), their output order relative to each other is the normal order."
-msgstr "Utmatningsordningen bestäms av ordningen på glob-mönstren i _<ordnings-fil>_. Alla filer med sökvägar som matchar det första mönstret matas ut först, alla filer med sökvägar som matchar det andra mönstret (men inte det första) matas ut härnäst, och så vidare. Alla filer med sökvägar som inte matchar något mönster matas ut sist, som om det fanns ett implicit match-all-mönster i slutet av filen. Om flera sökvägar har samma rangordning (de matchar samma mönster men inga tidigare mönster), är deras utmatningsordning i förhållande till varandra den normala ordningen."
+msgstr "Utmatningsordningen bestäms av ordningen på glob-mönstren i _<ordingsfil>_. Alla filer med sökvägar som matchar det första mönstret matas ut först, alla filer med sökvägar som matchar det andra mönstret (men inte det första) matas ut härnäst, och så vidare. Alla filer med sökvägar som inte matchar något mönster matas ut sist, som om det fanns ett implicit match-all-mönster i slutet av filen. Om flera sökvägar har samma rangordning (de matchar samma mönster men inga tidigare mönster), är deras utmatningsordning i förhållande till varandra den normala ordningen."
 
 #. type: Plain text
 #: en/diff-options.adoc:716
@@ -35565,13 +35565,14 @@ msgstr "där `origin/master` brukade peka på incheckningar B0, B1, B2 och nu pe
 
 #. type: Plain text
 #: en/git-merge-base.adoc:190
+#, fuzzy
 msgid "In such a case, `git merge-base origin/master topic` would return the parent of B0 in the above picture, but B0^..D is *not* the range of commits you would want to replay on top of B (it includes B0, which is not what you wrote; it is a commit the other side discarded when it moved its tip from B0 to B1)."
-msgstr "I ett sådant fall skulle `git merge-base origin/master topic` returnera föräldern till B0 i bilden ovan, men B0^..D är *inte* det intervall av incheckningar du vill spela upp ovanpå B (det inkluderar B0, vilket inte är vad du skrev; det är en incheckning som den andra sidan ignorerade när den flyttade sin spets från B0 till B1)."
+msgstr "I ett sådant fall skulle `git merge-base origin/master amne` (nedan \"ämne\") returnera föräldern till B0 i bilden ovan, men B0^..D är *inte* det intervall av incheckningar du vill spela upp ovanpå B (det inkluderar B0, vilket inte är vad du skrev; det är en incheckning som den andra sidan ignorerade när den flyttade sin spets från B0 till B1)."
 
 #. type: Plain text
 #: en/git-merge-base.adoc:198
 msgid "`git merge-base --fork-point origin/master topic` is designed to help in such a case. It takes not only B but also B0, B1, and B2 (i.e. old tips of the remote-tracking branches your repository's reflog knows about) into account to see on which commit your topic branch was built and finds B0, allowing you to replay only the commits on your topic, excluding the commits the other side later discarded."
-msgstr "`git merge-base --fork-point origin/master ämne` är utformad för att hjälpa till i ett sådant fall. Den tar inte bara hänsyn till B utan även B0, B1 och B2 (dvs. gamla tips från de fjärrspårningsgrenar som ditt repositorys reflog känner till) för att se vilken incheckning din ämnesgren byggdes på och hittar B0, vilket gör att du bara kan spela upp incheckningar på ditt ämne, exklusive de incheckningar som den andra sidan senare kasserade."
+msgstr "`git merge-base --fork-point origin/master topic` är utformad för att hjälpa till i ett sådant fall. Den tar inte bara hänsyn till B utan även B0, B1 och B2 (dvs. gamla tips från de fjärrspårningsgrenar som ditt repo reflog känner till) för att se vilken incheckning din ämnesgren byggdes på och hittar B0, vilket gör att du bara kan spela upp incheckningar på ditt ämne, exklusive de incheckningar som den andra sidan senare kasserade."
 
 #. type: Plain text
 #: en/git-merge-base.adoc:200
@@ -35927,24 +35928,25 @@ msgstr "'git merge-one-file'\n"
 #. type: Plain text
 #: en/git-merge-one-file.adoc:18
 msgid "This is the standard helper program to use with 'git merge-index' to resolve a merge after the trivial merge done with 'git read-tree -m'."
-msgstr ""
+msgstr "Detta är standardhjälpprogrammet som används med 'git merge-index' för att lösa en sammanslagning efter den triviala sammanslagningen som gjorts med 'git read-tree -m'."
 
 #. type: Title =
 #: en/git-mergetool--lib.adoc:2
 #, no-wrap
 msgid "git-mergetool{litdd}lib(1)"
-msgstr ""
+msgstr "git-mergetool{litdd}lib(1)"
 
 #. type: Plain text
 #: en/git-mergetool--lib.adoc:7
+#, fuzzy
 msgid "git-mergetool--lib - Common Git merge tool shell scriptlets"
-msgstr ""
+msgstr "git-mergetool--lib - Vanliga Git-sammanfogningsverktyg skal skriptlets"
 
 #. type: verse
 #: en/git-mergetool--lib.adoc:12
 #, no-wrap
 msgid "'TOOL_MODE=(diff|merge) . \"$(git --exec-path)/git-mergetool{litdd}lib\"'\n"
-msgstr ""
+msgstr "'TOOL_MODE=(diff|merge) . \"$(git --exec-path)/git-mergetool{litdd}lib\"'\n"
 
 #. type: Plain text
 #: en/git-mergetool--lib.adoc:19 en/git-sh-i18n.adoc:19 en/git-sh-setup.adoc:19
@@ -35953,13 +35955,14 @@ msgstr "Detta är inte ett kommando som slutanvändaren någonsin skulle vilja k
 
 #. type: Plain text
 #: en/git-mergetool--lib.adoc:23
+#, fuzzy
 msgid "The 'git-mergetool{litdd}lib' scriptlet is designed to be sourced (using `.`) by other shell scripts to set up functions for working with Git merge tools."
-msgstr ""
+msgstr "Skriptleten 'git-mergetool{litdd}lib' är utformad för att source:as (med hjälp av `.`) från andra skalskript för att konfigurera funktioner för att arbeta med Git-sammanfogningsverktyg."
 
 #. type: Plain text
 #: en/git-mergetool--lib.adoc:27
 msgid "Before sourcing 'git-mergetool{litdd}lib', your script must set `TOOL_MODE` to define the operation mode for the functions listed below. 'diff' and 'merge' are valid values."
-msgstr ""
+msgstr "Innan du hämtar sourcade-värdet 'git-mergetool{litdd}lib' måste ditt skript ställa in `TOOL_MODE` för att definiera operationsläget för funktionerna som listas nedan. 'diff' och 'merge' är giltiga värden."
 
 #. type: Title -
 #: en/git-mergetool--lib.adoc:29 en/git-sh-i18n.adoc:28 en/git-sh-setup.adoc:34
@@ -35971,56 +35974,56 @@ msgstr "FUNKTIONER"
 #: en/git-mergetool--lib.adoc:30
 #, no-wrap
 msgid "get_merge_tool"
-msgstr ""
+msgstr "get_merge_tool"
 
 #. type: Plain text
 #: en/git-mergetool--lib.adoc:34
 msgid "Returns a merge tool. The return code is 1 if we returned a guessed merge tool, else 0. '$GIT_MERGETOOL_GUI' may be set to 'true' to search for the appropriate guitool."
-msgstr ""
+msgstr "Returnerar ett sammanslagningsverktyg. Returkoden är 1 om vi returnerade ett gissat sammanslagningsverktyg, annars 0. '$GIT_MERGETOOL_GUI' kan sättas till 'true' för att söka efter lämpligt grafiskt verktyg."
 
 #. type: Labeled list
 #: en/git-mergetool--lib.adoc:35
 #, no-wrap
 msgid "get_merge_tool_cmd"
-msgstr ""
+msgstr "get_merge_tool_cmd"
 
 #. type: Plain text
 #: en/git-mergetool--lib.adoc:37
 msgid "Returns the custom command for a merge tool."
-msgstr ""
+msgstr "Returnerar det anpassade kommandot för ett sammanfogningsverktyg."
 
 #. type: Labeled list
 #: en/git-mergetool--lib.adoc:38
 #, no-wrap
 msgid "get_merge_tool_path"
-msgstr ""
+msgstr "get_merge_tool_path"
 
 #. type: Plain text
 #: en/git-mergetool--lib.adoc:40
 msgid "Returns the custom path for a merge tool."
-msgstr ""
+msgstr "Returnerar den anpassade sökvägen för ett sammanfogningsverktyg."
 
 #. type: Labeled list
 #: en/git-mergetool--lib.adoc:41
 #, no-wrap
 msgid "initialize_merge_tool"
-msgstr ""
+msgstr "initialize_merge_tool"
 
 #. type: Plain text
 #: en/git-mergetool--lib.adoc:44
 msgid "Brings merge tool specific functions into scope so they can be used or overridden."
-msgstr ""
+msgstr "Tar specifika funktioner för sammanslagningsverktyget med i omfånget så att de kan användas eller åsidosättas."
 
 #. type: Labeled list
 #: en/git-mergetool--lib.adoc:45
 #, no-wrap
 msgid "run_merge_tool"
-msgstr ""
+msgstr "run_merge_tool"
 
 #. type: Plain text
 #: en/git-mergetool--lib.adoc:50
 msgid "Launches a merge tool given the tool name and a true/false flag to indicate whether a merge base is present. '$MERGED', '$LOCAL', '$REMOTE', and '$BASE' must be defined for use by the merge tool."
-msgstr ""
+msgstr "Startar ett sammanslagningsverktyg med verktygsnamnet och en sant/falskt-flagga som indikerar om en sammanslagningsbas finns. '$MERGED', '$LOCAL', '$REMOTE' och '$BASE' måste definieras för att användas av sammanslagningsverktyget."
 
 #. type: Title =
 #: en/git-mergetool.adoc:2
@@ -36038,59 +36041,59 @@ msgstr "git-mergetool - Kör verktyg för att lösa sammanslagningskonflikter"
 #: en/git-mergetool.adoc:12
 #, no-wrap
 msgid "git mergetool [--tool=<tool>] [-y | --[no-]prompt] [<file>...]\n"
-msgstr ""
+msgstr "git mergetool [--tool=<verktyg>] [-y | --[no-]prompt] [<fil>...]\n"
 
 #. type: Plain text
 #: en/git-mergetool.adoc:18
 msgid "Use `git mergetool` to run one of several merge utilities to resolve merge conflicts. It is typically run after `git merge`."
-msgstr ""
+msgstr "Använd `git mergetool` för att köra ett av flera merge-verktyg för att lösa merge-konflikter. Det körs vanligtvis efter `git merge`."
 
 #. type: Plain text
 #: en/git-mergetool.adoc:24
 msgid "If one or more <file> parameters are given, the merge tool program will be run to resolve differences in each file (skipping those without conflicts). Specifying a directory will include all unresolved files in that path. If no _<file>_ names are specified, `git mergetool` will run the merge tool program on every file with merge conflicts."
-msgstr ""
+msgstr "Om en eller flera <fil>-parametrar anges, kommer merge-verktygsprogrammet att köras för att lösa skillnader i varje fil (och hoppa över de utan konflikter). Att ange en katalog inkluderar alla olösta filer i den sökvägen. Om inga _<fil>_-namn anges, kommer `git mergetool` att köra merge-verktygsprogrammet på varje fil med merge-konflikter."
 
 #. type: Labeled list
 #: en/git-mergetool.adoc:27
 #, no-wrap
 msgid "`-t <tool>`"
-msgstr ""
+msgstr "`-t <verktyg>`"
 
 #. type: Labeled list
 #: en/git-mergetool.adoc:28
 #, no-wrap
 msgid "`--tool=<tool>`"
-msgstr ""
+msgstr "`--tool=<verktyg>`"
 
 #. type: Plain text
 #: en/git-mergetool.adoc:33
 msgid "Use the merge resolution program specified by _<tool>_. Valid values include `emerge`, `gvimdiff`, `kdiff3`, `meld`, `vimdiff`, and `tortoisemerge`. Run `git mergetool --tool-help` for the list of valid _<tool>_ settings."
-msgstr ""
+msgstr "Använd det sammanslagningsupplösningsprogram som anges av _<verktyg>_. Giltiga värden inkluderar `emerge`, `gvimdiff`, `kdiff3`, `meld`, `vimdiff` och `tortoisemerge`. Kör `git mergetool --tool-help` för listan över giltiga _<verktyg>_-inställningar."
 
 #. type: Plain text
 #: en/git-mergetool.adoc:38
 msgid "If a merge resolution program is not specified, `git mergetool` will use the configuration variable `merge.tool`. If the configuration variable `merge.tool` is not set, `git mergetool` will pick a suitable default."
-msgstr ""
+msgstr "Om ett program för sammanslagningslösning inte anges, kommer `git mergetool` att använda konfigurationsvariabeln `merge.tool`. Om konfigurationsvariabeln `merge.tool` inte är satt, kommer `git mergetool` att välja en lämplig standardinställning."
 
 #. type: Plain text
 #: en/git-mergetool.adoc:44
 msgid "You can explicitly provide a full path to the tool by setting the configuration variable `mergetool.<tool>.path`. For example, you can configure the absolute path to kdiff3 by setting `mergetool.kdiff3.path`. Otherwise, `git mergetool` assumes the tool is available in `$PATH`."
-msgstr ""
+msgstr "Du kan explicit ange en fullständig sökväg till verktyget genom att ställa in konfigurationsvariabeln `mergetool.<tool>.path`. Du kan till exempel konfigurera den absoluta sökvägen till kdiff3 genom att ställa in `mergetool.kdiff3.path`. Annars antar `git mergetool` att verktyget är tillgängligt i `$PATH`."
 
 #. type: Plain text
 #: en/git-mergetool.adoc:49
 msgid "Instead of running one of the known merge tool programs, `git mergetool` can be customized to run an alternative program by specifying the command line to invoke in a configuration variable `mergetool.<tool>.cmd`."
-msgstr ""
+msgstr "Istället för att köra ett av de kända sammanslagingsverktygs-programmen kan `git mergetool` anpassas för att köra ett alternativt program genom att ange kommandoraden som ska anropas i en konfigurationsvariabel `mergetool.<verktyg>.cmd`."
 
 #. type: Plain text
 #: en/git-mergetool.adoc:60
 msgid "When `git mergetool` is invoked with this tool (either through the `-t` or `--tool` option or the `merge.tool` configuration variable), the configured command line will be invoked with `BASE` set to the name of a temporary file containing the common base for the merge, if available; `LOCAL` set to the name of a temporary file containing the contents of the file on the current branch; `REMOTE` set to the name of a temporary file containing the contents of the file to be merged, and `MERGED` set to the name of the file to which the merge tool should write the result of the merge resolution."
-msgstr ""
+msgstr "När `git mergetool` anropas med detta verktyg (antingen genom alternativet `-t` eller `--tool` eller konfigurationsvariabeln `merge.tool`), kommer den konfigurerade kommandoraden att anropas med `BASE` satt till namnet på en temporär fil som innehåller den gemensamma basen för sammanslagningen, om tillgänglig; `LOCAL` satt till namnet på en temporär fil som innehåller innehållet i filen på den aktuella grenen; `REMOTE` satt till namnet på en temporär fil som innehåller innehållet i filen som ska sammanfogas, och `MERGED` satt till namnet på den fil som sammanslagningsverktyget ska skriva resultatet av sammanslagningslösningen till."
 
 #. type: Plain text
 #: en/git-mergetool.adoc:66
 msgid "If the custom merge tool correctly indicates the success of a merge resolution with its exit code, then the configuration variable `mergetool.<tool>.trustExitCode` can be set to `true`. Otherwise, `git mergetool` will prompt the user to indicate the success of the resolution after the custom tool has exited."
-msgstr ""
+msgstr "Om det anpassade sammanslagningsverktyget korrekt indikerar att en sammanslagningslösning har lyckats med sin avslutningskod, kan konfigurationsvariabeln `mergetool.<verktyg>.trustExitCode` sättas till `true`. Annars kommer `git mergetool` att uppmana användaren att indikera att lösningen har lyckats efter att det anpassade verktyget har avslutats."
 
 #. type: Labeled list
 #: en/git-mergetool.adoc:67
@@ -36121,7 +36124,7 @@ msgstr "`--no-prompt`"
 #. type: Plain text
 #: en/git-mergetool.adoc:77
 msgid "Don't prompt before each invocation of the merge resolution program. This is the default if the merge resolution program is explicitly specified with the `--tool` option or with the `merge.tool` configuration variable."
-msgstr ""
+msgstr "Fråga inte före varje anrop av sammanslagningsprogrammet. Detta är standardinställningen om sammanslagningsprogrammet explicit anges med alternativet `--tool` eller med konfigurationsvariabeln `merge.tool`."
 
 #. type: Labeled list
 #: en/git-mergetool.adoc:78
@@ -36133,7 +36136,7 @@ msgstr "`--prompt`"
 #. type: Plain text
 #: en/git-mergetool.adoc:81
 msgid "Prompt before each invocation of the merge resolution program to give the user a chance to skip the path."
-msgstr ""
+msgstr "Fråga före varje anrop av sammanslagningsprogrammet för att ge användaren en chans att hoppa över sökvägen."
 
 #. type: Labeled list
 #: en/git-mergetool.adoc:82 en/rev-list-options.adoc:308
@@ -36152,7 +36155,7 @@ msgstr "`--gui`"
 #. type: Plain text
 #: en/git-mergetool.adoc:90
 msgid "When `git-mergetool` is invoked with the `-g` or `--gui` option, the default merge tool will be read from the configured `merge.guitool` variable instead of `merge.tool`. If `merge.guitool` is not set, we will fallback to the tool configured under `merge.tool`. This may be autoselected using the configuration variable `mergetool.guiDefault`."
-msgstr ""
+msgstr "När `git-mergetool` anropas med alternativet `-g` eller `--gui`, kommer standardverktyget för sammanslagning att läsas från den konfigurerade variabeln `merge.guitool` istället för `merge.tool`. Om `merge.guitool` inte är inställt, kommer vi att använda verktyget som konfigurerats under `merge.tool`. Detta kan väljas automatiskt med hjälp av konfigurationsvariabeln `mergetool.guiDefault`."
 
 #. type: Labeled list
 #: en/git-mergetool.adoc:91
@@ -36164,34 +36167,34 @@ msgstr "`--no-gui`"
 #. type: Plain text
 #: en/git-mergetool.adoc:95
 msgid "This overrides a previous `-g` or `--gui` setting or `mergetool.guiDefault` configuration and reads the default merge tool from the configured `merge.tool` variable."
-msgstr ""
+msgstr "Detta åsidosätter en tidigare `-g`- eller `--gui`-inställning eller `mergetool.guiDefault`-konfiguration och läser standardverktyget för sammanfogning från den konfigurerade variabeln `merge.tool`."
 
 #. type: Plain text
 #: en/git-mergetool.adoc:102
 msgid "Process files in the order specified in the _<orderfile>_, which has one shell glob pattern per line. This overrides the `diff.orderFile` configuration variable (see linkgit:git-config[1]). To cancel `diff.orderFile`, use `-O/dev/null`."
-msgstr ""
+msgstr "Bearbeta filer i den ordning som anges i _<ordingsfil>_, som har ett glob-mönster per rad. Detta åsidosätter konfigurationsvariabeln `diff.orderFile` (se linkgit:git-config[1]). För att avbryta `diff.orderFile`, använd `-O/dev/null`."
 
 #. type: Title -
 #: en/git-mergetool.adoc:112
 #, no-wrap
 msgid "TEMPORARY FILES"
-msgstr ""
+msgstr "TILLFÄLLIGA FILER"
 
 #. type: Plain text
 #: en/git-mergetool.adoc:116
 msgid "`git mergetool` creates `*.orig` backup files while resolving merges. These are safe to remove once a file has been merged and its `git mergetool` session has completed."
-msgstr ""
+msgstr "`git mergetool` skapar `*.orig` säkerhetskopior när de löser sammanslagningar. Dessa kan säkert tas bort när en fil har sammanfogats och dess `git mergetool`-session har slutförts."
 
 #. type: Plain text
 #: en/git-mergetool.adoc:120
 msgid "Setting the `mergetool.keepBackup` configuration variable to `false` causes `git mergetool` to automatically remove the backup files as files are successfully merged."
-msgstr ""
+msgstr "Om konfigurationsvariabeln `mergetool.keepBackup` sätts till `false` tar `git mergetool` automatiskt bort säkerhetskopiorna när filerna har sammanfogats."
 
 #. type: Title -
 #: en/git-mergetool.adoc:122
 #, no-wrap
 msgid "BACKEND SPECIFIC HINTS"
-msgstr ""
+msgstr "BAKÄNDA-SPECIFIKA TIPS"
 
 #. type: Title ~
 #: en/git-mergetool.adoc:125
@@ -36217,66 +36220,68 @@ msgstr "git-merge-tree - Utför sammanslagning utan att röra index eller arbets
 #, no-wrap
 msgid "'git merge-tree' [--write-tree] [<options>] <branch1> <branch2>\n'git merge-tree' [--trivial-merge] <base-tree> <branch1> <branch2> (deprecated)\n"
 msgstr ""
+"'git merge-tree' [--write-tree] <flaggor> <gren1> <gren2>\n"
+"'git merge-tree' [--trivial-merge] <bas-träd> <gren1> <gren2> (föråldrad)\n"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:23
 msgid "This command has a modern `--write-tree` mode and a deprecated `--trivial-merge` mode. With the exception of the <<DEPMERGE,DEPRECATED DESCRIPTION>> section at the end, the rest of this documentation describes the modern `--write-tree` mode."
-msgstr ""
+msgstr "Detta kommando har ett modernt `--write-tree`-läge och ett föråldrat `--trivial-merge`-läge. Med undantag för avsnittet <<DEPMERGE,FÖRÅLDRAD BESKRIVNING>> i slutet beskriver resten av denna dokumentation det moderna `--write-tree`-läget."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:26
 msgid "Performs a merge, but does not make any new commits and does not read from or write to either the working tree or index."
-msgstr ""
+msgstr "Utför en sammanslagning, men gör inga nya incheckningar och läser inte från eller skriver till vare sig arbetskatalog eller indexet."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:29
 msgid "The performed merge will use the same features as the \"real\" linkgit:git-merge[1], including:"
-msgstr ""
+msgstr "Den utförda sammanslagningen kommer att använda samma funktioner som den \"riktiga\" linkgit:git-merge[1], inklusive:"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:31
 msgid "three way content merges of individual files"
-msgstr ""
+msgstr "trevägs sammanslagning av enskilda filer"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:32
 msgid "rename detection"
-msgstr ""
+msgstr "omdöpnings-detektering"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:33
 msgid "proper directory/file conflict handling"
-msgstr ""
+msgstr "korrekt hantering av katalog-/fil-konflikter"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:35
 msgid "recursive ancestor consolidation (i.e. when there is more than one merge base, creating a virtual merge base by merging the merge bases)"
-msgstr ""
+msgstr "rekursiv förfaderkonsolidering (dvs. när det finns mer än en sammanslagningsbas, skapa en virtuell sammanslagningsbas genom att slå samman sammanslagningsbaserna)"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:36
 msgid "etc."
-msgstr ""
+msgstr "etc."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:39
 msgid "After the merge completes, a new toplevel tree object is created. See `OUTPUT` below for details."
-msgstr ""
+msgstr "När sammanslagningen är klar skapas ett nytt trädobjekt på toppnivå. Se `OUTPUT` nedan för mer information."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:47
 msgid "Read the commits to merge from the standard input rather than the command-line. See <<INPUT,INPUT FORMAT>> below for more information. Implies `-z`."
-msgstr ""
+msgstr "Läs incheckningar för att sammanfoga från standardindata istället för kommandoraden. Se <<INPUT,INGÅNGSFORMAT>> nedan för mer information. Innebär `-z`."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:54
 msgid "Do not quote filenames in the <Conflicted file info> section, and end each filename with a NUL character rather than newline. Also begin the messages section with a NUL character instead of a newline. See <<OUTPUT,OUTPUT>> below for more information."
-msgstr ""
+msgstr "Citera inte filnamn i avsnittet <Conflicted file info> och avsluta varje filnamn med ett NUL-tecken istället för en ny rad. Börja även meddelandeavsnittet med ett NUL-tecken istället för en ny rad. Se <<OUTPUT,UTMATNING>> nedan för mer information."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:61
 msgid "In the Conflicted file info section, instead of writing a list of (mode, oid, stage, path) tuples to output for conflicted files, just provide a list of filenames with conflicts (and do not list filenames multiple times if they have multiple conflicting stages)."
-msgstr ""
+msgstr "I avsnittet Info om konfliktfyllda filer, istället för att skriva en lista med (läge, oid, steg, sökväg) tupler som ska matas ut för konfliktfyllda filer, ange bara en lista med filnamn med konflikter (och lista inte filnamn flera gånger om de har flera konfliktfyllda steg)."
 
 #. type: Labeled list
 #: en/git-merge-tree.adoc:62
@@ -36295,12 +36300,12 @@ msgstr "--no-messages"
 #. type: Plain text
 #: en/git-merge-tree.adoc:68
 msgid "Write any informational messages such as \"Auto-merging <path>\" or CONFLICT notices to the end of stdout. If unspecified, the default is to include these messages if there are merge conflicts, and to omit them otherwise."
-msgstr ""
+msgstr "Skriv eventuella informationsmeddelanden som \"Auto-merging <path>\" eller CONFLICT-meddelanden i slutet av stdout. Om inget anges är standardinställningen att inkludera dessa meddelanden om det finns sammanslagningskonflikter, och att utelämna dem annars."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:74
 msgid "Disable all output from the program. Useful when you are only interested in the exit status. Allows merge-tree to exit early when it finds a conflict, and allows it to avoid writing most objects created by merges."
-msgstr ""
+msgstr "Inaktivera all utdata från programmet. Användbart när du bara är intresserad av avslutningsstatus. Tillåter att sammanslagings-tree avslutas tidigt när det hittar en konflikt och gör att det undviker att skriva till de flesta objekt som skapas av sammanslås."
 
 #. type: Labeled list
 #: en/git-merge-tree.adoc:75
@@ -36312,194 +36317,208 @@ msgstr "--allow-unrelated-histories"
 #. type: Plain text
 #: en/git-merge-tree.adoc:79
 msgid "merge-tree will by default error out if the two branches specified share no common history. This flag can be given to override that check and make the merge proceed anyway."
-msgstr ""
+msgstr "merge-tree kommer som standard att ge ett felmeddelande om de två angivna grenarna inte delar någon gemensam historik. Denna flagga kan anges för att åsidosätta den kontrollen och få sammanslagningen att fortsätta ändå."
 
 #. type: Labeled list
 #: en/git-merge-tree.adoc:80
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "--merge-base=<tree-ish>"
-msgstr ""
+msgstr "--merge-base=<tree-ish>"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:84
 msgid "Instead of finding the merge-bases for <branch1> and <branch2>, specify a merge-base for the merge. This option is incompatible with `--stdin`."
-msgstr ""
+msgstr "Istället för att hitta sammanslagings-baserna för <gren1> och <gren2>, ange en merge-base för merge-funktionen. Detta alternativ är inkompatibelt med `--stdin`."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:90
 msgid "Specifying multiple bases is currently not supported, which means that when merging two branches with more than one merge-base, using this option may cause merge results to differ from what `git merge` would compute. This can include potentially losing some changes made on one side of the history in the resulting merge."
-msgstr ""
+msgstr "Det stöds för närvarande inte att ange flera baser, vilket innebär att när man slår samman två grenar med mer än en sammanslagings-bas kan användning av det här alternativet orsaka att sammanslagningsresultaten skiljer sig från vad `git merge` skulle beräkna. Detta kan inkludera att man potentiellt förlorar vissa ändringar som gjorts på ena sidan av historiken i den resulterande sammanslagningen."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:93
 msgid "With this option, since the merge-base is provided directly, <branch1> and <branch2> do not need to specify commits; trees are enough."
-msgstr ""
+msgstr "Med det här alternativet, eftersom sammanslagings-bas tillhandahålls direkt, behöver <gren1> och <gren2> inte ange incheckningar; träd räcker."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:105
 msgid "For a successful merge, the output from git-merge-tree is simply one line:"
-msgstr ""
+msgstr "För en lyckad sammanslagning är utdata från git-merge-tree helt enkelt en rad:"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:107
 #, no-wrap
 msgid "\t<OID of toplevel tree>\n"
-msgstr ""
+msgstr "\t<OID av toppnivåträdet>\n"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:109
 msgid "Whereas for a conflicted merge, the output is by default of the form:"
-msgstr ""
+msgstr "Medan för en konfliktfylld sammanslagning är utdata som standard av formen:"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:113
 #, no-wrap
 msgid "\t<OID of toplevel tree>\n\t<Conflicted file info>\n\t<Informational messages>\n"
 msgstr ""
+"\t<OID för toppnivåträd>\n"
+"\t<Konfliktfylld filinformation>\n"
+"\t<Informationsmeddelandens>\n"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:115
 msgid "These are discussed individually below."
-msgstr ""
+msgstr "Dessa diskuteras var för sig nedan."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:120
 msgid "However, there is an exception. If `--stdin` is passed, then there is an extra section at the beginning, a NUL character at the end, and then all the sections repeat for each line of input. Thus, if the first merge is conflicted and the second is clean, the output would be of the form:"
-msgstr ""
+msgstr "Det finns dock ett undantag. Om `--stdin` skickas, finns det en extra sektion i början, ett NUL-tecken i slutet, och sedan upprepas alla sektioner för varje inmatningsrad. Således, om den första sammanslagningen är i konflikt och den andra är ren, skulle utdata vara av formen:"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:129
 #, no-wrap
 msgid "\t<Merge status>\n\t<OID of toplevel tree>\n\t<Conflicted file info>\n\t<Informational messages>\n\tNUL\n\t<Merge status>\n\t<OID of toplevel tree>\n\tNUL\n"
 msgstr ""
+"\t<Sammanfogningsstatus>\n"
+"\t<OID för toppnivåträd>\n"
+"\t<Konfliktfylld filinformation>\n"
+"\t<Informationsmeddelanden>\n"
+"\tNUL\n"
+"\t<Sammanfogningsstatus>\n"
+"\t<OID för toppnivåträd>\n"
+"\tNUL\n"
 
 #. type: Title ~
 #: en/git-merge-tree.adoc:132
 #, no-wrap
 msgid "Merge status"
-msgstr ""
+msgstr "Sammanslagningsstatus"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:135
 msgid "This is an integer status followed by a NUL character. The integer status is:"
-msgstr ""
+msgstr "Detta är en heltalsstatus följt av ett NUL-tecken. Heltalsstatusen är:"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:138
 #, no-wrap
 msgid "     0: merge had conflicts\n     1: merge was clean\n"
 msgstr ""
+"     0: sammanslagningen hade konflikter\n"
+"     1: sammanslagningen var ren\n"
 
 #. type: Title ~
 #: en/git-merge-tree.adoc:141
 #, no-wrap
 msgid "OID of toplevel tree"
-msgstr ""
+msgstr "OID för toppnivåträd"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:147
 msgid "This is a tree object that represents what would be checked out in the working tree at the end of `git merge`. If there were conflicts, then files within this tree may have embedded conflict markers. This section is always followed by a newline (or NUL if `-z` is passed)."
-msgstr ""
+msgstr "Detta är ett trädobjekt som representerar vad som skulle checkas ut i arbetsträdet i slutet av `git merge`. Om det skulle finnas konflikter kan filer i detta träd ha inbäddade konfliktmarkörer. Detta avsnitt följs alltid av en nyrad (eller NUL om `-z` skickas)."
 
 #. type: Title ~
 #: en/git-merge-tree.adoc:150
 #, no-wrap
 msgid "Conflicted file info"
-msgstr ""
+msgstr "Konflikter filinformation"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:153
 msgid "This is a sequence of lines with the format"
-msgstr ""
+msgstr "Detta är en radsekvens med formatet"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:155
 #, no-wrap
 msgid "\t<mode> <object> <stage> <filename>\n"
-msgstr ""
+msgstr "\t<läge> <objekt> <stag> <filnamn>\n"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:161
 msgid "The filename will be quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1]). However, if the `--name-only` option is passed, the mode, object, and stage will be omitted. If `-z` is passed, the \"lines\" are terminated by a NUL character instead of a newline character."
-msgstr ""
+msgstr "Filnamnet kommer att citeras enligt beskrivningen för konfigurationsvariabeln `core.quotePath` (se linkgit:git-config[1]). Om alternativet `--name-only` skickas kommer dock läget, objektet och scenen att utelämnas. Om `-z` skickas avslutas \"raderna\" med ett NUL-tecken istället för ett radbrytningstecken."
 
 #. type: Title ~
 #: en/git-merge-tree.adoc:164
 #, no-wrap
 msgid "Informational messages"
-msgstr ""
+msgstr "Informationsmeddelanden"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:169
 msgid "This section provides informational messages, typically about conflicts. The format of the section varies significantly depending on whether `-z` is passed."
-msgstr ""
+msgstr "Det här avsnittet innehåller informationsmeddelanden, vanligtvis om konflikter. Avsnittets format varierar avsevärt beroende på om `-z` skickas."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:171
 msgid "If `-z` is passed:"
-msgstr ""
+msgstr "Om `-z` skickas:"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:174
 msgid "The output format is zero or more conflict informational records, each of the form:"
-msgstr ""
+msgstr "Utdataformatet är noll eller fler konfliktinformationsposter, var och en av formen:"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:176
 #, no-wrap
 msgid "\t<list-of-paths><conflict-type>NUL<conflict-message>NUL\n"
-msgstr ""
+msgstr "\t<lista-över-sökvägar><konflikttyp>NUL<konfliktmeddelande>NUL\n"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:178
 msgid "where <list-of-paths> is of the form"
-msgstr ""
+msgstr "där <lista-över-sökvägar> är av formen"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:180
 #, no-wrap
 msgid "\t<number-of-paths>NUL<path1>NUL<path2>NUL...<pathN>NUL\n"
-msgstr ""
+msgstr "\t<antal-av-sökvägar>NUL<sökväg1>NUL<sökväg2>NUL...<sökvägN>NULL\n"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:184
 msgid "and includes paths (or branch names) affected by the conflict or informational message in <conflict-message>. Also, <conflict-type> is a stable string explaining the type of conflict, such as"
-msgstr ""
+msgstr "och inkluderar sökvägar (eller grennamn) som påverkas av konflikten eller informationsmeddelandet i <konfliktmeddelande>. Dessutom är <konflikttyp> en stabil sträng som förklarar typen av konflikt, till exempel"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:186
 msgid "\"Auto-merging\""
-msgstr ""
+msgstr "\"Slår ihop automatiskt\""
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:187
 msgid "\"CONFLICT (rename/delete)\""
-msgstr ""
+msgstr "\"KONFLIKT (namnbyte/namnbyte)\""
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:188
+#, fuzzy
 msgid "\"CONFLICT (submodule lacks merge base)\""
-msgstr ""
+msgstr "\"KONFLIKT (undermodul lacks merge base)\""
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:189
 msgid "\"CONFLICT (binary)\""
-msgstr ""
+msgstr "\"KONFLIKT (binär)\""
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:193
 msgid "and <conflict-message> is a more detailed message about the conflict which often (but not always) embeds the <stable-short-type-description> within it. These strings may change in future Git versions. Some examples:"
-msgstr ""
+msgstr "och <konfliktmeddelande> är ett mer detaljerat meddelande om konflikten som ofta (men inte alltid) bäddar in <stabil-kort-typ-beskrivning> i sig. Dessa strängar kan komma att ändras i framtida Git-versioner. Några exempel:"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:195
 msgid "\"Auto-merging <file>\""
-msgstr ""
+msgstr "Slår ihop <fil> automatiskt"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:196
 msgid "\"CONFLICT (rename/delete): <oldfile> renamed...but deleted in...\""
-msgstr ""
+msgstr "\"KONFLIKT (namnbyte/radera): <gammalfil> namnbytt till <nyttnamn> ..., men borttagen i ...\""
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:197
@@ -36510,137 +36529,147 @@ msgstr "\"Misslyckades med att sammanfoga undermodulen <undermodul> (ingen samma
 #. type: Plain text
 #: en/git-merge-tree.adoc:198
 msgid "\"Warning: cannot merge binary files: <filename>\""
-msgstr ""
+msgstr "\"Varning: kan inte sammanfoga binära filer: <filnamn>\""
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:200
 msgid "If `-z` is NOT passed:"
-msgstr ""
+msgstr "Om `-z` INTE skickas:"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:210
 msgid "This section starts with a blank line to separate it from the previous sections, and then only contains the <conflict-message> information from the previous section (separated by newlines). These are non-stable strings that should not be parsed by scripts, and are just meant for human consumption. Also, note that while <conflict-message> strings usually do not contain embedded newlines, they sometimes do. (However, the free-form messages will never have an embedded NUL character). So, the entire block of information is meant for human readers as an agglomeration of all conflict messages."
-msgstr ""
+msgstr "Det här avsnittet börjar med en tom rad för att separera det från föregående avsnitt, och innehåller sedan endast <konfliktmeddelande>-informationen från föregående avsnitt (avgränsad med nyradsbrytningar). Dessa är icke-stabila strängar som inte bör tolkas av skript, och är endast avsedda för mänsklig konsumtion. Observera också att även om <konfliktmeddelande>-strängar vanligtvis inte innehåller inbäddade nyradsbrytningar, gör de det ibland. (Fritt formulerade meddelanden kommer dock aldrig att ha ett inbäddat NUL-tecken). Så hela informationsblocket är avsett för mänskliga läsare som en agglomeration av alla konfliktmeddelanden."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:221
 msgid "For a successful, non-conflicted merge, the exit status is 0. When the merge has conflicts, the exit status is 1. If the merge is not able to complete (or start) due to some kind of error, the exit status is something other than 0 or 1 (and the output is unspecified). When --stdin is passed, the return status is 0 for both successful and conflicted merges, and something other than 0 or 1 if it cannot complete all the requested merges."
-msgstr ""
+msgstr "För en lyckad, icke-konfliktfylld sammanslagning är avslutningsstatusen 0. När sammanslagningen har konflikter är avslutningsstatusen 1. Om sammanslagningen inte kan slutföras (eller startas) på grund av någon form av fel är avslutningsstatusen något annat än 0 eller 1 (och utdata är ospecificerad). När --stdin skickas är returstatusen 0 för både lyckade och konfliktfyllda sammanslagningar, och något annat än 0 eller 1 om den inte kan slutföra alla begärda sammanslagningar."
 
 #. type: Title -
 #: en/git-merge-tree.adoc:223
 #, no-wrap
 msgid "USAGE NOTES"
-msgstr ""
+msgstr "ANVÄNDNINGSANMÄRKNINGAR"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:230
 msgid "This command is intended as low-level plumbing, similar to linkgit:git-hash-object[1], linkgit:git-mktree[1], linkgit:git-commit-tree[1], linkgit:git-write-tree[1], linkgit:git-update-ref[1], and linkgit:git-mktag[1]. Thus, it can be used as a part of a series of steps such as:"
-msgstr ""
+msgstr "Detta kommando är avsett som lågnivå-plumbing, liknande linkgit:git-hash-object[1], linkgit:git-mktree[1], linkgit:git-commit-tree[1], linkgit:git-write-tree[1], linkgit:git-update-ref[1] och linkgit:git-mktag[1]. Således kan det användas som en del av en serie steg som:"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:241
 #, no-wrap
 msgid "       vi message.txt\n       BRANCH1=refs/heads/test\n       BRANCH2=main\n       NEWTREE=$(git merge-tree --write-tree $BRANCH1 $BRANCH2) || {\n           echo \"There were conflicts...\" 1>&2\n           exit 1\n       }\n       NEWCOMMIT=$(git commit-tree $NEWTREE -F message.txt \\\n           -p $BRANCH1 -p $BRANCH2)\n       git update-ref $BRANCH1 $NEWCOMMIT\n"
 msgstr ""
+"       vi meddelande.txt\n"
+"       BRANCH1=refs/heads/test\n"
+"       BRANCH2=main\n"
+"       NEWTREE=$(git merge-tree --write-tree $BRANCH1 $BRANCH2) || {\n"
+"           echo \"Det fanns konflikter...\" 1>&2\n"
+"           exit 1\n"
+"       }\n"
+"       NEWCOMMIT=$(git commit-tree $NEWTREE -F meddelande.txt \\\n"
+"           -p $BRANCH1 -p $BRANCH2)\n"
+"       git update-ref $BRANCH1 $NEWCOMMIT\n"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:244
 msgid "Note that when the exit status is non-zero, `NEWTREE` in this sequence will contain a lot more output than just a tree."
-msgstr ""
+msgstr "Observera att när utgångsstatusen inte är noll, kommer `NEWTREE` i den här sekvensen att innehålla mycket mer utdata än bara ett träd."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:247
 msgid "For conflicts, the output includes the same information that you'd get with linkgit:git-merge[1]:"
-msgstr ""
+msgstr "Vid konflikter innehåller utdata samma information som du skulle få med linkgit:git-merge[1]:"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:250
 msgid "what would be written to the working tree (the <<OIDTLT,OID of toplevel tree>>)"
-msgstr ""
+msgstr "vad som skulle skrivas till arbetsträdet (<<OIDTLT,OID för toppnivåträdet>>)"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:252
 msgid "the higher order stages that would be written to the index (the <<CFI,Conflicted file info>>)"
-msgstr ""
+msgstr "de högre ordningens steg som skulle skrivas till indexet (<<CFI,Konfliktfilinformation>>)"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:254
 msgid "any messages that would have been printed to stdout (the <<IM,Informational messages>>)"
-msgstr ""
+msgstr "alla meddelanden som skulle ha skrivits ut till stdout (<<IM,Informativa meddelanden>>)"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:260
 msgid "'git merge-tree --stdin' input format is fully text based. Each line has this format:"
-msgstr ""
+msgstr "Inmatningsformatet 'git merge-tree --stdin' är helt textbaserat. Varje rad har detta format:"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:262
 #, no-wrap
 msgid "\t[<base-commit> -- ]<branch1> <branch2>\n"
-msgstr ""
+msgstr "\t[<bas-incheckning> -- ]<gren1> <gren2>\n"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:266
 msgid "If one line is separated by `--`, the string before the separator is used for specifying a merge-base for the merge and the string after the separator describes the branches to be merged."
-msgstr ""
+msgstr "Om en rad separeras med `--` används strängen före avgränsaren för att ange en sammanslagings-bas för sammanfogningen och strängen efter avgränsaren beskriver de grenar som ska slås samman."
 
 #. type: Title -
 #: en/git-merge-tree.adoc:268
 #, no-wrap
 msgid "MISTAKES TO AVOID"
-msgstr ""
+msgstr "MISSTAG ATT UNDVIKA"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:277
 msgid "Do NOT look through the resulting toplevel tree to try to find which files conflict; parse the <<CFI,Conflicted file info>> section instead. Not only would parsing an entire tree be horrendously slow in large repositories, there are numerous types of conflicts not representable by conflict markers (modify/delete, mode conflict, binary file changed on both sides, file/directory conflicts, various rename conflict permutations, etc.)"
-msgstr ""
+msgstr "Titta INTE igenom det resulterande toppnivåträdet för att försöka hitta vilka filer som är i konflikt; analysera istället avsnittet <<CFI,Konflikt filinformation>>. Det skulle inte bara vara fruktansvärt långsamt att analysera ett helt träd i stora arkiv, det finns också många typer av konflikter som inte kan representeras av konfliktmarkörer (ändra/ta bort, lägeskonflikt, binärfil ändrad på båda sidor, fil-/katalogkonflikter, olika permutationer av namnbyteskonflikter, etc.)"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:283
 msgid "Do NOT interpret an empty <<CFI,Conflicted file info>> list as a clean merge; check the exit status. A merge can have conflicts without having individual files conflict (there are a few types of directory rename conflicts that fall into this category, and others might also be added in the future)."
-msgstr ""
+msgstr "Tolka INTE en tom <<CFI,Konflikt filinformation>>-lista som en ren sammanslagning; kontrollera avslutningsstatusen. En sammanslagning kan ha konflikter utan att enskilda filer står i konflikt (det finns några typer av katalognamnskonflikter som faller inom denna kategori, och andra kan också läggas till i framtiden)."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:297
 msgid "Do NOT attempt to guess or make the user guess the conflict types from the <<CFI,Conflicted file info>> list. The information there is insufficient to do so. For example: Rename/rename(1to2) conflicts (both sides renamed the same file differently) will result in three different files having higher order stages (but each only has one higher order stage), with no way (short of the <<IM,Informational messages>> section) to determine which three files are related. File/directory conflicts also result in a file with exactly one higher order stage. Possibly-involved-in-directory-rename conflicts (when \"merge.directoryRenames\" is unset or set to \"conflicts\") also result in a file with exactly one higher order stage. In all cases, the <<IM,Informational messages>> section has the necessary info, though it is not designed to be machine parseable."
-msgstr ""
+msgstr "Försök INTE gissa eller få användaren att gissa konflikttyperna från listan <<CFI,Konflikt filinformation>>. Informationen där är otillräcklig för att göra det. Till exempel: Namnbyte/namnbyte(1till2)-konflikter (båda sidor döper om samma fil på olika sätt) kommer att resultera i tre olika filer med högre ordningsstadier (men var och en har bara ett högre ordningsstadium), utan något sätt (förutom avsnittet <<IM,Informationsmeddelanden>>) att avgöra vilka tre filer som är relaterade. Fil-/katalogkonflikter resulterar också i en fil med exakt ett högre ordningsstadium. Möjligen-inblanda-i-katalog-omdöpnings-konflikter (när \"merge.directoryRenames\" inte är inställt eller inställt på \"conflicts\") resulterar också i en fil med exakt ett högre ordningsstadium. I samtliga fall har avsnittet <<IM,Informationsmeddelanden>> den nödvändiga informationen, även om det inte är utformat för att kunna tolkas av maskiner."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:304
 msgid "Do NOT assume that each path from <<CFI,Conflicted file info>>, and the logical conflicts in the <<IM,Informational messages>> have a one-to-one mapping, nor that there is a one-to-many mapping, nor a many-to-one mapping. Many-to-many mappings exist, meaning that each path can have many logical conflict types in a single merge, and each logical conflict type can affect many paths."
-msgstr ""
+msgstr "Anta INTE att varje sökväg från <<CFI,Konflikt filinformation>> och de logiska konflikterna i <<IM,Informationsmeddelanden>> har en en-till-en-mappning, inte heller att det finns en en-till-många-mappning eller en många-till-en-mappning. Många-till-många-mappningar finns, vilket innebär att varje sökväg kan ha många logiska konflikttyper i en enda sammanslagning, och varje logisk konflikttyp kan påverka många sökvägar."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:308
 msgid "Do NOT assume all filenames listed in the <<IM,Informational messages>> section had conflicts. Messages can be included for files that have no conflicts, such as \"Auto-merging <file>\"."
-msgstr ""
+msgstr "Anta INTE att alla filnamn som listas i avsnittet <<IM,Informativt meddelande>> hade konflikter. Meddelanden kan inkluderas för filer som inte har några konflikter, till exempel \"Automatisk sammanfogning av <fil>\"."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:319
 msgid "AVOID taking the OIDS from the <<CFI,Conflicted file info>> and re-merging them to present the conflicts to the user. This will lose information. Instead, look up the version of the file found within the <<OIDTLT,OID of toplevel tree>> and show that instead. In particular, the latter will have conflict markers annotated with the original branch/commit being merged and, if renames were involved, the original filename. While you could include the original branch/commit in the conflict marker annotations when re-merging, the original filename is not available from the <<CFI,Conflicted file info>> and thus you would be losing information that might help the user resolve the conflict."
-msgstr ""
+msgstr "UNDVIK att ta OIDS från <<CFI,Konflikt filinformation>> och slå ihop dem igen för att presentera konflikterna för användaren. Detta kommer att förlora information. Sök istället upp versionen av filen som finns i <<OIDTLT,OID i toppnivåträdet>> och visa det istället. I synnerhet kommer det senare att ha konfliktmarkörer kommenterade med den ursprungliga grenen/incheckningen som slås ihop och, om namnändringar var inblandade, det ursprungliga filnamnet. Även om du skulle kunna inkludera den ursprungliga grenen/incheckningen i konfliktmarköranteckningarna vid återsammanfogningen, är det ursprungliga filnamnet inte tillgängligt från <<CFI,Konflikt filinformation>> och därmed skulle du förlora information som kan hjälpa användaren att lösa konflikten."
 
 #. type: Title -
 #: en/git-merge-tree.adoc:322
 #, no-wrap
 msgid "DEPRECATED DESCRIPTION"
-msgstr ""
+msgstr "FÖRÅLDRAD BESKRIVNING"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:327
 msgid "Per the <<NEWMERGE,DESCRIPTION>> and unlike the rest of this documentation, this section describes the deprecated `--trivial-merge` mode."
-msgstr ""
+msgstr "Enligt <<NEWMERGE,BESKRIVNING>> och till skillnad från resten av den här dokumentationen beskriver det här avsnittet det föråldrade `--trivial-merge`-läget."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:330
 msgid "Other than the optional `--trivial-merge`, this mode accepts no options."
-msgstr ""
+msgstr "Förutom det valfria `--trivial-merge` accepterar det här läget inga alternativ."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:338
 msgid "This mode reads three tree-ish, and outputs trivial merge results and conflicting stages to the standard output in a semi-diff format. Since this was designed for higher level scripts to consume and merge the results back into the index, it omits entries that match <branch1>. The result of this second form is similar to what three-way 'git read-tree -m' does, but instead of storing the results in the index, the command outputs the entries to the standard output."
-msgstr ""
+msgstr "Det här läget läser tre-träd-liknande format och matar ut triviala sammanslagningsresultat och motstridiga steg till standardutdata i ett semi-diff-format. Eftersom detta utformades för att skript på högre nivå skulle kunna konsumera och sammanfoga resultaten tillbaka till indexet, utelämnas poster som matchar <gren1>. Resultatet av denna andra form liknar vad trevägs 'git read-tree -m' gör, men istället för att lagra resultaten i indexet matar kommandot ut posterna till standardutdata."
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:345
@@ -36665,84 +36694,96 @@ msgstr "git-merge - Sammanfoga två eller flera utvecklingshistoriker"
 #, no-wrap
 msgid "git merge [-n] [--stat] [--compact-summary] [--no-commit] [--squash] [--[no-]edit]\n\t[--no-verify] [-s <strategy>] [-X <strategy-option>] [-S[<keyid>]]\n\t[--[no-]allow-unrelated-histories]\n\t[--[no-]rerere-autoupdate] [-m <msg>] [-F <file>]\n\t[--into-name <branch>] [<commit>...]\ngit merge (--continue | --abort | --quit)\n"
 msgstr ""
+"git merge [-n] [--stat] [--compact-summary] [--no-commit] [--squash] [--[no-]edit]\n"
+"\t[--no-verify] [-s <strategi>] [-X <strategi-flaggor>] [-S[<nyckelid>]]\n"
+"\t[--[no-]allow-unrelated-histories]\n"
+"\t[--[no-]rerere-autoupdate] [-m <msg>] [-F <fil>]\n"
+"\t[--into-name <gren>] [<incheckning>...]\n"
+"git merge (--continue | --abort | --quit)\n"
 
 #. type: Plain text
 #: en/git-merge.adoc:26
 msgid "Incorporates changes from the named commits (since the time their histories diverged from the current branch) into the current branch. This command is used by `git pull` to incorporate changes from another repository and can be used by hand to merge changes from one branch into another."
-msgstr ""
+msgstr "Inkorporerar ändringar från de namngivna incheckningar (sedan deras historik avvek från den aktuella grenen) i den aktuella grenen. Detta kommando används av `git pull` för att införliva ändringar från ett annat arkiv och kan användas manuellt för att sammanfoga ändringar från en gren till en annan."
 
 #. type: Plain text
 #: en/git-merge.adoc:29
 msgid "Assume the following history exists and the current branch is `master`:"
-msgstr ""
+msgstr "Anta att följande historik finns och att den aktuella grenen är `master`:"
 
 #. type: delimited block -
 #: en/git-merge.adoc:34 en/git-rebase.adoc:30
 #, no-wrap
 msgid "          A---B---C topic\n         /\n    D---E---F---G master\n"
 msgstr ""
+"          A---B---C ämne\n"
+"         /\n"
+"    D---E---F---G master\n"
 
 #. type: Plain text
 #: en/git-merge.adoc:42
 msgid "Then `git merge topic` will replay the changes made on the `topic` branch since it diverged from `master` (i.e., `E`) until its current commit (`C`) on top of `master`, and record the result in a new commit along with the names of the two parent commits and a log message from the user describing the changes. Before the operation, `ORIG_HEAD` is set to the tip of the current branch (`G`)."
-msgstr ""
+msgstr "Sedan kommer `git merge amne` att spela upp ändringarna som gjorts på grenen `amne` sedan den avvek från `master` (dvs. `E`) fram till dess nuvarande commit (`C`) ovanpå `master`, och registrera resultatet i en ny incheckning tillsammans med namnen på de två överordnade incheckningar och ett loggmeddelande från användaren som beskriver ändringarna. Innan operationen sätts `ORIG_HEAD` till toppen av den nuvarande grenen (`G`)."
 
 #. type: delimited block -
 #: en/git-merge.adoc:47
 #, no-wrap
 msgid "          A---B---C topic\n         /         \\\n    D---E---F---G---H master\n"
 msgstr ""
+"          A---B---C ämne\n"
+"         /         \\\n"
+"    D---E---F---G---H master\n"
 
 #. type: Plain text
 #: en/git-merge.adoc:53
 msgid "A merge stops if there's a conflict that cannot be resolved automatically or if `--no-commit` was provided when initiating the merge. At that point you can run `git merge --abort` or `git merge --continue`."
-msgstr ""
+msgstr "En sammanslagning stoppas om det finns en konflikt som inte kan lösas automatiskt eller om `--no-commit` angavs när sammanslagningen initierades. Vid den tidpunkten kan du köra `git merge --abort` eller `git merge --continue`."
 
 #. type: Plain text
 #: en/git-merge.adoc:59
 msgid "`git merge --abort` will abort the merge process and try to reconstruct the pre-merge state. However, if there were uncommitted changes when the merge started (and especially if those changes were further modified after the merge was started), `git merge --abort` will in some cases be unable to reconstruct the original (pre-merge) changes. Therefore:"
-msgstr ""
+msgstr "`git merge --abort` avbryter sammanslagningsprocessen och försöker rekonstruera tillståndet före sammanslagningen. Om det dock fanns obekräftade ändringar när sammanslagningen startade (och särskilt om dessa ändringar modifierades ytterligare efter att sammanslagningen startades), kommer `git merge --abort` i vissa fall inte att kunna rekonstruera de ursprungliga (före sammanslagningen) ändringarna. Därför:"
 
 #. type: Plain text
 #: en/git-merge.adoc:63
 msgid "Running `git merge` with non-trivial uncommitted changes is discouraged: while possible, it may leave you in a state that is hard to back out of in the case of a conflict."
-msgstr ""
+msgstr "Att köra `git merge` med icke-triviala oincheckade ändringar avråds: även om det är möjligt kan det försätta dig i ett tillstånd som är svårt att ta sig ur i händelse av en konflikt."
 
 #. type: Plain text
 #: en/git-merge.adoc:73
 msgid "Set the commit message to be used for the merge commit (in case one is created)."
-msgstr ""
+msgstr "Ange inchecknings-meddelandet som ska användas för sammanslagings-incheckning (om en sådan skapas)."
 
 #. type: Plain text
 #: en/git-merge.adoc:76 en/git-merge.adoc:93
 msgid "If `--log` is specified, a shortlog of the commits being merged will be appended to the specified message."
-msgstr ""
+msgstr "Om `--log` anges, kommer en kort logg över de incheckningar som sammanfogas att läggas till i det angivna meddelandet."
 
 #. type: Plain text
 #: en/git-merge.adoc:80
 msgid "The `git fmt-merge-msg` command can be used to give a good default for automated `git merge` invocations. The automated message can include the branch description."
-msgstr ""
+msgstr "Kommandot `git fmt-merge-msg` kan användas för att ge en bra standard för automatiserade `git merge`-anrop. Det automatiserade meddelandet kan innehålla grenbeskrivningen."
 
 #. type: Labeled list
 #: en/git-merge.adoc:81
 #, no-wrap
 msgid "`--into-name <branch>`"
-msgstr ""
+msgstr "`--into-name <gren>`"
 
 #. type: Plain text
 #: en/git-merge.adoc:85
 msgid "Prepare the default merge message as if merging to the branch _<branch>_, instead of the name of the real branch to which the merge is made."
-msgstr ""
+msgstr "Förbered standardmeddelandet för sammanslagning som om man sammanfogar till grenen _<gren>_, istället för namnet på den riktiga gren som sammanslagningen görs till."
 
 #. type: Plain text
 #: en/git-merge.adoc:90
 msgid "Read the commit message to be used for the merge commit (in case one is created)."
-msgstr ""
+msgstr "Läs inchecknings-meddelandet som ska användas för sammanslagings-incheckning (om en sådan skapas)."
 
 #. type: Plain text
 #: en/git-merge.adoc:100
 msgid "Silently overwrite ignored files from the merge result. This is the default behavior. Use `--no-overwrite-ignore` to abort."
-msgstr ""
+msgstr "Skriv tyst över ignorerade filer från sammanslagningsresultatet. Detta är standardbeteendet. Använd `--no-overwrite-ignore` för att avbryta."
 
 #. type: Labeled list
 #: en/git-merge.adoc:101 en/git-notes.adoc:240
@@ -36754,17 +36795,17 @@ msgstr "`--abort`"
 #. type: Plain text
 #: en/git-merge.adoc:105
 msgid "Abort the current conflict resolution process, and try to reconstruct the pre-merge state. If an autostash entry is present, apply it to the worktree."
-msgstr ""
+msgstr "Avbryt den aktuella konfliktlösningsprocessen och försök att rekonstruera tillståndet före sammanslagningen. Om en autostash-post finns, tillämpa den på arbetsträdet."
 
 #. type: Plain text
 #: en/git-merge.adoc:110
 msgid "If there were uncommitted worktree changes present when the merge started, `git merge --abort` will in some cases be unable to reconstruct these changes. It is therefore recommended to always commit or stash your changes before running `git merge`."
-msgstr ""
+msgstr "Om det fanns oincheckade arbetsträdsändringar när sammanslagningen startade, kommer `git merge --abort` i vissa fall inte att kunna rekonstruera dessa ändringar. Det rekommenderas därför att alltid inchecka eller gömma dina ändringar innan du kör `git merge`."
 
 #. type: Plain text
 #: en/git-merge.adoc:116
 msgid "`git merge --abort` is equivalent to `git reset --merge` when `MERGE_HEAD` is present unless `MERGE_AUTOSTASH` is also present in which case `git merge --abort` applies the stash entry to the worktree whereas `git reset --merge` will save the stashed changes in the stash list."
-msgstr ""
+msgstr "`git merge --abort` är ekvivalent med `git reset --merge` när `MERGE_HEAD` finns, såvida inte `MERGE_AUTOSTASH` också finns, i vilket fall `git merge --abort` tillämpar stash-posten på arbetsträdet medan `git reset --merge` sparar de gömmda ändringarna i stash-listan."
 
 #. type: Labeled list
 #: en/git-merge.adoc:117
@@ -36776,7 +36817,7 @@ msgstr "`--quit`"
 #. type: Plain text
 #: en/git-merge.adoc:121
 msgid "Forget about the current merge in progress. Leave the index and the working tree as-is. If `MERGE_AUTOSTASH` is present, the stash entry will be saved to the stash list."
-msgstr ""
+msgstr "Glöm den pågående sammanslagningen. Lämna indexet och arbetsträdet som de är. Om `MERGE_AUTOSTASH` finns, kommer stash-posten att sparas i stash-listan."
 
 #. type: Labeled list
 #: en/git-merge.adoc:122
@@ -36788,307 +36829,347 @@ msgstr "`--continue`"
 #. type: Plain text
 #: en/git-merge.adoc:126
 msgid "After a `git merge` stops due to conflicts you can conclude the merge by running `git merge --continue` (see \"HOW TO RESOLVE CONFLICTS\" section below)."
-msgstr ""
+msgstr "Efter att en `git merge` har stoppats på grund av konflikter kan du avsluta sammanslagningen genom att köra `git merge --continue` (se avsnittet \"HUR MAN LÖSER KONFLIKTER\" nedan)."
 
 #. type: Labeled list
 #: en/git-merge.adoc:127
 #, no-wrap
 msgid "`<commit>...`"
-msgstr ""
+msgstr "`<incheckning>...`"
 
 #. type: Plain text
 #: en/git-merge.adoc:131
 msgid "Commits, usually other branch heads, to merge into our branch. Specifying more than one commit will create a merge with more than two parents (affectionately called an Octopus merge)."
-msgstr ""
+msgstr "Commits, vanligtvis andra grenhuvuden, för att slås samman med vår gren. Om du anger mer än en incheckning skapas en sammanslagning med mer än två föräldrar (kärleksfullt kallad en bläckfisk-sammanslagning)."
 
 #. type: Plain text
 #: en/git-merge.adoc:135
 msgid "If no commit is given from the command line, merge the remote-tracking branches that the current branch is configured to use as its upstream. See also the configuration section of this manual page."
-msgstr ""
+msgstr "Om ingen commit ges från kommandoraden, sammanfoga de fjärrspårningsgrenar som den aktuella grenen är konfigurerad att använda som sin uppström. Se även konfigurationsavsnittet på den här manualsidan."
 
 #. type: Plain text
 #: en/git-merge.adoc:139
 msgid "When `FETCH_HEAD` (and no other commit) is specified, the branches recorded in the `.git/FETCH_HEAD` file by the previous invocation of `git fetch` for merging are merged to the current branch."
-msgstr ""
+msgstr "När `FETCH_HEAD` (och ingen annan incheckning) anges, slås grenarna som registrerats i `.git/FETCH_HEAD`-filen genom föregående anrop av `git fetch` för sammanslagning samman med den aktuella grenen."
 
 #. type: Title -
 #: en/git-merge.adoc:142
 #, no-wrap
 msgid "PRE-MERGE CHECKS"
-msgstr ""
+msgstr "KONTROLLER FÖRE SAMMANSLAGNING"
 
 #. type: Plain text
 #: en/git-merge.adoc:150
 msgid "Before applying outside changes, you should get your own work in good shape and committed locally, so it will not be clobbered if there are conflicts. See also linkgit:git-stash[1]. `git pull` and `git merge` will stop without doing anything when local uncommitted changes overlap with files that `git pull`/`git merge` may need to update."
-msgstr ""
+msgstr "Innan du tillämpar externa ändringar bör du få ditt eget arbete i gott skick och checka-in det lokalt, så att det inte blir förstört om det uppstår konflikter. Se även linkgit:git-stash[1]. `git pull` och `git merge` kommer att stoppas utan att göra någonting när lokala oincheckade ändringar överlappar med filer som `git pull`/`git merge` kan behöva uppdatera."
 
 #. type: Plain text
 #: en/git-merge.adoc:156
 msgid "To avoid recording unrelated changes in the merge commit, `git pull` and `git merge` will also abort if there are any changes registered in the index relative to the `HEAD` commit. (Special narrow exceptions to this rule may exist depending on which merge strategy is in use, but generally, the index must match `HEAD`.)"
-msgstr ""
+msgstr "För att undvika att orelaterade ändringar registreras i sammanslagings-incheckningen, kommer `git pull` och `git merge` också att avbrytas om det finns några ändringar registrerade i indexet i förhållande till `HEAD`-commiten. (Särskilda snäva undantag från denna regel kan finnas beroende på vilken sammanslagings-strategi som används, men generellt måste indexet matcha `HEAD`.)"
 
 #. type: Plain text
 #: en/git-merge.adoc:159
 msgid "If all named commits are already ancestors of `HEAD`, `git merge` will exit early with the message \"Already up to date.\""
-msgstr ""
+msgstr "Om alla namngivna incheckningar redan är föregångare till `HEAD`, kommer `git merge` att avslutas tidigt med meddelandet \"Redan uppdaterad\"."
 
 #. type: Title -
 #: en/git-merge.adoc:161
 #, no-wrap
 msgid "FAST-FORWARD MERGE"
-msgstr ""
+msgstr "SNABBSPOLNING FRAMÅT SAMMANSLAGNING"
 
 #. type: Plain text
 #: en/git-merge.adoc:171
 msgid "Often the current branch head is an ancestor of the named commit. This is the most common case especially when invoked from `git pull`: you are tracking an upstream repository, you have committed no local changes, and now you want to update to a newer upstream revision. In this case, a new commit is not needed to store the combined history; instead, the `HEAD` (along with the index) is updated to point at the named commit, without creating an extra merge commit."
-msgstr ""
+msgstr "Ofta är den aktuella grenhuvudet en förfader till den namngivna incheckningen. Detta är det vanligaste fallet, särskilt när det anropas från `git pull`: du spårar ett uppströms arkiv, du har inte incheckat några lokala ändringar och nu vill du uppdatera till en nyare uppströmsversion. I det här fallet behövs inte en ny incheckning för att lagra den kombinerade historiken; istället uppdateras `HEAD` (tillsammans med indexet) för att peka på den namngivna incheckningen, utan att skapa en extra sammanslagings-incheckning."
 
 #. type: Plain text
 #: en/git-merge.adoc:173
 msgid "This behavior can be suppressed with the `--no-ff` option."
-msgstr ""
+msgstr "Detta beteende kan undertryckas med alternativet `--no-ff`."
 
 #. type: Title -
 #: en/git-merge.adoc:175
 #, no-wrap
 msgid "TRUE MERGE"
-msgstr ""
+msgstr "SANN SAMMANSLAGNING"
 
 #. type: Plain text
 #: en/git-merge.adoc:180
 msgid "Except in a fast-forward merge (see above), the branches to be merged must be tied together by a merge commit that has both of them as its parents."
-msgstr ""
+msgstr "Förutom i en snabbsamlare (se ovan) måste grenarna som ska slås samman knytas samman av en sammanslagnings-incheckning som har båda som sina föräldrar."
 
 #. type: Plain text
 #: en/git-merge.adoc:185
 msgid "A merged version reconciling the changes from all branches to be merged is committed, and your `HEAD`, index, and working tree are updated to it. It is possible to have modifications in the working tree as long as they do not overlap; the update will preserve them."
-msgstr ""
+msgstr "En sammanfogad version som avstämmer ändringarna från alla grenar som ska sammanfogas implementeras, och din `HEAD`, index och arbetsträd uppdateras till den. Det är möjligt att ha ändringar i arbetsträdet så länge de inte överlappar varandra; uppdateringen kommer att bevara dem."
 
 #. type: Plain text
 #: en/git-merge.adoc:188
 msgid "When it is not obvious how to reconcile the changes, the following happens:"
-msgstr ""
+msgstr "När det inte är uppenbart hur ändringarna ska avstämmas händer följande:"
 
 #. type: Plain text
 #: en/git-merge.adoc:190
 msgid "The `HEAD` pointer stays the same."
-msgstr ""
+msgstr "Pekaren `HEAD` förblir densamma."
 
 #. type: Plain text
 #: en/git-merge.adoc:191
 msgid "The `MERGE_HEAD` ref is set to point to the other branch head."
-msgstr ""
+msgstr "Referensen `MERGE_HEAD` är inställd att peka på den andra grenhuvudet."
 
 #. type: Plain text
 #: en/git-merge.adoc:193
 msgid "Paths that merged cleanly are updated both in the index file and in your working tree."
-msgstr ""
+msgstr "Sökvägar som sammanfogats korrekt uppdateras både i indexfilen och i ditt arbetskatalog."
 
 #. type: Plain text
 #: en/git-merge.adoc:199
 msgid "For conflicting paths, the index file records up to three versions: stage 1 stores the version from the common ancestor, stage 2 from `HEAD`, and stage 3 from `MERGE_HEAD` (you can inspect the stages with `git ls-files -u`). The working tree files contain the result of the merge operation; i.e. 3-way merge results with familiar conflict markers +<<<+ `===` +>>>+."
-msgstr ""
+msgstr "För motstridiga sökvägar registrerar indexfilen upp till tre versioner: steg 1 lagrar versionen från den gemensamma förfadern, steg 2 från `HEAD` och steg 3 från `MERGE_HEAD` (du kan inspektera stegen med `git ls-files -u`). Arbetskatalogen innehåller resultatet av sammanslagningsoperationen; dvs. 3-vägs sammanslagningsresultat med välkända konfliktmarkörer +<<<+ `===` +>>>+."
 
 #. type: Plain text
 #: en/git-merge.adoc:203
 msgid "A ref named `AUTO_MERGE` is written, pointing to a tree corresponding to the current content of the working tree (including conflict markers for textual conflicts). Note that this ref is only written when the `ort` merge strategy is used (the default)."
-msgstr ""
+msgstr "En referens med namnet `AUTO_MERGE` skrivs, som pekar på ett träd som motsvarar det aktuella innehållet i arbetsträdet (inklusive konfliktmarkörer för textkonflikter). Observera att denna referens endast skrivs när sammanslagningsstrategin `ort` används (standard)."
 
 #. type: Plain text
 #: en/git-merge.adoc:207
 msgid "No other changes are made. In particular, the local modifications you had before you started merge will stay the same and the index entries for them stay as they were, i.e. matching `HEAD`."
-msgstr ""
+msgstr "Inga andra ändringar görs. I synnerhet kommer de lokala ändringar du hade innan du började sammanfoga att förbli desamma och indexposterna för dem förblir som de var, dvs. matchar `HEAD`."
 
 #. type: Plain text
 #: en/git-merge.adoc:210
 msgid "If you tried a merge which resulted in complex conflicts and want to start over, you can recover with `git merge --abort`."
-msgstr ""
+msgstr "Om du försökte en sammanslagning som resulterade i komplexa konflikter och vill börja om, kan du återställa med `git merge --abort`."
 
 #. type: Title -
 #: en/git-merge.adoc:212
 #, no-wrap
 msgid "MERGING TAG"
-msgstr ""
+msgstr "SAMMANSLAGNING AV TAGG"
 
 #. type: Plain text
 #: en/git-merge.adoc:219
 msgid "When merging an annotated (and possibly signed) tag, Git always creates a merge commit even if a fast-forward merge is possible, and the commit message template is prepared with the tag message. Additionally, if the tag is signed, the signature check is reported as a comment in the message template. See also linkgit:git-tag[1]."
-msgstr ""
+msgstr "När man sammanfogar en kommenterad (och eventuellt signerad) tagg skapar Git alltid en sammanslagings-incheckning även om en snabbspolning framåt är möjlig, och inchecknings-meddelandemallen förbereds med taggmeddelandet. Dessutom, om taggen är signerad, rapporteras signaturkontrollen som en kommentar i meddelandemallen. Se även linkgit:git-tag[1]."
 
 #. type: Plain text
 #: en/git-merge.adoc:223
 msgid "When you want to just integrate with the work leading to the commit that happens to be tagged, e.g. synchronizing with an upstream release point, you may not want to make an unnecessary merge commit."
-msgstr ""
+msgstr "När du bara vill integrera med det arbete som leder till den incheckning som råkar vara taggad, t.ex. synkronisera med en uppströms utgivningspunkt, kanske du inte vill göra en onödig sammanslagings-incheckning."
 
 #. type: Plain text
 #: en/git-merge.adoc:227
 msgid "In such a case, you can \"unwrap\" the tag yourself before feeding it to `git merge`, or pass `--ff-only` when you do not have any work on your own. e.g."
-msgstr ""
+msgstr "I ett sådant fall, kan du \"packa upp\" taggen själv innan du skickar den till `git merge`, eller skicka `--ff-only` när du inte har något eget arbete. t.ex."
 
 #. type: delimited block -
 #: en/git-merge.adoc:232
 #, no-wrap
 msgid "git fetch origin\ngit merge v1.2.3^0\ngit merge --ff-only v1.2.3\n"
 msgstr ""
+"git fetch origin\n"
+"git merge v1.2.3^0\n"
+"git merge --ff-only v1.2.3\n"
 
 #. type: Title -
 #: en/git-merge.adoc:235
 #, no-wrap
 msgid "HOW CONFLICTS ARE PRESENTED"
-msgstr ""
+msgstr "HUR KONFLIKTER PRESENTERAS"
 
 #. type: Plain text
 #: en/git-merge.adoc:244
 msgid "During a merge, the working tree files are updated to reflect the result of the merge. Among the changes made to the common ancestor's version, non-overlapping ones (that is, you changed an area of the file while the other side left that area intact, or vice versa) are incorporated in the final result verbatim. When both sides made changes to the same area, however, Git cannot randomly pick one side over the other, and asks you to resolve it by leaving what both sides did to that area."
-msgstr ""
+msgstr "Under en sammanslagning uppdateras arbetskatalog för att återspegla resultatet av sammanslagningen. Bland de ändringar som gjorts i den gemensamma förfaderns version införlivas icke-överlappande ändringar (det vill säga att du ändrade ett område i filen medan den andra sidan lämnade det området intakt, eller vice versa) ordagrant i det slutliga resultatet. När båda sidor har gjort ändringar i samma område kan Git dock inte slumpmässigt välja den ena sidan framför den andra, och ber dig att lösa det genom att lämna vad båda sidor gjorde i det området."
 
 #. type: Plain text
 #: en/git-merge.adoc:247
 msgid "By default, Git uses the same style as the one used by the \"merge\" program from the RCS suite to present such a conflicted hunk, like this:"
-msgstr ""
+msgstr "Som standard, använder Git samma stil som den som används av \"merge\"-programmet från RCS-sviten för att presentera en sådan konfliktfylld bit, så här:"
 
 #. type: delimited block -
 #: en/git-merge.adoc:259
 #, no-wrap
 msgid "Here are lines that are either unchanged from the common\nancestor, or cleanly resolved because only one side changed,\nor cleanly resolved because both sides changed the same way.\n<<<<<<< yours:sample.txt\nConflict resolution is hard;\nlet's go shopping.\n=======\nGit makes conflict resolution easy.\n>>>>>>> theirs:sample.txt\nAnd here is another line that is cleanly resolved or unmodified.\n"
 msgstr ""
+"Här är rader som antingen är oförändrade från den gemensamma\n"
+"förfadern, eller är rent upplösta eftersom bara en sida har ändrats,\n"
+"eller är rent upplösta eftersom båda sidor har ändrats på samma sätt.\n"
+"<<<<<<<< din:prov.txt\n"
+"Konfliktlösning är svårt;\n"
+"låt oss gå och handla.\n"
+"=======\n"
+"Git gör konfliktlösning enkelt.\n"
+">>>>>>>> deras:prov.txt\n"
+"Och här är en annan rad som är rent upplöst eller omodifierad.\n"
 
 #. type: Plain text
 #: en/git-merge.adoc:264
 msgid "The area where a pair of conflicting changes happened is marked with markers +<<<<<<<+, `=======`, and +>>>>>>>+. The part before the `=======` is typically your side, and the part afterwards is typically their side."
-msgstr ""
+msgstr "Området där ett par motstridiga ändringar inträffade markeras med markörerna +<<<<<<<<+, `=======` och +>>>>>>>+. Delen före `=======` är vanligtvis din sida, och delen efteråt är vanligtvis deras sida."
 
 #. type: Plain text
 #: en/git-merge.adoc:270
 msgid "The default format does not show what the original said in the conflicting area. You cannot tell how many lines are deleted and replaced with Barbie's remark on your side. The only thing you can tell is that your side wants to say it is hard and you'd prefer to go shopping, while the other side wants to claim it is easy."
-msgstr ""
+msgstr "Standardformatet visar inte vad originalet sa i konfliktområdet. Du kan inte se hur många rader som har tagits bort och ersatts med Barbies kommentar på din sida. Det enda du kan se är att din sida vill säga att det är svårt och att du hellre vill handla, medan den andra sidan vill påstå att det är lätt."
 
 #. type: Plain text
 #: en/git-merge.adoc:274
 msgid "An alternative style can be used by setting the `merge.conflictStyle` configuration variable to either `diff3` or `zdiff3`. In `diff3` style, the above conflict may look like this:"
-msgstr ""
+msgstr "En alternativ stil kan användas genom att ställa in konfigurationsvariabeln `merge.conflictStyle` till antingen `diff3` eller `zdiff3`. I `diff3`-stilen kan konflikten ovan se ut så här:"
 
 #. type: delimited block -
 #: en/git-merge.adoc:290
 #, no-wrap
 msgid "Here are lines that are either unchanged from the common\nancestor, or cleanly resolved because only one side changed,\n<<<<<<< yours:sample.txt\nor cleanly resolved because both sides changed the same way.\nConflict resolution is hard;\nlet's go shopping.\n||||||| base:sample.txt\nor cleanly resolved because both sides changed identically.\nConflict resolution is hard.\n=======\nor cleanly resolved because both sides changed the same way.\nGit makes conflict resolution easy.\n>>>>>>> theirs:sample.txt\nAnd here is another line that is cleanly resolved or unmodified.\n"
 msgstr ""
+"Här är rader som antingen är oförändrade från den gemensamma\n"
+"förfadern, eller rent lösta eftersom bara en sida ändrades,\n"
+"<<<<<<<< din:prov.txt\n"
+"eller rent lösta eftersom båda sidor ändrades på samma sätt.\n"
+"Konfliktlösning är svårt;\n"
+"låt oss gå och handla.\n"
+"||||||| bas:prov.txt\n"
+"eller rent lösta eftersom båda sidor ändrades identiskt.\n"
+"Konfliktlösning är svårt.\n"
+"=======\n"
+"eller rent lösta eftersom båda sidor ändrades på samma sätt.\n"
+"Git gör konfliktlösning enkel.\n"
+">>>>>>> deras:prov.txt\n"
+"Och här är en annan rad som är rent löst eller omodifierad.\n"
 
 #. type: Plain text
 #: en/git-merge.adoc:293
 msgid "while in `zdiff3` style, it may look like this:"
-msgstr ""
+msgstr "i `zdiff3`-stil kan det se ut så här:"
 
 #. type: delimited block -
 #: en/git-merge.adoc:308
 #, no-wrap
 msgid "Here are lines that are either unchanged from the common\nancestor, or cleanly resolved because only one side changed,\nor cleanly resolved because both sides changed the same way.\n<<<<<<< yours:sample.txt\nConflict resolution is hard;\nlet's go shopping.\n||||||| base:sample.txt\nor cleanly resolved because both sides changed identically.\nConflict resolution is hard.\n=======\nGit makes conflict resolution easy.\n>>>>>>> theirs:sample.txt\nAnd here is another line that is cleanly resolved or unmodified.\n"
 msgstr ""
+"Här är rader som antingen är oförändrade från den gemensamma\n"
+"förfadern, eller rent lösta eftersom bara en sida ändrades,\n"
+"eller rent lösta eftersom båda sidor ändrades på samma sätt.\n"
+"<<<<<<<< din:prov.txt\n"
+"Konfliktlösning är svårt;\n"
+"låt oss gå och shoppa.\n"
+"||||||| bas:prov.txt\n"
+"eller rent lösta eftersom båda sidor ändrades identiskt.\n"
+"Konfliktlösning är svårt.\n"
+"=======\n"
+"Git gör konfliktlösning enkel.\n"
+">>>>>>>> deras:prov.txt\n"
+"Och här är en annan rad som är rent löst eller omodifierad.\n"
 
 #. type: Plain text
 #: en/git-merge.adoc:316
 msgid "In addition to the +<<<<<<<+, `=======`, and +>>>>>>>+ markers, it uses another +|||||||+ marker that is followed by the original text. You can tell that the original just stated a fact, and your side simply gave in to that statement and gave up, while the other side tried to have a more positive attitude. You can sometimes come up with a better resolution by viewing the original."
-msgstr ""
+msgstr "Förutom markörerna +<<<<<<<+, `=======` och +>>>>>>>+ används ytterligare en markör +||||||||+ som följs av originaltexten. Du kan se att originalet bara konstaterade ett faktum, och din sida gav helt enkelt efter för det påståendet och upp, medan den andra sidan försökte ha en mer positiv attityd. Ibland kan du komma fram till en bättre lösning genom att titta på originalet."
 
 #. type: Title -
 #: en/git-merge.adoc:319
 #, no-wrap
 msgid "HOW TO RESOLVE CONFLICTS"
-msgstr ""
+msgstr "HUR MAN LÖSER KONFLIKTER"
 
 #. type: Plain text
 #: en/git-merge.adoc:322
 msgid "After seeing a conflict, you can do two things:"
-msgstr ""
+msgstr "Efter att ha sett en konflikt kan du göra två saker:"
 
 #. type: Plain text
 #: en/git-merge.adoc:327
 msgid "Decide not to merge. The only clean-ups you need are to reset the index file to the `HEAD` commit to reverse 2. and to clean up working tree changes made by 2. and 3.; `git merge --abort` can be used for this."
-msgstr ""
+msgstr "Bestäm dig för att inte sammanfoga. De enda rensningarna du behöver göra är att återställa indexfilen till `HEAD`-incheckning för att vända 2. och att rensa upp fungerande trädändringar gjorda av 2. och 3.; `git merge --abort` kan användas för detta."
 
 #. type: Plain text
 #: en/git-merge.adoc:334
 msgid "Resolve the conflicts. Git will mark the conflicts in the working tree. Edit the files into shape and `git add` them to the index. Use `git commit` or `git merge --continue` to seal the deal. The latter command checks whether there is a (interrupted) merge in progress before calling `git commit`."
-msgstr ""
+msgstr "Lös konflikterna. Git markerar konflikterna i arbetskatalogen. Redigera filerna till rätt form och `git add` dem till indexet. Använd `git commit` eller `git merge --continue` för att avsluta affären. Det senare kommandot kontrollerar om det pågår en (avbruten) sammanslagning innan `git commit` anropas."
 
 #. type: Plain text
 #: en/git-merge.adoc:336
 msgid "You can work through the conflict with a number of tools:"
-msgstr ""
+msgstr "Du kan bearbeta konflikten med ett antal verktyg:"
 
 #. type: Plain text
 #: en/git-merge.adoc:339
 msgid "Use a mergetool. `git mergetool` to launch a graphical mergetool which will work through the merge with you."
-msgstr ""
+msgstr "Använd ett mergetool. `git mergetool` för att starta ett grafiskt mergetool som kommer att arbeta genom sammanslagingsprocessen tillsammans med dig."
 
 #. type: Plain text
 #: en/git-merge.adoc:344
 msgid "Look at the diffs. `git diff` will show a three-way diff, highlighting changes from both the `HEAD` and `MERGE_HEAD` versions. `git diff AUTO_MERGE` will show what changes you've made so far to resolve textual conflicts."
-msgstr ""
+msgstr "Titta på skillnaderna. `git diff` visar en trevägsdiff som markerar ändringar från både `HEAD`- och `MERGE_HEAD`-versionerna. `git diff AUTO_MERGE` visar vilka ändringar du har gjort hittills för att lösa textkonflikter."
 
 #. type: Plain text
 #: en/git-merge.adoc:348
 msgid "Look at the diffs from each branch. `git log --merge -p <path>` will show diffs first for the `HEAD` version and then the `MERGE_HEAD` version."
-msgstr ""
+msgstr "Titta på skillnaderna från varje gren. `git log --merge -p <sökväg>` visar först skillnaderna för `HEAD`-versionen och sedan `MERGE_HEAD`-versionen."
 
 #. type: Plain text
 #: en/git-merge.adoc:353
 msgid "Look at the originals. `git show :1:filename` shows the common ancestor, `git show :2:filename` shows the `HEAD` version, and `git show :3:filename` shows the `MERGE_HEAD` version."
-msgstr ""
+msgstr "Titta på originalversionerna. `git show :1:filnamn` visar den gemensamma förfadern, `git show :2:filnamn` visar `HEAD`-versionen och `git show :3:filnamn` visar `MERGE_HEAD`-versionen."
 
 #. type: Plain text
 #: en/git-merge.adoc:360
 msgid "Merge branches `fixes` and `enhancements` on top of the current branch, making an octopus merge:"
-msgstr ""
+msgstr "Sammanfoga grenarna `fixes` och `förbättringar` ovanpå den aktuella grenen, vilket skapar en bläckfisk-sammanslagning:"
 
 #. type: delimited block -
 #: en/git-merge.adoc:363
 #, no-wrap
 msgid "$ git merge fixes enhancements\n"
-msgstr ""
+msgstr "$ git merge fixar förbättringar\n"
 
 #. type: Plain text
 #: en/git-merge.adoc:367
 msgid "Merge branch `obsolete` into the current branch, using `ours` merge strategy:"
-msgstr ""
+msgstr "Sammanfoga grenen `obsolete` med den aktuella grenen med hjälp av sammanfogningsstrategin `ours`:"
 
 #. type: delimited block -
 #: en/git-merge.adoc:370
 #, no-wrap
 msgid "$ git merge -s ours obsolete\n"
-msgstr ""
+msgstr "$ git merge -s ours obsolete\n"
 
 #. type: Plain text
 #: en/git-merge.adoc:374
 msgid "Merge branch `maint` into the current branch, but do not make a new commit automatically:"
-msgstr ""
+msgstr "Sammanfoga grenen `maint` med den aktuella grenen, men gör inte en ny incheckning automatiskt:"
 
 #. type: delimited block -
 #: en/git-merge.adoc:377
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "$ git merge --no-commit maint\n"
-msgstr ""
+msgstr "$ git merge --no-commit maint\n"
 
 #. type: Plain text
 #: en/git-merge.adoc:381
 msgid "This can be used when you want to include further changes to the merge, or want to write your own merge commit message."
-msgstr ""
+msgstr "Detta kan användas när du vill inkludera ytterligare ändringar i sammanslagningen, eller vill skriva ditt eget sammanslagningsmeddelande."
 
 #. type: Plain text
 #: en/git-merge.adoc:385
 msgid "You should refrain from abusing this option to sneak substantial changes into a merge commit. Small fixups like bumping release/version name would be acceptable."
-msgstr ""
+msgstr "Du bör avstå från att missbruka det här alternativet för att smyga in väsentliga ändringar i en sammanslagnings-incheckningen. Små korrigeringar som att bumpa utgåva/versionsnamn skulle vara acceptabla."
 
 #. type: Labeled list
 #: en/git-merge.adoc:392
 #, no-wrap
 msgid "`branch.<name>.mergeOptions`"
-msgstr ""
+msgstr "`branch.<namn>.mergeOptions`"
 
 #. type: Plain text
 #: en/git-merge.adoc:396
 msgid "Sets default options for merging into branch _<name>_. The syntax and supported options are the same as those of `git merge`, but option values containing whitespace characters are currently not supported."
-msgstr ""
+msgstr "Ställer in standardalternativ för sammanslagning till grenen _<namn>_. Syntaxen och de alternativ som stöds är desamma som för `git merge`, men alternativvärden som innehåller blanksteg stöds för närvarande inte."
 
 #. type: Plain text
 #: en/git-merge.adoc:409
@@ -62281,7 +62362,7 @@ msgstr "Föråldrad synonym för `diff-algoritm=histogram`."
 #. type: Plain text
 #: en/merge-strategies.adoc:95
 msgid "Deprecated synonym for `diff-algorithm=patience`."
-msgstr "Föråldrad synonym för `diff-algoritm=tålamod`."
+msgstr "Föråldrad synonym för `diff-algoritm=patience`."
 
 #. type: Labeled list
 #: en/merge-strategies.adoc:96
@@ -62373,7 +62454,7 @@ msgstr "`araxis`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:2
 msgid "Use Araxis Merge (requires a graphical session)"
-msgstr ""
+msgstr "Använd Araxis Merge (kräver en grafisk session)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:2
@@ -62386,7 +62467,7 @@ msgstr "`bc`"
 #: en/mergetools-merge.adoc:3 en/mergetools-merge.adoc:4
 #: en/mergetools-merge.adoc:5
 msgid "Use Beyond Compare (requires a graphical session)"
-msgstr ""
+msgstr "Använd Beyond Compare (kräver en grafisk session)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:3
@@ -62410,7 +62491,7 @@ msgstr "`codecompare`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:6
 msgid "Use Code Compare (requires a graphical session)"
-msgstr ""
+msgstr "Använd Code Compare (kräver en grafisk session)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:6
@@ -62422,7 +62503,7 @@ msgstr "`deltawalker`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:7
 msgid "Use DeltaWalker (requires a graphical session)"
-msgstr ""
+msgstr "Använd DeltaWalker (kräver en grafisk session)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:7
@@ -62434,7 +62515,7 @@ msgstr "`diffmerge`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:8
 msgid "Use DiffMerge (requires a graphical session)"
-msgstr ""
+msgstr "Använd DiffMerge (kräver en grafisk session)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:8
@@ -62446,7 +62527,7 @@ msgstr "`diffuse`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:9
 msgid "Use Diffuse (requires a graphical session)"
-msgstr ""
+msgstr "Använd Diffuse (kräver en grafisk session)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:9
@@ -62458,7 +62539,7 @@ msgstr "`ecmerge`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:10
 msgid "Use ECMerge (requires a graphical session)"
-msgstr ""
+msgstr "Använd ECMerge (kräver en grafisk session)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:10
@@ -62470,7 +62551,7 @@ msgstr "`emerge`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:11
 msgid "Use Emacs' Emerge"
-msgstr ""
+msgstr "Använd Emacs Emerge"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:11
@@ -62482,7 +62563,7 @@ msgstr "`examdiff`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:12
 msgid "Use ExamDiff Pro (requires a graphical session)"
-msgstr ""
+msgstr "Använd ExamDiff Pro (kräver en grafisk session)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:12
@@ -62494,7 +62575,7 @@ msgstr "`guiffy`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:13
 msgid "Use Guiffy's Diff Tool (requires a graphical session)"
-msgstr ""
+msgstr "Använd Guiffy's Diff Tool (kräver en grafisk session)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:13
@@ -62506,7 +62587,7 @@ msgstr "`gvimdiff`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:14
 msgid "Use gVim (requires a graphical session) with a custom layout (see `git help mergetool`'s `BACKEND SPECIFIC HINTS` section)"
-msgstr ""
+msgstr "Använd gVim (kräver en grafisk session) med en anpassad layout (se avsnittet `BACKÄNDA-SPECIFIKA TIPS` i `git help mergetool`)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:14
@@ -62517,7 +62598,7 @@ msgstr "`gvimdiff1`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:15
 msgid "Use gVim (requires a graphical session) with a 2 panes layout (LOCAL and REMOTE)"
-msgstr ""
+msgstr "Använd gVim (kräver en grafisk session) med en layout med två paneler (LOKAL och FJÄRR)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:15
@@ -62528,7 +62609,7 @@ msgstr "`gvimdiff2`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:16
 msgid "Use gVim (requires a graphical session) with a 3 panes layout (LOCAL, MERGED and REMOTE)"
-msgstr ""
+msgstr "Använd gVim (kräver en grafisk session) med en layout med 3 paneler (LOKAL, SAMMANSLAGEN och FJÄRR)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:16
@@ -62539,7 +62620,7 @@ msgstr "`gvimdiff3`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:17
 msgid "Use gVim (requires a graphical session) where only the MERGED file is shown"
-msgstr ""
+msgstr "Använd gVim (kräver en grafisk session) där endast den SAMMANSLAGNA filen visas"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:17
@@ -62550,7 +62631,7 @@ msgstr "`kdiff3`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:18
 msgid "Use KDiff3 (requires a graphical session)"
-msgstr ""
+msgstr "Använd KDiff3 (kräver en grafisk session)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:18
@@ -62562,7 +62643,7 @@ msgstr "`meld`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:19
 msgid "Use Meld (requires a graphical session) with optional `auto merge` (see `git help mergetool`'s `CONFIGURATION` section)"
-msgstr ""
+msgstr "Använd Meld (kräver en grafisk session) med valfritt `auto merge` (se `KONFIGURATION`-avsnittet i `git help mergetool`)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:19
@@ -62574,7 +62655,7 @@ msgstr "`nvimdiff`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:20
 msgid "Use Neovim with a custom layout (see `git help mergetool`'s `BACKEND SPECIFIC HINTS` section)"
-msgstr ""
+msgstr "Använd Neovim med en anpassad layout (se avsnittet `BAKÄNDA-SPECIFIKA TIPS` i `git help mergetool`)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:20
@@ -62585,7 +62666,7 @@ msgstr "`nvimdiff1`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:21
 msgid "Use Neovim with a 2 panes layout (LOCAL and REMOTE)"
-msgstr ""
+msgstr "Använd Neovim med en layout med två paneler (LOKAL och FJÄRR)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:21
@@ -62596,7 +62677,7 @@ msgstr "`nvimdiff2`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:22
 msgid "Use Neovim with a 3 panes layout (LOCAL, MERGED and REMOTE)"
-msgstr ""
+msgstr "Använd Neovim med en layout med 3 paneler (LOKAL, SAMMANSLAGEN och FJÄRR)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:22
@@ -62607,7 +62688,7 @@ msgstr "`nvimdiff3`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:23
 msgid "Use Neovim where only the MERGED file is shown"
-msgstr ""
+msgstr "Använd Neovim där endast den SAMMANSLAGNA filen visas"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:23
@@ -62619,7 +62700,7 @@ msgstr "`opendiff`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:24
 msgid "Use FileMerge (requires a graphical session)"
-msgstr ""
+msgstr "Använd FileMerge (kräver en grafisk session)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:24
@@ -62630,7 +62711,7 @@ msgstr "`p4merge`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:25
 msgid "Use HelixCore P4Merge (requires a graphical session)"
-msgstr ""
+msgstr "Använd HelixCore P4Merge (kräver en grafisk session)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:25
@@ -62642,7 +62723,7 @@ msgstr "`smerge`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:26
 msgid "Use Sublime Merge (requires a graphical session)"
-msgstr ""
+msgstr "Använd Sublime Merge (kräver en grafisk session)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:26
@@ -62654,7 +62735,7 @@ msgstr "`tkdiff`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:27
 msgid "Use TkDiff (requires a graphical session)"
-msgstr ""
+msgstr "Använd TkDiff (kräver en grafisk session)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:27
@@ -62666,7 +62747,7 @@ msgstr "`tortoisemerge`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:28
 msgid "Use TortoiseMerge (requires a graphical session)"
-msgstr ""
+msgstr "Använd TortoiseMerge (kräver en grafisk session)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:28
@@ -62678,7 +62759,7 @@ msgstr "`vimdiff`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:29
 msgid "Use Vim with a custom layout (see `git help mergetool`'s `BACKEND SPECIFIC HINTS` section)"
-msgstr ""
+msgstr "Använd Vim med en anpassad layout (se avsnittet `BAKÄNDA-SPECIFIKA TIPS` i `git help mergetool`)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:29
@@ -62689,7 +62770,7 @@ msgstr "`vimdiff1`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:30
 msgid "Use Vim with a 2 panes layout (LOCAL and REMOTE)"
-msgstr ""
+msgstr "Använd Vim med en layout med två paneler (LOKAL och FJÄRR)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:30
@@ -62700,7 +62781,7 @@ msgstr "`vimdiff2`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:31
 msgid "Use Vim with a 3 panes layout (LOCAL, MERGED and REMOTE)"
-msgstr ""
+msgstr "Använd Vim med en layout med 3 paneler (LOKAL, SAMMANSLAGEN och FJÄRR)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:31
@@ -62711,7 +62792,7 @@ msgstr "`vimdiff3`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:32
 msgid "Use Vim where only the MERGED file is shown"
-msgstr ""
+msgstr "Använd Vim där endast den SAMMANSLAGNA filen visas"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:32
@@ -62723,7 +62804,7 @@ msgstr "`vscode`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:33
 msgid "Use Visual Studio Code (requires a graphical session)"
-msgstr ""
+msgstr "Använd Visual Studio Code (kräver en grafisk session)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:33
@@ -62735,7 +62816,7 @@ msgstr "`winmerge`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:34
 msgid "Use WinMerge (requires a graphical session)"
-msgstr ""
+msgstr "Använd WinMerge (kräver en grafisk session)"
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:34
@@ -62747,7 +62828,7 @@ msgstr "`xxdiff`"
 #. type: Plain text
 #: en/mergetools-merge.adoc:34
 msgid "Use xxdiff (requires a graphical session)"
-msgstr ""
+msgstr "Använd xxdiff (kräver en grafisk session)"
 
 #. type: Plain text
 #: en/object-format-disclaimer.adoc:3
