@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-01-27 17:31+0000\n"
+"PO-Revision-Date: 2026-01-27 18:34+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -3415,273 +3415,279 @@ msgstr "`diff.external`"
 #. type: Plain text
 #: en/config/diff.adoc:88
 msgid "If this config variable is set, diff generation is not performed using the internal diff machinery, but using the given command. Can be overridden with the `GIT_EXTERNAL_DIFF` environment variable. The command is called with parameters as described under \"git Diffs\" in linkgit:git[1]. Note: if you want to use an external diff program only on a subset of your files, you might want to use linkgit:gitattributes[5] instead."
-msgstr ""
+msgstr "Om denna konfigurationsvariabel är satt, utförs diff-generering inte med hjälp av den interna diff-maskineriet, utan med hjälp av det givna kommandot. Kan åsidosättas med miljövariabeln `GIT_EXTERNAL_DIFF`. Kommandot anropas med parametrar som beskrivs under \"git Diffs\" i linkgit:git[1]. Obs: om du bara vill använda ett externt diff-program på en delmängd av dina filer, kanske du vill använda linkgit:gitattributes[5] istället."
 
 #. type: Labeled list
 #: en/config/diff.adoc:89
 #, no-wrap
 msgid "`diff.trustExitCode`"
-msgstr ""
+msgstr "`diff.trustExitCode`"
 
 #. type: Plain text
 #: en/config/diff.adoc:97
 msgid "If this boolean value is set to `true` then the `diff.external` command is expected to return exit code 0 if it considers the input files to be equal or 1 if it considers them to be different, like `diff`(1). If it is set to `false`, which is the default, then the command is expected to return exit code `0` regardless of equality. Any other exit code causes Git to report a fatal error."
-msgstr ""
+msgstr "Om detta booleska värde är satt till `true` förväntas kommandot `diff.external` returnera avslutningskoden 0 om det anser att indatafilerna är lika eller 1 om det anser att de är olika, som `diff`(1). Om det är satt till `false`, vilket är standardvärdet, förväntas kommandot returnera avslutningskoden `0` oavsett likhet. All annan avslutningskod gör att Git rapporterar ett allvarligt fel."
 
 #. type: Labeled list
 #: en/config/diff.adoc:98
 #, no-wrap
 msgid "`diff.ignoreSubmodules`"
-msgstr ""
+msgstr "`diff.ignoreSubmodules`"
 
 #. type: Plain text
 #: en/config/diff.adoc:110
 msgid "Sets the default value of `--ignore-submodules`. Note that this affects only `git diff` Porcelain, and not lower level `diff` commands such as `git diff-files`. `git checkout` and `git switch` also honor this setting when reporting uncommitted changes. Setting it to `all` disables the submodule summary normally shown by `git commit` and `git status` when `status.submoduleSummary` is set unless it is overridden by using the `--ignore-submodules` command-line option. The `git submodule` commands are not affected by this setting. By default this is set to untracked so that any untracked submodules are ignored."
-msgstr ""
+msgstr "Ställer in standardvärdet för `--ignore-submodules`. Observera att detta endast påverkar `git diff` Porcelain, och inte lägre nivåer av `diff`-kommandon som `git diff-files`. `git checkout` och `git switch` respekterar också denna inställning vid rapportering av ej incheckade ändringar. Om den ställs in på `all` inaktiveras undermoduls-ammanfattningen som normalt visas av `git commit` och `git status` när `status.submoduleSummary` är inställt om den inte åsidosätts med hjälp av kommandoradsalternativet `--ignore-submodules`. Kommandona `git submodule` påverkas inte av denna inställning. Som standard är detta inställt på ospårad så att eventuella ej spårade undermoduler ignoreras."
 
 #. type: Labeled list
 #: en/config/diff.adoc:111
 #, no-wrap
 msgid "`diff.mnemonicPrefix`"
-msgstr ""
+msgstr "`diff.mnemonicPrefix`"
 
 #. type: Plain text
 #: en/config/diff.adoc:116
 msgid "If set, `git diff` uses a prefix pair that is different from the standard `a/` and `b/` depending on what is being compared. When this configuration is in effect, reverse diff output also swaps the order of the prefixes:"
-msgstr ""
+msgstr "Om detta är satt använder `git diff` ett prefixpar som skiljer sig från standard `a/` och `b/` beroende på vad som jämförs. När denna konfiguration är aktiv byter även omvänd diff-utmatning ordningen på prefixen:"
 
 #. type: Labeled list
 #: en/config/diff.adoc:116
 #, no-wrap
 msgid "`git diff`"
-msgstr ""
+msgstr "`git diff`"
 
 #. type: Plain text
 #: en/config/diff.adoc:118
+#, fuzzy
 msgid "compares the (i)ndex and the (w)ork tree;"
-msgstr ""
+msgstr "jämför (i)indexet och (w)arbetskatalog(erna);"
 
 #. type: Labeled list
 #: en/config/diff.adoc:118
 #, no-wrap
 msgid "`git diff HEAD`"
-msgstr ""
+msgstr "`git diff HEAD`"
 
 #. type: Plain text
 #: en/config/diff.adoc:120
+#, fuzzy
 msgid "compares a (c)ommit and the (w)ork tree;"
-msgstr ""
+msgstr "jämför ett (c)incheckning och (w)arbetsträdet;"
 
 #. type: Labeled list
 #: en/config/diff.adoc:120
 #, no-wrap
 msgid "`git diff --cached`"
-msgstr ""
+msgstr "`git diff --cached`"
 
 #. type: Plain text
 #: en/config/diff.adoc:122
+#, fuzzy
 msgid "compares a (c)ommit and the (i)ndex;"
-msgstr ""
+msgstr "jämför en (c)inchecking och (i)index;"
 
 #. type: Labeled list
 #: en/config/diff.adoc:122
 #, no-wrap
 msgid "`git diff HEAD:<file1> <file2>`"
-msgstr ""
+msgstr "`git diff HEAD:<fil1> <fil2>`"
 
 #. type: Plain text
 #: en/config/diff.adoc:124
+#, fuzzy
 msgid "compares an (o)bject and a (w)ork tree entity;"
-msgstr ""
+msgstr "jämför ett (o)objekt och en (w)arbetstkatalogs entitet;"
 
 #. type: Labeled list
 #: en/config/diff.adoc:124
 #, no-wrap
 msgid "`git diff --no-index <a> <b>`"
-msgstr ""
+msgstr "`git diff --no-index <a> <b>`"
 
 #. type: Plain text
 #: en/config/diff.adoc:126
 msgid "compares two non-git things _<a>_ and _<b>_."
-msgstr ""
+msgstr "jämför två icke-git-saker _<a>_ och _<b>_."
 
 #. type: Labeled list
 #: en/config/diff.adoc:127
 #, no-wrap
 msgid "`diff.noPrefix`"
-msgstr ""
+msgstr "`diff.noPrefix`"
 
 #. type: Plain text
 #: en/config/diff.adoc:129
 msgid "If set, `git diff` does not show any source or destination prefix."
-msgstr ""
+msgstr "Om angivet visar `git diff` inget käll- eller destinationsprefix."
 
 #. type: Labeled list
 #: en/config/diff.adoc:130
 #, no-wrap
 msgid "`diff.srcPrefix`"
-msgstr ""
+msgstr "`diff.srcPrefix`"
 
 #. type: Plain text
 #: en/config/diff.adoc:132
 msgid "If set, `git diff` uses this source prefix. Defaults to `a/`."
-msgstr ""
+msgstr "Om angivet använder `git diff` detta källkodsprefix. Standardvärdet är `a/`."
 
 #. type: Labeled list
 #: en/config/diff.adoc:133
 #, no-wrap
 msgid "`diff.dstPrefix`"
-msgstr ""
+msgstr "`diff.dstPrefix`"
 
 #. type: Plain text
 #: en/config/diff.adoc:135
 msgid "If set, `git diff` uses this destination prefix. Defaults to `b/`."
-msgstr ""
+msgstr "Om angivet använder `git diff` detta destinationsprefix. Standardvärdet är `b/`."
 
 #. type: Labeled list
 #: en/config/diff.adoc:136
 #, no-wrap
 msgid "`diff.relative`"
-msgstr ""
+msgstr "`diff.relative`"
 
 #. type: Plain text
 #: en/config/diff.adoc:139
 msgid "If set to `true`, `git diff` does not show changes outside of the directory and show pathnames relative to the current directory."
-msgstr ""
+msgstr "Om den är satt till `true` visar `git diff` inte ändringar utanför katalogen och visar sökvägar i förhållande till den aktuella katalogen."
 
 #. type: Labeled list
 #: en/config/diff.adoc:140
 #, no-wrap
 msgid "`diff.orderFile`"
-msgstr ""
+msgstr "`diff.orderFile`"
 
 #. type: Plain text
 #: en/config/diff.adoc:142
 msgid "File indicating how to order files within a diff."
-msgstr ""
+msgstr "Fil som anger hur filer ska ordnas inom en diff."
 
 #. type: Plain text
 #: en/config/diff.adoc:144
 #, no-wrap
 msgid "\tSee the `-O` option for details.\n"
-msgstr ""
+msgstr "\tSe alternativet `-O` för mer information.\n"
 
 #. type: Plain text
 #: en/config/diff.adoc:147
 #, no-wrap
 msgid "\tSee the `-O` option to linkgit:git-diff[1] for details.\n"
-msgstr ""
+msgstr "\tSe `-O`-flaggan till linkgit:git-diff[1] för mer information..\n"
 
 #. type: Plain text
 #: en/config/diff.adoc:150
 #, no-wrap
 msgid "\tIf `diff.orderFile` is a relative pathname, it is treated as\n\trelative to the top of the working tree.\n"
 msgstr ""
+"\tOm `diff.orderFile` är en relativ sökväg behandlas den som\n"
+"\trelativt till toppen av arbetskatalogen.\n"
 
 #. type: Labeled list
 #: en/config/diff.adoc:151
 #, no-wrap
 msgid "`diff.renameLimit`"
-msgstr ""
+msgstr "`diff.renameLimit`"
 
 #. type: Plain text
 #: en/config/diff.adoc:156
 msgid "The number of files to consider in the exhaustive portion of copy/rename detection; equivalent to the `git diff` option `-l`. If not set, the default value is currently 1000. This setting has no effect if rename detection is turned off."
-msgstr ""
+msgstr "Antalet filer som ska beaktas i den uttömmande delen av kopierings-/namnbytesdetektering; motsvarande `git diff`flaggan `-l`. Om det inte är inställt är standardvärdet för närvarande 1000. Denna inställning har ingen effekt om namnbytesdetektering är avstängd."
 
 #. type: Labeled list
 #: en/config/diff.adoc:157
 #, no-wrap
 msgid "`diff.renames`"
-msgstr ""
+msgstr "`diff.renames`"
 
 #. type: Plain text
 #: en/config/diff.adoc:165
 msgid "Whether and how Git detects renames. If set to `false`, rename detection is disabled. If set to `true`, basic rename detection is enabled. If set to `copies` or `copy`, Git will detect copies, as well. Defaults to `true`. Note that this affects only `git diff` Porcelain like linkgit:git-diff[1] and linkgit:git-log[1], and not lower level commands such as linkgit:git-diff-files[1]."
-msgstr ""
+msgstr "Om och hur Git identifierar namnbyten. Om det är satt till `false` är namnbytesdetektering inaktiverad. Om det är satt till `true` är grundläggande namnbytesdetektering aktiverad. Om det är satt till `copies` eller `copy` kommer Git även att identifiera kopior. Standardvärdet är `true`. Observera att detta endast påverkar `git diff` Porslinskommandon som linkgit:git-diff[1] och linkgit:git-log[1], och inte lägre kommandon som linkgit:git-diff-files[1]."
 
 #. type: Labeled list
 #: en/config/diff.adoc:166
 #, no-wrap
 msgid "`diff.suppressBlankEmpty`"
-msgstr ""
+msgstr "`diff.suppressBlankEmpty`"
 
 #. type: Plain text
 #: en/config/diff.adoc:169
 msgid "A boolean to inhibit the standard behavior of printing a space before each empty output line. Defaults to `false`."
-msgstr ""
+msgstr "Ett booleskt värde för att förhindra standardbeteendet att skriva ut ett mellanslag före varje tom utdatarad. Standardvärdet är `false`."
 
 #. type: Labeled list
 #: en/config/diff.adoc:170
 #, no-wrap
 msgid "`diff.submodule`"
-msgstr ""
+msgstr "`diff.submodule`"
 
 #. type: Plain text
 #: en/config/diff.adoc:177
 msgid "Specify the format in which differences in submodules are shown. The `short` format just shows the names of the commits at the beginning and end of the range. The `log` format lists the commits in the range like linkgit:git-submodule[1] `summary` does. The `diff` format shows an inline diff of the changed contents of the submodule. Defaults to `short`."
-msgstr ""
+msgstr "Ange formatet i vilket skillnader i undermoduler visas. Formatet `short` visar bara namnen på incheckningar i början och slutet av intervallet. Formatet `log` listar incheckningar i intervallet, precis som linkgit:git-submodule[1] `summary` gör. Formatet `diff` visar en inline-diff av det ändrade innehållet i undermodulen. Standardinställningen är `short`."
 
 #. type: Labeled list
 #: en/config/diff.adoc:178
 #, no-wrap
 msgid "`diff.wordRegex`"
-msgstr ""
+msgstr "`diff.wordRegex`"
 
 #. type: Plain text
 #: en/config/diff.adoc:183
 msgid "A POSIX Extended Regular Expression used to determine what is a \"word\" when performing word-by-word difference calculations. Character sequences that match the regular expression are \"words\", all other characters are *ignorable* whitespace."
-msgstr ""
+msgstr "Ett utökat reguljärt uttryck i POSIX som används för att avgöra vad som är ett \"ord\" vid ord-för-ord-differensberäkningar. Teckensekvenser som matchar det reguljära uttrycket är \"ord\", alla andra tecken är *ignorerbara* blanksteg."
 
 #. type: Labeled list
 #: en/config/diff.adoc:184
 #, no-wrap
 msgid "`diff.<driver>.command`"
-msgstr ""
+msgstr "`diff.<förare>.command`"
 
 #. type: Plain text
 #: en/config/diff.adoc:187
 msgid "The custom diff driver command. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "Anpassat diff förare kommando. Se linkgit:gitattributes[5] för mer information."
 
 #. type: Labeled list
 #: en/config/diff.adoc:188
 #, no-wrap
 msgid "`diff.<driver>.trustExitCode`"
-msgstr ""
+msgstr "`diff.<förare>.trustExitCode`"
 
 #. type: Plain text
 #: en/config/diff.adoc:196
 msgid "If this boolean value is set to `true` then the `diff.<driver>.command` command is expected to return exit code 0 if it considers the input files to be equal or 1 if it considers them to be different, like `diff`(1). If it is set to `false`, which is the default, then the command is expected to return exit code 0 regardless of equality. Any other exit code causes Git to report a fatal error."
-msgstr ""
+msgstr "Om detta booleska värde är satt till `true` förväntas kommandot `diff.<förare>.command` returnera avslutningskod 0 om det anser att indatafilerna är lika eller 1 om det anser att de är olika, som `diff`(1). Om det är satt till `false`, vilket är standardvärdet, förväntas kommandot returnera avslutningskod 0 oavsett likhet. All annan avslutningskod gör att Git rapporterar ett allvarligt fel."
 
 #. type: Labeled list
 #: en/config/diff.adoc:197
 #, no-wrap
 msgid "`diff.<driver>.xfuncname`"
-msgstr ""
+msgstr "`diff.<förare>.xfuncname`"
 
 #. type: Plain text
 #: en/config/diff.adoc:201
 msgid "The regular expression that the diff driver should use to recognize the hunk header. A built-in pattern may also be used. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "Det reguljära uttryck som diff-föraren ska använda för att känna igen hunk-huvud. Ett inbyggt mönster kan också användas. Se linkgit:gitattributes[5] för mer information."
 
 #. type: Labeled list
 #: en/config/diff.adoc:202
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "`diff.<driver>.binary`"
-msgstr ""
+msgstr "`diff.<förare>.binary`"
 
 #. type: Plain text
 #: en/config/diff.adoc:205
 msgid "Set this option to `true` to make the diff driver treat files as binary. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "Sätt det här alternativet till `true` för att få diff-förare att behandla filer som binära. Se linkgit:gitattributes[5] för mer information."
 
 #. type: Labeled list
 #: en/config/diff.adoc:206
 #, no-wrap
 msgid "`diff.<driver>.textconv`"
-msgstr ""
+msgstr "`diff.<förare>.textconv`"
 
 #. type: Plain text
 #: en/config/diff.adoc:211
@@ -3692,45 +3698,45 @@ msgstr "Kommandot som diff-drivrutinen ska anropa för att generera den textkonv
 #: en/config/diff.adoc:212
 #, no-wrap
 msgid "`diff.<driver>.wordRegex`"
-msgstr ""
+msgstr "`diff.<förare>.wordRegex`"
 
 #. type: Plain text
 #: en/config/diff.adoc:216
 msgid "The regular expression that the diff driver should use to split words in a line. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "Det reguljära uttryck som diff-drivrutinen ska använda för att dela upp ord på en rad. Se linkgit:gitattributes[5] för mer information."
 
 #. type: Labeled list
 #: en/config/diff.adoc:217
 #, no-wrap
 msgid "`diff.<driver>.cachetextconv`"
-msgstr ""
+msgstr "`diff.<förare>.cachetextconv`"
 
 #. type: Plain text
 #: en/config/diff.adoc:220
 msgid "Set this option to `true` to make the diff driver cache the text conversion outputs. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "Sätt det här alternativet till `true` för att få diff-drivrutinen att cachelagra textkonverteringsutdata. Se linkgit:gitattributes[5] för mer information."
 
 #. type: Labeled list
 #: en/config/diff.adoc:221
 #, no-wrap
 msgid "`diff.indentHeuristic`"
-msgstr ""
+msgstr "`diff.indentHeuristic`"
 
 #. type: Plain text
 #: en/config/diff.adoc:224
 msgid "Set this option to `false` to disable the default heuristics that shift diff hunk boundaries to make patches easier to read."
-msgstr ""
+msgstr "Ställ in det här alternativet på `false` för att inaktivera standardheuristiken som flyttar olika hunk-gränser för att göra patchar lättare att läsa."
 
 #. type: Labeled list
 #: en/config/diff.adoc:225
 #, no-wrap
 msgid "`diff.algorithm`"
-msgstr ""
+msgstr "`diff.algorithm`"
 
 #. type: Plain text
 #: en/config/diff.adoc:227 en/diff-algorithm-option.adoc:3
 msgid "Choose a diff algorithm. The variants are as follows:"
-msgstr ""
+msgstr "Välj en diff-algoritm. Varianterna är följande:"
 
 #. type: Labeled list
 #: en/config/diff.adoc:229 en/diff-algorithm-option.adoc:5
@@ -3750,7 +3756,7 @@ msgstr "`myers`"
 #. type: Plain text
 #: en/config/diff.adoc:232 en/diff-algorithm-option.adoc:8
 msgid "The basic greedy diff algorithm. Currently, this is the default."
-msgstr ""
+msgstr "Den grundläggande giriga diff-algoritmen. För närvarande är detta standard."
 
 #. type: Labeled list
 #: en/config/diff.adoc:232 en/diff-algorithm-option.adoc:8
@@ -3763,7 +3769,7 @@ msgstr "`minimal`"
 #: en/config/diff.adoc:235 en/diff-algorithm-option.adoc:11
 #: en/diff-options.adoc:183
 msgid "Spend extra time to make sure the smallest possible diff is produced."
-msgstr ""
+msgstr "Lägg extra tid på att se till att minsta möjliga skillnad produceras."
 
 #. type: Labeled list
 #: en/config/diff.adoc:235 en/diff-algorithm-option.adoc:11
@@ -3776,7 +3782,7 @@ msgstr "`patience`"
 #. type: Plain text
 #: en/config/diff.adoc:237 en/diff-algorithm-option.adoc:13
 msgid "Use \"patience diff\" algorithm when generating patches."
-msgstr ""
+msgstr "Använd algoritmen \"patience diff\" när du genererar patchar."
 
 #. type: Labeled list
 #: en/config/diff.adoc:237 en/diff-algorithm-option.adoc:13
@@ -3789,13 +3795,13 @@ msgstr "`histogram`"
 #. type: Plain text
 #: en/config/diff.adoc:240 en/diff-algorithm-option.adoc:16
 msgid "This algorithm extends the patience algorithm to \"support low-occurrence common elements\"."
-msgstr ""
+msgstr "Denna algoritm utökar tålamodsalgoritmen till att \"stödja vanliga element med låg förekomst\"."
 
 #. type: Labeled list
 #: en/config/diff.adoc:243
 #, no-wrap
 msgid "`diff.wsErrorHighlight`"
-msgstr ""
+msgstr "`diff.wsErrorHighlight`"
 
 #. type: Plain text
 #: en/config/diff.adoc:251
@@ -3806,41 +3812,43 @@ msgstr "Markera mellanslagsfel i raderna `context`, `old` eller `new` i diff-fil
 #: en/config/diff.adoc:252
 #, no-wrap
 msgid "`diff.colorMoved`"
-msgstr ""
+msgstr "`diff.colorMoved`"
 
 #. type: Plain text
 #: en/config/diff.adoc:255
 msgid "If set to either a valid _<mode>_ or a `true` value, moved lines in a diff are colored differently."
-msgstr ""
+msgstr "Om den är satt till antingen ett giltigt _<läge>_ eller ett `sant`-värde, färgas flyttade linjer i en diff olika."
 
 #. type: Plain text
 #: en/config/diff.adoc:257
 #, no-wrap
 msgid "\tFor details of valid modes see `--color-moved`.\n"
-msgstr ""
+msgstr "\tFör detaljer om giltiga lägen, se `--color-moved`.\n"
 
 #. type: Plain text
 #: en/config/diff.adoc:260
 #, no-wrap
 msgid "\tFor details of valid modes see `--color-moved` in linkgit:git-diff[1].\n"
-msgstr ""
+msgstr "\tFör detaljer om giltiga lägen, se `--color-moved` i linkgit:git-diff[1].\n"
 
 #. type: Plain text
 #: en/config/diff.adoc:263
 #, no-wrap
 msgid "\tIf simply set to `true` the default color mode will be used. When\n\tset to `false`, moved lines are not colored.\n"
 msgstr ""
+"\tOm den bara ställs in på `sant` används standardfärgläget. När\n"
+"\tden ställs in på `false` färgas inte flyttade linjer.\n"
 
 #. type: Labeled list
 #: en/config/diff.adoc:264
 #, no-wrap
 msgid "`diff.colorMovedWS`"
-msgstr ""
+msgstr "`diff.colorMovedWS`"
 
 #. type: Plain text
 #: en/config/diff.adoc:267
 msgid "When moved lines are colored using e.g. the `diff.colorMoved` setting, this option controls the mode how spaces are treated. For details of valid modes see `--color-moved-ws` in linkgit:git-diff[1]."
-msgstr ""
+msgstr "När flyttade linjer färgläggs med t.ex. inställningen `diff.colorMoved`, styr detta alternativ läget för hur mellanslag behandlas. För detaljer om giltiga lägen, se `--color-moved-ws` i linkgit:git-diff[1]."
 
 #. type: Labeled list
 #: en/config/init.adoc:6
@@ -35535,7 +35543,7 @@ msgstr "Diskussion om gaffelpunktsläge"
 #. type: Plain text
 #: en/git-merge-base.adoc:168
 msgid "After working on the `topic` branch created with `git switch -c topic origin/master`, the history of remote-tracking branch `origin/master` may have been rewound and rebuilt, leading to a history of this shape:"
-msgstr "Efter att ha arbetat med grenen `ämne` som skapades med `git switch -c ämne origin/master`, kan historiken för fjärrspårningsgrenen `origin/master` ha spolats tillbaka och byggts om, vilket lett till en historik av denna form:"
+msgstr "Efter att ha arbetat med grenen `amne` (nedan \"ämne\") som skapades med `git switch -c amne origin/master`, kan historiken för fjärrspårningsgrenen `origin/master` ha spolats tillbaka och byggts om, vilket lett till en historik av denna form:"
 
 #. type: delimited block .
 #: en/git-merge-base.adoc:177
@@ -67179,7 +67187,7 @@ msgstr "Olika kommandon, inklusive `git checkout` och `git status`, visar hur m�
 #. type: Plain text
 #: en/urls-remotes.adoc:116
 msgid "The upstream is stored in `.git/config`, in the \"`remote`\" and \"`merge`\" fields. For example, if `main`'s upstream is `origin/main`:"
-msgstr "Uppströmmen lagras i `.git/config`, i fälten \"`remote`\" och \"`merge`\". Till exempel, om `main`s uppström är `origin/main`:"
+msgstr "Uppströmmen lagras i `.git/config`, i fälten \"`remote`\" och \"`merge`\". Till exempel, om `main`s uppstrom är `origin/main`:"
 
 #. type: delimited block -
 #: en/urls-remotes.adoc:121
