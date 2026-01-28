@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-01-28 19:33+0000\n"
+"PO-Revision-Date: 2026-01-28 22:16+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -17544,7 +17544,7 @@ msgstr "`--config` `<key>=<värde>`"
 #. type: Plain text
 #: en/git-clone.adoc:253
 msgid "Set a configuration variable in the newly-created repository; this takes effect immediately after the repository is initialized, but before the remote history is fetched or any files checked out. The _<key>_ is in the same format as expected by linkgit:git-config[1] (e.g., `core.eol=true`). If multiple values are given for the same key, each value will be written to the config file. This makes it safe, for example, to add additional fetch refspecs to the origin remote."
-msgstr "Ställ in en konfigurationsvariabel i det nyskapade repot; denna träder i kraft omedelbart efter att arkivet har initierats, men innan fjärrhistoriken hämtas eller några filer checkas ut. _<nyckeln>_ har samma format som förväntas av linkgit:git-config[1] (t.ex. `core.eol=true`). Om flera värden anges för samma nyckel kommer varje värde att skrivas till konfigurationsfilen. Detta gör det säkert att till exempel lägga till ytterligare hämtningsreferenser till den ursprungliga fjärrkontrollen."
+msgstr "Ställ in en konfigurationsvariabel i det nyskapade repot; denna träder i kraft omedelbart efter att repo har initierats, men innan fjärrhistoriken hämtas eller några filer checkas ut. _<nyckeln>_ har samma format som förväntas av linkgit:git-config[1] (t.ex. `core.eol=true`). Om flera värden anges för samma nyckel kommer varje värde att skrivas till konfigurationsfilen. Detta gör det säkert att till exempel lägga till ytterligare hämtningsreferenser till den ursprungliga fjärrkontrollen."
 
 #. type: Plain text
 #: en/git-clone.adoc:259
@@ -26731,7 +26731,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-fetch-pack.adoc:117 en/git-push.adoc:384 en/git-send-pack.adoc:64
 msgid "Run verbosely."
-msgstr ""
+msgstr "Kör utförligt."
 
 #. type: Labeled list
 #: en/git-fetch-pack.adoc:118 en/git-ls-remote.adoc:88
@@ -26998,13 +26998,13 @@ msgstr ""
 #. type: Plain text
 #: en/git-fetch.adoc:226 en/git-push.adoc:458
 msgid "A single character indicating the status of the ref:"
-msgstr ""
+msgstr "Ett enda tecken som anger referensens status:"
 
 #. type: Labeled list
 #: en/git-fetch.adoc:226 en/git-push.adoc:458
 #, no-wrap
 msgid "(space)"
-msgstr ""
+msgstr "(mellanslag)"
 
 #. type: Plain text
 #: en/git-fetch.adoc:227
@@ -27015,12 +27015,12 @@ msgstr ""
 #: en/git-fetch.adoc:227 en/git-push.adoc:459
 #, no-wrap
 msgid "`+`"
-msgstr ""
+msgstr "`+`"
 
 #. type: Plain text
 #: en/git-fetch.adoc:228 en/git-push.adoc:460
 msgid "for a successful forced update;"
-msgstr ""
+msgstr "för en lyckad påtvingad uppdatering;"
 
 #. type: Labeled list
 #: en/git-fetch.adoc:228 en/git-push.adoc:460
@@ -27061,7 +27061,7 @@ msgstr ""
 #: en/git-fetch.adoc:231 en/git-push.adoc:462
 #, no-wrap
 msgid "`!`"
-msgstr ""
+msgstr "`!`"
 
 #. type: Plain text
 #: en/git-fetch.adoc:232
@@ -27072,7 +27072,7 @@ msgstr ""
 #: en/git-fetch.adoc:232 en/git-push.adoc:463
 #, no-wrap
 msgid "`=`"
-msgstr ""
+msgstr "`=`"
 
 #. type: Plain text
 #: en/git-fetch.adoc:233
@@ -27094,7 +27094,7 @@ msgstr ""
 #: en/git-fetch.adoc:240 en/git-push.adoc:493
 #, no-wrap
 msgid "from"
-msgstr ""
+msgstr "från"
 
 #. type: Plain text
 #: en/git-fetch.adoc:244
@@ -27105,7 +27105,7 @@ msgstr ""
 #: en/git-fetch.adoc:245 en/git-push.adoc:498
 #, no-wrap
 msgid "to"
-msgstr ""
+msgstr "till"
 
 #. type: Plain text
 #: en/git-fetch.adoc:248
@@ -32341,7 +32341,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-http-push.adoc:39 en/git-push.adoc:151 en/git-send-pack.adoc:54
 msgid "Do everything except actually send the updates."
-msgstr ""
+msgstr "Gör allt utom att faktiskt skicka uppdateringarna."
 
 #. type: Plain text
 #: en/git-http-push.adoc:43
@@ -40970,117 +40970,123 @@ msgstr "git-push - Uppdatera fjärr-referenser och tillhörande objekt"
 #, no-wrap
 msgid "git push [--all | --branches | --mirror | --tags] [--follow-tags] [--atomic] [-n | --dry-run] [--receive-pack=<git-receive-pack>]\n\t [--repo=<repository>] [-f | --force] [-d | --delete] [--prune] [-q | --quiet] [-v | --verbose]\n\t [-u | --set-upstream] [-o <string> | --push-option=<string>]\n\t [--[no-]signed | --signed=(true|false|if-asked)]\n\t [--force-with-lease[=<refname>[:<expect>]] [--force-if-includes]]\n\t [--no-verify] [<repository> [<refspec>...]]\n"
 msgstr ""
+"git push [--all | --branches | --mirror | --tags] [--follow-tags] [--atomic] [-n | --dry-run] [--receive-pack=<git-receive-pack>]\n"
+"\t [--repo=<repo>] [-f | --force] [-d | --delete] [--prune] [-q | --quiet] [-v | --verbose]\n"
+"\t [-u | --set-upstream] [-o <string> | --push-option=<sträng>]\n"
+"\t [--[no-]signed | --signed=(true|false|if-asked)]\n"
+"\t [--force-with-lease[=<refname>[:<expect>]] [--force-if-includes]]\n"
+"\t [--no-verify] [<repo> [<refspec>...]]\n"
 
 #. type: Plain text
 #: en/git-push.adoc:25
 msgid "Updates one or more branches, tags, or other references in a remote repository from your local repository, and sends all necessary data that isn't already on the remote."
-msgstr ""
+msgstr "Uppdaterar en eller flera grenar, taggar eller andra referenser i ett fjärr-repo från ditt lokala repo och skickar all nödvändig data som inte redan finns på fjärren."
 
 #. type: Plain text
 #: en/git-push.adoc:29
 msgid "The simplest way to push is `git push <remote> <branch>`. `git push origin main` will push the local `main` branch to the `main` branch on the remote named `origin`."
-msgstr ""
+msgstr "Det enklaste sättet att pusha är `git push <fjärr> <gren>`. `git push origin main` kommer att sända den lokala `main`-grenen till `main`-grenen på fjärren med namnet `origin`."
 
 #. type: Plain text
 #: en/git-push.adoc:32
 msgid "The `<repository>` argument defaults to the upstream for the current branch, or `origin` if there's no configured upstream."
-msgstr ""
+msgstr "Argumentet `<repo>` är som standard uppströms för den aktuella grenen, eller `origin` om det inte finns någon konfigurerad uppströms."
 
 #. type: Plain text
 #: en/git-push.adoc:35
 msgid "To decide which branches, tags, or other refs to push, Git uses (in order of precedence):"
-msgstr ""
+msgstr "För att bestämma vilka grenar, taggar eller andra referenser som ska sändas (\"pushas\") använder Git (i prioritetsordning):"
 
 #. type: Plain text
 #: en/git-push.adoc:38
 msgid "The `<refspec>` argument(s) (for example `main` in `git push origin main`) or the `--all`, `--mirror`, or `--tags` options"
-msgstr ""
+msgstr "Argumentet/argumenten `<refspec>` (till exempel `main` i `git push origin main`) eller alternativen `--all`, `--mirror` eller `--tags`"
 
 #. type: Plain text
 #: en/git-push.adoc:39
 msgid "The `remote.<name>.push` configuration for the repository being pushed to"
-msgstr ""
+msgstr "Konfigurationen `remote.<namn>.push` för repot som sänds till"
 
 #. type: Plain text
 #: en/git-push.adoc:42
 msgid "The `push.default` configuration. The default is `push.default=simple`, which will push to a branch with the same name as the current branch. See the <<CONFIGURATION,CONFIGURATION>> section below for more on `push.default`."
-msgstr ""
+msgstr "Konfigurationen `push.default`. Standardinställningen är `push.default=simple`, vilket skickar till en gren med samma namn som den aktuella grenen. Se avsnittet <<CONFIGURATION,KONFIGURATION>> nedan för mer information om `push.default`."
 
 #. type: Plain text
 #: en/git-push.adoc:47
 msgid "`git push` may fail if you haven't set an upstream for the current branch, depending on what `push.default` is set to. See the <<UPSTREAM-BRANCHES,UPSTREAM BRANCHES>> section below for more on how to set and use upstreams."
-msgstr ""
+msgstr "`git push` kan misslyckas om du inte har ställt in en uppström för den aktuella grenen, beroende på vad `push.default` är inställt på. Se avsnittet <<UPSTREAM-BRANCHES,UPPSTRÖMS GRENAR>> nedan för mer information om hur man ställer in och använder uppström."
 
 #. type: Plain text
 #: en/git-push.adoc:51
 msgid "You can make interesting things happen to a repository every time you push into it, by setting up 'hooks' there. See documentation for linkgit:git-receive-pack[1]."
-msgstr ""
+msgstr "Du kan få intressanta saker att hända med ett repo varje gång du skickar in det, genom att sätta upp 'krokar' (\"hooks\") där. Se dokumentationen för linkgit:git-receive-pack[1]."
 
 #. type: Plain text
 #: en/git-push.adoc:60
 msgid "The \"remote\" repository that is the destination of a push operation. This parameter can be either a URL (see the section <<URLS,GIT URLS>> below) or the name of a remote (see the section <<REMOTES,REMOTES>> below)."
-msgstr ""
+msgstr "Det \"fjärr\" repo som är destinationen för en sänd-operation. Denna parameter kan antingen vara en URL (se avsnittet <<URLS,GIT URLS>> nedan) eller namnet på en fjärren (se avsnittet <<REMOTES,FJÄRRAR>> nedan)."
 
 #. type: Labeled list
 #: en/git-push.adoc:61
 #, no-wrap
 msgid "`<refspec>...`"
-msgstr ""
+msgstr "`<refspec>...`"
 
 #. type: Plain text
 #: en/git-push.adoc:63
 msgid "Specify what destination ref to update with what source object."
-msgstr ""
+msgstr "Ange vilken destinationsreferens som ska uppdateras med vilket källobjekt."
 
 #. type: Plain text
 #: en/git-push.adoc:66
 msgid "The format for a refspec is `[+]<src>[:<dst>]`, for example `main`, `main:other`, or `HEAD^:refs/heads/main`."
-msgstr ""
+msgstr "Formatet för en refspec är `[+]<src>[:<mål>]`, till exempel `main`, `main:other` eller `HEAD^:refs/heads/main`."
 
 #. type: Plain text
 #: en/git-push.adoc:69
 msgid "The _<src>_ is often the name of the local branch to push, but it can be any arbitrary \"SHA-1 expression\" (see linkgit:gitrevisions[7])."
-msgstr ""
+msgstr "_<src>_ är ofta namnet på den lokala grenen som ska skickas, men det kan vara vilket godtyckligt \"SHA-1-uttryck\" som helst (se linkgit:gitrevisions[7])."
 
 #. type: Plain text
 #: en/git-push.adoc:72
 msgid "The _<dst>_ determines what ref to update on the remote side. It must be the name of a branch, tag, or other ref, not an arbitrary expression."
-msgstr ""
+msgstr "_<mål>_ avgör vilken referens som ska uppdateras på fjärrsidan. Det måste vara namnet på en gren, tagg eller annan referens, inte ett godtyckligt uttryck."
 
 #. type: Plain text
 #: en/git-push.adoc:74
 msgid "The `+` is optional and does the same thing as `--force`."
-msgstr ""
+msgstr "`+` är valfritt och gör samma sak som `--force`."
 
 #. type: Plain text
 #: en/git-push.adoc:80
 msgid "You can write a refspec using the fully expanded form (for example `refs/heads/main:refs/heads/main`) which specifies the exact source and destination, or with a shorter form (for example `main` or `main:other`). Here are the rules for how refspecs are expanded, as well as various other special refspec forms:"
-msgstr ""
+msgstr "Du kan skriva en refspec med hjälp av den helt expanderade formen (till exempel `refs/heads/main:refs/heads/main`) som anger exakt källa och destination, eller med en kortare form (till exempel `main` eller `main:other`). Här är reglerna för hur refspecs expanderas, såväl som olika andra speciella refspec-former:"
 
 #. type: Plain text
 #: en/git-push.adoc:85
 msgid "_<src>_ without a `:<dst>` means to update the same ref as the _<src>_, unless the `remote.<repository>.push` configuration specifies a different _<dst>_. For example, if `main` is a branch, then the refspec `main` expands to `main:refs/heads/main`."
-msgstr ""
+msgstr "_<src>_ utan `:<mål>` innebär att uppdatera samma referens som _<src>_, såvida inte konfigurationen `remote.<repo>.push` anger en annan _<mål>_. Till exempel, om `main` är en gren, expanderas refspec `main` till `main:refs/heads/main`."
 
 #. type: Plain text
 #: en/git-push.adoc:88
 msgid "If _<dst>_ unambiguously refers to a ref on the <repository> remote, then expand it to that ref. For example, if `v1.0` is a tag on the remote, then `HEAD:v1.0` expands to `HEAD:refs/tags/v1.0`."
-msgstr ""
+msgstr "Om _<mål>_ otvetydigt refererar till en referens på fjärr <repot>, expandera den till den referensen. Om till exempel `v1.0` är en tagg på fjärren, expanderas `HEAD:v1.0` till `HEAD:refs/tags/v1.0`."
 
 #. type: Plain text
 #: en/git-push.adoc:91
 msgid "If _<src>_ resolves to a ref starting with `refs/heads/` or `refs/tags/`, then prepend that to <dst>. For example, if `main` is a branch, then `main:other` expands to `main:refs/heads/other`"
-msgstr ""
+msgstr "Om _<src>_ leder till en referens som börjar med `refs/heads/` eller `refs/tags/`, lägg då till det före <mål>. Om till exempel `main` är en gren, expanderas `main:other` till `main:refs/heads/other`"
 
 #. type: Plain text
 #: en/git-push.adoc:95
 msgid "The special refspec `:` (or `+:` to allow non-fast-forward updates) directs Git to push \"matching\" branches: for every branch that exists on the local side, the remote side is updated if a branch of the same name already exists on the remote side."
-msgstr ""
+msgstr "Den speciella refspecen `:` (eller `+:` för att tillåta uppdateringar som inte spolas framåt) instruerar Git att skicka \"matchande\" grenar: för varje gren som finns på den lokala sidan uppdateras fjärrsidan om en gren med samma namn redan finns på fjärrsidan."
 
 #. type: Plain text
 #: en/git-push.adoc:101
 msgid "_<src>_ may contain a `*` to indicate a simple pattern match. This works like a glob that matches any ref matching the pattern. There must be only one `*` in both the `<src>` and `<dst>`. It will map refs to the destination by replacing the * with the contents matched from the source. For example, `refs/heads/*:refs/heads/*` will push all branches."
-msgstr ""
+msgstr "_<src>_ kan innehålla ett `*` för att indikera en enkel mönstermatchning. Detta fungerar som en glob som matchar alla referenser som matchar mönstret. Det får bara finnas ett `*` i både `<src>` och `<mål>`. Den kommer att mappa referenser till målet genom att ersätta * med innehållet som matchas från källan. Till exempel kommer `refs/heads/*:refs/heads/*` att sända alla grenar."
 
 #. type: Plain text
 #: en/git-push.adoc:109
@@ -41090,27 +41096,27 @@ msgstr "En refspec som börjar med `^` är en negativ refspec. Detta anger refer
 #. type: Plain text
 #: en/git-push.adoc:112
 msgid "If _<src>_ is empty, it deletes the _<dst>_ ref from the remote repository. For example, `git push origin :dev` will delete the `dev` branch."
-msgstr ""
+msgstr "Om _<src>_ är tomt, raderas _<mål>_-referensen från fjärr-repot. Till exempel, `git push origin :dev` kommer att radera `dev`-grenen."
 
 #. type: Plain text
 #: en/git-push.adoc:113
 msgid "`tag <tag>` expands to `refs/tags/<tag>:refs/tags/<tag>`."
-msgstr ""
+msgstr "`tag <tagg>` expanderar till `refs/tags/<tagg>:refs/tags/<tagg>`."
 
 #. type: Plain text
 #: en/git-push.adoc:116
 msgid "This is technically a special syntax for `git push` and not a refspec, since in `git push origin tag v1.0` the arguments `tag` and `v1.0` are separate."
-msgstr ""
+msgstr "Detta är tekniskt sett en speciell syntax för `git push` och inte en refspec, eftersom argumenten `tag` och `v1.0` är separata i `git push origin tag v1.0`."
 
 #. type: Plain text
 #: en/git-push.adoc:121
 msgid "If the refspec can't be expanded unambiguously, error out with an error indicating what was tried, and depending on the `advice.pushUnqualifiedRefname` configuration (see linkgit:git-config[1]) suggest what refs/ namespace you may have wanted to push to."
-msgstr ""
+msgstr "Om refspec:en inte kan expanderas entydigt, skicka ett felmeddelande som anger vad som försöktes, och beroende på konfigurationen av `advice.pushUnqualifiedRefname` (se linkgit:git-config[1]) föreslå vilken refs/namnrymd du kanske ville skicka till."
 
 #. type: Plain text
 #: en/git-push.adoc:123
 msgid "Not all updates are allowed: see PUSH RULES below for the details."
-msgstr ""
+msgstr "Inte alla uppdateringar är tillåtna: se SÄND-REGLER nedan för mer information."
 
 #. type: Labeled list
 #: en/git-push.adoc:125
@@ -41122,32 +41128,32 @@ msgstr "`--branches`"
 #. type: Plain text
 #: en/git-push.adoc:128
 msgid "Push all branches (i.e. refs under `refs/heads/`); cannot be used with other <refspec>."
-msgstr ""
+msgstr "Skjut alla grenar (dvs. refs under `refs/heads/`); kan inte användas med andra <refspec>."
 
 #. type: Plain text
 #: en/git-push.adoc:136
 msgid "Remove remote branches that don't have a local counterpart. For example a remote branch `tmp` will be removed if a local branch with the same name doesn't exist any more. This also respects refspecs, e.g. `git push --prune remote refs/heads/*:refs/tmp/*` would make sure that remote `refs/tmp/foo` will be removed if `refs/heads/foo` doesn't exist."
-msgstr ""
+msgstr "Ta bort fjärrgrenar som inte har en lokal motsvarighet. Till exempel kommer en fjärrgren `tmp` att tas bort om en lokal gren med samma namn inte längre finns. Detta respekterar även refspecs, t.ex. `git push --prune remote refs/heads/*:refs/tmp/*` skulle se till att fjärrgrenen `refs/tmp/foo` kommer att tas bort om `refs/heads/foo` inte finns."
 
 #. type: Plain text
 #: en/git-push.adoc:147
 msgid "Instead of naming each ref to push, specifies that all refs under `refs/` (which includes but is not limited to `refs/heads/`, `refs/remotes/`, and `refs/tags/`) be mirrored to the remote repository. Newly created local refs will be pushed to the remote end, locally updated refs will be force updated on the remote end, and deleted refs will be removed from the remote end. This is the default if the configuration option `remote.<remote>.mirror` is set."
-msgstr ""
+msgstr "Istället för att namnge varje referens att pusha, anger detta att alla referenser under `refs/` (vilket inkluderar men inte är begränsat till `refs/heads/`, `refs/remotes/` och `refs/tags/`) ska speglas till fjärr-repot. Nyskapade lokala referenser kommer att pushas till fjärrändan, lokalt uppdaterade referenser kommer att tvångsuppdateras på fjärrändan och borttagna referenser kommer att tas bort från fjärrändan. Detta är standardinställningen om konfigurationsalternativet `remote.<fjärr>.mirror` är inställt."
 
 #. type: Plain text
 #: en/git-push.adoc:156
 msgid "Produce machine-readable output. The output status line for each ref will be tab-separated and sent to stdout instead of stderr. The full symbolic names of the refs will be given."
-msgstr ""
+msgstr "Producera maskinläsbar utdata. Statusraden för varje referens kommer att vara tabbaseparerad och skickas till stdout istället för stderr. De fullständiga symboliska namnen på referenserna kommer att anges."
 
 #. type: Plain text
 #: en/git-push.adoc:161
 msgid "All listed refs are deleted from the remote repository. This is the same as prefixing all refs with a colon."
-msgstr ""
+msgstr "Alla listade referenser raderas från fjärr-repot. Detta är samma sak som att lägga till ett kolon före alla referenser."
 
 #. type: Plain text
 #: en/git-push.adoc:166
 msgid "All refs under `refs/tags` are pushed, in addition to refspecs explicitly listed on the command line."
-msgstr ""
+msgstr "Alla referenser under `refs/tags` skickas, utöver refspecs som uttryckligen listas på kommandoraden."
 
 #. type: Labeled list
 #: en/git-push.adoc:167
@@ -41159,7 +41165,7 @@ msgstr "`--follow-tags`"
 #. type: Plain text
 #: en/git-push.adoc:174
 msgid "Push all the refs that would be pushed without this option, and also push annotated tags in `refs/tags` that are missing from the remote but are pointing at commit-ish that are reachable from the refs being pushed. This can also be specified with configuration variable `push.followTags`. For more information, see `push.followTags` in linkgit:git-config[1]."
-msgstr ""
+msgstr "Skicka alla referenser som skulle skickas utan det här alternativet, och skicka även kommenterade taggar i `refs/tags` som saknas i fjärren men pekar på inchecknings-aktig och som kan nås från de referenser som skickas. Detta kan också anges med konfigurationsvariabeln `push.followTags`. För mer information, se `push.followTags` i linkgit:git-config[1]."
 
 #. type: Labeled list
 #: en/git-push.adoc:175 en/git-push.adoc:185
@@ -41185,17 +41191,17 @@ msgstr "`--signed=(true|false|if-asked)`"
 #. type: Plain text
 #: en/git-push.adoc:181
 msgid "GPG-sign the push request to update refs on the receiving side, to allow it to be checked by the hooks and/or be logged. Possible values are:"
-msgstr ""
+msgstr "GPG-signerar sänd-begäran för att uppdatera referenser på mottagarsidan, så att den kan kontrolleras av krokarna och/eller loggas. Möjliga värden är:"
 
 #. type: Plain text
 #: en/git-push.adoc:184
 msgid "no signing will be attempted."
-msgstr ""
+msgstr "inget försök till signering kommer att göras."
 
 #. type: Plain text
 #: en/git-push.adoc:187
 msgid "the push will fail if the server does not support signed pushes."
-msgstr ""
+msgstr "Push-funktionen kommer att misslyckas om servern inte stöder signerade push-meddelanden."
 
 #. type: Labeled list
 #: en/git-push.adoc:187
@@ -41207,7 +41213,7 @@ msgstr "`if-asked`"
 #. type: Plain text
 #: en/git-push.adoc:191
 msgid "sign if and only if the server supports signed pushes. The push will also fail if the actual call to `gpg --sign` fails. See linkgit:git-receive-pack[1] for the details on the receiving end."
-msgstr ""
+msgstr "signera om och endast om servern stöder signerade push-kommandon. Push-kommandot kommer också att misslyckas om det faktiska anropet till `gpg --sign` misslyckas. Se linkgit:git-receive-pack[1] för detaljer om mottagarsidan."
 
 #. type: Labeled list
 #: en/git-push.adoc:193
@@ -41219,18 +41225,18 @@ msgstr "`--no-atomic`"
 #. type: Plain text
 #: en/git-push.adoc:197
 msgid "Use an atomic transaction on the remote side if available. Either all refs are updated, or on error, no refs are updated. If the server does not support atomic pushes the push will fail."
-msgstr ""
+msgstr "Använd en atomär transaktion på fjärrsidan om sådan finns. Antingen uppdateras alla referenser, eller vid fel uppdateras inga referenser. Om servern inte stöder atomära push-transaktioner kommer push-transaktionen att misslyckas."
 
 #. type: Labeled list
 #: en/git-push.adoc:199
 #, no-wrap
 msgid "`--push-option=<option>`"
-msgstr ""
+msgstr "`--push-option=<alternativ>`"
 
 #. type: Plain text
 #: en/git-push.adoc:209
 msgid "Transmit the given string to the server, which passes them to the pre-receive as well as the post-receive hook. The given string must not contain a _NUL_ or _LF_ character. When multiple `--push-option=<option>` are given, they are all sent to the other side in the order listed on the command line. When no `--push-option=<option>` is given from the command line, the values of configuration variable `push.pushOption` are used instead."
-msgstr ""
+msgstr "Skicka den givna strängen till servern, som skickar dem till både pre-receive- och post-receive-kroken. Den givna strängen får inte innehålla tecknet _NUL_ eller _LF_. När flera `--push-option=<alternativ>` anges skickas de alla till den andra sidan i den ordning som anges på kommandoraden. När ingen `--push-option=<alternativ>` anges från kommandoraden används värdena för konfigurationsvariabeln `push.pushOption` istället."
 
 #. type: Labeled list
 #: en/git-push.adoc:210
@@ -41246,8 +41252,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-push.adoc:216
+#, fuzzy
 msgid "Path to the 'git-receive-pack' program on the remote end. Sometimes useful when pushing to a remote repository over ssh, and you do not have the program in a directory on the default `$PATH`."
-msgstr ""
+msgstr "Sökväg till programmet 'git-receive-pack' på fjärrsidan. Ibland användbart vid push-överföring till ett fjärrarkiv via ssh, och du inte har programmet i en katalog på standardkatalogen `$PATH`."
 
 #. type: Labeled list
 #: en/git-push.adoc:217
@@ -41267,126 +41274,132 @@ msgstr "`--no-force-with-lease`"
 #: en/git-push.adoc:219
 #, no-wrap
 msgid "`--force-with-lease=<refname>`"
-msgstr ""
+msgstr "`--force-with-lease=<refnamn>`"
 
 #. type: Labeled list
 #: en/git-push.adoc:220
 #, no-wrap
 msgid "`--force-with-lease=<refname>:<expect>`"
-msgstr ""
+msgstr "`--force-with-lease=<refnamn>:<förväntat>`"
 
 #. type: Plain text
 #: en/git-push.adoc:223
 msgid "Usually, `git push` refuses to update a remote ref that is not an ancestor of the local ref used to overwrite it."
-msgstr ""
+msgstr "Vanligtvis vägrar `git push` att uppdatera en fjärrreferens som inte är en förfader till den lokala referensen som används för att skriva över den."
 
 #. type: Plain text
 #: en/git-push.adoc:226
 msgid "This option overrides this restriction if the current value of the remote ref is the expected value. `git push` fails otherwise."
-msgstr ""
+msgstr "Det här alternativet åsidosätter denna begränsning om det aktuella värdet för fjärrreferensen är det förväntade värdet. `git push` misslyckas annars."
 
 #. type: Plain text
 #: en/git-push.adoc:233
 msgid "Imagine that you have to rebase what you have already published. You will have to bypass the \"must fast-forward\" rule in order to replace the history you originally published with the rebased history. If somebody else built on top of your original history while you are rebasing, the tip of the branch at the remote may advance with their commit, and blindly pushing with `--force` will lose their work."
-msgstr ""
+msgstr "Tänk dig att du måste återanvända det du redan har publicerat. Du måste kringgå regeln \"måste spola framåt\" för att ersätta den historik du ursprungligen publicerade med den återanvända historiken. Om någon annan byggde ovanpå din ursprungliga historik medan du återanvänder den, kan toppen av grenen på fjärrkontrollen gå vidare med sin incheckning, och att blint trycka på `--force` kommer att förlora sitt arbete."
 
 #. type: Plain text
 #: en/git-push.adoc:240
 msgid "This option allows you to say that you expect the history you are updating is what you rebased and want to replace. If the remote ref still points at the commit you specified, you can be sure that no other people did anything to the ref. It is like taking a \"lease\" on the ref without explicitly locking it, and the remote ref is updated only if the \"lease\" is still valid."
-msgstr ""
+msgstr "Det här alternativet låter dig ange att du förväntar dig att historiken du uppdaterar är den du ombaserade och vill ersätta. Om fjärrreferensen fortfarande pekar på den incheckning du angav, kan du vara säker på att inga andra personer gjorde något med referensen. Det är som att ta ett \"leaseavtal\" på referensen utan att explicit låsa den, och fjärrreferensen uppdateras bara om \"leaseavtalet\" fortfarande är giltigt."
 
 #. type: Plain text
 #: en/git-push.adoc:245
 msgid "`--force-with-lease` alone, without specifying the details, will protect all remote refs that are going to be updated by requiring their current value to be the same as the remote-tracking branch we have for them."
-msgstr ""
+msgstr "Enbart `--force-with-lease`, utan att specificera detaljerna, kommer att skydda alla fjärrreferenser som ska uppdateras genom att kräva att deras nuvarande värde är detsamma som den fjärrspårningsgren vi har för dem."
 
 #. type: Plain text
 #: en/git-push.adoc:250
 msgid "`--force-with-lease=<refname>`, without specifying the expected value, will protect _<refname>_ (alone), if it is going to be updated, by requiring its current value to be the same as the remote-tracking branch we have for it."
-msgstr ""
+msgstr "Enbart `--force-with-lease`, utan att specificera detaljerna, kommer att skydda alla fjärrreferenser som ska uppdateras, genom att kräva att deras nuvarande värde är detsamma som den fjärrspårningsgren vi har för dem."
 
 #. type: Plain text
 #: en/git-push.adoc:258
 msgid "`--force-with-lease=<refname>:<expect>` will protect _<refname>_ (alone), if it is going to be updated, by requiring its current value to be the same as the specified value _<expect>_ (which is allowed to be different from the remote-tracking branch we have for the refname, or we do not even have to have such a remote-tracking branch when this form is used). If _<expect>_ is the empty string, then the named ref must not already exist."
-msgstr ""
+msgstr "`--force-with-lease=<refnamn>:<förväntat>` skyddar _<refnamn>_ (ensamt), om den ska uppdateras, genom att kräva att dess nuvarande värde är detsamma som det angivna värdet _<förväntat>_ (vilket tillåts skilja sig från den fjärrspårningsgren vi har för refnamen, annars behöver vi inte ens ha en sådan fjärrspårningsgren när denna form används). Om _<förväntat>_ är den tomma strängen, får den namngivna refen inte redan existera."
 
 #. type: Plain text
 #: en/git-push.adoc:263
 msgid "Note that all forms other than `--force-with-lease=<refname>:<expect>` that specifies the expected current value of the ref explicitly are still experimental and their semantics may change as we gain experience with this feature."
-msgstr ""
+msgstr "Observera att alla former förutom `--force-with-lease=<refnamn>:<förväntat>` som explicit anger det förväntade aktuella värdet för referensen fortfarande är experimentella och deras semantik kan komma att ändras allt eftersom vi får erfarenhet av den här funktionen."
 
 #. type: Plain text
 #: en/git-push.adoc:266
 msgid "`--no-force-with-lease` will cancel all the previous `--force-with-lease` on the command line."
-msgstr ""
+msgstr "`--no-force-with-lease` kommer att upphäva alla tidigare `--force-with-lease` på kommandoraden."
 
 #. type: Plain text
 #: en/git-push.adoc:272
 msgid "A general note on safety: supplying this option without an expected value, i.e. as `--force-with-lease` or `--force-with-lease=<refname>` interacts very badly with anything that implicitly runs `git fetch` on the remote to be pushed to in the background, e.g. `git fetch origin` on your repository in a cronjob."
-msgstr ""
+msgstr "En allmän anmärkning om säkerhet: att ange detta alternativ utan ett förväntat värde, dvs. som `--force-with-lease` eller `--force-with-lease=<refnamn>`, interagerar mycket dåligt med allt som implicit kör `git fetch` på fjärren för att skickas till i bakgrunden, t.ex. `git fetch origin` på ditt repo i ett cronjob."
 
 #. type: Plain text
 #: en/git-push.adoc:279
 msgid "The protection it offers over `--force` is ensuring that subsequent changes your work wasn't based on aren't clobbered, but this is trivially defeated if some background process is updating refs in the background. We don't have anything except the remote tracking info to go by as a heuristic for refs you're expected to have seen & are willing to clobber."
-msgstr ""
+msgstr "Skyddet den erbjuder jämfört med `--force` säkerställer att efterföljande ändringar som ditt arbete inte baserades på inte förstörs, men detta är trivialt om någon bakgrundsprocess uppdaterar referenser i bakgrunden. Vi har inget annat än fjärrspårningsinformation att använda som en heuristik för referenser som du förväntas ha sett och är villig att förstöra."
 
 #. type: Plain text
 #: en/git-push.adoc:283
 msgid "If your editor or some other system is running `git fetch` in the background for you a way to mitigate this is to simply set up another remote:"
-msgstr ""
+msgstr "Om din editor eller något annat system kör `git fetch` i bakgrunden är ett sätt att mildra detta att helt enkelt konfigurera en annan fjärr:"
 
 #. type: delimited block -
 #: en/git-push.adoc:287
 #, no-wrap
 msgid "git remote add origin-push $(git config remote.origin.url)\ngit fetch origin-push\n"
 msgstr ""
+"git remote add origin-push $(git config remote.origin.url)\n"
+"git fetch origin-push\n"
 
 #. type: Plain text
 #: en/git-push.adoc:291
 msgid "Now when the background process runs `git fetch origin` the references on `origin-push` won't be updated, and thus commands like:"
-msgstr ""
+msgstr "När bakgrundsprocessen kör `git fetch origin` kommer referenserna på `origin-push` inte att uppdateras, och därmed kommandon som:"
 
 #. type: delimited block -
 #: en/git-push.adoc:294
 #, no-wrap
 msgid "git push --force-with-lease origin-push\n"
-msgstr ""
+msgstr "git push --force-with-lease origin-push\n"
 
 #. type: Plain text
 #: en/git-push.adoc:300
 msgid "Will fail unless you manually run `git fetch origin-push`. This method is of course entirely defeated by something that runs `git fetch --all`, in that case you'd need to either disable it or do something more tedious like:"
-msgstr ""
+msgstr "Kommer att misslyckas om du inte kör `git fetch origin-push` manuellt. Den här metoden är naturligtvis helt omintetgjord av något som kör `git fetch --all`, i så fall skulle du behöva antingen inaktivera den eller göra något mer mödosamt som:"
 
 #. type: delimited block -
 #: en/git-push.adoc:306
 #, no-wrap
 msgid "git fetch              # update 'master' from remote\ngit tag base master    # mark our base point\ngit rebase -i master   # rewrite some commits\ngit push --force-with-lease=master:base master:master\n"
 msgstr ""
+"git fetch              # uppdatera 'master' från fjärr\n"
+"git tag base master    # markera vår baspunktt\n"
+"git rebase -i master   # skriv om några incheckningar\n"
+"git push --force-with-lease=master:base master:master\n"
 
 #. type: Plain text
 #: en/git-push.adoc:313
 msgid "I.e. create a `base` tag for versions of the upstream code that you've seen and are willing to overwrite, then rewrite history, and finally force push changes to `master` if the remote version is still at `base`, regardless of what your local `remotes/origin/master` has been updated to in the background."
-msgstr ""
+msgstr "Dvs. skapa en `base`-tagg för versioner av uppströmskoden som du har sett och är villig att skriva över, skriv sedan om historiken, och tvinga slutligen fram sänd-ändringar till `master` om fjärrversionen fortfarande är på `base`, oavsett vad din lokala `remotes/origin/master` har uppdaterats till i bakgrunden."
 
 #. type: Plain text
 #: en/git-push.adoc:321
 msgid "Alternatively, specifying `--force-if-includes` as an ancillary option along with `--force-with-lease[=<refname>]` (i.e., without saying what exact commit the ref on the remote side must be pointing at, or which refs on the remote side are being protected) at the time of \"push\" will verify if updates from the remote-tracking refs that may have been implicitly updated in the background are integrated locally before allowing a forced update."
-msgstr ""
+msgstr "Alternativt kan man ange `--force-if-includes` som ett tilläggsalternativ tillsammans med `--force-with-lease[=<refnamn>]` (dvs. utan att ange exakt vilken incheckning referensen på fjärrsidan måste peka på, eller vilka referenser på fjärrsidan som skyddas) vid tidpunkten för \"sändningen\" för att verifiera om uppdateringar från fjärrspårningsreferenserna som kan ha uppdaterats implicit i bakgrunden integreras lokalt innan en tvångsuppdatering tillåts."
 
 #. type: Plain text
 #: en/git-push.adoc:326
 msgid "Usually, `git push` will refuse to update a branch that is not an ancestor of the commit being pushed."
-msgstr ""
+msgstr "Vanligtvis vägrar `git push` att uppdatera en branch som inte är en förfader till den incheckning som sändas."
 
 #. type: Plain text
 #: en/git-push.adoc:330
 msgid "This flag disables that check, the other safety checks in PUSH RULES below, and the checks in `--force-with-lease`. It can cause the remote repository to lose commits; use it with care."
-msgstr ""
+msgstr "Denna flagga inaktiverar den kontrollen, de andra säkerhetskontrollerna i SÄND REGLER nedan och kontrollerna i `--force-with-lease`. Det kan orsaka att fjärrarkivet förlorar incheckningar; använd den med försiktighet."
 
 #. type: Plain text
 #: en/git-push.adoc:339
 msgid "Note that `--force` applies to all the refs that are pushed, hence using it with `push.default` set to `matching` or with multiple push destinations configured with `remote.<name>.push` may overwrite refs other than the current branch (including local refs that are strictly behind their remote counterpart). To force a push to only one branch, use a `+` in front of the refspec to push (e.g `git push origin +master` to force a push to the `master` branch). See the `<refspec>...` section above for details."
-msgstr ""
+msgstr "Observera att `--force` gäller för alla referenser som skickas, därför kan användning med `push.default` inställd på `matching` eller med flera sänd-destinationer konfigurerade med `remote.<namn>.push` skriva över andra referenser än den aktuella grenen (inklusive lokala referenser som ligger strikt efter deras fjärrmotsvarighet). För att tvinga fram en sändning till endast en gren, använd ett `+` framför refspec:en för att skicka (t.ex. `git push origin +master` för att tvinga fram en sända till grenen `master`). Se avsnittet `<refspec>...` ovan för mer information."
 
 #. type: Labeled list
 #: en/git-push.adoc:340
@@ -41405,38 +41418,38 @@ msgstr "`--no-force-if-includes`"
 #. type: Plain text
 #: en/git-push.adoc:344
 msgid "Force an update only if the tip of the remote-tracking ref has been integrated locally."
-msgstr ""
+msgstr "Tvinga fram en uppdatering endast om spetsen på fjärrspårningsreferensen har integrerats lokalt."
 
 #. type: Plain text
 #: en/git-push.adoc:350
 msgid "This option enables a check that verifies if the tip of the remote-tracking ref is reachable from one of the \"reflog\" entries of the local branch based in it for a rewrite. The check ensures that any updates from the remote have been incorporated locally by rejecting the forced update if that is not the case."
-msgstr ""
+msgstr "Det här alternativet aktiverar en kontroll som verifierar om spetsen för fjärrspårningsreferensen är nåbar från en av \"reflog\"-posterna för den lokala grenen som är baserad i den för en omskrivning. Kontrollen säkerställer att eventuella uppdateringar från fjärren har införlivats lokalt genom att avvisa den påtvingade uppdateringen om så inte är fallet."
 
 #. type: Plain text
 #: en/git-push.adoc:354
 msgid "If the option is passed without specifying `--force-with-lease`, or specified along with `--force-with-lease=<refname>:<expect>`, it is a \"no-op\"."
-msgstr ""
+msgstr "Om alternativet skickas utan att ange `--force-with-lease`, eller anges tillsammans med `--force-with-lease=<refnamn>:<förvätat>`, är det en \"no-op\"."
 
 #. type: Plain text
 #: en/git-push.adoc:356
 msgid "Specifying `--no-force-if-includes` disables this behavior."
-msgstr ""
+msgstr "Om du anger `--no-force-if-includes` inaktiveras detta beteende."
 
 #. type: Labeled list
 #: en/git-push.adoc:357
 #, no-wrap
 msgid "`--repo=<repository>`"
-msgstr ""
+msgstr "`--repo=<repo>`"
 
 #. type: Plain text
 #: en/git-push.adoc:360
 msgid "This option is equivalent to the _<repository>_ argument. If both are specified, the command-line argument takes precedence."
-msgstr ""
+msgstr "Det här alternativet motsvarar argumentet _<repo>_. Om båda anges har kommandoradsargumentet företräde."
 
 #. type: Plain text
 #: en/git-push.adoc:367
 msgid "For every branch that is up to date or successfully pushed, add upstream (tracking) reference, used by argument-less linkgit:git-pull[1] and other commands. For more information, see `branch.<name>.merge` in linkgit:git-config[1]."
-msgstr ""
+msgstr "För varje branch som är uppdaterad eller har sänts, lägg till en uppströmsreferens (spårningsreferens), som används av argumentlösa linkgit:git-pull[1] och andra kommandon. För mer information, se `branch.<namn>.merge` i linkgit:git-config[1]."
 
 #. type: Labeled list
 #: en/git-push.adoc:368
@@ -41455,12 +41468,12 @@ msgstr "`--no-thin`"
 #. type: Plain text
 #: en/git-push.adoc:374
 msgid "These options are passed to linkgit:git-send-pack[1]. A thin transfer significantly reduces the amount of sent data when the sender and receiver share many of the same objects in common. The default is `--thin`."
-msgstr ""
+msgstr "Dessa alternativ skickas till linkgit:git-send-pack[1]. En tunn överföring minskar mängden skickad data avsevärt när sändare och mottagare delar många av samma objekt gemensamt. Standardvärdet är `--thin`."
 
 #. type: Plain text
 #: en/git-push.adoc:380
 msgid "Suppress all output, including the listing of updated refs, unless an error occurs. Progress is not reported to the standard error stream."
-msgstr ""
+msgstr "Undertryck all utdata, inklusive listan över uppdaterade referenser, såvida inte ett fel uppstår. Förlopp rapporteras inte till standardfelströmmen."
 
 #. type: Labeled list
 #: en/git-push.adoc:392
@@ -41472,7 +41485,7 @@ msgstr "`--recurse-submodules=(check|on-demand|only|no)`"
 #. type: Plain text
 #: en/git-push.adoc:396
 msgid "May be used to make sure all submodule commits used by the revisions to be pushed are available on a remote-tracking branch. Possible values are:"
-msgstr ""
+msgstr "Kan användas för att säkerställa att alla undermodul-incheckningar som används av de revisioner som ska sänds är tillgängliga på en fjärrspårningsgren. Möjliga värden är:"
 
 #. type: Labeled list
 #: en/git-push.adoc:396
@@ -41484,7 +41497,7 @@ msgstr "`check`"
 #. type: Plain text
 #: en/git-push.adoc:401
 msgid "Git will verify that all submodule commits that changed in the revisions to be pushed are available on at least one remote of the submodule. If any commits are missing the push will be aborted and exit with non-zero status."
-msgstr ""
+msgstr "Git kommer att verifiera att alla undermodul-incheckningar som ändrats i de revisioner som ska sändas är tillgängliga på minst en fjärr till undermodulen. Om några incheckningar saknas kommer sänd-processen att avbrytas och avslutas med status som inte är noll."
 
 #. type: Labeled list
 #: en/git-push.adoc:401
@@ -41496,7 +41509,7 @@ msgstr "`on-demand`"
 #. type: Plain text
 #: en/git-push.adoc:405
 msgid "all submodules that changed in the revisions to be pushed will be pushed. If `on-demand` was not able to push all necessary revisions it will also be aborted and exit with non-zero status."
-msgstr ""
+msgstr "alla undermoduler som ändrats i de revisioner som ska skickas kommer att skickas. Om `on-demand` inte kunde skicka alla nödvändiga revisioner kommer den också att avbrytas och avslutas med status som inte är noll."
 
 #. type: Labeled list
 #: en/git-push.adoc:405
@@ -41508,101 +41521,101 @@ msgstr "`only`"
 #. type: Plain text
 #: en/git-push.adoc:408
 msgid "all submodules will be pushed while the superproject is left unpushed."
-msgstr ""
+msgstr "Alla undermoduler kommer att skickas medan superprojektet lämnas oskickat."
 
 #. type: Plain text
 #: en/git-push.adoc:411
 msgid "override the `push.recurseSubmodules` configuration variable when no submodule recursion is required. Similar to using `--no-recurse-submodules`."
-msgstr ""
+msgstr "åsidosätta konfigurationsvariabeln `push.recurseSubmodules` när ingen rekursion av en undermodul krävs. Liknar det att använda `--no-recurse-submodules`."
 
 #. type: Plain text
 #: en/git-push.adoc:416
 msgid "When using `on-demand` or `only`, if a submodule has a `push.recurseSubmodules=(on-demand|only)` or `submodule.recurse` configuration, further recursion will occur. In this case, `only` is treated as `on-demand`."
-msgstr ""
+msgstr "När `on-demand` eller `only` används, om en undermodul har en `push.recurseSubmodules=(on-demand|only)` eller `submodule.recurse` konfiguration, kommer ytterligare rekursion att ske. I det här fallet behandlas `only` som `on-demand`."
 
 #. type: Plain text
 #: en/git-push.adoc:422
 msgid "Toggle the pre-push hook (see linkgit:githooks[5]). The default is `--verify`, giving the hook a chance to prevent the push. With `--no-verify`, the hook is bypassed completely."
-msgstr ""
+msgstr "Aktivera pre-push-kroken (se linkgit:githooks[5]). Standardinställningen är `--verify`, vilket ger kroken en chans att förhindra sänd-funktionen. Med `--no-verify` kringgås kroken helt."
 
 #. type: Plain text
 #: en/git-push.adoc:439
 msgid "The output of \"git push\" depends on the transport method used; this section describes the output when pushing over the Git protocol (either locally or via ssh)."
-msgstr ""
+msgstr "Utdata från \"git push\" beror på vilken transportmetod som används; det här avsnittet beskriver utdata vid pushing av Git-protokollet (antingen lokalt eller via ssh)."
 
 #. type: Plain text
 #: en/git-push.adoc:442
 msgid "The status of the push is output in tabular form, with each line representing the status of a single ref. Each line is of the form:"
-msgstr ""
+msgstr "Statusen för sänd-funktionen visas i tabellform, där varje rad representerar statusen för en enskild referens. Varje rad har formen:"
 
 #. type: delimited block -
 #: en/git-push.adoc:445
 #, no-wrap
 msgid " <flag> <summary> <from> -> <to> (<reason>)\n"
-msgstr ""
+msgstr " <flagga> <sammanfattning> <från> -> <till> (<orsak>)\n"
 
 #. type: Plain text
 #: en/git-push.adoc:448
 msgid "If `--porcelain` is used, then each line of the output is of the form:"
-msgstr ""
+msgstr "Om `--porcelain` används, så är varje rad i utdata av formen:"
 
 #. type: delimited block -
 #: en/git-push.adoc:451
 #, no-wrap
 msgid " <flag> \\t <from>:<to> \\t <summary> (<reason>)\n"
-msgstr ""
+msgstr " <flagga> \\t <från>:<till> \\t <sammanfattning> (<orsak>)\n"
 
 #. type: Plain text
 #: en/git-push.adoc:455
 msgid "The status of up-to-date refs is shown only if `--porcelain` or `--verbose` option is used."
-msgstr ""
+msgstr "Status för uppdaterade referenser visas endast om alternativet `--porcelain` eller `--verbose` används."
 
 #. type: Labeled list
 #: en/git-push.adoc:456
 #, no-wrap
 msgid "_<flag>_"
-msgstr ""
+msgstr "_<flagga>_"
 
 #. type: Plain text
 #: en/git-push.adoc:459
 msgid "for a successfully pushed fast-forward;"
-msgstr ""
+msgstr "för en framgångsrikt sänt snabbspolning;"
 
 #. type: Plain text
 #: en/git-push.adoc:461
 msgid "for a successfully deleted ref;"
-msgstr ""
+msgstr "för en framgångsrikt borttagen ref;"
 
 #. type: Plain text
 #: en/git-push.adoc:462
 msgid "for a successfully pushed new ref;"
-msgstr ""
+msgstr "för en framgångsrikt sänt ny ref;"
 
 #. type: Plain text
 #: en/git-push.adoc:463
 msgid "for a ref that was rejected or failed to push; and"
-msgstr ""
+msgstr "för en ref som avvisades eller misslyckades med att sändas; och"
 
 #. type: Plain text
 #: en/git-push.adoc:464
 msgid "for a ref that was up to date and did not need pushing."
-msgstr ""
+msgstr "för en ref som var aktuell och inte behövde sändas."
 
 #. type: Labeled list
 #: en/git-push.adoc:465
 #, no-wrap
 msgid "_<summary>_"
-msgstr ""
+msgstr "_<sammanfattning>_"
 
 #. type: Plain text
 #: en/git-push.adoc:470
 msgid "For a successfully pushed ref, the summary shows the old and new values of the ref in a form suitable for using as an argument to `git log` (this is `<old>..<new>` in most cases, and `<old>...<new>` for forced non-fast-forward updates)."
-msgstr ""
+msgstr "För en lyckat sänt referens visar sammanfattningen de gamla och nya värdena för referensen i en form som är lämplig att använda som ett argument till `git log` (detta är `<gamla>..<nya>` i de flesta fall, och `<gamla>...<nya>` för tvingade uppdateringar som inte snabbspolas framåt)."
 
 #. type: Plain text
 #: en/git-push.adoc:472
 msgid "For a failed update, more details are given:"
-msgstr ""
+msgstr "För en misslyckad uppdatering ges mer information:"
 
 #. type: Labeled list
 #: en/git-push.adoc:474
@@ -41613,39 +41626,39 @@ msgstr "rejected"
 #. type: Plain text
 #: en/git-push.adoc:477
 msgid "Git did not try to send the ref at all, typically because it is not a fast-forward and you did not force the update."
-msgstr ""
+msgstr "Git försökte inte skicka referensen alls, vanligtvis för att det inte är en snabbspolning framåt och du inte tvingade fram uppdateringen."
 
 #. type: Labeled list
 #: en/git-push.adoc:478
 #, no-wrap
 msgid "remote rejected"
-msgstr ""
+msgstr "fjärren avvisad"
 
 #. type: Plain text
 #: en/git-push.adoc:486
 msgid "The remote end refused the update. Usually caused by a hook on the remote side, or because the remote repository has one of the following safety options in effect: `receive.denyCurrentBranch` (for pushes to the checked out branch), `receive.denyNonFastForwards` (for forced non-fast-forward updates), `receive.denyDeletes` or `receive.denyDeleteCurrent`. See linkgit:git-config[1]."
-msgstr ""
+msgstr "Fjärrsidan vägrade uppdateringen. Vanligtvis orsakat av en krok på fjärrsidan, eller att fjärr-repot har ett av följande säkerhetsalternativ aktiverat: `receive.denyCurrentBranch` (för sänd-besked till den utcheckade grenen), `receive.denyNonFastForwards` (för tvingade uppdateringar som inte snabbspolas framåt), `receive.denyDeletes` eller `receive.denyDeleteCurrent`. Se linkgit:git-config[1]."
 
 #. type: Labeled list
 #: en/git-push.adoc:487
 #, no-wrap
 msgid "remote failure"
-msgstr ""
+msgstr "fjärrfel"
 
 #. type: Plain text
 #: en/git-push.adoc:491
 msgid "The remote end did not report the successful update of the ref, perhaps because of a temporary error on the remote side, a break in the network connection, or other transient error."
-msgstr ""
+msgstr "Fjärrsidan rapporterade inte att uppdateringen av referensen lyckades, kanske på grund av ett tillfälligt fel på fjärrsidan, ett avbrott i nätverksanslutningen eller annat övergående fel."
 
 #. type: Plain text
 #: en/git-push.adoc:497
 msgid "The name of the local ref being pushed, minus its `refs/<type>/` prefix. In the case of deletion, the name of the local ref is omitted."
-msgstr ""
+msgstr "Namnet på den lokala referens som skickas, minus dess prefix `refs/<typ>/`. Vid borttagning utelämnas namnet på den lokala referensen."
 
 #. type: Plain text
 #: en/git-push.adoc:501
 msgid "The name of the remote ref being updated, minus its `refs/<type>/` prefix."
-msgstr ""
+msgstr "Namnet på den fjärrreferens som uppdateras, minus dess prefix `refs/<typ>/`."
 
 #. type: Plain text
 #: en/git-push.adoc:506
@@ -41656,37 +41669,37 @@ msgstr "En människoläsbar förklaring. Vid framgångsrikt skickad ref, behövs
 #: en/git-push.adoc:508
 #, no-wrap
 msgid "PUSH RULES"
-msgstr ""
+msgstr "SÄND REGLER"
 
 #. type: Plain text
 #: en/git-push.adoc:512
 msgid "As a safety feature, the `git push` command only allows certain kinds of updates to prevent you from accidentally losing data on the remote."
-msgstr ""
+msgstr "Som en säkerhetsfunktion tillåter kommandot `git push` endast vissa typer av uppdateringar för att förhindra att du av misstag förlorar data på fjärren."
 
 #. type: Plain text
 #: en/git-push.adoc:518
 msgid "Because branches and tags are intended to be used differently, the safety rules for pushing to a branch are different from the rules for pushing to a tag. In the following rules \"update\" means any modifications except deletions and creations. Deletions and creations are always allowed, except when forbidden by configuration or hooks."
-msgstr ""
+msgstr "Eftersom grenar och taggar är avsedda att användas på olika sätt, skiljer sig säkerhetsreglerna för att pusha till en gren från reglerna för att pusha till en tagg. I följande regler betyder \"uppdatering\" alla modifieringar förutom borttagningar och skapande. Borttagningar och skapande är alltid tillåtna, förutom när det är förbjudet enligt konfiguration eller krokar."
 
 #. type: Plain text
 #: en/git-push.adoc:522
 msgid "If the push destination is a **branch** (`refs/heads/*`): only fast-forward updates are allowed, which means the destination must be an ancestor of the source commit. The source must be a commit."
-msgstr ""
+msgstr "Om sänd-destinationen är en **branch** (`refs/heads/*`): är endast snabbspolningsuppdateringar tillåtna, vilket innebär att destinationen måste vara en förfader till käll-incheckningen. Källan måste vara en incheckningen."
 
 #. type: Plain text
 #: en/git-push.adoc:524
 msgid "If the push destination is a **tag** (`refs/tags/*`): all updates will be rejected. The source can be any object."
-msgstr ""
+msgstr "Om sänd-destinationen är en **tagg** (`refs/tags/*`): kommer alla uppdateringar att avvisas. Källan kan vara vilket objekt som helst."
 
 #. type: Plain text
 #: en/git-push.adoc:525
 msgid "If the push destination is not a branch or tag:"
-msgstr ""
+msgstr "Om sänd-destinationen inte är en gren eller tagg:"
 
 #. type: Plain text
 #: en/git-push.adoc:526
 msgid "If the source is a tree or blob object, any updates will be rejected"
-msgstr ""
+msgstr "Om källan är ett träd- eller blobobjekt kommer alla uppdateringar att avvisas"
 
 #. type: Plain text
 #: en/git-push.adoc:534
@@ -41696,258 +41709,273 @@ msgstr "Om källan är ett tagg- eller inchecknings-objekt är alla snabbspolnin
 #. type: Plain text
 #: en/git-push.adoc:540
 msgid "You can override these rules by passing `--force` or by adding the optional leading `+` to a refspec. The only exceptions are that no amount of forcing will make a branch accept a non-commit object, and forcing won't make the remote repository accept a push that it's configured to deny."
-msgstr ""
+msgstr "Du kan åsidosätta dessa regler genom att skicka `--force` eller genom att lägga till det valfria inledande `+` till en refspec. De enda undantagen är att ingen mängd tvång kommer att få en gren att acceptera ett icke-inchecknings-objekt, och tvång kommer inte att få fjärra-repot att acceptera en sänding som det är konfigurerat att neka."
 
 #. type: Plain text
 #: en/git-push.adoc:545
 msgid "Hooks and configuration can also override or amend these rules, see e.g. `receive.denyNonFastForwards` and `receive.denyDeletes` in linkgit:git-config[1] and `pre-receive` and `update` in linkgit:githooks[5]."
-msgstr ""
+msgstr "Krokar och konfiguration kan också åsidosätta eller ändra dessa regler, se t.ex. `receive.denyNonFastForwards` och `receive.denyDeletes` i linkgit:git-config[1] och `pre-receive` och `update` i linkgit:githooks[5]."
 
 #. type: Title -
 #: en/git-push.adoc:547
 #, no-wrap
 msgid "NOTE ABOUT FAST-FORWARDS"
-msgstr ""
+msgstr "NOTERING OM SNABBSPOLNING FRAMÅT"
 
 #. type: Plain text
 #: en/git-push.adoc:552
 msgid "When an update changes a branch (or more in general, a ref) that used to point at commit A to point at another commit B, it is called a fast-forward update if and only if B is a descendant of A."
-msgstr ""
+msgstr "När en uppdatering ändrar en gren (eller mer generellt, en referens) som brukade peka på incheckning A till att peka på en annan incheckning B, kallas det en snabbuppdatering om och endast om B är en ättling incheckning A."
 
 #. type: Plain text
 #: en/git-push.adoc:556
 msgid "In a fast-forward update from A to B, the set of commits that the original commit A built on top of is a subset of the commits the new commit B builds on top of. Hence, it does not lose any history."
-msgstr ""
+msgstr "I en snabbspolning från A till B är uppsättningen incheckningar som den ursprungliga incheckning A byggde ovanpå en delmängd av de incheckningar som den nya incheckning B bygger ovanpå. Därför förlorar den ingen historik."
 
 #. type: Plain text
 #: en/git-push.adoc:561
 msgid "In contrast, a non-fast-forward update will lose history. For example, suppose you and somebody else started at the same commit X, and you built a history leading to commit B while the other person built a history leading to commit A. The history looks like this:"
-msgstr ""
+msgstr "Däremot, kommer en uppdatering som inte spolas framåt att förlora historik. Anta till exempel, att du och någon annan började vid samma incheckning X, och ni byggde en historik som ledde till incheckning B medan den andra personen byggde en historik som ledde till incheckning A. Historiken ser ut så här:"
 
 #. type: delimited block -
 #: en/git-push.adoc:567
 #, no-wrap
 msgid "      B\n     /\n ---X---A\n"
 msgstr ""
+"      B\n"
+"     /\n"
+" ---X---A\n"
 
 #. type: Plain text
 #: en/git-push.adoc:573
 msgid "Further suppose that the other person already pushed changes leading to A back to the original repository from which you two obtained the original commit X."
-msgstr ""
+msgstr "Anta vidare att den andra personen redan sände ändringar som leder till A tillbaka till det ursprungliga repot från vilket ni två hämtade den ursprungliga incheckningen X."
 
 #. type: Plain text
 #: en/git-push.adoc:576
 msgid "The push done by the other person updated the branch that used to point at commit X to point at commit A. It is a fast-forward."
-msgstr ""
+msgstr "Sändningen som den andra personen gjorde uppdaterade grenen som brukade peka på commit X till att peka på commit A. Det är en snabbspolning framåt."
 
 #. type: Plain text
 #: en/git-push.adoc:581
 msgid "But if you try to push, you will attempt to update the branch (that now points at A) with commit B. This does _not_ fast-forward. If you did so, the changes introduced by commit A will be lost, because everybody will now start building on top of B."
-msgstr ""
+msgstr "Men om du försöker sända (\"pusha\"), kommer du att försöka uppdatera grenen (som nu pekar på A) med commit B. Detta _spola_ inte framåt. Om du gjorde det kommer ändringarna som introducerades av incheckning A att gå förlorade, eftersom alla nu kommer att börja bygga ovanpå B."
 
 #. type: Plain text
 #: en/git-push.adoc:584
 msgid "The command by default does not allow an update that is not a fast-forward to prevent such loss of history."
-msgstr ""
+msgstr "Kommandot tillåter som standard inte en uppdatering som inte är en snabbspolning framåt för att förhindra sådan historikförlust."
 
 #. type: Plain text
 #: en/git-push.adoc:589
 msgid "If you do not want to lose your work (history from X to B) or the work by the other person (history from X to A), you would need to first fetch the history from the repository, create a history that contains changes done by both parties, and push the result back."
-msgstr ""
+msgstr "Om du inte vill förlora ditt arbete (historik från X till B) eller arbetet av den andra personen (historik från X till A), måste du först hämta historiken från repot, skapa en historik som innehåller ändringar gjorda av båda parter och sedan spara resultatet."
 
 #. type: Plain text
 #: en/git-push.adoc:593
 msgid "You can perform \"git pull\", resolve potential conflicts, and \"git push\" the result. A \"git pull\" will create a merge commit C between commits A and B."
-msgstr ""
+msgstr "Du kan utföra \"git pull\", lösa potentiella konflikter och \"git push\" resultatet. En \"git pull\" skapar en sammanslagins-incheckning C mellan incheckningar A och B."
 
 #. type: delimited block -
 #: en/git-push.adoc:599
 #, no-wrap
 msgid "      B---C\n     /   /\n ---X---A\n"
 msgstr ""
+"      B---C\n"
+"     /   /\n"
+" ---X---A\n"
 
 #. type: Plain text
 #: en/git-push.adoc:604
 msgid "Updating A with the resulting merge commit will fast-forward and your push will be accepted."
-msgstr ""
+msgstr "Att uppdatera A med den resulterande sammanslagings-incheckning kommer att snabbspola framåt och din sändingen kommer att accepteras."
 
 #. type: Plain text
 #: en/git-push.adoc:609
 msgid "Alternatively, you can rebase your change between X and B on top of A, with `git pull --rebase`, and push the result back. The rebase will create a new commit D that builds the change between X and B on top of A."
-msgstr ""
+msgstr "Alternativt kan du återanvända din ändring mellan X och B ovanpå A, med `git pull --rebase`, och sända resultatet tillbaka. Ombasering skapar en ny incheckning D som bygger ändringen mellan X och B ovanpå A."
 
 #. type: delimited block -
 #: en/git-push.adoc:615
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "      B   D\n     /   /\n ---X---A\n"
 msgstr ""
+"      B   D\n"
+"     /   /\n"
+" ---X---A\n"
 
 #. type: Plain text
 #: en/git-push.adoc:620
 msgid "Again, updating A with this commit will fast-forward and your push will be accepted."
-msgstr ""
+msgstr "Återigen, om du uppdaterar A med denna incheckning kommer det att snabbspola framåt och din sändning kommer att accepteras."
 
 #. type: Plain text
 #: en/git-push.adoc:631
 msgid "There is another common situation where you may encounter non-fast-forward rejection when you try to push, and it is possible even when you are pushing into a repository nobody else pushes into. After you push commit A yourself (in the first picture in this section), replace it with `git commit --amend` to produce commit B, and you try to push it out, because forgot that you have pushed A out already. In such a case, and only if you are certain that nobody in the meantime fetched your earlier commit A (and started building on top of it), you can run `git push --force` to overwrite it. In other words, `git push --force` is a method reserved for a case where you do mean to lose history."
-msgstr ""
+msgstr "Det finns en annan vanlig situation där du kan stöta på avslag utan snabbspolning framåt när du försöker sända, och det är möjligt även när du sänder in i ett repo som ingen annan sänder i. Efter att du själv sänder incheckning A (i den första bilden i det här avsnittet), ersätt det med `git commit --amend` för att producera commit B, och du försöker sända ut det, eftersom du glömt att du redan har sändt A. I ett sådant fall, och bara om du är säker på att ingen under tiden hämtade din tidigare incheckning A (och började bygga ovanpå den), kan du köra `git push --force` för att skriva över den. Med andra ord, `git push --force` är en metod reserverad för ett fall där du avser att förlora historik."
 
 #. type: Labeled list
 #: en/git-push.adoc:636
 #, no-wrap
 msgid "`git push`"
-msgstr ""
+msgstr "`git push`"
 
 #. type: Plain text
 #: en/git-push.adoc:640
 msgid "Works like `git push <remote>`, where <remote> is the current branch's remote (or `origin`, if no remote is configured for the current branch)."
-msgstr ""
+msgstr "Fungerar som `git push <fjärr>`, där <fjärr> är den aktuella grenens fjärr(eller `origin`, om ingen fjärr är konfigurerad för den aktuella grenen)."
 
 #. type: Labeled list
 #: en/git-push.adoc:641
 #, no-wrap
 msgid "`git push origin`"
-msgstr ""
+msgstr "`git push origin`"
 
 #. type: Plain text
 #: en/git-push.adoc:646
 msgid "Without additional configuration, pushes the current branch to the configured upstream (`branch.<name>.merge` configuration variable) if it has the same name as the current branch, and errors out without pushing otherwise."
-msgstr ""
+msgstr "Utan ytterligare konfiguration, skickas den aktuella grenen till den konfigurerade uppströmsen (konfigurationsvariabeln `branch.<namn>.merge`) om den har samma namn som den aktuella grenen, och felmeddelanden utfärdas utan att skicka något annat."
 
 #. type: Plain text
 #: en/git-push.adoc:650
 msgid "The default behavior of this command when no _<refspec>_ is given can be configured by setting the `push` option of the remote, or the `push.default` configuration variable."
-msgstr ""
+msgstr "Standardbeteendet för det här kommandot när ingen _<refspec>_ anges kan konfigureras genom att ställa in alternativet `push` på fjärrkontrollen eller konfigurationsvariabeln `push.default`."
 
 #. type: Plain text
 #: en/git-push.adoc:655
 msgid "For example, to default to pushing only the current branch to `origin` use `git config remote.origin.push HEAD`. Any valid _<refspec>_ (like the ones in the examples below) can be configured as the default for `git push origin`."
-msgstr ""
+msgstr "Till exempel, för att som standard bara pusha den aktuella grenen till `origin`, använd `git config remote.origin.push HEAD`. Vilken giltig _<refspec>_ som helst (som de i exemplen nedan) kan konfigureras som standard för `git push origin`."
 
 #. type: Labeled list
 #: en/git-push.adoc:656
 #, no-wrap
 msgid "`git push origin :`"
-msgstr ""
+msgstr "`git push origin :`"
 
 #. type: Plain text
 #: en/git-push.adoc:660
 msgid "Push \"matching\" branches to `origin`. See _<refspec>_ in the <<OPTIONS,OPTIONS>> section above for a description of \"matching\" branches."
-msgstr ""
+msgstr "Skjut \"matchande\" grenar till `origin`. Se _<refspec>_ i avsnittet <<OPTIONS,FLAGGOR>> ovan för en beskrivning av \"matchande\" grenar."
 
 #. type: Labeled list
 #: en/git-push.adoc:661
 #, no-wrap
 msgid "`git push origin master`"
-msgstr ""
+msgstr "`git push origin master`"
 
 #. type: Plain text
 #: en/git-push.adoc:667
 msgid "Find a ref that matches `master` in the source repository (most likely, it would find `refs/heads/master`), and update the same ref (e.g. `refs/heads/master`) in `origin` repository with it. If `master` did not exist remotely, it would be created."
-msgstr ""
+msgstr "Hitta en referens som matchar `master` i käll-repot (troligtvis skulle den hitta `refs/heads/master`), och uppdatera samma referens (t.ex. `refs/heads/master`) i `origin`-förrådet med den. Om `master` inte existerade på distans skulle den skapas."
 
 #. type: Labeled list
 #: en/git-push.adoc:668
 #, no-wrap
 msgid "`git push origin HEAD`"
-msgstr ""
+msgstr "`git push origin HEAD`"
 
 #. type: Plain text
 #: en/git-push.adoc:671
 msgid "A handy way to push the current branch to the same name on the remote."
-msgstr ""
+msgstr "Ett praktiskt sätt att sända den aktuella grenen till samma namn på fjärren."
 
 #. type: Labeled list
 #: en/git-push.adoc:672
 #, no-wrap
 msgid "`git push mothership master:satellite/master dev:satellite/dev`"
-msgstr ""
+msgstr "`git push moderskepp master:satellit/master dev:satellit/dev`"
 
 #. type: Plain text
 #: en/git-push.adoc:677
 msgid "Use the source ref that matches `master` (e.g. `refs/heads/master`) to update the ref that matches `satellite/master` (most probably `refs/remotes/satellite/master`) in the `mothership` repository; do the same for `dev` and `satellite/dev`."
-msgstr ""
+msgstr "Använd källreferensen som matchar `master` (t.ex. `refs/heads/master`) för att uppdatera referensen som matchar `satellit/master` (troligtvis `refs/remotes/satellit/master`) i `moderskepp`-repot; gör detsamma för `dev` och `satellite/dev`."
 
 #. type: Plain text
 #: en/git-push.adoc:680
 msgid "See the section describing `<refspec>...` above for a discussion of the matching semantics."
-msgstr ""
+msgstr "Se avsnittet som beskriver `<refspec>...` ovan för en diskussion om matchande semantik."
 
 #. type: Plain text
 #: en/git-push.adoc:687
 msgid "This is to emulate `git fetch` run on the `mothership` using `git push` that is run in the opposite direction in order to integrate the work done on `satellite`, and is often necessary when you can only make connection in one way (i.e. satellite can ssh into mothership but mothership cannot initiate connection to satellite because the latter is behind a firewall or does not run sshd)."
-msgstr ""
+msgstr "Detta är för att emulera `git fetch` som körs på `moderskeppet` med hjälp av `git push` som körs i motsatt riktning för att integrera arbetet som utförs på `satellit`, och är ofta nödvändigt när man bara kan upprätta anslutning på ett sätt (dvs. satelliten kan SSH in i moderskeppet men moderskeppet kan inte initiera anslutning till satelliten eftersom den senare är bakom en brandvägg eller inte kör sshd)."
 
 #. type: Plain text
 #: en/git-push.adoc:692
 msgid "After running this `git push` on the `satellite` machine, you would ssh into the `mothership` and run `git merge` there to complete the emulation of `git pull` that were run on `mothership` to pull changes made on `satellite`."
-msgstr ""
+msgstr "Efter att ha kört denna `git push` på `satellit`-maskinen, skulle du ssh-a in i `moderskepp` och köra `git merge` där för att slutföra emuleringen av `git pull` som kördes på `moderskepp` för att hämta ändringar gjorda på `satellit`."
 
 #. type: Labeled list
 #: en/git-push.adoc:693
 #, no-wrap
 msgid "`git push origin HEAD:master`"
-msgstr ""
+msgstr "`git push origin HEAD:master`"
 
 #. type: Plain text
 #: en/git-push.adoc:697
 msgid "Push the current branch to the remote ref matching `master` in the `origin` repository. This form is convenient to push the current branch without thinking about its local name."
-msgstr ""
+msgstr "Skicka den aktuella grenen till fjärrreferensen som matchar `master` i `origin`-repot. Den här formen är bekväm för att skicka den aktuella grenen utan att behöva tänka på dess lokala namn."
 
 #. type: Labeled list
 #: en/git-push.adoc:698
 #, no-wrap
 msgid "`git push origin master:refs/heads/experimental`"
-msgstr ""
+msgstr "`git push origin master:refs/heads/experimentell`"
 
 #. type: Plain text
 #: en/git-push.adoc:704
 msgid "Create the branch `experimental` in the `origin` repository by copying the current `master` branch. This form is only needed to create a new branch or tag in the remote repository when the local name and the remote name are different; otherwise, the ref name on its own will work."
-msgstr ""
+msgstr "Skapa grenen `experimentell` i `origin`-arkivet genom att kopiera den aktuella `master`-grenen. Detta formulär behövs bara för att skapa en ny gren eller tagg i fjärr-repot när det lokala namnet och fjärrnamnet är olika; annars fungerar referensnamnet på egen hand."
 
 #. type: Labeled list
 #: en/git-push.adoc:705
 #, no-wrap
 msgid "`git push origin :experimental`"
-msgstr ""
+msgstr "`git push origin :experimentell`"
 
 #. type: Plain text
 #: en/git-push.adoc:708
 msgid "Find a ref that matches `experimental` in the `origin` repository (e.g. `refs/heads/experimental`), and delete it."
-msgstr ""
+msgstr "Hitta en referens som matchar `experimentell` i `origin`-repot (t.ex. `refs/heads/experimentell`) och radera den."
 
 #. type: Labeled list
 #: en/git-push.adoc:709
 #, no-wrap
 msgid "`git push origin +dev:master`"
-msgstr ""
+msgstr "`git push origin +dev:master`"
 
 #. type: Plain text
 #: en/git-push.adoc:714
 msgid "Update the origin repository's master branch with the dev branch, allowing non-fast-forward updates. *This can leave unreferenced commits dangling in the origin repository.* Consider the following situation, where a fast-forward is not possible:"
-msgstr ""
+msgstr "Uppdatera ursprungs-repots master-gren med dev-grenen, vilket möjliggör uppdateringar som inte spolas framåt. *Detta kan lämna orefererade incheckningar diglande i ursprungsförrådet.* Tänk dig följande situation, där en spolning framåt inte är möjlig:"
 
 #. type: delimited block -
 #: en/git-push.adoc:719
 #, no-wrap
 msgid "\t    o---o---o---A---B  origin/master\n\t\t     \\\n\t\t      X---Y---Z  dev\n"
 msgstr ""
+"\t    o---o---o---A---B  origin/master\n"
+"\t\t     \\\n"
+"\t\t      X---Y---Z  dev\n"
 
 #. type: Plain text
 #: en/git-push.adoc:722
 msgid "The above command would change the origin repository to"
-msgstr ""
+msgstr "Ovanstående kommando skulle ändra ursprungs-repot till"
 
 #. type: delimited block -
 #: en/git-push.adoc:727
 #, no-wrap
 msgid "\t\t      A---B  (unnamed branch)\n\t\t     /\n\t    o---o---o---X---Y---Z  master\n"
 msgstr ""
+"\t\t      A---B  (namnlös gren)\n"
+"\t\t     /\n"
+"\t    o---o---o---X---Y---Z  master\n"
 
 #. type: Plain text
 #: en/git-push.adoc:732
 msgid "Commits A and B would no longer belong to a branch with a symbolic name, and so would be unreachable. As such, these commits would be removed by a `git gc` command on the origin repository."
-msgstr ""
+msgstr "Incheckning A och B skulle inte längre tillhöra en gren med ett symboliskt namn, och skulle därför vara oåtkomliga. Som sådan skulle dessa incheckningar tas bort med ett `git gc`-kommando i ursprungsförrådet."
 
 #. type: Title =
 #: en/git-quiltimport.adoc:2
@@ -64545,7 +64573,7 @@ msgstr "Precis som med pushing med linkgit:git-push[1], kan alla regler som besk
 #. type: NOTE
 #: en/pull-fetch-param.adoc:101
 msgid "When the remote branch you want to fetch is known to be rewound and rebased regularly, it is expected that its new tip will not be a descendant of its previous tip (as stored in your remote-tracking branch the last time you fetched). You would want to use the `+` sign to indicate non-fast-forward updates will be needed for such branches. There is no way to determine or declare that a branch will be made available in a repository with this behavior; the pulling user simply must know this is the expected usage pattern for a branch."
-msgstr "När den fjärrgren du vill hämta är känd för att regelbundet spolas tillbaka och ombaseras, förväntas det att dess nya tips inte kommer att vara en underordnad av dess tidigare tips (som lagrats i din fjärrspårningsgren förra gången du hämtade). Du vill använda `+`-tecknet för att indikera att uppdateringar som inte är framåtspolade kommer att behövas för sådana grenar. Det finns inget sätt att avgöra eller deklarera att en gren kommer att göras tillgänglig i ett arkiv med detta beteende; den indragande (\"pullande\") användaren måste helt enkelt veta att detta är det förväntade användningsmönstret för en gren."
+msgstr "När den fjärrgren du vill hämta är känd för att regelbundet spolas tillbaka och ombaseras, förväntas det att dess nya tips inte kommer att vara en underordnad av dess tidigare tips (som lagrats i din fjärrspårningsgren förra gången du hämtade). Du vill använda `+`-tecknet för att indikera att uppdateringar som inte är framåtspolade kommer att behövas för sådana grenar. Det finns inget sätt att avgöra eller deklarera att en gren kommer att göras tillgänglig i ett repo med detta beteende; den indragande (\"pullande\") användaren måste helt enkelt veta att detta är det förväntade användningsmönstret för en gren."
 
 #. type: NOTE
 #: en/pull-fetch-param.adoc:121
