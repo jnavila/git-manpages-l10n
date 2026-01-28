@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-01-28 13:52+0000\n"
+"PO-Revision-Date: 2026-01-28 15:49+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -9122,47 +9122,54 @@ msgstr "git-add - Lägg till filinnehåll i indexet"
 #, no-wrap
 msgid "git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]\n\t[--edit | -e] [--[no-]all | -A | --[no-]ignore-removal | [--update | -u]] [--sparse]\n\t[--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]\n\t[--chmod=(+|-)x] [--pathspec-from-file=<file> [--pathspec-file-nul]]\n\t[--] [<pathspec>...]\n"
 msgstr ""
+"git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]\n"
+"\t[--edit | -e] [--[no-]all | -A | --[no-]ignore-removal | [--update | -u]] [--sparse]\n"
+"\t[--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]\n"
+"\t[--chmod=(+|-)x] [--pathspec-from-file=<fil> [--pathspec-file-nul]]\n"
+"\t[--] [<sökvägsspec>...]\n"
 
 #. type: Plain text
 #: en/git-add.adoc:22
 msgid "Add contents of new or changed files to the index. The \"index\" (also known as the \"staging area\") is what you use to prepare the contents of the next commit."
-msgstr ""
+msgstr "Lägg till innehållet i nya eller ändrade filer i indexet. \"Indexet\" (även känt som \"uppställningsområdet\") är det du använder för att förbereda innehållet i nästa incheckning."
 
 #. type: Plain text
 #: en/git-add.adoc:26
 msgid "When you run `git commit` without any other arguments, it will only commit staged changes. For example, if you've edited `file.c` and want to commit your changes to that file, you can run:"
-msgstr ""
+msgstr "När du kör `git commit` utan några andra argument, kommer den bara att genomföra stegvisa ändringar. Om du till exempel har redigerat `fil.c` och vill checka-in dina ändringar i den filen kan du köra:"
 
 #. type: Plain text
 #: en/git-add.adoc:29
 #, no-wrap
 msgid "   git add file.c\n   git commit\n"
 msgstr ""
+"   git add fil.c\n"
+"   git commit\n"
 
 #. type: Plain text
 #: en/git-add.adoc:31
 msgid "You can also add only part of your changes to a file with `git add -p`."
-msgstr ""
+msgstr "Du kan också lägga till bara en del av dina ändringar i en fil med `git add -p`."
 
 #. type: Plain text
 #: en/git-add.adoc:36
 msgid "This command can be performed multiple times before a commit. It only adds the content of the specified file(s) at the time the add command is run; if you want subsequent changes included in the next commit, then you must run `git add` again to add the new content to the index."
-msgstr ""
+msgstr "Det här kommandot kan utföras flera gånger före en incheckning. Det lägger bara till innehållet i den/de angivna filen/filerna när add-kommandot körs. Om du vill att efterföljande ändringar ska inkluderas i nästa incheckning måste du köra `git add` igen för att lägga till det nya innehållet i indexet."
 
 #. type: Plain text
 #: en/git-add.adoc:39
 msgid "The `git status` command can be used to obtain a summary of which files have changes that are staged for the next commit."
-msgstr ""
+msgstr "Kommandot `git status` kan användas för att få en sammanfattning av vilka filer som har ändringar som är klara för nästa incheckning."
 
 #. type: Plain text
 #: en/git-add.adoc:44
 msgid "The `git add` command will not add ignored files by default. You can use the `--force` option to add ignored files. If you specify the exact filename of an ignored file, `git add` will fail with a list of ignored files. Otherwise it will silently ignore the file."
-msgstr ""
+msgstr "Kommandot `git add` lägger inte till ignorerade filer som standard. Du kan använda alternativet `--force` för att lägga till ignorerade filer. Om du anger det exakta filnamnet på en ignorerad fil kommer `git add` att misslyckas med en lista över ignorerade filer. Annars kommer filen att ignoreras i tysthet."
 
 #. type: Plain text
 #: en/git-add.adoc:47
 msgid "Please see linkgit:git-commit[1] for alternative ways to add content to a commit."
-msgstr ""
+msgstr "Se linkgit:git-commit[1] för alternativa sätt att lägga till innehåll i en incheckning."
 
 #. type: Title -
 #: en/git-add.adoc:50 en/git-am.adoc:32 en/git-annotate.adoc:24
@@ -9223,12 +9230,12 @@ msgstr "ALTERNATIV"
 #: en/git-stash.adoc:276 en/git-status.adoc:157
 #, no-wrap
 msgid "`<pathspec>...`"
-msgstr ""
+msgstr "`<sökvägsspec>...`"
 
 #. type: Plain text
 #: en/git-add.adoc:63
 msgid "Files to add content from. Fileglobs (e.g. `*.c`) can be given to add all matching files. Also a leading directory name (e.g. `dir` to add `dir/file1` and `dir/file2`) can be given to update the index to match the current state of the directory as a whole (e.g. specifying `dir` will record not just a file `dir/file1` modified in the working tree, a file `dir/file2` added to the working tree, but also a file `dir/file3` removed from the working tree). Note that older versions of Git used to ignore removed files; use `--no-all` option if you want to add modified or new files but ignore removed ones."
-msgstr ""
+msgstr "Filer att lägga till innehåll från. Filglobs (t.ex. `*.c`) kan anges för att lägga till alla matchande filer. Ett inledande katalognamn (t.ex. `dir` för att lägga till `kat/fil1` och `kat/fil2`) kan också anges för att uppdatera indexet så att det matchar hela katalogens aktuella tillstånd (t.ex. om du anger `kat` registreras inte bara en fil `kat/fil1` som ändrats i arbetskatalog, en fil `kat/fil2` som lagts till i arbetskatalog, utan även en fil `kat/fil3` som tagits bort från arbetskatalog). Observera att äldre versioner av Git brukade ignorera borttagna filer; använd alternativet `--no-all` om du vill lägga till ändrade eller nya filer men ignorera borttagna."
 
 #. type: Plain text
 #: en/git-add.adoc:66
@@ -9239,7 +9246,7 @@ msgstr "För mer information om syntaxen _<sökvägsspec>_, se posten 'pathspec'
 #. type: Plain text
 #: en/git-add.adoc:71
 msgid "Don't actually add the file(s), just show if they exist and/or will be ignored."
-msgstr ""
+msgstr "Lägg inte till filen/filerna, visa bara om de finns och/eller kommer att ignoreras."
 
 #. type: Plain text
 #: en/git-add.adoc:79
@@ -9257,7 +9264,7 @@ msgstr "`--sparse`"
 #. type: Plain text
 #: en/git-add.adoc:86
 msgid "Allow updating index entries outside of the sparse-checkout cone. Normally, `git add` refuses to update index entries whose paths do not fit within the sparse-checkout cone, since those files might be removed from the working tree without warning. See linkgit:git-sparse-checkout[1] for more details."
-msgstr ""
+msgstr "Tillåt uppdatering av indexposter utanför gles-checkout-konen. Normalt vägrar `git add` att uppdatera indexposter vars sökvägar inte passar inom gles-checkout-konen, eftersom dessa filer kan tas bort från arbetskatalog utan förvarning. Se linkgit:git-sparse-checkout[1] för mer information."
 
 #. type: Labeled list
 #: en/git-add.adoc:87 en/git-branch.adoc:155 en/git-commit.adoc:304
@@ -9277,17 +9284,17 @@ msgstr "`--interactive`"
 #. type: Plain text
 #: en/git-add.adoc:93
 msgid "Add modified contents in the working tree interactively to the index. Optional path arguments may be supplied to limit operation to a subset of the working tree. See ``Interactive mode'' for details."
-msgstr ""
+msgstr "Lägg till ändrat innehåll i arbetskatalog interaktivt till indexet. Valfria sökvägsargument kan anges för att begränsa åtgärden till en delmängd av arbetskatalog. Se \"Interaktivt läge\" för mer information."
 
 #. type: Plain text
 #: en/git-add.adoc:100
 msgid "Interactively choose hunks of patch between the index and the work tree and add them to the index. This gives the user a chance to review the difference before adding modified contents to the index."
-msgstr ""
+msgstr "Välj interaktivt bitar av patch mellan indexet och arbetsträdet och lägg till dem i indexet. Detta ger användaren en chans att granska skillnaden innan modifierat innehåll läggs till i indexet."
 
 #. type: Plain text
 #: en/git-add.adoc:104
 msgid "This effectively runs `add --interactive`, but bypasses the initial command menu and directly jumps to the `patch` subcommand. See ``Interactive mode'' for details."
-msgstr ""
+msgstr "Detta kör i praktiken `add --interactive`, men kringgår den initiala kommandomenyn och hoppar direkt till delkommandot `patch`. Se ``Interactive mode'' för detaljer."
 
 #. type: Labeled list
 #: en/git-add.adoc:107 en/git-commit.adoc:263 en/git-tag.adoc:200
@@ -9308,12 +9315,12 @@ msgstr "`--edit`"
 #. type: Plain text
 #: en/git-add.adoc:112
 msgid "Open the diff vs. the index in an editor and let the user edit it. After the editor was closed, adjust the hunk headers and apply the patch to the index."
-msgstr ""
+msgstr "Öppna skillnaden mellan diffen och indexet i en editor och låt användaren redigera den. När editorn har stängts, justera hunk-rubrikerna och applicera patchen på indexet."
 
 #. type: Plain text
 #: en/git-add.adoc:118
 msgid "The intent of this option is to pick and choose lines of the patch to apply, or even to modify the contents of lines to be staged. This can be quicker and more flexible than using the interactive hunk selector. However, it is easy to confuse oneself and create a patch that does not apply to the index. See EDITING PATCHES below."
-msgstr ""
+msgstr "Avsikten med det här alternativet är att välja och vraka rader i patchen som ska tillämpas, eller till och med att modifiera innehållet i rader som ska iscensattas. Detta kan vara snabbare och mer flexibelt än att använda den interaktiva hunk-väljaren. Det är dock lätt att förvirra sig själv och skapa en patch som inte gäller för indexet. Se REDIGERA PATCHAR nedan."
 
 #. type: Labeled list
 #: en/git-add.adoc:120
@@ -9325,12 +9332,12 @@ msgstr "`--update`"
 #. type: Plain text
 #: en/git-add.adoc:124
 msgid "Update the index just where it already has an entry matching _<pathspec>_. This removes as well as modifies index entries to match the working tree, but adds no new files."
-msgstr ""
+msgstr "Uppdatera indexet där det redan har en post som matchar _<sökvägsspec>_. Detta tar bort och modifierar indexposter så att de matchar arbetskatalog, men lägger inte till några nya filer."
 
 #. type: Plain text
 #: en/git-add.adoc:129
 msgid "If no _<pathspec>_ is given when `-u` option is used, all tracked files in the entire working tree are updated (old versions of Git used to limit the update to the current directory and its subdirectories)."
-msgstr ""
+msgstr "Om ingen _<sökvägsspec>_ anges när `-u`-alternativet används, uppdateras alla spårade filer i hela arbetskatalog (gamla versioner av Git användes för att begränsa uppdateringen till den aktuella katalogen och dess underkataloger)."
 
 #. type: Labeled list
 #: en/git-add.adoc:130
@@ -9349,12 +9356,12 @@ msgstr "`--no-ignore-removal`"
 #. type: Plain text
 #: en/git-add.adoc:137
 msgid "Update the index not only where the working tree has a file matching _<pathspec>_ but also where the index already has an entry. This adds, modifies, and removes index entries to match the working tree."
-msgstr ""
+msgstr "Uppdatera indexet inte bara där arbetskatalog har en fil som matchar _<sökvägsspec>_ utan även där indexet redan har en post. Detta lägger till, ändrar och tar bort indexposter så att de matchar arbetskatalog."
 
 #. type: Plain text
 #: en/git-add.adoc:142
 msgid "If no _<pathspec>_ is given when `-A` option is used, all files in the entire working tree are updated (old versions of Git used to limit the update to the current directory and its subdirectories)."
-msgstr ""
+msgstr "Om ingen _<sökvägsspec>_ anges när `-A`-alternativet används, uppdateras alla filer i hela arbetsträdet (gamla versioner av Git användes för att begränsa uppdateringen till den aktuella katalogen och dess underkataloger)."
 
 #. type: Labeled list
 #: en/git-add.adoc:144
@@ -9366,12 +9373,12 @@ msgstr "`--ignore-removal`"
 #. type: Plain text
 #: en/git-add.adoc:149
 msgid "Update the index by adding new files that are unknown to the index and files modified in the working tree, but ignore files that have been removed from the working tree. This option is a no-op when no _<pathspec>_ is used."
-msgstr ""
+msgstr "Uppdatera indexet genom att lägga till nya filer som är okända för indexet och filer som ändrats i arbetsträdet, men ignorera filer som har tagits bort från arbetskatalogen. Det här alternativet fungerar inte när ingen _<sökvägsspec>_ används."
 
 #. type: Plain text
 #: en/git-add.adoc:153
 msgid "This option is primarily to help users who are used to older versions of Git, whose `git add <pathspec>...` was a synonym for `git add --no-all <pathspec>...`, i.e. ignored removed files."
-msgstr ""
+msgstr "Det här alternativet är främst till för att hjälpa användare som är vana vid äldre versioner av Git, vars `git add <sökvägsspec>...` var en synonym för `git add --no-all <sökvägsspec>...`, d.v.s. ignorerade borttagna filer."
 
 #. type: Labeled list
 #: en/git-add.adoc:154
@@ -9389,8 +9396,9 @@ msgstr "`--intent-to-add`"
 
 #. type: Plain text
 #: en/git-add.adoc:161
+#, fuzzy
 msgid "Record only the fact that the path will be added later. An entry for the path is placed in the index with no content. This is useful for, among other things, showing the unstaged content of such files with `git diff` and committing them with `git commit -a`."
-msgstr ""
+msgstr "Registrera endast det faktum att sökvägen kommer att läggas till senare. En post för sökvägen placeras i indexet utan innehåll. Detta är användbart för att bland annat visa det osparade innehållet i sådana filer med `git diff` och incheckning dem med `git commit -a`."
 
 #. type: Labeled list
 #: en/git-add.adoc:162 en/git-reset.adoc:112
@@ -9402,7 +9410,7 @@ msgstr "`--refresh`"
 #. type: Plain text
 #: en/git-add.adoc:165
 msgid "Don't add the file(s), but only refresh their stat() information in the index."
-msgstr ""
+msgstr "Lägg inte till filen/filerna, utan uppdatera bara deras stat()-information i indexet."
 
 #. type: Labeled list
 #: en/git-add.adoc:166
@@ -9414,7 +9422,7 @@ msgstr "`--ignore-errors`"
 #. type: Plain text
 #: en/git-add.adoc:172
 msgid "If some files could not be added because of errors indexing them, do not abort the operation, but continue adding the others. The command shall still exit with non-zero status. The configuration variable `add.ignoreErrors` can be set to true to make this the default behaviour."
-msgstr ""
+msgstr "Om vissa filer inte kunde läggas till på grund av fel vid indexeringen av dem, avbryt inte åtgärden, utan fortsätt att lägga till de andra. Kommandot ska fortfarande avslutas med status som inte är noll. Konfigurationsvariabeln `add.ignoreErrors` kan sättas till true för att göra detta till standardbeteendet."
 
 #. type: Labeled list
 #: en/git-add.adoc:173 en/git-notes.adoc:210 en/rev-list-options.adoc:230
@@ -9426,7 +9434,7 @@ msgstr "`--ignore-missing`"
 #. type: Plain text
 #: en/git-add.adoc:178
 msgid "This option can only be used together with `--dry-run`. By using this option the user can check if any of the given files would be ignored, no matter if they are already present in the work tree or not."
-msgstr ""
+msgstr "Det här alternativet kan bara användas tillsammans med `--dry-run`. Genom att använda det här alternativet kan användaren kontrollera om någon av de givna filerna ska ignoreras, oavsett om de redan finns i arbetsträdet eller inte."
 
 #. type: Labeled list
 #: en/git-add.adoc:179
@@ -9438,7 +9446,7 @@ msgstr "`--no-warn-embedded-repo`"
 #. type: Plain text
 #: en/git-add.adoc:185
 msgid "By default, `git add` will warn when adding an embedded repository to the index without using `git submodule add` to create an entry in `.gitmodules`. This option will suppress the warning (e.g., if you are manually performing operations on submodules)."
-msgstr ""
+msgstr "Som standard varnar `git add` när ett inbäddat repository läggs till i indexet utan att använda `git submodule add` för att skapa en post i `.gitmodules`. Det här alternativet undertrycker varningen (t.ex. om du manuellt utför operationer på undermoduler)."
 
 #. type: Labeled list
 #: en/git-add.adoc:186
@@ -9449,8 +9457,9 @@ msgstr "`--renormalize`"
 
 #. type: Plain text
 #: en/git-add.adoc:194
+#, fuzzy
 msgid "Apply the \"clean\" process freshly to all tracked files to forcibly add them again to the index. This is useful after changing `core.autocrlf` configuration or the `text` attribute in order to correct files added with wrong _CRLF/LF_ line endings. This option implies `-u`. Lone CR characters are untouched, thus while a _CRLF_ cleans to _LF_, a _CRCRLF_ sequence is only partially cleaned to _CRLF_."
-msgstr ""
+msgstr "Använd \"clean\"-processen på nytt på alla spårade filer för att tvångsmässigt lägga till dem i indexet igen. Detta är användbart efter att ha ändrat konfigurationen av `core.autocrlf` eller attributet `text` för att korrigera filer som lagts till med felaktiga _CRLF/LF_-radslut. Detta alternativ innebär `-u`. Ensamma CR-tecken är orörda, så medan en _CRLF_ rensas till _LF_, rensas en _CRCRLF_-sekvens bara delvis till _CRLF_."
 
 #. type: Labeled list
 #: en/git-add.adoc:195
@@ -9462,7 +9471,7 @@ msgstr "`--chmod=(+|-)x`"
 #. type: Plain text
 #: en/git-add.adoc:199
 msgid "Override the executable bit of the added files. The executable bit is only changed in the index, the files on disk are left unchanged."
-msgstr ""
+msgstr "Åsidosätt den körbara biten för de tillagda filerna. Den körbara biten ändras bara i indexet, filerna på disken lämnas oförändrade."
 
 #. type: Labeled list
 #: en/git-add.adoc:200 en/git-checkout.adoc:321 en/git-commit.adoc:325
@@ -9470,12 +9479,12 @@ msgstr ""
 #: en/git-stash.adoc:234
 #, no-wrap
 msgid "`--pathspec-from-file=<file>`"
-msgstr ""
+msgstr "`--pathspec-from-file=<fil>`"
 
 #. type: Plain text
 #: en/git-add.adoc:207
 msgid "Pathspec is passed in _<file>_ instead of commandline args. If _<file>_ is exactly `-` then standard input is used. Pathspec elements are separated by _LF_ or _CR/LF_. Pathspec elements can be quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1]). See also `--pathspec-file-nul` and global `--literal-pathspecs`."
-msgstr ""
+msgstr "Pathspec skickas i _<fil>_ istället för kommandoradsargument. Om _<fil>_ är exakt `-` används standardindata. Pathspec-element separeras med _LF_ eller _CR/LF_. Pathspec-element kan citeras enligt beskrivningen för konfigurationsvariabeln `core.quotePath` (se linkgit:git-config[1]). Se även `--pathspec-file-nul` och global `--literal-pathspecs`."
 
 #. type: Labeled list
 #: en/git-add.adoc:208 en/git-checkout.adoc:329 en/git-commit.adoc:333
@@ -9490,7 +9499,7 @@ msgstr "`--pathspec-file-nul`"
 #: en/git-add.adoc:212 en/git-checkout.adoc:333 en/git-commit.adoc:337
 #: en/git-reset.adoc:128 en/git-restore.adoc:141 en/git-rm.adoc:98
 msgid "Only meaningful with `--pathspec-from-file`. Pathspec elements are separated with _NUL_ character and all other characters are taken literally (including newlines and quotes)."
-msgstr ""
+msgstr "Endast meningsfullt med `--pathspec-from-file`. Pathspec-element separeras med tecknet _NUL_ och alla andra tecken tolkas bokstavligt (inklusive radbrytningar och citattecken)."
 
 #. type: Labeled list
 #: en/git-add.adoc:213 en/git-checkout.adoc:368 en/git-commit.adoc:403
@@ -9504,12 +9513,12 @@ msgstr "`--`"
 #. type: Plain text
 #: en/git-add.adoc:217 en/git-rm.adoc:66
 msgid "This option can be used to separate command-line options from the list of files, (useful when filenames might be mistaken for command-line options)."
-msgstr ""
+msgstr "Det här alternativet kan användas för att separera kommandoradsalternativ från fillistan (användbart när filnamn kan misstas för kommandoradsalternativ)."
 
 #. type: Plain text
 #: en/git-add.adoc:224
 msgid "Adds content from all ++*.txt++ files under `Documentation` directory and its subdirectories:"
-msgstr ""
+msgstr "Lägger till innehåll från alla ++*.txt++-filer under katalogen `Dokumentation` och dess underkataloger:"
 
 #. type: delimited block -
 #: en/git-add.adoc:227
@@ -9520,12 +9529,12 @@ msgstr "$ git add Documentation/\\*.txt\n"
 #. type: Plain text
 #: en/git-add.adoc:232
 msgid "Note that the asterisk ++*++ is quoted from the shell in this example; this lets the command include the files from subdirectories of `Documentation/` directory."
-msgstr ""
+msgstr "Observera att asterisken ++*++ är ett citat från skalet i det här exemplet; detta låter kommandot inkludera filerna från underkataloger till katalogen `Documentation/`."
 
 #. type: Plain text
 #: en/git-add.adoc:234
 msgid "Considers adding content from all ++git-*.sh++ scripts:"
-msgstr ""
+msgstr "Överväger att lägga till innehåll från alla ++git-*.sh++-skript:"
 
 #. type: delimited block -
 #: en/git-add.adoc:237
@@ -9536,18 +9545,18 @@ msgstr "$ git add git-*.sh\n"
 #. type: Plain text
 #: en/git-add.adoc:242
 msgid "Because this example lets the shell expand the asterisk (i.e. you are listing the files explicitly), it does not consider `subdir/git-foo.sh`."
-msgstr ""
+msgstr "Eftersom det här exemplet låter skalet expandera asterisken (dvs. du listar filerna explicit), tar det inte hänsyn till `underkat/git-foo.sh`."
 
 #. type: Title -
 #: en/git-add.adoc:244 en/git-rebase.adoc:819
 #, no-wrap
 msgid "INTERACTIVE MODE"
-msgstr ""
+msgstr "INTERAKTIVT LÄGE"
 
 #. type: Plain text
 #: en/git-add.adoc:248
 msgid "When the command enters the interactive mode, it shows the output of the 'status' subcommand, and then goes into its interactive command loop."
-msgstr ""
+msgstr "När kommandot går in i interaktivt läge visar det utdata från delkommandot 'status' och går sedan in i sin interaktiva kommandoslinga."
 
 #. type: Plain text
 #: en/git-add.adoc:253 en/git-clean.adoc:89
@@ -9559,38 +9568,45 @@ msgstr "Kommandoslingan visar listan över tillgängliga delkommandon och ger en
 #, no-wrap
 msgid "    *** Commands ***\n      1: status       2: update       3: revert       4: add untracked\n      5: patch        6: diff         7: quit         8: help\n    What now> 1\n"
 msgstr ""
+"    *** Commands ***\n"
+"      1: status       2: update       3: revert       4: add untracked\n"
+"      5: patch        6: diff         7: quit         8: help\n"
+"    What now> 1\n"
 
 #. type: Plain text
 #: en/git-add.adoc:263
 msgid "You also could say `s` or `sta` or `status` above as long as the choice is unique."
-msgstr ""
+msgstr "Du kan också säga `s` eller `sta` eller `status` ovan så länge valet är unikt."
 
 #. type: Plain text
 #: en/git-add.adoc:265
 msgid "The main command loop has 6 subcommands (plus help and quit)."
-msgstr ""
+msgstr "Huvudkommandoslingan har 6 underkommandon (plus help och quit)."
 
 #. type: Labeled list
 #: en/git-add.adoc:266
 #, no-wrap
 msgid "status"
-msgstr ""
+msgstr "status"
 
 #. type: Plain text
 #: en/git-add.adoc:273
 msgid "This shows the change between `HEAD` and index (i.e. what will be committed if you say `git commit`), and between index and working tree files (i.e. what you could stage further before `git commit` using `git add`) for each path. A sample output looks like this:"
-msgstr ""
+msgstr "Detta visar förändringen mellan `HEAD` och index (dvs. vad som kommer att incheckas om du säger `git commit`), och mellan index- och arbetskatalogs-filer (dvs. vad du kan iscensätta ytterligare före `git commit` med `git add`) för varje sökväg. Ett exempel på utdata ser ut så här:"
 
 #. type: delimited block -
 #: en/git-add.adoc:278
 #, no-wrap
 msgid "              staged     unstaged path\n     1:       binary      nothing foo.png\n     2:     +403/-35        +1/-1 add-interactive.c\n"
 msgstr ""
+"              staged     unstaged path\n"
+"     1:       binary      nothing foo.png\n"
+"     2:     +403/-35        +1/-1 add-interactive.c\n"
 
 #. type: Plain text
 #: en/git-add.adoc:289
 msgid "It shows that `foo.png` has differences from `HEAD` (but that is binary so line count cannot be shown) and there is no difference between indexed copy and the working tree version (if the working tree version were also different, 'binary' would have been shown in place of 'nothing'). The other file, `add-interactive.c`, has 403 lines added and 35 lines deleted if you commit what is in the index, but working tree file has further modifications (one addition and one deletion)."
-msgstr ""
+msgstr "Den visar att `foo.png` skiljer sig från `HEAD` (men det är binärt så radantalet kan inte visas) och det finns ingen skillnad mellan den indexerade kopian och arbetskatalog-versionen (om arbetskatalogs-versionen också var annorlunda skulle 'binär' ha visats istället för 'ingenting'). Den andra filen, `add-interactive.c`, har 403 rader tillagda och 35 rader borttagna om man sparar det som finns i indexet, men arbetskatalogs-filen har ytterligare modifieringar (ett tillägg och en borttagning)."
 
 #. type: Labeled list
 #: en/git-add.adoc:290 en/git-update-ref.adoc:99
@@ -9602,12 +9618,12 @@ msgstr "update"
 #. type: Plain text
 #: en/git-add.adoc:299
 msgid "This shows the status information and issues an \"Update>>\" prompt. When the prompt ends with double '>>', you can make more than one selection, concatenated with whitespace or comma. Also you can say ranges. E.g. \"2-5 7,9\" to choose 2,3,4,5,7,9 from the list. If the second number in a range is omitted, all remaining patches are taken. E.g. \"7-\" to choose 7,8,9 from the list. You can say '*' to choose everything."
-msgstr ""
+msgstr "Detta visar statusinformationen och utlöser en fråga om \"Uppdatera>>\". När frågan avslutas med dubbelt '>>' kan du göra mer än ett val, sammanfogat med mellanslag eller kommatecken. Du kan också säga intervall. T.ex. \"2-5 7,9\" för att välja 2, 3, 4, 5, 7, 9 från listan. Om det andra numret i ett intervall utelämnas tas alla återstående fält. T.ex. \"7-\" för att välja 7, 8, 9 från listan. Du kan säga '*' för att välja allt."
 
 #. type: Plain text
 #: en/git-add.adoc:302
 msgid "What you chose are then highlighted with '*', like this:"
-msgstr ""
+msgstr "Det du valt markeras sedan med '*', så här:"
 
 #. type: delimited block -
 #: en/git-add.adoc:307
@@ -9618,18 +9634,18 @@ msgstr ""
 #. type: Plain text
 #: en/git-add.adoc:311
 msgid "To remove selection, prefix the input with `-` like this:"
-msgstr ""
+msgstr "För att ta bort en sektion, skriv in prefixet `-` så här:"
 
 #. type: delimited block -
 #: en/git-add.adoc:314
 #, no-wrap
 msgid "Update>> -2\n"
-msgstr ""
+msgstr "Uppdatera>> -2\n"
 
 #. type: Plain text
 #: en/git-add.adoc:318
 msgid "After making the selection, answer with an empty line to stage the contents of working tree files for selected paths in the index."
-msgstr ""
+msgstr "Efter att du har gjort valet, svara med en tom rad för att mellanlagra innehållet i arbetskatalog-filerna för valda sökvägar i indexet."
 
 #. type: Labeled list
 #: en/git-add.adoc:319
@@ -9640,7 +9656,7 @@ msgstr "revert"
 #. type: Plain text
 #: en/git-add.adoc:324
 msgid "This has a very similar UI to 'update', and the staged information for selected paths are reverted to that of the HEAD version. Reverting new paths makes them untracked."
-msgstr ""
+msgstr "Detta har ett mycket liknande användargränssnitt som \"uppdatera\", och den mellanlagrade informationen för valda sökvägar återställs till den i HEAD-versionen. Om du återställer nya sökvägar spåras de inte längre."
 
 #. type: Labeled list
 #: en/git-add.adoc:325
@@ -9651,7 +9667,7 @@ msgstr "lägg till ospårad"
 #. type: Plain text
 #: en/git-add.adoc:329
 msgid "This has a very similar UI to 'update' and 'revert', and lets you add untracked paths to the index."
-msgstr ""
+msgstr "Detta har ett mycket liknande gränssnitt som \"uppdatera\" och \"återställ\", och låter dig lägga till ospårade sökvägar till indexet."
 
 #. type: Labeled list
 #: en/git-add.adoc:330
@@ -9662,13 +9678,29 @@ msgstr "patch"
 #. type: Plain text
 #: en/git-add.adoc:337
 msgid "This lets you choose one path out of a 'status' like selection. After choosing the path, it presents the diff between the index and the working tree file and asks you if you want to stage the change of each hunk. You can select one of the following options and type return:"
-msgstr ""
+msgstr "Detta låter dig välja en sökväg från ett \"status\"-liknande urval. Efter att sökvägen valts visas skillnaden mellan indexet och arbetskatalogs-filen och du frågas om du vill ställa in ändringen för varje bit i olika steg. Du kan välja ett av följande alternativ och skriva return:"
 
 #. type: Plain text
 #: en/git-add.adoc:354
 #, no-wrap
 msgid "y - stage this hunk\nn - do not stage this hunk\nq - quit; do not stage this hunk or any of the remaining ones\na - stage this hunk and all later hunks in the file\nd - do not stage this hunk or any of the later hunks in the file\ng - select a hunk to go to\n/ - search for a hunk matching the given regex\nj - go to the next undecided hunk, roll over at the bottom\nJ - go to the next hunk, roll over at the bottom\nk - go to the previous undecided hunk, roll over at the top\nK - go to the previous hunk, roll over at the top\ns - split the current hunk into smaller hunks\ne - manually edit the current hunk\np - print the current hunk\nP - print the current hunk using the pager\n? - print help\n"
 msgstr ""
+"y - köa stycket\n"
+"n - köa inte stycket\n"
+"q - avsluta; köa inte stycket eller något av de följande\n"
+"a - köa stycket och alla följande i filen\n"
+"d - köa inte stycket eller något av de följande i filen\n"
+"j - gå till nästa obestämda stycke, börja om vid slutet\n"
+"J - gå till nästa stycke, börja om vid slutet\n"
+"k - gå till föregående obestämda stycke, börja om vid början\n"
+"K - gå till föregående styckem, börja om vid början\n"
+"g - välj ett stycke att gå till\n"
+"/ - sök efter stycke som motsvarar angivet reguljärt uttryck\n"
+"s - dela aktuellt stycke i mindre styckens\n"
+"e - redigera aktuellt stycke manuellt\n"
+"p - visa aktuellt stycke\n"
+"P - visa aktuellt stycke i bläddrare\n"
+"? - visa hjälp\n"
 
 #. type: Plain text
 #: en/git-add.adoc:357
