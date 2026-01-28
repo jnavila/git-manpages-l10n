@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-01-28 11:20+0000\n"
+"PO-Revision-Date: 2026-01-28 13:49+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -4242,35 +4242,36 @@ msgstr "`--diff-algorithm=(patience|minimal|histogram|myers)`"
 #. type: Plain text
 #: en/diff-algorithm-option.adoc:20
 msgid "For instance, if you configured the `diff.algorithm` variable to a non-default value and want to use the default one, then you have to use `--diff-algorithm=default` option."
-msgstr ""
+msgstr "Om du till exempel, konfigurerade variabeln `diff.algorithm` till ett värde som inte är standard och vill använda standardvärdet, måste du använda alternativet `--diff-algorithm=default`."
 
 #. type: Labeled list
 #: en/diff-context-options.adoc:1 en/diff-options.adoc:128
 #, no-wrap
 msgid "`-U<n>`"
-msgstr ""
+msgstr "`-U<n>`"
 
 #. type: Labeled list
 #: en/diff-context-options.adoc:2 en/diff-options.adoc:129
 #, no-wrap
 msgid "`--unified=<n>`"
-msgstr ""
+msgstr "`--unified=<n>`"
 
 #. type: Plain text
 #: en/diff-context-options.adoc:5
+#, fuzzy
 msgid "Generate diffs with _<n>_ lines of context. Defaults to `diff.context` or 3 if the config option is unset."
-msgstr ""
+msgstr "Generera differenser med _<n>_ rader kontext. Standardvärdet är `diff.context` eller 3 om konfigurationsalternativet inte är inställt."
 
 #. type: Labeled list
 #: en/diff-context-options.adoc:6
 #, no-wrap
 msgid "`--inter-hunk-context=<n>`"
-msgstr ""
+msgstr "`--inter-hunk-context=<n>`"
 
 #. type: Plain text
 #: en/diff-context-options.adoc:10 en/diff-options.adoc:795
 msgid "Show the context between diff hunks, up to the specified _<number>_ of lines, thereby fusing hunks that are close to each other. Defaults to `diff.interHunkContext` or 0 if the config option is unset."
-msgstr ""
+msgstr "Visar sammanhanget mellan olika hunks, upp till det angivna _<antal>_ rader, och sammanfogar därmed hunks som ligger nära varandra. Standardvärdet är `diff.interHunkContext` eller 0 om konfigurationsalternativet inte är inställt."
 
 #. type: Title -
 #: en/diff-format.adoc:2
@@ -4281,246 +4282,252 @@ msgstr "Rått utdataformat"
 #. type: Plain text
 #: en/diff-format.adoc:6
 msgid "The raw output format from `git-diff-index`, `git-diff-tree`, `git-diff-files` and `git diff --raw` are very similar."
-msgstr ""
+msgstr "Det råa utdataformatet från `git-diff-index`, `git-diff-tree`, `git-diff-files` och `git diff --raw` är mycket lika."
 
 #. type: Plain text
 #: en/diff-format.adoc:9
 msgid "These commands all compare two sets of things; what is compared differs:"
-msgstr ""
+msgstr "Dessa kommandon jämför alla två uppsättningar saker; vad som jämförs skiljer sig åt:"
 
 #. type: Labeled list
 #: en/diff-format.adoc:10
 #, no-wrap
 msgid "`git-diff-index <tree-ish>`"
-msgstr ""
+msgstr "`git-diff-index <trädlikt>`"
 
 #. type: Plain text
 #: en/diff-format.adoc:12
 msgid "compares the _<tree-ish>_ and the files on the filesystem."
-msgstr ""
+msgstr "jämför _<trädlikt>_ och filerna på filsystemet."
 
 #. type: Labeled list
 #: en/diff-format.adoc:13
 #, no-wrap
 msgid "`git-diff-index --cached <tree-ish>`"
-msgstr ""
+msgstr "`git-diff-index --cached <trädlikt>`"
 
 #. type: Plain text
 #: en/diff-format.adoc:15
 msgid "compares the _<tree-ish>_ and the index."
-msgstr ""
+msgstr "jämför _<trädlikt>_ och indexet."
 
 #. type: Labeled list
 #: en/diff-format.adoc:16
 #, no-wrap
 msgid "`git-diff-tree [-r] <tree-ish-1> <tree-ish-2> [<pattern>...]`"
-msgstr ""
+msgstr "`git-diff-tree [-r] <trädlikt-1> <trädlikt-2> [<mönster>...]`"
 
 #. type: Plain text
 #: en/diff-format.adoc:18
 msgid "compares the trees named by the two arguments."
-msgstr ""
+msgstr "jämför träden som namnges av de två argumenten."
 
 #. type: Labeled list
 #: en/diff-format.adoc:19
 #, no-wrap
 msgid "`git-diff-files [<pattern>...]`"
-msgstr ""
+msgstr "`git-diff-files [<mönster>...]`"
 
 #. type: Plain text
 #: en/diff-format.adoc:21
 msgid "compares the index and the files on the filesystem."
-msgstr ""
+msgstr "jämför indexet och filerna på filsystemet."
 
 #. type: Plain text
 #: en/diff-format.adoc:25
 msgid "The `git-diff-tree` command begins its output by printing the hash of what is being compared. After that, all the commands print one output line per changed file."
-msgstr ""
+msgstr "Kommandot `git-diff-tree` börjar sin utmatning genom att skriva ut hashen för det som jämförs. Därefter skriver alla kommandon ut en utmatningsrad per ändrad fil."
 
 #. type: Plain text
 #: en/diff-format.adoc:27
 msgid "An output line is formatted this way:"
-msgstr ""
+msgstr "En utmatningsrad formateras så här:"
 
 #. type: delimited block -
 #: en/diff-format.adoc:35
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "in-place edit  :100644 100644 bcd1234 0123456 M file0\ncopy-edit      :100644 100644 abcd123 1234567 C68 file1 file2\nrename-edit    :100644 100644 abcd123 1234567 R86 file1 file3\ncreate         :000000 100644 0000000 1234567 A file4\ndelete         :100644 000000 1234567 0000000 D file5\nunmerged       :000000 000000 0000000 0000000 U file6\n"
 msgstr ""
+"in-place edit  :100644 100644 bcd1234 0123456 M fil0\n"
+"copy-edit      :100644 100644 abcd123 1234567 C68 fil1 fil2\n"
+"rename-edit    :100644 100644 abcd123 1234567 R86 fil1 fil3\n"
+"create         :000000 100644 0000000 1234567 A fil4\n"
+"delete         :100644 000000 1234567 0000000 D fil5\n"
+"unmerged       :000000 000000 0000000 0000000 U fil6\n"
 
 #. type: Plain text
 #: en/diff-format.adoc:38
 msgid "That is, from the left to the right:"
-msgstr ""
+msgstr "Det vill säga, från vänster till höger:"
 
 #. type: Plain text
 #: en/diff-format.adoc:40
 msgid "a colon."
-msgstr ""
+msgstr "ett kolon."
 
 #. type: Plain text
 #: en/diff-format.adoc:41
 msgid "mode for \"src\"; 000000 if creation or unmerged."
-msgstr ""
+msgstr "läge för \"src\"; 000000 om skapande eller osammanslagen."
 
 #. type: Plain text
 #: en/diff-format.adoc:42 en/diff-format.adoc:44 en/diff-format.adoc:46
 #: en/diff-format.adoc:48
 msgid "a space."
-msgstr ""
+msgstr "ett mellanslag."
 
 #. type: Plain text
 #: en/diff-format.adoc:43
 msgid "mode for \"dst\"; 000000 if deletion or unmerged."
-msgstr ""
+msgstr "läge för \"dst\"; 000000 om borttagning eller osammanslagen."
 
 #. type: Plain text
 #: en/diff-format.adoc:45
 msgid "sha1 for \"src\"; 0\\{40\\} if creation or unmerged."
-msgstr ""
+msgstr "sha1 för \"src\"; 0\\{40\\} om skapande eller osammanslagen."
 
 #. type: Plain text
 #: en/diff-format.adoc:47
 msgid "sha1 for \"dst\"; 0\\{40\\} if deletion, unmerged or \"work tree out of sync with the index\"."
-msgstr ""
+msgstr "sha1 för \"dst\"; 0\\{40\\} om borttagning, avsammanslagning eller \"arbetsträdet är inte synkroniserat med indexet\"."
 
 #. type: Plain text
 #: en/diff-format.adoc:49
 msgid "status, followed by optional \"score\" number."
-msgstr ""
+msgstr "status, följt av ett valfritt \"poäng\"-nummer."
 
 #. type: Plain text
 #: en/diff-format.adoc:50
 msgid "a tab or a NUL when `-z` option is used."
-msgstr ""
+msgstr "en tabb eller ett NUL när alternativet `-z` används."
 
 #. type: Plain text
 #: en/diff-format.adoc:51
 msgid "path for \"src\""
-msgstr ""
+msgstr "sökvägen för \"src\""
 
 #. type: Plain text
 #: en/diff-format.adoc:52
 msgid "a tab or a NUL when `-z` option is used; only exists for C or R."
-msgstr ""
+msgstr "en tabb eller ett NUL när `-z`-alternativet används; finns endast för C eller R."
 
 #. type: Plain text
 #: en/diff-format.adoc:53
 msgid "path for \"dst\"; only exists for C or R."
-msgstr ""
+msgstr "sökväg för \"dst\"; finns bara för C eller R."
 
 #. type: Plain text
 #: en/diff-format.adoc:54
 msgid "an LF or a NUL when `-z` option is used, to terminate the record."
-msgstr ""
+msgstr "en LF eller en NUL när `-z`-alternativet används, för att avsluta posten."
 
 #. type: Plain text
 #: en/diff-format.adoc:56
 msgid "Possible status letters are:"
-msgstr ""
+msgstr "Möjliga statusbokstäver är:"
 
 #. type: Plain text
 #: en/diff-format.adoc:58
 msgid "`A`: addition of a file"
-msgstr ""
+msgstr "`A`: tillägg av en fil"
 
 #. type: Plain text
 #: en/diff-format.adoc:59
 msgid "`C`: copy of a file into a new one"
-msgstr ""
+msgstr "`C`: kopiera en fil till en ny"
 
 #. type: Plain text
 #: en/diff-format.adoc:60
 msgid "`D`: deletion of a file"
-msgstr ""
+msgstr "`D`: radering av en fil"
 
 #. type: Plain text
 #: en/diff-format.adoc:61
 msgid "`M`: modification of the contents or mode of a file"
-msgstr ""
+msgstr "`M`: modifiering av innehållet eller läget för en fil"
 
 #. type: Plain text
 #: en/diff-format.adoc:62
 msgid "`R`: renaming of a file"
-msgstr ""
+msgstr "`R`: byta namn på en fil"
 
 #. type: Plain text
 #: en/diff-format.adoc:63
 msgid "`T`: change in the type of the file (regular file, symbolic link or submodule)"
-msgstr ""
+msgstr "`T`: ändring av filtypen (vanlig fil, symbolisk länk eller undermodul)"
 
 #. type: Plain text
 #: en/diff-format.adoc:65
 msgid "`U`: file is unmerged (you must complete the merge before it can be committed)"
-msgstr ""
+msgstr "`U`: filen är avsammanfogad (du måste slutföra sammanfogningen innan den kan sparas)"
 
 #. type: Plain text
 #: en/diff-format.adoc:66
 msgid "`X`: \"unknown\" change type (most probably a bug, please report it)"
-msgstr ""
+msgstr "`X`: \"okänd\" ändringstyp (troligtvis en bugg, vänligen rapportera det)"
 
 #. type: Plain text
 #: en/diff-format.adoc:71
 msgid "Status letters `C` and `R` are always followed by a score (denoting the percentage of similarity between the source and target of the move or copy). Status letter `M` may be followed by a score (denoting the percentage of dissimilarity) for file rewrites."
-msgstr ""
+msgstr "Statusbokstäverna `C` och `R` följs alltid av en poäng (som anger procentandelen likhet mellan källan och målet för flytten eller kopian). Statusbokstaven `M` kan följas av en poäng (som anger procentandelen olikhet) för filomskrivningar."
 
 #. type: Plain text
 #: en/diff-format.adoc:74
 msgid "The sha1 for \"dst\" is shown as all 0's if a file on the filesystem is out of sync with the index."
-msgstr ""
+msgstr "sha1 för \"dst\" visas som enbart nollor (0) om en fil i filsystemet inte är synkroniserad med indexet."
 
 #. type: Labeled list
 #: en/diff-format.adoc:76 en/git-svn.adoc:499 en/git-svn.adoc:539
 #, no-wrap
 msgid "Example:"
-msgstr ""
+msgstr "Exempel:"
 
 #. type: delimited block -
 #: en/diff-format.adoc:79
 #, no-wrap
 msgid ":100644 100644 5be4a4a 0000000 M file.c\n"
-msgstr ""
+msgstr ":100644 100644 5be4a4a 0000000 M-fil.c\n"
 
 #. type: Plain text
 #: en/diff-format.adoc:85 en/git-ls-files.adoc:257 en/git-ls-tree.adoc:134
 msgid "Without the `-z` option, pathnames with \"unusual\" characters are quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1]). Using `-z` the filename is output verbatim and the line is terminated by a NUL byte."
-msgstr ""
+msgstr "Utan `-z`-alternativet citeras sökvägar med \"ovanliga\" tecken enligt beskrivningen för konfigurationsvariabeln `core.quotePath` (se linkgit:git-config[1]). Med `-z` matas filnamnet ut ordagrant och raden avslutas med en NUL-byte."
 
 #. type: Title -
 #: en/diff-format.adoc:87
 #, no-wrap
 msgid "diff format for merges"
-msgstr ""
+msgstr "diff-format för sammanslagningar"
 
 #. type: Plain text
 #: en/diff-format.adoc:93
 msgid "`git-diff-tree`, `git-diff-files` and `git-diff --raw` can take `-c` or `--cc` option to generate diff output also for merge commits. The output differs from the format described above in the following way:"
-msgstr ""
+msgstr "`git-diff-tree`, `git-diff-files` och `git-diff --raw` kan använda `-c` eller `--cc` alternativ för att generera diff-utdata även för merge-commits. Utdata skiljer sig från formatet som beskrivs ovan på följande sätt:"
 
 #. type: Plain text
 #: en/diff-format.adoc:95
 msgid "there is a colon for each parent"
-msgstr ""
+msgstr "det finns ett kolon för varje förälder"
 
 #. type: Plain text
 #: en/diff-format.adoc:96
 msgid "there are more \"src\" modes and \"src\" sha1"
-msgstr ""
+msgstr "det finns fler \"src\"-lägen och \"src\" sha1"
 
 #. type: Plain text
 #: en/diff-format.adoc:97
 msgid "status is concatenated status characters for each parent"
-msgstr ""
+msgstr "status är sammanfogade statustecken för varje förälder"
 
 #. type: Plain text
 #: en/diff-format.adoc:98
 msgid "no optional \"score\" number"
-msgstr ""
+msgstr "inget valfritt \"poängnummer\""
 
 #. type: Plain text
 #: en/diff-format.adoc:99
 msgid "tab-separated pathname(s) of the file"
-msgstr ""
+msgstr "tabbavgränsade sökvägar till filen"
 
 #. type: Plain text
 #: en/diff-format.adoc:104
@@ -4530,362 +4537,419 @@ msgstr "För `-c` och `--cc` visas endast destinations- eller slutsökvägen äv
 #. type: Plain text
 #: en/diff-format.adoc:106
 msgid "Examples for `-c` and `--cc` without `--combined-all-paths`:"
-msgstr ""
+msgstr "Exempel för `-c` och `--cc` utan `--combined-all-paths`:"
 
 #. type: delimited block -
 #: en/diff-format.adoc:111
 #, no-wrap
 msgid "::100644 100644 100644 fabadb8 cc95eb0 4866510 MM\tdesc.c\n::100755 100755 100755 52b7a2d 6d1ac04 d2ac7d7 RM\tbar.sh\n::100644 100644 100644 e07d6c5 9042e82 ee91881 RR\tphooey.c\n"
 msgstr ""
+"::100644 100644 100644 fabadb8 cc95eb0 4866510 MM\tdesc.c\n"
+"::100755 100755 100755 52b7a2d 6d1ac04 d2ac7d7 RM\tbar.sh\n"
+"::100644 100644 100644 e07d6c5 9042e82 ee91881 RR\tphooey.c\n"
 
 #. type: Plain text
 #: en/diff-format.adoc:114
 msgid "Examples when `--combined-all-paths` added to either `-c` or `--cc`:"
-msgstr ""
+msgstr "Exempel när `--combined-all-paths` läggs till antingen `-c` eller `--cc`:"
 
 #. type: delimited block -
 #: en/diff-format.adoc:119
 #, no-wrap
 msgid "::100644 100644 100644 fabadb8 cc95eb0 4866510 MM\tdesc.c\tdesc.c\tdesc.c\n::100755 100755 100755 52b7a2d 6d1ac04 d2ac7d7 RM\tfoo.sh\tbar.sh\tbar.sh\n::100644 100644 100644 e07d6c5 9042e82 ee91881 RR\tfooey.c\tfuey.c\tphooey.c\n"
 msgstr ""
+"::100644 100644 100644 fabadb8 cc95eb0 4866510 MM\tdesc.c\tdesc.c\tdesc.c\n"
+"::100755 100755 100755 52b7a2d 6d1ac04 d2ac7d7 RM\tfoo.sh\tbar.sh\tbar.sh\n"
+"::100644 100644 100644 e07d6c5 9042e82 ee91881 RR\tfooey.c\tfuey.c\tphooey.c\n"
 
 #. type: Plain text
 #: en/diff-format.adoc:123
 msgid "Note that 'combined diff' lists only files which were modified from all parents."
-msgstr ""
+msgstr "Observera att 'kombinerad diff' endast listar filer som har modifierats från alla föräldrar."
 
 #. type: Title -
 #: en/diff-format.adoc:129
 #, no-wrap
 msgid "other diff formats"
-msgstr ""
+msgstr "andra diff-format"
 
 #. type: Plain text
 #: en/diff-format.adoc:135
 msgid "The `--summary` option describes newly added, deleted, renamed and copied files. The `--stat` option adds `diffstat`(1) graph to the output. These options can be combined with other options, such as `-p`, and are meant for human consumption."
-msgstr ""
+msgstr "Alternativet `--summary` beskriver nyligen tillagda, raderade, omdöpta och kopierade filer. Alternativet `--stat` lägger till `diffstat`(1)-grafen till utdata. Dessa alternativ kan kombineras med andra alternativ, såsom `-p`, och är avsedda för mänsklig konsumtion."
 
 #. type: Plain text
 #: en/diff-format.adoc:140
 msgid "When showing a change that involves a rename or a copy, `--stat` output formats the pathnames compactly by combining common prefix and suffix of the pathnames. For example, a change that moves `arch/i386/Makefile` to `arch/x86/Makefile` while modifying 4 lines will be shown like this:"
-msgstr ""
+msgstr "När en ändring som involverar ett namnbyte eller en kopia visas, formaterar `--stat` sökvägarna kompakt genom att kombinera gemensamma prefix och suffix för sökvägarna. Till exempel, en ändring som flyttar `arch/i386/Makefile` till `arch/x86/Makefile` medan fyra rader ändras kommer att visas så här:"
 
 #. type: delimited block -
 #: en/diff-format.adoc:143
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "arch/{i386 => x86}/Makefile    |   4 +--\n"
-msgstr ""
+msgstr "arch/{i386 => x86}/Makefile    |   4 +--\n"
 
 #. type: Plain text
 #: en/diff-format.adoc:148
 msgid "The `--numstat` option gives the diffstat(1) information but is designed for easier machine consumption. An entry in `--numstat` output looks like this:"
-msgstr ""
+msgstr "Alternativet `--numstat` ger informationen diffstat(1) men är utformat för enklare maskinanvändning. En post i `--numstat`-utdata ser ut så här:"
 
 #. type: delimited block -
 #: en/diff-format.adoc:152
 #, no-wrap
 msgid "1\t2\tREADME\n3\t1\tarch/{i386 => x86}/Makefile\n"
 msgstr ""
+"1\t2\tREADME\n"
+"3\t1\tarch/{i386 => x86}/Makefile\n"
 
 #. type: Plain text
 #: en/diff-format.adoc:155
 msgid "That is, from left to right:"
-msgstr ""
+msgstr "Det vill säga, från vänster till höger:"
 
 #. type: Plain text
 #: en/diff-format.adoc:157 en/diff-format.adoc:173
 msgid "the number of added lines;"
-msgstr ""
+msgstr "antalet tillagda rader;"
 
 #. type: Plain text
 #: en/diff-format.adoc:158 en/diff-format.adoc:160 en/diff-format.adoc:174
 #: en/diff-format.adoc:176
 msgid "a tab;"
-msgstr ""
+msgstr "en tab;"
 
 #. type: Plain text
 #: en/diff-format.adoc:159 en/diff-format.adoc:175
 msgid "the number of deleted lines;"
-msgstr ""
+msgstr "antalet raderade rader;"
 
 #. type: Plain text
 #: en/diff-format.adoc:161
 msgid "pathname (possibly with rename/copy information);"
-msgstr ""
+msgstr "sökväg (möjligen med information om namnbyte/kopiering);"
 
 #. type: Plain text
 #: en/diff-format.adoc:162
 msgid "a newline."
-msgstr ""
+msgstr "en nyrad."
 
 #. type: Plain text
 #: en/diff-format.adoc:164
 msgid "When `-z` output option is in effect, the output is formatted this way:"
-msgstr ""
+msgstr "När utdataalternativet `-z` är aktiverat formateras utdata på följande sätt:"
 
 #. type: delimited block -
 #: en/diff-format.adoc:168
 #, no-wrap
 msgid "1\t2\tREADME NUL\n3\t1\tNUL arch/i386/Makefile NUL arch/x86/Makefile NUL\n"
 msgstr ""
+"1\t2\tREADME NUL\n"
+"3\t1\tNUL arch/i386/Makefile NUL arch/x86/Makefile NUL\n"
 
 #. type: Plain text
 #: en/diff-format.adoc:171
 msgid "That is:"
-msgstr ""
+msgstr "Som är:"
 
 #. type: Plain text
 #: en/diff-format.adoc:177 en/diff-format.adoc:179
 msgid "a NUL (only exists if renamed/copied);"
-msgstr ""
+msgstr "en NUL (existerar endast om den byts om/kopieras);"
 
 #. type: Plain text
 #: en/diff-format.adoc:178
 msgid "pathname in preimage;"
-msgstr ""
+msgstr "sökväg i föravbildning;"
 
 #. type: Plain text
 #: en/diff-format.adoc:180
 msgid "pathname in postimage (only exists if renamed/copied);"
-msgstr ""
+msgstr "sökväg i postimage (finns endast om det byts namn/kopieras);"
 
 #. type: Plain text
 #: en/diff-format.adoc:181
 msgid "a NUL."
-msgstr ""
+msgstr "en NUL."
 
 #. type: Plain text
 #: en/diff-format.adoc:186
 msgid "The extra `NUL` before the preimage path in renamed case is to allow scripts that read the output to tell if the current record being read is a single-path record or a rename/copy record without reading ahead. After reading added and deleted lines, reading up to `NUL` would yield the pathname, but if that is `NUL`, the record will show two paths."
-msgstr ""
+msgstr "Den extra `NUL` före preimage-sökvägen i omdöpt skiftläge är till för att tillåta skript som läser utdata att avgöra om den aktuella posten som läses är en post med en enda sökväg eller en omdöpnings-/kopieringspost utan att läsa framåt. Efter att ha läst tillagda och borttagna rader skulle läsning upp till `NUL` ge sökvägsnamnet, men om det är `NUL` kommer posten att visa två sökvägar."
 
 #. type: Title -
 #: en/diff-generate-patch.adoc:3
 #, no-wrap
 msgid "Generating patch text with -p"
-msgstr ""
+msgstr "Generera patchtext med -p"
 
 #. type: Plain text
 #: en/diff-generate-patch.adoc:16
 msgid "Running linkgit:git-diff[1], linkgit:git-log[1], linkgit:git-show[1], linkgit:git-diff-index[1], linkgit:git-diff-tree[1], or linkgit:git-diff-files[1] with the `-p` option produces patch text. You can customize the creation of patch text via the `GIT_EXTERNAL_DIFF` and the `GIT_DIFF_OPTS` environment variables (see linkgit:git[1]), and the `diff` attribute (see linkgit:gitattributes[5])."
-msgstr ""
+msgstr "Att köra linkgit:git-diff[1], linkgit:git-log[1], linkgit:git-show[1], linkgit:git-diff-index[1], linkgit:git-diff-tree[1] eller linkgit:git-diff-files[1] med alternativet `-p` producerar patchtext. Du kan anpassa skapandet av patchtext via miljövariablerna `GIT_EXTERNAL_DIFF` och `GIT_DIFF_OPTS` (se linkgit:git[1]), och attributet `diff` (se linkgit:gitattributes[5])."
 
 #. type: Plain text
 #: en/diff-generate-patch.adoc:19
 msgid "What the `-p` option produces is slightly different from the traditional diff format:"
-msgstr ""
+msgstr "Det som `-p`-alternativet producerar skiljer sig något från det traditionella diff-formatet:"
 
 #. type: Plain text
 #: en/diff-generate-patch.adoc:21
 msgid "It is preceded by a \"git diff\" header that looks like this:"
-msgstr ""
+msgstr "Det föregås av en \"git diff\"-rubrik som ser ut så här:"
 
 #. type: Plain text
 #: en/diff-generate-patch.adoc:23
 #, no-wrap
 msgid "diff --git a/file1 b/file2\n"
-msgstr ""
+msgstr "diff --git a/fil1 b/fil2\n"
 
 #. type: Plain text
 #: en/diff-generate-patch.adoc:27
 msgid "The `a/` and `b/` filenames are the same unless rename/copy is involved. Especially, even for a creation or a deletion, `/dev/null` is _not_ used in place of the `a/` or `b/` filenames."
-msgstr ""
+msgstr "Filnamnen `a/` och `b/` är desamma om det inte rör sig om att byta namn/kopiera. Speciellt, även vid skapande eller borttagning, används `/dev/null` _inte_ istället för filnamnen `a/` eller `b/`."
 
 #. type: Plain text
 #: en/diff-generate-patch.adoc:31
 msgid "When a rename/copy is involved, `file1` and `file2` show the name of the source file of the rename/copy and the name of the file that the rename/copy produces, respectively."
-msgstr ""
+msgstr "När ett namnbyte/kopiering är inblandat visar `fil1` och `fil2` namnet på källfilen för namnbytet/kopieringen respektive namnet på filen som namnbytet/kopieringen producerar."
 
 #. type: Plain text
 #: en/diff-generate-patch.adoc:33
+#, fuzzy
 msgid "It is followed by one or more extended header lines:"
-msgstr ""
+msgstr "Den följs av en eller flera utökade rubrikrader:"
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:46
 #, no-wrap
 msgid "old mode <mode>\nnew mode <mode>\ndeleted file mode <mode>\nnew file mode <mode>\ncopy from <path>\ncopy to <path>\nrename from <path>\nrename to <path>\nsimilarity index <number>\ndissimilarity index <number>\nindex <hash>..<hash> <mode>\n"
 msgstr ""
+"old mode <sökväg>\n"
+"new mode <behörigheter>\n"
+"deleted file mode <behörigheter>\n"
+"new file mode <läge>\n"
+"copy from <sökväg>\n"
+"copy to <sökväg>\n"
+"rename from <sökväg>\n"
+"rename to <sökväg>\n"
+"similarity index <nummer>\n"
+"dissimilarity index <nummer>\n"
+"index <hash>..<hash> <behörigheter>\n"
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:49
 msgid "File modes _<mode>_ are printed as 6-digit octal numbers including the file type and file permission bits."
-msgstr ""
+msgstr "Fil-rättigheter _<behörigheter>_ skrivs ut som 6-siffriga oktala tal inklusive filtyp och filbehörighetsbitar."
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:51
 msgid "Path names in extended headers do not include the `a/` and `b/` prefixes."
-msgstr ""
+msgstr "Sökvägar i utökade rubriker inkluderar inte prefixen `a/` och `b/`."
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:58
 msgid "The similarity index is the percentage of unchanged lines, and the dissimilarity index is the percentage of changed lines. It is a rounded down integer, followed by a percent sign. The similarity index value of 100% is thus reserved for two equal files, while 100% dissimilarity means that no line from the old file made it into the new one."
-msgstr ""
+msgstr "Likhetsindexet är andelen oförändrade rader och olikhetsindexet är andelen ändrade rader. Det är ett avrundat heltal följt av ett procenttecken. Likhetsindexvärdet 100 % är således reserverat för två lika filer, medan 100 % olikhet innebär att ingen rad från den gamla filen kom med i den nya."
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:62
 msgid "The index line includes the blob object names before and after the change. The _<mode>_ is included if the file mode does not change; otherwise, separate lines indicate the old and the new mode."
-msgstr ""
+msgstr "Indexraden innehåller namnen på blob-objekten före och efter ändringen. _<behörigheter>_ inkluderas om fil-rättigheterna inte ändras; annars anger separata rader det gamla och det nya läget."
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:66
 msgid "Pathnames with \"unusual\" characters are quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1])."
-msgstr ""
+msgstr "Sökvägar med \"ovanliga\" tecken anges i citat enligt beskrivningen för konfigurationsvariabeln `core.quotePath` (se linkgit:git-config[1])."
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:71
 msgid "All the `file1` files in the output refer to files before the commit, and all the `file2` files refer to files after the commit. It is incorrect to apply each change to each file sequentially. For example, this patch will swap a and b:"
-msgstr ""
+msgstr "Alla `fil1`-filer i utdata refererar till filer före incheckning, och alla `fil2`-filer refererar till filer efter incheckning. Det är felaktigt att tillämpa varje ändring på varje fil sekventiellt. Till exempel kommer den här patchen att byta a och b:"
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:78
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "diff --git a/a b/b\nrename from a\nrename to b\ndiff --git a/b b/a\nrename from b\nrename to a\n"
 msgstr ""
+"diff --git a/a b/b\n"
+"rename from a\n"
+"rename to b\n"
+"diff --git a/b b/a\n"
+"rename from b\n"
+"rename to a\n"
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:83
 msgid "Hunk headers mention the name of the function to which the hunk applies. See \"Defining a custom hunk-header\" in linkgit:gitattributes[5] for details of how to tailor this to specific languages."
-msgstr ""
+msgstr "Hunk-rubriker nämner namnet på den funktion som hunken gäller för. Se \"Definiera en anpassad hunk-rubrik\" i linkgit:gitattributes[5] för detaljer om hur man anpassar detta till specifika språk."
 
 #. type: Title -
 #: en/diff-generate-patch.adoc:86
 #, no-wrap
 msgid "Combined diff format"
-msgstr ""
+msgstr "Kombinerat diff-format"
 
 #. type: Plain text
 #: en/diff-generate-patch.adoc:94
 msgid "Any diff-generating command can take the `-c` or `--cc` option to produce a 'combined diff' when showing a merge. This is the default format when showing merges with linkgit:git-diff[1] or linkgit:git-show[1]. Note also that you can give suitable `--diff-merges` option to any of these commands to force generation of diffs in a specific format."
-msgstr ""
+msgstr "Alla diff-genererande kommandon kan använda `-c` eller `--cc` alternativet för att skapa en 'kombinerad diff' när en merge visas. Detta är standardformatet när merges visas med linkgit:git-diff[1] eller linkgit:git-show[1]. Observera också att du kan ge lämplig `--diff-merges` alternativ till vilket som helst av dessa kommandon för att tvinga generering av diffs i ett specifikt format."
 
 #. type: Plain text
 #: en/diff-generate-patch.adoc:96
 msgid "A \"combined diff\" format looks like this:"
-msgstr ""
+msgstr "Ett \"kombinerat diff\"-format ser ut så här:"
 
 #. type: delimited block -
 #: en/diff-generate-patch.adoc:105
 #, no-wrap
 msgid "diff --combined describe.c\nindex fabadb8,cc95eb0..4866510\n--- a/describe.c\n+++ b/describe.c\n@@@ -98,20 -98,12 +98,20 @@@\n\treturn (a_date > b_date) ? -1 : (a_date == b_date) ? 0 : 1;\n  }\n"
 msgstr ""
+"diff --combined describe.c\n"
+"index fabadb8,cc95eb0..4866510\n"
+"--- a/describe.c\n"
+"+++ b/describe.c\n"
+"@@@ -98,20 -98,12 +98,20 @@@\n"
+"\treturn (a_date > b_date) ? -1 : (a_date == b_date) ? 0 : 1;\n"
+"  }\n"
 
 #. type: delimited block -
 #: en/diff-generate-patch.adoc:115
 #, no-wrap
 msgid "- static void describe(char *arg)\n -static void describe(struct commit *cmit, int last_one)\n++static void describe(char *arg, int last_one)\n  {\n +\tunsigned char sha1[20];\n +\tstruct commit *cmit;\n\tstruct commit_list *list;\n\tstatic int initialized = 0;\n\tstruct commit_name *n;\n"
 msgstr ""
+"- static void describe(char *arg)\n"
+" -static void describe(struct commit *cmit, int last_one)\n"
+"++static void describe(char *arg, int last_one)\n"
+"  {\n"
+" +\tunsigned char sha1[20];\n"
+" +\tstruct commit *cmit;\n"
+"\tstruct commit_list *list;\n"
+"\tstatic int initialized = 0;\n"
+"\tstruct commit_name *n;\n"
 
 #. type: delimited block -
 #: en/diff-generate-patch.adoc:125
 #, no-wrap
 msgid " +\tif (get_sha1(arg, sha1) < 0)\n +\t\tusage(describe_usage);\n +\tcmit = lookup_commit_reference(sha1);\n +\tif (!cmit)\n +\t\tusage(describe_usage);\n +\n\tif (!initialized) {\n\t\tinitialized = 1;\n\t\tfor_each_ref(get_name);\n"
 msgstr ""
+" +\tif (get_sha1(arg, sha1) < 0)\n"
+" +\t\tusage(describe_usage);\n"
+" +\tcmit = lookup_commit_reference(sha1);\n"
+" +\tif (!cmit)\n"
+" +\t\tusage(describe_usage);\n"
+" +\n"
+"\tif (!initialized) {\n"
+"\t\tinitialized = 1;\n"
+"\t\tfor_each_ref(get_name);\n"
 
 #. type: Plain text
 #: en/diff-generate-patch.adoc:129
 msgid "It is preceded by a \"git diff\" header, that looks like this (when the `-c` option is used):"
-msgstr ""
+msgstr "Den föregås av en \"git diff\"-rubrik, som ser ut så här (när alternativet `-c` används):"
 
 #. type: Plain text
 #: en/diff-generate-patch.adoc:131
 #, no-wrap
 msgid "diff --combined file\n"
-msgstr ""
+msgstr "diff --combined fil\n"
 
 #. type: Plain text
 #: en/diff-generate-patch.adoc:133
 msgid "or like this (when the `--cc` option is used):"
-msgstr ""
+msgstr "eller så här (när `--cc`-alternativet används):"
 
 #. type: Plain text
 #: en/diff-generate-patch.adoc:135
 #, no-wrap
 msgid "       diff --cc file\n"
-msgstr ""
+msgstr "       diff --cc fil\n"
 
 #. type: Plain text
 #: en/diff-generate-patch.adoc:138
 msgid "It is followed by one or more extended header lines (this example shows a merge with two parents):"
-msgstr ""
+msgstr "Den följs av en eller flera utökade rubrikrader (detta exempel visar en sammanslagning med två föräldrar):"
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:144
 #, no-wrap
 msgid "index <hash>,<hash>..<hash>\nmode <mode>,<mode>..<mode>\nnew file mode <mode>\ndeleted file mode <mode>,<mode>\n"
 msgstr ""
+"index <hash>,<hash>..<hash>\n"
+"mode <behörighter>,<behörighter>..<behörighter>\n"
+"new file mode <behörighter>\n"
+"deleted file mode <behörighter>,<behörighter>\n"
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:150
 msgid "The `mode <mode>,<mode>..<mode>` line appears only if at least one of the <mode> is different from the rest. Extended headers with information about detected content movement (renames and copying detection) are designed to work with the diff of two _<tree-ish>_ and are not used by combined diff format."
-msgstr ""
+msgstr "Raden `mode <behörighter>,<behörighter>..<behörighter>` visas bara om minst en av <behörighter> skiljer sig från resten. Utökade rubriker med information om detekterad innehållsförflyttning (namnbyten och kopieringsdetektering) är utformade för att fungera med diff-värdet för två _<trädlikt>_ och används inte av kombinerat diff-format."
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:152
 msgid "It is followed by a two-line from-file/to-file header:"
-msgstr ""
+msgstr "Den följs av en tvåradig från-fil/till-fil-rubrik:"
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:154 en/diff-generate-patch.adoc:165
 #: en/diff-generate-patch.adoc:166 en/diff-generate-patch.adoc:167
 msgid "a/file"
-msgstr ""
+msgstr "a/fil"
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:155 en/diff-generate-patch.adoc:168
 msgid "b/file"
-msgstr ""
+msgstr "b/fil"
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:159
 msgid "Similar to the two-line header for the traditional 'unified' diff format, `/dev/null` is used to signal created or deleted files."
-msgstr ""
+msgstr "I likhet med den tvåradiga rubriken för det traditionella 'unified' diff-formatet används `/dev/null` för att signalera skapade eller raderade filer."
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:163
 msgid "However, if the --combined-all-paths option is provided, instead of a two-line from-file/to-file, you get an N+1 line from-file/to-file header, where N is the number of parents in the merge commit:"
-msgstr ""
+msgstr "Om alternativet --combined-all-paths däremot anges, får du istället för en tvåradig från-fil/till-fil-rubrik en N+1-radig from-file/to-file-rubrik, där N är antalet föräldrar i sammanslagings-incheckning:"
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:172
 msgid "This extended format can be useful if rename or copy detection is active, to allow you to see the original name of the file in different parents."
-msgstr ""
+msgstr "Detta utökade format kan vara användbart om namnbytes- eller kopieringsdetektering är aktivt, så att du kan se filens ursprungliga namn i olika överordnade filer."
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:178
 msgid "Chunk header format is modified to prevent people from accidentally feeding it to `patch -p1`. Combined diff format was created for review of merge commit changes, and was not meant to be applied. The change is similar to the change in the extended 'index' header:"
-msgstr ""
+msgstr "Chunk-headerformatet är modifierat för att förhindra att folk av misstag matar in det i `patch -p1`. Kombinerat diff-format skapades för granskning av sammanslagings inchecknings-ändringar och var inte avsett att tillämpas. Ändringen liknar ändringen i den utökade 'index'-headern:"
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:180
 #, no-wrap
 msgid "@@@ <from-file-range> <from-file-range> <to-file-range> @@@\n"
-msgstr ""
+msgstr "@@@ <från-fil-omfång> <från-fil-omfång> <till-fil-omfånge> @@@\n"
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:183
 msgid "There are (number of parents + 1) `@` characters in the chunk header for combined diff format."
-msgstr ""
+msgstr "Det finns (antal föräldrar + 1) `@`-tecken i chunk-rubriken för kombinerat diff-format."
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:192
 msgid "Unlike the traditional 'unified' diff format, which shows two files A and B with a single column that has `-` (minus -- appears in A but removed in B), `+` (plus -- missing in A but added to B), or `\" \"` (space -- unchanged) prefix, this format compares two or more files file1, file2,... with one file X, and shows how X differs from each of fileN. One column for each of fileN is prepended to the output line to note how X's line is different from it."
-msgstr ""
+msgstr "Till skillnad från det traditionella \"unified\" diff-formatet, som visar två filer A och B med en enda kolumn som har prefixet `-` (minus -- visas i A men tas bort i B), `+` (plus -- saknas i A men läggs till i B) eller `\" \"` (mellanslag -- oförändrat), jämför detta format två eller flera filer fil1, fil2,... med en fil X, och visar hur X skiljer sig från var och en av filN. En kolumn för var och en av filN läggs till på utdataraden för att ange hur X:s rad skiljer sig från den."
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:198
 msgid "A `-` character in the column N means that the line appears in fileN but it does not appear in the result. A `+` character in the column N means that the line appears in the result, and fileN does not have that line (in other words, the line was added, from the point of view of that parent)."
-msgstr ""
+msgstr "Ett `-`-tecknet i kolumn N betyder att raden visas i fileN men inte i resultatet. Ett `+`-tecknet i kolumn N betyder att raden visas i resultatet, och fileN har inte den raden (med andra ord, raden lades till, ur den överordnade filens synvinkel)."
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:204
 msgid "In the above example output, the function signature was changed from both files (hence two `-` removals from both file1 and file2, plus `++` to mean one line that was added does not appear in either file1 or file2). Also, eight other lines are the same from file1 but do not appear in file2 (hence prefixed with `+`)."
-msgstr ""
+msgstr "I exemplet ovan ändrades funktionssignaturen från båda filerna (därav två borttagningar av `-` från både fil1 och fil2, plus `++` för att betyda att en rad som lades till inte visas i vare sig fil1 eller fil2). Dessutom är åtta andra rader desamma från fil1 men visas inte i fil2 (därav prefixet `+`)."
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:210
 msgid "When shown by `git diff-tree -c`, it compares the parents of a merge commit with the merge result (i.e. file1..fileN are the parents). When shown by `git diff-files -c`, it compares the two unresolved merge parents with the working tree file (i.e. file1 is stage 2 aka \"our version\", file2 is stage 3 aka \"their version\")."
-msgstr ""
+msgstr "När det visas med `git diff-tree -c` jämför den föräldrarna till en sammanslagnings-incheckning med sammanslagnings-resultatet (dvs. file1..fileN är föräldrarna). När det visas med `git diff-files -c` jämför den de två olösta sammanslagnings-föräldrarna med den fungerande arbetskatalog filen (dvs. file1 är steg 2, även kallad \"vår version\", file2 är steg 3, även kallad \"deras version\")."
 
 #. type: Labeled list
 #: en/diff-options.adoc:17 en/git-rebase.adoc:395
@@ -4897,7 +4961,7 @@ msgstr "--no-stat"
 #. type: Plain text
 #: en/diff-options.adoc:19
 msgid "Generate plain patches without any diffstats."
-msgstr ""
+msgstr "Generera vanliga patchar utan några diffstatistik."
 
 #. type: Labeled list
 #: en/diff-options.adoc:22 en/fetch-options.adoc:143 en/git-add.adoc:94
