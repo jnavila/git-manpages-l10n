@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-01-30 05:37+0000\n"
+"PO-Revision-Date: 2026-01-30 06:20+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -52479,84 +52479,107 @@ msgstr "uppdaterad men ej sammanslagen"
 #, no-wrap
 msgid "|X        |  Y     |Meaning\n|         |[AMD]   |not updated\n|M        |[ MTD]  |updated in index\n|T        |[ MTD]  |type changed in index\n|A        |[ MTD]  |added to index\n|D        |        |deleted from index\n|R        |[ MTD]  |renamed in index\n|C        |[ MTD]  |copied in index\n|[MTARC]  |        |index and work tree matches\n|[ MTARC] |M       |work tree changed since index\n|[ MTARC] |T       |type changed in work tree since index\n|[ MTARC] |D       |deleted in work tree\n|         |R       |renamed in work tree\n|         |C       |copied in work tree\n|D        |D       |unmerged, both deleted\n|A        |U       |unmerged, added by us\n|U        |D       |unmerged, deleted by them\n|U        |A       |unmerged, added by them\n|D        |U       |unmerged, deleted by us\n|A        |A       |unmerged, both added\n|U        |U       |unmerged, both modified\n|?        |?       |untracked\n|!        |!       |ignored\n"
 msgstr ""
+"|X        |  Y     |Betydelse\n"
+"|         |[AMD]   ||ej uppdaterad\n"
+"|M        |[ MTD]  |uppdaterad i index\n"
+"|T        |[ MTD]  |typ ändrad i index\n"
+"|A        |[ MTD]  |tillagd i index\n"
+"|D        |        |borttagen från index\n"
+"|R        |[ MTD]  |omdöpt i index\n"
+"|C        |[ MTD]  |kopierad i index\n"
+"|[MTARC]  |        |index- och arbetskatalog matchar\n"
+"|[ MTARC] |M       |arbetskatalog ändrat sedan index\n"
+"|[ MTARC] |T       |typ ändrad i arbetskatalog sedan index\n"
+"|[ MTARC] |D       |borttagen i arbetskatalog\n"
+"|         |R       |omdöpt i arbetskatalog\n"
+"|         |C       |copied in work tree\n"
+"|D        |D       |osammanslagna, båda borttagnad\n"
+"|A        |U       |osammanslagna, tillagda av oss\n"
+"|U        |D       |osammanslagna, borttagna av dem\n"
+"|U        |A       |osammanslagna, borttagna av dem\n"
+"|D        |U       |osammanslagna, borttagna av oss\n"
+"|A        |A       |osammanslagna, båda tillagda\n"
+"|U        |U       |osammanslagna, båda modifierade\n"
+"|?        |?       |ospårade\n"
+"|!        |!       |ignorerade\n"
 
 #. type: Plain text
 #: en/git-status.adoc:250
 msgid "Submodules have more state and instead report"
-msgstr ""
+msgstr "Undermoduler har mer tillstånd och rapporterar istället"
 
 #. type: Plain text
 #: en/git-status.adoc:252
 msgid "the submodule has a different HEAD than recorded in the index"
-msgstr ""
+msgstr "Undermodulen har en annan HEAD än den som är registrerad i indexet"
 
 #. type: Plain text
 #: en/git-status.adoc:253
 msgid "the submodule has modified content"
-msgstr ""
+msgstr "undermodulen har ändrat innehåll"
 
 #. type: Labeled list
 #: en/git-status.adoc:253
 #, no-wrap
 msgid "`?`"
-msgstr ""
+msgstr "`?`"
 
 #. type: Plain text
 #: en/git-status.adoc:254
 msgid "the submodule has untracked files"
-msgstr ""
+msgstr "undermodulen har ospårade filer"
 
 #. type: Plain text
 #: en/git-status.adoc:257
 msgid "This is since modified content or untracked files in a submodule cannot be added via `git add` in the superproject to prepare a commit."
-msgstr ""
+msgstr "Detta beror på att modifierat innehåll eller ospårade filer i en undermodul inte kan läggas till via `git add` i superprojektet för att förbereda en incheckning."
 
 #. type: Plain text
 #: en/git-status.adoc:260
 msgid "`m` and `?` are applied recursively. For example if a nested submodule in a submodule contains an untracked file, this is reported as `?` as well."
-msgstr ""
+msgstr "`m` och `?` tillämpas rekursivt. Om till exempel en kapslad undermodul i en undermodul innehåller en ospårad fil rapporteras detta också som `?`."
 
 #. type: Plain text
 #: en/git-status.adoc:262
 msgid "If `-b` is used the short-format status is preceded by a line"
-msgstr ""
+msgstr "Om `-b` används föregås kortformatstatusen av en rad"
 
 #. type: synopsis
 #: en/git-status.adoc:265
 #, no-wrap
 msgid "{empty}## <branchname> <tracking-info>\n"
-msgstr ""
+msgstr "{tom}## <grennamn> <spårningsinformation>\n"
 
 #. type: Title ~
 #: en/git-status.adoc:268
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Porcelain Format Version 1"
-msgstr ""
+msgstr "Porcelain Format Version 1"
 
 #. type: Plain text
 #: en/git-status.adoc:275
 msgid "Version 1 porcelain format is similar to the short format, but is guaranteed not to change in a backwards-incompatible way between Git versions or based on user configuration. This makes it ideal for parsing by scripts. The description of the short format above also describes the porcelain format, with a few exceptions:"
-msgstr ""
+msgstr "Version 1 av porslinsformatet liknar det korta formatet, men garanteras att det inte ändras på ett bakåtinkompatibelt sätt mellan Git-versioner eller baserat på användarkonfiguration. Detta gör det idealiskt för parsning med skript. Beskrivningen av det korta formatet ovan beskriver även porslinsformatet, med några få undantag:"
 
 #. type: Plain text
 #: en/git-status.adoc:278
 msgid "The user's `color.status` configuration is not respected; color will always be off."
-msgstr ""
+msgstr "Användarens `color.status`-konfiguration respekteras inte; färgen kommer alltid att vara avstängd."
 
 #. type: Plain text
 #: en/git-status.adoc:281
 msgid "The user's `status.relativePaths` configuration is not respected; paths shown will always be relative to the repository root."
-msgstr ""
+msgstr "Användarens konfiguration av `status.relativePaths` respekteras inte; visade sökvägar kommer alltid att vara relativa till repots rot."
 
 #. type: Plain text
 #: en/git-status.adoc:291
 msgid "There is also an alternate `-z` format recommended for machine parsing. In that format, the status field is the same, but some other things change. First, the `->` is omitted from rename entries and the field order is reversed (e.g `from -> to` becomes `to from`). Second, a _NUL_ (ASCII 0) follows each filename, replacing space as a field separator and the terminating newline (but a space still separates the status field from the first filename). Third, filenames containing special characters are not specially formatted; no quoting or backslash-escaping is performed."
-msgstr ""
+msgstr "Det finns också ett alternativt `-z`-format som rekommenderas för maskinparsning. I det formatet är statusfältet detsamma, men vissa andra saker ändras. För det första utelämnas `->` från namnbytesposter och fältordningen är omvänd (t.ex. `från -> till` blir `till från`). För det andra följer en _NUL_ (ASCII 0) varje filnamn och ersätter mellanslag som fältavgränsare och den avslutande nyradstecknet (men ett mellanslag separerar fortfarande statusfältet från det första filnamnet). För det tredje är filnamn som innehåller specialtecken inte särskilt formaterade; ingen citattecken ellerbakåtsnedstreck används."
 
 #. type: Plain text
 #: en/git-status.adoc:293
 msgid "Any submodule changes are reported as modified `M` instead of `m` or single `?`."
-msgstr ""
+msgstr "Alla ändringar i undermoduler rapporteras som modifierad `M` istället för `m` eller enstaka `?`."
 
 #. type: Title ~
 #: en/git-status.adoc:295
@@ -52567,251 +52590,302 @@ msgstr ""
 #. type: Plain text
 #: en/git-status.adoc:300
 msgid "Version 2 format adds more detailed information about the state of the worktree and changed items. Version 2 also defines an extensible set of easy to parse optional headers."
-msgstr ""
+msgstr "Version 2-formatet lägger till mer detaljerad information om arbetsträdets tillstånd och ändrade objekt. Version 2 definierar också en utökningsbar uppsättning lätttolkade valfria rubriker."
 
 #. type: Plain text
 #: en/git-status.adoc:304
 msgid "Header lines start with `#` and are added in response to specific command line arguments. Parsers should ignore headers they don't recognize."
-msgstr ""
+msgstr "Rubrikrader börjar med `#` och läggs till som svar på specifika kommandoradsargument. Parsers bör ignorera rubriker som de inte känner igen."
 
 #. type: Title ^
 #: en/git-status.adoc:306
 #, no-wrap
 msgid "Branch Headers"
-msgstr ""
+msgstr "Grenrubriker"
 
 #. type: Plain text
 #: en/git-status.adoc:310
 msgid "If `--branch` is given, a series of header lines are printed with information about the current branch."
-msgstr ""
+msgstr "Om `--branch` anges skrivs en serie rubrikrader ut med information om den aktuella grenen."
 
 #. type: Table
 #: en/git-status.adoc:319
 #, no-wrap
 msgid "|Line                                     |Notes\n|`# branch.oid <commit> \\| (initial)`     |Current commit.\n|`# branch.head <branch> \\| (detached)`   |Current branch.\n|`# branch.upstream <upstream-branch>`    |If upstream is set.\n|`# branch.ab +<ahead> -<behind>`         |If upstream is set and\n\t\t\t\t\t  the commit is present.\n"
 msgstr ""
+"|Rad                                       |Anteckningar\n"
+"|`# branch.oid <incheckning> \\| (initial)` |Aktuell commit.\n"
+"|`# branch.head <gren> \\| (fristående)`    |Aktuell gren.\n"
+"|`# branch.upstream <uppströmsgren>`       |Om uppströms är satt.\n"
+"|`# branch.ab +<framåt> -<bakom>`          |Om uppströms är satt och \n"
+"\t\t\t\t\t   incheckningen finns.\n"
 
 #. type: Title ^
 #: en/git-status.adoc:322
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Stash Information"
-msgstr ""
+msgstr "”Stash” Information"
 
 #. type: Plain text
 #: en/git-status.adoc:326
 msgid "If `--show-stash` is given, one line is printed showing the number of stash entries if non-zero:"
-msgstr ""
+msgstr "Om `--show-stash` anges skrivs en rad ut som visar antalet ”stash”-poster om det inte är noll:"
 
 #. type: Plain text
 #: en/git-status.adoc:328
 #, no-wrap
 msgid "    # stash <N>\n"
-msgstr ""
+msgstr "    # stash <N>\n"
 
 #. type: Title ^
 #: en/git-status.adoc:330
 #, no-wrap
 msgid "Changed Tracked Entries"
-msgstr ""
+msgstr "Ändrade spårade poster"
 
 #. type: Plain text
 #: en/git-status.adoc:337
 msgid "Following the headers, a series of lines are printed for tracked entries. One of three different line formats may be used to describe an entry depending on the type of change. Tracked entries are printed in an undefined order; parsers should allow for a mixture of the 3 line types in any order."
-msgstr ""
+msgstr "Efter rubrikerna skrivs en serie rader ut för spårade poster. Ett av tre olika radformat kan användas för att beskriva en post beroende på typen av ändring. Spårade poster skrivs ut i en odefinierad ordning; parsers bör tillåta en blandning av de tre radtyperna i valfri ordning."
 
 #. type: Plain text
 #: en/git-status.adoc:339
 msgid "Ordinary changed entries have the following format:"
-msgstr ""
+msgstr "Vanliga ändrade poster har följande format:"
 
 #. type: synopsis
 #: en/git-status.adoc:342
 #, no-wrap
 msgid "1 <XY> <sub> <mH> <mI> <mW> <hH> <hI> <path>\n"
-msgstr ""
+msgstr "1 <XY> <sub> <mH> <mI> <mW> <hH> <hI> <sökväg>\n"
 
 #. type: synopsis
 #: en/git-status.adoc:344
 msgid "Renamed or copied entries have the following format:"
-msgstr ""
+msgstr "Omdöpta eller kopierade poster har följande format:"
 
 #. type: synopsis
 #: en/git-status.adoc:347
 #, no-wrap
 msgid "2 <XY> <sub> <mH> <mI> <mW> <hH> <hI> <X><score> <path><sep><origPath>\n"
-msgstr ""
+msgstr "2 <XY> <sub> <mH> <mI> <mW> <hH> <hI> <X><poäng> <sökväg><sep><urspr.Sökväg>\n"
 
 #. type: Table
 #: en/git-status.adoc:362
 #, no-wrap
 msgid "|Field       | Meaning\n\n|_<XY>_\n|A 2 character field containing the staged and\nunstaged XY values described in the short format,\nwith unchanged indicated by a \".\" rather than\na space.\n|_<sub>_\n|A 4 character field describing the submodule state.\n\"N...\" when the entry is not a submodule.\n`S<c><m><u>` when the entry is a submodule.\n\n"
 msgstr ""
+"|Fält       | Betydelse\n"
+"\n"
+"|_<XY>_\n"
+"|Ett 2-teckensfält som innehåller de iscensatt och\n"
+"oiscensatta XY-värdena beskrivna i kortformat,\n"
+"där oförändrad indikeras av ett \".\" istället för\n"
+"ett mellanslag.\n"
+"|_<sub>_\n"
+"|Ett 4-teckensfält som beskriver undermodulens tillstånd.\n"
+"\"N...\" när posten inte är en undermodul.\n"
+"`S<c><m><u>` när posten är en undermodul.\n"
+"\n"
 
 #. type: Table
 #: en/git-status.adoc:363
 #, no-wrap
 msgid "_<c>_ is \"C\" if the commit changed; otherwise \".\".\n"
-msgstr ""
+msgstr "_<c>_ är \"C\" om incheckningen ändrades; annars \".\".\n"
 
 #. type: Table
 #: en/git-status.adoc:364
 #, no-wrap
 msgid "_<m>_ is \"M\" if it has tracked changes; otherwise \".\".\n"
-msgstr ""
+msgstr "_<m>_ är \"M\" om den har spårade ändringar; annars \".\".\n"
 
 #. type: Table
 #: en/git-status.adoc:383
 #, no-wrap
 msgid "_<u>_ is \"U\" if there are untracked changes; otherwise \".\".\n|_<mH>_       |The octal file mode in HEAD.\n|_<mI>_       |The octal file mode in the index.\n|_<mW>_       |The octal file mode in the worktree.\n|_<hH>_       |The object name in HEAD.\n|_<hI>_       |The object name in the index.\n|_<X><score>_ |The rename or copy score (denoting the percentage\nof similarity between the source and target of the\nmove or copy). For example \"R100\" or \"C75\".\n|_<path>_\n|The pathname.  In a renamed/copied entry, this is the target path.\n|_<sep>_\n|When the `-z` option is used, the 2 pathnames are separated\nwith a _NUL_ (ASCII 0x00) byte; otherwise, a _TAB_ (ASCII 0x09)\nbyte separates them.\n|_<origPath>_\n|The pathname in the commit at HEAD or in the index.\nThis is only present in a renamed/copied entry, and\ntells where the renamed/copied contents came from.\n"
 msgstr ""
+"_<u>_ är \"U\" om det finns ospårade ändringar; annars \".\".\n"
+"|_<mH>_       |Det oktala filläget i HEAD.\n"
+"|_<mI>_       |Det oktala filläget i indexet.\n"
+"|_<mW>_       |Det oktala filläget i arbetsträdet.\n"
+"|_<hH>_       |Objektnamnet i HEAD.\n"
+"|_<hI>_       |Objektnamnet i indexet.\n"
+"|_<X><score>_ |Omdöpnings- eller kopieringspoängen (som anger procentandelen\n"
+"av likhet mellan källan och målet för\n"
+"flytten eller kopian). Till exempel \"R100\" eller \"C75\".\n"
+"|_<sökväg>_\n"
+"|Sökvägen. I en omdöpt/kopierad post är detta målsökvägen.\n"
+"|_<sep>_\n"
+"|När alternativet `-z` används separeras de två sökvägarna\n"
+"med en _NUL_ (ASCII 0x00) byte; annars separeras de av en _TAB_ (ASCII 0x09)\n"
+"byte.\n"
+"|_<urspr.Sökväg>_\n"
+"|Sökvägen i incheckning vid HEAD eller i indexet.\n"
+"Detta finns bara i en omdöpt/kopierad post och\n"
+"anger var det omdöpta/kopierade innehållet kom ifrån.\n"
 
 #. type: Plain text
 #: en/git-status.adoc:387
 msgid "Unmerged entries have the following format; the first character is a \"u\" to distinguish from ordinary changed entries."
-msgstr ""
+msgstr "Osammanfogade poster har följande format; det första tecknet är ett \"u\" för att skilja från vanliga ändrade poster."
 
 #. type: synopsis
 #: en/git-status.adoc:390
 #, no-wrap
 msgid "u <XY> <sub> <m1> <m2> <m3> <mW> <h1> <h2> <h3> <path>\n"
-msgstr ""
+msgstr "u <XY> <sub> <m1> <m2> <m3> <mW> <h1> <h2> <h3> <sökväg>\n"
 
 #. type: Table
 #: en/git-status.adoc:406
 #, no-wrap
 msgid "|Field       |Meaning\n|_<XY>_      |A 2 character field describing the conflict type\n\t    as described in the short format.\n|_<sub>_     |A 4 character field describing the submodule state\n\t    as described above.\n|_<m1>_      |The octal file mode in stage 1.\n|_<m2>_      |The octal file mode in stage 2.\n|_<m3>_      |The octal file mode in stage 3.\n|_<mW>_      |The octal file mode in the worktree.\n|_<h1>_      |The object name in stage 1.\n|_<h2>_      |The object name in stage 2.\n|_<h3>_      |The object name in stage 3.\n|_<path>_    |The pathname.\n"
 msgstr ""
+"|Fält        |Betydelse\n"
+"|_<XY>_      |Ett 2-teckensfält som beskriver konflikttypen\n"
+"\t      enligt beskrivningen i kortformat.\n"
+"|_<sub>_     |Ett 4-teckensfält som beskriver submodulens tillstånd\n"
+"\t      enligt beskrivningen ovan.\n"
+"|_<m1>_      |Det oktala filläget i steg 1.\n"
+"|_<m2>_      |Det oktala filläget i steg 2.\n"
+"|_<m3>_      |Det oktala filläget i steg 3.\n"
+"|_<mW>_      |Det oktala filläget i arbetsträdet.\n"
+"|_<h1>_      |Objektnamnet i steg 1.\n"
+"|_<h2>_      |Objektnamnet i steg 2.\n"
+"|_<h3>_      |Objektnamnet i steg3.\n"
+"|_<path>_    |Sökvägen.\n"
 
 #. type: Title ^
 #: en/git-status.adoc:409
 #, no-wrap
 msgid "Other Items"
-msgstr ""
+msgstr "Andra poster"
 
 #. type: Plain text
 #: en/git-status.adoc:414
 msgid "Following the tracked entries (and if requested), a series of lines will be printed for untracked and then ignored items found in the worktree."
-msgstr ""
+msgstr "Efter de spårade posterna (och om begärt) skrivs en serie rader ut för ospårade och sedan ignorerade objekt som hittats i arbetsträdet."
 
 #. type: Plain text
 #: en/git-status.adoc:416
 msgid "Untracked items have the following format:"
-msgstr ""
+msgstr "Ospårade objekt har följande format:"
 
 #. type: Plain text
 #: en/git-status.adoc:418
 #, no-wrap
 msgid "    ? <path>\n"
-msgstr ""
+msgstr "    ? <sökväg>\n"
 
 #. type: Plain text
 #: en/git-status.adoc:420
 msgid "Ignored items have the following format:"
-msgstr ""
+msgstr "Ignorerade objekt har följande format:"
 
 #. type: Plain text
 #: en/git-status.adoc:422
 #, no-wrap
 msgid "    ! <path>\n"
-msgstr ""
+msgstr "    ! <sökväg>\n"
 
 #. type: Title ^
 #: en/git-status.adoc:424
 #, no-wrap
 msgid "Pathname Format Notes and -z"
-msgstr ""
+msgstr "Sökvägsformats noteringar och -z"
 
 #. type: Plain text
 #: en/git-status.adoc:429
 msgid "When the `-z` option is given, pathnames are printed as is and without any quoting and lines are terminated with a _NUL_ (ASCII 0x00) byte."
-msgstr ""
+msgstr "När alternativet `-z` anges skrivs sökvägar ut som de är och utan citattecken, och rader avslutas med en _NUL_ (ASCII 0x00) byte."
 
 #. type: Plain text
 #: en/git-status.adoc:433
 msgid "Without the `-z` option, pathnames with \"unusual\" characters are quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1])."
-msgstr ""
+msgstr "Utan `-z`-alternativet citeras sökvägar med \"ovanliga\" tecken enligt beskrivningen för konfigurationsvariabeln `core.quotePath` (se linkgit:git-config[1])."
 
 #. type: Plain text
 #: en/git-status.adoc:442
+#, fuzzy
 msgid "The command honors `color.status` (or `status.color` -- they mean the same thing and the latter is kept for backward compatibility) and `color.status.<slot>` configuration variables to colorize its output."
-msgstr ""
+msgstr "Kommandot använder konfigurationsvariablerna `color.status` (eller `status.color` -- de betyder samma sak och den senare behålls för bakåtkompatibilitet) och `color.status.<lucka>` för att färglägga utdata."
 
 #. type: Plain text
 #: en/git-status.adoc:446
 msgid "If the config variable `status.relativePaths` is set to false, then all paths shown are relative to the repository root, not to the current directory."
-msgstr ""
+msgstr "Om konfigurationsvariabeln `status.relativePaths` är satt till falskt, är alla visade sökvägar relativa till repo-roten, inte till den aktuella katalogen."
 
 #. type: Plain text
 #: en/git-status.adoc:457
 msgid "If `status.submoduleSummary` is set to a non zero number or true (identical to -1 or an unlimited number), the submodule summary will be enabled for the long format and a summary of commits for modified submodules will be shown (see `--summary-limit` option of linkgit:git-submodule[1]). Please note that the summary output from the status command will be suppressed for all submodules when `diff.ignoreSubmodules` is set to `all` or only for those submodules where `submodule.<name>.ignore=all`. To also view the summary for ignored submodules you can either use the `--ignore-submodules=dirty` command line option or the 'git submodule summary' command, which shows a similar output but does not honor these settings."
-msgstr ""
+msgstr "Om `status.submoduleSummary` är satt till ett tal som inte är noll eller sant (identiskt med -1 eller ett obegränsat tal), kommer undermodulsammanfattningen att aktiveras för det långa formatet och en sammanfattning av incheckningar för modifierade undermoduler kommer att visas (se alternativet `--summary-limit` i linkgit:git-submodule[1]). Observera att sammanfattningsutdata från kommandot status kommer att undertryckas för alla undermoduler när `diff.ignoreSubmodules` är satt till `all` eller endast för de undermoduler där `submodule.<namn>.ignore=all`. För att även visa sammanfattningen för ignorerade undermoduler kan du antingen använda kommandoradsalternativet `--ignore-submodules=dirty` eller kommandot 'git submodule summary', som visar en liknande utdata men inte respekterar dessa inställningar."
 
 #. type: Title -
 #: en/git-status.adoc:459
 #, no-wrap
 msgid "BACKGROUND REFRESH"
-msgstr ""
+msgstr "BAKGRUNDSUPPDATERING"
 
 #. type: Plain text
 #: en/git-status.adoc:470
 msgid "By default, `git status` will automatically refresh the index, updating the cached stat information from the working tree and writing out the result. Writing out the updated index is an optimization that isn't strictly necessary (`status` computes the values for itself, but writing them out is just to save subsequent programs from repeating our computation). When `status` is run in the background, the lock held during the write may conflict with other simultaneous processes, causing them to fail. Scripts running `status` in the background should consider using `git --no-optional-locks status` (see linkgit:git[1] for details)."
-msgstr ""
+msgstr "Som standard uppdaterar `git status` automatiskt indexet, uppdaterar den cachade statistikinformationen från arbetskatalogen och skriver ut resultatet. Att skriva ut det uppdaterade indexet är en optimering som inte är absolut nödvändig (`status` beräknar värdena för sig själv, men att skriva ut dem är bara för att rädda efterföljande program från att upprepa vår beräkning). När `status` körs i bakgrunden kan låset som hålls under skrivningen komma i konflikt med andra samtidiga processer, vilket kan orsaka att de misslyckas. Skript som kör `status` i bakgrunden bör överväga att använda `git --no-optional-locks status` (se linkgit:git[1] för detaljer)."
 
 #. type: Title -
 #: en/git-status.adoc:472
 #, no-wrap
 msgid "UNTRACKED FILES AND PERFORMANCE"
-msgstr ""
+msgstr "OSPÅRADE FILER OCH PRESTANDA"
 
 #. type: Plain text
 #: en/git-status.adoc:483
 msgid "`git status` can be very slow in large worktrees if/when it needs to search for untracked files and directories. There are many configuration options available to speed this up by either avoiding the work or making use of cached results from previous Git commands. There is no single optimum set of settings right for everyone. We'll list a summary of the relevant options to help you, but before going into the list, you may want to run `git status` again, because your configuration may already be caching `git status` results, so it could be faster on subsequent runs."
-msgstr ""
+msgstr "`git status` kan vara väldigt långsamt i stora arbetsträd om/när det behöver söka efter filer och kataloger som inte spåras. Det finns många konfigurationsalternativ tillgängliga för att påskynda detta genom att antingen undvika arbetet eller använda cachade resultat från tidigare Git-kommandon. Det finns ingen optimal uppsättning inställningar som är rätt för alla. Vi listar en sammanfattning av de relevanta alternativen för att hjälpa dig, men innan du går in på listan kanske du vill köra `git status` igen, eftersom din konfiguration kanske redan cachar `git status`-resultat, så det kan vara snabbare vid efterföljande körningar."
 
 #. type: Plain text
 #: en/git-status.adoc:485
 msgid "The `--untracked-files=no` flag or the"
-msgstr ""
+msgstr "Flaggan `--untracked-files=no` eller"
 
 #. type: Plain text
 #: en/git-status.adoc:490
 msgid "`status.showUntrackedFiles=no` config (see above for both): indicate that `git status` should not report untracked files. This is the fastest option. `git status` will not list the untracked files, so you need to be careful to remember if you create any new files and manually `git add` them."
-msgstr ""
+msgstr "`status.showUntrackedFiles=no` konfiguration (se ovan för båda): indikerar att `git status` inte ska rapportera ospårade filer. Detta är det snabbaste alternativet. `git status` kommer inte att lista de ospårade filerna, så du måste vara noga med att komma ihåg om du skapar några nya filer och manuellt `git add` dem."
 
 #. type: Plain text
 #: en/git-status.adoc:492
 msgid "`advice.statusUoption=false` (see linkgit:git-config[1]):"
-msgstr ""
+msgstr "`advice.statusUoption=false` (se länkgit:git-config[1]):"
 
 #. type: Plain text
 #: en/git-status.adoc:499
 msgid "setting this variable to `false` disables the warning message given when enumerating untracked files takes more than 2 seconds. In a large project, it may take longer and the user may have already accepted the trade off (e.g. using `-uno` may not be an acceptable option for the user), in which case, there is no point issuing the warning message, and in such a case, disabling the warning may be the best."
-msgstr ""
+msgstr "om man ställer in variabeln till `false` inaktiveras varningsmeddelandet som visas när det tar mer än 2 sekunder att räkna upp ospårade filer. I ett stort projekt kan det ta längre tid och användaren kanske redan har accepterat kompromissen (t.ex. att använda `-uno` kanske inte är ett acceptabelt alternativ för användaren), i vilket fall det inte finns någon anledning att utfärda varningsmeddelandet, och i sådant fall kan det vara bäst att inaktivera varningen."
 
 #. type: Plain text
 #: en/git-status.adoc:501
 msgid "`core.untrackedCache=true` (see linkgit:git-update-index[1]):"
-msgstr ""
+msgstr "`core.untrackedCache=true` (se länkgit:git-update-index[1]):"
 
 #. type: Plain text
 #: en/git-status.adoc:513
 msgid "enable the untracked cache feature and only search directories that have been modified since the previous `git status` command. Git remembers the set of untracked files within each directory and assumes that if a directory has not been modified, then the set of untracked files within has not changed. This is much faster than enumerating the contents of every directory, but still not without cost, because Git still has to search for the set of modified directories. The untracked cache is stored in the `.git/index` file. The reduced cost of searching for untracked files is offset slightly by the increased size of the index and the cost of keeping it up-to-date. That reduced search time is usually worth the additional size."
-msgstr ""
+msgstr "aktivera funktionen för ospårad cache och sök endast i kataloger som har ändrats sedan föregående `git status`-kommando. Git kommer ihåg uppsättningen ospårade filer i varje katalog och antar att om en katalog inte har ändrats, så har uppsättningen ospårade filer i den inte ändrats. Detta är mycket snabbare än att räkna upp innehållet i varje katalog, men fortfarande inte utan kostnad, eftersom Git fortfarande måste söka efter uppsättningen modifierade kataloger. Den ospårade cachen lagras i `.git/index`-filen. Den minskade kostnaden för att söka efter ospårade filer uppvägs något av den ökade storleken på indexet och kostnaden för att hålla det uppdaterat. Den minskade söktiden är vanligtvis värd den extra storleken."
 
 #. type: Plain text
 #: en/git-status.adoc:515
 msgid "`core.untrackedCache=true` and `core.fsmonitor=true` or"
-msgstr ""
+msgstr "`core.untrackedCache=true` och `core.fsmonitor=true` eller"
 
 #. type: Plain text
 #: en/git-status.adoc:525
 msgid "`core.fsmonitor=<hook-command-pathname>` (see linkgit:git-update-index[1]): enable both the untracked cache and FSMonitor features and only search directories that have been modified since the previous `git status` command. This is faster than using just the untracked cache alone because Git can also avoid searching for modified directories. Git only has to enumerate the exact set of directories that have changed recently. While the FSMonitor feature can be enabled without the untracked cache, the benefits are greatly reduced in that case."
-msgstr ""
+msgstr "`core.fsmonitor=<hook-command-pathname>` (se linkgit:git-update-index[1]): aktiverar både den ospårade cachen och FSMonitor-funktionerna och sök endast i kataloger som har ändrats sedan föregående `git status`-kommando. Detta är snabbare än att bara använda den ospårade cachen eftersom Git också kan undvika att söka efter ändrade kataloger. Git behöver bara räkna upp den exakta uppsättningen kataloger som nyligen har ändrats. Även om FSMonitor-funktionen kan aktiveras utan den ospårade cachen, minskas fördelarna kraftigt i så fall."
 
 #. type: Plain text
 #: en/git-status.adoc:530
 msgid "Note that after you turn on the untracked cache and/or FSMonitor features it may take a few `git status` commands for the various caches to warm up before you see improved command times. This is normal."
-msgstr ""
+msgstr "Observera att efter att du har aktiverat den ospårade cachen och/eller FSMonitor-funktionerna kan det ta några `git status`-kommandon för de olika cachen att värmas upp innan du ser förbättrade kommandotider. Detta är normalt."
 
 #. type: Title =
 #: en/git-stripspace.adoc:2
