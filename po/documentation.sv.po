@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-01-30 11:16+0000\n"
+"PO-Revision-Date: 2026-01-30 12:27+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -23884,7 +23884,7 @@ msgstr ""
 #: en/git-diff.adoc:208 en/git-remote-fd.adoc:44 en/git-remote-fd.adoc:52
 #: en/git-web--browse.adoc:52
 msgid "Same as above."
-msgstr ""
+msgstr "Samma som ovan."
 
 #. type: Plain text
 #: en/git-diff.adoc:210
@@ -45303,7 +45303,7 @@ msgstr ""
 #: en/git-remote-ext.adoc:59 en/git-remote-fd.adoc:32
 #, no-wrap
 msgid "ENVIRONMENT VARIABLES"
-msgstr ""
+msgstr "MILJÖVARIABLER"
 
 #. type: Labeled list
 #: en/git-remote-ext.adoc:61 en/git-remote-fd.adoc:33
@@ -45315,7 +45315,7 @@ msgstr "GIT_TRANSLOOP_DEBUG"
 #. type: Plain text
 #: en/git-remote-ext.adoc:63 en/git-remote-fd.adoc:35
 msgid "If set, prints debugging information about various reads/writes."
-msgstr ""
+msgstr "Om angivet skrivs felsökningsinformation om olika läsningar/skrivningar ut."
 
 #. type: Title -
 #: en/git-remote-ext.adoc:65
@@ -45428,66 +45428,66 @@ msgstr "git-remote-fd(1)"
 #. type: Plain text
 #: en/git-remote-fd.adoc:7
 msgid "git-remote-fd - Reflect smart transport stream back to caller"
-msgstr ""
+msgstr "git-remote-fd - Reflektera smart transportström tillbaka till anroparen"
 
 #. type: Plain text
 #: en/git-remote-fd.adoc:11
 msgid "\"fd::<infd>[,<outfd>][/<anything>]\" (as URL)"
-msgstr ""
+msgstr "\"fd::<infd>[,<outfd>][/<vad-som-helst>]\" (som URL)"
 
 #. type: Plain text
 #: en/git-remote-fd.adoc:17
 msgid "This helper uses specified file descriptors to connect to a remote Git server. This is not meant for end users but for programs and scripts calling git fetch, push, or archive."
-msgstr ""
+msgstr "Denna hjälpfunktion använder specificerade filbeskrivningar för att ansluta till en fjärransluten Git-server. Detta är inte avsett för slutanvändare utan för program och skript som anropar git fetch, push eller archive."
 
 #. type: Plain text
 #: en/git-remote-fd.adoc:23
 msgid "If only <infd> is given, it is assumed to be a bidirectional socket connected to a remote Git server (git-upload-pack, git-receive-pack, or git-upload-archive). If both <infd> and <outfd> are given, they are assumed to be pipes connected to a remote Git server (<infd> being the inbound pipe and <outfd> being the outbound pipe)."
-msgstr ""
+msgstr "Om endast <infd> anges antas det vara en dubbelriktad socket ansluten till en fjärransluten Git-server (git-upload-pack, git-receive-pack eller git-upload-archive). Om både <infd> och <outfd> anges antas de vara pipes anslutna till en fjärransluten Git-server (<infd> är den inkommande pipen och <outfd> är den utgående pipen)."
 
 #. type: Plain text
 #: en/git-remote-fd.adoc:26
 msgid "It is assumed that any handshaking procedures have already been completed (such as sending service request for git://) before this helper is started."
-msgstr ""
+msgstr "Det antas att alla handskakningsprocedurer redan har slutförts (som att skicka en serviceförfrågan för git://) innan denna hjälpare startas."
 
 #. type: Plain text
 #: en/git-remote-fd.adoc:30
 msgid "<anything> can be any string. It is ignored. It is meant for providing information to the user in the URL in case that URL is displayed in some context."
-msgstr ""
+msgstr "<vad-som-helst> kan vara vilken sträng som helst. Den ignoreras. Den är avsedd att ge information till användaren i URL:en om URL:en visas i något sammanhang."
 
 #. type: Labeled list
 #: en/git-remote-fd.adoc:38
 #, no-wrap
 msgid "`git fetch fd::17 master`"
-msgstr ""
+msgstr "`git fetch fd::17 master`"
 
 #. type: Plain text
 #: en/git-remote-fd.adoc:41
 msgid "Fetch master, using file descriptor #17 to communicate with git-upload-pack."
-msgstr ""
+msgstr "Hämta master, med hjälp av fildeskriptor #17 för att kommunicera med git-upload-pack."
 
 #. type: Labeled list
 #: en/git-remote-fd.adoc:42
 #, no-wrap
 msgid "`git fetch fd::17/foo master`"
-msgstr ""
+msgstr "`git fetch fd::17/foo master`"
 
 #. type: Labeled list
 #: en/git-remote-fd.adoc:45
 #, no-wrap
 msgid "`git push fd::7,8 master (as URL)`"
-msgstr ""
+msgstr "`git push fd::7,8 master (som URL)`"
 
 #. type: Plain text
 #: en/git-remote-fd.adoc:49
 msgid "Push master, using file descriptor #7 to read data from git-receive-pack and file descriptor #8 to write data to the same service."
-msgstr ""
+msgstr "Push-master, med fildeskriptor #7 för att läsa data från git-receive-pack och fildeskriptor #8 för att skriva data till samma tjänst."
 
 #. type: Labeled list
 #: en/git-remote-fd.adoc:50
 #, no-wrap
 msgid "`git push fd::7,8/bar master`"
-msgstr ""
+msgstr "`git push fd::7,8/bar master`"
 
 #. type: Title =
 #: en/git-remote.adoc:2
@@ -50237,108 +50237,129 @@ msgstr "git-shell - Begränsat inloggningsskal för SSH-åtkomst till bara Git"
 #, no-wrap
 msgid "'chsh' -s $(command -v git-shell) <user>\n'git clone' <user>`@localhost:/path/to/repo.git`\n'ssh' <user>`@localhost`\n"
 msgstr ""
+"'chsh' -s $(command -v git-shell) <användare>\n"
+"'git clone' <användare>`@localhost:/path/to/repo.git`\n"
+"'ssh' <användare>`@localhost`\n"
 
 #. type: Plain text
 #: en/git-shell.adoc:23
 msgid "This is a login shell for SSH accounts to provide restricted Git access. It permits execution only of server-side Git commands implementing the pull/push functionality, plus custom commands present in a subdirectory named `git-shell-commands` in the user's home directory."
-msgstr ""
+msgstr "Detta är ett inloggningsshell för SSH-konton för att ge begränsad Git-åtkomst. Det tillåter endast exekvering av serversida-Git-kommandon som implementerar hämta/sänd(pull/push)-funktionen, plus anpassade kommandon som finns i en underkatalog med namnet `git-shell-commands` i användarens hemkatalog."
 
 #. type: Plain text
 #: en/git-shell.adoc:28
 msgid "'git shell' accepts the following commands after the `-c` option:"
-msgstr ""
+msgstr "'git shell' accepterar följande kommandon efter `-c`-alternativet:"
 
 #. type: Labeled list
 #: en/git-shell.adoc:29
 #, no-wrap
 msgid "'git receive-pack <argument>'"
-msgstr ""
+msgstr "'git receive-pack <argument>'"
 
 #. type: Labeled list
 #: en/git-shell.adoc:30
 #, no-wrap
 msgid "'git upload-pack <argument>'"
-msgstr ""
+msgstr "'git upload-pack <argument>'"
 
 #. type: Labeled list
 #: en/git-shell.adoc:31
 #, no-wrap
 msgid "'git upload-archive <argument>'"
-msgstr ""
+msgstr "'git upload-archive <argument>'"
 
 #. type: Plain text
 #: en/git-shell.adoc:35
 msgid "Call the corresponding server-side command to support the client's 'git push', 'git fetch', or 'git archive --remote' request."
-msgstr ""
+msgstr "Anropa motsvarande serversida-kommando för att stödja klientens begäran 'git push', 'git fetch' eller 'git archive --remote'."
 
 #. type: Labeled list
 #: en/git-shell.adoc:35
 #, no-wrap
 msgid "'cvs server'"
-msgstr ""
+msgstr "'cvs server'"
 
 #. type: Plain text
 #: en/git-shell.adoc:37
 msgid "Imitate a CVS server. See linkgit:git-cvsserver[1]."
-msgstr ""
+msgstr "Imitera en CVS-server. Se linkgit:git-cvsserver[1]."
 
 #. type: Plain text
 #: en/git-shell.adoc:42
 msgid "If a `~/git-shell-commands` directory is present, 'git shell' will also handle other, custom commands by running \"`git-shell-commands/<command> <arguments>`\" from the user's home directory."
-msgstr ""
+msgstr "Om en `~/git-shell-commands`-katalog finns, kommer 'git shell' även att hantera andra, anpassade kommandon genom att köra \"`git-shell-commands/<kommando> <arguments>`\" från användarens hemkatalog."
 
 #. type: Title -
 #: en/git-shell.adoc:44
 #, no-wrap
 msgid "INTERACTIVE USE"
-msgstr ""
+msgstr "INTERAKTIV ANVÄNDNING"
 
 #. type: Plain text
 #: en/git-shell.adoc:48
 msgid "By default, the commands above can be executed only with the `-c` option; the shell is not interactive."
-msgstr ""
+msgstr "Som standard, kan kommandona ovan endast köras med alternativet `-c`; skalet är inte interaktivt."
 
 #. type: Plain text
 #: en/git-shell.adoc:56
 msgid "If a `~/git-shell-commands` directory is present, 'git shell' can also be run interactively (with no arguments). If a `help` command is present in the `git-shell-commands` directory, it is run to provide the user with an overview of allowed actions. Then a \"git> \" prompt is presented at which one can enter any of the commands from the `git-shell-commands` directory, or `exit` to close the connection."
-msgstr ""
+msgstr "Om en `~/git-shell-commands`-katalog finns, kan 'git shell' också köras interaktivt (utan argument). Om ett `help`-kommando finns i `git-shell-commands`-katalogen körs det för att ge användaren en översikt över tillåtna åtgärder. Sedan visas en \"git>\"-prompt där man kan ange vilket som helst av kommandona från `git-shell-commands`-katalogen, eller `exit` för att stänga anslutningen."
 
 #. type: Plain text
 #: en/git-shell.adoc:61
 msgid "Generally this mode is used as an administrative interface to allow users to list repositories they have access to, create, delete, or rename repositories, or change repository descriptions and permissions."
-msgstr ""
+msgstr "Generellt sett används det här läget som ett administrativt gränssnitt för att låta användare lista repon de har åtkomst till, skapa, ta bort eller byta namn på repon, eller ändra repo-beskrivningar och behörigheter."
 
 #. type: Plain text
 #: en/git-shell.adoc:64
 msgid "If a `no-interactive-login` command exists, then it is run and the interactive shell is aborted."
-msgstr ""
+msgstr "Om ett `no-interactive-login`-kommando finns, körs det och det interaktiva skalet avbryts."
 
 #. type: Plain text
 #: en/git-shell.adoc:69
 msgid "To disable interactive logins, displaying a greeting instead:"
-msgstr ""
+msgstr "För att inaktivera interaktiva inloggningar, visa en hälsning istället:"
 
 #. type: delimited block -
 #: en/git-shell.adoc:80
 #, no-wrap
 msgid "$ chsh -s /usr/bin/git-shell\n$ mkdir $HOME/git-shell-commands\n$ cat >$HOME/git-shell-commands/no-interactive-login <<\\EOF\n#!/bin/sh\nprintf '%s\\n' \"Hi $USER! You've successfully authenticated, but I do not\"\nprintf '%s\\n' \"provide interactive shell access.\"\nexit 128\nEOF\n$ chmod +x $HOME/git-shell-commands/no-interactive-login\n"
 msgstr ""
+"$ chsh -s /usr/bin/git-shell\n"
+"$ mkdir $HOME/git-shell-commands\n"
+"$ cat >$HOME/git-shell-commands/no-interactive-login <<\\EOF\n"
+"#!/bin/sh\n"
+"printf '%s\\n' \"Hej $USER! Du har autentiserat dig, men jag gör det inte.\"\n"
+"printf '%s\\n' \"ge interaktiv skalåtkomst.\"\n"
+"exit 128\n"
+"EOF\n"
+"$ chmod +x $HOME/git-shell-commands/no-interactive-login\n"
 
 #. type: Plain text
 #: en/git-shell.adoc:85
 msgid "To enable git-cvsserver access (which should generally have the `no-interactive-login` example above as a prerequisite, as creating the git-shell-commands directory allows interactive logins):"
-msgstr ""
+msgstr "För att aktivera åtkomst till git-cvsserver (vilket generellt sett bör ha exemplet `no-interactive-login` ovan som en förutsättning, eftersom skapandet av katalogen git-shell-commands tillåter interaktiva inloggningar):"
 
 #. type: delimited block -
 #: en/git-shell.adoc:96
 #, no-wrap
 msgid "$ cat >$HOME/git-shell-commands/cvs <<\\EOF\nif ! test $# = 1 && test \"$1\" = \"server\"\nthen\n\techo >&2 \"git-cvsserver only handles \\\"server\\\"\"\n\texit 1\nfi\nexec git cvsserver server\nEOF\n$ chmod +x $HOME/git-shell-commands/cvs\n"
 msgstr ""
+"$ cat >$HOME/git-shell-commands/cvs <<\\EOF\n"
+"if ! test $# = 1 && test \"$1\" = \"server\"\n"
+"then\n"
+"\techo >&2 \"git-cvsserver bara hantera \\\"server\\\"\"\n"
+"\texit 1\n"
+"fi\n"
+"exec git cvsserver server\n"
+"EOF\n"
+"$ chmod +x $HOME/git-shell-commands/cvs\n"
 
 #. type: Plain text
 #: en/git-shell.adoc:103
 msgid "ssh(1), linkgit:git-daemon[1], contrib/git-shell-commands/README"
-msgstr ""
+msgstr "ssh(1), linkgit:git-daemon[1], contrib/git-shell-commands/README"
 
 #. type: Title =
 #: en/git-sh-i18n--envsubst.adoc:2
@@ -59454,7 +59475,7 @@ msgstr "git-upload-pack(1)"
 #. type: Plain text
 #: en/git-upload-pack.adoc:7
 msgid "git-upload-pack - Send objects packed back to git-fetch-pack"
-msgstr ""
+msgstr "git-upload-pack - Skicka objekt packade tillbaka till git-fetch-pack"
 
 #. type: verse
 #: en/git-upload-pack.adoc:14
@@ -59467,12 +59488,12 @@ msgstr ""
 #. type: Plain text
 #: en/git-upload-pack.adoc:19
 msgid "Invoked by 'git fetch-pack', learns what objects the other side is missing, and sends them after packing."
-msgstr ""
+msgstr "Anropas av 'git fetch-pack', lär sig vilka objekt den andra sidan saknar och skickar dem efter packning."
 
 #. type: Plain text
 #: en/git-upload-pack.adoc:24
 msgid "This command is usually not invoked directly by the end user. The UI for the protocol is on the 'git fetch-pack' side, and the program pair is meant to be used to pull updates from a remote repository. For push operations, see 'git send-pack'."
-msgstr ""
+msgstr "Det här kommandot anropas vanligtvis inte direkt av slutanvändaren. Användargränssnittet för protokollet finns på sidan 'git fetch-pack', och programparet är avsett att användas för att hämta (pull) uppdateringar från ett fjärr-repo. För sänd-åtgärder (push), se 'git send-pack'."
 
 #. type: Labeled list
 #: en/git-upload-pack.adoc:29
@@ -59490,7 +59511,7 @@ msgstr "Försök inte <katalog>/.git/ om <katalog> inte är en Git-katalog."
 #: en/git-upload-pack.adoc:32
 #, no-wrap
 msgid "--timeout=<n>"
-msgstr ""
+msgstr "--timeout=<n>"
 
 #. type: Plain text
 #: en/git-upload-pack.adoc:34
@@ -59507,48 +59528,48 @@ msgstr "--stateless-rpc"
 #. type: Plain text
 #: en/git-upload-pack.adoc:39
 msgid "Perform only a single read-write cycle with stdin and stdout. This fits with the HTTP POST request processing model where a program may read the request, write a response, and must exit."
-msgstr ""
+msgstr "Utför endast en enda läs- och skrivcykel med stdin och stdout. Detta passar HTTP POST-förfrågningsmodellen där ett program kan läsa begäran, skriva ett svar och måste avsluta."
 
 #. type: Plain text
 #: en/git-upload-pack.adoc:47
 msgid "Used by linkgit:git-http-backend[1] to serve up `$GIT_URL/info/refs?service=git-upload-pack` requests. See \"Smart Clients\" in linkgit:gitprotocol-http[5] and \"HTTP Transport\" in the linkgit:gitprotocol-v2[5] documentation. Also understood by linkgit:git-receive-pack[1]."
-msgstr ""
+msgstr "Används av linkgit:git-http-backend[1] för att hantera `$GIT_URL/info/refs?service=git-upload-pack`-förfrågningar. Se \"Smarta klienter\" i linkgit:gitprotocol-http[5] och \"HTTP Transport\" i linkgit:gitprotocol-v2[5]-dokumentationen. Förstås även av linkgit:git-receive-pack[1]."
 
 #. type: Plain text
 #: en/git-upload-pack.adoc:50
 msgid "The repository to sync from."
-msgstr ""
+msgstr "Repot att synkronisera från."
 
 #. type: Plain text
 #: en/git-upload-pack.adoc:58
 msgid "Internal variable used for handshaking the wire protocol. Server admins may need to configure some transports to allow this variable to be passed. See the discussion in linkgit:git[1]."
-msgstr ""
+msgstr "Intern variabel som används för handskakning av wire-protokollet. Serveradministratörer kan behöva konfigurera vissa transporter för att tillåta att denna variabel skickas. Se diskussionen i linkgit:git[1]."
 
 #. type: Plain text
 #: en/git-upload-pack.adoc:68
 msgid "When cloning or fetching from a partial repository (i.e., one itself cloned with `--filter`), the server-side `upload-pack` may need to fetch extra objects from its upstream in order to complete the request. By default, `upload-pack` will refuse to perform such a lazy fetch, because `git fetch` may run arbitrary commands specified in configuration and hooks of the source repository (and `upload-pack` tries to be safe to run even in untrusted `.git` directories)."
-msgstr ""
+msgstr "Vid kloning eller hämtning från ett partiellt arkiv (dvs. ett som själv klonats med `--filter`) kan `upload-pack` på serversidan behöva hämta extra objekt från sin uppströms för att slutföra begäran. Som standard vägrar `upload-pack` att utföra en sådan lat hämtning, eftersom `git fetch` kan köra godtyckliga kommandon som anges i konfigurationen och hakarna för käll-repot (och `upload-pack` försöker vara säker att köra även i otillförlitliga `.git`-kataloger)."
 
 #. type: Plain text
 #: en/git-upload-pack.adoc:74
 msgid "This is implemented by having `upload-pack` internally set the `GIT_NO_LAZY_FETCH` variable to `1`. If you want to override it (because you are fetching from a partial clone, and you are sure you trust it), you can explicitly set `GIT_NO_LAZY_FETCH` to `0`."
-msgstr ""
+msgstr "Detta implementeras genom att `upload-pack` internt sätter variabeln `GIT_NO_LAZY_FETCH` till `1`. Om du vill åsidosätta den (eftersom du hämtar från en partiell klon och du är säker på att du litar på den) kan du explicit sätta `GIT_NO_LAZY_FETCH` till `0`."
 
 #. type: Plain text
 #: en/git-upload-pack.adoc:83
 msgid "Most Git commands should not be run in an untrusted `.git` directory (see the section `SECURITY` in linkgit:git[1]). `upload-pack` tries to avoid any dangerous configuration options or hooks from the repository it's serving, making it safe to clone an untrusted directory and run commands on the resulting clone."
-msgstr ""
+msgstr "De flesta Git-kommandon bör inte köras i en opålitlig `.git`-katalog (se avsnittet `SÄKERHET` i linkgit:git[1]). `upload-pack` försöker undvika farliga konfigurationsalternativ eller krokar från det repo det hanterar, vilket gör det säkert att klona en opålitlig katalog och köra kommandon på den resulterande klonen."
 
 #. type: Plain text
 #: en/git-upload-pack.adoc:87
 msgid "For an extra level of safety, you may be able to run `upload-pack` as an alternate user. The details will be platform dependent, but on many systems you can run:"
-msgstr ""
+msgstr "För en extra säkerhetsnivå kan du eventuellt köra `upload-pack` som en alternativ användare. Detaljerna beror på plattformen, men på många system kan du köra:"
 
 #. type: Plain text
 #: en/git-upload-pack.adoc:89
 #, no-wrap
 msgid "    git clone --no-local --upload-pack='sudo -u nobody git-upload-pack' ...\n"
-msgstr ""
+msgstr "    git clone --no-local --upload-pack='sudo -u nobody git-upload-pack' ...\n"
 
 #. type: Title =
 #: en/git-var.adoc:2
