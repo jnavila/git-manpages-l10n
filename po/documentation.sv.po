@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-01-30 12:27+0000\n"
+"PO-Revision-Date: 2026-01-30 19:31+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -1451,7 +1451,7 @@ msgstr "linkgit:git-rebase[1]"
 #. type: Plain text
 #: en/cmds-mainporcelain.adoc:90
 msgid "Reapply commits on top of another base tip."
-msgstr "Återapplicera incheckningar ovanpå en annan basspets."
+msgstr "Återapplicera incheckningar ovanpå en annan bas-top."
 
 #. type: Labeled list
 #: en/cmds-mainporcelain.adoc:91
@@ -3806,7 +3806,7 @@ msgstr "`diff.wsErrorHighlight`"
 #. type: Plain text
 #: en/config/diff.adoc:251
 msgid "Highlight whitespace errors in the `context`, `old` or `new` lines of the diff. Multiple values are separated by comma, `none` resets previous values, `default` reset the list to `new` and `all` is a shorthand for `old,new,context`. The whitespace errors are colored with `color.diff.whitespace`. The command line option `--ws-error-highlight=<kind>` overrides this setting."
-msgstr "Markera mellanslagsfel i raderna `context`, `old` eller `new` i diff-filen. Flera värden separeras med kommatecken, `none` återställer tidigare värden, `default` återställer listan till `new` och `all` är en förkortning för `old,new,context`. Mellanslagsfelen är färgade med `color.diff.whitespace`. Kommandoradsalternativet `--ws-error-highlight=<kind>` åsidosätter denna inställning."
+msgstr "Markera mellanslagsfel i raderna `context`, `old` eller `new` i diff-filen. Flera värden separeras med kommatecken, `none` återställer tidigare värden, `default` återställer listan till `new` och `all` är en förkortning för `old,new,context`. Mellanslagsfelen är färgade med `color.diff.whitespace`. Kommandoradsalternativet `--ws-error-highlight=<slag>` åsidosätter denna inställning."
 
 #. type: Labeled list
 #: en/config/diff.adoc:252
@@ -3914,7 +3914,7 @@ msgstr "`merge.defaultToUpstream`"
 #. type: Plain text
 #: en/config/merge.adoc:25
 msgid "If merge is called without any commit argument, merge the upstream branches configured for the current branch by using their last observed values stored in their remote-tracking branches. The values of the `branch.<current branch>.merge` that name the branches at the remote named by `branch.<current-branch>.remote` are consulted, and then they are mapped via `remote.<remote>.fetch` to their corresponding remote-tracking branches, and the tips of these tracking branches are merged. Defaults to true."
-msgstr "Om merge anropas utan något inchecknings-argument, sammanfogas de uppströmsgrenar som konfigurerats för den aktuella grenen med hjälp av deras senast observerade värden som lagrats i deras fjärrspårningsgrenar. Värdena för `branch.<nuvarande gren>.merge` som namnger grenarna på fjärrvärd namngiven av `branch.<nuvarande gren>.remote` konsulteras, och sedan mappas de via `remote.<fjärrvärd>.fetch` till deras motsvarande fjärrspårningsgrenar, och tipsen för dessa spårningsgrenar sammanfogas. Standardvärdet är sant."
+msgstr "Om merge anropas utan något inchecknings-argument, sammanfogas de uppströmsgrenar som konfigurerats för den aktuella grenen med hjälp av deras senast observerade värden som lagrats i deras fjärrspårningsgrenar. Värdena för `branch.<nuvarande gren>.merge` som namnger grenarna på fjärrvärd namngiven av `branch.<nuvarande gren>.remote` konsulteras, och sedan mappas de via `remote.<fjärrvärd>.fetch` till deras motsvarande fjärrspårningsgrenar, och topparna för dessa spårningsgrenar sammanfogas. Standardvärdet är sant."
 
 #. type: Labeled list
 #: en/config/merge.adoc:26
@@ -3925,7 +3925,7 @@ msgstr "`merge.ff`"
 #. type: Plain text
 #: en/config/merge.adoc:35
 msgid "By default, Git does not create an extra merge commit when merging a commit that is a descendant of the current commit. Instead, the tip of the current branch is fast-forwarded. When set to `false`, this variable tells Git to create an extra merge commit in such a case (equivalent to giving the `--no-ff` option from the command line). When set to `only`, only such fast-forward merges are allowed (equivalent to giving the `--ff-only` option from the command line)."
-msgstr "Som standard skapar Git inte en extra sammanslagnings-incheckningar när den sammanfogar en incheckning som är en underordnad till den aktuella incheckning. Istället snabbspolas spetsen för den aktuella grenen framåt. När den är satt till `false`, talar denna variabel om för Git att skapa en extra sammanslagnings-incheckning i ett sådant fall (motsvarande att ge alternativet `--no-ff` från kommandoraden). När den är satt till `only`, tillåts endast sådana snabbspolnings-sammanfogningar (motsvarande att ge alternativet `--ff-only` från kommandoraden)."
+msgstr "Som standard, skapar Git inte en extra sammanslagnings-incheckningar när den sammanfogar en incheckning som är en underordnad till den topen av aktuell incheckning. Istället snabbspolas spetsen för den aktuella grenen framåt. När den är satt till `false`, talar denna variabel om för Git att skapa en extra sammanslagnings-incheckning i ett sådant fall (motsvarande att ge alternativet `--no-ff` från kommandoraden). När den är satt till `only`, tillåts endast sådana snabbspolnings-sammanfogningar (motsvarande att ge alternativet `--ff-only` från kommandoraden)."
 
 #. type: Labeled list
 #: en/config/merge.adoc:36
@@ -4768,7 +4768,7 @@ msgstr "Alla `fil1`-filer i utdata refererar till filer före incheckning, och a
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:78
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "diff --git a/a b/b\nrename from a\nrename to b\ndiff --git a/b b/a\nrename from b\nrename to a\n"
 msgstr ""
 "diff --git a/a b/b\n"
@@ -5195,7 +5195,7 @@ msgstr "`c`"
 #. type: Plain text
 #: en/diff-options.adoc:100
 msgid "Show differences from each of the parents to the merge result simultaneously instead of showing pairwise diff between a parent and the result one at a time. Furthermore, it lists only files which were modified from all parents."
-msgstr ""
+msgstr "Visa skillnader från varje förälder till sammanslagningsresultatet samtidigt istället för att visa parvisa skillnader mellan en förälder och resultatet en i taget. Dessutom listas endast filer som har ändrats från alla föräldrar."
 
 #. type: Labeled list
 #: en/diff-options.adoc:101
@@ -5214,7 +5214,7 @@ msgstr "`cc`"
 #. type: Plain text
 #: en/diff-options.adoc:107
 msgid "Further compress output produced by `--diff-merges=combined` by omitting uninteresting hunks whose contents in the parents have only two variants and the merge result picks one of them without modification."
-msgstr ""
+msgstr "Komprimera ytterligare utdata som produceras av `--diff-merges=combined` genom att utelämna ointressanta stycken vars innehåll i föräldrarna bara har två varianter och sammanslagningsresultatet väljer en av dem utan modifiering."
 
 #. type: Labeled list
 #: en/diff-options.adoc:108
@@ -5233,12 +5233,12 @@ msgstr "`r`"
 #. type: Plain text
 #: en/diff-options.adoc:113
 msgid "Remerge two-parent merge commits to create a temporary tree object--potentially containing files with conflict markers and such. A diff is then shown between that temporary tree and the actual merge commit."
-msgstr ""
+msgstr "Återsammanfoga två-föräldra sammanslagnings-incheckningar för att skapa ett temporärt trädobjekt – potentiellt innehållande filer med konfliktmarkörer och liknande. En skillnad visas sedan mellan det temporära trädet och den faktiska sammanslagnings-incheckningen."
 
 #. type: Plain text
 #: en/diff-options.adoc:118
 msgid "The output emitted when this option is used is subject to change, and so is its interaction with other options (unless explicitly documented)."
-msgstr ""
+msgstr "Utdata som genereras när detta alternativ används kan komma att ändras, och detsamma gäller dess interaktion med andra alternativ (såvida det inte uttryckligen dokumenterats)."
 
 #. type: Labeled list
 #: en/diff-options.adoc:120
@@ -5250,52 +5250,52 @@ msgstr "`--combined-all-paths`"
 #. type: Plain text
 #: en/diff-options.adoc:126
 msgid "Cause combined diffs (used for merge commits) to list the name of the file from all parents. It thus only has effect when `--diff-merges=[dense-]combined` is in use, and is likely only useful if filename changes are detected (i.e. when either rename or copy detection have been requested)."
-msgstr ""
+msgstr "Gör att kombinerade diffs (används försammanslagnings-incheckningar) listar namnet på filen från alla föräldrar. Det har således bara effekt när `--diff-merges=[dense-]combined` används, och är sannolikt bara användbart om filnamnsändringar upptäcks (dvs. när antingen namnbyte eller kopieringsdetektering har begärts)."
 
 #. type: Plain text
 #: en/diff-options.adoc:132
 msgid "Generate diffs with _<n>_ lines of context instead of the usual three."
-msgstr ""
+msgstr "Generera skillnader med _<n>_ kontextrader istället för de vanliga tre."
 
 #. type: Plain text
 #: en/diff-options.adoc:134 en/diff-options.adoc:526
 #, no-wrap
 msgid "\tImplies `--patch`.\n"
-msgstr ""
+msgstr "\timplicerar `--patch`.\n"
 
 #. type: Labeled list
 #: en/diff-options.adoc:136
 #, no-wrap
 msgid "`--output=<file>`"
-msgstr ""
+msgstr "`--output=<fil>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:138
 msgid "Output to a specific file instead of stdout."
-msgstr ""
+msgstr "Utdata till en specifik fil istället för stdout."
 
 #. type: Labeled list
 #: en/diff-options.adoc:139
 #, no-wrap
 msgid "`--output-indicator-new=<char>`"
-msgstr ""
+msgstr "`--output-indicator-new=<tecken>`"
 
 #. type: Labeled list
 #: en/diff-options.adoc:140
 #, no-wrap
 msgid "`--output-indicator-old=<char>`"
-msgstr ""
+msgstr "`--output-indicator-old=<tecken>`"
 
 #. type: Labeled list
 #: en/diff-options.adoc:141
 #, no-wrap
 msgid "`--output-indicator-context=<char>`"
-msgstr ""
+msgstr "`--output-indicator-context=<tecken>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:145
 msgid "Specify the character used to indicate new, old or context lines in the generated patch. Normally they are `+`, `-` and ' ' respectively."
-msgstr ""
+msgstr "Ange tecknet som används för att indikera nya, gamla eller kontextuella rader i den genererade patchen. Normalt är de `+`, `-` respektive ' '."
 
 #. type: Labeled list
 #: en/diff-options.adoc:147 en/git-verify-commit.adoc:20
@@ -5316,6 +5316,11 @@ msgstr "\tgenerera diff i råformat\n"
 #, no-wrap
 msgid "\tFor each commit, show a summary of changes using the raw diff\n\tformat. See the \"RAW OUTPUT FORMAT\" section of\n\tlinkgit:git-diff[1]. This is different from showing the log\n\titself in raw format, which you can achieve with\n\t`--format=raw`.\n"
 msgstr ""
+"\tFör varje incheckning, visa en sammanfattning av ändringarna med hjälp av raw diff\n"
+"\t-formatet. Se avsnittet \"RÅTTUTGÅNGSFORMAT\" i\n"
+"\tlinkgit:git-diff[1]. Detta skiljer sig från att visa själva loggen \n"
+"\ti råformat, vilket du kan uppnå med\n"
+"\t`--format=raw`.\n"
 
 #. type: Labeled list
 #: en/diff-options.adoc:164
@@ -5340,7 +5345,7 @@ msgstr "`-t`"
 #. type: Plain text
 #: en/diff-options.adoc:171
 msgid "Show the tree objects in the diff output."
-msgstr ""
+msgstr "Visa trädobjekten i diff-utdata."
 
 #. type: Labeled list
 #: en/diff-options.adoc:173
@@ -5352,7 +5357,7 @@ msgstr "`--indent-heuristic`"
 #. type: Plain text
 #: en/diff-options.adoc:176
 msgid "Enable the heuristic that shifts diff hunk boundaries to make patches easier to read. This is the default."
-msgstr ""
+msgstr "Aktivera heuristiken som flyttar olika styckesgränser för att göra patchar lättare att läsa. Detta är standardinställningen."
 
 #. type: Labeled list
 #: en/diff-options.adoc:177
@@ -5364,7 +5369,7 @@ msgstr "`--no-indent-heuristic`"
 #. type: Plain text
 #: en/diff-options.adoc:179
 msgid "Disable the indent heuristic."
-msgstr ""
+msgstr "Inaktivera indenteringsheuristiken."
 
 #. type: Labeled list
 #: en/diff-options.adoc:180
@@ -5401,7 +5406,7 @@ msgstr "Generera en diff med algoritmen \"histogram diff\"."
 #: en/diff-options.adoc:190
 #, no-wrap
 msgid "`--anchored=<text>`"
-msgstr ""
+msgstr "`--anchored=<text>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:192
@@ -5411,18 +5416,18 @@ msgstr "Generera en diff med algoritmen \"anchored diff\"."
 #. type: Plain text
 #: en/diff-options.adoc:194
 msgid "This option may be specified more than once."
-msgstr ""
+msgstr "Det här alternativet kan anges mer än en gång."
 
 #. type: Plain text
 #: en/diff-options.adoc:199
 msgid "If a line exists in both the source and destination, exists only once, and starts with _<text>_, this algorithm attempts to prevent it from appearing as a deletion or addition in the output. It uses the \"patience diff\" algorithm internally."
-msgstr ""
+msgstr "Om en rad finns i både käll- och destinationsraden, bara finns en gång och börjar med _<text>_, försöker den här algoritmen förhindra att den visas som en borttagning eller tillägg i utdata. Den använder algoritmen \"patience diff\" internt."
 
 #. type: Labeled list
 #: en/diff-options.adoc:202
 #, no-wrap
 msgid "`--stat[=<width>[,<name-width>[,<count>]]]`"
-msgstr ""
+msgstr "`--stat[=<bredd>[,<namn-bredd>[,<antal>]]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:217
@@ -5432,7 +5437,7 @@ msgstr "Generera en diffstat. Som standard används så mycket utrymme som behö
 #. type: Plain text
 #: en/diff-options.adoc:220
 msgid "These parameters can also be set individually with `--stat-width=<width>`, `--stat-name-width=<name-width>` and `--stat-count=<count>`."
-msgstr ""
+msgstr "Dessa parametrar kan också ställas in individuellt med `--stat-width=<bredd>`, `--stat-name-width=<namn-bredd>` och `--stat-count=<antal>`."
 
 #. type: Labeled list
 #: en/diff-options.adoc:221 en/merge-options.adoc:116
@@ -5456,7 +5461,7 @@ msgstr "`--numstat`"
 #. type: Plain text
 #: en/diff-options.adoc:235
 msgid "Similar to `--stat`, but shows number of added and deleted lines in decimal notation and pathname without abbreviation, to make it more machine friendly. For binary files, outputs two `-` instead of saying `0 0`."
-msgstr ""
+msgstr "Liknar `--stat`, men visar antalet tillagda och borttagna rader i decimalnotation och sökväg utan förkortning, för att göra det mer maskinvänligt. För binära filer matas två `-` ut istället för att säga `0 0`."
 
 #. type: Labeled list
 #: en/diff-options.adoc:236
@@ -5468,19 +5473,19 @@ msgstr "`--shortstat`"
 #. type: Plain text
 #: en/diff-options.adoc:240
 msgid "Output only the last line of the `--stat` format containing total number of modified files, as well as number of added and deleted lines."
-msgstr ""
+msgstr "Skriv endast ut den sista raden i formatet `--stat` som innehåller det totala antalet ändrade filer, samt antalet tillagda och borttagna rader."
 
 #. type: Labeled list
 #: en/diff-options.adoc:241
 #, no-wrap
 msgid "`-X [<param>,...]`"
-msgstr ""
+msgstr "`-X [<param>,...]`"
 
 #. type: Labeled list
 #: en/diff-options.adoc:242
 #, no-wrap
 msgid "`--dirstat[=<param>,...]`"
-msgstr ""
+msgstr "`--dirstat[=<param>,...]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:249
@@ -5490,7 +5495,7 @@ msgstr "Visar fördelningen av den relativa mängden ändringar för varje under
 #. type: Plain text
 #: en/diff-options.adoc:285
 msgid "Example: The following will count changed files, while ignoring directories with less than 10% of the total amount of changed files, and accumulating child directory counts in the parent directories: `--dirstat=files,10,cumulative`."
-msgstr ""
+msgstr "Exempel: Följande räknar ändrade filer, ignorerar kataloger med mindre än 10 % av den totala mängden ändrade filer och ackumulerar antal underkataloger i överordnade kataloger: `--dirstat=files,10,cumulative`."
 
 #. type: Labeled list
 #: en/diff-options.adoc:286
@@ -5508,7 +5513,7 @@ msgstr "Synonym för `--dirstat=cumulative`."
 #: en/diff-options.adoc:289
 #, no-wrap
 msgid "`--dirstat-by-file[=<param>,...]`"
-msgstr ""
+msgstr "`--dirstat-by-file[=<param>,...]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:291
@@ -5524,8 +5529,9 @@ msgstr "`--summary`"
 
 #. type: Plain text
 #: en/diff-options.adoc:295
+#, fuzzy
 msgid "Output a condensed summary of extended header information such as creations, renames and mode changes."
-msgstr ""
+msgstr "Skriv ut en komprimerad sammanfattning av utökad rubrikinformation, såsom skapande, namnbyten och lägesändringar."
 
 #. type: Labeled list
 #: en/diff-options.adoc:297
@@ -5551,23 +5557,26 @@ msgstr "`-z`"
 #: en/diff-options.adoc:306
 #, no-wrap
 msgid "\tSeparate the commits with __NUL__s instead of newlines.\n"
-msgstr ""
+msgstr "\tSeparera incheckningar med __NUL__ istället för newlines.\n"
 
 #. type: Plain text
 #: en/diff-options.adoc:309
+#, fuzzy
 msgid "Also, when `--raw` or `--numstat` has been given, do not munge pathnames and use __NUL__s as output field terminators."
-msgstr ""
+msgstr "Också, när `--raw` eller `--numstat` har angetts, munga inte sökvägar och använd __NUL__s som avslutningar för utdatafält."
 
 #. type: Plain text
 #: en/diff-options.adoc:313
 #, no-wrap
 msgid "\tWhen `--raw`, `--numstat`, `--name-only` or `--name-status` has been\n\tgiven, do not munge pathnames and use NULs as output field terminators.\n"
 msgstr ""
+"\tNär `--raw`, `--numstat`, `--name-only` eller `--name-status` har angetts,\n"
+"\tändra inte sökvägar och använd NUL:er som terminatorer för utdatafält.\n"
 
 #. type: Plain text
 #: en/diff-options.adoc:318 en/git-apply.adoc:131
 msgid "Without this option, pathnames with \"unusual\" characters are quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1])."
-msgstr ""
+msgstr "Utan detta alternativ, citeras sökvägar med \"ovanliga\" tecken enligt beskrivningen för konfigurationsvariabeln `core.quotePath` (se linkgit:git-config[1])."
 
 #. type: Labeled list
 #: en/diff-options.adoc:319
@@ -5579,7 +5588,7 @@ msgstr "`--name-only`"
 #. type: Plain text
 #: en/diff-options.adoc:324
 msgid "Show only the name of each changed file in the post-image tree. The file names are often encoded in UTF-8. For more information see the discussion about encoding in the linkgit:git-log[1] manual page."
-msgstr ""
+msgstr "Visa endast namnet på varje ändrad fil i trädet efter avbildningen. Filnamnen är ofta kodade i UTF-8. För mer information, se diskussionen om kodning på manualsidan för linkgit:git-log[1]."
 
 #. type: Labeled list
 #: en/diff-options.adoc:325
@@ -5591,18 +5600,18 @@ msgstr "`--name-status`"
 #. type: Plain text
 #: en/diff-options.adoc:329
 msgid "Show only the name(s) and status of each changed file. See the description of the `--diff-filter` option on what the status letters mean. Just like `--name-only` the file names are often encoded in UTF-8."
-msgstr ""
+msgstr "Visa endast namn och status för varje ändrad fil. Se beskrivningen av alternativet `--diff-filter` för information om vad statusbokstäverna betyder. Precis som `--name-only` är filnamnen ofta kodade i UTF-8."
 
 #. type: Labeled list
 #: en/diff-options.adoc:330
 #, no-wrap
 msgid "`--submodule[=<format>]`"
-msgstr ""
+msgstr "`--submodule[=<format>]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:341
 msgid "Specify how differences in submodules are shown. When specifying `--submodule=short` the `short` format is used. This format just shows the names of the commits at the beginning and end of the range. When `--submodule` or `--submodule=log` is specified, the `log` format is used. This format lists the commits in the range like linkgit:git-submodule[1] `summary` does. When `--submodule=diff` is specified, the `diff` format is used. This format shows an inline diff of the changes in the submodule contents between the commit range. Defaults to `diff.submodule` or the `short` format if the config option is unset."
-msgstr ""
+msgstr "Ange hur skillnader i undermoduler visas. När `--submodule=short` anges används formatet `short`. Detta format visar bara namnen på incheckningar i början och slutet av intervallet. När `--submodule` eller `--submodule=log` anges används formatet `log`. Detta format listar incheckningar i intervallet, precis som linkgit:git-submodule[1] `summary` gör. När `--submodule=diff` anges används formatet `diff`. Detta format visar en inline-diff av ändringarna i undermodulinnehållet mellan inchecknings-intervallet. Standardinställningen är `diff.submodule` eller formatet `short` om konfigurationsalternativet inte är inställt."
 
 #. type: Labeled list
 #: en/diff-options.adoc:342 en/for-each-ref-options.adoc:31
@@ -5614,13 +5623,15 @@ msgstr "`--color[=<när>]`"
 #. type: Plain text
 #: en/diff-options.adoc:346
 msgid "Show colored diff. `--color` (i.e. without `=<when>`) is the same as `--color=always`. _<when>_ can be one of `always`, `never`, or `auto`."
-msgstr ""
+msgstr "Visa färglagd skillnad. `--color` (dvs. utan `=<när>`) är samma sak som `--color=always`. _<när>_ kan vara en av `always`, `aldrig` eller `auto`."
 
 #. type: Plain text
 #: en/diff-options.adoc:349
 #, no-wrap
 msgid "\tIt can be changed by the `color.ui` and `color.diff`\n\tconfiguration settings.\n"
 msgstr ""
+"\tDet kan ändras med konfigurationsinställningarna\n"
+"\t`color.ui` och `color.diff`.\n"
 
 #. type: Labeled list
 #: en/diff-options.adoc:351 en/git-branch.adoc:150
@@ -5632,25 +5643,25 @@ msgstr "`--no-color`"
 #. type: Plain text
 #: en/diff-options.adoc:353
 msgid "Turn off colored diff."
-msgstr ""
+msgstr "Stäng av färgad diff."
 
 #. type: Plain text
 #: en/diff-options.adoc:355
 #, no-wrap
 msgid "\tThis can be used to override configuration settings.\n"
-msgstr ""
+msgstr "\tDetta kan användas för att åsidosätta konfigurationsinställningar.\n"
 
 #. type: Plain text
 #: en/diff-options.adoc:357
 #, no-wrap
 msgid "\tIt is the same as `--color=never`.\n"
-msgstr ""
+msgstr "\tDet är samma sak som `--color=never`.\n"
 
 #. type: Labeled list
 #: en/diff-options.adoc:358
 #, no-wrap
 msgid "`--color-moved[=<mode>]`"
-msgstr ""
+msgstr "`--color-moved[=<läge>]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:360
@@ -5661,13 +5672,16 @@ msgstr "Flyttade kodrader färgas annorlunda."
 #: en/diff-options.adoc:362
 #, no-wrap
 msgid "\tIt can be changed by the `diff.colorMoved` configuration setting.\n"
-msgstr ""
+msgstr "\tDet kan ändras med konfigurationsinställningen `diff.colorMoved`.\n"
 
 #. type: Plain text
 #: en/diff-options.adoc:366
 #, no-wrap
 msgid "\tThe _<mode>_ defaults to `no` if the option is not given\n\tand to `zebra` if the option with no mode is given.\n\tThe mode must be one of:\n"
 msgstr ""
+"\tStandardvärdet för _<läge>_ är `no` om alternativet inte anges\n"
+"\toch `zebra` om alternativet utan läge anges.\n"
+"\tLäget måste vara ett av:\n"
 
 #. type: Labeled list
 #: en/diff-options.adoc:368 en/diff-options.adoc:410 en/git-commit.adoc:349
@@ -5680,12 +5694,12 @@ msgstr "`no`"
 #. type: Plain text
 #: en/diff-options.adoc:370
 msgid "Moved lines are not highlighted."
-msgstr ""
+msgstr "Flyttade linjer markeras inte."
 
 #. type: Plain text
 #: en/diff-options.adoc:373
 msgid "Is a synonym for `zebra`. This may change to a more sensible mode in the future."
-msgstr ""
+msgstr "Är en synonym för \"zebra\". Detta kan komma att ändras till ett mer förnuftigt läge i framtiden."
 
 #. type: Labeled list
 #: en/diff-options.adoc:373 en/diff-options.adoc:441
@@ -5697,7 +5711,7 @@ msgstr "`plain`"
 #. type: Plain text
 #: en/diff-options.adoc:380
 msgid "Any line that is added in one location and was removed in another location will be colored with `color.diff.newMoved`. Similarly `color.diff.oldMoved` will be used for removed lines that are added somewhere else in the diff. This mode picks up any moved line, but it is not very useful in a review to determine if a block of code was moved without permutation."
-msgstr ""
+msgstr "Alla rader som läggs till på en plats och togs bort på en annan plats kommer att färgas med `color.diff.newMoved`. På liknande sätt kommer `color.diff.oldMoved` att användas för borttagna rader som läggs till någon annanstans i diff-filen. Det här läget plockar upp alla flyttade rader, men det är inte särskilt användbart i en granskning för att avgöra om ett kodblock flyttades utan permutation."
 
 #. type: Labeled list
 #: en/diff-options.adoc:380
@@ -5709,7 +5723,7 @@ msgstr "`blocks`"
 #. type: Plain text
 #: en/diff-options.adoc:385
 msgid "Blocks of moved text of at least 20 alphanumeric characters are detected greedily. The detected blocks are painted using either the `color.diff.(old|new)Moved` color. Adjacent blocks cannot be told apart."
-msgstr ""
+msgstr "Block med flyttad text på minst 20 alfanumeriska tecken upptäcks snabbt. De upptäckta blocken målas med antingen färgen `color.diff.(old|new)Moved`. Intilliggande block kan inte skiljas åt."
 
 #. type: Labeled list
 #: en/diff-options.adoc:385
@@ -5721,7 +5735,7 @@ msgstr "`zebra`"
 #. type: Plain text
 #: en/diff-options.adoc:390
 msgid "Blocks of moved text are detected as in `blocks` mode. The blocks are painted using either the `color.diff.(old|new)Moved` color or `color.diff.(old|new)MovedAlternative`. The change between the two colors indicates that a new block was detected."
-msgstr ""
+msgstr "Block med flyttad text detekteras som i `blocks`-läge. Blocken målas med antingen färgen `color.diff.(old|new)Moved` eller `color.diff.(old|new)MovedAlternative`. Växlingen mellan de två färgerna indikerar att ett nytt block har detekterats."
 
 #. type: Labeled list
 #: en/diff-options.adoc:390
@@ -5733,7 +5747,7 @@ msgstr "`dimmed-zebra`"
 #. type: Plain text
 #: en/diff-options.adoc:395
 msgid "Similar to `zebra`, but additional dimming of uninteresting parts of moved code is performed. The bordering lines of two adjacent blocks are considered interesting, the rest is uninteresting. `dimmed_zebra` is a deprecated synonym."
-msgstr ""
+msgstr "Liknar `zebra`, men ytterligare nedtoning av ointressanta delar av flyttad kod utförs. Gränslinjerna för två intilliggande block anses intressanta, resten är ointressant. `dimmed_zebra` är en föråldrad synonym."
 
 #. type: Labeled list
 #: en/diff-options.adoc:397
@@ -5745,35 +5759,35 @@ msgstr "`--no-color-moved`"
 #. type: Plain text
 #: en/diff-options.adoc:400
 msgid "Turn off move detection. This can be used to override configuration settings. It is the same as `--color-moved=no`."
-msgstr ""
+msgstr "Stäng av rörelsedetektering. Detta kan användas för att åsidosätta konfigurationsinställningar. Det är samma sak som `--color-moved=no`."
 
 #. type: Labeled list
 #: en/diff-options.adoc:401
 #, no-wrap
 msgid "`--color-moved-ws=<mode>,...`"
-msgstr ""
+msgstr "`--color-moved-ws=<läge>,...`"
 
 #. type: Plain text
 #: en/diff-options.adoc:404
 msgid "This configures how whitespace is ignored when performing the move detection for `--color-moved`."
-msgstr ""
+msgstr "Detta konfigurerar hur blanksteg ignoreras när rörelsedetektering utförs för `--color-moved`."
 
 #. type: Plain text
 #: en/diff-options.adoc:406
 #, no-wrap
 msgid "\tIt can be set by the `diff.colorMovedWS` configuration setting.\n"
-msgstr ""
+msgstr "\tDet kan ställas in med konfigurationsinställningen `diff.colorMovedWS`.\n"
 
 #. type: Plain text
 #: en/diff-options.adoc:408
 #, no-wrap
 msgid "\tThese modes can be given as a comma separated list:\n"
-msgstr ""
+msgstr "\tDessa lägen kan anges som en kommaseparerad lista:\n"
 
 #. type: Plain text
 #: en/diff-options.adoc:412
 msgid "Do not ignore whitespace when performing move detection."
-msgstr ""
+msgstr "Ignorera inte blanksteg när du utför rörelsedetektering."
 
 #. type: Labeled list
 #: en/diff-options.adoc:412 en/merge-strategies.adoc:50
@@ -5797,7 +5811,7 @@ msgstr "`ignore-space-change`"
 #. type: Plain text
 #: en/diff-options.adoc:418 en/diff-options.adoc:774
 msgid "Ignore changes in amount of whitespace. This ignores whitespace at line end, and considers all other sequences of one or more whitespace characters to be equivalent."
-msgstr ""
+msgstr "Ignorera ändringar i mängden mellanslag. Detta ignorerar mellanslag i radslutet och betraktar alla andra sekvenser av ett eller flera mellanslagstecken som likvärdiga."
 
 #. type: Labeled list
 #: en/diff-options.adoc:418 en/merge-strategies.adoc:49
@@ -5809,7 +5823,7 @@ msgstr "`ignore-all-space`"
 #. type: Plain text
 #: en/diff-options.adoc:421 en/diff-options.adoc:780
 msgid "Ignore whitespace when comparing lines. This ignores differences even if one line has whitespace where the other line has none."
-msgstr ""
+msgstr "Ignorera mellanslag när du jämför rader. Detta ignorerar skillnader även om en rad har mellanslag medan den andra raden inte har något."
 
 #. type: Labeled list
 #: en/diff-options.adoc:421
@@ -5821,7 +5835,7 @@ msgstr "`allow-indentation-change`"
 #. type: Plain text
 #: en/diff-options.adoc:426
 msgid "Initially ignore any whitespace in the move detection, then group the moved code blocks only into a block if the change in whitespace is the same per line. This is incompatible with the other modes."
-msgstr ""
+msgstr "Ignorera först eventuella blanksteg i flyttdetekteringen, gruppera sedan de flyttade kodblocken endast i ett block om ändringen i blanksteg är densamma per rad. Detta är inkompatibelt med de andra lägena."
 
 #. type: Labeled list
 #: en/diff-options.adoc:428
@@ -5833,18 +5847,18 @@ msgstr "`--no-color-moved-ws`"
 #. type: Plain text
 #: en/diff-options.adoc:432
 msgid "Do not ignore whitespace when performing move detection. This can be used to override configuration settings. It is the same as `--color-moved-ws=no`."
-msgstr ""
+msgstr "Ignorera inte blanksteg när du utför rörelsedetektering. Detta kan användas för att åsidosätta konfigurationsinställningar. Det är samma sak som `--color-moved-ws=no`."
 
 #. type: Labeled list
 #: en/diff-options.adoc:433
 #, no-wrap
 msgid "`--word-diff[=<mode>]`"
-msgstr ""
+msgstr "`--word-diff[=<läge>]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:437
 msgid "By default, words are delimited by whitespace; see `--word-diff-regex` below. The _<mode>_ defaults to `plain`, and must be one of:"
-msgstr ""
+msgstr "Som standard avgränsas ord med blanksteg; se `--word-diff-regex` nedan. _<läge>_ har som standard `plain` och måste vara en av:"
 
 #. type: Labeled list
 #: en/diff-options.adoc:439 en/git-for-each-ref.adoc:112
@@ -5856,12 +5870,12 @@ msgstr "`color`"
 #. type: Plain text
 #: en/diff-options.adoc:441
 msgid "Highlight changed words using only colors. Implies `--color`."
-msgstr ""
+msgstr "Markera ändrade ord med endast färger. Innebär `--color`."
 
 #. type: Plain text
 #: en/diff-options.adoc:445
 msgid "Show words as ++[-removed-]++ and ++{+added+}++. Makes no attempts to escape the delimiters if they appear in the input, so the output may be ambiguous."
-msgstr ""
+msgstr "Visar ord som ++[-borttagen-]++ och ++{+tillagd+}++. Gör inga försök att ta escape avgränsare om de förekommer i indata, så utdata kan vara tvetydig."
 
 #. type: Labeled list
 #: en/diff-options.adoc:445
@@ -5873,54 +5887,54 @@ msgstr "`porcelain`"
 #. type: Plain text
 #: en/diff-options.adoc:452
 msgid "Use a special line-based format intended for script consumption. Added/removed/unchanged runs are printed in the usual unified diff format, starting with a `+`/`-`/` ` character at the beginning of the line and extending to the end of the line. Newlines in the input are represented by a tilde `~` on a line of its own."
-msgstr ""
+msgstr "Använd ett speciellt radbaserat format avsett för skriptanvändning. Tillagda/borttagna/oändrade körningar skrivs ut i det vanliga enhetliga diff-formatet, med början med ett `+`/`-`/` `-tecknet i början av raden och sträcker sig till slutet av raden. Nya rader i inmatningen representeras av en tilde `~` på en egen rad."
 
 #. type: Plain text
 #: en/diff-options.adoc:454
 msgid "Disable word diff again."
-msgstr ""
+msgstr "Inaktivera orddiff igen."
 
 #. type: Plain text
 #: en/diff-options.adoc:458
 msgid "Note that despite the name of the first mode, color is used to highlight the changed parts in all modes if enabled."
-msgstr ""
+msgstr "Observera att trots namnet på det första läget, används färg för att markera de ändrade delarna i alla lägen om det är aktiverat."
 
 #. type: Labeled list
 #: en/diff-options.adoc:459
 #, no-wrap
 msgid "`--word-diff-regex=<regex>`"
-msgstr ""
+msgstr "`--word-diff-regex=<regex>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:463
 msgid "Use _<regex>_ to decide what a word is, instead of considering runs of non-whitespace to be a word. Also implies `--word-diff` unless it was already enabled."
-msgstr ""
+msgstr "Använd _<regex>_ för att avgöra vad ett ord är, istället för att betrakta sträckor av icke-blanksteg som ett ord. Innebär även `--word-diff` om det inte redan var aktiverat."
 
 #. type: Plain text
 #: en/diff-options.adoc:471
 msgid "Every non-overlapping match of the _<regex>_ is considered a word. Anything between these matches is considered whitespace and ignored(!) for the purposes of finding differences. You may want to append `|[^[:space:]]` to your regular expression to make sure that it matches all non-whitespace characters. A match that contains a newline is silently truncated(!) at the newline."
-msgstr ""
+msgstr "Varje icke-överlappande matchning av _<regex>_ betraktas som ett ord. Allt mellan dessa matchningar betraktas som mellanslag och ignoreras(!) i syfte att hitta skillnader. Du kanske vill lägga till `|[^[:space:]]` i ditt reguljära uttryck för att se till att det matchar alla tecken som inte är mellanslag. En matchning som innehåller en nyrad avkortas tyst(!) vid nyradslinjen."
 
 #. type: Plain text
 #: en/diff-options.adoc:474
 msgid "For example, `--word-diff-regex=.` will treat each character as a word and, correspondingly, show differences character by character."
-msgstr ""
+msgstr "Till exempel kommer `--word-diff-regex=.` att behandla varje tecken som ett ord och, på motsvarande sätt, visa skillnader tecken för tecken."
 
 #. type: Plain text
 #: en/diff-options.adoc:479
 msgid "The regex can also be set via a diff driver or configuration option, see linkgit:gitattributes[5] or linkgit:git-config[1]. Giving it explicitly overrides any diff driver or configuration setting. Diff drivers override configuration settings."
-msgstr ""
+msgstr "Regex-funktionen kan också ställas in via en diff-drivrutin eller ett konfigurationsalternativ, se linkgit:gitattributes[5] eller linkgit:git-config[1]. Om du anger den explicit åsidosätts alla diff-drivrutiner eller konfigurationsinställningar. Diff-drivrutiner åsidosätter konfigurationsinställningar."
 
 #. type: Labeled list
 #: en/diff-options.adoc:480
 #, no-wrap
 msgid "`--color-words[=<regex>]`"
-msgstr ""
+msgstr "`--color-words[=<regex>]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:483
 msgid "Equivalent to `--word-diff=color` plus (if a regex was specified) `--word-diff-regex=<regex>`."
-msgstr ""
+msgstr "Motsvarande `--word-diff=color` plus (om ett regex angavs) `--word-diff-regex=<regex>`."
 
 #. type: Labeled list
 #: en/diff-options.adoc:485 en/git-status.adoc:148
@@ -5932,7 +5946,7 @@ msgstr "`--no-renames`"
 #. type: Plain text
 #: en/diff-options.adoc:488
 msgid "Turn off rename detection, even when the configuration file gives the default to do so."
-msgstr ""
+msgstr "Stäng av namnbytesdetektering, även när konfigurationsfilen anger standardinställningen för det."
 
 #. type: Labeled list
 #: en/diff-options.adoc:489
@@ -5951,7 +5965,7 @@ msgstr "`--no-rename-empty`"
 #. type: Plain text
 #: en/diff-options.adoc:492
 msgid "Whether to use empty blobs as rename source."
-msgstr ""
+msgstr "Huruvida tomma blobbar ska användas som namnbyteskälla."
 
 #. type: Labeled list
 #: en/diff-options.adoc:494
@@ -5963,13 +5977,13 @@ msgstr "`--check`"
 #. type: Plain text
 #: en/diff-options.adoc:503
 msgid "Warn if changes introduce conflict markers or whitespace errors. What are considered whitespace errors is controlled by `core.whitespace` configuration. By default, trailing whitespaces (including lines that consist solely of whitespaces) and a space character that is immediately followed by a tab character inside the initial indent of the line are considered whitespace errors. Exits with non-zero status if problems are found. Not compatible with `--exit-code`."
-msgstr ""
+msgstr "Varna om ändringar introducerar konfliktmarkörer eller mellanslagsfel. Vad som anses vara mellanslagsfel styrs av konfigurationen av `core.whitespace`. Som standard betraktas efterföljande mellanslag (inklusive rader som enbart består av mellanslag) och ett mellanslagstecken som omedelbart följs av ett tabbtecken inuti radens första indrag som mellanslagsfel. Avslutas med status som inte är noll om problem upptäcks. Inte kompatibel med `--exit-code`."
 
 #. type: Labeled list
 #: en/diff-options.adoc:504
 #, no-wrap
 msgid "`--ws-error-highlight=<kind>`"
-msgstr ""
+msgstr "`--ws-error-highlight=<slag>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:513
@@ -5986,7 +6000,7 @@ msgstr "`--full-index`"
 #. type: Plain text
 #: en/diff-options.adoc:520
 msgid "Instead of the first handful of characters, show the full pre- and post-image blob object names on the \"index\" line when generating patch format output."
-msgstr ""
+msgstr "Istället för de första tecknen, visa de fullständiga namnen på blob-objekten före och efter avbildningen på \"index\"-raden när du genererar utdata för patch-format."
 
 #. type: Labeled list
 #: en/diff-options.adoc:521
@@ -5998,51 +6012,51 @@ msgstr "`--binary`"
 #. type: Plain text
 #: en/diff-options.adoc:524
 msgid "In addition to `--full-index`, output a binary diff that can be applied with `git-apply`."
-msgstr ""
+msgstr "Förutom `--full-index`, mata ut en binär diff som kan tillämpas med `git-apply`."
 
 #. type: Labeled list
 #: en/diff-options.adoc:528
 #, no-wrap
 msgid "`--abbrev[=<n>]`"
-msgstr ""
+msgstr "`--abbrev[=<n>]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:537
 msgid "Instead of showing the full 40-byte hexadecimal object name in diff-raw format output and diff-tree header lines, show the shortest prefix that is at least _<n>_ hexdigits long that uniquely refers the object. In diff-patch output format, `--full-index` takes higher precedence, i.e. if `--full-index` is specified, full blob names will be shown regardless of `--abbrev`. Non default number of digits can be specified with `--abbrev=<n>`."
-msgstr ""
+msgstr "Istället för att visa det fullständiga 40-byte hexadecimala objektnamnet i utdata i diff-raw-format och diff-tree-rubrikrader, visa det kortaste prefixet som är minst _<n>_ hexdigits långt och som unikt refererar till objektet. I diff-patch-utdataformat har `--full-index` högre prioritet, d.v.s. om `--full-index` anges kommer fullständiga blobnamn att visas oavsett `--abbrev`. Antal siffror som inte är standard kan anges med `--abbrev=<n>`."
 
 #. type: Labeled list
 #: en/diff-options.adoc:538
 #, no-wrap
 msgid "`-B[<n>][/<m>]`"
-msgstr ""
+msgstr "`-B[<n>][/<m>]`"
 
 #. type: Labeled list
 #: en/diff-options.adoc:539
 #, no-wrap
 msgid "`--break-rewrites[=[<n>][/<m>]]`"
-msgstr ""
+msgstr "`--break-rewrites[=[<n>][/<m>]]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:542
 msgid "Break complete rewrite changes into pairs of delete and create. This serves two purposes:"
-msgstr ""
+msgstr "Dela upp fullständiga omskrivningsändringar i par av radera och skapa. Detta tjänar två syften:"
 
 #. type: Plain text
 #: en/diff-options.adoc:552
 msgid "It affects the way a change that amounts to a total rewrite of a file not as a series of deletion and insertion mixed together with a very few lines that happen to match textually as the context, but as a single deletion of everything old followed by a single insertion of everything new, and the number _<m>_ controls this aspect of the `-B` option (defaults to 60%). `-B/70%` specifies that less than 30% of the original should remain in the result for Git to consider it a total rewrite (i.e. otherwise the resulting patch will be a series of deletion and insertion mixed together with context lines)."
-msgstr ""
+msgstr "Det påverkar hur en förändring som innebär en total omskrivning av en fil, inte som en serie borttagningar och infogningar blandade med ett fåtal rader som råkar matcha textuellt som kontexten, utan som en enda borttagning av allt gammalt följt av en enda infogning av allt nytt, och siffran _<m>_ styr denna aspekt av `-B`-alternativet (standard är 60%). `-B/70%` anger att mindre än 30% av originalet ska finnas kvar i resultatet för att Git ska betrakta det som en total omskrivning (dvs. annars kommer den resulterande patchen att vara en serie borttagningar och infogningar blandade med kontextrader)."
 
 #. type: Plain text
 #: en/diff-options.adoc:560
 msgid "When used with `-M`, a totally-rewritten file is also considered as the source of a rename (usually `-M` only considers a file that disappeared as the source of a rename), and the number _<n>_ controls this aspect of the `-B` option (defaults to 50%). `-B20%` specifies that a change with addition and deletion compared to 20% or more of the file's size are eligible for being picked up as a possible source of a rename to another file."
-msgstr ""
+msgstr "När den används med `-M` betraktas även en helt omskriven fil som källa till ett namnbyte (vanligtvis betraktar `-M` bara en fil som försvunnit som källa till ett namnbyte), och siffran _<n>_ styr denna aspekt av alternativet `-B` (standard är 50%). `-B20%` anger att en ändring med tillägg och borttagning jämfört med 20% eller mer av filens storlek är berättigad att plockas upp som en möjlig källa till ett namnbyte till en annan fil."
 
 #. type: Labeled list
 #: en/diff-options.adoc:561
 #, no-wrap
 msgid "`-M[<n>]`"
-msgstr ""
+msgstr "`-M[<n>]`"
 
 #. type: Labeled list
 #: en/diff-options.adoc:562 en/git-status.adoc:152
@@ -6061,29 +6075,41 @@ msgstr "\tdetektera namnändringar\n"
 #, no-wrap
 msgid "\tIf generating diffs, detect and report renames for each commit.\n\tFor following files across renames while traversing history, see\n\t`--follow`.\n"
 msgstr ""
+"\tOm du genererar diffs, upptäck och rapportera namnbyten för varje .\n"
+"\tincheckning För att följa filer över namnbyten medan du går igenom \n"
+"\thistoriken, se `--follow`.\n"
 
 #. type: Plain text
 #: en/diff-options.adoc:580
 #, no-wrap
 msgid "\tIf _<n>_ is specified, it is a threshold on the similarity\n\tindex (i.e. amount of addition/deletions compared to the\n\tfile's size). For example, `-M90%` means Git should consider a\n\tdelete/add pair to be a rename if more than 90% of the file\n\thasn't changed.  Without a `%` sign, the number is to be read as\n\ta fraction, with a decimal point before it.  I.e., `-M5` becomes\n\t0.5, and is thus the same as `-M50%`.  Similarly, `-M05` is\n\tthe same as `-M5%`.  To limit detection to exact renames, use\n\t`-M100%`.  The default similarity index is 50%.\n"
 msgstr ""
+"\tOm _<n>_ anges, är det ett tröskelvärde för likhetsindexet (dvs. \n"
+"\tmängden tillägg/borttagningar jämfört med filens storlek).\n"
+"\tTill exempel betyder `-M90%` att Git ska betrakta ett \n"
+"\tborttagnings-/tilläggspar som ett namnbyte om mer än 90 % av filen\n"
+"\tinte har ändrats. Utan ett `%`-tecken ska talet läsas som\n"
+"\tett bråktral, med ett decimaltecken före. Dvs. `-M5` blir 0,5 \n"
+"\toch är således detsamma som `-M50%`. På liknande sätt är \n"
+"\t`-M05` detsamma som `-M5%`. För att begränsa detekteringen \n"
+"\ttill exakta namnbyten, använd `-M100%`. Standardlikhetsindexet är 50 %.\n"
 
 #. type: Labeled list
 #: en/diff-options.adoc:581
 #, no-wrap
 msgid "`-C[<n>]`"
-msgstr ""
+msgstr "`-C[<n>]`"
 
 #. type: Labeled list
 #: en/diff-options.adoc:582
 #, no-wrap
 msgid "`--find-copies[=<n>]`"
-msgstr ""
+msgstr "`--find-copies[=<n>]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:585
 msgid "Detect copies as well as renames. See also `--find-copies-harder`. If _<n>_ is specified, it has the same meaning as for `-M<n>`."
-msgstr ""
+msgstr "Identifiera kopior såväl som byt namn. Se även `--find-copies-harder`. Om _<n>_ anges har det samma betydelse som för `-M<n>`."
 
 #. type: Labeled list
 #: en/diff-options.adoc:586
@@ -6095,7 +6121,7 @@ msgstr "`--find-copies-harder`"
 #. type: Plain text
 #: en/diff-options.adoc:594
 msgid "For performance reasons, by default, `-C` option finds copies only if the original file of the copy was modified in the same changeset. This flag makes the command inspect unmodified files as candidates for the source of copy. This is a very expensive operation for large projects, so use it with caution. Giving more than one `-C` option has the same effect."
-msgstr ""
+msgstr "Av prestandaskäl hittar `-C`-alternativet som standard bara kopior om originalfilen för kopian ändrades i samma ändringsuppsättning. Denna flagga gör att kommandot inspekterar omodifierade filer som kandidater för kopians källa. Detta är en mycket dyr operation för stora projekt, så använd den med försiktighet. Att ge mer än ett `-C`-alternativ har samma effekt."
 
 #. type: Labeled list
 #: en/diff-options.adoc:595 en/git-branch.adoc:104
@@ -6114,29 +6140,29 @@ msgstr "`--irreversible-delete`"
 #. type: Plain text
 #: en/diff-options.adoc:604
 msgid "Omit the preimage for deletes, i.e. print only the header but not the diff between the preimage and `/dev/null`. The resulting patch is not meant to be applied with `patch` or `git apply`; this is solely for people who want to just concentrate on reviewing the text after the change. In addition, the output obviously lacks enough information to apply such a patch in reverse, even manually, hence the name of the option."
-msgstr ""
+msgstr "Utelämna preimage för borttagningar, d.v.s. skriv bara ut rubriken men inte skillnaden mellan preimage och `/dev/null`. Den resulterande patchen är inte avsedd att tillämpas med `patch` eller `git apply`; detta är enbart för personer som bara vill koncentrera sig på att granska texten efter ändringen. Dessutom saknar utdata uppenbarligen tillräckligt med information för att tillämpa en sådan patch i omvänd ordning, även manuellt, därav namnet på alternativet."
 
 #. type: Plain text
 #: en/diff-options.adoc:607
 msgid "When used together with `-B`, omit also the preimage in the deletion part of a delete/create pair."
-msgstr ""
+msgstr "När det används tillsammans med `-B`, utelämna även förbilden i borttagningsdelen av ett borttagnings-/skaparpar."
 
 #. type: Labeled list
 #: en/diff-options.adoc:608
 #, no-wrap
 msgid "`-l<num>`"
-msgstr ""
+msgstr "`-l<num>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:620
 msgid "The `-M` and `-C` options involve some preliminary steps that can detect subsets of renames/copies cheaply, followed by an exhaustive fallback portion that compares all remaining unpaired destinations to all relevant sources. (For renames, only remaining unpaired sources are relevant; for copies, all original sources are relevant.) For N sources and destinations, this exhaustive check is O(N^2). This option prevents the exhaustive portion of rename/copy detection from running if the number of source/destination files involved exceeds the specified number. Defaults to `diff.renameLimit`. Note that a value of 0 is treated as unlimited."
-msgstr ""
+msgstr "Alternativen `-M` och `-C` involverar några preliminära steg som kan upptäcka delmängder av namnbyten/kopior billigt, följt av en uttömmande reservdel som jämför alla återstående oparade destinationer med alla relevanta källor. (För namnbyten är endast återstående oparade källor relevanta; för kopior är alla originalkällor relevanta.) För N källor och destinationer är denna uttömmande kontroll O(N^2). Detta alternativ förhindrar att den uttömmande delen av namnbytes-/kopieringsdetektering körs om antalet inblandade käll-/destinationsfiler överstiger det angivna antalet. Standardvärdet är `diff.renameLimit`. Observera att värdet 0 behandlas som obegränsat."
 
 #. type: Labeled list
 #: en/diff-options.adoc:622
 #, no-wrap
 msgid "`--diff-filter=[(A|C|D|M|R|T|U|X|B)...[*]]`"
-msgstr ""
+msgstr "`--diff-filter=[(A|C|D|M|R|T|U|X|B)...[*]]`"
 
 #. type: Plain text
 #: en/diff-options.adoc:633
@@ -6145,87 +6171,91 @@ msgstr "Markera endast filer som är Tillagda (`A`), Kopierade (`C`), Borttagna 
 
 #. type: Plain text
 #: en/diff-options.adoc:636
+#, fuzzy
 msgid "Also, these upper-case letters can be downcased to exclude. E.g. `--diff-filter=ad` excludes added and deleted paths."
-msgstr ""
+msgstr "Även dessa versaler kan nedshiftas för att exkludera. T.ex. exkluderar `--diff-filter=ad` tillagda och borttagna sökvägar."
 
 #. type: Plain text
 #: en/diff-options.adoc:639
 msgid "Note that not all diffs can feature all types. For instance, copied and renamed entries cannot appear if detection for those types is disabled."
-msgstr ""
+msgstr "Observera att inte alla diffs kan innehålla alla typer. Till exempel kan kopierade och omdöpta poster inte visas om detektering för dessa typer är inaktiverat."
 
 #. type: Labeled list
 #: en/diff-options.adoc:640
 #, no-wrap
 msgid "`-S<string>`"
-msgstr ""
+msgstr "`-S<sträng>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:644
 msgid "Look for differences that change the number of occurrences of the specified _<string>_ (i.e. addition/deletion) in a file. Intended for the scripter's use."
-msgstr ""
+msgstr "Leta efter skillnader som ändrar antalet förekomster av den angivna _<sträng>_ (dvs. tillägg/borttagning) i en fil. Avsedd för skriptutvecklarens bruk."
 
 #. type: Plain text
 #: en/diff-options.adoc:650
 msgid "It is useful when you're looking for an exact block of code (like a struct), and want to know the history of that block since it first came into being: use the feature iteratively to feed the interesting block in the preimage back into `-S`, and keep going until you get the very first version of the block."
-msgstr ""
+msgstr "Det är användbart när du letar efter ett exakt kodblock (som en struktur) och vill veta blockets historia sedan det först kom till: använd funktionen iterativt för att mata in det intressanta blocket i föravbildningen tillbaka till `-S` och fortsätt tills du får den allra första versionen av blocket."
 
 #. type: Plain text
 #: en/diff-options.adoc:652
 msgid "Binary files are searched as well."
-msgstr ""
+msgstr "Binära filer genomsöks också."
 
 #. type: Labeled list
 #: en/diff-options.adoc:653
 #, no-wrap
 msgid "`-G<regex>`"
-msgstr ""
+msgstr "`-G<regex>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:656
 msgid "Look for differences whose patch text contains added/removed lines that match _<regex>_."
-msgstr ""
+msgstr "Leta efter skillnader vars patchtext innehåller tillagda/borttagna rader som matchar _<regex>_."
 
 #. type: Plain text
 #: en/diff-options.adoc:660
 msgid "To illustrate the difference between `-S<regex>` `--pickaxe-regex` and `-G<regex>`, consider a commit with the following diff in the same file:"
-msgstr ""
+msgstr "För att illustrera skillnaden mellan `-S<regex>` `--pickaxe-regex` och `-G<regex>`, betrakta en incheckning med följande diff i samma fil:"
 
 #. type: delimited block -
 #: en/diff-options.adoc:665
 #, no-wrap
 msgid "+    return frotz(nitfol, two->ptr, 1, 0);\n...\n-    hit = frotz(nitfol, mf2.ptr, 1, 0);\n"
 msgstr ""
+"+    return frotz(nitfol, two->ptr, 1, 0);\n"
+"...\n"
+"-    hit = frotz(nitfol, mf2.ptr, 1, 0);\n"
 
 #. type: Plain text
 #: en/diff-options.adoc:670
 msgid "While `git log -G\"frotz\\(nitfol\"` will show this commit, `git log -S\"frotz\\(nitfol\" --pickaxe-regex` will not (because the number of occurrences of that string did not change)."
-msgstr ""
+msgstr "Medan `git log -G\"frotz\\(nitfol\"` visar denna incheckning, gör `git log -S\"frotz\\(nitfol\" --pickaxe-regex` inte det (eftersom antalet förekomster av den strängen inte ändrades)."
 
 #. type: Plain text
 #: en/diff-options.adoc:673
 msgid "Unless `--text` is supplied patches of binary files without a textconv filter will be ignored."
-msgstr ""
+msgstr "Om inte `--text` anges kommer patchar av binära filer utan ett textconv-filter att ignoreras."
 
 #. type: Plain text
 #: en/diff-options.adoc:676
 msgid "See the 'pickaxe' entry in linkgit:gitdiffcore[7] for more information."
-msgstr ""
+msgstr "Se posten 'pickaxe' i linkgit:gitdiffcore[7] för mer information."
 
 #. type: Labeled list
 #: en/diff-options.adoc:677
 #, no-wrap
 msgid "`--find-object=<object-id>`"
-msgstr ""
+msgstr "`--find-object=<objekt-id>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:682
 msgid "Look for differences that change the number of occurrences of the specified object. Similar to `-S`, just the argument is different in that it doesn't search for a specific string but for a specific object id."
-msgstr ""
+msgstr "Leta efter skillnader som ändrar antalet förekomster av det angivna objektet. I likhet med `-S` är det bara argumentet som skiljer sig genom att det inte söker efter en specifik sträng utan efter ett specifikt objekt-id."
 
 #. type: Plain text
 #: en/diff-options.adoc:685
 msgid "The object can be a blob or a submodule commit. It implies the `-t` option in `git-log` to also find trees."
-msgstr ""
+msgstr "Objektet kan vara en blob eller en undermodul-incheckning. Det innebär att `-t`-alternativet i `git-log` också kan hitta träd."
 
 #. type: Labeled list
 #: en/diff-options.adoc:686
@@ -6237,7 +6267,7 @@ msgstr "`--pickaxe-all`"
 #. type: Plain text
 #: en/diff-options.adoc:690
 msgid "When `-S` or `-G` finds a change, show all the changes in that changeset, not just the files that contain the change in _<string>_."
-msgstr ""
+msgstr "När `-S` eller `-G` hittar en ändring, visa alla ändringar i den ändringsmängden, inte bara de filer som innehåller ändringen i _<sträng>_."
 
 #. type: Labeled list
 #: en/diff-options.adoc:691
@@ -6249,7 +6279,7 @@ msgstr "`--pickaxe-regex`"
 #. type: Plain text
 #: en/diff-options.adoc:694
 msgid "Treat the _<string>_ given to `-S` as an extended POSIX regular expression to match."
-msgstr ""
+msgstr "Behandla _<sträng>_ som ges till `-S` som ett utökat POSIX-reguljärt uttryck som matchar."
 
 #. type: Labeled list
 #: en/diff-options.adoc:697 en/git-mergetool.adoc:96
@@ -6260,7 +6290,7 @@ msgstr "`-O<ordingsfil>`"
 #. type: Plain text
 #: en/diff-options.adoc:702
 msgid "Control the order in which files appear in the output. This overrides the `diff.orderFile` configuration variable (see linkgit:git-config[1]). To cancel `diff.orderFile`, use `-O/dev/null`."
-msgstr ""
+msgstr "Styr ordningen i vilka filer visas i utdata. Detta åsidosätter konfigurationsvariabeln `diff.orderFile` (se linkgit:git-config[1]). För att avbryta `diff.orderFile`, använd `-O/dev/null`."
 
 #. type: Plain text
 #: en/diff-options.adoc:714
@@ -6270,22 +6300,22 @@ msgstr "Utmatningsordningen bestäms av ordningen på glob-mönstren i _<ordings
 #. type: Plain text
 #: en/diff-options.adoc:716
 msgid "_<orderfile>_ is parsed as follows:"
-msgstr ""
+msgstr "_<ordingsfil>_ tolkas enligt följande:"
 
 #. type: Plain text
 #: en/diff-options.adoc:720
 msgid "Blank lines are ignored, so they can be used as separators for readability."
-msgstr ""
+msgstr "Tomma rader ignoreras, så de kan användas som avgränsare för läsbarhet."
 
 #. type: Plain text
 #: en/diff-options.adoc:724
 msgid "Lines starting with a hash (\"`#`\") are ignored, so they can be used for comments. Add a backslash (\"`\\`\") to the beginning of the pattern if it starts with a hash."
-msgstr ""
+msgstr "Rader som börjar med en hash (\"`#`\") ignoreras, så de kan användas för kommentarer. Lägg till ett bakåtsnedstreck (\"`\\`\") i början av mönstret om det börjar med en hash."
 
 #. type: Plain text
 #: en/diff-options.adoc:726
 msgid "Each other line contains a single pattern."
-msgstr ""
+msgstr "Varje annan rad innehåller ett enda mönster."
 
 #. type: Plain text
 #: en/diff-options.adoc:733
@@ -6296,18 +6326,18 @@ msgstr "Mönster har samma syntax och semantik som mönster som används för `f
 #: en/diff-options.adoc:734
 #, no-wrap
 msgid "`--skip-to=<file>`"
-msgstr ""
+msgstr "`--skip-to=<fil>`"
 
 #. type: Labeled list
 #: en/diff-options.adoc:735
 #, no-wrap
 msgid "`--rotate-to=<file>`"
-msgstr ""
+msgstr "`--rotate-to=<fil>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:741
 msgid "Discard the files before the named _<file>_ from the output (i.e. 'skip to'), or move them to the end of the output (i.e. 'rotate to'). These options were invented primarily for the use of the `git difftool` command, and may not be very useful otherwise."
-msgstr ""
+msgstr "Släng filerna före den namngivna _<fil>_ från utdata (dvs. 'hoppa till'), eller flytta dem till slutet av utdata (dvs. 'rotera till'). Dessa alternativ uppfanns främst för användning av `git difftool`-kommandot, och kanske inte är särskilt användbara annars."
 
 #. type: Labeled list
 #: en/diff-options.adoc:743
@@ -6319,7 +6349,7 @@ msgstr "`-R`"
 #. type: Plain text
 #: en/diff-options.adoc:746
 msgid "Swap two inputs; that is, show differences from index or on-disk file to tree contents."
-msgstr ""
+msgstr "Växla två indata; det vill säga visa skillnader mellan index eller fil på disk och trädinnehåll."
 
 #. type: Labeled list
 #: en/diff-options.adoc:748
@@ -6337,7 +6367,7 @@ msgstr "`--no-relative`"
 #. type: Plain text
 #: en/diff-options.adoc:758
 msgid "When run from a subdirectory of the project, it can be told to exclude changes outside the directory and show pathnames relative to it with this option. When you are not in a subdirectory (e.g. in a bare repository), you can name which subdirectory to make the output relative to by giving a _<path>_ as an argument. `--no-relative` can be used to countermand both `diff.relative` config option and previous `--relative`."
-msgstr ""
+msgstr "När den körs från en underkatalog till projektet kan den få instruktioner att exkludera ändringar utanför katalogen och visa sökvägar relativa till den med detta alternativ. När du inte befinner dig i en underkatalog (t.ex. i ett bart arkiv) kan du namnge vilken underkatalog som utdata ska vara relativ till genom att ange _<sökväg>_ som argument. `--no-relative` kan användas för att ångra både konfigurationsalternativet `diff.relative` och föregående `--relative`."
 
 #. type: Labeled list
 #: en/diff-options.adoc:759 en/fetch-options.adoc:7 en/git-branch.adoc:187
@@ -6369,7 +6399,7 @@ msgstr "`--ignore-cr-at-eol`"
 #. type: Plain text
 #: en/diff-options.adoc:765
 msgid "Ignore carriage-return at the end of line when doing a comparison."
-msgstr ""
+msgstr "Ignorera vagnretur i slutet av raden vid en jämförelse."
 
 #. type: Labeled list
 #: en/diff-options.adoc:766
@@ -6422,24 +6452,24 @@ msgstr "Ignorera ändringar i rader som är helt blanka."
 #: en/diff-options.adoc:785
 #, no-wrap
 msgid "`-I<regex>`"
-msgstr ""
+msgstr "`-I<regex>`"
 
 #. type: Labeled list
 #: en/diff-options.adoc:786
 #, no-wrap
 msgid "`--ignore-matching-lines=<regex>`"
-msgstr ""
+msgstr "`--ignore-matching-lines=<regex>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:789
 msgid "Ignore changes whose all lines match _<regex>_. This option may be specified more than once."
-msgstr ""
+msgstr "Ignorera ändringar vars alla rader matchar _<regex>_. Det här alternativet kan anges mer än en gång."
 
 #. type: Labeled list
 #: en/diff-options.adoc:790
 #, no-wrap
 msgid "`--inter-hunk-context=<number>`"
-msgstr ""
+msgstr "`--inter-hunk-context=<nummer>`"
 
 #. type: Labeled list
 #: en/diff-options.adoc:796 en/git-restore.adoc:55
@@ -6458,7 +6488,7 @@ msgstr "`--function-context`"
 #. type: Plain text
 #: en/diff-options.adoc:802
 msgid "Show whole function as context lines for each change. The function names are determined in the same way as `git diff` works out patch hunk headers (see \"Defining a custom hunk-header\" in linkgit:gitattributes[5])."
-msgstr ""
+msgstr "Visa hela funktionen som kontextrader för varje ändring. Funktionsnamnen bestäms på samma sätt som `git diff` räknar ut patch-hunk-rubriker (se \"Definiera en anpassad hunk-rubriker\" i linkgit:gitattributes[5])."
 
 #. type: Labeled list
 #: en/diff-options.adoc:805
@@ -6470,7 +6500,7 @@ msgstr "`--exit-code`"
 #. type: Plain text
 #: en/diff-options.adoc:809
 msgid "Make the program exit with codes similar to `diff`(1). That is, it exits with 1 if there were differences and 0 means no differences."
-msgstr ""
+msgstr "Få programmet att avslutas med koder som liknar `diff`(1). Det vill säga, det avslutas med 1 om det fanns skillnader och 0 betyder inga skillnader."
 
 #. type: Labeled list
 #: en/diff-options.adoc:810 en/fetch-options.adoc:290 en/git-branch.adoc:214
@@ -6488,7 +6518,7 @@ msgstr "`--quiet`"
 #. type: Plain text
 #: en/diff-options.adoc:817
 msgid "Disable all output of the program. Implies `--exit-code`. Disables execution of external diff helpers whose exit code is not trusted, i.e. their respective configuration option `diff.trustExitCode` or ++diff.++__<driver>__++.trustExitCode++ or environment variable `GIT_EXTERNAL_DIFF_TRUST_EXIT_CODE` is false."
-msgstr ""
+msgstr "Inaktivera all utdata från programmet. Innebär `--exit-code`. Inaktiverar exekvering av externa diff-hjälpare vars avslutningskod inte är betrodd, d.v.s. deras respektive konfigurationsalternativ `diff.trustExitCode` eller ++diff.++__<driver>__++.trustExitCode++ eller miljövariabeln `GIT_EXTERNAL_DIFF_TRUST_EXIT_CODE` är falskt."
 
 #. type: Labeled list
 #: en/diff-options.adoc:820
@@ -6500,7 +6530,7 @@ msgstr "`--ext-diff`"
 #. type: Plain text
 #: en/diff-options.adoc:824
 msgid "Allow an external diff helper to be executed. If you set an external diff driver with linkgit:gitattributes[5], you need to use this option with linkgit:git-log[1] and friends."
-msgstr ""
+msgstr "Tillåt att en extern diff-hjälp körs. Om du ställer in en extern diff-drivrutin med linkgit:gitattributes[5], måste du använda den här alternativet med linkgit:git-log[1] och vänner."
 
 #. type: Labeled list
 #: en/diff-options.adoc:825
@@ -6512,7 +6542,7 @@ msgstr "`--no-ext-diff`"
 #. type: Plain text
 #: en/diff-options.adoc:827
 msgid "Disallow external diff drivers."
-msgstr ""
+msgstr "Tillåt inte externa diff-drivrutiner."
 
 #. type: Labeled list
 #: en/diff-options.adoc:828
@@ -6531,7 +6561,7 @@ msgstr "`--no-textconv`"
 #. type: Plain text
 #: en/diff-options.adoc:838
 msgid "Allow (or disallow) external text conversion filters to be run when comparing binary files. See linkgit:gitattributes[5] for details. Because textconv filters are typically a one-way conversion, the resulting diff is suitable for human consumption, but cannot be applied. For this reason, textconv filters are enabled by default only for linkgit:git-diff[1] and linkgit:git-log[1], but not for linkgit:git-format-patch[1] or diff plumbing commands."
-msgstr ""
+msgstr "Tillåt (eller förbjud) att externa textkonverteringsfilter körs vid jämförelse av binära filer. Se linkgit:gitattributes[5] för mer information. Eftersom textconv-filter vanligtvis är en envägskonvertering är den resulterande diff-funktionen lämplig för mänsklig konsumtion, men kan inte tillämpas. Av denna anledning är textconv-filter som standard endast aktiverade för linkgit:git-diff[1] och linkgit:git-log[1], men inte för linkgit:git-format-patch[1] eller diff plumbing-kommandon."
 
 #. type: Labeled list
 #: en/diff-options.adoc:840
@@ -6543,13 +6573,13 @@ msgstr "`--ignore-submodules[=(none|untracked|dirty|all)]`"
 #. type: Plain text
 #: en/diff-options.adoc:851
 msgid "Ignore changes to submodules in the diff generation. `all` is the default. Using `none` will consider the submodule modified when it either contains untracked or modified files or its `HEAD` differs from the commit recorded in the superproject and can be used to override any settings of the `ignore` option in linkgit:git-config[1] or linkgit:gitmodules[5]. When `untracked` is used submodules are not considered dirty when they only contain untracked content (but they are still scanned for modified content). Using `dirty` ignores all changes to the work tree of submodules, only changes to the commits stored in the superproject are shown (this was the behavior until 1.7.0). Using `all` hides all changes to submodules."
-msgstr ""
+msgstr "Ignorera ändringar i undermoduler i diff-genereringen. `all` är standardinställningen. Om `none` används betraktas undermodulen som modifierad när den antingen innehåller ospårade eller modifierade filer, eller om dess `HEAD` skiljer sig från incheckningen som registrerats i superprojektet, och kan användas för att åsidosätta alla inställningar i `ignore`-alternativet i linkgit:git-config[1] eller linkgit:gitmodules[5]. När `untracked` används anses undermoduler inte vara smutsiga när de bara innehåller ospårat innehåll (men de skannas fortfarande efter modifierat innehåll). Om `dirty` används ignoreras alla ändringar i arbetsträdet för undermoduler, endast ändringar i de incheckningar som lagras i superprojektet visas (detta var beteendet fram till 1.7.0). Om `all` används döljs alla ändringar i undermoduler."
 
 #. type: Labeled list
 #: en/diff-options.adoc:852
 #, no-wrap
 msgid "`--src-prefix=<prefix>`"
-msgstr ""
+msgstr "`--src-prefix=<prefix>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:854
@@ -6560,7 +6590,7 @@ msgstr "Visa givet käll_<prefix>_ istället för ”a/”."
 #: en/diff-options.adoc:855
 #, no-wrap
 msgid "`--dst-prefix=<prefix>`"
-msgstr ""
+msgstr "`--dst-prefix=<prefix>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:857
@@ -6589,13 +6619,13 @@ msgstr "`--default-prefix`"
 #. type: Plain text
 #: en/diff-options.adoc:866
 msgid "Use the default source and destination prefixes (\"a/\" and \"b/\"). This overrides configuration variables such as `diff.noprefix`, `diff.srcPrefix`, `diff.dstPrefix`, and `diff.mnemonicPrefix` (see linkgit:git-config[1])."
-msgstr ""
+msgstr "Använd standard käll- och destinationsprefixen (\"a/\" och \"b/\"). Detta åsidosätter konfigurationsvariabler som `diff.noprefix`, `diff.srcPrefix`, `diff.dstPrefix` och `diff.mnemonicPrefix` (se linkgit:git-config[1])."
 
 #. type: Labeled list
 #: en/diff-options.adoc:867
 #, no-wrap
 msgid "`--line-prefix=<prefix>`"
-msgstr ""
+msgstr "`--line-prefix=<prefix>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:869
@@ -6612,58 +6642,59 @@ msgstr "`--ita-invisible-in-index`"
 #. type: Plain text
 #: en/diff-options.adoc:877
 msgid "By default entries added by `git add -N` appear as an existing empty file in `git diff` and a new file in `git diff --cached`. This option makes the entry appear as a new file in `git diff` and non-existent in `git diff --cached`. This option could be reverted with `--ita-visible-in-index`. Both options are experimental and could be removed in future."
-msgstr ""
+msgstr "Som standard visas poster som läggs till av `git add -N` som en befintlig tom fil i `git diff` och en ny fil i `git diff --cached`. Det här alternativet gör att posten visas som en ny fil i `git diff` och obefintlig i `git diff --cached`. Det här alternativet kan återställas med `--ita-visible-in-index`. Båda alternativen är experimentella och kan komma att tas bort i framtiden."
 
 #. type: Labeled list
 #: en/diff-options.adoc:878
 #, no-wrap
 msgid "--max-depth=<depth>"
-msgstr ""
+msgstr "--max-depth=<djup>"
 
 #. type: Plain text
 #: en/diff-options.adoc:884
 msgid "For each pathspec given on command line, descend at most `<depth>` levels of directories. A value of `-1` means no limit. Cannot be combined with wildcards in the pathspec. Given a tree containing `foo/bar/baz`, the following list shows the matches generated by each set of options:"
-msgstr ""
+msgstr "För varje sökvägsspecifikation som anges på kommandoraden, gå ner högst `<djup>`-nivåer i kataloger. Värdet `-1` betyder ingen gräns. Kan inte kombineras med jokertecken i sökvägsspecifikationen. Givet ett träd som innehåller `foo/bar/baz` visar följande lista de träffar som genereras av varje uppsättning alternativ:"
 
 #. type: Plain text
 #: en/diff-options.adoc:887
 msgid "`--max-depth=0 -- foo`: `foo`"
-msgstr ""
+msgstr "`--max-depth=0 -- foo`: `foo`"
 
 #. type: Plain text
 #: en/diff-options.adoc:889
+#, fuzzy
 msgid "`--max-depth=1 -- foo`: `foo/bar`"
-msgstr ""
+msgstr "`--max-depth=1 -- foo`: `foo/bar`"
 
 #. type: Plain text
 #: en/diff-options.adoc:891
 msgid "`--max-depth=1 -- foo/bar`: `foo/bar/baz`"
-msgstr ""
+msgstr "`--max-depth=1 -- foo/bar`: `foo/bar/baz`"
 
 #. type: Plain text
 #: en/diff-options.adoc:893
 msgid "`--max-depth=1 -- foo foo/bar`: `foo/bar/baz`"
-msgstr ""
+msgstr "`--max-depth=1 -- foo foo/bar`: `foo/bar/baz`"
 
 #. type: Plain text
 #: en/diff-options.adoc:895
 msgid "`--max-depth=2 -- foo`: `foo/bar/baz`"
-msgstr ""
+msgstr "`--max-depth=2 -- foo`: `foo/bar/baz`"
 
 #. type: Plain text
 #: en/diff-options.adoc:902
 msgid "If no pathspec is given, the depth is measured as if all top-level entries were specified. Note that this is different than measuring from the root, in that `--max-depth=0` would still return `foo`. This allows you to still limit depth while asking for a subset of the top-level entries."
-msgstr ""
+msgstr "Om ingen sökvägsspec anges mäts djupet som om alla poster på toppnivå vore specificerade. Observera att detta skiljer sig från att mäta från roten, eftersom `--max-depth=0` fortfarande skulle returnera `foo`. Detta låter dig fortfarande begränsa djupet samtidigt som du frågar efter en delmängd av posterna på toppnivå."
 
 #. type: Plain text
 #: en/diff-options.adoc:905
 msgid "Note that this option is only supported for diffs between tree objects, not against the index or working tree."
-msgstr ""
+msgstr "Observera att det här alternativet endast stöds för skillnader mellan trädobjekt, inte mot indexet eller arbetskatalog."
 
 #. type: Plain text
 #: en/diff-options.adoc:907
 msgid "For more detailed explanation on these common options, see also linkgit:gitdiffcore[7]."
-msgstr ""
+msgstr "För en mer detaljerad förklaring av dessa vanliga alternativ, se även linkgit:gitdiffcore[7]."
 
 #. type: Labeled list
 #: en/fetch-options.adoc:1 en/git-add.adoc:131 en/git-branch.adoc:188
@@ -6730,7 +6761,7 @@ msgstr "`--deepen=<djup>`"
 #. type: Plain text
 #: en/fetch-options.adoc:28
 msgid "Similar to `--depth`, except it specifies the number of commits from the current shallow boundary instead of from the tip of each remote branch history."
-msgstr "Liknar `--depth`, förutom att den anger antalet incheckningar från den aktuella ytliga gränsen istället för från toppen av varje fjärrgrenhistorik."
+msgstr "spetsenspetsenLiknar `--depth`, förutom att den anger antalet incheckningar från den aktuella ytliga gränsen istället för från topen av varje fjärrgrenhistorik."
 
 #. type: Labeled list
 #: en/fetch-options.adoc:29 en/git-clone.adoc:267
@@ -6792,7 +6823,7 @@ msgstr "`--negotiation-tip=(<incheckning>|<glob>)`"
 #. type: Plain text
 #: en/fetch-options.adoc:60
 msgid "By default, Git will report, to the server, commits reachable from all local refs to find common commits in an attempt to reduce the size of the to-be-received packfile. If specified, Git will only report commits reachable from the given tips. This is useful to speed up fetches when the user knows which local ref is likely to have commits in common with the upstream ref being fetched."
-msgstr "Som standard, rapporterar Git incheckningar till servern som är nåbara från alla lokala referenser för att hitta gemensamma incheckningar i ett försök att minska storleken på den packfil som ska tas emot. Om detta anges kommer Git bara att rapportera incheckningar som är nåbara från de givna tipsen. Detta är användbart för att påskynda hämtningar när användaren vet vilken lokal referens som sannolikt har incheckningar gemensamt med den uppströms referens som hämtas."
+msgstr "Som standard, rapporterar Git incheckningar till servern som är nåbara från alla lokala referenser för att hitta gemensamma incheckningar i ett försök att minska storleken på den packfil som ska tas emot. Om detta anges kommer Git bara att rapportera incheckningar som är nåbara från de givna toppar. Detta är användbart för att påskynda hämtningar när användaren vet vilken lokal referens som sannolikt har incheckningar gemensamt med den uppströms referens som hämtas."
 
 #. type: Plain text
 #: en/fetch-options.adoc:63
@@ -7482,7 +7513,7 @@ msgstr "`--merged[=<objekt>]`"
 #. type: Plain text
 #: en/for-each-ref-options.adoc:51
 msgid "Only list refs whose tips are reachable from the specified commit (`HEAD` if not specified)."
-msgstr "Lista endast referenser vars tips är nåbara från den angivna incheckningen (`HEAD` om inget annat anges)."
+msgstr "Lista endast referenser vars toppar är nåbara från den angivna incheckningen (`HEAD` om inget annat anges)."
 
 #. type: Labeled list
 #: en/for-each-ref-options.adoc:52
@@ -7493,7 +7524,7 @@ msgstr "`--no-merged[=<objekt>]`"
 #. type: Plain text
 #: en/for-each-ref-options.adoc:55
 msgid "Only list refs whose tips are not reachable from _<object>_(`HEAD` if not specified)."
-msgstr "Lista endast referenser vars tips inte kan nås från _<objekt>_(`HEAD` om inget anges)."
+msgstr "Lista endast referenser vars toppar inte kan nås från _<objekt>_(`HEAD` om inget anges)."
 
 #. type: Labeled list
 #: en/for-each-ref-options.adoc:56
@@ -7585,7 +7616,7 @@ msgstr "`badDate`"
 #. type: Plain text
 #: en/fsck-msgids.adoc:3
 msgid "(ERROR) Invalid date format in an author/committer line."
-msgstr ""
+msgstr "(FEL) Ogiltigt datumformat i en författar-/publicerings-rad."
 
 #. type: Labeled list
 #: en/fsck-msgids.adoc:4
@@ -7597,7 +7628,7 @@ msgstr "`badDateOverflow`"
 #. type: Plain text
 #: en/fsck-msgids.adoc:6
 msgid "(ERROR) Invalid date value in an author/committer line."
-msgstr ""
+msgstr "(FEL) Ogiltigt datumvärde på en författar-/publicerings-rad."
 
 #. type: Labeled list
 #: en/fsck-msgids.adoc:7
@@ -7609,7 +7640,7 @@ msgstr "`badEmail`"
 #. type: Plain text
 #: en/fsck-msgids.adoc:9
 msgid "(ERROR) Invalid email format in an author/committer line."
-msgstr ""
+msgstr "(FEL) Ogiltigt e-postformat i en författar-/publicerings-rad."
 
 #. type: Labeled list
 #: en/fsck-msgids.adoc:10
@@ -7621,7 +7652,7 @@ msgstr "`badFilemode`"
 #. type: Plain text
 #: en/fsck-msgids.adoc:12
 msgid "(INFO) A tree contains a bad filemode entry."
-msgstr ""
+msgstr "(INFO) Ett träd innehåller en felaktig fillägespost."
 
 #. type: Labeled list
 #: en/fsck-msgids.adoc:13
@@ -7633,7 +7664,7 @@ msgstr "`badGpgsig`"
 #. type: Plain text
 #: en/fsck-msgids.adoc:15
 msgid "(ERROR) A tag contains a bad (truncated) signature (e.g., `gpgsig`) header."
-msgstr ""
+msgstr "(FEL) En tagg innehåller en ogiltig (trunkerad) signaturrubrik (t.ex. `gpgsig`)."
 
 #. type: Labeled list
 #: en/fsck-msgids.adoc:16
@@ -16914,7 +16945,7 @@ msgstr ""
 msgid "$ git log --graph --oneline --decorate --boundary origin/master...topic\n* 7654321 (origin/master) upstream tip commit\n[... snip some other commits ...]\n* cccc111 cherry-pick of C\n* aaaa111 cherry-pick of A\n[... snip a lot more that has happened ...]\n| * cccc000 (topic) commit C\n| * bbbb000 commit B\n| * aaaa000 commit A\n|/\no 1234567 branch point\n"
 msgstr ""
 "$ git log --graph --oneline --decorate --boundary origin/master...ämne\n"
-"* 7654321 (origin/master) uppströms spets incheckning\n"
+"* 7654321 (origin/master) uppströms top incheckning\n"
 "[... klipp ut några andra incheckninger ...]\n"
 "* cccc111 cherry-pick of C\n"
 "* aaaa111 cherry-pick of A\n"
@@ -16958,7 +16989,7 @@ msgstr ""
 msgid "$ git log --graph --oneline --decorate --boundary origin/master...topic\n* 7654321 (origin/master) upstream tip commit\n[... snip some other commits ...]\n* cccc111 cherry-pick of C\n* aaaa111 cherry-pick of A\n[... snip a lot more that has happened ...]\n| * cccc000 (topic) commit C\n| * bbbb000 commit B\n| * aaaa000 commit A\n| * 0000fff (base) unpublished stuff F\n[... snip ...]\n| * 0000aaa unpublished stuff A\n|/\no 1234567 merge-base between upstream and topic\n"
 msgstr ""
 "$ git log --graph --oneline --decorate --boundary origin/master...ämne\n"
-"* 7654321 (origin/master) uppströms spets incheckning\n"
+"* 7654321 (origin/master) uppströms top incheckning\n"
 "[... klipp ut några andra incheckningar ...]\n"
 "* cccc111 cherry-pick of C\n"
 "* aaaa111 cherry-pick of A\n"
@@ -17561,7 +17592,7 @@ msgstr "`--depth <djup>`"
 #. type: Plain text
 #: en/git-clone.adoc:266
 msgid "Create a 'shallow' clone with a history truncated to the specified number of commits. Implies `--single-branch` unless `--no-single-branch` is given to fetch the histories near the tips of all branches. If you want to clone submodules shallowly, also pass `--shallow-submodules`."
-msgstr "Skapa en \"ytlig\"-klon med en historik avkortad till det angivna antalet incheckningar. Implicerar `--single-branch` om inte `--no-single-branch` anges för att hämta historikerna nära spetsarna på alla grenar. Om du vill klona submoduler ytligt, skicka även `--shallow-submodules`."
+msgstr "Skapa en \"ytlig\"-klon med en historik avkortad till det angivna antalet incheckningar. Implicerar `--single-branch` om inte `--no-single-branch` anges för att hämta historikerna nära topparna på alla grenar. Om du vill klona submoduler ytligt, skicka även `--shallow-submodules`."
 
 #. type: Plain text
 #: en/git-clone.adoc:269
@@ -23030,28 +23061,28 @@ msgstr "git-diff-index(1)"
 #. type: Plain text
 #: en/git-diff-index.adoc:7
 msgid "git-diff-index - Compare a tree to the working tree or index"
-msgstr ""
+msgstr "git-diff-index - Jämför ett träd med det fungerande trädet eller indexet"
 
 #. type: verse
 #: en/git-diff-index.adoc:13
 #, no-wrap
 msgid "'git diff-index' [-m] [--cached] [--merge-base] [<common-diff-options>] <tree-ish> [<path>...]\n"
-msgstr ""
+msgstr "'git diff-index' [-m] [--cached] [--merge-base] [<vanliga-diff-alternativ>] <trädlikt> [<sökväg>...]\n"
 
 #. type: Plain text
 #: en/git-diff-index.adoc:21
 msgid "Compare the content and mode of the blobs found in a tree object with the corresponding tracked files in the working tree, or with the corresponding paths in the index. When <path> arguments are present, compare only paths matching those patterns. Otherwise all tracked files are compared."
-msgstr ""
+msgstr "Jämför innehållet och läget för blobarna som finns i ett trädobjekt med motsvarande spårade filer i arbetskatalog, eller med motsvarande sökvägar i indexet. När <sökväg>-argument finns, jämför endast sökvägar som matchar dessa mönster. Annars jämförs alla spårade filer."
 
 #. type: Plain text
 #: en/git-diff-index.adoc:28
 msgid "The id of a tree object to diff against."
-msgstr ""
+msgstr "Id:t för ett trädobjekt att differera mot."
 
 #. type: Plain text
 #: en/git-diff-index.adoc:31
 msgid "Do not consider the on-disk file at all."
-msgstr ""
+msgstr "Beakta inte filen på disken alls."
 
 #. type: Labeled list
 #: en/git-diff-index.adoc:32 en/git-diff-tree.adoc:46
@@ -23064,125 +23095,134 @@ msgstr "--merge-base"
 #. type: Plain text
 #: en/git-diff-index.adoc:36
 msgid "Instead of comparing <tree-ish> directly, use the merge base between <tree-ish> and HEAD instead. <tree-ish> must be a commit."
-msgstr ""
+msgstr "Istället för att jämföra <trädlikt> direkt, använd mergebasen mellan <trädlikt> och HEAD istället. <trädlikt> måste vara en incheckning."
 
 #. type: Plain text
 #: en/git-diff-index.adoc:42
 msgid "By default, files recorded in the index but not checked out are reported as deleted. This flag makes 'git diff-index' say that all non-checked-out files are up to date."
-msgstr ""
+msgstr "Som standard, rapporteras filer som är registrerade i indexet men inte utcheckade som borttagna. Denna flagga gör att 'git diff-index' anger att alla filer som inte är utcheckade är uppdaterade."
 
 #. type: Title -
 #: en/git-diff-index.adoc:46
 #, no-wrap
 msgid "OPERATING MODES"
-msgstr ""
+msgstr "DRIFTSLÄGEN"
 
 #. type: Plain text
 #: en/git-diff-index.adoc:51
 msgid "You can choose whether you want to trust the index file entirely (using the `--cached` flag) or ask the diff logic to show any files that don't match the stat state as being \"tentatively changed\". Both of these operations are very useful indeed."
-msgstr ""
+msgstr "Du kan välja om du vill lita helt på indexfilen (med hjälp av flaggan `--cached`) eller be diff-logiken att visa filer som inte matchar det statistiska tillståndet som \"preliminärt ändrade\". Båda dessa operationer är mycket användbara."
 
 #. type: Title -
 #: en/git-diff-index.adoc:53
 #, no-wrap
 msgid "CACHED MODE"
-msgstr ""
+msgstr "CACHAD LÄGE"
 
 #. type: Plain text
 #: en/git-diff-index.adoc:55
 msgid "If `--cached` is specified, it allows you to ask:"
-msgstr ""
+msgstr "Om `--cached` anges, kan du fråga:"
 
 #. type: Plain text
 #: en/git-diff-index.adoc:58
 #, no-wrap
 msgid "\tshow me the differences between HEAD and the current index\n\tcontents (the ones I'd write using 'git write-tree')\n"
 msgstr ""
+"\tvisa mig skillnaderna mellan HEAD och det aktuella indexinnehållet \n"
+"\t(de jag skulle skriva med 'git write-tree')\n"
 
 #. type: Plain text
 #: en/git-diff-index.adoc:63
 msgid "For example, let's say that you have worked on your working directory, updated some files in the index and are ready to commit. You want to see exactly *what* you are going to commit, without having to write a new tree object and compare it that way, and to do that, you just do"
-msgstr ""
+msgstr "Låt oss till exempel säga att du har arbetat med din arbetskatalog, uppdaterat några filer i indexet och är redo att checka-in. Du vill se exakt *vad* du ska checka-in, utan att behöva skriva ett nytt trädobjekt och jämföra det på det sättet, och för att göra det gör du bara"
 
 #. type: Plain text
 #: en/git-diff-index.adoc:65
 #, no-wrap
 msgid "\tgit diff-index --cached HEAD\n"
-msgstr ""
+msgstr "\tgit diff-index --cached HEAD\n"
 
 #. type: Plain text
 #: en/git-diff-index.adoc:70
 msgid "Example: let's say I had renamed `commit.c` to `git-commit.c`, and I had done an `update-index` to make that effective in the index file. `git diff-files` wouldn't show anything at all, since the index file matches my working directory. But doing a 'git diff-index' does:"
-msgstr ""
+msgstr "Exempel: låt oss säga att jag hade bytt namn på `commit.c` till `git-commit.c`, och jag hade gjort en `update-index` för att göra det effektivt i indexfilen. `git diff-files` skulle inte visa någonting alls, eftersom indexfilen matchar min arbetskatalog. Men att göra en 'git diff-index' gör:"
 
 #. type: Plain text
 #: en/git-diff-index.adoc:74
 #, no-wrap
 msgid "  torvalds@ppc970:~/git> git diff-index --cached HEAD\n  :100644 000000 4161aecc6700a2eb579e842af0b7f22b98443f74 0000000000000000000000000000000000000000 D\tcommit.c\n  :000000 100644 0000000000000000000000000000000000000000 4161aecc6700a2eb579e842af0b7f22b98443f74 A\tgit-commit.c\n"
 msgstr ""
+"  torvalds@ppc970:~/git> git diff-index --cached HEAD\n"
+"  :100644 000000 4161aecc6700a2eb579e842af0b7f22b98443f74 0000000000000000000000000000000000000000 D\tcommit.c\n"
+"  :000000 100644 0000000000000000000000000000000000000000 4161aecc6700a2eb579e842af0b7f22b98443f74 A\tgit-commit.c\n"
 
 #. type: Plain text
 #: en/git-diff-index.adoc:76
 msgid "You can see easily that the above is a rename."
-msgstr ""
+msgstr "Du kan lätt se att ovanstående är ett namnbyte."
 
 #. type: Plain text
 #: en/git-diff-index.adoc:80
 msgid "In fact, `git diff-index --cached` *should* always be entirely equivalent to actually doing a 'git write-tree' and comparing that. Except this one is much nicer for the case where you just want to check where you are."
-msgstr ""
+msgstr "Faktum är att `git diff-index --cached` alltid *borde* vara helt likvärdigt med att faktiskt göra ett 'git write-tree' och jämföra det. Förutom att den här är mycket trevligare i fallet där du bara vill kontrollera var du befinner dig."
 
 #. type: Plain text
 #: en/git-diff-index.adoc:84
 msgid "So doing a `git diff-index --cached` is basically very useful when you are asking yourself \"what have I already marked for being committed, and what's the difference to a previous tree\"."
-msgstr ""
+msgstr "Så att göra en `git diff-index --cached` är i grunden väldigt användbart när du frågar dig själv \"vad har jag redan markerat som incheckat, och vad är skillnaden jämfört med ett tidigare träd\"."
 
 #. type: Title -
 #: en/git-diff-index.adoc:86
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "NON-CACHED MODE"
-msgstr ""
+msgstr "ICKE-CACHAD LÄGE"
 
 #. type: Plain text
 #: en/git-diff-index.adoc:91
 msgid "The \"non-cached\" mode takes a different approach, and is potentially the more useful of the two in that what it does can't be emulated with a 'git write-tree' + 'git diff-tree'. Thus that's the default mode. The non-cached version asks the question:"
-msgstr ""
+msgstr "Läget \"icke-cachat\" har en annan metod, och är potentiellt det mest användbara av de två eftersom det den gör inte kan emuleras med ett 'git write-tree' + 'git diff-tree'. Således är det standardläget. Den icke-cachade versionen ställer frågan:"
 
 #. type: Plain text
 #: en/git-diff-index.adoc:94
 #, no-wrap
 msgid "  show me the differences between HEAD and the currently checked out\n  tree - index contents _and_ files that aren't up to date\n"
 msgstr ""
+"  svisa mig skillnaderna mellan HEAD och det för närvarande utcheckade\n"
+"  trädet - indexera innehåll _och_ filer som inte är uppdaterade\n"
 
 #. type: Plain text
 #: en/git-diff-index.adoc:98
 msgid "which is obviously a very useful question too, since that tells you what you *could* commit. Again, the output matches the 'git diff-tree -r' output to a tee, but with a twist."
-msgstr ""
+msgstr "vilket uppenbarligen är en mycket användbar fråga också, eftersom den berättar vad du *skulle kunna* checka-in. Återigen matchar utdata 'git diff-tree -r'-utdatan till punkt och pricka, men med en twist."
 
 #. type: Plain text
 #: en/git-diff-index.adoc:104
 msgid "The twist is that if some file doesn't match the index, we don't have a backing store thing for it, and we use the magic \"all-zero\" sha1 to show that. So let's say that you have edited `kernel/sched.c`, but have not actually done a 'git update-index' on it yet - there is no \"object\" associated with the new state, and you get:"
-msgstr ""
+msgstr "Det svåra är att om någon fil inte matchar indexet, har vi ingen backup-funktion för den, och vi använder den magiska \"all-zero\" sha1 för att visa det. Så låt oss säga att du har redigerat `kernel/sched.c`, men inte har gjort en 'git update-index' på den än - det finns inget \"objekt\" associerat med det nya tillståndet, och du får:"
 
 #. type: Plain text
 #: en/git-diff-index.adoc:107
 #, no-wrap
 msgid "  torvalds@ppc970:~/v2.6/linux> git diff-index --abbrev HEAD\n  :100644 100644 7476bb5ba 000000000 M\tkernel/sched.c\n"
 msgstr ""
+"  torvalds@ppc970:~/v2.6/linux> git diff-index --abbrev HEAD\n"
+"  :100644 100644 7476bb5ba 000000000 M\tkernel/sched.c\n"
 
 #. type: Plain text
 #: en/git-diff-index.adoc:112
 msgid "i.e., it shows that the tree has changed, and that `kernel/sched.c` is not up to date and may contain new stuff. The all-zero sha1 means that to get the real diff, you need to look at the object in the working directory directly rather than do an object-to-object diff."
-msgstr ""
+msgstr "d.v.s. det visar att trädet har ändrats, och att `kernel/sched.c` inte är uppdaterat och kan innehålla nya saker. Sha1, som är helt noll, betyder att för att få den verkliga skillnaden måste du titta direkt på objektet i arbetskatalogen istället för att göra en objekt-till-objekt-diff."
 
 #. type: Plain text
 #: en/git-diff-index.adoc:118
 msgid "As with other commands of this type, 'git diff-index' does not actually look at the contents of the file at all. So maybe `kernel/sched.c` hasn't actually changed, and it's just that you touched it. In either case, it's a note that you need to 'git update-index' it to make the index be in sync."
-msgstr ""
+msgstr "Precis som med andra kommandon av den här typen tittar 'git diff-index' inte alls på innehållet i filen. Så kanske 'kernel/sched.c' inte har ändrats alls, och det är bara det att du rörde vid det. I båda fallen är det en anmärkning att du måste 'git update-index' det för att indexet ska vara synkroniserat."
 
 #. type: Plain text
 #: en/git-diff-index.adoc:124
 msgid "You can have a mixture of files show up as \"has been updated\" and \"is still dirty in the working directory\" together. You can always tell which file is in which state, since the \"has been updated\" ones show a valid sha1, and the \"not in sync with the index\" ones will always have the special all-zero sha1."
-msgstr ""
+msgstr "Du kan ha en blandning av filer som visas som \"har uppdaterats\" och \"är fortfarande smutsig i arbetskatalogen\". Du kan alltid se vilken fil som är i vilket tillstånd, eftersom de som \"har uppdaterats\" visar en giltig sha1, och de som \"inte synkroniseras med indexet\" alltid kommer att ha den speciella sha1-koden som bara är noll."
 
 #. type: Title =
 #: en/git-difftool.adoc:2
@@ -23194,7 +23234,7 @@ msgstr "git-difftool(1)"
 #. type: Plain text
 #: en/git-difftool.adoc:7
 msgid "git-difftool - Show changes using common diff tools"
-msgstr ""
+msgstr "git-difftool - Visa ändringar med vanliga diff-verktyg"
 
 #. type: verse
 #: en/git-difftool.adoc:12
@@ -23205,7 +23245,7 @@ msgstr "'git difftool' [<flaggor>] [<incheckning> [<incheckning>]] [--] [<sökv�
 #. type: Plain text
 #: en/git-difftool.adoc:19
 msgid "'git difftool' is a Git command that allows you to compare and edit files between revisions using common diff tools. 'git difftool' is a frontend to 'git diff' and accepts the same options and arguments. See linkgit:git-diff[1]."
-msgstr ""
+msgstr "'git difftool' är ett Git-kommando som låter dig jämföra och redigera filer mellan versioner med hjälp av vanliga diff-verktyg. 'git difftool' är ett gränssnitt till 'git diff' och accepterar samma alternativ och argument. Se linkgit:git-diff[1]."
 
 #. type: Labeled list
 #: en/git-difftool.adoc:23
@@ -23217,7 +23257,7 @@ msgstr "--dir-diff"
 #. type: Plain text
 #: en/git-difftool.adoc:27
 msgid "Copy the modified files to a temporary location and perform a directory diff on them. This mode never prompts before launching the diff tool."
-msgstr ""
+msgstr "Kopiera de modifierade filerna till en tillfällig plats och utför en katalogdiff på dem. Det här läget frågar aldrig innan diff-verktyget startas."
 
 #. type: Labeled list
 #: en/git-difftool.adoc:28
@@ -23248,66 +23288,66 @@ msgstr "--prompt"
 #. type: Plain text
 #: en/git-difftool.adoc:36
 msgid "Prompt before each invocation of the diff tool. This is the default behaviour; the option is provided to override any configuration settings."
-msgstr ""
+msgstr "Fråga före varje anrop av diff-verktyget. Detta är standardbeteendet; alternativet finns för att åsidosätta alla konfigurationsinställningar."
 
 #. type: Labeled list
 #: en/git-difftool.adoc:37
 #, no-wrap
 msgid "--rotate-to=<file>"
-msgstr ""
+msgstr "--rotate-to=<fil>"
 
 #. type: Plain text
 #: en/git-difftool.adoc:40
 msgid "Start showing the diff for the given path, the paths before it will move to the end and output."
-msgstr ""
+msgstr "Börja visa skillnaden för den givna sökvägen, sökvägarna före den kommer att flyttas till slutet och matas ut."
 
 #. type: Labeled list
 #: en/git-difftool.adoc:41
 #, no-wrap
 msgid "--skip-to=<file>"
-msgstr ""
+msgstr "--skip-to=<fil>"
 
 #. type: Plain text
 #: en/git-difftool.adoc:44
 msgid "Start showing the diff for the given path, skipping all the paths before it."
-msgstr ""
+msgstr "Börja visa skillnaden för den givna sökvägen och hoppa över alla sökvägar före den."
 
 #. type: Labeled list
 #: en/git-difftool.adoc:45
 #, no-wrap
 msgid "-t <tool>"
-msgstr ""
+msgstr "-t <verktyg>"
 
 #. type: Labeled list
 #: en/git-difftool.adoc:46
 #, no-wrap
 msgid "--tool=<tool>"
-msgstr ""
+msgstr "--tool=<verktyg>"
 
 #. type: Plain text
 #: en/git-difftool.adoc:50
 msgid "Use the diff tool specified by <tool>. Valid values include emerge, kompare, meld, and vimdiff. Run `git difftool --tool-help` for the list of valid <tool> settings."
-msgstr ""
+msgstr "Använd diff-verktyget som anges av <verktyg>. Giltiga värden inkluderar emerge, kompare, meld och vimdiff. Kör `git difftool --tool-help` för listan över giltiga <verktyg>-inställningar."
 
 #. type: Plain text
 #: en/git-difftool.adoc:55
 msgid "If a diff tool is not specified, 'git difftool' will use the configuration variable `diff.tool`. If the configuration variable `diff.tool` is not set, 'git difftool' will pick a suitable default."
-msgstr ""
+msgstr "Om ett diff-verktyg inte anges kommer 'git difftool' att använda konfigurationsvariabeln `diff.tool`. Om konfigurationsvariabeln `diff.tool` inte är satt kommer 'git difftool' att välja en lämplig standardinställning."
 
 #. type: Plain text
 #: en/git-difftool.adoc:61
 msgid "You can explicitly provide a full path to the tool by setting the configuration variable `difftool.<tool>.path`. For example, you can configure the absolute path to kdiff3 by setting `difftool.kdiff3.path`. Otherwise, 'git difftool' assumes the tool is available in PATH."
-msgstr ""
+msgstr "Du kan explicit ange en fullständig sökväg till verktyget genom att ställa in konfigurationsvariabeln `difftool.<verktyg>.path`. Du kan till exempel konfigurera den absoluta sökvägen till kdiff3 genom att ställa in `difftool.kdiff3.path`. Annars antar 'git difftool' att verktyget är tillgängligt i PATH."
 
 #. type: Plain text
 #: en/git-difftool.adoc:66
 msgid "Instead of running one of the known diff tools, 'git difftool' can be customized to run an alternative program by specifying the command line to invoke in a configuration variable `difftool.<tool>.cmd`."
-msgstr ""
+msgstr "Istället för att köra ett av de kända diff-verktygen kan 'git difftool' anpassas för att köra ett alternativt program genom att ange kommandoraden som ska anropas i en konfigurationsvariabel `difftool.<verktyg>.cmd`."
 
 #. type: Plain text
 #: en/git-difftool.adoc:76
 msgid "When 'git difftool' is invoked with this tool (either through the `-t` or `--tool` option or the `diff.tool` configuration variable) the configured command line will be invoked with the following variables available: `$LOCAL` is set to the name of the temporary file containing the contents of the diff pre-image and `$REMOTE` is set to the name of the temporary file containing the contents of the diff post-image. `$MERGED` is the name of the file which is being compared. `$BASE` is provided for compatibility with custom merge tool commands and has the same value as `$MERGED`."
-msgstr ""
+msgstr "När 'git difftool' anropas med detta verktyg (antingen via alternativet `-t` eller `--tool` eller konfigurationsvariabeln `diff.tool`) kommer den konfigurerade kommandoraden att anropas med följande variabler tillgängliga: `$LOCAL` sätts till namnet på den temporära filen som innehåller innehållet i diff-föravbildningen och `$REMOTE` sätts till namnet på den temporära filen som innehåller innehållet i diff-postavbildningen. `$MERGED` är namnet på filen som jämförs. `$BASE` tillhandahålls för kompatibilitet med anpassade sammanslagnings-verktygskommandon och har samma värde som `$MERGED`."
 
 #. type: Labeled list
 #: en/git-difftool.adoc:77
@@ -23338,29 +23378,29 @@ msgstr "--no-symlinks"
 #. type: Plain text
 #: en/git-difftool.adoc:86
 msgid "'git difftool''s default behavior is to create symlinks to the working tree when run in `--dir-diff` mode and the right-hand side of the comparison yields the same content as the file in the working tree."
-msgstr ""
+msgstr "Standardbeteendet för 'git difftool' är att skapa symboliska länkar till arbetskatalog när det körs i `--dir-diff`-läge och den högra sidan av jämförelsen ger samma innehåll som filen i arbetskatalogen."
 
 #. type: Plain text
 #: en/git-difftool.adoc:89
 msgid "Specifying `--no-symlinks` instructs 'git difftool' to create copies instead. `--no-symlinks` is the default on Windows."
-msgstr ""
+msgstr "Om man anger `--no-symlinks` instrueras `git difftool' att skapa kopior istället. `--no-symlinks` är standardinställningen i Windows."
 
 #. type: Labeled list
 #: en/git-difftool.adoc:90
 #, no-wrap
 msgid "-x <command>"
-msgstr ""
+msgstr "-x <kommando>"
 
 #. type: Labeled list
 #: en/git-difftool.adoc:91
 #, no-wrap
 msgid "--extcmd=<command>"
-msgstr ""
+msgstr "--extcmd=<<kommando>"
 
 #. type: Plain text
 #: en/git-difftool.adoc:96
 msgid "Specify a custom command for viewing diffs. 'git-difftool' ignores the configured defaults and runs `<command> $LOCAL $REMOTE` when this option is specified. Additionally, `$BASE` is set in the environment."
-msgstr ""
+msgstr "Ange ett anpassat kommando för att visa differenser. 'git-difftool' ignorerar de konfigurerade standardvärdena och kör `<kommando> $LOCAL $REMOTE` när detta alternativ anges. Dessutom är `$BASE` inställt i miljön."
 
 #. type: Labeled list
 #: en/git-difftool.adoc:97 en/git-help.adoc:70 en/git-show-branch.adoc:110
@@ -23387,7 +23427,7 @@ msgstr "--no-gui"
 #. type: Plain text
 #: en/git-difftool.adoc:108
 msgid "When 'git-difftool' is invoked with the `-g` or `--gui` option the default diff tool will be read from the configured `diff.guitool` variable instead of `diff.tool`. This may be selected automatically using the configuration variable `difftool.guiDefault`. The `--no-gui` option can be used to override these settings. If `diff.guitool` is not set, we will fallback in the order of `merge.guitool`, `diff.tool`, `merge.tool` until a tool is found."
-msgstr ""
+msgstr "När 'git-difftool' anropas med alternativet `-g` eller `--gui` kommer standardverktyget för diff att läsas från den konfigurerade variabeln `diff.guitool` istället för `diff.tool`. Detta kan väljas automatiskt med konfigurationsvariabeln `difftool.guiDefault`. Alternativet `--no-gui` kan användas för att åsidosätta dessa inställningar. Om `diff.guitool` inte är angivet kommer vi att använda ordningen `merge.guitool`, `diff.tool`, `merge.tool` tills ett verktyg hittas."
 
 #. type: Labeled list
 #: en/git-difftool.adoc:109
@@ -23406,22 +23446,22 @@ msgstr "--no-trust-exit-code"
 #. type: Plain text
 #: en/git-difftool.adoc:114
 msgid "Errors reported by the diff tool are ignored by default. Use `--trust-exit-code` to make 'git-difftool' exit when an invoked diff tool returns a non-zero exit code."
-msgstr ""
+msgstr "Fel som rapporteras av diff-verktyget ignoreras som standard. Använd `--trust-exit-code` för att få 'git-difftool' att avslutas när ett anropat diff-verktyg returnerar en avslutningskod som inte är noll."
 
 #. type: Plain text
 #: en/git-difftool.adoc:117
 msgid "'git-difftool' will forward the exit code of the invoked tool when `--trust-exit-code` is used."
-msgstr ""
+msgstr "'git-difftool' vidarebefordrar avslutningskoden för det anropade verktyget när `--trust-exit-code` används."
 
 #. type: Plain text
 #: en/git-difftool.adoc:119
 msgid "See linkgit:git-diff[1] for the full list of supported options."
-msgstr ""
+msgstr "Se linkgit:git-diff[1] för en fullständig lista över stödda alternativ."
 
 #. type: Plain text
 #: en/git-difftool.adoc:124
 msgid "'git difftool' falls back to 'git mergetool' config variables when the difftool equivalents have not been defined."
-msgstr ""
+msgstr "'git difftool' använder konfigurationsvariabler som 'git mergetool' när difftool-ekvivalenterna inte har definierats."
 
 #. type: Plain text
 #: en/git-difftool.adoc:133
@@ -23455,6 +23495,9 @@ msgstr "git-diff-tree - Jämför innehållet och läget för blobbar som hittats
 #, no-wrap
 msgid "'git diff-tree' [--stdin] [-m] [-s] [-v] [--no-commit-id] [--pretty]\n\t      [-t] [-r] [-c | --cc] [--combined-all-paths] [--root] [--merge-base]\n\t      [<common-diff-options>] <tree-ish> [<tree-ish>] [<path>...]\n"
 msgstr ""
+"'git diff-tree' [--stdin] [-m] [-s] [-v] [--no-commit-id] [--pretty]\n"
+"\t      [-t] [-r] [-c | --cc] [--combined-all-paths] [--root] [--merge-base]\n"
+"\t      [<vanliga-diff-alternativ>] <tträdlikt> [<trädlikt>] [<sökväg>...]\n"
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:19
@@ -23464,28 +23507,28 @@ msgstr "Jämför innehållet och läget för blobbar som hittats via två trädo
 #. type: Plain text
 #: en/git-diff-tree.adoc:22
 msgid "If there is only one <tree-ish> given, the commit is compared with its parents (see --stdin below)."
-msgstr ""
+msgstr "Om det bara finns en <trädlikt> given jämförs incheckning med dess föräldrar (se --stdin nedan)."
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:24
 msgid "Note that 'git diff-tree' can use the tree encapsulated in a commit object."
-msgstr ""
+msgstr "Observera att 'git diff-tree' kan använda trädet som är inkapslat i ett inchecknings-objekt."
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:31
 msgid "The id of a tree object."
-msgstr ""
+msgstr "Id:t för ett trädobjekt."
 
 #. type: Labeled list
 #: en/git-diff-tree.adoc:32 en/git-submodule.adoc:463
 #, no-wrap
 msgid "<path>..."
-msgstr ""
+msgstr "<sökväg>..."
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:35
 msgid "If provided, the results are limited to a subset of files matching one of the provided pathspecs."
-msgstr ""
+msgstr "Om det anges är resultaten begränsade till en delmängd av filer som matchar en av de angivna sökvägsspecifikationerna."
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:38 en/git-ls-tree.adoc:46
@@ -23495,52 +23538,52 @@ msgstr "Rekursera ner i underträd."
 #. type: Plain text
 #: en/git-diff-tree.adoc:41
 msgid "Show tree entry itself as well as subtrees. Implies -r."
-msgstr ""
+msgstr "Visar själva trädposten såväl som underträd. Innebär -r."
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:45
 msgid "When `--root` is specified the initial commit will be shown as a big creation event. This is equivalent to a diff against the NULL tree."
-msgstr ""
+msgstr "När `--root` anges kommer den initiala incheckningen att visas som en stor skapandehändelse. Detta motsvarar en diff mot NULL-trädet."
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:50
 msgid "Instead of comparing the <tree-ish>s directly, use the merge base between the two <tree-ish>s as the \"before\" side. There must be two <tree-ish>s given and they must both be commits."
-msgstr ""
+msgstr "Istället för att jämföra <trädlikt> direkt, använd mergebasen mellan de två <trädlikt> som \"före\"-sida. Det måste finnas två <trädlikt> givna och båda måste vara sammanslå."
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:57
 msgid "When `--stdin` is specified, the command does not take <tree-ish> arguments from the command line. Instead, it reads lines containing either two <tree>, one <commit>, or a list of <commit> from its standard input. (Use a single space as separator.)"
-msgstr ""
+msgstr "När `--stdin` anges tar kommandot inte <trädlikt>-argument från kommandoraden. Istället läser det rader som innehåller antingen två <träd>, en <incheckning> eller en lista med <incheckning> från standardindata. (Använd ett enda mellanslag som avgränsare.)"
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:62
 msgid "When two trees are given, it compares the first tree with the second. When a single commit is given, it compares the commit with its parents. The remaining commits, when given, are used as if they are parents of the first commit."
-msgstr ""
+msgstr "När två träd anges jämförs det första trädet med det andra. När en enda incheckning anges jämförs incheckningen med dess föräldrar. De återstående incheckningarna, när de anges, används som om de vore föräldrar till den första incheckningen."
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:67
 msgid "When comparing two trees, the ID of both trees (separated by a space and terminated by a newline) is printed before the difference. When comparing commits, the ID of the first (or only) commit, followed by a newline, is printed."
-msgstr ""
+msgstr "När man jämför två träd skrivs ID:t för båda träden (separerade med ett mellanslag och avslutade med en nyrad) ut före skillnaden. När man jämför incheckningear skrivs ID:t för den första (eller enda) incheckningen ut, följt av en nyrad."
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:70
 msgid "The following flags further affect the behavior when comparing commits (but not trees)."
-msgstr ""
+msgstr "Följande flaggor påverkar ytterligare beteendet vid jämförelse av incheckningar (men inte träd)."
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:76
 msgid "By default, 'git diff-tree --stdin' does not show differences for merge commits. With this flag, it shows differences to that commit from all of its parents. See also `-c`."
-msgstr ""
+msgstr "Som standard, visar 'git diff-tree --stdin' inte skillnader för sammanslagnings-incheckningar. Med den här flaggan, visas skillnader mellan den incheckningarna och alla dess föräldrar. Se även `-c`."
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:82
 msgid "By default, 'git diff-tree --stdin' shows differences, either in machine-readable form (without `-p`) or in patch form (with `-p`). This output can be suppressed. It is only useful with the `-v` flag."
-msgstr ""
+msgstr "Som standard visar 'git diff-tree --stdin' skillnader, antingen i maskinläsbar form (utan `-p`) eller i patch-form (med `-p`). Denna utdata kan undertryckas. Den är bara användbar med flaggan `-v`."
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:86
 msgid "This flag causes 'git diff-tree --stdin' to also show the commit message before the differences."
-msgstr ""
+msgstr "Denna flagga gör att 'git diff-tree --stdin' också visar inchecknings-meddelandet före skillnaderna."
 
 #. type: Labeled list
 #: en/git-diff-tree.adoc:89
@@ -23551,18 +23594,19 @@ msgstr "--no-commit-id"
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:92
+#, fuzzy
 msgid "'git diff-tree' outputs a line with the commit ID when applicable. This flag suppresses the commit ID output."
-msgstr ""
+msgstr "'git diff-tree' matar ut en rad med inchecknings-ID:t när det är tillämpligt. Denna flagga undertrycker inchecknings-ID:t-utdata."
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:102
 msgid "This flag changes the way a merge commit is displayed (which means it is useful only when the command is given one <tree-ish>, or `--stdin`). It shows the differences from each of the parents to the merge result simultaneously instead of showing pairwise diff between a parent and the result one at a time (which is what the `-m` option does). Furthermore, it lists only files which were modified from all parents."
-msgstr ""
+msgstr "Denna flagga ändrar hur en sammanslagnings-incheckning visas (vilket innebär att den bara är användbar när kommandot ges en <trädlikt>, eller `--stdin`). Den visar skillnaderna från varje förälder till sammanslagings-resultatet samtidigt istället för att visa parvisa skillnader mellan en förälder och resultatet en i taget (vilket är vad `-m`-alternativet gör). Dessutom listar den bara filer som har modifierats från alla föräldrar."
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:112
 msgid "This flag changes the way a merge commit patch is displayed, in a similar way to the `-c` option. It implies the `-c` and `-p` options and further compresses the patch output by omitting uninteresting hunks whose contents in the parents have only two variants and the merge result picks one of them without modification. When all hunks are uninteresting, the commit itself and the commit log message are not shown, just like in any other \"empty diff\" case."
-msgstr ""
+msgstr "Denna flagga ändrar hur en sammanslslagnings-inchecknings-patch visas, på ett liknande sätt som alternativet `-c`. Den impliserar alternativen `-c` och `-p` och komprimerar ytterligare patch-utdata genom att utelämna ointressanta stycken vars innehåll i föräldrarna bara har två varianter och merge-resultatet väljer en av dem utan modifiering. När alla stycken är ointressanta visas inte själva commiten och inchecknings-loggmeddelandet, precis som i alla andra fall av \"tom diff\"."
 
 #. type: Labeled list
 #: en/git-diff-tree.adoc:113
@@ -23574,12 +23618,12 @@ msgstr "--combined-all-paths"
 #. type: Plain text
 #: en/git-diff-tree.adoc:119
 msgid "This flag causes combined diffs (used for merge commits) to list the name of the file from all parents. It thus only has effect when -c or --cc are specified, and is likely only useful if filename changes are detected (i.e. when either rename or copy detection have been requested)."
-msgstr ""
+msgstr "Denna flagga gör att kombinerade diffs (används för sammanslagnings-incheckningar) listar namnet på filen från alla föräldrar. Den har således bara effekt när -c eller --cc anges, och är sannolikt bara användbar om filnamnsändringar upptäcks (dvs. när antingen namnbyte eller kopieringsdetektering har begärts)."
 
 #. type: Plain text
 #: en/git-diff-tree.adoc:123
 msgid "Show the commit itself and the commit log message even if the diff itself is empty."
-msgstr ""
+msgstr "Visa själva incheckning och incheckning-loggmeddelandet även om själva diff-filen är tom."
 
 #. type: Title =
 #: en/git-diff.adoc:2
@@ -23598,92 +23642,98 @@ msgstr "git-diff - Visa ändringar mellan incheckningar, incheckning och arbetsk
 #, no-wrap
 msgid "git diff [<options>] [<commit>] [--] [<path>...]\ngit diff [<options>] --cached [--merge-base] [<commit>] [--] [<path>...]\ngit diff [<options>] [--merge-base] <commit> [<commit>...] <commit> [--] [<path>...]\ngit diff [<options>] <commit>...<commit> [--] [<path>...]\ngit diff [<options>] <blob> <blob>\ngit diff [<options>] --no-index [--] <path> <path> [<pathspec>...]\n"
 msgstr ""
+"git diff [<flaggor>] [<incheckning>] [--] [<path>...]\n"
+"git diff [<flaggor>] --cached [--merge-base] [<incheckning>] [--] [<path>...]\n"
+"git diff [<flaggor>] [--merge-base] <commit> [<incheckning>...] <incheckning> [--] [<path>...]\n"
+"git diff [<flaggor>] <incheckning>...<incheckning> [--] [<sökväg>...]\n"
+"git diff [<flaggor>] <blob> <blob>\n"
+"git diff [<flaggor>] --no-index [--] <path> <path> [<sökvägspec>...]\n"
 
 #. type: Plain text
 #: en/git-diff.adoc:25
 msgid "Show changes between the working tree and the index or a tree, changes between the index and a tree, changes between two trees, changes resulting from a merge, changes between two blob objects, or changes between two files on disk."
-msgstr ""
+msgstr "Visa ändringar mellan arbetskatalog och indexet eller ett träd, ändringar mellan indexet och ett träd, ändringar mellan två träd, ändringar som är resultatet av en sammanslagning, ändringar mellan två blobobjekt eller ändringar mellan två filer på disken."
 
 #. type: Labeled list
 #: en/git-diff.adoc:26
 #, no-wrap
 msgid "`git diff [<options>] [--] [<path>...]`"
-msgstr ""
+msgstr "`git diff [<flaggor>] [--] [<sökväg>...]`"
 
 #. type: Plain text
 #: en/git-diff.adoc:33
 msgid "This form is to view the changes you made relative to the index (staging area for the next commit). In other words, the differences are what you _could_ tell Git to further add to the index but you still haven't. You can stage these changes by using linkgit:git-add[1]."
-msgstr ""
+msgstr "Det här formen är till för att visa de ändringar du gjort i förhållande till indexet (uppställningsområdet för nästa incheckning). Med andra ord, skillnaderna är vad du _kunde_ säga åt Git att lägga till ytterligare i indexet men som du fortfarande inte har gjort. Du kan uppställa dessa ändringar genom att använda linkgit:git-add[1]."
 
 #. type: Labeled list
 #: en/git-diff.adoc:34
 #, no-wrap
 msgid "`git diff [<options>] --no-index [--] <path> <path> [<pathspec>...]`"
-msgstr ""
+msgstr "`git diff [<flaggor>] --no-index [--] <sökväg> <sökväg> [<sökvägsspec>...]`"
 
 #. type: Plain text
 #: en/git-diff.adoc:46
 msgid "This form is to compare the given two paths on the filesystem. You can omit the `--no-index` option when running the command in a working tree controlled by Git and at least one of the paths points outside the working tree, or when running the command outside a working tree controlled by Git. This form implies `--exit-code`. If both paths point to directories, additional pathspecs may be provided. These will limit the files included in the difference. All such pathspecs must be relative as they apply to both sides of the diff."
-msgstr ""
+msgstr "Denna form är till för att jämföra de två givna sökvägarna på filsystemet. Du kan utelämna alternativet `--no-index` när du kör kommandot i ett arbetskatalog som styrs av Git och minst en av sökvägarna pekar utanför arbetsträdet, eller när du kör kommandot utanför ett arbetskatalog som styrs av Git. Denna formulär innebär `--exit-code`. Om båda sökvägarna pekar på kataloger kan ytterligare sökvägsspecifikationer tillhandahållas. Dessa kommer att begränsa de filer som ingår i skillnaden. Alla sådana sökvägsspecifikationer måste vara relativa eftersom de gäller för båda sidor av skillnaden."
 
 #. type: Labeled list
 #: en/git-diff.adoc:47
 #, no-wrap
 msgid "`git diff [<options>] --cached [--merge-base] [<commit>] [--] [<path>...]`"
-msgstr ""
+msgstr "`git diff [<flaggor>] --cached [--merge-base] [<incheckning>] [--] [<sökväg>...]`"
 
 #. type: Plain text
 #: en/git-diff.adoc:56
 msgid "This form is to view the changes you staged for the next commit relative to the named _<commit>_. Typically you would want comparison with the latest commit, so if you do not give _<commit>_, it defaults to `HEAD`. If `HEAD` does not exist (e.g. unborn branches) and _<commit>_ is not given, it shows all staged changes. `--staged` is a synonym of `--cached`."
-msgstr ""
+msgstr "Det här formen är till för att visa de ändringar du har genomfört för nästa cincheckning i förhållande till den namngivna _<incheckningen>_. Vanligtvis vill du jämföra med den senaste incheckningen, så om du inte anger _<incheckning>_ används som standard `HEAD`. Om `HEAD` inte existerar (t.ex. ofödda grenar) och _<incheckning>_ inte anges, visas alla genomförda ändringar. `--staged` är en synonym till `--cached`."
 
 #. type: Plain text
 #: en/git-diff.adoc:60
 msgid "If `--merge-base` is given, instead of using _<commit>_, use the merge base of _<commit>_ and `HEAD`. `git diff --cached --merge-base A` is equivalent to `git diff --cached $(git merge-base A HEAD)`."
-msgstr ""
+msgstr "Om `--merge-base` anges, använd sammanslagnings-basen _<incheckning>_ och `HEAD` istället för att använda _<incheckning>_. `git diff --cached --merge-base A` motsvarar `git diff --cached $(git merge-base A HEAD)`."
 
 #. type: Labeled list
 #: en/git-diff.adoc:61
 #, no-wrap
 msgid "`git diff [<options>] [--merge-base] <commit> [--] [<path>...]`"
-msgstr ""
+msgstr "`git diff [<flaggor>] [--merge-base] <incheckning> [--] [<sökväg>...]`"
 
 #. type: Plain text
 #: en/git-diff.adoc:68
 msgid "This form is to view the changes you have in your working tree relative to the named _<commit>_. You can use `HEAD` to compare it with the latest commit, or a branch name to compare with the tip of a different branch."
-msgstr ""
+msgstr "Det här formen är till för att visa de ändringar du har gjort i din arbetskatalog i förhållande till det namngivna _<incheckning>_. Du kan använda `HEAD` för att jämföra det med det senaste incheckningen, eller ett gren-namn för att jämföra med toppen av en annan gren."
 
 #. type: Plain text
 #: en/git-diff.adoc:72
 msgid "If `--merge-base` is given, instead of using _<commit>_, use the merge base of _<commit>_ and `HEAD`. `git diff --merge-base A` is equivalent to `git diff $(git merge-base A HEAD)`."
-msgstr ""
+msgstr "Om `--merge-base` anges, använd sammanslagnings-basen _<incheckning>_ och `HEAD` istället för att använda _<incheckning>_. `git diff --merge-base A` motsvarar `git diff $(git merge-base A HEAD)`."
 
 #. type: Labeled list
 #: en/git-diff.adoc:73
 #, no-wrap
 msgid "`git diff [<options>] [--merge-base] <commit> <commit> [--] [<path>...]`"
-msgstr ""
+msgstr "`git diff [<flaggor>] [--merge-base] <incheckning> <incheckning> [--] [<sökväg>...]`"
 
 #. type: Plain text
 #: en/git-diff.adoc:77
 msgid "This is to view the changes between two arbitrary _<commit>_."
-msgstr ""
+msgstr "Detta är för att se ändringarna mellan två godtyckliga _<incheckningar>_."
 
 #. type: Plain text
 #: en/git-diff.adoc:81
 msgid "If `--merge-base` is given, use the merge base of the two commits for the \"before\" side. `git diff --merge-base A B` is equivalent to `git diff $(git merge-base A B) B`."
-msgstr ""
+msgstr "Om `--merge-base` anges, använd sammanslagnings-basen för de två incheckningar för \"före\"-sidan. `git diff --merge-base A B` är ekvivalent med `git diff $(git merge-base A B) B`."
 
 #. type: Labeled list
 #: en/git-diff.adoc:82
 #, no-wrap
 msgid "`git diff [<options>] <commit> <commit>...<commit> [--] [<path>...]`"
-msgstr ""
+msgstr "`git diff [<flaggor>] <incheckning> <incheckning>...<incheckning> [--] [<sökväg>...]`"
 
 #. type: Plain text
 #: en/git-diff.adoc:90
 msgid "This form is to view the results of a merge commit. The first listed _<commit>_ must be the merge itself; the remaining two or more commits should be its parents. Convenient ways to produce the desired set of revisions are to use the suffixes `@` and `^!`. If `A` is a merge commit, then `git diff A A^@`, `git diff A^!` and `git show A` all give the same combined diff."
-msgstr ""
+msgstr "Det här formen är till för att visa resultaten av en sammanslagins-incheckning. Den första listade _<incheckning>_ måste vara själva sammanslagingen; de återstående två eller fler incheckningar bör vara dess föräldrar. Praktiska sätt att producera önskad uppsättning revisioner är att använda suffixen `@` och `^!`. Om `A` är en merge-commit, ger `git diff A A^@`, `git diff A^!` och `git show A` alla samma kombinerade diff."
 
 #. type: Labeled list
 #: en/git-diff.adoc:91
@@ -23694,7 +23744,7 @@ msgstr "`git diff [<flaggor>] <incheckning>..<incheckning> [--] [<sökväg>...]`
 #. type: Plain text
 #: en/git-diff.adoc:97
 msgid "This is synonymous to the earlier form (without the `..`) for viewing the changes between two arbitrary _<commit>_. If _<commit>_ on one side is omitted, it will have the same effect as using `HEAD` instead."
-msgstr ""
+msgstr "Detta är synonymt med den tidigare formen (utan `..`) för att visa ändringarna mellan två godtyckliga _<incheckningar>_. Om _<incheckning>_ på ena sidan utelämnas, kommer det att ha samma effekt som att använda `HEAD` istället."
 
 #. type: Labeled list
 #: en/git-diff.adoc:98
@@ -23705,28 +23755,28 @@ msgstr "`git diff [<flaggor>] <incheckning>..<incheckning> [--] [<sökväg>...]`
 #. type: Plain text
 #: en/git-diff.adoc:105
 msgid "This form is to view the changes on the branch containing and up to the second _<commit>_, starting at a common ancestor of both _<commit>_. `git diff A...B` is equivalent to `git diff $(git merge-base A B) B`. You can omit any one of _<commit>_, which has the same effect as using `HEAD` instead."
-msgstr ""
+msgstr "Det här formen är till för att visa ändringarna på grenen som innehåller och upp till den andra _<incheckningen>_, med början vid en gemensam förfader till båda _<incheckningarna>_. `git diff A...B` är ekvivalent med `git diff $(git merge-base A B) B`. Du kan utelämna vilken som helst av _<incheckningarna>_, vilket har samma effekt som att använda `HEAD` istället."
 
 #. type: Plain text
 #: en/git-diff.adoc:114
 msgid "Just in case you are doing something exotic, it should be noted that all of the _<commit>_ in the above description, except in the `--merge-base` case and in the last two forms that use `..` notations, can be any _<tree>_. A tree of interest is the one pointed to by the ref named `AUTO_MERGE`, which is written by the `ort` merge strategy upon hitting merge conflicts (see linkgit:git-merge[1]). Comparing the working tree with `AUTO_MERGE` shows changes you've made so far to resolve textual conflicts (see the examples below)."
-msgstr ""
+msgstr "Om du gör något exotiskt, bör det noteras att alla _<incheckningar>_ i beskrivningen ovan, förutom i fallet `--merge-base` och i de två sista formerna som använder `..`-notationerna, kan vara vilket _<träd>_ som helst. Ett intressant träd är det som pekas ut av referensen med namnet `AUTO_MERGE`, som skrivs av `ort`-sammanslagningsstrategin vid sammanslagningskonflikter (se linkgit:git-merge[1]). Att jämföra arbetsträdet med `AUTO_MERGE` visar ändringar du hittills har gjort för att lösa textkonflikter (se exemplen nedan)."
 
 #. type: Plain text
 #: en/git-diff.adoc:121
 msgid "For a more complete list of ways to spell _<commit>_, see \"SPECIFYING REVISIONS\" section in linkgit:gitrevisions[7]. However, `diff` is about comparing two _endpoints_, not ranges, and the range notations (`<commit>..<commit>` and `<commit>...<commit>`) do not mean a range as defined in the \"SPECIFYING RANGES\" section in linkgit:gitrevisions[7]."
-msgstr ""
+msgstr "För en mer komplett lista över sätt att stava _<incheckning>_, se avsnittet \"SSPECIFIERING AV REVIDERINGAR\" i linkgit:gitrevisions[7]. Emellertid handlar `diff` om att jämföra två _slutpunkter_, inte intervall, och intervallbeteckningarna (`<incheckning>..<incheckning>` och `<incheckning>...<incheckning>`) betyder inte ett intervall som definieras i avsnittet \"ANGE OMRÅDEN\" i linkgit:gitrevisions[7]."
 
 #. type: Labeled list
 #: en/git-diff.adoc:122
 #, no-wrap
 msgid "`git diff [<options>] <blob> <blob>`"
-msgstr ""
+msgstr "`git diff [<flaggor>] <blob> <blob>`"
 
 #. type: Plain text
 #: en/git-diff.adoc:126
 msgid "This form is to view the differences between the raw contents of two blob objects."
-msgstr ""
+msgstr "Det här formen är till för att visa skillnaderna mellan det råa innehållet i två blob-objekt."
 
 #. type: Labeled list
 #: en/git-diff.adoc:132
@@ -23759,27 +23809,27 @@ msgstr "`-3`"
 #. type: Plain text
 #: en/git-diff.adoc:139
 msgid "Compare the working tree with"
-msgstr ""
+msgstr "Jämför arbetskatalog med"
 
 #. type: Plain text
 #: en/git-diff.adoc:142
 msgid "the \"base\" version (stage #1) when using `-1` or `--base`,"
-msgstr ""
+msgstr "\"basversionen\" (steg nr1) när `-1` eller `--base` används,"
 
 #. type: Plain text
 #: en/git-diff.adoc:143
 msgid "\"our branch\" (stage #2) when using `-2` or `--ours`, or"
-msgstr ""
+msgstr "\"vår gren\" (steg nr2) när man använder `-2` eller `--vår`, eller"
 
 #. type: Plain text
 #: en/git-diff.adoc:144
 msgid "\"their branch\" (stage #3) when using `-3` or `--theirs`."
-msgstr ""
+msgstr "\"deras gren\" (steg nr3) när `-3` eller `--deras` används."
 
 #. type: Plain text
 #: en/git-diff.adoc:149
 msgid "The index contains these stages only for unmerged entries i.e. while resolving conflicts. See linkgit:git-read-tree[1] section \"3-Way Merge\" for detailed information."
-msgstr ""
+msgstr "Indexet innehåller dessa steg endast för osammanfogade poster, dvs. vid lösning av konflikter. Se länkgit:git-read-tree[1] avsnittet \"3-vägs sammanslagning\" för detaljerad information."
 
 #. type: Labeled list
 #: en/git-diff.adoc:150
@@ -23791,94 +23841,104 @@ msgstr "`-0`"
 #. type: Plain text
 #: en/git-diff.adoc:154
 msgid "Omit diff output for unmerged entries and just show \"Unmerged\". Can be used only when comparing the working tree with the index."
-msgstr ""
+msgstr "Utelämna diff-utdata för osammanfogade poster och visa bara \"Osammanfogad\". Kan endast användas när arbetskatalog jämförs med indexet."
 
 #. type: Labeled list
 #: en/git-diff.adoc:155
 #, no-wrap
 msgid "`<path>...`"
-msgstr ""
+msgstr "`<sökväg>...`"
 
 #. type: Plain text
 #: en/git-diff.adoc:159
 msgid "The _<path>_ parameters, when given, are used to limit the diff to the named paths (you can give directory names and get diff for all files under them)."
-msgstr ""
+msgstr "Parametrarna _<sökväg>_, när de är angivna, används för att begränsa differansen till de namngivna sökvägarna (du kan ange katalognamn och hämta diff-värden för alla filer under dem)."
 
 #. type: Labeled list
 #: en/git-diff.adoc:166
 #, no-wrap
 msgid "Various ways to check your working tree"
-msgstr ""
+msgstr "Olika sätt att kontrollera din arbetskatalog"
 
 #. type: delimited block -
 #: en/git-diff.adoc:173
 #, no-wrap
 msgid "$ git diff            <1>\n$ git diff --cached   <2>\n$ git diff HEAD       <3>\n$ git diff AUTO_MERGE <4>\n"
 msgstr ""
+"$ git diff            <1>\n"
+"$ git diff --cached   <2>\n"
+"$ git diff HEAD       <3>\n"
+"$ git diff AUTO_MERGE <4>\n"
 
 #. type: Plain text
 #: en/git-diff.adoc:176
 msgid "Changes in the working tree not yet staged for the next commit."
-msgstr ""
+msgstr "Ändringar i arbetskatalog har ännu inte genomförts för nästa incheckning."
 
 #. type: Plain text
 #: en/git-diff.adoc:178
 msgid "Changes between the index and your last commit; what you would be committing if you run `git commit` without `-a` option."
-msgstr ""
+msgstr "Ändringar mellan indexet och din senaste incheckning; vad du skulle checka-in om du kör `git commit` utan `-a`-flaggan."
 
 #. type: Plain text
 #: en/git-diff.adoc:180
 msgid "Changes in the working tree since your last commit; what you would be committing if you run `git commit -a`"
-msgstr ""
+msgstr "Förändringar i arbetskatalog sedan din senaste incheckning; vad du skulle checka-in om du kör `git commit -a`"
 
 #. type: Plain text
 #: en/git-diff.adoc:182
 msgid "Changes in the working tree you've made to resolve textual conflicts so far."
-msgstr ""
+msgstr "Ändringar i arbetskatalog som du hittills har gjort för att lösa textkonflikter."
 
 #. type: Labeled list
 #: en/git-diff.adoc:183
 #, no-wrap
 msgid "Comparing with arbitrary commits"
-msgstr ""
+msgstr "Jämförelse med godtyckliga incheckningar"
 
 #. type: delimited block -
 #: en/git-diff.adoc:189
 #, no-wrap
 msgid "$ git diff test            <1>\n$ git diff HEAD -- ./test  <2>\n$ git diff HEAD^ HEAD      <3>\n"
 msgstr ""
+"$ git diff test            <1>\n"
+"$ git diff HEAD -- ./test  <2>\n"
+"$ git diff HEAD^ HEAD      <3>\n"
 
 #. type: Plain text
 #: en/git-diff.adoc:193
 msgid "Instead of using the tip of the current branch, compare with the tip of \"test\" branch."
-msgstr ""
+msgstr "Istället för att använda toppen på den aktuella grenen, jämför med toppen på \"test\"-grenen."
 
 #. type: Plain text
 #: en/git-diff.adoc:196
 msgid "Instead of comparing with the tip of \"test\" branch, compare with the tip of the current branch, but limit the comparison to the file \"test\"."
-msgstr ""
+msgstr "Istället för att jämföra med topen på grenen \"test\", jämför med topen på den aktuella grenen, men begränsa jämförelsen till filen \"test\"."
 
 #. type: Plain text
 #: en/git-diff.adoc:197
 msgid "Compare the version before the last commit and the last commit."
-msgstr ""
+msgstr "Jämför versionen före den senaste incheckningen och den senaste incheckningen."
 
 #. type: Labeled list
 #: en/git-diff.adoc:198
 #, no-wrap
 msgid "Comparing branches"
-msgstr ""
+msgstr "Jämföra grenar"
 
 #. type: delimited block -
 #: en/git-diff.adoc:204
 #, no-wrap
 msgid "$ git diff topic master    <1>\n$ git diff topic..master   <2>\n$ git diff topic...master  <3>\n"
 msgstr ""
+"$ git diff ärende master    <1>\n"
+"$ git diff ärende..master   <2>\n"
+"$ git diff ärende...master  <3>\n"
 
 #. type: Plain text
 #: en/git-diff.adoc:207
 msgid "Changes between the tips of the topic and the master branches."
-msgstr ""
+msgstr "Ändringar mellan ämnets toppar och huvudgrenarna."
 
 #. type: Plain text
 #: en/git-diff.adoc:208 en/git-remote-fd.adoc:44 en/git-remote-fd.adoc:52
@@ -23889,61 +23949,66 @@ msgstr "Samma som ovan."
 #. type: Plain text
 #: en/git-diff.adoc:210
 msgid "Changes that occurred on the master branch since when the topic branch was started off it."
-msgstr ""
+msgstr "Ändringar som inträffat på huvudgrenen sedan när ämnesgrenen startades från den."
 
 #. type: Labeled list
 #: en/git-diff.adoc:211
 #, no-wrap
 msgid "Limiting the diff output"
-msgstr ""
+msgstr "Begränsa diff-utmatning"
 
 #. type: delimited block -
 #: en/git-diff.adoc:217
 #, no-wrap
 msgid "$ git diff --diff-filter=MRC            <1>\n$ git diff --name-status                <2>\n$ git diff arch/i386 include/asm-i386   <3>\n"
 msgstr ""
+"$ git diff --diff-filter=MRC            <1>\n"
+"$ git diff --name-status                <2>\n"
+"$ git diff arch/i386 include/asm-i386   <3>\n"
 
 #. type: Plain text
 #: en/git-diff.adoc:221
 msgid "Show only modification, rename, and copy, but not addition or deletion."
-msgstr ""
+msgstr "Visa endast ändring, namnbyte och kopiering, men inte tillägg eller borttagning."
 
 #. type: Plain text
 #: en/git-diff.adoc:223
 msgid "Show only names and the nature of change, but not actual diff output."
-msgstr ""
+msgstr "Visar endast namn och ändringens natur, men inte faktisk skillnadsutdata."
 
 #. type: Plain text
 #: en/git-diff.adoc:224
 msgid "Limit diff output to named subtrees."
-msgstr ""
+msgstr "Begränsa diff-utdata till namngivna underträd."
 
 #. type: Labeled list
 #: en/git-diff.adoc:225
 #, no-wrap
 msgid "Munging the diff output"
-msgstr ""
+msgstr "Omformning av diff-utdata"
 
 #. type: delimited block -
 #: en/git-diff.adoc:230
 #, no-wrap
 msgid "$ git diff --find-copies-harder -B -C  <1>\n$ git diff -R                          <2>\n"
 msgstr ""
+"$ git diff --find-copies-harder -B -C  <1>\n"
+"$ git diff -R                          <2>\n"
 
 #. type: Plain text
 #: en/git-diff.adoc:234
 msgid "Spend extra cycles to find renames, copies and complete rewrites (very expensive)."
-msgstr ""
+msgstr "Lägg extra cykler på att hitta namnbyten, kopior och fullständiga omskrivningar (väldigt dyrt)."
 
 #. type: Plain text
 #: en/git-diff.adoc:235
 msgid "Output diff in reverse."
-msgstr ""
+msgstr "Utgångsskillnad i omvänd ordning."
 
 #. type: Plain text
 #: en/git-diff.adoc:253
 msgid "`diff`(1), linkgit:git-difftool[1], linkgit:git-log[1], linkgit:gitdiffcore[7], linkgit:git-format-patch[1], linkgit:git-apply[1], linkgit:git-show[1]"
-msgstr ""
+msgstr "`diff`(1), linkgit:git-difftool[1], linkgit:git-log[1], linkgit:gitdiffcore[7], linkgit:git-format-patch[1], linkgit:git-apply[1], linkgit:git-show[1]"
 
 #. type: Title =
 #: en/git-fast-export.adoc:2
@@ -35756,12 +35821,12 @@ msgstr "där `origin/master` brukade peka på incheckningar B0, B1, B2 och nu pe
 #. type: Plain text
 #: en/git-merge-base.adoc:190
 msgid "In such a case, `git merge-base origin/master topic` would return the parent of B0 in the above picture, but B0^..D is *not* the range of commits you would want to replay on top of B (it includes B0, which is not what you wrote; it is a commit the other side discarded when it moved its tip from B0 to B1)."
-msgstr "I ett sådant fall skulle `git merge-base origin/master ämne` returnera föräldern till B0 i bilden ovan, men B0^..D är *inte* det intervall av incheckningar du vill spela upp ovanpå B (det inkluderar B0, vilket inte är vad du skrev; det är en incheckning som den andra sidan ignorerade när den flyttade sin spets från B0 till B1)."
+msgstr "I ett sådant fall skulle `git merge-base origin/master ämne` returnera föräldern till B0 i bilden ovan, men B0^..D är *inte* det intervall av incheckningar du vill spela upp ovanpå B (det inkluderar B0, vilket inte är vad du skrev; det är en incheckning som den andra sidan ignorerade när den flyttade sin top från B0 till B1)."
 
 #. type: Plain text
 #: en/git-merge-base.adoc:198
 msgid "`git merge-base --fork-point origin/master topic` is designed to help in such a case. It takes not only B but also B0, B1, and B2 (i.e. old tips of the remote-tracking branches your repository's reflog knows about) into account to see on which commit your topic branch was built and finds B0, allowing you to replay only the commits on your topic, excluding the commits the other side later discarded."
-msgstr "`git merge-base --fork-point origin/master topic` är utformad för att hjälpa till i ett sådant fall. Den tar inte bara hänsyn till B utan även B0, B1 och B2 (dvs. gamla tips från de fjärrspårningsgrenar som ditt repo reflog känner till) för att se vilken incheckning din ämnesgren byggdes på och hittar B0, vilket gör att du bara kan spela upp incheckningar på ditt ämne, exklusive de incheckningar som den andra sidan senare kasserade."
+msgstr "`git merge-base --fork-point origin/master topic` är utformad för att hjälpa till i ett sådant fall. Den tar inte bara hänsyn till B utan även B0, B1 och B2 (dvs. gamla toppar från de fjärrspårningsgrenar som ditt repo reflog känner till) för att se vilken incheckning din ämnesgren byggdes på och hittar B0, vilket gör att du bara kan spela upp incheckningar på ditt ämne, exklusive de incheckningar som den andra sidan senare kasserade."
 
 #. type: Plain text
 #: en/git-merge-base.adoc:200
@@ -35812,7 +35877,7 @@ msgstr "En fallgrop är att äldre reflog-poster i ditt repo kan ha gått ut och
 #. type: Plain text
 #: en/git-merge-base.adoc:237
 msgid "Also, the remote-tracking branch you use the `--fork-point` mode with must be the one your topic forked from its tip. If you forked from an older commit than the tip, this mode would not find the fork point (imagine in the above sample history B0 did not exist, origin/master started at B1, moved to B2 and then B, and you forked your topic at origin/master^ when origin/master was B1; the shape of the history would be the same as above, without B0, and the parent of B1 is what `git merge-base origin/master topic` correctly finds, but the `--fork-point` mode will not, because it is not one of the commits that used to be at the tip of origin/master)."
-msgstr "Dessutom måste den fjärrspårningsgren som du använder `--fork-point`-läget med vara den som ditt ämne avgrenades från sin tip. Om du grenadeav från en äldre incheckning än tippen, skulle detta läge inte hitta avgrenings-punkten (tänk dig att i exemplet ovan existerade historiken B0 inte, origin/master startade vid B1, flyttade till B2 och sedan B, och du avgrenade ditt ämne vid origin/master^ när origin/master var B1; historikens form skulle vara densamma som ovan, utan B0, och föräldern till B1 är vad `git merge-base origin/master topic` korrekt hittar, men `--fork-point`-läget gör det inte, eftersom det inte är en av de incheckningar som brukade vara vid tippen av origin/master)."
+msgstr "Dessutom måste den fjärrspårningsgren som du använder `--fork-point`-läget med vara den som ditt ämne avgrenades från sin spets. Om du grenadeav från en äldre incheckning än spetsen, skulle detta läge inte hitta avgrenings-punkten (tänk dig att i exemplet ovan existerade historiken B0 inte, origin/master startade vid B1, flyttade till B2 och sedan B, och du avgrenade ditt ämne vid origin/master^ när origin/master var B1; historikens form skulle vara densamma som ovan, utan B0, och föräldern till B1 är vad `git merge-base origin/master topic` korrekt hittar, men `--fork-point`-läget gör det inte, eftersom det inte är en av de incheckningar som brukade vara vid topen av origin/master)."
 
 #. type: Title -
 #: en/git-merge-base.adoc:240
@@ -36510,9 +36575,9 @@ msgstr "merge-tree kommer som standard att ge ett felmeddelande om de två angiv
 
 #. type: Labeled list
 #: en/git-merge-tree.adoc:80
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "--merge-base=<tree-ish>"
-msgstr "--merge-base=<tree-ish>"
+msgstr "--merge-base=<trädlikt>"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:84
@@ -40370,7 +40435,7 @@ msgstr "'git pack-refs' [--all] [--no-prune] [--auto] [--include <mönster>] [--
 #. type: Plain text
 #: en/git-pack-refs.adoc:24
 msgid "Traditionally, tips of branches and tags (collectively known as 'refs') were stored one file per ref in a (sub)directory under `$GIT_DIR/refs` directory. While many branch tips tend to be updated often, most tags and some branch tips are never updated. When a repository has hundreds or thousands of tags, this one-file-per-ref format both wastes storage and hurts performance."
-msgstr "Traditionellt lagrades tips för grenar och taggar (gemensamt kallade 'referenser') en fil per referens i en (under)katalog under katalogen `$GIT_DIR/refs`. Medan många grentips tenderar att uppdateras ofta, uppdateras de flesta taggar och vissa grentips aldrig. När ett arkiv har hundratals eller tusentals taggar, slösar detta format med en fil per referens både lagringsutrymme och försämrar prestandan."
+msgstr "Traditionellt lagrades toppar för grenar och taggar (gemensamt kallade 'referenser') en fil per referens i en (under)katalog under katalogen `$GIT_DIR/refs`. Medan många grentips tenderar att uppdateras ofta, uppdateras de flesta taggar och vissa grentoppar aldrig. När ett arkiv har hundratals eller tusentals taggar, slösar detta format med en fil per referens både lagringsutrymme och försämrar prestandan."
 
 #. type: Plain text
 #: en/git-pack-refs.adoc:31
@@ -41425,12 +41490,12 @@ msgstr "`--no-force-if-includes`"
 #. type: Plain text
 #: en/git-push.adoc:344
 msgid "Force an update only if the tip of the remote-tracking ref has been integrated locally."
-msgstr "Tvinga fram en uppdatering endast om spetsen på fjärrspårningsreferensen har integrerats lokalt."
+msgstr "Tvinga fram en uppdatering endast om toppen på fjärrspårningsreferensen har integrerats lokalt."
 
 #. type: Plain text
 #: en/git-push.adoc:350
 msgid "This option enables a check that verifies if the tip of the remote-tracking ref is reachable from one of the \"reflog\" entries of the local branch based in it for a rewrite. The check ensures that any updates from the remote have been incorporated locally by rejecting the forced update if that is not the case."
-msgstr "Det här alternativet aktiverar en kontroll som verifierar om spetsen för fjärrspårningsreferensen är nåbar från en av \"reflog\"-posterna för den lokala grenen som är baserad i den för en omskrivning. Kontrollen säkerställer att eventuella uppdateringar från fjärren har införlivats lokalt genom att avvisa den påtvingade uppdateringen om så inte är fallet."
+msgstr "Det här alternativet aktiverar en kontroll som verifierar om toppen för fjärrspårningsreferensen är nåbar från en av \"reflog\"-posterna för den lokala grenen som är baserad i den för en omskrivning. Kontrollen säkerställer att eventuella uppdateringar från fjärren har införlivats lokalt genom att avvisa den påtvingade uppdateringen om så inte är fallet."
 
 #. type: Plain text
 #: en/git-push.adoc:354
@@ -41905,7 +41970,7 @@ msgstr "Se avsnittet som beskriver `<refspec>...` ovan för en diskussion om mat
 #. type: Plain text
 #: en/git-push.adoc:687
 msgid "This is to emulate `git fetch` run on the `mothership` using `git push` that is run in the opposite direction in order to integrate the work done on `satellite`, and is often necessary when you can only make connection in one way (i.e. satellite can ssh into mothership but mothership cannot initiate connection to satellite because the latter is behind a firewall or does not run sshd)."
-msgstr "Detta är för att emulera `git fetch` som körs på `moderskeppet` med hjälp av `git push` som körs i motsatt riktning för att integrera arbetet som utförs på `satellit`, och är ofta nödvändigt när man bara kan upprätta anslutning på ett sätt (dvs. satelliten kan SSH in i moderskeppet men moderskeppet kan inte initiera anslutning till satelliten eftersom den senare är bakom en brandvägg eller inte kör sshd)."
+msgstr "Detta är för att emulera `git fetch` som körs på `moderskeppet` med hjälp av `git push` som körs i motsatt riktning för att integrera arbetet som utförs på `satellit`, och är ofta nödvändigt när man bara kan upprätta anslutning på ett sätt (dvs. satelliten kan ssh in i moderskeppet men moderskeppet kan inte initiera anslutning till satelliten eftersom den senare är bakom en brandvägg eller inte kör sshd)."
 
 #. type: Plain text
 #: en/git-push.adoc:692
@@ -60955,7 +61020,7 @@ msgstr "[[def_cherry-picking]]cherry-picking"
 #. type: Plain text
 #: en/glossary-content.adoc:59
 msgid "In <<def_SCM,SCM>> jargon, \"cherry pick\" means to choose a subset of changes out of a series of changes (typically commits) and record them as a new series of changes on top of a different codebase. In Git, this is performed by the \"git cherry-pick\" command to extract the change introduced by an existing <<def_commit,commit>> and to record it based on the tip of the current <<def_branch,branch>> as a new commit."
-msgstr "I <<def_SCM,SCM>>-jargong betyder \"cherry pick\" att välja en delmängd av ändringar ur en serie ändringar (vanligtvis incheckning) och registrera dem som en ny serie ändringar ovanpå en annan kodbas. I Git utförs detta med kommandot \"git cherry-pick\" för att extrahera ändringen som introducerats av en befintlig <<def_commit,incheckning>> och registrera den baserat på tipset från den aktuella <<def_branch,grenen>> som en ny incheckning."
+msgstr "I <<def_SCM,SCM>>-jargong betyder \"cherry pick\" att välja en delmängd av ändringar ur en serie ändringar (vanligtvis incheckning) och registrera dem som en ny serie ändringar ovanpå en annan kodbas. I Git utförs detta med kommandot \"git cherry-pick\" för att extrahera ändringen som introducerats av en befintlig <<def_commit,incheckning>> och registrera den baserat på toppen från den aktuella <<def_branch,grenen>> som en ny incheckning."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:60
@@ -60993,7 +61058,7 @@ msgstr "[[def_commit_graph_general]]incheckning-grafkoncept, representationer oc
 #. type: Plain text
 #: en/glossary-content.adoc:85
 msgid "A synonym for the <<def_DAG,DAG>> structure formed by the commits in the object database, <<def_ref,referenced>> by branch tips, using their <<def_chain,chain>> of linked commits. This structure is the definitive commit graph. The graph can be represented in other ways, e.g. the <<def_commit_graph_file,\"commit-graph\" file>>."
-msgstr "En synonym för strukturen <<def_DAG,DAG>> som bildas av commits i objektdatabasen, <<def_ref,refererad>> av branch toppen, med hjälp av deras <<def_chain,kedja>> av länkade incheckningar. Denna struktur är den definitiva inchecknings-grafen. Grafen kan representeras på andra sätt, t.ex. <<def_commit_graph_file,\"commit-graph\"-filen>>."
+msgstr "En synonym för strukturen <<def_DAG,DAG>> som bildas av commits i objektdatabasen, <<def_ref,refererad>> av gren toppen, med hjälp av deras <<def_chain,kedja>> av länkade incheckningar. Denna struktur är den definitiva inchecknings-grafen. Grafen kan representeras på andra sätt, t.ex. <<def_commit_graph_file,\"commit-graph\"-filen>>."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:86
@@ -61228,7 +61293,7 @@ msgstr "[[def_head]]huvud"
 #. type: Plain text
 #: en/glossary-content.adoc:227
 msgid "A <<def_ref,named reference>> to the <<def_commit,commit>> at the tip of a <<def_branch,branch>>. Heads are stored in a file in `$GIT_DIR/refs/heads/` directory, except when using packed refs. (See linkgit:git-pack-refs[1].)"
-msgstr "En <<def_ref,namngiven referens>> till <<def_commit,incheckning>> i spetsen av en <<def_branch,gren>>. Heads lagras i en fil i katalogen `$GIT_DIR/refs/heads/`, förutom när packade referenser används. (Se linkgit:git-pack-refs[1].)"
+msgstr "En <<def_ref,namngiven referens>> till <<def_commit,incheckning>> i toppen av en <<def_branch,gren>>. Heads lagras i en fil i katalogen `$GIT_DIR/refs/heads/`, förutom när packade referenser används. (Se linkgit:git-pack-refs[1].)"
 
 #. type: Labeled list
 #: en/glossary-content.adoc:228
@@ -61310,7 +61375,7 @@ msgstr "Som verb: Att hämta (\"fetcha\") innehållet från en annan <<def_branc
 #. type: Plain text
 #: en/glossary-content.adoc:289
 msgid "As a noun: unless it is a <<def_fast_forward,fast-forward>>, a successful merge results in the creation of a new <<def_commit,commit>> representing the result of the merge, and having as <<def_parent,parents>> the tips of the merged <<def_branch,branches>>. This commit is referred to as a \"merge commit\", or sometimes just a \"merge\"."
-msgstr "Som ett substantiv: om det inte är en <<def_fast_forward,snabbspolning>>, resulterar en lyckad sammanslagning i skapandet av en ny <<def_commit,incheckningmmit>> som representerar resultatet av sammanslagningen, och som har som <<def_parent,föräldrar>> tipsen för den sammanslagna <<def_branch,grenar>>. Denna commit kallas en sammanslagnings-incheckning (\"merge commit\"), eller ibland bara en sammanslagning (\"merge\")."
+msgstr "Som ett substantiv: om det inte är en <<def_fast_forward,snabbspolning>>, resulterar en lyckad sammanslagning i skapandet av en ny <<def_commit,incheckningmmit>> som representerar resultatet av sammanslagningen, och som har som <<def_parent,föräldrar>> toppar för den sammanslagna <<def_branch,grenar>>. Denna commit kallas en sammanslagnings-incheckning (\"merge commit\"), eller ibland bara en sammanslagning (\"merge\")."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:290
@@ -62508,7 +62573,7 @@ msgstr "`--no-verify-signatures`"
 #. type: Plain text
 #: en/merge-options.adoc:167
 msgid "Verify that the tip commit of the side branch being merged is signed with a valid key, i.e. a key that has a valid uid: in the default trust model, this means the signing key has been signed by a trusted key. If the tip commit of the side branch is not signed with a valid key, the merge is aborted."
-msgstr "Verifiera att tip incheckningen för sidgrenen som sammanfogas är signerad med en giltig nyckel, d.v.s. en nyckel som har en giltig uid: i standardförtroendemodellen betyder detta att signeringsnyckeln har signerats av en betrodd nyckel. Om tip incheckningen för sidgrenen inte är signerad med en giltig nyckel avbryts sammanfogningen."
+msgstr "Verifiera att tip incheckningen för sidgrenen som sammanfogas är signerad med en giltig nyckel, d.v.s. en nyckel som har en giltig uid: i standardförtroendemodellen betyder detta att signeringsnyckeln har signerats av en betrodd nyckel. Om top incheckningen för sidgrenen inte är signerad med en giltig nyckel avbryts sammanfogningen."
 
 #. type: Labeled list
 #: en/merge-options.adoc:173
@@ -63200,7 +63265,7 @@ msgstr "Historiskt sett varnade vi för att SHA-256-arkiv senare kan behöva bak
 #. type: Plain text
 #: en/pack-refs-options.adoc:10
 msgid "The command by default packs all tags and refs that are already packed, and leaves other refs alone. This is because branches are expected to be actively developed and packing their tips does not help performance. This option causes all refs to be packed as well, with the exception of hidden refs, broken refs, and symbolic refs. Useful for a repository with many branches of historical interests."
-msgstr "Kommandot packar som standard alla taggar och referenser som redan är packade, och lämnar andra referenser ifred. Detta beror på att grenar förväntas utvecklas aktivt och att packa deras tips inte förbättrar prestandan. Det här alternativet gör att alla referenser också packas, med undantag för dolda referenser, trasiga referenser och symboliska referenser. Användbart för ett repo med många grenar av historiskt intresse."
+msgstr "Kommandot packar som standard alla taggar och referenser som redan är packade, och lämnar andra referenser ifred. Detta beror på att grenar förväntas utvecklas aktivt och att packa deras toppar inte förbättrar prestandan. Det här alternativet gör att alla referenser också packas, med undantag för dolda referenser, trasiga referenser och symboliska referenser. Användbart för ett repo med många grenar av historiskt intresse."
 
 #. type: Plain text
 #: en/pack-refs-options.adoc:15
@@ -64714,7 +64779,7 @@ msgstr "Precis som med pushing med linkgit:git-push[1], kan alla regler som besk
 #. type: NOTE
 #: en/pull-fetch-param.adoc:101
 msgid "When the remote branch you want to fetch is known to be rewound and rebased regularly, it is expected that its new tip will not be a descendant of its previous tip (as stored in your remote-tracking branch the last time you fetched). You would want to use the `+` sign to indicate non-fast-forward updates will be needed for such branches. There is no way to determine or declare that a branch will be made available in a repository with this behavior; the pulling user simply must know this is the expected usage pattern for a branch."
-msgstr "När den fjärrgren du vill hämta är känd för att regelbundet spolas tillbaka och ombaseras, förväntas det att dess nya tips inte kommer att vara en underordnad av dess tidigare tips (som lagrats i din fjärrspårningsgren förra gången du hämtade). Du vill använda `+`-tecknet för att indikera att uppdateringar som inte är framåtspolade kommer att behövas för sådana grenar. Det finns inget sätt att avgöra eller deklarera att en gren kommer att göras tillgänglig i ett repo med detta beteende; den indragande (\"pullande\") användaren måste helt enkelt veta att detta är det förväntade användningsmönstret för en gren."
+msgstr "När den fjärrgren du vill hämta är känd för att regelbundet spolas tillbaka och ombaseras, förväntas det att dess nya top inte kommer att vara en underordnad av dess tidigare top (som lagrats i din fjärrspårningsgren förra gången du hämtade). Du vill använda `+`-tecknet för att indikera att uppdateringar som inte är framåtspolade kommer att behövas för sådana grenar. Det finns inget sätt att avgöra eller deklarera att en gren kommer att göras tillgänglig i ett repo med detta beteende; den indragande (\"pullande\") användaren måste helt enkelt veta att detta är det förväntade användningsmönstret för en gren."
 
 #. type: NOTE
 #: en/pull-fetch-param.adoc:121
