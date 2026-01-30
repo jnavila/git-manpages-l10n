@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-01-30 20:31+0000\n"
+"PO-Revision-Date: 2026-01-30 21:14+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -24712,7 +24712,7 @@ msgstr ""
 #: en/git-pack-objects.adoc:136 en/git-repack.adoc:124
 #, no-wrap
 msgid "--depth=<n>"
-msgstr ""
+msgstr "--depth=<n>"
 
 #. type: Plain text
 #: en/git-fast-import.adoc:183
@@ -26636,53 +26636,57 @@ msgstr "git-fetch-pack(1)"
 #. type: Plain text
 #: en/git-fetch-pack.adoc:7
 msgid "git-fetch-pack - Receive missing objects from another repository"
-msgstr ""
+msgstr "git-fetch-pack - Ta emot saknade objekt från ett annat repo"
 
 #. type: verse
 #: en/git-fetch-pack.adoc:16
 #, no-wrap
 msgid "'git fetch-pack' [--all] [--quiet|-q] [--keep|-k] [--thin] [--include-tag]\n\t[--upload-pack=<git-upload-pack>]\n\t[--depth=<n>] [--no-progress]\n\t[-v] <repository> [<refs>...]\n"
 msgstr ""
+"'git fetch-pack' [--all] [--quiet|-q] [--keep|-k] [--thin] [--include-tag]\n"
+"\t[--upload-pack=<git-upload-pack>]\n"
+"\t[--depth=<n>] [--no-progress]\n"
+"\t[-v] <repo> [<refs>...]\n"
 
 #. type: Plain text
 #: en/git-fetch-pack.adoc:21
 msgid "Usually you would want to use 'git fetch', which is a higher level wrapper of this command, instead."
-msgstr ""
+msgstr "Vanligtvis vill du istället använda 'git fetch', vilket är en omslutningsfil på högre nivå för det här kommandot."
 
 #. type: Plain text
 #: en/git-fetch-pack.adoc:27
 msgid "Invokes 'git-upload-pack' on a possibly remote repository and asks it to send objects missing from this repository, to update the named heads. The list of commits available locally is found out by scanning the local refs/ hierarchy and sent to 'git-upload-pack' running on the other end."
-msgstr ""
+msgstr "Anropar 'git-upload-pack' på ett eventuellt fjärr-repo och ber den att skicka objekt som saknas i detta repo för att uppdatera de namngivna huvudena. Listan över incheckningar som är tillgängliga lokalt tas fram genom att skanna den lokala refs/hierarkin och skickas till 'git-upload-pack' som körs i andra änden."
 
 #. type: Plain text
 #: en/git-fetch-pack.adoc:31
 msgid "This command degenerates to download everything to complete the asked refs from the remote side when the local side does not have a common ancestor commit."
-msgstr ""
+msgstr "Det här kommandot degenererar för att ladda ner allt för att slutföra de begärda referenserna från fjärrsidan när den lokala sidan inte har en gemensam förfader-incheckning."
 
 #. type: Plain text
 #: en/git-fetch-pack.adoc:37
 msgid "Fetch all remote refs."
-msgstr ""
+msgstr "Hämta alla fjärrreferenser."
 
 #. type: Plain text
 #: en/git-fetch-pack.adoc:43 en/git-send-pack.adoc:47
 msgid "Take the list of refs from stdin, one per line. If there are refs specified on the command line in addition to this option, then the refs from stdin are processed after those on the command line."
-msgstr ""
+msgstr "Ta listan med referenser från stdin, en per rad. Om det finns referenser angivna på kommandoraden utöver detta alternativ, bearbetas referenserna från stdin efter de på kommandoraden."
 
 #. type: Plain text
 #: en/git-fetch-pack.adoc:47 en/git-send-pack.adoc:51
 msgid "If `--stateless-rpc` is specified together with this option then the list of refs must be in packet format (pkt-line). Each ref must be in a separate packet, and the list must end with a flush packet."
-msgstr ""
+msgstr "Om `--stateless-rpc` anges tillsammans med detta alternativ måste listan över referenser vara i paketformat (pkt-line). Varje referens måste finnas i ett separat paket, och listan måste avslutas med ett tömningspaket."
 
 #. type: Plain text
 #: en/git-fetch-pack.adoc:52
 msgid "Pass `-q` flag to 'git unpack-objects'; this makes the cloning process less verbose."
-msgstr ""
+msgstr "Skicka flaggan `-q` till 'git unpack-objects'; detta gör kloningsprocessen mindre utförlig."
 
 #. type: Plain text
 #: en/git-fetch-pack.adoc:59
 msgid "Do not invoke 'git unpack-objects' on received data, but create a single packfile out of it instead, and store it in the object database. If provided twice then the pack is locked against repacking."
-msgstr ""
+msgstr "Anropa inte 'git unpack-objects' på mottagen data, utan skapa en enda packfile av den istället och lagra den i objektdatabasen. Om den anges två gånger är paketet låst mot ompackning."
 
 #. type: Labeled list
 #: en/git-fetch-pack.adoc:60 en/git-pack-objects.adoc:258
@@ -26695,7 +26699,7 @@ msgstr "--thin"
 #. type: Plain text
 #: en/git-fetch-pack.adoc:63
 msgid "Fetch a \"thin\" pack, which records objects in deltified form based on objects not included in the pack to reduce network traffic."
-msgstr ""
+msgstr "Hämta ett \"tunt\" paket, som registrerar objekt i deltifierad form baserat på objekt som inte ingår i paketet för att minska nätverkstrafiken."
 
 #. type: Labeled list
 #: en/git-fetch-pack.adoc:64 en/git-pack-objects.adoc:85
@@ -26707,18 +26711,18 @@ msgstr "--include-tag"
 #. type: Plain text
 #: en/git-fetch-pack.adoc:69
 msgid "If the remote side supports it, annotated tags objects will be downloaded on the same connection as the other objects if the object the tag references is downloaded. The caller must otherwise determine the tags this option made available."
-msgstr ""
+msgstr "Om fjärrsidan stöder det, kommer annoterade taggobjekt att laddas ner på samma anslutning som de andra objekten om objektet som taggen refererar till laddas ner. Anroparen måste annars bestämma vilka taggar som detta alternativ gjorde tillgängliga."
 
 #. type: Labeled list
 #: en/git-fetch-pack.adoc:70
 #, no-wrap
 msgid "--upload-pack=<git-upload-pack>"
-msgstr ""
+msgstr "--upload-pack=<git-upload-pack>"
 
 #. type: Plain text
 #: en/git-fetch-pack.adoc:81
 msgid "Use this to specify the path to 'git-upload-pack' on the remote side, if it is not found on your $PATH. Installations of sshd ignores the user's environment setup scripts for login shells (e.g. .bash_profile) and your privately installed git may not be found on the system default $PATH. Another workaround suggested is to set up your $PATH in \".bashrc\", but this flag is for people who do not want to pay the overhead for non-interactive shells by having a lean .bashrc file (they set most of the things up in .bash_profile)."
-msgstr ""
+msgstr "Använd detta för att ange sökvägen till 'git-upload-pack' på fjärrsidan, om den inte hittas på din $PATH. Installationer av sshd ignorerar användarens miljöskript för inloggningsshell (t.ex. .bash_profile) och din privat installerade git kanske inte hittas på systemets standard $PATH. En annan föreslagen lösning är att konfigurera din $PATH i \".bashrc\", men den här flaggan är för personer som inte vill betala omkostnaderna för icke-interaktiva skal genom att ha en smal .bashrc-fil (de konfigurerar det mesta i .bash_profile)."
 
 #. type: Labeled list
 #: en/git-fetch-pack.adoc:82
@@ -26729,29 +26733,29 @@ msgstr "--exec=<git-upload-pack>"
 #. type: Plain text
 #: en/git-fetch-pack.adoc:84
 msgid "Same as --upload-pack=<git-upload-pack>."
-msgstr ""
+msgstr "Same as --upload-pack=<git-upload-pack>."
 
 #. type: Plain text
 #: en/git-fetch-pack.adoc:89
 msgid "Limit fetching to ancestor-chains not longer than n. 'git-upload-pack' treats the special depth 2147483647 as infinite even if there is an ancestor-chain that long."
-msgstr ""
+msgstr "Begränsa hämtning till förfaderkedjor som inte är längre än n. 'git-upload-pack' behandlar det speciella djupet 2147483647 som oändligt även om det finns en förfaderkedja som är så lång."
 
 #. type: Labeled list
 #: en/git-fetch-pack.adoc:90
 #, no-wrap
 msgid "--shallow-since=<date>"
-msgstr ""
+msgstr "--shallow-since=<datum>"
 
 #. type: Plain text
 #: en/git-fetch-pack.adoc:93
 msgid "Deepen or shorten the history of a shallow repository to include all reachable commits after <date>."
-msgstr ""
+msgstr "Fördjupa eller förkorta historiken för ett ytligt repo för att inkludera alla nåbara incheckningar efter <datum>."
 
 #. type: Labeled list
 #: en/git-fetch-pack.adoc:94
 #, no-wrap
 msgid "--shallow-exclude=<ref>"
-msgstr ""
+msgstr "--shallow-exclude=<ref>"
 
 #. type: Labeled list
 #: en/git-fetch-pack.adoc:99
@@ -26763,7 +26767,7 @@ msgstr "--deepen-relative"
 #. type: Plain text
 #: en/git-fetch-pack.adoc:103
 msgid "Argument --depth specifies the number of commits from the current shallow boundary instead of from the tip of each remote branch history."
-msgstr ""
+msgstr "Argument --depth anger antalet incheckningar från den aktuella ytliga gränsen istället för från toppen av varje fjärrgrenhistorik."
 
 #. type: Labeled list
 #: en/git-fetch-pack.adoc:104
@@ -26775,12 +26779,12 @@ msgstr "--refetch"
 #. type: Plain text
 #: en/git-fetch-pack.adoc:107
 msgid "Skips negotiating commits with the server in order to fetch all matching objects. Use to reapply a new partial clone blob/tree filter."
-msgstr ""
+msgstr "Hoppar över förhandlingar om incheckningar med servern för att hämta alla matchande objekt. Används för att återanvända ett nytt partiellt klon-blob/trädfilter."
 
 #. type: Plain text
 #: en/git-fetch-pack.adoc:110
 msgid "Do not show the progress."
-msgstr ""
+msgstr "Visa inte framstegen."
 
 #. type: Labeled list
 #: en/git-fetch-pack.adoc:111 en/git-index-pack.adoc:97
@@ -26792,7 +26796,7 @@ msgstr "--check-self-contained-and-connected"
 #. type: Plain text
 #: en/git-fetch-pack.adoc:114
 msgid "Output \"connectivity-ok\" if the received pack is self-contained and connected."
-msgstr ""
+msgstr "Utdata \"anslutning-ok\" om det mottagna paketet är sluten och anslutet."
 
 #. type: Plain text
 #: en/git-fetch-pack.adoc:117 en/git-push.adoc:384 en/git-send-pack.adoc:64
@@ -26809,23 +26813,23 @@ msgstr "<repo>"
 #. type: Plain text
 #: en/git-fetch-pack.adoc:120
 msgid "The URL to the remote repository."
-msgstr ""
+msgstr "URL:en till fjärr-repot."
 
 #. type: Labeled list
 #: en/git-fetch-pack.adoc:121
 #, no-wrap
 msgid "<refs>..."
-msgstr ""
+msgstr "<refs>..."
 
 #. type: Plain text
 #: en/git-fetch-pack.adoc:125
 msgid "The remote heads to update from. This is relative to $GIT_DIR (e.g. \"HEAD\", \"refs/heads/master\"). When unspecified, update from all heads the remote side has."
-msgstr ""
+msgstr "Fjärrstyrda huvuden att uppdatera från. Detta är relativt till $GIT_DIR (t.ex. \"HEAD\", \"refs/heads/master\"). Om ospecificerat, uppdateras från alla huvuden som fjärrsidan har."
 
 #. type: Plain text
 #: en/git-fetch-pack.adoc:129
 msgid "If the remote has enabled the options `uploadpack.allowTipSHA1InWant`, `uploadpack.allowReachableSHA1InWant`, or `uploadpack.allowAnySHA1InWant`, they may alternatively be 40-hex sha1s present on the remote."
-msgstr ""
+msgstr "Om fjärren har aktiverat alternativen `uploadpack.allowTipSHA1InWant`, `uploadpack.allowReachableSHA1InWant` eller `uploadpack.allowAnySHA1InWant`, kan de alternativt vara 40-hex sha1:or som finns på fjärren."
 
 #. type: Title =
 #: en/git-fetch.adoc:2
@@ -26845,167 +26849,180 @@ msgstr "git-fetch - Hämta (ladda ner) objekt och referenser från ett annat rep
 #, no-wrap
 msgid "git fetch [<options>] [<repository> [<refspec>...]]\ngit fetch [<options>] <group>\ngit fetch --multiple [<options>] [(<repository>|<group>)...]\ngit fetch --all [<options>]\n"
 msgstr ""
+"git fetch [<opflaggortions>] [<repo> [<refspec>...]]\n"
+"git fetch [<flaggor>] <grupp>\n"
+"git fetch --multiple [<flaggor>] [(<repo>|<grupp>)...]\n"
+"git fetch --all [<flaggor>]\n"
 
 #. type: Plain text
 #: en/git-fetch.adoc:24
 msgid "Fetch branches and/or tags (collectively, \"refs\") from one or more other repositories, along with the objects necessary to complete their histories. Remote-tracking branches are updated (see the description of _<refspec>_ below for ways to control this behavior)."
-msgstr ""
+msgstr "Hämta grenar och/eller taggar (gemensamt kallade \"referenser\") från ett eller flera andra repon, tillsammans med de objekt som krävs för att slutföra deras historik. Fjärrspårningsgrenar uppdateras (se beskrivningen av _<refspec>_ nedan för sätt att kontrollera detta beteende)."
 
 #. type: Plain text
 #: en/git-fetch.adoc:32
 msgid "By default, any tag that points into the histories being fetched is also fetched; the effect is to fetch tags that point at branches that you are interested in. This default behavior can be changed by using the `--tags` or `--no-tags` options or by configuring `remote.<name>.tagOpt`. By using a refspec that fetches tags explicitly, you can fetch tags that do not point into branches you are interested in as well."
-msgstr ""
+msgstr "Som standard, hämtas även alla taggar som pekar in i de historiker som hämtas; effekten är att hämta taggar som pekar på grenar som du är intresserad av. Detta standardbeteende kan ändras genom att använda alternativen `--tags` eller `--no-tags` eller genom att konfigurera `remote.<namn>.tagOpt`. Genom att använda en refspec som hämtar taggar explicit kan du också hämta taggar som inte pekar in på grenar som du är intresserad av."
 
 #. type: Plain text
 #: en/git-fetch.adoc:37
 msgid "`git fetch` can fetch from either a single named repository or URL, or from several repositories at once if _<group>_ is given and there is a `remotes.<group>` entry in the configuration file. (See linkgit:git-config[1])."
-msgstr ""
+msgstr "`git fetch` kan hämta från antingen ett enda namngivet repository eller URL, eller från flera repos samtidigt om _<grupp>_ anges och det finns en `remotes.<grupp>`-post i konfigurationsfilen. (Se linkgit:git-config[1])."
 
 #. type: Plain text
 #: en/git-fetch.adoc:40
 msgid "When no remote is specified, by default the `origin` remote will be used, unless there's an upstream branch configured for the current branch."
-msgstr ""
+msgstr "När ingen fjärr anges används som standard fjärren `origin`, såvida det inte finns en uppströmsgren konfigurerad för den aktuella grenen."
 
 #. type: Plain text
 #: en/git-fetch.adoc:44
 msgid "The names of refs that are fetched, together with the object names they point at, are written to `.git/FETCH_HEAD`. This information may be used by scripts or other git commands, such as linkgit:git-pull[1]."
-msgstr ""
+msgstr "Namnen på referenser som hämtas, tillsammans med objektnamnen de pekar på, skrivs till `.git/FETCH_HEAD`. Denna information kan användas av skript eller andra git-kommandon, till exempel linkgit:git-pull[1]."
 
 #. type: Plain text
 #: en/git-fetch.adoc:54
 msgid "Read refspecs, one per line, from stdin in addition to those provided as arguments. The \"tag _<name>_\" format is not supported."
-msgstr ""
+msgstr "Läs refspecs, en per rad, från stdin utöver de som anges som argument. Formatet \"tag _<namn>_\" stöds inte."
 
 #. type: Title -
 #: en/git-fetch.adoc:59
 #, no-wrap
 msgid "CONFIGURED REMOTE-TRACKING BRANCHES"
-msgstr ""
+msgstr "KONFIGURERADE FJÄRSPÅRNINGSGRENAR"
 
 #. type: Plain text
 #: en/git-fetch.adoc:65
 msgid "You often interact with the same remote repository by regularly and repeatedly fetching from it. In order to keep track of the progress of such a remote repository, `git fetch` allows you to configure `remote.<repository>.fetch` configuration variables."
-msgstr ""
+msgstr "Du interagerar ofta med samma fjärr-repo genom att regelbundet och upprepade gånger hämta data från det. För att hålla koll på förloppet för ett sådant fjärr-repo låter `git fetch` dig konfigurera konfigurationsvariabler `remote.<repo>.fetch`."
 
 #. type: Plain text
 #: en/git-fetch.adoc:67
 msgid "Typically such a variable may look like this:"
-msgstr ""
+msgstr "Vanligtvis kan en sådan variabel se ut så här:"
 
 #. type: delimited block -
 #: en/git-fetch.adoc:71
 #, no-wrap
 msgid "[remote \"origin\"]\n\tfetch = +refs/heads/*:refs/remotes/origin/*\n"
 msgstr ""
+"[remote \"origin\"]\n"
+"\tfetch = +refs/heads/*:refs/remotes/origin/*\n"
 
 #. type: Plain text
 #: en/git-fetch.adoc:74
 msgid "This configuration is used in two ways:"
-msgstr ""
+msgstr "Denna konfiguration används på två sätt:"
 
 #. type: Plain text
 #: en/git-fetch.adoc:84
 msgid "When `git fetch` is run without specifying what branches and/or tags to fetch on the command line, e.g. `git fetch origin` or `git fetch`, `remote.<repository>.fetch` values are used as the refspecs--they specify which refs to fetch and which local refs to update. The example above will fetch all branches that exist in the `origin` (i.e. any ref that matches the left-hand side of the value, `refs/heads/*`) and update the corresponding remote-tracking branches in the `refs/remotes/origin/*` hierarchy."
-msgstr ""
+msgstr "När `git fetch` körs utan att ange vilka grenar och/eller taggar som ska hämtas på kommandoraden, t.ex. `git fetch origin` eller `git fetch`, används `remote.<repo>.fetch`-värden som refspecs – de anger vilka referenser som ska hämtas och vilka lokala referenser som ska uppdateras. Exemplet ovan hämtar alla grenar som finns i `origin` (dvs. alla referenser som matchar vänster sida av värdet `refs/heads/*`) och uppdaterar motsvarande fjärrspårningsgrenar i `refs/remotes/origin/*`-hierarkin."
 
 #. type: Plain text
 #: en/git-fetch.adoc:101
 msgid "When `git fetch` is run with explicit branches and/or tags to fetch on the command line, e.g. `git fetch origin master`, the _<refspec>s_ given on the command line determine what are to be fetched (e.g. `master` in the example, which is a short-hand for `master:`, which in turn means \"fetch the `master` branch but I do not explicitly say what remote-tracking branch to update with it from the command line\"), and the example command will fetch _only_ the `master` branch. The `remote.<repository>.fetch` values determine which remote-tracking branch, if any, is updated. When used in this way, the `remote.<repository>.fetch` values do not have any effect in deciding _what_ gets fetched (i.e. the values are not used as refspecs when the command-line lists refspecs); they are only used to decide _where_ the refs that are fetched are stored by acting as a mapping."
-msgstr ""
+msgstr "När `git fetch` körs med explicita grenar och/eller taggar för att hämta på kommandoraden, t.ex. `git fetch origin master`, bestämmer _<refspec>s_ som anges på kommandoraden vad som ska hämtas (t.ex. `master` i exemplet, vilket är en förkortning för `master:`, vilket i sin tur betyder \"hämta `master`-grenen men jag säger inte explicit vilken fjärrspårningsgren som ska uppdateras med den från kommandoraden\"), och exempelkommandot hämtar _endast_ `master`-grenen. Värdena för `remote.<repo>.fetch` bestämmer vilken fjärrspårningsgren, om någon, som uppdateras. När de används på detta sätt har `remote.<repo>.fetch`-värdena ingen effekt på att bestämma _vad_ som hämtas (dvs. värdena används inte som refspecs när kommandoraden listar refspecs); De används bara för att bestämma _var_ de hämtade referenserna lagras genom att fungera som en mappning."
 
 #. type: Plain text
 #: en/git-fetch.adoc:105
 msgid "The latter use of the `remote.<repository>.fetch` values can be overridden by giving the `--refmap=<refspec>` parameter(s) on the command line."
-msgstr ""
+msgstr "Den senare användningen av `remote.<repo>.fetch`-värdena kan åsidosättas genom att ange parametern(erna) `--refmap=<refspec>` på kommandoraden."
 
 #. type: Title -
 #: en/git-fetch.adoc:107
 #, no-wrap
 msgid "PRUNING"
-msgstr ""
+msgstr "BESKÄRNING"
 
 #. type: Plain text
 #: en/git-fetch.adoc:112
 msgid "Git has a default disposition of keeping data unless it's explicitly thrown away; this extends to holding onto local references to branches on remotes that have themselves deleted those branches."
-msgstr ""
+msgstr "Git har som standard att behålla data om den inte uttryckligen raderas; detta omfattar även att behålla lokala referenser till grenar på fjärrdatorer som själva har tagit bort dessa grenar."
 
 #. type: Plain text
 #: en/git-fetch.adoc:118
 msgid "If left to accumulate, these stale references might make performance worse on big and busy repos that have a lot of branch churn, and e.g. make the output of commands like `git branch -a --contains <commit>` needlessly verbose, as well as impacting anything else that'll work with the complete set of known references."
-msgstr ""
+msgstr "Om de får ansamlas, kan dessa inaktuella referenser försämra prestandan på stora och upptagna repos med mycket gren-omsättning, och t.ex. göra utdata från kommandon som `git branch -a --contains <incheckning>` onödigt utförliga, samt påverka allt annat som fungerar med den kompletta uppsättningen kända referenser."
 
 #. type: Plain text
 #: en/git-fetch.adoc:121
 msgid "These remote-tracking references can be deleted as a one-off with either of:"
-msgstr ""
+msgstr "Dessa fjärrspårningsreferenser kan raderas en gång för sig med något av följande:"
 
 #. type: delimited block -
 #: en/git-fetch.adoc:125
 #, no-wrap
 msgid "# While fetching\n$ git fetch --prune <name>\n"
 msgstr ""
+"# Medan hämtning\n"
+"$ git fetch --prune <namn>\n"
 
 #. type: delimited block -
 #: en/git-fetch.adoc:128
 #, no-wrap
 msgid "# Only prune, don't fetch\n$ git remote prune <name>\n"
 msgstr ""
+"# Beskär bara, hämta inte\n"
+"$ git remote prune <namn>\n"
 
 #. type: Plain text
 #: en/git-fetch.adoc:134
 msgid "To prune references as part of your normal workflow without needing to remember to run that, set `fetch.prune` globally, or `remote.<name>.prune` per-remote in the config. See linkgit:git-config[1]."
-msgstr ""
+msgstr "För att rensa referenser som en del av ditt vanliga arbetsflöde utan att behöva komma ihåg att köra det, sätt `fetch.prune` globalt, eller `remote.<namn>.prune` per-remote i konfigurationen. Se linkgit:git-config[1]."
 
 #. type: Plain text
 #: en/git-fetch.adoc:139
 msgid "Here's where things get tricky and more specific. The pruning feature doesn't actually care about branches, instead it'll prune local <--> remote-references as a function of the refspec of the remote (see `<refspec>` and <<CRTB,CONFIGURED REMOTE-TRACKING BRANCHES>> above)."
-msgstr ""
+msgstr "Det är här det blir knepigt och mer specifikt. Beskärningsfunktionen bryr sig egentligen inte om grenar, istället beskär den lokala <--> fjärrreferenser som en funktion av fjärrkontrollens refspec (se `<refspec>` och <<CRTB,KONFIGURERADE FJÄRSPÅRNINGSFILIER>> ovan)."
 
 #. type: Plain text
 #: en/git-fetch.adoc:145
 msgid "Therefore if the refspec for the remote includes e.g. `refs/tags/*:refs/tags/*`, or you manually run e.g. `git fetch --prune <name> \"refs/tags/*:refs/tags/*\"` it won't be stale remote tracking branches that are deleted, but any local tag that doesn't exist on the remote."
-msgstr ""
+msgstr "Om därför refspec:en för fjärrkontrollen inkluderar t.ex. `refs/tags/*:refs/tags/*`, eller om du manuellt kör t.ex. `git fetch --prune <namn> \"refs/tags/*:refs/tags/*\"`, kommer det inte att vara inaktuella grenar för fjärrspårning som tas bort, utan alla lokala taggar som inte finns på fjärren."
 
 #. type: Plain text
 #: en/git-fetch.adoc:150
 msgid "This might not be what you expect, i.e. you want to prune remote _<name>_, but also explicitly fetch tags from it, so when you fetch from it you delete all your local tags, most of which may not have come from the _<name>_ remote in the first place."
-msgstr ""
+msgstr "Det här kanske inte är vad du förväntar dig, d.v.s. du vill rensa fjärren _<namn>_, men också explicit hämta taggar från den, så när du hämtar från den raderar du alla dina lokala taggar, varav de flesta kanske inte kom från fjärrkontrollen _<namn>_ från första början."
 
 #. type: Plain text
 #: en/git-fetch.adoc:154
 msgid "So be careful when using this with a refspec like `refs/tags/*:refs/tags/*`, or any other refspec which might map references from multiple remotes to the same local namespace."
-msgstr ""
+msgstr "Så var försiktig när du använder detta med en refspec som `refs/tags/*:refs/tags/*`, eller någon annan refspec som kan mappa referenser från flera fjärrenheter till samma lokala namnrymd."
 
 #. type: Plain text
 #: en/git-fetch.adoc:161
 msgid "Since keeping up-to-date with both branches and tags on the remote is a common use-case the `--prune-tags` option can be supplied along with `--prune` to prune local tags that don't exist on the remote, and force-update those tags that differ. Tag pruning can also be enabled with `fetch.pruneTags` or `remote.<name>.pruneTags` in the config. See linkgit:git-config[1]."
-msgstr ""
+msgstr "Eftersom det är vanligt att hålla sig uppdaterad med både grenar och taggar på fjärren kan alternativet `--prune-tags` anges tillsammans med `--prune` för att rensa bort lokala taggar som inte finns på fjärren och tvångsuppdatera de taggar som skiljer sig åt. Taggrensning kan också aktiveras med `fetch.pruneTags` eller `remote.<namn>.pruneTags` i konfigurationen. Se linkgit:git-config[1]."
 
 #. type: Plain text
 #: en/git-fetch.adoc:165
 msgid "The `--prune-tags` option is equivalent to having `refs/tags/*:refs/tags/*` declared in the refspecs of the remote. This can lead to some seemingly strange interactions:"
-msgstr ""
+msgstr "Alternativet `--prune-tags` motsvarar att `refs/tags/*:refs/tags/*` deklareras i fjärrens refspecs. Detta kan leda till en del till synes konstiga interaktioner:"
 
 #. type: delimited block -
 #: en/git-fetch.adoc:170
 #, no-wrap
 msgid "# These both fetch tags\n$ git fetch --no-tags origin 'refs/tags/*:refs/tags/*'\n$ git fetch --no-tags --prune-tags origin\n"
 msgstr ""
+"# Båda dessa hämtningstaggar\n"
+"$ git fetch --no-tags origin 'refs/tags/*:refs/tags/*'\n"
+"$ git fetch --no-tags --prune-tags origin\n"
 
 #. type: Plain text
 #: en/git-fetch.adoc:176
 msgid "The reason it doesn't error out when provided without `--prune` or its config versions is for flexibility of the configured versions, and to maintain a 1=1 mapping between what the command line flags do, and what the configuration versions do."
-msgstr ""
+msgstr "Anledningen till att det inte ger felar-ut när det anges utan `--prune` eller dess konfigurationsversioner är för flexibiliteten hos de konfigurerade versionerna, och för att bibehålla en 1=1-mappning mellan vad kommandoradsflaggorna gör och vad konfigurationsversionerna gör."
 
 #. type: Plain text
 #: en/git-fetch.adoc:181
 msgid "It's reasonable to e.g. configure `fetch.pruneTags=true` in `~/.gitconfig` to have tags pruned whenever `git fetch --prune` is run, without making every invocation of `git fetch` without `--prune` an error."
-msgstr ""
+msgstr "Det är rimligt att t.ex. konfigurera `fetch.pruneTags=true` i `~/.gitconfig` så att taggar rensas varje gång `git fetch --prune` körs, utan att göra varje anrop av `git fetch` utan `--prune` till ett fel."
 
 #. type: Plain text
 #: en/git-fetch.adoc:185
 msgid "Pruning tags with `--prune-tags` also works when fetching a URL instead of a named remote. These will all prune tags not found on origin:"
-msgstr ""
+msgstr "Att rensa taggar med `--prune-tags` fungerar också när man hämtar en URL istället för en namngiven fjärr. Dessa kommer att rensa alla taggar som inte hittas på ursprungsadressen:"
 
 #. type: delimited block -
 #: en/git-fetch.adoc:191
@@ -27020,18 +27037,18 @@ msgstr ""
 #. type: Plain text
 #: en/git-fetch.adoc:199
 msgid "The output of \"git fetch\" depends on the transport method used; this section describes the output when fetching over the Git protocol (either locally or via ssh) and Smart HTTP protocol."
-msgstr ""
+msgstr "Utdata från \"git fetch\" beror på vilken transportmetod som används; det här avsnittet beskriver utdata vid hämtning över Git-protokollet (antingen lokalt eller via ssh) och Smart HTTP-protokollet."
 
 #. type: Plain text
 #: en/git-fetch.adoc:202
 msgid "The status of the fetch is output in tabular form, with each line representing the status of a single ref. Each line is of the form:"
-msgstr ""
+msgstr "Statusen för hämtningen visas i tabellform, där varje rad representerar statusen för en enskild referens. Varje rad har formen:"
 
 #. type: delimited block -
 #: en/git-fetch.adoc:205
 #, no-wrap
 msgid " <flag> <summary> <from> -> <to> [<reason>]\n"
-msgstr ""
+msgstr " <flagga> <sammanfattning> <från> -> <till> [<orsak>]\n"
 
 #. type: Plain text
 #: en/git-fetch.adoc:211
@@ -27043,23 +27060,23 @@ msgstr "När `--porcelain` används, är utdataformatet avsett att vara maskinl�
 #: en/git-fetch.adoc:214
 #, no-wrap
 msgid "<flag> <old-object-id> <new-object-id> <local-reference>\n"
-msgstr ""
+msgstr "<flagga> <gammalt-objekt-id> <nytt-objekt-id> <lokal-referens>\n"
 
 #. type: Plain text
 #: en/git-fetch.adoc:218
 msgid "The status of up-to-date refs is shown only if the `--verbose` option is used."
-msgstr ""
+msgstr "Status för uppdaterade referenser visas endast om alternativet `--verbose` används."
 
 #. type: Plain text
 #: en/git-fetch.adoc:223
 msgid "In compact output mode, specified with configuration variable fetch.output, if either entire _<from>_ or _<to>_ is found in the other string, it will be substituted with `*` in the other string. For example, `master -> origin/master` becomes `master -> origin/*`."
-msgstr ""
+msgstr "I kompakt utdataläge, specificerat med konfigurationsvariabeln fetch.output, om antingen hela _<från>_ eller _<till>_ hittas i den andra strängen, kommer den att ersättas med `*` i den andra strängen. Till exempel blir `master -> origin/master` `master -> origin/*`."
 
 #. type: Labeled list
 #: en/git-fetch.adoc:224
 #, no-wrap
 msgid "flag"
-msgstr ""
+msgstr "flagga"
 
 #. type: Plain text
 #: en/git-fetch.adoc:226 en/git-push.adoc:458
@@ -27075,7 +27092,7 @@ msgstr "(mellanslag)"
 #. type: Plain text
 #: en/git-fetch.adoc:227
 msgid "for a successfully fetched fast-forward;"
-msgstr ""
+msgstr "för en lyckad hämtad snabbspolning framåt;"
 
 #. type: Labeled list
 #: en/git-fetch.adoc:227 en/git-push.adoc:459
@@ -27098,7 +27115,7 @@ msgstr "`-`"
 #. type: Plain text
 #: en/git-fetch.adoc:229
 msgid "for a successfully pruned ref;"
-msgstr ""
+msgstr "för en framgångsrikt beskuren ref;"
 
 #. type: Labeled list
 #: en/git-fetch.adoc:229
@@ -27110,7 +27127,7 @@ msgstr "`t`"
 #. type: Plain text
 #: en/git-fetch.adoc:230
 msgid "for a successful tag update;"
-msgstr ""
+msgstr "för en lyckad tagguppdatering;"
 
 #. type: Labeled list
 #: en/git-fetch.adoc:230 en/git-push.adoc:461
@@ -27121,7 +27138,7 @@ msgstr "`*`"
 #. type: Plain text
 #: en/git-fetch.adoc:231
 msgid "for a successfully fetched new ref;"
-msgstr ""
+msgstr "för en framgångsrikt hämtad ny ref;"
 
 #. type: Labeled list
 #: en/git-fetch.adoc:231 en/git-push.adoc:462
@@ -27132,7 +27149,7 @@ msgstr "`!`"
 #. type: Plain text
 #: en/git-fetch.adoc:232
 msgid "for a ref that was rejected or failed to update; and"
-msgstr ""
+msgstr "för en referens som avvisades eller inte kunde uppdateras; och"
 
 #. type: Labeled list
 #: en/git-fetch.adoc:232 en/git-push.adoc:463
@@ -27143,7 +27160,7 @@ msgstr "`=`"
 #. type: Plain text
 #: en/git-fetch.adoc:233
 msgid "for a ref that was up to date and did not need fetching."
-msgstr ""
+msgstr "för en domare som var aktuell och inte behövde hämtas."
 
 #. type: Labeled list
 #: en/git-fetch.adoc:234
@@ -27154,7 +27171,7 @@ msgstr "summary"
 #. type: Plain text
 #: en/git-fetch.adoc:239
 msgid "For a successfully fetched ref, the summary shows the old and new values of the ref in a form suitable for using as an argument to `git log` (this is `<old>..<new>` in most cases, and `<old>...<new>` for forced non-fast-forward updates)."
-msgstr ""
+msgstr "För en lyckat hämtad referens visar sammanfattningen de gamla och nya värdena för referensen i en form som är lämplig att använda som ett argument till `git log` (detta är `<gammal>..<ny>` i de flesta fall, och `<gammal>...<ny>` för tvingade uppdateringar som inte snabbspolas framåt)."
 
 #. type: Labeled list
 #: en/git-fetch.adoc:240 en/git-push.adoc:493
@@ -27165,7 +27182,7 @@ msgstr "från"
 #. type: Plain text
 #: en/git-fetch.adoc:244
 msgid "The name of the remote ref being fetched from, minus its `refs/<type>/` prefix. In the case of deletion, the name of the remote ref is \"(none)\"."
-msgstr ""
+msgstr "Namnet på den fjärrreferens som hämtas från, minus dess prefix `refs/<typ>/`. Vid borttagning är namnet på fjärrreferensen \"(ingen)\"."
 
 #. type: Labeled list
 #: en/git-fetch.adoc:245 en/git-push.adoc:498
@@ -27176,7 +27193,7 @@ msgstr "till"
 #. type: Plain text
 #: en/git-fetch.adoc:248
 msgid "The name of the local ref being updated, minus its `refs/<type>/` prefix."
-msgstr ""
+msgstr "Namnet på den lokala referensen som uppdateras, minus dess prefix `refs/<typ>/`."
 
 #. type: Labeled list
 #: en/git-fetch.adoc:249 en/git-push.adoc:502
@@ -27198,54 +27215,56 @@ msgstr "Uppdatera de fjärrspårade grenarna:"
 #: en/git-fetch.adoc:261
 #, no-wrap
 msgid "$ git fetch origin\n"
-msgstr ""
+msgstr "$ git fetch origin\n"
 
 #. type: Plain text
 #: en/git-fetch.adoc:267
 msgid "The above command copies all branches from the remote `refs/heads/` namespace and stores them to the local `refs/remotes/origin/` namespace, unless the `remote.<repository>.fetch` option is used to specify a non-default refspec."
-msgstr ""
+msgstr "Kommandot ovan kopierar alla grenar från namnrymden `refs/heads/` och lagrar dem i den lokala namnrymden `refs/remotes/origin/`, såvida inte alternativet `remote.<repository>.fetch` används för att ange en refspec som inte är standard."
 
 #. type: Plain text
 #: en/git-fetch.adoc:269
 msgid "Using refspecs explicitly:"
-msgstr ""
+msgstr "Använda refspecs explicit:"
 
 #. type: delimited block -
 #: en/git-fetch.adoc:272
 #, no-wrap
 msgid "$ git fetch origin +seen:seen maint:tmp\n"
-msgstr ""
+msgstr "$ git fetch origin +seen:seen maint:tmp\n"
 
 #. type: Plain text
 #: en/git-fetch.adoc:277
 msgid "This updates (or creates, as necessary) branches `seen` and `tmp` in the local repository by fetching from the branches (respectively) `seen` and `maint` from the remote repository."
-msgstr ""
+msgstr "Detta uppdaterar (eller skapar, vid behov) grenarna `sedd` och `tmp` i det lokala arkivet genom att hämta från grenarna (respektive) `sedd` och `maint` från fjärrarkivet."
 
 #. type: Plain text
 #: en/git-fetch.adoc:280
 msgid "The `seen` branch will be updated even if it does not fast-forward, because it is prefixed with a plus sign; `tmp` will not be."
-msgstr ""
+msgstr "Grenen `sedd` kommer att uppdateras även om den inte snabbspolar framåt, eftersom den har ett plustecken som prefix; `tmp` kommer inte att göra det."
 
 #. type: Plain text
 #: en/git-fetch.adoc:283
 msgid "Peek at a remote's branch, without configuring the remote in your local repository:"
-msgstr ""
+msgstr "Titta på en fjärrens gren, utan att konfigurera fjärren i ditt lokala arkiv:"
 
 #. type: delimited block -
 #: en/git-fetch.adoc:287
 #, no-wrap
 msgid "$ git fetch git://git.kernel.org/pub/scm/git/git.git maint\n$ git log FETCH_HEAD\n"
 msgstr ""
+"$ git fetch git://git.kernel.org/pub/scm/git/git.git maint\n"
+"$ git log FETCH_HEAD\n"
 
 #. type: Plain text
 #: en/git-fetch.adoc:294
 msgid "The first command fetches the `maint` branch from the repository at `git://git.kernel.org/pub/scm/git/git.git` and the second command uses `FETCH_HEAD` to examine the branch with linkgit:git-log[1]. The fetched objects will eventually be removed by git's built-in housekeeping (see linkgit:git-gc[1])."
-msgstr ""
+msgstr "Det första kommandot hämtar grenen `maint` från arkivet på `git://git.kernel.org/pub/scm/git/git.git` och det andra kommandot använder `FETCH_HEAD` för att undersöka grenen med linkgit:git-log[1]. De hämtade objekten kommer så småningom att tas bort av gits inbyggda housekeeping (se linkgit:git-gc[1])."
 
 #. type: Plain text
 #: en/git-fetch.adoc:310
 msgid "Using `--recurse-submodules` can only fetch new commits in submodules that are present locally e.g. in `$GIT_DIR/modules/`. If the upstream adds a new submodule, that submodule cannot be fetched until it is cloned e.g. by `git submodule update`. This is expected to be fixed in a future Git version."
-msgstr ""
+msgstr "Att använda `--recurse-submodules` kan bara hämta nya incheckningar i undermoduler som finns lokalt, t.ex. i `$GIT_DIR/modules/`. Om uppströmsmodulen lägger till en ny undermodul kan den undermodulen inte hämtas förrän den klonas, t.ex. av `git submodule update`. Detta förväntas bli åtgärdat i en framtida Git-version."
 
 #. type: Title =
 #: en/git-filter-branch.adoc:2
