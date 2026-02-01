@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-02-01 09:01+0000\n"
+"PO-Revision-Date: 2026-02-01 18:42+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -3218,7 +3218,7 @@ msgstr "`commit.gpgSign`"
 #. type: Plain text
 #: en/config/commit.adoc:23
 msgid "A boolean to specify whether all commits should be GPG signed. Use of this option when doing operations such as rebase can result in a large number of commits being signed. It may be convenient to use an agent to avoid typing your GPG passphrase several times."
-msgstr "En boolesk kod som anger om alla commits ska GPG-signeras. Användning av det här alternativet vid operationer som ombasering kan resultera i att ett stort antal incheckningar signeras. Det kan vara praktiskt att använda en agent för att undvika att skriva in din GPG-lösenfras flera gånger."
+msgstr "En boolesk kod som anger om alla incheckningar ska GPG-signeras. Användning av det här alternativet vid operationer som ombasering kan resultera i att ett stort antal incheckningar signeras. Det kan vara praktiskt att använda en agent för att undvika att skriva in din GPG-lösenfras flera gånger."
 
 #. type: Labeled list
 #: en/config/commit.adoc:24
@@ -4171,7 +4171,7 @@ msgstr "`merge.suppressDest`"
 #. type: Plain text
 #: en/config/fmt-merge-msg.adoc:18
 msgid "By adding a glob that matches the names of integration branches to this multi-valued configuration variable, the default merge message computed for merges into these integration branches will omit \"into _<branch-name>_\" from its title."
-msgstr "Genom att lägga till en glob som matchar namnen på integrationsgrenar till denna flervärdeskonfigurationsvariabel, kommer standardmeddelandet för sammanslagningar som beräknas för sammanslagningar i dessa integrationsgrenar att utelämna \"into _<grennamn>_\" från titeln."
+msgstr "Genom att lägga till en glob som matchar namnen på integrationsgrenar till denna flervärdeskonfigurationsvariabel, kommer standardmeddelandet för sammanslagningar som beräknas för sammanslagningar i dessa integrationsgrenar att utelämna \"into _<gren-namn>_\" från titeln."
 
 #. type: Plain text
 #: en/config/fmt-merge-msg.adoc:22
@@ -9192,7 +9192,7 @@ msgstr "Lägg till innehållet i nya eller ändrade filer i indexet. \"Indexet\"
 #. type: Plain text
 #: en/git-add.adoc:26
 msgid "When you run `git commit` without any other arguments, it will only commit staged changes. For example, if you've edited `file.c` and want to commit your changes to that file, you can run:"
-msgstr "När du kör `git commit` utan några andra argument, kommer den bara att genomföra stegvisa ändringar. Om du till exempel har redigerat `fil.c` och vill checka-in dina ändringar i den filen kan du köra:"
+msgstr "När du kör `git commit` utan några andra argument, kommer den bara att genomföra köade ändringar. Om du till exempel har redigerat `fil.c` och vill checka-in dina ändringar i den filen kan du köra:"
 
 #. type: Plain text
 #: en/git-add.adoc:29
@@ -9215,7 +9215,7 @@ msgstr "Det här kommandot kan utföras flera gånger före en incheckning. Det 
 #. type: Plain text
 #: en/git-add.adoc:39
 msgid "The `git status` command can be used to obtain a summary of which files have changes that are staged for the next commit."
-msgstr "Kommandot `git status` kan användas för att få en sammanfattning av vilka filer som har ändringar som är klara för nästa incheckning."
+msgstr "Kommandot `git status` kan användas för att få en sammanfattning av vilka filer som har ändringar som är köade för nästa incheckning."
 
 #. type: Plain text
 #: en/git-add.adoc:44
@@ -9376,7 +9376,7 @@ msgstr "Öppna skillnaden mellan diffen och indexet i en editor och låt använd
 #. type: Plain text
 #: en/git-add.adoc:118
 msgid "The intent of this option is to pick and choose lines of the patch to apply, or even to modify the contents of lines to be staged. This can be quicker and more flexible than using the interactive hunk selector. However, it is easy to confuse oneself and create a patch that does not apply to the index. See EDITING PATCHES below."
-msgstr "Avsikten med det här alternativet är att välja och vraka rader i patchen som ska tillämpas, eller till och med att modifiera innehållet i rader som ska iscensattas. Detta kan vara snabbare och mer flexibelt än att använda den interaktiva hunk-väljaren. Det är dock lätt att förvirra sig själv och skapa en patch som inte gäller för indexet. Se REDIGERA PATCHAR nedan."
+msgstr "Avsikten med det här alternativet är att välja och vraka rader i patchen som ska tillämpas, eller till och med att modifiera innehållet i rader som ska köas. Detta kan vara snabbare och mer flexibelt än att använda den interaktiva styckes-väljaren. Det är dock lätt att förvirra sig själv och skapa en patch som inte gäller för indexet. Se REDIGERA PATCHAR nedan."
 
 #. type: Labeled list
 #: en/git-add.adoc:120
@@ -9655,8 +9655,8 @@ msgstr "Detta visar förändringen mellan `HEAD` och index (dvs. vad som kommer 
 #, no-wrap
 msgid "              staged     unstaged path\n     1:       binary      nothing foo.png\n     2:     +403/-35        +1/-1 add-interactive.c\n"
 msgstr ""
-"              staged     unstaged path\n"
-"     1:       binary      nothing foo.png\n"
+"              köad     ej köad sökväg\n"
+"     1:       binär       ingenting foo.png\n"
 "     2:     +403/-35        +1/-1 add-interactive.c\n"
 
 #. type: Plain text
@@ -9715,7 +9715,7 @@ msgstr "revert"
 #. type: Plain text
 #: en/git-add.adoc:324
 msgid "This has a very similar UI to 'update', and the staged information for selected paths are reverted to that of the HEAD version. Reverting new paths makes them untracked."
-msgstr "Detta har ett mycket liknande användargränssnitt som \"uppdatera\", och den mellanlagrade informationen för valda sökvägar återställs till den i HEAD-versionen. Om du återställer nya sökvägar spåras de inte längre."
+msgstr "Detta har ett mycket liknande användargränssnitt som \"uppdatera\", och den köade informationen för valda sökvägar återställs till den i HEAD-versionen. Om du återställer nya sökvägar spåras de inte längre."
 
 #. type: Labeled list
 #: en/git-add.adoc:325
@@ -10441,7 +10441,7 @@ msgstr "--no-gpg-sign"
 #: en/git-am.adoc:192 en/git-cherry-pick.adoc:118 en/git-rebase.adoc:381
 #: en/git-revert.adoc:99
 msgid "GPG-sign commits. The `keyid` argument is optional and defaults to the committer identity; if specified, it must be stuck to the option without a space. `--no-gpg-sign` is useful to countermand both `commit.gpgSign` configuration variable, and earlier `--gpg-sign`."
-msgstr "GPG-sign incheckningar. Argumentet `nyckelid` är valfritt och används som standard för incheckningar-identiteten; om det anges måste det fästas vid alternativet utan mellanslag. `--no-gpg-sign` är användbart för att negligera både konfigurationsvariabeln `commit.gpgSign` och den tidigare `--gpg-sign`."
+msgstr "GPG-signera incheckningar. Argumentet `nyckelid` är valfritt och används som standard för incheckningar-identiteten; om det anges måste det fästas vid alternativet utan mellanslag. `--no-gpg-sign` är användbart för att negligera både konfigurationsvariabeln `commit.gpgSign` och den tidigare `--gpg-sign`."
 
 #. type: Labeled list
 #: en/git-am.adoc:193 en/git-rebase.adoc:182 en/sequencer.adoc:1
@@ -12801,68 +12801,84 @@ msgstr "git-branch(1)"
 #. type: Plain text
 #: en/git-branch.adoc:7
 msgid "git-branch - List, create, or delete branches"
-msgstr ""
+msgstr "git-branch - Lista, skapa eller ta bort grenar"
 
 #. type: synopsis
 #: en/git-branch.adoc:27
 #, no-wrap
 msgid "git branch [--color[=<when>] | --no-color] [--show-current]\n\t   [-v [--abbrev=<n> | --no-abbrev]]\n\t   [--column[=<options>] | --no-column] [--sort=<key>]\n\t   [--merged [<commit>]] [--no-merged [<commit>]]\n\t   [--contains [<commit>]] [--no-contains [<commit>]]\n\t   [--points-at <object>] [--format=<format>]\n\t   [(-r|--remotes) | (-a|--all)]\n\t   [--list] [<pattern>...]\ngit branch [--track[=(direct|inherit)] | --no-track] [-f]\n\t   [--recurse-submodules] <branch-name> [<start-point>]\ngit branch (--set-upstream-to=<upstream>|-u <upstream>) [<branch-name>]\ngit branch --unset-upstream [<branch-name>]\ngit branch (-m|-M) [<old-branch>] <new-branch>\ngit branch (-c|-C) [<old-branch>] <new-branch>\ngit branch (-d|-D) [-r] <branch-name>...\ngit branch --edit-description [<branch-name>]\n"
 msgstr ""
+"git branch [--color[=<när>] | --no-color] [--show-current]\n"
+"\t   [-v [--abbrev=<n> | --no-abbrev]]\n"
+"\t   [--column[=<flaggor>] | --no-column] [--sort=<nyckel>]\n"
+"\t   [--merged [<incheckning>]] [--no-merged [<incheckning>]]\n"
+"\t   [--contains [<incheckning>]] [--no-contains [<incheckning>]]\n"
+"\t   [--points-at <objekt>] [--format=<format>]\n"
+"\t   [(-r|--remotes) | (-a|--all)]\n"
+"\t   [--list] [<mönster>...]\n"
+"git branch [--track[=(direct|inherit)] | --no-track] [-f]\n"
+"\t   [--recurse-submodules] <branch-name> [<start-punkt>]\n"
+"git branch (--set-upstream-to=<uppströms>|-u <uppströms>) [<gren-namn>]\n"
+"git branch --unset-upstream [<gren-namn>]\n"
+"git branch (-m|-M) [<old-branch>] <ny-gren>\n"
+"git branch (-c|-C) [<old-branch>] <ny-gren>\n"
+"git branch (-d|-D) [-r] <gren-namn>...\n"
+"git branch --edit-description [<gren-namn>]\n"
 
 #. type: Plain text
 #: en/git-branch.adoc:37
 msgid "If `--list` is given, or if there are no non-option arguments, existing branches are listed; the current branch will be highlighted in green and marked with an asterisk. Any branches checked out in linked worktrees will be highlighted in cyan and marked with a plus sign. Option `-r` causes the remote-tracking branches to be listed, and option `-a` shows both local and remote branches."
-msgstr ""
+msgstr "Om `--list` anges, eller om det inte finns några argument som inte är alternativ, listas befintliga grenar; den aktuella grenen markeras i grönt och med en asterisk. Alla grenar som är utcheckade i länkade arbetsträd markeras i cyan och markeras med ett plustecken. Alternativet `-r` gör att grenarna för fjärrspårning listas, och alternativet `-a` visar både lokala och fjärrgrenar."
 
 #. type: Plain text
 #: en/git-branch.adoc:42
 msgid "If a `<pattern>` is given, it is used as a shell wildcard to restrict the output to matching branches. If multiple patterns are given, a branch is shown if it matches any of the patterns."
-msgstr ""
+msgstr "Om ett `<mönster>` anges används det som ett jokertecken i skalet för att begränsa utdata till matchande grenar. Om flera mönster anges visas en gren om den matchar något av mönstren."
 
 #. type: Plain text
 #: en/git-branch.adoc:46
 msgid "Note that when providing a `<pattern>`, you must use `--list`; otherwise the command may be interpreted as branch creation."
-msgstr ""
+msgstr "Observera att när du anger ett `<mönster>` måste du använda `--list`; annars kan kommandot tolkas som att en gren skapas."
 
 #. type: Plain text
 #: en/git-branch.adoc:55
 msgid "With `--contains`, shows only the branches that contain the named commit (in other words, the branches whose tip commits are descendants of the named commit), `--no-contains` inverts it. With `--merged`, only branches merged into the named commit (i.e. the branches whose tip commits are reachable from the named commit) will be listed. With `--no-merged` only branches not merged into the named commit will be listed. If the _<commit>_ argument is missing it defaults to `HEAD` (i.e. the tip of the current branch)."
-msgstr ""
+msgstr "Med `--contains` visas endast de grenar som innehåller den namngivna incheckningen (med andra ord, de grenar vars top-incheckning är ättlingar till den namngivna incheckningen), `--no-contains` inverterar den. Med `--merged` listas endast grenar som har sammanfogats med den namngivna incheckningen (dvs. de grenar vars top-incheckningar är nåbara från den namngivna incheckningen). Med `--no-merged` listas endast grenar som inte har sammanfogats med den namngivna incheckningen. Om argumentet _<incheckning>_ saknas används som standard `HEAD` (dvs. spetsen på den aktuella grenen)."
 
 #. type: Plain text
 #: en/git-branch.adoc:62
 msgid "The command's second form creates a new branch head named _<branch-name>_ which points to the current `HEAD`, or _<start-point>_ if given. As a special case, for _<start-point>_, you may use `<rev-A>...<rev-B>` as a shortcut for the merge base of _<rev-A>_ and _<rev-B>_ if there is exactly one merge base. You can leave out at most one of _<rev-A>_ and _<rev-B>_, in which case it defaults to `HEAD`."
-msgstr ""
+msgstr "Kommandots andra form skapar en ny grenhuvud med namnet _<gren-namn>_ som pekar på den aktuella `HEAD`, eller _<start-punkt>_ om angivet. Som ett specialfall, för _<start-punkt>_, kan du använda `<rev-A>...<rev-B>` som en genväg för sammanslagningsbasen för _<rev-A>_ och _<rev-B>_ om det finns exakt en sammanslagningsbas. Du kan utelämna högst en av _<rev-A>_ och _<rev-B>_, i vilket fall standardvärdet är `HEAD`."
 
 #. type: Plain text
 #: en/git-branch.adoc:66
 msgid "Note that this will create the new branch, but it will not switch the working tree to it; use `git switch <new-branch>` to switch to the new branch."
-msgstr ""
+msgstr "Observera att detta kommer att skapa den nya grenen, men det kommer inte att växla arbetsträdet till den; använd `git switch <ny-gren>` för att växla till den nya grenen."
 
 #. type: Plain text
 #: en/git-branch.adoc:74
 msgid "When a local branch is started off a remote-tracking branch, Git sets up the branch (specifically the `branch.<name>.remote` and `branch.<name>.merge` configuration entries) so that `git pull` will appropriately merge from the remote-tracking branch. This behavior may be changed via the global `branch.autoSetupMerge` configuration flag. That setting can be overridden by using the `--track` and `--no-track` options, and changed later using `git branch --set-upstream-to`."
-msgstr ""
+msgstr "När en lokal gren startas från en fjärrspårningsgren, konfigurerar Git grenen (specifikt konfigurationsposterna `branch.<namn>.remote` och `branch.<namn>.merge`) så att `git pull` korrekt sammanfogas från fjärrspårningsgrenen. Detta beteende kan ändras via den globala konfigurationsflaggan `branch.autoSetupMerge`. Den inställningen kan åsidosättas genom att använda alternativen `--track` och `--no-track`, och ändras senare med `git branch --set-upstream-to`."
 
 #. type: Plain text
 #: en/git-branch.adoc:80
 msgid "With a `-m` or `-M` option, _<old-branch>_ will be renamed to _<new-branch>_. If _<old-branch>_ had a corresponding reflog, it is renamed to match _<new-branch>_, and a reflog entry is created to remember the branch renaming. If _<new-branch>_ exists, `-M` must be used to force the rename to happen."
-msgstr ""
+msgstr "Med alternativet `-m` eller `-M` kommer _<gammal-gren>_ att byta namn till _<ny-gren>_. Om _<gammal-gren>_ hade en motsvarande reflog, byts namn på den för att matcha _<ny-gren>_, och en reflog-post skapas för att komma ihåg namnbytet på grenen. Om _<ny-gren>_ finns måste `-M` användas för att tvinga fram namnbytet."
 
 #. type: Plain text
 #: en/git-branch.adoc:84
 msgid "The `-c` and `-C` options have the exact same semantics as `-m` and `-M`, except instead of the branch being renamed, it will be copied to a new name, along with its config and reflog."
-msgstr ""
+msgstr "Alternativen `-c` och `-C` har exakt samma semantik som `-m` och `-M`, förutom att grenen inte byter namn utan kopieras till ett nytt namn, tillsammans med dess konfiguration och reflogg."
 
 #. type: Plain text
 #: en/git-branch.adoc:88
 msgid "With a `-d` or `-D` option, _<branch-name>_ will be deleted. You may specify more than one branch for deletion. If the branch currently has a reflog then the reflog will also be deleted."
-msgstr ""
+msgstr "Med alternativet `-d` eller `-D` kommer _<gren-namn>_ att raderas. Du kan ange mer än en gren för borttagning. Om grenen för närvarande har en reflogg kommer även refloggen att raderas."
 
 #. type: Plain text
 #: en/git-branch.adoc:94
 msgid "Use `-r` together with `-d` to delete remote-tracking branches. Note, that it only makes sense to delete remote-tracking branches if they no longer exist in the remote repository or if `git fetch` was configured not to fetch them again. See also the `prune` subcommand of linkgit:git-remote[1] for a way to clean up all obsolete remote-tracking branches."
-msgstr ""
+msgstr "Använd `-r` tillsammans med `-d` för att ta bort grenar för fjärrspårning. Observera att det bara är vettigt att ta bort grenar för fjärrspårning om de inte längre finns i fjärr-repot eller om `git fetch` konfigurerades att inte hämta dem igen. Se även under-kommandot `prune` i linkgit:git-remote[1] för ett sätt att rensa upp alla föråldrade grenar för fjärrspårning."
 
 #. type: Labeled list
 #: en/git-branch.adoc:98 en/git-checkout.adoc:208 en/git-push.adoc:157
@@ -12882,12 +12898,12 @@ msgstr "`--delete`"
 #. type: Plain text
 #: en/git-branch.adoc:103
 msgid "Delete a branch. The branch must be fully merged in its upstream branch, or in `HEAD` if no upstream was set with `--track` or `--set-upstream-to`."
-msgstr ""
+msgstr "Ta bort en gren. Grenen måste vara helt sammanfogad i sin uppströmsgren, eller i `HEAD` om ingen uppströmsgren har angetts med `--track` eller `--set-upstream-to`."
 
 #. type: Plain text
 #: en/git-branch.adoc:106
 msgid "Shortcut for `--delete --force`."
-msgstr ""
+msgstr "Genväg för `--delete --force`."
 
 #. type: Labeled list
 #: en/git-branch.adoc:107 en/git-tag.adoc:212
@@ -12899,17 +12915,17 @@ msgstr "`--create-reflog`"
 #. type: Plain text
 #: en/git-branch.adoc:116
 msgid "Create the branch's reflog. This activates recording of all changes made to the branch ref, enabling use of date based sha1 expressions such as `<branch-name>@{yesterday}`. Note that in non-bare repositories, reflogs are usually enabled by default by the `core.logAllRefUpdates` config option. The negated form `--no-create-reflog` only overrides an earlier `--create-reflog`, but currently does not negate the setting of `core.logAllRefUpdates`."
-msgstr "Skapa grenens reflog. Detta aktiverar registrering av alla ändringar som gjorts i grenreferensen, vilket möjliggör användning av datumbaserade sha1-uttryck som `<grennamn>@{igår}`. Observera att i icke-bara repositorier reflogs är vanligtvis aktiverade som standard av konfigurationsalternativet `core.logAllRefUpdates`. Den negerade formen `--no-create-reflog` åsidosätter endast en tidigare `--create-reflog`, men negerar för närvarande inte inställningen för `core.logAllRefUpdates`."
+msgstr "Skapa grenens reflog. Detta aktiverar registrering av alla ändringar som gjorts i grenreferensen, vilket möjliggör användning av datumbaserade sha1-uttryck som `<gren-namn>@{igår}`. Observera att i icke-bara repositorier reflogs är vanligtvis aktiverade som standard av konfigurationsalternativet `core.logAllRefUpdates`. Den negerade formen `--no-create-reflog` åsidosätter endast en tidigare `--create-reflog`, men negerar för närvarande inte inställningen för `core.logAllRefUpdates`."
 
 #. type: Plain text
 #: en/git-branch.adoc:126
 msgid "Reset _<branch-name>_ to _<start-point>_, even if _<branch-name>_ exists already. Without `-f`, `git branch` refuses to change an existing branch. In combination with `-d` (or `--delete`), allow deleting the branch irrespective of its merged status, or whether it even points to a valid commit. In combination with `-m` (or `--move`), allow renaming the branch even if the new branch name already exists, the same applies for `-c` (or `--copy`)."
-msgstr ""
+msgstr "Återställ _<gren-namn>_ till _<start-punkt>_, även om _<gren-namn>_ redan finns. Utan `-f` vägrar `git branch` att ändra en befintlig gren. I kombination med `-d` (eller `--delete`) tillåts borttagning av grenen oavsett dess sammanslagna status, eller om den ens pekar på en giltig incheckning. I kombination med `-m` (eller `--move`) tillåts namnbyte av grenen även om det nya grennamnet redan finns, detsamma gäller för `-c` (eller `--copy`)."
 
 #. type: Plain text
 #: en/git-branch.adoc:130
 msgid "Note that `git branch -f <branch-name> [<start-point>]`, even with `-f`, refuses to change an existing branch _<branch-name>_ that is checked out in another worktree linked to the same repository."
-msgstr ""
+msgstr "Observera att `git branch -f <gren-namn> [<start-punkt>]`, även med `-f`, vägrar att ändra en befintlig branch _<gren-namn>_ som är utcheckad i ett annat arbetsträd länkat till samma repo."
 
 #. type: Labeled list
 #: en/git-branch.adoc:132
@@ -12921,7 +12937,7 @@ msgstr "`--move`"
 #. type: Plain text
 #: en/git-branch.adoc:134
 msgid "Move/rename a branch, together with its config and reflog."
-msgstr ""
+msgstr "Flytta/byt namn på en gren, tillsammans med dess konfiguration och reflog."
 
 #. type: Labeled list
 #: en/git-branch.adoc:135
@@ -12933,7 +12949,7 @@ msgstr "`-M`"
 #. type: Plain text
 #: en/git-branch.adoc:137
 msgid "Shortcut for `--move --force`."
-msgstr ""
+msgstr "Genväg för `--move --force`."
 
 #. type: Labeled list
 #: en/git-branch.adoc:139
@@ -12945,7 +12961,7 @@ msgstr "`--copy`"
 #. type: Plain text
 #: en/git-branch.adoc:141
 msgid "Copy a branch, together with its config and reflog."
-msgstr ""
+msgstr "Kopiera en gren, tillsammans med dess konfiguration och reflogg."
 
 #. type: Labeled list
 #: en/git-branch.adoc:142
@@ -12957,17 +12973,17 @@ msgstr "`-C`"
 #. type: Plain text
 #: en/git-branch.adoc:144
 msgid "Shortcut for `--copy --force`."
-msgstr ""
+msgstr "Genväg för `--copy --force`."
 
 #. type: Plain text
 #: en/git-branch.adoc:149
 msgid "Color branches to highlight current, local, and remote-tracking branches. The value must be `always` (the default), `never`, or `auto`."
-msgstr ""
+msgstr "Färglägg grenar för att markera aktuella, lokala och fjärrspårande grenar. Värdet måste vara `always` (standard), `never` eller `auto`."
 
 #. type: Plain text
 #: en/git-branch.adoc:154
 msgid "Turn off branch colors, even when the configuration file gives the default to color output. Same as `--color=never`."
-msgstr ""
+msgstr "Stäng av grenfärger, även när konfigurationsfilen anger standardfärg som utdata. Samma som `--color=never`."
 
 #. type: Plain text
 #: en/git-branch.adoc:158
@@ -12990,17 +13006,17 @@ msgstr "`--no-column`"
 #. type: Plain text
 #: en/git-branch.adoc:168
 msgid "Display branch listing in columns. See configuration variable `column.branch` for option syntax. `--column` and `--no-column` without options are equivalent to `always` and `never` respectively."
-msgstr ""
+msgstr "Visa grenlista i kolumner. Se konfigurationsvariabeln `column.branch` för alternativsyntax. `--column` och `--no-column` utan alternativ motsvarar `always` respektive `never`."
 
 #. type: Plain text
 #: en/git-branch.adoc:170
 msgid "This option is only applicable in non-verbose mode."
-msgstr ""
+msgstr "Det här alternativet är endast tillämpligt i icke-utförligt läge."
 
 #. type: Plain text
 #: en/git-branch.adoc:181
 msgid "Sort based on _<key>_. Prefix `-` to sort in descending order of the value. You may use the `--sort=<key>` option multiple times, in which case the last key becomes the primary key. The keys supported are the same as those in linkgit:git-for-each-ref[1]. Sort order defaults to the value configured for the `branch.sort` variable if it exists, or to sorting based on the full refname (including `refs/...` prefix). This lists detached `HEAD` (if present) first, then local branches and finally remote-tracking branches. See linkgit:git-config[1]."
-msgstr ""
+msgstr "Sortera baserat på _<nyckel>_. Prefixet `-` för att sortera i fallande ordning efter värdet. Du kan använda alternativet `--sort=<nyckel>` flera gånger, i vilket fall den sista nyckeln blir primärnyckeln. Nycklarna som stöds är desamma som i linkgit:git-for-each-ref[1]. Sorteringsordningen är som standard det värde som är konfigurerat för variabeln `branch.sort` om den finns, eller sortering baserat på hela refnamnet (inklusive prefixet `refs/...`). Detta listar först fristående `HEAD` (om det finns) sedan lokala grenar och slutligen fjärrspårningsgrenar. Se linkgit:git-config[1]."
 
 #. type: Labeled list
 #: en/git-branch.adoc:182 en/git-pull.adoc:94 en/git-rm.adoc:58
@@ -13019,12 +13035,12 @@ msgstr "`--remotes`"
 #. type: Plain text
 #: en/git-branch.adoc:186
 msgid "List or delete (if used with `-d`) the remote-tracking branches. Combine with `--list` to match the optional pattern(s)."
-msgstr ""
+msgstr "Lista eller ta bort (om det används med `-d`) grenarna för fjärrspårning. Kombinera med `--list` för att matcha det/de valfria mönstret/mönstren."
 
 #. type: Plain text
 #: en/git-branch.adoc:191
 msgid "List both remote-tracking branches and local branches. Combine with `--list` to match optional pattern(s)."
-msgstr ""
+msgstr "Lista både fjärrspårningsgrenar och lokala grenar. Kombinera med `--list` för att matcha valfria mönster."
 
 #. type: Labeled list
 #: en/git-branch.adoc:192 en/git-checkout.adoc:204 en/git-clone.adoc:45
@@ -13044,7 +13060,7 @@ msgstr "`--list`"
 #. type: Plain text
 #: en/git-branch.adoc:197
 msgid "List branches. With optional `<pattern>...`, e.g. `git branch --list 'maint-*'`, list only the branches that match the pattern(s)."
-msgstr ""
+msgstr "Lista grenar. Med valfritt `<mönster>...`, t.ex. `git branch --list 'maint-*'`, listas endast de grenar som matchar mönstret/mönstren."
 
 #. type: Labeled list
 #: en/git-branch.adoc:198
@@ -13056,7 +13072,7 @@ msgstr "`--show-current`"
 #. type: Plain text
 #: en/git-branch.adoc:201
 msgid "Print the name of the current branch. In detached `HEAD` state, nothing is printed."
-msgstr ""
+msgstr "Skriv ut namnet på den aktuella grenen. I det fristående `HEAD`-tillståndet skrivs ingenting ut."
 
 #. type: Labeled list
 #: en/git-branch.adoc:203
@@ -13068,23 +13084,23 @@ msgstr "`-vv`"
 #. type: Plain text
 #: en/git-branch.adoc:212
 msgid "When in list mode, show sha1 and commit subject line for each head, along with relationship to upstream branch (if any). If given twice, print the path of the linked worktree (if any) and the name of the upstream branch, as well (see also `git remote show <remote>`). Note that the current worktree's `HEAD` will not have its path printed (it will always be your current directory)."
-msgstr ""
+msgstr "I listläge, visa sha1 och inchecknings-ämnesraden för varje head, tillsammans med relationen till uppströmsgrenen (om någon). Om det anges två gånger, skriv ut sökvägen till det länkade arbetsträdet (om någon) och namnet på uppströmsgrenen (se även `git remote show <fjärr>`). Observera att det aktuella arbetsträdets `HEAD` inte kommer att få sin sökväg utskriven (det kommer alltid att vara din aktuella katalog)."
 
 #. type: Plain text
 #: en/git-branch.adoc:217
 msgid "Be more quiet when creating or deleting a branch, suppressing non-error messages."
-msgstr ""
+msgstr "Var tystare när du skapar eller tar bort en gren, och undertryck icke-felmeddelanden."
 
 #. type: Labeled list
 #: en/git-branch.adoc:218
 #, no-wrap
 msgid "`--abbrev=<n>`"
-msgstr ""
+msgstr "`--abbrev=<n>`"
 
 #. type: Plain text
 #: en/git-branch.adoc:224
 msgid "In the verbose listing that show the commit object name, show the shortest prefix that is at least _<n>_ hexdigits long that uniquely refers the object. The default value is 7 and can be overridden by the `core.abbrev` config option."
-msgstr ""
+msgstr "I den utförliga listan som visar inchecknings-objektets namn, visa det kortaste prefixet som är minst _<n>_ hexdigits långt och som unikt refererar till objektet. Standardvärdet är 7 och kan åsidosättas av konfigurationsalternativet `core.abbrev`."
 
 #. type: Labeled list
 #: en/git-branch.adoc:225
@@ -13096,7 +13112,7 @@ msgstr "`--no-abbrev`"
 #. type: Plain text
 #: en/git-branch.adoc:227
 msgid "Display the full sha1s in the output listing rather than abbreviating them."
-msgstr ""
+msgstr "Visa de fullständiga sha1:erna i utdatalistan istället för att förkorta dem."
 
 #. type: Labeled list
 #: en/git-branch.adoc:229 en/git-checkout.adoc:161
@@ -13108,27 +13124,27 @@ msgstr "`--track[=(direct|inherit)]`"
 #. type: Plain text
 #: en/git-branch.adoc:237
 msgid "When creating a new branch, set up `branch.<name>.remote` and `branch.<name>.merge` configuration entries to set \"upstream\" tracking configuration for the new branch. This configuration will tell git to show the relationship between the two branches in `git status` and `git branch -v`. Furthermore, it directs `git pull` without arguments to pull from the upstream when the new branch is checked out."
-msgstr ""
+msgstr "När du skapar en ny gren, konfigurera konfigurationsposterna `branch.<namn>.remote` och `branch.<namn>.merge` för att ställa in spårningskonfigurationen \"uppströms\" för den nya grenen. Denna konfiguration kommer att instruera git att visa förhållandet mellan de två grenarna i `git status` och `git branch -v`. Dessutom dirigerar den `git pull` utan argument att hämta från uppströms när den nya grenen är utcheckad."
 
 #. type: Plain text
 #: en/git-branch.adoc:242
 msgid "The exact upstream branch is chosen depending on the optional argument: `-t`, `--track`, or `--track=direct` means to use the start-point branch itself as the upstream; `--track=inherit` means to copy the upstream configuration of the start-point branch."
-msgstr ""
+msgstr "Den exakta uppströmsgrenen väljs beroende på det valfria argumentet: `-t`, `--track` eller `--track=direct` betyder att själva startpunktsgrenen används som uppströmsgren; `--track=inherit` betyder att kopiera uppströmskonfigurationen för startpunktsgrenen."
 
 #. type: Plain text
 #: en/git-branch.adoc:246
 msgid "The `branch.autoSetupMerge` configuration variable specifies how `git switch`, `git checkout` and `git branch` should behave when neither `--track` nor `--no-track` are specified:"
-msgstr ""
+msgstr "Konfigurationsvariabeln `branch.autoSetupMerge` anger hur `git switch`, `git checkout` och `git branch` ska bete sig när varken `--track` eller `--no-track` är angivna:"
 
 #. type: Plain text
 #: en/git-branch.adoc:254
 msgid "The default option, `true`, behaves as though `--track=direct` were given whenever the start-point is a remote-tracking branch. `false` behaves as if `--no-track` were given. `always` behaves as though `--track=direct` were given. `inherit` behaves as though `--track=inherit` were given. `simple` behaves as though `--track=direct` were given only when the _<start-point>_ is a remote-tracking branch and the new branch has the same name as the remote branch."
-msgstr ""
+msgstr "Standardalternativet, `true`, beter sig som om `--track=direct` anges när startpunkten är en fjärrspårningsgren. `false` beter sig som om `--no-track` anges. `always` beter sig som om `--track=direct` anges. `inherit` beter sig som om `--track=inherit` anges. `simple` beter sig som om `--track=direct` anges endast när _<start-punkt>_ är en fjärrspårningsgren och den nya grenen har samma namn som fjärrgrenen."
 
 #. type: Plain text
 #: en/git-branch.adoc:257
 msgid "See linkgit:git-pull[1] and linkgit:git-config[1] for additional discussion on how the `branch.<name>.remote` and `branch.<name>.merge` options are used."
-msgstr ""
+msgstr "Se linkgit:git-pull[1] och linkgit:git-config[1] för ytterligare diskussion om hur alternativen `branch.<namn>.remote` och `branch.<namn>.merge` används."
 
 #. type: Labeled list
 #: en/git-branch.adoc:258 en/git-checkout.adoc:176 en/git-switch.adoc:172
@@ -13141,7 +13157,7 @@ msgstr "`--no-track`"
 #. type: Plain text
 #: en/git-branch.adoc:261
 msgid "Do not set up \"upstream\" configuration, even if the `branch.autoSetupMerge` configuration variable is set."
-msgstr ""
+msgstr "Konfigurera inte \"uppströms\"-konfigurationen, även om konfigurationsvariabeln `branch.autoSetupMerge` är inställd."
 
 #. type: Labeled list
 #: en/git-branch.adoc:262 en/git-checkout.adoc:303 en/git-reset.adoc:93
@@ -13154,34 +13170,34 @@ msgstr "`--recurse-submodules`"
 #. type: Plain text
 #: en/git-branch.adoc:268
 msgid "THIS OPTION IS EXPERIMENTAL! Cause the current command to recurse into submodules if `submodule.propagateBranches` is enabled. See `submodule.propagateBranches` in linkgit:git-config[1]. Currently, only branch creation is supported."
-msgstr ""
+msgstr "DETTA ALTERNATIV ÄR EXPERIMENTELLT! Gör att det aktuella kommandot rekursivt går in i undermoduler om `submodule.propagateBranches` är aktiverat. Se `submodule.propagateBranches` i linkgit:git-config[1]. För närvarande stöds endast skapande av branches."
 
 #. type: Plain text
 #: en/git-branch.adoc:277
 msgid "When used in branch creation, a new branch _<branch-name>_ will be created in the superproject and all of the submodules in the superproject's _<start-point>_. In submodules, the branch will point to the submodule commit in the superproject's _<start-point>_ but the branch's tracking information will be set up based on the submodule's branches and remotes e.g. `git branch --recurse-submodules topic origin/main` will create the submodule branch \"topic\" that points to the submodule commit in the superproject's \"origin/main\", but tracks the submodule's \"origin/main\"."
-msgstr ""
+msgstr "När den används vid skapandet av en gren skapas en ny gren _<gren-namn>_ i superprojektet och alla undermoduler i superprojektets _<start-punkt>_. I undermoduler pekar grenen på undermodulens incheckning i superprojektets _<start-punkt>_, men grenens spårningsinformation konfigureras baserat på undermodulens grenar och fjärrkontroller, t.ex. `git branch --recurse-submodules topic origin/main` skapar undermodulens gren \"topic\" som pekar på undermodulens incheckning i superprojektets \"origin/main\", men spårar undermodulens \"origin/main\"."
 
 #. type: Plain text
 #: en/git-branch.adoc:281
 msgid "As this option had confusing syntax, it is no longer supported. Please use `--track` or `--set-upstream-to` instead."
-msgstr ""
+msgstr "Eftersom det här alternativet hade förvirrande syntax stöds det inte längre. Använd `--track` eller `--set-upstream-to` istället."
 
 #. type: Labeled list
 #: en/git-branch.adoc:282
 #, no-wrap
 msgid "`-u <upstream>`"
-msgstr ""
+msgstr "`-u <uppströms>`"
 
 #. type: Labeled list
 #: en/git-branch.adoc:283
 #, no-wrap
 msgid "`--set-upstream-to=<upstream>`"
-msgstr ""
+msgstr "`--set-upstream-to=<uppströms>`"
 
 #. type: Plain text
 #: en/git-branch.adoc:287
 msgid "Set up _<branch-name>_'s tracking information so _<upstream>_ is considered _<branch-name>_'s upstream branch. If no _<branch-name>_ is specified, then it defaults to the current branch."
-msgstr ""
+msgstr "Ställ in spårningsinformationen för _<gren-namn>_ så att _<uppströms>_ betraktas som _<gren-namn>_s uppströmsgren. Om ingen _<gren-namn>_ anges används som standard den aktuella grenen."
 
 #. type: Labeled list
 #: en/git-branch.adoc:288
@@ -13193,7 +13209,7 @@ msgstr "`--unset-upstream`"
 #. type: Plain text
 #: en/git-branch.adoc:291
 msgid "Remove the upstream information for _<branch-name>_. If no branch is specified it defaults to the current branch."
-msgstr ""
+msgstr "Ta bort uppströmsinformationen för _<gren-namn>_. Om ingen gren anges används som standard den aktuella grenen."
 
 #. type: Labeled list
 #: en/git-branch.adoc:292
@@ -13205,218 +13221,228 @@ msgstr "`--edit-description`"
 #. type: Plain text
 #: en/git-branch.adoc:297
 msgid "Open an editor and edit the text to explain what the branch is for, to be used by various other commands (e.g. `format-patch`, `request-pull`, and `merge` (if enabled)). Multi-line explanations may be used."
-msgstr ""
+msgstr "Öppna en editor och redigera texten för att förklara vad grenen är till för, så att den kan användas av olika andra kommandon (t.ex. `format-patch`, `request-pull` och `merge` (om aktiverat)). Flera raders förklaringar kan användas."
 
 #. type: Labeled list
 #: en/git-branch.adoc:298 en/git-tag.adoc:154
 #, no-wrap
 msgid "`--contains [<commit>]`"
-msgstr ""
+msgstr "`--contains [<incheckning>]`"
 
 #. type: Plain text
 #: en/git-branch.adoc:301
 msgid "Only list branches which contain _<commit>_ (`HEAD` if not specified). Implies `--list`."
-msgstr ""
+msgstr "Lista endast grenar som innehåller _<incheckning>_ (`HEAD` om inget anges). Implicerar `--list`."
 
 #. type: Labeled list
 #: en/git-branch.adoc:302 en/git-tag.adoc:158
 #, no-wrap
 msgid "`--no-contains [<commit>]`"
-msgstr ""
+msgstr "`--no-contains [<incheckning>]`"
 
 #. type: Plain text
 #: en/git-branch.adoc:305
 msgid "Only list branches which don't contain _<commit>_ (`HEAD` if not specified). Implies `--list`."
-msgstr ""
+msgstr "Lista endast grenar som inte innehåller _<incheckning>_ (`HEAD` om inget anges). Implicerar `--list`."
 
 #. type: Labeled list
 #: en/git-branch.adoc:306 en/git-tag.adoc:162
 #, no-wrap
 msgid "`--merged [<commit>]`"
-msgstr ""
+msgstr "`--merged [<incheckning>]`"
 
 #. type: Plain text
 #: en/git-branch.adoc:309
 msgid "Only list branches whose tips are reachable from _<commit>_ (`HEAD` if not specified). Implies `--list`."
-msgstr ""
+msgstr "Lista endast grenar vars tips kan nås från _<incheckning>_ (`HEAD` om inget anges). Implicerar `--list`."
 
 #. type: Labeled list
 #: en/git-branch.adoc:310 en/git-tag.adoc:166
 #, no-wrap
 msgid "`--no-merged [<commit>]`"
-msgstr ""
+msgstr "`--no-merged [<incheckning>]`"
 
 #. type: Plain text
 #: en/git-branch.adoc:313
 msgid "Only list branches whose tips are not reachable from _<commit>_ (`HEAD` if not specified). Implies `--list`."
-msgstr ""
+msgstr "Lista endast grenar vars tips inte kan nås från _<incheckning>_ (`HEAD` om inget anges). Implicerar `--list`."
 
 #. type: Labeled list
 #: en/git-branch.adoc:314
 #, no-wrap
 msgid "`--points-at <object>`"
-msgstr ""
+msgstr "`--points-at <objekt>`"
 
 #. type: Plain text
 #: en/git-branch.adoc:316
 msgid "Only list branches of _<object>_."
-msgstr ""
+msgstr "Lista endast grenar av _<objekt>_."
 
 #. type: Labeled list
 #: en/git-branch.adoc:317
 #, no-wrap
 msgid "`--format <format>`"
-msgstr ""
+msgstr "`--format <format>`"
 
 #. type: Plain text
 #: en/git-branch.adoc:321
 msgid "A string that interpolates `%(fieldname)` from a branch ref being shown and the object it points at. _<format>_ is the same as that of linkgit:git-for-each-ref[1]."
-msgstr ""
+msgstr "En sträng som interpolerar `%(fältnamn)` från en grenreferens som visas och objektet den pekar på. _<format>_ är samma sak som för linkgit:git-for-each-ref[1]."
 
 #. type: Labeled list
 #: en/git-branch.adoc:322
 #, no-wrap
 msgid "_<branch-name>_"
-msgstr ""
+msgstr "_<gren-namn>_"
 
 #. type: Plain text
 #: en/git-branch.adoc:327
 msgid "The name of the branch to create or delete. The new branch name must pass all checks defined by linkgit:git-check-ref-format[1]. Some of these checks may restrict the characters allowed in a branch name."
-msgstr ""
+msgstr "Namnet på den gren som ska skapas eller tas bort. Det nya gren-namnet måste klara alla kontroller som definieras av linkgit:git-check-ref-format[1]. Vissa av dessa kontroller kan begränsa antalet tecken som är tillåtna i ett gren-namn."
 
 #. type: Labeled list
 #: en/git-branch.adoc:328 en/git-checkout.adoc:352 en/git-switch.adoc:40
 #, no-wrap
 msgid "_<start-point>_"
-msgstr ""
+msgstr "_<start-punkt>_"
 
 #. type: Plain text
 #: en/git-branch.adoc:332
 msgid "The new branch head will point to this commit. It may be given as a branch name, a commit-id, or a tag. If this option is omitted, the current `HEAD` will be used instead."
-msgstr ""
+msgstr "Det nya grenhuvudet kommer att peka på denna incheckning. Det kan anges som ett gren-namn, ett commit-id eller en tagg. Om detta alternativ utelämnas kommer det nuvarande `HEAD` att användas istället."
 
 #. type: Labeled list
 #: en/git-branch.adoc:333
 #, no-wrap
 msgid "_<old-branch>_"
-msgstr ""
+msgstr "_<gammal-gren>_"
 
 #. type: Plain text
 #: en/git-branch.adoc:336
 msgid "The name of an existing branch. If this option is omitted, the name of the current branch will be used instead."
-msgstr ""
+msgstr "Namnet på en befintlig gren. Om det här alternativet utelämnas kommer namnet på den aktuella grenen att användas istället."
 
 #. type: Labeled list
 #: en/git-branch.adoc:337 en/git-checkout.adoc:349 en/git-switch.adoc:37
 #, no-wrap
 msgid "_<new-branch>_"
-msgstr ""
+msgstr "_<ny-gren>_"
 
 #. type: Plain text
 #: en/git-branch.adoc:340
 msgid "The new name for an existing branch. The same restrictions as for _<branch-name>_ apply."
-msgstr ""
+msgstr "Det nya namnet för en befintlig gren. Samma begränsningar som för _<gren-namn>_ gäller."
 
 #. type: Plain text
 #: en/git-branch.adoc:346
 msgid "`pager.branch` is only respected when listing branches, i.e., when `--list` is used or implied. The default is to use a pager. See linkgit:git-config[1]."
-msgstr ""
+msgstr "`pager.branch` respekteras endast vid lista av brancher, dvs. när `--list` används eller antyds. Standardinställningen är att använda en bläddrare. Se linkgit:git-config[1]."
 
 #. type: Labeled list
 #: en/git-branch.adoc:354
 #, no-wrap
 msgid "Start development from a known tag"
-msgstr ""
+msgstr "Starta utveckling från en känd tagg"
 
 #. type: delimited block -
 #: en/git-branch.adoc:361
 #, no-wrap
 msgid "$ git clone git://git.kernel.org/pub/scm/.../linux-2.6 my2.6\n$ cd my2.6\n$ git branch my2.6.14 v2.6.14   <1>\n$ git switch my2.6.14\n"
 msgstr ""
+"$ git clone git://git.kernel.org/pub/scm/.../linux-2.6 my2.6\n"
+"$ cd my2.6\n"
+"$ git branch my2.6.14 v2.6.14   <1>\n"
+"$ git switch my2.6.14\n"
 
 #. type: Plain text
 #: en/git-branch.adoc:365
 msgid "This step and the next one could be combined into a single step with \"checkout -b my2.6.14 v2.6.14\"."
-msgstr ""
+msgstr "Detta steg och nästa kan kombineras till ett enda steg med \"checkout -b my2.6.14 v2.6.14\"."
 
 #. type: Labeled list
 #: en/git-branch.adoc:366
 #, no-wrap
 msgid "Delete an unneeded branch"
-msgstr ""
+msgstr "Ta bort en onödig gren"
 
 #. type: delimited block -
 #: en/git-branch.adoc:373
 #, no-wrap
 msgid "$ git clone git://git.kernel.org/.../git.git my.git\n$ cd my.git\n$ git branch -d -r origin/todo origin/html origin/man   <1>\n$ git branch -D test                                    <2>\n"
 msgstr ""
+"$ git clone git://git.kernel.org/.../git.git my.git\n"
+"$ cd my.git\n"
+"$ git branch -d -r origin/todo origin/html origin/man   <1>\n"
+"$ git branch -D test                                    <2>\n"
 
 #. type: Plain text
 #: en/git-branch.adoc:378
 msgid "Delete the remote-tracking branches \"todo\", \"html\" and \"man\". The next `git fetch` or `git pull` will create them again unless you configure them not to. See linkgit:git-fetch[1]."
-msgstr ""
+msgstr "Ta bort grenarna för fjärrspårning \"todo\", \"html\" och \"man\". Nästa `git fetch` eller `git pull` kommer att skapa dem igen om du inte konfigurerar dem att inte göra det. Se linkgit:git-fetch[1]."
 
 #. type: Plain text
 #: en/git-branch.adoc:380
 msgid "Delete the \"test\" branch even if the \"master\" branch (or whichever branch is currently checked out) does not have all commits from the test branch."
-msgstr ""
+msgstr "Ta bort grenen \"test\" även om grenen \"master\" (eller vilken gren som för närvarande är utcheckad) inte har alla incheckningar från testgrenen."
 
 #. type: Labeled list
 #: en/git-branch.adoc:381
 #, no-wrap
 msgid "Listing branches from a specific remote"
-msgstr ""
+msgstr "Lista grenar från en specifik fjärr"
 
 #. type: delimited block -
 #: en/git-branch.adoc:386
 #, no-wrap
 msgid "$ git branch -r -l '<remote>/<pattern>'                 <1>\n$ git for-each-ref 'refs/remotes/<remote>/<pattern>'    <2>\n"
 msgstr ""
+"$ git branch -r -l '<fjärr>/<mönster>'                 <1>\n"
+"$ git for-each-ref 'refs/remotes/<fjärr>/<mönster>'    <2>\n"
 
 #. type: Plain text
 #: en/git-branch.adoc:390
 msgid "Using `-a` would conflate _<remote>_ with any local branches you happen to have been prefixed with the same _<remote>_ pattern."
-msgstr ""
+msgstr "Att använda `-a` skulle sammanblanda _<fjärr>_ med alla lokala grenar som du råkar ha fått prefixet med samma _<fjärr>_-mönster."
 
 #. type: Plain text
 #: en/git-branch.adoc:391
 msgid "`for-each-ref` can take a wide range of options. See linkgit:git-for-each-ref[1]"
-msgstr ""
+msgstr "`for-each-ref` kan ha en mängd olika alternativ. Se linkgit:git-for-each-ref[1]"
 
 #. type: Plain text
 #: en/git-branch.adoc:393
 msgid "Patterns will normally need quoting."
-msgstr ""
+msgstr "Mönster kräver normalt citering."
 
 #. type: Plain text
 #: en/git-branch.adoc:400
 msgid "If you are creating a branch that you want to switch to immediately, it is easier to use the `git switch` command with its `-c` option to do the same thing with a single command."
-msgstr ""
+msgstr "Om du skapar en gren som du vill byta till omedelbart är det enklare att använda kommandot `git switch` med dess `-c`-flagga för att göra samma sak med ett enda kommando."
 
 #. type: Plain text
 #: en/git-branch.adoc:403
 msgid "The options `--contains`, `--no-contains`, `--merged` and `--no-merged` serve four related but different purposes:"
-msgstr ""
+msgstr "Alternativen `--contains`, `--no-contains`, `--merged` och `--no-merged` tjänar fyra relaterade men olika syften:"
 
 #. type: Plain text
 #: en/git-branch.adoc:407
 msgid "`--contains <commit>` is used to find all branches which will need special attention if _<commit>_ were to be rebased or amended, since those branches contain the specified _<commit>_."
-msgstr ""
+msgstr "`--contains <incheckning>` används för att hitta alla grenar som behöver särskild uppmärksamhet om _<incheckning>_ skulle ombaseras eller ändras, eftersom dessa grenar innehåller den angivna _<incheckning>_."
 
 #. type: Plain text
 #: en/git-branch.adoc:410
 msgid "`--no-contains <commit>` is the inverse of that, i.e. branches that don't contain the specified _<commit>_."
-msgstr ""
+msgstr "`--no-contains <incheckning>` är motsatsen till det, dvs. grenar som inte innehåller den angivna _<incheckning>_."
 
 #. type: Plain text
 #: en/git-branch.adoc:413
 msgid "`--merged` is used to find all branches which can be safely deleted, since those branches are fully contained by `HEAD`."
-msgstr ""
+msgstr "`--no-contains <inchecking>` är motsatsen till det, dvs. grenar som inte innehåller den angivna _<inchecking>_."
 
 #. type: Plain text
 #: en/git-branch.adoc:416
 msgid "`--no-merged` is used to find branches which are candidates for merging into `HEAD`, since those branches are not fully contained by `HEAD`."
-msgstr ""
+msgstr "`--no-merged` används för att hitta grenar som är kandidater för sammanslagning med `HEAD`, eftersom dessa grenar inte helt och hållet ingår i `HEAD`."
 
 #. type: Plain text
 #: en/git-branch.adoc:426
@@ -16016,7 +16042,7 @@ msgstr ""
 #: en/git-checkout.adoc:375 en/git-commit.adoc:413 en/git-reset.adoc:138
 #: en/git-restore.adoc:149 en/git-stash.adoc:285
 msgid "For more details, see the 'pathspec' entry in linkgit:gitglossary[7]."
-msgstr ""
+msgstr "För mer information, se posten 'sökvägsspec' i linkgit:gitglossary[7]."
 
 #. type: Title -
 #: en/git-checkout.adoc:377
@@ -17868,122 +17894,132 @@ msgstr "git-column(1)"
 #. type: Plain text
 #: en/git-column.adoc:7
 msgid "git-column - Display data in columns"
-msgstr ""
+msgstr "git-column - Visa data i kolumner"
 
 #. type: verse
 #: en/git-column.adoc:13
 #, no-wrap
 msgid "'git column' [--command=<name>] [--[raw-]mode=<mode>] [--width=<width>]\n\t     [--indent=<string>] [--nl=<string>] [--padding=<n>]\n"
 msgstr ""
+"'git column' [--command=<namn>] [--[raw-]mode=<läge>] [--width=<bredd>]\n"
+"\t     [--indent=<sträng>] [--nl=<sträng>] [--padding=<n>]\n"
 
 #. type: Plain text
 #: en/git-column.adoc:20
 msgid "This command formats the lines of its standard input into a table with multiple columns. Each input line occupies one cell of the table. It is used internally by other git commands to format output into columns."
-msgstr ""
+msgstr "Det här kommandot formaterar raderna i dess standardinmatning till en tabell med flera kolumner. Varje inmatningsrad upptar en cell i tabellen. Det används internt av andra git-kommandon för att formatera utdata till kolumner."
 
 #. type: Labeled list
 #: en/git-column.adoc:23
 #, no-wrap
 msgid "--command=<name>"
-msgstr ""
+msgstr "--command=<namn>"
 
 #. type: Plain text
 #: en/git-column.adoc:26
 msgid "Look up layout mode using configuration variable column.<name> and column.ui."
-msgstr ""
+msgstr "Slå upp layoutläge med hjälp av konfigurationsvariablerna column.<namn> och column.ui."
 
 #. type: Labeled list
 #: en/git-column.adoc:27
 #, no-wrap
 msgid "--mode=<mode>"
-msgstr ""
+msgstr "--mode=<läge>"
 
 #. type: Plain text
 #: en/git-column.adoc:30
 msgid "Specify layout mode. See configuration variable column.ui for option syntax in linkgit:git-config[1]."
-msgstr ""
+msgstr "Ange layoutläge. Se konfigurationsvariabeln column.ui för alternativsyntax i linkgit:git-config[1]."
 
 #. type: Labeled list
 #: en/git-column.adoc:31
 #, no-wrap
 msgid "--raw-mode=<n>"
-msgstr ""
+msgstr "--raw-mode=<n>"
 
 #. type: Plain text
 #: en/git-column.adoc:34
 msgid "Same as --mode but take mode encoded as a number. This is mainly used by other commands that have already parsed layout mode."
-msgstr ""
+msgstr "Samma som --mode men ta läget kodat som ett tal. Detta används huvudsakligen av andra kommandon som redan har analyserat layoutläget."
 
 #. type: Labeled list
 #: en/git-column.adoc:35
 #, no-wrap
 msgid "--width=<width>"
-msgstr ""
+msgstr "--width=<bredd>"
 
 #. type: Plain text
 #: en/git-column.adoc:38
 msgid "Specify the terminal width. By default 'git column' will detect the terminal width, or fall back to 80 if it is unable to do so."
-msgstr ""
+msgstr "Ange terminalbredden. Som standard kommer 'git column' att upptäcka terminalbredden, eller gå tillbaka till 80 om den inte kan göra det."
 
 #. type: Labeled list
 #: en/git-column.adoc:39
 #, no-wrap
 msgid "--indent=<string>"
-msgstr ""
+msgstr "--indent=<sträng>"
 
 #. type: Plain text
 #: en/git-column.adoc:41
 msgid "String to be printed at the beginning of each line."
-msgstr ""
+msgstr "Sträng som ska skrivas ut i början av varje rad."
 
 #. type: Labeled list
 #: en/git-column.adoc:42
 #, no-wrap
 msgid "--nl=<string>"
-msgstr ""
+msgstr "--nl=<sträng>"
 
 #. type: Plain text
 #: en/git-column.adoc:45
 msgid "String to be printed at the end of each line, including newline character."
-msgstr ""
+msgstr "Sträng som ska skrivas ut i slutet av varje rad, inklusive nyradstecken."
 
 #. type: Labeled list
 #: en/git-column.adoc:46
 #, no-wrap
 msgid "--padding=<N>"
-msgstr ""
+msgstr "--padding=<N>"
 
 #. type: Plain text
 #: en/git-column.adoc:48
 msgid "The number of spaces between columns. One space by default."
-msgstr ""
+msgstr "Antalet mellanslag mellan kolumner. Ett mellanslag som standard."
 
 #. type: Plain text
 #: en/git-column.adoc:53
 msgid "Format data by columns:"
-msgstr ""
+msgstr "Formatera data efter kolumner:"
 
 #. type: delimited block -
 #: en/git-column.adoc:59
 #, no-wrap
 msgid "$ seq 1 24 | git column --mode=column --padding=5\n1      4      7      10     13     16     19     22\n2      5      8      11     14     17     20     23\n3      6      9      12     15     18     21     24\n"
 msgstr ""
+"$ seq 1 24 | git column --mode=column --padding=5\n"
+"1      4      7      10     13     16     19     22\n"
+"2      5      8      11     14     17     20     23\n"
+"3      6      9      12     15     18     21     24\n"
 
 #. type: Plain text
 #: en/git-column.adoc:62
 msgid "Format data by rows:"
-msgstr ""
+msgstr "Formatera data efter rader:"
 
 #. type: delimited block -
 #: en/git-column.adoc:68
 #, no-wrap
 msgid "$ seq 1 21 | git column --mode=row --padding=5\n1      2      3      4      5      6      7\n8      9      10     11     12     13     14\n15     16     17     18     19     20     21\n"
 msgstr ""
+"$ seq 1 21 | git column --mode=row --padding=5\n"
+"1      2      3      4      5      6      7\n"
+"8      9      10     11     12     13     14\n"
+"15     16     17     18     19     20     21\n"
 
 #. type: Plain text
 #: en/git-column.adoc:71
 msgid "List some tags in a table with unequal column widths:"
-msgstr ""
+msgstr "Lista några taggar i en tabell med olika kolumnbredder:"
 
 #. type: delimited block -
 #: en/git-column.adoc:78
@@ -18006,43 +18042,48 @@ msgstr "git-commit-tree(1)"
 #. type: Plain text
 #: en/git-commit-tree.adoc:7
 msgid "git-commit-tree - Create a new commit object"
-msgstr ""
+msgstr "git-commit-tree - Skapa ett nytt inchecknings-objekt"
 
 #. type: verse
 #: en/git-commit-tree.adoc:15
 #, no-wrap
 msgid "'git commit-tree' <tree> [(-p <parent>)...]\n'git commit-tree' [(-p <parent>)...] [-S[<keyid>]] [(-m <message>)...]\n\t\t  [(-F <file>)...] <tree>\n"
 msgstr ""
+"'git commit-tree' <träd> [(-p <förälder>)...]\n"
+"'git commit-tree' [(-p <parent>)...] [-S[<keyid>]] [(-m <meddelande>)...]\n"
+"\t\t  [(-F <fil>)...] <träd>\n"
 
 #. type: Plain text
 #: en/git-commit-tree.adoc:21
 msgid "This is usually not what an end user wants to run directly. See linkgit:git-commit[1] instead."
-msgstr ""
+msgstr "Detta är vanligtvis inte vad en slutanvändare vill köra direkt. Se linkgit:git-commit[1] istället."
 
 #. type: Plain text
 #: en/git-commit-tree.adoc:25
 msgid "Creates a new commit object based on the provided tree object and emits the new commit object id on stdout. The log message is read from the standard input, unless `-m` or `-F` options are given."
 msgstr ""
+"Skapar ett nytt inchecknings-objekt baserat på det angivna trädobjektet och genererar det nya inchecknings-objekt-\n"
+"id:t vid stdout. Loggmeddelandet läses från standardindata, såvida inte alternativen `-m` eller `-F` anges."
 
 #. type: Plain text
 #: en/git-commit-tree.adoc:29
 msgid "The `-m` and `-F` options can be given any number of times, in any order. The commit log message will be composed in the order in which the options are given."
-msgstr ""
+msgstr "Alternativen `-m` och `-F` kan anges hur många gånger som helst, i valfri ordning. Meddelandet i inchecknings-loggen kommer att skrivas i den ordning alternativen anges."
 
 #. type: Plain text
 #: en/git-commit-tree.adoc:34
 msgid "A commit object may have any number of parents. With exactly one parent, it is an ordinary commit. Having more than one parent makes the commit a merge between several lines of history. Initial (root) commits have no parents."
-msgstr ""
+msgstr "Ett inchecknings-objekt kan ha ett valfritt antal föräldrar. Med exakt en förälder är det en vanlig incheckning. Att ha mer än en förälder gör incheckningen till en sammanslagning mellan flera historik-linjer. Initiala (root) commits har inga föräldrar."
 
 #. type: Plain text
 #: en/git-commit-tree.adoc:38
 msgid "While a tree represents a particular directory state of a working directory, a commit represents that state in \"time\", and explains how to get there."
-msgstr ""
+msgstr "Medan ett träd representerar ett visst katalogtillstånd i en arbetskatalog, representerar en incheckning det tillståndet i \"tid\" och förklarar hur man kommer dit."
 
 #. type: Plain text
 #: en/git-commit-tree.adoc:44
 msgid "Normally a commit would identify a new \"HEAD\" state, and while Git doesn't care where you save the note about that state, in practice we tend to just write the result to the file that is pointed at by `.git/HEAD`, so that we can always see what the last committed state was."
-msgstr ""
+msgstr "Normalt sett skulle en incheckning identifiera ett nytt \"HEAD\"-tillstånd, och även om Git inte bryr sig om var du sparar anteckningen om det tillståndet, tenderar vi i praktiken att bara skriva resultatet till filen som `.git/HEAD` pekar på, så att vi alltid kan se vad det senaste incheckade tillståndet var."
 
 #. type: Labeled list
 #: en/git-commit-tree.adoc:47 en/git.adoc:410
@@ -18053,18 +18094,18 @@ msgstr "<träd>"
 #. type: Plain text
 #: en/git-commit-tree.adoc:49
 msgid "An existing tree object."
-msgstr ""
+msgstr "Ett befintligt trädobjekt."
 
 #. type: Labeled list
 #: en/git-commit-tree.adoc:50
 #, no-wrap
 msgid "-p <parent>"
-msgstr ""
+msgstr "-p <förälder>"
 
 #. type: Plain text
 #: en/git-commit-tree.adoc:52
 msgid "Each `-p` indicates the id of a parent commit object."
-msgstr ""
+msgstr "Varje `-p` anger id:t för ett överordnat inchecknings-objekt."
 
 #. type: Labeled list
 #: en/git-commit-tree.adoc:53 en/git-fmt-merge-msg.adoc:43
@@ -18091,44 +18132,44 @@ msgstr "Läs inchecknings-loggmeddelandet från den givna filen. Använd `-` fö
 #. type: Plain text
 #: en/git-commit-tree.adoc:69
 msgid "GPG-sign commits. The `keyid` argument is optional and defaults to the committer identity; if specified, it must be stuck to the option without a space. `--no-gpg-sign` is useful to countermand a `--gpg-sign` option given earlier on the command line."
-msgstr ""
+msgstr "GPG-signera incheckningar. Argumentet `keyid` är valfritt och används som standard för committer-identiteten; om det anges måste det fästas vid alternativet utan mellanslag. `--no-gpg-sign` är användbart för att ångra ett `--gpg-sign`-alternativ som angetts tidigare på kommandoraden."
 
 #. type: Title -
 #: en/git-commit-tree.adoc:71
 #, no-wrap
 msgid "Commit Information"
-msgstr ""
+msgstr "Inchecknings-information"
 
 #. type: Plain text
 #: en/git-commit-tree.adoc:74
 msgid "A commit encapsulates:"
-msgstr ""
+msgstr "En incheckning inkapslar:"
 
 #. type: Plain text
 #: en/git-commit-tree.adoc:76
 msgid "all parent object ids"
-msgstr ""
+msgstr "alla överordnade objekt-id:n"
 
 #. type: Plain text
 #: en/git-commit-tree.adoc:77
 msgid "author name, email and date"
-msgstr ""
+msgstr "författarnamn, e-postadress och datum"
 
 #. type: Plain text
 #: en/git-commit-tree.adoc:78
 msgid "committer name and email and the commit time."
-msgstr ""
+msgstr "namn och e-postadress för incheckaren och inchecknings-tid."
 
 #. type: Plain text
 #: en/git-commit-tree.adoc:82
 msgid "A commit comment is read from stdin. If a changelog entry is not provided via \"<\" redirection, 'git commit-tree' will just wait for one to be entered and terminated with ^D."
-msgstr ""
+msgstr "En inchecknings-kommentar läses från stdin. Om en ändringsloggpost inte anges via omdirigering med \"<\", kommer 'git commit-tree' bara att vänta på att en ska anges och avslutas med ^D."
 
 #. type: Title -
 #: en/git-commit-tree.adoc:86
 #, no-wrap
 msgid "Discussion"
-msgstr ""
+msgstr "Diskussion"
 
 #. type: Title -
 #: en/git-commit-tree.adoc:91 en/git-commit.adoc:576 en/git-config.adoc:367
@@ -18141,7 +18182,7 @@ msgstr "FILER"
 #. type: Plain text
 #: en/git-commit-tree.adoc:93
 msgid "/etc/mailname"
-msgstr ""
+msgstr "/etc/mailname"
 
 #. type: Plain text
 #: en/git-commit-tree.adoc:98
@@ -18159,7 +18200,7 @@ msgstr "git-commit(1)"
 #. type: Plain text
 #: en/git-commit.adoc:7
 msgid "git-commit - Record changes to the repository"
-msgstr ""
+msgstr "git-commit - Registrera ändringar i repot"
 
 #. type: synopsis
 #: en/git-commit.adoc:19
@@ -18178,134 +18219,139 @@ msgstr ""
 #. type: Plain text
 #: en/git-commit.adoc:28
 msgid "Create a new commit containing the current contents of the index and the given log message describing the changes. The new commit is a direct child of HEAD, usually the tip of the current branch, and the branch is updated to point to it (unless no branch is associated with the working tree, in which case `HEAD` is \"detached\" as described in linkgit:git-checkout[1])."
-msgstr ""
+msgstr "Skapa en ny incheckning som innehåller det aktuella innehållet i indexet och det givna loggmeddelandet som beskriver ändringarna. Den nya incheckningen är ett direkt barn till HEAD, vanligtvis toppen av den aktuella grenen, och grenen uppdateras för att peka på den (såvida ingen gren är associerad med arbetskatalog, i vilket fall `HEAD` \"kopplas bort\" enligt beskrivningen i linkgit:git-checkout[1])."
 
 #. type: Plain text
 #: en/git-commit.adoc:30
 msgid "The content to be committed can be specified in several ways:"
-msgstr ""
+msgstr "Innehållet som ska checkas-in kan specificeras på flera sätt:"
 
 #. type: Plain text
 #: en/git-commit.adoc:34
 msgid "by using linkgit:git-add[1] to incrementally \"add\" changes to the index before using the `commit` command (Note: even modified files must be \"added\");"
-msgstr ""
+msgstr "genom att använda linkgit:git-add[1] för att stegvis \"lägga till\" ändringar i indexet innan man använder `commit`-kommandot (Obs: även modifierade filer måste \"läggas till\");"
 
 #. type: Plain text
 #: en/git-commit.adoc:37
 msgid "by using linkgit:git-rm[1] to remove files from the working tree and the index, again before using the `commit` command;"
-msgstr ""
+msgstr "genom att använda linkgit:git-rm[1] för att ta bort filer från arbetskatalog och indexet, igen innan man använder `commit`-kommandot;"
 
 #. type: Plain text
 #: en/git-commit.adoc:43
 msgid "by listing files as arguments to the `commit` command (without `--interactive` or `--patch` switch), in which case the commit will ignore changes staged in the index, and instead record the current content of the listed files (which must already be known to Git);"
-msgstr ""
+msgstr "genom att lista filer som argument till `commit`-kommandot (utan `--interactive` eller `--patch`-växeln), i vilket fall inchecknings-kommandot kommer att ignorera ändringar som köats i indexet och istället registrera det aktuella innehållet i de listade filerna (vilket Git redan måste känna till);"
 
 #. type: Plain text
 #: en/git-commit.adoc:49
 msgid "by using the `-a` switch with the `commit` command to automatically \"add\" changes from all known files (i.e. all files that are already listed in the index) and to automatically \"rm\" files in the index that have been removed from the working tree, and then perform the actual commit;"
-msgstr ""
+msgstr "genom att använda `-a`-växeln med `commit`-kommandot för att automatiskt \"lägga till\" ändringar från alla kända filer (dvs. alla filer som redan finns listade i indexet) och för att automatiskt \"rm\" filer i indexet som har tagits bort från arbetskatalog, och sedan utföra själva inchecknings-processen;"
 
 #. type: Plain text
 #: en/git-commit.adoc:55
 msgid "by using the `--interactive` or `--patch` switches with the `commit` command to decide one by one which files or hunks should be part of the commit in addition to contents in the index, before finalizing the operation. See the ``Interactive Mode'' section of linkgit:git-add[1] to learn how to operate these modes."
-msgstr ""
+msgstr "genom att använda växlarna `--interactive` eller `--patch` med kommandot `commit` för att en efter en bestämma vilka filer eller hunks som ska ingå i incheckningen utöver innehållet i indexet, innan operationen slutförs. Se avsnittet ``Interaktivt läge'' i linkgit:git-add[1] för att lära dig hur man använder dessa lägen."
 
 #. type: Plain text
 #: en/git-commit.adoc:59
 msgid "The `--dry-run` option can be used to obtain a summary of what is included by any of the above for the next commit by giving the same set of parameters (options and paths)."
-msgstr ""
+msgstr "Alternativet `--dry-run` kan användas för att få en sammanfattning av vad som ingår i något av ovanstående för nästa incheckning genom att ange samma uppsättning parametrar (alternativ och sökvägar)."
 
 #. type: Plain text
 #: en/git-commit.adoc:62
 msgid "If you make a commit and then find a mistake immediately after that, you can recover from it with `git reset`."
-msgstr ""
+msgstr "Om du gör en incheckning och sedan hittar ett misstag direkt efter det, kan du återställa det med `git reset`."
 
 #. type: Plain text
 #: en/git-commit.adoc:72
 msgid "Automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected."
-msgstr ""
+msgstr "Staging-anpassar automatiskt filer som har ändrats och raderats, men nya filer som du inte har informerat Git om påverkas inte."
 
 #. type: Plain text
 #: en/git-commit.adoc:78
 msgid "Use the interactive patch selection interface to choose which changes to commit. See linkgit:git-add[1] for details."
-msgstr ""
+msgstr "Använd det interaktiva gränssnittet för val av patch för att välja vilka ändringar som ska checkas-in. Se linkgit:git-add[1] för mer information."
 
 #. type: Labeled list
 #: en/git-commit.adoc:81
 #, no-wrap
 msgid "`-C <commit>`"
-msgstr ""
+msgstr "`-C <incheckning>`"
 
 #. type: Labeled list
 #: en/git-commit.adoc:82
 #, no-wrap
 msgid "`--reuse-message=<commit>`"
-msgstr ""
+msgstr "`--reuse-message=<incheckning>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:86
 msgid "Take an existing _<commit>_ object, and reuse the log message and the authorship information (including the timestamp) when creating the commit."
-msgstr ""
+msgstr "Ta ett befintligt _<incheckning>_-objekt och återanvänd loggmeddelandet och författarinformationen (inklusive tidsstämpeln) när du skapar inchecknings-filen."
 
 #. type: Labeled list
 #: en/git-commit.adoc:87
 #, no-wrap
 msgid "`-c <commit>`"
-msgstr ""
+msgstr "`-c <incheckning>`"
 
 #. type: Labeled list
 #: en/git-commit.adoc:88
 #, no-wrap
 msgid "`--reedit-message=<commit>`"
-msgstr ""
+msgstr "`--reedit-message=<incheckning>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:91
 msgid "Like `-C`, but with `-c` the editor is invoked, so that the user can further edit the commit message."
-msgstr ""
+msgstr "Som `-C`, men med `-c` anropas editorn, så att användaren kan redigera incheckning-meddelandet ytterligare."
 
 #. type: Labeled list
 #: en/git-commit.adoc:92
 #, no-wrap
 msgid "`--fixup=[(amend|reword):]<commit>`"
-msgstr ""
+msgstr "`--fixup=[(amend|reword):]<incheckning>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:102
 msgid "Create a new commit which \"fixes up\" _<commit>_ when applied with `git rebase --autosquash`. Plain `--fixup=<commit>` creates a \"fixup!\" commit which changes the content of _<commit>_ but leaves its log message untouched. `--fixup=amend:<commit>` is similar but creates an \"amend!\" commit which also replaces the log message of _<commit>_ with the log message of the \"amend!\" commit. `--fixup=reword:<commit>` creates an \"amend!\" commit which replaces the log message of _<commit>_ with its own log message but makes no changes to the content of _<commit>_."
-msgstr ""
+msgstr "Skapa en ny incheckning som \"fixar upp\" _<incheckning>_ när den tillämpas med `git rebase --autosquash`. Vanlig `--fixup=<incheckning>` skapar en \"fixup!\"-incheckning som ändrar innehållet i _<incheckningen>_ men lämnar dess loggmeddelande orört. `--fixup=amend:<incheckning>` är liknande men skapar en \"amend!\"-incheckning som också ersätter loggmeddelandet för _<incheckning>_ med loggmeddelandet från \"amend!\"-incheckningen. `--fixup=reword:<incheckning>` skapar en \"amend!\"-incheckning som ersätter loggmeddelandet för _<incheckning>_ med sitt eget loggmeddelande men gör inga ändringar i innehållet i _<incheckning>_."
 
 #. type: Plain text
 #: en/git-commit.adoc:110
 msgid "The commit created by plain `--fixup=<commit>` has a title composed of \"fixup!\" followed by the title of _<commit>_, and is recognized specially by `git rebase --autosquash`. The `-m` option may be used to supplement the log message of the created commit, but the additional commentary will be thrown away once the \"fixup!\" commit is squashed into _<commit>_ by `git rebase --autosquash`."
-msgstr ""
+msgstr "Den incheckning som skapas av `--fixup=<incheckning>` har en titel som består av \"fixup!\" följt av titeln _<incheckning>_, och känns igen speciellt av `git rebase --autosquash`. Alternativet `-m` kan användas för att komplettera loggmeddelandet för den skapade commiten, men den ytterligare kommentaren kommer att försvinna när \"fixup!\"-incheckningen har klämts in i _<incheckning>_ av `git rebase --autosquash`."
 
 #. type: Plain text
 #: en/git-commit.adoc:120
 msgid "The commit created by `--fixup=amend:<commit>` is similar but its title is instead prefixed with \"amend!\". The log message of _<commit>_ is copied into the log message of the \"amend!\" commit and opened in an editor so it can be refined. When `git rebase --autosquash` squashes the \"amend!\" commit into _<commit>_, the log message of _<commit>_ is replaced by the refined log message from the \"amend!\" commit. It is an error for the \"amend!\" commit's log message to be empty unless `--allow-empty-message` is specified."
-msgstr ""
+msgstr "Den incheckning som skapas av `--fixup=amend:<incheckning>` är liknande men dess titel har istället prefixet \"amend!\". Loggmeddelandet för _<incheckning>_ kopieras till loggmeddelandet för \"amend!\"-incheckningen och öppnas i en editor så att det kan förfinas. När `git rebase --autosquash` komprimerar \"amend!\"-incheckningen till _<incheckning>_ ersätts loggmeddelandet för _<incheckning>_ av det förfinade loggmeddelandet från \"amend!\"-incheckningen. Det är ett fel om \"amend!\"-inchecknings loggmeddelande är tomt om inte `--allow-empty-message` anges."
 
 #. type: Plain text
 #: en/git-commit.adoc:126
 #, no-wrap
 msgid "`--fixup=reword:<commit>` is shorthand for `--fixup=amend:<commit>\n --only`. It creates an \"amend!\" commit with only a log message\n(ignoring any changes staged in the index). When squashed by `git\nrebase --autosquash`, it replaces the log message of _<commit>_\nwithout making any other changes.\n"
 msgstr ""
+"`--fixup=reword:<incheckning>` är en förkortning för `--fixup=amend:<incheckning>\n"
+"--only`. Den skapar en \"amend!\"-incheckning med endast ett loggmeddelande\n"
+"(ignorerar eventuella ändringar som köats i indexet). När den komprimeras av `git\n"
+"rebase --autosquash` ersätter den loggmeddelandet för _<incheckning>_\n"
+"utan att göra några andra ändringar.\n"
 
 #. type: Plain text
 #: en/git-commit.adoc:130
 msgid "Neither \"fixup!\" nor \"amend!\" commits change authorship of _<commit>_ when applied by `git rebase --autosquash`. See linkgit:git-rebase[1] for details."
-msgstr ""
+msgstr "Varken \"fixup!\" eller \"amend!\" bekräftar ändring av författarskap för _<incheckning>_ när det tillämpas av `git rebase --autosquash`. Se linkgit:git-rebase[1] för detaljer."
 
 #. type: Labeled list
 #: en/git-commit.adoc:131
 #, no-wrap
 msgid "`--squash=<commit>`"
-msgstr ""
+msgstr "`--squash=<incheckning>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:137
 msgid "Construct a commit message for use with `git rebase --autosquash`. The commit message title is taken from the specified commit with a prefix of \"squash! \". Can be used with additional commit message options (`-m`/`-c`/`-C`/`-F`). See linkgit:git-rebase[1] for details."
-msgstr ""
+msgstr "Konstruera ett inchecknings-meddelande för användning med `git rebase --autosquash`. Rubriken för inchecknings-meddelandet hämtas från den angivna inchecknings-funktionen med prefixet \"squash!\". Kan användas med ytterligare inchecknings-meddelandealternativ (`-m`/`-c`/`-C`/`-F`). Se linkgit:git-rebase[1] för mer information."
 
 #. type: Labeled list
 #: en/git-commit.adoc:138
@@ -18317,7 +18363,7 @@ msgstr "`--reset-author`"
 #. type: Plain text
 #: en/git-commit.adoc:143
 msgid "When used with `-C`/`-c`/`--amend` options, or when committing after a conflicting cherry-pick, declare that the authorship of the resulting commit now belongs to the committer. This also renews the author timestamp."
-msgstr ""
+msgstr "När det används med `-C`/`-c`/`--amend`-flaggor, eller vid incheckning efter ett motstridigt urval av attribut, deklareras att författarskapet till den resulterande incheckningen nu tillhör incheckaren. Detta förnyar också författartidsstämpeln."
 
 #. type: Labeled list
 #: en/git-commit.adoc:144 en/git-status.adoc:29
@@ -18329,7 +18375,7 @@ msgstr "`--short`"
 #. type: Plain text
 #: en/git-commit.adoc:147
 msgid "When doing a dry-run, give the output in the short-format. See linkgit:git-status[1] for details. Implies `--dry-run`."
-msgstr ""
+msgstr "När du gör en testkörning, ange utdata i short-format. Se linkgit:git-status[1] för detaljer. Implicerar `--dry-run`."
 
 #. type: Labeled list
 #: en/git-commit.adoc:148 en/git-status.adoc:33
@@ -18341,12 +18387,12 @@ msgstr "`--branch`"
 #. type: Plain text
 #: en/git-commit.adoc:151
 msgid "Show the branch and tracking info even in short-format. See linkgit:git-status[1] for details."
-msgstr ""
+msgstr "Visa gren- och spårningsinformation även i kortformat. Se linkgit:git-status[1] för mer information."
 
 #. type: Plain text
 #: en/git-commit.adoc:156
 msgid "When doing a dry-run, give the output in a porcelain-ready format. See linkgit:git-status[1] for details. Implies `--dry-run`."
-msgstr ""
+msgstr "När du gör en torrkörning, ge utdata i ett porslinsklart format. Se linkgit:git-status[1] för detaljer. Implicerar `--dry-run`."
 
 #. type: Labeled list
 #: en/git-commit.adoc:157 en/git-status.adoc:48
@@ -18358,7 +18404,7 @@ msgstr "`--long`"
 #. type: Plain text
 #: en/git-commit.adoc:161
 msgid "When doing a dry-run, give the output in the long-format. This is the default output of linkgit:git-status[1]. Implies `--dry-run`."
-msgstr ""
+msgstr "När du gör en testkörning, ange utdata i long-format. Detta är standardutdata för linkgit:git-status[1]. Implicerar `--dry-run`."
 
 #. type: Labeled list
 #: en/git-commit.adoc:163
@@ -18370,7 +18416,7 @@ msgstr "`--null`"
 #. type: Plain text
 #: en/git-commit.adoc:170
 msgid "When showing `short` or `porcelain` linkgit:git-status[1] output, print the filename verbatim and terminate the entries with _NUL_, instead of _LF_. If no format is given, implies the `--porcelain` output format. Without the `-z` option, filenames with \"unusual\" characters are quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1])."
-msgstr ""
+msgstr "När `short` eller `porcelain` linkgit:git-status[1] visas, skriv ut filnamnet ordagrant och avsluta posterna med _NUL_, istället för _LF_. Om inget format anges, innebär detta utdataformatet `--porcelain`. Utan `-z`-alternativet citeras filnamn med \"ovanliga\" tecken enligt beskrivningen för konfigurationsvariabeln `core.quotePath` (se linkgit:git-config[1])."
 
 #. type: Labeled list
 #: en/git-commit.adoc:171 en/git-merge.adoc:86 en/git-notes.adoc:155
@@ -18389,29 +18435,29 @@ msgstr "`--file=<fil>`"
 #. type: Plain text
 #: en/git-commit.adoc:175
 msgid "Take the commit message from _<file>_. Use '-' to read the message from the standard input."
-msgstr ""
+msgstr "Hämta incheckning-meddelandet från _<fil>_. Använd '-' för att läsa meddelandet från standardindata."
 
 #. type: Labeled list
 #: en/git-commit.adoc:176
 #, no-wrap
 msgid "`--author=<author>`"
-msgstr ""
+msgstr "`--author=<författare>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:182
 msgid "Override the commit author. Specify an explicit author using the standard `A U Thor <author@example.com>` format. Otherwise _<author>_ is assumed to be a pattern and is used to search for an existing commit by that author (i.e. `git rev-list --all -i --author=<author>`); the commit author is then copied from the first such commit found."
-msgstr ""
+msgstr "Åsidosätt inchecknings-författaren. Ange en explicit författare med standardformatet `A U Thor <författare@example.com>`. Annars antas _<författare>_ vara ett mönster och används för att söka efter en befintlig incheckning av den författaren (dvs. `git rev-list --all -i --author=<författare>`); inchecknings-författaren kopieras sedan från den första hittade incheckningen."
 
 #. type: Labeled list
 #: en/git-commit.adoc:183
 #, no-wrap
 msgid "`--date=<date>`"
-msgstr ""
+msgstr "`--date=<datum>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:185
 msgid "Override the author date used in the commit."
-msgstr ""
+msgstr "Åsidosätt författardatumet som användes i incheckningen."
 
 #. type: Labeled list
 #: en/git-commit.adoc:186 en/git-merge.adoc:70 en/git-notes.adoc:149
@@ -18424,7 +18470,7 @@ msgstr "`-m <medd>`"
 #: en/git-commit.adoc:187 en/git-notes.adoc:150 en/git-tag.adoc:175
 #, no-wrap
 msgid "`--message=<msg>`"
-msgstr ""
+msgstr "`--message=<medd>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:191
@@ -18434,35 +18480,35 @@ msgstr "Använd _<medd>_ som incheckning-meddelande. Om flera `-m`-alternativ an
 #. type: Plain text
 #: en/git-commit.adoc:193
 msgid "The `-m` option is mutually exclusive with `-c`, `-C`, and `-F`."
-msgstr ""
+msgstr "Alternativet `-m` utesluter `-c`, `-C` och `-F`."
 
 #. type: Labeled list
 #: en/git-commit.adoc:194
 #, no-wrap
 msgid "`-t <file>`"
-msgstr ""
+msgstr "`-t <fil>`"
 
 #. type: Labeled list
 #: en/git-commit.adoc:195
 #, no-wrap
 msgid "`--template=<file>`"
-msgstr ""
+msgstr "`--template=<fil>`"
 
 #. type: Plain text
 #: en/git-commit.adoc:204
 msgid "When editing the commit message, start the editor with the contents in _<file>_. The `commit.template` configuration variable is often used to give this option implicitly to the command. This mechanism can be used by projects that want to guide participants with some hints on what to write in the message in what order. If the user exits the editor without editing the message, the commit is aborted. This has no effect when a message is given by other means, e.g. with the `-m` or `-F` options."
-msgstr ""
+msgstr "När du redigerar incheckning-meddelandet, starta editorn med innehållet i _<fil>_. Konfigurationsvariabeln `commit.template` används ofta för att ge denna möjlighet implicit till kommandot. Denna mekanism kan användas av projekt som vill vägleda deltagarna med några tips om vad de ska skriva i meddelandet och i vilken ordning. Om användaren avslutar editorn utan att redigera meddelandet avbryts inchecknings-inlämningen. Detta har ingen effekt när ett meddelande ges på annat sätt, t.ex. med alternativen `-m` eller `-F`."
 
 #. type: Labeled list
 #: en/git-commit.adoc:207 en/git-tag.adoc:189
 #, no-wrap
 msgid "`--trailer <token>[(=|:)<value>]`"
-msgstr ""
+msgstr "`--trailer <token>[(=|:)<värde>]`"
 
 #. type: Plain text
 #: en/git-commit.adoc:217
 msgid "Specify a (_<token>_, _<value>_) pair that should be applied as a trailer. (e.g. `git commit --trailer \"Signed-off-by:C O Mitter \\ <committer@example.com>\" --trailer \"Helped-by:C O Mitter \\ <committer@example.com>\"` will add the `Signed-off-by` trailer and the `Helped-by` trailer to the commit message.) The `trailer.*` configuration variables (linkgit:git-interpret-trailers[1]) can be used to define if a duplicated trailer is omitted, where in the run of trailers each trailer would appear, and other details."
-msgstr ""
+msgstr "Ange ett (_<token>_, _<värde>_)-par som ska användas som en trailer. (t.ex. `git commit --trailer \"Signed-off-by:C O Mitter \\ <committer@example.com>\" --trailer \"Helped-by:C O Mitter \\ <committer@example.com>\"` kommer att lägga till trailern `Signed-off-by` och trailern `Helped-by` i incheckares-meddelandet.) Konfigurationsvariablerna `trailer.*` (linkgit:git-interpret-trailers[1]) kan användas för att definiera om en duplicerad trailer utelämnas, var i trailerserien varje trailer ska visas och andra detaljer."
 
 #. type: Labeled list
 #: en/git-commit.adoc:219 en/git-push.adoc:417 en/git-tag.adoc:96
@@ -18482,7 +18528,7 @@ msgstr "`--no-verify`"
 #. type: Plain text
 #: en/git-commit.adoc:223
 msgid "Bypass the `pre-commit` and `commit-msg` hooks. See also linkgit:githooks[5]."
-msgstr ""
+msgstr "Hoppa över krokarna `pre-commit` och `commit-msg`. Se även linkgit:githooks[5]."
 
 #. type: Labeled list
 #: en/git-commit.adoc:224 en/git-notes.adoc:172
@@ -18494,7 +18540,7 @@ msgstr "`--allow-empty`"
 #. type: Plain text
 #: en/git-commit.adoc:229
 msgid "Usually recording a commit that has the exact same tree as its sole parent commit is a mistake, and the command prevents you from making such a commit. This option bypasses the safety, and is primarily for use by foreign SCM interface scripts."
-msgstr ""
+msgstr "Vanligtvis är det ett misstag att registrera en incheckning som har exakt samma träd som dess enda överordnade incheckning, och kommandot hindrar dig från att göra en sådan incheckning. Det här alternativet kringgår säkerheten och används främst av främmande SCM-gränssnittsskript."
 
 #. type: Labeled list
 #: en/git-commit.adoc:230
@@ -18506,7 +18552,7 @@ msgstr "`--allow-empty-message`"
 #. type: Plain text
 #: en/git-commit.adoc:234
 msgid "Create a commit with an empty commit message without using plumbing commands like linkgit:git-commit-tree[1]. Like `--allow-empty`, this command is primarily for use by foreign SCM interface scripts."
-msgstr ""
+msgstr "Skapa en commit med ett tomt inchecknings-meddelande utan att använda plumbing-kommandon som linkgit:git-commit-tree[1]. Precis som `--allow-empty` är detta kommando främst avsett för användning av främmande SCM-gränssnittsskript."
 
 #. type: Labeled list
 #: en/git-commit.adoc:235 en/git-tag.adoc:205 en/merge-options.adoc:38
@@ -18517,7 +18563,7 @@ msgstr "`--cleanup=<läge>`"
 #. type: Plain text
 #: en/git-commit.adoc:239
 msgid "Determine how the supplied commit message should be cleaned up before committing. The '<mode>' can be `strip`, `whitespace`, `verbatim`, `scissors` or `default`."
-msgstr ""
+msgstr "Bestäm hur det angivna inchecknings-meddelandet ska rensas upp innan det checkas-in. '<mode>' kan vara `strip`, `whitespace`, `verbatim`, `scissors` eller `default`."
 
 #. type: Labeled list
 #: en/git-commit.adoc:241
@@ -18529,7 +18575,7 @@ msgstr "`strip`"
 #. type: Plain text
 #: en/git-commit.adoc:244
 msgid "Strip leading and trailing empty lines, trailing whitespace, commentary and collapse consecutive empty lines."
-msgstr ""
+msgstr "Ta bort inledande och efterföljande tomma rader, efterföljande blanksteg, kommentarer och dölj på varandra följande tomma rader."
 
 #. type: Labeled list
 #: en/git-commit.adoc:244
@@ -18541,7 +18587,7 @@ msgstr "`whitespace`"
 #. type: Plain text
 #: en/git-commit.adoc:246
 msgid "Same as `strip` except #commentary is not removed."
-msgstr ""
+msgstr "Samma som `strip` förutom att #kommentarer inte tas bort."
 
 #. type: Labeled list
 #: en/git-commit.adoc:246
@@ -18553,7 +18599,7 @@ msgstr "`verbatim`"
 #. type: Plain text
 #: en/git-commit.adoc:248
 msgid "Do not change the message at all."
-msgstr ""
+msgstr "Ändra inte meddelandet alls."
 
 #. type: Labeled list
 #: en/git-commit.adoc:248
@@ -18565,7 +18611,7 @@ msgstr "`scissors`"
 #. type: Plain text
 #: en/git-commit.adoc:252
 msgid "Same as `whitespace` except that everything from (and including) the line found below is truncated, if the message is to be edited. \"`#`\" can be customized with `core.commentChar`."
-msgstr ""
+msgstr "Samma som `blanktecken` förutom att allt från (och inklusive) raden nedanför avkortas om meddelandet ska redigeras. \"`#`\" kan anpassas med `core.commentChar`."
 
 #. type: Plain text
 #: en/git-commit.adoc:254
@@ -18576,17 +18622,17 @@ msgstr "# ------------------------ >8 ------------------------\n"
 #. type: Plain text
 #: en/git-commit.adoc:258
 msgid "Same as `strip` if the message is to be edited. Otherwise `whitespace`."
-msgstr ""
+msgstr "Samma som `strip` om meddelandet ska redigeras. Annars `whitespace`."
 
 #. type: Plain text
 #: en/git-commit.adoc:262
 msgid "The default can be changed by the `commit.cleanup` configuration variable (see linkgit:git-config[1])."
-msgstr ""
+msgstr "Standardvärdet kan ändras med konfigurationsvariabeln `commit.cleanup` (se linkgit:git-config[1])."
 
 #. type: Plain text
 #: en/git-commit.adoc:268
 msgid "Let the user further edit the message taken from _<file>_ with `-F <file>`, command line with `-m <message>`, and from _<commit>_ with `-C <commit>`."
-msgstr ""
+msgstr "Låt användaren ytterligare redigera meddelandet som tagits från _<fil>_ med `-F <fil>`, kommandoraden med `-m <meddelande>` och från _<incheckning>_ med `-C <incheckning>`."
 
 #. type: Labeled list
 #: en/git-commit.adoc:269 en/merge-options.adoc:20
@@ -18598,7 +18644,7 @@ msgstr "`--no-edit`"
 #. type: Plain text
 #: en/git-commit.adoc:273
 msgid "Use the selected commit message without launching an editor. For example, `git commit --amend --no-edit` amends a commit without changing its commit message."
-msgstr ""
+msgstr "Använd det valda incheckning-meddelandet utan att starta en editor. Till exempel ändrar `git commit --amend --no-edit` en commit utan att ändra dess commit-meddelande."
 
 #. type: Labeled list
 #: en/git-commit.adoc:274
@@ -18609,29 +18655,33 @@ msgstr "`--amend`"
 
 #. type: Plain text
 #: en/git-commit.adoc:284
+#, fuzzy
 msgid "Replace the tip of the current branch by creating a new commit. The recorded tree is prepared as usual (including the effect of the `-i` and `-o` options and explicit pathspec), and the message from the original commit is used as the starting point, instead of an empty message, when no other message is specified from the command line via options such as `-m`, `-F`, `-c`, etc. The new commit has the same parents and author as the current one (the `--reset-author` option can countermand this)."
-msgstr ""
+msgstr "Ersätt toppen av den aktuella grenen genom att skapa en ny incheckning. Det inspelade trädet förbereds som vanligt (inklusive effekten av alternativen `-i` och `-o` samt explicit sökvägsspec), och meddelandet från den ursprungliga incheckningen används som utgångspunkt, istället för ett tomt meddelande, när inget annat meddelande anges från kommandoraden via alternativ som `-m`, `-F`, `-c`, etc. Den nya incheckningen har samma föräldrar och författare som den aktuella (alternativet `--reset-author` kan motverka detta)."
 
 #. type: Plain text
 #: en/git-commit.adoc:287
 msgid "It is a rough equivalent for:"
-msgstr ""
+msgstr "Det är en ungefärlig motsvarighet för:"
 
 #. type: delimited block -
 #: en/git-commit.adoc:292
 #, no-wrap
 msgid "\t$ git reset --soft HEAD^\n\t$ ... do something else to come up with the right tree ...\n\t$ git commit -c ORIG_HEAD\n"
 msgstr ""
+"\t$ git reset --soft HEAD^\n"
+"\t$ ... gör något annat för att få fram rätt träd ...\n"
+"\t$ git commit -c ORIG_HEAD\n"
 
 #. type: Plain text
 #: en/git-commit.adoc:295
 msgid "but can be used to amend a merge commit."
-msgstr ""
+msgstr "men kan användas för att ändra en sammanslagings-incheckning."
 
 #. type: Plain text
 #: en/git-commit.adoc:300
 msgid "You should understand the implications of rewriting history if you amend a commit that has already been published. (See the \"RECOVERING FROM UPSTREAM REBASE\" section in linkgit:git-rebase[1].)"
-msgstr ""
+msgstr "Du bör förstå konsekvenserna av att skriva om historiken om du ändrar en incheckning som redan har publicerats. (Se avsnittet \"ÅTERSTÄLLA FRÅN UPSTRÖMSREBASE\" i linkgit:git-rebase[1].)"
 
 #. type: Labeled list
 #: en/git-commit.adoc:301
@@ -18643,7 +18693,7 @@ msgstr "`--no-post-rewrite`"
 #. type: Plain text
 #: en/git-commit.adoc:303
 msgid "Bypass the `post-rewrite` hook."
-msgstr ""
+msgstr "Hoppa över kroken `post-rewrite`."
 
 #. type: Labeled list
 #: en/git-commit.adoc:305
@@ -18654,8 +18704,9 @@ msgstr "`--include`"
 
 #. type: Plain text
 #: en/git-commit.adoc:310
+#, fuzzy
 msgid "Before making a commit out of staged contents so far, stage the contents of paths given on the command line as well. This is usually not what you want unless you are concluding a conflicted merge."
-msgstr ""
+msgstr "Innan du gör en incheckning från det hittills upplagda innehållet, upplagra även innehållet i de sökvägar som anges på kommandoraden. Detta är vanligtvis inte vad du vill om du inte slutför en konfliktfylld sammanslagning."
 
 #. type: Labeled list
 #: en/git-commit.adoc:311
@@ -18674,12 +18725,12 @@ msgstr "`--only`"
 #. type: Plain text
 #: en/git-commit.adoc:324
 msgid "Make a commit by taking the updated working tree contents of the paths specified on the command line, disregarding any contents that have been staged for other paths. This is the default mode of operation of `git commit` if any paths are given on the command line, in which case this option can be omitted. If this option is specified together with `--amend`, then no paths need to be specified, which can be used to amend the last commit without committing changes that have already been staged. If used together with `--allow-empty` paths are also not required, and an empty commit will be created."
-msgstr ""
+msgstr "Gör en incheckning genom att hämta det uppdaterade innehållet i arbetskatalogen för de sökvägar som anges på kommandoraden, utan att ta hänsyn till innehåll som har köade för andra sökvägar. Detta är standardläget för `git commit` om några sökvägar anges på kommandoraden, i vilket fall detta alternativ kan utelämnas. Om detta alternativ anges tillsammans med `--amend` behöver inga sökvägar anges, vilka kan användas för att ändra den senaste incheckningen utan att checka-in ändringar som redan har stagats. Om de används tillsammans med `--allow-empty` krävs inte heller några sökvägar, och en tom incheckning kommer att skapas."
 
 #. type: Plain text
 #: en/git-commit.adoc:332
 msgid "Pass pathspec in _<file>_ instead of commandline args. If _<file>_ is exactly `-` then standard input is used. Pathspec elements are separated by _LF_ or _CR_/_LF_. Pathspec elements can be quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1]). See also `--pathspec-file-nul` and global `--literal-pathspecs`."
-msgstr ""
+msgstr "Skicka sökvägsspec i _<fil>_ istället för kommandoradsargument. Om _<fil>_ är exakt `-` används standardindata. Sökvägsspec-element separeras med _LF_ eller _CR_/_LF_. Sökvägsspec-element kan citeras enligt beskrivningen för konfigurationsvariabeln `core.quotePath` (se linkgit:git-config[1]). Se även `--pathspec-file-nul` och global `--literal-pathspecs`."
 
 #. type: Labeled list
 #: en/git-commit.adoc:338 en/git-status.adoc:59
@@ -18701,7 +18752,7 @@ msgstr "Visa ospårade filer."
 #. type: Plain text
 #: en/git-commit.adoc:346
 msgid "The _<mode>_ parameter is optional (defaults to `all`), and is used to specify the handling of untracked files; when `-u` is not used, the default is `normal`, i.e. show untracked files and directories."
-msgstr ""
+msgstr "Parametern _<mode>_ är valfri (standardinställningen är `all`) och används för att ange hanteringen av ospårade filer; när `-u` inte används är standardinställningen `normal`, d.v.s. visar ospårade filer och kataloger."
 
 #. type: Plain text
 #: en/git-commit.adoc:348 en/git-status.adoc:69 en/git-status.adoc:115
@@ -18711,7 +18762,7 @@ msgstr "De möjliga alternativen är:"
 #. type: Plain text
 #: en/git-commit.adoc:350
 msgid "Show no untracked files"
-msgstr ""
+msgstr "Visa inga ospårade filer"
 
 #. type: Labeled list
 #: en/git-commit.adoc:350 en/git-status.adoc:71
@@ -18723,7 +18774,7 @@ msgstr "`normal`"
 #. type: Plain text
 #: en/git-commit.adoc:351
 msgid "Shows untracked files and directories"
-msgstr ""
+msgstr "Visar ospårade filer och kataloger"
 
 #. type: Labeled list
 #: en/git-commit.adoc:351 en/git-init.adoc:119 en/git-status.adoc:72
@@ -18736,32 +18787,32 @@ msgstr "`all`"
 #. type: Plain text
 #: en/git-commit.adoc:352
 msgid "Also shows individual files in untracked directories."
-msgstr ""
+msgstr "Visar även enskilda filer i ospårade kataloger."
 
 #. type: Plain text
 #: en/git-commit.adoc:357
 msgid "All usual spellings for Boolean value `true` are taken as `normal` and `false` as `no`. The default can be changed using the `status.showUntrackedFiles` configuration variable documented in linkgit:git-config[1]."
-msgstr ""
+msgstr "Alla vanliga stavningar för det booleska värdet `true` tas som `normal` och `false` som `no`. Standardvärdet kan ändras med hjälp av konfigurationsvariabeln `status.showUntrackedFiles` som dokumenteras i linkgit:git-config[1]."
 
 #. type: Plain text
 #: en/git-commit.adoc:369
 msgid "Show unified diff between the `HEAD` commit and what would be committed at the bottom of the commit message template to help the user describe the commit by reminding what changes the commit has. Note that this diff output doesn't have its lines prefixed with `#`. This diff will not be a part of the commit message. See the `commit.verbose` configuration variable in linkgit:git-config[1]."
-msgstr ""
+msgstr "Visa en enhetlig skillnad mellan `HEAD`-incheckning och vad som skulle checkas-in längst ner i inchecknings-meddelandemallen för att hjälpa användaren att beskriva incheckningen genom att påminna om vilka ändringar incheckningen har. Observera att denna diff-utdata inte har sina rader prefixerade med `#`. Denna skillnad kommer inte att vara en del av inchecknings-meddelandet. Se konfigurationsvariabeln `commit.verbose` i linkgit:git-config[1]."
 
 #. type: Plain text
 #: en/git-commit.adoc:373
 msgid "If specified twice, show in addition the unified diff between what would be committed and the worktree files, i.e. the unstaged changes to tracked files."
-msgstr ""
+msgstr "Om det anges två gånger, visa dessutom den enhetliga skillnaden mellan vad som skulle checkas-in och arbetsträd, dvs. de ostegade ändringarna av spårade filer."
 
 #. type: Plain text
 #: en/git-commit.adoc:377
 msgid "Suppress commit summary message."
-msgstr ""
+msgstr "Undertryck sammanfattnings-meddelande för incheckningen."
 
 #. type: Plain text
 #: en/git-commit.adoc:382
 msgid "Do not create a commit, but show a list of paths that are to be committed, paths with local changes that will be left uncommitted and paths that are untracked."
-msgstr ""
+msgstr "Skapa inte en incheckning, utan visa en lista över sökvägar som ska checkas-in, sökvägar med lokala ändringar som kommer att lämnas oincheckade och sökvägar som inte spåras."
 
 #. type: Labeled list
 #: en/git-commit.adoc:383
@@ -18773,7 +18824,7 @@ msgstr "`--status`"
 #. type: Plain text
 #: en/git-commit.adoc:388
 msgid "Include the output of linkgit:git-status[1] in the commit message template when using an editor to prepare the commit message. Defaults to on, but can be used to override configuration variable `commit.status`."
-msgstr ""
+msgstr "Inkludera utdata från linkgit:git-status[1] i inchecknings-meddelandemallen när en editor används för att förbereda inchecknings-meddelandet. Standardinställningen är på, men kan användas för att åsidosätta konfigurationsvariabeln `commit.status`."
 
 #. type: Labeled list
 #: en/git-commit.adoc:389
@@ -18785,7 +18836,7 @@ msgstr "`--no-status`"
 #. type: Plain text
 #: en/git-commit.adoc:393
 msgid "Do not include the output of linkgit:git-status[1] in the commit message template when using an editor to prepare the default commit message."
-msgstr ""
+msgstr "Inkludera inte utdata från linkgit:git-status[1] i inchecknings-meddelandemallen när du använder en editor för att förbereda standard inchecknings-meddelandet."
 
 #. type: Labeled list
 #: en/git-commit.adoc:394 en/merge-options.adoc:84
@@ -18809,98 +18860,113 @@ msgstr "`--no-gpg-sign`"
 #. type: Plain text
 #: en/git-commit.adoc:402
 msgid "GPG-sign commits. The _<key-id>_ is optional and defaults to the committer identity; if specified, it must be stuck to the option without a space. `--no-gpg-sign` is useful to countermand both `commit.gpgSign` configuration variable, and earlier `--gpg-sign`."
-msgstr ""
+msgstr "GPG-signera incheckning. _<nyckel-id>_ är valfri och används som standard för incheckare-identiteten; om den anges måste den fästas vid alternativet utan mellanslag. `--no-gpg-sign` är användbar för att negligera både konfigurationsvariabeln `commit.gpgSign` och den tidigare `--gpg-sign`."
 
 #. type: Plain text
 #: en/git-commit.adoc:411
 msgid "When _<pathspec>_ is given on the command line, commit the contents of the files that match the pathspec without recording the changes already added to the index. The contents of these files are also staged for the next commit on top of what have been staged before."
-msgstr ""
+msgstr "När _<sökvägsspec>_ anges på kommandoraden, checka-in innehållet i filerna som matchar sökvägsspec utan att registrera de ändringar som redan lagts till i indexet. Innehållet i dessa filer köas också för nästa incheckning utöver vad som har köats tidigare."
 
 #. type: Plain text
 #: en/git-commit.adoc:427
 msgid "When recording your own work, the contents of modified files in your working tree are temporarily stored to a staging area called the \"index\" with `git add`. A file can be reverted back, only in the index but not in the working tree, to that of the last commit with `git restore --staged <file>`, which effectively reverts `git add` and prevents the changes to this file from participating in the next commit. After building the state to be committed incrementally with these commands, `git commit` (without any pathname parameter) is used to record what has been staged so far. This is the most basic form of the command. An example:"
-msgstr ""
+msgstr "När du registrerar in ditt eget arbete lagras innehållet i modifierade filer i ditt arbetskatalog tillfälligt i ett kö-område som kallas \"index\" med `git add`. En fil kan återställas, endast i indexet men inte i arbetskatalog, till det som var i den senaste incheckningen med `git restore --staged <fil>`, vilket effektivt återställer `git add` och förhindrar att ändringarna i denna fil deltar i nästa commit. Efter att ha byggt det tillstånd som ska checkas-in köats med dessa kommandon, används `git commit` (utan någon sökvägsparameter) för att registrera vad som hittills har köats. Detta är den mest grundläggande formen av kommandot. Ett exempel:"
 
 #. type: delimited block -
 #: en/git-commit.adoc:433
 #, no-wrap
 msgid "$ edit hello.c\n$ git rm goodbye.c\n$ git add hello.c\n$ git commit\n"
 msgstr ""
+"$ edit hej.c\n"
+"$ git rm adjö.c\n"
+"$ git add hej.c\n"
+"$ git commit\n"
 
 #. type: Plain text
 #: en/git-commit.adoc:441
 msgid "Instead of staging files after each individual change, you can tell `git commit` to notice the changes to the files whose contents are tracked in your working tree and do corresponding `git add` and `git rm` for you. That is, this example does the same as the earlier example if there is no other change in your working tree:"
-msgstr ""
+msgstr "Istället för att köa filer efter varje enskild ändring kan du ange att `git commit` ska notera ändringarna i de filer vars innehåll spåras i ditt arbetsträd och göra motsvarande `git add` och `git rm` åt dig. Det vill säga, det här exemplet gör samma sak som det tidigare exemplet om det inte finns någon annan ändring i ditt arbetsträd:"
 
 #. type: delimited block -
 #: en/git-commit.adoc:446
 #, no-wrap
 msgid "$ edit hello.c\n$ rm goodbye.c\n$ git commit -a\n"
 msgstr ""
+"$ edit hej.c\n"
+"$ rm adjö.c\n"
+"$ git commit -a\n"
 
 #. type: Plain text
 #: en/git-commit.adoc:451
 msgid "The command `git commit -a` first looks at your working tree, notices that you have modified `hello.c` and removed `goodbye.c`, and performs necessary `git add` and `git rm` for you."
-msgstr ""
+msgstr "Kommandot `git commit -a` tittar först på ditt arbetskatalog, märker att du har modifierat `hej.c` och tagit bort `adjö.c`, och utför nödvändiga `git add` och `git rm` åt dig."
 
 #. type: Plain text
 #: en/git-commit.adoc:456
 msgid "After staging changes to many files, you can alter the order the changes are recorded in, by giving pathnames to `git commit`. When pathnames are given, the command makes a commit that only records the changes made to the named paths:"
-msgstr ""
+msgstr "Efter att ha köat ändringar i många filer kan du ändra ordningen som ändringarna registreras i genom att ge sökvägar till `git commit`. När sökvägar anges gör kommandot en incheckning som bara registrerar de ändringar som gjorts i de namngivna sökvägarna:"
 
 #. type: delimited block -
 #: en/git-commit.adoc:462
 #, no-wrap
 msgid "$ edit hello.c hello.h\n$ git add hello.c hello.h\n$ edit Makefile\n$ git commit Makefile\n"
 msgstr ""
+"$ edit hej.c hej.h\n"
+"$ git add hej.c hej.h\n"
+"$ edit Makefile\n"
+"$ git commit Makefile\n"
 
 #. type: Plain text
 #: en/git-commit.adoc:469
 msgid "This makes a commit that records the modification to `Makefile`. The changes staged for `hello.c` and `hello.h` are not included in the resulting commit. However, their changes are not lost -- they are still staged and merely held back. After the above sequence, if you do:"
-msgstr ""
+msgstr "Detta skapar en incheckning som registrerar modifieringen till `Makefile`. Ändringarna som stagas för `hej.c` och `hej.h` inkluderas inte i den resulterande incheckningen. Deras ändringar går dock inte förlorade -- de stagas fortfarande och hålls bara tillbaka. Om du gör det efter ovanstående sekvens:"
 
 #. type: delimited block -
 #: en/git-commit.adoc:472 en/git-commit.adoc:498
 #, no-wrap
 msgid "$ git commit\n"
-msgstr ""
+msgstr "$ git commit\n"
 
 #. type: Plain text
 #: en/git-commit.adoc:476
 msgid "this second commit would record the changes to `hello.c` and `hello.h` as expected."
-msgstr ""
+msgstr "Denna andra incheckningen skulle registrera ändringarna av `hej.c` och `hej.h` som förväntat."
 
 #. type: Plain text
 #: en/git-commit.adoc:484
 msgid "After a merge (initiated by `git merge` or `git pull`) stops because of conflicts, cleanly merged paths are already staged to be committed for you, and paths that conflicted are left in unmerged state. You would have to first check which paths are conflicting with `git status` and after fixing them manually in your working tree, you would stage the result as usual with `git add`:"
-msgstr ""
+msgstr "Efter att en sammanslagning (initierad av `git merge` eller `git pull`) stoppas på grund av konflikter, är rent sammanslagna sökvägar redan köade för att checkas-in åt dig, och sökvägar som är i konflikt lämnas i osammanslaget tillstånd. Du måste först kontrollera vilka sökvägar som är i konflikt med `git status` och efter att ha åtgärdat dem manuellt i ditt arbetskatalog stagför du resultatet som vanligt med `git add`:"
 
 #. type: delimited block -
 #: en/git-commit.adoc:490
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "$ git status | grep unmerged\nunmerged: hello.c\n$ edit hello.c\n$ git add hello.c\n"
 msgstr ""
+"$ git status | grep unmerged\n"
+"unmerged: hej.c\n"
+"$ edit hej.c\n"
+"$ git add hej.c\n"
 
 #. type: Plain text
 #: en/git-commit.adoc:495
 msgid "After resolving conflicts and staging the result, `git ls-files -u` would stop mentioning the conflicted path. When you are done, run `git commit` to finally record the merge:"
-msgstr ""
+msgstr "Efter att konflikter har lösts och resultatet köats, kommer `git ls-files -u` att sluta nämna den konfliktfyllda sökvägen. När du är klar, kör `git commit` för att slutligen registrera sammanslagningen:"
 
 #. type: Plain text
 #: en/git-commit.adoc:506
 msgid "As with the case to record your own changes, you can use `-a` option to save typing. One difference is that during a merge resolution, you cannot use `git commit` with pathnames to alter the order the changes are committed, because the merge should be recorded as a single commit. In fact, the command refuses to run when given pathnames (but see `-i` option)."
-msgstr ""
+msgstr "Precis som i fallet med att registrera dina egna ändringar kan du använda alternativet `-a` för att spara skrivning. En skillnad är att under en sammanslagnings-lösning kan du inte använda `git commit` med sökvägar för att ändra ordningen som ändringarna checkas-in, eftersom sammanslagningen ska registreras som en enda incheckning. Kommandot vägrar faktiskt att köras när det ges sökvägar (men se alternativet `-i`)."
 
 #. type: Title -
 #: en/git-commit.adoc:508
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "COMMIT INFORMATION"
-msgstr ""
+msgstr "ÅTGÄRDSINFORMATION"
 
 #. type: Plain text
 #: en/git-commit.adoc:512
 msgid "Author and committer information is taken from the following environment variables, if set:"
-msgstr ""
+msgstr "Information om författare och incheckare hämtas från följande miljövariabler, om de är inställda:"
 
 #. type: Labeled list
 #: en/git-commit.adoc:514 en/git.adoc:589
@@ -18947,38 +19013,38 @@ msgstr "`GIT_COMMITTER_DATE`"
 #. type: Plain text
 #: en/git-commit.adoc:521
 msgid "(nb \"<\", \">\" and \"\\n\"s are stripped)"
-msgstr ""
+msgstr "(obs \"<\", \">\" och \"\\n\" är avskalade)"
 
 #. type: Plain text
 #: en/git-commit.adoc:527
 msgid "The author and committer names are by convention some form of a personal name (that is, the name by which other humans refer to you), although Git does not enforce or require any particular form. Arbitrary Unicode may be used, subject to the constraints listed above. This name has no effect on authentication; for that, see the `credential.username` variable in linkgit:git-config[1]."
-msgstr ""
+msgstr "Författar- och incheckare-namnen är enligt konvention någon form av ett personnamn (det vill säga det namn som andra människor refererar till dig med), även om Git inte tillämpar eller kräver någon särskild form. Godtycklig Unicode kan användas, med förbehåll för de begränsningar som anges ovan. Detta namn har ingen effekt på autentisering; för detta, se variabeln `credential.username` i linkgit:git-config[1]."
 
 #. type: Plain text
 #: en/git-commit.adoc:534
 msgid "In case (some of) these environment variables are not set, the information is taken from the configuration items `user.name` and `user.email`, or, if not present, the environment variable `EMAIL`, or, if that is not set, system user name and the hostname used for outgoing mail (taken from `/etc/mailname` and falling back to the fully qualified hostname when that file does not exist)."
-msgstr ""
+msgstr "Om (några av) dessa miljövariabler inte är angivna, hämtas informationen från konfigurationsalternativen `user.name` och `user.email`, eller, om de inte finns, miljövariabeln `EMAIL`, eller, om den inte är angiven, systemanvändarnamnet och värdnamnet som används för utgående e-post (hämtat från `/etc/mailname` och använder det fullständiga kvalificerade värdnamnet när den filen inte finns)."
 
 #. type: Plain text
 #: en/git-commit.adoc:538
 msgid "The `author.name` and `committer.name` and their corresponding email options override `user.name` and `user.email` if set and are overridden themselves by the environment variables."
-msgstr ""
+msgstr "`author.name` och `committer.name` och deras motsvarande e-postalternativ åsidosätter `user.name` och `user.email` om de är inställda och åsidosätts själva av miljövariablerna."
 
 #. type: Plain text
 #: en/git-commit.adoc:541
 msgid "The typical usage is to set just the `user.name` and `user.email` variables; the other options are provided for more complex use cases."
-msgstr ""
+msgstr "Den typiska användningen är att bara ange variablerna `user.name` och `user.email`; de andra alternativen finns för mer komplexa användningsfall."
 
 #. type: Plain text
 #: en/git-commit.adoc:555
 msgid "Though not required, it's a good idea to begin the commit message with a single short (no more than 50 characters) line summarizing the change, followed by a blank line and then a more thorough description. The text up to the first blank line in a commit message is treated as the commit title, and that title is used throughout Git. For example, linkgit:git-format-patch[1] turns a commit into email, and it uses the title on the Subject line and the rest of the commit in the body."
-msgstr ""
+msgstr "Även om det inte är ett krav är det en bra idé att börja inchecknings-meddelandet med en enda kort rad (högst 50 tecken) som sammanfattar ändringen, följt av en tom rad och sedan en mer utförlig beskrivning. Texten fram till den första tomma raden i ett inchecknings-meddelande behandlas som inchecknings-titeln, och den titeln används i hela Git. Till exempel, linkgit:git-format-patch[1] omvandlar en commit till ett e-postmeddelande, och den använder titeln på ämnesraden och resten av inchecknings-meddelandet i brödtexten."
 
 #. type: Title -
 #: en/git-commit.adoc:559
 #, no-wrap
 msgid "ENVIRONMENT AND CONFIGURATION VARIABLES"
-msgstr ""
+msgstr "MILJÖ- OCH KONFIGURATIONSVARIABLER"
 
 #. type: Plain text
 #: en/git-commit.adoc:564
@@ -18988,18 +19054,18 @@ msgstr "Redigeraren som används för att redigera inchecknings-loggmeddelandet 
 #. type: Plain text
 #: en/git-commit.adoc:574
 msgid "This command can run `commit-msg`, `prepare-commit-msg`, `pre-commit`, `post-commit` and `post-rewrite` hooks. See linkgit:githooks[5] for more information."
-msgstr ""
+msgstr "Det här kommandot kan köra hakarna `commit-msg`, `prepare-commit-msg`, `pre-commit`, `post-commit` och `post-rewrite`. Se linkgit:githooks[5] för mer information."
 
 #. type: Labeled list
 #: en/git-commit.adoc:578
 #, no-wrap
 msgid "`$GIT_DIR/COMMIT_EDITMSG`"
-msgstr ""
+msgstr "`$GIT_DIR/COMMIT_EDITMSG`"
 
 #. type: Plain text
 #: en/git-commit.adoc:584
 msgid "This file contains the commit message of a commit in progress. If `git commit` exits due to an error before creating a commit, any commit message that has been provided by the user (e.g., in an editor session) will be available in this file, but will be overwritten by the next invocation of `git commit`."
-msgstr ""
+msgstr "Den här filen innehåller inchecknings-meddelandet för en pågående incheckning. Om `git commit` avslutas på grund av ett fel innan en incheckning skapas, kommer alla inchecknings-meddelanden som har tillhandahållits av användaren (t.ex. i en redigeringssession) att finnas tillgängliga i den här filen, men kommer att skrivas över av nästa anrop av `git commit`."
 
 #. type: Plain text
 #: en/git-commit.adoc:592
@@ -20293,52 +20359,52 @@ msgstr "Räknar antalet opackade objektfiler och det diskutrymme som förbrukas 
 #. type: Plain text
 #: en/git-count-objects.adoc:24
 msgid "Provide more detailed reports:"
-msgstr ""
+msgstr "Ge mer detaljerade rapporter:"
 
 #. type: Plain text
 #: en/git-count-objects.adoc:26
 msgid "count: the number of loose objects"
-msgstr ""
+msgstr "antal: antalet lösa objekt"
 
 #. type: Plain text
 #: en/git-count-objects.adoc:28
 msgid "size: disk space consumed by loose objects, in KiB (unless -H is specified)"
-msgstr ""
+msgstr "storlek: diskutrymme som förbrukas av lösa objekt, i KiB (om inte -H anges)"
 
 #. type: Plain text
 #: en/git-count-objects.adoc:30
 msgid "in-pack: the number of in-pack objects"
-msgstr ""
+msgstr "in-pack: antalet objekt i packetet"
 
 #. type: Plain text
 #: en/git-count-objects.adoc:32
 msgid "packs: the number of pack files"
-msgstr ""
+msgstr "paket: antalet paketfiler"
 
 #. type: Plain text
 #: en/git-count-objects.adoc:34
 msgid "size-pack: disk space consumed by the packs, in KiB (unless -H is specified)"
-msgstr ""
+msgstr "size-pack: diskutrymme som förbrukas av paketen, i KiB (om inte -H anges)"
 
 #. type: Plain text
 #: en/git-count-objects.adoc:37
 msgid "prune-packable: the number of loose objects that are also present in the packs. These objects could be pruned using `git prune-packed`."
-msgstr ""
+msgstr "prune-packable: antalet lösa objekt som också finns i paketen. Dessa objekt kan beskäras med hjälp av `git prune-packed`."
 
 #. type: Plain text
 #: en/git-count-objects.adoc:40
 msgid "garbage: the number of files in the object database that are neither valid loose objects nor valid packs"
-msgstr ""
+msgstr "garbage: antalet filer i objektdatabasen som varken är giltiga lösa objekt eller giltiga paket"
 
 #. type: Plain text
 #: en/git-count-objects.adoc:43
 msgid "size-garbage: disk space consumed by garbage files, in KiB (unless -H is specified)"
-msgstr ""
+msgstr "size-garbage: diskutrymme som förbrukas av skräpfiler, i KiB (om inte -H anges)"
 
 #. type: Plain text
 #: en/git-count-objects.adoc:48
 msgid "alternate: absolute path of alternate object databases; may appear multiple times, one line per path. Note that if the path contains non-printable characters, it may be surrounded by double-quotes and contain C-style backslashed escape sequences."
-msgstr ""
+msgstr "alternativ: absolut sökväg för alternativa objektdatabaser; kan förekomma flera gånger, en rad per sökväg. Observera att om sökvägen innehåller tecken som inte kan skrivas ut kan den omges av dubbla citattecken och innehålla bakåtsnedstreck escape-sekvenser i C-stil."
 
 #. type: Labeled list
 #: en/git-count-objects.adoc:49 en/git-cvsserver.adoc:61 en/git-grep.adoc:123
@@ -23712,7 +23778,7 @@ msgstr "`git diff [<flaggor>] --cached [--merge-base] [<incheckning>] [--] [<sö
 #. type: Plain text
 #: en/git-diff.adoc:56
 msgid "This form is to view the changes you staged for the next commit relative to the named _<commit>_. Typically you would want comparison with the latest commit, so if you do not give _<commit>_, it defaults to `HEAD`. If `HEAD` does not exist (e.g. unborn branches) and _<commit>_ is not given, it shows all staged changes. `--staged` is a synonym of `--cached`."
-msgstr "Det här formen är till för att visa de ändringar du har genomfört för nästa cincheckning i förhållande till den namngivna _<incheckningen>_. Vanligtvis vill du jämföra med den senaste incheckningen, så om du inte anger _<incheckning>_ används som standard `HEAD`. Om `HEAD` inte existerar (t.ex. ofödda grenar) och _<incheckning>_ inte anges, visas alla genomförda ändringar. `--staged` är en synonym till `--cached`."
+msgstr "Det här formen är till för att visa de ändringar du har köade för nästa cincheckning i förhållande till den namngivna _<incheckningen>_. Vanligtvis vill du jämföra med den senaste incheckningen, så om du inte anger _<incheckning>_ används som standard `HEAD`. Om `HEAD` inte existerar (t.ex. ofödda grenar) och _<incheckning>_ inte anges, visas alla köade ändringar. `--staged` är en synonym till `--cached`."
 
 #. type: Plain text
 #: en/git-diff.adoc:60
@@ -23900,7 +23966,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-diff.adoc:176
 msgid "Changes in the working tree not yet staged for the next commit."
-msgstr "Ändringar i arbetskatalog har ännu inte genomförts för nästa incheckning."
+msgstr "Ändringar i arbetskatalog har ännu inte köade för nästa incheckning."
 
 #. type: Plain text
 #: en/git-diff.adoc:178
@@ -31515,22 +31581,25 @@ msgstr "git-hash-object - Beräkna objekt-ID och möjligen skapa ett objekt frå
 #, no-wrap
 msgid "'git hash-object' [-t <type>] [-w] [--path=<file> | --no-filters]\n\t\t[--stdin [--literally]] [--] <file>...\n'git hash-object' [-t <type>] [-w] --stdin-paths [--no-filters]\n"
 msgstr ""
+"'git hash-object' [-t <typ>] [-w] [--path=<fil> | --no-filters]\n"
+"\t\t[--stdin [--literally]] [--] <fil>...\n"
+"'git hash-object' [-t <typ>] [-w] --stdin-paths [--no-filters]\n"
 
 #. type: Plain text
 #: en/git-hash-object.adoc:23
 msgid "Computes the object ID value for an object with specified type with the contents of the named file (which can be outside of the work tree), and optionally writes the resulting object into the object database. Reports its object ID to its standard output. When <type> is not specified, it defaults to \"blob\"."
-msgstr ""
+msgstr "Beräknar objekt-ID-värdet för ett objekt med angiven typ med innehållet i den namngivna filen (som kan finnas utanför arbetsträdet) och skriver eventuellt det resulterande objektet till objektdatabasen. Rapporterar dess objekt-ID till standardutdata. När <typ> inte anges används som standard \"blob\"."
 
 #. type: Labeled list
 #: en/git-hash-object.adoc:27
 #, no-wrap
 msgid "-t <type>"
-msgstr ""
+msgstr "-t <typ>"
 
 #. type: Plain text
 #: en/git-hash-object.adoc:30
 msgid "Specify the type of object to be created (default: \"blob\"). Possible values are `commit`, `tree`, `blob`, and `tag`."
-msgstr ""
+msgstr "Ange vilken typ av objekt som ska skapas (standard: \"blob\"). Möjliga värden är `commit`, `tree`, `blob` och `tag`."
 
 #. type: Plain text
 #: en/git-hash-object.adoc:33
@@ -31540,7 +31609,7 @@ msgstr "Skriv faktiskt objektet in i objektdatabasen."
 #. type: Plain text
 #: en/git-hash-object.adoc:36
 msgid "Read the object from standard input instead of from a file."
-msgstr ""
+msgstr "Läs objektet från standardindata istället för från en fil."
 
 #. type: Labeled list
 #: en/git-hash-object.adoc:37
@@ -31552,12 +31621,12 @@ msgstr "--stdin-paths"
 #. type: Plain text
 #: en/git-hash-object.adoc:40
 msgid "Read file names from the standard input, one per line, instead of from the command-line."
-msgstr ""
+msgstr "Läs filnamn från standardinmatningen, ett per rad, istället för från kommandoraden."
 
 #. type: Plain text
 #: en/git-hash-object.adoc:50
 msgid "Hash object as if it were located at the given path. The location of the file does not directly influence the hash value, but the path is used to determine which Git filters should be applied to the object before it can be placed in the object database. As a result of applying filters, the actual blob put into the object database may differ from the given file. This option is mainly useful for hashing temporary files located outside of the working directory or files read from stdin."
-msgstr ""
+msgstr "Hasha objektet som om det vore placerat på den givna sökvägen. Filens plats påverkar inte direkt hashvärdet, men sökvägen används för att avgöra vilka Git-filter som ska tillämpas på objektet innan det kan placeras i objektdatabasen. Som ett resultat av att filter tillämpas kan den faktiska blobben som placeras i objektdatabasen skilja sig från den givna filen. Det här alternativet är främst användbart för att hasha temporära filer som finns utanför arbetskatalogen eller filer som läses från stdin."
 
 #. type: Labeled list
 #: en/git-hash-object.adoc:51
@@ -31569,7 +31638,7 @@ msgstr "--no-filters"
 #. type: Plain text
 #: en/git-hash-object.adoc:56
 msgid "Hash the contents as is, ignoring any input filter that would have been chosen by the attributes mechanism, including the end-of-line conversion. If the file is read from standard input then this is always implied, unless the `--path` option is given."
-msgstr ""
+msgstr "Hasha innehållet som det är, och ignorera eventuella inmatningsfilter som skulle ha valts av attributmekanismen, inklusive konverteringen vid radslut. Om filen läses från standardindata är detta alltid underförstått, såvida inte alternativet `--path` anges."
 
 #. type: Labeled list
 #: en/git-hash-object.adoc:57
@@ -31581,7 +31650,7 @@ msgstr "--literally"
 #. type: Plain text
 #: en/git-hash-object.adoc:62
 msgid "Allow `--stdin` to hash any garbage into a loose object which might not otherwise pass standard object parsing or git-fsck checks. Useful for stress-testing Git itself or reproducing characteristics of corrupt or bogus objects encountered in the wild."
-msgstr ""
+msgstr "Tillåter `--stdin` att hasha skräp till ett löst objekt som annars kanske inte skulle klara standardobjektparsning eller git-fsck-kontroller. Användbart för att stresstesta Git självt eller för att reproducera egenskaper hos korrupta eller falska objekt som påträffas i fritt tillstånd."
 
 #. type: Title =
 #: en/git-help.adoc:2
@@ -33059,7 +33128,7 @@ msgstr ""
 "git init [-q | --quiet] [--bare] [--template=<mallkatalog>]\n"
 "\t [--separate-git-dir <git-kat>] [--object-format=<format>]\n"
 "\t [--ref-format=<format>]\n"
-"\t [-b <grennamn> | --initial-branch=<grennamn>]\n"
+"\t [-b <gren-namn> | --initial-branch=<grennamn>]\n"
 "\t [--shared[=<behörigheter>]] [<katalog>]\n"
 
 #. type: Plain text
@@ -33134,18 +33203,18 @@ msgstr "Om detta är en ominitialisering, repot kommer att flyttas till den angi
 #: en/git-init.adoc:77
 #, no-wrap
 msgid "`-b <branch-name>`"
-msgstr "`-b <grennamn>`"
+msgstr "`-b <gren-namn>`"
 
 #. type: Labeled list
 #: en/git-init.adoc:78
 #, no-wrap
 msgid "`--initial-branch=<branch-name>`"
-msgstr "`--initial-branch=<grennamn>`"
+msgstr "`--initial-branch=<gren-namn>`"
 
 #. type: Plain text
 #: en/git-init.adoc:81
 msgid "Use _<branch-name>_ for the initial branch in the newly created repository. If not specified, fall back to the default name"
-msgstr "Använd _<grennamn>_ för den initiala grenen i det nyskapade arkivet. Om inget namn anges, återgå till standardnamnet"
+msgstr "Använd _<gren-namn>_ för den initiala grenen i det nyskapade repot. Om inget namn anges, återgå till standardnamnet"
 
 #. type: Plain text
 #: en/git-init.adoc:83
@@ -41315,7 +41384,7 @@ msgstr "`--signed=(true|false|if-asked)`"
 #. type: Plain text
 #: en/git-push.adoc:181
 msgid "GPG-sign the push request to update refs on the receiving side, to allow it to be checked by the hooks and/or be logged. Possible values are:"
-msgstr "GPG-signerar sänd-begäran för att uppdatera referenser på mottagarsidan, så att den kan kontrolleras av krokarna och/eller loggas. Möjliga värden är:"
+msgstr "GPG-signera sänd-begäran för att uppdatera referenser på mottagarsidan, så att den kan kontrolleras av krokarna och/eller loggas. Möjliga värden är:"
 
 #. type: Plain text
 #: en/git-push.adoc:184
@@ -52282,7 +52351,7 @@ msgstr "Ge utdata i long-format. Detta är standardinställningen."
 #. type: Plain text
 #: en/git-status.adoc:58
 msgid "In addition to the names of files that have been changed, also show the textual changes that are staged to be committed (i.e., like the output of `git diff --cached`). If `-v` is specified twice, then also show the changes in the working tree that have not yet been staged (i.e., like the output of `git diff`)."
-msgstr "Förutom namnen på filer som har ändrats, visa även de textändringar som är planerade att checkas-in (dvs. som utdata från `git diff --cached`). Om `-v` anges två gånger, visa även de ändringar i arbetskatalogen som ännu inte har iscensatts (dvs. som utdata från `git diff`)."
+msgstr "Förutom namnen på filer som har ändrats, visa även de textändringar som är köade att checkas-in (dvs. som utdata från `git diff --cached`). Om `-v` anges två gånger, visa även de ändringar i arbetskatalogen som ännu inte har iscensatts (dvs. som utdata från `git diff`)."
 
 #. type: Plain text
 #: en/git-status.adoc:67
@@ -52706,7 +52775,7 @@ msgstr "Om `-b` används föregås kortformatstatusen av en rad"
 #: en/git-status.adoc:265
 #, no-wrap
 msgid "{empty}## <branchname> <tracking-info>\n"
-msgstr "{tom}## <grennamn> <spårningsinformation>\n"
+msgstr "{tom}## <gren-namn> <spårningsinformation>\n"
 
 #. type: Title ~
 #: en/git-status.adoc:268
@@ -52836,8 +52905,8 @@ msgstr ""
 "|Fält       | Betydelse\n"
 "\n"
 "|_<XY>_\n"
-"|Ett 2-teckensfält som innehåller de iscensatt och\n"
-"oiscensatta XY-värdena beskrivna i kortformat,\n"
+"|Ett 2-teckensfält som innehåller de köade och\n"
+"ej köade XY-värdena beskrivna i kortformat,\n"
 "där oförändrad indikeras av ett \".\" istället för\n"
 "ett mellanslag.\n"
 "|_<sub>_\n"
