@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-02-01 18:42+0000\n"
+"PO-Revision-Date: 2026-02-02 00:25+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -1487,7 +1487,7 @@ msgstr "linkgit:git-revert[1]"
 #. type: Plain text
 #: en/cmds-mainporcelain.adoc:99
 msgid "Revert some existing commits."
-msgstr "Återställ några befintliga incheckningar."
+msgstr "Ångra några befintliga incheckningar."
 
 #. type: Labeled list
 #: en/cmds-mainporcelain.adoc:100
@@ -6642,7 +6642,7 @@ msgstr "`--ita-invisible-in-index`"
 #. type: Plain text
 #: en/diff-options.adoc:877
 msgid "By default entries added by `git add -N` appear as an existing empty file in `git diff` and a new file in `git diff --cached`. This option makes the entry appear as a new file in `git diff` and non-existent in `git diff --cached`. This option could be reverted with `--ita-visible-in-index`. Both options are experimental and could be removed in future."
-msgstr "Som standard visas poster som läggs till av `git add -N` som en befintlig tom fil i `git diff` och en ny fil i `git diff --cached`. Det här alternativet gör att posten visas som en ny fil i `git diff` och obefintlig i `git diff --cached`. Det här alternativet kan återställas med `--ita-visible-in-index`. Båda alternativen är experimentella och kan komma att tas bort i framtiden."
+msgstr "Som standard visas poster som läggs till av `git add -N` som en befintlig tom fil i `git diff` och en ny fil i `git diff --cached`. Det här alternativet gör att posten visas som en ny fil i `git diff` och obefintlig i `git diff --cached`. Det här alternativet kan ångras med `--ita-visible-in-index`. Båda alternativen är experimentella och kan komma att tas bort i framtiden."
 
 #. type: Labeled list
 #: en/diff-options.adoc:878
@@ -9621,7 +9621,7 @@ msgstr "Kommandoslingan visar listan över tillgängliga delkommandon och ger en
 
 #. type: delimited block -
 #: en/git-add.adoc:259
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "    *** Commands ***\n      1: status       2: update       3: revert       4: add untracked\n      5: patch        6: diff         7: quit         8: help\n    What now> 1\n"
 msgstr ""
 "    *** Commands ***\n"
@@ -9710,12 +9710,12 @@ msgstr "Efter att du har gjort valet, svara med en tom rad för att mellanlagra 
 #: en/git-add.adoc:319
 #, no-wrap
 msgid "revert"
-msgstr "revert"
+msgstr "ångra"
 
 #. type: Plain text
 #: en/git-add.adoc:324
 msgid "This has a very similar UI to 'update', and the staged information for selected paths are reverted to that of the HEAD version. Reverting new paths makes them untracked."
-msgstr "Detta har ett mycket liknande användargränssnitt som \"uppdatera\", och den köade informationen för valda sökvägar återställs till den i HEAD-versionen. Om du återställer nya sökvägar spåras de inte längre."
+msgstr "Detta har ett mycket liknande användargränssnitt som \"uppdatera\", och den köade informationen för valda sökvägar ångras till den i HEAD-versionen. Om du återställer nya sökvägar spåras de inte längre."
 
 #. type: Labeled list
 #: en/git-add.adoc:325
@@ -9726,7 +9726,7 @@ msgstr "lägg till ospårad"
 #. type: Plain text
 #: en/git-add.adoc:329
 msgid "This has a very similar UI to 'update' and 'revert', and lets you add untracked paths to the index."
-msgstr "Detta har ett mycket liknande gränssnitt som \"uppdatera\" och \"återställ\", och låter dig lägga till ospårade sökvägar till indexet."
+msgstr "Detta har ett mycket liknande gränssnitt som \"uppdatera\" och \"ångra\", och låter dig lägga till ospårade sökvägar till indexet."
 
 #. type: Labeled list
 #: en/git-add.adoc:330
@@ -9830,7 +9830,7 @@ msgstr "Ändrat innehåll representeras av \"-\" rader (som tar bort det gamla i
 #. type: Plain text
 #: en/git-add.adoc:405
 msgid "There are also more complex operations that can be performed. But beware that because the patch is applied only to the index and not the working tree, the working tree will appear to \"undo\" the change in the index. For example, introducing a new line into the index that is in neither the `HEAD` nor the working tree will stage the new line for commit, but the line will appear to be reverted in the working tree."
-msgstr "Det finns också mer komplexa operationer som kan utföras. Men var medveten om att eftersom patchen endast tillämpas på indexet och inte arbetsträdet, kommer arbetskatalog att verka \"ångra\" ändringen i indexet. Om du till exempel introducerar en ny rad i indexet som varken finns i `HEAD` eller arbetsträdet, kommer den nya raden att lagras för incheckning, men raden kommer att verka återställd i arbetskatalog."
+msgstr "Det finns också mer komplexa operationer som kan utföras. Men var medveten om att eftersom patchen endast tillämpas på indexet och inte arbetsträdet, kommer arbetskatalogen att verka \"ångra\" ändringen i indexet. Om du till exempel introducerar en ny rad i indexet som varken finns i `HEAD` eller arbetskatalogen, kommer den nya raden att lagras för incheckning, men raden kommer att verka ångras i arbetskatalogen."
 
 #. type: Plain text
 #: en/git-add.adoc:407
@@ -9857,7 +9857,7 @@ msgstr "modifiera befintligt innehåll"
 #. type: Plain text
 #: en/git-add.adoc:423
 msgid "One can also modify context lines by staging them for removal (by converting \" \" to \"-\") and adding a \"{plus}\" line with the new content. Similarly, one can modify \"{plus}\" lines for existing additions or modifications. In all cases, the new modification will appear reverted in the working tree."
-msgstr "Man kan också modifiera kontextrader genom att ställa in dem för borttagning (genom att konvertera \" \" till \"-\") och lägga till en \"{plus}\"-rad med det nya innehållet. På liknande sätt kan man modifiera \"{plus}\"-rader för befintliga tillägg eller modifieringar. I samtliga fall kommer den nya modifieringen att visas återställd i arbetskatalog."
+msgstr "Man kan också modifiera kontextrader genom att ställa in dem för borttagning (genom att konvertera \" \" till \"-\") och lägga till en \"{plus}\"-rad med det nya innehållet. På liknande sätt kan man modifiera \"{plus}\"-rader för befintliga tillägg eller modifieringar. I samtliga fall kommer den nya modifieringen att visas ångrad i arbetskatalog."
 
 #. type: Labeled list
 #: en/git-add.adoc:424
@@ -9868,7 +9868,7 @@ msgstr "nytt innehåll"
 #. type: Plain text
 #: en/git-add.adoc:429
 msgid "You may also add new content that does not exist in the patch; simply add new lines, each starting with \"{plus}\". The addition will appear reverted in the working tree."
-msgstr "Du kan också lägga till nytt innehåll som inte finns i patchen; lägg helt enkelt till nya rader, som alla börjar med \"{plus}\". Tillägget kommer att visas återställt i arbetskatalogen."
+msgstr "Du kan också lägga till nytt innehåll som inte finns i patchen; lägg helt enkelt till nya rader, som alla börjar med \"{plus}\". Tillägget kommer att visas ångrad i arbetskatalogen."
 
 #. type: Plain text
 #: en/git-add.adoc:433
@@ -10492,7 +10492,7 @@ msgstr "--abort"
 #. type: Plain text
 #: en/git-am.adoc:214
 msgid "Restore the original branch and abort the patching operation. Revert the contents of files involved in the am operation to their pre-am state."
-msgstr "Återställ den ursprungliga grenen och avbryt uppdateringsåtgärden. Återställ innehållet i filer som är involverade i am-åtgärden till deras tillstånd före-am."
+msgstr "Återställ den ursprungliga grenen och avbryt uppdateringsåtgärden. Ångra innehållet i filer som är involverade i am-åtgärden till deras tillstånd före-am."
 
 #. type: Labeled list
 #: en/git-am.adoc:215 en/git-rebase.adoc:195 en/sequencer.adoc:10
@@ -16570,7 +16570,7 @@ msgstr ""
 #: en/git-cherry-pick.adoc:43 en/git-revert.adoc:36
 #, no-wrap
 msgid "<commit>..."
-msgstr ""
+msgstr "<incheckning>..."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:52
@@ -16594,12 +16594,12 @@ msgstr ""
 #: en/git-cherry-pick.adoc:58 en/git-revert.adoc:70
 #, no-wrap
 msgid "--cleanup=<mode>"
-msgstr ""
+msgstr "--cleanup=<läge>"
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:64 en/git-revert.adoc:76
 msgid "This option determines how the commit message will be cleaned up before being passed on to the commit machinery. See linkgit:git-commit[1] for more details. In particular, if the '<mode>' is given a value of `scissors`, scissors will be appended to `MERGE_MSG` before being passed on in the case of a conflict."
-msgstr ""
+msgstr "Det här alternativet avgör hur incheckning-meddelandet ska rensas innan det skickas vidare till inchecknings-maskineriet. Se linkgit:git-commit[1] för mer information. Om '<läge>' ges värdet `scissors` kommer scissors att läggas till i `MERGE_MSG` innan det skickas vidare i händelse av en konflikt."
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:65 en/git-clean.adoc:67
@@ -16655,7 +16655,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-cherry-pick.adoc:109 en/git-revert.adoc:104
 msgid "Add a `Signed-off-by` trailer at the end of the commit message. See the signoff option in linkgit:git-commit[1] for more information."
-msgstr ""
+msgstr "Lägg till en `Signed-off-by`-trailer i slutet av inchecknings-meddelandet. Se signoff-alternativet i linkgit:git-commit[1] för mer information."
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:119
@@ -16728,12 +16728,12 @@ msgstr ""
 #: en/git-svn.adoc:678
 #, no-wrap
 msgid "--strategy=<strategy>"
-msgstr ""
+msgstr "--strategy=<strategi>"
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:169 en/git-revert.adoc:109
 msgid "Use the given merge strategy. Should only be used once. See the MERGE STRATEGIES section in linkgit:git-merge[1] for details."
-msgstr ""
+msgstr "Använd den givna sammanslagningsstrategin. Bör endast användas en gång. Se avsnittet SAMMANSLAGNINGSSTRATEGIER i linkgit:git-merge[1] för mer information."
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:170 en/git-merge-tree.adoc:94 en/git-revert.adoc:110
@@ -16754,9 +16754,9 @@ msgstr "Skicka det merge-strategispecifika alternativet vidare till merge-strate
 
 #. type: Title -
 #: en/git-cherry-pick.adoc:178 en/git-revert.adoc:127
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "SEQUENCER SUBCOMMANDS"
-msgstr ""
+msgstr "SEKVENSERARE UNDERKOMMANDON"
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:183
@@ -17141,7 +17141,7 @@ msgstr "-d"
 #. type: Plain text
 #: en/git-clean.adoc:35
 msgid "Normally, when no <pathspec> is specified, git clean will not recurse into untracked directories to avoid removing too much. Specify -d to have it recurse into such directories as well. If a <pathspec> is specified, -d is irrelevant; all untracked files matching the specified paths (with exceptions for nested git directories mentioned under `--force`) will be removed."
-msgstr "Normalt sett, när ingen <sökvägsspec> är specificerad, kommer git clean inte att återgå till ospårade kataloger för att undvika att för mycket tas bort. Ange -d för att den även ska återgå till sådana kataloger. Om en <sökvägsspec> är specificerad är -d irrelevant; alla ospårade filer som matchar de angivna sökvägarna (med undantag för kapslade git-kataloger som nämns under `--force`) kommer att tas bort."
+msgstr "Normalt sett, när ingen <sökvägsspec> är specificerad, kommer git clean inte att rekursera till ospårade kataloger för att undvika att för mycket tas bort. Ange -d för att den även ska rekursera till sådana kataloger. Om en <sökvägsspec> är specificerad är -d irrelevant; alla ospårade filer som matchar de angivna sökvägarna (med undantag för kapslade git-kataloger som nämns under `--force`) kommer att tas bort."
 
 #. type: Plain text
 #: en/git-clean.adoc:43
@@ -18870,7 +18870,7 @@ msgstr "När _<sökvägsspec>_ anges på kommandoraden, checka-in innehållet i 
 #. type: Plain text
 #: en/git-commit.adoc:427
 msgid "When recording your own work, the contents of modified files in your working tree are temporarily stored to a staging area called the \"index\" with `git add`. A file can be reverted back, only in the index but not in the working tree, to that of the last commit with `git restore --staged <file>`, which effectively reverts `git add` and prevents the changes to this file from participating in the next commit. After building the state to be committed incrementally with these commands, `git commit` (without any pathname parameter) is used to record what has been staged so far. This is the most basic form of the command. An example:"
-msgstr "När du registrerar in ditt eget arbete lagras innehållet i modifierade filer i ditt arbetskatalog tillfälligt i ett kö-område som kallas \"index\" med `git add`. En fil kan återställas, endast i indexet men inte i arbetskatalog, till det som var i den senaste incheckningen med `git restore --staged <fil>`, vilket effektivt återställer `git add` och förhindrar att ändringarna i denna fil deltar i nästa commit. Efter att ha byggt det tillstånd som ska checkas-in köats med dessa kommandon, används `git commit` (utan någon sökvägsparameter) för att registrera vad som hittills har köats. Detta är den mest grundläggande formen av kommandot. Ett exempel:"
+msgstr "När du registrerar in ditt eget arbete lagras innehållet i modifierade filer i ditt arbetskatalog tillfälligt i ett kö-område som kallas \"index\" med `git add`. En fil kan ångrar tillbaka, endast i indexet men inte i arbetskatalog, till det som var i den senaste incheckningen med `git restore --staged <fil>`, vilket effektivt ångrar `git add` och förhindrar att ändringarna i denna fil deltar i nästa incheckning. Efter att ha byggt det tillstånd som ska checkas-in köats med dessa kommandon, används `git commit` (utan någon sökvägsparameter) för att registrera vad som hittills har köats. Detta är den mest grundläggande formen av kommandot. Ett exempel:"
 
 #. type: delimited block -
 #: en/git-commit.adoc:433
@@ -42180,76 +42180,78 @@ msgstr "git-quiltimport(1)"
 #. type: Plain text
 #: en/git-quiltimport.adoc:7
 msgid "git-quiltimport - Applies a quilt patchset onto the current branch"
-msgstr ""
+msgstr "git-quiltimport - Tillämpar en quilt-patchset på den aktuella grenen"
 
 #. type: verse
 #: en/git-quiltimport.adoc:14
 #, no-wrap
 msgid "'git quiltimport' [--dry-run | -n] [--author <author>] [--patches <dir>]\n\t\t[--series <file>] [--keep-non-patch]\n"
 msgstr ""
+"'git quiltimport' [--dry-run | -n] [--author <författare>] [--patches <kat>]\n"
+"\t\t[--series <fil>] [--keep-non-patch]\n"
 
 #. type: Plain text
 #: en/git-quiltimport.adoc:21
 msgid "Applies a quilt patchset onto the current Git branch, preserving the patch boundaries, patch order, and patch descriptions present in the quilt patchset."
-msgstr ""
+msgstr "Tillämpar en quilt-patchuppsättning på den aktuella Git-grenen, och bevarar patchgränserna, patchordningen, och patchbeskrivningarna som finns i quilt-patchuppsättningen."
 
 #. type: Plain text
 #: en/git-quiltimport.adoc:27
 msgid "For each patch the code attempts to extract the author from the patch description. If that fails it falls back to the author specified with --author. If the --author flag was not given the patch description is displayed and the user is asked to interactively enter the author of the patch."
-msgstr ""
+msgstr "För varje patch försöker koden extrahera författaren från patchbeskrivningen. Om det misslyckas återgår den till författaren som angavs med --author. Om flaggan --author inte angavs visas patchbeskrivningen och användaren ombeds att interaktivt ange patchens författare."
 
 #. type: Plain text
 #: en/git-quiltimport.adoc:30
 msgid "If a subject is not found in the patch description the patch name is preserved as the 1 line subject in the Git description."
-msgstr ""
+msgstr "Om ett ämne inte hittas i patchbeskrivningen bevaras patchnamnet som det enradiga ämnet i Git-beskrivningen."
 
 #. type: Plain text
 #: en/git-quiltimport.adoc:40
 msgid "Walk through the patches in the series and warn if we cannot find all of the necessary information to commit a patch. At the time of this writing only missing author information is warned about."
-msgstr ""
+msgstr "Gå igenom patcharna i serien och varna om vi inte hittar all nödvändig information för att checka-in en patch. I skrivande stund varnas endast för saknad författarinformation."
 
 #. type: Labeled list
 #: en/git-quiltimport.adoc:41
 #, no-wrap
 msgid "--author 'Author Name <Author Email>'"
-msgstr ""
+msgstr "--author 'Författar Namn <Författar E-post>'"
 
 #. type: Plain text
 #: en/git-quiltimport.adoc:44
 msgid "The author name and email address to use when no author information can be found in the patch description."
-msgstr ""
+msgstr "Författarnamnet och e-postadressen som ska användas när ingen författarinformation finns i patchbeskrivningen."
 
 #. type: Labeled list
 #: en/git-quiltimport.adoc:45
 #, no-wrap
 msgid "--patches <dir>"
-msgstr ""
+msgstr "--patches <kat>"
 
 #. type: Plain text
 #: en/git-quiltimport.adoc:47
 msgid "The directory to find the quilt patches."
-msgstr ""
+msgstr "Katalogen för att hitta quilt-patcharna."
 
 #. type: Plain text
 #: en/git-quiltimport.adoc:51
 msgid "The default for the patch directory is 'patches' or the value of the `$QUILT_PATCHES` environment variable."
-msgstr ""
+msgstr "Standardvärdet för patch-katalogen är 'patches' eller värdet för miljövariabeln `$QUILT_PATCHES`."
 
 #. type: Labeled list
 #: en/git-quiltimport.adoc:52
 #, no-wrap
 msgid "--series <file>"
-msgstr ""
+msgstr "--series <fil>"
 
 #. type: Plain text
 #: en/git-quiltimport.adoc:54
 msgid "The quilt series file."
-msgstr ""
+msgstr "Filen för quiltserien."
 
 #. type: Plain text
 #: en/git-quiltimport.adoc:58
 msgid "The default for the series file is <patches>/series or the value of the `$QUILT_SERIES` environment variable."
-msgstr ""
+msgstr "Standardvärdet för seriefilen är <patches>/series eller värdet för miljövariabeln `$QUILT_SERIES`."
 
 #. type: Title =
 #: en/git-range-diff.adoc:2
@@ -45384,33 +45386,33 @@ msgstr "git-remote-ext(1)"
 #. type: Plain text
 #: en/git-remote-ext.adoc:7
 msgid "git-remote-ext - Bridge smart transport to external command."
-msgstr ""
+msgstr "git-remote-ext - Brygga smart transport till externt kommando."
 
 #. type: verse
 #: en/git-remote-ext.adoc:12
 #, no-wrap
 msgid "git remote add <nick> \"ext::<command>[ <arguments>...]\"\n"
-msgstr ""
+msgstr "git remote add <smek> \"ext::<kommando>[ <argument>...]\"\n"
 
 #. type: Plain text
 #: en/git-remote-ext.adoc:17
 msgid "This remote helper uses the specified '<command>' to connect to a remote Git server."
-msgstr ""
+msgstr "Denna fjärrhjälpare använder det angivna '<kommandot>' för att ansluta till en fjärransluten Git-server."
 
 #. type: Plain text
 #: en/git-remote-ext.adoc:23
 msgid "Data written to stdin of the specified '<command>' is assumed to be sent to a git:// server, git-upload-pack, git-receive-pack or git-upload-archive (depending on situation), and data read from stdout of <command> is assumed to be received from the same service."
-msgstr ""
+msgstr "Data som skrivs till stdin för det angivna '<kommando>' antas skickas till en git://-server, git-upload-pack, git-receive-pack eller git-upload-archive (beroende på situationen), och data som läses från stdout för <kommando> antas tas emot från samma tjänst."
 
 #. type: Plain text
 #: en/git-remote-ext.adoc:25
 msgid "Command and arguments are separated by an unescaped space."
-msgstr ""
+msgstr "Kommando och argument separeras med ett icke-escapat mellanslag."
 
 #. type: Plain text
 #: en/git-remote-ext.adoc:27
 msgid "The following sequences have a special meaning:"
-msgstr ""
+msgstr "Följande sekvenser har en speciell betydelse:"
 
 #. type: Labeled list
 #: en/git-remote-ext.adoc:28
@@ -45421,7 +45423,7 @@ msgstr "'% '"
 #. type: Plain text
 #: en/git-remote-ext.adoc:30
 msgid "Literal space in command or argument."
-msgstr ""
+msgstr "Bokstavligt mellanslag i kommando eller argument."
 
 #. type: Labeled list
 #: en/git-remote-ext.adoc:31
@@ -45432,7 +45434,7 @@ msgstr "'%%'"
 #. type: Plain text
 #: en/git-remote-ext.adoc:33
 msgid "Literal percent sign."
-msgstr ""
+msgstr "Procenttecken."
 
 #. type: Labeled list
 #: en/git-remote-ext.adoc:34
@@ -45444,7 +45446,7 @@ msgstr "'%s'"
 #. type: Plain text
 #: en/git-remote-ext.adoc:37
 msgid "Replaced with name (receive-pack, upload-pack, or upload-archive) of the service Git wants to invoke."
-msgstr ""
+msgstr "Ersatt med namnet (receive-pack, upload-pack eller upload-archive) på den tjänst som Git vill anropa."
 
 #. type: Labeled list
 #: en/git-remote-ext.adoc:38
@@ -45456,34 +45458,34 @@ msgstr "'%S'"
 #. type: Plain text
 #: en/git-remote-ext.adoc:42
 msgid "Replaced with long name (git-receive-pack, git-upload-pack, or git-upload-archive) of the service Git wants to invoke."
-msgstr ""
+msgstr "Ersatt med det långa namnet (git-receive-pack, git-upload-pack eller git-upload-archive) på tjänsten som Git vill anropa."
 
 #. type: Labeled list
 #: en/git-remote-ext.adoc:43
 #, no-wrap
 msgid "'%G' (must be the first characters in an argument)"
-msgstr ""
+msgstr "'%G' (måste vara de första tecknen i ett argument)"
 
 #. type: Plain text
 #: en/git-remote-ext.adoc:49
 msgid "This argument will not be passed to '<command>'. Instead, it will cause the helper to start by sending git:// service requests to the remote side with the service field set to an appropriate value and the repository field set to the rest of the argument. Default is not to send such a request."
-msgstr ""
+msgstr "Detta argument kommer inte att skickas till '<kommando>'. Istället kommer det att få hjälpen att börja med att skicka git://-tjänstförfrågningar till fjärrsidan med servicefältet inställt på ett lämpligt värde och repo-fältet inställt på resten av argumentet. Standardinställningen är att inte skicka en sådan begäran."
 
 #. type: Plain text
 #: en/git-remote-ext.adoc:52
 msgid "This is useful if the remote side is git:// server accessed over some tunnel."
-msgstr ""
+msgstr "Detta är användbart om fjärrsidan är git://-servern som nås via någon tunnel."
 
 #. type: Labeled list
 #: en/git-remote-ext.adoc:53
 #, no-wrap
 msgid "'%V' (must be first characters in argument)"
-msgstr ""
+msgstr "'%V' (måste vara de första tecknen i argumentet)"
 
 #. type: Plain text
 #: en/git-remote-ext.adoc:57
 msgid "This argument will not be passed to '<command>'. Instead it sets the vhost field in the git:// service request (to the rest of the argument). Default is not to send vhost in such request (if sent)."
-msgstr ""
+msgstr "Detta argument kommer inte att skickas till '<kommando>'. Istället sätter det vhost-fältet i git://-tjänstförfrågan (till resten av argumentet). Standardinställningen är att inte skicka vhost i en sådan förfrågan (om den skickas)."
 
 #. type: Title -
 #: en/git-remote-ext.adoc:59 en/git-remote-fd.adoc:32
@@ -45507,7 +45509,7 @@ msgstr "Om angivet skrivs felsökningsinformation om olika läsningar/skrivninga
 #: en/git-remote-ext.adoc:65
 #, no-wrap
 msgid "ENVIRONMENT VARIABLES PASSED TO COMMAND"
-msgstr ""
+msgstr "MILJÖVARIABLER SKICKAS TILL KOMMANDO"
 
 #. type: Labeled list
 #: en/git-remote-ext.adoc:67
@@ -45519,7 +45521,7 @@ msgstr "GIT_EXT_SERVICE"
 #. type: Plain text
 #: en/git-remote-ext.adoc:70
 msgid "Set to long name (git-upload-pack, etc...) of service helper needs to invoke."
-msgstr ""
+msgstr "Sätt till långt namn (git-upload-pack, etc...) på den tjänst-hjälpare som behöver anropas."
 
 #. type: Labeled list
 #: en/git-remote-ext.adoc:71
@@ -45531,78 +45533,78 @@ msgstr "GIT_EXT_SERVICE_NOPREFIX"
 #. type: Plain text
 #: en/git-remote-ext.adoc:74
 msgid "Set to long name (upload-pack, etc...) of service helper needs to invoke."
-msgstr ""
+msgstr "Ställ in det långa namnet (upload-pack, etc...) på den tjänst-hjälpare som behöver anropas."
 
 #. type: Plain text
 #: en/git-remote-ext.adoc:82
 msgid "This remote helper is transparently used by Git when you use commands such as \"git fetch <URL>\", \"git clone <URL>\", , \"git push <URL>\" or \"git remote add <nick> <URL>\", where <URL> begins with `ext::`. Examples:"
-msgstr ""
+msgstr "Denna fjärrhjälp används transparent av Git när du använder kommandon som \"git fetch <URL>\", \"git clone <URL>\", , \"git push <URL>\" eller \"git remote add <nick> <URL>\", där <URL> börjar med `ext::`. Exempel:"
 
 #. type: Labeled list
 #: en/git-remote-ext.adoc:83
 #, no-wrap
 msgid "\"ext::ssh -i /home/foo/.ssh/somekey user&#64;host.example %S 'foo/repo'\""
-msgstr ""
+msgstr "\"ext::ssh -i /home/foo/.ssh/någonnyckel user&#64;host.exampel %S 'foo/repo'\""
 
 #. type: Plain text
 #: en/git-remote-ext.adoc:87
 msgid "Like host.example:foo/repo, but use /home/foo/.ssh/somekey as keypair and user as the user on the remote side. This avoids the need to edit .ssh/config."
-msgstr ""
+msgstr "Som host.example:foo/repo, men använd /home/foo/.ssh/någonnyckel som nyckelpar och user som användare på fjärrsidan. Detta undviker behovet av att redigera .ssh/config."
 
 #. type: Labeled list
 #: en/git-remote-ext.adoc:88
 #, no-wrap
 msgid "\"ext::socat -t3600 - ABSTRACT-CONNECT:/git-server %G/somerepo\""
-msgstr ""
+msgstr "\"ext::socat -t3600 - ABSTRACT-CONNECT:/git-server %G/somerepo\""
 
 #. type: Plain text
 #: en/git-remote-ext.adoc:91
 msgid "Represents repository with path /somerepo accessible over git protocol at the abstract namespace address /git-server."
-msgstr ""
+msgstr "Representerar repot med sökvägen /somerepo åtkomlig via git-protokollet vid den abstrakta namnrymdsadressen /git-server."
 
 #. type: Labeled list
 #: en/git-remote-ext.adoc:92
 #, no-wrap
 msgid "\"ext::git-server-alias foo %G/repo\""
-msgstr ""
+msgstr "\"ext::git-server-alias foo %G/repo\""
 
 #. type: Plain text
 #: en/git-remote-ext.adoc:98
 msgid "Represents a repository with path /repo accessed using the helper program \"git-server-alias foo\". The path to the repository and type of request are not passed on the command line but as part of the protocol stream, as usual with git:// protocol."
-msgstr ""
+msgstr "Representerar ett repo med sökvägen /repo som nås med hjälpprogrammet \"git-server-alias foo\". Sökvägen till repository och typen av begäran skickas inte på kommandoraden utan som en del av protokollströmmen, som vanligt med git://-protokollet."
 
 #. type: Labeled list
 #: en/git-remote-ext.adoc:99
 #, no-wrap
 msgid "\"ext::git-server-alias foo %G/repo %Vfoo\""
-msgstr ""
+msgstr "\"ext::git-server-alias foo %G/repo %Vfoo\""
 
 #. type: Plain text
 #: en/git-remote-ext.adoc:105
 msgid "Represents a repository with path /repo accessed using the helper program \"git-server-alias foo\". The hostname for the remote server passed in the protocol stream will be \"foo\" (this allows multiple virtual Git servers to share a link-level address)."
-msgstr ""
+msgstr "Representerar ett repo med sökvägen /repo som nås med hjälp av hjälpprogrammet \"git-server-alias foo\". Värdnamnet för fjärrservern som skickas i protokollströmmen blir \"foo\" (detta tillåter flera virtuella Git-servrar att dela en länknivåadress)."
 
 #. type: Labeled list
 #: en/git-remote-ext.adoc:106
 #, no-wrap
 msgid "\"ext::git-server-alias foo %G/repo% with% spaces %Vfoo\""
-msgstr ""
+msgstr "\"ext::git-server-alias foo %G/repo% with% spaces %Vfoo\""
 
 #. type: Plain text
 #: en/git-remote-ext.adoc:112
 msgid "Represents a repository with path `/repo with spaces` accessed using the helper program \"git-server-alias foo\". The hostname for the remote server passed in the protocol stream will be \"foo\" (this allows multiple virtual Git servers to share a link-level address)."
-msgstr ""
+msgstr "Representerar ett repo med sökvägen `/repo with spaces` som nås med hjälp av hjälpprogrammet \"git-server-alias foo\". Värdnamnet för fjärrservern som skickas i protokollströmmen kommer att vara \"foo\" (detta tillåter flera virtuella Git-servrar att dela en länknivåadress)."
 
 #. type: Labeled list
 #: en/git-remote-ext.adoc:113
 #, no-wrap
 msgid "\"ext::git-ssl foo.example /bar\""
-msgstr ""
+msgstr "\"ext::git-ssl foo.example /bar\""
 
 #. type: Plain text
 #: en/git-remote-ext.adoc:118
 msgid "Represents a repository accessed using the helper program \"git-ssl foo.example /bar\". The type of request can be determined by the helper using environment variables (see above)."
-msgstr ""
+msgstr "Representerar ett repo som nås med hjälpprogrammet \"git-ssl foo.example /bar\". Typen av begäran kan bestämmas av hjälpprogrammet med hjälp av miljövariabler (se ovan)."
 
 #. type: Title =
 #: en/git-remote-fd.adoc:2
@@ -45685,73 +45687,86 @@ msgstr "git-remote(1)"
 #. type: Plain text
 #: en/git-remote.adoc:7
 msgid "git-remote - Manage set of tracked repositories"
-msgstr ""
+msgstr "git-remote - Hantera en uppsättning spårade repo"
 
 #. type: synopsis
 #: en/git-remote.adoc:25
 #, no-wrap
 msgid "git remote [-v | --verbose]\ngit remote add [-t <branch>] [-m <master>] [-f] [--[no-]tags] [--mirror=(fetch|push)] <name> <URL>\ngit remote rename [--[no-]progress] <old> <new>\ngit remote remove <name>\ngit remote set-head <name> (-a | --auto | -d | --delete | <branch>)\ngit remote set-branches [--add] <name> <branch>...\ngit remote get-url [--push] [--all] <name>\ngit remote set-url [--push] <name> <newurl> [<oldurl>]\ngit remote set-url --add [--push] <name> <newurl>\ngit remote set-url --delete [--push] <name> <URL>\ngit remote [-v | --verbose] show [-n] <name>...\ngit remote prune [-n | --dry-run] <name>...\ngit remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]\n"
 msgstr ""
+"git remote [-v | --verbose]\n"
+"git remote add [-t <gren>] [-m <master>] [-f] [--[no-]tags] [--mirror=(fetch|push)] <namn> <URL>\n"
+"git remote rename [--[no-]progress] <gammal> <ny>\n"
+"git remote remove <name>\n"
+"git remote set-head <name> (-a | --auto | -d | --delete | <gren>)\n"
+"git remote set-branches [--add] <namn> <gren>...\n"
+"git remote get-url [--push] [--all] <namn>\n"
+"git remote set-url [--push] <namn> <nyurl> [<gammalurl>]\n"
+"git remote set-url --add [--push] <namn> <nyurl>\n"
+"git remote set-url --delete [--push] <namn> <URL>\n"
+"git remote [-v | --verbose] show [-n] <namn>...\n"
+"git remote prune [-n | --dry-run] <namn>...\n"
+"git remote [-v | --verbose] update [-p | --prune] [(<grupp> | <fjärr>)...]\n"
 
 #. type: Plain text
 #: en/git-remote.adoc:30
 msgid "Manage the set of repositories (\"remotes\") whose branches you track."
-msgstr ""
+msgstr "Hantera uppsättningen databaser (\"fjärrar\") vars grenar du spårar."
 
 #. type: Plain text
 #: en/git-remote.adoc:41
 msgid "Be a little more verbose and show remote url after name. For promisor remotes, also show which filters (`blob:none` etc.) are configured. NOTE: This must be placed between `remote` and subcommand."
-msgstr ""
+msgstr "Var lite mer utförlig och visa fjärrens URL efter namnet. För promisor-fjärrar, visa även vilka filter (`blob:none` etc.) som är konfigurerade. OBS: Detta måste placeras mellan `remote` och underkommandot."
 
 #. type: Plain text
 #: en/git-remote.adoc:48
 msgid "With no arguments, show a list of existing remotes. Several subcommands are available to perform operations on the remotes."
-msgstr ""
+msgstr "Utan argument visas en lista över befintliga fjärrar. Flera underkommandon är tillgängliga för att utföra åtgärder på fjärrarna."
 
 #. type: Plain text
 #: en/git-remote.adoc:54
 msgid "Add a remote named _<name>_ for the repository at _<URL>_. The command `git fetch <name>` can then be used to create and update remote-tracking branches `<name>/<branch>`."
-msgstr ""
+msgstr "Lägg till en fjärr med namnet _<namn>_ för arkivet på _<URL>_. Kommandot `git fetch <namn>` kan sedan användas för att skapa och uppdatera fjärrspårningsgrenar `<namn>/<gren>`."
 
 #. type: Plain text
 #: en/git-remote.adoc:57
 msgid "With `-f` option, `git fetch <name>` is run immediately after the remote information is set up."
-msgstr ""
+msgstr "Med alternativet `-f` körs `git fetch <namn>` omedelbart efter att fjärrinformationen har konfigurerats."
 
 #. type: Plain text
 #: en/git-remote.adoc:60
 msgid "With `--tags` option, `git fetch <name>` imports every tag from the remote repository."
-msgstr ""
+msgstr "Med alternativet `--tags` importerar `git fetch <namn>` alla taggar från fjärr-repot."
 
 #. type: Plain text
 #: en/git-remote.adoc:63
 msgid "With `--no-tags` option, `git fetch <name>` does not import tags from the remote repository."
-msgstr ""
+msgstr "Med alternativet `--no-tags` importerar `git fetch <namn>` inte taggar från fjärr-repot."
 
 #. type: Plain text
 #: en/git-remote.adoc:66
 msgid "By default, only tags on fetched branches are imported (see linkgit:git-fetch[1])."
-msgstr ""
+msgstr "Som standard, importeras endast taggar på hämtade grenar (se linkgit:git-fetch[1])."
 
 #. type: Plain text
 #: en/git-remote.adoc:72
 msgid "With `-t <branch>` option, instead of the default glob refspec for the remote to track all branches under the `refs/remotes/<name>/` namespace, a refspec to track only _<branch>_ is created. You can give more than one `-t <branch>` to track multiple branches without grabbing all branches."
-msgstr ""
+msgstr "Med alternativet `-t <gren>` skapas en refspec för att endast spåra _<gren>_, istället för standard glob refspec för att fjärren ska spåra alla grenar under namnrymden `refs/remotes/<name>/`. Du kan ange mer än en `-t <gren>` för att spåra flera grenar utan att hämta alla grenar."
 
 #. type: Plain text
 #: en/git-remote.adoc:75
 msgid "With `-m <master>` option, a symbolic-ref `refs/remotes/<name>/HEAD` is set up to point at remote's _<master>_ branch. See also the set-head command."
-msgstr ""
+msgstr "Med alternativet `-m <master>` konfigureras en symbolisk referens `refs/remotes/<namn>/HEAD` för att peka mot remotes gren _<master>_. Se även kommandot set-head."
 
 #. type: Plain text
 #: en/git-remote.adoc:81
 msgid "When a fetch mirror is created with `--mirror=fetch`, the refs will not be stored in the `refs/remotes/` namespace, but rather everything in `refs/` on the remote will be directly mirrored into `refs/` in the local repository. This option only makes sense in bare repositories, because a fetch would overwrite any local commits."
-msgstr ""
+msgstr "När en fetch-spegel skapas med `--mirror=fetch`, kommer inte referenserna att lagras i namnrymden `refs/remotes/`, utan allt i `refs/` på fjärren kommer att speglas direkt till `refs/` i det lokala arkivet. Det här alternativet är bara meningsfullt i bara arkiv, eftersom en fetch skulle skriva över alla lokala incheckningar."
 
 #. type: Plain text
 #: en/git-remote.adoc:84
 msgid "When a push mirror is created with `--mirror=push`, then `git push` will always behave as if `--mirror` was passed."
-msgstr ""
+msgstr "När en push-spegling skapas med `--mirror=push`, kommer `git push` alltid att bete sig som om `--mirror` hade skickats."
 
 #. type: Labeled list
 #: en/git-remote.adoc:85
@@ -45763,12 +45778,12 @@ msgstr "`rename`"
 #. type: Plain text
 #: en/git-remote.adoc:89
 msgid "Rename the remote named _<old>_ to _<new>_. All remote-tracking branches and configuration settings for the remote are updated."
-msgstr ""
+msgstr "Byt namn på fjärren med namnet _<gammal>_ till _<ny>_. Alla grenar och konfigurationsinställningar för fjärren uppdateras."
 
 #. type: Plain text
 #: en/git-remote.adoc:93
 msgid "In case _<old>_ and _<new>_ are the same, and _<old>_ is a file under `$GIT_DIR/remotes` or `$GIT_DIR/branches`, the remote is converted to the configuration file format."
-msgstr ""
+msgstr "Om _<gammal>_ och _<ny>_ är desamma, och _<gammal>_ är en fil under `$GIT_DIR/remotes` eller `$GIT_DIR/branches`, konverteras fjärren till konfigurationsfilformatet."
 
 #. type: Labeled list
 #: en/git-remote.adoc:95
@@ -45780,7 +45795,7 @@ msgstr "`rm`"
 #. type: Plain text
 #: en/git-remote.adoc:99
 msgid "Remove the remote named _<name>_. All remote-tracking branches and configuration settings for the remote are removed."
-msgstr ""
+msgstr "Ta bort fjärren med namnet _<namn>_. Alla grenar och konfigurationsinställningar för fjärrspårning tas bort."
 
 #. type: Labeled list
 #: en/git-remote.adoc:100
@@ -45792,22 +45807,22 @@ msgstr "`set-head`"
 #. type: Plain text
 #: en/git-remote.adoc:109
 msgid "Set or delete the default branch (i.e. the target of the symbolic-ref `refs/remotes/<name>/HEAD`) for the named remote. Having a default branch for a remote is not required, but allows the name of the remote to be specified in lieu of a specific branch. For example, if the default branch for `origin` is set to `master`, then `origin` may be specified wherever you would normally specify `origin/master`."
-msgstr ""
+msgstr "Ställ in eller ta bort standardgrenen (dvs. målet för symbolreferensen `refs/remotes/<namn>/HEAD`) för den namngivna fjärren. Att ha en standardgren för en fjärr är inte nödvändigt, men det gör att namnet på fjärren kan anges istället för en specifik gren. Om till exempel standardgrenen för `origin` är satt till `master`, kan `origin` anges där du normalt skulle ange `origin/master`."
 
 #. type: Plain text
 #: en/git-remote.adoc:111
 msgid "With `-d` or `--delete`, the symbolic ref `refs/remotes/<name>/HEAD` is deleted."
-msgstr ""
+msgstr "Med `-d` eller `--delete` tas den symboliska referensen `refs/remotes/<namn>/HEAD` bort."
 
 #. type: Plain text
 #: en/git-remote.adoc:118
 msgid "With `-a` or `--auto`, the remote is queried to determine its `HEAD`, then the symbolic-ref `refs/remotes/<name>/HEAD` is set to the same branch. e.g., if the remote `HEAD` is pointed at `next`, `git remote set-head origin -a` will set the symbolic-ref `refs/remotes/origin/HEAD` to `refs/remotes/origin/next`. This will only work if `refs/remotes/origin/next` already exists; if not it must be fetched first."
-msgstr ""
+msgstr "Med `-a` eller `--auto` frågas fjärren för att bestämma dess `HEAD`, sedan sätts den symboliska referensen `refs/remotes/<namn>/HEAD` till samma gren. t.ex., om fjärren `HEAD` pekar mot `next`, kommer `git remote set-head origin -a` att sätta den symboliska referensen `refs/remotes/origin/HEAD` till `refs/remotes/origin/next`. Detta fungerar bara om `refs/remotes/origin/next` redan finns; annars måste den hämtas först."
 
 #. type: Plain text
 #: en/git-remote.adoc:123
 msgid "Use _<branch>_ to set the symbolic-ref `refs/remotes/<name>/HEAD` explicitly. e.g., `git remote set-head origin master` will set the symbolic-ref `refs/remotes/origin/HEAD` to `refs/remotes/origin/master`. This will only work if `refs/remotes/origin/master` already exists; if not it must be fetched first."
-msgstr ""
+msgstr "Använd _<gren>_ för att explicit ställa in den symboliska referensen `refs/remotes/<namn>/HEAD`. t.ex. `git remote set-head origin master` kommer att ställa in den symboliska referensen `refs/remotes/origin/HEAD` till `refs/remotes/origin/master`. Detta fungerar bara om `refs/remotes/origin/master` redan finns; annars måste den hämtas först."
 
 #. type: Labeled list
 #: en/git-remote.adoc:125
@@ -45819,17 +45834,17 @@ msgstr "`set-branches`"
 #. type: Plain text
 #: en/git-remote.adoc:130
 msgid "Change the list of branches tracked by the named remote. This can be used to track a subset of the available remote branches after the initial setup for a remote."
-msgstr ""
+msgstr "Ändra listan över grenar som spåras av den namngivna fjärren. Detta kan användas för att spåra en delmängd av de tillgängliga fjärrgrenarna efter den initiala konfigurationen för en fjärr."
 
 #. type: Plain text
 #: en/git-remote.adoc:133
 msgid "The named branches will be interpreted as if specified with the `-t` option on the `git remote add` command line."
-msgstr ""
+msgstr "De namngivna grenarna kommer att tolkas som om de angetts med alternativet `-t` på kommandoraden `git remote add`."
 
 #. type: Plain text
 #: en/git-remote.adoc:136
 msgid "With `--add`, instead of replacing the list of currently tracked branches, adds to that list."
-msgstr ""
+msgstr "Med `--add`, istället för att ersätta listan över grenar som för närvarande spåras, läggs till i den listan."
 
 #. type: Labeled list
 #: en/git-remote.adoc:137
@@ -45841,17 +45856,17 @@ msgstr "`get-url`"
 #. type: Plain text
 #: en/git-remote.adoc:141
 msgid "Retrieves the URLs for a remote. Configurations for `insteadOf` and `pushInsteadOf` are expanded here. By default, only the first URL is listed."
-msgstr ""
+msgstr "Hämtar URL:erna för en fjärr. Konfigurationer för `insteadOf` och `pushInsteadOf` expanderas här. Som standard listas endast den första URL:en."
 
 #. type: Plain text
 #: en/git-remote.adoc:143
 msgid "With `--push`, push URLs are queried rather than fetch URLs."
-msgstr ""
+msgstr "Med `--push` efterfrågas push-URL:er snarare än hämta-URL:er."
 
 #. type: Plain text
 #: en/git-remote.adoc:145
 msgid "With `--all`, all URLs for the remote will be listed."
-msgstr ""
+msgstr "Med `--all` listas alla URL:er för fjärren."
 
 #. type: Labeled list
 #: en/git-remote.adoc:146
@@ -45863,52 +45878,52 @@ msgstr "`set-url`"
 #. type: Plain text
 #: en/git-remote.adoc:151
 msgid "Change URLs for the remote. Sets first URL for remote _<name>_ that matches regex _<oldurl>_ (first URL if no _<oldurl>_ is given) to _<newurl>_. If _<oldurl>_ doesn't match any URL, an error occurs and nothing is changed."
-msgstr ""
+msgstr "Ändra URL:er för fjärren. Ställer in den första URL:en för fjärren _<namn>_ som matchar regex _<gammal-url>_ (första URL:en om ingen _<gammal-url>_ anges) till _<ny-url>_. Om _<gammal-url>_ inte matchar någon URL uppstår ett fel och ingenting ändras."
 
 #. type: Plain text
 #: en/git-remote.adoc:153
 msgid "With `--push`, push URLs are manipulated instead of fetch URLs."
-msgstr ""
+msgstr "Med `--push` manipuleras push-URL:er istället för hämt-URL:er."
 
 #. type: Plain text
 #: en/git-remote.adoc:155
 msgid "With `--add`, instead of changing existing URLs, new URL is added."
-msgstr ""
+msgstr "Med `--add` läggs en ny URL till istället för att ändra befintliga URL:er."
 
 #. type: Plain text
 #: en/git-remote.adoc:159
 msgid "With `--delete`, instead of changing existing URLs, all URLs matching regex _<URL>_ are deleted for remote _<name>_. Trying to delete all non-push URLs is an error."
-msgstr ""
+msgstr "Med `--delete`, istället för att ändra befintliga URL:er, raderas alla URL:er som matchar regex _<URL>_ för fjärranslutna _<namn>_. Att försöka ta bort alla icke-push-URL:er är ett fel."
 
 #. type: Plain text
 #: en/git-remote.adoc:166
 msgid "Note that the push URL and the fetch URL, even though they can be set differently, must still refer to the same place. What you pushed to the push URL should be what you would see if you immediately fetched from the fetch URL. If you are trying to fetch from one place (e.g. your upstream) and push to another (e.g. your publishing repository), use two separate remotes."
-msgstr ""
+msgstr "Observera att push-URL:en och hämt-URL:en, även om de kan ställas in på olika sätt, fortfarande måste referera till samma plats. Det du skickade till push-URL:en ska vara det du skulle se om du direkt hämtade från hämt-URL:en. Om du försöker hämta från en plats (t.ex. din uppströms) och skicka till en annan (t.ex. ditt publiceringsarkiv), använd två separata fjärrar."
 
 #. type: Plain text
 #: en/git-remote.adoc:171
 msgid "Give some information about the remote _<name>_."
-msgstr ""
+msgstr "Ge lite information om fjärren _<namn>_."
 
 #. type: Plain text
 #: en/git-remote.adoc:174
 msgid "With `-n` option, the remote heads are not queried first with `git ls-remote <name>`; cached information is used instead."
-msgstr ""
+msgstr "Med alternativet `-n` frågas inte fjärr kommandon först med `git ls-remote <namn>`; cachad information används istället."
 
 #. type: Plain text
 #: en/git-remote.adoc:182
 msgid "Delete stale references associated with _<name>_. By default, stale remote-tracking branches under _<name>_ are deleted, but depending on global configuration and the configuration of the remote we might even prune local tags that haven't been pushed there. Equivalent to `git fetch --prune <name>`, except that no new references will be fetched."
-msgstr ""
+msgstr "Ta bort inaktuella referenser associerade med _<namn>_. Som standard tas inaktuella fjärrspårningsgrenar under _<namn>_ bort, men beroende på global konfiguration och fjärrkontrollens konfiguration kan vi till och med rensa bort lokala taggar som inte har skickats dit. Motsvarande `git fetch --prune <namn>`, förutom att inga nya referenser kommer att hämtas."
 
 #. type: Plain text
 #: en/git-remote.adoc:185
 msgid "See the PRUNING section of linkgit:git-fetch[1] for what it'll prune depending on various configuration."
-msgstr ""
+msgstr "Se avsnittet BESKÄRNING i linkgit:git-fetch[1] för vad som kommer att beskäras beroende på olika konfigurationer."
 
 #. type: Plain text
 #: en/git-remote.adoc:188
 msgid "With `--dry-run` option, report what branches would be pruned, but do not actually prune them."
-msgstr ""
+msgstr "Med alternativet `--dry-run`, rapportera vilka grenar som skulle beskäras, men beskär dem inte i verkligheten."
 
 #. type: Labeled list
 #: en/git-remote.adoc:189
@@ -45920,54 +45935,82 @@ msgstr "`update`"
 #. type: Plain text
 #: en/git-remote.adoc:197
 msgid "Fetch updates for remotes or remote groups in the repository as defined by `remotes.<group>`. If neither group nor remote is specified on the command line, the configuration parameter `remotes.default` will be used; if `remotes.default` is not defined, all remotes which do not have the configuration parameter `remote.<name>.skipDefaultUpdate` set to `true` will be updated. (See linkgit:git-config[1])."
-msgstr ""
+msgstr "Hämta uppdateringar för fjärrer eller fjärrgrupper i arkivet enligt definitionen i `remotes.<group>`. Om varken group eller remote anges på kommandoraden kommer konfigurationsparametern `remotes.default` att användas; om `remotes.default` inte är definierad kommer alla fjärrer som inte har konfigurationsparametern `remote.<name>.skipDefaultUpdate` inställd på `true` att uppdateras. (Se linkgit:git-config[1])."
 
 #. type: Plain text
 #: en/git-remote.adoc:199
 msgid "With `--prune` option, run pruning against all the remotes that are updated."
-msgstr ""
+msgstr "Med alternativet `--prune`, kör rensning mot alla fjärrar som är uppdaterade."
 
 #. type: Plain text
 #: en/git-remote.adoc:207
 msgid "The remote configuration is achieved using the `remote.origin.url` and `remote.origin.fetch` configuration variables. (See linkgit:git-config[1])."
-msgstr ""
+msgstr "Fjärrkonfigurationen uppnås med hjälp av konfigurationsvariablerna `remote.origin.url` och `remote.origin.fetch`. (Se linkgit:git-config[1])."
 
 #. type: Plain text
 #: en/git-remote.adoc:212
 msgid "On success, the exit status is `0`."
-msgstr ""
+msgstr "Vid lyckat slutförande är avslutningsstatusen `0`."
 
 #. type: Plain text
 #: en/git-remote.adoc:216
 msgid "When subcommands such as `add`, `rename`, and `remove` can't find the remote in question, the exit status is `2`. When the remote already exists, the exit status is `3`."
-msgstr ""
+msgstr "När underkommandon som `add`, `rename` och `remove` inte hittar fjärren i fråga är avslutningsstatusen `2`. När fjärr redan finns är avslutningsstatusen `3`."
 
 #. type: Plain text
 #: en/git-remote.adoc:218
 msgid "On any other error, the exit status may be any other non-zero value."
-msgstr ""
+msgstr "Vid alla andra fel, kan utgångsstatusen vara vilket annat värde som helst som inte är noll."
 
 #. type: Plain text
 #: en/git-remote.adoc:223
 msgid "Add a new remote, fetch, and check out a branch from it"
-msgstr ""
+msgstr "Lägg till en ny fjärr, hämta och checka ut en gren från den"
 
 #. type: delimited block -
 #: en/git-remote.adoc:248
 #, no-wrap
 msgid "$ git remote\norigin\n$ git branch -r\n  origin/HEAD -> origin/master\n  origin/master\n$ git remote add staging git://git.kernel.org/.../gregkh/staging.git\n$ git remote\norigin\nstaging\n$ git fetch staging\n...\nFrom git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging\n * [new branch]      master     -> staging/master\n * [new branch]      staging-linus -> staging/staging-linus\n * [new branch]      staging-next -> staging/staging-next\n$ git branch -r\n  origin/HEAD -> origin/master\n  origin/master\n  staging/master\n  staging/staging-linus\n  staging/staging-next\n$ git switch -c staging staging/master\n...\n"
 msgstr ""
+"$ git remote\n"
+"origin\n"
+"$ git branch -r\n"
+"  origin/HEAD -> origin/master\n"
+"  origin/master\n"
+"$ git remote add staging git://git.kernel.org/.../gregkh/staging.git\n"
+"$ git remote\n"
+"origin\n"
+"staging\n"
+"$ git fetch staging\n"
+"...\n"
+"From git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging\n"
+" * [new branch]      master     -> staging/master\n"
+" * [new branch]      staging-linus -> staging/staging-linus\n"
+" * [new branch]      staging-next -> staging/staging-next\n"
+"$ git branch -r\n"
+"  origin/HEAD -> origin/master\n"
+"  origin/master\n"
+"  staging/master\n"
+"  staging/staging-linus\n"
+"  staging/staging-next\n"
+"$ git switch -c staging staging/master\n"
+"...\n"
 
 #. type: Plain text
 #: en/git-remote.adoc:251
 msgid "Imitate `git clone` but track only selected branches"
-msgstr ""
+msgstr "Imitera `git clone` men spåra endast valda grenar"
 
 #. type: delimited block -
 #: en/git-remote.adoc:258
 #, no-wrap
 msgid "$ mkdir project.git\n$ cd project.git\n$ git init\n$ git remote add -f -t master -m master origin git://example.com/git.git/\n$ git merge origin\n"
 msgstr ""
+"$ mkdir project.git\n"
+"$ cd project.git\n"
+"$ git init\n"
+"$ git remote add -f -t master -m master origin git://example.com/git.git/\n"
+"$ git merge origin\n"
 
 #. type: Plain text
 #: en/git-remote.adoc:266
@@ -46989,7 +47032,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-reset.adoc:103 en/git-restore.adoc:30 en/git-revert.adoc:33
 msgid "See \"Reset, restore and revert\" in linkgit:git[1] for the differences between the three commands."
-msgstr ""
+msgstr "Se \"Nollställ, återställ och ångra\" i linkgit:git[1] för skillnaderna mellan de tre kommandona."
 
 #. type: Plain text
 #: en/git-reset.adoc:111
@@ -47653,33 +47696,35 @@ msgstr "git-revert(1)"
 #. type: Plain text
 #: en/git-revert.adoc:7
 msgid "git-revert - Revert some existing commits"
-msgstr ""
+msgstr "git-revert - Ångra vissa befintliga incheckningar"
 
 #. type: verse
 #: en/git-revert.adoc:13
 #, no-wrap
 msgid "'git revert' [--[no-]edit] [-n] [-m <parent-number>] [-s] [-S[<keyid>]] <commit>...\n'git revert' (--continue | --skip | --abort | --quit)\n"
 msgstr ""
+"'git revert' [--[no-]edit] [-n] [-m <föräldranummer>] [-s] [-S[<nyckelid>]] <incheckning>...\n"
+"'git revert' (--continue | --skip | --abort | --quit)\n"
 
 #. type: Plain text
 #: en/git-revert.adoc:21
 msgid "Given one or more existing commits, revert the changes that the related patches introduce, and record some new commits that record them. This requires your working tree to be clean (no modifications from the HEAD commit)."
-msgstr ""
+msgstr "Givet en eller flera befintliga incheckningar, ångra de ändringar som de relaterade patcharna introducerar och registrera några nya incheckning som registrerar dem. Detta kräver att din arbetskatalog är rent (inga modifieringar från HEAD-incheckningen)."
 
 #. type: Plain text
 #: en/git-revert.adoc:30
 msgid "Note: 'git revert' is used to record some new commits to reverse the effect of some earlier commits (often only a faulty one). If you want to throw away all uncommitted changes in your working directory, you should see linkgit:git-reset[1], particularly the `--hard` option. If you want to extract specific files as they were in another commit, you should see linkgit:git-restore[1], specifically the `--source` option. Take care with these alternatives as both will discard uncommitted changes in your working directory."
-msgstr ""
+msgstr "Obs: 'git revert' används för att registrera nya incheckningar för att vända effekten av tidigare incheckningar (ofta bara en felaktig sådan). Om du vill slänga alla oincheckade ändringar i din arbetskatalog bör du se linkgit:git-reset[1], särskilt alternativet `--hard`. Om du vill extrahera specifika filer som de var i en annan incheckning, bör du se linkgit:git-restore[1], specifikt alternativet `--source`. Var försiktig med dessa alternativ eftersom båda kommer att slänga oincheckade ändringar i din arbetskatalog."
 
 #. type: Plain text
 #: en/git-revert.adoc:43
 msgid "Commits to revert. For a more complete list of ways to spell commit names, see linkgit:gitrevisions[7]. Sets of commits can also be given but no traversal is done by default, see linkgit:git-rev-list[1] and its `--no-walk` option."
-msgstr ""
+msgstr "Incheckningar att ångra. För en mer komplett lista över sätt att stava inchecknings-namn, se linkgit:gitrevisions[7]. Uppsättningar av incheckningar kan också anges men ingen genomgång görs som standard, se linkgit:git-rev-list[1] och dess `--no-walk`-alternativ."
 
 #. type: Plain text
 #: en/git-revert.adoc:49
 msgid "With this option, 'git revert' will let you edit the commit message prior to committing the revert. This is the default if you run the command from a terminal."
-msgstr ""
+msgstr "Med det här alternativet låter 'git revert' dig redigera inchecknings-meddelandet innan du checka-in ångra. Detta är standardinställningen om du kör kommandot från en terminal."
 
 #. type: Labeled list
 #: en/git-revert.adoc:50
@@ -47691,22 +47736,23 @@ msgstr "-m förälder-nummber"
 #: en/git-revert.adoc:51
 #, no-wrap
 msgid "--mainline parent-number"
-msgstr ""
+msgstr "--mainline <förälder-nummer>"
 
 #. type: Plain text
 #: en/git-revert.adoc:57
+#, fuzzy
 msgid "Usually you cannot revert a merge because you do not know which side of the merge should be considered the mainline. This option specifies the parent number (starting from 1) of the mainline and allows revert to reverse the change relative to the specified parent."
-msgstr ""
+msgstr "Vanligtvis kan du inte återställa en sammanslagning eftersom du inte vet vilken sida av sammanslagningen som ska betraktas som huvudlinjen. Det här alternativet anger huvudlinjens <föräldra-nummer> (med början från 1) och låter återställa till upphäva ändringen i förhållande till den angivna föräldern."
 
 #. type: Plain text
 #: en/git-revert.adoc:62
 msgid "Reverting a merge commit declares that you will never want the tree changes brought in by the merge. As a result, later merges will only bring in tree changes introduced by commits that are not ancestors of the previously reverted merge. This may or may not be what you want."
-msgstr ""
+msgstr "Att återgå en sammanslagings-incheckning deklarerar att du aldrig vill att trädändringarna som infördes av sammanslagings-inchecknin ska finnas kvar. Som ett resultat kommer senare sammanslagings-inchecknin endast att inkludera trädändringar som introducerats av incheckningar som inte är föregångare till den tidigare ångrade sammanslagings-incheckningen. Detta kan vara vad du vill, men behöver inte vara det."
 
 #. type: Plain text
 #: en/git-revert.adoc:65
 msgid "See the link:howto/revert-a-faulty-merge.html[revert-a-faulty-merge How-To] for more details."
-msgstr ""
+msgstr "Se link:howto/revert-a-faulty-merge.html[revert-a-faulty-merge How-To] för mer information."
 
 #. type: Labeled list
 #: en/git-revert.adoc:66
@@ -47718,17 +47764,17 @@ msgstr "--no-edit"
 #. type: Plain text
 #: en/git-revert.adoc:69
 msgid "With this option, 'git revert' will not start the commit message editor."
-msgstr ""
+msgstr "Med det här alternativet, kommer 'git revert' inte att starta inchecknings-meddelande redigeraren."
 
 #. type: Plain text
 #: en/git-revert.adoc:87
 msgid "Usually the command automatically creates some commits with commit log messages stating which commits were reverted. This flag applies the changes necessary to revert the named commits to your working tree and the index, but does not make the commits. In addition, when this option is used, your index does not have to match the HEAD commit. The revert is done against the beginning state of your index."
-msgstr ""
+msgstr "Vanligtvis skapar kommandot automatiskt några incheckningar med inchecknings-loggmeddelanden som anger vilka incheckningar som ångrad. Denna flagga tillämpar de ändringar som krävs för att ångra de namngivna incheckningarna till ditt arbetskatalog och indexet, men gör inte incheckningarna. Dessutom, när detta alternativ används, behöver ditt index inte matcha HEAD-incheckningen. Upphävdes görs mot starttillståndet för ditt index."
 
 #. type: Plain text
 #: en/git-revert.adoc:90
 msgid "This is useful when reverting more than one commits' effect to your index in a row."
-msgstr ""
+msgstr "Detta är användbart när du ångrar mer än en inchecknings-effekt till ditt index i rad."
 
 #. type: Labeled list
 #: en/git-revert.adoc:117
@@ -47739,35 +47785,37 @@ msgstr "--reference"
 
 #. type: Plain text
 #: en/git-revert.adoc:124
+#, fuzzy
 msgid "Instead of starting the body of the log message with \"This reverts <full-object-name-of-the-commit-being-reverted>.\", refer to the commit using \"--pretty=reference\" format (cf. linkgit:git-log[1]). The `revert.reference` configuration variable can be used to enable this option by default."
-msgstr ""
+msgstr "Istället för att börja loggmeddelandets brödtext med \"This reverts <full-object-name-of-the-commit-being-reverted>.\", referera till incheckningen med formatet \"--pretty=reference\" (jfr. linkgit:git-log[1]). Konfigurationsvariabeln `revert.reference` kan användas för att aktivera detta alternativ som standard."
 
 #. type: Labeled list
 #: en/git-revert.adoc:132
 #, no-wrap
 msgid "`git revert HEAD~3`"
-msgstr ""
+msgstr "`git revert HEAD~3`"
 
 #. type: Plain text
 #: en/git-revert.adoc:136
+#, fuzzy
 msgid "Revert the changes specified by the fourth last commit in HEAD and create a new commit with the reverted changes."
-msgstr ""
+msgstr "Återgår ändringarna som anges av den fjärde sista incheckningen i HEAD och skapa en ny incheckning med de upphävda ändringarna."
 
 #. type: Labeled list
 #: en/git-revert.adoc:137
 #, no-wrap
 msgid "`git revert -n master~5..master~2`"
-msgstr ""
+msgstr "`git revert -n master~5..master~2`"
 
 #. type: Plain text
 #: en/git-revert.adoc:144
 msgid "Revert the changes done by commits from the fifth last commit in master (included) to the third last commit in master (included), but do not create any commit with the reverted changes. The revert only modifies the working tree and the index."
-msgstr ""
+msgstr "Ångrar ändringarna som gjorts av incheckningar från den femte sista incheckningen i master (inkluderad) till den tredje sista incheckningen i master (inkluderad), men skapa inte någon incheckning med de ågrade ändringarna. Ångringen ändrar bara arbetskatalog och indexet."
 
 #. type: Plain text
 #: en/git-revert.adoc:154
 msgid "While git creates a basic commit message automatically, it is _strongly_ recommended to explain why the original commit is being reverted. In addition, repeatedly reverting reverts will result in increasingly unwieldy subject lines, for example 'Reapply \"Reapply \"<original-subject>\"\"'. Please consider rewording these to be shorter and more unique."
-msgstr ""
+msgstr "Medan git skapar ett enkelt inchecknings-meddelande automatiskt, rekommenderas det _starkt_ att förklara varför den ursprungliga incheckningen upphävdes. Dessutom kommer upprepade ångingar av ångring att resultera i alltmer otympliga ämnesrader, till exempel 'Reapply \"Reapply \"<original-subject>\"\"'. Överväg att omformulera dessa för att göra dem kortare och mer unika."
 
 #. type: Title =
 #: en/git-rev-list.adoc:2
@@ -56920,7 +56968,7 @@ msgstr "Dessa kommandon är till för att interagera med främmande SCM och med 
 #: en/git.adoc:271
 #, no-wrap
 msgid "Reset, restore and revert"
-msgstr "Nollställ, återställ och återgå"
+msgstr "Nollställ, återställ och ångring"
 
 #. type: Plain text
 #: en/git.adoc:274
@@ -63026,7 +63074,7 @@ msgstr "Detta är en modifierad `ort`-strategi. När träd A och B sammanfogas, 
 #. type: Plain text
 #: en/merge-strategies.adoc:152
 msgid "With the strategies that use 3-way merge (including the default, `ort`), if a change is made on both branches, but later reverted on one of the branches, that change will be present in the merged result; some people find this behavior confusing. It occurs because only the heads and the merge base are considered when performing a merge, not the individual commits. The merge algorithm therefore considers the reverted change as no change at all, and substitutes the changed version instead."
-msgstr "Med strategier som använder 3-vägssammanslagning (inklusive standardvärdet `ort`), om en ändring görs på båda grenarna, men senare återställs på en av grenarna, kommer den ändringen att finnas i det sammanslagna resultatet; vissa personer tycker att detta beteende är förvirrande. Det inträffar eftersom endast huvuden och sammanslagningsbasen beaktas när en sammanslagning utförs, inte de enskilda incheckningarna. Sammanslagningsalgoritmen betraktar därför den återställda ändringen som ingen ändring alls och ersätter den ändrade versionen istället."
+msgstr "Med strategier som använder 3-vägssammanslagning (inklusive standardvärdet `ort`), om en ändring görs på båda grenarna, men senare ångrad på en av grenarna, kommer den ändringen att finnas i det sammanslagna resultatet; vissa personer tycker att detta beteende är förvirrande. Det inträffar eftersom endast huvuden och sammanslagningsbasen beaktas när en sammanslagning utförs, inte de enskilda incheckningarna. Sammanslagningsalgoritmen betraktar därför den ångrade ändringen som ingen ändring alls och ersätter den ändrade versionen istället."
 
 #. type: Labeled list
 #: en/mergetools-merge.adoc:1
@@ -67623,7 +67671,7 @@ msgstr ""
 #. type: Plain text
 #: en/sequencer.adoc:5
 msgid "Continue the operation in progress using the information in `.git/sequencer`. Can be used to continue after resolving conflicts in a failed cherry-pick or revert."
-msgstr "Fortsätt den pågående operationen med informationen i `.git/sequencer`. Kan användas för att fortsätta efter att konflikter i en misslyckad cherry-picking eller återställning har lösts."
+msgstr "Fortsätt den pågående operationen med informationen i `.git/sequencer`. Kan användas för att fortsätta efter att konflikter i en misslyckad cherry-picking eller ångring har lösts."
 
 #. type: Plain text
 #: en/sequencer.adoc:9
