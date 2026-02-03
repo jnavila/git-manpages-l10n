@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-02-03 06:22+0000\n"
+"PO-Revision-Date: 2026-02-03 19:30+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -3405,7 +3405,7 @@ msgstr "`diff.interHunkContext`"
 #. type: Plain text
 #: en/config/diff.adoc:79
 msgid "Show the context between diff hunks, up to the specified number of lines, thereby fusing the hunks that are close to each other. This value serves as the default for the `--inter-hunk-context` command line option."
-msgstr "Visa sammanhanget mellan olika hunks, upp till det angivna antalet rader, och sammanfoga därmed de hunks som ligger nära varandra. Detta värde fungerar som standardvärde för kommandoradsalternativet `--inter-hunk-context`."
+msgstr "Visa sammanhanget mellan olika stycken, upp till det angivna antalet rader, och sammanfoga därmed de stycken som ligger nära varandra. Detta värde fungerar som standardvärde för kommandoradsalternativet `--inter-hunk-context`."
 
 #. type: Labeled list
 #: en/config/diff.adoc:80
@@ -3904,7 +3904,7 @@ msgstr "`merge.conflictStyle`"
 #. type: Plain text
 #: en/config/merge.adoc:15
 msgid "Specify the style in which conflicted hunks are written out to working tree files upon merge. The default is \"merge\", which shows a +<<<<<<<+ conflict marker, changes made by one side, a `=======` marker, changes made by the other side, and then a +>>>>>>>+ marker. An alternate style, \"diff3\", adds a +|||||||+ marker and the original text before the `=======` marker. The \"merge\" style tends to produce smaller conflict regions than diff3, both because of the exclusion of the original text, and because when a subset of lines match on the two sides, they are just pulled out of the conflict region. Another alternate style, \"zdiff3\", is similar to diff3 but removes matching lines on the two sides from the conflict region when those matching lines appear near either the beginning or end of a conflict region."
-msgstr "Ange stilen med vilken konfliktfyllda hunks skrivs ut till arbetsträdfiler vid sammanslagning. Standardinställningen är \"merge\", som visar en +<<<<<<<+ konfliktmarkör, ändringar gjorda av ena sidan, en `=======`-markör, ändringar gjorda av den andra sidan och sedan en +>>>>>>>+ markör. En alternativ stil, \"diff3\", lägger till en +||||||||+ markör och originaltexten före `=======`-markören. Stilen \"merge\" tenderar att producera mindre konfliktområden än diff3, både på grund av att originaltexten utesluts och för att när en delmängd av rader matchar på de två sidorna, dras de bara ut ur konfliktområdet. En annan alternativ stil, \"zdiff3\", liknar diff3 men tar bort matchande rader på de två sidorna från konfliktområdet när dessa matchande rader visas nära antingen början eller slutet av ett konfliktområde."
+msgstr "Ange stilen med vilken konfliktfyllda stycken skrivs ut till arbetsträdfiler vid sammanslagning. Standardinställningen är \"merge\", som visar en +<<<<<<<+ konfliktmarkör, ändringar gjorda av ena sidan, en `=======`-markör, ändringar gjorda av den andra sidan och sedan en +>>>>>>>+ markör. En alternativ stil, \"diff3\", lägger till en +||||||||+ markör och originaltexten före `=======`-markören. Stilen \"merge\" tenderar att producera mindre konfliktområden än diff3, både på grund av att originaltexten utesluts och för att när en delmängd av rader matchar på de två sidorna, dras de bara ut ur konfliktområdet. En annan alternativ stil, \"zdiff3\", liknar diff3 men tar bort matchande rader på de två sidorna från konfliktområdet när dessa matchande rader visas nära antingen början eller slutet av ett konfliktområde."
 
 #. type: Labeled list
 #: en/config/merge.adoc:16
@@ -4272,7 +4272,7 @@ msgstr "`--inter-hunk-context=<n>`"
 #. type: Plain text
 #: en/diff-context-options.adoc:10 en/diff-options.adoc:795
 msgid "Show the context between diff hunks, up to the specified _<number>_ of lines, thereby fusing hunks that are close to each other. Defaults to `diff.interHunkContext` or 0 if the config option is unset."
-msgstr "Visar sammanhanget mellan olika hunks, upp till det angivna _<antal>_ rader, och sammanfogar därmed hunks som ligger nära varandra. Standardvärdet är `diff.interHunkContext` eller 0 om konfigurationsalternativet inte är inställt."
+msgstr "Visar sammanhanget mellan olika stycken, upp till det angivna _<antal>_ rader, och sammanfogar därmed stycken som ligger nära varandra. Standardvärdet är `diff.interHunkContext` eller 0 om konfigurationsalternativet inte är inställt."
 
 #. type: Title -
 #: en/diff-format.adoc:2
@@ -10874,7 +10874,7 @@ msgstr "Applicera plåstret i omvänd ordning."
 #. type: Plain text
 #: en/git-apply.adoc:123
 msgid "For atomicity, 'git apply' by default fails the whole patch and does not touch the working tree when some of the hunks do not apply. This option makes it apply the parts of the patch that are applicable, and leave the rejected hunks in corresponding *.rej files."
-msgstr "För atomicitet misslyckas 'git apply' som standard med hela patchen och vidrör inte arbetskatalogen när vissa av stycken inte gäller. Det här alternativet gör att de delar av patchen som är tillämpliga tillämpas och de avvisade hunks lämnas kvar i motsvarande *.rej-filer."
+msgstr "För atomicitet misslyckas 'git apply' som standard med hela patchen och vidrör inte arbetskatalogen när vissa av stycken inte gäller. Det här alternativet gör att de delar av patchen som är tillämpliga tillämpas och de avvisade stycken lämnas kvar i motsvarande *.rej-filer."
 
 #. type: Labeled list
 #: en/git-apply.adoc:124 en/git-cat-file.adoc:266 en/git-check-attr.adoc:35
@@ -11347,27 +11347,31 @@ msgstr "git-archive - Skapa ett arkiv över filer från ett namngivet träd"
 #, no-wrap
 msgid "'git archive' [--format=<fmt>] [--list] [--prefix=<prefix>/] [<extra>]\n\t      [-o <file> | --output=<file>] [--worktree-attributes]\n\t      [--remote=<repo> [--exec=<git-upload-archive>]] <tree-ish>\n\t      [<path>...]\n"
 msgstr ""
+"'git archive' [--format=<fmt>] [--list] [--prefix=<prefix>/] [<extra>]\n"
+"\t      [-o <file> | --output=<fil>] [--worktree-attributes]\n"
+"\t      [--remote=<förvar> [--exec=<git-upload-archive>]] <trädlikt>\n"
+"\t      [<sökväg>...]\n"
 
 #. type: Plain text
 #: en/git-archive.adoc:23
 msgid "Creates an archive of the specified format containing the tree structure for the named tree, and writes it out to the standard output. If <prefix> is specified it is prepended to the filenames in the archive."
-msgstr ""
+msgstr "Skapar ett arkiv i det angivna formatet som innehåller trädstrukturen för det namngivna trädet och skriver ut det till standardutdata. Om <prefix> anges läggs det till i filnamnen i arkivet."
 
 #. type: Plain text
 #: en/git-archive.adoc:32
 msgid "'git archive' behaves differently when given a tree ID as opposed to a commit ID or tag ID. When a tree ID is provided, the current time is used as the modification time of each file in the archive. On the other hand, when a commit ID or tag ID is provided, the commit time as recorded in the referenced commit object is used instead. Additionally the commit ID is stored in a global extended pax header if the tar format is used; it can be extracted using 'git get-tar-commit-id'. In ZIP files it is stored as a file comment."
-msgstr ""
+msgstr "'git archive' beter sig annorlunda när det ges ett träd-ID jämfört med ett inchecknings-ID eller tagg-ID. När ett träd-ID anges används aktuell tid som ändringstid för varje fil i arkivet. Å andra sidan, när ett inchecknings-ID eller tagg-ID anges, används inchecknings-tiden som registrerats i det refererade inchecknings-objektet istället. Dessutom lagras inchecknings-ID:t i en global utökad pax-header om tar-formatet används; det kan extraheras med 'git get-tar-inchecknings-id'. I ZIP-filer lagras det som en filkommentar."
 
 #. type: Labeled list
 #: en/git-archive.adoc:36
 #, no-wrap
 msgid "--format=<fmt>"
-msgstr ""
+msgstr "--format=<fmt>"
 
 #. type: Plain text
 #: en/git-archive.adoc:44
 msgid "Format of the resulting archive. Possible values are `tar`, `zip`, `tar.gz`, `tgz`, and any format defined using the configuration option `tar.<format>.command`. If `--format` is not given, and the output file is specified, the format is inferred from the filename if possible (e.g. writing to `foo.zip` makes the output to be in the `zip` format). Otherwise the output format is `tar`."
-msgstr ""
+msgstr "Format för det resulterande arkivet. Möjliga värden är `tar`, `zip`, `tar.gz`, `tgz` och valfritt format som definieras med konfigurationsalternativet `tar.<format>.command`. Om `--format` inte anges och utdatafilen anges, härleds formatet från filnamnet om möjligt (t.ex. om man skriver till `foo.zip` blir utdata i `zip`-format). Annars är utdataformatet `tar`."
 
 #. type: Labeled list
 #: en/git-archive.adoc:46 en/git-config.adoc:322 en/git-imap-send.adoc:58
@@ -11380,77 +11384,77 @@ msgstr "--list"
 #. type: Plain text
 #: en/git-archive.adoc:48
 msgid "Show all available formats."
-msgstr ""
+msgstr "Visa alla tillgängliga format."
 
 #. type: Plain text
 #: en/git-archive.adoc:52
 msgid "Report progress to stderr."
-msgstr ""
+msgstr "Rapportera förloppet till stderr."
 
 #. type: Labeled list
 #: en/git-archive.adoc:53
 #, no-wrap
 msgid "--prefix=<prefix>/"
-msgstr ""
+msgstr "--prefix=<prefix>/"
 
 #. type: Plain text
 #: en/git-archive.adoc:57
 msgid "Prepend <prefix>/ to paths in the archive. Can be repeated; its rightmost value is used for all tracked files. See below which value gets used by `--add-file`."
-msgstr ""
+msgstr "Lägg till <prefix>/ framför sökvägarna i arkivet. Kan upprepas; dess värde längst till höger används för alla spårade filer. Se nedan vilket värde som används av `--add-file`."
 
 #. type: Labeled list
 #: en/git-archive.adoc:58
 #, no-wrap
 msgid "-o <file>"
-msgstr ""
+msgstr "-o <fil>"
 
 #. type: Labeled list
 #: en/git-archive.adoc:59
 #, no-wrap
 msgid "--output=<file>"
-msgstr ""
+msgstr "--output=<fil>"
 
 #. type: Plain text
 #: en/git-archive.adoc:61
 msgid "Write the archive to <file> instead of stdout."
-msgstr ""
+msgstr "Skriv arkivet till <fil> istället för stdout."
 
 #. type: Labeled list
 #: en/git-archive.adoc:62
 #, no-wrap
 msgid "--add-file=<file>"
-msgstr ""
+msgstr "--add-file=<fil>"
 
 #. type: Plain text
 #: en/git-archive.adoc:67
 msgid "Add a non-tracked file to the archive. Can be repeated to add multiple files. The path of the file in the archive is built by concatenating the value of the last `--prefix` option (if any) before this `--add-file` and the basename of <file>."
-msgstr ""
+msgstr "Lägg till en icke-spårad fil i arkivet. Kan upprepas för att lägga till flera filer. Sökvägen till filen i arkivet skapas genom att sammanfoga värdet för det sista `--prefix`-alternativet (om det finns något) före denna `--add-file` och basnamnet för <fil>."
 
 #. type: Labeled list
 #: en/git-archive.adoc:68
 #, no-wrap
 msgid "--add-virtual-file=<path>:<content>"
-msgstr ""
+msgstr "--add-virtual-file=<sökväg>:<innehåll>"
 
 #. type: Plain text
 #: en/git-archive.adoc:71
 msgid "Add the specified contents to the archive. Can be repeated to add multiple files."
-msgstr ""
+msgstr "Lägg till det angivna innehållet i arkivet. Kan upprepas för att lägga till flera filer."
 
 #. type: Plain text
 #: en/git-archive.adoc:78
 msgid "The `<path>` argument can start and end with a literal double-quote character; the contained file name is interpreted as a C-style string, i.e. the backslash is interpreted as escape character. The path must be quoted if it contains a colon, to avoid the colon from being misinterpreted as the separator between the path and the contents, or if the path begins or ends with a double-quote character."
-msgstr ""
+msgstr "Argumentet `<sökväg>` kan börja och sluta med ett dubbelt citattecken; det ingående filnamnet tolkas som en C-liknande sträng, d.v.s. bakåtsnedstrecket tolkas som ett escape-tecken. Sökvägen måste anges i citattecken om den innehåller ett kolon, för att undvika att kolon misstolkas som avgränsaren mellan sökvägen och innehållet, eller om sökvägen börjar eller slutar med ett dubbelt citattecken."
 
 #. type: Plain text
 #: en/git-archive.adoc:82
 msgid "The file mode is limited to a regular file, and the option may be subject to platform-dependent command-line limits. For non-trivial cases, write an untracked file and use `--add-file` instead."
-msgstr ""
+msgstr "Filläget är begränsat till en vanlig fil, och alternativet kan vara beroende av plattformsberoende kommandorads-begränsningar. För icke-triviala fall, skriv en ospårad fil och använd `--add-file` istället."
 
 #. type: Plain text
 #: en/git-archive.adoc:86
 msgid "Note that unlike `--add-file` the path created in the archive is not affected by the `--prefix` option, as a full `<path>` can be given as the value of the option."
-msgstr ""
+msgstr "Observera att till skillnad från `--add-file` påverkas inte sökvägen som skapas i arkivet av alternativet `--prefix`, eftersom en fullständig `<sökväg>` kan anges som värde för alternativet."
 
 #. type: Labeled list
 #: en/git-archive.adoc:87
@@ -11462,40 +11466,40 @@ msgstr "--worktree-attributes"
 #. type: Plain text
 #: en/git-archive.adoc:90
 msgid "Look for attributes in .gitattributes files in the working tree as well (see <<ATTRIBUTES>>)."
-msgstr ""
+msgstr "Leta även efter attribut i .gitattributes-filer i arbetskatalogen (se <<ATTRIBUT>>)."
 
 #. type: Labeled list
 #: en/git-archive.adoc:91
 #, no-wrap
 msgid "--mtime=<time>"
-msgstr ""
+msgstr "--mtime=<tid>"
 
 #. type: Plain text
 #: en/git-archive.adoc:95
 msgid "Set modification time of archive entries. Without this option the committer time is used if `<tree-ish>` is a commit or tag, and the current time if it is a tree."
-msgstr ""
+msgstr "Ställ in ändringstid för arkivposter. Utan detta alternativ används incheckare-tiden om `<trädlikt>` är en incheckning eller tagg, och aktuell tid om det är ett träd."
 
 #. type: Labeled list
 #: en/git-archive.adoc:96
 #, no-wrap
 msgid "<extra>"
-msgstr ""
+msgstr "<extra>"
 
 #. type: Plain text
 #: en/git-archive.adoc:99
 msgid "This can be any options that the archiver backend understands. See next section."
-msgstr ""
+msgstr "Detta kan vara vilka alternativ som helst som arkiverings-bakändan förstår. Se nästa avsnitt."
 
 #. type: Labeled list
 #: en/git-archive.adoc:100
 #, no-wrap
 msgid "--remote=<repo>"
-msgstr ""
+msgstr "--remote=<förvar>"
 
 #. type: Plain text
 #: en/git-archive.adoc:106
 msgid "Instead of making a tar archive from the local repository, retrieve a tar archive from a remote repository. Note that the remote repository may place restrictions on which sha1 expressions may be allowed in `<tree-ish>`. See linkgit:git-upload-archive[1] for details."
-msgstr ""
+msgstr "Istället för att skapa ett tar-arkiv från det lokala förvaret, hämta ett tar-arkiv från ett fjärrförvar. Observera att fjärrförvaret kan begränsa vilka sha1-uttryck som får tillåtas i `<trädlikt>`. Se linkgit:git-upload-archive[1] för mer information."
 
 #. type: Labeled list
 #: en/git-archive.adoc:107
@@ -11507,7 +11511,7 @@ msgstr "--exec=<git-upload-archive>"
 #. type: Plain text
 #: en/git-archive.adoc:110
 msgid "Used with --remote to specify the path to the 'git-upload-archive' on the remote side."
-msgstr ""
+msgstr "Används med --remote för att ange sökvägen till 'git-upload-archive' på fjärrsidan."
 
 #. type: Labeled list
 #: en/git-archive.adoc:111 en/git-diff-index.adoc:26 en/git-diff-tree.adoc:29
@@ -11519,7 +11523,7 @@ msgstr "<trädlikt>"
 #. type: Plain text
 #: en/git-archive.adoc:113
 msgid "The tree or commit to produce an archive for."
-msgstr ""
+msgstr "Trädet eller incheckning för att skapa ett arkiv för."
 
 #. type: Labeled list
 #: en/git-archive.adoc:114
@@ -11530,217 +11534,217 @@ msgstr "<sökväg>"
 #. type: Plain text
 #: en/git-archive.adoc:118
 msgid "Without an optional path parameter, all files and subdirectories of the current working directory are included in the archive. If one or more paths are specified, only these are included."
-msgstr ""
+msgstr "Utan en valfri sökvägsparameter inkluderas alla filer och underkataloger i den aktuella arbetskatalogen i arkivet. Om en eller flera sökvägar anges inkluderas endast dessa."
 
 #. type: Title -
 #: en/git-archive.adoc:120
 #, no-wrap
 msgid "BACKEND EXTRA OPTIONS"
-msgstr ""
+msgstr "EXTRA ALTERNATIV FÖR BAKÄNDA"
 
 #. type: Title ~
 #: en/git-archive.adoc:123
 #, no-wrap
 msgid "zip"
-msgstr ""
+msgstr "zip"
 
 #. type: Labeled list
 #: en/git-archive.adoc:124
 #, no-wrap
 msgid "-<digit>"
-msgstr ""
+msgstr "-<siffra>"
 
 #. type: Plain text
 #: en/git-archive.adoc:129
 msgid "Specify compression level. Larger values allow the command to spend more time to compress to smaller size. Supported values are from `-0` (store-only) to `-9` (best ratio). Default is `-6` if not given."
-msgstr ""
+msgstr "Ange komprimeringsnivå. Större värden gör att kommandot kan använda mer tid på att komprimera till mindre storlek. Värden som stöds är från `-0` (endast lagring) till `-9` (bästa förhållande). Standardvärdet är `-6` om inget anges."
 
 #. type: Title ~
 #: en/git-archive.adoc:131
 #, no-wrap
 msgid "tar"
-msgstr ""
+msgstr "tar"
 
 #. type: Labeled list
 #: en/git-archive.adoc:132
 #, no-wrap
 msgid "-<number>"
-msgstr ""
+msgstr "-<nummer>"
 
 #. type: Plain text
 #: en/git-archive.adoc:137
 msgid "Specify compression level. The value will be passed to the compression command configured in `tar.<format>.command`. See manual page of the configured command for the list of supported levels and the default level if this option isn't specified."
-msgstr ""
+msgstr "Ange komprimeringsnivå. Värdet skickas till komprimeringskommandot som konfigurerats i `tar.<format>.command`. Se manualsidan för det konfigurerade kommandot för en lista över nivåer som stöds och standardnivån om detta alternativ inte anges."
 
 #. type: Labeled list
 #: en/git-archive.adoc:141
 #, no-wrap
 msgid "tar.umask"
-msgstr ""
+msgstr "tar.umask"
 
 #. type: Plain text
 #: en/git-archive.adoc:148
 msgid "This variable can be used to restrict the permission bits of tar archive entries. The default is 0002, which turns off the world write bit. The special value \"user\" indicates that the archiving user's umask will be used instead. See umask(2) for details. If `--remote` is used then only the configuration of the remote repository takes effect."
-msgstr ""
+msgstr "Denna variabel kan användas för att begränsa behörighetsbitarna för tar-arkivposter. Standardvärdet är 0002, vilket stänger av world skriv-biten. Specialvärdet \"user\" indikerar att den arkiverande användarens umask kommer att användas istället. Se umask(2) för mer information. Om `--remote` används träder endast konfigurationen av fjärrförvaret i kraft."
 
 #. type: Labeled list
 #: en/git-archive.adoc:149
 #, no-wrap
 msgid "tar.<format>.command"
-msgstr ""
+msgstr "tar.<format>.command"
 
 #. type: Plain text
 #: en/git-archive.adoc:156
 msgid "This variable specifies a shell command through which the tar output generated by `git archive` should be piped. The command is executed using the shell with the generated tar file on its standard input, and should produce the final output on its standard output. Any compression-level options will be passed to the command (e.g., `-9`)."
-msgstr ""
+msgstr "Denna variabel anger ett shell-kommando genom vilket tar-utdatan som genereras av `git archive` ska skickas. Kommandot körs med hjälp av shell-kommandot med den genererade tar-filen på standardindata och ska producera den slutliga utdatan på standardutdata. Eventuella komprimeringsnivå-alternativ kommer att skickas till kommandot (t.ex. `-9`)."
 
 #. type: Plain text
 #: en/git-archive.adoc:160
 msgid "The `tar.gz` and `tgz` formats are defined automatically and use the magic command `git archive gzip` by default, which invokes an internal implementation of gzip."
-msgstr ""
+msgstr "Formaten `tar.gz` och `tgz` definieras automatiskt och använder som standard det magiska kommandot `git archive gzip`, vilket anropar en intern implementering av gzip."
 
 #. type: Labeled list
 #: en/git-archive.adoc:161
 #, no-wrap
 msgid "tar.<format>.remote"
-msgstr ""
+msgstr "tar.<format>.remote"
 
 #. type: Plain text
 #: en/git-archive.adoc:166
 msgid "If true, enable the format for use by remote clients via linkgit:git-upload-archive[1]. Defaults to false for user-defined formats, but true for the `tar.gz` and `tgz` formats."
-msgstr ""
+msgstr "Om sant, aktivera formatet för användning av fjärrklienter via linkgit:git-upload-archive[1]. Standardvärdet är falskt för användar-definierade format, men sant för formaten `tar.gz` och `tgz`."
 
 #. type: Title -
 #: en/git-archive.adoc:169
 #, no-wrap
 msgid "ATTRIBUTES"
-msgstr ""
+msgstr "ATTRIBUT"
 
 #. type: Labeled list
 #: en/git-archive.adoc:171
 #, no-wrap
 msgid "export-ignore"
-msgstr ""
+msgstr "export-ignore"
 
 #. type: Plain text
 #: en/git-archive.adoc:174
 msgid "Files and directories with the attribute export-ignore won't be added to archive files. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "Filer och kataloger med attributet export-ignore kommer inte att läggas till i arkivfiler. Se linkgit:gitattributes[5] för mer information."
 
 #. type: Labeled list
 #: en/git-archive.adoc:175
 #, no-wrap
 msgid "export-subst"
-msgstr ""
+msgstr "export-subst"
 
 #. type: Plain text
 #: en/git-archive.adoc:179
 msgid "If the attribute export-subst is set for a file then Git will expand several placeholders when adding this file to an archive. See linkgit:gitattributes[5] for details."
-msgstr ""
+msgstr "Om attributet export-subst är satt för en fil kommer Git att expandera flera platshållare när filen läggs till i ett arkiv. Se linkgit:gitattributes[5] för mer information."
 
 #. type: Plain text
 #: en/git-archive.adoc:187
 msgid "Note that attributes are by default taken from the `.gitattributes` files in the tree that is being archived. If you want to tweak the way the output is generated after the fact (e.g. you committed without adding an appropriate export-ignore in its `.gitattributes`), adjust the checked out `.gitattributes` file as necessary and use `--worktree-attributes` option. Alternatively you can keep necessary attributes that should apply while archiving any tree in your `$GIT_DIR/info/attributes` file."
-msgstr ""
+msgstr "Observera att attribut som standard hämtas från `.gitattributes`-filerna i trädet som arkiveras. Om du vill justera hur utdata genereras i efterhand (t.ex. om du har genomfört en incheckning utan att lägga till en lämplig export-ignore i dess `.gitattributes`), justera den utcheckade `.gitattributes`-filen efter behov och använd alternativet `--worktree-attributes`. Alternativt kan du behålla nödvändiga attribut som ska gälla när du arkiverar ett träd i din `$GIT_DIR/info/attributes`-fil."
 
 #. type: Labeled list
 #: en/git-archive.adoc:190
 #, no-wrap
 msgid "`git archive --format=tar --prefix=junk/ HEAD | (cd /var/tmp/ && tar xf -)`"
-msgstr ""
+msgstr "`git archive --format=tar --prefix=junk/ HEAD | (cd /var/tmp/ && tar xf -)`"
 
 #. type: Plain text
 #: en/git-archive.adoc:195
 msgid "Create a tar archive that contains the contents of the latest commit on the current branch, and extract it in the `/var/tmp/junk` directory."
-msgstr ""
+msgstr "Skapa ett tar-arkiv som innehåller innehållet i den senaste incheckning på den aktuella grenen, och extrahera det i katalogen `/var/tmp/junk`."
 
 #. type: Labeled list
 #: en/git-archive.adoc:196
 #, no-wrap
 msgid "`git archive --format=tar --prefix=git-1.4.0/ v1.4.0 | gzip >git-1.4.0.tar.gz`"
-msgstr ""
+msgstr "`git archive --format=tar --prefix=git-1.4.0/ v1.4.0 | gzip >git-1.4.0.tar.gz`"
 
 #. type: Plain text
 #: en/git-archive.adoc:199
 msgid "Create a compressed tarball for v1.4.0 release."
-msgstr ""
+msgstr "Skapa en komprimerad tarball för v1.4.0-utgåvan."
 
 #. type: Labeled list
 #: en/git-archive.adoc:200
 #, no-wrap
 msgid "`git archive --format=tar.gz --prefix=git-1.4.0/ v1.4.0 >git-1.4.0.tar.gz`"
-msgstr ""
+msgstr "`git archive --format=tar.gz --prefix=git-1.4.0/ v1.4.0 >git-1.4.0.tar.gz`"
 
 #. type: Plain text
 #: en/git-archive.adoc:203
 msgid "Same as above, but using the builtin tar.gz handling."
-msgstr ""
+msgstr "Samma som ovan, men med den inbyggda tar.gz-hanteringen."
 
 #. type: Labeled list
 #: en/git-archive.adoc:204
 #, no-wrap
 msgid "`git archive --prefix=git-1.4.0/ -o git-1.4.0.tar.gz v1.4.0`"
-msgstr ""
+msgstr "`git archive --prefix=git-1.4.0/ -o git-1.4.0.tar.gz v1.4.0`"
 
 #. type: Plain text
 #: en/git-archive.adoc:207
 msgid "Same as above, but the format is inferred from the output file."
-msgstr ""
+msgstr "Samma som ovan, men formatet härleds från utdatafilen."
 
 #. type: Labeled list
 #: en/git-archive.adoc:208
 #, no-wrap
 msgid "`git archive --format=tar --prefix=git-1.4.0/ v1.4.0^{tree} | gzip >git-1.4.0.tar.gz`"
-msgstr ""
+msgstr "`git archive --format=tar --prefix=git-1.4.0/ v1.4.0^{tree} | gzip >git-1.4.0.tar.gz`"
 
 #. type: Plain text
 #: en/git-archive.adoc:212
 msgid "Create a compressed tarball for v1.4.0 release, but without a global extended pax header."
-msgstr ""
+msgstr "Skapa en komprimerad tarball för v1.4.0-utgåvan, men utan en global utökad pax-header."
 
 #. type: Labeled list
 #: en/git-archive.adoc:213
 #, no-wrap
 msgid "`git archive --format=zip --prefix=git-docs/ HEAD:Documentation/ > git-1.4.0-docs.zip`"
-msgstr ""
+msgstr "`git archive --format=zip --prefix=git-docs/ HEAD:Dokumentation/ > git-1.4.0-docs.zip`"
 
 #. type: Plain text
 #: en/git-archive.adoc:217
 msgid "Put everything in the current head's Documentation/ directory into 'git-1.4.0-docs.zip', with the prefix 'git-docs/'."
-msgstr ""
+msgstr "Lägg allt i den aktuella huvudets Dokumentation/-katalog i 'git-1.4.0-docs.zip', med prefixet 'git-docs/'."
 
 #. type: Labeled list
 #: en/git-archive.adoc:218
 #, no-wrap
 msgid "`git archive -o latest.zip HEAD`"
-msgstr ""
+msgstr "`git archive -o latest.zip HEAD`"
 
 #. type: Plain text
 #: en/git-archive.adoc:223
 msgid "Create a Zip archive that contains the contents of the latest commit on the current branch. Note that the output format is inferred by the extension of the output file."
-msgstr ""
+msgstr "Skapa ett zip-arkiv som innehåller innehållet i den senaste incheckningen på den aktuella grenen. Observera att utdataformatet härleds från utdatafilens filändelse."
 
 #. type: Labeled list
 #: en/git-archive.adoc:224
 #, no-wrap
 msgid "`git archive -o latest.tar --prefix=build/ --add-file=configure --prefix= HEAD`"
-msgstr ""
+msgstr "`git archive -o latest.tar --prefix=build/ --add-file=configure --prefix= HEAD`"
 
 #. type: Plain text
 #: en/git-archive.adoc:229
 msgid "Creates a tar archive that contains the contents of the latest commit on the current branch with no prefix and the untracked file 'configure' with the prefix 'build/'."
-msgstr ""
+msgstr "Skapar ett tar-arkiv som innehåller innehållet i den senaste incheckningen på den aktuella grenen utan prefix och den ospårade filen 'configure' med prefixet 'build/'."
 
 #. type: Labeled list
 #: en/git-archive.adoc:230
 #, no-wrap
 msgid "`git config tar.tar.xz.command \"xz -c\"`"
-msgstr ""
+msgstr "`git config tar.tar.xz.command \"xz -c\"`"
 
 #. type: Plain text
 #: en/git-archive.adoc:235
 msgid "Configure a \"tar.xz\" format for making LZMA-compressed tarfiles. You can use it specifying `--format=tar.xz`, or by creating an output file like `-o foo.tar.xz`."
-msgstr ""
+msgstr "Konfigurera ett \"tar.xz\"-format för att skapa LZMA-komprimerade tar-filer. Du kan använda det genom att ange `--format=tar.xz`, eller genom att skapa en utdatafil som `-o foo.tar.xz`."
 
 #. type: Title =
 #: en/git-bisect.adoc:2
@@ -14828,18 +14832,21 @@ msgstr "git-check-attr(1)"
 #. type: Plain text
 #: en/git-check-attr.adoc:7
 msgid "git-check-attr - Display gitattributes information"
-msgstr ""
+msgstr "git-check-attr - Visar information om gitattributes"
 
 #. type: verse
 #: en/git-check-attr.adoc:14
 #, no-wrap
 msgid "'git check-attr' [--source <tree-ish>] [-a | --all | <attr>...] [--] <pathname>...\n'git check-attr' --stdin [-z] [--source <tree-ish>] [-a | --all | <attr>...]\n"
 msgstr ""
+"'git check-attr' [--source <trälikt>] [-a | --all | <attr>...] [--] <säkvägsnamn>...\n"
+"'git check-attr' --stdin [-z] [--source <trädlikt>] [-a | --all | <attr>...]\n"
 
 #. type: Plain text
 #: en/git-check-attr.adoc:19
+#, fuzzy
 msgid "For every pathname, this command will list if each attribute is 'unspecified', 'set', or 'unset' as a gitattribute on that pathname."
-msgstr ""
+msgstr "För varje sökvägsnamn listar det här kommandot om varje attribut är 'unspecified', 'set' eller 'unset' som ett gitattribut på den sökvägen."
 
 #. type: Labeled list
 #: en/git-check-attr.adoc:23 en/git-checkout-index.adoc:40
@@ -14857,12 +14864,12 @@ msgstr "--all"
 #. type: Plain text
 #: en/git-check-attr.adoc:27
 msgid "List all attributes that are associated with the specified paths. If this option is used, then 'unspecified' attributes will not be included in the output."
-msgstr ""
+msgstr "Lista alla attribut som är associerade med de angivna sökvägarna. Om det här alternativet används kommer 'ospecificerade' attribut inte att inkluderas i utdata."
 
 #. type: Plain text
 #: en/git-check-attr.adoc:30
 msgid "Consider `.gitattributes` in the index only, ignoring the working tree."
-msgstr ""
+msgstr "Betrakta endast `.gitattributes` i indexet och ignorera arbetskatalogen."
 
 #. type: Labeled list
 #: en/git-check-attr.adoc:31 en/git-check-ignore.adoc:45
@@ -14879,23 +14886,23 @@ msgstr "--stdin"
 #. type: Plain text
 #: en/git-check-attr.adoc:34
 msgid "Read pathnames from the standard input, one per line, instead of from the command line."
-msgstr ""
+msgstr "Läs sökvägar från standardinmatningen, en per rad, istället för från kommandoraden."
 
 #. type: Plain text
 #: en/git-check-attr.adoc:39
 msgid "The output format is modified to be machine-parsable. If `--stdin` is also given, input paths are separated with a NUL character instead of a linefeed character."
-msgstr ""
+msgstr "Utdataformatet är modifierat för att vara maskinparsbart. Om `--stdin` också anges, separeras indatavägarna med ett NUL-tecken istället för ett radmatningstecken."
 
 #. type: Labeled list
 #: en/git-check-attr.adoc:40
 #, no-wrap
 msgid "--source=<tree-ish>"
-msgstr ""
+msgstr "--source=<trträdlikt>"
 
 #. type: Plain text
 #: en/git-check-attr.adoc:44
 msgid "Check attributes against the specified tree-ish. It is common to specify the source tree by naming a commit, branch, or tag associated with it."
-msgstr ""
+msgstr "Kontrollera attribut mot det angivna trädlikt. Det är vanligt att ange källträdet genom att namnge en incheckning, gren eller tagg som är associerad med det."
 
 #. type: Labeled list
 #: en/git-check-attr.adoc:45 en/git-checkout-index.adoc:77 en/git-grep.adoc:311
@@ -14908,27 +14915,27 @@ msgstr "\\--"
 #. type: Plain text
 #: en/git-check-attr.adoc:48
 msgid "Interpret all preceding arguments as attributes and all following arguments as path names."
-msgstr ""
+msgstr "Tolka alla föregående argument som attribut och alla efterföljande argument som sökvägsnamn."
 
 #. type: Plain text
 #: en/git-check-attr.adoc:52
 msgid "If none of `--stdin`, `--all`, or `--` is used, the first argument will be treated as an attribute and the rest of the arguments as pathnames."
-msgstr ""
+msgstr "Om inget av `--stdin`, `--all` eller `--` används, kommer det första argumentet att behandlas som ett attribut och resten av argumenten som sökvägsnamn."
 
 #. type: Plain text
 #: en/git-check-attr.adoc:58
 msgid "The output is of the form: <path> COLON SP <attribute> COLON SP <info> LF"
-msgstr ""
+msgstr "Utdata är av formen: <sökväg> COLON SP <attribut> COLON SP <info> LF"
 
 #. type: Plain text
 #: en/git-check-attr.adoc:61
 msgid "unless `-z` is in effect, in which case NUL is used as delimiter: <path> NUL <attribute> NUL <info> NUL"
-msgstr ""
+msgstr "om inte `-z` är aktivt, i vilket fall NUL används som avgränsare: <sökväg> NUL <attribut> NUL <info> NUL"
 
 #. type: Plain text
 #: en/git-check-attr.adoc:65
 msgid "<path> is the path of a file being queried, <attribute> is an attribute being queried, and <info> can be either:"
-msgstr ""
+msgstr "<sökväg> är sökvägen till en fil som efterfrågas, <attribute> är ett attribut som efterfrågas och <info> kan vara antingen:"
 
 #. type: Labeled list
 #: en/git-check-attr.adoc:66
@@ -14940,7 +14947,7 @@ msgstr "'unspecified'"
 #. type: Plain text
 #: en/git-check-attr.adoc:67
 msgid "when the attribute is not defined for the path."
-msgstr ""
+msgstr "när attributet inte är definierat för sökvägen."
 
 #. type: Labeled list
 #: en/git-check-attr.adoc:67
@@ -14952,7 +14959,7 @@ msgstr "'unset'"
 #. type: Plain text
 #: en/git-check-attr.adoc:68
 msgid "when the attribute is defined as false."
-msgstr ""
+msgstr "när attributet är definierat som falskt."
 
 #. type: Labeled list
 #: en/git-check-attr.adoc:68
@@ -14964,7 +14971,7 @@ msgstr "'set'"
 #. type: Plain text
 #: en/git-check-attr.adoc:69
 msgid "when the attribute is defined as true."
-msgstr ""
+msgstr "när attributet är definierat som sant."
 
 #. type: Labeled list
 #: en/git-check-attr.adoc:69
@@ -14975,78 +14982,95 @@ msgstr "<värde>"
 #. type: Plain text
 #: en/git-check-attr.adoc:70
 msgid "when a value has been assigned to the attribute."
-msgstr ""
+msgstr "när ett värde har tilldelats attributet."
 
 #. type: Plain text
 #: en/git-check-attr.adoc:75 en/git-check-ignore.adoc:108
 msgid "Buffering happens as documented under the `GIT_FLUSH` option in linkgit:git[1]. The caller is responsible for avoiding deadlocks caused by overfilling an input buffer or reading from an empty output buffer."
-msgstr ""
+msgstr "Buffring sker enligt beskrivningen under `GIT_FLUSH`-alternativet i linkgit:git[1]. Anroparen ansvarar för att undvika dödlägen orsakade av överfyllning av en inbuffert eller läsning från en tom utbuffert."
 
 #. type: Plain text
 #: en/git-check-attr.adoc:80
 msgid "In the examples, the following '.gitattributes' file is used:"
-msgstr ""
+msgstr "I exemplen, används följande '.gitattributes'-fil:"
 
 #. type: delimited block -
 #: en/git-check-attr.adoc:85
 #, no-wrap
 msgid "*.java diff=java -crlf myAttr\nNoMyAttr.java !myAttr\nREADME caveat=unspecified\n"
 msgstr ""
+"*.java diff=java -crlf myAttr\n"
+"NoMyAttr.java !myAttr\n"
+"README caveat=unspecified\n"
 
 #. type: Plain text
 #: en/git-check-attr.adoc:88
 msgid "Listing a single attribute:"
-msgstr ""
+msgstr "Lista ett enda attribut:"
 
 #. type: delimited block -
 #: en/git-check-attr.adoc:92
 #, no-wrap
 msgid "$ git check-attr diff org/example/MyClass.java\norg/example/MyClass.java: diff: java\n"
 msgstr ""
+"$ git check-attr diff org/example/MyClass.java\n"
+"org/example/MyClass.java: diff: java\n"
 
 #. type: Plain text
 #: en/git-check-attr.adoc:95
 msgid "Listing multiple attributes for a file:"
-msgstr ""
+msgstr "Lista flera attribut för en fil:"
 
 #. type: delimited block -
 #: en/git-check-attr.adoc:101
 #, no-wrap
 msgid "$ git check-attr crlf diff myAttr -- org/example/MyClass.java\norg/example/MyClass.java: crlf: unset\norg/example/MyClass.java: diff: java\norg/example/MyClass.java: myAttr: set\n"
 msgstr ""
+"$ git check-attr crlf diff myAttr -- org/example/MyClass.java\n"
+"org/example/MyClass.java: crlf: unset\n"
+"org/example/MyClass.java: diff: java\n"
+"org/example/MyClass.java: myAttr: set\n"
 
 #. type: Plain text
 #: en/git-check-attr.adoc:104
 msgid "Listing all attributes for a file:"
-msgstr ""
+msgstr "Lista alla attribut för en fil:"
 
 #. type: delimited block -
 #: en/git-check-attr.adoc:109
 #, no-wrap
 msgid "$ git check-attr --all -- org/example/MyClass.java\norg/example/MyClass.java: diff: java\norg/example/MyClass.java: myAttr: set\n"
 msgstr ""
+"$ git check-attr --all -- org/example/MyClass.java\n"
+"org/example/MyClass.java: diff: java\n"
+"org/example/MyClass.java: myAttr: set\n"
 
 #. type: Plain text
 #: en/git-check-attr.adoc:112
 msgid "Listing an attribute for multiple files:"
-msgstr ""
+msgstr "Lista ett attribut för flera filer:"
 
 #. type: delimited block -
 #: en/git-check-attr.adoc:117
 #, no-wrap
 msgid "$ git check-attr myAttr -- org/example/MyClass.java org/example/NoMyAttr.java\norg/example/MyClass.java: myAttr: set\norg/example/NoMyAttr.java: myAttr: unspecified\n"
 msgstr ""
+"$ git check-attr myAttr -- org/example/MyClass.java org/example/NoMyAttr.java\n"
+"org/example/MyClass.java: myAttr: set\n"
+"org/example/NoMyAttr.java: myAttr: unspecified\n"
 
 #. type: Plain text
 #: en/git-check-attr.adoc:120
 msgid "Not all values are equally unambiguous:"
-msgstr ""
+msgstr "Inte alla värden är lika entydiga:"
 
 #. type: delimited block -
 #: en/git-check-attr.adoc:124
 #, no-wrap
 msgid "$ git check-attr caveat README\nREADME: caveat: unspecified\n"
 msgstr ""
+"$ git check-attr caveat README\n"
+"README: caveat: unspecified\n"
 
 #. type: Plain text
 #: en/git-check-attr.adoc:129
@@ -16013,7 +16037,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-checkout.adoc:328 en/git-reset.adoc:123 en/git-restore.adoc:136
 msgid "Pathspec is passed in _<file>_ instead of commandline args. If _<file>_ is exactly `-` then standard input is used. Pathspec elements are separated by _LF_ or _CR_/_LF_. Pathspec elements can be quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1]). See also `--pathspec-file-nul` and global `--literal-pathspecs`."
-msgstr ""
+msgstr "Sökvägsspec skickas i _<fil>_ istället för kommandoradsargument. Om _<fil>_ är exakt `-` används standardindata. Sökvägsspec-element separeras med _LF_ eller _CR_/_LF_. Sökvägsspec-element kan citeras enligt beskrivningen för konfigurationsvariabeln `core.quotePath` (se linkgit:git-config[1]). Se även `--pathspec-file-nul` och global `--literal-pathspecs`."
 
 #. type: Labeled list
 #: en/git-checkout.adoc:334
@@ -16061,7 +16085,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-checkout.adoc:373 en/git-reset.adoc:136 en/git-restore.adoc:147
 msgid "Limits the paths affected by the operation."
-msgstr ""
+msgstr "Begränsar de sökvägar som påverkas av operationen."
 
 #. type: Plain text
 #: en/git-checkout.adoc:375 en/git-commit.adoc:413 en/git-reset.adoc:138
@@ -18274,7 +18298,7 @@ msgstr "genom att använda `-a`-växeln med `commit`-kommandot för att automati
 #. type: Plain text
 #: en/git-commit.adoc:55
 msgid "by using the `--interactive` or `--patch` switches with the `commit` command to decide one by one which files or hunks should be part of the commit in addition to contents in the index, before finalizing the operation. See the ``Interactive Mode'' section of linkgit:git-add[1] to learn how to operate these modes."
-msgstr "genom att använda växlarna `--interactive` eller `--patch` med kommandot `commit` för att en efter en bestämma vilka filer eller hunks som ska ingå i incheckningen utöver innehållet i indexet, innan operationen slutförs. Se avsnittet ``Interaktivt läge'' i linkgit:git-add[1] för att lära dig hur man använder dessa lägen."
+msgstr "genom att använda växlarna `--interactive` eller `--patch` med kommandot `commit` för att en efter en bestämma vilka filer eller stycken som ska ingå i incheckningen utöver innehållet i indexet, innan operationen slutförs. Se avsnittet ``Interaktivt läge'' i linkgit:git-add[1] för att lära dig hur man använder dessa lägen."
 
 #. type: Plain text
 #: en/git-commit.adoc:59
@@ -46951,11 +46975,15 @@ msgstr "git-reset - Återställ aktuell HEAD till angivet tillstånd"
 #, no-wrap
 msgid "git reset [-q] [<tree-ish>] [--] <pathspec>...\ngit reset [-q] [--pathspec-from-file=<file> [--pathspec-file-nul]] [<tree-ish>]\ngit reset (--patch | -p) [<tree-ish>] [--] [<pathspec>...]\ngit reset [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [<commit>]\n"
 msgstr ""
+"git reset [-q] [<trädlikt>] [--] <sökvägsspec>...\n"
+"git reset [-q] [--pathspec-from-file=<fil> [--pathspec-file-nul]] [<trädlikt>]\n"
+"git reset (--patch | -p) [<trädlikt>] [--] [<sökvägsspec>...]\n"
+"git reset [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [<incheckning>]\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:22
 msgid "In the first three forms, copy entries from _<tree-ish>_ to the index. In the last form, set the current branch head (`HEAD`) to _<commit>_, optionally modifying index and working tree to match. The _<tree-ish>_/_<commit>_ defaults to `HEAD` in all forms."
-msgstr ""
+msgstr "I de tre första formerna, kopiera poster från _<trädlikt>_ till indexet. I det sista formuläret, sätt den aktuella grenhuvudet (`HEAD`) till _<incheckning>_, och modifiera eventuellt index och arbetsträd så att de matchar. _<trädlikt>_/_<incheckning>_ har som standard `HEAD` i alla formulär."
 
 #. type: Labeled list
 #: en/git-reset.adoc:23
@@ -46972,17 +47000,17 @@ msgstr "`git reset [-q] [--pathspec-from-file=<file> [--pathspec-file-nul]] [<tt
 #. type: Plain text
 #: en/git-reset.adoc:28
 msgid "These forms reset the index entries for all paths that match the _<pathspec>_ to their state at _<tree-ish>_. (It does not affect the working tree or the current branch.)"
-msgstr ""
+msgstr "Dessa former återställer indexposterna för alla sökvägar som matchar _<sökvägsspec>_ till deras tillstånd vid _<trädlikt>_. (Det påverkar inte arbetsträdet eller den aktuella grenen.)"
 
 #. type: Plain text
 #: en/git-reset.adoc:32
 msgid "This means that `git reset <pathspec>` is the opposite of `git add <pathspec>`. This command is equivalent to `git restore [--source=<tree-ish>] --staged <pathspec>...`."
-msgstr ""
+msgstr "Det här betyder att `git reset <sökvägsspec>` är motsatsen till `git add <sökvägsspec>`. Detta kommando motsvarar `git restore [--source=<trädlikt>] --staged <sökvägsspec>...`."
 
 #. type: Plain text
 #: en/git-reset.adoc:39
 msgid "After running `git reset <pathspec>` to update the index entry, you can use linkgit:git-restore[1] to check the contents out of the index to the working tree. Alternatively, using linkgit:git-restore[1] and specifying a commit with `--source`, you can copy the contents of a path out of a commit to the index and to the working tree in one go."
-msgstr ""
+msgstr "Efter att ha kört `git reset <sökvägsspec>` för att uppdatera indexposten kan du använda linkgit:git-restore[1] för att checka ut innehållet från indexet till arbetskatalog. Alternativt, genom att använda linkgit:git-restore[1] och ange en incheckning med `--source`, kan du kopiera innehållet i en sökväg från en incheckning till indexet och till arbetsträdet samtidigt."
 
 #. type: Labeled list
 #: en/git-reset.adoc:40
@@ -46993,23 +47021,23 @@ msgstr "`git reset (--patch | -p) [<trädlikt>] [--] [<sökvägsspec>...]`"
 #. type: Plain text
 #: en/git-reset.adoc:44
 msgid "Interactively select hunks in the difference between the index and _<tree-ish>_ (defaults to `HEAD`). The chosen hunks are applied in reverse to the index."
-msgstr ""
+msgstr "Välj interaktivt bitar i skillnaden mellan indexet och _<trädlikt>_ (standardinställningen är `HEAD`). De valda bitarna tillämpas i omvänd ordning på indexet."
 
 #. type: Plain text
 #: en/git-reset.adoc:48
 msgid "This means that `git reset -p` is the opposite of `git add -p`, i.e. you can use it to selectively reset hunks. See the \"Interactive Mode\" section of linkgit:git-add[1] to learn how to operate the `--patch` mode."
-msgstr ""
+msgstr "Det här betyder att `git reset -p` är motsatsen till `git add -p`, d.v.s. du kan använda det för att selektivt återställa stycken. Se avsnittet \"Interaktivt läge\" i linkgit:git-add[1] för att lära dig hur man använder `--patch`-läget."
 
 #. type: Labeled list
 #: en/git-reset.adoc:49
 #, no-wrap
 msgid "`git reset [<mode>] [<commit>]`"
-msgstr ""
+msgstr "`git reset [<läge>] [<incheckning>]`"
 
 #. type: Plain text
 #: en/git-reset.adoc:55
 msgid "This form resets the current branch head to _<commit>_ and possibly updates the index (resetting it to the tree of _<commit>_) and the working tree depending on _<mode>_. Before the operation, `ORIG_HEAD` is set to the tip of the current branch. If _<mode>_ is omitted, defaults to `--mixed`. The _<mode>_ must be one of the following:"
-msgstr ""
+msgstr "Det här formuläret återställer den aktuella grenhuvudet till _<incheckning>_ och uppdaterar eventuellt indexet (återställer det till trädet för _<incheckning>_) och arbetskatalog beroende på _<läge>_. Före operationen sätts `ORIG_HEAD` till toppen av den aktuella grenen. Om _<mode>_ utelämnas, sätts standardvärdet till `--mixed`. _<läge>_ måste vara ett av följande:"
 
 #. type: Labeled list
 #: en/git-reset.adoc:57
@@ -47021,7 +47049,7 @@ msgstr "`--soft`"
 #. type: Plain text
 #: en/git-reset.adoc:62
 msgid "Does not touch the index file or the working tree at all (but resets the head to _<commit>_, just like all modes do). This leaves all your changed files \"Changes to be committed\", as `git status` would put it."
-msgstr ""
+msgstr "Rör inte indexfilen eller arbetsträdet alls (men återställer huvudet till _<incheckning>_, precis som alla lägen gör). Detta lämnar alla dina ändrade filer kvar som \"Ändringar att checkas-in\", som `git status` skulle uttrycka det."
 
 #. type: Labeled list
 #: en/git-reset.adoc:63
@@ -47033,12 +47061,12 @@ msgstr "`--mixed`"
 #. type: Plain text
 #: en/git-reset.adoc:67
 msgid "Resets the index but not the working tree (i.e., the changed files are preserved but not marked for commit) and reports what has not been updated. This is the default action."
-msgstr ""
+msgstr "Återställer indexet men inte arbetskatalog (dvs. de ändrade filerna bevaras men markeras inte för incheckning) och rapporterar vad som inte har uppdaterats. Detta är standardåtgärden."
 
 #. type: Plain text
 #: en/git-reset.adoc:70
 msgid "If `-N` is specified, removed paths are marked as intent-to-add (see linkgit:git-add[1])."
-msgstr ""
+msgstr "Om `-N` anges markeras borttagna sökvägar som avsiktliga att lägga till (se linkgit:git-add[1])."
 
 #. type: Labeled list
 #: en/git-reset.adoc:71
@@ -47050,27 +47078,27 @@ msgstr "`--hard`"
 #. type: Plain text
 #: en/git-reset.adoc:75
 msgid "Resets the index and working tree. Any changes to tracked files in the working tree since _<commit>_ are discarded. Any untracked files or directories in the way of writing any tracked files are simply deleted."
-msgstr ""
+msgstr "Återställer indexet och arbetskatalog. Alla ändringar av spårade filer i arbetskatalog sedan _<incheckning>_ ignoreras. Alla ospårade filer eller kataloger som används vid skrivning av spårade filer raderas helt enkelt."
 
 #. type: Plain text
 #: en/git-reset.adoc:83
 msgid "Resets the index and updates the files in the working tree that are different between _<commit>_ and `HEAD`, but keeps those which are different between the index and working tree (i.e. which have changes which have not been added). If a file that is different between _<commit>_ and the index has unstaged changes, reset is aborted."
-msgstr ""
+msgstr "Återställer indexet och uppdaterar filerna i arbetskatalogen som skiljer sig mellan _<incheckning>_ och `HEAD`, men behåller de som skiljer sig mellan indexet och arbetskatalogen (dvs. som har ändringar som inte har lagts till). Om en fil som skiljer sig mellan _<incheckning>_ och indexet har ändringar som inte har lagts till, avbryts återställningen."
 
 #. type: Plain text
 #: en/git-reset.adoc:86
 msgid "In other words, `--merge` does something like a `git read-tree -u -m <commit>`, but carries forward unmerged index entries."
-msgstr ""
+msgstr "Med andra ord, `--merge` gör något i stil med `git read-tree -u -m <incheckning>`, men överför osammanfogade indexposter."
 
 #. type: Plain text
 #: en/git-reset.adoc:92
 msgid "Resets index entries and updates files in the working tree that are different between _<commit>_ and `HEAD`. If a file that is different between _<commit>_ and `HEAD` has local changes, reset is aborted."
-msgstr ""
+msgstr "Återställer indexposter och uppdaterar filer i arbetskatalogen som skiljer sig mellan _<incheckning>_ och `HEAD`. Om en fil som skiljer sig mellan _<incheckning>_ och `HEAD` har lokala ändringar avbryts återställningen."
 
 #. type: Plain text
 #: en/git-reset.adoc:99
 msgid "When the working tree is updated, using `--recurse-submodules` will also recursively reset the working tree of all active submodules according to the commit recorded in the superproject, also setting the submodules' `HEAD` to be detached at that commit."
-msgstr ""
+msgstr "När arbetskatalogen uppdateras, kommer användning av `--recurse-submodules` också rekursivt att återställa arbetskatalogen för alla aktiva undermoduler enligt den incheckning som registrerats i superprojektet, och även ställa in undermodulernas `HEAD` så att de kopplas bort vid den incheckningen."
 
 #. type: Plain text
 #: en/git-reset.adoc:103 en/git-restore.adoc:30 en/git-revert.adoc:33
@@ -47092,378 +47120,470 @@ msgstr "`--no-refresh`"
 #. type: Plain text
 #: en/git-reset.adoc:115
 msgid "Refresh the index after a mixed reset. Enabled by default."
-msgstr ""
+msgstr "Uppdatera indexet efter en blandad återställning. Aktiverat som standard."
 
 #. type: Labeled list
 #: en/git-reset.adoc:142
 #, no-wrap
 msgid "Undo add"
-msgstr ""
+msgstr "Ångra tillägg"
 
 #. type: delimited block -
 #: en/git-reset.adoc:150
 #, no-wrap
 msgid "$ edit                                     <1>\n$ git add frotz.c filfre.c\n$ mailx                                    <2>\n$ git reset                                <3>\n$ git pull git://info.example.com/ nitfol  <4>\n"
 msgstr ""
+"$ edit                                     <1>\n"
+"$ git add frotz.c filfre.c\n"
+"$ mailx                                    <2>\n"
+"$ git reset                                <3>\n"
+"$ git pull git://info.example.com/ nitfol  <4>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:156
 msgid "You are happily working on something, and find the changes in these files are in good order. You do not want to see them when you run `git diff`, because you plan to work on other files and changes with these files are distracting."
-msgstr ""
+msgstr "Du arbetar glatt med något och upptäcker att ändringarna i dessa filer är i god ordning. Du vill inte se dem när du kör `git diff`, eftersom du planerar att arbeta med andra filer och ändringar med dessa filer är störande."
 
 #. type: Plain text
 #: en/git-reset.adoc:157
+#, fuzzy
 msgid "Somebody asks you to pull, and the changes sound worthy of merging."
-msgstr ""
+msgstr "Någon ber dig att hämta (\"pulla\"), och ändringarna låter värda att sammanslås."
 
 #. type: Plain text
 #: en/git-reset.adoc:162
 msgid "However, you already dirtied the index (i.e. your index does not match the `HEAD` commit). But you know the pull you are going to make does not affect `frotz.c` or `filfre.c`, so you revert the index changes for these two files. Your changes in working tree remain there."
-msgstr ""
+msgstr "Du har dock redan smutsat ner indexet (dvs. ditt index matchar inte `HEAD`-incheckningen). Men du vet att den pull du ska göra inte påverkar `frotz.c` eller `filfre.c`, så du återställer indexändringarna för dessa två filer. Dina ändringar i arbetskatalog finns kvar där."
 
 #. type: Plain text
 #: en/git-reset.adoc:164
 msgid "Then you can pull and merge, leaving `frotz.c` and `filfre.c` changes still in the working tree."
-msgstr ""
+msgstr "Sedan kan du hämta och sammanfoga, och lämna ändringarna av `frotz.c` och `filfre.c` kvar i arbetskatalogen."
 
 #. type: Labeled list
 #: en/git-reset.adoc:165
 #, no-wrap
 msgid "Undo a commit and redo"
-msgstr ""
+msgstr "Ångra en incheckning och gör om"
 
 #. type: delimited block -
 #: en/git-reset.adoc:172
 #, no-wrap
 msgid "$ git commit ...\n$ git reset --soft HEAD^      <1>\n$ edit                        <2>\n$ git commit -a -c ORIG_HEAD  <3>\n"
 msgstr ""
+"$ git commit ...\n"
+"$ git reset --soft HEAD^      <1>\n"
+"$ edit                        <2>\n"
+"$ git commit -a -c ORIG_HEAD  <3>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:177
 msgid "This is most often done when you remembered what you just committed is incomplete, or you misspelled your commit message, or both. Leaves working tree as it was before \"reset\"."
-msgstr ""
+msgstr "Detta görs oftast när du kommer ihåg att det du just checkade-in är ofullständigt, eller att du stavade ditt inchecknings-meddelande fel, eller båda. Lämnar arbetskatalogen som det var före \"återställning\"."
 
 #. type: Plain text
 #: en/git-reset.adoc:178
 msgid "Make corrections to working tree files."
-msgstr ""
+msgstr "Gör korrigeringar till arbetskatalogs-filer."
 
 #. type: Plain text
 #: en/git-reset.adoc:181
 msgid "\"reset\" copies the old head to `.git/ORIG_HEAD`; redo the commit by starting with its log message. If you do not need to edit the message further, you can give `-C` option instead."
-msgstr ""
+msgstr "\"reset\" kopierar den gamla huvudet till `.git/ORIG_HEAD`; gör om incheckningen genom att börja med dess loggmeddelande. Om du inte behöver redigera meddelandet ytterligare kan du ge alternativet `-C` istället."
 
 #. type: Plain text
 #: en/git-reset.adoc:183
 msgid "See also the `--amend` option to linkgit:git-commit[1]."
-msgstr ""
+msgstr "Se även alternativet `--amend` till linkgit:git-commit[1]."
 
 #. type: Labeled list
 #: en/git-reset.adoc:184
 #, no-wrap
 msgid "Undo a commit, making it a topic branch"
-msgstr ""
+msgstr "Ångra en incheckning, vilket gör den till en ämnesgren"
 
 #. type: delimited block -
 #: en/git-reset.adoc:190
 #, no-wrap
 msgid "$ git branch topic/wip          <1>\n$ git reset --hard HEAD~3       <2>\n$ git switch topic/wip          <3>\n"
 msgstr ""
+"$ git branch topic/wip          <1>\n"
+"$ git reset --hard HEAD~3       <2>\n"
+"$ git switch topic/wip          <3>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:196
 msgid "You have made some commits, but realize they were premature to be in the `master` branch. You want to continue polishing them in a topic branch, so create `topic/wip` branch off of the current `HEAD`."
-msgstr ""
+msgstr "Du har gjort några incheckningar, men inser att det var för tidigt att lägga dem i `master`-grenen. Du vill fortsätta finslipa dem i en ämnes-gren, så skapa en `topic/wip`-gren från den nuvarande `HEAD`."
 
 #. type: Plain text
 #: en/git-reset.adoc:197
 msgid "Rewind the master branch to get rid of those three commits."
-msgstr ""
+msgstr "Spola tillbaka master-grenen för att bli av med de tre incheckningarna."
 
 #. type: Plain text
 #: en/git-reset.adoc:198
 msgid "Switch to `topic/wip` branch and keep working."
-msgstr ""
+msgstr "Byt till grenen `topic/wip` och fortsätt arbeta."
 
 #. type: Labeled list
 #: en/git-reset.adoc:199
 #, no-wrap
 msgid "Undo commits permanently"
-msgstr ""
+msgstr "Ångra incheckningar permanent"
 
 #. type: delimited block -
 #: en/git-reset.adoc:204
 #, no-wrap
 msgid "$ git commit ...\n$ git reset --hard HEAD~3   <1>\n"
 msgstr ""
+"$ git commit ...\n"
+"$ git reset --hard HEAD~3   <1>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:211
 msgid "The last three commits (`HEAD`, `HEAD^`, and `HEAD~2`) were bad and you do not want to ever see them again. Do *not* do this if you have already given these commits to somebody else. (See the \"RECOVERING FROM UPSTREAM REBASE\" section in linkgit:git-rebase[1] for the implications of doing so.)"
-msgstr ""
+msgstr "De tre senaste incheckningarna (`HEAD`, `HEAD^` och `HEAD~2`) var dåliga och du vill inte se dem igen. Gör *inte* detta om du redan har gett dessa incheckningar till någon annan. (Se avsnittet \"ÅTERSTÄLLA FRÅN UPSTRÖMSREBASE\" i linkgit:git-rebase[1] för konsekvenserna av att göra det.)"
 
 #. type: Labeled list
 #: en/git-reset.adoc:212
 #, no-wrap
 msgid "Undo a merge or pull"
-msgstr ""
+msgstr "Ångra en sammanslagning eller pull"
 
 #. type: delimited block -
 #: en/git-reset.adoc:224
 #, no-wrap
 msgid "$ git pull                         <1>\nAuto-merging nitfol\nCONFLICT (content): Merge conflict in nitfol\nAutomatic merge failed; fix conflicts and then commit the result.\n$ git reset --hard                 <2>\n$ git pull . topic/branch          <3>\nUpdating from 41223... to 13134...\nFast-forward\n$ git reset --hard ORIG_HEAD       <4>\n"
 msgstr ""
+"$ git pull                         <1>\n"
+"Auto-merging nitfol\n"
+"CONFLICT (content): Merge conflict in nitfol\n"
+"Automatic merge failed; fix conflicts and then commit the result.\n"
+"$ git reset --hard                 <2>\n"
+"$ git pull . topic/branch          <3>\n"
+"Updating from 41223... to 13134...\n"
+"Fast-forward\n"
+"$ git reset --hard ORIG_HEAD       <4>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:229
 msgid "Try to update from the upstream resulted in a lot of conflicts; you were not ready to spend a lot of time merging right now, so you decide to do that later."
-msgstr ""
+msgstr "Att försöka uppdatera uppströms resulterade i många konflikter; du var inte redo att lägga ner mycket tid på att sammanslå just nu, så du bestämmer dig för att göra det senare."
 
 #. type: Plain text
 #: en/git-reset.adoc:232
 msgid "\"pull\" has not made merge commit, so `git reset --hard` which is a synonym for `git reset --hard HEAD` clears the mess from the index file and the working tree."
-msgstr ""
+msgstr "\"pull\" har inte gjort sammanslagnings-incheckning, så `git reset --hard` som är en synonym för `git reset --hard HEAD` rensar bort röran från indexfilen och arbetskatalogen."
 
 #. type: Plain text
 #: en/git-reset.adoc:234
 msgid "Merge a topic branch into the current branch, which resulted in a fast-forward."
-msgstr ""
+msgstr "Sammanfoga en ämnesgren med den aktuella grenen, vilket resulterade i en snabbspolning framåt."
 
 #. type: Plain text
 #: en/git-reset.adoc:239
 msgid "But you decided that the topic branch is not ready for public consumption yet. \"pull\" or \"merge\" always leaves the original tip of the current branch in `ORIG_HEAD`, so resetting hard to it brings your index file and the working tree back to that state, and resets the tip of the branch to that commit."
-msgstr ""
+msgstr "Men du har bestämt dig för att ämnesgrenen inte är redo för offentlig konsumtion än. \"pull\" eller \"merge\" lämnar alltid den ursprungliga toppen på den aktuella grenen i `ORIG_HEAD`, så att återställa den hårt till den återställer din indexfil och arbetskatalogen till det tillståndet, och återställer grenens toppen till den incheckningen."
 
 #. type: Labeled list
 #: en/git-reset.adoc:240
 #, no-wrap
 msgid "Undo a merge or pull inside a dirty working tree"
-msgstr ""
+msgstr "Ångra en sammanslagning eller pull inuti ett smutsig arbetskatalog"
 
 #. type: delimited block -
 #: en/git-reset.adoc:249
 #, no-wrap
 msgid "$ git pull                         <1>\nAuto-merging nitfol\nMerge made by recursive.\n nitfol                |   20 +++++----\n ...\n$ git reset --merge ORIG_HEAD      <2>\n"
 msgstr ""
+"$ git pull                         <1>\n"
+"Auto-merging nitfol\n"
+"Merge made by recursive.\n"
+" nitfol                |   20 +++++----\n"
+" ...\n"
+"$ git reset --merge ORIG_HEAD      <2>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:255
 msgid "Even if you may have local modifications in your working tree, you can safely say `git pull` when you know that the change in the other branch does not overlap with them."
-msgstr ""
+msgstr "Även om du kan ha lokala modifieringar i ditt arbetskatalog, kan du tryggt säga \"git pull\" när du vet att ändringen i den andra grenen inte överlappar dem."
 
 #. type: Plain text
 #: en/git-reset.adoc:260
 msgid "After inspecting the result of the merge, you may find that the change in the other branch is unsatisfactory. Running `git reset --hard ORIG_HEAD` will let you go back to where you were, but it will discard your local changes, which you do not want. `git reset --merge` keeps your local changes."
-msgstr ""
+msgstr "Efter att ha granskat resultatet av sammanslagningen, kan du upptäcka att ändringen i den andra grenen är otillfredsställande. Om du kör `git reset --hard ORIG_HEAD` går du tillbaka till var du var, men det kommer att ignorera dina lokala ändringar, vilket du inte vill ha. `git reset --merge` behåller dina lokala ändringar."
 
 #. type: Labeled list
 #: en/git-reset.adoc:262 en/git-stash.adoc:335
 #, no-wrap
 msgid "Interrupted workflow"
-msgstr ""
+msgstr "Avbrutet arbetsflöde"
 
 #. type: Plain text
 #: en/git-reset.adoc:268
 msgid "Suppose you are interrupted by an urgent fix request while you are in the middle of a large change. The files in your working tree are not in any shape to be committed yet, but you need to get to the other branch for a quick bugfix."
-msgstr ""
+msgstr "Anta att du blir avbruten av en brådskande åtgärdsförfrågan medan du håller på med en stor ändring. Filerna i ditt arbetsträd är ännu inte i form för att komma åt, men du behöver gå till den andra grenen för en snabb buggfix."
 
 #. type: delimited block -
 #: en/git-reset.adoc:279
 #, no-wrap
 msgid "$ git switch feature  ;# you were working in \"feature\" branch and\n$ work work work      ;# got interrupted\n$ git commit -a -m \"snapshot WIP\"                 <1>\n$ git switch master\n$ fix fix fix\n$ git commit ;# commit with real log\n$ git switch feature\n$ git reset --soft HEAD^ ;# go back to WIP state  <2>\n$ git reset                                       <3>\n"
 msgstr ""
+"$ git switch feature  ;# du arbetade i \"funktions\"-grenen och\n"
+"$ work work work      ;# blev avbruten\n"
+"$ git commit -a -m \"ögonblicksbild WIP\"                     <1>\n"
+"$ git switch master\n"
+"$ fix fix fix\n"
+"$ git commit ;# commit med riktig logg\n"
+"$ git switch feature\n"
+"$ git reset --soft HEAD^ ;# gå tillbaka till WIP-tillstånd  <2>\n"
+"$ git reset                                                 <3>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:282
 msgid "This commit will get blown away so a throw-away log message is OK."
-msgstr ""
+msgstr "Denna incheckning kommer att bli bortblåst så ett meddelande om bortkastad logg är okej."
 
 #. type: Plain text
 #: en/git-reset.adoc:284
 msgid "This removes the 'WIP' commit from the commit history, and sets your working tree to the state just before you made that snapshot."
-msgstr ""
+msgstr "Detta tar bort 'WIP'-incheckningen från inchecknings-historiken och ställer in ditt arbetskatalog till tillståndet precis innan du skapade den ögonblicksbilden."
 
 #. type: Plain text
 #: en/git-reset.adoc:287
 msgid "At this point the index file still has all the WIP changes you committed as 'snapshot WIP'. This updates the index to show your WIP files as uncommitted."
-msgstr ""
+msgstr "Vid det här laget innehåller indexfilen fortfarande alla WIP-ändringar som du har checkat-in som en \"ögonblicksbild WIP\". Detta uppdaterar indexet så att dina WIP-filer visas som obehandlade."
 
 #. type: Plain text
 #: en/git-reset.adoc:289
 msgid "See also linkgit:git-stash[1]."
-msgstr ""
+msgstr "Se även linkgit:git-stash[1]."
 
 #. type: Labeled list
 #: en/git-reset.adoc:290
 #, no-wrap
 msgid "Reset a single file in the index"
-msgstr ""
+msgstr "Återställ en enskild fil i indexet"
 
 #. type: Plain text
 #: en/git-reset.adoc:295
 msgid "Suppose you have added a file to your index, but later decide you do not want to add it to your commit. You can remove the file from the index while keeping your changes with git reset."
-msgstr ""
+msgstr "Anta att du har lagt till en fil i ditt index, men senare bestämmer dig för att du inte vill lägga till den i din incheckning. Du kan ta bort filen från indexet samtidigt som du behåller dina ändringar med git reset."
 
 #. type: delimited block -
 #: en/git-reset.adoc:300
 #, no-wrap
 msgid "$ git reset -- frotz.c                      <1>\n$ git commit -m \"Commit files in index\"     <2>\n$ git add frotz.c                           <3>\n"
 msgstr ""
+"$ git reset -- frotz.c                      <1>\n"
+"$ git commit -m \"Checka-in filer i index\"   <2>\n"
+"$ git add frotz.c                           <3>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:304
 msgid "This removes the file from the index while keeping it in the working directory."
-msgstr ""
+msgstr "Detta tar bort filen från indexet medan den behålls i arbetskatalogen."
 
 #. type: Plain text
 #: en/git-reset.adoc:305
 msgid "This commits all other changes in the index."
-msgstr ""
+msgstr "Detta checkar-in alla andra ändringar i indexet."
 
 #. type: Plain text
 #: en/git-reset.adoc:306
 msgid "Adds the file to the index again."
-msgstr ""
+msgstr "Lägger till filen i indexet igen."
 
 #. type: Labeled list
 #: en/git-reset.adoc:307
 #, no-wrap
 msgid "Keep changes in working tree while discarding some previous commits"
-msgstr ""
+msgstr "Behåll ändringar i arbetskatalogen medan du kasta bort några tidigare incheckningar"
 
 #. type: Plain text
 #: en/git-reset.adoc:314
 msgid "Suppose you are working on something and you commit it, and then you continue working a bit more, but now you think that what you have in your working tree should be in another branch that has nothing to do with what you committed previously. You can start a new branch and reset it while keeping the changes in your working tree."
-msgstr ""
+msgstr "Anta att du arbetar med något och du checkar-in det, och sedan fortsätter du att arbeta lite mer, men nu tror du att det du har i din arbetskatalog borde finnas i en annan gren som inte har något att göra med det du checkade-in tidigare. Du kan starta en ny gren och återställa den samtidigt som du behåller ändringarna i din arbetskatalog."
 
 #. type: delimited block -
 #: en/git-reset.adoc:323
 #, no-wrap
 msgid "$ git tag start\n$ git switch -c branch1\n$ edit\n$ git commit ...                            <1>\n$ edit\n$ git switch -c branch2                     <2>\n$ git reset --keep start                    <3>\n"
 msgstr ""
+"$ git tag start\n"
+"$ git switch -c branch1\n"
+"$ edit\n"
+"$ git commit ...                            <1>\n"
+"$ edit\n"
+"$ git switch -c branch2                     <2>\n"
+"$ git reset --keep start                    <3>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:326
 msgid "This commits your first edits in `branch1`."
-msgstr ""
+msgstr "Detta checkar-in dina första redigeringar i `branch1`."
 
 #. type: Plain text
 #: en/git-reset.adoc:330
 msgid "In the ideal world, you could have realized that the earlier commit did not belong to the new topic when you created and switched to `branch2` (i.e. `git switch -c branch2 start`), but nobody is perfect."
-msgstr ""
+msgstr "I den ideala världen hade du kunnat inse att den tidigare incheckningen inte hörde hemma i det nya ämnet när du skapade och bytte till `branch2` (dvs. `git switch -c branch2 start`), men ingen är perfekt."
 
 #. type: Plain text
 #: en/git-reset.adoc:332
 msgid "But you can use `reset --keep` to remove the unwanted commit after you switched to `branch2`."
-msgstr ""
+msgstr "Men du kan använda `reset --keep` för att ta bort den oönskade incheckningen efter att du har bytt till `branch2`."
 
 #. type: Labeled list
 #: en/git-reset.adoc:333
 #, no-wrap
 msgid "Split a commit apart into a sequence of commits"
-msgstr ""
+msgstr "Dela upp en incheckning i en sekvens av incheckningar"
 
 #. type: Plain text
 #: en/git-reset.adoc:341
 msgid "Suppose that you have created lots of logically separate changes and committed them together. Then, later you decide that it might be better to have each logical chunk associated with its own commit. You can use git reset to rewind history without changing the contents of your local files, and then successively use `git add -p` to interactively select which hunks to include into each commit, using `git commit -c` to pre-populate the commit message."
-msgstr ""
+msgstr "Anta att du har skapat många logiskt separata ändringar och checkat-in dem tillsammans. Senare bestämmer du dig för att det kan vara bättre att ha varje logisk bit associerad med sin egen incheckning. Du kan använda git reset för att spola tillbaka historiken utan att ändra innehållet i dina lokala filer, och sedan successivt använda `git add -p` för att interaktivt välja vilka stycken som ska inkluderas i varje incheckning, med hjälp av `git commit -c` för att förfylla inchecknings-meddelandet."
 
 #. type: delimited block -
 #: en/git-reset.adoc:351
 #, no-wrap
 msgid "$ git reset -N HEAD^                        <1>\n$ git add -p                                <2>\n$ git diff --cached                         <3>\n$ git commit -c HEAD@{1}                    <4>\n...                                         <5>\n$ git add ...                               <6>\n$ git diff --cached                         <7>\n$ git commit ...                            <8>\n"
 msgstr ""
+"$ git reset -N HEAD^                        <1>\n"
+"$ git add -p                                <2>\n"
+"$ git diff --cached                         <3>\n"
+"$ git commit -c HEAD@{1}                    <4>\n"
+"...                                         <5>\n"
+"$ git add ...                               <6>\n"
+"$ git diff --cached                         <7>\n"
+"$ git commit ...                            <8>\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:357
 msgid "First, reset the history back one commit so that we remove the original commit, but leave the working tree with all the changes. The `-N` ensures that any new files added with `HEAD` are still marked so that `git add -p` will find them."
-msgstr ""
+msgstr "Först, återställ historiken bakåt en incheckning så att vi tar bort den ursprungliga incheckningen, men lämnar arbetskatalogen med alla ändringar. `-N` säkerställer att alla nya filer som läggs till med `HEAD` fortfarande är markerade så att `git add -p` hittar dem."
 
 #. type: Plain text
 #: en/git-reset.adoc:361
 msgid "Next, we interactively select diff hunks to add using the `git add -p` facility. This will ask you about each diff hunk in sequence and you can use simple commands such as \"yes, include this\", \"No don't include this\" or even the very powerful \"edit\" facility."
-msgstr ""
+msgstr "Därefter väljer vi interaktivt diff-stycken att lägga till med hjälp av funktionen `git add -p`. Detta kommer att fråga dig om varje diff-stycke i sekvens och du kan använda enkla kommandon som \"ja, inkludera detta\", \"Nej, inkludera inte detta\" eller till och med den mycket kraftfulla funktionen \"redigera\"."
 
 #. type: Plain text
 #: en/git-reset.adoc:365
 msgid "Once satisfied with the hunks you want to include, you should verify what has been prepared for the first commit by using `git diff --cached`. This shows all the changes that have been moved into the index and are about to be committed."
-msgstr ""
+msgstr "När du är nöjd med de ändringar du vill inkludera, bör du verifiera vad som har förberetts för den första incheckningen genom att använda `git diff --cached`. Detta visar alla ändringar som har flyttats till indexet och som snart kommer att checkas-in."
 
 #. type: Plain text
 #: en/git-reset.adoc:372
 msgid "Next, commit the changes stored in the index. The `-c` option specifies to pre-populate the commit message from the original message that you started with in the first commit. This is helpful to avoid retyping it. The `HEAD@{1}` is a special notation for the commit that `HEAD` used to be at prior to the original reset commit (1 change ago). See linkgit:git-reflog[1] for more details. You may also use any other valid commit reference."
-msgstr ""
+msgstr "Sedan, checka-in ändringarna som lagras i indexet. Alternativet `-c` anger att inchecknings-meddelandet ska förfyllas från det ursprungliga meddelandet som du började med i den första incheckningen. Detta är praktiskt för att undvika att skriva om det. `HEAD@{1}` är en speciell notation för den incheckning som `HEAD` brukade vara vid före den ursprungliga återställnings-incheckningen (för 1 ändring sedan). Se linkgit:git-reflog[1] för mer information. Du kan också använda vilken annan giltig inchecknings-referens som helst."
 
 #. type: Plain text
 #: en/git-reset.adoc:374
 msgid "You can repeat steps 2-4 multiple times to break the original code into any number of commits."
-msgstr ""
+msgstr "Du kan upprepa steg 2–4 flera gånger för att dela upp originalkoden i valfritt antal incheckningar."
 
 #. type: Plain text
 #: en/git-reset.adoc:377
 msgid "Now you've split out many of the changes into their own commits, and might no longer use the patch mode of `git add`, in order to select all remaining uncommitted changes."
-msgstr ""
+msgstr "Nu har du delat upp många av ändringarna i egna incheckningar, och kanske inte längre använder patch-läget för `git add` för att välja alla återstående oincheckade ändringar."
 
 #. type: Plain text
 #: en/git-reset.adoc:380
 msgid "Once again, check to verify that you've included what you want to. You may also wish to verify that git diff doesn't show any remaining changes to be committed later."
-msgstr ""
+msgstr "Kontrollera återigen att du har inkluderat det du vill. Du kan också kontrollera att git diff inte visar några återstående ändringar som ska checkas-in senare."
 
 #. type: Plain text
 #: en/git-reset.adoc:381
 msgid "And finally create the final commit."
-msgstr ""
+msgstr "Och slutligen skapa den slutliga incheckningen."
 
 #. type: Plain text
 #: en/git-reset.adoc:387
 msgid "The tables below show what happens when running:"
-msgstr ""
+msgstr "Tabellerna nedan visar vad som händer vid körning:"
 
 #. type: delimited block -
 #: en/git-reset.adoc:390
 #, no-wrap
 msgid "git reset --option target\n"
-msgstr ""
+msgstr "git reset --option target\n"
 
 #. type: Plain text
 #: en/git-reset.adoc:394
 msgid "to reset the `HEAD` to another commit (`target`) with the different reset options depending on the state of the files."
-msgstr ""
+msgstr "att återställa `HEAD` till en annan incheckning (`target`) med olika återställningsalternativ beroende på filernas tillstånd."
 
 #. type: Plain text
 #: en/git-reset.adoc:403
 msgid "In these tables, `A`, `B`, `C` and `D` are some different states of a file. For example, the first line of the first table means that if a file is in state `A` in the working tree, in state `B` in the index, in state `C` in `HEAD` and in state `D` in the target, then `git reset --soft target` will leave the file in the working tree in state `A` and in the index in state `B`. It resets (i.e. moves) the `HEAD` (i.e. the tip of the current branch, if you are on one) to `target` (which has the file in state `D`)."
-msgstr ""
+msgstr "I dessa tabeller är `A`, `B`, `C` och `D` några olika tillstånd för en fil. Till exempel betyder den första raden i den första tabellen att om en fil är i tillstånd `A` i arbetskatalogen, i tillstånd `B` i indexet, i tillstånd `C` i `HEAD` och i tillstånd `D` i målet, så kommer `git reset --soft target` att lämna filen i arbetskatalogen i tillstånd `A` och i indexet i tillstånd `B`. Den återställer (dvs. flyttar) `HEAD` (dvs. spetsen på den aktuella grenen, om du är på en) till `target` (som har filen i tillstånd `D`)."
 
 #. type: delimited block .
 #: en/git-reset.adoc:412
 #, no-wrap
 msgid "working index HEAD target         working index HEAD\n----------------------------------------------------\n A       B     C    D     --soft   A       B     D\n\t\t\t  --mixed  A       D     D\n\t\t\t  --hard   D       D     D\n\t\t\t  --merge (disallowed)\n\t\t\t  --keep  (disallowed)\n"
 msgstr ""
+"arbetande index HEAD target     arbetande index HEAD\n"
+"----------------------------------------------------\n"
+" A       B     C    D     --soft   A       B     D\n"
+"\t\t\t  --mixed  A       D     D\n"
+"\t\t\t  --hard   D       D     D\n"
+"\t\t\t  --merge (otillåten)\n"
+"\t\t\t  --keep  (otillåten)\n"
 
 #. type: delimited block .
 #: en/git-reset.adoc:422
 #, no-wrap
 msgid "working index HEAD target         working index HEAD\n----------------------------------------------------\n A       B     C    C     --soft   A       B     C\n\t\t\t  --mixed  A       C     C\n\t\t\t  --hard   C       C     C\n\t\t\t  --merge (disallowed)\n\t\t\t  --keep   A       C     C\n"
 msgstr ""
+"arbetande index HEAD target     arbetande index HEAD\n"
+"----------------------------------------------------\n"
+" A       B     C    C     --soft   A       B     C\n"
+"\t\t\t  --mixed  A       C     C\n"
+"\t\t\t  --hard   C       C     C\n"
+"\t\t\t  --merge (otillåten)\n"
+"\t\t\t  --keep   A       C     C\n"
 
 #. type: delimited block .
 #: en/git-reset.adoc:432
 #, no-wrap
 msgid "working index HEAD target         working index HEAD\n----------------------------------------------------\n B       B     C    D     --soft   B       B     D\n\t\t\t  --mixed  B       D     D\n\t\t\t  --hard   D       D     D\n\t\t\t  --merge  D       D     D\n\t\t\t  --keep  (disallowed)\n"
 msgstr ""
+"arbetande index HEAD target     arbetande index HEAD\n"
+"----------------------------------------------------\n"
+" B       B     C    D     --soft   B       B     D\n"
+"\t\t\t  --mixed  B       D     D\n"
+"\t\t\t  --hard   D       D     D\n"
+"\t\t\t  --merge  D       D     D\n"
+"\t\t\t  --keep  (otillåten)\n"
 
 #. type: delimited block .
 #: en/git-reset.adoc:442
 #, no-wrap
 msgid "working index HEAD target         working index HEAD\n----------------------------------------------------\n B       B     C    C     --soft   B       B     C\n\t\t\t  --mixed  B       C     C\n\t\t\t  --hard   C       C     C\n\t\t\t  --merge  C       C     C\n\t\t\t  --keep   B       C     C\n"
 msgstr ""
+"arbetande index HEAD target     arbetande index HEAD\n"
+"----------------------------------------------------\n"
+" B       B     C    C     --soft   B       B     C\n"
+"\t\t\t  --mixed  B       C     C\n"
+"\t\t\t  --hard   C       C     C\n"
+"\t\t\t  --merge  C       C     C\n"
+"\t\t\t  --keep   B       C     C\n"
 
 #. type: delimited block .
 #: en/git-reset.adoc:452
 #, no-wrap
 msgid "working index HEAD target         working index HEAD\n----------------------------------------------------\n B       C     C    D     --soft   B       C     D\n\t\t\t  --mixed  B       D     D\n\t\t\t  --hard   D       D     D\n\t\t\t  --merge (disallowed)\n\t\t\t  --keep  (disallowed)\n"
 msgstr ""
+"arbetande index HEAD target     arbetande index HEAD\n"
+"----------------------------------------------------\n"
+" B       C     C    D     --soft   B       C     D\n"
+"\t\t\t  --mixed  B       D     D\n"
+"\t\t\t  --hard   D       D     D\n"
+"\t\t\t  --merge (otillåten)\n"
+"\t\t\t  --keep  (otillåten)\n"
 
 #. type: delimited block .
 #: en/git-reset.adoc:462
