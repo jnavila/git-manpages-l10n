@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-02-03 19:30+0000\n"
+"PO-Revision-Date: 2026-02-04 04:39+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -11763,114 +11763,130 @@ msgstr "git-bisect - Använd binärsökning för att hitta ändringen som introd
 #, no-wrap
 msgid "'git bisect' start [--term-(bad|new)=<term-new> --term-(good|old)=<term-old>]\n\t\t   [--no-checkout] [--first-parent] [<bad> [<good>...]] [--] [<pathspec>...]\n'git bisect' (bad|new|<term-new>) [<rev>]\n'git bisect' (good|old|<term-old>) [<rev>...]\n'git bisect' terms [--term-(good|old) | --term-(bad|new)]\n'git bisect' skip [(<rev>|<range>)...]\n'git bisect' next\n'git bisect' reset [<commit>]\n'git bisect' (visualize|view)\n'git bisect' replay <logfile>\n'git bisect' log\n'git bisect' run <cmd> [<arg>...]\n'git bisect' help\n"
 msgstr ""
+"'git bisect' start [--term-(bad|new)=<term-ny> --term-(good|old)=<term-gammal>]\n"
+"\t\t   [--no-checkout] [--first-parent] [<bad> [<good>...]] [--] [<sökvägsspec>...]\n"
+"'git bisect' (bad|new|<term-new>) [<rev>]\n"
+"'git bisect' (good|old|<term-old>) [<rev>...]\n"
+"'git bisect' terms [--term-(good|old) | --term-(bad|new)]\n"
+"'git bisect' skip [(<rev>|<range>)...]\n"
+"'git bisect' next\n"
+"'git bisect' reset [<incheckning>]\n"
+"'git bisect' (visualize|view)\n"
+"'git bisect' replay <loggfile>\n"
+"'git bisect' log\n"
+"'git bisect' run <cmd> [<arg>...]\n"
+"'git bisect' help\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:36
 msgid "This command uses a binary search algorithm to find which commit in your project's history introduced a bug. You use it by first telling it a \"bad\" commit that is known to contain the bug, and a \"good\" commit that is known to be before the bug was introduced. Then `git bisect` picks a commit between those two endpoints and asks you whether the selected commit is \"good\" or \"bad\". It continues narrowing down the range until it finds the exact commit that introduced the change."
-msgstr ""
+msgstr "Det här kommandot använder en binär sökalgoritm för att hitta vilken incheckningi projektets historik som introducerade en bugg. Du använder den genom att först ange en \"dålig\" incheckning som är känd för att innehålla buggen, och en \"bra\" incheckning som är känd för att finnas innan buggen introducerades. Sedan väljer `git bisect` en incheckning mellan dessa två slutpunkter och frågar dig om den valda incheckning är \"bra\" eller \"dålig\". Den fortsätter att begränsa intervallet tills den hittar exakt den incheckning som introducerade ändringen."
 
 #. type: Plain text
 #: en/git-bisect.adoc:43
 msgid "In fact, `git bisect` can be used to find the commit that changed *any* property of your project; e.g., the commit that fixed a bug, or the commit that caused a benchmark's performance to improve. To support this more general usage, the terms \"old\" and \"new\" can be used in place of \"good\" and \"bad\", or you can choose your own terms. See section \"Alternate terms\" below for more information."
-msgstr ""
+msgstr "Faktum är, att `git bisect` kan användas för att hitta den incheckning som ändrade *någon* egenskap i ditt projekt; t.ex. den incheckning som fixade ett fel, eller den incheckning som fick ett benchmarks prestanda att förbättras. För att stödja denna mer allmänna användning kan termerna \"gammal\" och \"ny\" användas istället för \"bra\" och \"dålig\", eller så kan du välja dina egna termer. Se avsnittet \"Alternativa termer\" nedan för mer information."
 
 #. type: Title ~
 #: en/git-bisect.adoc:45
 #, no-wrap
 msgid "Basic bisect commands: start, bad, good"
-msgstr ""
+msgstr "Grundläggande halveringskommandon: start, dålig, bra"
 
 #. type: Plain text
 #: en/git-bisect.adoc:50
 msgid "As an example, suppose you are trying to find the commit that broke a feature that was known to work in version `v2.6.13-rc2` of your project. You start a bisect session as follows:"
-msgstr ""
+msgstr "Anta som exempel, att du försöker hitta den incheckningsom bröt en funktion som var känd för att fungera i version `v2.6.13-rc2` av ditt projekt. Du startar en bisect-session enligt följande:"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:55
 #, no-wrap
 msgid "$ git bisect start\n$ git bisect bad                 # Current version is bad\n$ git bisect good v2.6.13-rc2    # v2.6.13-rc2 is known to be good\n"
 msgstr ""
+"$ git bisect start\n"
+"$ git bisect bad                 # Nuvarande version är dålig\n"
+"$ git bisect good v2.6.13-rc2    # v2.6.13-rc2 är känd för att vara bra\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:60
 msgid "Once you have specified at least one bad and one good commit, `git bisect` selects a commit in the middle of that range of history, checks it out, and outputs something similar to the following:"
-msgstr ""
+msgstr "När du har angett minst en dålig och en bra incheckning, väljer `git bisect` en incheckningmitt i det historikintervallet, kontrollerar den och matar ut något liknande följande:"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:63
 #, no-wrap
 msgid "Bisecting: 675 revisions left to test after this (roughly 10 steps)\n"
-msgstr ""
+msgstr "Tudelning: 675 revisioner kvar att testa efter detta (ungefär 10 steg)\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:67
 msgid "You should now compile the checked-out version and test it. If that version works correctly, type"
-msgstr ""
+msgstr "Du bör nu kompilera den utcheckade versionen och testa den. Om den versionen fungerar korrekt skriver du"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:70
 #, no-wrap
 msgid "$ git bisect good\n"
-msgstr ""
+msgstr "$ git bisect good\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:73
 msgid "If that version is broken, type"
-msgstr ""
+msgstr "Om den versionen är trasig, skriv"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:76
 #, no-wrap
 msgid "$ git bisect bad\n"
-msgstr ""
+msgstr "$ git bisect bad\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:79
 msgid "Then `git bisect` will respond with something like"
-msgstr ""
+msgstr "Då kommer `git bisect` att svara med något i stil med"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:82
 #, no-wrap
 msgid "Bisecting: 337 revisions left to test after this (roughly 9 steps)\n"
-msgstr ""
+msgstr "Tudelning: 337 revisioner kvar att testa efter detta (ungefär 9 steg)\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:87
 msgid "Keep repeating the process: compile the tree, test it, and depending on whether it is good or bad run `git bisect good` or `git bisect bad` to ask for the next commit that needs testing."
-msgstr ""
+msgstr "Fortsätt upprepa processen: kompilera trädet, testa det och beroende på om det är bra eller dåligt, kör `git bisect good` eller `git bisect bad` för att fråga efter nästa incheckning som behöver testas."
 
 #. type: Plain text
 #: en/git-bisect.adoc:91
 msgid "Eventually there will be no more revisions left to inspect, and the command will print out a description of the first bad commit. The reference `refs/bisect/bad` will be left pointing at that commit."
-msgstr ""
+msgstr "Så småningom kommer det inte finnas några fler revisioner kvar att inspektera, och kommandot kommer att skriva ut en beskrivning av den första felaktiga incheckning. Referensen `refs/bisect/bad` kommer att lämnas kvar och peka på den incheckningen."
 
 #. type: Title ~
 #: en/git-bisect.adoc:94
 #, no-wrap
 msgid "Bisect reset"
-msgstr ""
+msgstr "Återställning av halvering"
 
 #. type: Plain text
 #: en/git-bisect.adoc:98
 msgid "After a bisect session, to clean up the bisection state and return to the original HEAD, issue the following command:"
-msgstr ""
+msgstr "Efter en bisektionssession, för att rensa bisektionstillståndet och återgå till det ursprungliga HEAD, kör följande kommando:"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:101
 #, no-wrap
 msgid "$ git bisect reset\n"
-msgstr ""
+msgstr "$ git bisect reset\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:106
 msgid "By default, this will return your tree to the commit that was checked out before `git bisect start`. (A new `git bisect start` will also do that, as it cleans up the old bisection state.)"
-msgstr ""
+msgstr "Som standard kommer detta att returnera ditt träd till den incheckning som checkades ut före `git bisect start`. (En ny `git bisect start` kommer också att göra det, eftersom den rensar upp det gamla bisection-tillståndet.)"
 
 #. type: Plain text
 #: en/git-bisect.adoc:109
 msgid "With an optional argument, you can return to a different commit instead:"
-msgstr ""
+msgstr "Med ett valfritt argument, kan du återgå till en annan incheckning istället:"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:112
@@ -11881,345 +11897,355 @@ msgstr "$ git bisect reset [<incheckning>]\n"
 #. type: Plain text
 #: en/git-bisect.adoc:117
 msgid "For example, `git bisect reset bisect/bad` will check out the first bad revision, while `git bisect reset HEAD` will leave you on the current bisection commit and avoid switching commits at all."
-msgstr ""
+msgstr "Till exempel, `git bisect reset bisect/bad` kommer att kontrollera den första dåliga revisionen, medan `git bisect reset HEAD` kommer att lämna dig på den nuvarande bisection-incheckning och undvika att byta incheckningar alls."
 
 #. type: Title ~
 #: en/git-bisect.adoc:120
 #, no-wrap
 msgid "Alternate terms"
-msgstr ""
+msgstr "Alternativa termer"
 
 #. type: Plain text
 #: en/git-bisect.adoc:128
 msgid "Sometimes you are not looking for the commit that introduced a breakage, but rather for a commit that caused a change between some other \"old\" state and \"new\" state. For example, you might be looking for the commit that introduced a particular fix. Or you might be looking for the first commit in which the source-code filenames were finally all converted to your company's naming standard. Or whatever."
-msgstr ""
+msgstr "Ibland letar man inte efter den incheckning som introducerade ett fel, utan snarare efter en incheckning som orsakade en förändring mellan ett annat \"gammalt\" tillstånd och ett \"nytt\" tillstånd. Till exempel kanske man letar efter den incheckning som introducerade en viss korrigering. Eller så kanske man letar efter den första incheckning där källkodsfilnamnen slutligen konverterades till företagets namngivningsstandard. Eller vad det nu var."
 
 #. type: Plain text
 #: en/git-bisect.adoc:134
 msgid "In such cases it can be very confusing to use the terms \"good\" and \"bad\" to refer to \"the state before the change\" and \"the state after the change\". So instead, you can use the terms \"old\" and \"new\", respectively, in place of \"good\" and \"bad\". (But note that you cannot mix \"good\" and \"bad\" with \"old\" and \"new\" in a single session.)"
-msgstr ""
+msgstr "I sådana fall kan det vara mycket förvirrande att använda termerna \"bra\" och \"dåligt\" för att hänvisa till \"tillståndet före förändringen\" och \"tillståndet efter förändringen\". Så istället kan du använda termerna \"gammalt\" respektive \"nytt\" istället för \"bra\" och \"dåligt\". (Men observera att du inte kan blanda \"bra\" och \"dåligt\" med \"gammalt\" och \"nytt\" i en enda session.)"
 
 #. type: Plain text
 #: en/git-bisect.adoc:141
 msgid "In this more general usage, you provide `git bisect` with a \"new\" commit that has some property and an \"old\" commit that doesn't have that property. Each time `git bisect` checks out a commit, you test if that commit has the property. If it does, mark the commit as \"new\"; otherwise, mark it as \"old\". When the bisection is done, `git bisect` will report which commit introduced the property."
-msgstr ""
+msgstr "I denna mer generella användning förser du `git bisect` med en \"ny\" incheckning som har en viss egenskap och en \"gammal\" incheckning som inte har den egenskapen. Varje gång `git bisect` checkar ut en incheckning testar du om den incheckning har egenskapen. Om den har det, markera incheckning som \"ny\"; annars markera den som \"gammal\". När bisektionen är klar kommer `git bisect` att rapportera vilken incheckning som introducerade egenskapen."
 
 #. type: Plain text
 #: en/git-bisect.adoc:145
 msgid "To use \"old\" and \"new\" instead of \"good\" and bad, you must run `git bisect start` without commits as argument and then run the following commands to add the commits:"
-msgstr ""
+msgstr "För att använda \"old\" och \"new\" istället för \"good\" och bad, måste du köra `git bisect start` utan incheckningar som argument och sedan köra följande kommandon för att lägga till incheckningar:"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:148
 #, no-wrap
 msgid "git bisect old [<rev>]\n"
-msgstr ""
+msgstr "git bisect old [<rev>]\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:151
 msgid "to indicate that a commit was before the sought change, or"
-msgstr ""
+msgstr "för att indikera att en incheckning skedde före den sökta ändringen, eller"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:154
 #, no-wrap
 msgid "git bisect new [<rev>...]\n"
-msgstr ""
+msgstr "git bisect new [<rev>...]\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:157
 msgid "to indicate that it was after."
-msgstr ""
+msgstr "för att indikera att det var efter."
 
 #. type: Plain text
 #: en/git-bisect.adoc:159
 msgid "To get a reminder of the currently used terms, use"
-msgstr ""
+msgstr "För att få en påminnelse om de termer som används just nu, använd"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:162
 #, no-wrap
 msgid "git bisect terms\n"
-msgstr ""
+msgstr "git bisect terms\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:168
 msgid "You can get just the old term with `git bisect terms --term-old` or `git bisect terms --term-good`; `git bisect terms --term-new` and `git bisect terms --term-bad` can be used to learn how to call the commits more recent than the sought change."
-msgstr ""
+msgstr "Du kan bara få den gamla termen med `git bisect terms --term-old` eller `git bisect terms --term-good`; `git bisect terms --term-new` och `git bisect terms --term-bad` kan användas för att lära sig hur man anropar incheckningar som är nyare än den sökta ändringen."
 
 #. type: Plain text
 #: en/git-bisect.adoc:173
 msgid "If you would like to use your own terms instead of \"bad\"/\"good\" or \"new\"/\"old\", you can choose any names you like (except existing bisect subcommands like `reset`, `start`, ...) by starting the bisection using"
-msgstr ""
+msgstr "Om du vill använda dina egna termer istället för \"dålig\"/\"bra\" eller \"nytt\"/\"gammalt\", kan du välja vilka namn du vill (förutom befintliga bisect-underkommandon som `reset`, `start`, ...) genom att starta bisektionen med"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:176
 #, no-wrap
 msgid "git bisect start --term-old <term-old> --term-new <term-new>\n"
-msgstr ""
+msgstr "git bisect start --term-old <term-gammal> --term-new <term-ny>\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:180
 msgid "For example, if you are looking for a commit that introduced a performance regression, you might use"
-msgstr ""
+msgstr "Om du till exempel, letar efter en incheckning som introducerade en prestandaregression kan du använda"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:183
 #, no-wrap
 msgid "git bisect start --term-old fast --term-new slow\n"
-msgstr ""
+msgstr "git bisect start --term-old snabb --term-new långsam\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:186
 msgid "Or if you are looking for the commit that fixed a bug, you might use"
-msgstr ""
+msgstr "Eller om du letar efter incheckning som fixade ett fel kan du använda"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:189
 #, no-wrap
 msgid "git bisect start --term-new fixed --term-old broken\n"
-msgstr ""
+msgstr "git bisect start --term-new rättad --term-old trasig\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:193
 msgid "Then, use `git bisect <term-old>` and `git bisect <term-new>` instead of `git bisect good` and `git bisect bad` to mark commits."
-msgstr ""
+msgstr "Använd sedan `git bisect <term-gammal>` och `git bisect <term-ny>` istället för `git bisect good` och `git bisect bad` för att markera incheckningar."
 
 #. type: Title ~
 #: en/git-bisect.adoc:195
 #, no-wrap
 msgid "Bisect visualize/view"
-msgstr ""
+msgstr "Bisect visualisera/visa"
 
 #. type: Plain text
 #: en/git-bisect.adoc:200
 msgid "To see the currently remaining suspects in 'gitk', issue the following command during the bisection process (the subcommand `view` can be used as an alternative to `visualize`):"
-msgstr ""
+msgstr "För att se de för närvarande återstående misstänkta i 'gitk', kör följande kommando under bisektionsprocessen (underkommandot 'view' kan användas som ett alternativ till 'visualize'):"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:203
 #, no-wrap
 msgid "$ git bisect visualize\n"
-msgstr ""
+msgstr "$ git bisect visualize\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:210
 msgid "Git detects a graphical environment through various environment variables: `DISPLAY`, which is set in X Window System environments on Unix systems. `SESSIONNAME`, which is set under Cygwin in interactive desktop sessions. `MSYSTEM`, which is set under Msys2 and Git for Windows. `SECURITYSESSIONID`, which may be set on macOS in interactive desktop sessions."
-msgstr ""
+msgstr "Git detekterar en grafisk miljö genom olika miljövariabler: `DISPLAY`, som anges i X Window System-miljöer på Unix-system. `SESSIONNAME`, som anges under Cygwin i interaktiva skrivbordssessioner. `MSYSTEM`, som anges under Msys2 och Git för Windows. `SECURITYSESSIONID`, som kan anges på macOS i interaktiva skrivbordssessioner."
 
 #. type: Plain text
 #: en/git-bisect.adoc:213
 msgid "If none of these environment variables is set, 'git log' is used instead. You can also give command-line options such as `-p` and `--stat`."
-msgstr ""
+msgstr "Om ingen av dessa miljövariabler är satta används 'git log' istället. Du kan också ange kommandoradsalternativ som `-p` och `--stat`."
 
 #. type: delimited block -
 #: en/git-bisect.adoc:216
 #, no-wrap
 msgid "$ git bisect visualize --stat\n"
-msgstr ""
+msgstr "$ git bisect visualize --stat\n"
 
 #. type: Title ~
 #: en/git-bisect.adoc:219
 #, no-wrap
 msgid "Bisect log and bisect replay"
-msgstr ""
+msgstr "Bisect-logg och bisect-uppspelning"
 
 #. type: Plain text
 #: en/git-bisect.adoc:223
 msgid "After having marked revisions as good or bad, issue the following command to show what has been done so far:"
-msgstr ""
+msgstr "Efter att ha markerat revisionerna som bra eller dåliga, kör följande kommando för att visa vad som har gjorts hittills:"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:226
 #, no-wrap
 msgid "$ git bisect log\n"
-msgstr ""
+msgstr "$ git bisect log\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:232
 msgid "If you discover that you made a mistake in specifying the status of a revision, you can save the output of this command to a file, edit it to remove the incorrect entries, and then issue the following commands to return to a corrected state:"
-msgstr ""
+msgstr "Om du upptäcker att du har gjort ett misstag när du angav statusen för en revision kan du spara resultatet av kommandot till en fil, redigera det för att ta bort de felaktiga posterna och sedan köra följande kommandon för att återställa det till ett korrigerat tillstånd:"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:236
 #, no-wrap
 msgid "$ git bisect reset\n$ git bisect replay that-file\n"
 msgstr ""
+"$ git bisect reset\n"
+"$ git bisect replay that-file\n"
 
 #. type: Title ~
 #: en/git-bisect.adoc:239
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Avoiding testing a commit"
-msgstr ""
+msgstr "Undvik att testa en incheckning"
 
 #. type: Plain text
 #: en/git-bisect.adoc:246
 msgid "If, in the middle of a bisect session, you know that the suggested revision is not a good one to test (e.g. it fails to build and you know that the failure does not have anything to do with the bug you are chasing), you can manually select a nearby commit and test that one instead."
-msgstr ""
+msgstr "Om, du mitt i en bisect-session vet att den föreslagna revisionen inte är bra att testa (t.ex. att den misslyckas med att bygga och du vet att felet inte har något att göra med den bugg du jagar), kan du manuellt välja en närliggande incheckning och testa den istället."
 
 #. type: Plain text
 #: en/git-bisect.adoc:248 en/git-name-rev.adoc:53 en/git-tag.adoc:406
 #: en/git-bisect-lk2009.adoc:914 en/git-bisect-lk2009.adoc:1136
 #: en/git-bisect-lk2009.adoc:1152 en/git-bisect-lk2009.adoc:1175
 msgid "For example:"
-msgstr ""
+msgstr "Till exempel:"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:255
 #, no-wrap
 msgid "$ git bisect good/bad\t\t\t# previous round was good or bad.\nBisecting: 337 revisions left to test after this (roughly 9 steps)\n$ git bisect visualize\t\t\t# oops, that is uninteresting.\n$ git reset --hard HEAD~3\t\t# try 3 revisions before what\n\t\t\t\t\t# was suggested\n"
 msgstr ""
+"$ git bisect good/bad\t\t\t# föregående omgång var bra eller dålig.\n"
+"Bisecting: 337 revisioner kvar att testa efter detta (ungefär 9 steg)\n"
+"$ git bisect visualize\t\t\t# hoppsan, det är ointressant.\n"
+"$ git reset --hard HEAD~3\t\t# prova 3 revisioner innan vad\n"
+"\t\t\t\t\t# föreslogs\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:259
 msgid "Then compile and test the chosen revision, and afterwards mark the revision as good or bad in the usual manner."
-msgstr ""
+msgstr "Kompilera och testa sedan den valda revisionen, och markera därefter revisionen som bra eller dålig på vanligt sätt."
 
 #. type: Title ~
 #: en/git-bisect.adoc:261
 #, no-wrap
 msgid "Bisect skip"
-msgstr ""
+msgstr "Bisect hoppaöver"
 
 #. type: Plain text
 #: en/git-bisect.adoc:265
 msgid "Instead of choosing a nearby commit by yourself, you can ask Git to do it for you by issuing the command:"
-msgstr ""
+msgstr "Istället för att själv välja en närliggande incheckning, kan du be Git att göra det åt dig genom att köra kommandot:"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:268
 #, no-wrap
 msgid "$ git bisect skip                 # Current version cannot be tested\n"
-msgstr ""
+msgstr "$ git bisect skip                 # Nuvarande version kan inte testas\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:273
 msgid "However, if you skip a commit adjacent to the one you are looking for, Git will be unable to tell exactly which of those commits was the first bad one."
-msgstr ""
+msgstr "Men om du hoppar över en incheckning intill den du letar efter, kommer Git inte att kunna avgöra exakt vilken av dessa incheckning som var den första dåliga."
 
 #. type: Plain text
 #: en/git-bisect.adoc:276
 msgid "You can also skip a range of commits, instead of just one commit, using range notation. For example:"
-msgstr ""
+msgstr "Du kan också hoppa över ett intervall av incheckningar, istället för bara ett incheckning, med hjälp av intervallnotation. Till exempel:"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:279
 #, no-wrap
 msgid "$ git bisect skip v2.5..v2.6\n"
-msgstr ""
+msgstr "$ git bisect skip v2.5..v2.6\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:283
 msgid "This tells the bisect process that no commit after `v2.5`, up to and including `v2.6`, should be tested."
-msgstr ""
+msgstr "Detta talar om för bisect-processen att ingen incheckning efter `v2.5`, upp till och inklusive `v2.6`, ska testas."
 
 #. type: Plain text
 #: en/git-bisect.adoc:286
 msgid "Note that if you also want to skip the first commit of the range you would issue the command:"
-msgstr ""
+msgstr "Observera att om du också vill hoppa över den första inchecknings-funktionen i intervallet skulle du köra kommandot:"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:289
 #, no-wrap
 msgid "$ git bisect skip v2.5 v2.5..v2.6\n"
-msgstr ""
+msgstr "$ git bisect skip v2.5 v2.5..v2.6\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:293
 msgid "This tells the bisect process that the commits between `v2.5` and `v2.6` (inclusive) should be skipped."
-msgstr ""
+msgstr "Detta talar om för bisect-processen att incheckningar mellan `v2.5` och `v2.6` (inklusive) ska hoppas över."
 
 #. type: Title ~
 #: en/git-bisect.adoc:295
 #, no-wrap
 msgid "Bisect next"
-msgstr ""
+msgstr "Bisect nästa"
 
 #. type: Plain text
 #: en/git-bisect.adoc:300
 msgid "Normally, after marking a revision as good or bad, Git automatically computes and checks out the next revision to test. However, if you need to explicitly request the next bisection step, you can use:"
-msgstr ""
+msgstr "Normalt sett, efter att en revision markerats som bra eller dålig, beräknar och kontrollerar Git automatiskt nästa revision att testa. Men om du uttryckligen behöver begära nästa bisektionssteg kan du använda:"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:303
 #, no-wrap
 msgid "$ git bisect next\n"
-msgstr ""
+msgstr "$ git bisect next\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:307
 msgid "You might use this to resume the bisection process after interrupting it by checking out a different revision."
-msgstr ""
+msgstr "Du kan använda detta för att återuppta bisektionsprocessen efter att ha avbrutit den genom att checka ut en annan revision."
 
 #. type: Title ~
 #: en/git-bisect.adoc:309
 #, no-wrap
 msgid "Cutting down bisection by giving more parameters to bisect start"
-msgstr ""
+msgstr "Minska bisektionen genom att ge fler parametrar för att börja bisektionen"
 
 #. type: Plain text
 #: en/git-bisect.adoc:314
 msgid "You can further cut down the number of trials, if you know what part of the tree is involved in the problem you are tracking down, by specifying pathspec parameters when issuing the `bisect start` command:"
-msgstr ""
+msgstr "Du kan ytterligare minska antalet försök, om du vet vilken del av trädet som är involverad i problemet du spårar, genom att ange sökvägsspec-parametrar när du kör kommandot `bisect start`:"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:317
 #, no-wrap
 msgid "$ git bisect start -- arch/i386 include/asm-i386\n"
-msgstr ""
+msgstr "$ git bisect start -- arch/i386 include/asm-i386\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:322
 msgid "If you know beforehand more than one good commit, you can narrow the bisect space down by specifying all of the good commits immediately after the bad commit when issuing the `bisect start` command:"
-msgstr ""
+msgstr "Om du i förväg vet mer än en bra incheckning kan du begränsa bisect-utrymmet genom att ange alla bra incheckningar omedelbart efter den dåliga incheckningen när du kör kommandot `bisect start`:"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:327
 #, no-wrap
 msgid "$ git bisect start v2.6.20-rc6 v2.6.20-rc4 v2.6.20-rc1 --\n                   # v2.6.20-rc6 is bad\n                   # v2.6.20-rc4 and v2.6.20-rc1 are good\n"
 msgstr ""
+"$ git bisect start v2.6.20-rc6 v2.6.20-rc4 v2.6.20-rc1 --\n"
+"                   # v2.6.20-rc6 är dålig\n"
+"                   # v2.6.20-rc4 and v2.6.20-rc1 är bra\n"
 
 #. type: Title ~
 #: en/git-bisect.adoc:330
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Bisect run"
-msgstr ""
+msgstr "Bisect kör"
 
 #. type: Plain text
 #: en/git-bisect.adoc:334
 msgid "If you have a script that can tell if the current source code is good or bad, you can bisect by issuing the command:"
-msgstr ""
+msgstr "Om du har ett skript som kan avgöra om den aktuella källkoden är bra eller dålig, kan du dela den genom att köra kommandot:"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:337
 #, no-wrap
 msgid "$ git bisect run my_script arguments\n"
-msgstr ""
+msgstr "$ git bisect run my_script arguments\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:343
 msgid "Note that the script (`my_script` in the above example) should exit with code 0 if the current source code is good/old, and exit with a code between 1 and 127 (inclusive), except 125, if the current source code is bad/new."
-msgstr ""
+msgstr "Observera att skriptet (`my_script` i exemplet ovan) ska avslutas med kod 0 om den nuvarande källkoden är bra/gammal, och avslutas med en kod mellan 1 och 127 (inklusive), förutom 125, om den nuvarande källkoden är dålig/ny."
 
 #. type: Plain text
 #: en/git-bisect.adoc:347
 msgid "Any other exit code will abort the bisect process. It should be noted that a program that terminates via `exit(-1)` leaves $? = 255, (see the exit(3) manual page), as the value is chopped with `& 0377`."
-msgstr ""
+msgstr "Annan avslutningskod kommer att avbryta bisect-processen. Det bör noteras att ett program som avslutas via `exit(-1)` lämnar $? = 255, (se manualsidan för exit(3)), eftersom värdet hackas med `& 0377`."
 
 #. type: Plain text
 #: en/git-bisect.adoc:356
 msgid "The special exit code 125 should be used when the current source code cannot be tested. If the script exits with this code, the current revision will be skipped (see `git bisect skip` above). 125 was chosen as the highest sensible value to use for this purpose, because 126 and 127 are used by POSIX shells to signal specific error status (127 is for command not found, 126 is for command found but not executable--these details do not matter, as they are normal errors in the script, as far as `bisect run` is concerned)."
-msgstr ""
+msgstr "Den speciella avslutningskoden 125 bör användas när den aktuella källkoden inte kan testas. Om skriptet avslutas med denna kod kommer den aktuella versionen att hoppas över (se `git bisect skip` ovan). 125 valdes som det högsta rimliga värdet att använda för detta ändamål, eftersom 126 och 127 används av POSIX-shell för att signalera specifik felstatus (127 är för kommandot hittades inte, 126 är för kommandot hittades men inte körbart – dessa detaljer spelar ingen roll, eftersom de är normala fel i skriptet, vad gäller `bisect run`)."
 
 #. type: Plain text
 #: en/git-bisect.adoc:362
 msgid "You may often find that during a bisect session you want to have temporary modifications (e.g. s/#define DEBUG 0/#define DEBUG 1/ in a header file, or \"revision that does not have this commit needs this patch applied to work around another problem this bisection is not interested in\") applied to the revision being tested."
-msgstr ""
+msgstr "Du kan ofta upptäcka att du under en bisect-session vill ha tillfälliga modifieringar (t.ex. s/#define DEBUG 0/#define DEBUG 1/ i en headerfil, eller \"revision som inte har denna incheckning behöver denna patch tillämpad för att lösa ett annat problem som denna bisektion inte är intresserad av\") tillämpade på den revision som testas."
 
 #. type: Plain text
 #: en/git-bisect.adoc:370
 msgid "To cope with such a situation, after the inner 'git bisect' finds the next revision to test, the script can apply the patch before compiling, run the real test, and afterwards decide if the revision (possibly with the needed patch) passed the test and then rewind the tree to the pristine state. Finally the script should exit with the status of the real test to let the `git bisect run` command loop determine the eventual outcome of the bisect session."
-msgstr ""
+msgstr "För att hantera en sådan situation, efter att den inre 'git bisect' hittat nästa revision att testa, kan skriptet tillämpa patchen innan kompilering, köra det riktiga testet och därefter avgöra om revisionen (eventuellt med den nödvändiga patchen) klarade testet och sedan spola tillbaka trädet till det ursprungliga tillståndet. Slutligen bör skriptet avslutas med statusen för det riktiga testet för att låta `git bisect run`-kommandoslingan avgöra det slutliga resultatet av bisect-sessionen."
 
 #. type: Labeled list
 #: en/git-bisect.adoc:373
@@ -12231,125 +12257,159 @@ msgstr "--no-checkout"
 #. type: Plain text
 #: en/git-bisect.adoc:378
 msgid "Do not checkout the new working tree at each iteration of the bisection process. Instead just update the reference named `BISECT_HEAD` to make it point to the commit that should be tested."
-msgstr ""
+msgstr "Checka inte ut det nya arbetsträdet vid varje iteration av bisektionsprocessen. Uppdatera istället bara referensen med namnet `BISECT_HEAD` så att den pekar på den incheckning som ska testas."
 
 #. type: Plain text
 #: en/git-bisect.adoc:381
 msgid "This option may be useful when the test you would perform in each step does not require a checked out tree."
-msgstr ""
+msgstr "Det här alternativet kan vara användbart när testet du skulle utföra i varje steg inte kräver ett utcheckat träd."
 
 #. type: Plain text
 #: en/git-bisect.adoc:383
 msgid "If the repository is bare, `--no-checkout` is assumed."
-msgstr ""
+msgstr "Om förvaret är tomt antas `--no-checkout`."
 
 #. type: Plain text
 #: en/git-bisect.adoc:387
 msgid "Follow only the first parent commit upon seeing a merge commit."
-msgstr ""
+msgstr "Följ endast den första överordnade incheckning när du ser en sammanslagnings-incheckning."
 
 #. type: Plain text
 #: en/git-bisect.adoc:391
 msgid "In detecting regressions introduced through the merging of a branch, the merge commit will be identified as introduction of the bug and its ancestors will be ignored."
-msgstr ""
+msgstr "Vid detektering av regressioner som introduceras genom sammanslagningen av en gren kommer sammanslagnigs-incheckning att identifieras som introduktionen av buggen och dess föregångare kommer att ignoreras."
 
 #. type: Plain text
 #: en/git-bisect.adoc:394
 msgid "This option is particularly useful in avoiding false positives when a merged branch contained broken or non-buildable commits, but the merge itself was OK."
-msgstr ""
+msgstr "Det här alternativet är särskilt användbart för att undvika falska positiva resultat när en sammanfogad gren innehöll trasiga eller icke-byggbara incheckningar, men själva sammanfogningen var OK."
 
 #. type: Plain text
 #: en/git-bisect.adoc:399
 msgid "Automatically bisect a broken build between v1.2 and HEAD:"
-msgstr ""
+msgstr "Automatiskt bisectera en trasig version mellan v1.2 och HEAD:"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:404
 #, no-wrap
 msgid "$ git bisect start HEAD v1.2 --      # HEAD is bad, v1.2 is good\n$ git bisect run make                # \"make\" builds the app\n$ git bisect reset                   # quit the bisect session\n"
 msgstr ""
+"$ git bisect start HEAD v1.2 --      # HEAD är dålig, v1.2 är bra\n"
+"$ git bisect run make                # \"make\" bygger appen\n"
+"$ git bisect reset                   # avsluta bisect-sessionen\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:407
 msgid "Automatically bisect a test failure between origin and HEAD:"
-msgstr ""
+msgstr "Automatiskt bisecta ett testfel mellan origo och HEAD:"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:412
 #, no-wrap
 msgid "$ git bisect start HEAD origin --    # HEAD is bad, origin is good\n$ git bisect run make test           # \"make test\" builds and tests\n$ git bisect reset                   # quit the bisect session\n"
 msgstr ""
+"$ git bisect start HEAD origin --    # HEAD är dåligt, ursprunget är bra\n"
+"$ git bisect run make test           # \"Gör test\"-byggen och tester\n"
+"$ git bisect reset                   # avsluta bisect-sessionen\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:415 en/git-bisect.adoc:469
 msgid "Automatically bisect a broken test case:"
-msgstr ""
+msgstr "Dela automatiskt ett trasigt testfall i två delar:"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:424
 #, no-wrap
 msgid "$ cat ~/test.sh\n#!/bin/sh\nmake || exit 125                     # this skips broken builds\n~/check_test_case.sh                 # does the test case pass?\n$ git bisect start HEAD HEAD~10 --   # culprit is among the last 10\n$ git bisect run ~/test.sh\n$ git bisect reset                   # quit the bisect session\n"
 msgstr ""
+"$ cat ~/test.sh\n"
+"#!/bin/sh\n"
+"make || exit 125                     # detta hoppar över trasiga byggen\n"
+"~/check_test_case.sh                 #klarar testfallet det?\n"
+"$ git bisect start HEAD HEAD~10 --   # boven i dramat är bland de sista 10\n"
+"$ git bisect run ~/test.sh\n"
+"$ git bisect reset                   # avsluta bisect-sessionen\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:430
 msgid "Here we use a `test.sh` custom script. In this script, if `make` fails, we skip the current commit. `check_test_case.sh` should `exit 0` if the test case passes, and `exit 1` otherwise."
-msgstr ""
+msgstr "Här använder vi ett anpassat skript av typen `test.sh`. I det här skriptet hoppar vi över den aktuella inchecknings-processen om `make` misslyckas. `check_test_case.sh` ska `exit 0` om testfallet godkänns, och `exit 1` annars."
 
 #. type: Plain text
 #: en/git-bisect.adoc:434
 msgid "It is safer if both `test.sh` and `check_test_case.sh` are outside the repository to prevent interactions between the bisect, make and test processes and the scripts."
-msgstr ""
+msgstr "Det är säkrare om både `test.sh` och `check_test_case.sh` finns utanför arkivet för att förhindra interaktioner mellan bisect-, make- och test-processerna och skripten."
 
 #. type: Plain text
 #: en/git-bisect.adoc:436
 msgid "Automatically bisect with temporary modifications (hot-fix):"
-msgstr ""
+msgstr "Automatisk bisect med tillfälliga ändringar (snabbkorrigering):"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:440
 #, no-wrap
 msgid "$ cat ~/test.sh\n#!/bin/sh\n"
 msgstr ""
+"$ cat ~/test.sh\n"
+"#!/bin/sh\n"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:453
 #, no-wrap
 msgid "# tweak the working tree by merging the hot-fix branch\n# and then attempt a build\nif\tgit merge --no-commit --no-ff hot-fix &&\n\tmake\nthen\n\t# run project specific test and report its status\n\t~/check_test_case.sh\n\tstatus=$?\nelse\n\t# tell the caller this is untestable\n\tstatus=125\nfi\n"
 msgstr ""
+"# justera arbetsträdet genom att sammanfoga snabbkorrigeringsgrenen\n"
+"# och försök sedan bygga\n"
+"if\tgit merge --no-commit --no-ff hot-fix &&\n"
+"\tmake\n"
+"then\n"
+"\t# kör projektspecifikt test och rapportera dess status \n"
+"\t~/check_test_case.sh\n"
+"\tstatus=$?\n"
+"else\n"
+"\t# berätta för anroparen att detta inte är testbart\n"
+"\tstatus=125\n"
+"fi\n"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:456
 #, no-wrap
 msgid "# undo the tweak to allow clean flipping to the next commit\ngit reset --hard\n"
 msgstr ""
+"# ångra justeringen för att tillåta ren vändning till nästa incheckning\n"
+"git reset --hard\n"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:459
 #, no-wrap
 msgid "# return control\nexit $status\n"
 msgstr ""
+"# returnera kontrollen\n"
+"exit $status\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:467
 msgid "This applies modifications from a hot-fix branch before each test run, e.g. in case your build or test environment changed so that older revisions may need a fix which newer ones have already. (Make sure the hot-fix branch is based off a commit which is contained in all revisions which you are bisecting, so that the merge does not pull in too much, or use `git cherry-pick` instead of `git merge`.)"
-msgstr ""
+msgstr "Detta tillämpar modifieringar från en hot-fix-gren före varje testkörning, t.ex. om din bygg- eller testmiljö har ändrats så att äldre versioner kan behöva en fix som nyare redan har. (Se till att hot-fix-grenen är baserad på en incheckning som finns i alla versioner som du delar upp, så att merge-funktionen inte drar in för mycket, eller använd `git cherry-pick` istället för `git merge`.)"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:474
 #, no-wrap
 msgid "$ git bisect start HEAD HEAD~10 --   # culprit is among the last 10\n$ git bisect run sh -c \"make || exit 125; ~/check_test_case.sh\"\n$ git bisect reset                   # quit the bisect session\n"
 msgstr ""
+"$ git bisect start HEAD HEAD~10 --   # gärningsmannen är bland de senaste 10\n"
+"$ git bisect run sh -c \"make || exit 125; ~/check_test_case.sh\"\n"
+"$ git bisect reset                   # avsluta bisect-sessionen\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:478
 msgid "This shows that you can do without a run script if you write the test on a single line."
-msgstr ""
+msgstr "Detta visar att du kan klara dig utan ett körskript om du skriver testet på en enda rad."
 
 #. type: Plain text
 #: en/git-bisect.adoc:480
 msgid "Locate a good region of the object graph in a damaged repository"
-msgstr ""
+msgstr "Lokalisera en bra region av objektgrafen i ett skadat arkiv"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:490
@@ -12369,7 +12429,7 @@ msgstr ""
 #: en/git-bisect.adoc:492
 #, no-wrap
 msgid "$ git bisect reset                   # quit the bisect session\n"
-msgstr ""
+msgstr "$ git bisect reset                   # avsluta bisect-sessionen\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:497
@@ -12379,40 +12439,47 @@ msgstr "I det här fallet, när 'git bisect run' är klar, kommer bisect/bad att
 #. type: Plain text
 #: en/git-bisect.adoc:499
 msgid "Look for a fix instead of a regression in the code"
-msgstr ""
+msgstr "Leta efter en lösning istället för en regression i koden"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:504
 #, no-wrap
 msgid "$ git bisect start\n$ git bisect new HEAD    # current commit is marked as new\n$ git bisect old HEAD~10 # the tenth commit from now is marked as old\n"
 msgstr ""
+"$ git bisect start\n"
+"$ git bisect new HEAD    # aktuell commit är markerad som ny\n"
+"$ git bisect old HEAD~10 # Den tionde incheckningen från och med nu är markerad som gammal\n"
 
 #. type: Plain text
 #: en/git-bisect.adoc:507
 msgid "or:"
-msgstr ""
+msgstr "eller:"
 
 #. type: delimited block -
 #: en/git-bisect.adoc:512
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "$ git bisect start --term-old broken --term-new fixed\n$ git bisect fixed\n$ git bisect broken HEAD~10\n"
 msgstr ""
+"$ git bisect start --term-old broken --term-new fixed\n"
+"$ git bisect fixed\n"
+"$ git bisect broken HEAD~10\n"
 
 #. type: Title ~
 #: en/git-bisect.adoc:515
 #, no-wrap
 msgid "Getting help"
-msgstr ""
+msgstr "Få hjälp"
 
 #. type: Plain text
 #: en/git-bisect.adoc:519
 msgid "Use `git bisect` to get a short usage description, and `git bisect help` or `git bisect -h` to get a long usage description."
-msgstr ""
+msgstr "Använd `git bisect` för att få en kort användningsbeskrivning, och `git bisect help` eller `git bisect -h` för att få en lång användningsbeskrivning."
 
 #. type: Plain text
 #: en/git-bisect.adoc:524
+#, fuzzy
 msgid "link:git-bisect-lk2009.html[Fighting regressions with git bisect], linkgit:git-blame[1]."
-msgstr ""
+msgstr "link:git-bisect-lk2009.html[Fighting regressions with git bisect], linkgit:git-blame[1]."
 
 #. type: Title =
 #: en/git-blame.adoc:2
@@ -15088,48 +15155,50 @@ msgstr "git-check-ignore(1)"
 #. type: Plain text
 #: en/git-check-ignore.adoc:7
 msgid "git-check-ignore - Debug gitignore / exclude files"
-msgstr ""
+msgstr "git-check-ignore - Felsöka gitignore / exkludera filer"
 
 #. type: verse
 #: en/git-check-ignore.adoc:14
 #, no-wrap
 msgid "'git check-ignore' [<options>] <pathname>...\n'git check-ignore' [<options>] --stdin\n"
 msgstr ""
+"'git check-ignore' [<flaggor>] <sökvägsnamn>...\n"
+"'git check-ignore' [<flaggor>] --stdin\n"
 
 #. type: Plain text
 #: en/git-check-ignore.adoc:22
 msgid "For each pathname given via the command-line or from a file via `--stdin`, check whether the file is excluded by .gitignore (or other input files to the exclude mechanism) and output the path if it is excluded."
-msgstr ""
+msgstr "För varje sökvägsnamn som anges via kommandoraden eller från en fil via `--stdin`, kontrollera om filen är exkluderad av .gitignore (eller andra indatafiler till exkluderingsmekanismen) och mata ut sökvägen om den är exkluderad."
 
 #. type: Plain text
 #: en/git-check-ignore.adoc:25
 msgid "By default, tracked files are not shown at all since they are not subject to exclude rules; but see `--no-index'."
-msgstr ""
+msgstr "Som standard, visas inte spårade filer alls eftersom de inte omfattas av exkluderingsregler; men se `--no-index'."
 
 #. type: Plain text
 #: en/git-check-ignore.adoc:32
 msgid "Don't output anything, just set exit status. This is only valid with a single pathname."
-msgstr ""
+msgstr "Skriv inte ut något, ange bara utgångsstatus. Detta är bara giltigt med ett enda sökvägsnamn."
 
 #. type: Plain text
 #: en/git-check-ignore.adoc:41
 msgid "Instead of printing the paths that are excluded, for each path that matches an exclude pattern, print the exclude pattern together with the path. (Matching an exclude pattern usually means the path is excluded, but if the pattern begins with \"`!`\" then it is a negated pattern and matching it means the path is NOT excluded.)"
-msgstr ""
+msgstr "Istället för att skriva ut de sökvägar som är exkluderade, skriv ut exkluderingsmönstret tillsammans med sökvägen för varje sökväg som matchar ett exkluderingsmönster. (Att matcha ett exkluderingsmönster innebär vanligtvis att sökvägen är exkluderad, men om mönstret börjar med \"`!\"\" är det ett negerat mönster och att matcha det innebär att sökvägen INTE är exkluderad.)"
 
 #. type: Plain text
 #: en/git-check-ignore.adoc:44
 msgid "For precedence rules within and between exclude sources, see linkgit:gitignore[5]."
-msgstr ""
+msgstr "För prioriteringsregler inom och mellan uteslutningskällor, se linkgit:gitignore[5]."
 
 #. type: Plain text
 #: en/git-check-ignore.adoc:48
 msgid "Read pathnames from the standard input, one per line, instead of from the command-line."
-msgstr ""
+msgstr "Läs sökvägar från standardinmatningen, en per rad, istället för från kommandoraden."
 
 #. type: Plain text
 #: en/git-check-ignore.adoc:53
 msgid "The output format is modified to be machine-parsable (see below). If `--stdin` is also given, input paths are separated with a NUL character instead of a linefeed character."
-msgstr ""
+msgstr "Utdataformatet är modifierat för att vara maskinparsbart (se nedan). Om `--stdin` också anges, separeras indatavägarna med ett NUL-tecken istället för ett radmatningstecken."
 
 #. type: Labeled list
 #: en/git-check-ignore.adoc:55
@@ -15141,7 +15210,7 @@ msgstr "--non-matching"
 #. type: Plain text
 #: en/git-check-ignore.adoc:60
 msgid "Show given paths which don't match any pattern. This only makes sense when `--verbose` is enabled, otherwise it would not be possible to distinguish between paths which match a pattern and those which don't."
-msgstr ""
+msgstr "Visa givna sökvägar som inte matchar något mönster. Detta är bara meningsfullt när `--verbose` är aktiverat, annars skulle det inte vara möjligt att skilja mellan sökvägar som matchar ett mönster och de som inte gör det."
 
 #. type: Labeled list
 #: en/git-check-ignore.adoc:61 en/git-grep.adoc:52
@@ -15153,42 +15222,42 @@ msgstr "--no-index"
 #. type: Plain text
 #: en/git-check-ignore.adoc:67
 msgid "Don't look in the index when undertaking the checks. This can be used to debug why a path became tracked by e.g. `git add .` and was not ignored by the rules as expected by the user or when developing patterns including negation to match a path previously added with `git add -f`."
-msgstr ""
+msgstr "Titta inte i indexet när du utför kontrollerna. Detta kan användas för att felsöka varför en sökväg spårades av t.ex. `git add .` och inte ignorerades av reglerna som förväntat av användaren, eller när man utvecklar mönster som inkluderar negation för att matcha en sökväg som tidigare lagts till med `git add -f`."
 
 #. type: Plain text
 #: en/git-check-ignore.adoc:75
 msgid "By default, any of the given pathnames which match an ignore pattern will be output, one per line. If no pattern matches a given path, nothing will be output for that path; this means that path will not be ignored."
-msgstr ""
+msgstr "Som standard, kommer alla givna sökvägar som matchar ett ignoreringsmönster att matas ut, ett per rad. Om inget mönster matchar en given sökväg, kommer ingenting att matas ut för den sökvägen; det betyder att den sökvägen inte kommer att ignoreras."
 
 #. type: Plain text
 #: en/git-check-ignore.adoc:77
 msgid "If `--verbose` is specified, the output is a series of lines of the form:"
-msgstr ""
+msgstr "Om `--verbose` anges, är utdata en serie rader av formen:"
 
 #. type: Plain text
 #: en/git-check-ignore.adoc:79
 msgid "<source> <COLON> <linenum> <COLON> <pattern> <HT> <pathname>"
-msgstr ""
+msgstr "<källa> <COLON> <radnumret> <COLON> <mönster> <HT> <sökvägsnamn>"
 
 #. type: Plain text
 #: en/git-check-ignore.adoc:87
 msgid "<pathname> is the path of a file being queried, <pattern> is the matching pattern, <source> is the pattern's source file, and <linenum> is the line number of the pattern within that source. If the pattern contained a \"`!`\" prefix or \"`/`\" suffix, it will be preserved in the output. <source> will be an absolute path when referring to the file configured by `core.excludesFile`, or relative to the repository root when referring to `.git/info/exclude` or a per-directory exclude file."
-msgstr ""
+msgstr "<sökvägsnamn> är sökvägen till en fil som efterfrågas, <mönster> är det matchande mönstret, <källa> är mönstrets källfil och <radnumret> är radnumret för mönstret i den källkoden. Om mönstret innehöll ett \"`!`\"-prefix eller \"`/`\"-suffix kommer det att bevaras i utdata. <källa> kommer att vara en absolut sökväg när det refereras till filen som konfigurerats av `core.excludesFile`, eller relativ till förvars-roten när det refereras till `.git/info/exclude` eller en exkluderingsfil per katalog."
 
 #. type: Plain text
 #: en/git-check-ignore.adoc:91
 msgid "If `-z` is specified, the pathnames in the output are delimited by the null character; if `--verbose` is also specified then null characters are also used instead of colons and hard tabs:"
-msgstr ""
+msgstr "Om `-z` anges avgränsas sökvägarna i utdata av null-tecknet; om `--verbose` också anges används även null-tecken istället för kolon och tabbtecken:"
 
 #. type: Plain text
 #: en/git-check-ignore.adoc:93
 msgid "<source> <NULL> <linenum> <NULL> <pattern> <NULL> <pathname> <NULL>"
-msgstr ""
+msgstr "<källa> <NULL> <radnummer> <NULL> <mönster> <NULL> <sökvägsnamn> <NULL>"
 
 #. type: Plain text
 #: en/git-check-ignore.adoc:103
 msgid "If `-n` or `--non-matching` are specified, non-matching pathnames will also be output, in which case all fields in each output record except for <pathname> will be empty. This can be useful when running non-interactively, so that files can be incrementally streamed to STDIN of a long-running check-ignore process, and for each of these files, STDOUT will indicate whether that file matched a pattern or not. (Without this option, it would be impossible to tell whether the absence of output for a given file meant that it didn't match any pattern, or that the output hadn't been generated yet.)"
-msgstr ""
+msgstr "Om `-n` eller `--non-matching` anges, kommer även icke-matchande sökvägar att matas ut, i vilket fall alla fält i varje utdatapost förutom <sökvägsnamn> kommer att vara tomma. Detta kan vara användbart vid icke-interaktiv körning, så att filer kan strömmas stegvis till STDIN för en långvarig check-ignore-process, och för var och en av dessa filer kommer STDOUT att indikera om filen matchade ett mönster eller inte. (Utan detta alternativ skulle det vara omöjligt att avgöra om avsaknaden av utdata för en given fil innebar att den inte matchade något mönster, eller att utdata ännu inte hade genererats.)"
 
 #. type: Title -
 #: en/git-check-ignore.adoc:110 en/git-filter-branch.adoc:239
@@ -15201,34 +15270,34 @@ msgstr "UTGÅNGSSTATUS"
 #: en/git-check-ignore.adoc:112
 #, no-wrap
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #. type: Plain text
 #: en/git-check-ignore.adoc:114
 msgid "One or more of the provided paths is ignored."
-msgstr ""
+msgstr "En eller flera av de angivna sökvägarna ignoreras."
 
 #. type: Labeled list
 #: en/git-check-ignore.adoc:115
 #, no-wrap
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #. type: Plain text
 #: en/git-check-ignore.adoc:117
 msgid "None of the provided paths are ignored."
-msgstr ""
+msgstr "Ingen av de angivna sökvägarna ignoreras."
 
 #. type: Labeled list
 #: en/git-check-ignore.adoc:118
 #, no-wrap
 msgid "128"
-msgstr ""
+msgstr "128"
 
 #. type: Plain text
 #: en/git-check-ignore.adoc:120
 msgid "A fatal error was encountered."
-msgstr ""
+msgstr "Ett allvarligt fel uppstod."
 
 #. type: Plain text
 #: en/git-check-ignore.adoc:126
@@ -35086,7 +35155,7 @@ msgstr "git-ls-remote(1)"
 #. type: Plain text
 #: en/git-ls-remote.adoc:7
 msgid "git-ls-remote - List references in a remote repository"
-msgstr ""
+msgstr "git-ls-remote - Lista referenser i ett fjärrförvar"
 
 #. type: verse
 #: en/git-ls-remote.adoc:15
@@ -35100,7 +35169,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-ls-remote.adoc:20
 msgid "Displays references available in a remote repository along with the associated commit IDs."
-msgstr ""
+msgstr "Visar referenser som är tillgängliga i ett fjärrförvar tillsammans med tillhörande inchecknings-ID:n."
 
 #. type: Labeled list
 #: en/git-ls-remote.adoc:25 en/git-show-ref.adoc:48
@@ -35112,7 +35181,7 @@ msgstr "--branches"
 #. type: Plain text
 #: en/git-ls-remote.adoc:36
 msgid "Limit to only local branches and local tags, respectively. These options are _not_ mutually exclusive; when given both, references stored in refs/heads and refs/tags are displayed. Note that `--heads` and `-h` are deprecated synonyms for `--branches` and `-b` and may be removed in the future. Also note that `git ls-remote -h` used without anything else on the command line gives help, consistent with other git subcommands."
-msgstr ""
+msgstr "Begränsa till endast lokala grenar respektive lokala taggar. Dessa alternativ utesluter _inte_ varandra; när båda anges visas referenser lagrade i refs/heads och refs/tags. Observera att `--heads` och `-h` är föråldrade synonymer för `--branches` och `-b` och kan komma att tas bort i framtiden. Observera också att `git ls-remote -h` som används utan något annat på kommandoraden ger hjälp, i linje med andra git-underkommandon."
 
 #. type: Labeled list
 #: en/git-ls-remote.adoc:37
@@ -35129,18 +35198,18 @@ msgstr "Visa inte avskalade taggar eller pseudorefs som `HEAD` i utdata."
 #. type: Plain text
 #: en/git-ls-remote.adoc:43
 msgid "Do not print remote URL to stderr."
-msgstr ""
+msgstr "Skriv inte ut fjärr-URL till stderr."
 
 #. type: Labeled list
 #: en/git-ls-remote.adoc:44
 #, no-wrap
 msgid "--upload-pack=<exec>"
-msgstr ""
+msgstr "--upload-pack=<exec>"
 
 #. type: Plain text
 #: en/git-ls-remote.adoc:49
 msgid "Specify the full path of 'git-upload-pack' on the remote host. This allows listing references from repositories accessed via SSH and where the SSH daemon does not use the PATH configured by the user."
-msgstr ""
+msgstr "Ange den fullständiga sökvägen för 'git-upload-pack' på fjärrvärden. Detta gör det möjligt att lista referenser från förvar som nås via SSH och där SSH-daemonen inte använder den PATH som konfigurerats av användaren."
 
 #. type: Labeled list
 #: en/git-ls-remote.adoc:50
@@ -35152,7 +35221,7 @@ msgstr "--exit-code"
 #. type: Plain text
 #: en/git-ls-remote.adoc:55
 msgid "Exit with status \"2\" when no matching refs are found in the remote repository. Usually the command exits with status \"0\" to indicate it successfully talked with the remote repository, whether it found any matching refs."
-msgstr ""
+msgstr "Avsluta med status \"2\" när inga matchande referenser hittas i fjärrförvaret. Vanligtvis avslutas kommandot med status \"0\" för att indikera att det har kommunicerat med fjärrförvaret och om det hittat några matchande referenser."
 
 #. type: Labeled list
 #: en/git-ls-remote.adoc:56
@@ -35164,7 +35233,7 @@ msgstr "--get-url"
 #. type: Plain text
 #: en/git-ls-remote.adoc:60
 msgid "Expand the URL of the given remote repository taking into account any \"url.<base>.insteadOf\" config setting (See linkgit:git-config[1]) and exit without talking to the remote."
-msgstr ""
+msgstr "Expandera URL:en för det givna fjärrförvaret med hänsyn till eventuella konfigurationsinställningar för \"url.<bas>.insteadOf\" (se linkgit:git-config[1]) och avsluta utan att prata med fjärren."
 
 #. type: Labeled list
 #: en/git-ls-remote.adoc:61
@@ -35176,51 +35245,51 @@ msgstr "--symref"
 #. type: Plain text
 #: en/git-ls-remote.adoc:66
 msgid "In addition to the object pointed by it, show the underlying ref pointed by it when showing a symbolic ref. Currently, upload-pack only shows the symref HEAD, so it will be the only one shown by ls-remote."
-msgstr ""
+msgstr "Förutom objektet som den pekar på, visa den underliggande referensen som den pekar på när en symbolisk referens visas. För närvarande visar upload-pack bara symref HEAD, så det kommer att vara den enda som visas av ls-remote."
 
 #. type: Labeled list
 #: en/git-ls-remote.adoc:67
 #, no-wrap
 msgid "--sort=<key>"
-msgstr ""
+msgstr "--sort=<nyckel>"
 
 #. type: Plain text
 #: en/git-ls-remote.adoc:76
 msgid "Sort based on the key given. Prefix `-` to sort in descending order of the value. Supports \"version:refname\" or \"v:refname\" (tag names are treated as versions). The \"version:refname\" sort order can also be affected by the \"versionsort.suffix\" configuration variable. See linkgit:git-for-each-ref[1] for more sort options, but be aware keys like `committerdate` that require access to the objects themselves will not work for refs whose objects have not yet been fetched from the remote, and will give a `missing object` error."
-msgstr ""
+msgstr "Sortera baserat på den angivna nyckeln. Prefixet `-` för att sortera i fallande ordning efter värdet. Stöder \"version:refnamn\" eller \"v:refname\" (taggnamn behandlas som versioner). Sorteringsordningen \"version:refnamn\" kan också påverkas av konfigurationsvariabeln \"versionsort.suffix\". Se linkgit:git-for-each-ref[1] för fler sorteringsalternativ, men var medveten om att nycklar som `incheckingsdatum` som kräver åtkomst till själva objekten inte fungerar för referenser vars objekt ännu inte har hämtats från fjärrkontrollen och kommer att ge ett `missing object`-fel."
 
 #. type: Labeled list
 #: en/git-ls-remote.adoc:77
 #, no-wrap
 msgid "-o <option>"
-msgstr ""
+msgstr "-o <alternativ>"
 
 #. type: Labeled list
 #: en/git-ls-remote.adoc:78
 #, no-wrap
 msgid "--server-option=<option>"
-msgstr ""
+msgstr "--server-option=<alternativ>"
 
 #. type: Plain text
 #: en/git-ls-remote.adoc:87
 msgid "Transmit the given string to the server when communicating using protocol version 2. The given string must not contain a NUL or LF character. When multiple `--server-option=<option>` are given, they are all sent to the other side in the order listed on the command line. When no `--server-option=<option>` is given from the command line, the values of configuration variable `remote.<name>.serverOption` are used instead."
-msgstr ""
+msgstr "Skicka den givna strängen till servern vid kommunikation med protokollversion 2. Den givna strängen får inte innehålla ett NUL- eller LF-tecken. När flera `--server-option=<alternativ>` anges skickas de alla till den andra sidan i den ordning som anges på kommandoraden. När ingen `--server-option=<alternativ>` anges från kommandoraden används värdena för konfigurationsvariabeln `remote.<namn>.serverOption` istället."
 
 #. type: Plain text
 #: en/git-ls-remote.adoc:92
 msgid "The \"remote\" repository to query. This parameter can be either a URL or the name of a remote (see the GIT URLS and REMOTES sections of linkgit:git-fetch[1])."
-msgstr ""
+msgstr "\"Fjärr\"-förvaret som ska frågas. Denna parameter kan antingen vara en URL eller namnet på en fjärransluten enhet (se avsnitten GIT URLS och FJÄRR i linkgit:git-fetch[1])."
 
 #. type: Labeled list
 #: en/git-ls-remote.adoc:93
 #, no-wrap
 msgid "<patterns>..."
-msgstr ""
+msgstr "<mönster>..."
 
 #. type: Plain text
 #: en/git-ls-remote.adoc:103
 msgid "When unspecified, all references, after filtering done with --heads and --tags, are shown. When <patterns>... are specified, only references matching one or more of the given patterns are displayed. Each pattern is interpreted as a glob (see `glob` in linkgit:gitglossary[7]) which is matched against the \"tail\" of a ref, starting either from the start of the ref (so a full name like `refs/heads/foo` matches) or from a slash separator (so `bar` matches `refs/heads/bar` but not `refs/heads/foobar`)."
-msgstr ""
+msgstr "När de inte anges, visas alla referenser, efter filtrering gjord med --heads och --tags. När <mönster>... anges visas endast referenser som matchar ett eller flera av de givna mönstren. Varje mönster tolkas som en glob (se `glob` i linkgit:gitglossary[7]) som matchas mot \"svansen\" av en referens, med början antingen från början av referensen (så ett fullständigt namn som `refs/heads/foo` matchar) eller från ett snedstreckavgränsare (så `bar` matchar `refs/heads/bar` men inte `refs/heads/foobar`)."
 
 #. type: Plain text
 #: en/git-ls-remote.adoc:108 en/git-show-ref.adoc:116
@@ -35231,12 +35300,12 @@ msgstr "Utdata är i formatet:"
 #: en/git-ls-remote.adoc:111
 #, no-wrap
 msgid "<oid> TAB <ref> LF\n"
-msgstr ""
+msgstr "<oid> TAB <ref> LF\n"
 
 #. type: Plain text
 #: en/git-ls-remote.adoc:117
 msgid "When showing an annotated tag, unless `--refs` is given, two such lines are shown: one with the refname for the tag itself as `<ref>`, and another with `<ref>` followed by `^{}`. The `<oid>` on the latter line shows the name of the object the tag points at."
-msgstr ""
+msgstr "När en kommenterad tagg visas, såvida inte `--refs` anges, visas två sådana rader: en med själva taggens refnamn som `<ref>`, och en annan med `<ref>` följt av `^{}`. `<oid>` på den senare raden visar namnet på objektet som taggen pekar på."
 
 #. type: Plain text
 #: en/git-ls-remote.adoc:123
@@ -35248,22 +35317,31 @@ msgstr "Lista alla referenser (inklusive symboler och pseudorefs), avskalnings-t
 #, no-wrap
 msgid "$ git ls-remote\n27d43aaaf50ef0ae014b88bba294f93658016a2e\tHEAD\n950264636c68591989456e3ba0a5442f93152c1a\trefs/heads/main\nd9ab777d41f92a8c1684c91cfb02053d7dd1046b\trefs/heads/next\nd4ca2e3147b409459955613c152220f4db848ee1\trefs/tags/v2.40.0\n73876f4861cd3d187a4682290ab75c9dccadbc56\trefs/tags/v2.40.0^{}\n"
 msgstr ""
+"$ git ls-remote\n"
+"27d43aaaf50ef0ae014b88bba294f93658016a2e\tHEAD\n"
+"950264636c68591989456e3ba0a5442f93152c1a\trefs/heads/main\n"
+"d9ab777d41f92a8c1684c91cfb02053d7dd1046b\trefs/heads/next\n"
+"d4ca2e3147b409459955613c152220f4db848ee1\trefs/tags/v2.40.0\n"
+"73876f4861cd3d187a4682290ab75c9dccadbc56\trefs/tags/v2.40.0^{}\n"
 
 #. type: Plain text
 #: en/git-ls-remote.adoc:134
 msgid "List all references matching given patterns:"
-msgstr ""
+msgstr "Lista alla referenser som matchar givna mönster:"
 
 #. type: delimited block -
 #: en/git-ls-remote.adoc:139
 #, no-wrap
 msgid "$ git ls-remote http://www.kernel.org/pub/scm/git/git.git master seen rc\n5fe978a5381f1fbad26a80e682ddd2a401966740\trefs/heads/master\nc781a84b5204fb294c9ccc79f8b3baceeb32c061\trefs/heads/seen\n"
 msgstr ""
+"$ git ls-remote http://www.kernel.org/pub/scm/git/git.git master seen rc\n"
+"5fe978a5381f1fbad26a80e682ddd2a401966740\trefs/heads/master\n"
+"c781a84b5204fb294c9ccc79f8b3baceeb32c061\trefs/heads/seen\n"
 
 #. type: Plain text
 #: en/git-ls-remote.adoc:142
 msgid "List only tags matching a given wildcard pattern:"
-msgstr ""
+msgstr "Lista endast taggar som matchar ett givet jokerteckenmönster:"
 
 #. type: delimited block -
 #: en/git-ls-remote.adoc:149
