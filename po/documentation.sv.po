@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-02-04 04:39+0000\n"
+"PO-Revision-Date: 2026-02-04 20:56+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -13700,457 +13700,484 @@ msgstr "git-bundle(1)"
 #. type: Plain text
 #: en/git-bundle.adoc:7
 msgid "git-bundle - Move objects and refs by archive"
-msgstr ""
+msgstr "git-bundle - Flytta objekt och referenser via arkiv"
 
 #. type: verse
 #: en/git-bundle.adoc:17
 #, no-wrap
 msgid "'git bundle' create [-q | --quiet | --progress]\n\t\t    [--version=<version>] <file> <git-rev-list-args>\n'git bundle' verify [-q | --quiet] <file>\n'git bundle' list-heads <file> [<refname>...]\n'git bundle' unbundle [--progress] <file> [<refname>...]\n"
 msgstr ""
+"'git bundle' create [-q | --quiet | --progress]\n"
+"\t\t    [--version=<version>] <fil> <git-rev-list-args>\n"
+"'git bundle' verify [-q | --quiet] <fil>\n"
+"'git bundle' list-heads <file> [<refnamn>...]\n"
+"'git bundle' unbundle [--progress] <file> [<refnamn>...]\n"
 
 #. type: Plain text
 #: en/git-bundle.adoc:24
 msgid "Create, unpack, and manipulate \"bundle\" files. Bundles are used for the \"offline\" transfer of Git objects without an active \"server\" sitting on the other side of the network connection."
-msgstr ""
+msgstr "Skapa, packa upp och manipulera \"bundle\"-filer. Buntar används för \"offline\"-överföring av Git-objekt utan en aktiv \"server\" på andra sidan nätverksanslutningen."
 
 #. type: Plain text
 #: en/git-bundle.adoc:29
 msgid "They can be used to create both incremental and full backups of a repository (see the \"full backup\" example in \"EXAMPLES\"), and to relay the state of the references in one repository to another (see the second example)."
-msgstr ""
+msgstr "De kan användas för att skapa både stegvisa och fullständiga säkerhetskopior av ett arkiv (se exemplet \"fullständig säkerhetskopia\" i \"EXEMPEL\"), och för att vidarebefordra statusen för referenserna i ett förvar till ett annat (se det andra exemplet)."
 
 #. type: Plain text
 #: en/git-bundle.adoc:37
 msgid "Git commands that fetch or otherwise \"read\" via protocols such as `ssh://` and `https://` can also operate on bundle files. It is possible linkgit:git-clone[1] a new repository from a bundle, to use linkgit:git-fetch[1] to fetch from one, and to list the references contained within it with linkgit:git-ls-remote[1]. There's no corresponding \"write\" support, i.e. a 'git push' into a bundle is not supported."
-msgstr ""
+msgstr "Git-kommandon som hämtar eller på annat sätt \"läser\" via protokoll som `ssh://` och `https://` kan också fungera på buntfiler. Det är möjligt linkgit:git-clone[1] att skapa ett nytt förvar från ett bunt, att använda linkgit:git-fetch[1] för att hämta från ett, och att lista referenserna i det med linkgit:git-ls-remote[1]. Det finns inget motsvarande \"skriv\"-stöd, d.v.s. en 'git push' in i en bunt stöds inte."
 
 #. type: Title -
 #: en/git-bundle.adoc:39
 #, no-wrap
 msgid "BUNDLE FORMAT"
-msgstr ""
+msgstr "BUNTFORMAT"
 
 #. type: Plain text
 #: en/git-bundle.adoc:43
 msgid "Bundles are `.pack` files (see linkgit:git-pack-objects[1]) with a header indicating what references are contained within the bundle."
-msgstr ""
+msgstr "Buntar är `.pack`-filer (se linkgit:git-pack-objects[1]) med en rubrik som anger vilka referenser som finns i bunten."
 
 #. type: Plain text
 #: en/git-bundle.adoc:47
 msgid "Like the packed archive format itself bundles can either be self-contained, or be created using exclusions. See the \"OBJECT PREREQUISITES\" section below."
-msgstr ""
+msgstr "Precis som det packade arkiv-formatet kan buntar antingen vara fristående eller skapas med hjälp av exkluderingar. Se avsnittet \"OBJEKT-FÖRUTSÄTTNINGAR\" nedan."
 
 #. type: Plain text
 #: en/git-bundle.adoc:51
 msgid "Bundles created using revision exclusions are \"thin packs\" created using the `--thin` option to linkgit:git-pack-objects[1], and unbundled using the `--fix-thin` option to linkgit:git-index-pack[1]."
-msgstr ""
+msgstr "Buntar som skapas med hjälp av revisions-exkluderingar är \"tunna paket\" som skapas med hjälp av alternativet `--thin` till linkgit:git-pack-objects[1], och packas upp med hjälp av alternativet `--fix-thin` till linkgit:git-index-pack[1]."
 
 #. type: Plain text
 #: en/git-bundle.adoc:57
 msgid "There is no option to create a \"thick pack\" when using revision exclusions, and users should not be concerned about the difference. By using \"thin packs\", bundles created using exclusions are smaller in size. That they're \"thin\" under the hood is merely noted here as a curiosity, and as a reference to other documentation."
-msgstr ""
+msgstr "Det finns inget alternativ att skapa ett \"tjockt paket\" när man använder revisions-exkluderingar, och användare bör inte oroa sig för skillnaden. Genom att använda \"tunna paket\" blir paket som skapas med undantag mindre i storlek. Att de är \"tunna\" under huven noteras här endast som en kuriositet och som en hänvisning till annan dokumentation."
 
 #. type: Plain text
 #: en/git-bundle.adoc:60
 msgid "See linkgit:gitformat-bundle[5] for more details and the discussion of \"thin pack\" in linkgit:gitformat-pack[5] for further details."
-msgstr ""
+msgstr "Se linkgit:gitformat-bundle[5] för mer information och diskussionen om \"tunna paket\" i linkgit:gitformat-pack[5] för ytterligare information."
 
 #. type: Labeled list
 #: en/git-bundle.adoc:64
 #, no-wrap
 msgid "create [options] <file> <git-rev-list-args>"
-msgstr ""
+msgstr "create [flaggor] <fil> <git-rev-list-args>"
 
 #. type: Plain text
 #: en/git-bundle.adoc:69
 msgid "Used to create a bundle named 'file'. This requires the '<git-rev-list-args>' arguments to define the bundle contents. 'options' contains the options specific to the 'git bundle create' subcommand. If 'file' is `-`, the bundle is written to stdout."
-msgstr ""
+msgstr "Används för att skapa ett buntar med namnet 'fil'. Detta kräver argumenten '<git-rev-list-args>' för att definiera paketets innehåll. 'flaggor' innehåller de alternativ som är specifika för underkommandot 'git bundle create'. Om 'fil' är `-` skrivs paketet till stdout."
 
 #. type: Labeled list
 #: en/git-bundle.adoc:70
 #, no-wrap
 msgid "verify <file>"
-msgstr ""
+msgstr "verify <fil>"
 
 #. type: Plain text
 #: en/git-bundle.adoc:81
 msgid "Used to check that a bundle file is valid and will apply cleanly to the current repository. This includes checks on the bundle format itself as well as checking that the prerequisite commits exist and are fully linked in the current repository. Then, 'git bundle' prints a list of missing commits, if any. Finally, information about additional capabilities, such as \"object filter\", is printed. See \"Capabilities\" in linkgit:gitformat-bundle[5] for more information. The exit code is zero for success, but will be nonzero if the bundle file is invalid. If 'file' is `-`, the bundle is read from stdin."
-msgstr ""
+msgstr "Används för att kontrollera att en bunt-fil är giltig och kommer att tillämpas korrekt på det aktuella förvaret. Detta inkluderar kontroller av själva bunt-formatet samt kontroll av att nödvändiga incheckningar finns och är fullständigt länkade i det aktuella förvaret. Sedan skriver 'git bundle' ut en lista över eventuella saknade incheckningar. Slutligen skrivs information om ytterligare funktioner, såsom \"objektfilter\", ut. Se \"Förmågor\" i linkgit:gitformat-bundle[5] för mer information. Avslutningskoden är noll för att lyckas, men kommer att vara annan än noll om bunt-filen är ogiltig. Om 'fil' är `-` läses bundle-filen från stdin."
 
 #. type: Labeled list
 #: en/git-bundle.adoc:82
 #, no-wrap
 msgid "list-heads <file>"
-msgstr ""
+msgstr "list-heads <fil>"
 
 #. type: Plain text
 #: en/git-bundle.adoc:86
 msgid "Lists the references defined in the bundle. If followed by a list of references, only references matching those given are printed out. If 'file' is `-`, the bundle is read from stdin."
-msgstr ""
+msgstr "Listar referenserna som definierats i bunten. Om det följs av en lista med referenser, skrivs endast referenser som matchar de angivna ut. Om 'fil' är `-` läses bunten från stdin."
 
 #. type: Labeled list
 #: en/git-bundle.adoc:87
 #, no-wrap
 msgid "unbundle <file>"
-msgstr ""
+msgstr "unbundle <fil>"
 
 #. type: Plain text
 #: en/git-bundle.adoc:94
 msgid "Passes the objects in the bundle to 'git index-pack' for storage in the repository, then prints the names of all defined references. If a list of references is given, only references matching those in the list are printed. This command is really plumbing, intended to be called only by 'git fetch'. If 'file' is `-`, the bundle is read from stdin."
-msgstr ""
+msgstr "Skickar objekten i bunten till 'git index-pack' för lagring i förvaret och skriver sedan ut namnen på alla definierade referenser. Om en lista med referenser anges, skrivs endast referenser som matchar de i listan ut. Detta kommando är egentligen ett rörmokeri-kommando, avsett att anropas endast av 'git fetch'. Om 'fil' är `-` läses paketet från stdin."
 
 #. type: Labeled list
 #: en/git-bundle.adoc:95
 #, no-wrap
 msgid "<git-rev-list-args>"
-msgstr ""
+msgstr "<git-rev-list-args>"
 
 #. type: Plain text
 #: en/git-bundle.adoc:104
 msgid "A list of arguments, acceptable to 'git rev-parse' and 'git rev-list' (and containing a named ref, see SPECIFYING REFERENCES below), that specifies the specific objects and references to transport. For example, `master~10..master` causes the current master reference to be packaged along with all objects added since its 10th ancestor commit. There is no explicit limit to the number of references and objects that may be packaged."
-msgstr ""
+msgstr "En lista med argument, acceptabla för 'git rev-parse' och 'git rev-list' (och innehållande en namngiven referens, se SPECIFIERING AV REFERENSER nedan), som anger de specifika objekten och referenserna som ska transporteras. Till exempel gör 'master~10..master' att den aktuella master-referensen paketeras tillsammans med alla objekt som lagts till sedan dess 10:e förfader-incheckningen. Det finns ingen uttrycklig gräns för antalet referenser och objekt som kan paketeras."
 
 #. type: Labeled list
 #: en/git-bundle.adoc:106
 #, no-wrap
 msgid "[<refname>...]"
-msgstr ""
+msgstr "[<refnamn>...]"
 
 #. type: Plain text
 #: en/git-bundle.adoc:112
 msgid "A list of references used to limit the references reported as available. This is principally of use to 'git fetch', which expects to receive only those references asked for and not necessarily everything in the pack (in this case, 'git bundle' acts like 'git fetch-pack')."
-msgstr ""
+msgstr "En lista med referenser som används för att begränsa de referenser som rapporteras som tillgängliga. Detta är huvudsakligen användbart för 'git fetch', som förväntar sig att endast ta emot de referenser som efterfrågas och inte nödvändigtvis allt i paketet (i det här fallet fungerar 'git bundle' som 'git fetch-pack')."
 
 #. type: Plain text
 #: en/git-bundle.adoc:118 en/git-pack-objects.adoc:203
 msgid "Progress status is reported on the standard error stream by default when it is attached to a terminal, unless -q is specified. This flag forces progress status even if the standard error stream is not directed to a terminal."
-msgstr ""
+msgstr "Förloppsstatus rapporteras som standard i standardfelströmmen när den är kopplad till en terminal, såvida inte -q anges. Denna flagga tvingar fram förloppsstatus även om standardfelströmmen inte dirigeras till en terminal."
 
 #. type: Labeled list
 #: en/git-bundle.adoc:119
 #, no-wrap
 msgid "--version=<version>"
-msgstr ""
+msgstr "--version=<version>"
 
 #. type: Plain text
 #: en/git-bundle.adoc:124
 msgid "Specify the bundle version. Version 2 is the older format and can only be used with SHA-1 repositories; the newer version 3 contains capabilities that permit extensions. The default is the oldest supported format, based on the hash algorithm in use."
-msgstr ""
+msgstr "Ange bunt-versionen. Version 2 är det äldre formatet och kan endast användas med SHA-1-arkiv; den nyare versionen 3 innehåller funktioner som tillåter tillägg. Standardinställningen är det äldsta formatet som stöds, baserat på den hashalgoritm som används."
 
 #. type: Plain text
 #: en/git-bundle.adoc:129 en/git-pack-objects.adoc:223
 msgid "This flag makes the command not to report its progress on the standard error stream."
-msgstr ""
+msgstr "Denna flagga gör att kommandot inte rapporterar sina förlopp i standardfelströmmen."
 
 #. type: Title -
 #: en/git-bundle.adoc:131
 #, no-wrap
 msgid "SPECIFYING REFERENCES"
-msgstr ""
+msgstr "SPECIFIERING AV REFERENSER"
 
 #. type: Plain text
 #: en/git-bundle.adoc:135
 msgid "Revisions must be accompanied by reference names to be packaged in a bundle. Alternatively `--all` can be used to package all refs."
-msgstr ""
+msgstr "Revisioner måste åtföljas av referensnamn för att paketeras i en bunt. Alternativt kan `--all` användas för att paketera alla referenser."
 
 #. type: Plain text
 #: en/git-bundle.adoc:139
+#, fuzzy
 msgid "More than one reference may be packaged, and more than one set of prerequisite objects can be specified. The objects packaged are those not contained in the union of the prerequisites."
-msgstr ""
+msgstr "Mer än en referens kan paketeras, och mer än en uppsättning nödvändiga objekt kan anges. De paketerade objekten är de som inte ingår i unionen av förutsättningarna."
 
 #. type: Plain text
 #: en/git-bundle.adoc:144
 msgid "The 'git bundle create' command resolves the reference names for you using the same rules as `git rev-parse --abbrev-ref=loose`. Each prerequisite can be specified explicitly (e.g. `^master~10`), or implicitly (e.g. `master~10..master`, `--since=10.days.ago master`)."
-msgstr ""
+msgstr "Kommandot 'git bundle create' löser referensnamnen åt dig med samma regler som `git rev-parse --abbrev-ref=loose`. Varje förutsättning kan anges explicit (t.ex. `^master~10`), eller implicit (t.ex. `master~10..master`, `--since=10.days.ago master`)."
 
 #. type: Plain text
 #: en/git-bundle.adoc:147
 msgid "All of these simple cases are OK (assuming we have a \"master\" and \"next\" branch):"
-msgstr ""
+msgstr "Alla dessa enkla fall är OK (förutsatt att vi har en \"master\"- och en \"next\"-gren):"
 
 #. type: delimited block -
 #: en/git-bundle.adoc:153
 #, no-wrap
 msgid "$ git bundle create master.bundle master\n$ echo master | git bundle create master.bundle --stdin\n$ git bundle create master-and-next.bundle master next\n$ (echo master; echo next) | git bundle create master-and-next.bundle --stdin\n"
 msgstr ""
+"$ git bundle create master.bundle master\n"
+"$ echo master | git bundle create master.bundle --stdin\n"
+"$ git bundle create master-and-next.bundle master next\n"
+"$ (echo master; echo next) | git bundle create master-och-next.bundle --stdin\n"
 
 #. type: Plain text
 #: en/git-bundle.adoc:156
 msgid "And so are these (and the same but omitted `--stdin` examples):"
-msgstr ""
+msgstr "Och så är dessa (och samma men utelämnade `--stdin` exempel):"
 
 #. type: delimited block -
 #: en/git-bundle.adoc:160
 #, no-wrap
 msgid "$ git bundle create recent-master.bundle master~10..master\n$ git bundle create recent-updates.bundle master~10..master next~5..next\n"
 msgstr ""
+"$ git bundle create färsk-master.bundle master~10..master\n"
+"$ git bundle create färska-uppdateringar.bundle master~10..master next~5..next\n"
 
 #. type: Plain text
 #: en/git-bundle.adoc:164
 msgid "A revision name or a range whose right-hand-side cannot be resolved to a reference is not accepted:"
-msgstr ""
+msgstr "Ett revisionsnamn eller ett intervall vars högra sida inte kan lösas upp till en referens accepteras inte:"
 
 #. type: delimited block -
 #: en/git-bundle.adoc:170
 #, no-wrap
 msgid "$ git bundle create HEAD.bundle $(git rev-parse HEAD)\nfatal: Refusing to create empty bundle.\n$ git bundle create master-yesterday.bundle master~10..master~5\nfatal: Refusing to create empty bundle.\n"
 msgstr ""
+"$ git bundle create HEAD.bundle $(git rev-parse HEAD)\n"
+"ödesdigert: Vägrar skapa en tom bunt.\n"
+"$ git bundle create master-igår.bundle master~10..master~5\n"
+"ödesdigert: Vägrar skapa en tom bunt.\n"
 
 #. type: Title -
 #: en/git-bundle.adoc:173
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "OBJECT PREREQUISITES"
-msgstr ""
+msgstr "OBJEKTFÖRKRAV"
 
 #. type: Plain text
 #: en/git-bundle.adoc:179
 msgid "When creating bundles it is possible to create a self-contained bundle that can be unbundled in a repository with no common history, as well as providing negative revisions to exclude objects needed in the earlier parts of the history."
-msgstr ""
+msgstr "När man skapar buntar är det möjligt att skapa ett fristående bunt som kan delas upp i ett förvar utan gemensam historik, samt att tillhandahålla negativa revisioner för att exkludera objekt som behövs i de tidigare delarna av historiken."
 
 #. type: Plain text
 #: en/git-bundle.adoc:184
 msgid "Feeding a revision such as `new` to `git bundle create` will create a bundle file that contains all the objects reachable from the revision `new`. That bundle can be unbundled in any repository to obtain a full history that leads to the revision `new`:"
-msgstr ""
+msgstr "Att mata en revision som `ny` till `git bundle create` skapar en bunt-fil som innehåller alla objekt som kan nås från revisionen `ny`. Den bunten kan packas upp i vilket förvar som helst för att få en fullständig historik som leder till revisionen `ny`:"
 
 #. type: delimited block -
 #: en/git-bundle.adoc:187
 #, no-wrap
 msgid "$ git bundle create full.bundle new\n"
-msgstr ""
+msgstr "$ git bundle create full.bundle ny\n"
 
 #. type: Plain text
 #: en/git-bundle.adoc:192
 msgid "A revision range such as `old..new` will produce a bundle file that will require the revision `old` (and any objects reachable from it) to exist for the bundle to be \"unbundle\"-able:"
-msgstr ""
+msgstr "Ett revisions-intervall som `gammal..ny` kommer att producera en bunt-fil som kräver att revisionen `old` (och alla objekt som kan nås från den) finns för att paketet ska kunna \"avbuntas\":"
 
 #. type: delimited block -
 #: en/git-bundle.adoc:195
 #, no-wrap
 msgid "$ git bundle create full.bundle old..new\n"
-msgstr ""
+msgstr "$ git bundle create full.bundle gammal..ny\n"
 
 #. type: Plain text
 #: en/git-bundle.adoc:200
 msgid "A self-contained bundle without any prerequisites can be extracted into anywhere, even into an empty repository, or be cloned from (i.e., `new`, but not `old..new`)."
-msgstr ""
+msgstr "Ett fristående bunt utan några förkrav kan extraheras var som helst, även till ett tomt arkiv, eller klonas från (dvs. `nytt`, men inte `gammalt..ny`)."
 
 #. type: Plain text
 #: en/git-bundle.adoc:204
 msgid "It is okay to err on the side of caution, causing the bundle file to contain objects already in the destination, as these are ignored when unpacking at the destination."
-msgstr ""
+msgstr "Det är okej att vara på den försiktiga sidan, och orsaka att bunt-filen innehåller objekt som redan finns i destinationen, eftersom dessa ignoreras vid uppackning i destinationen."
 
 #. type: Plain text
 #: en/git-bundle.adoc:208
 msgid "If you want to provide the same set of refs that a clone directly from the source repository would get, use `--branches --tags` for the `<git-rev-list-args>`."
-msgstr ""
+msgstr "Om du vill tillhandahålla samma uppsättning referenser som en klon direkt från käll-förrådet skulle få, använd `--branches --tags` för `<git-rev-list-args>`."
 
 #. type: Plain text
 #: en/git-bundle.adoc:212
 msgid "The 'git bundle verify' command can be used to check whether your recipient repository has the required prerequisite commits for a bundle."
-msgstr ""
+msgstr "Kommandot 'git bundle verify' kan användas för att kontrollera om ditt mottagar-förråd har de nödvändiga incheckningar för en bunt."
 
 #. type: Plain text
 #: en/git-bundle.adoc:217
 msgid "We'll discuss two cases:"
-msgstr ""
+msgstr "Vi kommer att diskutera två fall:"
 
 #. type: Plain text
 #: en/git-bundle.adoc:219
 msgid "Taking a full backup of a repository"
-msgstr ""
+msgstr "Att ta en fullständig säkerhetskopia av ett förråd"
 
 #. type: Plain text
 #: en/git-bundle.adoc:221
 msgid "Transferring the history of a repository to another machine when the two machines have no direct connection"
-msgstr ""
+msgstr "Överföra historiken för ett förråd till en annan maskin när de två maskinerna inte har någon direkt anslutning"
 
 #. type: Plain text
 #: en/git-bundle.adoc:225
 msgid "First let's consider a full backup of the repository. The following command will take a full backup of the repository in the sense that all refs are included in the bundle:"
-msgstr ""
+msgstr "Låt oss först överväga en fullständig säkerhetskopia av förrådet. Följande kommando kommer att göra en fullständig säkerhetskopia av förrådet i den meningen att alla referenser ingår i bunten:"
 
 #. type: delimited block -
 #: en/git-bundle.adoc:228
 #, no-wrap
 msgid "$ git bundle create backup.bundle --all\n"
-msgstr ""
+msgstr "$ git bundle create säkerhetskopia.bundle --all\n"
 
 #. type: Plain text
 #: en/git-bundle.adoc:234
 msgid "But note again that this is only for the refs, i.e. you will only include refs and commits reachable from those refs. You will not include other local state, such as the contents of the index, working tree, the stash, per-repository configuration, hooks, etc."
-msgstr ""
+msgstr "Men observera återigen att detta endast gäller för referenserna, d.v.s. du kommer endast att inkludera referenser och incheckningar som är åtkomliga från dessa referenser. Du kommer inte att inkludera andra lokala tillstånd, såsom innehållet i indexet, arbetskatalogen, gömman, konfiguration per förvar, krokar, etc."
 
 #. type: Plain text
 #: en/git-bundle.adoc:237
 msgid "You can later recover that repository by using for example linkgit:git-clone[1]:"
-msgstr ""
+msgstr "Du kan senare återställa det förvaret genom att till exempel använda linkgit:git-clone[1]:"
 
 #. type: delimited block -
 #: en/git-bundle.adoc:240
 #, no-wrap
 msgid "$ git clone backup.bundle <new directory>\n"
-msgstr ""
+msgstr "$ git clone säkerhetskopia.bundle <ny katalog>>\n"
 
 #. type: Plain text
 #: en/git-bundle.adoc:247
 msgid "For the next example, assume you want to transfer the history from a repository R1 on machine A to another repository R2 on machine B. For whatever reason, direct connection between A and B is not allowed, but we can move data from A to B via some mechanism (CD, email, etc.). We want to update R2 with development made on the branch master in R1."
-msgstr ""
+msgstr "I nästa exempel, anta att du vill överföra historiken från ett förvar R1 på maskin A till ett annat förvar R2 på maskin B. Av någon anledning är direkt anslutning mellan A och B inte tillåten, men vi kan flytta data från A till B via någon mekanism (CD, e-post, etc.). Vi vill uppdatera R2 med utveckling gjord på grenen master i R1."
 
 #. type: Plain text
 #: en/git-bundle.adoc:252
 msgid "To bootstrap the process, you can first create a bundle that does not have any prerequisites. You can use a tag to remember up to what commit you last processed, in order to make it easy to later update the other repository with an incremental bundle:"
-msgstr ""
+msgstr "För att starta upp processen, kan du först skapa en bunt som inte har några förutsättningar. Du kan använda en tagg för att komma ihåg fram till vilken incheckning du senast bearbetade, för att göra det enkelt att senare uppdatera det andra förvaret med ett inkrementellt paket:"
 
 #. type: delimited block -
 #: en/git-bundle.adoc:257
 #, no-wrap
 msgid "machineA$ cd R1\nmachineA$ git bundle create file.bundle master\nmachineA$ git tag -f lastR2bundle master\n"
 msgstr ""
+"maskinA$ cd R1\n"
+"maskinA$ git bundle create fil.bundle master\n"
+"maskinA$ git tag -f senasteR2bunt master\n"
 
 #. type: Plain text
 #: en/git-bundle.adoc:262
 msgid "Then you transfer file.bundle to the target machine B. Because this bundle does not require any existing object to be extracted, you can create a new repository on machine B by cloning from it:"
-msgstr ""
+msgstr "Sedan överför du fil.bundle till målmaskin B. Eftersom detta bunt inte kräver att något befintligt objekt extraheras, kan du skapa ett nytt förvar på maskin B genom att klona från det:"
 
 #. type: delimited block -
 #: en/git-bundle.adoc:265
 #, no-wrap
 msgid "machineB$ git clone -b master /home/me/tmp/file.bundle R2\n"
-msgstr ""
+msgstr "maskinB$ git clone -b master /home/mej/tmp/fil.bundle R2\n"
 
 #. type: Plain text
 #: en/git-bundle.adoc:270
 msgid "This will define a remote called \"origin\" in the resulting repository that lets you fetch and pull from the bundle. The $GIT_DIR/config file in R2 will have an entry like this:"
-msgstr ""
+msgstr "Detta kommer att definiera en fjärrkontroll som heter \"origin\" i det resulterande arkivet som låter dig hämta och pull från paketet. Filen $GIT_DIR/config i R2 kommer att ha en post som denna:"
 
 #. type: delimited block -
 #: en/git-bundle.adoc:275
 #, no-wrap
 msgid "[remote \"origin\"]\n    url = /home/me/tmp/file.bundle\n    fetch = refs/heads/*:refs/remotes/origin/*\n"
 msgstr ""
+"[remote \"origin\"]\n"
+"    url = /home/mej/tmp/fil.bundle\n"
+"    fetch = refs/heads/*:refs/remotes/origin/*\n"
 
 #. type: Plain text
 #: en/git-bundle.adoc:280
 msgid "To update the resulting mine.git repository, you can fetch or pull after replacing the bundle stored at /home/me/tmp/file.bundle with incremental updates."
-msgstr ""
+msgstr "För att uppdatera det resulterande mitt.git-förvaret kan du hämta eller pulla efter att du har ersatt paketet som lagras i /home/mej/tmp/fil.bundle med stegvisa uppdateringar."
 
 #. type: Plain text
 #: en/git-bundle.adoc:283
 msgid "After working some more in the original repository, you can create an incremental bundle to update the other repository:"
-msgstr ""
+msgstr "Efter att ha arbetat lite mer i det ursprungliga förvaret kan du skapa en stegvis bunt för att uppdatera det andra arkivet:"
 
 #. type: delimited block -
 #: en/git-bundle.adoc:288
 #, no-wrap
 msgid "machineA$ cd R1\nmachineA$ git bundle create file.bundle lastR2bundle..master\nmachineA$ git tag -f lastR2bundle master\n"
 msgstr ""
+"maskinA$ cd R1\n"
+"maskinA$ git bundle create fil.bundle senasteR2bunt..master\n"
+"maskinA$ git tag -f senasteR2bunt master\n"
 
 #. type: Plain text
 #: en/git-bundle.adoc:292
 msgid "You then transfer the bundle to the other machine to replace /home/me/tmp/file.bundle, and pull from it."
-msgstr ""
+msgstr "Sedan överför du bunten till den andra maskinen för att ersätta /home/mej/tmp/fil.bundle, och hämtar från det."
 
 #. type: delimited block -
 #: en/git-bundle.adoc:296
 #, no-wrap
 msgid "machineB$ cd R2\nmachineB$ git pull\n"
 msgstr ""
+"maskinB$ cd R2\n"
+"maskinB$ git pull\n"
 
 #. type: Plain text
 #: en/git-bundle.adoc:304
 msgid "If you know up to what commit the intended recipient repository should have the necessary objects, you can use that knowledge to specify the prerequisites, giving a cut-off point to limit the revisions and objects that go in the resulting bundle. The previous example used the lastR2bundle tag for this purpose, but you can use any other options that you would give to the linkgit:git-log[1] command. Here are more examples:"
-msgstr ""
+msgstr "Om du vet upp till vilken incheckning det avsedda mottagar-förrådet ska ha de nödvändiga objekten, kan du använda den kunskapen för att specificera förutsättningarna och ange en gräns för att begränsa revisionerna och objekten som ingår i det resulterande paketet. Det föregående exemplet använde taggen senasteR2bunten för detta ändamål, men du kan använda andra alternativ som du skulle ge till kommandot linkgit:git-log[1]. Här är fler exempel:"
 
 #. type: Plain text
 #: en/git-bundle.adoc:306
 msgid "You can use a tag that is present in both:"
-msgstr ""
+msgstr "Du kan använda en tagg som finns i båda:"
 
 #. type: delimited block -
 #: en/git-bundle.adoc:309
 #, no-wrap
 msgid "$ git bundle create mybundle v1.0.0..master\n"
-msgstr ""
+msgstr "$ git bundle create minbunt v1.0.0..master\n"
 
 #. type: Plain text
 #: en/git-bundle.adoc:312
 msgid "You can use a prerequisite based on time:"
-msgstr ""
+msgstr "Du kan använda en förutsättning baserad på tid:"
 
 #. type: delimited block -
 #: en/git-bundle.adoc:315
 #, no-wrap
 msgid "$ git bundle create mybundle --since=10.days master\n"
-msgstr ""
+msgstr "$ git bundle create minbunt --since=10.days master\n"
 
 #. type: Plain text
 #: en/git-bundle.adoc:318
 msgid "You can use the number of commits:"
-msgstr ""
+msgstr "Du kan använda antalet incheckningar:"
 
 #. type: delimited block -
 #: en/git-bundle.adoc:321
 #, no-wrap
 msgid "$ git bundle create mybundle -10 master\n"
-msgstr ""
+msgstr "$ git bundle create minbunt -10 master\n"
 
 #. type: Plain text
 #: en/git-bundle.adoc:325
 msgid "You can run `git-bundle verify` to see if you can extract from a bundle that was created with a prerequisite:"
-msgstr ""
+msgstr "Du kan köra `git-bundle verify` för att se om du kan extrahera från ett paket som skapades med en förutsättning:"
 
 #. type: delimited block -
 #: en/git-bundle.adoc:328
 #, no-wrap
 msgid "$ git bundle verify mybundle\n"
-msgstr ""
+msgstr "$ git bundle verify minbunt\n"
 
 #. type: Plain text
 #: en/git-bundle.adoc:332
 msgid "This will list what commits you must have in order to extract from the bundle and will error out if you do not have them."
-msgstr ""
+msgstr "Detta listar vilka incheckningar du måste ha för att extrahera från bunten och kommer att ge ett felmeddelande om du inte har dem."
 
 #. type: Plain text
 #: en/git-bundle.adoc:336
 msgid "A bundle from a recipient repository's point of view is just like a regular repository which it fetches or pulls from. You can, for example, map references when fetching:"
-msgstr ""
+msgstr "Ett paket, ur ett mottagar-förvars synvinkel, är precis som ett vanligt förvar som det hämtar eller hämtar från. Du kan till exempel mappa referenser när du hämtar:"
 
 #. type: delimited block -
 #: en/git-bundle.adoc:339
 #, no-wrap
 msgid "$ git fetch mybundle master:localRef\n"
-msgstr ""
+msgstr "$ git fetch minbunt master:localRef\n"
 
 #. type: Plain text
 #: en/git-bundle.adoc:342
 msgid "You can also see what references it offers:"
-msgstr ""
+msgstr "Du kan också se vilka referenser den erbjuder:"
 
 #. type: delimited block -
 #: en/git-bundle.adoc:345
 #, no-wrap
 msgid "$ git ls-remote mybundle\n"
-msgstr ""
+msgstr "$ git ls-remote minbunt\n"
 
 #. type: Plain text
 #: en/git-bundle.adoc:354
 msgid "A naive way to make a full backup of a repository is to use something to the effect of `cp -r <repo> <destination>`. This is discouraged since the repository could be written to during the copy operation. In turn some files at `<destination>` could be corrupted."
-msgstr ""
+msgstr "Ett naivt sätt att göra en fullständig säkerhetskopia av ett förvar är att använda något i stil med `cp -r <förvar> <destination>`. Detta avråds eftersom förvaret kan skrivas till under kopieringen. I sin tur kan vissa filer på `<destination>` bli skadade."
 
 #. type: Plain text
 #: en/git-bundle.adoc:361
 msgid "This is why it is recommended to use Git tooling for making repository backups, either with this command or with e.g. linkgit:git-clone[1]. But keep in mind that these tools will not help you backup state other than refs and commits. In other words they will not help you backup contents of the index, working tree, the stash, per-repository configuration, hooks, etc."
-msgstr ""
+msgstr "Det är därför det rekommenderas att använda Git-verktyg för att göra säkerhetskopior av förvar, antingen med detta kommando eller med t.ex. linkgit:git-clone[1]. Men kom ihåg att dessa verktyg inte hjälper dig att säkerhetskopiera tillstånd förutom referenser och incheckningar. Med andra ord kommer de inte att hjälpa dig att säkerhetskopiera innehållet i indexet, arbetskatalogen, gömman, konfigurationen per arkiv, krokar, etc."
 
 #. type: Plain text
 #: en/git-bundle.adoc:364
 msgid "See also linkgit:gitfaq[7], section \"TRANSFERS\" for a discussion of the problems associated with file syncing across systems."
-msgstr ""
+msgstr "Se även linkgit:gitfaq[7], avsnittet \"ÖVERFÖRINGAR\" för en diskussion om problemen i samband med filsynkronisering mellan system."
 
 #. type: Title -
 #: en/git-bundle.adoc:366
 #, no-wrap
 msgid "FILE FORMAT"
-msgstr ""
+msgstr "FILFORMAT"
 
 #. type: Plain text
 #: en/git-bundle.adoc:369
@@ -14174,26 +14201,33 @@ msgstr "git-cat-file - Tillhandahåller innehåll eller detaljer om förvars-obj
 #, no-wrap
 msgid "'git cat-file' <type> <object>\n'git cat-file' (-e | -p | -t | -s) <object>\n'git cat-file' (--textconv | --filters)\n\t     [<rev>:<path|tree-ish> | --path=<path|tree-ish> <rev>]\n'git cat-file' (--batch | --batch-check | --batch-command) [--batch-all-objects]\n\t     [--buffer] [--follow-symlinks] [--unordered]\n\t     [--textconv | --filters] [-Z]\n"
 msgstr ""
+"'git cat-file' <typ> <objekt>\n"
+"'git cat-file' (-e | -p | -t | -s) <objekt>\n"
+"'git cat-file' (--textconv | --filters)\n"
+"\t     [<rev>:<sökväg|trädlikt> | --path=<sökväg|trädlikt> <rev>]\n"
+"'git cat-file' (--batch | --batch-check | --batch-command) [--batch-all-objects]\n"
+"\t     [--buffer] [--follow-symlinks] [--unordered]\n"
+"\t     [--textconv | --filters] [-Z]\n"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:23
 msgid "Output the contents or other properties such as size, type or delta information of one or more objects."
-msgstr ""
+msgstr "Mata ut innehållet eller andra egenskaper, såsom storlek, typ eller delta-information, för ett eller flera objekt."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:26
 msgid "This command can operate in two modes, depending on whether an option from the `--batch` family is specified."
-msgstr ""
+msgstr "Det här kommandot kan fungera i två lägen, beroende på om ett alternativ från `--batch`-familjen är specificerat."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:29
 msgid "In non-batch mode, the command provides information on an object named on the command line."
-msgstr ""
+msgstr "I icke-satsläge tillhandahåller kommandot information om ett objekt som namnges på kommandoraden."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:31
 msgid "In batch mode, arguments are read from standard input."
-msgstr ""
+msgstr "I satsläge läses argument från standardindata."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:34 en/git-fsck.adoc:23 en/git.adoc:404
@@ -14204,27 +14238,27 @@ msgstr "<objekt>"
 #. type: Plain text
 #: en/git-cat-file.adoc:38
 msgid "The name of the object to show. For a more complete list of ways to spell object names, see the \"SPECIFYING REVISIONS\" section in linkgit:gitrevisions[7]."
-msgstr ""
+msgstr "Namnet på det objekt som ska visas. För en mer komplett lista över sätt att stava objektnamn, se avsnittet \"SPECIFICERING AV REVISIONER\" i linkgit:gitrevisions[7]."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:42
 msgid "Instead of the content, show the object type identified by `<object>`."
-msgstr ""
+msgstr "Istället för innehållet, visa objekttypen som identifieras av `<objekt>`."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:48
 msgid "Instead of the content, show the object size identified by `<object>`. If used with `--use-mailmap` option, will show the size of updated object after replacing idents using the mailmap mechanism."
-msgstr ""
+msgstr "Istället för innehållet, visa objektstorleken identifierad av `<objekt>`. Om den används med alternativet `--use-mailmap`, visas storleken på det uppdaterade objektet efter att identer ersatts med hjälp av mailmap-mekanismen."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:53
 msgid "Exit with zero status if `<object>` exists and is a valid object. If `<object>` is of an invalid format, exit with non-zero status and emit an error on stderr."
-msgstr ""
+msgstr "Avsluta med status noll om `<objekt>` finns och är ett giltigt objekt. Om `<objekt>` har ett ogiltigt format, avsluta med status som inte är noll och generera ett felmeddelande vid stderr."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:56
 msgid "Pretty-print the contents of `<object>` based on its type."
-msgstr ""
+msgstr "Skriv ut innehållet i `<objekt>` baserat på dess typ."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:57 en/git.adoc:428
@@ -14268,7 +14302,7 @@ msgstr "--no-use-mailmap"
 #. type: Plain text
 #: en/git-cat-file.adoc:72
 msgid "Use mailmap file to map author, committer and tagger names and email addresses to canonical real names and email addresses. See linkgit:git-shortlog[1]."
-msgstr ""
+msgstr "Använd mailmap-filen för att mappa författar-, incheckare- och taggarnamn och e-postadresser till kanoniska riktiga namn och e-postadresser. Se linkgit:git-shortlog[1]."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:73 en/git-grep.adoc:83
@@ -14280,7 +14314,7 @@ msgstr "--textconv"
 #. type: Plain text
 #: en/git-cat-file.adoc:78
 msgid "Show the content as transformed by a textconv filter. In this case, `<object>` has to be of the form `<tree-ish>:<path>`, or `:<path>` in order to apply the filter to the content recorded in the index at `<path>`."
-msgstr ""
+msgstr "Visa innehållet så som det har transformerats av ett textconv filtret. I det här fallet måste `<objekt>` ha formen `<trädlikt>:<sökväg>` eller `:<sökväg>` för att filtret ska kunna tillämpas på innehållet som är registrerat i indexet vid `<sökväg>`."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:79
@@ -14292,13 +14326,13 @@ msgstr "--filters"
 #. type: Plain text
 #: en/git-cat-file.adoc:84
 msgid "Show the content as converted by the filters configured in the current working tree for the given `<path>` (i.e. smudge filters, end-of-line conversion, etc). In this case, `<object>` has to be of the form `<tree-ish>:<path>`, or `:<path>`."
-msgstr ""
+msgstr "Visa innehållet så som det konverterats av filtren som konfigurerats i den aktuella arbetskatalogen för det givna `<sökvägen>` (dvs. smetfilter, konvertering vid radslut, etc.). I det här fallet måste `<objekt>` vara av formen `<trädlikt>:<sökväg>` eller `:<sökväg>`."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:85 en/git-pack-objects.adoc:308 en/git-repack.adoc:162
 #, no-wrap
 msgid "--filter=<filter-spec>"
-msgstr ""
+msgstr "--filter=<filter-spec>"
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:86 en/git-pack-objects.adoc:313
@@ -14310,33 +14344,33 @@ msgstr "--no-filter"
 #. type: Plain text
 #: en/git-cat-file.adoc:93
 msgid "Omit objects from the list of printed objects. This can only be used in combination with one of the batched modes. Excluded objects that have been explicitly requested via any of the batch modes that read objects via standard input (`--batch`, `--batch-check`) will be reported as \"filtered\". Excluded objects in `--batch-all-objects` mode will not be printed at all. The '<filter-spec>' may be one of the following:"
-msgstr ""
+msgstr "Uteslut objekt från listan över utskrivna objekt. Detta kan bara användas i kombination med ett av satslägena. Undantagna objekt som uttryckligen har begärts via något av satslägena som läser objekt via standardinmatning (`--batch`, `--batch-check`) kommer att rapporteras som \"filtrerade\". Undantagna objekt i `--batch-all-objects`-läge kommer inte att skrivas ut alls. '<filter-spec>' kan vara ett av följande:"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:95
 msgid "The form '--filter=blob:none' omits all blobs."
-msgstr ""
+msgstr "Formen '--filter=blob:none' utelämnar alla blobbar."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:100
 msgid "The form '--filter=blob:limit=<n>[kmg]' omits blobs of size at least n bytes or units. n may be zero. The suffixes k, m, and g can be used to name units in KiB, MiB, or GiB. For example, 'blob:limit=1k' is the same as 'blob:limit=1024'."
-msgstr ""
+msgstr "Formen '--filter=blob:limit=<n>[kmg]' utelämnar blobbar med en storlek på minst n byte eller enheter. n kan vara noll. Suffixen k, m och g kan användas för att namnge enheter i KiB, MiB eller GiB. Till exempel är 'blob:limit=1k' samma sak som 'blob:limit=1024'."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:103
 msgid "The form '--filter=object:type=(tag|commit|tree|blob)' omits all objects which are not of the requested type."
-msgstr ""
+msgstr "Formen '--filter=object:type=(tag|commit|tree|blob)' utelämnar alla objekt som inte är av den begärda typen."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:104
 #, no-wrap
 msgid "--path=<path>"
-msgstr ""
+msgstr "--path=<sökväg>"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:108
 msgid "For use with `--textconv` or `--filters`, to allow specifying an object name and a path separately, e.g. when it is difficult to figure out the revision from which the blob came."
-msgstr ""
+msgstr "För användning med `--textconv` eller `--filters`, för att tillåta att ett objektnamn och en sökväg anges separat, t.ex. när det är svårt att lista ut vilken version blobben kommer från."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:109 en/git-mktree.adoc:32
@@ -14354,17 +14388,17 @@ msgstr "--batch=<format>"
 #. type: Plain text
 #: en/git-cat-file.adoc:114
 msgid "Print object information and contents for each object provided on stdin. May not be combined with any other options or arguments except `--textconv`, `--filters`, or `--use-mailmap`."
-msgstr ""
+msgstr "Skriv ut objektinformation och innehåll för varje objekt som anges på stdin. Får inte kombineras med andra alternativ eller argument förutom `--textconv`, `--filters` eller `--use-mailmap`."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:119 en/git-cat-file.adoc:153
 msgid "When used with `--textconv` or `--filters`, the input lines must specify the path, separated by whitespace. See the section `BATCH OUTPUT` below for details."
-msgstr ""
+msgstr "När det används med `--textconv` eller `--filters` måste inmatningsraderna ange sökvägen, separerade med blanktecken. Se avsnittet `SATS UTMATNING` nedan för mer information."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:125
 msgid "When used with `--use-mailmap`, for commit and tag objects, the contents part of the output shows the identities replaced using the mailmap mechanism, while the information part of the output shows the size of the object as if it actually recorded the replacement identities."
-msgstr ""
+msgstr "När det används med `--use-mailmap`, för incheckning- och tagg-objekt, visar innehållsdelen av utdata de identiteter som ersatts med mailmap-mekanismen, medan informationsdelen av utdata visar objektets storlek som om det faktiskt registrerade ersättningsidentiteterna."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:127
@@ -14377,28 +14411,28 @@ msgstr "--batch-check"
 #: en/git-cat-file.adoc:128
 #, no-wrap
 msgid "--batch-check=<format>"
-msgstr ""
+msgstr "--batch-check=<format>"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:132
 msgid "Print object information for each object provided on stdin. May not be combined with any other options or arguments except `--textconv`, `--filters` or `--use-mailmap`."
-msgstr ""
+msgstr "Skriv ut objektinformation för varje objekt som anges på stdin. Får inte kombineras med andra alternativ eller argument förutom `--textconv`, `--filters` eller `--use-mailmap`."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:135
 msgid "When used with `--textconv` or `--filters`, the input lines must"
-msgstr ""
+msgstr "När det används med `--textconv` eller `--filters` måste inmatningsraderna"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:137
 #, no-wrap
 msgid "specify the path, separated by whitespace. See the section\n`BATCH OUTPUT` below for details.\n"
-msgstr ""
+msgstr "Ange sökvägen, separerad med blanktecken. Se avsnittet `SATS UTMATNING` nedan för mer information.\n"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:141
 msgid "When used with `--use-mailmap`, for commit and tag objects, the printed object information shows the size of the object as if the identities recorded in it were replaced by the mailmap mechanism."
-msgstr ""
+msgstr "När det används med `--use-mailmap`, för incheckning- och tagg-objekt, visar den utskrivna objektinformationen objektets storlek som om identiteterna som registrerats i det ersattes av mailmap-mekanismen."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:143
@@ -14411,55 +14445,55 @@ msgstr "--batch-command"
 #: en/git-cat-file.adoc:144
 #, no-wrap
 msgid "--batch-command=<format>"
-msgstr ""
+msgstr "--batch-command=<format>"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:148
 msgid "Enter a command mode that reads commands and arguments from stdin. May only be combined with `--buffer`, `--textconv`, `--use-mailmap` or `--filters`."
-msgstr ""
+msgstr "Ange ett kommandoläge som läser kommandon och argument från stdin. Får endast kombineras med `--buffer`, `--textconv`, `--use-mailmap` eller `--filters`."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:159
 msgid "When used with `--use-mailmap`, for commit and tag objects, the `contents` command shows the identities replaced using the mailmap mechanism, while the `info` command shows the size of the object as if it actually recorded the replacement identities."
-msgstr ""
+msgstr "När det används med `--use-mailmap`, för incheckning- och tagg-objekt, visar kommandot `contents` de identiteter som ersatts med mailmap-mekanismen, medan kommandot `info` visar objektets storlek som om det faktiskt registrerade ersättningsidentiteterna."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:162
 msgid "`--batch-command` recognizes the following commands:"
-msgstr ""
+msgstr "`--batch-command` känner igen följande kommandon:"
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:164
 #, no-wrap
 msgid "contents <object>"
-msgstr ""
+msgstr "contents <objekt>"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:167
 msgid "Print object contents for object reference `<object>`. This corresponds to the output of `--batch`."
-msgstr ""
+msgstr "Skriv ut objektinnehållet för objektreferensen `<objekt>`. Detta motsvarar utdata från `--batch`."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:168
 #, no-wrap
 msgid "info <object>"
-msgstr ""
+msgstr "info <objekt>"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:171
 msgid "Print object info for object reference `<object>`. This corresponds to the output of `--batch-check`."
-msgstr ""
+msgstr "Skriv ut objektinformation för objektreferensen `<objekt>`. Detta motsvarar utdata från `--batch-check`."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:172
 #, no-wrap
 msgid "flush"
-msgstr ""
+msgstr "flush"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:177
 msgid "Used with `--buffer` to execute all preceding commands that were issued since the beginning or since the last flush was issued. When `--buffer` is used, no output will come until a `flush` is issued. When `--buffer` is not used, commands are flushed each time without issuing `flush`."
-msgstr ""
+msgstr "Används med `--buffer` för att utföra alla föregående kommandon som utfärdats sedan början eller sedan den senaste spolningen utfördes. När `--buffer` används kommer ingen utmatning förrän en `flush` utförs. När `--buffer` inte används spolas kommandona varje gång utan att `flush` utförs."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:180
@@ -14471,7 +14505,7 @@ msgstr "--batch-all-objects"
 #. type: Plain text
 #: en/git-cat-file.adoc:188
 msgid "Instead of reading a list of objects on stdin, perform the requested batch operation on all objects in the repository and any alternate object stores (not just reachable objects). Requires `--batch` or `--batch-check` be specified. By default, the objects are visited in order sorted by their hashes; see also `--unordered` below. Objects are presented as-is, without respecting the \"replace\" mechanism of linkgit:git-replace[1]."
-msgstr ""
+msgstr "Istället för att läsa en lista med objekt på stdin, utför den begärda sats-operationen på alla objekt i förvaret och eventuella alternativa objektlager (inte bara nåbara objekt). Kräver att `--batch` eller `--batch-check` anges. Som standard besöks objekten i ordning sorterade efter deras hash-värden; se även `--unordered` nedan. Objekt presenteras som de är, utan att respektera \"replace\"-mekanismen i linkgit:git-replace[1]."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:189
@@ -14483,7 +14517,7 @@ msgstr "--buffer"
 #. type: Plain text
 #: en/git-cat-file.adoc:195
 msgid "Normally batch output is flushed after each object is output, so that a process can interactively read and write from `cat-file`. With this option, the output uses normal stdio buffering; this is much more efficient when invoking `--batch-check` or `--batch-command` on a large number of objects."
-msgstr ""
+msgstr "Normalt sett rensas satsutdata efter att varje objekt har matats ut, så att en process interaktivt kan läsa och skriva från `cat-file`. Med det här alternativet använder utdata normal stdio-buffring; detta är mycket effektivare när `--batch-check` eller `--batch-command` anropas på ett stort antal objekt."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:196
@@ -14495,7 +14529,7 @@ msgstr "--unordered"
 #. type: Plain text
 #: en/git-cat-file.adoc:205
 msgid "When `--batch-all-objects` is in use, visit objects in an order which may be more efficient for accessing the object contents than hash order. The exact details of the order are unspecified, but if you do not require a specific order, this should generally result in faster output, especially with `--batch`. Note that `cat-file` will still show each object only once, even if it is stored multiple times in the repository."
-msgstr ""
+msgstr "När `--batch-all-objects` används, besök objekt i en ordning som kan vara mer effektiv för att komma åt objektinnehållet än hashordning. De exakta detaljerna i ordningen är ospecificerade, men om du inte behöver en specifik ordning bör detta generellt resultera i snabbare utdata, särskilt med `--batch`. Observera att `cat-file` fortfarande bara visar varje objekt en gång, även om det lagras flera gånger i arkivet."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:206
@@ -14507,72 +14541,81 @@ msgstr "--follow-symlinks"
 #. type: Plain text
 #: en/git-cat-file.adoc:215
 msgid "With `--batch` or `--batch-check`, follow symlinks inside the repository when requesting objects with extended SHA-1 expressions of the form tree-ish:path-in-tree. Instead of providing output about the link itself, provide output about the linked-to object. If a symlink points outside the tree-ish (e.g. a link to `/foo` or a root-level link to `../foo`), the portion of the link which is outside the tree will be printed."
-msgstr ""
+msgstr "Med `--batch` eller `--batch-check`, följ symboliska länkar inuti förvaret när du begär objekt med utökade SHA-1-uttryck av formen tree-ish:path-in-tree. Istället för att tillhandahålla utdata om själva länken, tillhandahålla utdata om det länkade objektet. Om en symbolisk länk pekar utanför trädet (t.ex. en länk till `/foo` eller en rotnivålänk till `../foo`), kommer den del av länken som finns utanför trädet att skrivas ut."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:219
 msgid "This option does not (currently) work correctly when an object in the index is specified (e.g. `:link` instead of `HEAD:link`) rather than one in the tree."
-msgstr ""
+msgstr "Det här alternativet fungerar (för närvarande) inte korrekt när ett objekt i indexet anges (t.ex. `:link` istället för `HEAD:link`) snarare än ett i trädet."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:222
 msgid "This option cannot (currently) be used unless `--batch` or `--batch-check` is used."
-msgstr ""
+msgstr "Det här alternativet kan (för närvarande) inte användas om inte `--batch` eller `--batch-check` används."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:224
 msgid "For example, consider a git repository containing:"
-msgstr ""
+msgstr "Tänk dig till exempel ett git-förvar som innehåller:"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:231
 #, no-wrap
 msgid "\tf: a file containing \"hello\\n\"\n\tlink: a symlink to f\n\tdir/link: a symlink to ../f\n\tplink: a symlink to ../f\n\talink: a symlink to /etc/passwd\n"
 msgstr ""
+"\tf: en fil som innehåller \"hej\\n\"\n"
+"\tlänk: en symlink till f\n"
+"\tkat/länk: en symlink till../f\n"
+"\tplänk: en symlink till../f\n"
+"\talänk: en symlink till /etc/passwd\n"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:234
 msgid "For a regular file `f`, `echo HEAD:f | git cat-file --batch` would print"
-msgstr ""
+msgstr "För en vanlig fil `f` skulle `echo HEAD:f | git cat-file --batch` skriva ut"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:237
 #, no-wrap
 msgid "\tce013625030ba8dba906f756967f9e9ca394464a blob 6\n"
-msgstr ""
+msgstr "\tce013625030ba8dba906f756967f9e9ca394464a blob 6\n"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:242
 msgid "And `echo HEAD:link | git cat-file --batch --follow-symlinks` would print the same thing, as would `HEAD:dir/link`, as they both point at `HEAD:f`."
-msgstr ""
+msgstr "Och `echo HEAD:link | git cat-file --batch --follow-symlinks` skulle skriva ut samma sak, liksom `HEAD:kat/länk`, eftersom båda pekar på `HEAD:f`."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:245
 msgid "Without `--follow-symlinks`, these would print data about the symlink itself. In the case of `HEAD:link`, you would see"
-msgstr ""
+msgstr "Utan `--follow-symlinks` skulle dessa skriva ut data om själva symboliska länken. I fallet med `HEAD:länk` skulle du se"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:248
 #, no-wrap
 msgid "\t4d1ae35ba2c8ec712fa2a379db44ad639ca277bd blob 1\n"
-msgstr ""
+msgstr "\t4d1ae35ba2c8ec712fa2a379db44ad639ca277bd blob 1\n"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:252
 msgid "Both `plink` and `alink` point outside the tree, so they would respectively print:"
-msgstr ""
+msgstr "Både `plänk` och `alänk` pekar utanför trädet, så de skulle skriva ut:"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:256
 #, no-wrap
 msgid "\tsymlink 4\n\t../f\n"
 msgstr ""
+"\tsymlink 4\n"
+"\t../f\n"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:259
 #, no-wrap
 msgid "\tsymlink 11\n\t/etc/passwd\n"
 msgstr ""
+"\tsymlink 11\n"
+"\t/etc/passwd\n"
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:261
@@ -14584,12 +14627,12 @@ msgstr "-Z"
 #. type: Plain text
 #: en/git-cat-file.adoc:265
 msgid "Only meaningful with `--batch`, `--batch-check`, or `--batch-command`; input and output is NUL-delimited instead of newline-delimited."
-msgstr ""
+msgstr "Endast meningsfullt med `--batch`, `--batch-check` eller `--batch-command`; indata och utdata är NUL-avgränsade istället för nyradsavgränsade."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:271
 msgid "Only meaningful with `--batch`, `--batch-check`, or `--batch-command`; input is NUL-delimited instead of newline-delimited. This option is deprecated in favor of `-Z` as the output can otherwise be ambiguous."
-msgstr ""
+msgstr "Endast meningsfullt med `--batch`, `--batch-check` eller `--batch-command`; inmatningen är NUL-avgränsad istället för nyradsavgränsad. Detta alternativ är föråldrat till förmån för `-Z` eftersom utmatningen annars kan vara tvetydig."
 
 #. type: Title -
 #: en/git-cat-file.adoc:274 en/git-check-attr.adoc:54
@@ -14605,48 +14648,48 @@ msgstr "UTMATNING"
 #. type: Plain text
 #: en/git-cat-file.adoc:276
 msgid "If `-t` is specified, one of the `<type>`."
-msgstr ""
+msgstr "Om `-t` anges, en av `<typ>`."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:278
 msgid "If `-s` is specified, the size of the `<object>` in bytes."
-msgstr ""
+msgstr "Om `-s` anges, storleken på `<objekt>` i byte."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:280
 msgid "If `-e` is specified, no output, unless the `<object>` is malformed."
-msgstr ""
+msgstr "Om `-e` anges, ingen utdata, såvida inte `<objekt>` är felaktigt formaterat."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:282
 msgid "If `-p` is specified, the contents of `<object>` are pretty-printed."
-msgstr ""
+msgstr "Om `-p` anges, skrivs innehållet i `<objekt>` snyggt formaterat."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:285
 msgid "If `<type>` is specified, the raw (though uncompressed) contents of the `<object>` will be returned."
-msgstr ""
+msgstr "Om `<typ>` anges, returneras det råa (men okomprimerade) innehållet i `<objekt>`."
 
 #. type: Title -
 #: en/git-cat-file.adoc:287
 #, no-wrap
 msgid "BATCH OUTPUT"
-msgstr ""
+msgstr "SATS UTMATNING"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:293
 msgid "If `--batch` or `--batch-check` is given, `cat-file` will read objects from stdin, one per line, and print information about them in the same order as they have been read. By default, the whole line is considered as an object, as if it were fed to linkgit:git-rev-parse[1]."
-msgstr ""
+msgstr "Om `--batch` eller `--batch-check` anges, kommer `cat-file` att läsa objekt från stdin, ett per rad, och skriva ut information om dem i samma ordning som de har lästs. Som standard, betraktas hela raden som ett objekt, som om den matades till linkgit:git-rev-parse[1]."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:300
 msgid "When `--batch-command` is given, `cat-file` will read commands from stdin, one per line, and print information based on the command given. With `--batch-command`, the `info` command followed by an object will print information about the object the same way `--batch-check` would, and the `contents` command followed by an object prints contents in the same way `--batch` would."
-msgstr ""
+msgstr "När `--batch-command` ges, kommer `cat-file` att läsa kommandon från stdin, ett per rad, och skriva ut information baserat på det givna kommandot. Med `--batch-command` kommer `info`-kommandot följt av ett objekt att skriva ut information om objektet på samma sätt som `--batch-check` skulle göra, och `contents`-kommandot följt av ett objekt skriver ut innehållet på samma sätt som `--batch` skulle göra."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:305
 msgid "You can specify the information shown for each object by using a custom `<format>`. The `<format>` is copied literally to stdout for each object, with placeholders of the form `%(atom)` expanded, followed by a newline. The available atoms are:"
-msgstr ""
+msgstr "Du kan ange informationen som visas för varje objekt genom att använda ett anpassat `<format>`. `<format>` kopieras bokstavligen till stdout för varje objekt, med platshållare av formen `%(atom)` expanderade, följt av en nyrad. De tillgängliga atomerna är:"
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:306 en/git-for-each-ref.adoc:68
@@ -14658,7 +14701,7 @@ msgstr "`objectname`"
 #. type: Plain text
 #: en/git-cat-file.adoc:308
 msgid "The full hex representation of the object name."
-msgstr ""
+msgstr "Den fullständiga hexadecimala representationen av objektnamnet."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:309 en/git-for-each-ref.adoc:61
@@ -14670,7 +14713,7 @@ msgstr "`objecttype`"
 #. type: Plain text
 #: en/git-cat-file.adoc:311
 msgid "The type of the object (the same as `cat-file -t` reports)."
-msgstr ""
+msgstr "Objektets typ (samma som `cat-file -t` rapporterar)."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:312
@@ -14682,7 +14725,7 @@ msgstr "`objectmode`"
 #. type: Plain text
 #: en/git-cat-file.adoc:316
 msgid "If the specified object has mode information (such as a tree or index entry), the mode expressed as an octal integer. Otherwise, empty string."
-msgstr ""
+msgstr "Om det angivna objektet har lägesinformation (t.ex. ett träd eller en indexpost), uttrycks läget som ett oktalt heltal. Annars en tom sträng."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:317 en/git-for-each-ref.adoc:64
@@ -14694,7 +14737,7 @@ msgstr "`objectsize`"
 #. type: Plain text
 #: en/git-cat-file.adoc:320
 msgid "The size, in bytes, of the object (the same as `cat-file -s` reports)."
-msgstr ""
+msgstr "Objektets storlek, i byte, (samma som `cat-file -s` rapporterar)."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:321
@@ -14730,147 +14773,158 @@ msgstr "`rest`"
 #. type: Plain text
 #: en/git-cat-file.adoc:337
 msgid "If this atom is used in the output string, input lines are split at the first whitespace boundary. All characters before that whitespace are considered to be the object name; characters after that first run of whitespace (i.e., the \"rest\" of the line) are output in place of the `%(rest)` atom."
-msgstr ""
+msgstr "Om denna atom används i utdatasträngen delas indatalinjerna vid den första blankstegsgränsen. Alla tecken före det mellanslaget anses vara objektnamnet; Tecken efter den första omgången av blanksteg (dvs. \"resten\" av raden) matas ut istället för `%(rest)`-atomen."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:340
+#, fuzzy
 msgid "If no format is specified, the default format is `%(objectname) %(objecttype) %(objectsize)`."
-msgstr ""
+msgstr "Om inget format anges är standardformatet `%(objectname) %(objecttype) %(objectsize)`."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:344
 msgid "If `--batch` is specified, or if `--batch-command` is used with the `contents` command, the object information is followed by the object contents (consisting of `%(objectsize)` bytes), followed by a newline."
-msgstr ""
+msgstr "Om `--batch` anges, eller om `--batch-command` används med kommandot `contents`, följs objektinformationen av objektinnehållet (bestående av `%(objectsize)` byte), följt av en ny rad."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:346
 msgid "For example, `--batch` without a custom format would produce:"
-msgstr ""
+msgstr "Till exempel skulle `--batch` utan ett anpassat format producera:"
 
 #. type: delimited block -
 #: en/git-cat-file.adoc:350
 #, no-wrap
 msgid "<oid> SP <type> SP <size> LF\n<contents> LF\n"
 msgstr ""
+"<oid> SP <typ> SP <storlek> LF\n"
+"<innehåll> LF\n"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:353
 msgid "Whereas `--batch-check='%(objectname) %(objecttype)'` would produce:"
-msgstr ""
+msgstr "Medan `--batch-check='%(objectname) %(objecttype)'` skulle producera:"
 
 #. type: delimited block -
 #: en/git-cat-file.adoc:356
 #, no-wrap
 msgid "<oid> SP <type> LF\n"
-msgstr ""
+msgstr "<oid> SP <typ> LF\n"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:360
 msgid "If a name is specified on stdin that cannot be resolved to an object in the repository, then `cat-file` will ignore any custom format and print:"
-msgstr ""
+msgstr "Om ett namn anges på stdin som inte kan matchas med ett objekt i förvaret, kommer `cat-file` att ignorera alla anpassade format och skriva ut:"
 
 #. type: delimited block -
 #: en/git-cat-file.adoc:363 en/git-cat-file.adoc:404
 #, no-wrap
 msgid "<object> SP missing LF\n"
-msgstr ""
+msgstr "<objekt> SP missing LF\n"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:367
 msgid "If a name is specified on stdin that is filtered out via `--filter=`, then `cat-file` will ignore any custom format and print:"
-msgstr ""
+msgstr "Om ett namn anges på stdin som filtreras bort via `--filter=`, så kommer `cat-file` att ignorera alla anpassade format och skriva ut:"
 
 #. type: delimited block -
 #: en/git-cat-file.adoc:370
 #, no-wrap
 msgid "<object> SP excluded LF\n"
-msgstr ""
+msgstr "<objekt> SP excluded LF\n"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:373
 msgid "If a name is specified that might refer to more than one object (an ambiguous short sha), then `cat-file` will ignore any custom format and print:"
-msgstr ""
+msgstr "Om ett namn anges som kan referera till mer än ett objekt (en tvetydig kort sha), kommer `cat-file` att ignorera alla anpassade format och skriva ut:"
 
 #. type: delimited block -
 #: en/git-cat-file.adoc:376
 #, no-wrap
 msgid "<object> SP ambiguous LF\n"
-msgstr ""
+msgstr "<objekt> SP ambiguous LF\n"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:381
 msgid "If a name is specified that refers to a submodule entry in a tree and the target object does not exist in the repository, then `cat-file` will ignore any custom format and print (with the object ID of the submodule):"
-msgstr ""
+msgstr "Om ett namn anges som refererar till en undermodulpost i ett träd och målobjektet inte finns i förvaret, kommer `cat-file` att ignorera alla anpassade format och skriva ut (med undermodulens objekt-ID):"
 
 #. type: delimited block -
 #: en/git-cat-file.adoc:384
 #, no-wrap
 msgid "<oid> SP submodule LF\n"
-msgstr ""
+msgstr "<oid> SP submodule LF\n"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:389
 msgid "If `--follow-symlinks` is used, and a symlink in the repository points outside the repository, then `cat-file` will ignore any custom format and print:"
-msgstr ""
+msgstr "Om `--follow-symlinks` används, och en symlänk i arkivet pekar utanför arkivet, så kommer `cat-file` att ignorera alla anpassade format och skriva ut:"
 
 #. type: delimited block -
 #: en/git-cat-file.adoc:393
 #, no-wrap
 msgid "symlink SP <size> LF\n<symlink> LF\n"
 msgstr ""
+"symlink SP <storlek> LF\n"
+"<symlänk> LF\n"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:398
 msgid "The symlink will either be absolute (beginning with a `/`), or relative to the tree root. For instance, if dir/link points to `../../foo`, then `<symlink>` will be `../foo`. `<size>` is the size of the symlink in bytes."
-msgstr ""
+msgstr "Symbollänken kommer antingen att vara absolut (börjar med ett `/`) eller relativ till trädroten. Om till exempel dir/link pekar på `../../foo`, så kommer `<symlänk>` att vara `../foo`. `<storlek>` är storleken på symbollänken i byte."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:401
 msgid "If `--follow-symlinks` is used, the following error messages will be displayed:"
-msgstr ""
+msgstr "Om `--follow-symlinks` används kommer följande felmeddelanden att visas:"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:406
 msgid "is printed when the initial symlink requested does not exist."
-msgstr ""
+msgstr "skrivs ut när den initialt begärda symboliska länken inte finns."
 
 #. type: delimited block -
 #: en/git-cat-file.adoc:410
 #, no-wrap
 msgid "dangling SP <size> LF\n<object> LF\n"
 msgstr ""
+"dangling SP <storlek> LF\n"
+"<objekt> LF\n"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:413
 msgid "is printed when the initial symlink exists, but something that it (transitive-of) points to does not."
-msgstr ""
+msgstr "skrivs ut när den initiala symboliska länken finns, men något som den (transitivt-av) pekar på inte gör det."
 
 #. type: delimited block -
 #: en/git-cat-file.adoc:417
 #, no-wrap
 msgid "loop SP <size> LF\n<object> LF\n"
 msgstr ""
+"loop SP <storlek> LF\n"
+"<objekt> LF\n"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:420
 msgid "is printed for symlink loops (or any symlinks that require more than 40 link resolutions to resolve)."
-msgstr ""
+msgstr "skrivs ut för symlänkslingor (eller andra symlänkar som kräver mer än 40 länkupplösningar för att lösas)."
 
 #. type: delimited block -
 #: en/git-cat-file.adoc:424
 #, no-wrap
 msgid "notdir SP <size> LF\n<object> LF\n"
 msgstr ""
+"notdir SP <storlek> LF\n"
+"<objekt> LF\n"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:427
 msgid "is printed when, during symlink resolution, a file is used as a directory name."
-msgstr ""
+msgstr "skrivs ut när en fil används som katalognamn under symlänksupplösning."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:432
 msgid "Alternatively, when `-Z` is passed, the line feeds in any of the above examples are replaced with NUL terminators. This ensures that output will be parsable if the output itself would contain a linefeed and is thus recommended for scripting purposes."
-msgstr ""
+msgstr "Alternativt, när `-Z` skickas, ersätts radmatningarna i något av exemplen ovan med NUL-terminatorer. Detta säkerställer att utdata kommer att vara parsbar om själva utdata skulle innehålla en radmatning och därför rekommenderas för skriptändamål."
 
 #. type: Title -
 #: en/git-cat-file.adoc:434 en/git-for-each-ref.adoc:452
@@ -14881,13 +14935,14 @@ msgstr "FÖRBEHÅLL"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:442 en/git-for-each-ref.adoc:460
+#, fuzzy
 msgid "Note that the sizes of objects on disk are reported accurately, but care should be taken in drawing conclusions about which refs or objects are responsible for disk usage. The size of a packed non-delta object may be much larger than the size of objects which delta against it, but the choice of which object is the base and which is the delta is arbitrary and is subject to change during a repack."
-msgstr ""
+msgstr "Observera att storlekarna på objekten på disken rapporteras korrekt, men försiktighet bör iakttas när man drar slutsatser om vilka referenser eller objekt som är ansvariga för diskanvändningen. Storleken på ett packat icke-deltaobjekt kan vara mycket större än storleken på objekt som deltar mot det, men valet av vilket objekt som är basen och vilket som är deltan är godtyckligt och kan ändras under en ompackning."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:446 en/git-for-each-ref.adoc:464
 msgid "Note also that multiple copies of an object may be present in the object database; in this case, it is undefined which copy's size or delta base will be reported."
-msgstr ""
+msgstr "Observera också att flera kopior av ett objekt kan finnas i objektdatabasen; i det här fallet är det odefinierat vilken kopias storlek eller deltabas som kommer att rapporteras."
 
 #. type: Title =
 #: en/git-check-attr.adoc:2
@@ -15657,114 +15712,123 @@ msgstr "git-checkout - Byt gren eller återställ filer i arbetskatalogen"
 #, no-wrap
 msgid "git checkout [-q] [-f] [-m] [<branch>]\ngit checkout [-q] [-f] [-m] --detach [<branch>]\ngit checkout [-q] [-f] [-m] [--detach] <commit>\ngit checkout [-q] [-f] [-m] [[-b|-B|--orphan] <new-branch>] [<start-point>]\ngit checkout <tree-ish> [--] <pathspec>...\ngit checkout <tree-ish> --pathspec-from-file=<file> [--pathspec-file-nul]\ngit checkout [-f|--ours|--theirs|-m|--conflict=<style>] [--] <pathspec>...\ngit checkout [-f|--ours|--theirs|-m|--conflict=<style>] --pathspec-from-file=<file> [--pathspec-file-nul]\ngit checkout (-p|--patch) [<tree-ish>] [--] [<pathspec>...]\n"
 msgstr ""
+"git checkout [-q] [-f] [-m] [<gren>]\n"
+"git checkout [-q] [-f] [-m] --detach [<gren>]\n"
+"git checkout [-q] [-f] [-m] [--detach] <incheckning>\n"
+"git checkout [-q] [-f] [-m] [[-b|-B|--orphan] <ny-grel>] [<start-punkt>]\n"
+"git checkout <tree-ish> [--] <sökvägsspec>...\n"
+"git checkout <tree-ish> --pathspec-from-file=<fil> [--pathspec-file-nul]\n"
+"git checkout [-f|--ours|--theirs|-m|--conflict=<stil>] [--] <sökvägsspec>...\n"
+"git checkout [-f|--ours|--theirs|-m|--conflict=<stil>] --pathspec-from-file=<file> [--pathspec-file-nul]\n"
+"git checkout (-p|--patch) [<trädlikt>] [--] [<sökvägsspec>...]\n"
 
 #. type: Plain text
 #: en/git-checkout.adoc:25
 msgid "`git checkout` has two main modes:"
-msgstr ""
+msgstr "`git checkout` har två huvudlägen:"
 
 #. type: Plain text
 #: en/git-checkout.adoc:27
 msgid "**Switch branches**, with `git checkout <branch>`"
-msgstr ""
+msgstr "**Byt grenar**, med `git checkout <gren>`"
 
 #. type: Plain text
 #: en/git-checkout.adoc:29
 msgid "**Restore a different version of a file**, for example with `git checkout <commit> <filename>` or `git checkout <filename>`"
-msgstr ""
+msgstr "**Återställ en annan version av en fil**, till exempel med `git checkout <incheckning> <filnamn>` eller `git checkout <filnamn>`"
 
 #. type: Plain text
 #: en/git-checkout.adoc:31
 msgid "See ARGUMENT DISAMBIGUATION below for how Git decides which one to do."
-msgstr ""
+msgstr "Se ARGUMENT SÄRSKILJNING nedan för hur Git bestämmer vilken som ska göras."
 
 #. type: Labeled list
 #: en/git-checkout.adoc:32
 #, no-wrap
 msgid "`git checkout [<branch>]`"
-msgstr ""
+msgstr "`git checkout [<gren>]`"
 
 #. type: Plain text
 #: en/git-checkout.adoc:38
 msgid "Switch to _<branch>_. This sets the current branch to _<branch>_ and updates the files in your working directory. The checkout will fail if there are uncommitted changes to any files where _<branch>_ and your current commit have different content. Uncommitted changes will otherwise be kept."
-msgstr ""
+msgstr "Växla till _<gren>_. Detta ställer in den aktuella grenen till _<gren>_ och uppdaterar filerna i din arbetskatalog. Utcheckningen kommer att misslyckas om det finns oincheckade ändringar i filer där _<gren>_ och din nuvarande incheckning har olika innehåll. Oincheckade ändringar kommer annars att behållas."
 
 #. type: Plain text
 #: en/git-checkout.adoc:42
 msgid "If _<branch>_ is not found but there does exist a tracking branch in exactly one remote (call it _<remote>_) with a matching name and `--no-guess` is not specified, treat as equivalent to"
-msgstr ""
+msgstr "Om _<gren>_ inte hittas men det finns en spårningsgren i exakt en fjärr (kalla den _<fjärr >_) med ett matchande namn och `--no-guess` inte är specificerad, behandla den som likvärdig med"
 
 #. type: delimited block -
 #: en/git-checkout.adoc:45 en/git-checkout.adoc:188
 #, no-wrap
 msgid "$ git checkout -b <branch> --track <remote>/<branch>\n"
-msgstr ""
+msgstr "$ git checkout -b <gren> --track <fjärr>/<gren>\n"
 
 #. type: Plain text
 #: en/git-checkout.adoc:49
 msgid "Running `git checkout` without specifying a branch has no effect except to print out the tracking information for the current branch."
-msgstr ""
+msgstr "Att köra `git checkout` utan att ange en gren har ingen effekt förutom att skriva ut spårningsinformationen för den aktuella grenen."
 
 #. type: Labeled list
 #: en/git-checkout.adoc:50
 #, no-wrap
 msgid "`git checkout -b <new-branch> [<start-point>]`"
-msgstr ""
+msgstr "`git checkout -b <ny-gren> [<start-punkt>]`"
 
 #. type: Plain text
 #: en/git-checkout.adoc:56
 msgid "Create a new branch named _<new-branch>_, start it at _<start-point>_ (defaults to the current commit), and check out the new branch. You can use the `--track` or `--no-track` options to set the branch's upstream tracking information."
-msgstr ""
+msgstr "Skapa en ny gren med namnet _<ny-gren>_, starta den vid _<start-punkt>_ (standardinställningen är den nuvarande incheckning) och kolla in den nya grenen. Du kan använda alternativen `--track` eller `--no-track` för att ställa in grenens uppströms spårningsinformation."
 
 #. type: Plain text
 #: en/git-checkout.adoc:60
 msgid "This will fail if there's an error checking out _<new-branch>_, for example if checking out the `<start-point>` commit would overwrite your uncommitted changes."
-msgstr ""
+msgstr "Detta kommer att misslyckas om det uppstår ett fel vid utcheckning av _<ny-gren>_, till exempel om utcheckning av `<start-punkt>`-incheckningen skulle skriva över dina oincheckade ändringar."
 
 #. type: Labeled list
 #: en/git-checkout.adoc:61
 #, no-wrap
 msgid "`git checkout -B <branch> [<start-point>]`"
-msgstr ""
+msgstr "`git checkout -B <gren> [<start-punkt>]`"
 
 #. type: Plain text
 #: en/git-checkout.adoc:65 en/git-checkout.adoc:159
 msgid "The same as `-b`, except that if the branch already exists it resets _<branch>_ to the start point instead of failing."
-msgstr ""
+msgstr "Samma som `-b`, förutom att om grenen redan finns återställer den _<gren>_ till startpunkten istället för att misslyckas."
 
 #. type: Labeled list
 #: en/git-checkout.adoc:66
 #, no-wrap
 msgid "`git checkout --detach [<branch>]`"
-msgstr ""
+msgstr "`git checkout --detach [<gren>]`"
 
 #. type: Labeled list
 #: en/git-checkout.adoc:67
 #, no-wrap
 msgid "`git checkout [--detach] <commit>`"
-msgstr ""
+msgstr "`git checkout [--detach] <incheckning>`"
 
 #. type: Plain text
 #: en/git-checkout.adoc:72
 msgid "The same as `git checkout <branch>`, except that instead of pointing `HEAD` at the branch, it points `HEAD` at the commit ID. See the \"DETACHED HEAD\" section below for more."
-msgstr ""
+msgstr "Samma som `git checkout <gren>`, förutom att istället för att peka `HEAD` mot branchen, pekar den `HEAD` mot inchecknings-ID:t. Se avsnittet \"FRISTÅENDE HEAD\" nedan för mer information."
 
 #. type: Plain text
 #: en/git-checkout.adoc:74
 msgid "Omitting _<branch>_ detaches `HEAD` at the tip of the current branch."
-msgstr ""
+msgstr "Om man utelämnar _<gren>_ lossnar `HEAD` i toppen av den aktuella grenen."
 
 #. type: Labeled list
 #: en/git-checkout.adoc:75
 #, no-wrap
 msgid "`git checkout <tree-ish> [--] <pathspec>...`"
-msgstr ""
+msgstr "`git checkout <trädlikt> [--] <sökvägsspec>...`"
 
 #. type: Labeled list
 #: en/git-checkout.adoc:76
 #, no-wrap
 msgid "`git checkout <tree-ish> --pathspec-from-file=<file> [--pathspec-file-nul]`"
-msgstr ""
+msgstr "`git checkout <trädlikt> --pathspec-from-file=<fil> [--pathspec-file-nul]`"
 
 #. type: Plain text
 #: en/git-checkout.adoc:81
