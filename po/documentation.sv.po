@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-02-12 22:09+0000\n"
+"PO-Revision-Date: 2026-02-13 22:00+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -2233,7 +2233,7 @@ msgstr "linkgit:git-credential[1]"
 #. type: Plain text
 #: en/cmds-purehelpers.adoc:18
 msgid "Retrieve and store user credentials."
-msgstr "Hämta och lagra användarens inloggningsuppgifter."
+msgstr "Hämta och lagra användarens legitimationsinformation."
 
 #. type: Labeled list
 #: en/cmds-purehelpers.adoc:19
@@ -2257,7 +2257,7 @@ msgstr "linkgit:git-credential-store[1]"
 #. type: Plain text
 #: en/cmds-purehelpers.adoc:24
 msgid "Helper to store credentials on disk."
-msgstr "Hjälpprogram för att lagra inloggningsuppgifter på disk."
+msgstr "Hjälpprogram för att lagra legitimationsinformation på disk."
 
 #. type: Labeled list
 #: en/cmds-purehelpers.adoc:25
@@ -6519,7 +6519,7 @@ msgstr "`--quiet`"
 #. type: Plain text
 #: en/diff-options.adoc:817
 msgid "Disable all output of the program. Implies `--exit-code`. Disables execution of external diff helpers whose exit code is not trusted, i.e. their respective configuration option `diff.trustExitCode` or ++diff.++__<driver>__++.trustExitCode++ or environment variable `GIT_EXTERNAL_DIFF_TRUST_EXIT_CODE` is false."
-msgstr "Inaktivera all utdata från programmet. Innebär `--exit-code`. Inaktiverar exekvering av externa diff-hjälpare vars avslutningskod inte är betrodd, d.v.s. deras respektive konfigurationsalternativ `diff.trustExitCode` eller ++diff.++__<driver>__++.trustExitCode++ eller miljövariabeln `GIT_EXTERNAL_DIFF_TRUST_EXIT_CODE` är falskt."
+msgstr "Inaktivera all utdata från programmet. Innebär `--exit-code`. Inaktiverar exekvering av externa diff-hjälpprogram vars avslutningskod inte är betrodd, d.v.s. deras respektive konfigurationsalternativ `diff.trustExitCode` eller ++diff.++__<driver>__++.trustExitCode++ eller miljövariabeln `GIT_EXTERNAL_DIFF_TRUST_EXIT_CODE` är falskt."
 
 #. type: Labeled list
 #: en/diff-options.adoc:820
@@ -16737,29 +16737,32 @@ msgstr "--normalize"
 #. type: Plain text
 #: en/git-check-ref-format.adoc:121
 msgid "Normalize 'refname' by removing any leading slash (`/`) characters and collapsing runs of adjacent slashes between name components into a single slash. If the normalized refname is valid then print it to standard output and exit with a status of 0, otherwise exit with a non-zero status. (`--print` is a deprecated way to spell `--normalize`.)"
-msgstr ""
+msgstr "Normalisera 'refnamn' genom att ta bort alla inledande snedstreck (`/`) och komprimera serier av intilliggande snedstreck mellan namnkomponenter till ett enda snedstreck. Om det normaliserade refnamnet är giltigt, skriv ut det till standardutdata och avsluta med statusen 0, annars avslutas med en status som inte är noll. (`--print` är ett föråldrat sätt att stava `--normalize`.)"
 
 #. type: Plain text
 #: en/git-check-ref-format.adoc:127
+#, fuzzy
 msgid "Print the name of the previous thing checked out:"
-msgstr ""
+msgstr "Skriv namnet på den föregående utcheckade saken:"
 
 #. type: delimited block -
 #: en/git-check-ref-format.adoc:130
 #, no-wrap
 msgid "$ git check-ref-format --branch @{-1}\n"
-msgstr ""
+msgstr "$ git check-ref-format --branch @{-1}\n"
 
 #. type: Plain text
 #: en/git-check-ref-format.adoc:133
 msgid "Determine the reference name to use for a new branch:"
-msgstr ""
+msgstr "Bestäm referensnamnet som ska användas för en ny gren:"
 
 #. type: delimited block -
 #: en/git-check-ref-format.adoc:137
 #, no-wrap
 msgid "$ ref=$(git check-ref-format --normalize \"refs/heads/$newbranch\")||\n{ echo \"we do not like '$newbranch' as a branch name.\" >&2 ; exit 1 ; }\n"
 msgstr ""
+"$ ref=$(git check-ref-format --normalize \"refs/heads/$newbranch\")||\n"
+"{ echo \"Vi gillar inte '$newbranch' som grennamn.\" >&2 ; exit 1 ; }\n"
 
 #. type: Title =
 #: en/git-cherry-pick.adoc:2
@@ -16771,53 +16774,56 @@ msgstr "git-cherry-pick(1)"
 #. type: Plain text
 #: en/git-cherry-pick.adoc:7
 msgid "git-cherry-pick - Apply the changes introduced by some existing commits"
-msgstr ""
+msgstr "git-cherry-pick - Tillämpa ändringarna som introducerats av vissa befintliga incheckningar"
 
 #. type: verse
 #: en/git-cherry-pick.adoc:14
 #, no-wrap
 msgid "'git cherry-pick' [--edit] [-n] [-m <parent-number>] [-s] [-x] [--ff]\n\t\t  [-S[<keyid>]] <commit>...\n'git cherry-pick' (--continue | --skip | --abort | --quit)\n"
 msgstr ""
+"'git cherry-pick' [--edit] [-n] [-m <förälder-nummer>] [-s] [-x] [--ff]\n"
+"\t\t  [-S[<nyckelid>]] <incheckning>...\n"
+"'git cherry-pick' (--continue | --skip | --abort | --quit)\n"
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:21
 msgid "Given one or more existing commits, apply the change each one introduces, recording a new commit for each. This requires your working tree to be clean (no modifications from the HEAD commit)."
-msgstr ""
+msgstr "Givet en eller flera befintliga incheckningar, tillämpa den ändring som varje incheckning introducerar, och registrera en ny incheckning för varje. Detta kräver att din arbetskatalog är ren (inga modifieringar från HEAD-incheckningen)."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:24
 msgid "When it is not obvious how to apply a change, the following happens:"
-msgstr ""
+msgstr "När det inte är uppenbart hur en ändring ska tillämpas, händer följande:"
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:27
 msgid "The current branch and `HEAD` pointer stay at the last commit successfully made."
-msgstr ""
+msgstr "Den aktuella grenen och `HEAD`-pekaren stannar vid den senast framgångsrikt genomförda incheckningen."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:29
 msgid "The `CHERRY_PICK_HEAD` ref is set to point at the commit that introduced the change that is difficult to apply."
-msgstr ""
+msgstr "Referensen `CHERRY_PICK_HEAD` är inställd att peka på den incheckning som introducerade ändringen som är svår att tillämpa."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:31
 msgid "Paths in which the change applied cleanly are updated both in the index file and in your working tree."
-msgstr ""
+msgstr "Sökvägar där ändringen tillämpades korrekt uppdateras både i indexfilen och i din arbetskatalog."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:36
 msgid "For conflicting paths, the index file records up to three versions, as described in the \"TRUE MERGE\" section of linkgit:git-merge[1]. The working tree files will include a description of the conflict bracketed by the usual conflict markers `<<<<<<<` and `>>>>>>>`."
-msgstr ""
+msgstr "För motstridiga sökvägar, registrerar indexfilen upp till tre versioner, enligt beskrivningen i avsnittet \"SANN SAMMANSLAGNING\" i linkgit:git-merge[1]. Arbetskatalogs-filerna kommer att innehålla en beskrivning av konflikten inom av de vanliga konfliktmarkörerna `<<<<<<<` och `>>>>>>>`."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:37
 msgid "No other modifications are made."
-msgstr ""
+msgstr "Inga andra ändringar görs."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:40
 msgid "See linkgit:git-merge[1] for some hints on resolving such conflicts."
-msgstr ""
+msgstr "Se linkgit:git-merge[1] för några tips om hur man löser sådana konflikter."
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:43 en/git-revert.adoc:36
@@ -16828,7 +16834,7 @@ msgstr "<incheckning>..."
 #. type: Plain text
 #: en/git-cherry-pick.adoc:52
 msgid "Commits to cherry-pick. For a more complete list of ways to spell commits, see linkgit:gitrevisions[7]. Sets of commits can be passed but no traversal is done by default, as if the `--no-walk` option was specified, see linkgit:git-rev-list[1]. Note that specifying a range will feed all <commit>... arguments to a single revision walk (see a later example that uses 'maint master..next')."
-msgstr ""
+msgstr "Incheckningar so ska plockas som russin ur kakan. För en mer komplett lista över sätt att stava incheckningar, se linkgit:gitrevisions[7]. Uppsättningar av incheckningar kan skickas men ingen genomgång görs som standard, som om alternativet `--no-walk` var specificerat, se linkgit:git-rev-list[1]. Observera att om man anger ett intervall matas alla <inchecknings>...-argument till en enda revisionsgenomgång (se ett senare exempel som använder 'maint master..next')."
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:54 en/git-config.adoc:356 en/git-revert.adoc:45
@@ -16841,7 +16847,7 @@ msgstr "--edit"
 #. type: Plain text
 #: en/git-cherry-pick.adoc:57
 msgid "With this option, 'git cherry-pick' will let you edit the commit message prior to committing."
-msgstr ""
+msgstr "Med det här alternativet, låter 'git cherry-pick' dig redigera inchecknings-meddelandet innan incheckningen."
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:58 en/git-revert.adoc:70
@@ -16864,29 +16870,29 @@ msgstr "-x"
 #. type: Plain text
 #: en/git-cherry-pick.adoc:78
 msgid "When recording the commit, append a line that says \"(cherry picked from commit ...)\" to the original commit message in order to indicate which commit this change was cherry-picked from. This is done only for cherry picks without conflicts. Do not use this option if you are cherry-picking from your private branch because the information is useless to the recipient. If on the other hand you are cherry-picking between two publicly visible branches (e.g. backporting a fix to a maintenance branch for an older release from a development branch), adding this information can be useful."
-msgstr ""
+msgstr "När du reistrerar incheckningen, lägg till en rad som säger \"(cherry picked from commit ...)\" till det ursprungliga inchecknings-meddelandet för att ange vilken incheckning denna ändring applicerades från. Detta görs endast för plocka russin ur kakan ändringar utan konflikter. Använd inte det här alternativet om du väljer att plocka russin ur kakan från din privata gren eftersom informationen är värdelös för mottagaren. Om du å andra sidan plocka russin ur kakan mellan två offentligt synliga grenar (t.ex. bakporterar en fix till en underhållsgren för en äldre utgåva från en utvecklingsgren), kan det vara användbart att lägga till denna information."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:83
 msgid "It used to be that the command defaulted to do `-x` described above, and `-r` was to disable it. Now the default is not to do `-x` so this option is a no-op."
-msgstr ""
+msgstr "Tidigare var det så att kommandot som standard gjorde `-x` som beskrivits ovan, och `-r` var för att inaktivera det. Nu är standardinställningen att inte göra `-x` så detta är en verkningslös flagga."
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:84
 #, no-wrap
 msgid "-m <parent-number>"
-msgstr ""
+msgstr "-m <förälder-nummer>"
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:85
 #, no-wrap
 msgid "--mainline <parent-number>"
-msgstr ""
+msgstr "--mainline <förälder-nummer>"
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:91
 msgid "Usually you cannot cherry-pick a merge because you do not know which side of the merge should be considered the mainline. This option specifies the parent number (starting from 1) of the mainline and allows cherry-pick to replay the change relative to the specified parent."
-msgstr ""
+msgstr "Vanligtvis kan man inte plocka russin ur kakan med en sammanslagning eftersom man inte vet vilken sida av sammanslagningen som ska betraktas som huvudlinjen. Det här alternativet anger huvudlinjens föräldrer-nummer (med början från 1) och låter en plocka russin ur kakan att återspelning ändringen i förhållande till den angivna föräldern."
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:93 en/git-revert.adoc:78
@@ -16898,12 +16904,12 @@ msgstr "--no-commit"
 #. type: Plain text
 #: en/git-cherry-pick.adoc:101
 msgid "Usually the command automatically creates a sequence of commits. This flag applies the changes necessary to cherry-pick each named commit to your working tree and the index, without making any commit. In addition, when this option is used, your index does not have to match the HEAD commit. The cherry-pick is done against the beginning state of your index."
-msgstr ""
+msgstr "Vanligtvis skapar kommandot automatiskt en sekvens av incheckningar. Denna flagga tillämpar de ändringar som krävs för att välja ut varje namngiven incheckning till ditt arbetskatalog och indexet, utan att göra någon incheckning. Dessutom, när detta alternativ används, behöver ditt index inte matcha HEAD-incheckningen. Urvalet görs mot starttillståndet för ditt index."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:104
 msgid "This is useful when cherry-picking more than one commits' effect to your index in a row."
-msgstr ""
+msgstr "Detta är användbart när du plocka russin ur kakan och mer än en incheckning påverkar ditt index i rad."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:109 en/git-revert.adoc:104
@@ -16919,13 +16925,15 @@ msgstr "--ff"
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:123
+#, fuzzy
 msgid "If the current HEAD is the same as the parent of the cherry-pick'ed commit, then a fast forward to this commit will be performed."
-msgstr ""
+msgstr "Om den aktuella HEAD är densamma som föräldern till den cherry-pick:ade incheckningen, kommer en snabbspolning framåt till denna incheckning att utföras."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:136
+#, fuzzy
 msgid "By default, cherry-picking an empty commit will fail, indicating that an explicit invocation of `git commit --allow-empty` is required. This option overrides that behavior, allowing empty commits to be preserved automatically in a cherry-pick. Note that when \"--ff\" is in effect, empty commits that meet the \"fast-forward\" requirement will be kept even without this option. Note also, that use of this option only keeps commits that were initially empty (i.e. the commit recorded the same tree as its parent). Commits which are made empty due to a previous commit will cause the cherry-pick to fail. To force the inclusion of those commits, use `--empty=keep`."
-msgstr ""
+msgstr "Som standard, att plocka russin ur kakan på en tom incheckning kommer misslyckas , vilket indikerar att ett explicit anrop av `git commit --allow-empty` krävs. Det här alternativet åsidosätter det beteendet, och tillåter att tomma incheckningar bevaras automatiskt i näd man plockar russin ur kakan. Observera att när \"--ff\" är aktivt kommer tomma incheckningar som uppfyller kravet på \"snabbspola framåt\" att behållas även utan det här alternativet. Observera också att användning av det här alternativet bara behåller incheckningar som ursprungligen var tomma (dvs. incheckningen registrerade samma träd som sin förälder). Incheckningarsom görs tomma på grund av ett tidigare incheckning kommer att orsaka att plocka russin ur kakan misslyckas. För att tvinga inkluderingen av dessa incheckningar, använd `--empty=keep`."
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:137 en/git-rebase.adoc:330
@@ -16936,33 +16944,36 @@ msgstr "--allow-empty-message"
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:141
+#, fuzzy
 msgid "By default, cherry-picking a commit with an empty message will fail. This option overrides that behavior, allowing commits with empty messages to be cherry picked."
-msgstr ""
+msgstr "Som standard, misslyckas det att plocka russin ur kakan med ett tomt meddelande. Det här alternativet åsidosätter det beteendet och gör att incheckningar med tomma meddelanden kan väljas ut."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:145
+#, fuzzy
 msgid "How to handle commits being cherry-picked that are redundant with changes already in the current history."
-msgstr ""
+msgstr "Hur man hanterar incheckningar som plocka russin ur kakan och är redundanta med ändringar som redan finns i den aktuella historiken."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:149
 msgid "The commit will be dropped."
-msgstr ""
+msgstr "Incheckningen kommer kastas."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:151
 msgid "The commit will be kept. Implies `--allow-empty`."
-msgstr ""
+msgstr "Incheckningen kommer att behållas. Implicerar `--allow-empty`."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:154
 msgid "The cherry-pick will stop when the commit is applied, allowing you to examine the commit. This is the default behavior."
-msgstr ""
+msgstr "Plocka russin ur kakan avbryts när incheckningen tillämpas, vilket gör att du kan granska incheckningen. Detta är standardbeteendet."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:160
+#, fuzzy
 msgid "Note that `--empty=drop` and `--empty=stop` only specify how to handle a commit that was not initially empty, but rather became empty due to a previous commit. Commits that were initially empty will still cause the cherry-pick to fail unless one of `--empty=keep` or `--allow-empty` are specified."
-msgstr ""
+msgstr "Observera att `--empty=drop` och `--empty=stop` bara anger hur en incheckning ska hanteras som inte ursprungligen var tom, utan snarare blev tom på grund av en tidigare incheckning. Incheckningar som ursprungligen var tomma kommer fortfarande att orsaka att plocka russin ur kakan misslyckas om inte något av `--empty=keep` eller `--allow-empty` anges."
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:162
@@ -16974,7 +16985,7 @@ msgstr "--keep-redundant-commits"
 #. type: Plain text
 #: en/git-cherry-pick.adoc:164
 msgid "Deprecated synonym for `--empty=keep`."
-msgstr ""
+msgstr "Föråldrad synonym för `--empty=keep`."
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:165 en/git-rebase.adoc:351 en/git-revert.adoc:105
@@ -17015,121 +17026,125 @@ msgstr "SEKVENSERARE UNDERKOMMANDON"
 #: en/git-cherry-pick.adoc:183
 #, no-wrap
 msgid "`git cherry-pick master`"
-msgstr ""
+msgstr "`git cherry-pick master`"
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:187
 msgid "Apply the change introduced by the commit at the tip of the master branch and create a new commit with this change."
-msgstr ""
+msgstr "Tillämpa ändringen som introducerades av incheckningen i toppen på master-grenen och skapa en ny incheckning med denna ändring."
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:188
 #, no-wrap
 msgid "`git cherry-pick ..master`"
-msgstr ""
+msgstr "`git cherry-pick ..master`"
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:189
 #, no-wrap
 msgid "`git cherry-pick ^HEAD master`"
-msgstr ""
+msgstr "`git cherry-pick ^HEAD master`"
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:193
 msgid "Apply the changes introduced by all commits that are ancestors of master but not of HEAD to produce new commits."
-msgstr ""
+msgstr "Tillämpa ändringarna som introducerats av alla incheckningar som är föregångare till master men inte till HEAD för att skapa nya incheckningar."
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:194
 #, no-wrap
 msgid "`git cherry-pick maint next ^master`"
-msgstr ""
+msgstr "`git cherry-pick maint next ^master`"
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:195
 #, no-wrap
 msgid "`git cherry-pick maint master..next`"
-msgstr ""
+msgstr "`git cherry-pick maint master..next`"
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:202
 msgid "Apply the changes introduced by all commits that are ancestors of maint or next, but not master or any of its ancestors. Note that the latter does not mean `maint` and everything between `master` and `next`; specifically, `maint` will not be used if it is included in `master`."
-msgstr ""
+msgstr "Tillämpa ändringarna som introduceras av alla incheckningar som är föregångare till maint eller next, men inte master eller någon av dess föregångare. Observera att det senare inte betyder `maint` och allt mellan `master` och `next`; specifikt kommer `maint` inte att användas om det ingår i `master`."
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:203
 #, no-wrap
 msgid "`git cherry-pick master~4 master~2`"
-msgstr ""
+msgstr "`git cherry-pick master~4 master~2`"
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:208
 msgid "Apply the changes introduced by the fifth and third last commits pointed to by master and create 2 new commits with these changes."
-msgstr ""
+msgstr "Tillämpa ändringarna som introducerades av den femte och tredje sista incheckningarna som master pekar på och skapa 2 nya incheckningar med dessa ändringar."
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:209
 #, no-wrap
 msgid "`git cherry-pick -n master~1 next`"
-msgstr ""
+msgstr "`git cherry-pick -n master~1 next`"
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:215
 msgid "Apply to the working tree and the index the changes introduced by the second last commit pointed to by master and by the last commit pointed to by next, but do not create any commit with these changes."
-msgstr ""
+msgstr "Tillämpa på arbetskatalogen och indexet de ändringar som introducerades av den näst sista incheckningen som pekas ut av master och av den sista incheckningen som pekas ut av next, men skapa ingen incheckning med dessa ändringar."
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:216
 #, no-wrap
 msgid "`git cherry-pick --ff ..next`"
-msgstr ""
+msgstr "`git cherry-pick --ff ..next`"
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:223
 msgid "If history is linear and HEAD is an ancestor of next, update the working tree and advance the HEAD pointer to match next. Otherwise, apply the changes introduced by those commits that are in next but not HEAD to the current branch, creating a new commit for each new change."
-msgstr ""
+msgstr "Om historiken är linjär och HEAD är en förfader till next, uppdatera arbetskatalogen och flytta HEAD-pekaren så att den matchar next. Annars tillämpar du ändringarna som introducerats av de incheckningar som finns i next men inte HEAD på den aktuella grenen, och skapar en ny incheckning för varje ny ändring."
 
 #. type: Labeled list
 #: en/git-cherry-pick.adoc:224
 #, no-wrap
 msgid "`git rev-list --reverse master -- README | git cherry-pick -n --stdin`"
-msgstr ""
+msgstr "`git rev-list --reverse master -- README | git cherry-pick -n --stdin`"
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:230
 msgid "Apply the changes introduced by all commits on the master branch that touched README to the working tree and index, so the result can be inspected and made into a single new commit if suitable."
-msgstr ""
+msgstr "Tillämpa ändringarna som introducerats av alla incheckningar på huvudgrenen som berörde README på arbetskatalogen och indexet, så att resultatet kan inspekteras och göras om till en enda ny incheckning om det är lämpligt."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:234
 msgid "The following sequence attempts to backport a patch, bails out because the code the patch applies to has changed too much, and then tries again, this time exercising more care about matching up context lines."
-msgstr ""
+msgstr "Följande sekvens försöker bakporterar en patch, stannar eftersom koden som patchen gäller för har ändrats för mycket, och försöker sedan igen, den här gången med större noggrannhet i att matcha kontextrader."
 
 #. type: delimited block -
 #: en/git-cherry-pick.adoc:240
 #, no-wrap
 msgid "$ git cherry-pick topic^             <1>\n$ git diff                           <2>\n$ git cherry-pick --abort            <3>\n$ git cherry-pick -Xpatience topic^  <4>\n"
 msgstr ""
+"$ git cherry-pick topic^             <1>\n"
+"$ git diff                           <2>\n"
+"$ git cherry-pick --abort            <3>\n"
+"$ git cherry-pick -Xpatience topic^  <4>\n"
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:245
 msgid "apply the change that would be shown by `git show topic^`. In this example, the patch does not apply cleanly, so information about the conflict is written to the index and working tree and no new commit results."
-msgstr ""
+msgstr "tillämpa ändringen som skulle visas av `git show topic^`. I det här exemplet, tillämpas inte patchen korrekt, så information om konflikten skrivs till indexet och arbetskatalogen och ingen nya incheckning-resultat uppstår."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:246
 msgid "summarize changes to be reconciled"
-msgstr ""
+msgstr "sammanfatta ändringar som ska försonas"
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:249
 msgid "cancel the cherry-pick. In other words, return to the pre-cherry-pick state, preserving any local modifications you had in the working tree."
-msgstr ""
+msgstr "avbryt urvalet. Med andra ord, återgå till tillståndet före russinen plockades ur kakan och behåll alla lokala ändringar du hade i arbetskatalogen."
 
 #. type: Plain text
 #: en/git-cherry-pick.adoc:252
 msgid "try to apply the change introduced by `topic^` again, spending extra time to avoid mistakes based on incorrectly matching context lines."
-msgstr ""
+msgstr "försök att tillämpa ändringen som introducerades av `topic^` igen, och lägg extra tid på att undvika misstag baserade på felaktigt matchande kontextrader."
 
 #. type: Title =
 #: en/git-cherry.adoc:2
@@ -17152,22 +17167,22 @@ msgstr "'git cherry' [-v] [<uppström> [<huvud> [<gräns>]]]\n"
 #. type: Plain text
 #: en/git-cherry.adoc:17
 msgid "Determine whether there are commits in `<head>..<upstream>` that are equivalent to those in the range `<limit>..<head>`."
-msgstr ""
+msgstr "Avgör om det finns incheckningar i `<huvud>..<uppström>` som är likvärdiga med de i intervallet `<gräns>..<huvud>`."
 
 #. type: Plain text
 #: en/git-cherry.adoc:22
 msgid "The equivalence test is based on the diff, after removing whitespace and line numbers. git-cherry therefore detects when commits have been \"copied\" by means of linkgit:git-cherry-pick[1], linkgit:git-am[1] or linkgit:git-rebase[1]."
-msgstr ""
+msgstr "Ekvivalenstestet baseras på diff-koden, efter att blanktecken och radnummer har tagits bort. git-cherry detekterar därför när incheckningar har \"kopierats\" med hjälp av linkgit:git-cherry-pick[1], linkgit:git-am[1] eller linkgit:git-rebase[1]."
 
 #. type: Plain text
 #: en/git-cherry.adoc:26
 msgid "Outputs the SHA1 of every commit in `<limit>..<head>`, prefixed with `-` for commits that have an equivalent in <upstream>, and `+` for commits that do not."
-msgstr ""
+msgstr "Matar ut SHA1 för varje incheckning i `<gräns>..<huvud>`, prefixet med `-` för incheckningar som har en motsvarighet i <uppström>, och `+` för incheckningar som inte har det."
 
 #. type: Plain text
 #: en/git-cherry.adoc:31
 msgid "Show the commit subjects next to the SHA1s."
-msgstr ""
+msgstr "Visa inchecknings-ämnen bredvid SHA1:erna."
 
 #. type: Labeled list
 #: en/git-cherry.adoc:32 en/git-rebase.adoc:244
@@ -17177,8 +17192,9 @@ msgstr "<uppströms>"
 
 #. type: Plain text
 #: en/git-cherry.adoc:35
+#, fuzzy
 msgid "Upstream branch to search for equivalent commits. Defaults to the upstream branch of HEAD."
-msgstr ""
+msgstr "Uppströmsgrenen att söka efter motsvarande incheckningar i. Standardinställningen är uppströmsgrenen av HEAD."
 
 #. type: Labeled list
 #: en/git-cherry.adoc:36 en/git.adoc:448
@@ -17189,29 +17205,30 @@ msgstr "<huvud>"
 #. type: Plain text
 #: en/git-cherry.adoc:38
 msgid "Working branch; defaults to HEAD."
-msgstr ""
+msgstr "Arbetande gren; standardinställningen är HEAD."
 
 #. type: Labeled list
 #: en/git-cherry.adoc:39
 #, no-wrap
 msgid "<limit>"
-msgstr ""
+msgstr "<gräns>"
 
 #. type: Plain text
 #: en/git-cherry.adoc:41
 msgid "Do not report commits up to (and including) limit."
-msgstr ""
+msgstr "Rapportera inte incheckningar upp till (och inklusive) gränsen."
 
 #. type: Title ~
 #: en/git-cherry.adoc:46
 #, no-wrap
 msgid "Patch workflows"
-msgstr ""
+msgstr "Patch-arbetsflöden"
 
 #. type: Plain text
 #: en/git-cherry.adoc:52
+#, fuzzy
 msgid "git-cherry is frequently used in patch-based workflows (see linkgit:gitworkflows[7]) to determine if a series of patches has been applied by the upstream maintainer. In such a workflow you might create and send a topic branch like this:"
-msgstr ""
+msgstr "git-cherry används ofta i patchbaserade arbetsflöden (se linkgit:gitworkflows[7]) för att avgöra om en serie patchar har tillämpats av den uppströms underhålls-ansvarige. I ett sådant arbetsflöde kan du skapa och skicka en ämnesgren så här:"
 
 #. type: delimited block -
 #: en/git-cherry.adoc:58
@@ -17226,24 +17243,26 @@ msgstr ""
 #. type: Plain text
 #: en/git-cherry.adoc:62
 msgid "Later, you can see whether your changes have been applied by saying (still on `topic`):"
-msgstr ""
+msgstr "Senare, kan du se om dina ändringar har tillämpats genom att säga (fortfarande på `ämne`):"
 
 #. type: delimited block -
 #: en/git-cherry.adoc:66
 #, no-wrap
 msgid "$ git fetch  # update your notion of origin/master\n$ git cherry -v\n"
 msgstr ""
+"$ git fetch  # uppdatera din uppfattning om origin/master\n"
+"$ git cherry -v\n"
 
 #. type: Title ~
 #: en/git-cherry.adoc:69
 #, no-wrap
 msgid "Concrete example"
-msgstr ""
+msgstr "Konkret exempel"
 
 #. type: Plain text
 #: en/git-cherry.adoc:73
 msgid "In a situation where topic consisted of three commits, and the maintainer applied two of them, the situation might look like:"
-msgstr ""
+msgstr "I en situation där ämnet bestod av tre incheckningar, och underhålls-ansvarige tillämpade två av dem, kan situationen se ut så här:"
 
 #. type: delimited block -
 #: en/git-cherry.adoc:86
@@ -17265,29 +17284,33 @@ msgstr ""
 #. type: Plain text
 #: en/git-cherry.adoc:90
 msgid "In such cases, git-cherry shows a concise summary of what has yet to be applied:"
-msgstr ""
+msgstr "I sådana fall, visar git-cherry en kortfattad sammanfattning av vad som ännu inte har tillämpats:"
 
 #. type: delimited block -
 #: en/git-cherry.adoc:96
 #, no-wrap
 msgid "$ git cherry origin/master topic\n- cccc000... commit C\n+ bbbb000... commit B\n- aaaa000... commit A\n"
 msgstr ""
+"$ git cherry origin/master ämne\n"
+"- cccc000... commit C\n"
+"+ bbbb000... commit B\n"
+"- aaaa000... commit A\n"
 
 #. type: Plain text
 #: en/git-cherry.adoc:102
 msgid "Here, we see that the commits A and C (marked with `-`) can be dropped from your `topic` branch when you rebase it on top of `origin/master`, while the commit B (marked with `+`) still needs to be kept so that it will be sent to be applied to `origin/master`."
-msgstr ""
+msgstr "Här ser vi att incheckning A och C (markerade med `-`) kan tas bort från din `ämnes`-gren när du ombaserar den ovanpå `origin/master`, medan incheckning B (markerad med `+`) fortfarande behöver behållas så att den skickas för att tillämpas på `origin/master`."
 
 #. type: Title ~
 #: en/git-cherry.adoc:105
 #, no-wrap
 msgid "Using a limit"
-msgstr ""
+msgstr "Använda en gräns"
 
 #. type: Plain text
 #: en/git-cherry.adoc:110
 msgid "The optional <limit> is useful in cases where your topic is based on other work that is not in upstream. Expanding on the previous example, this might look like:"
-msgstr ""
+msgstr "Det valfria alternativet <gräns> är användbart i de fall där ditt ämne är baserat på annat arbete som inte finns i uppströms. Om vi utvidgar föregående exempel, kan detta se ut så här:"
 
 #. type: delimited block -
 #: en/git-cherry.adoc:126
@@ -17312,13 +17335,17 @@ msgstr ""
 #. type: Plain text
 #: en/git-cherry.adoc:130
 msgid "By specifying `base` as the limit, you can avoid listing commits between `base` and `topic`:"
-msgstr ""
+msgstr "Genom att ange `bas` som gräns kan du undvika att lista incheckningar mellan `bas` och `ämne`:"
 
 #. type: delimited block -
 #: en/git-cherry.adoc:136
 #, no-wrap
 msgid "$ git cherry origin/master topic base\n- cccc000... commit C\n+ bbbb000... commit B\n- aaaa000... commit A\n"
 msgstr ""
+"$ git cherry origin/master ämne bas\n"
+"- cccc000... commit C\n"
+"+ bbbb000... commit B\n"
+"- aaaa000... commit A\n"
 
 #. type: Title =
 #: en/git-citool.adoc:2
@@ -17843,13 +17870,13 @@ msgstr "Skapa ett nytt förvar och hämta historiken som leder till den givna re
 #: en/git-clone.adoc:233
 #, no-wrap
 msgid "`-u` _<upload-pack>_"
-msgstr ""
+msgstr "`-u` _<uppladdnings-paket>_"
 
 #. type: Labeled list
 #: en/git-clone.adoc:234
 #, no-wrap
 msgid "`--upload-pack` _<upload-pack>_"
-msgstr ""
+msgstr "`--upload-pack` _<uppladdnings-paket>_"
 
 #. type: Plain text
 #: en/git-clone.adoc:238
@@ -20681,33 +20708,33 @@ msgstr "Utskriftsstorlekar i människoläsbart format"
 #: en/git-credential-cache--daemon.adoc:2
 #, no-wrap
 msgid "git-credential-cache{litdd}daemon(1)"
-msgstr ""
+msgstr "git-credential-cache{litdd}daemon(1)"
 
 #. type: Plain text
 #: en/git-credential-cache--daemon.adoc:7
 msgid "git-credential-cache--daemon - Temporarily store user credentials in memory"
-msgstr ""
+msgstr "git-credential-cache--daemon - Lagra legitimationsinformation tillfälligt i minnet"
 
 #. type: verse
 #: en/git-credential-cache--daemon.adoc:12
 #, no-wrap
 msgid "'git credential-cache{litdd}daemon' [--debug] <socket-path>\n"
-msgstr ""
+msgstr "'git credential-cache{litdd}daemon' [--debug] <socket-sökväg>\n"
 
 #. type: Plain text
 #: en/git-credential-cache--daemon.adoc:18
 msgid "You probably don't want to invoke this command yourself; it is started automatically when you use linkgit:git-credential-cache[1]."
-msgstr ""
+msgstr "Du vill förmodligen inte anropa det här kommandot själv; det startas automatiskt när du använder linkgit:git-credential-cache[1]."
 
 #. type: Plain text
 #: en/git-credential-cache--daemon.adoc:23
 msgid "This command listens on the Unix domain socket specified by `<socket-path>` for `git-credential-cache` clients. Clients may store and retrieve credentials. Each credential is held for a timeout specified by the client; once no credentials are held, the daemon exits."
-msgstr ""
+msgstr "Det här kommandot lyssnar på Unix-domänsocketen som anges av `<socket-sökväg>` för `git-credential-cache`-klienter. Klienter kan lagra och hämta inloggningsuppgifter. Varje legitimationsinformation sparas under en tidsgräns som anges av klienten; när ingen legitimationsinformation sparas avslutas daemonen."
 
 #. type: Plain text
 #: en/git-credential-cache--daemon.adoc:27
 msgid "If the `--debug` option is specified, the daemon does not close its stderr stream, and may output extra diagnostics to it even after it has begun listening for clients."
-msgstr ""
+msgstr "Om alternativet `--debug` anges stänger inte daemonen sin stderr-ström, och kan mata ut extra diagnostik till den även efter att den har börjat lyssna efter klienter."
 
 #. type: Title =
 #: en/git-credential-cache.adoc:2
@@ -20719,111 +20746,119 @@ msgstr "git-credential-cache(1)"
 #. type: Plain text
 #: en/git-credential-cache.adoc:7
 msgid "git-credential-cache - Helper to temporarily store passwords in memory"
-msgstr ""
+msgstr "git-credential-cache - Hjälpprogram för att tillfälligt lagra lösenord i minnet"
 
 #. type: delimited block -
 #: en/git-credential-cache.adoc:12
 #, no-wrap
 msgid "git config credential.helper 'cache [<options>]'\n"
-msgstr ""
+msgstr "git config credential.helper 'cache [<flaggor>]'\n"
 
 #. type: Plain text
 #: en/git-credential-cache.adoc:24
 msgid "This command caches credentials for use by future Git programs. The stored credentials are kept in memory of the cache-daemon process (instead of being written to a file) and are forgotten after a configurable timeout. Credentials are forgotten sooner if the cache-daemon dies, for example if the system restarts. The cache is accessible over a Unix domain socket, restricted to the current user by filesystem permissions."
-msgstr ""
+msgstr "Det här kommandot cachar legitimationsinformation för användning av framtida Git-program. De lagrade legitimationsinformationen sparas i cache-daemon-processens minne (istället för att skrivas till en fil) och glöms bort efter en konfigurerbar timeout. Legitimationsinformationen glöms bort tidigare om cache-daemonen dör, till exempel om systemet startas om. Cachen är åtkomlig via en Unix-domänsocket, begränsad till den aktuella användaren av filsystembehörigheter."
 
 #. type: Plain text
 #: en/git-credential-cache.adoc:28
 msgid "You probably don't want to invoke this command directly; it is meant to be used as a credential helper by other parts of Git. See linkgit:gitcredentials[7] or `EXAMPLES` below."
-msgstr ""
+msgstr "Du vill förmodligen inte anropa det här kommandot direkt; det är tänkt att användas som en hjälp för legitimationsinformation av andra delar av Git. Se linkgit:gitcredentials[7] eller `EXEMPEL` nedan."
 
 #. type: Labeled list
 #: en/git-credential-cache.adoc:32
 #, no-wrap
 msgid "--timeout <seconds>"
-msgstr ""
+msgstr "--timeout <sekunder>"
 
 #. type: Plain text
 #: en/git-credential-cache.adoc:35
 msgid "Number of seconds to cache credentials (default: 900)."
-msgstr ""
+msgstr "Antal sekunder för att cacha legitimationsinformation (standard: 900)."
 
 #. type: Labeled list
 #: en/git-credential-cache.adoc:36
 #, no-wrap
 msgid "--socket <path>"
-msgstr ""
+msgstr "--socket <sökväg>"
 
 #. type: Plain text
 #: en/git-credential-cache.adoc:46
 msgid "Use `<path>` to contact a running cache daemon (or start a new cache daemon if one is not started). Defaults to `$XDG_CACHE_HOME/git/credential/socket` unless `~/.git-credential-cache/` exists in which case `~/.git-credential-cache/socket` is used instead. If your home directory is on a network-mounted filesystem, you may need to change this to a local filesystem. You must specify an absolute path."
-msgstr ""
+msgstr "Använd `<sökväg>` för att kontakta en aktiv cache-daemon (eller starta en ny cache-daemon om en inte har startats). Standardvärdet är `$XDG_CACHE_HOME/git/credential/socket` om inte `~/.git-credential-cache/` finns, i vilket fall `~/.git-credential-cache/socket` används istället. Om din hemkatalog finns på ett nätverksmonterat filsystem kan du behöva ändra detta till ett lokalt filsystem. Du måste ange en absolut sökväg."
 
 #. type: Title -
 #: en/git-credential-cache.adoc:48
 #, no-wrap
 msgid "CONTROLLING THE DAEMON"
-msgstr ""
+msgstr "KONTROLLERA DEMONEN"
 
 #. type: Plain text
 #: en/git-credential-cache.adoc:52
+#, fuzzy
 msgid "If you would like the daemon to exit early, forgetting all cached credentials before their timeout, you can issue an `exit` action:"
-msgstr ""
+msgstr "Om du vill att daemonen ska avslutas tidigt, och glömma alla cachade autentiseringsuppgifter innan timeout, kan du utföra en `exit`-åtgärd:"
 
 #. type: delimited block -
 #: en/git-credential-cache.adoc:55
 #, no-wrap
 msgid "git credential-cache exit\n"
-msgstr ""
+msgstr "git credential-cache exit\n"
 
 #. type: Plain text
 #: en/git-credential-cache.adoc:62 en/git-credential-store.adoc:75
 msgid "The point of this helper is to reduce the number of times you must type your username or password. For example:"
-msgstr ""
+msgstr "Poängen med den här hjälpprogramet är att minska antalet gånger du måste skriva in ditt användarnamn eller lösenord. Till exempel:"
 
 #. type: delimited block -
 #: en/git-credential-cache.adoc:68
 #, no-wrap
 msgid "$ git config credential.helper cache\n$ git push http://example.com/repo.git\nUsername: <type your username>\nPassword: <type your password>\n"
 msgstr ""
+"$ git config credential.helper cache\n"
+"$ git push http://example.com/repo.git\n"
+"Username: <skriv ditt användarnamn>\n"
+"Password: <skriv ditt lösenord>\n"
 
 #. type: delimited block -
 #: en/git-credential-cache.adoc:72
 #, no-wrap
 msgid "[work for 5 more minutes]\n$ git push http://example.com/repo.git\n[your credentials are used automatically]\n"
 msgstr ""
+"[jobba i 5 minuter till]\n"
+"$ git push http://example.com/repo.git\n"
+"[dina legitimationsinformation används automatiskt]\n"
 
 #. type: Plain text
 #: en/git-credential-cache.adoc:76
 msgid "You can provide options via the credential.helper configuration variable (this example increases the cache time to 1 hour):"
-msgstr ""
+msgstr "Du kan ange alternativ via konfigurationsvariabeln credential.helper (detta exempel ökar cachetiden till 1 timme):"
 
 #. type: delimited block -
 #: en/git-credential-cache.adoc:79
 #, no-wrap
 msgid "$ git config credential.helper 'cache --timeout=3600'\n"
-msgstr ""
+msgstr "$ git config credential.helper 'cache --timeout=3600'\n"
 
 #. type: Title -
 #: en/git-credential-cache.adoc:82
 #, no-wrap
 msgid "PERSONAL ACCESS TOKENS"
-msgstr ""
+msgstr "PERSONLIGA ÅTKOMSTTOKEN"
 
 #. type: Plain text
 #: en/git-credential-cache.adoc:87
 msgid "Some remotes accept personal access tokens, which are randomly generated and hard to memorise. They typically have a lifetime of weeks or months."
-msgstr ""
+msgstr "Vissa fjärrar accepterar personliga åtkomsttokens, vilka genereras slumpmässigt och är svåra att memorera. De har vanligtvis en livslängd på veckor eller månader."
 
 #. type: Plain text
 #: en/git-credential-cache.adoc:92
 msgid "git-credential-cache is inherently unsuitable for persistent storage of personal access tokens. The credential will be forgotten after the cache timeout. Even if you configure a long timeout, credentials will be forgotten if the daemon dies."
-msgstr ""
+msgstr "git-credential-cache är i sig olämpligt för permanent lagring av personliga åtkomsttokens. Autentiseringsuppgifterna kommer att glömmas bort efter cache-timeouten. Även om du konfigurerar en lång timeout kommer legitimationsinformationen att glömmas bort om daemonen dör."
 
 #. type: Plain text
 #: en/git-credential-cache.adoc:97
 msgid "To avoid frequently regenerating personal access tokens, configure a credential helper with persistent storage. Alternatively, configure an OAuth credential helper to generate credentials automatically. See linkgit:gitcredentials[7], sections \"Available helpers\" and \"OAuth\"."
-msgstr ""
+msgstr "För att undvika att ofta generera om personliga åtkomsttokens, konfigurera en autentiseringshjälp med permanent lagring. Alternativt kan du konfigurera en OAuth-autentiseringshjälp för att generera autentiseringsuppgifter automatiskt. Se linkgit:gitcredentials[7], avsnitten \"Tillgängliga hjälpfunktioner\" och \"OAuth\"."
 
 #. type: Title =
 #: en/git-credential-store.adoc:2
@@ -20835,120 +20870,129 @@ msgstr "git-credential-store(1)"
 #. type: Plain text
 #: en/git-credential-store.adoc:7
 msgid "git-credential-store - Helper to store credentials on disk"
-msgstr ""
+msgstr "git-credential-store - Hjälpere för att lagra legitimationsinformation på disk"
 
 #. type: delimited block -
 #: en/git-credential-store.adoc:12
 #, no-wrap
 msgid "git config credential.helper 'store [<options>]'\n"
-msgstr ""
+msgstr "git config credential.helper 'store [<flaggor>]'\n"
 
 #. type: Plain text
 #: en/git-credential-store.adoc:21
 msgid "Using this helper will store your passwords unencrypted on disk, protected only by filesystem permissions. If this is not an acceptable security tradeoff, try linkgit:git-credential-cache[1], or find a helper that integrates with secure storage provided by your operating system."
-msgstr ""
+msgstr "Genom att använda det här hjälpprogramet lagras dina lösenord okrypterade på disk, skyddade endast av filsystemsbehörigheter. Om detta inte är en acceptabel säkerhetsavvägning kan du prova linkgit:git-credential-cache[1], eller hitta entthjälpprogram som integreras med säker lagring som tillhandahålls av ditt operativsystem."
 
 #. type: Plain text
 #: en/git-credential-store.adoc:24
 msgid "This command stores credentials indefinitely on disk for use by future Git programs."
-msgstr ""
+msgstr "Det här kommandot lagrar legitimationsinformation på obestämd tid på disk för användning av framtida Git-program."
 
 #. type: Plain text
 #: en/git-credential-store.adoc:28
 msgid "You probably don't want to invoke this command directly; it is meant to be used as a credential helper by other parts of git. See linkgit:gitcredentials[7] or `EXAMPLES` below."
-msgstr ""
+msgstr "Du vill förmodligen inte anropa det här kommandot direkt; det är tänkt att användas som en hjälp för legitimationsinformation av andra delar av git. Se linkgit:gitcredentials[7] eller `EXEMPEL` nedan."
 
 #. type: Labeled list
 #: en/git-credential-store.adoc:32
 #, no-wrap
 msgid "--file=<path>"
-msgstr ""
+msgstr "--file=<sökväg>"
 
 #. type: Plain text
 #: en/git-credential-store.adoc:42
 msgid "Use `<path>` to lookup and store credentials. The file will have its filesystem permissions set to prevent other users on the system from reading it, but it will not be encrypted or otherwise protected. If not specified, credentials will be searched for from `~/.git-credentials` and `$XDG_CONFIG_HOME/git/credentials`, and credentials will be written to `~/.git-credentials` if it exists, or `$XDG_CONFIG_HOME/git/credentials` if it exists and the former does not. See also <<FILES>>."
-msgstr ""
+msgstr "Använd `<sökväg>` för att slå upp och lagra inloggningsuppgifter. Filens filsystembehörigheter kommer att vara inställda för att förhindra att andra användare på systemet läser den, men den kommer inte att krypteras eller på annat sätt skyddas. Om inget anges kommer inloggningsuppgifter att sökas efter från `~/.git-credentials` och `$XDG_CONFIG_HOME/git/credentials`, och inloggningsuppgifter kommer att skrivas till `~/.git-credentials` om den finns, eller `$XDG_CONFIG_HOME/git/credentials` om den finns och den förra inte finns. Se även <<FILER>>."
 
 #. type: Plain text
 #: en/git-credential-store.adoc:49
 msgid "If not set explicitly with `--file`, there are two files where git-credential-store will search for credentials in order of precedence:"
-msgstr ""
+msgstr "Om det inte uttryckligen anges med `--file`, finns det två filer där git-credential-store söker efter inloggningsuppgifter i prioritetsordning:"
 
 #. type: Labeled list
 #: en/git-credential-store.adoc:50
 #, no-wrap
 msgid "~/.git-credentials"
-msgstr ""
+msgstr "~/.git-credentials"
 
 #. type: Plain text
 #: en/git-credential-store.adoc:52
+#, fuzzy
 msgid "User-specific credentials file."
-msgstr ""
+msgstr "Användarspecifik inloggningsuppgiftsfil."
 
 #. type: Labeled list
 #: en/git-credential-store.adoc:53
 #, no-wrap
 msgid "$XDG_CONFIG_HOME/git/credentials"
-msgstr ""
+msgstr "$XDG_CONFIG_HOME/git/credentials"
 
 #. type: Plain text
 #: en/git-credential-store.adoc:59
 msgid "Second user-specific credentials file. If '$XDG_CONFIG_HOME' is not set or empty, `$HOME/.config/git/credentials` will be used. Any credentials stored in this file will not be used if `~/.git-credentials` has a matching credential as well. It is a good idea not to create this file if you sometimes use older versions of Git that do not support it."
-msgstr ""
+msgstr "Andra användarspecifika inloggningsuppgifter. Om '$XDG_CONFIG_HOME' inte är angivet eller tomt, kommer `$HOME/.config/git/credentials` att användas. Inloggningsuppgifter som lagras i den här filen kommer inte att användas om `~/.git-credentials` också har en matchande inloggningsuppgifter väl. Det är en bra idé att inte skapa den här filen om du ibland använder äldre versioner av Git som inte stöder den."
 
 #. type: Plain text
 #: en/git-credential-store.adoc:63
 msgid "For credential lookups, the files are read in the order given above, with the first matching credential found taking precedence over credentials found in files further down the list."
-msgstr ""
+msgstr "Vid uppslagning av legitimationsinformation läses filerna i den ordning som anges ovan, där den första matchande autentiseringsuppgiften som hittas prioriteras framför autentiseringsuppgifter som finns i filer längre ner i listan."
 
 #. type: Plain text
 #: en/git-credential-store.adoc:67
 msgid "Credential storage will by default write to the first existing file in the list. If none of these files exist, `~/.git-credentials` will be created and written to."
-msgstr ""
+msgstr "Legitimationsinformations-lagringen skriver som standard till den första befintliga filen i listan. Om ingen av dessa filer finns skapas och skrivs till `~/.git-credentials`."
 
 #. type: Plain text
 #: en/git-credential-store.adoc:69
 msgid "When erasing credentials, matching credentials will be erased from all files."
-msgstr ""
+msgstr "När du raderar inloggningsuppgifter kommer matchande legitimationsinformationen att raderas från alla filer."
 
 #. type: delimited block -
 #: en/git-credential-store.adoc:81
 #, no-wrap
 msgid "$ git config credential.helper store\n$ git push http://example.com/repo.git\nUsername: <type your username>\nPassword: <type your password>\n"
 msgstr ""
+"$ git config credential.helper store\n"
+"$ git push http://example.com/repo.git\n"
+"Username: <skriv ditt användarnamn>\n"
+"Password: <skriv ditt lösenord>\n"
 
 #. type: delimited block -
 #: en/git-credential-store.adoc:85
 #, no-wrap
 msgid "[several days later]\n$ git push http://example.com/repo.git\n[your credentials are used automatically]\n"
 msgstr ""
+"[flera dagar senare]\n"
+"$ git push http://example.com/repo.git\n"
+"[dina inloggningsuppgifter används automatiskt]\n"
 
 #. type: Title -
 #: en/git-credential-store.adoc:88
 #, no-wrap
 msgid "STORAGE FORMAT"
-msgstr ""
+msgstr "LAGRINGSFORMAT"
 
 #. type: Plain text
 #: en/git-credential-store.adoc:92
 msgid "The `.git-credentials` file is stored in plaintext. Each credential is stored on its own line as a URL like:"
-msgstr ""
+msgstr "Filen `.git-credentials` lagras i klartext. Varje legitimationsinformation lagras på en egen rad som en URL, ungefär som:"
 
 #. type: delimited block -
 #: en/git-credential-store.adoc:95
 #, no-wrap
 msgid "https://user:pass@example.com\n"
-msgstr ""
+msgstr "https://user:pass@example.com\n"
 
 #. type: Plain text
 #: en/git-credential-store.adoc:100
+#, fuzzy
 msgid "No other kinds of lines (e.g. empty lines or comment lines) are allowed in the file, even though some may be silently ignored. Do not view or edit the file with editors."
-msgstr ""
+msgstr "Inga andra typer av rader (t.ex. tomma rader eller kommentarsrader) är tillåtna i filen, även om vissa kan ignoreras tyst. Visa eller redigera inte filen med redigerare."
 
 #. type: Plain text
 #: en/git-credential-store.adoc:107
 msgid "When Git needs authentication for a particular URL context, credential-store will consider that context a pattern to match against each entry in the credentials file. If the protocol, hostname, and username (if we already have one) match, then the password is returned to Git. See the discussion of configuration in linkgit:gitcredentials[7] for more information."
-msgstr ""
+msgstr "När Git behöver autentisering för en specifik URL-kontext, kommer legitimationsinformations-lagret att betrakta den kontexten som ett mönster som matchar varje post i legitimationsinformations-filen. Om protokollet, värdnamnet och användarnamnet (om vi redan har ett) matchar, returneras lösenordet till Git. Se diskussionen om konfiguration i linkgit:gitcredentials[7] för mer information."
 
 #. type: Title =
 #: en/git-credential.adoc:2
@@ -20960,142 +21004,149 @@ msgstr "git-credential(1)"
 #. type: Plain text
 #: en/git-credential.adoc:7
 msgid "git-credential - Retrieve and store user credentials"
-msgstr ""
+msgstr "git-credential - Hämta och lagra användaruppgifter"
 
 #. type: delimited block -
 #: en/git-credential.adoc:12
 #, no-wrap
 msgid "'git credential' (fill|approve|reject|capability)\n"
-msgstr ""
+msgstr "'git credential' (fill|approve|reject|capability)\n"
 
 #. type: Plain text
 #: en/git-credential.adoc:24
 msgid "Git has an internal interface for storing and retrieving credentials from system-specific helpers, as well as prompting the user for usernames and passwords. The git-credential command exposes this interface to scripts which may want to retrieve, store, or prompt for credentials in the same manner as Git. The design of this scriptable interface models the internal C API; see credential.h for more background on the concepts."
-msgstr ""
+msgstr "Git har ett internt gränssnitt för att lagra och hämta inloggningsuppgifter från systemspecifika hjälpprogram, samt för att be användaren om användarnamn och lösenord. Kommandot git-credential exponerar detta gränssnitt för skript som kan vilja hämta, lagra eller be om inloggningsuppgifter på samma sätt som Git. Utformningen av detta skriptbara gränssnitt modellerar det interna C API:et; se credential.h för mer bakgrund om koncepten."
 
 #. type: Plain text
 #: en/git-credential.adoc:28
 msgid "git-credential takes an \"action\" option on the command-line (one of `fill`, `approve`, or `reject`) and reads a credential description on stdin (see <<IOFMT,INPUT/OUTPUT FORMAT>>)."
-msgstr ""
+msgstr "git-credential tar ett \"handlings\"-alternativ på kommandoraden (ett av `fill`, `approve` eller `reject`) och läser en beskrivning av legitimationsinformations-beskrivingen på stdin (se <<IOFMT,IN-/UTMATNINGSFORMAT>>)."
 
 #. type: Plain text
 #: en/git-credential.adoc:35
 msgid "If the action is `fill`, git-credential will attempt to add \"username\" and \"password\" attributes to the description by reading config files, by contacting any configured credential helpers, or by prompting the user. The username and password attributes of the credential description are then printed to stdout together with the attributes already provided."
-msgstr ""
+msgstr "Om åtgärden är `fill` kommer git-credential att försöka lägga till attributen \"username\" and \"password\" i beskrivningen genom att läsa konfigurationsfiler, genom att kontakta eventuella konfigurerade legitimationsinformations-hjälpprogram eller genom att fråga användaren. Attributen \"username\" och \"password\" i legitimationsinformationsbeskrivningen skrivs sedan ut till stdout tillsammans med de attribut som redan angetts."
 
 #. type: Plain text
 #: en/git-credential.adoc:39
 msgid "If the action is `approve`, git-credential will send the description to any configured credential helpers, which may store the credential for later use."
-msgstr ""
+msgstr "Om åtgärden är `godkänn` skickar git-credential beskrivningen till alla konfigurerade autentiserings-hjälpprogram, som kan lagra legitimationsinformation för senare användning."
 
 #. type: Plain text
 #: en/git-credential.adoc:43
 msgid "If the action is `reject`, git-credential will send the description to any configured credential helpers, which may erase any stored credentials matching the description."
-msgstr ""
+msgstr "Om åtgärden är `reject` skickar git-credential beskrivningen till alla konfigurerade legitimationsinformations-hjälpprogram, vilket kan radera all lagrae legitimationsinformation som matchar beskrivningen."
 
 #. type: Plain text
 #: en/git-credential.adoc:46
 msgid "If the action is `capability`, git-credential will announce any capabilities it supports to standard output."
-msgstr ""
+msgstr "Om åtgärden är `capability` kommer git-credential att meddela alla funktioner den stöder till standardutdata."
 
 #. type: Plain text
 #: en/git-credential.adoc:48
 msgid "If the action is `approve` or `reject`, no output should be emitted."
-msgstr ""
+msgstr "Om åtgärden är `godkänn` eller `avvisa`, ska ingen utdata genereras."
 
 #. type: Title -
 #: en/git-credential.adoc:50
 #, no-wrap
 msgid "TYPICAL USE OF GIT CREDENTIAL"
-msgstr ""
+msgstr "TYPISK ANVÄNDNING AV GIT-AUTENTIERINGSINFORMATION"
 
 #. type: Plain text
 #: en/git-credential.adoc:54
 msgid "An application using git-credential will typically use `git credential` following these steps:"
-msgstr ""
+msgstr "En applikation som använder git-credential använder vanligtvis `git credential` genom att följa dessa steg:"
 
 #. type: Plain text
 #: en/git-credential.adoc:56
 msgid "Generate a credential description based on the context."
-msgstr ""
+msgstr "Generera en beskrivning av legitimationsinformation baserat på sammanhanget."
 
 #. type: Plain text
 #: en/git-credential.adoc:62
 msgid "For example, if we want a password for `https://example.com/foo.git`, we might generate the following credential description (don't forget the blank line at the end; it tells `git credential` that the application finished feeding all the information it has):"
-msgstr ""
+msgstr "Om vi till exempel vill ha ett lösenord för `https://example.com/foo.git` kan vi generera följande beskrivning av legitimationsinformation (glöm inte den tomma raden i slutet; den talar om för `git credential` att applikationen har matat in all information den har):"
 
 #. type: Plain text
 #: en/git-credential.adoc:66
 #, no-wrap
 msgid "\t protocol=https\n\t host=example.com\n\t path=foo.git\n"
 msgstr ""
+"\t protocol=https\n"
+"\t host=example.com\n"
+"\t path=foo.git\n"
 
 #. type: Plain text
 #: en/git-credential.adoc:72
 msgid "Ask git-credential to give us a username and password for this description. This is done by running `git credential fill`, feeding the description from step (1) to its standard input. The complete credential description (including the credential per se, i.e. the login and password) will be produced on standard output, like:"
-msgstr ""
+msgstr "Be git-credential att ge oss ett användarnamn och lösenord för denna beskrivning. Detta görs genom att köra `git credential fill` och mata in beskrivningen från steg (1) till dess standardindata. Den fullständiga beskrivningen av legitimationsinformation (inklusive själva legitimationsinformationen, dvs. inloggning och lösenord) kommer att produceras på standardutdata, som:"
 
 #. type: Plain text
 #: en/git-credential.adoc:77
 #, no-wrap
 msgid "protocol=https\nhost=example.com\nusername=bob\npassword=secr3t\n"
 msgstr ""
+"protocol=https\n"
+"host=example.com\n"
+"username=bob\n"
+"password=secr3t\n"
 
 #. type: Plain text
 #: en/git-credential.adoc:82
 msgid "In most cases, this means the attributes given in the input will be repeated in the output, but Git may also modify the credential description, for example by removing the `path` attribute when the protocol is HTTP(s) and `credential.useHttpPath` is false."
-msgstr ""
+msgstr "I de flesta fall innebär detta att attributen som anges i indata kommer att upprepas i utdata, men Git kan också modifiera beskrivningen av legitimationsinformation, till exempel genom att ta bort attributet `path` när protokollet är HTTP(s) och `credential.useHttpPath` är falskt."
 
 #. type: Plain text
 #: en/git-credential.adoc:88
 msgid "If the `git credential` knew about the password, this step may not have involved the user actually typing this password (the user may have typed a password to unlock the keychain instead, or no user interaction was done if the keychain was already unlocked) before it returned `password=secr3t`."
-msgstr ""
+msgstr "Om `git credential` kände till lösenordet, kanske det här steget inte innebar att användaren faktiskt skrev in detta lösenord (användaren kan ha skrivit ett lösenord för att låsa upp nyckelringen istället, eller så gjordes ingen användarinteraktion om nyckelringen redan var upplåst) innan den returnerade `password=secr3t`."
 
 #. type: Plain text
 #: en/git-credential.adoc:91
 msgid "Use the credential (e.g., access the URL with the username and password from step (2)), and see if it's accepted."
-msgstr ""
+msgstr "Använd legitimationsinformationen (t.ex. gå till URL:en med användarnamnet och lösenordet från steg (2)) och se om de accepteras."
 
 #. type: Plain text
 #: en/git-credential.adoc:101
 msgid "Report on the success or failure of the password. If the credential allowed the operation to complete successfully, then it can be marked with an \"approve\" action to tell `git credential` to reuse it in its next invocation. If the credential was rejected during the operation, use the \"reject\" action so that `git credential` will ask for a new password in its next invocation. In either case, `git credential` should be fed with the credential description obtained from step (2) (which also contains the fields provided in step (1))."
-msgstr ""
+msgstr "Rapportera om lösenordet lyckades eller misslyckades. Om autentiseringsuppgifterna tillät operationen att slutföras korrekt kan de markeras med åtgärden \"approve\" (godkänn) för att ange att `git credential` ska återanvända den vid nästa anrop. Om autentiseringsuppgifterna avvisades under operationen, använd åtgärden \"reject\" (avvisa) så att `git credential` kommer att be om ett nytt lösenord vid nästa anrop. I båda fallen ska `git credential` matas med autentiseringsbeskrivningen som erhölls från steg (2) (som också innehåller fälten som anges i steg (1))."
 
 #. type: Title -
 #: en/git-credential.adoc:104
 #, no-wrap
 msgid "INPUT/OUTPUT FORMAT"
-msgstr ""
+msgstr "INGÅNGS-/UTMATNINGSFORMAT"
 
 #. type: Plain text
 #: en/git-credential.adoc:111
 msgid "`git credential` reads and/or writes (depending on the action used) credential information in its standard input/output. This information can correspond either to keys for which `git credential` will obtain the login information (e.g. host, protocol, path), or to the actual credential data to be obtained (username/password)."
-msgstr ""
+msgstr "`git credential` läser och/eller skriver (beroende på vilken åtgärd som används) legitimationsinformation i sin standardindata/utdata. Denna information kan antingen motsvara nycklar för vilka `git credential` kommer att hämta inloggningsuppgifter (t.ex. värd, protokoll, sökväg), eller de faktiska legitimationsinformationer som ska hämtas (användarnamn/lösenord)."
 
 #. type: Plain text
 #: en/git-credential.adoc:115
 msgid "The credential is split into a set of named attributes, with one attribute per line. Each attribute is specified by a key-value pair, separated by an `=` (equals) sign, followed by a newline."
-msgstr ""
+msgstr "Legitimationsinformationen är uppdelade i en uppsättning namngivna attribut, med ett attribut per rad. Varje attribut anges av ett nyckel-värde-par, separerade med ett `=` (likhetstecken), följt av en ny rad."
 
 #. type: Plain text
 #: en/git-credential.adoc:120
 msgid "The key may contain any bytes except `=`, newline, or NUL. The value may contain any bytes except newline or NUL. A line, including the trailing newline, may not exceed 65535 bytes in order to allow implementations to parse efficiently."
-msgstr ""
+msgstr "Nyckeln får innehålla vilka byte som helst förutom `=`, newline eller NUL. Värdet får innehålla vilka byte som helst förutom newline eller NUL. En rad, inklusive den efterföljande newline, får inte överstiga 65535 byte för att implementeringar ska kunna tolkas effektivt."
 
 #. type: Plain text
 #: en/git-credential.adoc:126
 msgid "Attributes with keys that end with C-style array brackets `[]` can have multiple values. Each instance of a multi-valued attribute forms an ordered list of values - the order of the repeated attributes defines the order of the values. An empty multi-valued attribute (`key[]=\\n`) acts to clear any previous entries and reset the list."
-msgstr ""
+msgstr "Attribut med nycklar som slutar med C-liknande arrayparenteser `[]` kan ha flera värden. Varje instans av ett flervärdigt attribut bildar en ordnad lista med värden - ordningen på de upprepade attributen definierar ordningen på värdena. Ett tomt flervärdigt attribut (`key[]=\\n`) rensar eventuella tidigare poster och återställer listan."
 
 #. type: Plain text
 #: en/git-credential.adoc:130
 msgid "In all cases, all bytes are treated as-is (i.e., there is no quoting, and one cannot transmit a value with newline or NUL in it). The list of attributes is terminated by a blank line or end-of-file."
-msgstr ""
+msgstr "I samtliga fall behandlas alla byte som de är (dvs. det finns ingen citering, och man kan inte överföra ett värde med nyrad eller NUL i det). Listan med attribut avslutas med en tom rad eller filslut."
 
 #. type: Plain text
 #: en/git-credential.adoc:132
 msgid "Git understands the following attributes:"
-msgstr ""
+msgstr "Git förstår följande attribut:"
 
 #. type: Labeled list
 #: en/git-credential.adoc:133
@@ -21107,7 +21158,7 @@ msgstr "`protocol`"
 #. type: Plain text
 #: en/git-credential.adoc:137
 msgid "The protocol over which the credential will be used (e.g., `https`)."
-msgstr ""
+msgstr "Protokollet över vilket legitimationsinformationen kommer att användas (t.ex. `https`)."
 
 #. type: Labeled list
 #: en/git-credential.adoc:138
@@ -21119,7 +21170,7 @@ msgstr "`host`"
 #. type: Plain text
 #: en/git-credential.adoc:142
 msgid "The remote hostname for a network credential. This includes the port number if one was specified (e.g., \"example.com:8088\")."
-msgstr ""
+msgstr "Fjärrvärdnamnet för en nätverks-legitimationsinformation. Detta inkluderar portnumret om ett sådant angavs (t.ex. \"example.com:8088\")."
 
 #. type: Labeled list
 #: en/git-credential.adoc:143
@@ -21131,7 +21182,7 @@ msgstr "`path`"
 #. type: Plain text
 #: en/git-credential.adoc:148
 msgid "The path with which the credential will be used. E.g., for accessing a remote https repository, this will be the repository's path on the server."
-msgstr ""
+msgstr "Sökvägen som legitimationsinformationen kommer att användas med. T.ex. för åtkomst till ett fjärr-https-arkiv, kommer detta att vara arkivets sökväg på servern."
 
 #. type: Labeled list
 #: en/git-credential.adoc:149
@@ -21143,7 +21194,7 @@ msgstr "`username`"
 #. type: Plain text
 #: en/git-credential.adoc:153
 msgid "The credential's username, if we already have one (e.g., from a URL, the configuration, the user, or from a previously run helper)."
-msgstr ""
+msgstr "Legitimationsinformationens användarnamn, om vi redan har ett (t.ex. från en URL, konfigurationen, användaren eller från en tidigare körd hjälpprogram)."
 
 #. type: Labeled list
 #: en/git-credential.adoc:154
@@ -21155,7 +21206,7 @@ msgstr "`password`"
 #. type: Plain text
 #: en/git-credential.adoc:157
 msgid "The credential's password, if we are asking it to be stored."
-msgstr ""
+msgstr "Inloggningsuppgifternas lösenord, om vi ber om att det ska lagras."
 
 #. type: Labeled list
 #: en/git-credential.adoc:158
@@ -21167,7 +21218,7 @@ msgstr "`password_expiry_utc`"
 #. type: Plain text
 #: en/git-credential.adoc:163
 msgid "Generated passwords such as an OAuth access token may have an expiry date. When reading credentials from helpers, `git credential fill` ignores expired passwords. Represented as Unix time UTC, seconds since 1970."
-msgstr ""
+msgstr "Genererade lösenord, till exempel en OAuth-åtkomsttoken, kan ha ett utgångsdatum. När inloggningsuppgifter läses från hjälpprogram ignorerar `git credential fill` utgångna lösenord. Representeras som Unix-tid UTC, sekunder sedan 1970."
 
 #. type: Labeled list
 #: en/git-credential.adoc:164
@@ -21179,7 +21230,7 @@ msgstr "`oauth_refresh_token`"
 #. type: Plain text
 #: en/git-credential.adoc:169
 msgid "An OAuth refresh token may accompany a password that is an OAuth access token. Helpers must treat this attribute as confidential like the password attribute. Git itself has no special behaviour for this attribute."
-msgstr ""
+msgstr "En OAuth-uppdateringstoken kan medfölja ett lösenord som är en OAuth-åtkomsttoken. Hjälpprogram måste behandla detta attribut som konfidentiellt, precis som lösenordsattributet. Git i sig har inget särskilt beteende för detta attribut."
 
 #. type: Labeled list
 #: en/git-credential.adoc:170
@@ -21191,17 +21242,17 @@ msgstr "`url`"
 #. type: Plain text
 #: en/git-credential.adoc:177
 msgid "When this special attribute is read by `git credential`, the value is parsed as a URL and treated as if its constituent parts were read (e.g., `url=https://example.com` would behave as if `protocol=https` and `host=example.com` had been provided). This can help callers avoid parsing URLs themselves."
-msgstr ""
+msgstr "När detta speciella attribut läses av `git credential`, tolkas värdet som en URL och behandlas som om dess beståndsdelar lästes (t.ex. skulle `url=https://example.com` bete sig som om `protocol=https` och `host=example.com` hade angetts). Denna kan hjälpa anropare att undvika att själva tolka URL:er."
 
 #. type: Plain text
 #: en/git-credential.adoc:182
 msgid "Note that specifying a protocol is mandatory and if the URL doesn't specify a hostname (e.g., \"cert:///path/to/file\") the credential will contain a hostname attribute whose value is an empty string."
-msgstr ""
+msgstr "Observera att det är obligatoriskt att ange ett protokoll och om URL:en inte anger ett värdnamn (t.ex. \"cert:///sökväg/till/fil\") kommer legitimationsinformationen att innehålla ett värdnamnsattribut vars värde är en tom sträng."
 
 #. type: Plain text
 #: en/git-credential.adoc:185
 msgid "Components which are missing from the URL (e.g., there is no username in the example above) will be left unset."
-msgstr ""
+msgstr "Komponenter som saknas i URL:en (t.ex. det finns inget användarnamn i exemplet ovan) kommer att lämnas oinställda."
 
 #. type: Labeled list
 #: en/git-credential.adoc:186
@@ -21213,13 +21264,13 @@ msgstr "`authtype`"
 #. type: Plain text
 #: en/git-credential.adoc:192
 msgid "This indicates that the authentication scheme in question should be used. Common values for HTTP and HTTPS include `basic`, `bearer`, and `digest`, although the latter is insecure and should not be used. If `credential` is used, this may be set to an arbitrary string suitable for the protocol in question (usually HTTP)."
-msgstr ""
+msgstr "Detta indikerar att det aktuella autentiseringsschemat ska användas. Vanliga värden för HTTP och HTTPS inkluderar `basic`, `bearer` och `digest`, även om det senare är osäkert och inte bör användas. Om `credential` används kan detta sättas till en godtycklig sträng som är lämplig för protokollet i fråga (vanligtvis HTTP)."
 
 #. type: Plain text
 #: en/git-credential.adoc:195 en/git-credential.adoc:204
 #: en/git-credential.adoc:218 en/git-credential.adoc:227
 msgid "This value should not be sent unless the appropriate capability (see below) is provided on input."
-msgstr ""
+msgstr "Detta värde bör inte skickas om inte lämplig förmåga (se nedan) anges vid inmatning."
 
 #. type: Labeled list
 #: en/git-credential.adoc:196
@@ -21231,7 +21282,7 @@ msgstr "`credential`"
 #. type: Plain text
 #: en/git-credential.adoc:201
 msgid "The pre-encoded credential, suitable for the protocol in question (usually HTTP). If this key is sent, `authtype` is mandatory, and `username` and `password` are not used. For HTTP, Git concatenates the `authtype` value and this value with a single space to determine the `Authorization` header."
-msgstr ""
+msgstr "Den förkodade inloggningsuppgiftern, lämplig för protokollet i fråga (vanligtvis HTTP). Om denna nyckel skickas är `authtype` obligatorisk, och `username` och `password` används inte. För HTTP sammanfogar Git värdet `authtype` och detta värde med ett enda mellanslag för att bestämma `Authorization`-rubriken."
 
 #. type: Labeled list
 #: en/git-credential.adoc:205
@@ -21243,23 +21294,23 @@ msgstr "`ephemeral`"
 #. type: Plain text
 #: en/git-credential.adoc:212
 msgid "This boolean value indicates, if true, that the value in the `credential` field should not be saved by the credential helper because its usefulness is limited in time. For example, an HTTP Digest `credential` value is computed using a nonce and reusing it will not result in successful authentication. This may also be used for situations with short duration (e.g., 24-hour) credentials. The default value is false."
-msgstr ""
+msgstr "Detta booleska värde indikerar, om det är sant, att värdet i fältet `credential` inte ska sparas av legitimationsinformation helpprogramet eftersom dess användbarhet är tidsbegränsad. Till exempel beräknas ett HTTP Digest `credential`-värde med hjälp av en nonce och återanvändning av det kommer inte att resultera i lyckad autentisering. Detta kan också användas i situationer med kortvariga (t.ex. 24-timmars) legitimationsinformation. Standardvärdet är falskt."
 
 #. type: Plain text
 #: en/git-credential.adoc:215
 msgid "The credential helper will still be invoked with `store` or `erase` so that it can determine whether the operation was successful."
-msgstr ""
+msgstr "Legitimationsinformations hejälpprogramet kommer fortfarande att anropas med `store` eller `erase` så att den kan avgöra om operationen lyckades."
 
 #. type: Labeled list
 #: en/git-credential.adoc:219
 #, no-wrap
 msgid "`state[]`"
-msgstr ""
+msgstr "`state[]`"
 
 #. type: Plain text
 #: en/git-credential.adoc:224
 msgid "This value provides an opaque state that will be passed back to this helper if it is called again. Each different credential helper may specify this once. The value should include a prefix unique to the credential helper and should ignore values that don't match its prefix."
-msgstr ""
+msgstr "Detta värde ger ett ogenomskinligt tillstånd som skickas tillbaka till detta hjälpprogram om den anropas igen. Varje olika legitimationsinformation kan ange detta en gång. Värdet ska innehålla ett prefix som är unikt för legitimationsinformationen och ska ignorera värden som inte matchar dess prefix."
 
 #. type: Labeled list
 #: en/git-credential.adoc:228
@@ -21271,75 +21322,75 @@ msgstr "`continue`"
 #. type: Plain text
 #: en/git-credential.adoc:236
 msgid "This is a boolean value, which, if enabled, indicates that this authentication is a non-final part of a multistage authentication step. This is common in protocols such as NTLM and Kerberos, where two rounds of client authentication are required, and setting this flag allows the credential helper to implement the multistage authentication step. This flag should only be sent if a further stage is required; that is, if another round of authentication is expected."
-msgstr ""
+msgstr "Detta är ett booleskt värde som, om det är aktiverat, indikerar att denna autentisering inte är en slutgiltig del av ett flerstegsautentiseringssteg. Detta är vanligt i protokoll som NTLM och Kerberos, där två omgångar av klientautentisering krävs, och om denna flagga ställs in kan legitimationsinformation hjälpprogrammet implementera flerstegsautentiseringssteget. Denna flagga bör endast skickas om ytterligare ett steg krävs; det vill säga om ytterligare en autentiseringsrunda förväntas."
 
 #. type: Plain text
 #: en/git-credential.adoc:240
 msgid "This value should not be sent unless the appropriate capability (see below) is provided on input. This attribute is 'one-way' from a credential helper to pass information to Git (or other programs invoking `git credential`)."
-msgstr ""
+msgstr "Detta värde ska inte skickas om inte lämplig funktion (se nedan) anges vid inmatning. Detta attribut är 'enkelriktat' från en legitimationsinformations hjälpprogramet för att skicka information till Git (eller andra program som anropar `git credential`)."
 
 #. type: Labeled list
 #: en/git-credential.adoc:241
 #, no-wrap
 msgid "`wwwauth[]`"
-msgstr ""
+msgstr "`wwwauth[]`"
 
 #. type: Plain text
 #: en/git-credential.adoc:246
 msgid "When an HTTP response is received by Git that includes one or more 'WWW-Authenticate' authentication headers, these will be passed by Git to credential helpers."
-msgstr ""
+msgstr "När Git tar emot ett HTTP-svar som innehåller en eller flera 'WWW-Authenticate'-autentiseringsrubriker, skickas dessa av Git till legitimationsinformations hjälpprogramet."
 
 #. type: Plain text
 #: en/git-credential.adoc:251
 msgid "Each 'WWW-Authenticate' header value is passed as a multi-valued attribute 'wwwauth[]', where the order of the attributes is the same as they appear in the HTTP response. This attribute is 'one-way' from Git to pass additional information to credential helpers."
-msgstr ""
+msgstr "Varje 'WWW-Authenticate' rubrik-värde skickas som ett flervärdesattribut 'wwwauth[]', där attributens ordning är densamma som de visas i HTTP-svaret. Detta attribut är 'enkelriktat' från Git för att skicka ytterligare information till legitimationsinformations hjälpprogrammet."
 
 #. type: Labeled list
 #: en/git-credential.adoc:252
 #, no-wrap
 msgid "`capability[]`"
-msgstr ""
+msgstr "`capability[]`"
 
 #. type: Plain text
 #: en/git-credential.adoc:258
 msgid "This signals that Git, or the helper, as appropriate, supports the capability in question. This can be used to provide better, more specific data as part of the protocol. A `capability[]` directive must precede any value depending on it and these directives _should_ be the first item announced in the protocol."
-msgstr ""
+msgstr "Detta signalerar att Git, eller hjälpprogrammet, beroende på vad som är lämpligt, stöder den aktuella förmågan. Detta kan användas för att tillhandahålla bättre, mer specifik data som en del av protokollet. Direktivet `capability[]` måste föregå alla värden som är beroende av det och dessa direktiv _bör_ vara det första som tillkännages i protokollet."
 
 #. type: Plain text
 #: en/git-credential.adoc:263
 msgid "There are two currently supported capabilities. The first is `authtype`, which indicates that the `authtype`, `credential`, and `ephemeral` values are understood. The second is `state`, which indicates that the `state[]` and `continue` values are understood."
-msgstr ""
+msgstr "Det finns för närvarande två förmågorna som stöds. Den första är `authtype`, vilket indikerar att värdena `authtype`, `credential` och `ephemeral` är förstådda. Den andra är `state`, vilket indikerar att värdena `state[]` och `continue` är förstådda."
 
 #. type: Plain text
 #: en/git-credential.adoc:266
 msgid "It is not obligatory to use the additional features just because the capability is supported, but they should not be provided without the capability."
-msgstr ""
+msgstr "Det är inte obligatoriskt att använda tilläggsfunktionerna bara för att funktionen stöds, men de bör inte tillhandahållas utan funktionen."
 
 #. type: Plain text
 #: en/git-credential.adoc:268
 msgid "Unrecognised attributes and capabilities are silently discarded."
-msgstr ""
+msgstr "Okända attribut och förmågor förkastas i tysthet."
 
 #. type: Title -
 #: en/git-credential.adoc:271
 #, no-wrap
 msgid "CAPABILITY INPUT/OUTPUT FORMAT"
-msgstr ""
+msgstr "FÖRMÅGOR INGÅNGS-/UTGÅNGSFORMAT"
 
 #. type: Plain text
 #: en/git-credential.adoc:279
 msgid "For `git credential capability`, the format is slightly different. First, a `version 0` announcement is made to indicate the current version of the protocol, and then each capability is announced with a line like `capability authtype`. Credential helpers may also implement this format, again with the `capability` argument. Additional lines may be added in the future; callers should ignore lines which they don't understand."
-msgstr ""
+msgstr "För `git credential capability` är formatet något annorlunda. Först görs ett `version 0`-meddelande för att indikera den aktuella versionen av protokollet, och sedan meddelas varje funktion med en rad som `capability authtype`. Legitimationsinformations-hjälpprogram kan också implementera detta format, återigen med argumentet `capability`. Ytterligare rader kan läggas till i framtiden; anropare bör ignorera rader som de inte förstår."
 
 #. type: Plain text
 #: en/git-credential.adoc:284
 msgid "Because this is a new part of the credential helper protocol, older versions of Git, as well as some credential helpers, may not support it. If a non-zero exit status is received, or if the first line doesn't start with the word `version` and a space, callers should assume that no capabilities are supported."
-msgstr ""
+msgstr "Eftersom detta är en ny del av protokollet för legitimationsinformations-hjälpprgram, kanske äldre versioner av Git, såväl som vissa legitimationsinformations-hjälpprogram, inte stöder det. Om en avslutningsstatus som inte är noll tas emot, eller om den första raden inte börjar med ordet \"version\" och ett mellanslag, bör anropare anta att inga funktioner stöds."
 
 #. type: Plain text
 #: en/git-credential.adoc:291
 msgid "The intention of this format is to differentiate it from the credential output in an unambiguous way. It is possible to use very simple credential helpers (e.g., inline shell scripts) which always produce identical output. Using a distinct format allows users to continue to use this syntax without having to worry about correctly implementing capability advertisements or accidentally confusing callers querying for capabilities."
-msgstr ""
+msgstr "Avsikten med detta format är att skilja det från utdata för legitimationsinformations utskrift på ett entydigt sätt. Det är möjligt att använda mycket enkla legitimationsinformations-hjälpprogram (t.ex. inline-shellskript) som alltid producerar identisk utdata. Genom att använda ett distinkt format kan användare fortsätta använda denna syntax utan att behöva oroa sig för att korrekt implementera förmågoannonser eller av misstag förvirra anropare som frågar efter funktioner."
 
 #. type: Title =
 #: en/git-cvsexportcommit.adoc:2
@@ -45676,7 +45727,7 @@ msgstr "git remote add <smek> \"ext::<kommando>[ <argument>...]\"\n"
 #. type: Plain text
 #: en/git-remote-ext.adoc:17
 msgid "This remote helper uses the specified '<command>' to connect to a remote Git server."
-msgstr "Denna fjärrhjälpare använder det angivna '<kommandot>' för att ansluta till en fjärransluten Git-server."
+msgstr "Denna fjärr-hjälpprogram använder det angivna '<kommandot>' för att ansluta till en fjärransluten Git-server."
 
 #. type: Plain text
 #: en/git-remote-ext.adoc:23
@@ -45800,7 +45851,7 @@ msgstr "GIT_EXT_SERVICE"
 #. type: Plain text
 #: en/git-remote-ext.adoc:70
 msgid "Set to long name (git-upload-pack, etc...) of service helper needs to invoke."
-msgstr "Sätt till långt namn (git-upload-pack, etc...) på den tjänst-hjälpare som behöver anropas."
+msgstr "Sätt till långt namn (git-upload-pack, etc...) på den tjänst-hjälpprogram som behöver anropas."
 
 #. type: Labeled list
 #: en/git-remote-ext.adoc:71
@@ -45812,7 +45863,7 @@ msgstr "GIT_EXT_SERVICE_NOPREFIX"
 #. type: Plain text
 #: en/git-remote-ext.adoc:74
 msgid "Set to long name (upload-pack, etc...) of service helper needs to invoke."
-msgstr "Ställ in det långa namnet (upload-pack, etc...) på den tjänst-hjälpare som behöver anropas."
+msgstr "Ställ in det långa namnet (upload-pack, etc...) på den tjänst-hjälpprogram som behöver anropas."
 
 #. type: Plain text
 #: en/git-remote-ext.adoc:82
@@ -45915,7 +45966,7 @@ msgstr "Om endast <infd> anges antas det vara en dubbelriktad socket ansluten ti
 #. type: Plain text
 #: en/git-remote-fd.adoc:26
 msgid "It is assumed that any handshaking procedures have already been completed (such as sending service request for git://) before this helper is started."
-msgstr "Det antas att alla handskakningsprocedurer redan har slutförts (som att skicka en serviceförfrågan för git://) innan denna hjälpare startas."
+msgstr "Det antas att alla handskakningsprocedurer redan har slutförts (som att skicka en serviceförfrågan för git://) innan denna hjälpprogram startas."
 
 #. type: Plain text
 #: en/git-remote-fd.adoc:30
@@ -68464,7 +68515,7 @@ msgstr "`git clone`, `git fetch` och `git pull`, men inte `git push`, accepterar
 #. type: Plain text
 #: en/urls.adoc:63
 msgid "When Git doesn't know how to handle a certain transport protocol, it attempts to use the `remote-<transport>` remote helper, if one exists. To explicitly request a remote helper, the following syntax may be used:"
-msgstr "När Git inte vet hur ett visst transportprotokoll ska hanteras, försöker det använda fjärr-hjälparen `remote-<transport>`, om en sådan finns. För att explicit begära en fjärr-hjälpare kan följande syntax användas:"
+msgstr "När Git inte vet hur ett visst transportprotokoll ska hanteras, försöker det använda fjärr-hjälpprogram `remote-<transport>`, om en sådan finns. För att explicit begära en fjärr-hjälpprogram kan följande syntax användas:"
 
 #. type: Plain text
 #: en/urls.adoc:65
