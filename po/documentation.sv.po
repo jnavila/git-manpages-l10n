@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-02-15 06:29+0000\n"
+"PO-Revision-Date: 2026-02-15 11:58+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -9429,7 +9429,7 @@ msgstr "`--ignore-removal`"
 #. type: Plain text
 #: en/git-add.adoc:149
 msgid "Update the index by adding new files that are unknown to the index and files modified in the working tree, but ignore files that have been removed from the working tree. This option is a no-op when no _<pathspec>_ is used."
-msgstr "Uppdatera indexet genom att lägga till nya filer som är okända för indexet och filer som ändrats i arbetsträdet, men ignorera filer som har tagits bort från arbetskatalogen. Det här alternativet fungerar inte när ingen _<sökvägsangivelse>_ används."
+msgstr "Uppdatera indexet genom att lägga till nya filer som är okända för indexet och filer som ändrats i arbetsträdet, men ignorera filer som har tagits bort från arbetskatalogen. Det här alternativet är verkningslöst när ingen _<sökvägsangivelse>_ används."
 
 #. type: Plain text
 #: en/git-add.adoc:153
@@ -17642,7 +17642,7 @@ msgstr "När arkivet som ska klonas från finns på en lokal maskin, kringgår d
 #. type: Plain text
 #: en/git-clone.adoc:60
 msgid "If the repository is specified as a local path (e.g., `/path/to/repo`), this is the default, and `--local` is essentially a no-op. If the repository is specified as a URL, then this flag is ignored (and we never use the local optimizations). Specifying `--no-local` will override the default when `/path/to/repo` is given, using the regular Git transport instead."
-msgstr "Om repot anges som en lokal sökväg (t.ex. `/sökväg/till/förvar`) är detta standardinställningen, och `--local` är i princip en no-op. Om arkivet anges som en URL ignoreras denna flagga (och vi använder aldrig de lokala optimeringarna). Att ange `--no-local` åsidosätter standardinställningen när `/sökväg/till/förvar` anges, och använder istället den vanliga Git-transporten."
+msgstr "Om repot anges som en lokal sökväg (t.ex. `/sökväg/till/förvar`) är detta standardinställningen, och `--local` är i princip utan funktion. Om förvaret anges som en URL ignoreras denna flagga (och vi använder aldrig de lokala optimeringarna). Att ange `--no-local` åsidosätter standardinställningen när `/sökväg/till/förvar` anges, och använder istället den vanliga Git-transporten."
 
 #. type: Plain text
 #: en/git-clone.adoc:65
@@ -17964,7 +17964,7 @@ msgstr "Styr om taggar ska klonas eller inte. När `--no-tags` anges blir altern
 #. type: Plain text
 #: en/git-clone.adoc:296
 msgid "By default, tags are cloned and passing `--tags` is thus typically a no-op, unless it cancels out a previous `--no-tags`."
-msgstr "Som standard, klonas taggar och att skicka `--tags` är därför vanligtvis en no-op, såvida det inte upphäver ett tidigare `--no-tags`."
+msgstr "Som standard, klonas taggar och att skicka `--tags` är därför vanligtvis en utan funktion, såvida det inte upphäver ett tidigare `--no-tags`."
 
 #. type: Plain text
 #: en/git-clone.adoc:301
@@ -18599,12 +18599,12 @@ msgstr "Skapa en ny incheckning som \"fixar upp\" _<incheckning>_ när den till�
 #. type: Plain text
 #: en/git-commit.adoc:110
 msgid "The commit created by plain `--fixup=<commit>` has a title composed of \"fixup!\" followed by the title of _<commit>_, and is recognized specially by `git rebase --autosquash`. The `-m` option may be used to supplement the log message of the created commit, but the additional commentary will be thrown away once the \"fixup!\" commit is squashed into _<commit>_ by `git rebase --autosquash`."
-msgstr "Den incheckning som skapas av `--fixup=<incheckning>` har en titel som består av \"fixup!\" följt av titeln _<incheckning>_, och känns igen speciellt av `git rebase --autosquash`. Alternativet `-m` kan användas för att komplettera loggmeddelandet för den skapade commiten, men den ytterligare kommentaren kommer att försvinna när \"fixup!\"-incheckningen har klämts in i _<incheckning>_ av `git rebase --autosquash`."
+msgstr "Den incheckning som skapas av `--fixup=<incheckning>` har en titel som består av \"fixup!\" följt av titeln _<incheckning>_, och känns igen speciellt av `git rebase --autosquash`. Alternativet `-m` kan användas för att komplettera loggmeddelandet för den skapade commiten, men den ytterligare kommentaren kommer att försvinna när (baka in) \"fixup!\"-incheckningen har klämts in i _<incheckning>_ av `git rebase --autosquash`."
 
 #. type: Plain text
 #: en/git-commit.adoc:120
 msgid "The commit created by `--fixup=amend:<commit>` is similar but its title is instead prefixed with \"amend!\". The log message of _<commit>_ is copied into the log message of the \"amend!\" commit and opened in an editor so it can be refined. When `git rebase --autosquash` squashes the \"amend!\" commit into _<commit>_, the log message of _<commit>_ is replaced by the refined log message from the \"amend!\" commit. It is an error for the \"amend!\" commit's log message to be empty unless `--allow-empty-message` is specified."
-msgstr "Den incheckning som skapas av `--fixup=amend:<incheckning>` är liknande men dess titel har istället prefixet \"amend!\". Loggmeddelandet för _<incheckning>_ kopieras till loggmeddelandet för \"amend!\"-incheckningen och öppnas i en editor så att det kan förfinas. När `git rebase --autosquash` komprimerar \"amend!\"-incheckningen till _<incheckning>_ ersätts loggmeddelandet för _<incheckning>_ av det förfinade loggmeddelandet från \"amend!\"-incheckningen. Det är ett fel om \"amend!\"-inchecknings loggmeddelande är tomt om inte `--allow-empty-message` anges."
+msgstr "Den incheckning som skapas av `--fixup=amend:<incheckning>` är liknande men dess titel har istället prefixet \"amend!\". Loggmeddelandet för _<incheckning>_ kopieras till loggmeddelandet för \"amend!\"-incheckningen och öppnas i en editor så att det kan förfinas. När `git rebase --autosquash` slå ihop \"amend!\"-incheckningen till _<incheckning>_ ersätts loggmeddelandet för _<incheckning>_ av det förfinade loggmeddelandet från \"amend!\"-incheckningen. Det är ett fel om \"amend!\"-inchecknings loggmeddelande är tomt om inte `--allow-empty-message` anges."
 
 #. type: Plain text
 #: en/git-commit.adoc:126
@@ -18631,7 +18631,7 @@ msgstr "`--squash=<incheckning>`"
 #. type: Plain text
 #: en/git-commit.adoc:137
 msgid "Construct a commit message for use with `git rebase --autosquash`. The commit message title is taken from the specified commit with a prefix of \"squash! \". Can be used with additional commit message options (`-m`/`-c`/`-C`/`-F`). See linkgit:git-rebase[1] for details."
-msgstr "Konstruera ett inchecknings-meddelande för användning med `git rebase --autosquash`. Rubriken för inchecknings-meddelandet hämtas från den angivna inchecknings-funktionen med prefixet \"squash!\". Kan användas med ytterligare inchecknings-meddelandealternativ (`-m`/`-c`/`-C`/`-F`). Se linkgit:git-rebase[1] för mer information."
+msgstr "Konstruera ett inchecknings-meddelande för användning med `git rebase --autosquash` (auto-ihopslaging). Rubriken för inchecknings-meddelandet hämtas från den angivna inchecknings-funktionen med prefixet \"squash!\". Kan användas med ytterligare inchecknings-meddelandealternativ (`-m`/`-c`/`-C`/`-F`). Se linkgit:git-rebase[1] för mer information."
 
 #. type: Labeled list
 #: en/git-commit.adoc:138
@@ -28607,7 +28607,7 @@ msgstr ""
 #: en/git-for-each-ref.adoc:34 en/git-ls-files.adoc:267 en/git-ls-tree.adoc:145
 #, no-wrap
 msgid "FIELD NAMES"
-msgstr ""
+msgstr "FÄLTNAMN"
 
 #. type: Plain text
 #: en/git-for-each-ref.adoc:39
@@ -35150,7 +35150,7 @@ msgstr "--abbrev[=<n>]"
 #. type: Plain text
 #: en/git-ls-files.adoc:191 en/git-ls-tree.adoc:77
 msgid "Instead of showing the full 40-byte hexadecimal object lines, show the shortest prefix that is at least '<n>' hexdigits long that uniquely refers the object. Non default number of digits can be specified with --abbrev=<n>."
-msgstr ""
+msgstr "Istället för att visa hela 40-byte hexadecimala objektraderna, visa det kortaste prefixet som är minst '<n>' hexdigits långt och som unikt refererar till objektet. Antal siffror som inte är standard kan anges med --abbrev=<n>."
 
 #. type: Plain text
 #: en/git-ls-files.adoc:197
@@ -35201,7 +35201,7 @@ msgstr ""
 #: en/git-ls-files.adoc:220 en/git-ls-tree.adoc:86 en/git-replace.adoc:106
 #, no-wrap
 msgid "--format=<format>"
-msgstr ""
+msgstr "--format=<format>"
 
 #. type: Plain text
 #: en/git-ls-files.adoc:227
@@ -35249,7 +35249,7 @@ msgstr ""
 #. type: Plain text
 #: en/git-ls-files.adoc:263 en/git-ls-tree.adoc:141
 msgid "It is possible to print in a custom format by using the `--format` option, which is able to interpolate different fields using a `%(fieldname)` notation. For example, if you only care about the \"objectname\" and \"path\" fields, you can execute with a specific \"--format\" like"
-msgstr ""
+msgstr "Det är möjligt att skriva ut i ett anpassat format genom att använda alternativet `--format`, vilket kan interpolera olika fält med hjälp av notationen `%(fältnamn)`. Om du till exempel bara bryr dig om fälten \"objektnamn\" och \"sökväg\" kan du köra med ett specifikt \"--format\" som"
 
 #. type: Plain text
 #: en/git-ls-files.adoc:265
@@ -35299,7 +35299,7 @@ msgstr ""
 #: en/git-ls-files.adoc:279 en/git-ls-tree.adoc:157
 #, no-wrap
 msgid "objectsize[:padded]"
-msgstr ""
+msgstr "objectsize[:padded]"
 
 #. type: Plain text
 #: en/git-ls-files.adoc:283
@@ -35643,53 +35643,56 @@ msgstr "git-ls-tree(1)"
 #. type: Plain text
 #: en/git-ls-tree.adoc:7
 msgid "git-ls-tree - List the contents of a tree object"
-msgstr ""
+msgstr "git-ls-tree - Lista innehållet i ett trädobjekt"
 
 #. type: verse
 #: en/git-ls-tree.adoc:15
 #, no-wrap
 msgid "'git ls-tree' [-d] [-r] [-t] [-l] [-z]\n\t    [--name-only] [--name-status] [--object-only] [--full-name] [--full-tree] [--abbrev[=<n>]] [--format=<format>]\n\t    <tree-ish> [<path>...]\n"
 msgstr ""
+"'git ls-tree' [-d] [-r] [-t] [-l] [-z]\n"
+"\t    [--name-only] [--name-status] [--object-only] [--full-name] [--full-tree] [--abbrev[=<n>]] [--format=<format>]\n"
+"\t    <träd-igt> [<sökväg>...]\n"
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:20
 msgid "Lists the contents of a given tree object, like what \"/bin/ls -a\" does in the current working directory. Note that:"
-msgstr ""
+msgstr "Listar innehållet i ett givet trädobjekt, ungefär som vad \"/bin/ls -a\" gör i den aktuella arbetskatalogen. Observera att:"
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:25
 msgid "the behaviour is slightly different from that of \"/bin/ls\" in that the '<path>' denotes just a list of patterns to match, e.g. so specifying directory name (without `-r`) will behave differently, and order of the arguments does not matter."
-msgstr ""
+msgstr "Beteendet skiljer sig något från \"/bin/ls\" genom att '<sökväg>' bara anger en lista med mönster som ska matchas, t.ex. så att ange katalognamn (utan `-r`) kommer att bete sig annorlunda, och ordningen på argumenten spelar ingen roll."
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:35
 msgid "the behaviour is similar to that of \"/bin/ls\" in that the '<path>' is taken as relative to the current working directory. E.g. when you are in a directory 'sub' that has a directory 'dir', you can run 'git ls-tree -r HEAD dir' to list the contents of the tree (that is `sub/dir` in `HEAD`). You don't want to give a tree that is not at the root level (e.g. `git ls-tree -r HEAD:sub dir`) in this case, as that would result in asking for `sub/sub/dir` in the `HEAD` commit. However, the current working directory can be ignored by passing --full-tree option."
-msgstr ""
+msgstr "Beteendet liknar det för \"/bin/ls\" i det att '<sökväg>' tas som relativ till den aktuella arbetskatalogen. T.ex. när du är i en katalog 'sub' som har en katalog 'dir' kan du köra 'git ls-tree -r HEAD dir' för att lista innehållet i trädet (det vill säga `sub/dir` i `HEAD`). Du vill inte ange ett träd som inte är på rotnivå (t.ex. `git ls-tree -r HEAD:sub dir`) i det här fallet, eftersom det skulle resultera i att fråga efter `sub/sub/dir` i `HEAD`-incheckningen. Den aktuella arbetskatalogen kan dock ignoreras genom att skicka alternativet --full-tree."
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:40
 msgid "Id of a tree-ish."
-msgstr ""
+msgstr "Id av ett träd-igt."
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:43
 msgid "Show only the named tree entry itself, not its children."
-msgstr ""
+msgstr "Visa endast själva den namngivna trädposten, inte dess barn."
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:50
 msgid "Show tree entries even when going to recurse them. Has no effect if `-r` was not passed. `-d` implies `-t`."
-msgstr ""
+msgstr "Visar trädposter även när man ska använda rekursiv funktion. Har ingen effekt om `-r` inte skickades. `-d` innebär `-t`."
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:54
 msgid "Show object size of blob (file) entries."
-msgstr ""
+msgstr "Visa objektstorlek för blob-poster (filposter)."
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:58
 msgid "\\0 line termination on output and do not quote filenames. See OUTPUT FORMAT below for more information."
-msgstr ""
+msgstr "\\0 radavslutning vid utdata och citera inte filnamn. Se UTMATNINGSFORMAT nedan för mer information."
 
 #. type: Labeled list
 #: en/git-ls-tree.adoc:60
@@ -35701,7 +35704,7 @@ msgstr "--name-status"
 #. type: Plain text
 #: en/git-ls-tree.adoc:63
 msgid "List only filenames (instead of the \"long\" output), one per line. Cannot be combined with `--object-only`."
-msgstr ""
+msgstr "Lista endast filnamn (istället för den \"långa\" utdata), ett per rad. Kan inte kombineras med `--object-only`."
 
 #. type: Labeled list
 #: en/git-ls-tree.adoc:64
@@ -35713,33 +35716,33 @@ msgstr "--object-only"
 #. type: Plain text
 #: en/git-ls-tree.adoc:71
 msgid "List only names of the objects, one per line. Cannot be combined with `--name-only` or `--name-status`. This is equivalent to specifying `--format='%(objectname)'`, but for both this option and that exact format the command takes a hand-optimized codepath instead of going through the generic formatting mechanism."
-msgstr ""
+msgstr "Lista endast namnen på objekten, ett per rad. Kan inte kombineras med `--name-only` eller `--name-status`. Detta motsvarar att ange `--format='%(objektnamn)'`, men för både detta alternativ och exakt det formatet använder kommandot en hand-optimerad kodväg istället för att gå igenom den generiska formateringsmekanismen."
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:81
 msgid "Instead of showing the path names relative to the current working directory, show the full path names."
-msgstr ""
+msgstr "Istället för att visa sökvägarna i förhållande till den aktuella arbetskatalogen, visa de fullständiga sökvägarna."
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:85
 msgid "Do not limit the listing to the current working directory. Implies --full-name."
-msgstr ""
+msgstr "Begränsa inte listan till den aktuella arbetskatalogen. Innebär --full-name."
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:95
 msgid "A string that interpolates `%(fieldname)` from the result being shown. It also interpolates `%%` to `%`, and `%xNN` where `NN` are hex digits interpolates to character with hex code `NN`; for example `%x00` interpolates to `\\0` (NUL), `%x09` to `\\t` (TAB) and `%x0a` to `\\n` (LF). When specified, `--format` cannot be combined with other format-altering options, including `--long`, `--name-only` and `--object-only`."
-msgstr ""
+msgstr "En sträng som interpolerar `%(fältnamn)` från resultatet som visas. Den interpolerar också `%%` till `%`, och `%xNN` där `NN` är hexagonala siffror interpolerar till tecken med hexagonalkod `NN`; till exempel interpolerar `%x00` till `\\0` (NUL), `%x09` till `\\t` (TAB) och `%x0a` till `\\n` (LF). När `--format` anges kan den inte kombineras med andra formatändringsalternativ, inklusive `--long`, `--name-only` och `--object-only`."
 
 #. type: Labeled list
 #: en/git-ls-tree.adoc:96
 #, no-wrap
 msgid "[<path>...]"
-msgstr ""
+msgstr "[<sökväg>...]"
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:100
 msgid "When paths are given, show them (note that this isn't really raw pathnames, but rather a list of patterns to match). Otherwise implicitly uses the root level of the tree as the sole path argument."
-msgstr ""
+msgstr "När sökvägar anges, visa dem (observera att detta inte är råa sökvägsnamn, utan snarare en lista med mönster som ska matcha). Annars används implicit trädets rotnivå som enda sökvägsargument."
 
 #. type: Title -
 #: en/git-ls-tree.adoc:103
@@ -35750,85 +35753,85 @@ msgstr "Utdataformat"
 #. type: Plain text
 #: en/git-ls-tree.adoc:108
 msgid "The output format of `ls-tree` is determined by either the `--format` option, or other format-altering options such as `--name-only` etc. (see `--format` above)."
-msgstr ""
+msgstr "Utdataformatet för `ls-tree` bestäms antingen av alternativet `--format` eller andra format-ändringsalternativ som `--name-only` etc. (se `--format` ovan)."
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:112
 msgid "The use of certain `--format` directives is equivalent to using those options, but invoking the full formatting machinery can be slower than using an appropriate formatting option."
-msgstr ""
+msgstr "Användningen av vissa `--format`-direktiv motsvarar att använda dessa alternativ, men att anropa hela formateringsmaskineriet kan vara långsammare än att använda ett lämpligt formateringsalternativ."
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:116
 msgid "In cases where the `--format` would exactly map to an existing option `ls-tree` will use the appropriate faster path. Thus the default format is equivalent to:"
-msgstr ""
+msgstr "I de fall där `--format` exakt skulle mappas till ett befintligt alternativ kommer `ls-tree` att använda lämplig snabbare sökväg. Standardformatet är alltså likvärdigt med:"
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:118
 #, no-wrap
 msgid "\t%(objectmode) %(objecttype) %(objectname)%x09%(path)\n"
-msgstr ""
+msgstr "\t%(objectmode) %(objecttype) %(objectname)%x09%(path)\n"
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:121
 msgid "This output format is compatible with what `--index-info --stdin` of 'git update-index' expects."
-msgstr ""
+msgstr "Detta utdataformat är kompatibelt med vad `--index-info --stdin` i 'git update-index' förväntar sig."
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:123
 msgid "When the `-l` option is used, format changes to"
-msgstr ""
+msgstr "När alternativet `-l` används ändras formatet till"
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:125
 #, no-wrap
 msgid "\t%(objectmode) %(objecttype) %(objectname) %(objectsize:padded)%x09%(path)\n"
-msgstr ""
+msgstr "\t%(objectmode) %(objecttype) %(objectname) %(objectsize:padded)%x09%(path)\n"
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:129
 msgid "Object size identified by <objectname> is given in bytes, and right-justified with minimum width of 7 characters. Object size is given only for blobs (file) entries; for other entries `-` character is used in place of size."
-msgstr ""
+msgstr "Objektstorleken som identifieras av <objektnamn> anges i byte och är högerjusterad med en minsta bredd på 7 tecken. Objektstorleken anges endast för blob-poster (filposter); för andra poster används `-`-tecknet istället för storlek."
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:136
 msgid "Customized format:"
-msgstr ""
+msgstr "Anpassat format:"
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:143
 #, no-wrap
 msgid "\tgit ls-tree --format='%(objectname) %(path)' <tree-ish>\n"
-msgstr ""
+msgstr "\tgit ls-tree --format='%(objectname) %(path)' <träd-igt>\n"
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:150
 msgid "Various values from structured fields can be used to interpolate into the resulting output. For each outputting line, the following names can be used:"
-msgstr ""
+msgstr "Olika värden från strukturerade fält kan användas för att interpolera in i den resulterande utdata. För varje utmatningsrad kan följande namn användas:"
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:153
 msgid "The mode of the object."
-msgstr ""
+msgstr "Objektets läge."
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:155
 msgid "The type of the object (`commit`, `blob` or `tree`)."
-msgstr ""
+msgstr "Objektets typ (`commit`, `blob` eller `tree`)."
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:157
 msgid "The name of the object."
-msgstr ""
+msgstr "Objektets namn."
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:160
 msgid "The size of a `blob` object (\"-\" if it's a `commit` or `tree`). It also supports a padded format of size with \"%(objectsize:padded)\"."
-msgstr ""
+msgstr "Storleken på ett `blob`-objekt (\"-\" om det är ett `commit` eller `tree`). Det stöder också ett utfyllt format med storleken \"%(objectsize:padded)\"."
 
 #. type: Plain text
 #: en/git-ls-tree.adoc:162
 msgid "The pathname of the object."
-msgstr ""
+msgstr "Objektets sökväg."
 
 #. type: Title =
 #: en/git-mailinfo.adoc:2
@@ -35847,66 +35850,69 @@ msgstr "git-mailinfo - Extraherar patch och författarskap från ett enda e-post
 #, no-wrap
 msgid "'git mailinfo' [-k|-b] [-u | --encoding=<encoding> | -n]\n\t       [--[no-]scissors] [--quoted-cr=<action>]\n\t       <msg> <patch>\n"
 msgstr ""
+"'git mailinfo' [-k|-b] [-u | --encoding=<kodning> | -n]\n"
+"\t       [--[no-]scissors] [--quoted-cr=<handling>]\n"
+"\t       <medd> <patch>\n"
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:25
 msgid "Reads a single e-mail message from the standard input, and writes the commit log message in <msg> file, and the patches in <patch> file. The author name, e-mail and e-mail subject are written out to the standard output to be used by 'git am' to create a commit. It is usually not necessary to use this command directly. See linkgit:git-am[1] instead."
-msgstr ""
+msgstr "Läser ett enda e-postmeddelande från standardinmatningen och skriver inchecknings-loggmeddelandet i <medd>-filen och patcharna i <patch>-filen. Författarnamn, e-postadress och ämnesrad skrivs ut till standardutmatningen för att användas av 'git am' för att skapa en incheckning. Det är vanligtvis inte nödvändigt att använda detta kommando direkt. Se linkgit:git-am[1] istället."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:34
 msgid "Usually the program removes email cruft from the Subject: header line to extract the title line for the commit log message. This option prevents this munging, and is most useful when used to read back 'git format-patch -k' output."
-msgstr ""
+msgstr "Vanligtvis tar programmet bort e-postfragment från rubrikraden Ämne: (`Subject`) för att extrahera titelraden för inchecknings-loggmeddelandet. Det här alternativet förhindrar detta nötande och är mest användbart när det används för att läsa tillbaka utdata från 'git format-patch -k'."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:36
 msgid "Specifically, the following are removed until none of them remain:"
-msgstr ""
+msgstr "Mer specifikt, tas följande bort tills ingen av dem finns kvar:"
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:39
 msgid "Leading and trailing whitespace."
-msgstr ""
+msgstr "Inledande och efterföljande blanksteg."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:41
 msgid "Leading `Re:`, `re:`, and `:`."
-msgstr ""
+msgstr "Inledande `Re:`, `re:` och `:`."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:43
 msgid "Leading bracketed strings (between `[` and `]`, usually"
-msgstr ""
+msgstr "Inledande strängar inom parentes (mellan `[` och `]`, vanligtvis"
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:44
 msgid "`[PATCH]`)."
-msgstr ""
+msgstr "`[PATCH]`)."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:48
 msgid "Finally, runs of whitespace are normalized to a single ASCII space character."
-msgstr ""
+msgstr "Slutligen, normaliseras serier av blanksteg till ett enda ASCII-mellanslags tecken."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:53
 msgid "When -k is not in effect, all leading strings bracketed with '[' and ']' pairs are stripped. This option limits the stripping to only the pairs whose bracketed string contains the word \"PATCH\"."
-msgstr ""
+msgstr "När -k inte är aktivt tas alla inledande strängar inom parentes med '[' och ']' bort. Det här alternativet begränsar borttagningen till endast de par vars sträng inom parentes innehåller ordet \"PATCH\"."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:60
 msgid "The commit log message, author name and author email are taken from the e-mail, and after minimally decoding MIME transfer encoding, re-coded in the charset specified by `i18n.commitEncoding` (defaulting to UTF-8) by transliterating them. This used to be optional but now it is the default."
-msgstr ""
+msgstr "Inchecknings-loggen meddelandet, författarnamnet och författar-e-postadressen hämtas från e-postmeddelandet och efter minimal avkodning av MIME-överföringskodningen omkodas de i teckenuppsättningen som anges av `i18n.commitEncoding` (standardinställningen är UTF-8) genom att translitterera dem. Detta brukade vara valfritt men är nu standard."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:63
 msgid "Note that the patch is always used as-is without charset conversion, even with this flag."
-msgstr ""
+msgstr "Observera att patchen alltid används som den är utan teckenuppsättningskonvertering, även med denna flagga."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:67
 msgid "Similar to -u. But when re-coding, the charset specified here is used instead of the one specified by `i18n.commitEncoding` or UTF-8."
-msgstr ""
+msgstr "Liknar -u. Men vid omkodning används den teckenuppsättning som anges här istället för den som anges av `i18n.commitEncoding` eller UTF-8."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:70
@@ -35916,62 +35922,62 @@ msgstr "Inaktivera all omkodning av teckenuppsättningar för metadata."
 #. type: Plain text
 #: en/git-mailinfo.adoc:75
 msgid "Copy the Message-ID header at the end of the commit message. This is useful in order to associate commits with mailing list discussions."
-msgstr ""
+msgstr "Kopiera Message-ID-rubriken i slutet av inchecknings-meddelandet. Detta är användbart för att associera incheckningar med diskussioner på e-postlistor."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:83
 msgid "Remove everything in body before a scissors line (e.g. \"-- >8 --\"). The line represents scissors and perforation marks, and is used to request the reader to cut the message at that line. If that line appears in the body of the message before the patch, everything before it (including the scissors line itself) is ignored when this option is used."
-msgstr ""
+msgstr "Ta bort allt i brödtexten före en saxlinjen (t.ex. \"-- >8 --\"). Linjen representerar sax- och perforeringsmärken och används för att be läsaren att klippa meddelandet vid den raden. Om den raden visas i meddelandets brödtext före patchen ignoreras allt före den (inklusive själva saxlinjen) när det här alternativet används."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:88
 msgid "This is useful if you want to begin your message in a discussion thread with comments and suggestions on the message you are responding to, and to conclude it with a patch submission, separating the discussion and the beginning of the proposed commit log message with a scissors line."
-msgstr ""
+msgstr "Detta är användbart om du vill börja ditt meddelande i en diskussionstråd med kommentarer och förslag på meddelandet du svarar på, och avsluta det med en patch-inlämning, genom att separera diskussionen och början av det föreslagna inchecknings-loggmeddelandet med en saxlinje."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:90
 msgid "This can be enabled by default with the configuration option mailinfo.scissors."
-msgstr ""
+msgstr "Detta kan aktiveras som standard med konfigurationsalternativet mailinfo.scissors."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:93
 msgid "Ignore scissors lines. Useful for overriding mailinfo.scissors settings."
-msgstr ""
+msgstr "Ignorera saxlinjer. Användbart för att åsidosätta inställningar för mailinfo.scissors."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:98
 msgid "Action when processes email messages sent with base64 or quoted-printable encoding, and the decoded lines end with a CRLF instead of a simple LF."
-msgstr ""
+msgstr "Åtgärd när e-postmeddelanden som skickats med base64- eller citerad-utskrivbar-kodning bearbetas, och de avkodade raderna slutar med en CRLF istället för en enkel LF."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:100
 msgid "The valid actions are:"
-msgstr ""
+msgstr "De giltiga åtgärderna är:"
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:103
 msgid "`nowarn`: Git will do nothing when such a CRLF is found."
-msgstr ""
+msgstr "`nowarn`: Git kommer inte att göra någonting när en sådan CRLF hittas."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:104
 msgid "`warn`: Git will issue a warning for each message if such a CRLF is"
-msgstr ""
+msgstr "`warn`: Git kommer att utfärda en varning för varje meddelande om en sådan CRLF är"
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:105
 msgid "found."
-msgstr ""
+msgstr "hittades."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:106
 msgid "`strip`: Git will convert those CRLF to LF."
-msgstr ""
+msgstr "`strip`: Git kommer att konvertera dessa CRLF till LF."
 
 #. type: Plain text
 #: en/git-mailinfo.adoc:110
 msgid "The default action could be set by configuration option `mailinfo.quotedCR`. If no such configuration option has been set, `warn` will be used."
-msgstr ""
+msgstr "Standardåtgärden kan ställas in med konfigurationsalternativet `mailinfo.quotedCR`. Om inget sådant konfigurationsalternativ har angetts kommer `warn` att användas."
 
 #. type: Labeled list
 #: en/git-mailinfo.adoc:111
@@ -35982,7 +35988,7 @@ msgstr "<medd>"
 #. type: Plain text
 #: en/git-mailinfo.adoc:114
 msgid "The commit log message extracted from e-mail, usually except the title line which comes from e-mail Subject."
-msgstr ""
+msgstr "Incheckning-loggmeddelandet som extraheras från e-postmeddelandet, vanligtvis förutom titelraden som kommer från e-postmeddelandets ämne."
 
 #. type: Labeled list
 #: en/git-mailinfo.adoc:115
@@ -35993,7 +35999,7 @@ msgstr "<patch>"
 #. type: Plain text
 #: en/git-mailinfo.adoc:117
 msgid "The patch extracted from e-mail."
-msgstr ""
+msgstr "Patchen extraherad från e-post."
 
 #. type: Title =
 #: en/git-mailsplit.adoc:2
@@ -36005,45 +36011,47 @@ msgstr "git-mailsplit(1)"
 #. type: Plain text
 #: en/git-mailsplit.adoc:7
 msgid "git-mailsplit - Simple UNIX mbox splitter program"
-msgstr ""
+msgstr "git-mailsplit - Enkelt UNIX mbox-delningsprogram"
 
 #. type: verse
 #: en/git-mailsplit.adoc:13
 #, no-wrap
 msgid "'git mailsplit' [-b] [-f<nn>] [-d<prec>] [--keep-cr] [--mboxrd]\n\t\t-o<directory> [--] [(<mbox>|<Maildir>)...]\n"
 msgstr ""
+"'git mailsplit' [-b] [-f<nn>] [-d<prec>] [--keep-cr] [--mboxrd]\n"
+"\t\t-o<katalog> [--] [(<mbox>|<Maildir>)...]\n"
 
 #. type: Plain text
 #: en/git-mailsplit.adoc:18
 msgid "Splits a mbox file or a Maildir into a list of files: \"0001\" \"0002\" .. in the specified directory so you can process them further from there."
-msgstr ""
+msgstr "Delar upp en mbox-fil eller en Maildir i en lista med filer: \"0001\" \"0002\" .. i den angivna katalogen så att du kan bearbeta dem vidare därifrån."
 
 #. type: Plain text
 #: en/git-mailsplit.adoc:21
 msgid "Maildir splitting relies upon filenames being sorted to output patches in the correct order."
-msgstr ""
+msgstr "Maildir-delning är beroende av att filnamn sorteras för att mata ut patchar i rätt ordning."
 
 #. type: Labeled list
 #: en/git-mailsplit.adoc:24
 #, no-wrap
 msgid "<mbox>"
-msgstr ""
+msgstr "<mbox>"
 
 #. type: Plain text
 #: en/git-mailsplit.adoc:27
 msgid "Mbox file to split. If not given, the mbox is read from the standard input."
-msgstr ""
+msgstr "Mbox-fil att dela. Om ingen given fil anges läses mbox-filen från standardindata."
 
 #. type: Labeled list
 #: en/git-mailsplit.adoc:28
 #, no-wrap
 msgid "<Maildir>"
-msgstr ""
+msgstr "<Maildir>"
 
 #. type: Plain text
 #: en/git-mailsplit.adoc:31
 msgid "Root of the Maildir to split. This directory should contain the cur, tmp and new subdirectories."
-msgstr ""
+msgstr "Rotkatalogen för den e-postkatalog som ska delas. Den här katalogen ska innehålla underkatalogerna cur, tmp och new."
 
 #. type: Labeled list
 #: en/git-mailsplit.adoc:32
@@ -36054,39 +36062,39 @@ msgstr "-o<katalog>"
 #. type: Plain text
 #: en/git-mailsplit.adoc:34
 msgid "Directory in which to place the individual messages."
-msgstr ""
+msgstr "Katalog där de enskilda meddelandena ska placeras."
 
 #. type: Plain text
 #: en/git-mailsplit.adoc:38
 msgid "If any file doesn't begin with a From line, assume it is a single mail message instead of signaling an error."
-msgstr ""
+msgstr "Om någon fil inte börjar med en Från-rad, anta att det är ett enda e-postmeddelande istället för att signalera ett fel."
 
 #. type: Labeled list
 #: en/git-mailsplit.adoc:39
 #, no-wrap
 msgid "-d<prec>"
-msgstr ""
+msgstr "-d<prec>"
 
 #. type: Plain text
 #: en/git-mailsplit.adoc:43
 msgid "Instead of the default 4 digits with leading zeros, different precision can be specified for the generated filenames."
-msgstr ""
+msgstr "Istället för standardvärdet 4 siffror med inledande nollor kan olika precision anges för de genererade filnamnen."
 
 #. type: Labeled list
 #: en/git-mailsplit.adoc:44
 #, no-wrap
 msgid "-f<nn>"
-msgstr ""
+msgstr "-f<nn>"
 
 #. type: Plain text
 #: en/git-mailsplit.adoc:47
 msgid "Skip the first <nn> numbers, for example if -f3 is specified, start the numbering with 0004."
-msgstr ""
+msgstr "Hoppa över de första <nn> siffrorna, till exempel om -f3 anges, börja numreringen med 0004."
 
 #. type: Plain text
 #: en/git-mailsplit.adoc:50
 msgid "Do not remove `\\r` from lines ending with `\\r\\n`."
-msgstr ""
+msgstr "Ta inte bort `\\r` från rader som slutar med `\\r\\n`."
 
 #. type: Labeled list
 #: en/git-mailsplit.adoc:51
@@ -36098,7 +36106,7 @@ msgstr "--mboxrd"
 #. type: Plain text
 #: en/git-mailsplit.adoc:54
 msgid "Input is of the \"mboxrd\" format and \"^>+From \" line escaping is reversed."
-msgstr ""
+msgstr "Inmatningen är i formatet \"mboxrd\" och radkoderna \"^>+From\" är omvända."
 
 #. type: Title =
 #: en/git-merge-base.adoc:2
@@ -38178,39 +38186,41 @@ msgstr "git-name-rev(1)"
 #. type: Plain text
 #: en/git-name-rev.adoc:7
 msgid "git-name-rev - Find symbolic names for given revs"
-msgstr ""
+msgstr "git-name-rev - Hitta symboliska namn för givna revs"
 
 #. type: verse
 #: en/git-name-rev.adoc:14
 #, no-wrap
 msgid "'git name-rev' [--tags] [--refs=<pattern>]\n\t       ( --all | --annotate-stdin | <commit-ish>... )\n"
 msgstr ""
+"'git name-rev' [--tags] [--refs=<mönster>]\n"
+"\t       ( --all | --annotate-stdin | <incheckning-igt>... )\n"
 
 #. type: Plain text
 #: en/git-name-rev.adoc:19
 msgid "Finds symbolic names suitable for human digestion for revisions given in any format parsable by 'git rev-parse'."
-msgstr ""
+msgstr "Hittar symboliska namn lämpliga för mänsklig smältning av revisioner givna i valfritt format som kan analyseras av 'git rev-parse'."
 
 #. type: Plain text
 #: en/git-name-rev.adoc:26
 msgid "Do not use branch names, but only tags to name the commits"
-msgstr ""
+msgstr "Använd inte grennamn, utan endast taggar för att namnge incheckningar"
 
 #. type: Labeled list
 #: en/git-name-rev.adoc:27
 #, no-wrap
 msgid "--refs=<pattern>"
-msgstr ""
+msgstr "--refs=<mönster>"
 
 #. type: Plain text
 #: en/git-name-rev.adoc:32
 msgid "Only use refs whose names match a given shell pattern. The pattern can be a branch name, a tag name, or a fully qualified ref name. If given multiple times, use refs whose names match any of the given shell patterns. Use `--no-refs` to clear any previous ref patterns given."
-msgstr ""
+msgstr "Använd endast referenser vars namn matchar ett givet skalmönster. Mönstret kan vara ett grennamn, ett taggnamn eller ett fullständigt kvalificerat referensnamn. Om det anges flera gånger, använd referenser vars namn matchar något av de givna skalmönstren. Använd `--no-refs` för att rensa alla tidigare givna referensmönster."
 
 #. type: Plain text
 #: en/git-name-rev.adoc:41
 msgid "Do not use any ref whose name matches a given shell pattern. The pattern can be one of branch name, tag name or fully qualified ref name. If given multiple times, a ref will be excluded when it matches any of the given patterns. When used together with --refs, a ref will be used as a match only when it matches at least one --refs pattern and does not match any --exclude patterns. Use `--no-exclude` to clear the list of exclude patterns."
-msgstr ""
+msgstr "Använd inte någon referens vars namn matchar ett givet skalmönster. Mönstret kan vara antingen grennamn, taggnamn eller ett fullständigt kvalificerat referensnamn. Om det anges flera gånger kommer en referens att exkluderas när den matchar något av de givna mönstren. När den används tillsammans med --refs kommer en referens endast att användas som en matchning när den matchar minst ett --refs-mönster och inte matchar några --exclude-mönster. Använd `--no-exclude` för att rensa listan över exkluderingsmönster."
 
 #. type: Plain text
 #: en/git-name-rev.adoc:44
@@ -38227,48 +38237,57 @@ msgstr "--annotate-stdin"
 #. type: Plain text
 #: en/git-name-rev.adoc:51
 msgid "Transform stdin by substituting all the 40-character SHA-1 hexes (say $hex) with \"$hex ($rev_name)\". When used with --name-only, substitute with \"$rev_name\", omitting $hex altogether. This option was called `--stdin` in older versions of Git."
-msgstr ""
+msgstr "Transformera stdin genom att ersätta alla 40-teckens SHA-1-hexar (t.ex. $hex) med \"$hex ($rev_name)\". När det används med --name-only, ersätt med \"$rev_name\", och uteslut $hex helt och hållet. Detta alternativ kallades `--stdin` i äldre versioner av Git."
 
 #. type: delimited block -
 #: en/git-name-rev.adoc:56
 #, no-wrap
 msgid "$ cat sample.txt\n"
-msgstr ""
+msgstr "$ cat sample.txt\n"
 
 #. type: delimited block -
 #: en/git-name-rev.adoc:60
 #, no-wrap
 msgid "An abbreviated revision 2ae0a9cb82 will not be substituted.\nThe full name after substitution is 2ae0a9cb8298185a94e5998086f380a355dd8907,\nwhile its tree object is 70d105cc79e63b81cfdcb08a15297c23e60b07ad\n"
 msgstr ""
+"En förkortad version 2ae0a9cb82 kommer inte att ersättas.\n"
+"Det fullständiga namnet efter substitutionen är 2ae0a9cb8298185a94e5998086f380a355dd8907,\n"
+"medan dess trädobjekt är 70d105cc79e63b81cfdcb08a15297c23e60b07ad\n"
 
 #. type: delimited block -
 #: en/git-name-rev.adoc:62
 #, no-wrap
 msgid "$ git name-rev --annotate-stdin <sample.txt\n"
-msgstr ""
+msgstr "$ git name-rev --annotate-stdin <sample.txt\n"
 
 #. type: delimited block -
 #: en/git-name-rev.adoc:66
 #, no-wrap
 msgid "An abbreviated revision 2ae0a9cb82 will not be substituted.\nThe full name after substitution is 2ae0a9cb8298185a94e5998086f380a355dd8907 (master),\nwhile its tree object is 70d105cc79e63b81cfdcb08a15297c23e60b07ad\n"
 msgstr ""
+"En förkortad revision 2ae0a9cb82 kommer inte att ersättas.\n"
+"Det fullständiga namnet efter substitutionen är 2ae0a9cb8298185a94e5998086f380a355dd8907 (master),\n"
+"medan dess trädobjekt är 70d105cc79e63b81cfdcb08a15297c23e60b07ad\n"
 
 #. type: delimited block -
 #: en/git-name-rev.adoc:68
 #, no-wrap
 msgid "$ git name-rev --name-only --annotate-stdin <sample.txt\n"
-msgstr ""
+msgstr "$ git name-rev --name-only --annotate-stdin <sample.txt\n"
 
 #. type: delimited block -
 #: en/git-name-rev.adoc:72
 #, no-wrap
 msgid "An abbreviated revision 2ae0a9cb82 will not be substituted.\nThe full name after substitution is master,\nwhile its tree object is 70d105cc79e63b81cfdcb08a15297c23e60b07ad\n"
 msgstr ""
+"En förkortad revision 2ae0a9cb82 kommer inte att ersättas.\n"
+"Det fullständiga namnet efter ersättning är master,\n"
+"medan dess trädobjekt är 70d105cc79e63b81cfdcb08a15297c23e60b07ad\n"
 
 #. type: Plain text
 #: en/git-name-rev.adoc:79
 msgid "Instead of printing both the SHA-1 and the name, print only the name. If given with --tags the usual tag prefix of \"tags/\" is also omitted from the name, matching the output of `git-describe` more closely."
-msgstr ""
+msgstr "Istället för att skriva ut både SHA-1 och namnet, skriv bara ut namnet. Om det anges med --tags utelämnas även det vanliga taggprefixet \"tags/\" från namnet, vilket matchar utdata från `git-describe` bättre."
 
 #. type: Labeled list
 #: en/git-name-rev.adoc:80
@@ -38280,39 +38299,41 @@ msgstr "--no-undefined"
 #. type: Plain text
 #: en/git-name-rev.adoc:83
 msgid "Die with error code != 0 when a reference is undefined, instead of printing `undefined`."
-msgstr ""
+msgstr "Dör med felkod != 0 när en referens är odefinierad, istället för att skriva ut `undefined`."
 
 #. type: Plain text
 #: en/git-name-rev.adoc:94
 msgid "Given a commit, find out where it is relative to the local refs. Say somebody wrote you about that fantastic commit 33db5f4d9027a10e477ccf054b2c1ab94f74c85a. Of course, you look into the commit, but that only tells you what happened, but not the context."
-msgstr ""
+msgstr "Givet en incheckning, ta reda på var den ligger i förhållande till de lokala referenserna. Säg att någon skrev till dig om den där fantastiska incheckningen 33db5f4d9027a10e477ccf054b2c1ab94f74c85a. Naturligtvis tittar du på incheckningen, men det berättar bara vad som hände, inte sammanhanget."
 
 #. type: Plain text
 #: en/git-name-rev.adoc:96
 msgid "Enter 'git name-rev':"
-msgstr ""
+msgstr "Skriva in 'git name-rev':"
 
 #. type: delimited block -
 #: en/git-name-rev.adoc:100
 #, no-wrap
 msgid "% git name-rev 33db5f4d9027a10e477ccf054b2c1ab94f74c85a\n33db5f4d9027a10e477ccf054b2c1ab94f74c85a tags/v0.99~940\n"
 msgstr ""
+"% git name-rev 33db5f4d9027a10e477ccf054b2c1ab94f74c85a\n"
+"33db5f4d9027a10e477ccf054b2c1ab94f74c85a tags/v0.99~940\n"
 
 #. type: Plain text
 #: en/git-name-rev.adoc:103
 msgid "Now you are wiser, because you know that it happened 940 revisions before v0.99."
-msgstr ""
+msgstr "Nu är du klokare, eftersom du vet att det hände 940 revisioner före v0.99."
 
 #. type: Plain text
 #: en/git-name-rev.adoc:105
 msgid "Another nice thing you can do is:"
-msgstr ""
+msgstr "En annan trevlig sak du kan göra är:"
 
 #. type: delimited block -
 #: en/git-name-rev.adoc:108
 #, no-wrap
 msgid "% git log | git name-rev --annotate-stdin\n"
-msgstr ""
+msgstr "% git log | git name-rev --annotate-stdin\n"
 
 #. type: Title =
 #: en/git-notes.adoc:2
@@ -43564,246 +43585,275 @@ msgstr "git-rebase - Applicera incheckningar på nytt ovanpå en annan bastopp"
 #, no-wrap
 msgid "'git rebase' [-i | --interactive] [<options>] [--exec <cmd>]\n\t[--onto <newbase> | --keep-base] [<upstream> [<branch>]]\n'git rebase' [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase>]\n\t--root [<branch>]\n'git rebase' (--continue|--skip|--abort|--quit|--edit-todo|--show-current-patch)\n"
 msgstr ""
+"'git rebase' [-i | --interactive] [<flaggor>] [--exec <cmd>]\n"
+"\t[--onto <nybas> | --keep-base] [<upstream> [<gren>]]\n"
+"'git rebase' [-i | --interactive] [<flaggor>] [--exec <cmd>] [--onto <nybas>]\n"
+"\t--root [<gren>]\n"
+"'git rebase' (--continue|--skip|--abort|--quit|--edit-todo|--show-current-patch)\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:22
 msgid "Transplant a series of commits onto a different starting point. You can also use `git rebase` to reorder or combine commits: see INTERACTIVE MODE below for how to do that."
-msgstr ""
+msgstr "Överför en serie incheckningar till en annan startpunkt. Du kan också använda `git rebase` för att ändra ordning på eller kombinera incheckningar: se INTERAKTIVT LÄGE nedan för hur du gör det."
 
 #. type: Plain text
 #: en/git-rebase.adoc:25
 msgid "For example, imagine that you have been working on the `topic` branch in this history, and you want to \"catch up\" to the work done on the `master` branch."
-msgstr ""
+msgstr "Till exempel, tänk dig att du har arbetat med grenen `ämne` i den här historiken, och vill \"komma ikapp\" det arbete som gjorts på grenen `master`."
 
 #. type: Plain text
 #: en/git-rebase.adoc:37
+#, fuzzy
 msgid "You want to transplant the commits you made on `topic` since it diverged from `master` (i.e. A, B, and C), on top of the current `master`. You can do this by running `git rebase master` while the `topic` branch is checked out. If you want to rebase `topic` while on another branch, `git rebase master topic` is a shortcut for `git checkout topic && git rebase master`."
-msgstr ""
+msgstr "Du vill överföra de incheckningar du gjorde på `ämne` eftersom det avvek från `master` (dvs. A, B och C), ovanpå den nuvarande `master`. Du kan göra detta genom att köra `git rebase master` medan `ämne`-grenen är utcheckad. Om du vill om basera `ämne` medan du är på en annan gren, är `git rebase master topic` en genväg för `git checkout topic && git rebase master`."
 
 #. type: delimited block -
 #: en/git-rebase.adoc:42
 #, no-wrap
 msgid "                  A'--B'--C' topic\n                 /\n    D---E---F---G master\n"
 msgstr ""
+"                  A'--B'--C' ämne\n"
+"                 /\n"
+"    D---E---F---G master\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:48
 msgid "If there is a merge conflict during this process, `git rebase` will stop at the first problematic commit and leave conflict markers. If this happens, you can do one of these things:"
-msgstr ""
+msgstr "Om det uppstår en sammanslagningskonflikt under den här processen kommer `git rebase` att stanna vid den första problematiska incheckningen och lämna konfliktmarkörer. Om detta händer kan du göra något av följande:"
 
 #. type: Plain text
 #: en/git-rebase.adoc:54
 msgid "Resolve the conflict. You can use `git diff` to find the markers (<<<<<<) and make edits to resolve the conflict. For each file you edit, you need to tell Git that the conflict has been resolved. You can mark the conflict as resolved with `git add <filename>`. After resolving all of the conflicts, you can continue the rebasing process with"
-msgstr ""
+msgstr "Lös konflikten. Du kan använda `git diff` för att hitta markörerna (<<<<<<) och göra redigeringar för att lösa konflikten. För varje fil du redigerar måste du meddela Git att konflikten har lösts. Du kan markera konflikten som löst med `git add <filnamn>`. Efter att ha löst alla konflikter kan du fortsätta ombaseringsprocessen med"
 
 #. type: Plain text
 #: en/git-rebase.adoc:56
 #, no-wrap
 msgid "git rebase --continue\n"
-msgstr ""
+msgstr "git rebase --continue\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:58
 msgid "Stop the `git rebase` and return your branch to its original state with"
-msgstr ""
+msgstr "Stoppa `git rebase` och återställ din gren till sitt ursprungliga tillstånd med"
 
 #. type: Plain text
 #: en/git-rebase.adoc:60
 #, no-wrap
 msgid "git rebase --abort\n"
-msgstr ""
+msgstr "git rebase --abort\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:62
 msgid "Skip the commit that caused the merge conflict with"
-msgstr ""
+msgstr "Hoppa över incheckningen som orsakade sammanslagningskonflikten med"
 
 #. type: Plain text
 #: en/git-rebase.adoc:64
 #, no-wrap
 msgid "git rebase --skip\n"
-msgstr ""
+msgstr "git rebase --skip\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:70
 msgid "If you don't specify an `<upstream>` to rebase onto, the upstream configured in `branch.<name>.remote` and `branch.<name>.merge` options will be used (see linkgit:git-config[1] for details) and the `--fork-point` option is assumed. If you are currently not on any branch or if the current branch does not have a configured upstream, the rebase will abort."
-msgstr ""
+msgstr "Om du inte anger en `<uppström>` att ombasera på, kommer den uppström som konfigurerats i alternativen `branch.<namn>.remote` och `branch.<namn>.merge` att användas (se linkgit:git-config[1] för detaljer) och alternativet `--fork-point` antas. Om du för närvarande inte är på någon gren eller om den aktuella grenen inte har en konfigurerad uppström, kommer rebase att avbrytas."
 
 #. type: Plain text
 #: en/git-rebase.adoc:72
 msgid "Here is a simplified description of what `git rebase <upstream>` does:"
-msgstr ""
+msgstr "Här är en förenklad beskrivning av vad `git rebase <uppström>` gör:"
 
 #. type: Plain text
 #: en/git-rebase.adoc:76
 msgid "Make a list of all commits on your current branch since it branched off from `<upstream>` that do not have an equivalent commit in `<upstream>`."
-msgstr ""
+msgstr "Gör en lista över alla incheckningar på din nuvarande gren sedan den avgrenades från `<uppström>` som inte har en motsvarande incheckning i `<uppström>`."
 
 #. type: Plain text
 #: en/git-rebase.adoc:78
 msgid "Check out `<upstream>` with the equivalent of `git checkout --detach <upstream>`."
-msgstr ""
+msgstr "Kolla ut `<uppström>` med motsvarigheten till `git checkout --detach <uppström>`."
 
 #. type: Plain text
 #: en/git-rebase.adoc:81
 msgid "Replay the commits, one by one, in order. This is similar to running `git cherry-pick <commit>` for each commit. See REBASING MERGES for how merges are handled."
-msgstr ""
+msgstr "Spela upp incheckningarna, en efter en, i ordning. Detta liknar att köra `git cherry-pick <incheckning>` för varje commit. Se OMBASERING AV SAMMANSLAGNINGAR för hur sammanslagningar hanteras."
 
 #. type: Plain text
 #: en/git-rebase.adoc:83
 msgid "Update your branch to point to the final commit with the equivalent of `git checkout -B <branch>`."
-msgstr ""
+msgstr "Uppdatera din gren så att den pekar på den slutliga incheckning en med motsvarigheten till `git checkout -B <gren>`."
 
 #. type: NOTE
 #: en/git-rebase.adoc:91
 msgid "When starting the rebase, `ORIG_HEAD` is set to point to the commit at the tip of the to-be-rebased branch. However, `ORIG_HEAD` is not guaranteed to still point to that commit at the end of the rebase if other commands that change `ORIG_HEAD` (like `git reset`) are used during the rebase. The previous branch tip, however, is accessible using the reflog of the current branch (i.e. `@{1}`, see linkgit:gitrevisions[7])."
-msgstr ""
+msgstr "När ombaseringen startas är `ORIG_HEAD` inställd på att peka på incheckningen i toppen av grenen som ska ombaseras. Det är dock inte garanterat att `ORIG_HEAD` fortfarande pekar på den incheckningen i slutet av ombaseringen om andra kommandon som ändrar `ORIG_HEAD` (som `git reset`) används under ombaseringen. Den föregående grentopen är dock tillgänglig med hjälp av refloggen för den aktuella grenen (dvs. `@{1}`, se linkgit:gitrevisions[7])."
 
 #. type: Title -
 #: en/git-rebase.adoc:93
 #, no-wrap
 msgid "TRANSPLANTING A TOPIC BRANCH WITH --ONTO"
-msgstr ""
+msgstr "TRANSPLANTERING AV EN ÄMNESGREN MED --ONTO"
 
 #. type: Plain text
 #: en/git-rebase.adoc:98
 msgid "Here is how you would transplant a topic branch based on one branch to another, to pretend that you forked the topic branch from the latter branch, using `rebase --onto`."
-msgstr ""
+msgstr "Så här skulle du omplantera en ämnesgren baserad på en gren till en annan, för att låtsas att du har förgrenat ämnesgrenen från den senare grenen, med hjälp av `rebase --onto`."
 
 #. type: Plain text
 #: en/git-rebase.adoc:102
 msgid "First let's assume your 'topic' is based on branch 'next'. For example, a feature developed in 'topic' depends on some functionality which is found in 'next'."
-msgstr ""
+msgstr "Låt oss först anta att ditt 'ämne' är baserat på grenen 'next'. Till exempel är en funktion som utvecklats i 'ämne' beroende av någon funktionalitet som finns i 'next'."
 
 #. type: delimited block -
 #: en/git-rebase.adoc:109
 #, no-wrap
 msgid "    o---o---o---o---o  master\n         \\\n          o---o---o---o---o  next\n                           \\\n                            o---o---o  topic\n"
 msgstr ""
+"    o---o---o---o---o  master\n"
+"         \\\n"
+"          o---o---o---o---o  next\n"
+"                           \\\n"
+"                            o---o---o  ämne\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:114
 msgid "We want to make 'topic' forked from branch 'master'; for example, because the functionality on which 'topic' depends was merged into the more stable 'master' branch. We want our tree to look like this:"
-msgstr ""
+msgstr "Vi vill att 'ämne' ska avgrenades från grenen 'master'; till exempel eftersom funktionaliteten som 'ämne' är beroende av har sammanfogats med den mer stabila grenen 'master'. Vi vill att vårt träd ska se ut så här:"
 
 #. type: delimited block -
 #: en/git-rebase.adoc:121
 #, no-wrap
 msgid "    o---o---o---o---o  master\n        |            \\\n        |             o'--o'--o'  topic\n         \\\n          o---o---o---o---o  next\n"
 msgstr ""
+"    o---o---o---o---o  master\n"
+"        |            \\\n"
+"        |             o'--o'--o'  ämne\n"
+"         \\\n"
+"          o---o---o---o---o  next\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:124
 msgid "We can get this using the following command:"
-msgstr ""
+msgstr "Vi kan få detta med hjälp av följande kommando:"
 
 #. type: Plain text
 #: en/git-rebase.adoc:126
 #, no-wrap
 msgid "    git rebase --onto master next topic\n"
-msgstr ""
+msgstr "    git rebase --onto master next ämne\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:130
 msgid "Another example of --onto option is to rebase part of a branch. If we have the following situation:"
-msgstr ""
+msgstr "Ett annat exempel på alternativet --onto är att ombasera en del av en gren. Om vi har följande situation:"
 
 #. type: delimited block -
 #: en/git-rebase.adoc:137
 #, no-wrap
 msgid "                            H---I---J topicB\n                           /\n                  E---F---G  topicA\n                 /\n    A---B---C---D  master\n"
 msgstr ""
+"                            H---I---J ämneB\n"
+"                           /\n"
+"                  E---F---G  ämneA\n"
+"                 /\n"
+"    A---B---C---D  master\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:140 en/git-rebase.adoc:163
 msgid "then the command"
-msgstr ""
+msgstr "sedan kommandot"
 
 #. type: Plain text
 #: en/git-rebase.adoc:142
 #, no-wrap
 msgid "    git rebase --onto master topicA topicB\n"
-msgstr ""
+msgstr "    git rebase --onto master ämneA ämneB\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:144
 msgid "would result in:"
-msgstr ""
+msgstr "skulle resultera i:"
 
 #. type: delimited block -
 #: en/git-rebase.adoc:151
 #, no-wrap
 msgid "                 H'--I'--J'  topicB\n                /\n                | E---F---G  topicA\n                |/\n    A---B---C---D  master\n"
 msgstr ""
+"                 H'--I'--J'  ämneB\n"
+"                /\n"
+"                | E---F---G  ämneA\n"
+"                |/\n"
+"    A---B---C---D  master\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:154
 msgid "This is useful when topicB does not depend on topicA."
-msgstr ""
+msgstr "Detta är användbart när ämneB inte är beroende av ämneA."
 
 #. type: Plain text
 #: en/git-rebase.adoc:157
 msgid "A range of commits could also be removed with rebase. If we have the following situation:"
-msgstr ""
+msgstr "En rad incheckningar kan också tas bort med ombasering. Om vi har följande situation:"
 
 #. type: delimited block -
 #: en/git-rebase.adoc:160
 #, no-wrap
 msgid "    E---F---G---H---I---J  topicA\n"
-msgstr ""
+msgstr "    E---F---G---H---I---J  ämneA\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:165
 #, no-wrap
 msgid "    git rebase --onto topicA~5 topicA~3 topicA\n"
-msgstr ""
+msgstr "    git rebase --onto ämneA~5 ämneA~3 ämneA\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:167
 msgid "would result in the removal of commits F and G:"
-msgstr ""
+msgstr "skulle resultera i att incheckningar F och G tas bort:"
 
 #. type: delimited block -
 #: en/git-rebase.adoc:170
 #, no-wrap
 msgid "    E---H'---I'---J'  topicA\n"
-msgstr ""
+msgstr "    E---H'---I'---J'  ämneA\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:175
 msgid "This is useful if F and G were flawed in some way, or should not be part of topicA. Note that the argument to `--onto` and the `<upstream>` parameter can be any valid commit-ish."
-msgstr ""
+msgstr "Detta är användbart om F och G var felaktiga på något sätt, eller inte borde vara en del av ämneA. Observera att argumentet till `--onto` och parametern `<uppström>` kan vara vilken giltig inchecknings-liknande parameter som helst."
 
 #. type: Title -
 #: en/git-rebase.adoc:177
 #, no-wrap
 msgid "MODE OPTIONS"
-msgstr ""
+msgstr "LÄGESALTERNATIV"
 
 #. type: Plain text
 #: en/git-rebase.adoc:181
 msgid "The options in this section cannot be used with any other option, including not with each other:"
-msgstr ""
+msgstr "Alternativen i det här avsnittet kan inte användas med något annat alternativ, inklusive inte med varandra:"
 
 #. type: Plain text
 #: en/git-rebase.adoc:184
 msgid "Restart the rebasing process after having resolved a merge conflict."
-msgstr ""
+msgstr "Starta om ombaseringsprocessen efter att en sammanslagningskonflikt har lösts."
 
 #. type: Plain text
 #: en/git-rebase.adoc:187
 msgid "Restart the rebasing process by skipping the current patch."
-msgstr ""
+msgstr "Starta om ombaseringsprocessen genom att hoppa över den aktuella patchen."
 
 #. type: Plain text
 #: en/git-rebase.adoc:194
 msgid "Abort the rebase operation and reset HEAD to the original branch. If `<branch>` was provided when the rebase operation was started, then `HEAD` will be reset to `<branch>`. Otherwise `HEAD` will be reset to where it was when the rebase operation was started."
-msgstr ""
+msgstr "Avbryt rebase-operationen och återställ HEAD till den ursprungliga grenen. Om `<gren>` angavs när ombaserings-operationen startades, kommer `HEAD` att återställas till `<gren>`. Annars kommer `HEAD` att återställas till var den var när ombaserings-operationen startades."
 
 #. type: Plain text
 #: en/git-rebase.adoc:200
 msgid "Abort the rebase operation but `HEAD` is not reset back to the original branch. The index and working tree are also left unchanged as a result. If a temporary stash entry was created using `--autostash`, it will be saved to the stash list."
-msgstr ""
+msgstr "Avbryter ombasnings-operationen men `HEAD` återställs inte till den ursprungliga grenen. Indexet och arbetskatalogen lämnas också oförändrade som ett resultat. Om en tillfällig gömma-post skapades med `--autostash` kommer den att sparas i gömma-listan."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:201
@@ -43828,28 +43878,28 @@ msgstr "--show-current-patch"
 #. type: Plain text
 #: en/git-rebase.adoc:208
 msgid "Show the current patch in an interactive rebase or when rebase is stopped because of conflicts. This is the equivalent of `git show REBASE_HEAD`."
-msgstr ""
+msgstr "Visa den aktuella patchen i en interaktiv ombasering eller när ombaseringen stoppas på grund av konflikter. Detta motsvarar `git show REBASE_HEAD`."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:211
 #, no-wrap
 msgid "--onto <newbase>"
-msgstr ""
+msgstr "--onto <nybas>"
 
 #. type: Plain text
 #: en/git-rebase.adoc:216
 msgid "Starting point at which to create the new commits. If the `--onto` option is not specified, the starting point is `<upstream>`. May be any valid commit, and not just an existing branch name."
-msgstr ""
+msgstr "Startpunkt för att skapa de nya incheckningarna. Om alternativet `--onto` inte anges är startpunkten `<uppström>`. Kan vara vilken giltig incheckning som helst, och inte bara ett befintligt grennamn."
 
 #. type: Plain text
 #: en/git-rebase.adoc:220
 msgid "As a special case, you may use \"A\\...B\" as a shortcut for the merge base of A and B if there is exactly one merge base. You can leave out at most one of A and B, in which case it defaults to HEAD."
-msgstr ""
+msgstr "Som ett specialfall kan du använda \"A\\...B\" som en genväg för sammanslagningsbasen för A och B om det finns exakt en sammanslagningsbas. Du kan utelämna högst en av A och B, i vilket fall standardvärdet är HEAD."
 
 #. type: Plain text
 #: en/git-rebase.adoc:222
 msgid "See TRANSPLANTING A TOPIC BRANCH WITH --ONTO above for examples."
-msgstr ""
+msgstr "Se TRANSPLANTERING AV EN ÄMNESGREN MED --ONTO ovan för exempel."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:223
@@ -43861,17 +43911,17 @@ msgstr "--keep-base"
 #. type: Plain text
 #: en/git-rebase.adoc:229
 msgid "Set the starting point at which to create the new commits to the merge base of `<upstream>` and `<branch>`. Running `git rebase --keep-base <upstream> <branch>` is equivalent to running `git rebase --reapply-cherry-picks --no-fork-point --onto <upstream>...<branch> <upstream> <branch>`."
-msgstr ""
+msgstr "Ange startpunkten för att skapa de nya incheckningar till sammanslagingsbasen för `<uppström>` och `<gren>`. Att köra `git rebase --keep-base <uppström> <gren>` motsvarar att köra `git rebase --reapply-cherry-picks --no-fork-point --onto <uppström>...<gren> <uppström> <gren>`."
 
 #. type: Plain text
 #: en/git-rebase.adoc:236
 msgid "This option is useful in the case where one is developing a feature on top of an upstream branch. While the feature is being worked on, the upstream branch may advance and it may not be the best idea to keep rebasing on top of the upstream but to keep the base commit as-is. As the base commit is unchanged this option implies `--reapply-cherry-picks` to avoid losing commits."
-msgstr ""
+msgstr "Det här alternativet är användbart om man utvecklar en funktion ovanpå en uppströmsgren. Medan funktionen arbetas med kan uppströmsgrenen avancera och det kanske inte är den bästa idén att fortsätta att ombasera ovanpå uppströmsgrenen utan att behålla basincheckningen som den är. Eftersom basincheckningen är oförändrad innebär det här alternativet `--reapply-cherry-picks` för att undvika att förlora incheckningar."
 
 #. type: Plain text
 #: en/git-rebase.adoc:241
 msgid "Although both this option and `--fork-point` find the merge base between `<upstream>` and `<branch>`, this option uses the merge base as the _starting point_ on which new commits will be created, whereas `--fork-point` uses the merge base to determine the _set of commits_ which will be rebased."
-msgstr ""
+msgstr "Även om både det här alternativet och `--fork-point` hittar sammanslagningsbasen mellan `<uppström>` och `<gren>`, använder det här alternativet sammanslagninsbasen som _startpunkt_ på vilken nya incheckningar kommer att skapas, medan `--fork-point` använder sammanslagnigsbasen för att bestämma _uppsättningen av incheckningar_ som kommer att ombaseras."
 
 #. type: Plain text
 #: en/git-rebase.adoc:243 en/git-rebase.adoc:258 en/git-rebase.adoc:286
@@ -43887,7 +43937,7 @@ msgstr "Se även INKOMPATIBLA ALTERNATIV nedan."
 #. type: Plain text
 #: en/git-rebase.adoc:248
 msgid "Upstream branch to compare against. May be any valid commit, not just an existing branch name. Defaults to the configured upstream for the current branch."
-msgstr ""
+msgstr "Uppströmsgren att jämföra mot. Kan vara vilken giltig incheckning som helst, inte bara ett befintligt grennamn. Standardinställningen är den konfigurerade uppströmsgrenen för den aktuella grenen."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:249
@@ -43898,27 +43948,27 @@ msgstr "<gren>"
 #. type: Plain text
 #: en/git-rebase.adoc:251
 msgid "Working branch; defaults to `HEAD`."
-msgstr ""
+msgstr "Arbetande gren; standardinställningen är `HEAD`."
 
 #. type: Plain text
 #: en/git-rebase.adoc:256
 msgid "Use applying strategies to rebase (calling `git-am` internally). This option may become a no-op in the future once the merge backend handles everything the apply one does."
-msgstr ""
+msgstr "Använd applicerings-strategier för att ombasera (anropa `git-am` internt). Det här alternativet kan bli utan funktion i framtiden när 'merge'-bakändan hanterar allt som applicera-funktionen gör."
 
 #. type: Plain text
 #: en/git-rebase.adoc:264
 msgid "How to handle commits that are not empty to start and are not clean cherry-picks of any upstream commit, but which become empty after rebasing (because they contain a subset of already upstream changes):"
-msgstr ""
+msgstr "Hur man hanterar incheckningar som inte är tomma till att börja med och inte är rena plockningar från någon uppströms incheckning, men som blir tomma efter ombasering (eftersom de innehåller en delmängd av redan uppströms ändringar):"
 
 #. type: Plain text
 #: en/git-rebase.adoc:268
 msgid "The commit will be dropped. This is the default behavior."
-msgstr ""
+msgstr "Incheckningen kommer att tas bort. Detta är standardbeteendet."
 
 #. type: Plain text
 #: en/git-rebase.adoc:271
 msgid "The commit will be kept. This option is implied when `--exec` is specified unless `-i`/`--interactive` is also specified."
-msgstr ""
+msgstr "Incheckningen kommer att behållas. Detta alternativ är underförstått när `--exec` anges om inte `-i`/`--interactive` också anges."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:272
@@ -43930,12 +43980,12 @@ msgstr "`ask`"
 #. type: Plain text
 #: en/git-rebase.adoc:277
 msgid "The rebase will halt when the commit is applied, allowing you to choose whether to drop it, edit files more, or just commit the empty changes. This option is implied when `-i`/`--interactive` is specified. `ask` is a deprecated synonym of `stop`."
-msgstr ""
+msgstr "Obaseringen stoppas när incheckningen tillämpas, vilket gör att du kan välja om du vill ta bort den, redigera fler filer eller bara checka-in de tomma ändringarna. Detta alternativ är underförstått när `-i`/`--interactive` är specificerat. `ask` är en föråldrad synonym till `stop`."
 
 #. type: Plain text
 #: en/git-rebase.adoc:284
 msgid "Note that commits which start empty are kept (unless `--no-keep-empty` is specified), and commits which are clean cherry-picks (as determined by `git log --cherry-mark ...`) are detected and dropped as a preliminary step (unless `--reapply-cherry-picks` or `--keep-base` is passed)."
-msgstr ""
+msgstr "Observera att incheckningar som börjar tomma behålls (såvida inte `--no-keep-empty` anges), och incheckningar som är rena plockningar (enligt `git log --cherry-mark ...`) detekteras och tas bort som ett preliminärt steg (såvida inte `--reapply-cherry-picks` eller `--keep-base` skickas)."
 
 #. type: Plain text
 #: en/git-rebase.adoc:287 en/git-rebase.adoc:652
@@ -43954,17 +44004,17 @@ msgstr "--keep-empty"
 #. type: Plain text
 #: en/git-rebase.adoc:296
 msgid "Do not keep commits that start empty before the rebase (i.e. that do not change anything from its parent) in the result. The default is to keep commits which start empty, since creating such commits requires passing the `--allow-empty` override flag to `git commit`, signifying that a user is very intentionally creating such a commit and thus wants to keep it."
-msgstr ""
+msgstr "Behåll inte incheckningar som börjar tomma före ombaseringen (dvs. som inte ändrar något från sin överordnade) i resultatet. Standardinställningen är att behålla incheckningar som börjar tomma, eftersom skapandet av sådana incheckningar kräver att flaggan `--allow-empty` skickas till `git commit`, vilket indikerar att en användare mycket avsiktligt skapar en sådan incheckning och därför vill behålla den."
 
 #. type: Plain text
 #: en/git-rebase.adoc:302
 msgid "Usage of this flag will probably be rare, since you can get rid of commits that start empty by just firing up an interactive rebase and removing the lines corresponding to the commits you don't want. This flag exists as a convenient shortcut, such as for cases where external tools generate many empty commits and you want them all removed."
-msgstr ""
+msgstr "Användning av denna flagga kommer förmodligen att vara sällsynt, eftersom du kan bli av med incheckningar som börjar tomma genom att bara starta en interaktiv rebase och ta bort raderna som motsvarar de incheckningar du inte vill ha. Denna flagga finns som en bekväm genväg, till exempel i fall där externa verktyg genererar många tomma incheckningar och du vill att alla ska tas bort."
 
 #. type: Plain text
 #: en/git-rebase.adoc:305
 msgid "For commits which do not start empty but become empty after rebasing, see the `--empty` flag."
-msgstr ""
+msgstr "För incheckningar som inte börjar tomma men blir tomma efter ombasering, se flaggan `--empty`."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:308
@@ -43983,22 +44033,22 @@ msgstr "--no-reapply-cherry-picks"
 #. type: Plain text
 #: en/git-rebase.adoc:315
 msgid "Reapply all clean cherry-picks of any upstream commit instead of preemptively dropping them. (If these commits then become empty after rebasing, because they contain a subset of already upstream changes, the behavior towards them is controlled by the `--empty` flag.)"
-msgstr ""
+msgstr "Återanvänd alla rena urval av alla uppströms-incheckningar istället för att i förväg ta bort dem. (Om dessa incheckningar sedan blir tomma efter ombasering, eftersom de innehåller en delmängd av redan uppströms-ändringar, styrs beteendet gentemot dem av flaggan `--empty`.)"
 
 #. type: Plain text
 #: en/git-rebase.adoc:324
 msgid "In the absence of `--keep-base` (or if `--no-reapply-cherry-picks` is given), these commits will be automatically dropped. Because this necessitates reading all upstream commits, this can be expensive in repositories with a large number of upstream commits that need to be read. When using the 'merge' backend, warnings will be issued for each dropped commit (unless `--quiet` is given). Advice will also be issued unless `advice.skippedCherryPicks` is set to false (see linkgit:git-config[1])."
-msgstr ""
+msgstr "I avsaknad av `--keep-base` (eller om `--no-reapply-cherry-picks` anges) kommer dessa incheckningar att tas bort automatiskt. Eftersom detta kräver att alla uppströms incheckningar läses kan detta vara dyrt i förvar med ett stort antal uppströms incheckningar som behöver läsas. När man använder 'merge'-bakändan kommer varningar att utfärdas för varje borttagen incheckning (såvida inte `--quiet` anges). Råd kommer också att utfärdas om inte `advice.skippedCherryPicks` är satt till falskt (se linkgit:git-config[1])."
 
 #. type: Plain text
 #: en/git-rebase.adoc:327
 msgid "`--reapply-cherry-picks` allows rebase to forgo reading all upstream commits, potentially improving performance."
-msgstr ""
+msgstr "`--reapply-cherry-picks` tillåter rebase att avstå från att läsa alla uppströms incheckningar, vilket potentiellt förbättrar prestandan."
 
 #. type: Plain text
 #: en/git-rebase.adoc:335
 msgid "No-op. Rebasing commits with an empty message used to fail and this option would override that behavior, allowing commits with empty messages to be rebased. Now commits with an empty message do not cause rebasing to halt."
-msgstr ""
+msgstr "Utan funktion. Ombasering av incheckningar med ett tomt meddelande misslyckades tidigare och det här alternativet åsidosatte det beteendet, vilket gjorde att incheckningar med tomma meddelanden kunde ombaseras. Nu orsakar inte incheckningar med ett tomt meddelande att ombaseringen stoppas."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:339 en/git-rebase.adoc:645 en/git-submodule.adoc:389
@@ -44011,28 +44061,28 @@ msgstr "--merge"
 #. type: Plain text
 #: en/git-rebase.adoc:341
 msgid "Using merging strategies to rebase (default)."
-msgstr ""
+msgstr "Använda sammanslagningsstrategier för att återbasera (standard)."
 
 #. type: Plain text
 #: en/git-rebase.adoc:347
 msgid "Note that a rebase merge works by replaying each commit from the working branch on top of the `<upstream>` branch. Because of this, when a merge conflict happens, the side reported as 'ours' is the so-far rebased series, starting with `<upstream>`, and 'theirs' is the working branch. In other words, the sides are swapped."
-msgstr ""
+msgstr "Observera att en ombaserings-sammanslagning fungerar genom att spela upp varje incheckning från arbetsgrenen ovanpå `<uppströms>`-grenen. På grund av detta, när en sammanslagningskonflikt inträffar, är sidan som rapporteras som 'ours' den hittills rebaserade serien, med början på `<uppströms>`, och 'theirs' är arbetsgrenen. Med andra ord, sidorna är utbytta."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:350
 #, no-wrap
 msgid "-s <strategy>"
-msgstr ""
+msgstr "-s <strategi>"
 
 #. type: Plain text
 #: en/git-rebase.adoc:354
 msgid "Use the given merge strategy, instead of the default `ort`. This implies `--merge`."
-msgstr ""
+msgstr "Använd den givna sammanslagningsstrategin istället för standardmetoden `ort`. Detta innebär `--merge`."
 
 #. type: Plain text
 #: en/git-rebase.adoc:359
 msgid "Because `git rebase` replays each commit from the working branch on top of the `<upstream>` branch using the given strategy, using the `ours` strategy simply empties all patches from the `<branch>`, which makes little sense."
-msgstr ""
+msgstr "Eftersom `git rebase` spelar upp varje incheckning från den fungerande grenen ovanpå `<uppströms>`-grenen med den givna strategin, tömmer `ours`-strategin helt enkelt alla patchar från `<gren>`, vilket är föga logiskt."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:362
@@ -44044,12 +44094,12 @@ msgstr "-X <strategy-option>"
 #: en/git-rebase.adoc:363
 #, no-wrap
 msgid "--strategy-option=<strategy-option>"
-msgstr ""
+msgstr "--strategy-option=<strategi-alternativ>"
 
 #. type: Plain text
 #: en/git-rebase.adoc:368
 msgid "Pass the <strategy-option> through to the merge strategy. This implies `--merge` and, if no strategy has been specified, `-s ort`. Note the reversal of 'ours' and 'theirs' as noted above for the `-m` option."
-msgstr ""
+msgstr "Skicka <strategi-alternativ> vidare till sammanslagnings-strategin. Detta innebär `--merge` och, om ingen strategi har specificerats, `-s ort`. Observera omkastningen av 'ours' och 'theirs' som nämnts ovan för `-m`-alternativet."
 
 #. type: Plain text
 #: en/git-rebase.adoc:385
@@ -44059,22 +44109,22 @@ msgstr "Var tyst. implicerar `--no-stat`."
 #. type: Plain text
 #: en/git-rebase.adoc:389
 msgid "Be verbose. Implies `--stat`."
-msgstr ""
+msgstr "Var utförlig. Innebär `--stat`."
 
 #. type: Plain text
 #: en/git-rebase.adoc:393
 msgid "Show a diffstat of what changed upstream since the last rebase. The diffstat is also controlled by the configuration option rebase.stat."
-msgstr ""
+msgstr "Visa en diffstat över vad som har ändrats uppströms sedan den senaste ombaseringen. Diffstat styrs också av konfigurationsalternativet rebase.stat."
 
 #. type: Plain text
 #: en/git-rebase.adoc:397
 msgid "Do not show a diffstat as part of the rebase process."
-msgstr ""
+msgstr "Visa inte en diffstat som en del av rebase-processen."
 
 #. type: Plain text
 #: en/git-rebase.adoc:400
 msgid "This option bypasses the pre-rebase hook. See also linkgit:githooks[5]."
-msgstr ""
+msgstr "Det här alternativet kringgår pre-rebase-kroken. Se även linkgit:githooks[5]."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:401 en/git-rev-parse.adoc:109 en/git-show-ref.adoc:69
@@ -44091,7 +44141,7 @@ msgstr "Tillåter att pre-rebase-kroken körs, vilket är standardinställningen
 #. type: Plain text
 #: en/git-rebase.adoc:410
 msgid "Ensure at least `<n>` lines of surrounding context match before and after each change. When fewer lines of surrounding context exist they all must match. By default no context is ever ignored. Implies `--apply`."
-msgstr ""
+msgstr "Se till att minst `<n>` rader med omgivande kontext matchar före och efter varje ändring. När det finns färre rader med omgivande kontext måste alla matcha. Som standard ignoreras inget kontext någonsin. Innebär `--apply`."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:413
@@ -44110,12 +44160,12 @@ msgstr "--force-rebase"
 #. type: Plain text
 #: en/git-rebase.adoc:419
 msgid "Individually replay all rebased commits instead of fast-forwarding over the unchanged ones. This ensures that the entire history of the rebased branch is composed of new commits."
-msgstr ""
+msgstr "Spela upp alla ombaserade incheckningar individuellt istället för att spola framåt över de oförändrade. Detta säkerställer att hela historiken för den ombaserade grenen består av nya incheckningar."
 
 #. type: Plain text
 #: en/git-rebase.adoc:425
 msgid "You may find this helpful after reverting a topic branch merge, as this option recreates the topic branch with fresh commits so it can be remerged successfully without needing to \"revert the reversion\" (see the link:howto/revert-a-faulty-merge.html[revert-a-faulty-merge How-To] for details)."
-msgstr ""
+msgstr "Du kan tycka att detta är användbart efter att du har återställt en sammanslagning av ämnesgrenar, eftersom det här alternativet återskapar ämnesgrenen med nya incheckningar så att den kan sammanfogas igen utan att behöva \"återställa återställningen\" (se länken:howto/revert-a-faulty-merge.html[revert-a-faulty-merge How-To] för mer information)."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:427
@@ -44127,70 +44177,70 @@ msgstr "--no-fork-point"
 #. type: Plain text
 #: en/git-rebase.adoc:431
 msgid "Use reflog to find a better common ancestor between `<upstream>` and `<branch>` when calculating which commits have been introduced by `<branch>`."
-msgstr ""
+msgstr "Använd reflog för att hitta en bättre gemensam förfader mellan `<uppströms>` och `<gren>` när du beräknar vilka incheckningar som har introducerats av `<gren>`."
 
 #. type: Plain text
 #: en/git-rebase.adoc:437
 msgid "When `--fork-point` is active, 'fork_point' will be used instead of `<upstream>` to calculate the set of commits to rebase, where 'fork_point' is the result of `git merge-base --fork-point <upstream> <branch>` command (see linkgit:git-merge-base[1]). If 'fork_point' ends up being empty, the `<upstream>` will be used as a fallback."
-msgstr ""
+msgstr "När `--fork-point` är aktivt kommer 'fork_point' att användas istället för `<uppströms>` för att beräkna mängden incheckningar som ska ombaseras, där 'fork_point' är resultatet av kommandot `git merge-base --fork-point <uppströms> <gren>` (se linkgit:git-merge-base[1]). Om 'fork_point' blir tomt kommer `<uppströms>` att användas som reserv."
 
 #. type: Plain text
 #: en/git-rebase.adoc:441
 msgid "If `<upstream>` or `--keep-base` is given on the command line, then the default is `--no-fork-point`, otherwise the default is `--fork-point`. See also `rebase.forkpoint` in linkgit:git-config[1]."
-msgstr ""
+msgstr "Om `<uppströms>` eller `--keep-base` anges på kommandoraden, är standardvärdet `--no-fork-point`, annars är standardvärdet `--fork-point`. Se även `rebase.forkpoint` i linkgit:git-config[1]."
 
 #. type: Plain text
 #: en/git-rebase.adoc:445
 msgid "If your branch was based on `<upstream>` but `<upstream>` was rewound and your branch contains commits which were dropped, this option can be used with `--keep-base` in order to drop those commits from your branch."
-msgstr ""
+msgstr "Om din gren var baserad på `<uppströms>` men `<uppströms>` spolades om och din gren innehåller incheckningar som togs bort, kan den här väljaren användas med `--keep-base` för att ta bort dessa incheckningar från din gren."
 
 #. type: Plain text
 #: en/git-rebase.adoc:452
 msgid "Ignore whitespace differences when trying to reconcile differences. Currently, each backend implements an approximation of this behavior:"
-msgstr ""
+msgstr "Ignorera skillnader i blanksteg när du försöker jämka skillnaderna. För närvarande implementerar varje bakända en approximation av detta beteende:"
 
 #. type: Labeled list
 #: en/git-rebase.adoc:453
 #, no-wrap
 msgid "apply backend"
-msgstr ""
+msgstr "tillämpa bakända"
 
 #. type: Plain text
 #: en/git-rebase.adoc:459
 msgid "When applying a patch, ignore changes in whitespace in context lines. Unfortunately, this means that if the \"old\" lines being replaced by the patch differ only in whitespace from the existing file, you will get a merge conflict instead of a successful patch application."
-msgstr ""
+msgstr "När du tillämpar en patch, ignorera ändringar i blanktecken i kontextrader. Tyvärr innebär detta att om de \"gamla\" raderna som ersätts av patchen bara skiljer sig i blanktecken från den befintliga filen, kommer du att få en sammanslagningskonflikt istället för en lyckad patch-applikation."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:460
 #, no-wrap
 msgid "merge backend"
-msgstr ""
+msgstr "merge bakända"
 
 #. type: Plain text
 #: en/git-rebase.adoc:465
 msgid "Treat lines with only whitespace changes as unchanged when merging. Unfortunately, this means that any patch hunks that were intended to modify whitespace and nothing else will be dropped, even if the other side had no changes that conflicted."
-msgstr ""
+msgstr "Behandla rader med endast ändringar i blanktecken som oförändrade vid sammanslagning. Tyvärr, innebär detta att alla patch-bitar som var avsedda att modifiera blanktecken och inget annat kommer att tas bort, även om den andra sidan inte hade några ändringar som skapade konflikt."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:466
 #, no-wrap
 msgid "--whitespace=<option>"
-msgstr ""
+msgstr "--whitespace=<alternativ>"
 
 #. type: Plain text
 #: en/git-rebase.adoc:470
 msgid "This flag is passed to the `git apply` program (see linkgit:git-apply[1]) that applies the patch. Implies `--apply`."
-msgstr ""
+msgstr "Denna flaggan skickas till `git apply`-programmet (se linkgit:git-apply[1]) som tillämpar patchen. Implicerar `--apply`."
 
 #. type: Plain text
 #: en/git-rebase.adoc:477
 msgid "Instead of using the current time as the committer date, use the author date of the commit being rebased as the committer date. This option implies `--force-rebase`."
-msgstr ""
+msgstr "Istället för att använda aktuell tid som inchecknings-datum, använd författar-datumet för den incheckning som ska ombaseras som incheckare-datum. Detta alternativ innebär `--force-rebase`."
 
 #. type: Plain text
 #: en/git-rebase.adoc:484
 msgid "The history walking machinery assumes that commits have non-decreasing commit timestamps. You should consider if you really need to use this option. Then you should only use this option to override the committer date when rebasing commits on top of a base which commit is older (in terms of the commit date) than the oldest commit you are applying (in terms of the author date)."
-msgstr ""
+msgstr "Historikvandringsmaskineriet antar att incheckningar har icke-minskande inchecknings-tidsstämplar. Du bör överväga om du verkligen behöver använda det här alternativet. Då bör du bara använda det här alternativet för att åsidosätta incheckare-datumet när du baserar om incheckningar ovanpå en bas vars incheckning är äldre (vad gäller inchecknings-datum) än den äldsta incheckning du tillämpar (vad gäller författardatum)."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:486
@@ -44202,22 +44252,22 @@ msgstr "--reset-author-date"
 #. type: Plain text
 #: en/git-rebase.adoc:490
 msgid "Instead of using the author date of the original commit, use the current time as the\tauthor date of the rebased commit. This option implies `--force-rebase`."
-msgstr ""
+msgstr "Istället för att använda författar-datumet för den ursprungliga incheckningen, använd aktuell tid som författardatum för den ombaserade incheckningen. Detta alternativ innebär `--force-rebase`."
 
 #. type: Plain text
 #: en/git-rebase.adoc:497
 msgid "Add a `Signed-off-by` trailer to all the rebased commits. Note that if `--interactive` is given then only commits marked to be picked, edited or reworded will have the trailer added."
-msgstr ""
+msgstr "Lägg till en `Signed-off-by`-trailer till alla ombaserade incheckningar. Observera att om `--interactive` anges så kommer endast incheckningar som markerats för att plockas, redigeras eller omformuleras att få släpet tillagd."
 
 #. type: Plain text
 #: en/git-rebase.adoc:505
 msgid "Make a list of the commits which are about to be rebased. Let the user edit that list before rebasing. This mode can also be used to split commits (see SPLITTING COMMITS below)."
-msgstr ""
+msgstr "Gör en lista över de incheckningar som ska ombaseras. Låt användaren redigera listan innan ombaseringen. Det här läget kan också användas för att dela incheckningar (se DELA INCHEKNINGAR nedan)."
 
 #. type: Plain text
 #: en/git-rebase.adoc:509
 msgid "The commit list format can be changed by setting the configuration option rebase.instructionFormat. A customized instruction format will automatically have the commit hash prepended to the format."
-msgstr ""
+msgstr "Inchecknings-listans format kan ändras genom att ställa in konfigurationsalternativet rebase.instructionFormat. Ett anpassat instruktionsformat kommer automatiskt att lägga till inchecknings-hashen före formatet."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:513
@@ -44236,17 +44286,17 @@ msgstr "--no-rebase-merges"
 #. type: Plain text
 #: en/git-rebase.adoc:524
 msgid "By default, a rebase will simply drop merge commits from the todo list, and put the rebased commits into a single, linear branch. With `--rebase-merges`, the rebase will instead try to preserve the branching structure within the commits that are to be rebased, by recreating the merge commits. Any resolved merge conflicts or manual amendments in these merge commits will have to be resolved/re-applied manually. `--no-rebase-merges` can be used to countermand both the `rebase.rebaseMerges` config option and a previous `--rebase-merges`."
-msgstr ""
+msgstr "Som standard, kommer en rebase helt enkelt att ta bort sammanslagnings-incheckningar från att-göra-listan, och placera de ombaserade incheckningarna i en enda, linjär gren. Med `--rebase-merges` kommer ombaseringen istället att försöka bevara förgreningsstrukturen inom de incheckningar som ska ombaseras, genom att återskapa sammanslagnings-incheckningar. Eventuella lösta sammanslagnings-konflikter eller manuella ändringar i dessa sammanslagnings-incheckningar måste lösas/återanvändas manuellt. `--no-rebase-merges` kan användas för att upphäva både konfigurationsalternativet `rebase.rebaseMerges` och ett tidigare `--rebase-merges`."
 
 #. type: Plain text
 #: en/git-rebase.adoc:533
 msgid "When rebasing merges, there are two modes: `rebase-cousins` and `no-rebase-cousins`. If the mode is not specified, it defaults to `no-rebase-cousins`. In `no-rebase-cousins` mode, commits which do not have `<upstream>` as direct ancestor will keep their original branch point, i.e. commits that would be excluded by linkgit:git-log[1]'s `--ancestry-path` option will keep their original ancestry by default. In `rebase-cousins` mode, such commits are instead rebased onto `<upstream>` (or `<onto>`, if specified)."
-msgstr ""
+msgstr "När ombaserings-sammanslagningar görs finns det två lägen: `rebase-cousins` och `no-rebase-cousins`. Om läget inte anges används `no-rebase-cousins` som standard. I `no-rebase-cousins`-läget kommer incheckningar som inte har `<uppströms>` som direkt förfader att behålla sin ursprungliga förgreningspunkt, d.v.s. incheckningar som skulle exkluderas av linkgit:git-log[1]'s `--ancestry-path`-alternativ kommer att behålla sina ursprungliga förfäders som standard. I `rebase-cousins`-läget ombaseras sådana incheckningar istället på `<uppströms>` (eller `<onto>`, om angivet)."
 
 #. type: Plain text
 #: en/git-rebase.adoc:537
 msgid "It is currently only possible to recreate the merge commits using the `ort` merge strategy; different merge strategies can be used only via explicit `exec git merge -s <strategy> [...]` commands."
-msgstr ""
+msgstr "Det är för närvarande bara möjligt att återskapa sammanslagnings-incheckningar med hjälp av sammanslagings-strategin `ort`; olika sammanslagings-strategier kan bara användas via explicita `exec git merge -s <strategi> [...]`-kommandon."
 
 #. type: Plain text
 #: en/git-rebase.adoc:539
@@ -44258,55 +44308,55 @@ msgstr "Se även REBASERA SAMMANSLAGNINGAR och INKOMPATIBLA ALTERNATIV nedan."
 #: en/git-rebase.adoc:540
 #, no-wrap
 msgid "-x <cmd>"
-msgstr ""
+msgstr "-x <cmd>"
 
 #. type: Labeled list
 #: en/git-rebase.adoc:541
 #, no-wrap
 msgid "--exec <cmd>"
-msgstr ""
+msgstr "--exec <cmd>"
 
 #. type: Plain text
 #: en/git-rebase.adoc:546
 msgid "Append \"exec <cmd>\" after each line creating a commit in the final history. `<cmd>` will be interpreted as one or more shell commands. Any command that fails will interrupt the rebase, with exit code 1."
-msgstr ""
+msgstr "Lägg till \"exec <cmd>\" efter varje rad som skapar en incheckning i den slutliga historiken. `<cmd>` kommer att tolkas som ett eller flera shell-kommandon. Alla kommandon som misslyckas kommer att avbryta rebase, med avslutningskod 1."
 
 #. type: Plain text
 #: en/git-rebase.adoc:549
 msgid "You may execute several commands by either using one instance of `--exec` with several commands:"
-msgstr ""
+msgstr "Du kan köra flera kommandon genom att antingen använda en instans av `--exec` med flera kommandon:"
 
 #. type: Plain text
 #: en/git-rebase.adoc:551
 #, no-wrap
 msgid "\tgit rebase -i --exec \"cmd1 && cmd2 && ...\"\n"
-msgstr ""
+msgstr "\tgit rebase -i --exec \"cmd1 && cmd2 && ...\"\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:553
 msgid "or by giving more than one `--exec`:"
-msgstr ""
+msgstr "eller genom att ange mer än en `--exec`:"
 
 #. type: Plain text
 #: en/git-rebase.adoc:555
 #, no-wrap
 msgid "\tgit rebase -i --exec \"cmd1\" --exec \"cmd2\" --exec ...\n"
-msgstr ""
+msgstr "\tgit rebase -i --exec \"cmd1\" --exec \"cmd2\" --exec ...\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:559
 msgid "If `--autosquash` is used, `exec` lines will not be appended for the intermediate commits, and will only appear at the end of each squash/fixup series."
-msgstr ""
+msgstr "Om `--autosquash` används kommer `exec`-rader inte att läggas till för mellanliggande incheckningar, och kommer bara att visas i slutet av varje squash/fixup-serie (hopslagning/inbakning)."
 
 #. type: Plain text
 #: en/git-rebase.adoc:562
 msgid "This uses the `--interactive` machinery internally, but it can be run without an explicit `--interactive`."
-msgstr ""
+msgstr "Detta använder `--interactive`-maskineriet internt, men det kan köras utan en explicit `--interactive`."
 
 #. type: Plain text
 #: en/git-rebase.adoc:569
 msgid "Rebase all commits reachable from `<branch>`, instead of limiting them with an `<upstream>`. This allows you to rebase the root commit(s) on a branch."
-msgstr ""
+msgstr "Ombasera alla incheckningar som är åtkomliga från `<gren>`, istället för att begränsa dem med en `<uppströms>`. Detta låter dig ombasera rot-incheckning(ar) på en gren."
 
 #. type: Plain text
 #: en/git-rebase.adoc:572 en/git-rebase.adoc:648
@@ -44325,22 +44375,22 @@ msgstr "--no-autosquash"
 #. type: Plain text
 #: en/git-rebase.adoc:581
 msgid "Automatically squash commits with specially formatted messages into previous commits being rebased. If a commit message starts with \"squash! \", \"fixup! \" or \"amend! \", the remainder of the title is taken as a commit specifier, which matches a previous commit if it matches the title or the hash of that commit. If no commit matches fully, matches of the specifier with the start of commit titles are considered."
-msgstr ""
+msgstr "Automatiskt slå ihop incheckningar med specialformaterade meddelanden till tidigare incheckningar som ombaseras. Om ett incheckning-meddelande börjar med \"squash!\", \"fixup!\" eller \"amend!\", tas resten av titeln som en inchecknings-specifikation, som matchar en tidigare incheckning om den matchar titeln eller hashen för den incheckningen. Om ingen incheckning matchar helt, beaktas matchningar av specifikationen med början av inchecknings-titlarna."
 
 #. type: Plain text
 #: en/git-rebase.adoc:586
 msgid "In the rebase todo list, the actions of squash, fixup and amend commits are changed from `pick` to `squash`, `fixup` or `fixup -C`, respectively, and they are moved right after the commit they modify. The `--interactive` option can be used to review and edit the todo list before proceeding."
-msgstr ""
+msgstr "I den ombaserade att-göra-listan ändras åtgärderna för squash-, fixup- och amend-incheckningar från `pick` till `squash`, `fixup` respektive `fixup -C`, och de flyttas direkt efter den incheckning de ändrar. Alternativet `--interactive` kan användas för att granska och redigera att-göra-listan innan man fortsätter."
 
 #. type: Plain text
 #: en/git-rebase.adoc:591
 msgid "The recommended way to create commits with squash markers is by using the `--squash`, `--fixup`, `--fixup=amend:` or `--fixup=reword:` options of linkgit:git-commit[1], which take the target commit as an argument and automatically fill in the title of the new commit from that."
-msgstr ""
+msgstr "Det rekommenderade sättet att skapa incheckningar med ihopslagnings-markörer är att använda alternativen `--squash`, `--fixup`, `--fixup=amend:` eller `--fixup=reword:` i linkgit:git-commit[1], vilka tar målincheckningen som ett argument och automatiskt fyller i titeln på den nya incheckningen utifrån den."
 
 #. type: Plain text
 #: en/git-rebase.adoc:595
 msgid "Setting configuration variable `rebase.autoSquash` to true enables auto-squashing by default for interactive rebase. The `--no-autosquash` option can be used to override that setting."
-msgstr ""
+msgstr "Om konfigurationsvariabeln `rebase.autoSquash` sätts till true aktiveras automatisk mosning som standard för interaktiv rebase. Alternativet `--no-autosquash` kan användas för att åsidosätta den inställningen."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:598
@@ -44378,17 +44428,17 @@ msgstr "--no-reschedule-failed-exec"
 #. type: Plain text
 #: en/git-rebase.adoc:610
 msgid "Automatically reschedule `exec` commands that failed. This only makes sense in interactive mode (or when an `--exec` option was provided)."
-msgstr ""
+msgstr "Planera automatiskt om `exec`-kommandon som misslyckades. Detta är bara logiskt i interaktivt läge (eller när ett `--exec`-alternativ tillhandahölls)."
 
 #. type: Plain text
 #: en/git-rebase.adoc:615
 msgid "This option applies once a rebase is started. It is preserved for the whole rebase based on, in order, the command line option provided to the initial `git rebase`, the `rebase.rescheduleFailedExec` configuration (see linkgit:git-config[1] or \"CONFIGURATION\" below), or it defaults to false."
-msgstr ""
+msgstr "Det här alternativet gäller när en ombasering har startats. Det bevaras för hela ombaseringen baserat på, i ordning, kommandoradsalternativet som anges till den initiala `git rebase`, `rebase.rescheduleFailedExec`-konfigurationen (se linkgit:git-config[1] eller \"KONFIGURATION\" nedan), eller så har det standardvärdet falskt."
 
 #. type: Plain text
 #: en/git-rebase.adoc:621
 msgid "Recording this option for the whole rebase is a convenience feature. Otherwise an explicit `--no-reschedule-failed-exec` at the start would be overridden by the presence of a `rebase.rescheduleFailedExec=true` configuration when `git rebase --continue` is invoked. Currently, you cannot pass `--[no-]reschedule-failed-exec` to `git rebase --continue`."
-msgstr ""
+msgstr "Att registrera det här alternativet för hela ombaseringen är en bekvämlighetsfunktion. Annars skulle en explicit `--no-reschedule-failed-exec` i början åsidosättas av närvaron av en `rebase.rescheduleFailedExec=true`-konfiguration när `git rebase --continue` anropas. För närvarande kan du inte skicka `--[no-]reschedule-failed-exec` till `git rebase --continue`."
 
 #. type: Plain text
 #: en/git-rebase.adoc:622 en/git-rebase.adoc:655
@@ -44407,12 +44457,12 @@ msgstr "--no-update-refs"
 #. type: Plain text
 #: en/git-rebase.adoc:627
 msgid "Automatically force-update any branches that point to commits that are being rebased. Any branches that are checked out in a worktree are not updated in this way."
-msgstr ""
+msgstr "Tvångsuppdatera automatiskt alla grenar som pekar på incheckningar som ombaseras. Grenar som är utcheckade i ett arbetsträd uppdateras inte på detta sätt."
 
 #. type: Plain text
 #: en/git-rebase.adoc:630
 msgid "If the configuration variable `rebase.updateRefs` is set, then this option can be used to override and disable this setting."
-msgstr ""
+msgstr "Om konfigurationsvariabeln `rebase.updateRefs` är angiven kan det här alternativet användas för att åsidosätta och inaktivera inställningen."
 
 #. type: Title -
 #: en/git-rebase.adoc:634
@@ -44423,7 +44473,7 @@ msgstr "REBASERA SAMMANSLAGNINGAR"
 #. type: Plain text
 #: en/git-rebase.adoc:637
 msgid "The following options:"
-msgstr ""
+msgstr "Följande alternativ:"
 
 #. type: Plain text
 #: en/git-rebase.adoc:640
@@ -44434,7 +44484,7 @@ msgstr "--whitespace"
 #. type: Plain text
 #: en/git-rebase.adoc:643
 msgid "are incompatible with the following options:"
-msgstr ""
+msgstr "är inte kompatibla med följande alternativ:"
 
 #. type: Plain text
 #: en/git-rebase.adoc:646
@@ -44470,70 +44520,70 @@ msgstr "--empty="
 #. type: Plain text
 #: en/git-rebase.adoc:654
 msgid "--[no-]reapply-cherry-picks when used without --keep-base"
-msgstr ""
+msgstr "--[no-]reapply-cherry-picks när det används utan --keep-base"
 
 #. type: Plain text
 #: en/git-rebase.adoc:656
 msgid "--root when used without --onto"
-msgstr ""
+msgstr "--root när det används utan -onto"
 
 #. type: Plain text
 #: en/git-rebase.adoc:658
 msgid "In addition, the following pairs of options are incompatible:"
-msgstr ""
+msgstr "Dessutom är följande par av alternativ inkompatibla:"
 
 #. type: Plain text
 #: en/git-rebase.adoc:660
 msgid "--keep-base and --onto"
-msgstr ""
+msgstr "--keep-base och --onto"
 
 #. type: Plain text
 #: en/git-rebase.adoc:661
 msgid "--keep-base and --root"
-msgstr ""
+msgstr "--keep-base och --root"
 
 #. type: Plain text
 #: en/git-rebase.adoc:662
 msgid "--fork-point and --root"
-msgstr ""
+msgstr "--fork-point och --root"
 
 #. type: Title -
 #: en/git-rebase.adoc:664
 #, no-wrap
 msgid "BEHAVIORAL DIFFERENCES"
-msgstr ""
+msgstr "BETEENDESKILLNADER"
 
 #. type: Plain text
 #: en/git-rebase.adoc:673
 msgid "`git rebase` has two primary backends: 'apply' and 'merge'. (The 'apply' backend used to be known as the 'am' backend, but the name led to confusion as it looks like a verb instead of a noun. Also, the 'merge' backend used to be known as the interactive backend, but it is now used for non-interactive cases as well. Both were renamed based on lower-level functionality that underpinned each.) There are some subtle differences in how these two backends behave:"
-msgstr ""
+msgstr "`git rebase` har två primära bakändor: 'apply' och 'merge'. ('Apply'-bakändan brukade vara känt som 'am'-bakändan, men namnet ledde till förvirring eftersom det ser ut som ett verb istället för ett substantiv. Även 'merge'-bakändan brukade vara känt som den interaktiva bakändan, men den används nu även för icke-interaktiva fall. Båda döptes om baserat på funktionalitet på lägre nivå som låg till grund för varje.) Det finns några subtila skillnader i hur dessa två bakändor beter sig:"
 
 #. type: Title ~
 #: en/git-rebase.adoc:675
 #, no-wrap
 msgid "Empty commits"
-msgstr ""
+msgstr "Tomma incheckningar"
 
 #. type: Plain text
 #: en/git-rebase.adoc:681
 msgid "The 'apply' backend unfortunately drops intentionally empty commits, i.e. commits that started empty, though these are rare in practice. It also drops commits that become empty and has no option for controlling this behavior."
-msgstr ""
+msgstr "'Apply'-bakändan tar tyvärr bort avsiktligt tomma incheckningar, dvs. incheckningar som började tomma, även om dessa är sällsynta i praktiken. Det tar också bort incheckningar som blir tomma och har inget alternativ för att kontrollera detta beteende."
 
 #. type: Plain text
 #: en/git-rebase.adoc:685
 msgid "The 'merge' backend keeps intentionally empty commits by default (though with `-i` they are marked as empty in the todo list editor, or they can be dropped automatically with `--no-keep-empty`)."
-msgstr ""
+msgstr "Bakändan 'merge' behåller avsiktligt tomma incheckningar som standard (men med `-i` markeras de som tomma i att-göra-listeredigeraren, eller så kan de tas bort automatiskt med `--no-keep-empty`)."
 
 #. type: Plain text
 #: en/git-rebase.adoc:691
 msgid "Similar to the apply backend, by default the merge backend drops commits that become empty unless `-i`/`--interactive` is specified (in which case it stops and asks the user what to do). The merge backend also has an `--empty=(drop|keep|stop)` option for changing the behavior of handling commits that become empty."
-msgstr ""
+msgstr "I likhet med apply-bakändan tar merge-bakändan som standard bort incheckningar som blir tomma om inte `-i`/`--interactive` anges (i vilket fall den stoppar och frågar användaren vad den ska göra). Merge-backend har också ett `--empty=(drop|keep|stop)`-alternativ för att ändra beteendet för hantering av incheckningar som blir tomma."
 
 #. type: Title ~
 #: en/git-rebase.adoc:693
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Directory rename detection"
-msgstr ""
+msgstr "Detektering av katalog-omdöpning"
 
 #. type: Plain text
 #: en/git-rebase.adoc:703
@@ -44543,158 +44593,158 @@ msgstr "På grund av bristen på korrekt trädinformation (som uppstår genom at
 #. type: Plain text
 #: en/git-rebase.adoc:706
 msgid "Directory rename detection works with the 'merge' backend to provide you warnings in such cases."
-msgstr ""
+msgstr "Katalog omdöpnings detektering fungerar med 'merge'-bakändan för att ge dig varningar i sådana fall."
 
 #. type: Title ~
 #: en/git-rebase.adoc:708
 #, no-wrap
 msgid "Context"
-msgstr ""
+msgstr "Kontext"
 
 #. type: Plain text
 #: en/git-rebase.adoc:724
 msgid "The 'apply' backend works by creating a sequence of patches (by calling `format-patch` internally), and then applying the patches in sequence (calling `am` internally). Patches are composed of multiple hunks, each with line numbers, a context region, and the actual changes. The line numbers have to be taken with some offset, since the other side will likely have inserted or deleted lines earlier in the file. The context region is meant to help find how to adjust the line numbers in order to apply the changes to the right lines. However, if multiple areas of the code have the same surrounding lines of context, the wrong one can be picked. There are real-world cases where this has caused commits to be reapplied incorrectly with no conflicts reported. Setting `diff.context` to a larger value may prevent such types of problems, but increases the chance of spurious conflicts (since it will require more lines of matching context to apply)."
-msgstr ""
+msgstr "Bakändan 'apply' fungerar genom att skapa en sekvens av patchar (genom att anropa 'format-patch' internt) och sedan tillämpa patcharna i sekvens (genom att anropa 'am' internt). Patchar består av flera bitar, var och en med radnummer, en kontextregion och de faktiska ändringarna. Radnumren måste tas med viss förskjutning, eftersom den andra sidan sannolikt har infogat eller tagit bort rader tidigare i filen. Kontextregionen är avsedd att hjälpa till att hitta hur man justerar radnumren för att tillämpa ändringarna på rätt rader. Men om flera områden i koden har samma omgivande kontextrader kan fel rad väljas. Det finns verkliga fall där detta har orsakat att incheckningar har tillämpats felaktigt utan att några konflikter har rapporterats. Att sätta 'diff.context' till ett högre värde kan förhindra sådana typer av problem, men ökar risken för falska konflikter (eftersom det kommer att kräva fler rader med matchande kontext för att tillämpas)."
 
 #. type: Plain text
 #: en/git-rebase.adoc:727
 msgid "The 'merge' backend works with a full copy of each relevant file, insulating it from these types of problems."
-msgstr ""
+msgstr "Bakändan 'merge' arbetar med en fullständig kopia av varje relevant fil, vilket isolerar den från den här typen av problem."
 
 #. type: Title ~
 #: en/git-rebase.adoc:729
 #, no-wrap
 msgid "Labelling of conflicts markers"
-msgstr ""
+msgstr "Märkning av konfliktmarkörer"
 
 #. type: Plain text
 #: en/git-rebase.adoc:741
 msgid "When there are content conflicts, the merge machinery tries to annotate each side's conflict markers with the commits where the content came from. Since the 'apply' backend drops the original information about the rebased commits and their parents (and instead generates new fake commits based off limited information in the generated patches), those commits cannot be identified; instead it has to fall back to a commit summary. Also, when `merge.conflictStyle` is set to `diff3` or `zdiff3`, the 'apply' backend will use \"constructed merge base\" to label the content from the merge base, and thus provide no information about the merge base commit whatsoever."
-msgstr ""
+msgstr "När det finns innehållskonflikter försöker sammanfogningsmaskineriet att annotera varje sidas konfliktmarkörer med de incheckningar som innehållet kommer ifrån. Eftersom 'apply'-bakändan tar bort den ursprungliga informationen om de ombaserade incheckningarna och deras föräldrar (och istället genererar nya falska incheckningar baserat på begränsad information i de genererade patcharna), kan dessa incheckningar inte identifieras; istället måste man återgå till en inchecknings-sammanfattning. När 'merge.conflictStyle' är satt till 'diff3' eller 'zdiff3' kommer 'apply'-bakändan också att använda \"konstruerad sammanfogningsbas\" för att märka innehållet från sammanslagnings basen, och därmed inte ge någon information om sammanfognings bas incheckningen alls."
 
 #. type: Plain text
 #: en/git-rebase.adoc:744
 msgid "The 'merge' backend works with the full commits on both sides of history and thus has no such limitations."
-msgstr ""
+msgstr "Bakändan 'merge' fungerar med fullständiga incheckningar på båda sidor av historiken och har således inga sådana begränsningar."
 
 #. type: Title ~
 #: en/git-rebase.adoc:746
 #, no-wrap
 msgid "Hooks"
-msgstr ""
+msgstr "Krokar"
 
 #. type: Plain text
 #: en/git-rebase.adoc:760
 msgid "The 'apply' backend has not traditionally called the post-commit hook, while the 'merge' backend has. Both have called the post-checkout hook, though the 'merge' backend has squelched its output. Further, both backends only call the post-checkout hook with the starting point commit of the rebase, not the intermediate commits nor the final commit. In each case, the calling of these hooks was by accident of implementation rather than by design (both backends were originally implemented as shell scripts and happened to invoke other commands like `git checkout` or `git commit` that would call the hooks). Both backends should have the same behavior, though it is not entirely clear which, if any, is correct. We will likely make rebase stop calling either of these hooks in the future."
-msgstr ""
+msgstr "Bakändan 'apply' har traditionellt sett inte anropat post-inchecknings-kroken, medan bakändan 'merge' har gjort det. Båda har anropat post-utchecknings-kroken, även om 'merge'-bakändan har kvävt dess utdata. Dessutom anropar båda bakändorna bara post-utcheckning-kroken med startpunkts-incheckningen för ombaseringen, inte de mellanliggande incheckningen eller den slutliga incheckningen. I båda fallen var anropet av dessa krokar ett misstag i implementeringen snarare än av design (båda bakändorna implementerades ursprungligen som shell-skript och råkade anropa andra kommandon som 'git checkout' eller 'git commit' som skulle anropa krokarna). Båda bakändorna bör ha samma beteende, även om det inte är helt klart vilket, om något, som är korrekt. Vi kommer sannolikt att få ombaseringen att sluta anropa någon av dessa krokar i framtiden."
 
 #. type: Title ~
 #: en/git-rebase.adoc:762
 #, no-wrap
 msgid "Interruptability"
-msgstr ""
+msgstr "Avbrytbarhet"
 
 #. type: Plain text
 #: en/git-rebase.adoc:771
 msgid "The 'apply' backend has safety problems with an ill-timed interrupt; if the user presses Ctrl-C at the wrong time to try to abort the rebase, the rebase can enter a state where it cannot be aborted with a subsequent `git rebase --abort`. The 'merge' backend does not appear to suffer from the same shortcoming. (See https://lore.kernel.org/git/20200207132152.GC2868@szeder.dev/ for details.)"
-msgstr ""
+msgstr "Bakändan 'apply' har säkerhetsproblem med ett feltajmat avbrott; om användaren trycker Ctrl-C vid fel tidpunkt för att försöka avbryta ombaseringen, kan ombaseringen gå in i ett tillstånd där den inte kan avbrytas med en efterföljande `git rebase --abort`. Bakändan 'merge' verkar inte lida av samma brist. (Se https://lore.kernel.org/git/20200207132152.GC2868@szeder.dev/ för mer information.)"
 
 #. type: Title ~
 #: en/git-rebase.adoc:773
 #, no-wrap
 msgid "Commit Rewording"
-msgstr ""
+msgstr "Omformulering av ändringar"
 
 #. type: Plain text
 #: en/git-rebase.adoc:781
 msgid "When a conflict occurs while rebasing, rebase stops and asks the user to resolve. Since the user may need to make notable changes while resolving conflicts, after conflicts are resolved and the user has run `git rebase --continue`, the rebase should open an editor and ask the user to update the commit message. The 'merge' backend does this, while the 'apply' backend blindly applies the original commit message."
-msgstr ""
+msgstr "När en konflikt uppstår under ombasering, stoppas rebase och ber användaren att lösa problemet. Eftersom användaren kan behöva göra viktiga ändringar när konflikter löses, efter att konflikterna är lösta och användaren har kört `git rebase --continue`, bör rebase öppna en editor och be användaren att uppdatera inchecknings-meddelandet. Bakändan 'merge' gör detta, medan bakändan 'apply' blint tillämpar det ursprungliga inchecknings-meddelandet."
 
 #. type: Title ~
 #: en/git-rebase.adoc:783
 #, no-wrap
 msgid "Miscellaneous differences"
-msgstr ""
+msgstr "Diverse skillnader"
 
 #. type: Plain text
 #: en/git-rebase.adoc:788
 msgid "There are a few more behavioral differences that most folks would probably consider inconsequential but which are mentioned for completeness:"
-msgstr ""
+msgstr "Det finns några fler beteendemässiga skillnader som de flesta förmodligen skulle anse vara obetydliga men som nämns för fullständighetens skull:"
 
 #. type: Plain text
 #: en/git-rebase.adoc:792
 msgid "Reflog: The two backends will use different wording when describing the changes made in the reflog, though both will make use of the word \"rebase\"."
-msgstr ""
+msgstr "Reflog: De två bakändorna kommer att använda olika formuleringar när de beskriver ändringarna som gjorts i refloggen, även om båda kommer att använda ordet \"rebase\"."
 
 #. type: Plain text
 #: en/git-rebase.adoc:798
 msgid "Progress, informational, and error messages: The two backends provide slightly different progress and informational messages. Also, the apply backend writes error messages (such as \"Your files would be overwritten...\") to stdout, while the merge backend writes them to stderr."
-msgstr ""
+msgstr "Förlopps-, informations- och felmeddelanden: De två bakändorna ger något olika förlopps- och informationsmeddelanden. Dessutom skriver apply-bakändan felmeddelanden (till exempel \"Dina filer skulle skrivas över...\") till stdout, medan merge-bakändan skriver dem till stderr."
 
 #. type: Plain text
 #: en/git-rebase.adoc:801
 msgid "State directories: The two backends keep their state in different directories under `.git/`"
-msgstr ""
+msgstr "Tillståndskataloger: De två bakändorna behåller sitt tillstånd i olika kataloger under `.git/`"
 
 #. type: Plain text
 #: en/git-rebase.adoc:810
 msgid "You should understand the implications of using `git rebase` on a repository that you share. See also RECOVERING FROM UPSTREAM REBASE below."
-msgstr ""
+msgstr "Du bör förstå konsekvenserna av att använda `git rebase` på ett förvar som du delar. Se även ÅTERSTÄLLA FRÅN UPSTRÖMSOMBASERING nedan."
 
 #. type: Plain text
 #: en/git-rebase.adoc:815
 msgid "When the rebase is run, it will first execute a `pre-rebase` hook if one exists. You can use this hook to do sanity checks and reject the rebase if it isn't appropriate. Please see the template `pre-rebase` hook script for an example."
-msgstr ""
+msgstr "När ombaseringen körs kommer den först att exekvera en `pre-rebase`-krok om en sådan finns. Du kan använda denna krok för att göra rimlighetskontroller och avvisa ombaseringen om den inte är lämplig. Se mallen `pre-rebase`-hook-skript för ett exempel."
 
 #. type: Plain text
 #: en/git-rebase.adoc:817
 msgid "Upon completion, `<branch>` will be the current branch."
-msgstr ""
+msgstr "När det är klart, kommer `<gren>` att vara den aktuella grenen."
 
 #. type: Plain text
 #: en/git-rebase.adoc:824
 msgid "Rebasing interactively means that you have a chance to edit the commits which are rebased. You can reorder the commits, and you can remove them (weeding out bad or otherwise unwanted patches)."
-msgstr ""
+msgstr "Att ombasera interaktivt innebär att du har möjlighet att redigera de incheckningar som blir ombaserade. Du kan ändra ordningen på incheckningarna och du kan ta bort dem (rensa bort dåliga eller på annat sätt oönskade patchar)."
 
 #. type: Plain text
 #: en/git-rebase.adoc:826
 msgid "The interactive mode is meant for this type of workflow:"
-msgstr ""
+msgstr "Det interaktiva läget är avsett för den här typen av arbetsflöde:"
 
 #. type: Plain text
 #: en/git-rebase.adoc:828
 msgid "have a wonderful idea"
-msgstr ""
+msgstr "har en underbar idé"
 
 #. type: Plain text
 #: en/git-rebase.adoc:829
 msgid "hack on the code"
-msgstr ""
+msgstr "hacka koden"
 
 #. type: Plain text
 #: en/git-rebase.adoc:830
 msgid "prepare a series for submission"
-msgstr ""
+msgstr "förbereda en serie för inlämning"
 
 #. type: Plain text
 #: en/git-rebase.adoc:831
 msgid "submit"
-msgstr ""
+msgstr "skicka in"
 
 #. type: Plain text
 #: en/git-rebase.adoc:833
 msgid "where point 2. consists of several instances of"
-msgstr ""
+msgstr "där punkt 2 består av flera instanser av"
 
 #. type: Plain text
 #: en/git-rebase.adoc:835
 msgid "regular use"
-msgstr ""
+msgstr "vanlig användning"
 
 #. type: Plain text
 #: en/git-rebase.adoc:837
 msgid "finish something worthy of a commit"
-msgstr ""
+msgstr "avsluta något värt en incheckning"
 
 #. type: Labeled list
 #: en/git-rebase.adoc:838 en/git-update-ref.adoc:150
@@ -44705,282 +44755,320 @@ msgstr "incheckning"
 #. type: Plain text
 #: en/git-rebase.adoc:840
 msgid "independent fixup"
-msgstr ""
+msgstr "oberoende korrigeringar"
 
 #. type: Plain text
 #: en/git-rebase.adoc:842
 msgid "realize that something does not work"
-msgstr ""
+msgstr "inse att något inte fungerar"
 
 #. type: Plain text
 #: en/git-rebase.adoc:843
 msgid "fix that"
-msgstr ""
+msgstr "fixa det"
 
 #. type: Plain text
 #: en/git-rebase.adoc:844
 msgid "commit it"
-msgstr ""
+msgstr "checka-in det"
 
 #. type: Plain text
 #: en/git-rebase.adoc:850
 msgid "Sometimes the thing fixed in b.2. cannot be amended to the not-quite perfect commit it fixes, because that commit is buried deeply in a patch series. That is exactly what interactive rebase is for: use it after plenty of \"a\"s and \"b\"s, by rearranging and editing commits, and squashing multiple commits into one."
-msgstr ""
+msgstr "Ibland kan inte det som fixades i b.2. ändras till den inte helt perfekta incheckning som den fixar, eftersom den incheckningen är djupt begravd i en patchserie. Det är precis vad interaktiv ombasering är till för: använd den efter många \"a\" och \"b\", genom att ordna om och redigera incheckningar, och slå ihop flera incheckningar till en."
 
 #. type: Plain text
 #: en/git-rebase.adoc:852
 msgid "Start it with the last commit you want to retain as-is:"
-msgstr ""
+msgstr "Börja med den sista incheckningen du vill behålla som den är:"
 
 #. type: Plain text
 #: en/git-rebase.adoc:854
 #, no-wrap
 msgid "\tgit rebase -i <after-this-commit>\n"
-msgstr ""
+msgstr "\tgit rebase -i <efter-denna-incheckning>\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:859
 msgid "An editor will be fired up with all the commits in your current branch (ignoring merge commits), which come after the given commit. You can reorder the commits in this list to your heart's content, and you can remove them. The list looks more or less like this:"
-msgstr ""
+msgstr "En editor kommer att laddas upp med alla incheckningar i din nuvarande branch (ignorerar sammanslagnings-incheckningar), som kommer efter den givna incheckningen. Du kan ändra ordningen på incheckningar i den här listan efter ditt hjärtas belåtenhet, och du kan ta bort dem. Listan ser ungefär ut så här:"
 
 #. type: delimited block -
 #: en/git-rebase.adoc:864
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "pick deadbee The oneline of this commit\npick fa1afe1 The oneline of the next commit\n...\n"
 msgstr ""
+"pick deadbee Enrad i denna incheckning\n"
+"pick fa1afe1 Enrad i nästa incheckning\n"
+"...\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:869
 msgid "The oneline descriptions are purely for your pleasure; 'git rebase' will not look at them but at the commit names (\"deadbee\" and \"fa1afe1\" in this example), so do not delete or edit the names."
-msgstr ""
+msgstr "Enrads-beskrivningarna är enbart för ditt nöjes skull; 'git rebase' tittar inte på dem utan på inchecknings-namnen (\"deadbee\" och \"fa1afe1\" i det här exemplet), så ta inte bort eller redigera namnen."
 
 #. type: Plain text
 #: en/git-rebase.adoc:874
 msgid "By replacing the command \"pick\" with the command \"edit\", you can tell `git rebase` to stop after applying that commit, so that you can edit the files and/or the commit message, amend the commit, and continue rebasing."
-msgstr ""
+msgstr "Genom att ersätta kommandot \"pick\" med kommandot \"edit\" kan du ange att `git rebase` ska stoppa efter att den incheckningen har tillämpats, så att du kan redigera filerna och/eller commit-meddelandet, ändra incheckningen och fortsätta med ombaseringen."
 
 #. type: Plain text
 #: en/git-rebase.adoc:877
 msgid "To interrupt the rebase (just like an \"edit\" command would do, but without cherry-picking any commit first), use the \"break\" command."
-msgstr ""
+msgstr "För att avbryta ombaseringen (precis som ett \"edit\"-kommando skulle göra, men utan att först välja ut någon incheckning), använd \"break\"-kommandot."
 
 #. type: Plain text
 #: en/git-rebase.adoc:880
 msgid "If you just want to edit the commit message for a commit, replace the command \"pick\" with the command \"reword\"."
-msgstr ""
+msgstr "Om du bara vill redigera inchecknings-meddelandet för en incheckning, ersätt kommandot \"pick\" med kommandot \"reword\"."
 
 #. type: Plain text
 #: en/git-rebase.adoc:883
 msgid "To drop a commit, replace the command \"pick\" with \"drop\", or just delete the matching line."
-msgstr ""
+msgstr "För att ta bort en incheckning, ersätt kommandot \"pick\" med \"drop\", eller ta bara bort matchande rad."
 
 #. type: Plain text
 #: en/git-rebase.adoc:898
 msgid "If you want to fold two or more commits into one, replace the command \"pick\" for the second and subsequent commits with \"squash\" or \"fixup\". If the commits had different authors, the folded commit will be attributed to the author of the first commit. The suggested commit message for the folded commit is the concatenation of the first commit's message with those identified by \"squash\" commands, omitting the messages of commits identified by \"fixup\" commands, unless \"fixup -c\" is used. In that case the suggested commit message is only the message of the \"fixup -c\" commit, and an editor is opened allowing you to edit the message. The contents (patch) of the \"fixup -c\" commit are still incorporated into the folded commit. If there is more than one \"fixup -c\" commit, the message from the final one is used. You can also use \"fixup -C\" to get the same behavior as \"fixup -c\" except without opening an editor."
-msgstr ""
+msgstr "Om du vill lägga ihop två eller fler incheckningar till en, ersätt kommandot \"pick\" för den andra och efterföljande incheckningar med \"squash\" (slå ihop) eller \"fixup\" (in-bakning). Om incheckningar hade olika författare kommer den vikta incheckningen att tillskrivas författaren till den första incheckningen. Det föreslagna inchecknings-meddelandet för den vikta incheckningen är en sammanfogning av den första incheckningens meddelande med de som identifieras av \"squash\"-kommandon, med utelämnande av meddelandena från incheckningar som identifieras av \"fixup\"-kommandon, såvida inte \"fixup -c\" används. I så fall är det föreslagna inchecknings-meddelandet endast meddelandet från \"fixup -c\"-incheckningen, och en editor öppnas som låter dig redigera meddelandet. Innehållet (patch) i \"fixup -c\"-incheckningen införlivas fortfarande i den vikta incheckningen. Om det finns mer än en \"fixup -c\"-incheckning används meddelandet från den sista. Du kan också använda \"fixup -C\" för att få samma beteende som \"fixup -c\" förutom utan att öppna en editor."
 
 #. type: Plain text
 #: en/git-rebase.adoc:902
 msgid "`git rebase` will stop when \"pick\" has been replaced with \"edit\" or when a command fails due to merge errors. When you are done editing and/or resolving conflicts you can continue with `git rebase --continue`."
-msgstr ""
+msgstr "`git rebase` stoppas när \"pick\" har ersatts med \"edit\" eller när ett kommando misslyckas på grund av sammanslagningsfel. När du är klar med att redigera och/eller lösa konflikter kan du fortsätta med `git rebase --continue`."
 
 #. type: Plain text
 #: en/git-rebase.adoc:906
 msgid "For example, if you want to reorder the last 5 commits, such that what was `HEAD~4` becomes the new `HEAD`. To achieve that, you would call `git rebase` like this:"
-msgstr ""
+msgstr "Till exempel , om du vill ändra ordningen på de senaste 5 incheckningarna, så att det som var `HEAD~4` blir det nya `HEAD`. För att uppnå det skulle du anropa `git rebase` så här:"
 
 #. type: delimited block -
 #: en/git-rebase.adoc:909
 #, no-wrap
 msgid "$ git rebase -i HEAD~5\n"
-msgstr ""
+msgstr "$ git rebase -i HEAD~5\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:912
 msgid "And move the first patch to the end of the list."
-msgstr ""
+msgstr "Och flytta den första patchen till slutet av listan."
 
 #. type: Plain text
 #: en/git-rebase.adoc:915
 msgid "You might want to recreate merge commits, e.g. if you have a history like this:"
-msgstr ""
+msgstr "Du kanske vill återskapa sammanslagnings-incheckningar, t.ex. om du har en historik som denna:"
 
 #. type: delimited block -
 #: en/git-rebase.adoc:922
 #, no-wrap
 msgid "           X\n            \\\n         A---M---B\n        /\n---o---O---P---Q\n"
 msgstr ""
+"           X\n"
+"            \\\n"
+"         A---M---B\n"
+"        /\n"
+"---o---O---P---Q\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:926
 msgid "Suppose you want to rebase the side branch starting at \"A\" to \"Q\". Make sure that the current `HEAD` is \"B\", and call"
-msgstr ""
+msgstr "Anta att du vill ombasera sidogrenen från \"A\" till \"Q\". Se till att den aktuella `HEAD` är \"B\" och anropa"
 
 #. type: delimited block -
 #: en/git-rebase.adoc:929
 #, no-wrap
 msgid "$ git rebase -i -r --onto Q O\n"
-msgstr ""
+msgstr "$ git rebase -i -r --onto Q O\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:936
 msgid "Reordering and editing commits usually creates untested intermediate steps. You may want to check that your history editing did not break anything by running a test, or at least recompiling at intermediate points in history by using the \"exec\" command (shortcut \"x\"). You may do so by creating a todo list like this one:"
-msgstr ""
+msgstr "Att ändra ordning och redigera incheckningar skapar vanligtvis otestade mellansteg. Du kanske vill kontrollera att din historikredigering inte orsakade några problem genom att köra ett test, eller åtminstone kompilera om vid mellanliggande punkter i historiken med hjälp av kommandot \"exec\" (genvägen \"x\"). Du kan göra det genom att skapa en att-göra-lista som den här:"
 
 #. type: delimited block -
 #: en/git-rebase.adoc:945
 #, no-wrap
 msgid "pick deadbee Implement feature XXX\nfixup f1a5c00 Fix to feature XXX\nexec make\npick c0ffeee The oneline of the next commit\nedit deadbab The oneline of the commit after\nexec cd subdir; make test\n...\n"
 msgstr ""
+"pick deadbee Implementera funktion XXX\n"
+"fixup f1a5c00 Fixa till funktion XXX\n"
+"exec make\n"
+"pick c0ffeee Enrad i nästa incheckning\n"
+"edit deadbab Enrad i incheckningefter\n"
+"exec cd subdir; make test\n"
+"...\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:950
 msgid "The interactive rebase will stop when a command fails (i.e. exits with non-0 status) to give you an opportunity to fix the problem. You can continue with `git rebase --continue`."
-msgstr ""
+msgstr "Den interaktiva ombaseringen stoppas när ett kommando misslyckas (dvs. avslutas med status som inte är 0) för att ge dig en möjlighet att åtgärda problemet. Du kan fortsätta med `git rebase --continue`."
 
 #. type: Plain text
 #: en/git-rebase.adoc:954
 msgid "The \"exec\" command launches the command in a shell (the default one, usually /bin/sh), so you can use shell features (like \"cd\", \">\", \";\" ...). The command is run from the root of the working tree."
-msgstr ""
+msgstr "Kommandot \"exec\" startar kommandot i ett skal (standardgränssnittet, vanligtvis /bin/sh), så att du kan använda skalfunktioner (som \"cd\", \">\", \";\" ...). Kommandot körs från roten av arbetskatalogen."
 
 #. type: delimited block -
 #: en/git-rebase.adoc:957
 #, no-wrap
 msgid "$ git rebase -i --exec \"make test\"\n"
-msgstr ""
+msgstr "$ git rebase -i --exec \"make test\"\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:961
 msgid "This command lets you check that intermediate commits are compilable. The todo list becomes like that:"
-msgstr ""
+msgstr "Det här kommandot låter dig kontrollera att mellanliggande incheckningar kompileras. Att-göra-listan blir så här:"
 
 #. type: delimited block -
 #: en/git-rebase.adoc:971
 #, no-wrap
 msgid "pick 5928aea one\nexec make test\npick 04d0fda two\nexec make test\npick ba46169 three\nexec make test\npick f4593f9 four\nexec make test\n"
 msgstr ""
+"pick 5928aea ett\n"
+"exec make test\n"
+"pick 04d0fda två\n"
+"exec make test\n"
+"pick ba46169 tre\n"
+"exec make test\n"
+"pick f4593f9 fyra\n"
+"exec make test\n"
 
 #. type: Title -
 #: en/git-rebase.adoc:974
 #, no-wrap
 msgid "SPLITTING COMMITS"
-msgstr ""
+msgstr "ATT DELA INCHECKNINGAR"
 
 #. type: Plain text
 #: en/git-rebase.adoc:980
 msgid "In interactive mode, you can mark commits with the action \"edit\". However, this does not necessarily mean that `git rebase` expects the result of this edit to be exactly one commit. Indeed, you can undo the commit, or you can add other commits. This can be used to split a commit into two:"
-msgstr ""
+msgstr "I interaktivt läge, kan du markera incheckningar med åtgärden \"edit\". Detta betyder dock inte nödvändigtvis att `git rebase` förväntar sig att resultatet av denna redigering ska vara exakt en incheckning. Du kan ångra incheckningen, eller så kan du lägga till andra incheckningar. Detta kan användas för att dela upp en incheckning i två:"
 
 #. type: Plain text
 #: en/git-rebase.adoc:984
 msgid "Start an interactive rebase with `git rebase -i <commit>^`, where `<commit>` is the commit you want to split. In fact, any commit range will do, as long as it contains that commit."
-msgstr ""
+msgstr "Starta en interaktiv ombasering med `git rebase -i <commit>^`, där `<incheckning>` är den incheckning du vill dela. Faktum är att vilket incheckning-intervall som helst fungerar, så länge det innehåller den incheckningen."
 
 #. type: Plain text
 #: en/git-rebase.adoc:986
 msgid "Mark the commit you want to split with the action \"edit\"."
-msgstr ""
+msgstr "Markera den incheckning du vill dela med åtgärden \"edit\"."
 
 #. type: Plain text
 #: en/git-rebase.adoc:990
 msgid "When it comes to editing that commit, execute `git reset HEAD^`. The effect is that the `HEAD` is rewound by one, and the index follows suit. However, the working tree stays the same."
-msgstr ""
+msgstr "När det gäller att redigera den incheckningen, kör `git reset HEAD^`. Effekten blir att `HEAD` spolas tillbaka ett steg, och indexet följer efter. arbetskatalogenförblir dock detsamma."
 
 #. type: Plain text
 #: en/git-rebase.adoc:994
 msgid "Now add the changes to the index that you want to have in the first commit. You can use `git add` (possibly interactively) or `git gui` (or both) to do that."
-msgstr ""
+msgstr "Lägg nu till de ändringar i indexet som du vill ha i den första incheckningen. Du kan använda `git add` (möjligen interaktivt) eller `git gui` (eller båda) för att göra det."
 
 #. type: Plain text
 #: en/git-rebase.adoc:997
 msgid "Commit the now-current index with whatever commit message is appropriate now."
-msgstr ""
+msgstr "Checka-in det nu aktuella indexet med det inchecknings-meddelande som är lämpligt nu."
 
 #. type: Plain text
 #: en/git-rebase.adoc:999
 msgid "Repeat the last two steps until your working tree is clean."
-msgstr ""
+msgstr "Upprepa de två sista stegen tills ditt arbetskatalogen är ren."
 
 #. type: Plain text
 #: en/git-rebase.adoc:1001
 msgid "Continue the rebase with `git rebase --continue`."
-msgstr ""
+msgstr "Fortsätt ombaseringen med `git rebase --continue`."
 
 #. type: Plain text
 #: en/git-rebase.adoc:1006
 msgid "If you are not absolutely sure that the intermediate revisions are consistent (they compile, pass the testsuite, etc.) you should use `git stash` to stash away the not-yet-committed changes after each commit, test, and amend the commit if fixes are necessary."
-msgstr ""
+msgstr "Om du inte är helt säker på att de mellanliggande revisionerna är konsekventa (de kompilerar, klarar testsviten, etc.) bör du använda `git stash` för att gömma undan de ännu inte incheckade ändringarna efter varje incheckning, test och ändra incheckningen om korrigeringar är nödvändiga."
 
 #. type: Title -
 #: en/git-rebase.adoc:1009
 #, no-wrap
 msgid "RECOVERING FROM UPSTREAM REBASE"
-msgstr ""
+msgstr "ÅTERHÄMTNING FRÅN UPPSTÖDSOMBASERING"
 
 #. type: Plain text
 #: en/git-rebase.adoc:1016
 msgid "Rebasing (or any other form of rewriting) a branch that others have based work on is a bad idea: anyone downstream of it is forced to manually fix their history. This section explains how to do the fix from the downstream's point of view. The real fix, however, would be to avoid rebasing the upstream in the first place."
-msgstr ""
+msgstr "Ombasering (eller någon annan form av omskrivning) av en gren som andra har baserat arbete på är en dålig idé: alla nedströms tvingas manuellt korrigera sin historik. Det här avsnittet förklarar hur man gör korrigeringen ur nedströms synvinkel. Den verkliga lösningen skulle dock vara att undvika att ombasera uppströmen från första början."
 
 #. type: Plain text
 #: en/git-rebase.adoc:1021
 msgid "To illustrate, suppose you are in a situation where someone develops a 'subsystem' branch, and you are working on a 'topic' that is dependent on this 'subsystem'. You might end up with a history like the following:"
-msgstr ""
+msgstr "För att illustrera, anta att du befinner dig i en situation där någon utvecklar en 'delsystem's-gren, och du arbetar med ett 'ämne' som är beroende av detta 'delsystem'. Du kan få en historik som liknar följande:"
 
 #. type: delimited block -
 #: en/git-rebase.adoc:1028
 #, no-wrap
 msgid "    o---o---o---o---o---o---o---o  master\n\t \\\n\t  o---o---o---o---o  subsystem\n\t\t\t   \\\n\t\t\t    *---*---*  topic\n"
 msgstr ""
+"    o---o---o---o---o---o---o---o  master\n"
+"\t \\\n"
+"\t  o---o---o---o---o  delsystem\n"
+"\t\t\t   \\\n"
+"\t\t\t    *---*---*  ämne\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:1031
 msgid "If 'subsystem' is rebased against 'master', the following happens:"
-msgstr ""
+msgstr "Om 'delsystem' obaseras på nytt mot 'master' händer följande:"
 
 #. type: delimited block -
 #: en/git-rebase.adoc:1038
 #, no-wrap
 msgid "    o---o---o---o---o---o---o---o  master\n\t \\\t\t\t \\\n\t  o---o---o---o---o\t  o'--o'--o'--o'--o'  subsystem\n\t\t\t   \\\n\t\t\t    *---*---*  topic\n"
 msgstr ""
+"    o---o---o---o---o---o---o---o  master\n"
+"\t \\\t\t\t \\\n"
+"\t  o---o---o---o---o\t  o'--o'--o'--o'--o'  delsystem\n"
+"\t\t\t   \\\n"
+"\t\t\t    *---*---*  ämne\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:1042
 msgid "If you now continue development as usual, and eventually merge 'topic' to 'subsystem', the commits from 'subsystem' will remain duplicated forever:"
-msgstr ""
+msgstr "Om du nu fortsätter utvecklingen som vanligt, och så småningom sammanfogar 'ämne' med 'delsystem', kommer incheckningar från 'delsystem' att förbli duplicerade för alltid:"
 
 #. type: delimited block -
 #: en/git-rebase.adoc:1049
 #, no-wrap
 msgid "    o---o---o---o---o---o---o---o  master\n\t \\\t\t\t \\\n\t  o---o---o---o---o\t  o'--o'--o'--o'--o'--M\t subsystem\n\t\t\t   \\\t\t\t     /\n\t\t\t    *---*---*-..........-*--*  topic\n"
 msgstr ""
+"    o---o---o---o---o---o---o---o  master\n"
+"\t \\\t\t\t \\\n"
+"\t  o---o---o---o---o\t  o'--o'--o'--o'--o'--M\t delsystem\n"
+"\t\t\t   \\\t\t\t     /\n"
+"\t\t\t    *---*---*-..........-*--*  ämne\n"
 
 #. type: Plain text
 #: en/git-rebase.adoc:1056
 msgid "Such duplicates are generally frowned upon because they clutter up history, making it harder to follow. To clean things up, you need to transplant the commits on 'topic' to the new 'subsystem' tip, i.e., rebase 'topic'. This becomes a ripple effect: anyone downstream from 'topic' is forced to rebase too, and so on!"
-msgstr ""
+msgstr "Sådana dubbletter är generellt ogillade eftersom de skräpar upp historiken och gör det svårt att följa. För att rensa upp saker måste du omplacera incheckningar på 'ämne' till den nya 'delsystem'-topen, dvs. ombasera 'ämne'. Detta blir en dominoeffekt: alla nedströms från 'ämne'n tvingas också ombasera, och så vidare!"
 
 #. type: Plain text
 #: en/git-rebase.adoc:1058
 msgid "There are two kinds of fixes, discussed in the following subsections:"
-msgstr ""
+msgstr "Det finns två typer av korrigeringar, som diskuteras i följande underavsnitt:"
 
 #. type: Labeled list
 #: en/git-rebase.adoc:1059
 #, no-wrap
 msgid "Easy case: The changes are literally the same."
-msgstr ""
+msgstr "Enkelt fall: Förändringarna är bokstavligen desamma."
 
 #. type: Plain text
 #: en/git-rebase.adoc:1063
 msgid "This happens if the 'subsystem' rebase was a simple rebase and had no conflicts."
-msgstr ""
+msgstr "Detta händer om 'delsystem'-ombaseringen var en enkel ombasering och inte hade några konflikter."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:1064
 #, no-wrap
 msgid "Hard case: The changes are not the same."
-msgstr ""
+msgstr "Svårt fall: Förändringarna är inte desamma."
 
 #. type: Plain text
 #: en/git-rebase.adoc:1071
@@ -52380,17 +52468,17 @@ msgstr ""
 #. type: Plain text
 #: en/git-stash.adoc:36
 msgid "Use `git stash` when you want to record the current state of the working directory and the index, but want to go back to a clean working directory. The command saves your local modifications away and reverts the working directory to match the `HEAD` commit."
-msgstr ""
+msgstr "Använd `git stash` när du vill registrera arbetskatalogens och indexets aktuella tillstånd, men vill gå tillbaka till en ren arbetskatalog. Kommandot sparar dina lokala ändringar och återställer arbetskatalogen så att den matchar `HEAD`-incheckningen."
 
 #. type: Plain text
 #: en/git-stash.adoc:44
 msgid "The modifications stashed away by this command can be listed with `git stash list`, inspected with `git stash show`, and restored (potentially on top of a different commit) with `git stash apply`. Calling `git stash` without any arguments is equivalent to `git stash push`. A stash is by default listed as \"WIP on '<branchname>' ...\", but you can give a more descriptive message on the command line when you create one."
-msgstr ""
+msgstr "De modifieringar som lagras av detta kommando kan listas med `git stash list`, inspekteras med `git stash show` och återställas (eventuellt ovanpå en annan incheckning) med `git stash apply`. Att anropa `git stash` utan några argument är likvärdigt med `git stash push`. En stash listas som standard som \"WIP on '<grennamn>' ...\", men du kan ge ett mer beskrivande meddelande på kommandoraden när du skapar en."
 
 #. type: Plain text
 #: en/git-stash.adoc:51
 msgid "The latest stash you created is stored in `refs/stash`; older stashes are found in the reflog of this reference and can be named using the usual reflog syntax (e.g. `stash@{0}` is the most recently created stash, `stash@{1}` is the one before it, `stash@{2.hours.ago}` is also possible). Stashes may also be referenced by specifying just the stash index (e.g. the integer `<n>` is equivalent to `stash@{<n>}`)."
-msgstr ""
+msgstr "Den senaste gömman du skapade lagras i `refs/stash`; äldre gömmor finns i refloggen för denna referens och kan namnges med den vanliga reflogsyntaxen (t.ex. `stash@{0}` är den senast skapade gömman, `stash@{1}` är den föregående, `stash@{2.hours.ago}` är också möjligt). Stash kan också refereras genom att bara ange stashindexet (t.ex. heltalet `<n>` är ekvivalent med `stash@{<n>}`)."
 
 #. type: Labeled list
 #: en/git-stash.adoc:55
@@ -52401,7 +52489,7 @@ msgstr "`push [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-u | --in
 #. type: Plain text
 #: en/git-stash.adoc:61
 msgid "Save your local modifications to a new 'stash entry' and roll them back to `HEAD` (in the working tree and in the index). The _<message>_ part is optional and gives the description along with the stashed state."
-msgstr ""
+msgstr "Spara dina lokala ändringar till en ny 'gömma-post' och rulla tillbaka dem till `HEAD` (i arbetsträdet och i indexet). _<meddelande>_-delen är valfri och ger beskrivningen tillsammans med det lagrade tillståndet."
 
 #. type: Plain text
 #: en/git-stash.adoc:67
@@ -52412,7 +52500,7 @@ msgstr "För att snabbt skapa en ögonblicksbild kan du utelämna \"push\". I de
 #: en/git-stash.adoc:68
 #, no-wrap
 msgid "`save [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-u | --include-untracked] [-a | --all] [-q | --quiet] [<message>]`"
-msgstr ""
+msgstr "`save [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-u | --include-untracked] [-a | --all] [-q | --quiet] [<meddelande>]`"
 
 #. type: Plain text
 #: en/git-stash.adoc:74
@@ -52423,23 +52511,25 @@ msgstr "Det här alternativet är föråldrat till förmån för 'git stash push
 #: en/git-stash.adoc:75
 #, no-wrap
 msgid "`list [<log-options>]`"
-msgstr ""
+msgstr "`list [<logg-flaggor>]`"
 
 #. type: Plain text
 #: en/git-stash.adoc:82
 msgid "List the stash entries that you currently have. Each 'stash entry' is listed with its name (e.g. `stash@{0}` is the latest entry, `stash@{1}` is the one before, etc.), the name of the branch that was current when the entry was made, and a short description of the commit the entry was based on."
-msgstr ""
+msgstr "Lista de gömma-poster du för närvarande har. Varje 'gömma-post' listas med sitt namn (t.ex. `stash@{0}` är den senaste posten, `stash@{1}` är den föregående, etc.), namnet på den gren som var aktuell när posten gjordes och en kort beskrivning av den incheckning som posten baserades på."
 
 #. type: delimited block -
 #: en/git-stash.adoc:86
 #, no-wrap
 msgid "stash@{0}: WIP on submit: 6ebd0e2... Update git-stash documentation\nstash@{1}: On master: 9cc0589... Add git-stash\n"
 msgstr ""
+"stash@{0}: WIP on submit: 6ebd0e2... Uppdatera git-stash-dokumentationen\n"
+"stash@{1}: On master: 9cc0589... Lägg till git-stash\n"
 
 #. type: Plain text
 #: en/git-stash.adoc:90
 msgid "The command takes options applicable to the 'git log' command to control what is shown and how. See linkgit:git-log[1]."
-msgstr ""
+msgstr "Kommandot tar alternativ som är tillämpliga på kommandot 'git log' för att kontrollera vad som visas och hur. Se linkgit:git-log[1]."
 
 #. type: Labeled list
 #: en/git-stash.adoc:91
@@ -52450,7 +52540,7 @@ msgstr "`show [-u | --include-untracked | --only-untracked] [<diff-flaggor>] [<g
 #. type: Plain text
 #: en/git-stash.adoc:103
 msgid "Show the changes recorded in the stash entry as a diff between the stashed contents and the commit back when the stash entry was first created. By default, the command shows the diffstat, but it will accept any format known to 'git diff' (e.g., `git stash show -p stash@{1}` to view the second most recent entry in patch form). If no _<diff-option>_ is provided, the default behavior will be given by the `stash.showStat`, and `stash.showPatch` config variables. You can also use `stash.showIncludeUntracked` to set whether `--include-untracked` is enabled by default."
-msgstr ""
+msgstr "Visa ändringarna som registrerats i gömma-posten som en skillnad mellan det undangömda innehållet och incheckningen från den tidpunkt då gömma-posten först skapades. Som standard visar kommandot diffstat, men det accepterar alla format som är kända för 'git diff' (t.ex. `git stash show -p stash@{1}` för att visa den näst senaste posten i patch-format). Om ingen _<diff-flagga>_ anges kommer standardbeteendet att ges av konfigurationsvariablerna `stash.showStat` och `stash.showPatch`. Du kan också använda `stash.showIncludeUntracked` för att ange om `--include-untracked` är aktiverat som standard."
 
 #. type: Labeled list
 #: en/git-stash.adoc:104
@@ -52461,12 +52551,12 @@ msgstr "`pop [--index] [-q | --quiet] [<gömma>]`"
 #. type: Plain text
 #: en/git-stash.adoc:110
 msgid "Remove a single stashed state from the stash list and apply it on top of the current working tree state, i.e., do the inverse operation of `git stash push`. The working directory must match the index."
-msgstr ""
+msgstr "Ta bort ett enskilt gömma-tillstånd från gömma-listan och applicera det ovanpå det aktuella arbetskatalogs-tillståndet, d.v.s. utför den inversa operationen av `git stash push`. Arbetskatalogen måste matcha indexet."
 
 #. type: Plain text
 #: en/git-stash.adoc:114
 msgid "Applying the state can fail with conflicts; in this case, it is not removed from the stash list. You need to resolve the conflicts by hand and call `git stash drop` manually afterwards."
-msgstr ""
+msgstr "Att tillämpa tillståndet kan misslyckas vid konflikter; i det här fallet tas det inte bort från gömma-listan. Du måste lösa konflikterna manuellt och anropa `git stash drop` manuellt efteråt."
 
 #. type: Labeled list
 #: en/git-stash.adoc:115
@@ -52477,23 +52567,23 @@ msgstr "`apply [--index] [-q | --quiet] [<gömma>]`"
 #. type: Plain text
 #: en/git-stash.adoc:120
 msgid "Like `pop`, but do not remove the state from the stash list. Unlike `pop`, `<stash>` may be any commit that looks like a commit created by `stash push` or `stash create`."
-msgstr ""
+msgstr "Som `pop`, men ta inte bort tillståndet från gömma-listan. Till skillnad från `pop` kan `<stash>` vara vilken incheckning som helst som ser ut som en incheckning skapad av `stash push` eller `stash create`."
 
 #. type: Labeled list
 #: en/git-stash.adoc:121
 #, no-wrap
 msgid "`branch <branchname> [<stash>]`"
-msgstr ""
+msgstr "`branch <grennamn> [<gömma>]`"
 
 #. type: Plain text
 #: en/git-stash.adoc:128
 msgid "Creates and checks out a new branch named _<branchname>_ starting from the commit at which the _<stash>_ was originally created, applies the changes recorded in _<stash>_ to the new working tree and index. If that succeeds, and _<stash>_ is a reference of the form `stash@{<revision>}`, it then drops the _<stash>_."
-msgstr ""
+msgstr "Skapar och checkar ut en ny gren med namnet _<grennamn>_ med början från den incheckning där _<gömman>_ ursprungligen skapades, tillämpar ändringarna som registrerats i _<gömman>_ på det nya arbetsträdet och indexet. Om det lyckas, och _<gömman>_ är en referens av formen `stash@{<revision>}`, tas _<gömman>_ bort."
 
 #. type: Plain text
 #: en/git-stash.adoc:134
 msgid "This is useful if the branch on which you ran `git stash push` has changed enough that `git stash apply` fails due to conflicts. Since the stash entry is applied on top of the commit that was HEAD at the time `git stash` was run, it restores the originally stashed state with no conflicts."
-msgstr ""
+msgstr "Detta är användbart om grenen där du kör `git stash push` har ändrats tillräckligt för att `git stash apply` misslyckas på grund av konflikter. Eftersom gömman-posten tillämpas ovanpå incheckningen som var HEAD när `git stash` kördes, återställer den det ursprungligen gömman-tillståndet utan konflikter."
 
 #. type: Labeled list
 #: en/git-stash.adoc:135
@@ -52505,18 +52595,18 @@ msgstr "`clear`"
 #. type: Plain text
 #: en/git-stash.adoc:139
 msgid "Remove all the stash entries. Note that those entries will then be subject to pruning, and may be impossible to recover (see 'EXAMPLES' below for a possible strategy)."
-msgstr ""
+msgstr "Ta bort alla poster i gömma-minnet. Observera att dessa poster sedan kommer att bli föremål för rensning och kan vara omöjliga att återställa (se 'EXEMPEL' nedan för en möjlig strategi)."
 
 #. type: Labeled list
 #: en/git-stash.adoc:140
 #, no-wrap
 msgid "`drop [-q | --quiet] [<stash>]`"
-msgstr ""
+msgstr "`drop [-q | --quiet] [<gömma>]`"
 
 #. type: Plain text
 #: en/git-stash.adoc:142
 msgid "Remove a single stash entry from the list of stash entries."
-msgstr ""
+msgstr "Ta bort en enskild gömma-post från listan över gömma-poster."
 
 #. type: Labeled list
 #: en/git-stash.adoc:143
@@ -52528,7 +52618,7 @@ msgstr "`create`"
 #. type: Plain text
 #: en/git-stash.adoc:149
 msgid "Create a stash entry (which is a regular commit object) and return its object name, without storing it anywhere in the ref namespace. This is intended to be useful for scripts. It is probably not the command you want to use; see \"push\" above."
-msgstr ""
+msgstr "Skapa en gömma-post (som är ett vanligt inchecknings-objekt) och returnera dess objektnamn, utan att lagra det någonstans i ref-namnrymden. Detta är tänkt att vara användbart för skript. Det är förmodligen inte det kommando du vill använda; se \"push\" ovan."
 
 #. type: Labeled list
 #: en/git-stash.adoc:150
@@ -52540,7 +52630,7 @@ msgstr "`store`"
 #. type: Plain text
 #: en/git-stash.adoc:156
 msgid "Store a given stash created via 'git stash create' (which is a dangling merge commit) in the stash ref, updating the stash reflog. This is intended to be useful for scripts. It is probably not the command you want to use; see \"push\" above."
-msgstr ""
+msgstr "Lagra en given gömma som skapats via 'git stash create' (vilket är en dinglande sammanslagnings-incheckning) i gömma-referensen och uppdatera gömma-refloggen. Detta är tänkt att vara användbart för skript. Det är förmodligen inte det kommando du vill använda; se \"push\" ovan."
 
 #. type: Labeled list
 #: en/git-stash.adoc:157
@@ -52551,29 +52641,29 @@ msgstr "`export ( --print | --to-ref <ref> ) [<gömma>...]`"
 #. type: Plain text
 #: en/git-stash.adoc:162
 msgid "Export the specified stashes, or all of them if none are specified, to a chain of commits which can be transferred using the normal fetch and push mechanisms, then imported using the `import` subcommand."
-msgstr ""
+msgstr "Exportera de angivna gömma-filerna, eller alla om inga anges, till en kedja av incheckningar som kan överföras med de vanliga hämtnings- och push-mekanismerna, och sedan importeras med under-kommandot `import`."
 
 #. type: Labeled list
 #: en/git-stash.adoc:163
 #, no-wrap
 msgid "`import <commit>`"
-msgstr ""
+msgstr "`import <incheckning>`"
 
 #. type: Plain text
 #: en/git-stash.adoc:167
 msgid "Import the specified stashes from the specified commit, which must have been created by `export`, and add them to the list of stashes. To replace the existing stashes, use `clear` first."
-msgstr ""
+msgstr "Importera de angivna gömmorna från den angivna incheckningen, som måste ha skapats av `export`, och lägg till dem i listan över gömmor. För att ersätta de befintliga gömmorna, använd `clear` först."
 
 #. type: Plain text
 #: en/git-stash.adoc:173 en/git-stash.adoc:204 en/git-stash.adoc:210
 #: en/git-stash.adoc:227
 msgid "This option is only valid for `push` and `save` commands."
-msgstr ""
+msgstr "Det här alternativet är endast giltigt för kommandona `push` och `save`."
 
 #. type: Plain text
 #: en/git-stash.adoc:176
 msgid "All ignored and untracked files are also stashed and then cleaned up with `git clean`."
-msgstr ""
+msgstr "Alla ignorerade och ospårade filer lagras också och rensas sedan upp med `git clean`."
 
 #. type: Labeled list
 #: en/git-stash.adoc:178
@@ -52592,12 +52682,12 @@ msgstr "`--no-include-untracked`"
 #. type: Plain text
 #: en/git-stash.adoc:183
 msgid "When used with the `push` and `save` commands, all untracked files are also stashed and then cleaned up with `git clean`."
-msgstr ""
+msgstr "När de används med kommandona `push` och `save`, lagras även alla ospårade filer och rensas sedan upp med `git clean`."
 
 #. type: Plain text
 #: en/git-stash.adoc:186
 msgid "When used with the `show` command, show the untracked files in the stash entry as part of the diff."
-msgstr ""
+msgstr "När det används med kommandot `show`, visas de ospårade filerna i gömma-posten som en del av diff."
 
 #. type: Labeled list
 #: en/git-stash.adoc:187
@@ -52609,12 +52699,12 @@ msgstr "`--only-untracked`"
 #. type: Plain text
 #: en/git-stash.adoc:189
 msgid "This option is only valid for the `show` command."
-msgstr ""
+msgstr "Det här alternativet är endast giltigt för kommandot `show`."
 
 #. type: Plain text
 #: en/git-stash.adoc:191
 msgid "Show only the untracked files in the stash entry as part of the diff."
-msgstr ""
+msgstr "Visa endast de ospårade filerna i gömma-posten som en del av diff."
 
 #. type: Labeled list
 #: en/git-stash.adoc:192
@@ -52626,12 +52716,12 @@ msgstr "`--index`"
 #. type: Plain text
 #: en/git-stash.adoc:194
 msgid "This option is only valid for `pop` and `apply` commands."
-msgstr ""
+msgstr "Det här alternativet är endast giltigt för kommandona `pop` och `apply`."
 
 #. type: Plain text
 #: en/git-stash.adoc:199
 msgid "Tries to reinstate not only the working tree's changes, but also the index's ones. However, this can fail, when you have conflicts (which are stored in the index, where you therefore can no longer apply the changes as they were originally)."
-msgstr ""
+msgstr "Försöker återställa inte bara arbetskatalogens-ändringar, utan även indexets. Detta kan dock misslyckas när det finns konflikter (som lagras i indexet, där du därför inte längre kan tillämpa ändringarna som de ursprungligen var)."
 
 #. type: Labeled list
 #: en/git-stash.adoc:201
@@ -52650,33 +52740,33 @@ msgstr "`--no-keep-index`"
 #. type: Plain text
 #: en/git-stash.adoc:206
 msgid "All changes already added to the index are left intact."
-msgstr ""
+msgstr "Alla ändringar som redan har lagts till i indexet lämnas intakta."
 
 #. type: Plain text
 #: en/git-stash.adoc:218
 msgid "Interactively select hunks from the diff between HEAD and the working tree to be stashed. The stash entry is constructed such that its index state is the same as the index state of your repository, and its worktree contains only the changes you selected interactively. The selected changes are then rolled back from your worktree. See the ``Interactive Mode'' section of linkgit:git-add[1] to learn how to operate the `--patch` mode."
-msgstr ""
+msgstr "Välj interaktivt stycken från skillnaden mellan HEAD och arbetskatalogen som ska gömmas. Gömma-posten är konstruerad så att dess indextillstånd är detsamma som indextillståndet för ditt förvar, och dess arbetsträd innehåller endast de ändringar du valde interaktivt. De valda ändringarna rullas sedan tillbaka från ditt arbetsträd. Se avsnittet \"Interaktivt läge\" i linkgit:git-add[1] för att lära dig hur man använder läget \"--patch\"."
 
 #. type: Plain text
 #: en/git-stash.adoc:221
 msgid "The `--patch` option implies `--keep-index`. You can use `--no-keep-index` to override this."
-msgstr ""
+msgstr "Alternativet `--patch` innebär `--keep-index`. Du kan använda `--no-keep-index` för att åsidosätta detta."
 
 #. type: Plain text
 #: en/git-stash.adoc:231
 msgid "Stash only the changes that are currently staged. This is similar to basic `git commit` except the state is committed to the stash instead of current branch."
-msgstr ""
+msgstr "Lagra endast de ändringar som för närvarande är pågående. Detta liknar grundläggande `git commit` förutom att tillståndet är incheckat till gömman istället för den aktuella grenen."
 
 #. type: Plain text
 #: en/git-stash.adoc:233
 msgid "The `--patch` option has priority over this one."
-msgstr ""
+msgstr "Alternativet `--patch` har prioritet framför detta."
 
 #. type: Plain text
 #: en/git-stash.adoc:236 en/git-stash.adoc:246 en/git-stash.adoc:273
 #: en/git-stash.adoc:278
 msgid "This option is only valid for `push` command."
-msgstr ""
+msgstr "Det här alternativet är endast giltigt för kommandot `push`."
 
 #. type: Plain text
 #: en/git-stash.adoc:243
@@ -52691,7 +52781,7 @@ msgstr "Endast meningsfullt med `--pathspec-from-file`. Sökvägsangivelse-poste
 #. type: Plain text
 #: en/git-stash.adoc:255
 msgid "This option is only valid for `apply`, `drop`, `pop`, `push`, `save`, `store` commands."
-msgstr ""
+msgstr "Det här alternativet är endast giltigt för kommandona `apply`, `drop`, `pop`, `push`, `save` och `store`."
 
 #. type: Labeled list
 #: en/git-stash.adoc:258
@@ -52703,12 +52793,12 @@ msgstr "`--print`"
 #. type: Plain text
 #: en/git-stash.adoc:260 en/git-stash.adoc:267
 msgid "This option is only valid for the `export` command."
-msgstr ""
+msgstr "Det här alternativet är endast giltigt för kommandot `export`."
 
 #. type: Plain text
 #: en/git-stash.adoc:264
 msgid "Create the chain of commits representing the exported stashes without storing it anywhere in the ref namespace and print the object ID to standard output. This is designed for scripts."
-msgstr ""
+msgstr "Skapa kedjan av incheckningar som representerar de exporterade gömma-filerna utan att lagra den någonstans i referensnamnrymden och skriv ut objekt-ID:t till standardutdata. Detta är utformat för skript."
 
 #. type: Labeled list
 #: en/git-stash.adoc:265
@@ -52720,7 +52810,7 @@ msgstr "`--to-ref`"
 #. type: Plain text
 #: en/git-stash.adoc:270
 msgid "Create the chain of commits representing the exported stashes and store it to the specified ref."
-msgstr ""
+msgstr "Skapa kedjan av incheckningar som representerar de exporterade gömma-filerna och lagra den till den angivna referensen."
 
 #. type: Plain text
 #: en/git-stash.adoc:275
@@ -52736,17 +52826,17 @@ msgstr "Den nya gömma-posten registrerar de modifierade tillstånden endast fö
 #: en/git-stash.adoc:286
 #, no-wrap
 msgid "_<stash>_"
-msgstr ""
+msgstr "_<gömma>_"
 
 #. type: Plain text
 #: en/git-stash.adoc:289
 msgid "This option is only valid for `apply`, `branch`, `drop`, `pop`, `show`, and `export` commands."
-msgstr ""
+msgstr "Det här alternativet är endast giltigt för kommandona `apply`, `branch`, `drop`, `pop`, `show` och `export`."
 
 #. type: Plain text
 #: en/git-stash.adoc:292
 msgid "A reference of the form `stash@{<revision>}`. When no _<stash>_ is given, the latest stash is assumed (that is, `stash@{0}`)."
-msgstr ""
+msgstr "En referens av formen `stash@{<revision>}`. När ingen _<gömma>_ anges antas den senaste gömma (det vill säga `stash@{0}`)."
 
 #. type: Plain text
 #: en/git-stash.adoc:301
@@ -52758,11 +52848,14 @@ msgstr "En gömma-post representeras som en incheckning vars träd registrerar a
 #, no-wrap
 msgid "            .----W\n           /    /\n     -----H----I\n"
 msgstr ""
+"            .----W\n"
+"           /    /\n"
+"     -----H----I\n"
 
 #. type: Plain text
 #: en/git-stash.adoc:309
 msgid "where `H` is the `HEAD` commit, `I` is a commit that records the state of the index, and `W` is a commit that records the state of the working tree."
-msgstr ""
+msgstr "där `H` är `HEAD`-incheckningen, `I` är en incheckning som registrerar indexets tillstånd och `W` är en incheckning som registrerar arbetskatalogens tillstånd."
 
 #. type: Labeled list
 #: en/git-stash.adoc:314
@@ -52773,91 +52866,132 @@ msgstr "Drar in (\"pulla\") i ett smutsigt träd"
 #. type: Plain text
 #: en/git-stash.adoc:320
 msgid "When you are in the middle of something, you learn that there are upstream changes that are possibly relevant to what you are doing. When your local changes do not conflict with the changes in the upstream, a simple `git pull` will let you move forward."
-msgstr ""
+msgstr "När du är mitt uppe i något lär du dig att det finns förändringar uppströms som eventuellt är relevanta för det du gör. När dina lokala ändringar inte står i konflikt med ändringarna uppströms, kommer en enkel \"git pull\" att låta dig gå vidare."
 
 #. type: Plain text
 #: en/git-stash.adoc:325
+#, fuzzy
 msgid "However, there are cases in which your local changes do conflict with the upstream changes, and `git pull` refuses to overwrite your changes. In such a case, you can stash your changes away, perform a pull, and then unstash, like this:"
-msgstr ""
+msgstr "Det finns dock fall där dina lokala ändringar står i konflikt med ändringarna uppströms, och `git pull` vägrar att skriva över dina ändringar. I sådana fall kan du lagra dina ändringar, utföra en pull och sedan pocka ur gömman, så här:"
 
 #. type: delimited block -
 #: en/git-stash.adoc:333
 #, no-wrap
 msgid "$ git pull\n ...\nfile foobar not up to date, cannot merge.\n$ git stash\n$ git pull\n$ git stash pop\n"
 msgstr ""
+"$ git pull\n"
+" ...\n"
+"fil-foobarn är inte uppdaterad, kan inte sammanslå.\n"
+"$ git stash\n"
+"$ git pull\n"
+"$ git stash pop\n"
 
 #. type: Plain text
 #: en/git-stash.adoc:341
 msgid "When you are in the middle of something, your boss comes in and demands that you fix something immediately. Traditionally, you would make a commit to a temporary branch to store your changes away, and return to your original branch to make the emergency fix, like this:"
-msgstr ""
+msgstr "När du är mitt uppe i något kommer din chef in och kräver att du åtgärdar något omedelbart. Traditionellt sett skulle du göra en incheckning till en tillfällig gren för att lagra dina ändringar och återgå till din ursprungliga gren för att göra den akuta åtgärden, så här:"
 
 #. type: delimited block -
 #: en/git-stash.adoc:352
 #, no-wrap
 msgid "# ... hack hack hack ...\n$ git switch -c my_wip\n$ git commit -a -m \"WIP\"\n$ git switch master\n$ edit emergency fix\n$ git commit -a -m \"Fix in a hurry\"\n$ git switch my_wip\n$ git reset --soft HEAD^\n# ... continue hacking ...\n"
 msgstr ""
+"# ... hack hack hack ...\n"
+"$ git switch -c my_wip\n"
+"$ git commit -a -m \"WIP\"\n"
+"$ git switch master\n"
+"$ edit emergency fix\n"
+"$ git commit -a -m \"Fixa snabbt\"\n"
+"$ git switch my_wip\n"
+"$ git reset --soft HEAD^\n"
+"# ... fortsätta hacka ...\n"
 
 #. type: Plain text
 #: en/git-stash.adoc:355
 msgid "You can use 'git stash' to simplify the above, like this:"
-msgstr ""
+msgstr "Du kan använda 'git stash' för att förenkla ovanstående, så här:"
 
 #. type: delimited block -
 #: en/git-stash.adoc:363
 #, no-wrap
 msgid "# ... hack hack hack ...\n$ git stash\n$ edit emergency fix\n$ git commit -a -m \"Fix in a hurry\"\n$ git stash pop\n# ... continue hacking ...\n"
 msgstr ""
+"# ... hack hack hack ...\n"
+"$ git stash\n"
+"$ edit emergency fix\n"
+"$ git commit -a -m \"Fixa snabbt\"\n"
+"$ git stash pop\n"
+"# ... fortsätta hacka ...\n"
 
 #. type: Labeled list
 #: en/git-stash.adoc:365
 #, no-wrap
 msgid "Testing partial commits"
-msgstr ""
+msgstr "Testa partiella incheckningar"
 
 #. type: Plain text
 #: en/git-stash.adoc:370
 msgid "You can use `git stash push --keep-index` when you want to make two or more commits out of the changes in the work tree, and you want to test each change before committing:"
-msgstr ""
+msgstr "Du kan använda `git stash push --keep-index` när du vill göra två eller fler incheckningar från ändringarna i arbetsträdet, och du vill testa varje ändring innan du checkar-in:"
 
 #. type: delimited block -
 #: en/git-stash.adoc:381
 #, no-wrap
 msgid "# ... hack hack hack ...\n$ git add --patch foo            # add just first part to the index\n$ git stash push --keep-index    # save all other changes to the stash\n$ edit/build/test first part\n$ git commit -m 'First part'     # commit fully tested change\n$ git stash pop                  # prepare to work on all other changes\n# ... repeat above five steps until one commit remains ...\n$ edit/build/test remaining parts\n$ git commit foo -m 'Remaining parts'\n"
 msgstr ""
+"#... hack hack hack...\n"
+"$ git add --patch foo # lägg bara till den första delen i indexet\n"
+"$ git stash push --keep-index # spara alla andra ändringar i gömman\n"
+"$edit/build/test första delen\n"
+"$ git commit -m 'Första delen' # incheckning fullständigt testad ändring\n"
+"$ git stash pop # förbered dig för att arbeta med alla andra ändringar\n"
+"# ... upprepa ovanstående fem steg tills en incheckning återstår ...\n"
+"$edit/build/test återstående delar\n"
+"$ git commit foo -m 'Återstående delar'\n"
 
 #. type: Labeled list
 #: en/git-stash.adoc:383
 #, no-wrap
 msgid "Saving unrelated changes for future use"
-msgstr ""
+msgstr "Spara orelaterade ändringar för framtida bruk"
 
 #. type: Plain text
 #: en/git-stash.adoc:390
 msgid "When you are in the middle of massive changes and you find some unrelated issue that you don't want to forget to fix, you can do the change(s), stage them, and use `git stash push --staged` to stash them out for future use. This is similar to committing the staged changes, only the commit ends-up being in the stash and not on the current branch."
-msgstr ""
+msgstr "När du är mitt uppe i stora förändringar och hittar något orelaterat problem som du inte vill glömma att åtgärda, kan du göra ändringen/ändringarna, etapp-lägga dem och använda `git stash push --staged` för att lagra dem för framtida bruk. Detta liknar att incheckning de etapp-ändringarna, bara det att incheckningen hamnar i gömman och inte på den aktuella grenen."
 
 #. type: delimited block -
 #: en/git-stash.adoc:399
 #, no-wrap
 msgid "# ... hack hack hack ...\n$ git add --patch foo           # add unrelated changes to the index\n$ git stash push --staged       # save these changes to the stash\n# ... hack hack hack, finish current changes ...\n$ git commit -m 'Massive'       # commit fully tested changes\n$ git switch fixup-branch       # switch to another branch\n$ git stash pop                 # to finish work on the saved changes\n"
 msgstr ""
+"#... hack hack hack...\n"
+"$ git add --patch foo # lägg till orelaterade ändringar i indexet\n"
+"$ git stash push --staged # spara dessa ändringar i gömman\n"
+"# ... hack hack hack, avsluta aktuella ändringar ...\n"
+"$ git commit -m 'Massive' # incheckning fullt testade ändringar\n"
+"$ git switch fixup-branch # växla till en annan gren\n"
+"$ git stash pop # för att avsluta arbetet med de sparade ändringarna\n"
 
 #. type: Labeled list
 #: en/git-stash.adoc:401
 #, no-wrap
 msgid "Recovering stash entries that were cleared/dropped erroneously"
-msgstr ""
+msgstr "Återställa gömman-poster som felaktigt raderades/tappades"
 
 #. type: Plain text
 #: en/git-stash.adoc:407
 msgid "If you mistakenly drop or clear stash entries, they cannot be recovered through the normal safety mechanisms. However, you can try the following incantation to get a list of stash entries that are still in your repository, but not reachable any more:"
-msgstr ""
+msgstr "Om du av misstag tappar eller rensar gömma-poster kan de inte återställas via de vanliga säkerhetsmekanismerna. Du kan dock prova följande besvärjelse för att få en lista över gömma-poster som fortfarande finns i ditt förvar, men som inte längre är nåbara:"
 
 #. type: delimited block -
 #: en/git-stash.adoc:412
 #, no-wrap
 msgid "git fsck --unreachable |\ngrep commit | cut -d\\  -f3 |\nxargs git log --merges --no-walk --grep=WIP\n"
 msgstr ""
+"git fsck --unreachable |\n"
+"grep commit | cut -d\\  -f3 |\n"
+"xargs git log --merges --no-walk --grep=WIP\n"
 
 #. type: Plain text
 #: en/git-stash.adoc:430
