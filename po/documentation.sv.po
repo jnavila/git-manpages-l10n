@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-02-15 14:54+0000\n"
+"PO-Revision-Date: 2026-02-15 15:39+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -30841,7 +30841,7 @@ msgstr "Se alternativet `gc.auto` i avsnittet \"KONFIGURATION\" nedan för hur d
 #. type: Plain text
 #: en/git-gc.adoc:55
 msgid "Once housekeeping is triggered by exceeding the limits of configuration options such as `gc.auto` and `gc.autoPackLimit`, all other housekeeping tasks (e.g. rerere, working trees, reflog...) will be performed as well."
-msgstr "När hushållsåtgärder utlöses genom att gränserna för konfigurationsalternativ som `gc.auto` och `gc.autoPackLimit` överskrids, kommer alla andra hushållsuppgifter (t.ex. rerere, arbetskataloger, reflog...) också att utföras."
+msgstr "När hushållningsåtgärder utlöses genom att gränserna för konfigurationsalternativ som `gc.auto` och `gc.autoPackLimit` överskrids, kommer alla andra hushållsuppgifter (t.ex. rerere, arbetskataloger, reflog...) också att utföras."
 
 #. type: Labeled list
 #: en/git-gc.adoc:56
@@ -40911,43 +40911,43 @@ msgstr "git-pack-redundant(1)"
 #. type: Plain text
 #: en/git-pack-redundant.adoc:7
 msgid "git-pack-redundant - Find redundant pack files"
-msgstr ""
+msgstr "git-pack-redundant - Hitta redundanta paketfiler"
 
 #. type: verse
 #: en/git-pack-redundant.adoc:13
 #, no-wrap
 msgid "'git pack-redundant' [--verbose] [--alt-odb] (--all | <pack-filename>...)\n"
-msgstr ""
+msgstr "'git pack-redundant' [--verbose] [--alt-odb] (--all | <packet-filnamn>...)\n"
 
 #. type: Plain text
 #: en/git-pack-redundant.adoc:21
 msgid "`git pack-redundant` has been deprecated and is scheduled for removal in a future version of Git. Because it can only remove entire duplicate packs and not individual duplicate objects, it is generally not a useful tool for reducing repository size. You are better off using `git gc` to do so, which will put objects into a new pack, removing duplicates."
-msgstr ""
+msgstr "`git pack-redundant` har blivit föråldrad och är planerad att tas bort i en framtida version av Git. Eftersom det bara kan ta bort hela dubbletter av paket och inte enskilda dubbletter av objekt, är det generellt sett inte ett användbart verktyg för att minska förvars-storleken. Du gör bättre med `git gc` för att göra det, vilket lägger objekt i ett nytt paket och tar bort dubbletter."
 
 #. type: Plain text
 #: en/git-pack-redundant.adoc:27
 msgid "Running `pack-redundant` without the `--i-still-use-this` flag will fail in this release. If you believe you have a use case for which `pack-redundant` is better suited and oppose this removal, please contact the Git mailing list at git@vger.kernel.org. More information about the list is available at https://git-scm.com/community."
-msgstr ""
+msgstr "Att köra `pack-redundant` utan flaggan `--i-still-use-this` kommer att misslyckas i den här utgåvan. Om du tror att du har ett användningsfall där `pack-redundant` är bättre lämpad och motsätter dig denna borttagning, vänligen kontakta Git-e-postlistan på git@vger.kernel.org. Mer information om listan finns på https://git-scm.com/community."
 
 #. type: Plain text
 #: en/git-pack-redundant.adoc:33
 msgid "This program computes which packs in your repository are redundant. The output is suitable for piping to `xargs rm` if you are in the root of the repository."
-msgstr ""
+msgstr "Det här programmet beräknar vilka paket i ditt förvar som är redundanta. Utdata är lämpliga för \"pipa\" till `xargs rm` om du befinner dig i roten av förvaret."
 
 #. type: Plain text
 #: en/git-pack-redundant.adoc:38
 msgid "'git pack-redundant' accepts a list of objects on standard input. Any objects given will be ignored when checking which packs are required. This makes the following command useful when wanting to remove packs which contain unreachable objects."
-msgstr ""
+msgstr "'git pack-redundant' accepterar en lista med objekt som standardindata. Alla angivna objekt ignoreras när man kontrollerar vilka paket som krävs. Detta gör följande kommando användbart när man vill ta bort paket som innehåller oåtkomliga objekt."
 
 #. type: Plain text
 #: en/git-pack-redundant.adoc:41
 msgid "git fsck --full --unreachable | cut -d ' ' -f3 | \\ git pack-redundant --all | xargs rm"
-msgstr ""
+msgstr "git fsck --full --unreachable | cut -d ' ' -f3 | \\ git pack-redundant --all | xargs rm"
 
 #. type: Plain text
 #: en/git-pack-redundant.adoc:48
 msgid "Processes all packs. Any filenames on the command line are ignored."
-msgstr ""
+msgstr "Bearbetar alla paket. Alla filnamn på kommandoraden ignoreras."
 
 #. type: Labeled list
 #: en/git-pack-redundant.adoc:49
@@ -40959,12 +40959,12 @@ msgstr "--alt-odb"
 #. type: Plain text
 #: en/git-pack-redundant.adoc:52
 msgid "Don't require objects present in packs from alternate object database (odb) directories to be present in local packs."
-msgstr ""
+msgstr "Kräv inte att objekt som finns i paket från odb-kataloger (alternativa objektdatabaser) finns i lokala paket."
 
 #. type: Plain text
 #: en/git-pack-redundant.adoc:55
 msgid "Outputs some statistics to stderr. Has a small performance penalty."
-msgstr ""
+msgstr "Matar ut statistik till stderr. Har en liten prestandaförsämring."
 
 #. type: Plain text
 #: en/git-pack-redundant.adoc:61
@@ -41027,7 +41027,7 @@ msgstr "git-patch-id(1)"
 #. type: Plain text
 #: en/git-patch-id.adoc:7
 msgid "git-patch-id - Compute unique ID for a patch"
-msgstr ""
+msgstr "git-patch-id - Beräkna unikt ID för en patch"
 
 #. type: synopsis
 #: en/git-patch-id.adoc:12
@@ -41038,22 +41038,22 @@ msgstr "git patch-id [--stable | --unstable | --verbatim]\n"
 #. type: Plain text
 #: en/git-patch-id.adoc:16
 msgid "Read a patch from the standard input and compute the patch ID for it."
-msgstr ""
+msgstr "Läs en patch från standard-in och beräkna patch-ID:t för den."
 
 #. type: Plain text
 #: en/git-patch-id.adoc:21
 msgid "A \"patch ID\" is nothing but a sum of SHA-1 of the file diffs associated with a patch, with line numbers ignored. As such, it's \"reasonably stable\", but at the same time also reasonably unique, i.e., two patches that have the same \"patch ID\" are almost guaranteed to be the same thing."
-msgstr ""
+msgstr "Ett \"patch-ID\" är inget annat än en summa av SHA-1 för fildifferenserna som är associerade med en patch, med radnummer ignorerade. Som sådan är det \"rimligt stabilt\", men samtidigt också rimligt unikt, d.v.s. två patchar som har samma \"patch-ID\" är nästan garanterat samma sak."
 
 #. type: Plain text
 #: en/git-patch-id.adoc:23
 msgid "The main usecase for this command is to look for likely duplicate commits."
-msgstr ""
+msgstr "Det huvudsakliga användningsområdet för det här kommandot är att leta efter sannolika dubbletter av incheckningar."
 
 #. type: Plain text
 #: en/git-patch-id.adoc:29
 msgid "When dealing with `git diff-tree` output, it takes advantage of the fact that the patch is prefixed with the object name of the commit, and outputs two 40-byte hexadecimal strings. The first string is the patch ID, and the second string is the commit ID. This can be used to make a mapping from patch ID to commit ID."
-msgstr ""
+msgstr "När man hanterar `git diff-tree`-utdata utnyttjar den det faktum att patchen har prefixet med incheckningens objektnamn och matar ut två 40-byte hexadecimala strängar. Den första strängen är patch-ID:t och den andra strängen är inchecknings-ID:t. Detta kan användas för att göra en mappning från patch-ID till inchecknings-ID."
 
 #. type: Labeled list
 #: en/git-patch-id.adoc:33
@@ -41065,12 +41065,12 @@ msgstr "`--verbatim`"
 #. type: Plain text
 #: en/git-patch-id.adoc:36
 msgid "Calculate the patch-id of the input as it is given, do not strip any whitespace."
-msgstr ""
+msgstr "Beräkna patch-id för indata som det ges, ta inte bort något blanksteg."
 
 #. type: Plain text
 #: en/git-patch-id.adoc:38
 msgid "This is the default if `patchid.verbatim` is `true`."
-msgstr ""
+msgstr "Detta är standardvärdet om `patchid.verbatim` är `true`."
 
 #. type: Labeled list
 #: en/git-patch-id.adoc:39
@@ -41082,27 +41082,27 @@ msgstr "`--stable`"
 #. type: Plain text
 #: en/git-patch-id.adoc:41
 msgid "Use a \"stable\" sum of hashes as the patch ID. With this option:"
-msgstr ""
+msgstr "Använd en \"stabil\" summa av hashvärden som patch-ID. Med det här alternativet:"
 
 #. type: Plain text
 #: en/git-patch-id.adoc:49
 msgid "Reordering file diffs that make up a patch does not affect the ID. In particular, two patches produced by comparing the same two trees with two different settings for `-O<orderfile>` result in the same patch ID signature, thereby allowing the computed result to be used as a key to index some meta-information about the change between the two trees;"
-msgstr ""
+msgstr "Att ändra ordning på fildifferenser som utgör en patch påverkar inte ID:t. I synnerhet resulterar två patchar som produceras genom att jämföra samma två träd med två olika inställningar för `-O<orderfile>` i samma patch-ID-signatur, vilket gör att det beräknade resultatet kan användas som en nyckel för att indexera viss metainformation om förändringen mellan de två träden;"
 
 #. type: Plain text
 #: en/git-patch-id.adoc:55
 msgid "Result is different from the value produced by git 1.9 and older or produced when an \"unstable\" hash (see `--unstable` below) is configured - even when used on a diff output taken without any use of `-O<orderfile>`, thereby making existing databases storing such \"unstable\" or historical patch-ids unusable."
-msgstr ""
+msgstr "Resultatet skiljer sig från värdet som produceras av git 1.9 och äldre eller produceras när en \"instabil\" hash (se `--unstable` nedan) konfigureras - även när den används på en diff-utdata som tas utan användning av `-O<orderfile>`, vilket gör befintliga databaser som lagrar sådana \"instabila\" eller historiska patch-id:n oanvändbara."
 
 #. type: Plain text
 #: en/git-patch-id.adoc:57
 msgid "All whitespace within the patch is ignored and does not affect the id."
-msgstr ""
+msgstr "Allt blanktecken i patchen ignoreras och påverkar inte id:t."
 
 #. type: Plain text
 #: en/git-patch-id.adoc:60
 msgid "This is the default if `patchid.stable` is set to `true`."
-msgstr ""
+msgstr "Detta är standardvärdet om `patchid.stable` är satt till `true`."
 
 #. type: Labeled list
 #: en/git-patch-id.adoc:61
@@ -41114,12 +41114,12 @@ msgstr "`--unstable`"
 #. type: Plain text
 #: en/git-patch-id.adoc:67
 msgid "Use an \"unstable\" hash as the patch ID. With this option, the result produced is compatible with the patch-id value produced by git 1.9 and older and whitespace is ignored. Users with pre-existing databases storing patch-ids produced by git 1.9 and older (who do not deal with reordered patches) may want to use this option."
-msgstr ""
+msgstr "Använd en \"instabil\" hash som patch-ID. Med det här alternativet är resultatet kompatibelt med patch-id-värdet som produceras av git 1.9 och äldre, och blanksteg ignoreras. Användare med befintliga databaser som lagrar patch-id:n som produceras av git 1.9 och äldre (som inte hanterar omordnade patchar) kanske vill använda det här alternativet."
 
 #. type: Plain text
 #: en/git-patch-id.adoc:69
 msgid "This is the default."
-msgstr ""
+msgstr "Detta är standardvärdet."
 
 #. type: Title =
 #: en/git-prune-packed.adoc:2
@@ -41131,43 +41131,43 @@ msgstr "git-prune-packed(1)"
 #. type: Plain text
 #: en/git-prune-packed.adoc:7
 msgid "git-prune-packed - Remove extra objects that are already in pack files"
-msgstr ""
+msgstr "git-prune-packed - Ta bort extra objekt som redan finns i packfiler"
 
 #. type: verse
 #: en/git-prune-packed.adoc:13
 #, no-wrap
 msgid "'git prune-packed' [-n | --dry-run] [-q | --quiet]\n"
-msgstr ""
+msgstr "'git prune-packed' [-n | --dry-run] [-q | --quiet]\n"
 
 #. type: Plain text
 #: en/git-prune-packed.adoc:19
 msgid "This program searches the `$GIT_OBJECT_DIRECTORY` for all objects that currently exist in a pack file as well as in the independent object directories."
-msgstr ""
+msgstr "Det här programmet söker i `$GIT_OBJECT_DIRECTORY` efter alla objekt som för närvarande finns i en pack-fil såväl som i de oberoende objektkatalogerna."
 
 #. type: Plain text
 #: en/git-prune-packed.adoc:21
 msgid "All such extra objects are removed."
-msgstr ""
+msgstr "Alla sådana extra objekt tas bort."
 
 #. type: Plain text
 #: en/git-prune-packed.adoc:24 en/git-repack.adoc:26
 msgid "A pack is a collection of objects, individually compressed, with delta compression applied, stored in a single file, with an associated index file."
-msgstr ""
+msgstr "Ett paket är en samling objekt, individuellt komprimerade, med deltakomprimering tillämpad, lagrade i en enda fil, med en tillhörande indexfil."
 
 #. type: Plain text
 #: en/git-prune-packed.adoc:27 en/git-repack.adoc:29
 msgid "Packs are used to reduce the load on mirror systems, backup engines, disk storage, etc."
-msgstr ""
+msgstr "Paket används för att minska belastningen på spegelsystem, backupmotorer, disklagring etc."
 
 #. type: Plain text
 #: en/git-prune-packed.adoc:35
 msgid "Don't actually remove any objects, only show those that would have been removed."
-msgstr ""
+msgstr "Ta inte bort några objekt, visa bara de som skulle ha tagits bort."
 
 #. type: Plain text
 #: en/git-prune-packed.adoc:39
 msgid "Squelch the progress indicator."
-msgstr ""
+msgstr "Tysta av förloppsindikatorn."
 
 #. type: Plain text
 #: en/git-prune-packed.adoc:44
@@ -41196,7 +41196,7 @@ msgstr "'git prune' [-n] [-v] [--progress] [--expire <tid>] [--] [<huvud>...]\n"
 #. type: Plain text
 #: en/git-prune.adoc:19
 msgid "In most cases, users should run 'git gc', which calls 'git prune'. See the section \"NOTES\", below."
-msgstr ""
+msgstr "I de flesta fall, bör användare köra 'git gc', som anropar 'git prune'. Se avsnittet \"ANMÄRKNINGAR\" nedan."
 
 #. type: Plain text
 #: en/git-prune.adoc:29
@@ -41207,17 +41207,17 @@ msgstr "Detta kör 'git fsck --unreachable' med alla referenser som finns i `ref
 #. type: Plain text
 #: en/git-prune.adoc:32
 msgid "Note that unreachable, packed objects will remain. If this is not desired, see linkgit:git-repack[1]."
-msgstr ""
+msgstr "Observera att oåtkomliga, packade objekt kommer att finnas kvar. Om detta inte önskas, se linkgit:git-repack[1]."
 
 #. type: Plain text
 #: en/git-prune.adoc:40
 msgid "Do not remove anything; just report what it would remove."
-msgstr ""
+msgstr "Ta inte bort något; rapportera bara vad det skulle ta bort."
 
 #. type: Plain text
 #: en/git-prune.adoc:44
 msgid "Report all removed objects."
-msgstr ""
+msgstr "Rapportera alla borttagna objekt."
 
 #. type: Plain text
 #: en/git-prune.adoc:47
@@ -41228,7 +41228,7 @@ msgstr "Visa förlopp."
 #: en/git-prune.adoc:48
 #, no-wrap
 msgid "--expire <time>"
-msgstr ""
+msgstr "--expire <tid>"
 
 #. type: Plain text
 #: en/git-prune.adoc:50
@@ -41240,33 +41240,33 @@ msgstr "Låt tid gå ut för onödiga objekt äldre än <tid>."
 #: en/git-prune.adoc:54
 #, no-wrap
 msgid "<head>..."
-msgstr ""
+msgstr "<huvud>..."
 
 #. type: Plain text
 #: en/git-prune.adoc:58
 msgid "In addition to objects reachable from any of our references, keep objects reachable from listed <head>s."
-msgstr ""
+msgstr "Förutom objekt som kan nås från någon av våra referenser, behåll objekt som kan nås från listade <huvud>en."
 
 #. type: Plain text
 #: en/git-prune.adoc:65
 msgid "To prune objects not used by your repository or another that borrows from your repository via its `.git/objects/info/alternates`:"
-msgstr ""
+msgstr "För att rensa objekt som inte används av ditt förvar eller ett annat som lånar från ditt förvar via dess `.git/objects/info/alternates`:"
 
 #. type: delimited block -
 #: en/git-prune.adoc:68
 #, no-wrap
 msgid "$ git prune $(cd ../another && git rev-parse --all)\n"
-msgstr ""
+msgstr "$ git prune $(cd ../another && git rev-parse --all)\n"
 
 #. type: Plain text
 #: en/git-prune.adoc:76
 msgid "In most cases, users will not need to call 'git prune' directly, but should instead call 'git gc', which handles pruning along with many other housekeeping tasks."
-msgstr ""
+msgstr "I de flesta fall behöver användare inte anropa 'git prune' direkt, utan bör istället anropa 'git gc', som hanterar rensning tillsammans med många andra hushållningssuppgifter."
 
 #. type: Plain text
 #: en/git-prune.adoc:79
 msgid "For a description of which objects are considered for pruning, see 'git fsck''s --unreachable option."
-msgstr ""
+msgstr "För en beskrivning av vilka objekt som beaktas för beskärning, se 'git fsck's --unreachable-alternativ."
 
 #. type: Plain text
 #: en/git-prune.adoc:86
@@ -47063,28 +47063,28 @@ msgstr "git-request-pull(1)"
 #. type: Plain text
 #: en/git-request-pull.adoc:7
 msgid "git-request-pull - Generates a summary of pending changes"
-msgstr ""
+msgstr "git-request-pull - Genererar en sammanfattning av väntande ändringar"
 
 #. type: verse
 #: en/git-request-pull.adoc:12
 #, no-wrap
 msgid "'git request-pull' [-p] <start> <URL> [<end>]\n"
-msgstr ""
+msgstr "'git request-pull' [-p] <start> <URL> [<slut>]\n"
 
 #. type: Plain text
 #: en/git-request-pull.adoc:20
 msgid "Generate a request asking your upstream project to pull changes into their tree. The request, printed to the standard output, begins with the branch description, summarizes the changes, and indicates from where they can be pulled."
-msgstr ""
+msgstr "Generera en begäran som ber ditt uppströmsprojekt att hämta ändringar till sitt träd. Begäran, som skrivs ut som standardutdata, börjar med grenbeskrivningen, sammanfattar ändringarna och anger varifrån de kan hämtas."
 
 #. type: Plain text
 #: en/git-request-pull.adoc:25
 msgid "The upstream project is expected to have the commit named by `<start>` and the output asks it to integrate the changes you made since that commit, up to the commit named by `<end>`, by visiting the repository named by `<URL>`."
-msgstr ""
+msgstr "Uppströmsprojektet förväntas ha incheckningen namngiven `<start>` och utdata ber det att integrera de ändringar du gjort sedan den incheckningen, upp till incheckningen namngiven `<slut>`, genom att besöka förvaret namngivet `<URL>`."
 
 #. type: Plain text
 #: en/git-request-pull.adoc:31
 msgid "Include patch text in the output."
-msgstr ""
+msgstr "Inkludera patchtext i utdata."
 
 #. type: Labeled list
 #: en/git-request-pull.adoc:32
@@ -47095,83 +47095,83 @@ msgstr "<start>"
 #. type: Plain text
 #: en/git-request-pull.adoc:35
 msgid "Commit to start at. This names a commit that is already in the upstream history."
-msgstr ""
+msgstr "Incheckning att börja med. Detta namnger en incheckning som redan finns i uppströmshistoriken."
 
 #. type: Labeled list
 #: en/git-request-pull.adoc:36
 #, no-wrap
 msgid "<URL>"
-msgstr ""
+msgstr "<URL>"
 
 #. type: Plain text
 #: en/git-request-pull.adoc:38
 msgid "The repository URL to be pulled from."
-msgstr ""
+msgstr "URL:en för förvaret som ska hämtas från."
 
 #. type: Labeled list
 #: en/git-request-pull.adoc:39
 #, no-wrap
 msgid "<end>"
-msgstr ""
+msgstr "<slut>"
 
 #. type: Plain text
 #: en/git-request-pull.adoc:42
 msgid "Commit to end at (defaults to HEAD). This names the commit at the tip of the history you are asking to be pulled."
-msgstr ""
+msgstr "Incheckning att sluta vid (standardinställningen är HEAD). Detta namnger incheckningen i slutet av historiken som du begär ska hämtas."
 
 #. type: Plain text
 #: en/git-request-pull.adoc:47
 msgid "When the repository named by `<URL>` has the commit at a tip of a ref that is different from the ref you have locally, you can use the `<local>:<remote>` syntax, to have its local name, a colon `:`, and its remote name."
-msgstr ""
+msgstr "När förvaret som namnges av `<URL>` har incheckningen i toppen för en referens som skiljer sig från den referens du har lokalt, kan du använda syntaxen `<lokal>:<fjärr>` för att få dess lokala namn, ett kolon `:` och dess fjärrnamn."
 
 #. type: Plain text
 #: en/git-request-pull.adoc:56
 msgid "Imagine that you built your work on your `master` branch on top of the `v1.0` release, and want it to be integrated into the project. First you push that change to your public repository for others to see:"
-msgstr ""
+msgstr "Tänk dig att du byggde ditt arbete på din `master`-gren ovanpå `v1.0`-utgåvan och vill att den ska integreras i projektet. Först publicerar du den ändringen till ditt publika förvar så att andra kan se den:"
 
 #. type: Plain text
 #: en/git-request-pull.adoc:58
 #, no-wrap
 msgid "\tgit push https://git.ko.xz/project master\n"
-msgstr ""
+msgstr "\tgit push https://git.ko.xz/projekt master\n"
 
 #. type: Plain text
 #: en/git-request-pull.adoc:60
 msgid "Then, you run this command:"
-msgstr ""
+msgstr "Sedan kör du det här kommandot:"
 
 #. type: Plain text
 #: en/git-request-pull.adoc:62
 #, no-wrap
 msgid "\tgit request-pull v1.0 https://git.ko.xz/project master\n"
-msgstr ""
+msgstr "\tgit request-pull v1.0 https://git.ko.xz/projekt master\n"
 
 #. type: Plain text
 #: en/git-request-pull.adoc:66
 msgid "which will produce a request to the upstream, summarizing the changes between the `v1.0` release and your `master`, to pull it from your public repository."
-msgstr ""
+msgstr "vilket kommer att generera en begäran till uppströmsen, som sammanfattar ändringarna mellan `v1.0`-utgåvan och din `master`, att hämta den från ditt publika förvar."
 
 #. type: Plain text
 #: en/git-request-pull.adoc:69
 msgid "If you pushed your change to a branch whose name is different from the one you have locally, e.g."
-msgstr ""
+msgstr "Om du skickade din ändring till en gren vars namn skiljer sig från det du har lokalt, t.ex."
 
 #. type: Plain text
 #: en/git-request-pull.adoc:71
 #, no-wrap
 msgid "\tgit push https://git.ko.xz/project master:for-linus\n"
-msgstr ""
+msgstr "\tgit push https://git.ko.xz/projekt master:for-linus\n"
 
 #. type: Plain text
 #: en/git-request-pull.adoc:73
 msgid "then you can ask that to be pulled with"
-msgstr ""
+msgstr "då kan du be att det tas bort med"
 
 #. type: Plain text
 #: en/git-request-pull.adoc:75
 #, no-wrap
 msgid "\tgit request-pull v1.0 https://git.ko.xz/project master:for-linus\n"
-msgstr ""
+msgstr "\tgit request-pull v1.0 https://git.ko.xz/projekt master:for-linus\n"
 
 #. type: Title =
 #: en/git-rerere.adoc:2
@@ -47194,33 +47194,34 @@ msgstr "'git rerere' [clear | forget <sökvägsangivelse>... | diff | status | r
 #. type: Plain text
 #: en/git-rerere.adoc:20
 msgid "In a workflow employing relatively long lived topic branches, the developer sometimes needs to resolve the same conflicts over and over again until the topic branches are done (either merged to the \"release\" branch, or sent out and accepted upstream)."
-msgstr ""
+msgstr "I ett arbetsflöde som använder relativt långlivade ämnesgrenar, behöver utvecklaren ibland lösa samma konflikter om och om igen tills ämnesgrenarna är klara (antingen sammanslagna med \"release\"-grenen, eller skickade ut och accepterade uppströms)."
 
 #. type: Plain text
 #: en/git-rerere.adoc:25
+#, fuzzy
 msgid "This command assists the developer in this process by recording conflicted automerge results and corresponding hand resolve results on the initial manual merge, and applying previously recorded hand resolutions to their corresponding automerge results."
-msgstr ""
+msgstr "Det här kommandot hjälper utvecklaren i den här processen genom att registrera motstridiga autosammanslå-resultat och motsvarande handlösningsresultat vid den initiala manuella sammanslagingen, och tillämpa tidigare registrerade handlösningar på deras motsvarande autosammanslå-resultat."
 
 #. type: NOTE
 #: en/git-rerere.adoc:29
 msgid "You need to set the configuration variable `rerere.enabled` in order to enable this command."
-msgstr ""
+msgstr "Du måste ställa in konfigurationsvariabeln `rerere.enabled` för att aktivera det här kommandot."
 
 #. type: Plain text
 #: en/git-rerere.adoc:37
 msgid "Normally, 'git rerere' is run without arguments or user-intervention. However, it has several commands that allow it to interact with its working state."
-msgstr ""
+msgstr "Normalt körs 'git rerere' utan argument eller användarintervention. Den har dock flera kommandon som gör att den kan interagera med sitt arbetsläge."
 
 #. type: Labeled list
 #: en/git-rerere.adoc:38
 #, no-wrap
 msgid "'clear'"
-msgstr ""
+msgstr "'clear'"
 
 #. type: Plain text
 #: en/git-rerere.adoc:43
 msgid "Reset the metadata used by rerere if a merge resolution is to be aborted. Calling 'git am [--skip|--abort]' or 'git rebase [--skip|--abort]' will automatically invoke this command."
-msgstr ""
+msgstr "Återställ metadata som används av rerere om en sammanslagningslösning ska avbrytas. Om du anropar 'git am [--skip|--abort]' eller 'git rebase [--skip|--abort]' anropas det här kommandot automatiskt."
 
 #. type: Labeled list
 #: en/git-rerere.adoc:44
@@ -47237,78 +47238,86 @@ msgstr "Återställ konfliktlösningarna som rerere har registrerat för den akt
 #: en/git-rerere.adoc:49
 #, no-wrap
 msgid "'diff'"
-msgstr ""
+msgstr "'diff'"
 
 #. type: Plain text
 #: en/git-rerere.adoc:55
 msgid "Display diffs for the current state of the resolution. It is useful for tracking what has changed while the user is resolving conflicts. Additional arguments are passed directly to the system 'diff' command installed in PATH."
-msgstr ""
+msgstr "Visa differenser för lösningens aktuella tillstånd. Det är användbart för att spåra vad som har ändrats medan användaren löser konflikter. Ytterligare argument skickas direkt till systemets 'diff'-kommando som är installerat i PATH."
 
 #. type: Labeled list
 #: en/git-rerere.adoc:56
 #, no-wrap
 msgid "'status'"
-msgstr ""
+msgstr "'status'"
 
 #. type: Plain text
 #: en/git-rerere.adoc:59
 msgid "Print paths with conflicts whose merge resolution rerere will record."
-msgstr ""
+msgstr "Skriv ut sökvägar med konflikter vars sammanslagningslösning kommer att registreras."
 
 #. type: Labeled list
 #: en/git-rerere.adoc:60
 #, no-wrap
 msgid "'remaining'"
-msgstr ""
+msgstr "'remaining'"
 
 #. type: Plain text
 #: en/git-rerere.adoc:65
 msgid "Print paths with conflicts that have not been autoresolved by rerere. This includes paths whose resolutions cannot be tracked by rerere, such as conflicting submodules."
-msgstr ""
+msgstr "Skriv ut sökvägar med konflikter som inte har lösts automatiskt av rerere. Detta inkluderar sökvägar vars lösningar inte kan spåras av rerere, till exempel motstridiga undermoduler."
 
 #. type: Labeled list
 #: en/git-rerere.adoc:66 en/git-svn.adoc:511
 #, no-wrap
 msgid "'gc'"
-msgstr ""
+msgstr "'gc'"
 
 #. type: Plain text
 #: en/git-rerere.adoc:74
 msgid "Prune records of conflicted merges that occurred a long time ago. By default, unresolved conflicts older than 15 days and resolved conflicts older than 60 days are pruned. These defaults are controlled via the `gc.rerereUnresolved` and `gc.rerereResolved` configuration variables respectively."
-msgstr ""
+msgstr "Rensa poster över konfliktfyllda sammanslagningar som inträffade för länge sedan. Som standard rengörs olösta konflikter som är äldre än 15 dagar och lösta konflikter som är äldre än 60 dagar. Dessa standardvärden styrs via konfigurationsvariablerna `gc.rerereUnresolved` respektive `gc.rerereResolved`."
 
 #. type: Plain text
 #: en/git-rerere.adoc:83
 msgid "When your topic branch modifies an overlapping area that your master branch (or upstream) touched since your topic branch forked from it, you may want to test it with the latest master, even before your topic branch is ready to be pushed upstream:"
-msgstr ""
+msgstr "När din ämnesgren modifierar ett överlappande område som din huvudgren (eller uppströms) har berört sedan din ämnesgren har förgrenat sig från den, kanske du vill testa den med den senaste huvudgrenen, redan innan din ämnesgren är redo att skickas uppströms:"
 
 #. type: delimited block -
 #: en/git-rerere.adoc:88
 #, no-wrap
 msgid "              o---*---o topic\n             /\n    o---o---o---*---o---o master\n"
 msgstr ""
+"              o---*---o ämne\n"
+"             /\n"
+"    o---o---o---*---o---o master\n"
 
 #. type: Plain text
 #: en/git-rerere.adoc:92
 msgid "For such a test, you need to merge master and topic somehow. One way to do it is to pull master into the topic branch:"
-msgstr ""
+msgstr "För ett sådant test behöver du på något sätt slå samman master och ämne. Ett sätt att göra det är att dra master in i topic-grenen:"
 
 #. type: delimited block -
 #: en/git-rerere.adoc:96
 #, no-wrap
 msgid "\t$ git switch topic\n\t$ git merge master\n"
 msgstr ""
+"\t$ git switch topic\n"
+"\t$ git merge master\n"
 
 #. type: delimited block -
 #: en/git-rerere.adoc:100
 #, no-wrap
 msgid "              o---*---o---+ topic\n             /           /\n    o---o---o---*---o---o master\n"
 msgstr ""
+"              o---*---o---+ ämne\n"
+"             /           /\n"
+"    o---o---o---*---o---o master\n"
 
 #. type: Plain text
 #: en/git-rerere.adoc:106
 msgid "The commits marked with `*` touch the same area in the same file; you need to resolve the conflicts when creating the commit marked with `+`. Then you can test the result to make sure your work-in-progress still works with what is in the latest master."
-msgstr ""
+msgstr "De incheckningar som är markerade med `*` berör samma område i samma fil; du måste lösa konflikterna när du skapar incheckningen som är markerad med `+`. Sedan kan du testa resultatet för att se till att ditt pågående arbete fortfarande fungerar med det som finns i den senaste master."
 
 #. type: Plain text
 #: en/git-rerere.adoc:114
@@ -47320,39 +47329,56 @@ msgstr "Efter denna testsammanslagning finns det två sätt att fortsätta ditt 
 #, no-wrap
 msgid "\t$ git switch topic\n\t$ git merge master\n\t$ ... work on both topic and master branches\n\t$ git switch master\n\t$ git merge topic\n"
 msgstr ""
+"\t$ git switch topic\n"
+"\t$ git merge master\n"
+"\t$ ... arbeta med både ämnes- och huvudgrenar\n"
+"\t$ git switch master\n"
+"\t$ git merge topic\n"
 
 #. type: delimited block -
 #: en/git-rerere.adoc:125
 #, no-wrap
 msgid "              o---*---o---+---o---o topic\n             /           /         \\\n    o---o---o---*---o---o---o---o---+ master\n"
 msgstr ""
+"              o---*---o---+---o---o ämne\n"
+"             /           /         \\\n"
+"    o---o---o---*---o---o---o---o---+ master\n"
 
 #. type: Plain text
 #: en/git-rerere.adoc:133
 msgid "When your topic branch is long-lived, however, your topic branch would end up having many such \"Merge from master\" commits on it, which would unnecessarily clutter the development history. Readers of the Linux kernel mailing list may remember that Linus complained about such too frequent test merges when a subsystem maintainer asked to pull from a branch full of \"useless merges\"."
-msgstr ""
+msgstr "När din ämnesgren är långlivad skulle den dock få många sådana \"Sammanslagning från master\"-incheckningar, vilket i onödan skulle skräpa in utvecklingshistoriken. Läsare av Linuxkärnans e-postlista kanske minns att Linus klagade över så frekventa testsammanslagningar när en delsystemsansvarig bad om att hämta från en gren full av \"värdelösa sammanslagningar\"."
 
 #. type: Plain text
 #: en/git-rerere.adoc:137
 msgid "As an alternative, to keep the topic branch clean of test merges, you could blow away the test merge, and keep building on top of the tip before the test merge:"
-msgstr ""
+msgstr "Som ett alternativ, för att hålla ämnesgrenen ren från testsammanslagningar, kan du ta bort testsammanslagningen och fortsätta bygga ovanpå toppen före testsammanslagningen:"
 
 #. type: delimited block -
 #: en/git-rerere.adoc:145
 #, no-wrap
 msgid "\t$ git switch topic\n\t$ git merge master\n\t$ git reset --hard HEAD^ ;# rewind the test merge\n\t$ ... work on both topic and master branches\n\t$ git switch master\n\t$ git merge topic\n"
 msgstr ""
+"\t$ git switch topic\n"
+"\t$ git merge master\n"
+"\t$ git reset --hard HEAD^ ;# spola tillbaka testsammanslagningen\n"
+"\t$ ... arbeta med både ämnes- och huvudgrenar\n"
+"\t$ git switch master\n"
+"\t$ git merge topic\n"
 
 #. type: delimited block -
 #: en/git-rerere.adoc:149
 #, no-wrap
 msgid "              o---*---o-------o---o topic\n             /                     \\\n    o---o---o---*---o---o---o---o---+ master\n"
 msgstr ""
+"              o---*---o-------o---o ämne\n"
+"             /                     \\\n"
+"    o---o---o---*---o---o---o---o---+ master\n"
 
 #. type: Plain text
 #: en/git-rerere.adoc:159
 msgid "This would leave only one merge commit when your topic branch is finally ready and merged into the master branch. This merge would require you to resolve the conflict, introduced by the commits marked with `*`. However, this conflict is often the same conflict you resolved when you created the test merge you blew away. 'git rerere' helps you resolve this final conflicted merge using the information from your earlier hand resolve."
-msgstr ""
+msgstr "Detta skulle bara lämna en sammanslagnings-incheckning kvar när din ämnesgren äntligen är klar och sammanfogad med huvudgrenen. Denna sammanslagning skulle kräva att du löser konflikten, som introduceras av incheckningar markerade med `*`. Denna konflikt är dock ofta samma konflikt som du löste när du skapade testsammanslagningen som du förstörde. 'git rerere' hjälper dig att lösa denna slutliga konfliktfyllda sammanslagning med hjälp av informationen från din tidigare handlösning."
 
 #. type: Plain text
 #: en/git-rerere.adoc:167
