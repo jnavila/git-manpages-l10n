@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-01-16 21:44+0100\n"
-"PO-Revision-Date: 2026-02-17 06:07+0000\n"
+"PO-Revision-Date: 2026-02-17 20:26+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
 #. type: Labeled list
 #: en/blame-options.adoc:1 en/git-instaweb.adoc:45 en/git-ls-remote.adoc:24
@@ -61347,65 +61347,74 @@ msgstr "git-worktree(1)"
 #. type: Plain text
 #: en/git-worktree.adoc:7
 msgid "git-worktree - Manage multiple working trees"
-msgstr ""
+msgstr "git-worktree - Hantera flera arbetskataloger"
 
 #. type: synopsis
 #: en/git-worktree.adoc:21
 #, no-wrap
 msgid "git worktree add [-f] [--detach] [--checkout] [--lock [--reason <string>]]\n\t\t [--orphan] [(-b | -B) <new-branch>] <path> [<commit-ish>]\ngit worktree list [-v | --porcelain [-z]]\ngit worktree lock [--reason <string>] <worktree>\ngit worktree move <worktree> <new-path>\ngit worktree prune [-n] [-v] [--expire <expire>]\ngit worktree remove [-f] <worktree>\ngit worktree repair [<path>...]\ngit worktree unlock <worktree>\n"
 msgstr ""
+"git worktree add [-f] [--detach] [--checkout] [--lock [--reason <sträng>]]\n"
+"\t\t [--orphan] [(-b | -B) <ny-gren>] <sökväg> [<incheckning-igt>]\n"
+"git worktree list [-v | --porcelain [-z]]\n"
+"git worktree lock [--reason <string>] <arbetsträd>\n"
+"git worktree move <worktree> <ny-sökväg>\n"
+"git worktree prune [-n] [-v] [--expire <upphör>]\n"
+"git worktree remove [-f] <arbetsträd>\n"
+"git worktree repair [<sökväg>...]\n"
+"git worktree unlock <arbetsträd>\n"
 
 #. type: Plain text
 #: en/git-worktree.adoc:26
 msgid "Manage multiple working trees attached to the same repository."
-msgstr ""
+msgstr "Hantera flera arbetskataloger som är kopplade till samma förvar."
 
 #. type: Plain text
 #: en/git-worktree.adoc:32
 msgid "A git repository can support multiple working trees, allowing you to check out more than one branch at a time. With `git worktree add` a new working tree is associated with the repository, along with additional metadata that differentiates that working tree from others in the same repository. The working tree, along with this metadata, is called a \"worktree\"."
-msgstr ""
+msgstr "Ett git-förvar kan stödja flera arbetskataloger, vilket gör att du kan checka ut mer än en gren åt gången. Med `git worktree add` associeras ett nytt arbetskatalog med förvaret, tillsammans med ytterligare metadata som skiljer den arbetskatalogen från andra i samma förvar. Arbetskatalogen, tillsammans med dessa metadata, kallas ett \"arbetsträd\"."
 
 #. type: Plain text
 #: en/git-worktree.adoc:38
 msgid "This new worktree is called a \"linked worktree\" as opposed to the \"main worktree\" prepared by linkgit:git-init[1] or linkgit:git-clone[1]. A repository has one main worktree (if it's not a bare repository) and zero or more linked worktrees. When you are done with a linked worktree, remove it with `git worktree remove`."
-msgstr ""
+msgstr "Detta nya arbetsträd kallas ett \"länkat arbetsträd\" i motsats till det \"huvudarbetsträd\" som förberetts av linkgit:git-init[1] eller linkgit:git-clone[1]. Ett förvar har ett huvudarbetsträd (om det inte är ett rent förvar) och noll eller fler länkade arbetsträd. När du är klar med ett länkat arbetsträd, ta bort det med `git worktree remove`."
 
 #. type: Plain text
 #: en/git-worktree.adoc:50
 msgid "In its simplest form, `git worktree add <path>` automatically creates a new branch whose name is the final component of _<path>_, which is convenient if you plan to work on a new topic. For instance, `git worktree add ../hotfix` creates new branch `hotfix` and checks it out at path `../hotfix`. To instead work on an existing branch in a new worktree, use `git worktree add <path> <branch>`. On the other hand, if you just plan to make some experimental changes or do testing without disturbing existing development, it is often convenient to create a 'throwaway' worktree not associated with any branch. For instance, `git worktree add -d <path>` creates a new worktree with a detached `HEAD` at the same commit as the current branch."
-msgstr ""
+msgstr "I sin enklaste form skapar `git worktree add <sökväg>` automatiskt en ny gren vars namn är den sista komponenten i _<sökväg>_, vilket är praktiskt om du planerar att arbeta med ett nytt ämne. Till exempel skapar `git worktree add ../hotfix` en ny gren `hotfix` och checkar ut den vid sökvägen `../hotfix`. För att istället arbeta med en befintlig gren i ett nytt arbetsträd, använd `git worktree add <sökväg> <gren>`. Å andra sidan, om du bara planerar att göra några experimentella ändringar eller testa utan att störa befintlig utveckling, är det ofta praktiskt att skapa ett 'engångs'-arbetsträd som inte är associerat med någon gren. Till exempel skapar `git worktree add -d <sökväg>` ett nytt arbetsträd med en fristående `HEAD` vid samma incheckning som den aktuella grenen."
 
 #. type: Plain text
 #: en/git-worktree.adoc:57
 msgid "If a working tree is deleted without using `git worktree remove`, then its associated administrative files, which reside in the repository (see \"DETAILS\" below), will eventually be removed automatically (see `gc.worktreePruneExpire` in linkgit:git-config[1]), or you can run `git worktree prune` in the main or any linked worktree to clean up any stale administrative files."
-msgstr ""
+msgstr "Om en arbetskatalog tas bort utan att använda `git worktree remove`, kommer dess tillhörande administrativa filer, som finns i arkivet (se \"DETALJER\" nedan), så småningom att tas bort automatiskt (se `gc.worktreePruneExpire` i linkgit:git-config[1]), eller så kan du köra `git worktree prune` i huvudträdet eller i något länkat arbetsträd för att rensa upp eventuella inaktuella administrativa filer."
 
 #. type: Plain text
 #: en/git-worktree.adoc:63
 msgid "If the working tree for a linked worktree is stored on a portable device or network share which is not always mounted, you can prevent its administrative files from being pruned by issuing the `git worktree lock` command, optionally specifying `--reason` to explain why the worktree is locked."
-msgstr ""
+msgstr "Om arbetskatalogen för ett länkat arbetsträd lagras på en bärbar enhet eller nätverksresurs som inte alltid är monterad, kan du förhindra att dess administrativa filer rensas genom att köra kommandot `git worktree lock`, valfritt ange `--reason` för att förklara varför arbetsträdet är låst."
 
 #. type: Labeled list
 #: en/git-worktree.adoc:66
 #, no-wrap
 msgid "`add <path> [<commit-ish>]`"
-msgstr ""
+msgstr "`add <sökväg> [<incheckning-igt>]`"
 
 #. type: Plain text
 #: en/git-worktree.adoc:72
 msgid "Create a worktree at _<path>_ and checkout _<commit-ish>_ into it. The new worktree is linked to the current repository, sharing everything except per-worktree files such as `HEAD`, `index`, etc. As a convenience, _<commit-ish>_ may be a bare \"`-`\", which is synonymous with `@{-1}`."
-msgstr ""
+msgstr "Skapa ett arbetsträd vid _<sökväg>_ och checka ut _<incheckning-igt>_ i det. Det nya arbetsträdet länkas till det aktuella arkivet och delar allt utom per arbetsträds-filer som `HEAD`, `index`, etc. För enkelhetens skull kan _<incheckning-igt>_ vara ett rent \"`-`\", vilket är synonymt med `@{-1}`."
 
 #. type: Plain text
 #: en/git-worktree.adoc:77
 msgid "If _<commit-ish>_ is a branch name (call it _<branch>_) and is not found, and neither `-b` nor `-B` nor `--detach` are used, but there does exist a tracking branch in exactly one remote (call it _<remote>_) with a matching name, treat as equivalent to:"
-msgstr ""
+msgstr "Om _<incheckning-igth>_ är ett grennamn (kalla det _<gren>_) och inte hittas, och varken `-b`, `-B` eller `--detach` används, men det finns en spårningsgren i exakt en fjärr (kalla den _<fjärr>_) med ett matchande namn, behandla den som likvärdig med:"
 
 #. type: delimited block -
 #: en/git-worktree.adoc:80
 #, no-wrap
 msgid "$ git worktree add --track -b <branch> <path> <remote>/<branch>\n"
-msgstr ""
+msgstr "$ git worktree add --track -b <gren> <sökväg> <fjärr>/<gren>\n"
 
 #. type: Plain text
 #: en/git-worktree.adoc:90
@@ -61415,17 +61424,18 @@ msgstr "Om grenen finns i flera fjärrer och en av dem namnges av konfigurations
 #. type: Plain text
 #: en/git-worktree.adoc:98
 msgid "If _<commit-ish>_ is omitted and neither `-b` nor `-B` nor `--detach` used, then, as a convenience, the new worktree is associated with a branch (call it _<branch>_) named after `$(basename <path>)`. If _<branch>_ doesn't exist, a new branch based on `HEAD` is automatically created as if `-b <branch>` was given. If _<branch>_ does exist, it will be checked out in the new worktree, if it's not checked out anywhere else, otherwise the command will refuse to create the worktree (unless `--force` is used)."
-msgstr ""
+msgstr "Om _<incheckning-igt>_ utelämnas och varken `-b`, `-B` eller `--detach` används, så associeras det nya arbetsträdet, för enkelhetens skull, med en gren (kalla den _<gren>_) uppkallad efter `$(basename <sökväg>)`. Om _<gren>_ inte finns, skapas automatiskt en ny gren baserad på `HEAD` som om `-b <gren>` hade angetts. Om _<gren>_ finns, kommer den att checkas ut i det nya arbetsträdet, om den inte är utcheckad någon annanstans, annars kommer kommandot att vägra att skapa arbetsträdet (såvida inte `--force` används)."
 
 #. type: Plain text
 #: en/git-worktree.adoc:108
 msgid "If _<commit-ish>_ is omitted, neither `--detach`, or `--orphan` is used, and there are no valid local branches (or remote branches if `--guess-remote` is specified) then, as a convenience, the new worktree is associated with a new unborn branch named _<branch>_ (after `$(basename <path>)` if neither `-b` or `-B` is used) as if `--orphan` was passed to the command. In the event the repository has a remote and `--guess-remote` is used, but no remote or local branches exist, then the command fails with a warning reminding the user to fetch from their remote first (or override by using `-f`/`--force`)."
-msgstr ""
+msgstr "Om _<incheckning-igt>_ utelämnas, används varken `--detach` eller `--orphan`, och det inte finns några giltiga lokala grenar (eller fjärrgrenar om `--guess-remote` anges) så associeras det nya arbetsträdet, för enkelhetens skull, med en ny ofödd gren med namnet _<gren>_ (efter `$(basename <sökväg>)` om varken `-b` eller `-B` används) som om `--orphan` skickades till kommandot. Om förvaret har en fjärr och `--guess-remote` används, men inga fjärr- eller lokala grenar finns, misslyckas kommandot med en varning som påminner användaren om att hämta från sin fjärr först (eller åsidosätta genom att använda `-f`/`--force`)."
 
 #. type: Plain text
 #: en/git-worktree.adoc:117
+#, fuzzy
 msgid "List details of each worktree. The main worktree is listed first, followed by each of the linked worktrees. The output details include whether the worktree is bare, the revision currently checked out, the branch currently checked out (or \"detached HEAD\" if none), \"locked\" if the worktree is locked, \"prunable\" if the worktree can be pruned by the `prune` command."
-msgstr ""
+msgstr "Lista detaljer om varje arbetsträd. Huvudarbetsträdet listas först, följt av vart och ett av de länkade arbetsträden. Utdata detaljerna inkluderar om arbetsträdet är bart, vilken revision som för närvarande är utcheckad, vilken gren som för närvarande är utcheckad (eller \"detached HEAD\" (frånkopplad HEAD) om ingen), \"locked\" om arbetsträdet är låst, \"prunable\" om arbetsträdet kan beskäras med kommandot `prune`."
 
 #. type: Labeled list
 #: en/git-worktree.adoc:118
@@ -61437,7 +61447,7 @@ msgstr "`lock`"
 #. type: Plain text
 #: en/git-worktree.adoc:124
 msgid "If a worktree is on a portable device or network share which is not always mounted, lock it to prevent its administrative files from being pruned automatically. This also prevents it from being moved or deleted. Optionally, specify a reason for the lock with `--reason`."
-msgstr ""
+msgstr "Om ett arbetsträd finns på en portabel enhet eller nätverksresurs som inte alltid är monterad, lås det för att förhindra att dess administrativa filer rensas automatiskt. Detta förhindrar också att det flyttas eller tas bort. Du kan också ange en orsak till låsningen med `--reason`."
 
 #. type: Labeled list
 #: en/git-worktree.adoc:125
@@ -61449,43 +61459,44 @@ msgstr "`move`"
 #. type: Plain text
 #: en/git-worktree.adoc:131
 msgid "Move a worktree to a new location. Note that the main worktree or linked worktrees containing submodules cannot be moved with this command. (The `git worktree repair` command, however, can reestablish the connection with linked worktrees if you move the main worktree manually.)"
-msgstr ""
+msgstr "Flytta ett arbetsträd till en ny plats. Observera att huvudarbetsträdet eller länkade arbetsträd som innehåller undermoduler inte kan flyttas med detta kommando. (Kommandot `git worktree repair` kan dock återupprätta anslutningen till länkade arbetsträd om du flyttar huvudarbetsträdet manuellt.)"
 
 #. type: Plain text
 #: en/git-worktree.adoc:135
 msgid "Prune worktree information in `$GIT_DIR/worktrees`."
-msgstr ""
+msgstr "Beskär arbetsträdsinformation i `$GIT_DIR/worktrees`."
 
 #. type: Plain text
 #: en/git-worktree.adoc:142
 msgid "Remove a worktree. Only clean worktrees (no untracked files and no modification in tracked files) can be removed. Unclean worktrees or ones with submodules can be removed with `--force`. The main worktree cannot be removed."
-msgstr ""
+msgstr "Ta bort ett arbetsträd. Endast rena arbetsträd (inga ospårade filer och inga modifieringar i spårade filer) kan tas bort. Orena arbetsträd eller arbetsträd med undermoduler kan tas bort med `--force`. Huvudarbetsträdet kan inte tas bort."
 
 #. type: Labeled list
 #: en/git-worktree.adoc:143
 #, no-wrap
 msgid "`repair [<path>...]`"
-msgstr ""
+msgstr "`repair [<sökväg>...]`"
 
 #. type: Plain text
 #: en/git-worktree.adoc:147
+#, fuzzy
 msgid "Repair worktree administrative files, if possible, if they have become corrupted or outdated due to external factors."
-msgstr ""
+msgstr "Reparera om möjligt administrativa filer, om de har blivit skadade eller föråldrade på grund av externa faktorer."
 
 #. type: Plain text
 #: en/git-worktree.adoc:152
 msgid "For instance, if the main worktree (or bare repository) is moved, linked worktrees will be unable to locate it. Running `repair` in the main worktree will reestablish the connection from linked worktrees back to the main worktree."
-msgstr ""
+msgstr "Till exempel, om huvudarbetsträdet (eller det bara förvaret) flyttas, kommer länkade arbetsträd inte att kunna hitta det. Att köra `reparera` i huvudarbetsträdet kommer att återupprätta anslutningen från länkade arbetsträd tillbaka till huvudarbetsträdet."
 
 #. type: Plain text
 #: en/git-worktree.adoc:159
 msgid "Similarly, if the working tree for a linked worktree is moved without using `git worktree move`, the main worktree (or bare repository) will be unable to locate it. Running `repair` within the recently-moved worktree will reestablish the connection. If multiple linked worktrees are moved, running `repair` from any worktree with each tree's new _<path>_ as an argument, will reestablish the connection to all the specified paths."
-msgstr ""
+msgstr "På samma sätt, om arbetsträdet för ett länkat arbetsträd flyttas utan att använda `git worktree move`, kommer huvudarbetsträdet (eller det bara förvaret) inte att kunna hitta det. Att köra `repair` i det nyligen flyttade arbetsträdet kommer att återupprätta anslutningen. Om flera länkade arbetsträd flyttas, kommer att köra `repair` från valfritt arbetsträd med varje träds nya _<sökväg>_ som argument, att återupprätta anslutningen till alla angivna sökvägar."
 
 #. type: Plain text
 #: en/git-worktree.adoc:164
 msgid "If both the main worktree and linked worktrees have been moved or copied manually, then running `repair` in the main worktree and specifying the new _<path>_ of each linked worktree will reestablish all connections in both directions."
-msgstr ""
+msgstr "Om både huvudarbetsträdet och länkade arbetsträd har flyttats eller kopierats manuellt, kommer alla anslutningar i båda riktningarna att återställas om man kör `reparera` i huvudarbetsträdet och anger den nya _<sökvägen>_ för varje länkat arbetsträd."
 
 #. type: Labeled list
 #: en/git-worktree.adoc:165
@@ -61497,32 +61508,32 @@ msgstr "`unlock`"
 #. type: Plain text
 #: en/git-worktree.adoc:168
 msgid "Unlock a worktree, allowing it to be pruned, moved or deleted."
-msgstr ""
+msgstr "Lås upp ett arbetsträd, så att det kan beskäras, flyttas eller tas bort."
 
 #. type: Plain text
 #: en/git-worktree.adoc:180
 msgid "By default, `add` refuses to create a new worktree when _<commit-ish>_ is a branch name and is already checked out by another worktree, or if _<path>_ is already assigned to some worktree but is missing (for instance, if _<path>_ was deleted manually). This option overrides these safeguards. To add a missing but locked worktree path, specify `--force` twice."
-msgstr ""
+msgstr "Som standard, vägrar `add` att skapa ett nytt arbetsträd när _<incheckning-igt>_ är ett grennamn och redan är utcheckat av ett annat arbetsträd, eller om _<sökväg>_ redan är tilldelat till ett arbetsträd men saknas (till exempel om _<sökväg>_ har tagits bort manuellt). Det här alternativet åsidosätter dessa skyddsåtgärder. För att lägga till en saknad men låst arbetsträdssökväg, ange `--force` två gånger."
 
 #. type: Plain text
 #: en/git-worktree.adoc:185
 msgid "`move` refuses to move a locked worktree unless `--force` is specified twice. If the destination is already assigned to some other worktree but is missing (for instance, if _<new-path>_ was deleted manually), then `--force` allows the move to proceed; use `--force` twice if the destination is locked."
-msgstr ""
+msgstr "`move` vägrar att flytta ett låst arbetsträd om inte `--force` anges två gånger. Om destinationen redan är tilldelad ett annat arbetsträd men saknas (till exempel om _<ny-sökväg>_ raderades manuellt), så tillåter `--force` att flytten fortsätter; använd `--force` två gånger om destinationen är låst."
 
 #. type: Plain text
 #: en/git-worktree.adoc:188
 msgid "`remove` refuses to remove an unclean worktree unless `--force` is used. To remove a locked worktree, specify `--force` twice."
-msgstr ""
+msgstr "`remove` vägrar att ta bort ett orent arbetsträd om inte `--force` används. För att ta bort ett låst arbetsträd, ange `--force` två gånger."
 
 #. type: Plain text
 #: en/git-worktree.adoc:197
 msgid "With `add`, create a new branch named _<new-branch>_ starting at _<commit-ish>_, and check out _<new-branch>_ into the new worktree. If _<commit-ish>_ is omitted, it defaults to `HEAD`. By default, `-b` refuses to create a new branch if it already exists. `-B` overrides this safeguard, resetting _<new-branch>_ to _<commit-ish>_."
-msgstr ""
+msgstr "Med `add`, skapa en ny gren med namnet _<ny-gren>_ som börjar på _<incheckning-igt>_, och checka ut _<ny-gren>_ i det nya arbetsträdet. Om _<incheckning-igt>_ utelämnas, används `HEAD` som standard. Som standard vägrar `-b` att skapa en ny gren om den redan finns. `-B` åsidosätter denna skyddsåtgärd och återställer _<ny-gren>_ till _<incheckning-igt>_."
 
 #. type: Plain text
 #: en/git-worktree.adoc:202
 msgid "With `add`, detach `HEAD` in the new worktree. See \"DETACHED HEAD\" in linkgit:git-checkout[1]."
-msgstr ""
+msgstr "Med `add`, koppla bort `HEAD` i det nya arbetsträdet. Se \"FRÅNKOPPLAT HEAD\" i linkgit:git-checkout[1]."
 
 #. type: Labeled list
 #: en/git-worktree.adoc:203
@@ -61534,7 +61545,7 @@ msgstr "`--checkout`"
 #. type: Plain text
 #: en/git-worktree.adoc:209
 msgid "By default, `add` checks out _<commit-ish>_, however, `--no-checkout` can be used to suppress checkout in order to make customizations, such as configuring sparse-checkout. See \"Sparse checkout\" in linkgit:git-read-tree[1]."
-msgstr ""
+msgstr "Som standard, checkar `add` ut _<incheckning-igt>_, men `--no-checkout` kan användas för att undertrycka utcheckning för att göra anpassningar, som att konfigurera gles-utcheckning. Se \"gles utcheckning\" i linkgit:git-read-tree[1]."
 
 #. type: Labeled list
 #: en/git-worktree.adoc:210
@@ -61553,12 +61564,12 @@ msgstr "`--no-guess-remote`"
 #. type: Plain text
 #: en/git-worktree.adoc:217
 msgid "With `worktree add <path>`, without _<commit-ish>_, instead of creating a new branch from `HEAD`, if there exists a tracking branch in exactly one remote matching the basename of _<path>_, base the new branch on the remote-tracking branch, and mark the remote-tracking branch as \"upstream\" from the new branch."
-msgstr ""
+msgstr "Med `worktree add <sökväg>`, utan _<incheckning-igt>_, istället för att skapa en ny gren från `HEAD`, om det finns en spårningsgren i exakt en fjärr som matchar basnamnet _<sökväg>_, basera den nya grenen på fjärrspårningsgrenen och markera fjärrspårningsgrenen som \"uppströms\" om den nya grenen."
 
 #. type: Plain text
 #: en/git-worktree.adoc:220
 msgid "This can also be set up as the default behaviour by using the `worktree.guessRemote` config option."
-msgstr ""
+msgstr "Detta kan också ställas in som standardbeteende genom att använda konfigurationsalternativet `worktree.guessRemote`."
 
 #. type: Labeled list
 #: en/git-worktree.adoc:221
@@ -61577,12 +61588,12 @@ msgstr "`--no-relative-paths`"
 #. type: Plain text
 #: en/git-worktree.adoc:226
 msgid "Link worktrees using relative paths or absolute paths (default). Overrides the `worktree.useRelativePaths` config option, see linkgit:git-config[1]."
-msgstr ""
+msgstr "Länka arbetsträd med relativa sökvägar eller absoluta sökvägar (standard). Åsidosätter konfigurationsalternativet `worktree.useRelativePaths`, se linkgit:git-config[1]."
 
 #. type: Plain text
 #: en/git-worktree.adoc:229
 msgid "With `repair`, the linking files will be updated if there's an absolute/relative mismatch, even if the links are correct."
-msgstr ""
+msgstr "Med `repair` (reparera) uppdateras länkfilerna om det finns en absolut/relativ avvikelse, även om länkarna är korrekta."
 
 #. type: Labeled list
 #: en/git-worktree.adoc:230
@@ -61594,7 +61605,7 @@ msgstr "`--track`"
 #. type: Plain text
 #: en/git-worktree.adoc:236
 msgid "When creating a new branch, if _<commit-ish>_ is a branch, mark it as \"upstream\" from the new branch. This is the default if _<commit-ish>_ is a remote-tracking branch. See `--track` in linkgit:git-branch[1] for details."
-msgstr ""
+msgstr "När du skapar en ny gren, om _<incheckning-igt>_ är en gren, markera den som \"uppströms\" från den nya grenen. Detta är standardvärdet om _<incheckning-igt>_ är en fjärrspårningsgren. Se `--track` i linkgit:git-branch[1] för mer information."
 
 #. type: Labeled list
 #: en/git-worktree.adoc:237
@@ -61606,12 +61617,12 @@ msgstr "`--lock`"
 #. type: Plain text
 #: en/git-worktree.adoc:241
 msgid "Keep the worktree locked after creation. This is the equivalent of `git worktree lock` after `git worktree add`, but without a race condition."
-msgstr ""
+msgstr "Håll arbetsträdet låst efter skapandet. Detta motsvarar `git worktree lock` efter `git worktree add`, men utan en kapplöpningsrisk."
 
 #. type: Plain text
 #: en/git-worktree.adoc:246
 msgid "With `prune`, do not remove anything; just report what it would remove."
-msgstr ""
+msgstr "Med `prune` (beskär), ta inte bort något; rapportera bara vad det skulle ta bort."
 
 #. type: Labeled list
 #: en/git-worktree.adoc:247
@@ -61623,321 +61634,369 @@ msgstr "`--orphan`"
 #. type: Plain text
 #: en/git-worktree.adoc:250
 msgid "With `add`, make the new worktree and index empty, associating the worktree with a new unborn branch named _<new-branch>_."
-msgstr ""
+msgstr "Med `add`, lägg till och gör det nya arbetsträdet och indexet tomt, och associera arbetsträdet med en ny ofödd gren med namnet _<ny-gren>_."
 
 #. type: Plain text
 #: en/git-worktree.adoc:256
 msgid "With `list`, output in an easy-to-parse format for scripts. This format will remain stable across Git versions and regardless of user configuration. It is recommended to combine this with `-z`. See below for details."
-msgstr ""
+msgstr "Med `list`, lista utdata i ett lätttolkat format för skript. Detta format kommer att förbli stabilt i alla Git-versioner och oavsett användarkonfiguration. Det rekommenderas att kombinera detta med `-z`. Se nedan för detaljer."
 
 #. type: Plain text
 #: en/git-worktree.adoc:262
 msgid "Terminate each line with a _NUL_ rather than a newline when `--porcelain` is specified with `list`. This makes it possible to parse the output when a worktree path contains a newline character."
-msgstr ""
+msgstr "Avsluta varje rad med ett _NUL_ istället för en ny rad när `--porcelain` anges med `list`. Detta gör det möjligt att analysera utdata när en arbetsträdssökväg innehåller ett nyradstecken."
 
 #. type: Plain text
 #: en/git-worktree.adoc:266
 msgid "With `add`, suppress feedback messages."
-msgstr ""
+msgstr "Med `add`, undertryck återkopplingsmeddelanden."
 
 #. type: Plain text
 #: en/git-worktree.adoc:270
 msgid "With `prune`, report all removals."
-msgstr ""
+msgstr "Med `prune` (beskär), rapportera alla borttagningar."
 
 #. type: Plain text
 #: en/git-worktree.adoc:272
 msgid "With `list`, output additional information about worktrees (see below)."
-msgstr ""
+msgstr "Med `list`, mata ut ytterligare information om arbetsträd (se nedan)."
 
 #. type: Labeled list
 #: en/git-worktree.adoc:273
 #, no-wrap
 msgid "`--expire <time>`"
-msgstr ""
+msgstr "`--expire <tid>`"
 
 #. type: Plain text
 #: en/git-worktree.adoc:275
 msgid "With `prune`, only expire unused worktrees older than _<time>_."
-msgstr ""
+msgstr "Med `prune` får endast oanvända arbetsträd som är äldre än _<tid>_ att upphöra att gälla."
 
 #. type: Plain text
 #: en/git-worktree.adoc:278
 msgid "With `list`, annotate missing worktrees as prunable if they are older than _<time>_."
-msgstr ""
+msgstr "Med `list`, annotera saknade arbetsträd som beskärningsbara om de är äldre än _<tid>_."
 
 #. type: Labeled list
 #: en/git-worktree.adoc:279
 #, no-wrap
 msgid "`--reason <string>`"
-msgstr ""
+msgstr "`--reason <sträng>`"
 
 #. type: Plain text
 #: en/git-worktree.adoc:282
 msgid "With `lock` or with `add --lock`, an explanation why the worktree is locked."
-msgstr ""
+msgstr "Med `lock` eller med `add --lock`, en förklaring till varför arbetsträdet är låst."
 
 #. type: Labeled list
 #: en/git-worktree.adoc:283
 #, no-wrap
 msgid "_<worktree>_"
-msgstr ""
+msgstr "_<arbetsträd>_"
 
 #. type: Plain text
 #: en/git-worktree.adoc:285
 msgid "Worktrees can be identified by path, either relative or absolute."
-msgstr ""
+msgstr "Arbetsträd kan identifieras med hjälp av sökväg, antingen relativ eller absolut."
 
 #. type: Plain text
 #: en/git-worktree.adoc:290
 msgid "If the last path components in the worktree's path is unique among worktrees, it can be used to identify a worktree. For example if you only have two worktrees, at `/abc/def/ghi` and `/abc/def/ggg`, then `ghi` or `def/ghi` is enough to point to the former worktree."
-msgstr ""
+msgstr "Om den sista sökvägskomponenten i arbetsträdets sökväg är unik bland arbetsträden kan den användas för att identifiera ett arbetsträd. Om du till exempel bara har två arbetsträd, vid `/abc/def/ghi` och `/abc/def/ggg`, så räcker `ghi` eller `def/ghi` för att peka på det förra arbetsträdet."
 
 #. type: Title -
 #: en/git-worktree.adoc:292
 #, no-wrap
 msgid "REFS"
-msgstr ""
+msgstr "REFS"
 
 #. type: Plain text
 #: en/git-worktree.adoc:297
 msgid "When using multiple worktrees, some refs are shared between all worktrees, but others are specific to an individual worktree. One example is `HEAD`, which is different for each worktree. This section is about the sharing rules and how to access refs of one worktree from another."
-msgstr ""
+msgstr "När man använder flera arbetsträd, delas vissa referenser mellan alla arbetsträd, men andra är specifika för ett enskilt arbetsträd. Ett exempel är `HEAD`, vilket är olika för varje arbetsträd. Det här avsnittet handlar om delningsreglerna och hur man kommer åt referenser för ett arbetsträd från ett annat."
 
 #. type: Plain text
 #: en/git-worktree.adoc:303
 msgid "In general, all pseudo refs are per-worktree and all refs starting with `refs/` are shared. Pseudo refs are ones like `HEAD` which are directly under `$GIT_DIR` instead of inside `$GIT_DIR/refs`. There are exceptions, however: refs inside `refs/bisect`, `refs/worktree` and `refs/rewritten` are not shared."
-msgstr ""
+msgstr "Generellt sett är alla pseudoreferenser per arbetsträd och alla referenser som börjar med `refs/` delas. Pseudoreferenser är sådana som `HEAD` som ligger direkt under `$GIT_DIR` istället för inuti `$GIT_DIR/refs`. Det finns dock undantag: referenser inuti `refs/bisect`, `refs/worktree` och `refs/rewritten` delas inte."
 
 #. type: Plain text
 #: en/git-worktree.adoc:308
 msgid "Refs that are per-worktree can still be accessed from another worktree via two special paths, `main-worktree` and `worktrees`. The former gives access to per-worktree refs of the main worktree, while the latter to all linked worktrees."
-msgstr ""
+msgstr "Referenser som är per arbetsträd kan fortfarande nås från ett annat arbetsträd via två speciella sökvägar, `main-worktree` and `worktrees`. Den förra ger åtkomst till referenser per arbetsträd för huvudarbetsträdet, medan den senare ger åtkomst till alla länkade arbetsträd."
 
 #. type: Plain text
 #: en/git-worktree.adoc:315
 msgid "For example, `main-worktree/HEAD` or `main-worktree/refs/bisect/good` resolve to the same value as the main worktree's `HEAD` and `refs/bisect/good` respectively. Similarly, `worktrees/foo/HEAD` or `worktrees/bar/refs/bisect/bad` are the same as `$GIT_COMMON_DIR/worktrees/foo/HEAD` and `$GIT_COMMON_DIR/worktrees/bar/refs/bisect/bad`."
-msgstr ""
+msgstr "Till exempel, `main-worktree/HEAD` eller `main-worktree/refs/bisect/good` upplöses till samma värde som huvudarbetsträdets `HEAD` respektive `refs/bisect/good`. På liknande sätt är `worktrees/foo/HEAD` eller `worktrees/bar/refs/bisect/bad` samma som `$GIT_COMMON_DIR/worktrees/foo/HEAD` och `$GIT_COMMON_DIR/worktrees/bar/refs/bisect/bad`."
 
 #. type: Plain text
 #: en/git-worktree.adoc:319
+#, fuzzy
 msgid "To access refs, it's best not to look inside `$GIT_DIR` directly. Instead use commands such as linkgit:git-rev-parse[1] or linkgit:git-update-ref[1] which will handle refs correctly."
-msgstr ""
+msgstr "För att komma åt refs, är det bäst att inte titta direkt i `$GIT_DIR`. Använd istället kommandon som linkgit:git-rev-parse[1] eller linkgit:git-update-ref[1] som hanterar referenser korrekt."
 
 #. type: Plain text
 #: en/git-worktree.adoc:326
 msgid "By default, the repository `config` file is shared across all worktrees. If the config variables `core.bare` or `core.worktree` are present in the common config file and `extensions.worktreeConfig` is disabled, then they will be applied to the main worktree only."
-msgstr ""
+msgstr "Som standard, delas arkivets `config`-fil mellan alla arbetsträd. Om konfigurationsvariablerna `core.bare` eller `core.worktree` finns i den gemensamma konfigurationsfilen och `extensions.worktreeConfig` är inaktiverat, kommer de endast att tillämpas på huvudarbetsträdet."
 
 #. type: Plain text
 #: en/git-worktree.adoc:329
 msgid "In order to have worktree-specific configuration, you can turn on the `worktreeConfig` extension, e.g.:"
-msgstr ""
+msgstr "För att få en arbetsträdsspecifik konfiguration kan du aktivera tillägget `worktreeConfig`, t.ex.:"
 
 #. type: delimited block -
 #: en/git-worktree.adoc:332
 #, no-wrap
 msgid "$ git config extensions.worktreeConfig true\n"
-msgstr ""
+msgstr "$ git config extensions.worktreeConfig true\n"
 
 #. type: Plain text
 #: en/git-worktree.adoc:338
 msgid "In this mode, specific configuration stays in the path pointed by `git rev-parse --git-path config.worktree`. You can add or update configuration in this file with `git config --worktree`. Older Git versions will refuse to access repositories with this extension."
-msgstr ""
+msgstr "I det här läget, stannar den specifika konfigurationen i sökvägen som anges av `git rev-parse --git-path config.worktree`. Du kan lägga till eller uppdatera konfigurationen i den här filen med `git config --worktree`. Äldre Git-versioner kommer att vägra åtkomst till förvar med det här tillägget."
 
 #. type: Plain text
 #: en/git-worktree.adoc:344
 msgid "Note that in this file, the exception for `core.bare` and `core.worktree` is gone. If they exist in `$GIT_DIR/config`, you must move them to the `config.worktree` of the main worktree. You may also take this opportunity to review and move other configuration that you do not want to share to all worktrees:"
-msgstr ""
+msgstr "Observera att i den här filen, är undantaget för `core.bare` och `core.worktree` borta. Om de finns i `$GIT_DIR/config` måste du flytta dem till `config.worktree` i huvudarbetsträdet. Du kan också ta tillfället i akt att granska och flytta annan konfiguration som du inte vill dela med alla arbetsträd:"
 
 #. type: Plain text
 #: en/git-worktree.adoc:346
 msgid "`core.worktree` should never be shared."
-msgstr ""
+msgstr "`core.worktree` ska aldrig delas."
 
 #. type: Plain text
 #: en/git-worktree.adoc:348
 msgid "`core.bare` should not be shared if the value is `core.bare=true`."
-msgstr ""
+msgstr "`core.bare` ska inte delas om värdet är `core.bare=true`."
 
 #. type: Plain text
 #: en/git-worktree.adoc:351
 msgid "`core.sparseCheckout` should not be shared, unless you are sure you always use sparse checkout for all worktrees."
-msgstr ""
+msgstr "`core.sparseCheckout` bör inte delas, såvida du inte är säker på att du alltid använder gles utcheckning för alla arbetsträd."
 
 #. type: Plain text
 #: en/git-worktree.adoc:354
 msgid "See the documentation of `extensions.worktreeConfig` in linkgit:git-config[1] for more details."
-msgstr ""
+msgstr "Se dokumentationen för `extensions.worktreeConfig` i linkgit:git-config[1] för mer information."
 
 #. type: Title -
 #: en/git-worktree.adoc:356
 #, no-wrap
 msgid "DETAILS"
-msgstr ""
+msgstr "DETALJER"
 
 #. type: Plain text
 #: en/git-worktree.adoc:365
 msgid "Each linked worktree has a private sub-directory in the repository's `$GIT_DIR/worktrees` directory. The private sub-directory's name is usually the base name of the linked worktree's path, possibly appended with a number to make it unique. For example, when `$GIT_DIR=/path/main/.git` the command `git worktree add /path/other/test-next next` creates the linked worktree in `/path/other/test-next` and also creates a `$GIT_DIR/worktrees/test-next` directory (or `$GIT_DIR/worktrees/test-next1` if `test-next` is already taken)."
-msgstr ""
+msgstr "Varje länkat arbetsträd har en privat underkatalog i arkivets katalog `$GIT_DIR/worktrees`. Namnet på den privata underkatalogen är vanligtvis basnamnet på det länkade arbetsträdets sökväg, eventuellt tillagt med ett nummer för att göra det unikt. Till exempel, när `$GIT_DIR=/sökväg/main/.git` skapar kommandot `git worktree add /sökväg/annan/test-next next` det länkade arbetsträdet i `/sökväg/annan/test-next` och skapar även en `$GIT_DIR/worktrees/test-next`-katalog (eller `$GIT_DIR/worktrees/test-next1` om `test-next` redan är upptaget)."
 
 #. type: Plain text
 #: en/git-worktree.adoc:371
 msgid "Within a linked worktree, `$GIT_DIR` is set to point to this private directory (e.g. `/path/main/.git/worktrees/test-next` in the example) and `$GIT_COMMON_DIR` is set to point back to the main worktree's `$GIT_DIR` (e.g. `/path/main/.git`). These settings are made in a `.git` file located at the top directory of the linked worktree."
-msgstr ""
+msgstr "Inom ett länkat arbetsträd är `$GIT_DIR` inställt att peka till denna privata katalog (t.ex. `/sökväg/main/.git/worktrees/test-next` i exemplet) och `$GIT_COMMON_DIR` är inställt att peka tillbaka till huvudarbetsträdets `$GIT_DIR` (t.ex. `/sökväg/main/.git`). Dessa inställningar görs i en `.git`-fil som finns i den översta katalogen i det länkade arbetsträdet."
 
 #. type: Plain text
 #: en/git-worktree.adoc:381
 msgid "Path resolution via `git rev-parse --git-path` uses either `$GIT_DIR` or `$GIT_COMMON_DIR` depending on the path. For example, in the linked worktree `git rev-parse --git-path HEAD` returns `/path/main/.git/worktrees/test-next/HEAD` (not `/path/other/test-next/.git/HEAD` or `/path/main/.git/HEAD`) while `git rev-parse --git-path refs/heads/master` uses `$GIT_COMMON_DIR` and returns `/path/main/.git/refs/heads/master`, since refs are shared across all worktrees, except `refs/bisect`, `refs/worktree` and `refs/rewritten`."
-msgstr ""
+msgstr "Sökvägsupplösning via `git rev-parse --git-path` använder antingen `$GIT_DIR` eller `$GIT_COMMON_DIR` beroende på sökvägen. Till exempel, i det länkade arbetsträdet returnerar `git rev-parse --git-path HEAD` `/sökväg/main/.git/worktrees/test-next/HEAD` (inte `/sökväg/annan/test-next/.git/HEAD` eller `/sökväg/main/.git/HEAD`) medan `git rev-parse --git-path refs/heads/master` använder `$GIT_COMMON_DIR` och returnerar `/sökväg/main/.git/refs/heads/master`, eftersom referenser delas mellan alla arbetsträd, förutom `refs/bisect`, `refs/worktree` och `refs/rewritten`."
 
 #. type: Plain text
 #: en/git-worktree.adoc:386
 msgid "See linkgit:gitrepository-layout[5] for more information. The rule of thumb is do not make any assumption about whether a path belongs to `$GIT_DIR` or `$GIT_COMMON_DIR` when you need to directly access something inside `$GIT_DIR`. Use `git rev-parse --git-path` to get the final path."
-msgstr ""
+msgstr "Se linkgit:gitrepository-layout[5] för mer information. Tumregeln är att inte göra några antaganden om huruvida en sökväg tillhör `$GIT_DIR` eller `$GIT_COMMON_DIR` när du behöver komma åt något direkt i `$GIT_DIR`. Använd `git rev-parse --git-path` för att få den slutliga sökvägen."
 
 #. type: Plain text
 #: en/git-worktree.adoc:394
 msgid "If you manually move a linked worktree, you need to update the `gitdir` file in the entry's directory. For example, if a linked worktree is moved to `/newpath/test-next` and its `.git` file points to `/path/main/.git/worktrees/test-next`, then update `/path/main/.git/worktrees/test-next/gitdir` to reference `/newpath/test-next` instead. Better yet, run `git worktree repair` to reestablish the connection automatically."
-msgstr ""
+msgstr "Om du manuellt flyttar ett länkat arbetsträd måste du uppdatera `gitdir`-filen i postens katalog. Om till exempel ett länkat arbetsträd flyttas till `/nysökväg/test-next` och dess `.git`-fil pekar på `/sökväg/main/.git/worktrees/test-next`, uppdatera då `/sökväg/main/.git/worktrees/test-next/gitdir` för att referera till `/nysökväg/test-next` istället. Ännu bättre, kör `git worktree repair` för att återupprätta anslutningen automatiskt."
 
 #. type: Plain text
 #: en/git-worktree.adoc:405
 msgid "To prevent a `$GIT_DIR/worktrees` entry from being pruned (which can be useful in some situations, such as when the entry's worktree is stored on a portable device), use the `git worktree lock` command, which adds a file named `locked` to the entry's directory. The file contains the reason in plain text. For example, if a linked worktree's `.git` file points to `/path/main/.git/worktrees/test-next` then a file named `/path/main/.git/worktrees/test-next/locked` will prevent the `test-next` entry from being pruned. See linkgit:gitrepository-layout[5] for details."
-msgstr ""
+msgstr "För att förhindra att en `$GIT_DIR/worktrees`-post beskärs (vilket kan vara användbart i vissa situationer, till exempel när postens arbetsträd lagras på en portabel enhet), använd kommandot `git worktree lock`, vilket lägger till en fil med namnet `locked` i postens katalog. Filen innehåller orsaken i klartext. Om till exempel ett länkat arbetsträds `.git`-fil pekar på `/sökväg/main/.git/worktrees/test-next`, kommer en fil med namnet `/sökväg/main/.git/worktrees/test-next/locked` att förhindra att `test-next`-posten beskärs. Se linkgit:gitrepository-layout[5] för mer information."
 
 #. type: Plain text
 #: en/git-worktree.adoc:408
 msgid "When `extensions.worktreeConfig` is enabled, the config file `.git/worktrees/<id>/config.worktree` is read after `.git/config` is."
-msgstr ""
+msgstr "När `extensions.worktreeConfig` är aktiverat, läses konfigurationsfilen `.git/worktrees/<id>/config.worktree` efter `.git/config`."
 
 #. type: Title -
 #: en/git-worktree.adoc:410
 #, no-wrap
 msgid "LIST OUTPUT FORMAT"
-msgstr ""
+msgstr "LIST UTMATNINGS-FORMAT"
 
 #. type: Plain text
 #: en/git-worktree.adoc:413
 msgid "The `worktree list` command has two output formats. The default format shows the details on a single line with columns. For example:"
-msgstr ""
+msgstr "Kommandot `worktree list` har två utdataformat. Standardformatet visar detaljerna på en enda rad med kolumner. Till exempel:"
 
 #. type: delimited block -
 #: en/git-worktree.adoc:419
 #, no-wrap
 msgid "$ git worktree list\n/path/to/bare-source            (bare)\n/path/to/linked-worktree        abcd1234 [master]\n/path/to/other-linked-worktree  1234abc  (detached HEAD)\n"
 msgstr ""
+"$ git worktree list\n"
+"/sökväg/till/bar-källa                (bare)\n"
+"/sökväg/till/länkat-arbetsträd        abcd1234 [master]\n"
+"/sökväg/till/annat-länkat-arbetsträd  1234abc  (detached HEAD)\n"
 
 #. type: Plain text
 #: en/git-worktree.adoc:423
 msgid "The command also shows annotations for each worktree, according to its state. These annotations are:"
-msgstr ""
+msgstr "Kommandot visar även anteckningar för varje arbetsträd, beroende på dess tillstånd. Dessa anteckningar är:"
 
 #. type: Plain text
 #: en/git-worktree.adoc:425
 msgid "`locked`, if the worktree is locked."
-msgstr ""
+msgstr "`locked`, om arbetsträdet är låst."
 
 #. type: Plain text
 #: en/git-worktree.adoc:426
 msgid "`prunable`, if the worktree can be pruned via `git worktree prune`."
-msgstr ""
+msgstr "`prunable`, om arbetsträdet kan beskäras via `git worktree prune`."
 
 #. type: delimited block -
 #: en/git-worktree.adoc:432
 #, no-wrap
 msgid "$ git worktree list\n/path/to/linked-worktree    abcd1234 [master]\n/path/to/locked-worktree    acbd5678 (brancha) locked\n/path/to/prunable-worktree  5678abc  (detached HEAD) prunable\n"
 msgstr ""
+"$ git worktree list\n"
+"/sökväg/till/länkat-arbetsträd      abcd1234 [master]\n"
+"/sökväg/till/låst-arbetsträd        acbd5678 (brancha) locked\n"
+"/sökväg/till/beskärbart-arbetsträd  5678abc  (detached HEAD) prunable\n"
 
 #. type: Plain text
 #: en/git-worktree.adoc:437
 msgid "For these annotations, a reason might also be available and this can be seen using the verbose mode. The annotation is then moved to the next line indented followed by the additional information."
-msgstr ""
+msgstr "För dessa annoteringar, kan det också finnas en orsak, och detta kan ses med hjälp av utförligt-läget (verbose). Annoteringen flyttas sedan till nästa indragna rad följt av den ytterligare informationen."
 
 #. type: delimited block -
 #: en/git-worktree.adoc:446
 #, no-wrap
 msgid "$ git worktree list --verbose\n/path/to/linked-worktree              abcd1234 [master]\n/path/to/locked-worktree-no-reason    abcd5678 (detached HEAD) locked\n/path/to/locked-worktree-with-reason  1234abcd (brancha)\n\tlocked: worktree path is mounted on a portable device\n/path/to/prunable-worktree            5678abc1 (detached HEAD)\n\tprunable: gitdir file points to non-existent location\n"
 msgstr ""
+"$ git worktree list --verbose\n"
+"/sökväg/till/länkat-arbetsträd                abcd1234 [master]\n"
+"/sökväg/till/länkat-arbetsträd-ej-anlending   abcd5678 (detached HEAD) locked\n"
+"/sökväg/till/länkat-arbetsträd-med-anlending  1234abcd (brancha)\n"
+"        locked: arbetsträdssökvägen är monterad på en portabel enhet\n"
+"/sökväg/till/prunable-worktree                5678abc1 (detached HEAD)\n"
+"        prunable: ”gitdir”-filen pekar på en ickeexisterande plats\n"
 
 #. type: Plain text
 #: en/git-worktree.adoc:451
 msgid "Note that the annotation is moved to the next line if the additional information is available, otherwise it stays on the same line as the worktree itself."
-msgstr ""
+msgstr "Observera att anteckningen flyttas till nästa rad om den ytterligare informationen är tillgänglig, annars stannar den kvar på samma rad som själva arbetsträdet."
 
 #. type: Title ~
 #: en/git-worktree.adoc:453
 #, no-wrap
 msgid "Porcelain Format"
-msgstr ""
+msgstr "Porslinsformat"
 
 #. type: Plain text
 #: en/git-worktree.adoc:462
 msgid "The porcelain format has a line per attribute. If `-z` is given then the lines are terminated with NUL rather than a newline. Attributes are listed with a label and value separated by a single space. Boolean attributes (like `bare` and `detached`) are listed as a label only, and are present only if the value is true. Some attributes (like `locked`) can be listed as a label only or with a value depending upon whether a reason is available. The first attribute of a worktree is always `worktree`, an empty line indicates the end of the record. For example:"
-msgstr ""
+msgstr "Porslinsformatet har en rad per attribut. Om `-z` anges avslutas raderna med NUL snarare än en nyrad. Attribut listas med en etikett och ett värde separerade med ett enda mellanslag. Booleska attribut (som `bare` och `detached`) listas endast som en etikett, och finns endast om värdet är sant. Vissa attribut (som `locked`) kan listas endast som en etikett eller med ett värde beroende på om en orsak finns tillgänglig. Det första attributet i ett arbetsträd är alltid `worktree`, en tom rad indikerar slutet på posten. Till exempel:"
 
 #. type: delimited block -
 #: en/git-worktree.adoc:467
 #, no-wrap
 msgid "$ git worktree list --porcelain\nworktree /path/to/bare-source\nbare\n"
 msgstr ""
+"$ git worktree list --porcelain\n"
+"worktree /sökväg/till/bar-källa\n"
+"bare\n"
 
 #. type: delimited block -
 #: en/git-worktree.adoc:471
 #, no-wrap
 msgid "worktree /path/to/linked-worktree\nHEAD abcd1234abcd1234abcd1234abcd1234abcd1234\nbranch refs/heads/master\n"
 msgstr ""
+"worktree /sökväg/till/länkat-arbetsträd\n"
+"HEAD abcd1234abcd1234abcd1234abcd1234abcd1234\n"
+"branch refs/heads/master\n"
 
 #. type: delimited block -
 #: en/git-worktree.adoc:475
 #, no-wrap
 msgid "worktree /path/to/other-linked-worktree\nHEAD 1234abc1234abc1234abc1234abc1234abc1234a\ndetached\n"
 msgstr ""
+"worktree /sökväg/till/annat-länkat-arbetsträd\n"
+"HEAD 1234abc1234abc1234abc1234abc1234abc1234a\n"
+"detached\n"
 
 #. type: delimited block -
 #: en/git-worktree.adoc:480
 #, no-wrap
 msgid "worktree /path/to/linked-worktree-locked-no-reason\nHEAD 5678abc5678abc5678abc5678abc5678abc5678c\nbranch refs/heads/locked-no-reason\nlocked\n"
 msgstr ""
+"worktree /sökväg/till/länkat-arbetsträd-låst-ingen-anledning\n"
+"HEAD 5678abc5678abc5678abc5678abc5678abc5678c\n"
+"branch refs/heads/locked-no-reason\n"
+"locked\n"
 
 #. type: delimited block -
 #: en/git-worktree.adoc:485
 #, no-wrap
 msgid "worktree /path/to/linked-worktree-locked-with-reason\nHEAD 3456def3456def3456def3456def3456def3456b\nbranch refs/heads/locked-with-reason\nlocked reason why is locked\n"
 msgstr ""
+"worktree /sökväg/till/länkat-arbetsträd-låst-med-anledning\n"
+"HEAD 3456def3456def3456def3456def3456def3456b\n"
+"branch refs/heads/locked-with-reason\n"
+"locked anledningen till att den är låst\n"
 
 #. type: delimited block -
 #: en/git-worktree.adoc:490
 #, no-wrap
 msgid "worktree /path/to/linked-worktree-prunable\nHEAD 1233def1234def1234def1234def1234def1234b\ndetached\nprunable gitdir file points to non-existent location\n"
 msgstr ""
+"worktree /sökväg/till/beskärbart-arbetsträd\n"
+"HEAD 1233def1234def1234def1234def1234def1234b\n"
+"detached\n"
+"prunable ”gitdir”-filen pekar på en ickeexisterande plats\n"
 
 #. type: Plain text
 #: en/git-worktree.adoc:497
 msgid "Unless `-z` is used any \"unusual\" characters in the lock reason such as newlines are escaped and the entire reason is quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1]). For Example:"
-msgstr ""
+msgstr "Om inte `-z` används citeras alla \"ovanliga\" tecken i låsorsaken, såsom nyradstecken, och hela orsaken citeras enligt beskrivningen för konfigurationsvariabeln `core.quotePath` (se linkgit:git-config[1]). Till exempel:"
 
 #. type: delimited block -
 #: en/git-worktree.adoc:503
 #, no-wrap
 msgid "$ git worktree list --porcelain\n...\nlocked \"reason\\nwhy is locked\"\n...\n"
 msgstr ""
+"$ git worktree list --porcelain\n"
+"...\n"
+"locked \"orsaken\\n"
+"varför är låst\"\n"
+"...\n"
 
 #. type: Plain text
 #: en/git-worktree.adoc:515
 msgid "You are in the middle of a refactoring session and your boss comes in and demands that you fix something immediately. You might typically use linkgit:git-stash[1] to store your changes away temporarily, however, your working tree is in such a state of disarray (with new, moved, and removed files, and other bits and pieces strewn around) that you don't want to risk disturbing any of it. Instead, you create a temporary linked worktree to make the emergency fix, remove it when done, and then resume your earlier refactoring session."
-msgstr ""
+msgstr "Du är mitt uppe i en refaktorerings-session och din chef kommer in och kräver att du åtgärdar något omedelbart. Du brukar använda linkgit:git-stash[1] för att tillfälligt lagra dina ändringar, men ditt arbetsträd är i ett sådant tillstånd av oordning (med nya, flyttade och borttagna filer, och andra småsaker utspridda) att du inte vill riskera att störa något av det. Istället skapar du ett tillfälligt länkat arbetsträd för att göra nödåtgärden, tar bort det när det är klart och återupptar sedan din tidigare refaktorerings-session."
 
 #. type: delimited block -
 #: en/git-worktree.adoc:523
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "$ git worktree add -b emergency-fix ../temp master\n$ pushd ../temp\n# ... hack hack hack ...\n$ git commit -a -m 'emergency fix for boss'\n$ popd\n$ git worktree remove ../temp\n"
 msgstr ""
+"$ git worktree add -b kritisk-fix ../temp master\n"
+"$ pushd ../temp\n"
+"# ... hack hack hack ...\n"
+"$ git commit -a -m 'kritisk lösning för chefen'\n"
+"$ popd\n"
+"$ git worktree remove ../temp\n"
 
 #. type: Plain text
 #: en/git-worktree.adoc:537
 msgid "Multiple checkout in general is still experimental, and the support for submodules is incomplete. It is NOT recommended to make multiple checkouts of a superproject."
-msgstr ""
+msgstr "Flera utcheckningar är generellt sett fortfarande experimentella, och stödet för undermoduler är ofullständigt. Det rekommenderas INTE att göra flera utcheckningar av ett superprojekt."
 
 #. type: Title =
 #: en/git-write-tree.adoc:2
@@ -65924,80 +65983,80 @@ msgstr "Efter att rerere-mekanismen återanvänder en inspelad lösning på den 
 #: en/revisions.adoc:2
 #, no-wrap
 msgid "SPECIFYING REVISIONS"
-msgstr ""
+msgstr "SPECIFICERING AV REVIDERINGAR"
 
 #. type: Plain text
 #: en/revisions.adoc:9
 msgid "A revision parameter '<rev>' typically, but not necessarily, names a commit object. It uses what is called an 'extended SHA-1' syntax. Here are various ways to spell object names. The ones listed near the end of this list name trees and blobs contained in a commit."
-msgstr ""
+msgstr "En revisionsparameter '<rev>' namnger vanligtvis, men inte nödvändigtvis, ett inchecknings-objekt. Den använder det som kallas en 'utökad SHA-1'-syntax. Här är olika sätt att stava objektnamn. De som listas nära slutet av den här listan namnger träd och blobbar som finns i en incheckning."
 
 #. type: Plain text
 #: en/revisions.adoc:13
 msgid "This document shows the \"raw\" syntax as seen by git. The shell and other UIs might require additional quoting to protect special characters and to avoid word splitting."
-msgstr ""
+msgstr "Det här dokumentet visar den \"råa\" syntaxen så som den visas i git. Skalet och andra användargränssnitt kan kräva ytterligare citatering för att skydda specialtecken och undvika orddelning."
 
 #. type: Labeled list
 #: en/revisions.adoc:14
 #, no-wrap
 msgid "'<sha1>', e.g. 'dae86e1950b1277e545cee180551750029cfe735', 'dae86e'"
-msgstr ""
+msgstr "'<sha1>', t.ex. 'dae86e1950b1277e545cee180551750029cfe735', 'dae86e'"
 
 #. type: Plain text
 #: en/revisions.adoc:20
 msgid "The full SHA-1 object name (40-byte hexadecimal string), or a leading substring that is unique within the repository. E.g. dae86e1950b1277e545cee180551750029cfe735 and dae86e both name the same commit object if there is no other object in your repository whose object name starts with dae86e."
-msgstr ""
+msgstr "Det fullständiga SHA-1-objektnamnet (en hexadecimal sträng på 40 byte), eller en inledande delsträng som är unik inom arkivet. T.ex. dae86e1950b1277e545cee180551750029cfe735 och dae86e namnger båda samma inchecknings-objekt om det inte finns något annat objekt i ditt förvar vars objektnamn börjar med dae86e."
 
 #. type: Labeled list
 #: en/revisions.adoc:21
 #, no-wrap
 msgid "'<describeOutput>', e.g. 'v1.7.4.2-679-g3bee7fb'"
-msgstr ""
+msgstr "'<beskrivUtdata>', t.ex. 'v1.7.4.2-679-g3bee7fb'"
 
 #. type: Plain text
 #: en/revisions.adoc:25
 msgid "Output from `git describe`; i.e. a closest tag, optionally followed by a dash and a number of commits, followed by a dash, a 'g', and an abbreviated object name."
-msgstr ""
+msgstr "Utdata från `git describe`; d.v.s. en närmaste tagg, valfritt följt av ett bindestreck och ett antal incheckningar, följt av ett bindestreck, ett 'g' och ett förkortat objektnamn."
 
 #. type: Labeled list
 #: en/revisions.adoc:26
 #, no-wrap
 msgid "'<refname>', e.g. 'master', 'heads/master', 'refs/heads/master'"
-msgstr ""
+msgstr "'<refnamn>', t.ex. 'master', 'heads/master', 'refs/heads/master'"
 
 #. type: Plain text
 #: en/revisions.adoc:33
 msgid "A symbolic ref name. E.g. 'master' typically means the commit object referenced by 'refs/heads/master'. If you happen to have both 'heads/master' and 'tags/master', you can explicitly say 'heads/master' to tell Git which one you mean. When ambiguous, a '<refname>' is disambiguated by taking the first match in the following rules:"
-msgstr ""
+msgstr "Ett symboliskt referensnamn. T.ex. 'master' betyder vanligtvis det inchecknings-objekt som refereras av 'refs/heads/master'. Om du råkar ha både 'heads/master' och 'tags/master' kan du uttryckligen säga 'heads/master' för att tala om för Git vilket du menar. När det är tvetydigt, defineras ett '<refnamn>' genom att ta den första matchningen i följande regler:"
 
 #. type: Plain text
 #: en/revisions.adoc:38
 msgid "If '$GIT_DIR/<refname>' exists, that is what you mean (this is usually useful only for `HEAD`, `FETCH_HEAD`, `ORIG_HEAD`, `MERGE_HEAD`, `REBASE_HEAD`, `REVERT_HEAD`, `CHERRY_PICK_HEAD`, `BISECT_HEAD` and `AUTO_MERGE`);"
-msgstr ""
+msgstr "Om '$GIT_DIR/<refnamn>' existerar, är det vad du menar (detta är vanligtvis bara användbart för `HEAD`, `FETCH_HEAD`, `ORIG_HEAD`, `MERGE_HEAD`, `REBASE_HEAD`, `REVERT_HEAD`, `CHERRY_PICK_HEAD`, `BISECT_HEAD` och `AUTO_MERGE`);"
 
 #. type: Plain text
 #: en/revisions.adoc:40
 msgid "otherwise, 'refs/<refname>' if it exists;"
-msgstr ""
+msgstr "annars, 'refs/<refnamn>' om det finns;"
 
 #. type: Plain text
 #: en/revisions.adoc:42
 msgid "otherwise, 'refs/tags/<refname>' if it exists;"
-msgstr ""
+msgstr "annars, 'refs/tags/<refnamn>' om det finns;"
 
 #. type: Plain text
 #: en/revisions.adoc:44
 msgid "otherwise, 'refs/heads/<refname>' if it exists;"
-msgstr ""
+msgstr "annars, 'refs/heads/<refnamn>' om det finns;"
 
 #. type: Plain text
 #: en/revisions.adoc:46
 msgid "otherwise, 'refs/remotes/<refname>' if it exists;"
-msgstr ""
+msgstr "annars, 'refs/remotes/<refnamn>' om det finns;"
 
 #. type: Plain text
 #: en/revisions.adoc:48
 msgid "otherwise, 'refs/remotes/<refname>/HEAD' if it exists."
-msgstr ""
+msgstr "annars, 'refs/remotes/<refnamn>/HEAD' om det finns."
 
 #. type: Plain text
 #: en/revisions.adoc:52
@@ -66017,6 +66076,8 @@ msgstr "`FETCH_HEAD`"
 #, no-wrap
 msgid "records the branch which you fetched from a remote repository with\nyour last `git fetch` invocation.\n"
 msgstr ""
+"registrerar grenen som du hämtade från ett fjärrförvar med\n"
+"din senaste `git fetch`-invokering.\n"
 
 #. type: Labeled list
 #: en/revisions.adoc:55
@@ -66030,6 +66091,10 @@ msgstr "`ORIG_HEAD`"
 #, no-wrap
 msgid "is created by commands that move your `HEAD` in a drastic way (`git\nam`, `git merge`, `git rebase`, `git reset`), to record the position\nof the `HEAD` before their operation, so that you can easily change\nthe tip of the branch back to the state before you ran them.\n"
 msgstr ""
+"skapas av kommandon som flyttar din `HEAD` på ett drastiskt sätt (`git\n"
+"am`, `git merge`, `git rebase`, `git reset`), för att registrera positionen\n"
+"för `HEAD` innan de körs, så att du enkelt kan ändra\n"
+"grenens top tillbaka till tillståndet innan du körde dem.\n"
 
 #. type: Labeled list
 #: en/revisions.adoc:60
@@ -66043,6 +66108,8 @@ msgstr "`MERGE_HEAD`"
 #, no-wrap
 msgid "records the commit(s) which you are merging into your branch when you\nrun `git merge`.\n"
 msgstr ""
+"registrerar den/de incheckning(er) som du sammanslår i din gren när du\n"
+"kör `git merge`.\n"
 
 #. type: Labeled list
 #: en/revisions.adoc:63
@@ -66056,6 +66123,9 @@ msgstr "`REBASE_HEAD`"
 #, no-wrap
 msgid "during a rebase, records the commit at which the operation is\ncurrently stopped, either because of conflicts or an `edit` command in\nan interactive rebase.\n"
 msgstr ""
+"under en rebase, registrerar den incheckningen där operationen för\n"
+"närvarande stoppas, antingen på grund av konflikter eller ett \n"
+"`edit`-kommando i en interaktiv rebase.\n"
 
 #. type: Labeled list
 #: en/revisions.adoc:67
@@ -66068,7 +66138,7 @@ msgstr "`REVERT_HEAD`"
 #: en/revisions.adoc:69
 #, no-wrap
 msgid "records the commit which you are reverting when you run `git revert`.\n"
-msgstr ""
+msgstr "registrerar den incheckning som du återställer när du kör `git revert`.\n"
 
 #. type: Labeled list
 #: en/revisions.adoc:69
@@ -66082,6 +66152,8 @@ msgstr "`CHERRY_PICK_HEAD`"
 #, no-wrap
 msgid "records the commit which you are cherry-picking when you run `git\ncherry-pick`.\n"
 msgstr ""
+"registrerar den incheckning som du plockar som ett russin i kakan \n"
+"är du kör `git cherry-pick`.\n"
 
 #. type: Labeled list
 #: en/revisions.adoc:72
@@ -66095,155 +66167,167 @@ msgstr "`BISECT_HEAD`"
 #, no-wrap
 msgid "records the current commit to be tested when you run `git bisect\n--no-checkout`.\n"
 msgstr ""
+"registrerar den aktuella incheckning som ska testas när du kör `git bisect\n"
+"--no-checkout`.\n"
 
 #. type: Plain text
 #: en/revisions.adoc:79
 #, no-wrap
 msgid "records a tree object corresponding to the state the\n'ort' merge strategy wrote to the working tree when a merge operation\nresulted in conflicts.\n"
 msgstr ""
+"registrerar ett trädobjekt som motsvarar det tillstånd som \n"
+"'ort'-sammanslagningsstrategin skrev till arbetskatalogen när en \n"
+"sammanslagningsoperation resulterade i konflikter.\n"
 
 #. type: Plain text
 #: en/revisions.adoc:85
 msgid "Note that any of the 'refs/*' cases above may come either from the `$GIT_DIR/refs` directory or from the `$GIT_DIR/packed-refs` file. While the ref name encoding is unspecified, UTF-8 is preferred as some output processing may assume ref names in UTF-8."
-msgstr ""
+msgstr "Observera att alla 'refs/*'-fall ovan kan komma antingen från katalogen `$GIT_DIR/refs` eller från filen `$GIT_DIR/packed-refs`. Även om referensnamnskodningen är ospecificerad, föredras UTF-8 eftersom viss utdatabehandling kan anta referensnamn i UTF-8."
 
 #. type: Labeled list
 #: en/revisions.adoc:86
 #, no-wrap
 msgid "'@'"
-msgstr ""
+msgstr "'@'"
 
 #. type: Plain text
 #: en/revisions.adoc:88
 msgid "'@' alone is a shortcut for `HEAD`."
-msgstr ""
+msgstr "Enbart '@' är en genväg för 'HEAD'."
 
 #. type: Labeled list
 #: en/revisions.adoc:89
 #, no-wrap
 msgid "'[<refname>]@{<date>}', e.g. 'master@\\{yesterday\\}', 'HEAD@{5 minutes ago}'"
-msgstr ""
+msgstr "'[<refnamn>]@{<datum>}', t.ex. 'master@\\{yesterday\\}', 'HEAD@{5 minutes ago}'"
 
 #. type: Plain text
 #: en/revisions.adoc:100
 msgid "A ref followed by the suffix '@' with a date specification enclosed in a brace pair (e.g. '\\{yesterday\\}', '{1 month 2 weeks 3 days 1 hour 1 second ago}' or '{1979-02-26 18:30:00}') specifies the value of the ref at a prior point in time. This suffix may only be used immediately following a ref name and the ref must have an existing log ('$GIT_DIR/logs/<ref>'). Note that this looks up the state of your *local* ref at a given time; e.g., what was in your local 'master' branch last week. If you want to look at commits made during certain times, see `--since` and `--until`."
-msgstr ""
+msgstr "En referens följt av suffixet '@' med en datumspecifikation inom ett par klammerpar (t.ex. '\\{yesterday\\}', '{1 month 2 weeks 3 days 1 hour 1 second ago}' eller '{1979-02-26 18:30:00}') anger värdet för referensen vid en tidigare tidpunkt. Detta suffix får endast användas omedelbart efter ett referensnamn och referensen måste ha en befintlig logg ('$GIT_DIR/logs/<ref>'). Observera att detta söker upp tillståndet för din *lokala* referens vid en given tidpunkt; t.ex. vad som fanns i din lokala 'master'-gren förra veckan. Om du vill titta på incheckningar som gjordes under vissa tidpunkter, se `--since` och `--until`."
 
 #. type: Labeled list
 #: en/revisions.adoc:101
 #, no-wrap
 msgid "'<refname>@{<n>}', e.g. 'master@\\{1\\}'"
-msgstr ""
+msgstr "'<refnamn>@{<n>}', t.ex. 'master@\\{1\\}'"
 
 #. type: Plain text
 #: en/revisions.adoc:109
 msgid "A ref followed by the suffix '@' with an ordinal specification enclosed in a brace pair (e.g. '\\{1\\}', '\\{15\\}') specifies the n-th prior value of that ref. For example 'master@\\{1\\}' is the immediate prior value of 'master' while 'master@\\{5\\}' is the 5th prior value of 'master'. This suffix may only be used immediately following a ref name and the ref must have an existing log ('$GIT_DIR/logs/<refname>')."
-msgstr ""
+msgstr "En referens följt av suffixet '@' med en ordinalspecifikation inom ett par klammerpar (t.ex. '\\{1\\}', '\\{15\\}') anger det n:te föregående värdet för den referensen. Till exempel är 'master@\\{1\\}' det omedelbart föregående värdet för 'master' medan 'master@\\{5\\}' är det femte föregående värdet för 'master'. Detta suffix får endast användas omedelbart efter ett referensnamn och referensen måste ha en befintlig logg ('$GIT_DIR/logs/<refnamn>')."
 
 #. type: Labeled list
 #: en/revisions.adoc:110
 #, no-wrap
 msgid "'@{<n>}', e.g. '@\\{1\\}'"
-msgstr ""
+msgstr "'@{<n>}', t.ex. '@\\{1\\}'"
 
 #. type: Plain text
 #: en/revisions.adoc:114
 msgid "You can use the '@' construct with an empty ref part to get at a reflog entry of the current branch. For example, if you are on branch 'blabla' then '@\\{1\\}' means the same as 'blabla@\\{1\\}'."
-msgstr ""
+msgstr "Du kan använda '@'-konstruktionen med en tom ref-del för att komma till en reflog-post för den aktuella grenen. Om du till exempel är på grenen 'blabla' betyder '@\\{1\\}' samma sak som 'blabla@\\{1\\}'."
 
 #. type: Labeled list
 #: en/revisions.adoc:115
 #, no-wrap
 msgid "'@{-<n>}', e.g. '@{-1}'"
-msgstr ""
+msgstr "'@{-<n>}', t.ex. '@{-1}'"
 
 #. type: Plain text
 #: en/revisions.adoc:118
 msgid "The construct '@{-<n>}' means the <n>th branch/commit checked out before the current one."
-msgstr ""
+msgstr "Konstruktionen '@{-<n>}' betyder den <n>:e gren/incheckning som checkats ut före den nuvarande."
 
 #. type: Labeled list
 #: en/revisions.adoc:119
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "'[<branchname>]@\\{upstream\\}', e.g. 'master@\\{upstream\\}', '@\\{u\\}'"
-msgstr ""
+msgstr "'[<grennamn>]@\\{upstream\\}', t.ex. 'master@\\{upstream\\}', '@\\{u\\}'"
 
 #. type: Plain text
 #: en/revisions.adoc:124
 msgid "A branch B may be set up to build on top of a branch X (configured with `branch.<name>.merge`) at a remote R (configured with `branch.<name>.remote`). B@{u} refers to the remote-tracking branch for the branch X taken from remote R, typically found at `refs/remotes/R/X`."
-msgstr ""
+msgstr "En gren B kan konfigureras för att bygga ovanpå en gren X (konfigurerad med `branch.<namn>.merge`) på en fjärr R (konfigurerad med `branch.<namn>.remote`). B@{u} refererar till den fjärrspårande grenen för gren X som tas från fjärr R, vanligtvis hittad på `refs/remotes/R/X`."
 
 #. type: Labeled list
 #: en/revisions.adoc:125
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "'[<branchname>]@\\{push\\}', e.g. 'master@\\{push\\}', '@\\{push\\}'"
-msgstr ""
+msgstr "'[<grennamn>]@\\{push\\}', t.ex. 'master@\\{push\\}', '@\\{push\\}'"
 
 #. type: Plain text
 #: en/revisions.adoc:130
 msgid "The suffix '@\\{push}' reports the branch \"where we would push to\" if `git push` were run while `branchname` was checked out (or the current `HEAD` if no branchname is specified). Like for '@\\{upstream\\}', we report the remote-tracking branch that corresponds to that branch at the remote."
-msgstr ""
+msgstr "Suffixet '@\\{push}' rapporterar grenen \"dit vi skulle pusha till\" om `git push` kördes medan `grennamn` checkades ut (eller den aktuella `HEAD` om inget grennamn anges). Precis som för '@\\{upstream\\}' rapporterar vi den fjärrspårande grenen som motsvarar den grenen på fjärrdatorn."
 
 #. type: Plain text
 #: en/revisions.adoc:132
 msgid "Here's an example to make it more clear:"
-msgstr ""
+msgstr "Här är ett exempel för att göra det tydligare:"
 
 #. type: delimited block -
 #: en/revisions.adoc:137
 #, no-wrap
 msgid "$ git config push.default current\n$ git config remote.pushdefault myfork\n$ git switch -c mybranch origin/master\n"
 msgstr ""
+"$ git config push.default current\n"
+"$ git config remote.pushdefault mingren\n"
+"$ git switch -c mybranch origin/master\n"
 
 #. type: delimited block -
 #: en/revisions.adoc:140
 #, no-wrap
 msgid "$ git rev-parse --symbolic-full-name @{upstream}\nrefs/remotes/origin/master\n"
 msgstr ""
+"$ git rev-parse --symbolic-full-name @{upstream}\n"
+"refs/remotes/origin/master\n"
 
 #. type: delimited block -
 #: en/revisions.adoc:143
 #, no-wrap
 msgid "$ git rev-parse --symbolic-full-name @{push}\nrefs/remotes/myfork/mybranch\n"
 msgstr ""
+"$ git rev-parse --symbolic-full-name @{push}\n"
+"refs/remotes/mingren/mybranch\n"
 
 #. type: Plain text
 #: en/revisions.adoc:148
 msgid "Note in the example that we set up a triangular workflow, where we pull from one location and push to another. In a non-triangular workflow, '@\\{push}' is the same as '@\\{upstream}', and there is no need for it."
-msgstr ""
+msgstr "Observera i exemplet att vi skapar ett triangulärt arbetsflöde, där vi hämtar från en plats och pushar till en annan. I ett icke-triangulärt arbetsflöde är '@\\{push}' detsamma som '@\\{upstream}', och det finns inget behov av det."
 
 #. type: Plain text
 #: en/revisions.adoc:151
 msgid "This suffix is also accepted when spelled in uppercase, and means the same thing no matter the case."
-msgstr ""
+msgstr "Detta suffix accepteras även när det stavas med versaler och betyder samma sak oavsett versaler."
 
 #. type: Labeled list
 #: en/revisions.adoc:152
 #, no-wrap
 msgid "'<rev>{caret}[<n>]', e.g. 'HEAD{caret}, v1.5.1{caret}0'"
-msgstr ""
+msgstr "'<rev>{caret}[<n>]', t.ex. 'HEAD{caret}, v1.5.1{caret}0'"
 
 #. type: Plain text
 #: en/revisions.adoc:159
 msgid "A suffix '{caret}' to a revision parameter means the first parent of that commit object. '{caret}<n>' means the <n>th parent (i.e. '<rev>{caret}' is equivalent to '<rev>{caret}1'). As a special rule, '<rev>{caret}0' means the commit itself and is used when '<rev>' is the object name of a tag object that refers to a commit object."
-msgstr ""
+msgstr "Ett suffix '{caret}' till en revisionsparameter avser den första föräldern till det inchecknings-objektet. '{caret}<n>' avser den <n>:te föräldern (dvs. '<rev>{caret}' är ekvivalent med '<rev>{caret}1'). Som en specialregel avser '<rev>{caret}0' själva inchecknings-objektet och används när '<rev>' är objektnamnet på ett taggobjekt som refererar till ett inchecknings-objekt."
 
 #. type: Labeled list
 #: en/revisions.adoc:160
 #, no-wrap
 msgid "'<rev>{tilde}[<n>]', e.g. 'HEAD{tilde}, master{tilde}3'"
-msgstr ""
+msgstr "'<rev>{tilde}[<n>]', t.ex. 'HEAD{tilde}, master{tilde}3'"
 
 #. type: Plain text
 #: en/revisions.adoc:169
 msgid "A suffix '{tilde}' to a revision parameter means the first parent of that commit object. A suffix '{tilde}<n>' to a revision parameter means the commit object that is the <n>th generation ancestor of the named commit object, following only the first parents. I.e. '<rev>{tilde}3' is equivalent to '<rev>{caret}{caret}{caret}' which is equivalent to '<rev>{caret}1{caret}1{caret}1'. See below for an illustration of the usage of this form."
-msgstr ""
+msgstr "Ett suffix '{tilde}' till en revisionsparameter avser den första föräldern till det inchecknings-objektet. Ett suffix '{tilde}<n>' till en revisionsparameter avser det inchecknings-objekt som är den <n>:e generationens förfader till det namngivna inchecknings-objektet, efter endast de första föräldrarna. Dvs. '<rev>{tilde}3' är ekvivalent med '<rev>{caret}{caret}{caret}' vilket är ekvivalent med '<rev>{caret}1{caret}1{caret}1'. Se nedan för en illustration av användningen av denna form."
 
 #. type: Labeled list
 #: en/revisions.adoc:170
 #, no-wrap
 msgid "'<rev>{caret}{<type>}', e.g. 'v0.99.8{caret}\\{commit\\}'"
-msgstr ""
+msgstr "'<rev>{caret}{<type>}', t.ex. 'v0.99.8{caret}\\{commit\\}'"
 
 #. type: Plain text
 #: en/revisions.adoc:181
@@ -66258,13 +66342,13 @@ msgstr "'<rev>{caret}\\{object\\}' kan användas för att säkerställa att '<re
 #. type: Plain text
 #: en/revisions.adoc:189
 msgid "'<rev>{caret}\\{tag\\}' can be used to ensure that '<rev>' identifies an existing tag object."
-msgstr ""
+msgstr "'<rev>{caret}\\{tag\\}' kan användas för att säkerställa att '<rev>' identifierar ett befintligt taggobjekt."
 
 #. type: Labeled list
 #: en/revisions.adoc:190
 #, no-wrap
 msgid "'<rev>{caret}{}', e.g. 'v0.99.8{caret}{}'"
-msgstr ""
+msgstr "'<rev>{caret}{}', t.ex. 'v0.99.8{caret}{}'"
 
 #. type: Plain text
 #: en/revisions.adoc:195
@@ -66275,289 +66359,331 @@ msgstr "Ett suffix '{caret}' följt av ett tomt parenteser betyder att objektet 
 #: en/revisions.adoc:196
 #, no-wrap
 msgid "'<rev>{caret}{/<text>}', e.g. 'HEAD^{/fix nasty bug}'"
-msgstr ""
+msgstr "'<rev>{caret}{/<text>}', t.ex. 'HEAD^{/fixa otäck bugg}'"
 
 #. type: Plain text
 #: en/revisions.adoc:202
 msgid "A suffix '{caret}' to a revision parameter, followed by a brace pair that contains a text led by a slash, is the same as the ':/fix nasty bug' syntax below except that it returns the youngest matching commit which is reachable from the '<rev>' before '{caret}'."
-msgstr ""
+msgstr "Ett suffix '{caret}' till en revisionsparameter, följt av ett par klammerpar som innehåller en text inledd av ett snedstreck, är samma som syntaxen ':/fix nasty bug' nedan förutom att den returnerar den yngsta matchande incheckningen som är nåbar från '<rev>' före '{caret}'."
 
 #. type: Labeled list
 #: en/revisions.adoc:203
 #, no-wrap
 msgid "':/<text>', e.g. ':/fix nasty bug'"
-msgstr ""
+msgstr "':/<text>', t.ex. ':/fixa otäck bugg'"
 
 #. type: Plain text
 #: en/revisions.adoc:216
 msgid "A colon, followed by a slash, followed by a text, names a commit whose commit message matches the specified regular expression. This name returns the youngest matching commit which is reachable from any ref, including HEAD. The regular expression can match any part of the commit message. To match messages starting with a string, one can use e.g. ':/^foo'. The special sequence ':/!' is reserved for modifiers to what is matched. ':/!-foo' performs a negative match, while ':/!!foo' matches a literal '!' character, followed by 'foo'. Any other sequence beginning with ':/!' is reserved for now. Depending on the given text, the shell's word splitting rules might require additional quoting."
-msgstr ""
+msgstr "Ett kolon, följt av ett snedstreck, följt av en text, namnger en incheckning vars inchecknings-meddelande matchar det angivna reguljära uttrycket. Detta namn returnerar den yngsta matchande incheckningen som är nåbar från vilken referens som helst, inklusive HEAD. Det reguljära uttrycket kan matcha vilken del som helst av inchecknings-meddelandet. För att matcha meddelanden som börjar med en sträng kan man använda t.ex. ':/^foo'. Den speciella sekvensen ':/!' är reserverad för modifierare av det som matchas. ':/!-foo' utför en negativ matchning, medan ':/!!foo' matchar ett bokstavligt '!'-tecken, följt av 'foo'. Alla andra sekvenser som börjar med ':/!' är reserverade för tillfället. Beroende på den givna texten kan skalets orddelningsregler kräva ytterligare citering."
 
 #. type: Labeled list
 #: en/revisions.adoc:217
 #, no-wrap
 msgid "'<rev>:<path>', e.g. 'HEAD:README', 'master:./README'"
-msgstr ""
+msgstr "'<rev>:<sökväg>', t.ex. 'HEAD:README', 'master:./README'"
 
 #. type: Plain text
 #: en/revisions.adoc:225
 msgid "A suffix ':' followed by a path names the blob or tree at the given path in the tree-ish object named by the part before the colon. A path starting with './' or '../' is relative to the current working directory. The given path will be converted to be relative to the working tree's root directory. This is most useful to address a blob or tree from a commit or tree that has the same tree structure as the working tree."
-msgstr ""
+msgstr "Ett suffix ':' följt av en sökväg namnger blobben eller trädet vid den givna sökvägen i det träd-igt objektet som namnges av delen före kolon. En sökväg som börjar med './' eller '../' är relativ till den aktuella arbetskatalogen. Den givna sökvägen kommer att konverteras till att vara relativ till arbetskatalogens rotkatalog. Detta är mest användbart för att adressera en blob eller ett träd från en incheckning eller ett träd som har samma trädstruktur som arbetskatalogen."
 
 #. type: Labeled list
 #: en/revisions.adoc:226
 #, no-wrap
 msgid "':[<n>:]<path>', e.g. ':0:README', ':README'"
-msgstr ""
+msgstr "':[<n>:]<sökväg>', e.g. ':0:README', ':README'"
 
 #. type: Plain text
 #: en/revisions.adoc:234
 msgid "A colon, optionally followed by a stage number (0 to 3) and a colon, followed by a path, names a blob object in the index at the given path. A missing stage number (and the colon that follows it) names a stage 0 entry. During a merge, stage 1 is the common ancestor, stage 2 is the target branch's version (typically the current branch), and stage 3 is the version from the branch which is being merged."
-msgstr ""
+msgstr "Ett kolon, valfritt följt av ett stegnummer (0 till 3) och ett kolon, följt av en sökväg, namnger ett blobobjekt i indexet vid den angivna sökvägen. Ett saknat stegnummer (och kolonet som följer det) namnger en steg 0-post. Under en sammanslagning är steg 1 den gemensamma förfadern, steg 2 är målgrenens version (vanligtvis den aktuella grenen) och steg 3 är versionen från grenen som sammanfogas."
 
 #. type: Plain text
 #: en/revisions.adoc:238
 msgid "Here is an illustration, by Jon Loeliger. Both commit nodes B and C are parents of commit node A. Parent commits are ordered left-to-right."
-msgstr ""
+msgstr "Här är en illustration av Jon Loeliger. Både inchecknings-noderna B och C är föräldrar till inchecknings-nod A. Föräldra-incheckningar är ordnade från vänster till höger."
 
 #. type: delimited block .
 #: en/revisions.adoc:250
 #, no-wrap
 msgid "G   H   I   J\n \\ /     \\ /\n  D   E   F\n   \\  |  / \\\n    \\ | /   |\n     \\|/    |\n      B     C\n       \\   /\n        \\ /\n         A\n"
 msgstr ""
+"G   H   I   J\n"
+" \\ /     \\ /\n"
+"  D   E   F\n"
+"   \\  |  / \\\n"
+"    \\ | /   |\n"
+"     \\|/    |\n"
+"      B     C\n"
+"       \\   /\n"
+"        \\ /\n"
+"         A\n"
 
 #. type: Plain text
 #: en/revisions.adoc:262
 #, no-wrap
 msgid "    A =      = A^0\n    B = A^   = A^1     = A~1\n    C =      = A^2\n    D = A^^  = A^1^1   = A~2\n    E = B^2  = A^^2\n    F = B^3  = A^^3\n    G = A^^^ = A^1^1^1 = A~3\n    H = D^2  = B^^2    = A^^^2  = A~2^2\n    I = F^   = B^3^    = A^^3^\n    J = F^2  = B^3^2   = A^^3^2\n"
 msgstr ""
+"    A =      = A^0\n"
+"    B = A^   = A^1     = A~1\n"
+"    C =      = A^2\n"
+"    D = A^^  = A^1^1   = A~2\n"
+"    E = B^2  = A^^2\n"
+"    F = B^3  = A^^3\n"
+"    G = A^^^ = A^1^1^1 = A~3\n"
+"    H = D^2  = B^^2    = A^^^2  = A~2^2\n"
+"    I = F^   = B^3^    = A^^3^\n"
+"    J = F^2  = B^3^2   = A^^3^2\n"
 
 #. type: Plain text
 #: en/revisions.adoc:269
 msgid "History traversing commands such as `git log` operate on a set of commits, not just a single commit."
-msgstr ""
+msgstr "Kommandon för historikgenomgång som `git log` fungerar på en uppsättning incheckningar, inte bara en enda incheckning."
 
 #. type: Plain text
 #: en/revisions.adoc:274
 msgid "For these commands, specifying a single revision, using the notation described in the previous section, means the set of commits `reachable` from the given commit."
-msgstr ""
+msgstr "För dessa kommandon innebär angivandet av en enda revision, med hjälp av notationen som beskrivs i föregående avsnitt, att uppsättningen incheckningar är \"nåbara\" från den givna incheckningen."
 
 #. type: Plain text
 #: en/revisions.adoc:277
 msgid "Specifying several revisions means the set of commits reachable from any of the given commits."
-msgstr ""
+msgstr "Att ange flera revisioner innebär den uppsättning incheckningar som kan nås från vilken som helst av de givna incheckningarna."
 
 #. type: Plain text
 #: en/revisions.adoc:280
 msgid "A commit's reachable set is the commit itself and the commits in its ancestry chain."
-msgstr ""
+msgstr "En inchecknings nåbara uppsättning är själva incheckningen och incheckningar i dess förfäders-kedja."
 
 #. type: Plain text
 #: en/revisions.adoc:283
 msgid "There are several notations to specify a set of connected commits (called a \"revision range\"), illustrated below."
-msgstr ""
+msgstr "Det finns flera notationer för att specificera en uppsättning sammankopplade incheckningar (kallat ett \"revisionsintervall\"), illustrerade nedan."
 
 #. type: Title ~
 #: en/revisions.adoc:286
 #, no-wrap
 msgid "Commit Exclusions"
-msgstr ""
+msgstr "Inchecknings Exlcuderingar"
 
 #. type: Labeled list
 #: en/revisions.adoc:288
 #, no-wrap
 msgid "'{caret}<rev>' (caret) Notation"
-msgstr ""
+msgstr "'{caret}<rev>' (caret) Notation"
 
 #. type: Plain text
 #: en/revisions.adoc:293
 msgid "To exclude commits reachable from a commit, a prefix '{caret}' notation is used. E.g. '{caret}r1 r2' means commits reachable from 'r2' but exclude the ones reachable from 'r1' (i.e. 'r1' and its ancestors)."
-msgstr ""
+msgstr "För att exkludera incheckningar som kan nås från en incheckning, används en prefix '{caret}' notation. T.ex. betyder '{caret}r1 r2' incheckningar som kan nås från 'r2' men exkluderar de som kan nås från 'r1' (dvs. 'r1' och dess föregångare)."
 
 #. type: Title ~
 #: en/revisions.adoc:295
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Dotted Range Notations"
-msgstr ""
+msgstr "Punkterade avståndsnotationer"
 
 #. type: Labeled list
 #: en/revisions.adoc:297
 #, no-wrap
 msgid "The '..' (two-dot) Range Notation"
-msgstr ""
+msgstr "'..' (två punkter) Avståndsnotationen"
 
 #. type: Plain text
 #: en/revisions.adoc:303
 msgid "The '{caret}r1 r2' set operation appears so often that there is a shorthand for it. When you have two commits 'r1' and 'r2' (named according to the syntax explained in SPECIFYING REVISIONS above), you can ask for commits that are reachable from r2 excluding those that are reachable from r1 by '{caret}r1 r2' and it can be written as 'r1..r2'."
-msgstr ""
+msgstr "Set-operationen '{caret}r1 r2' förekommer så ofta att det finns en förkortning för den. När du har två incheckningar 'r1' och 'r2' (namngivna enligt syntaxen som förklaras i SPECIFIKERA REVISIONER ovan), kan du fråga efter incheckningar som är nåbara från r2 exklusive de som är nåbara från r1 med '{caret}r1 r2' och det kan skrivas som 'r1..r2'."
 
 #. type: Labeled list
 #: en/revisions.adoc:304
 #, no-wrap
 msgid "The '\\...' (three-dot) Symmetric Difference Notation"
-msgstr ""
+msgstr "'\\...' (tre punkter) Symmetrisk differensnotationen"
 
 #. type: Plain text
 #: en/revisions.adoc:310
 msgid "A similar notation 'r1\\...r2' is called symmetric difference of 'r1' and 'r2' and is defined as 'r1 r2 --not $(git merge-base --all r1 r2)'. It is the set of commits that are reachable from either one of 'r1' (left side) or 'r2' (right side) but not from both."
-msgstr ""
+msgstr "En liknande notation 'r1\\...r2' kallas symmetrisk skillnad mellan 'r1' och 'r2' och definieras som 'r1 r2 --not $(git merge-base --all r1 r2)'. Det är den mängd incheckningar som kan nås från antingen 'r1' (vänster sida) eller 'r2' (höger sida) men inte från båda."
 
 #. type: Plain text
 #: en/revisions.adoc:317
 msgid "In these two shorthand notations, you can omit one end and let it default to HEAD. For example, 'origin..' is a shorthand for 'origin..HEAD' and asks \"What did I do since I forked from the origin branch?\" Similarly, '..origin' is a shorthand for 'HEAD..origin' and asks \"What did the origin do since I forked from them?\" Note that '..' would mean 'HEAD..HEAD' which is an empty range that is both reachable and unreachable from HEAD."
-msgstr ""
+msgstr "I dessa två förkortningsnotationer, kan du utelämna en ände och låta den vara standardvärdet HEAD. Till exempel är 'origin..' en förkortning för 'origin..HEAD' och frågar \"Vad gjorde jag sedan jag förgrenads från origin-grenen?\". På liknande sätt är '..origin' en förkortning för 'HEAD..origin' och frågar \"Vad gjorde origo sedan jag förgrenads från dem?\". Observera att '..' skulle betyda 'HEAD..HEAD' vilket är ett tomt intervall som både kan nås och inte kan nås från HEAD."
 
 #. type: Plain text
 #: en/revisions.adoc:324
 msgid "Commands that are specifically designed to take two distinct ranges (e.g. \"git range-diff R1 R2\" to compare two ranges) do exist, but they are exceptions. Unless otherwise noted, all \"git\" commands that operate on a set of commits work on a single revision range. In other words, writing two \"two-dot range notation\" next to each other, e.g."
-msgstr ""
+msgstr "Kommandon som är specifikt utformade för att ta två distinkta intervall (t.ex. \"git range-diff R1 R2\" för att jämföra två intervall) existerar, men de är undantag. Om inget annat anges, arbetar alla \"git\"-kommandon som arbetar på en uppsättning incheckningar på ett enda revisionsområde. Med andra ord, att skriva två \"tvåpunktsintervallnotationer\" bredvid varandra, t.ex."
 
 #. type: Plain text
 #: en/revisions.adoc:326
 #, no-wrap
 msgid "    $ git log A..B C..D\n"
-msgstr ""
+msgstr "    $ git log A..B C..D\n"
 
 #. type: Plain text
 #: en/revisions.adoc:331
 msgid "does *not* specify two revision ranges for most commands. Instead it will name a single connected set of commits, i.e. those that are reachable from either B or D but are reachable from neither A or C. In a linear history like this:"
-msgstr ""
+msgstr "anger *inte* två revisionsintervall för de flesta kommandon. Istället kommer den att namnge en enda sammankopplad uppsättning incheckningar, d.v.s. de som är nåbara från antingen B eller D men inte kan nås från varken A eller C. I en linjär historik som denna:"
 
 #. type: Plain text
 #: en/revisions.adoc:333
 #, no-wrap
 msgid "    ---A---B---o---o---C---D\n"
-msgstr ""
+msgstr "    ---A---B---o---o---C---D\n"
 
 #. type: Plain text
 #: en/revisions.adoc:336
 msgid "because A and B are reachable from C, the revision range specified by these two dotted ranges is a single commit D."
-msgstr ""
+msgstr "eftersom A och B kan nås från C, är revisionsintervallet som anges av dessa två prickade intervall en enda incheckning D."
 
 #. type: Title ~
 #: en/revisions.adoc:339
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Other <rev>{caret} Parent Shorthand Notations"
-msgstr ""
+msgstr "Andra <rev>{caret} förälder förkortade notationer"
 
 #. type: Plain text
 #: en/revisions.adoc:342
 msgid "Three other shorthands exist, particularly useful for merge commits, for naming a set that is formed by a commit and its parent commits."
-msgstr ""
+msgstr "Tre andra förkortningar finns, särskilt användbara för sammanslagnings-incheckningar, för att namnge en uppsättning som bildas av en incheckning och dess förälder incheckningar."
 
 #. type: Plain text
 #: en/revisions.adoc:344
 msgid "The 'r1{caret}@' notation means all parents of 'r1'."
-msgstr ""
+msgstr "Notationen 'r1{caret}@' betyder alla föräldrar till 'r1'."
 
 #. type: Plain text
 #: en/revisions.adoc:347
 msgid "The 'r1{caret}!' notation includes commit 'r1' but excludes all of its parents. By itself, this notation denotes the single commit 'r1'."
-msgstr ""
+msgstr "Notationen 'r1{caret}!' inkluderar incheckning 'r1' men exkluderar alla dess föräldrar. Denna notation betecknar i sig den enskilda incheckningen 'r1'."
 
 #. type: Plain text
 #: en/revisions.adoc:354
 msgid "The '<rev>{caret}-[<n>]' notation includes '<rev>' but excludes the <n>th parent (i.e. a shorthand for '<rev>{caret}<n>..<rev>'), with '<n>' = 1 if not given. This is typically useful for merge commits where you can just pass '<commit>{caret}-' to get all the commits in the branch that was merged in merge commit '<commit>' (including '<commit>' itself)."
-msgstr ""
+msgstr "Notationen '<rev>{caret}-[<n>]' inkluderar '<rev>' men exkluderar den <n>:te föräldern (dvs. en förkortning för '<rev>{caret}<n>..<rev>'), med '<n>' = 1 om den inte anges. Detta är vanligtvis användbart för sammanslagnings-incheckningar där du bara kan skicka '<incheckning>{caret}-' för att hämta alla incheckningar i grenen som slogs samman i sammanslagnings-incheckningen '<incheckning>' (inklusive '<incheckningen>' själv)."
 
 #. type: Plain text
 #: en/revisions.adoc:358
 msgid "While '<rev>{caret}<n>' was about specifying a single commit parent, these three notations also consider its parents. For example you can say 'HEAD{caret}2{caret}@', however you cannot say 'HEAD{caret}@{caret}2'."
-msgstr ""
+msgstr "Medan '<rev>{caret}<n>' handlade om att specificera en enda inchecknings-förälder, tar dessa tre notationer även hänsyn till dess föräldrar. Till exempel kan du säga 'HEAD{caret}2{caret}@', men du kan inte säga 'HEAD{caret}@{caret}2'."
 
 #. type: Title -
 #: en/revisions.adoc:360
-#, no-wrap
+#, fuzzy, no-wrap
 msgid "Revision Range Summary"
-msgstr ""
+msgstr "Sammanfattning av revisionsintervall"
 
 #. type: Labeled list
 #: en/revisions.adoc:362
 #, no-wrap
 msgid "'<rev>'"
-msgstr ""
+msgstr "'<rev>'"
 
 #. type: Plain text
 #: en/revisions.adoc:365
 msgid "Include commits that are reachable from <rev> (i.e. <rev> and its ancestors)."
-msgstr ""
+msgstr "Inkludera incheckningar som är nåbara från <rev> (dvs. <rev> och dess föregångare)."
 
 #. type: Labeled list
 #: en/revisions.adoc:366
 #, no-wrap
 msgid "'{caret}<rev>'"
-msgstr ""
+msgstr "'{caret}<rev>'"
 
 #. type: Plain text
 #: en/revisions.adoc:369
 msgid "Exclude commits that are reachable from <rev> (i.e. <rev> and its ancestors)."
-msgstr ""
+msgstr "Exkludera incheckningar som är nåbara från <rev> (dvs. <rev> och dess förfäder)."
 
 #. type: Labeled list
 #: en/revisions.adoc:370
 #, no-wrap
 msgid "'<rev1>..<rev2>'"
-msgstr ""
+msgstr "'<rev1>..<rev2>'"
 
 #. type: Plain text
 #: en/revisions.adoc:374
 msgid "Include commits that are reachable from <rev2> but exclude those that are reachable from <rev1>. When either <rev1> or <rev2> is omitted, it defaults to `HEAD`."
-msgstr ""
+msgstr "Inkludera incheckningar som kan nås från <rev2> men exkludera de som kan nås från <rev1>. När antingen <rev1> eller <rev2> utelämnas, används `HEAD` som standard."
 
 #. type: Labeled list
 #: en/revisions.adoc:375
 #, no-wrap
 msgid "'<rev1>\\...<rev2>'"
-msgstr ""
+msgstr "'<rev1>\\...<rev2>'"
 
 #. type: Plain text
 #: en/revisions.adoc:379
 msgid "Include commits that are reachable from either <rev1> or <rev2> but exclude those that are reachable from both. When either <rev1> or <rev2> is omitted, it defaults to `HEAD`."
-msgstr ""
+msgstr "Inkludera incheckningar som kan nås från antingen <rev1> eller <rev2> men exkludera de som kan nås från båda. När antingen <rev1> eller <rev2> utelämnas, används `HEAD` som standard."
 
 #. type: Labeled list
 #: en/revisions.adoc:380
 #, no-wrap
 msgid "'<rev>{caret}@', e.g. 'HEAD{caret}@'"
-msgstr ""
+msgstr "'<rev>{caret}@', t.ex. 'HEAD{caret}@'"
 
 #. type: Plain text
 #: en/revisions.adoc:384
 msgid "A suffix '{caret}' followed by an at sign is the same as listing all parents of '<rev>' (meaning, include anything reachable from its parents, but not the commit itself)."
-msgstr ""
+msgstr "Ett suffix '{caret}' följt av ett at-tecken är detsamma som att lista alla föräldrar till '<rev>' (vilket betyder, att inkludera allt som kan nås från dess föräldrar, men inte själva incheckningen)."
 
 #. type: Labeled list
 #: en/revisions.adoc:385
 #, no-wrap
 msgid "'<rev>{caret}!', e.g. 'HEAD{caret}!'"
-msgstr ""
+msgstr "'<rev>{caret}!', t.ex. 'HEAD{caret}!'"
 
 #. type: Plain text
 #: en/revisions.adoc:389
 msgid "A suffix '{caret}' followed by an exclamation mark is the same as giving commit '<rev>' and all its parents prefixed with '{caret}' to exclude them (and their ancestors)."
-msgstr ""
+msgstr "Ett suffix '{caret}' följt av ett utropstecken är detsamma som att ge incheckning '<rev>' och alla dess föräldrar prefixet '{caret}' för att exkludera dem (och deras förfäder)."
 
 #. type: Labeled list
 #: en/revisions.adoc:390
 #, no-wrap
 msgid "'<rev>{caret}-<n>', e.g. 'HEAD{caret}-, HEAD{caret}-2'"
-msgstr ""
+msgstr "'<rev>{caret}-<n>', t.ex. 'HEAD{caret}-, HEAD{caret}-2'"
 
 #. type: Plain text
 #: en/revisions.adoc:393
 msgid "Equivalent to '<rev>{caret}<n>..<rev>', with '<n>' = 1 if not given."
-msgstr ""
+msgstr "Motsvarande '<rev>{caret}<n>..<rev>', med '<n>' = 1 om inte angiven."
 
 #. type: Plain text
 #: en/revisions.adoc:397
 msgid "Here are a handful of examples using the Loeliger illustration above, with each step in the notation's expansion and selection carefully spelt out:"
-msgstr ""
+msgstr "Här är ett antal exempel som använder Loeliger-illustrationen ovan, där varje steg i notationens expansion och val noggrant anges:"
 
 #. type: delimited block .
 #: en/revisions.adoc:421
 #, no-wrap
 msgid "   Args   Expanded arguments    Selected commits\n   D                            G H D\n   D F                          G H I J D F\n   ^G D                         H D\n   ^D B                         E I J F B\n   ^D B C                       E I J F B C\n   C                            I J F C\n   B..C   = ^B C                C\n   B...C  = B ^F C              G H D E B C\n   B^-    = B^..B\n\t  = ^B^1 B              E I J F B\n   C^@    = C^1\n\t  = F                   I J F\n   B^@    = B^1 B^2 B^3\n\t  = D E F               D G H E F I J\n   C^!    = C ^C^@\n\t  = C ^C^1\n\t  = C ^F                C\n   B^!    = B ^B^@\n\t  = B ^B^1 ^B^2 ^B^3\n\t  = B ^D ^E ^F          B\n   F^! D  = F ^I ^J D           G H D F\n"
 msgstr ""
+"   Args   Utökade argument    Valda incheckningar\n"
+"   D                            G H D\n"
+"   D F                          G H I J D F\n"
+"   ^G D                         H D\n"
+"   ^D B                         E I J F B\n"
+"   ^D B C                       E I J F B C\n"
+"   C                            I J F C\n"
+"   B..C   = ^B C                C\n"
+"   B...C  = B ^F C              G H D E B C\n"
+"   B^-    = B^..B\n"
+"\t  = ^B^1 B              E I J F B\n"
+"   C^@    = C^1\n"
+"\t  = F                   I J F\n"
+"   B^@    = B^1 B^2 B^3\n"
+"\t  = D E F               D G H E F I J\n"
+"   C^!    = C ^C^@\n"
+"\t  = C ^C^1\n"
+"\t  = C ^F                C\n"
+"   B^!    = B ^B^@\n"
+"\t  = B ^B^1 ^B^2 ^B^3\n"
+"\t  = B ^D ^E ^F          B\n"
+"   F^! D  = F ^I ^J D           G H D F\n"
 
 #. type: Plain text
 #: en/rev-list-description.adoc:5
