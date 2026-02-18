@@ -18,8 +18,8 @@ ifndef V
 endif
 endif
 
-po4a.conf: scripts/create_po4a_conf sources.txt
-	@./scripts/create_po4a_conf
+po4a.conf: scripts/create_po4a_conf en/*.adoc en/config/*.adoc en/includes/*.adoc
+	@echo '   ' PO4A $@;./scripts/create_po4a_conf
 
 po/documentation.pot: po4a.conf $(EN_SOURCES) Makefile
 	$(QUIET_PO4A)PERL5LIB=./po4a/lib po4a/po4a -v po4a.conf --no-translations

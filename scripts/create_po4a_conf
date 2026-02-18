@@ -1,17 +1,32 @@
 #!/usr/bin/env python3
 import glob
+import shutil
+from os import unlink
 
-with open('po4a.conf', 'w') as f:
+with open('po4a.conf.new', 'w') as f:
     f.write('[po4a_langs]')
     langs = [ l[17:-3] for l in glob.glob('po/documentation.*.po')]
     langs.sort()
     f.write(' '.join(langs))
     f.write('\n[po4a_paths] po/documentation.pot $lang:po/documentation.$lang.po\n[options] opt: " -k 80" opt:" -o cleanspaces=1" opt:" --wrap-po no" opt:"-o \'style=[synopsis%]\'"\n')
-    with open('sources.txt', 'r') as sources:
-        for source in sources:
-            source = source.strip()
-            f.write(f"[type: asciidoc] en/{source} $lang:./$lang/{source}")
-            if source.startswith('git'):
-                f.write(' add_$lang:?addenda/addendum.$lang.txt\n')
-            else:
-                f.write('\n')
+    for source in glob.glob('en/**/*.adoc', recursive=True):
+        source = source[3:]
+        f.write(f"[type: asciidoc] en/{source} $lang:./$lang/{source}")
+        if source.startswith('git'):
+            f.write(' add_$lang:?addenda/addendum.$lang.txt\n')
+        else:
+            f.write('\n')
+
+
+try:
+    with open('po4a.conf', 'r') as f:
+        old_conf = f.read()
+        if old_conf != open('po4a.conf.new', 'r').read():
+            shutil.move('po4a.conf.new', 'po4a.conf')
+            print("Updated po4a.conf")
+        else:
+            print("po4a.conf is up to date")
+            unlink('po4a.conf.new')
+except FileNotFoundError:
+    shutil.move('po4a.conf.new', 'po4a.conf')
+    print("Created po4a.conf")
