@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v4
     - name: install package
       run: sudo apt-get -yq install libunicode-linebreak-perl gettext python3-polib libyaml-tiny-perl asciidoctor ruby-parslet
     - name: install required po4a version with asciidoc fixes
