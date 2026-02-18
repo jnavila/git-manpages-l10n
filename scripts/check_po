@@ -56,9 +56,6 @@ def main(filename: str, modify: bool = False):
                 placeholders.append(g)
                 if entry.msgstr != "" and not entry.obsolete and not entry.fuzzy and matched.group(0) not in entry.msgstr:
                     print(f"ERROR {filename}: {entry.msgid}, {entry.msgstr}:\n  {matched.group(0)} not found in translation")
-                    if entry.tcomment != "":
-                        entry.tcomment += "\n"
-                    entry.tcomment += f"ERROR: {matched.group(0)} not found in translation"
                     flags.add("fuzzy")
         flags = {x for x in flags if x.startswith("priority") or x in ["fuzzy", "no-wrap", "ignore-same", "ignore-ellipsis"]}
         if len(placeholders) > 0:
