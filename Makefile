@@ -1,4 +1,4 @@
-EN_SOURCES = $(wildcard en/*.adoc)
+EN_SOURCES = $(wildcard en/*.adoc) $(wildcard en/config/*.adoc) $(wildcard en/includes/*.adoc)
 DOC_SOURCES = $(wildcard en/git*.adoc)
 DOCS = $(patsubst en/%.adoc,%.adoc,$(DOC_SOURCES))
 LANGUAGE_PO = $(wildcard po/documentation.*.po)
