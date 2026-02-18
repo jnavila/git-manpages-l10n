@@ -1,20 +1,45 @@
 #!/usr/bin/python
 import os
+from os.path import join
 import shutil
+import re
+from sources import SECTIONS
+
+MIN_PRIORITY_INCLUDE_SECTION = 200
 
 ## get the relative path of the files from the env var SOURCE_PATH
 relative_path = os.getenv('SOURCE_PATH')
 if relative_path is None:
     relative_path = '..'
 
-with open('sources.txt') as f:
-    sources = f.read().splitlines()
-    for source in sources:
-        try:
-            shutil.copy2(os.path.join(relative_path, source), os.path.join("en", source))
-        except FileNotFoundError:
-            print(f"File not found: {source}")
-        except shutil.SameFileError:
-            print(f"File is the same: {source}")
+INCLUDE_REGEX = re.compile('''include::(.*)\\[\\]\n''')
+
+def copy_file(source: str) -> bool:
+    try:
+        print(f"Copying {source} from {relative_path} to en")
+        shutil.copy2(join(relative_path, source), join("en", source))
+        return True
+    except FileNotFoundError:
+        print(f"File not found: {source}")
+    except shutil.SameFileError:
+        print(f"File is the same: {source}")
+    return False
+
+def process_file(dirname: str, filename: str) -> None:
+    with open(join('en', dirname, filename),'r') as f:
+        for line in f.readlines():
+                match = INCLUDE_REGEX.fullmatch(line)
+                if match:
+                    full_filename = match.group(1)
+                    full_dirname = join(dirname, os.path.dirname(full_filename))
+                    filename = os.path.basename(full_filename)
+                    if copy_file(join(full_dirname, filename)):
+                        process_file(full_dirname, filename)
+
+
+for section in SECTIONS:
+    for source in SECTIONS[section]:
+        if copy_file(source) and section >= MIN_PRIORITY_INCLUDE_SECTION:
+            process_file('.', source)
 
 shutil.copy2(os.path.join(relative_path, "..", "GIT-VERSION-FILE"), ".")
