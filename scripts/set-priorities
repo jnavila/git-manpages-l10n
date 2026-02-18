@@ -4,91 +4,7 @@ import polib
 import sys
 import re
 from os.path import join, dirname
-
-SECTIONS = {310: ["en/gitglossary.adoc"],
-            300: ["en/git-init.adoc",
-                  "en/git-clone.adoc",
-                  "en/git-add.adoc"],
-            280: ["en/git-status.adoc",
-                  "en/git-diff.adoc",
-                  "en/diff-options.adoc",
-                  "en/diff-format.adoc",
-                  "en/git-commit.adoc",
-                  "en/git-notes.adoc",
-                  "en/git-restore.adoc",
-                  "en/git-reset.adoc",
-                  "en/git-rm.adoc",
-                  "en/git-mv.adoc"],
-            260: ["en/git-branch.adoc",
-                  "en/git-log.adoc",
-                  "en/git-shortlog.adoc",
-                  "en/git-describe.adoc"],
-            240: ["en/git-show.adoc",
-                  "en/git-checkout.adoc",
-                  "en/git-merge.adoc",
-                  "en/git-mergetool.adoc",
-                  "en/git-stash.adoc",
-                  "en/git-tag.adoc",
-                  "en/git-worktree.adoc"],
-            220: ["en/git-fetch.adoc",
-                  "en/git-pull.adoc",
-                  "en/git-push.adoc",
-                  "en/git-remote.adoc",
-                  "en/git-submodule.adoc",
-                  "en/git-rebase.adoc"],
-            90: ["en/git-cvsexportcommit.adoc",
-                 "en/git-cvsimport.adoc",
-                 "en/git-cvsserver.adoc",
-                 "en/git-unpack-file.adoc",
-                 "en/git-unpack-objects.adoc",
-                 "en/git-fast-export.adoc",
-                 "en/git-fast-import.adoc",
-                 "en/git-fetch-pack.adoc",
-                 "en/git-filter-branch.adoc",
-                 "en/git-update-server-info.adoc",
-                 "en/git-sh-i18n.adoc",
-                 "en/git-sh-i18n--envsubst.adoc",
-                 "en/git-send-pack.adoc",
-                 "en/git-remote-ext.adoc",
-                 "en/git-remote-fd.adoc",
-                 "en/git-receive-pack.adoc",
-                 "en/git-send-pack.adoc",
-                 "en/git-p4.adoc",
-                 "en/git-symbolic-ref.adoc",
-                 "en/git-merge-base.adoc",
-                 "en/git-merge-file.adoc",
-                 "en/git-merge-index.adoc",
-                 "en/git-credential-cache--daemon.adoc",
-                 "en/git-credential-cache.adoc",
-                 "en/git-quiltimport.adoc",
-                 ],
-            80: ["en/git-cat-file.adoc",
-                 "en/git-check-ignore.adoc",
-                 "en/git-checkout-index.adoc",
-                 "en/git-commit-tree.adoc",
-                 "en/git-count-objects.adoc",
-                 "en/git-diff-index.adoc",
-                 "en/git-diff-tree.adoc",
-                 "en/git-for-each-ref.adoc",
-                 "en/git-hash-object.adoc",
-                 "en/git-ls-files.adoc",
-                 "en/git-ls-tree.adoc",
-                 "en/git-merge-base.adoc",
-                 "en/git-pack-objects.adoc",
-                 "en/git-pack-redundant.adoc",
-                 "en/git-pack-refs.adoc",
-                 "en/git-patch-id.adoc",
-                 "en/git-read-tree.adoc",
-                 "en/git-rev-list.adoc",
-                 "en/git-rev-parse.adoc",
-                 "en/git-show-ref.adoc",
-                 "en/git-symbolic-ref.adoc",
-                 "en/git-update-index.adoc",
-                 "en/git-update-ref.adoc",
-                 "en/git-verify-pack.adoc",
-                 "en/git-write-tree.adoc"
-                 ]
-            }
+from sources import SECTIONS
 
 INCLUDE_REGEX = re.compile('''include::(.*)\\[\\]\n''')
 
@@ -108,7 +24,7 @@ def process_file(filename, priority, priorities):
 
 
 def main(f_list):
-    priorities = dict((source, section) for section in SECTIONS for source in SECTIONS[section])
+    priorities = dict((join('en', source), section) for section in SECTIONS for source in SECTIONS[section])
     items = list(priorities.items())
     for source, priority in items:
         process_file(source, priority, priorities)
