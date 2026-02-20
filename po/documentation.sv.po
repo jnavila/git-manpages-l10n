@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-02-18 21:42+0100\n"
-"PO-Revision-Date: 2026-02-17 20:26+0000\n"
+"PO-Revision-Date: 2026-02-20 05:09+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -7056,7 +7056,7 @@ msgstr "git-notes(1)"
 #: en/git-notes.adoc:7
 #, placeholders:'git-notes', priority:280
 msgid "git-notes - Add or inspect object notes"
-msgstr ""
+msgstr "git-notes - Lägg till eller inspektera objektanteckningar"
 
 #. type: synopsis
 #: en/git-notes.adoc:23
@@ -7092,43 +7092,43 @@ msgstr ""
 #: en/git-notes.adoc:29
 #, priority:280
 msgid "Adds, removes, or reads notes attached to objects, without touching the objects themselves."
-msgstr ""
+msgstr "Lägger till, tar bort eller läser anteckningar som är kopplade till objekt, utan att röra själva objekten."
 
 #. type: Plain text
 #: en/git-notes.adoc:34
 #, priority:280
 msgid "By default, notes are saved to and read from `refs/notes/commits`, but this default can be overridden. See the OPTIONS, CONFIGURATION, and ENVIRONMENT sections below. If this ref does not exist, it will be quietly created when it is first needed to store a note."
-msgstr ""
+msgstr "Som standard, sparas anteckningar till och läses från `refs/notes/commits`, men denna standardinställning kan åsidosättas. Se avsnitten ALTERNATIV, KONFIGURATION och MILJÖ nedan. Om denna referens inte finns kommer den att skapas i tysthet när den först behövs för att lagra en anteckning."
 
 #. type: Plain text
 #: en/git-notes.adoc:41
 #, priority:280
 msgid "A typical use of notes is to supplement a commit message without changing the commit itself. Notes can be shown by `git log` along with the original commit message. To distinguish these notes from the message stored in the commit object, the notes are indented like the message, after an unindented line saying \"Notes (_<refname>_):\" (or \"Notes:\" for `refs/notes/commits`)."
-msgstr ""
+msgstr "En typisk användning av anteckningar är att komplettera ett inchecknings-meddelande utan att ändra själva inchecknings-meddelandet. Anteckningar kan visas med `git log` tillsammans med det ursprungliga inchecknings-meddelandet. För att skilja dessa anteckningar från meddelandet som lagras i inchecknings-objektet är anteckningarna indragna som meddelandet, efter en icke-indragen rad som säger \"Anteckningar (_<refnamn>_):\" (eller \"Anteckningar:\" för `refs/notes/commits`)."
 
 #. type: Plain text
 #: en/git-notes.adoc:45
 #, placeholders:'git format-patch`':'`--notes`', priority:280
 msgid "Notes can also be added to patches prepared with `git format-patch` by using the `--notes` option. Such notes are added as a patch commentary after a three dash separator line."
-msgstr ""
+msgstr "Anteckningar kan också läggas till patchar som förberetts med `git format-patch` genom att använda alternativet `--notes`. Sådana anteckningar läggs till som en patchkommentar efter en separatorrad med tre streck."
 
 #. type: Plain text
 #: en/git-notes.adoc:48
 #, placeholders:'notes.displayRef':'<<CONFIGURATION,', priority:280
 msgid "To change which notes are shown by `git log`, see the `notes.displayRef` discussion in <<CONFIGURATION,CONFIGURATION>>."
-msgstr ""
+msgstr "För att ändra vilka anteckningar som visas av `git log`, se diskussionen om `notes.displayRef` i <<CONFIGURATION,KONFIGURATION>>."
 
 #. type: Plain text
 #: en/git-notes.adoc:51
 #, placeholders:'notes.rewrite', priority:280
 msgid "See the `notes.rewrite.<command>` configuration for a way to carry notes across commands that rewrite commits."
-msgstr ""
+msgstr "Se konfigurationen `notes.rewrite.<kommando>` för ett sätt att överföra anteckningar mellan kommandon som skriver om incheckningar."
 
 #. type: Title -
 #: en/git-notes.adoc:54
 #, no-wrap, priority:280
 msgid "SUBCOMMANDS"
-msgstr ""
+msgstr "UNDERKOMMANDON"
 
 #. type: Labeled list
 #: en/git-notes.adoc:56 en/git-worktree.adoc:109
@@ -7140,7 +7140,7 @@ msgstr "`list`"
 #: en/git-notes.adoc:61
 #, priority:280
 msgid "List the notes object for a given object. If no object is given, show a list of all note objects and the objects they annotate (in the format \"`<note-object> <annotated-object>`\"). This is the default subcommand if no subcommand is given."
-msgstr ""
+msgstr "Lista anteckningsobjektet för ett givet objekt. Om inget objekt anges, visa en lista över alla anteckningsobjekt och de objekt de antecknar (i formatet \"`<anteckningsobjekt> <antecknat-objekt>`\"). Detta är standardunderkommandot om inget underkommando anges."
 
 #. type: Labeled list
 #: en/git-notes.adoc:62 en/git-remote.adoc:49
@@ -7152,7 +7152,7 @@ msgstr "`add`"
 #: en/git-notes.adoc:73
 #, placeholders:'`HEAD`':'`-f`':'`-m`':'`-F`':'`--separator`':'`-e`':'`-m`':'`-F`', priority:280
 msgid "Add notes for a given object (defaults to `HEAD`). Abort if the object already has notes (use `-f` to overwrite existing notes). However, if you're using `add` interactively (using an editor to supply the notes contents), then - instead of aborting - the existing notes will be opened in the editor (like the `edit` subcommand). If you specify multiple `-m` and `-F`, a blank line will be inserted between the messages. Use the `--separator` option to insert other delimiters. You can use `-e` to edit and fine-tune the message(s) supplied from `-m` and `-F` options interactively (using an editor) before adding the note."
-msgstr ""
+msgstr "Lägg till anteckningar för ett givet objekt (standardinställningen är `HEAD`). Avbryt om objektet redan har anteckningar (använd `-f` för att skriva över befintliga anteckningar). Om du däremot använder `add` interaktivt (med hjälp av en editor för att ange anteckningsinnehållet) kommer de befintliga anteckningarna att öppnas i editorn (som underkommandot `edit`). Om du anger flera `-m` och `-F` kommer en tom rad att infogas mellan meddelandena. Använd alternativet `--separator` för att infoga andra avgränsare. Du kan använda `-e` för att redigera och finjustera meddelandet/meddelandena som anges från alternativen `-m` och `-F` interaktivt (med hjälp av en editor) innan du lägger till anteckningen."
 
 #. type: Labeled list
 #: en/git-notes.adoc:74
@@ -7164,31 +7164,31 @@ msgstr "`copy`"
 #: en/git-notes.adoc:80
 #, placeholders:'`HEAD`':'`-f`', priority:280
 msgid "Copy the notes for the first object onto the second object (defaults to `HEAD`). Abort if the second object already has notes, or if the first object has none (use `-f` to overwrite existing notes to the second object). This subcommand is equivalent to: `git notes add [-f] -C $(git notes list <from-object>) <to-object>`"
-msgstr ""
+msgstr "Kopiera anteckningarna för det första objektet till det andra objektet (standardinställningen är `HEAD`). Avbryt om det andra objektet redan har anteckningar, eller om det första objektet inte har några (använd `-f` för att skriva över befintliga anteckningarna till det andra objektet). Detta under kommando motsvarar: `git notes add [-f] -C $(git notes list <från-objekt>) <till-objekt>`"
 
 #. type: Plain text
 #: en/git-notes.adoc:82
 #, placeholders:'`--stdin`', priority:280
 msgid "In `--stdin` mode, take lines in the format"
-msgstr ""
+msgstr "I `--stdin`-läge, ta rader i formatet"
 
 #. type: delimited block -
 #: en/git-notes.adoc:85
 #, no-wrap, priority:280
 msgid "<from-object> SP <to-object> [ SP <rest> ] LF\n"
-msgstr ""
+msgstr "<från-objekt> SP <till-objekt> [ SP <rest> ] LF\n"
 
 #. type: Plain text
 #: en/git-notes.adoc:90
 #, priority:280
 msgid "on standard input, and copy the notes from each _<from-object>_ to its corresponding _<to-object>_. (The optional _<rest>_ is ignored so that the command can read the input given to the `post-rewrite` hook.)"
-msgstr ""
+msgstr "på standardinmatning och kopiera noterna från varje _<från-objekt>_ till dess motsvarande _<till-objekt>_. (Den valfria _<rest>_ ignoreras så att kommandot kan läsa inmatningen som ges till `post-rewrite`-kroken.)"
 
 #. type: Plain text
 #: en/git-notes.adoc:93
 #, placeholders:'`--stdin`', priority:280
 msgid "`--stdin` cannot be combined with object names given on the command line."
-msgstr ""
+msgstr "`--stdin` kan inte kombineras med objektnamn som anges på kommandoraden."
 
 #. type: Labeled list
 #: en/git-notes.adoc:94
@@ -7200,7 +7200,7 @@ msgstr "`append`"
 #: en/git-notes.adoc:103
 #, placeholders:'`-m`':'`-F`':'`HEAD`':'`--separator`':'`-m`':'`-F`':'`-e`', priority:280
 msgid "Append new message(s) given by `-m` or `-F` options to an existing note, or add them as a new note if one does not exist, for the object (defaults to `HEAD`). When appending to an existing note, a blank line is added before each new message as an inter-paragraph separator. The separator can be customized with the `--separator` option. Edit the notes to be appended given by `-m` and `-F` options with `-e` interactively (using an editor) before appending the note."
-msgstr ""
+msgstr "Lägg till nya meddelanden som anges med alternativen `-m` eller `-F` till en befintlig anteckning, eller lägg till dem som en ny anteckning om ingen finns, för objektet (standard är `HEAD`). När man lägger till en befintlig anteckning läggs en tom rad till före varje nytt meddelande som en avgränsare mellan stycken. Avgränsaren kan anpassas med alternativet `--separator`. Redigera anteckningarna som ska läggas till med alternativen `-m` och `-F` interaktivt med `-e` (med hjälp av en redigerare) innan anteckningen läggs till."
 
 #. type: Labeled list
 #: en/git-notes.adoc:104
@@ -7212,7 +7212,7 @@ msgstr "`edit`"
 #: en/git-notes.adoc:106
 #, placeholders:'`HEAD`', priority:280
 msgid "Edit the notes for a given object (defaults to `HEAD`)."
-msgstr ""
+msgstr "Redigera anteckningarna för ett givet objekt (standardinställningen är `HEAD`)."
 
 #. type: Labeled list
 #: en/git-notes.adoc:107 en/git-remote.adoc:168
@@ -7224,7 +7224,7 @@ msgstr "`show`"
 #: en/git-notes.adoc:109
 #, placeholders:'`HEAD`', priority:280
 msgid "Show the notes for a given object (defaults to `HEAD`)."
-msgstr ""
+msgstr "Visa anteckningarna för ett givet objekt (standardinställningen är `HEAD`)."
 
 #. type: Title ^
 #: en/git-notes.adoc:110 en/git-fast-import.adoc:643
@@ -7236,13 +7236,13 @@ msgstr "`merge`"
 #: en/git-notes.adoc:115
 #, priority:280
 msgid "Merge the given notes ref into the current notes ref. This will try to merge the changes made by the given notes ref (called \"remote\") since the merge-base (if any) into the current notes ref (called \"local\")."
-msgstr ""
+msgstr "Sammanslå den givna anteckningsreferensen med den aktuella anteckningsreferensen. Detta kommer att försöka sammanslå ändringarna som gjorts av den givna anteckningsreferensen (kallad \"fjärr\") sedan sammanslagningsbasen (om någon) med den aktuella anteckningsreferensen (kallad \"lokal\")."
 
 #. type: Plain text
 #: en/git-notes.adoc:124
 #, placeholders:'`.git/NOTES_MERGE_WORKTREE`':'--commit`':'--abort`', priority:280
 msgid "If conflicts arise and a strategy for automatically resolving conflicting notes (see the \"NOTES MERGE STRATEGIES\" section) is not given, the `manual` resolver is used. This resolver checks out the conflicting notes in a special worktree (`.git/NOTES_MERGE_WORKTREE`), and instructs the user to manually resolve the conflicts there. When done, the user can either finalize the merge with `git notes merge --commit`, or abort the merge with `git notes merge --abort`."
-msgstr ""
+msgstr "Om konflikter uppstår och en strategi för att automatiskt lösa motstridiga anteckningar (se avsnittet \"STRATEGIER FÖR ANTECKNINGAR\") inte anges, används den `manuella` lösningen. Denna lösning kontrollerar de motstridiga anteckningarna i ett särskilt arbetsträd (`.git/NOTES_MERGE_WORKTREE`) och instruerar användaren att manuellt lösa konflikterna där. När det är klart kan användaren antingen slutföra sammanslagningen med `git notes merge --commit` eller avbryta sammanslagningen med `git notes merge --abort`."
 
 #. type: Labeled list
 #: en/git-notes.adoc:125 en/git-worktree.adoc:136 en/git-remote.adoc:94
@@ -7254,13 +7254,13 @@ msgstr "`remove`"
 #: en/git-notes.adoc:130
 #, placeholders:'`HEAD`', priority:280
 msgid "Remove the notes for given objects (defaults to `HEAD`). When giving zero or one object from the command line, this is equivalent to specifying an empty note message to the `edit` subcommand."
-msgstr ""
+msgstr "Ta bort anteckningarna för givna objekt (standardinställningen är `HEAD`). När man anger noll eller ett objekt från kommandoraden motsvarar detta att ange ett tomt anteckningsmeddelande till underkommandot `edit`."
 
 #. type: Plain text
 #: en/git-notes.adoc:134
 #, placeholders:'`--stdin`':'`--stdin`', priority:280
 msgid "In `--stdin` mode, also remove the object names given on standard input. In other words, `--stdin` can be combined with object names from the command line."
-msgstr ""
+msgstr "I `--stdin`-läge, ta även bort objektnamnen som anges vid standardinmatning. Med andra ord kan `--stdin` kombineras med objektnamn från kommandoraden."
 
 #. type: Labeled list
 #: en/git-notes.adoc:135 en/git-worktree.adoc:132 en/git-remote.adoc:175
@@ -7272,7 +7272,7 @@ msgstr "`prune`"
 #: en/git-notes.adoc:137
 #, priority:280
 msgid "Remove all notes for non-existing/unreachable objects."
-msgstr ""
+msgstr "Ta bort alla anteckningar för objekt som inte finns/inte kan nås."
 
 #. type: Labeled list
 #: en/git-notes.adoc:138
@@ -7284,13 +7284,13 @@ msgstr "`get-ref`"
 #: en/git-notes.adoc:141
 #, priority:280
 msgid "Print the current notes ref. This provides an easy way to retrieve the current notes ref (e.g. from scripts)."
-msgstr ""
+msgstr "Skriv ut aktuell anteckningsreferens. Detta ger ett enkelt sätt att hämta aktuell anteckningsreferens (t.ex. från skript)."
 
 #. type: Plain text
 #: en/git-notes.adoc:148
 #, priority:280
 msgid "When adding notes to an object that already has notes, overwrite the existing notes (instead of aborting)."
-msgstr ""
+msgstr "När du lägger till anteckningar till ett objekt som redan har anteckningar, skriv över de befintliga anteckningarna (istället för att avbryta)."
 
 #. type: Labeled list
 #: en/git-notes.adoc:150 en/git-commit.adoc:187 en/git-tag.adoc:175
@@ -7302,49 +7302,49 @@ msgstr "`--message=<medd>`"
 #: en/git-notes.adoc:154
 #, placeholders:'`-m`', priority:280
 msgid "Use the given note message (instead of prompting). If multiple `-m` options are given, their values are concatenated as separate paragraphs."
-msgstr ""
+msgstr "Använd det givna anteckningsmeddelandet (istället för att fråga). Om flera `-m`-alternativ anges, sammanfogas deras värden som separata stycken."
 
 #. type: Plain text
 #: en/git-notes.adoc:159
 #, priority:280
 msgid "Take the note message from the given file. Use `-` to read the note message from the standard input."
-msgstr ""
+msgstr "Hämta anteckningsmeddelandet från den givna filen. Använd `-` för att läsa anteckningsmeddelandet från standardinmatningen."
 
 #. type: Labeled list
 #: en/git-notes.adoc:160
 #, no-wrap, priority:280
 msgid "`-C <object>`"
-msgstr ""
+msgstr "`-C <objekt>`"
 
 #. type: Labeled list
 #: en/git-notes.adoc:161
 #, no-wrap, placeholders:'`--reuse-message=', priority:280
 msgid "`--reuse-message=<object>`"
-msgstr ""
+msgstr "`--reuse-message=<objekt>`"
 
 #. type: Plain text
 #: en/git-notes.adoc:166
 #, placeholders:'`--no-stripspace`', priority:280
 msgid "Take the given blob object (for example, another note) as the note message. (Use `git notes copy <object>` instead to copy notes between objects.) Implies `--no-stripspace` since the default behavior is to copy the message verbatim."
-msgstr ""
+msgstr "Ta det givna blob-objektet (till exempel en annan anteckning) som anteckningsmeddelande. (Använd `git notes copy <object>` istället för att kopiera anteckningar mellan objekt.) Innebär `--no-stripspace` eftersom standardbeteendet är att kopiera meddelandet ordagrant."
 
 #. type: Labeled list
 #: en/git-notes.adoc:167
 #, no-wrap, priority:280
 msgid "`-c <object>`"
-msgstr ""
+msgstr "`-c <objekt>`"
 
 #. type: Labeled list
 #: en/git-notes.adoc:168
 #, no-wrap, placeholders:'`--reedit-message=', priority:280
 msgid "`--reedit-message=<object>`"
-msgstr ""
+msgstr "`--reedit-message=<objekt>`"
 
 #. type: Plain text
 #: en/git-notes.adoc:171
 #, placeholders:'`-C`':'`-c`', priority:280
 msgid "Like `-C`, but with `-c` the editor is invoked, so that the user can further edit the note message."
-msgstr ""
+msgstr "Som `-C`, men med `-c` anropas editorn, så att användaren kan redigera anteckningsmeddelandet ytterligare."
 
 #. type: Labeled list
 #: en/git-notes.adoc:172 en/git-commit.adoc:224
@@ -7356,13 +7356,13 @@ msgstr "`--allow-empty`"
 #: en/git-notes.adoc:175
 #, priority:280
 msgid "Allow an empty note object to be stored. The default behavior is to automatically remove empty notes."
-msgstr ""
+msgstr "Tillåt att ett tomt anteckningsobjekt lagras. Standardbeteendet är att tomma anteckningar tas bort automatiskt."
 
 #. type: Labeled list
 #: en/git-notes.adoc:176
 #, no-wrap, placeholders:'`--separator=', priority:280
 msgid "`--separator=<paragraph-break>`"
-msgstr ""
+msgstr "`--separator=<styckebrytning>`"
 
 #. type: Labeled list
 #: en/git-notes.adoc:177
@@ -7380,7 +7380,7 @@ msgstr "`--no-separator`"
 #: en/git-notes.adoc:183
 #, placeholders:'`--no-separator`', priority:280
 msgid "Specify a string used as a custom inter-paragraph separator (a newline is added at the end as needed). If `--no-separator`, no separators will be added between paragraphs. Defaults to a blank line."
-msgstr ""
+msgstr "Ange en sträng som används som en anpassad avgränsare mellan stycken (en nyrad läggs till i slutet vid behov). Om `--no-separator` används läggs inga avgränsare till mellan stycken. Standardinställningen är en tom rad."
 
 #. type: Labeled list
 #: en/git-notes.adoc:184
@@ -7422,25 +7422,25 @@ msgstr "ta bort tomma rader från början och slutet av inmatningen"
 #: en/git-notes.adoc:194
 #, priority:280
 msgid "add a missing `\\n` to the last line if necessary."
-msgstr ""
+msgstr "lägg till ett saknat `\\n` på sista raden om det behövs."
 
 #. type: Plain text
 #: en/git-notes.adoc:202
 #, placeholders:'`--stripspace`':'`-C`':'`--reuse-message`':'`--stripspace`':'`-m`':'`-C`', priority:280
 msgid "`--stripspace` is the default except for `-C`/`--reuse-message`. However, keep in mind that this depends on the order of similar options. For example, for `-C <object> -m<message>`, `--stripspace` will be used because the default for `-m` overrides the previous `-C`. This is a known limitation that may be fixed in the future."
-msgstr ""
+msgstr "`--stripspace` är standardvärdet förutom för `-C`/`--reuse-message`. Tänk dock på att detta beror på ordningen på liknande alternativ. Till exempel, för `-C <objekt> -m<meddelande>` kommer `--stripspace` att användas eftersom standardvärdet för `-m` åsidosätter det föregående `-C`. Detta är en känd begränsning som kan komma att åtgärdas i framtiden."
 
 #. type: Labeled list
 #: en/git-notes.adoc:203
 #, no-wrap, placeholders:'`--ref=', priority:280
 msgid "`--ref=<ref>`"
-msgstr ""
+msgstr "`--ref=<ref>`"
 
 #. type: Plain text
 #: en/git-notes.adoc:209
 #, placeholders:'GIT_NOTES_REF':'core.notesRef', priority:280
 msgid "Manipulate the notes tree in _<ref>_. This overrides `GIT_NOTES_REF` and the `core.notesRef` configuration. The ref specifies the full refname when it begins with `refs/notes/`; when it begins with `notes/`, `refs/` and otherwise `refs/notes/` is prefixed to form a full name of the ref."
-msgstr ""
+msgstr "Manipulera anteckningsträdet i _<ref>_. Detta åsidosätter `GIT_NOTES_REF` och konfigurationen `core.notesRef`. Ref anger det fullständiga referensnamnet när det börjar med `refs/notes/`; när det börjar med `notes/` prefixeras `refs/` och annars `refs/notes/` för att bilda ett fullständigt namn på referensen."
 
 #. type: Labeled list
 #: en/git-notes.adoc:210 en/rev-list-options.adoc:230 en/git-add.adoc:173
@@ -7452,7 +7452,7 @@ msgstr "`--ignore-missing`"
 #: en/git-notes.adoc:213
 #, priority:280
 msgid "Do not consider it an error to request removing notes from an object that does not have notes attached to it."
-msgstr ""
+msgstr "Betrakta det inte som ett fel att begära borttagning av anteckningar från ett objekt som inte har några anteckningar kopplade till sig."
 
 #. type: Labeled list
 #: en/git-notes.adoc:214 en/rev-list-options.adoc:242 en/git-fetch.adoc:51 en/for-each-ref-options.adoc:7
@@ -7464,13 +7464,13 @@ msgstr "`--stdin`"
 #: en/git-notes.adoc:216
 #, priority:280
 msgid "Only valid for `remove` and `copy`. See the respective subcommands."
-msgstr ""
+msgstr "Gäller endast för `remove` och `copy`. Se respektive underkommandon."
 
 #. type: Plain text
 #: en/git-notes.adoc:221
 #, priority:280
 msgid "Do not remove anything; just report the object names whose notes would be removed."
-msgstr ""
+msgstr "Ta inte bort något; rapportera bara objektnamnen vars anteckningar skulle tas bort."
 
 #. type: Labeled list
 #: en/git-notes.adoc:222 en/merge-options.adoc:147
@@ -7488,7 +7488,7 @@ msgstr "`--strategy=<strategi>`"
 #: en/git-notes.adoc:230
 #, placeholders:'cat_sort_uniq':'notes.mergeStrategy', priority:280
 msgid "When merging notes, resolve notes conflicts using the given strategy. The following strategies are recognized: `manual` (default), `ours`, `theirs`, `union` and `cat_sort_uniq`. This option overrides the `notes.mergeStrategy` configuration setting. See the \"NOTES MERGE STRATEGIES\" section below for more information on each notes merge strategy."
-msgstr ""
+msgstr "När du sammanslår anteckningar, lös anteckningskonflikter med hjälp av den givna strategin. Följande strategier känns igen: `manual` (standard), `ours`, `theirs`, `union` och `cat_sort_uniq`. Det här alternativet åsidosätter konfigurationsinställningen `notes.mergeStrategy`. Se avsnittet \"STRATEGIER FÖR ANTECKNINGAR\" nedan för mer information om varje strategi för sammanfogning av anteckningar."
 
 #. type: Labeled list
 #: en/git-notes.adoc:231 en/merge-options.adoc:1
@@ -7500,91 +7500,91 @@ msgstr "`--commit`"
 #: en/git-notes.adoc:239
 #, placeholders:'`.git/NOTES_MERGE_WORKTREE`':'`.git/NOTES_MERGE_PARTIAL`':'`.git/NOTES_MERGE_WORKTREE`':'`.git/NOTES_MERGE_REF`', priority:280
 msgid "Finalize an in-progress `git notes merge`. Use this option when you have resolved the conflicts that `git notes merge` stored in `.git/NOTES_MERGE_WORKTREE`. This amends the partial merge commit created by `git notes merge` (stored in `.git/NOTES_MERGE_PARTIAL`) by adding the notes in `.git/NOTES_MERGE_WORKTREE`. The notes ref stored in the `.git/NOTES_MERGE_REF` symref is updated to the resulting commit."
-msgstr ""
+msgstr "Slutför en pågående `git notes merge`. Använd det här alternativet när du har löst konflikterna som `git notes merge` lagrade i `.git/NOTES_MERGE_WORKTREE`. Detta ändrar den partiella sammanslagnings-incheckning som skapades av `git notes merge` (lagrad i `.git/NOTES_MERGE_PARTIAL`) genom att lägga till noterna i `.git/NOTES_MERGE_WORKTREE`. Notesreferensen som lagras i symref `.git/NOTES_MERGE_REF` uppdateras till den resulterande incheckningen."
 
 #. type: Plain text
 #: en/git-notes.adoc:244
 #, priority:280
 msgid "Abort/reset an in-progress `git notes merge`, i.e. a notes merge with conflicts. This simply removes all files related to the notes merge."
-msgstr ""
+msgstr "Avbryt/återställ en pågående `git notes merge`, d.v.s. en anteckningssammanslagning med konflikter. Detta tar helt enkelt bort alla filer relaterade till anteckningssammanslagningen."
 
 #. type: Plain text
 #: en/git-notes.adoc:248
 #, priority:280
 msgid "When merging notes, operate quietly."
-msgstr ""
+msgstr "När du sammanslår anteckningar, arbeta tyst."
 
 #. type: Plain text
 #: en/git-notes.adoc:254
 #, priority:280
 msgid "When merging notes, be more verbose. When pruning notes, report all object names whose notes are removed."
-msgstr ""
+msgstr "Var mer utförlig när du sammanfogar anteckningar. När du beskär anteckningar, rapportera alla objektnamn vars anteckningar har tagits bort."
 
 #. type: Plain text
 #: en/git-notes.adoc:268
 #, ignore-ellipsis, priority:280
 msgid "Commit notes are blobs containing extra information about an object (usually information to supplement a commit's message). These blobs are taken from notes refs. A notes ref is usually a branch which contains \"files\" whose paths are the object names for the objects they describe, with some directory separators included for performance reasons footnote:[Permitted pathnames have the form 'bf'`/`'fe'`/`'30'`/`'...'`/`'680d5a...': a sequence of directory names of two hexadecimal digits each followed by a filename with the rest of the object ID.]."
-msgstr ""
+msgstr "Incheckning-anteckningar är blobbar som innehåller extra information om ett objekt (vanligtvis information som kompletterar ett inchecknings-meddelande). Dessa blobbar är hämtade från anteckningsreferenser. En anteckningsreferens är vanligtvis en gren som innehåller \"filer\" vars sökvägar är objektnamnen för de objekt de beskriver, med vissa katalogavgränsare inkluderade av prestandaskäl fotnot: [Tillåtna sökvägar har formen 'bf'`/`'fe'`/`'30'`/`'...'`/`'680d5a...': en sekvens av katalognamn med två hexadecimala siffror vardera följt av ett filnamn med resten av objekt-ID:t.]."
 
 #. type: Plain text
 #: en/git-notes.adoc:275
 #, placeholders:'linkgit:git-commit[1]', priority:280
 msgid "Every notes change creates a new commit at the specified notes ref. You can therefore inspect the history of the notes by invoking, e.g., `git log -p notes/commits`. Currently the commit message only records which operation triggered the update, and the commit authorship is determined according to the usual rules (see linkgit:git-commit[1]). These details may change in the future."
-msgstr ""
+msgstr "Varje ändring av anteckningar skapar en ny incheckning vid den angivna anteckningsreferensen. Du kan därför granska anteckningarnas historik genom att anropa t.ex. `git log -p notes/commits`. För närvarande registrerar inchecknings-meddelandet bara vilken operation som utlöste uppdateringen, och inchecknings-författarskapet bestäms enligt de vanliga reglerna (se linkgit:git-commit[1]). Dessa detaljer kan komma att ändras i framtiden."
 
 #. type: Plain text
 #: en/git-notes.adoc:279
 #, priority:280
 msgid "It is also permitted for a notes ref to point directly to a tree object, in which case the history of the notes can be read with `git log -p -g <refname>`."
-msgstr ""
+msgstr "Det är också tillåtet för en anteckningsreferens att peka direkt till ett trädobjekt, i vilket fall anteckningarnas historik kan läsas med `git log -p -g <refnamn>`."
 
 #. type: Title -
 #: en/git-notes.adoc:282
 #, no-wrap, priority:280
 msgid "NOTES MERGE STRATEGIES"
-msgstr ""
+msgstr "ANTECKNINGAR SAMMANSLAGNINGSSTRATEGIER"
 
 #. type: Plain text
 #: en/git-notes.adoc:291
 #, placeholders:'`.git/NOTES_MERGE_WORKTREE`':'--commit`':'--abort`', priority:280
 msgid "The default notes merge strategy is `manual`, which checks out conflicting notes in a special work tree for resolving notes conflicts (`.git/NOTES_MERGE_WORKTREE`), and instructs the user to resolve the conflicts in that work tree. When done, the user can either finalize the merge with `git notes merge --commit`, or abort the merge with `git notes merge --abort`."
-msgstr ""
+msgstr "Standardstrategin för sammanslagingning av anteckningar är `manual`, som kontrollerar motstridiga anteckningar i ett särskilt arbetsträd för att lösa anteckningskonflikter (`.git/NOTES_MERGE_WORKTREE`), och instruerar användaren att lösa konflikterna i det arbetsträdet. När det är klart kan användaren antingen slutföra sammanfogningen med `git notes merge --commit`, eller avbryta sammanslagningen med `git notes merge --abort`."
 
 #. type: Plain text
 #: en/git-notes.adoc:294
 #, placeholders:'`-s`':'`--strategy`':'notes.mergeStrategy', priority:280
 msgid "Users may select an automated merge strategy from among the following using either `-s`/`--strategy` option or configuring `notes.mergeStrategy` accordingly:"
-msgstr ""
+msgstr "Användare kan välja en automatiserad sammanslagningsstrategi bland följande med hjälp av antingen alternativet `-s`/`--strategy` eller genom att konfigurera `notes.mergeStrategy` i enlighet därmed:"
 
 #. type: Plain text
 #: en/git-notes.adoc:297
 #, priority:280
 msgid "`ours` automatically resolves conflicting notes in favor of the local version (i.e. the current notes ref)."
-msgstr ""
+msgstr "`ours` löser automatiskt motstridiga anteckningar till förmån för den lokala versionen (dvs. den aktuella anteckningsreferensen)."
 
 #. type: Plain text
 #: en/git-notes.adoc:301
 #, priority:280
 msgid "`theirs` automatically resolves notes conflicts in favor of the remote version (i.e. the given notes ref being merged into the current notes ref)."
-msgstr ""
+msgstr "`theirs` löser automatiskt anteckningskonflikter till förmån för fjärrversionen (dvs. den givna anteckningsreferensen slås samman med den aktuella anteckningsreferensen)."
 
 #. type: Plain text
 #: en/git-notes.adoc:304
-#, priority:280
+#, fuzzy, priority:280
 msgid "`union` automatically resolves notes conflicts by concatenating the local and remote versions."
-msgstr ""
+msgstr "`union` löser automatiskt anteckningskonflikter genom att sammanfoga de lokala och fjärrversionerna."
 
 #. type: Plain text
 #: en/git-notes.adoc:314
-#, placeholders:'cat_sort_uniq', priority:280
+#, fuzzy, placeholders:'cat_sort_uniq', priority:280
 msgid "`cat_sort_uniq` is similar to `union`, but in addition to concatenating the local and remote versions, this strategy also sorts the resulting lines, and removes duplicate lines from the result. This is equivalent to applying the \"cat | sort | uniq\" shell pipeline to the local and remote versions. This strategy is useful if the notes follow a line-based format where one wants to avoid duplicated lines in the merge result. Note that if either the local or remote version contain duplicate lines prior to the merge, these will also be removed by this notes merge strategy."
-msgstr ""
+msgstr "`cat_sort_uniq` liknar `union`, men förutom att sammanfoga de lokala och fjärrversionerna sorterar denna strategi även de resulterande raderna och tar bort dubbletter från resultatet. Detta motsvarar att tillämpa skalpipelinen \"cat | sort | uniq\" på de lokala och fjärrversionerna. Denna strategi är användbar om anteckningarna följer ett radbaserat format där man vill undvika dubbletter i sammanslagningsresultatet. Observera att om antingen den lokala eller fjärrversionen innehåller dubbletter före sammanslagningen, kommer dessa också att tas bort av denna strategi för sammanslagning av anteckningar."
 
 #. type: Plain text
 #: en/git-notes.adoc:321
 #, priority:280
 msgid "You can use notes to add annotations with information that was not available at the time a commit was written."
-msgstr ""
+msgstr "Du kan använda anteckningar för att lägga till anteckningar med information som inte var tillgänglig när en incheckning skrevs."
 
 #. type: delimited block -
 #: en/git-notes.adoc:327
@@ -7595,6 +7595,10 @@ msgid ""
 "[...]\n"
 "    Signed-off-by: Junio C Hamano <gitster@pobox.com>\n"
 msgstr ""
+"$ git notes add -m 'Tested-by: Johannes Sixt <j6t@kdbg.org>' 72a144e2\n"
+"$ git show -s 72a144e\n"
+"[...]\n"
+"    Signed-off-by: Junio C Hamano <gitster@pobox.com>\n"
 
 #. type: delimited block -
 #: en/git-notes.adoc:330
@@ -7603,12 +7607,14 @@ msgid ""
 "Notes:\n"
 "    Tested-by: Johannes Sixt <j6t@kdbg.org>\n"
 msgstr ""
+"Notes:\n"
+"    Tested-by: Johannes Sixt <j6t@kdbg.org>\n"
 
 #. type: Plain text
 #: en/git-notes.adoc:335
 #, placeholders:'git hash-object`', priority:280
 msgid "In principle, a note is a regular Git blob, and any kind of (non-)format is accepted. You can binary-safely create notes from arbitrary files using `git hash-object`:"
-msgstr ""
+msgstr "I princip, är en anteckning en vanlig Git-blob, och alla typer av (icke-)format accepteras. Du kan binärt säkert skapa anteckningar från godtyckliga filer med hjälp av `git hash-object`:"
 
 #. type: delimited block -
 #: en/git-notes.adoc:340
@@ -7626,7 +7632,7 @@ msgstr ""
 #: en/git-notes.adoc:347
 #, placeholders:'--ref=built':'a.out':'HEAD`', priority:280
 msgid "(You cannot simply use `git notes --ref=built add -F a.out HEAD` because that is not binary-safe.) Of course, it doesn't make much sense to display non-text-format notes with `git log`, so if you use such notes, you'll probably need to write some special-purpose tools to do something useful with them."
-msgstr ""
+msgstr "(Du kan inte bara använda `git notes --ref=built add -F a.out HEAD` eftersom det inte är binärsäkert.) Naturligtvis är det inte särskilt meningsfullt att visa anteckningar som inte är i textformat med `git log`, så om du använder sådana anteckningar behöver du förmodligen skriva några specialverktyg för att göra något användbart med dem."
 
 #. type: Labeled list
 #: en/git-notes.adoc:353
@@ -7638,7 +7644,7 @@ msgstr "`core.notesRef`"
 #: en/git-notes.adoc:358
 #, priority:280
 msgid "Notes ref to read and manipulate instead of `refs/notes/commits`. Must be an unabbreviated ref name. This setting can be overridden through the environment and command line."
-msgstr ""
+msgstr "Notes-referens att läsa och manipulera istället för `refs/notes/commits`. Måste vara ett oförkortat referensnamn. Denna inställning kan åsidosättas via miljön och kommandoraden."
 
 #. type: Title -
 #: en/git-notes.adoc:365 en/git-cvsserver.adoc:312 en/git-daemon.adoc:334 en/git-config.adoc:466 en/git-http-backend.adoc:261 en/git-upload-pack.adoc:52
@@ -7656,7 +7662,7 @@ msgstr "`GIT_NOTES_REF`"
 #: en/git-notes.adoc:370
 #, placeholders:'core.notesRef', priority:280
 msgid "Which ref to manipulate notes from, instead of `refs/notes/commits`. This overrides the `core.notesRef` setting."
-msgstr ""
+msgstr "Vilken referens att manipulera anteckningar från, istället för `refs/notes/commits`. Detta åsidosätter inställningen `core.notesRef`."
 
 #. type: Labeled list
 #: en/git-notes.adoc:371
@@ -7668,13 +7674,13 @@ msgstr "`GIT_NOTES_DISPLAY_REF`"
 #: en/git-notes.adoc:377
 #, placeholders:'core.notesRef':'GIT_NOTES_REF':'notes.displayRef', priority:280
 msgid "Colon-delimited list of refs or globs indicating which refs, in addition to the default from `core.notesRef` or `GIT_NOTES_REF`, to read notes from when showing commit messages. This overrides the `notes.displayRef` setting."
-msgstr ""
+msgstr "Kolonavgränsad lista med referenser eller glober som anger vilka referenser, utöver standardvärdet från `core.notesRef` eller `GIT_NOTES_REF`, som anteckningar ska läsas från när inchecknings-meddelanden visas. Detta åsidosätter inställningen `notes.displayRef`."
 
 #. type: Plain text
 #: en/git-notes.adoc:380 en/config/notes.adoc:28
 #, priority:280
 msgid "A warning will be issued for refs that do not exist, but a glob that does not match any refs is silently ignored."
-msgstr ""
+msgstr "En varning kommer att utfärdas för referenser som inte finns, men en glob som inte matchar några referenser ignoreras tyst."
 
 #. type: Labeled list
 #: en/git-notes.adoc:381
@@ -7686,7 +7692,7 @@ msgstr "`GIT_NOTES_REWRITE_MODE`"
 #: en/git-notes.adoc:386
 #, placeholders:'cat_sort_uniq':'core.rewriteMode', priority:280
 msgid "When copying notes during a rewrite, what to do if the target commit already has a note. Must be one of `overwrite`, `concatenate`, `cat_sort_uniq`, or `ignore`. This overrides the `core.rewriteMode` setting."
-msgstr ""
+msgstr "När man kopierar anteckningar under en omskrivning, vad man ska göra om mål-incheckningen redan har en anteckning. Måste vara en av följande: `overwrite`, `concatenate`, `cat_sort_uniq` eller `ignore`. Detta åsidosätter inställningen `core.rewriteMode`."
 
 #. type: Labeled list
 #: en/git-notes.adoc:387
@@ -7698,13 +7704,13 @@ msgstr "`GIT_NOTES_REWRITE_REF`"
 #: en/git-notes.adoc:391
 #, priority:280
 msgid "When rewriting commits, which notes to copy from the original to the rewritten commit. Must be a colon-delimited list of refs or globs."
-msgstr ""
+msgstr "Vid omskrivning av incheckningar, vilka anteckningar som ska kopieras från originalet till den omskrivna incheckningen. Måste vara en kolonavgränsad lista med referenser eller globs."
 
 #. type: Plain text
 #: en/git-notes.adoc:394
 #, placeholders:'notes.rewrite':'notes.rewriteRef', priority:280
 msgid "If not set in the environment, the list of notes to copy depends on the `notes.rewrite.<command>` and `notes.rewriteRef` settings."
-msgstr ""
+msgstr "Om det inte är angivet i miljön, beror listan över anteckningar som ska kopieras på inställningarna `notes.rewrite.<kommando>` och `notes.rewriteRef`."
 
 #. type: Title =
 #: en/git-replace.adoc:2
@@ -38922,7 +38928,7 @@ msgstr "[[def_superproject]]superproject"
 #: en/glossary-content.adoc:667
 #, placeholders:'<<def_repository,':'<<def_submodule,', priority:310
 msgid "A <<def_repository,repository>> that references repositories of other projects in its working tree as <<def_submodule,submodules>>. The superproject knows about the names of (but does not hold copies of) commit objects of the contained submodules."
-msgstr ""
+msgstr "Ett <<def_repository,förvar>> som refererar till förvar för andra projekt i sin arbetskatalog som <<def_submodule,undermoduler>>. Superprojektet känner till namnen på (men innehåller inte kopior av) inchecknings-objekt för de ingående undermodulerna."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:668
@@ -77978,7 +77984,7 @@ msgstr "`merge.stat`"
 #: en/config/notes.adoc:6
 #, placeholders:'cat_sort_uniq':'linkgit:git-notes[1]', priority:280
 msgid "Which merge strategy to choose by default when resolving notes conflicts. Must be one of `manual`, `ours`, `theirs`, `union`, or `cat_sort_uniq`. Defaults to `manual`. See the \"NOTES MERGE STRATEGIES\" section of linkgit:git-notes[1] for more information on each strategy."
-msgstr ""
+msgstr "Vilken sammanslagningsstrategi som ska väljas som standard vid lösande av anteckningskonflikter. Måste vara en av `manual`, `ours`, `theirs`, `union` eller `cat_sort_uniq`. Standardinställningen är `manual`. Se avsnittet \"ANTECKNINGAR SAMMANSLAGNINGSSTRATEGIER\" i linkgit:git-notes[1] för mer information om varje strategi."
 
 #. type: Plain text
 #: en/config/notes.adoc:9
@@ -78002,7 +78008,7 @@ msgstr "`branch.<namn>.mergeOptions`"
 #: en/config/notes.adoc:15
 #, placeholders:'notes.mergeStrategy':'linkgit:git-notes[1]', priority:280
 msgid "Which merge strategy to choose when doing a notes merge into `refs/notes/<name>`. This overrides the more general `notes.mergeStrategy`. See the \"NOTES MERGE STRATEGIES\" section in linkgit:git-notes[1] for more information on the available strategies."
-msgstr ""
+msgstr "Vilken sammanslagningsstrategi man ska välja när man sammanfogar anteckningar med `refs/notes/<namn>`. Detta åsidosätter den mer generella `notes.mergeStrategy`. Se avsnittet \"ANTECKNINGAR SAMMANSLAGNINGSSTRATEGIER\" i linkgit:git-notes[1] för mer information om tillgängliga strategier."
 
 #. type: Labeled list
 #: en/config/notes.adoc:16
@@ -78015,43 +78021,43 @@ msgstr "`notemodify`"
 #: en/config/notes.adoc:21
 #, placeholders:'core.notesRef':'GIT_NOTES_REF', priority:280
 msgid "Which ref (or refs, if a glob or specified more than once), in addition to the default set by `core.notesRef` or `GIT_NOTES_REF`, to read notes from when showing commit messages with the `git log` family of commands."
-msgstr ""
+msgstr "Vilken referens (eller referenser, om en glob eller angetts mer än en gång), utöver standardvärdet som anges av `core.notesRef` eller `GIT_NOTES_REF`, som anteckningar ska läsas från när inchecknings-meddelanden visas med kommandofamiljen `git log`."
 
 #. type: Plain text
 #: en/config/notes.adoc:25
 #, placeholders:'GIT_NOTES_DISPLAY_REF', priority:280
 msgid "This setting can be overridden with the `GIT_NOTES_DISPLAY_REF` environment variable, which must be a colon separated list of refs or globs."
-msgstr ""
+msgstr "Den här inställningen kan åsidosättas med miljövariabeln `GIT_NOTES_DISPLAY_REF`, som måste vara en kolonseparerad lista med referenser eller globs."
 
 #. type: Plain text
 #: en/config/notes.adoc:32
 #, placeholders:'`--no-notes`':'linkgit:git-log[1]':'`--notes=', priority:280
 msgid "This setting can be disabled by the `--no-notes` option to the linkgit:git-log[1] family of commands, or by the `--notes=<ref>` option accepted by those commands."
-msgstr ""
+msgstr "Den här inställningen kan inaktiveras med alternativet `--no-notes` till kommandofamiljen linkgit:git-log[1], eller med alternativet `--notes=<ref>` som accepteras av dessa kommandon."
 
 #. type: Plain text
 #: en/config/notes.adoc:36
 #, placeholders:'core.notesRef':'GIT_NOTES_REF', priority:280
 msgid "The effective value of `core.notesRef` (possibly overridden by `GIT_NOTES_REF`) is also implicitly added to the list of refs to be displayed."
-msgstr ""
+msgstr "Det effektiva värdet för `core.notesRef` (eventuellt åsidosatt av `GIT_NOTES_REF`) läggs också implicit till i listan över referenser som ska visas."
 
 #. type: Labeled list
 #: en/config/notes.adoc:37
 #, no-wrap, placeholders:'notes.rewrite', priority:280
 msgid "`notes.rewrite.<command>`"
-msgstr ""
+msgstr "`notes.rewrite.<kommando>`"
 
 #. type: Plain text
 #: en/config/notes.adoc:42
 #, placeholders:'notes.rewriteRef', priority:280
 msgid "When rewriting commits with _<command>_ (currently `amend` or `rebase`), if this variable is `false`, git will not copy notes from the original to the rewritten commit. Defaults to `true`. See also `notes.rewriteRef` below."
-msgstr ""
+msgstr "När man skriver om incheckningar med _<kommando>_ (för närvarande `amend` eller `rebase`), och variabeln är `false`, kommer git inte att kopiera anteckningar från originalet till den omskrivna incheckningen. Standardvärdet är `true`. Se även `notes.rewriteRef` nedan."
 
 #. type: Plain text
 #: en/config/notes.adoc:46
 #, placeholders:'GIT_NOTES_REWRITE_REF', priority:280
 msgid "This setting can be overridden with the `GIT_NOTES_REWRITE_REF` environment variable, which must be a colon separated list of refs or globs."
-msgstr ""
+msgstr "Den här inställningen kan åsidosättas med miljövariabeln `GIT_NOTES_REWRITE_REF`, som måste vara en kolonseparerad lista med referenser eller globs."
 
 #. type: Labeled list
 #: en/config/notes.adoc:47
@@ -78064,7 +78070,7 @@ msgstr "`--no-post-rewrite`"
 #: en/config/notes.adoc:53
 #, placeholders:'notes.rewrite':'cat_sort_uniq', priority:280
 msgid "When copying notes during a rewrite (see the `notes.rewrite.<command>` option), determines what to do if the target commit already has a note. Must be one of `overwrite`, `concatenate`, `cat_sort_uniq`, or `ignore`. Defaults to `concatenate`."
-msgstr ""
+msgstr "När anteckningar kopieras under en omskrivning (se alternativet `notes.rewrite.<kommando>`), avgör detta vad som ska göras om mål-incheckningen redan har en anteckning. Måste vara en av `overwrite`, `concatenate`, `cat_sort_uniq` eller `ignore`. Standardvärdet är `concatenate`."
 
 #. type: Plain text
 #: en/config/notes.adoc:56
@@ -78084,19 +78090,19 @@ msgstr "`--no-post-rewrite`"
 #: en/config/notes.adoc:62
 #, priority:280
 msgid "When copying notes during a rewrite, specifies the (fully qualified) ref whose notes should be copied. May be a glob, in which case notes in all matching refs will be copied. You may also specify this configuration several times."
-msgstr ""
+msgstr "När anteckningar kopieras under en omskrivning, anger detta den (fullständigt kvalificerade) referens vars anteckningar ska kopieras. Kan vara en glob, i vilket fall anteckningar i alla matchande referenser kommer att kopieras. Du kan också ange denna konfiguration flera gånger."
 
 #. type: Plain text
 #: en/config/notes.adoc:66
 #, priority:280
 msgid "Does not have a default value; you must configure this variable to enable note rewriting. Set it to `refs/notes/commits` to enable rewriting for the default commit notes."
-msgstr ""
+msgstr "Har inget standardvärde; du måste konfigurera den här variabeln för att aktivera omskrivning av anteckningar. Ställ in den på `refs/notes/commits` för att aktivera omskrivning för standard incheckning anteckningarna."
 
 #. type: Plain text
 #: en/config/notes.adoc:68
 #, placeholders:'GIT_NOTES_REWRITE_REF':'notes.rewrite', priority:280
 msgid "Can be overridden with the `GIT_NOTES_REWRITE_REF` environment variable. See `notes.rewrite.<command>` above for a further description of its format."
-msgstr ""
+msgstr "Kan åsidosättas med miljövariabeln `GIT_NOTES_REWRITE_REF`. Se `notes.rewrite.<kommando>` ovan för en ytterligare beskrivning av dess format."
 
 #. type: Labeled list
 #: en/config/stash.adoc:9
@@ -78108,7 +78114,7 @@ msgstr "`stash.index`"
 #: en/config/stash.adoc:12
 #, placeholders:'`--index`', priority:240
 msgid "If this is set to true, `git stash apply` and `git stash pop` will behave as if `--index` was supplied. Defaults to false."
-msgstr ""
+msgstr "Om detta är satt till sant, kommer `git stash apply` och `git stash pop` att bete sig som om `--index` angavs. Standardvärdet är falskt."
 
 #. type: Plain text
 #: en/config/stash.adoc:14
@@ -78121,7 +78127,7 @@ msgstr "Se även linkgit:git-stash[1]."
 #: en/config/stash.adoc:18
 #, placeholders:'linkgit:git-stash[1]':'`--autostash`':'linkgit:git-merge[1]':'linkgit:git-rebase[1]':'linkgit:git-pull[1]', priority:240
 msgid "This also affects invocations of linkgit:git-stash[1] via `--autostash` from commands like linkgit:git-merge[1], linkgit:git-rebase[1], and linkgit:git-pull[1]."
-msgstr ""
+msgstr "Detta påverkar även anrop av linkgit:git-stash[1] via `--autostash` från kommandon som linkgit:git-merge[1], linkgit:git-rebase[1] och linkgit:git-pull[1]."
 
 #. type: Labeled list
 #: en/config/stash.adoc:20
@@ -78146,7 +78152,7 @@ msgstr "`stash.showPatch`"
 #: en/config/stash.adoc:28
 #, placeholders:'{see-show}', priority:240
 msgid "If this is set to true, the `git stash show` command without an option will show the stash entry in patch form. Defaults to false. {see-show}"
-msgstr ""
+msgstr "Om detta är satt till sant, kommer kommandot `git stash show` utan ett alternativ att visa gömma-posten i patch-format. Standardvärdet är falskt. {see-show}"
 
 #. type: Labeled list
 #: en/config/stash.adoc:29
@@ -78158,7 +78164,7 @@ msgstr "`stash.showStat`"
 #: en/config/stash.adoc:32
 #, placeholders:'{see-show}', priority:240
 msgid "If this is set to true, the `git stash show` command without an option will show a diffstat of the stash entry. Defaults to true. {see-show}"
-msgstr ""
+msgstr "Om detta är satt till sant, kommer kommandot `git stash show` utan ett alternativ att visa en diffstat för gömma-posten. Standardinställningen är sant. {see-show}"
 
 #. type: Labeled list
 #: en/config/commit.adoc:7
@@ -78230,19 +78236,19 @@ msgstr "`branch.autoSetupMerge`"
 #: en/config/branch.adoc:8
 #, placeholders:'linkgit:git-pull[1]':'`--track`':'`--no-track`', priority:260
 msgid "Tells `git branch`, `git switch` and `git checkout` to set up new branches so that linkgit:git-pull[1] will appropriately merge from the starting point branch. Note that even if this option is not set, this behavior can be chosen per-branch using the `--track` and `--no-track` options. This option defaults to `true`. The valid settings are:"
-msgstr ""
+msgstr "Anger för `git branch`, `git switch` och `git checkout` att ställa in nya grenar så att linkgit:git-pull[1] sammanslås korrekt från startpunktsgrenen. Observera att även om detta alternativ inte är angivet kan detta beteende väljas per gren med hjälp av alternativen `--track` och `--no-track`. Standardinställningen för detta alternativ är `true`. De giltiga inställningarna är:"
 
 #. type: Plain text
 #: en/config/branch.adoc:9
 #, priority:260
 msgid "no automatic setup is done"
-msgstr ""
+msgstr "ingen automatisk inställning görs"
 
 #. type: Plain text
 #: en/config/branch.adoc:10
 #, priority:260
 msgid "automatic setup is done when the starting point is a remote-tracking branch"
-msgstr ""
+msgstr "automatisk inställning görs när startpunkten är en fjärrspårningsgren"
 
 #. type: Labeled list
 #: en/config/branch.adoc:10 en/config/branch.adoc:26
@@ -78254,7 +78260,7 @@ msgstr "`always`"
 #: en/config/branch.adoc:12
 #, priority:260
 msgid "automatic setup is done when the starting point is either a local branch or remote-tracking branch"
-msgstr ""
+msgstr "automatisk inställning görs när startpunkten är antingen en lokal gren eller en fjärrspårningsgren"
 
 #. type: Labeled list
 #: en/config/branch.adoc:12
@@ -78266,7 +78272,7 @@ msgstr "`inherit`"
 #: en/config/branch.adoc:14
 #, priority:260
 msgid "if the starting point has a tracking configuration, it is copied to the new branch"
-msgstr ""
+msgstr "Om startpunkten har en spårningskonfiguration, kopieras den till den nya grenen"
 
 #. type: Labeled list
 #: en/config/branch.adoc:14 en/config/push.adoc:41
@@ -78278,7 +78284,7 @@ msgstr "`simple`"
 #: en/config/branch.adoc:17
 #, priority:260
 msgid "automatic setup is done only when the starting point is a remote-tracking branch and the new branch has the same name as the remote branch."
-msgstr ""
+msgstr "automatisk inställning görs endast när startpunkten är en fjärrspårningsgren och den nya grenen har samma namn som fjärrgrenen."
 
 #. type: Labeled list
 #: en/config/branch.adoc:18
@@ -78290,7 +78296,7 @@ msgstr "`branch.autoSetupRebase`"
 #: en/config/branch.adoc:23
 #, priority:260
 msgid "When a new branch is created with `git branch`, `git switch` or `git checkout` that tracks another branch, this variable tells Git to set up pull to rebase instead of merge (see `branch.<name>.rebase`). The valid settings are:"
-msgstr ""
+msgstr "När en ny gern skapas med `git branch`, `git switch` eller `git checkout` som spårar en annan gren, talar denna variabel om för Git att ställa in pull för att obasera istället för sammanslå (se `branch.<name>.rebase`). De giltiga inställningarna är:"
 
 #. type: Labeled list
 #: en/config/branch.adoc:23
@@ -78302,7 +78308,7 @@ msgstr "`never`"
 #: en/config/branch.adoc:24
 #, priority:260
 msgid "rebase is never automatically set to true."
-msgstr ""
+msgstr "ombasera sätts aldrig automatiskt till true."
 
 #. type: Labeled list
 #: en/config/branch.adoc:24
@@ -78334,13 +78340,13 @@ msgstr "[[def_remote_tracking_branch]]rfjärrspårade gren"
 #: en/config/branch.adoc:27
 #, priority:260
 msgid "rebase will be set to true for all tracking branches."
-msgstr ""
+msgstr "ombasera kommer att sättas till true för alla spårningsgrenar."
 
 #. type: Plain text
 #: en/config/branch.adoc:31
 #, placeholders:'branch.autoSetupMerge', priority:260
 msgid "See `branch.autoSetupMerge` for details on how to set up a branch to track another branch. This option defaults to `never`."
-msgstr ""
+msgstr "Se `branch.autoSetupMerge` för information om hur man konfigurerar en gren för att spåra en annan gren. Standardinställningen är `never`."
 
 #. type: Labeled list
 #: en/config/branch.adoc:32
@@ -78352,7 +78358,7 @@ msgstr "`branch.sort`"
 #: en/config/branch.adoc:37
 #, placeholders:'`--sort=':'linkgit:git-for-each-ref[1]', priority:260
 msgid "This variable controls the sort ordering of branches when displayed by linkgit:git-branch[1]. Without the `--sort=<value>` option provided, the value of this variable will be used as the default. See linkgit:git-for-each-ref[1] field names for valid values."
-msgstr ""
+msgstr "Denna variabel styr sorteringsordningen för grenar när de visas av linkgit:git-branch[1]. Utan alternativet `--sort=<värde>` kommer värdet för denna variabel att användas som standard. Se fältnamnen i linkgit:git-for-each-ref[1] för giltiga värden."
 
 #. type: Labeled list
 #: en/config/branch.adoc:38
@@ -78365,7 +78371,7 @@ msgstr "`branch.<namn>.mergeOptions`"
 #: en/config/branch.adoc:49
 #, placeholders:'remote.pushDefault':'remote.pushDefault', priority:260
 msgid "When on branch _<name>_, it tells `git fetch` and `git push` which remote to fetch from or push to. The remote to push to may be overridden with `remote.pushDefault` (for all branches). The remote to push to, for the current branch, may be further overridden by `branch.<name>.pushRemote`. If no remote is configured, or if you are not on any branch and there is more than one remote defined in the repository, it defaults to `origin` for fetching and `remote.pushDefault` for pushing. Additionally, `.` (a period) is the current local repository (a dot-repository), see `branch.<name>.merge`'s final note below."
-msgstr ""
+msgstr "När den är på grenen _<namn>_, talar den om för `git fetch` och `git push` vilken fjärr som ska hämtas från eller pushas till. Fjärren som pushas till kan åsidosättas med `remote.pushDefault` (för alla grenar). Fjärren som pushas till, för den aktuella grenen, kan ytterligare åsidosättas av `branch.<namn>.pushRemote`. Om ingen fjärr är konfigurerad, eller om du inte är på någon gren och det finns mer än en fjärr definierad i förvaret, används som standard `origin` för hämtning och `remote.pushDefault` för push:ing. Dessutom är `.` (en punkt) det aktuella lokala förvaret (ett punkt-förvar), se `branch.<namn>.merge`s sista anmärkning nedan."
 
 #. type: Labeled list
 #: en/config/branch.adoc:50
@@ -78378,7 +78384,7 @@ msgstr "`branch.<namn>.mergeOptions`"
 #: en/config/branch.adoc:58
 #, placeholders:'remote.pushDefault':'remote.pushDefault', priority:260
 msgid "When on branch _<name>_, it overrides `branch.<name>.remote` for pushing. It also overrides `remote.pushDefault` for pushing from branch _<name>_. When you pull from one place (e.g. your upstream) and push to another place (e.g. your own publishing repository), you would want to set `remote.pushDefault` to specify the remote to push to for all branches, and use this option to override it for a specific branch."
-msgstr ""
+msgstr "När den är på branch _<name>_, åsidosätter den `branch.<name>.remote` för push:ning. Den åsidosätter också `remote.pushDefault` för push:ning från gren _<name>_. När du hämtar från en plats (t.ex. din uppströms) och pushar till en annan plats (t.ex. ditt eget publiceringsfövar), vill du ställa in `remote.pushDefault` för att ange fjärren som push-funktionen ska skickas till för alla grenar, och använda det här alternativet för att åsidosätta det för en specifik gren."
 
 #. type: Labeled list
 #: en/config/branch.adoc:59
@@ -78391,7 +78397,7 @@ msgstr "`branch.<namn>.mergeOptions`"
 #: en/config/branch.adoc:76
 #, placeholders:'push.default':'FETCH_HEAD', priority:260
 msgid "Defines, together with `branch.<name>.remote`, the upstream branch for the given branch. It tells `git fetch`/`git pull`/`git rebase` which branch to merge and can also affect `git push` (see `push.default`). When in branch _<name>_, it tells `git fetch` the default refspec to be marked for merging in `FETCH_HEAD`. The value is handled like the remote part of a refspec, and must match a ref which is fetched from the remote given by `branch.<name>.remote`. The merge information is used by `git pull` (which first calls `git fetch`) to lookup the default branch for merging. Without this option, `git pull` defaults to merge the first refspec fetched. Specify multiple values to get an octopus merge. If you wish to setup `git pull` so that it merges into _<name>_ from another branch in the local repository, you can point `branch.<name>.merge` to the desired branch, and use the relative path setting `.` (a period) for `branch.<name>.remote`."
-msgstr ""
+msgstr "Definierar, tillsammans med `branch.<namn>.remote`, uppströmsgrenen för den givna grenen. Den anger för `git fetch`/`git pull`/`git rebase` vilken gren som ska sammanslås och kan också påverka `git push` (se `push.default`). I grenen _<namn>_ anger den för `git fetch` vilken standardrefspec som ska markeras för sammanfogning i `FETCH_HEAD`. Värdet hanteras som den fjärr-delen av en refspec och måste matcha en ref som hämtas från fjärren som anges av `branch.<namn>.remote`. Sammanslagnings-informationen används av `git pull` (som först anropar `git fetch`) för att söka efter standardgrenen för sammanfogning. Utan detta alternativ sammanslår `git pull` som standard den första hämtade refspecen. Ange flera värden för att få en bläckfisk-sammanfogning. Om du vill konfigurera `git pull` så att den sammanfogas med _<namn>_ från en annan gren i det lokala arkivet, kan du peka `branch.<namn>.merge` till önskad gren och använda den relativa sökvägsinställningen `.` (en punkt) för `branch.<namn>.remote`."
 
 #. type: Plain text
 #: en/config/branch.adoc:82
@@ -78411,7 +78417,7 @@ msgstr "`branch.<namn>.mergeOptions`"
 #: en/config/branch.adoc:88
 #, placeholders:'pull.rebase', priority:260
 msgid "When true, rebase the branch _<name>_ on top of the fetched branch, instead of merging the default branch from the default remote when `git pull` is run. See `pull.rebase` for doing this in a non branch-specific manner."
-msgstr ""
+msgstr "När det är sant, ombasera grenen _<namn>_ ovanpå den hämtade grenen, istället för att sammanfoga standardgrenen från standardfjärren när `git pull` körs. Se `pull.rebase` för att göra detta på ett icke-grenspecifikt sätt."
 
 #. type: Plain text
 #: en/config/branch.adoc:92
@@ -78424,13 +78430,13 @@ msgstr "ombasering med `git rebase --rebase-merges` så att de lokala sammanslag
 #: en/config/branch.adoc:95
 #, priority:260
 msgid "When the value is `interactive` (or just `i`), the rebase is run in interactive mode."
-msgstr ""
+msgstr "När värdet är `interactive` (eller bara `i`) körs ombaseringen i interaktivt läge."
 
 #. type: Plain text
 #: en/config/branch.adoc:99
 #, placeholders:'linkgit:git-rebase[1]', priority:260
 msgid "*NOTE*: this is a possibly dangerous operation; do *not* use it unless you understand the implications (see linkgit:git-rebase[1] for details)."
-msgstr ""
+msgstr "*OBS*: detta är en potentiellt farlig operation; använd den *inte* om du inte förstår konsekvenserna (se linkgit:git-rebase[1] för mer information)."
 
 #. type: Labeled list
 #: en/config/branch.adoc:100
@@ -78443,7 +78449,7 @@ msgstr "`branch.<namn>.mergeOptions`"
 #: en/config/branch.adoc:104
 #, placeholders:'--edit-description`', priority:260
 msgid "Branch description, can be edited with `git branch --edit-description`. Branch description is automatically added to the `format-patch` cover letter or `request-pull` summary."
-msgstr ""
+msgstr "Grenbeskrivning, kan redigeras med `git branch --edit-description`. Grenbeskrivningen läggs automatiskt till i `format-patch` följebrevet eller `request-pull` sammanfattningen."
 
 #. type: Labeled list
 #: en/config/rebase.adoc:1
@@ -78455,7 +78461,7 @@ msgstr "rebase.backend"
 #: en/config/rebase.adoc:6
 #, priority:220
 msgid "Default backend to use for rebasing. Possible choices are 'apply' or 'merge'. In the future, if the merge backend gains all remaining capabilities of the apply backend, this setting may become unused."
-msgstr ""
+msgstr "Standard-bakända att använda för ombasering. Möjliga val är 'apply' (tillämpa) eller 'merge' (sammanslå). Om sammanfognings-bakändan i framtiden får alla återstående funktioner från tillämpa-bakändan , kan den här inställningen bli oanvänd."
 
 #. type: Labeled list
 #: en/config/rebase.adoc:7
@@ -78480,7 +78486,7 @@ msgstr "rebase.autoSquash"
 #: en/config/rebase.adoc:15
 #, placeholders:'`--autosquash`':'linkgit:git-rebase[1]':'`--no-autosquash`', priority:220
 msgid "If set to true, enable the `--autosquash` option of linkgit:git-rebase[1] by default for interactive mode. This can be overridden with the `--no-autosquash` option."
-msgstr ""
+msgstr "Om satt till sant, aktivera alternativet `--autosquash` i linkgit:git-rebase[1] som standard för interaktivt läge. Detta kan åsidosättas med alternativet `--no-autosquash`."
 
 #. type: Labeled list
 #: en/config/rebase.adoc:16
@@ -78505,7 +78511,7 @@ msgstr "rebase.updateRefs"
 #: en/config/rebase.adoc:28
 #, placeholders:'`--update-refs`', priority:220
 msgid "If set to true enable `--update-refs` option by default."
-msgstr ""
+msgstr "Om satt till sant aktiveras alternativet `--update-refs` som standard."
 
 #. type: Labeled list
 #: en/config/rebase.adoc:29
@@ -78517,7 +78523,7 @@ msgstr "rebase.missingCommitsCheck"
 #: en/config/rebase.adoc:39
 #, placeholders:'--edit-todo', priority:220
 msgid "If set to \"warn\", git rebase -i will print a warning if some commits are removed (e.g. a line was deleted), however the rebase will still proceed. If set to \"error\", it will print the previous warning and stop the rebase, 'git rebase --edit-todo' can then be used to correct the error. If set to \"ignore\", no checking is done. To drop a commit without warning or error, use the `drop` command in the todo list. Defaults to \"ignore\"."
-msgstr ""
+msgstr "Om satt till \"warn\" (varna), kommer git rebase -i att skriva ut en varning om vissa incheckningar tas bort (t.ex. om en rad raderades), men ombaseringen kommer fortfarande att fortsätta. Om satt till \"error\" kommer den att skriva ut den föregående varningen och stoppa ombaseringen. 'git rebase --edit-todo' kan sedan användas för att korrigera felet. Om satt till \"ignore\" görs ingen kontroll. För att ta bort en incheckning utan varning eller fel, använd kommandot `drop` i att-göra-listan. Standardinställningen är \"ignore\"."
 
 #. type: Labeled list
 #: en/config/rebase.adoc:40
@@ -78542,7 +78548,7 @@ msgstr "rebase.abbreviateCommands"
 #: en/config/rebase.adoc:48
 #, priority:220
 msgid "If set to true, `git rebase` will use abbreviated command names in the todo list resulting in something like this:"
-msgstr ""
+msgstr "Om satt till sant, kommer `git rebase` att använda förkortade kommandonamn i att-göra-listan vilket resulterar i något liknande:"
 
 #. type: delimited block -
 #: en/config/rebase.adoc:53
@@ -78579,7 +78585,7 @@ msgstr ""
 #: en/config/rebase.adoc:64
 #, priority:220
 msgid "Defaults to false."
-msgstr ""
+msgstr "Standardvärdet är falskt."
 
 #. type: Labeled list
 #: en/config/rebase.adoc:65
@@ -78604,7 +78610,7 @@ msgstr "rebase.forkPoint"
 #: en/config/rebase.adoc:72
 #, placeholders:'`--no-fork-point`', priority:220
 msgid "If set to false set `--no-fork-point` option by default."
-msgstr ""
+msgstr "Om den är satt till falskt, sätt alternativet `--no-fork-point` som standard."
 
 #. type: Labeled list
 #: en/config/rebase.adoc:73
@@ -78616,7 +78622,7 @@ msgstr "rebase.rebaseMerges"
 #: en/config/rebase.adoc:82
 #, placeholders:'`--rebase-merges`':'`--rebase-merges=no-rebase-cousins`':'`--rebase-merges=rebase-cousins`':'`--no-rebase-merges`':'`--rebase-merges`':'rebase.rebaseMerges', priority:220
 msgid "Whether and how to set the `--rebase-merges` option by default. Can be `rebase-cousins`, `no-rebase-cousins`, or a boolean. Setting to true or to `no-rebase-cousins` is equivalent to `--rebase-merges=no-rebase-cousins`, setting to `rebase-cousins` is equivalent to `--rebase-merges=rebase-cousins`, and setting to false is equivalent to `--no-rebase-merges`. Passing `--rebase-merges` on the command line, with or without an argument, overrides any `rebase.rebaseMerges` configuration."
-msgstr ""
+msgstr "Om och hur alternativet `--rebase-merges` ska ställas in som standard. Kan vara `rebase-cousins`, `no-rebase-cousins` eller ett booleskt värde. Att sätta till true eller `no-rebase-cousins` motsvarar `--rebase-merges=no-rebase-cousins`, att sätta till `rebase-cousins` motsvarar `--rebase-merges=rebase-cousins`, och att sätta till `false`(falsk) motsvarar `--no-rebase-merges`. Att skicka `--rebase-merges` på kommandoraden, med eller utan ett argument, åsidosätter alla `rebase.rebaseMerges`-konfigurationer."
 
 #. type: Labeled list
 #: en/config/rebase.adoc:83
@@ -78874,7 +78880,7 @@ msgstr "`merge.tool`"
 #: en/config/mergetool.adoc:4
 #, placeholders:'`$PATH`', priority:240
 msgid "Override the path for the given tool. This is useful in case your tool is not in the `$PATH`."
-msgstr ""
+msgstr "Åsidosätt sökvägen för det givna verktyget. Detta är användbart om ditt verktyg inte finns i `$PATH`."
 
 #. type: Labeled list
 #: en/config/mergetool.adoc:5
@@ -78894,13 +78900,13 @@ msgstr "När `git mergetool` anropas med detta verktyg (antingen genom alternati
 #: en/config/mergetool.adoc:16
 #, no-wrap, priority:240
 msgid "`mergetool.<tool>.hideResolved`"
-msgstr ""
+msgstr "`mergetool.<verktyg>.hideResolved`"
 
 #. type: Plain text
 #: en/config/mergetool.adoc:20
 #, placeholders:'mergetool.hideResolved':'mergetool.hideResolved', priority:240
 msgid "Allows the user to override the global `mergetool.hideResolved` value for a specific tool. See `mergetool.hideResolved` for the full description."
-msgstr ""
+msgstr "Tillåter användaren att åsidosätta det globala värdet `mergetool.hideResolved` för ett specifikt verktyg. Se `mergetool.hideResolved` för en fullständig beskrivning."
 
 #. type: Labeled list
 #: en/config/mergetool.adoc:21
@@ -78913,7 +78919,7 @@ msgstr "`diff.<förare>.trustExitCode`"
 #: en/config/mergetool.adoc:28
 #, priority:240
 msgid "For a custom merge command, specify whether the exit code of the merge command can be used to determine whether the merge was successful. If this is not set to true then the merge target file timestamp is checked, and the merge is assumed to have been successful if the file has been updated; otherwise, the user is prompted to indicate the success of the merge."
-msgstr ""
+msgstr "För ett anpassat sammanslagnings-kommando anger du om avslutningskoden för sammanfognings-kommandot kan användas för att avgöra om sammanslagningen lyckades. Om detta inte är inställt på sant kontrolleras tidsstämpeln för sammanslagningsmålfilen och sammanslagningen antas ha lyckats om filen har uppdaterats. Annars uppmanas användaren att ange att sammanslagningen lyckades."
 
 #. type: Labeled list
 #: en/config/mergetool.adoc:29
@@ -78925,7 +78931,7 @@ msgstr "`mergetool.meld.hasOutput`"
 #: en/config/mergetool.adoc:37
 #, placeholders:'`--output`':'`--output`':'--help`':'mergetool.meld.hasOutput':'mergetool.meld.hasOutput':'`--output`':'`--output`', priority:240
 msgid "Older versions of `meld` do not support the `--output` option. Git will attempt to detect whether `meld` supports `--output` by inspecting the output of `meld --help`. Configuring `mergetool.meld.hasOutput` will make Git skip these checks and use the configured value instead. Setting `mergetool.meld.hasOutput` to `true` tells Git to unconditionally use the `--output` option, and `false` avoids using `--output`."
-msgstr ""
+msgstr "Äldre versioner av `meld` stöder inte alternativet `--output`. Git kommer att försöka upptäcka om `meld` stöder `--output` genom att inspektera utdata från `meld --help`. Om du konfigurerar `mergetool.meld.hasOutput` hoppar Git över dessa kontroller och använder det konfigurerade värdet istället. Om `mergetool.meld.hasOutput` ställs in på `true` får Git att ovillkorligen använda alternativet `--output`, och `false` undviker att använda `--output`."
 
 #. type: Labeled list
 #: en/config/mergetool.adoc:38
@@ -78937,25 +78943,25 @@ msgstr "`mergetool.meld.useAutoMerge`"
 #: en/config/mergetool.adoc:47
 #, placeholders:'`--auto-merge`':'mergetool.meld.useAutoMerge':'`--auto-merge`':'`--auto-merge`':'`--auto-merge`':'`--auto-merge`', priority:240
 msgid "When the `--auto-merge` is given, meld will merge all non-conflicting parts automatically, highlight the conflicting parts, and wait for user decision. Setting `mergetool.meld.useAutoMerge` to `true` tells Git to unconditionally use the `--auto-merge` option with `meld`. Setting this value to `auto` makes git detect whether `--auto-merge` is supported and will only use `--auto-merge` when available. A value of `false` avoids using `--auto-merge` altogether, and is the default value."
-msgstr ""
+msgstr "När `--auto-merge` är angivet, kommer meld att sammanfoga alla icke-konfliktande delar automatiskt, markera de motstridiga delarna och vänta på användarens beslut. Om `mergetool.meld.useAutoMerge` sätts till `true` anger du att Git villkorslöst ska använda alternativet `--auto-merge` med `meld`. Om detta värde sätts till `auto` detekterar git om `--auto-merge` stöds och kommer endast att använda `--auto-merge` när det är tillgängligt. Värdet `false` undviker att använda `--auto-merge` helt och hållet, och är standardvärdet."
 
 #. type: Labeled list
 #: en/config/mergetool.adoc:48
 #, no-wrap, priority:240
 msgid "`mergetool.<variant>.layout`"
-msgstr ""
+msgstr "`mergetool.<variant>.layout`"
 
 #. type: Plain text
 #: en/config/mergetool.adoc:57
 #, placeholders:'`--tool=':'`--tool`':'merge.tool', priority:240
 msgid "Configure the split window layout for vimdiff's _<variant>_, which is any of `vimdiff`, `nvimdiff`, `gvimdiff`. Upon launching `git mergetool` with `--tool=<variant>` (or without `--tool` if `merge.tool` is configured as _<variant>_), Git will consult `mergetool.<variant>.layout` to determine the tool's layout. If the variant-specific configuration is not available, `vimdiff` ' s is used as fallback. If that too is not available, a default layout with 4 windows will be used. To configure the layout, see the 'BACKEND SPECIFIC HINTS'"
-msgstr ""
+msgstr "Konfigurera layouten för delade fönster för vimdiffs _<variant>_, vilket är någon av `vimdiff`, `nvimdiff`, `gvimdiff`. Vid start av `git mergetool` med `--tool=<variant>` (eller utan `--tool` om `merge.tool` är konfigurerad som _<variant>_), kommer Git att konsultera `mergetool.<variant>.layout` för att bestämma verktygets layout. Om den variantspecifika konfigurationen inte är tillgänglig används `vimdiff` som reserv. Om inte heller den är tillgänglig används en standardlayout med 4 fönster. För att konfigurera layouten, se 'BAKÄNDA-SPECIFIKA TIPS'"
 
 #. type: Plain text
 #: en/config/mergetool.adoc:59
 #, no-wrap, priority:240
 msgid "\tsection.\n"
-msgstr ""
+msgstr "\tsektion.\n"
 
 #. type: Plain text
 #: en/config/mergetool.adoc:62
@@ -78974,7 +78980,7 @@ msgstr "`mergetool.hideResolved`"
 #: en/config/mergetool.adoc:73
 #, placeholders:'`$MERGED`':'`$LOCAL`':'`$REMOTE`':'`$LOCAL`':'`$REMOTE`', priority:240
 msgid "During a merge, Git will automatically resolve as many conflicts as possible and write the `$MERGED` file containing conflict markers around any conflicts that it cannot resolve; `$LOCAL` and `$REMOTE` normally are the versions of the file from before Git's conflict resolution. This flag causes `$LOCAL` and `$REMOTE` to be overwritten so that only the unresolved conflicts are presented to the merge tool. Can be configured per-tool via the `mergetool.<tool>.hideResolved` configuration variable. Defaults to `false`."
-msgstr ""
+msgstr "Under en sammanslagning kommer Git automatiskt att lösa så många konflikter som möjligt och skriva `$MERGED`-filen som innehåller konfliktmarkörer runt eventuella konflikter som den inte kan lösa; `$LOCAL` och `$REMOTE` är normalt versionerna av filen från före Gits konfliktlösning. Denna flagga gör att `$LOCAL` och `$REMOTE` skrivs över så att endast de olösta konflikterna presenteras för sammanslagningsverktyget. Kan konfigureras per verktyg via konfigurationsvariabeln `mergetool.<verktyg>.hideResolved`. Standardvärdet är `false`."
 
 #. type: Labeled list
 #: en/config/mergetool.adoc:74
@@ -78986,7 +78992,7 @@ msgstr "`mergetool.keepBackup`"
 #: en/config/mergetool.adoc:79
 #, priority:240
 msgid "After performing a merge, the original file with conflict markers can be saved as a file with a `.orig` extension. If this variable is set to `false` then this file is not preserved. Defaults to `true` (i.e. keep the backup files)."
-msgstr ""
+msgstr "Efter att en sammanslagning har utförts kan originalfilen med konfliktmarkörer sparas som en fil med filändelsen `.orig`. Om variabeln är satt till `false` bevaras inte filen. Standardvärdet är `sant` (dvs. behåll säkerhetskopiorna)."
 
 #. type: Labeled list
 #: en/config/mergetool.adoc:80
@@ -78998,7 +79004,7 @@ msgstr "`mergetool.keepTemporaries`"
 #: en/config/mergetool.adoc:86
 #, priority:240
 msgid "When invoking a custom merge tool, Git uses a set of temporary files to pass to the tool. If the tool returns an error and this variable is set to `true`, then these temporary files will be preserved; otherwise, they will be removed after the tool has exited. Defaults to `false`."
-msgstr ""
+msgstr "När ett anpassat sammanslagningsverktyg anropas använder Git en uppsättning temporära filer för att skicka till verktyget. Om verktyget returnerar ett fel och denna variabel är satt till `true`, kommer dessa temporära filer att bevaras; annars kommer de att tas bort efter att verktyget har avslutats. Standardvärdet är `false`."
 
 #. type: Labeled list
 #: en/config/mergetool.adoc:87
@@ -79010,7 +79016,7 @@ msgstr "`mergetool.writeToTemp`"
 #: en/config/mergetool.adoc:92
 #, priority:240
 msgid "Git writes temporary `BASE`, `LOCAL`, and `REMOTE` versions of conflicting files in the worktree by default. Git will attempt to use a temporary directory for these files when set `true`. Defaults to `false`."
-msgstr ""
+msgstr "Git skriver som standard temporära `BASE`-, `LOCAL`- och `REMOTE`-versioner av motstridiga filer i arbetsträdet. Git kommer att försöka använda en temporär katalog för dessa filer när `true` är satt. Standardvärdet är `false`."
 
 #. type: Labeled list
 #: en/config/mergetool.adoc:93
@@ -79035,7 +79041,7 @@ msgstr "`mergetool.guiDefault`"
 #: en/config/mergetool.adoc:101
 #, placeholders:'merge.guitool':'`--gui`':'merge.guitool':'merge.tool':'`--gui`':'merge.guitool', priority:240
 msgid "Set `true` to use the `merge.guitool` by default (equivalent to specifying the `--gui` argument), or `auto` to select `merge.guitool` or `merge.tool` depending on the presence of a `DISPLAY` environment variable value. The default is `false`, where the `--gui` argument must be provided explicitly for the `merge.guitool` to be used."
-msgstr ""
+msgstr "Sätt `true` för att använda `merge.guitool` som standard (motsvarande att ange argumentet `--gui`), eller `auto` för att välja `merge.guitool` eller `merge.tool` beroende på förekomsten av ett `DISPLAY` miljövariabelvärde. Standardvärdet är `false`, där argumentet `--gui` måste anges explicit för att `merge.guitool` ska kunna användas."
 
 #. type: Labeled list
 #: en/config/fetch.adoc:1
@@ -79253,7 +79259,7 @@ msgstr ""
 #: en/config/sequencer.adoc:1
 #, no-wrap, placeholders:'sequence.editor', priority:220
 msgid "sequence.editor"
-msgstr ""
+msgstr "sequence.editor"
 
 #. type: Plain text
 #: en/config/sequencer.adoc:5
@@ -79266,13 +79272,13 @@ msgstr "Textredigerare som används för att redigera 'todo'-filen när `git reb
 #: en/config/tag.adoc:1
 #, no-wrap, placeholders:'tag.forceSignAnnotated', priority:240
 msgid "`tag.forceSignAnnotated`"
-msgstr ""
+msgstr "`tag.forceSignAnnotated`"
 
 #. type: Plain text
 #: en/config/tag.adoc:5
 #, placeholders:'`--annotate`', priority:240
 msgid "A boolean to specify whether annotated tags created should be GPG signed. If `--annotate` is specified on the command line, it takes precedence over this option."
-msgstr ""
+msgstr "Ett booleskt värde som anger om skapade annoterade taggar ska vara GPG-signerade. Om `--annotate` anges på kommandoraden har det företräde framför detta alternativ."
 
 #. type: Labeled list
 #: en/config/tag.adoc:6
@@ -79285,19 +79291,19 @@ msgstr "`short`"
 #: en/config/tag.adoc:9
 #, placeholders:'git-tag`', priority:240
 msgid "This variable controls the sort ordering of tags when displayed by `git-tag`."
-msgstr ""
+msgstr "Denna variabel styr sorteringsordningen för taggar när de visas av `git-tag`."
 
 #. type: Plain text
 #: en/config/tag.adoc:13
 #, placeholders:'linkgit:git-tag[1]', priority:240
 msgid "This variable controls the sort ordering of tags when displayed by linkgit:git-tag[1]."
-msgstr ""
+msgstr "Denna variabel styr sorteringsordningen för taggar när de visas av linkgit:git-tag[1]."
 
 #. type: Plain text
 #: en/config/tag.adoc:16
 #, placeholders:'`--sort=', priority:240
 msgid "Without the `--sort=<value>` option provided, the value of this variable will be used as the default."
-msgstr ""
+msgstr "Utan alternativet `--sort=<value>` anges, kommer värdet på denna variabel att användas som standard."
 
 #. type: Labeled list
 #: en/config/tag.adoc:17
@@ -79842,13 +79848,13 @@ msgstr "`clone.defaultRemoteName`"
 #: en/config/checkout.adoc:11
 #, priority:240
 msgid "When you run `git checkout <something>` or `git switch <something>` and only have one remote, it may implicitly fall back on checking out and tracking e.g. `origin/<something>`. This stops working as soon as you have more than one remote with a _<something>_ reference. This setting allows for setting the name of a preferred remote that should always win when it comes to disambiguation. The typical use-case is to set this to `origin`."
-msgstr ""
+msgstr "När du kör `git checkout <något>` eller `git switch <något>` och bara har en fjärr, kan den implicit återgå till att checka ut och spåra, t.ex. `origin/<något>`. Detta slutar fungera så fort du har mer än en fjärr med en _<något>_-referens. Den här inställningen gör det möjligt att ställa in namnet på en föredragen fjärr som alltid ska vinna vid särskiljning. Det typiska användningsfallet är att ställa in detta till `origin`."
 
 #. type: Plain text
 #: en/config/checkout.adoc:19
 #, placeholders:'linkgit:git-switch[1]':'linkgit:git-checkout[1]':'linkgit:git-worktree[1]', priority:240
 msgid "Currently this is used by linkgit:git-switch[1] and linkgit:git-checkout[1] when `git checkout <something>` or `git switch <something>` will checkout the _<something>_ branch on another remote, and by linkgit:git-worktree[1] when `git worktree add` refers to a remote branch. This setting might be used for other checkout-like commands or functionality in the future."
-msgstr ""
+msgstr "För närvarande används detta av linkgit:git-switch[1] och linkgit:git-checkout[1] när `git checkout <något>` eller `git switch <något>` checkar ut grenen _<något>_ på en annan fjärr, och av linkgit:git-worktree[1] när `git worktree add` refererar till en fjärrgren. Denna inställning kan komma att användas för andra checkout-liknande kommandon eller funktioner i framtiden."
 
 #. type: Labeled list
 #: en/config/checkout.adoc:20
@@ -79861,7 +79867,7 @@ msgstr "`--checkout`"
 #: en/config/checkout.adoc:24
 #, placeholders:'`--guess`':'`--no-guess`':'linkgit:git-switch[1]':'linkgit:git-checkout[1]', priority:240
 msgid "Provides the default value for the `--guess` or `--no-guess` option in `git checkout` and `git switch`. See linkgit:git-switch[1] and linkgit:git-checkout[1]."
-msgstr ""
+msgstr "Anger standardvärdet för alternativen `--guess` eller `--no-guess` i `git checkout` och `git switch`. Se linkgit:git-switch[1] och linkgit:git-checkout[1]."
 
 #. type: Labeled list
 #: en/config/checkout.adoc:25
@@ -79874,25 +79880,25 @@ msgstr "`--checkout`"
 #: en/config/checkout.adoc:32
 #, placeholders:'checkout.thresholdForParallelism', priority:240
 msgid "The number of parallel workers to use when updating the working tree. The default is one, i.e. sequential execution. If set to a value less than one, Git will use as many workers as the number of logical cores available. This setting and `checkout.thresholdForParallelism` affect all commands that perform checkout. E.g. checkout, clone, reset, sparse-checkout, etc."
-msgstr ""
+msgstr "Antalet parallella arbetare som ska användas vid uppdatering av arbetskatalogen. Standardvärdet är ett, dvs. sekventiell exekvering. Om det sätts till ett värde mindre än ett, kommer Git att använda lika många arbetare som antalet tillgängliga logiska kärnor. Denna inställning och `checkout.thresholdForParallelism` påverkar alla kommandon som utför utcheckning. T.ex. checkout, clone, reset, sparse-checkout, etc."
 
 #. type: Plain text
 #: en/config/checkout.adoc:38
 #, priority:240
 msgid "Parallel checkout usually delivers better performance for repositories located on SSDs or over NFS. For repositories on spinning disks and/or machines with a small number of cores, the default sequential checkout often performs better. The size and compression level of a repository might also influence how well the parallel version performs."
-msgstr ""
+msgstr "Parallell utcheckning ger vanligtvis bättre prestanda för förvar som finns på SSD-diskar eller över NFS. För förvar på roterande diskar och/eller maskiner med ett litet antal kärnor fungerar standard sekventiell utcheckning ofta bättre. Storleken och komprimeringsnivån för ett förvaret kan också påverka hur bra den parallella versionen presterar."
 
 #. type: Labeled list
 #: en/config/checkout.adoc:39
 #, no-wrap, placeholders:'checkout.thresholdForParallelism', priority:240
 msgid "`checkout.thresholdForParallelism`"
-msgstr ""
+msgstr "`checkout.thresholdForParallelism`"
 
 #. type: Plain text
 #: en/config/checkout.adoc:44
 #, priority:240
 msgid "When running parallel checkout with a small number of files, the cost of subprocess spawning and inter-process communication might outweigh the parallelization gains. This setting allows you to define the minimum number of files for which parallel checkout should be attempted. The default is 100."
-msgstr ""
+msgstr "När man kör parallell utcheckning med ett litet antal filer kan kostnaden för att skapa underprocesser och kommunikation mellan processer överväga vinsterna med parallellisering. Den här inställningen låter dig definiera det minsta antalet filer som parallell utcheckning ska försökas för. Standardinställningen är 100."
 
 #. type: Labeled list
 #: en/config/merge.adoc:1
@@ -80198,7 +80204,7 @@ msgstr "`log.abbrevCommit`"
 #: en/config/log.adoc:3
 #, priority:260
 msgid "If `true`, make"
-msgstr ""
+msgstr "Om `sant`, gör"
 
 #. type: Plain text
 #: en/config/log.adoc:6
@@ -80223,6 +80229,8 @@ msgid ""
 "\tassume `--abbrev-commit`. You may\n"
 "\toverride this option with `--no-abbrev-commit`.\n"
 msgstr ""
+"\tanta `--abbrev-commit`. Du kan\n"
+"\t åsidosätta detta alternativ med `--no-abbrev-commit`.\n"
 
 #. type: Labeled list
 #: en/config/log.adoc:13
@@ -80234,13 +80242,13 @@ msgstr "`log.date`"
 #: en/config/log.adoc:17
 #, placeholders:'log.date':'`--date`':'linkgit:git-log[1]', priority:260
 msgid "Set the default date-time mode for the `log` command. Setting a value for log.date is similar to using `git log`'s `--date` option. See linkgit:git-log[1] for details."
-msgstr ""
+msgstr "Ställ in standardläget för datum och tid för `log`-kommandot. Att ställa in ett värde för log.date liknar att använda `git log`s `--date`-alternativ. Se linkgit:git-log[1] för mer information."
 
 #. type: Plain text
 #: en/config/log.adoc:21
 #, priority:260
 msgid "If the format is set to \"auto:foo\" and the pager is in use, format \"foo\" will be used for the date format. Otherwise, \"default\" will be used."
-msgstr ""
+msgstr "Om formatet är inställt på \"auto:foo\" och bläddrare används, kommer formatet \"foo\" att användas för datumformatet. Annars kommer \"standard\" att användas."
 
 #. type: Labeled list
 #: en/config/log.adoc:22
@@ -80259,13 +80267,13 @@ msgstr "Skriv ut referensnamnen för alla incheckningar som visas. Möjliga vär
 #: en/config/log.adoc:29
 #, priority:260
 msgid "the ref name prefixes `refs/heads/`, `refs/tags/` and `refs/remotes/` are not printed."
-msgstr ""
+msgstr "referensnamnsprefixen `refs/heads/`, `refs/tags/` och `refs/remotes/` skrivs inte ut."
 
 #. type: Plain text
 #: en/config/log.adoc:30
 #, priority:260
 msgid "the full ref name (including prefix) are printed."
-msgstr ""
+msgstr "det fullständiga referensnamnet (inklusive prefix) skrivs ut."
 
 #. type: Labeled list
 #: en/config/log.adoc:30
@@ -80277,13 +80285,13 @@ msgstr "`auto`"
 #: en/config/log.adoc:33
 #, priority:260
 msgid "if the output is going to a terminal, the ref names are shown as if `short` were given, otherwise no ref names are shown."
-msgstr ""
+msgstr "om utdata går till en terminal, visas referensnamnen som om `short` hade angetts, annars visas inga referensnamn."
 
 #. type: Plain text
 #: en/config/log.adoc:36
 #, placeholders:'`--decorate`', priority:260
 msgid "This is the same as the `--decorate` option of the `git log`."
-msgstr ""
+msgstr "Detta är samma sak som alternativet `--decorate` i `git log`."
 
 #. type: Labeled list
 #: en/config/log.adoc:37
@@ -80295,7 +80303,7 @@ msgstr "`log.initialDecorationSet`"
 #: en/config/log.adoc:41
 #, priority:260
 msgid "By default, `git log` only shows decorations for certain known ref namespaces. If 'all' is specified, then show all refs as decorations."
-msgstr ""
+msgstr "Som standard, visar `git log` bara dekorationer för vissa kända referensnamnrymder. Om 'alla' anges visas alla referenser som dekorationer."
 
 #. type: Labeled list
 #: en/config/log.adoc:42
@@ -80307,7 +80315,7 @@ msgstr "`log.excludeDecoration`"
 #: en/config/log.adoc:47
 #, placeholders:'`--decorate-refs-exclude`':'`--decorate-refs`', priority:260
 msgid "Exclude the specified patterns from the log decorations. This is similar to the `--decorate-refs-exclude` command-line option, but the config option can be overridden by the `--decorate-refs` option."
-msgstr ""
+msgstr "Exkludera de angivna mönstren från loggdekorationerna. Detta liknar kommandoradsalternativet `--decorate-refs-exclude`, men konfigurations-alternativet kan åsidosättas av `--decorate-refs`."
 
 #. type: Labeled list
 #: en/config/log.adoc:48
@@ -80319,7 +80327,7 @@ msgstr "`log.diffMerges`"
 #: en/config/log.adoc:52
 #, placeholders:'`--diff-merges=on`':'`--diff-merges`':'linkgit:git-log[1]', priority:260
 msgid "Set diff format to be used when `--diff-merges=on` is specified, see `--diff-merges` in linkgit:git-log[1] for details. Defaults to `separate`."
-msgstr ""
+msgstr "Ställ in diff-formatet som ska användas när `--diff-merges=on` är specificerat, se `--diff-merges` i linkgit:git-log[1] för detaljer. Standardinställningen är `separate`."
 
 #. type: Labeled list
 #: en/config/log.adoc:53
@@ -80331,7 +80339,7 @@ msgstr "`log.follow`"
 #: en/config/log.adoc:58
 #, placeholders:'`--follow`':'`--follow`', priority:260
 msgid "If `true`, `git log` will act as if the `--follow` option was used when a single <path> is given. This has the same limitations as `--follow`, i.e. it cannot be used to follow multiple files and does not work well on non-linear history."
-msgstr ""
+msgstr "Om `true` kommer `git log` att agera som om `--follow`-alternativet användes när en enda <sökväg> anges. Detta har samma begränsningar som `--follow`, d.v.s. det kan inte användas för att följa flera filer och fungerar inte bra på icke-linjär historik."
 
 #. type: Labeled list
 #: en/config/log.adoc:59
@@ -80343,7 +80351,7 @@ msgstr "`log.graphColors`"
 #: en/config/log.adoc:62
 #, placeholders:'--graph`', priority:260
 msgid "A list of colors, separated by commas, that can be used to draw history lines in `git log --graph`."
-msgstr ""
+msgstr "En lista med färger, separerade med kommatecken, som kan användas för att rita historiklinjer i `git log --graph`."
 
 #. type: Labeled list
 #: en/config/log.adoc:63
@@ -80355,7 +80363,7 @@ msgstr "`log.showRoot`"
 #: en/config/log.adoc:68
 #, placeholders:'linkgit:git-log[1]':'linkgit:git-whatchanged[1]', priority:260
 msgid "If true, the initial commit will be shown as a big creation event. This is equivalent to a diff against an empty tree. Tools like linkgit:git-log[1] or linkgit:git-whatchanged[1], which normally hide the root commit will now show it. True by default."
-msgstr ""
+msgstr "Om sant, visas den initiala incheckningen som en stor skapandehändelse. Detta motsvarar en diff mot ett tomt träd. Verktyg som linkgit:git-log[1] eller linkgit:git-whatchanged[1], som normalt döljer rot-incheckningen, kommer nu att visa den. Sant som standard."
 
 #. type: Labeled list
 #: en/config/log.adoc:69
@@ -80380,7 +80388,7 @@ msgstr "`log.mailmap`"
 #: en/config/log.adoc:76
 #, placeholders:'linkgit:git-log[1]':'linkgit:git-show[1]':'linkgit:git-whatchanged[1]':'`--use-mailmap`':'`--no-use-mailmap`', priority:260
 msgid "If true, makes linkgit:git-log[1], linkgit:git-show[1], and linkgit:git-whatchanged[1] assume `--use-mailmap`, otherwise assume `--no-use-mailmap`. True by default."
-msgstr ""
+msgstr "Om sant, gör att linkgit:git-log[1], linkgit:git-show[1] och linkgit:git-whatchanged[1] antar `--use-mailmap`, annars antar man `--no-use-mailmap`. Sant som standard."
 
 #. type: Labeled list
 #: en/config/worktree.adoc:1
@@ -80393,7 +80401,7 @@ msgstr "`--no-guess-remote`"
 #: en/config/worktree.adoc:10
 #, placeholders:'`-b`':'`-B`':'`--detach`':'worktree.guessRemote':'`HEAD`', priority:240
 msgid "If no branch is specified and neither `-b` nor `-B` nor `--detach` is used, then `git worktree add` defaults to creating a new branch from HEAD. If `worktree.guessRemote` is set to true, `worktree add` tries to find a remote-tracking branch whose name uniquely matches the new branch name. If such a branch exists, it is checked out and set as \"upstream\" for the new branch. If no such match can be found, it falls back to creating a new branch from the current `HEAD`."
-msgstr ""
+msgstr "Om ingen gren anges och varken `-b`, `-B` eller `--detach` används, skapar `git worktree add` som standard en ny gren från HEAD. Om `worktree.guessRemote` är satt till sant, försöker `worktree add` hitta en fjärrspårningsgren vars namn unikt matchar det nya grennamnet. Om en sådan gren finns, checkas den ut och sätts som \"uppströms\" för den nya grenen. Om ingen sådan matchning kan hittas, återgår den till att skapa en ny gren från den aktuella `HEAD`."
 
 #. type: Labeled list
 #: en/config/worktree.adoc:11
@@ -80406,13 +80414,13 @@ msgstr "`worktreepath`"
 #: en/config/worktree.adoc:16
 #, priority:240
 msgid "Link worktrees using relative paths (when \"`true`\") or absolute paths (when \"`false`\"). This is particularly useful for setups where the repository and worktrees may be moved between different locations or environments. Defaults to \"`false`\"."
-msgstr ""
+msgstr "Länka arbetsträd med relativa sökvägar (när \"`true`\") eller absoluta sökvägar (när \"`false`\"). Detta är särskilt användbart för inställningar där förvaret och arbetsträden kan flyttas mellan olika platser eller miljöer. Standardvärdet är \"`false`\"."
 
 #. type: Plain text
 #: en/config/worktree.adoc:19
 #, placeholders:'worktree.useRelativePaths':'extensions.relativeWorktrees':'linkgit:git-config[1]', priority:240
 msgid "Note that setting `worktree.useRelativePaths` to \"`true`\" implies enabling the `extensions.relativeWorktrees` config (see linkgit:git-config[1]), thus making it incompatible with older versions of Git."
-msgstr ""
+msgstr "Observera att om du ställer in `worktree.useRelativePaths` till \"`true`\" aktiveras konfigurationen `extensions.relativeWorktrees` (se linkgit:git-config[1]), vilket gör den inkompatibel med äldre versioner av Git."
 
 #. type: Plain text
 #: en/includes/cmd-config-section-rest.adoc:3
