@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-02-18 21:42+0100\n"
-"PO-Revision-Date: 2026-02-20 05:09+0000\n"
+"PO-Revision-Date: 2026-02-20 05:41+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -78634,7 +78634,7 @@ msgstr "rebase.maxLabelLength"
 #: en/config/rebase.adoc:87
 #, placeholders:'NAME_MAX', priority:220
 msgid "When generating label names from commit subjects, truncate the names to this length. By default, the names are truncated to a little less than `NAME_MAX` (to allow e.g. `.lock` files to be written for the corresponding loose refs)."
-msgstr ""
+msgstr "Vid generering av etikettnamn från inlämningsrubriker, korta av namnen till denna längd. Som standard kortas namnen av till något mindre än `NAME_MAX` (för att tillåta att exempelvis .lock-filer kan skrivas för motsvarande lösa referenser)."
 
 #. type: Labeled list
 #: en/config/push.adoc:1
@@ -78646,7 +78646,7 @@ msgstr "`push.autoSetupRemote`"
 #: en/config/push.adoc:11
 #, placeholders:'`--set-upstream`':'push.default':'push.default', priority:220
 msgid "If set to `true` assume `--set-upstream` on default push when no upstream tracking exists for the current branch; this option takes effect with `push.default` options `simple`, `upstream`, and `current`. It is useful if by default you want new branches to be pushed to the default remote (like the behavior of `push.default=current`) and you also want the upstream tracking to be set. Workflows most likely to benefit from this option are `simple` central workflows where all branches are expected to have the same name on the remote."
-msgstr ""
+msgstr "Om satt till `true` antas `--set-upstream` vara standard push när ingen uppströmsspårning finns för den aktuella grenen; detta alternativ träder i kraft med `push.default`-alternativen `simple`, `upstream` och `current`. Det är användbart om du som standard vill att nya grenar ska pushas till standardfjärren (som beteendet hos `push.default=current`) och du också vill att uppströmsspårningen ska vara inställd. Arbetsflöden som sannolikt kommer att dra nytta av detta alternativ är `enkla` centrala arbetsflöden där alla grenar förväntas ha samma namn på fjärren."
 
 #. type: Labeled list
 #: en/config/push.adoc:12
@@ -78658,7 +78658,7 @@ msgstr "`push.default`"
 #: en/config/push.adoc:19
 #, priority:220
 msgid "Defines the action `git push` should take if no refspec is given (whether from the command-line, config, or elsewhere). Different values are well-suited for specific workflows; for instance, in a purely central workflow (i.e. the fetch source is equal to the push destination), `upstream` is probably what you want. Possible values are:"
-msgstr ""
+msgstr "Definierar åtgärden `git push` ska utföra om ingen refspec anges (vare sig från kommandoraden, konfigurationen eller någon annanstans). Olika värden är väl lämpade för specifika arbetsflöden; till exempel, i ett rent centralt arbetsflöde (dvs. hämtningskällan är lika med push-destinationen) är `upstream` förmodligen vad du vill ha. Möjliga värden är:"
 
 #. type: Labeled list
 #: en/config/push.adoc:21
@@ -78668,9 +78668,9 @@ msgstr "`nothing`"
 
 #. type: Plain text
 #: en/config/push.adoc:25
-#, priority:220
+#, fuzzy, priority:220
 msgid "do not push anything (error out) unless a refspec is given. This is primarily meant for people who want to avoid mistakes by always being explicit."
-msgstr ""
+msgstr "skicka inte ut något (fel) om inte en refspec anges. Detta är främst avsett för personer som vill undvika misstag genom att alltid vara tydliga."
 
 #. type: Labeled list
 #: en/config/push.adoc:26
@@ -78682,13 +78682,13 @@ msgstr "`current`"
 #: en/config/push.adoc:30
 #, priority:220
 msgid "push the current branch to update a branch with the same name on the receiving end. Works in both central and non-central workflows."
-msgstr ""
+msgstr "skicka (push) den aktuella grenen för att uppdatera en gren med samma namn i mottagaränden. Fungerar i både centrala och icke-centrala arbetsflöden."
 
 #. type: Plain text
 #: en/config/push.adoc:37
 #, placeholders:'{upstream}`', priority:220
 msgid "push the current branch back to the branch whose changes are usually integrated into the current branch (which is called `@{upstream}`). This mode only makes sense if you are pushing to the same repository you would normally pull from (i.e. central workflow)."
-msgstr ""
+msgstr "skicka (push) den aktuella grenen tillbaka till den gren vars ändringar vanligtvis är integrerade i den aktuella grenen (som kallas `@{upstream}`). Det här läget är bara meningsfullt om du skickar till samma arkiv som du normalt skulle hämta från (dvs. centralt arbetsflöde)."
 
 #. type: Labeled list
 #: en/config/push.adoc:38
@@ -78714,31 +78714,31 @@ msgstr "Ett praktiskt sätt att sända den aktuella grenen till samma namn på f
 #: en/config/push.adoc:47
 #, priority:220
 msgid "If you are working on a centralized workflow (pushing to the same repository you pull from, which is typically `origin`), then you need to configure an upstream branch with the same name."
-msgstr ""
+msgstr "Om du arbetar med ett centraliserat arbetsflöde (push:ar till samma förvar som du hämtar från, vilket vanligtvis är `origin`), måste du konfigurera en uppströmsgren med samma namn."
 
 #. type: Plain text
 #: en/config/push.adoc:50
 #, priority:220
 msgid "This mode is the default since Git 2.0, and is the safest option suited for beginners."
-msgstr ""
+msgstr "Det här läget är standardläget sedan Git 2.0 och är det säkraste alternativet som passar nybörjare."
 
 #. type: Plain text
 #: en/config/push.adoc:58
 #, priority:220
 msgid "push all branches having the same name on both ends. This makes the repository you are pushing to remember the set of branches that will be pushed out (e.g. if you always push `maint` and `master` there and no other branches, the repository you push to will have these two branches, and your local `maint` and `master` will be pushed there)."
-msgstr ""
+msgstr "skicka (push) alla grenar med samma namn i båda ändar. Detta gör att arkivet du skickar kommer ihåg uppsättningen grenar som kommer att skickas ut (t.ex. om du alltid skickar `maint` och `master` där och inga andra grenar, kommer arkivet du skickar till att ha dessa två grenar, och dina lokala `maint` och `master` kommer att skickas dit)."
 
 #. type: Plain text
 #: en/config/push.adoc:68
 #, priority:220
 msgid "To use this mode effectively, you have to make sure _all_ the branches you would push out are ready to be pushed out before running `git push`, as the whole point of this mode is to allow you to push all of the branches in one go. If you usually finish work on only one branch and push out the result, while other branches are unfinished, this mode is not for you. Also this mode is not suitable for pushing into a shared central repository, as other people may add new branches there, or update the tip of existing branches outside your control."
-msgstr ""
+msgstr "För att använda det här läget effektivt måste du se till att _alla_ grenar du vill skicka ut är redo att skickas ut innan du kör `git push`, eftersom hela poängen med det här läget är att låta dig skicka alla grenar på en gång. Om du vanligtvis bara avslutar arbetet på en gren och skickar ut resultatet, medan andra grenar är oavslutade, är det här läget inte för dig. Det här läget är inte heller lämpligt för att skicka till ett delat centralt arkiv, eftersom andra personer kan lägga till nya grenar där, eller uppdatera toppen på befintliga grenar utanför din kontroll."
 
 #. type: Plain text
 #: en/config/push.adoc:71
 #, priority:220
 msgid "This used to be the default, but not since Git 2.0 (`simple` is the new default)."
-msgstr ""
+msgstr "Detta brukade vara standardinställningen, men inte sedan Git 2.0 (`simple` är den nya standardinställningen)."
 
 #. type: Labeled list
 #: en/config/push.adoc:74
@@ -78750,7 +78750,7 @@ msgstr "`push.followTags`"
 #: en/config/push.adoc:78
 #, placeholders:'`--follow-tags`':'`--no-follow-tags`', priority:220
 msgid "If set to true, enable `--follow-tags` option by default. You may override this configuration at time of push by specifying `--no-follow-tags`."
-msgstr ""
+msgstr "Om den är satt till sant, aktivera alternativet `--follow-tags` som standard. Du kan åsidosätta denna konfiguration vid skicka-tillfället (push) genom att ange `--no-follow-tags`."
 
 #. type: Labeled list
 #: en/config/push.adoc:79
@@ -78762,7 +78762,7 @@ msgstr "`push.gpgSign`"
 #: en/config/push.adoc:87
 #, placeholders:'`--signed`':'linkgit:git-push[1]':'`--signed=if-asked`', priority:220
 msgid "May be set to a boolean value, or the string `if-asked`. A true value causes all pushes to be GPG signed, as if `--signed` is passed to linkgit:git-push[1]. The string `if-asked` causes pushes to be signed if the server supports it, as if `--signed=if-asked` is passed to `git push`. A false value may override a value from a lower-priority config file. An explicit command-line flag always overrides this config option."
-msgstr ""
+msgstr "Kan sättas till ett booleskt värde, eller strängen `if-asked`. Ett sant värde gör att alla sändningar (push) GPG-signeras, som om `--signed` skickas till linkgit:git-push[1]. Strängen `if-asked` gör att push-filer signeras om servern stöder det, som om `--signed=if-asked` skickas till `git push`. Ett falskt värde kan åsidosätta ett värde från en konfigurationsfil med lägre prioritet. En explicit kommandoradsflagga åsidosätter alltid detta konfigurationsalternativ."
 
 #. type: Labeled list
 #: en/config/push.adoc:88
@@ -78774,13 +78774,13 @@ msgstr "`push.pushOption`"
 #: en/config/push.adoc:92
 #, placeholders:'`--push-option=':'`--push-option=', priority:220
 msgid "When no `--push-option=<option>` argument is given from the command line, `git push` behaves as if each _<option>_ of this variable is given as `--push-option=<option>`."
-msgstr ""
+msgstr "När inget `--push-option=<alternativ>`-argument anges från kommandoraden, beter sig `git push` som om varje _<alternativ>_ i denna variabel anges som `--push-option=<alternativ>`."
 
 #. type: Plain text
 #: en/config/push.adoc:97
 #, placeholders:'`$HOME', priority:220
 msgid "This is a multi-valued variable, and an empty value can be used in a higher priority configuration file (e.g. `.git/config` in a repository) to clear the values inherited from a lower priority configuration files (e.g. `$HOME/.gitconfig`)."
-msgstr ""
+msgstr "Detta är en variabel med flera värden, och ett tomt värde kan användas i en konfigurationsfil med högre prioritet (t.ex. `.git/config` i ett förvar) för att rensa värden som ärvts från konfigurationsfiler med lägre prioritet (t.ex. `$HOME/.gitconfig`)."
 
 #. type: delimited block -
 #: en/config/push.adoc:101
@@ -78797,6 +78797,9 @@ msgid ""
 "  push.pushoption = a\n"
 "  push.pushoption = b\n"
 msgstr ""
+"/etc/gitconfig\n"
+"  push.pushoption = a\n"
+"  push.pushoption = b\n"
 
 #. type: delimited block -
 #: en/config/push.adoc:108
@@ -78805,6 +78808,8 @@ msgid ""
 "~/.gitconfig\n"
 "  push.pushoption = c\n"
 msgstr ""
+"~/.gitconfig\n"
+"  push.pushoption = c\n"
 
 #. type: delimited block -
 #: en/config/push.adoc:112
@@ -78814,12 +78819,15 @@ msgid ""
 "  push.pushoption =\n"
 "  push.pushoption = b\n"
 msgstr ""
+"repo/.git/config\n"
+"  push.pushoption =\n"
+"  push.pushoption = b\n"
 
 #. type: delimited block -
 #: en/config/push.adoc:114
 #, no-wrap, priority:220
 msgid "This will result in only b (a and c are cleared).\n"
-msgstr ""
+msgstr "Detta kommer att resultera i att endast b (a och c är nollställda).\n"
 
 #. type: Labeled list
 #: en/config/push.adoc:117
@@ -78831,7 +78839,7 @@ msgstr "`push.recurseSubmodules`"
 #: en/config/push.adoc:122
 #, placeholders:'--recurse-submodules`':'submodule.recurse', priority:220
 msgid "May be `check`, `on-demand`, `only`, or `no`, with the same behavior as that of `push --recurse-submodules`. If not set, `no` is used by default, unless `submodule.recurse` is set (in which case a `true` value means `on-demand`)."
-msgstr ""
+msgstr "Kan vara `check`, `on-demand`, `only` eller `no`, med samma beteende som `push --recurse-submodules`. Om inte angivet används `no` som standard, såvida inte `submodule.recurse` är angivet (i vilket fall ett `true`-värde betyder `on-demand`)."
 
 #. type: Labeled list
 #: en/config/push.adoc:123
@@ -78843,7 +78851,7 @@ msgstr "`push.useForceIfIncludes`"
 #: en/config/push.adoc:128
 #, placeholders:'`--force-if-includes`':'linkgit:git-push[1]':'`--no-force-if-includes`', priority:220
 msgid "If set to `true`, it is equivalent to specifying `--force-if-includes` as an option to linkgit:git-push[1] in the command line. Adding `--no-force-if-includes` at the time of push overrides this configuration setting."
-msgstr ""
+msgstr "Om den är satt till `true` motsvarar det att ange `--force-if-includes` som ett alternativ till linkgit:git-push[1] i kommandoraden. Att lägga till `--no-force-if-includes` vid tidpunkten för push åsidosätter denna konfigurations-inställning."
 
 #. type: Labeled list
 #: en/config/push.adoc:129
@@ -78855,7 +78863,7 @@ msgstr "`push.negotiate`"
 #: en/config/push.adoc:135
 #, priority:220
 msgid "If set to `true`, attempt to reduce the size of the packfile sent by rounds of negotiation in which the client and the server attempt to find commits in common. If `false`, Git will rely solely on the server's ref advertisement to find commits in common."
-msgstr ""
+msgstr "Om värdet är satt till `true`, försök att minska storleken på packfilen som skickas genom förhandlingsrundor där klienten och servern försöker hitta gemensamma incheckningar. Om `false` kommer Git att förlita sig enbart på serverns referensannonsering för att hitta gemensamma incheckningar."
 
 #. type: Labeled list
 #: en/config/push.adoc:136
@@ -78867,7 +78875,7 @@ msgstr "`push.useBitmaps`"
 #: en/config/push.adoc:139
 #, placeholders:'pack.useBitmaps', priority:220
 msgid "If set to `false`, disable use of bitmaps for `git push` even if `pack.useBitmaps` is `true`, without preventing other git operations from using bitmaps. Default is `true`."
-msgstr ""
+msgstr "Om satt till `false`, inaktiveras användningen av bitmappar för `git push` även om `pack.useBitmaps` är `true`, utan att förhindra att andra git-operationer använder bitmappar. Standardvärdet är `true`."
 
 #. type: Labeled list
 #: en/config/mergetool.adoc:1
@@ -79053,7 +79061,7 @@ msgstr "`fetch.recurseSubmodules`"
 #: en/config/fetch.adoc:12
 #, placeholders:'submodule.recurse', priority:220
 msgid "This option controls whether `git fetch` (and the underlying fetch in `git pull`) will recursively fetch into populated submodules. This option can be set either to a boolean value or to `on-demand`. Setting it to a boolean changes the behavior of fetch and pull to recurse unconditionally into submodules when set to true or to not recurse at all when set to false. When set to `on-demand`, fetch and pull will only recurse into a populated submodule when its superproject retrieves a commit that updates the submodule's reference. Defaults to `on-demand`, or to the value of `submodule.recurse` if set."
-msgstr ""
+msgstr "Det här alternativet styr om `git fetch` (och den underliggande hämtningen i `git pull`) rekursivt ska hämta till ifyllda undermoduler. Det här alternativet kan ställas in antingen på ett booleskt värde eller på `on-demand`. Att ställa in det på ett booleskt värde ändrar beteendet för fetch and pull så att de villkorslöst rekurserar till undermoduler när de är satta till `true` (sant) eller till att inte rekursera alls när de är satta till `false` (falskt). När de är satta till `on-demand` kommer fetch and pull bara att rekursera till en ifylld undermodul när dess superprojekt hämtar en commit som uppdaterar undermodulens referens. Standardvärdet är `on-demand`, eller till värdet för `submodule.recurse` om det är satt."
 
 #. type: Labeled list
 #: en/config/fetch.adoc:13
@@ -79065,19 +79073,19 @@ msgstr "`fetch.fsckObjects`"
 #: en/config/fetch.adoc:18
 #, placeholders:'git-fetch-pack':'transfer.fsckObjects':'transfer.fsckObjects', priority:220
 msgid "If it is set to true, git-fetch-pack will check all fetched objects. See `transfer.fsckObjects` for what's checked. Defaults to `false`. If not set, the value of `transfer.fsckObjects` is used instead."
-msgstr ""
+msgstr "Om den är satt till sant kommer git-fetch-pack att kontrollera alla hämtade objekt. Se `transfer.fsckObjects` för vad som är markerat. Standardvärdet är `false`. Om det inte är satt används värdet för `transfer.fsckObjects` istället."
 
 #. type: Labeled list
 #: en/config/fetch.adoc:19
 #, no-wrap, placeholders:'fetch.fsck', priority:220
 msgid "`fetch.fsck.<msg-id>`"
-msgstr ""
+msgstr "`fetch.fsck.<medd-id>`"
 
 #. type: Plain text
 #: en/config/fetch.adoc:23
 #, placeholders:'linkgit:git-fetch-pack[1]':'linkgit:git-fsck[1]', priority:220
 msgid "Acts like `fsck.<msg-id>`, but is used by linkgit:git-fetch-pack[1] instead of linkgit:git-fsck[1]. See the `fsck.<msg-id>` documentation for details."
-msgstr ""
+msgstr "Fungerar som `fsck.<medd-id>`, men används av linkgit:git-fetch-pack[1] istället för linkgit:git-fsck[1]. Se dokumentationen för `fsck.<medd-id>` för mer information."
 
 #. type: Labeled list
 #: en/config/fetch.adoc:24
@@ -79089,7 +79097,7 @@ msgstr "`fetch.fsck.skipList`"
 #: en/config/fetch.adoc:28
 #, placeholders:'fsck.skipList':'linkgit:git-fetch-pack[1]':'linkgit:git-fsck[1]':'fsck.skipList', priority:220
 msgid "Acts like `fsck.skipList`, but is used by linkgit:git-fetch-pack[1] instead of linkgit:git-fsck[1]. See the `fsck.skipList` documentation for details."
-msgstr ""
+msgstr "Fungerar som `fsck.skipList`, men används av linkgit:git-fetch-pack[1] istället för linkgit:git-fsck[1]. Se dokumentationen för `fsck.skipList` för mer information."
 
 #. type: Labeled list
 #: en/config/fetch.adoc:29
@@ -79101,7 +79109,7 @@ msgstr "`fetch.unpackLimit`"
 #: en/config/fetch.adoc:39
 #, placeholders:'transfer.unpackLimit', priority:220
 msgid "If the number of objects fetched over the Git native transfer is below this limit, then the objects will be unpacked into loose object files. However if the number of received objects equals or exceeds this limit then the received pack will be stored as a pack, after adding any missing delta bases. Storing the pack from a push can make the push operation complete faster, especially on slow filesystems. If not set, the value of `transfer.unpackLimit` is used instead."
-msgstr ""
+msgstr "Om antalet objekt som hämtas via Git-överföringen understiger denna gräns, kommer objekten att packas upp till lösa objektfiler. Om antalet mottagna objekt däremot är lika med eller överstiger denna gräns, kommer det mottagna paketet att lagras som ett paket, efter att eventuella saknade deltabaser har lagts till. Att lagra paketet från en push-operation kan göra att push-operationen slutförs snabbare, särskilt på långsamma filsystem. Om det inte är angivet används värdet `transfer.unpackLimit` istället."
 
 #. type: Labeled list
 #: en/config/fetch.adoc:40
@@ -79113,7 +79121,7 @@ msgstr "`fetch.prune`"
 #: en/config/fetch.adoc:44
 #, placeholders:'`--prune`':'linkgit:git-fetch[1]', priority:220
 msgid "If true, fetch will automatically behave as if the `--prune` option was given on the command line. See also `remote.<name>.prune` and the PRUNING section of linkgit:git-fetch[1]."
-msgstr ""
+msgstr "Om sant, kommer fetch automatiskt att bete sig som om `--prune`-alternativet angavs på kommandoraden. Se även `remote.<namn>.prune` och BESKÄRNING-sektionen i linkgit:git-fetch[1]."
 
 #. type: Labeled list
 #: en/config/fetch.adoc:45
@@ -79125,7 +79133,7 @@ msgstr "`fetch.pruneTags`"
 #: en/config/fetch.adoc:52
 #, placeholders:'fetch.prune':'linkgit:git-fetch[1]', priority:220
 msgid "If true, fetch will automatically behave as if the `refs/tags/*:refs/tags/*` refspec was provided when pruning, if not set already. This allows for setting both this option and `fetch.prune` to maintain a 1=1 mapping to upstream refs. See also `remote.<name>.pruneTags` and the PRUNING section of linkgit:git-fetch[1]."
-msgstr ""
+msgstr "Om sant, kommer fetch automatiskt att bete sig som om `refs/tags/*:refs/tags/*` refspec angavs vid beskärning, om den inte redan är angiven. Detta gör det möjligt att ställa in både detta alternativ och `fetch.prune` för att bibehålla en 1=1-mappning till uppströmsreferenser. Se även `remote.<namn>.pruneTags` och BESKÄRNING-sektionen i linkgit:git-fetch[1]."
 
 #. type: Labeled list
 #: en/config/fetch.adoc:53
@@ -79137,7 +79145,7 @@ msgstr "`fetch.all`"
 #: en/config/fetch.adoc:58
 #, placeholders:'`--no-all`', priority:220
 msgid "If true, fetch will attempt to update all available remotes. This behavior can be overridden by passing `--no-all` or by explicitly specifying one or more remote(s) to fetch from. Defaults to `false`."
-msgstr ""
+msgstr "Om sant, kommer `fetch` att försöka uppdatera alla tillgängliga fjärrar. Detta beteende kan åsidosättas genom att skicka `--no-all` eller genom att explicit ange en eller flera fjärrar att hämta från. Standardvärdet är `false`."
 
 #. type: Labeled list
 #: en/config/fetch.adoc:59
@@ -79149,7 +79157,7 @@ msgstr "`fetch.output`"
 #: en/config/fetch.adoc:63
 #, placeholders:'linkgit:git-fetch[1]', priority:220
 msgid "Control how ref update status is printed. Valid values are `full` and `compact`. Default value is `full`. See the OUTPUT section in linkgit:git-fetch[1] for details."
-msgstr ""
+msgstr "Styr hur referensuppdateringsstatus skrivs ut. Giltiga värden är `full` och `compact`. Standardvärdet är `full`. Se avsnittet UTMATNING i linkgit:git-fetch[1] för mer information."
 
 #. type: Labeled list
 #: en/config/fetch.adoc:64
@@ -79161,7 +79169,7 @@ msgstr "`fetch.negotiationAlgorithm`"
 #: en/config/fetch.adoc:78
 #, placeholders:'feature.experimental', priority:220
 msgid "Control how information about the commits in the local repository is sent when negotiating the contents of the packfile to be sent by the server. Set to `consecutive` to use an algorithm that walks over consecutive commits checking each one. Set to `skipping` to use an algorithm that skips commits in an effort to converge faster, but may result in a larger-than-necessary packfile; or set to `noop` to not send any information at all, which will almost certainly result in a larger-than-necessary packfile, but will skip the negotiation step. Set to `default` to override settings made previously and use the default behaviour. The default is normally `consecutive`, but if `feature.experimental` is `true`, then the default is `skipping`. Unknown values will cause `git fetch` to error out."
-msgstr ""
+msgstr "Styr hur information om incheckningar i det lokala förvaret skickas vid förhandling av innehållet i packfilen som ska skickas av servern. Ställ in på `consecutive` för att använda en algoritm som går över på varandra följande incheckningar och kontrollerar var och en. Ställ in på `skipping` för att använda en algoritm som hoppar över incheckningar i ett försök att konvergera snabbare, men kan resultera i en packfil som är större än nödvändigt; eller sätt på `noop` för att inte skicka någon information alls, vilket nästan säkert kommer att resultera i en packfil som är större än nödvändigt, men som hoppar över förhandlingssteget. Ställ in på `default` för att åsidosätta inställningar som gjorts tidigare och använda standardbeteendet. Standardvärdet är normalt `consecutive`, men om `feature.experimental` är `true` är standardvärdet `skipping`. Okända värden kommer att orsaka att `git fetch` ger fel."
 
 #. type: Plain text
 #: en/config/fetch.adoc:81
@@ -79180,7 +79188,7 @@ msgstr "`fetch.showForcedUpdates`"
 #: en/config/fetch.adoc:86
 #, placeholders:'`--no-show-forced-updates`':'linkgit:git-fetch[1]':'linkgit:git-pull[1]', priority:220
 msgid "Set to `false` to enable `--no-show-forced-updates` in linkgit:git-fetch[1] and linkgit:git-pull[1] commands. Defaults to `true`."
-msgstr ""
+msgstr "Sätt till `false` för att aktivera `--no-show-forced-updates` i kommandona linkgit:git-fetch[1] och linkgit:git-pull[1]. Standardvärdet är `true`."
 
 #. type: Labeled list
 #: en/config/fetch.adoc:87
@@ -79192,13 +79200,13 @@ msgstr "`fetch.parallel`"
 #: en/config/fetch.adoc:91
 #, placeholders:'`--multiple`':'linkgit:git-fetch[1]', priority:220
 msgid "Specifies the maximal number of fetch operations to be run in parallel at a time (submodules, or remotes when the `--multiple` option of linkgit:git-fetch[1] is in effect)."
-msgstr ""
+msgstr "Anger det maximala antalet hämtningsoperationer som ska köras parallellt samtidigt (undermoduler eller fjärrar när `--multiple`-alternativet i linkgit:git-fetch[1] är aktivt)."
 
 #. type: Plain text
 #: en/config/fetch.adoc:93
 #, priority:220
 msgid "A value of 0 will give some reasonable default. If unset, it defaults to 1."
-msgstr ""
+msgstr "Ett värde på 0 ger en rimlig standardinställning. Om den inte är inställd är standardvärdet 1."
 
 #. type: Plain text
 #: en/config/fetch.adoc:96
@@ -79217,7 +79225,7 @@ msgstr "`fetch.writeCommitGraph`"
 #: en/config/fetch.adoc:105
 #, placeholders:'`--split`':'git merge-base`':'--graph`', priority:220
 msgid "Set to true to write a commit-graph after every `git fetch` command that downloads a pack-file from a remote. Using the `--split` option, most executions will create a very small commit-graph file on top of the existing commit-graph file(s). Occasionally, these files will merge and the write may take longer. Having an updated commit-graph file helps performance of many Git commands, including `git merge-base`, `git push -f`, and `git log --graph`. Defaults to `false`."
-msgstr ""
+msgstr "Sätt till true för att skriva en inchecknings-graph efter varje `git fetch`-kommando som laddar ner en pack-fil från en fjärr. Med alternativet `--split` skapar de flesta körningar en mycket liten inchecknings-graph-fil ovanpå den/de befintliga inchecknings-graph-filen/filerna. Ibland slås dessa filer samman och skrivningen kan ta längre tid. Att ha en uppdaterad inchecknings-graph-fil hjälper till att utföra många Git-kommandon, inklusive `git merge-base`, `git push -f` och `git log --graph`. Standardvärdet är `false`."
 
 #. type: Labeled list
 #: en/config/fetch.adoc:106
@@ -79229,13 +79237,13 @@ msgstr "`fetch.bundleURI`"
 #: en/config/fetch.adoc:113
 #, placeholders:'`--bundle-uri`':'linkgit:git-clone[1]':'--bundle-uri`':'fetch.bundleURI', priority:220
 msgid "This value stores a URI for downloading Git object data from a bundle URI before performing an incremental fetch from the origin Git server. This is similar to how the `--bundle-uri` option behaves in linkgit:git-clone[1]. `git clone --bundle-uri` will set the `fetch.bundleURI` value if the supplied bundle URI contains a bundle list that is organized for incremental fetches."
-msgstr ""
+msgstr "Det här värdet lagrar en URI för att ladda ner Git-objektdata från en bunt-URI innan en stegvis hämtning utförs från den ursprungliga Git-servern. Detta liknar hur alternativet `--bundle-uri` beter sig i linkgit:git-clone[1]. `git clone --bundle-uri` kommer att ställa in värdet `fetch.bundleURI` om den angivna bunt-URI:n innehåller en bunt-lista som är organiserad för stegvisa hämtningar."
 
 #. type: Plain text
 #: en/config/fetch.adoc:117
 #, placeholders:'fetch.bundleCreationToken':'fetch.bundleCreationToken', priority:220
 msgid "If you modify this value and your repository has a `fetch.bundleCreationToken` value, then remove that `fetch.bundleCreationToken` value before fetching from the new bundle URI."
-msgstr ""
+msgstr "Om du ändrar det här värdet och ditt förvar har ett `fetch.bundleCreationToken`-värde, ta bort det `fetch.bundleCreationToken`-värdet innan du hämtar från den nya bunt-URI:n."
 
 #. type: Labeled list
 #: en/config/fetch.adoc:118
@@ -79247,13 +79255,13 @@ msgstr "`fetch.bundleCreationToken`"
 #: en/config/fetch.adoc:125
 #, placeholders:'fetch.bundleURI', priority:220
 msgid "When using `fetch.bundleURI` to fetch incrementally from a bundle list that uses the \"`creationToken`\" heuristic, this config value stores the maximum `creationToken` value of the downloaded bundles. This value is used to prevent downloading bundles in the future if the advertised `creationToken` is not strictly larger than this value."
-msgstr ""
+msgstr "När `fetch.bundleURI` används för att hämta stegvis från en bunt-lista som använder heuristiken \"`creationToken`\", lagrar detta konfigurationsvärde det maximala `creationToken`-värdet för de nedladdade buntarna. Detta värde används för att förhindra nedladdning av buntar i framtiden om den annonserade `creationToken` inte är strikt större än detta värde."
 
 #. type: Plain text
 #: en/config/fetch.adoc:128
 #, placeholders:'fetch.bundleURI':'fetch.bundleCreationToken', priority:220
 msgid "The creation token values are chosen by the provider serving the specific bundle URI. If you modify the URI at `fetch.bundleURI`, then be sure to remove the value for the `fetch.bundleCreationToken` value before fetching."
-msgstr ""
+msgstr "Värdena för skapandetoken väljs av leverantören som hanterar den specifika bunt-URI:n. Om du ändrar URI:n vid `fetch.bundleURI`, se till att ta bort värdet för `fetch.bundleCreationToken` innan hämtningen."
 
 #. type: Labeled list
 #: en/config/sequencer.adoc:1
