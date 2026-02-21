@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-02-18 21:42+0100\n"
-"PO-Revision-Date: 2026-02-21 06:09+0000\n"
+"PO-Revision-Date: 2026-02-22 08:09+0000\n"
 "Last-Translator: Stefan Bjornelund the Gnome <stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
@@ -2265,7 +2265,7 @@ msgstr "Det här alternativet åsidosätter denna begränsning om det aktuella v
 #: en/git-push.adoc:233
 #, placeholders:'`--force`', priority:220
 msgid "Imagine that you have to rebase what you have already published. You will have to bypass the \"must fast-forward\" rule in order to replace the history you originally published with the rebased history. If somebody else built on top of your original history while you are rebasing, the tip of the branch at the remote may advance with their commit, and blindly pushing with `--force` will lose their work."
-msgstr "Tänk dig att du måste återanvända det du redan har publicerat. Du måste kringgå regeln \"måste spola framåt\" för att ersätta den historik du ursprungligen publicerade med den återanvända historiken. Om någon annan byggde ovanpå din ursprungliga historik medan du återanvänder den, kan toppen av grenen på fjärrkontrollen gå vidare med sin incheckning, och att blint trycka på `--force` kommer att förlora sitt arbete."
+msgstr "Tänk dig att du måste återanvända det du redan har publicerat. Du måste kringgå regeln \"måste spola framåt\" för att ersätta den historik du ursprungligen publicerade med den återanvända historiken. Om någon annan byggde ovanpå din ursprungliga historik medan du återanvänder den, kan toppen av grenen på fjärren gå vidare med sin incheckning, och att blint trycka på `--force` kommer att förlora sitt arbete."
 
 #. type: Plain text
 #: en/git-push.adoc:240
@@ -2282,9 +2282,9 @@ msgstr "Enbart `--force-with-lease`, utan att specificera detaljerna, kommer att
 # ERROR: `--force-with-lease= not found in translation
 #. type: Plain text
 #: en/git-push.adoc:250
-#, fuzzy, placeholders:'`--force-with-lease=', priority:220
+#, placeholders:'`--force-with-lease=', priority:220
 msgid "`--force-with-lease=<refname>`, without specifying the expected value, will protect _<refname>_ (alone), if it is going to be updated, by requiring its current value to be the same as the remote-tracking branch we have for it."
-msgstr "Enbart `--force-with-lease`, utan att specificera detaljerna, kommer att skydda alla fjärrreferenser som ska uppdateras, genom att kräva att deras nuvarande värde är detsamma som den fjärrspårningsgren vi har för dem."
+msgstr "`--force-with-lease=<refname>`, utan att ange det förväntade värdet, kommer att skydda _<refname>_ (ensamt), om det ska uppdateras, genom att kräva att dess nuvarande värde är detsamma som den fjärrspårningsgren vi har för det."
 
 #. type: Plain text
 #: en/git-push.adoc:258
@@ -2810,7 +2810,7 @@ msgstr "För en misslyckad uppdatering ges mer information:"
 
 #. type: Labeled list
 #: en/git-push.adoc:474
-#, fuzzy, no-wrap, priority:220
+#, no-wrap, priority:220
 msgid "rejected"
 msgstr "rejected"
 
@@ -3038,7 +3038,7 @@ msgstr "Alternativt kan du återanvända din ändring mellan X och B ovanpå A, 
 
 #. type: delimited block -
 #: en/git-push.adoc:615
-#, fuzzy, no-wrap, placeholders:'---X---A', priority:220
+#, no-wrap, placeholders:'---X---A', priority:220
 msgid ""
 "      B   D\n"
 "     /   /\n"
@@ -3088,7 +3088,7 @@ msgstr "Utan ytterligare konfiguration, skickas den aktuella grenen till den kon
 #: en/git-push.adoc:650
 #, placeholders:'push.default', priority:220
 msgid "The default behavior of this command when no _<refspec>_ is given can be configured by setting the `push` option of the remote, or the `push.default` configuration variable."
-msgstr "Standardbeteendet för det här kommandot när ingen _<referensspecifikation>_ anges kan konfigureras genom att ställa in alternativet `push` på fjärrkontrollen eller konfigurationsvariabeln `push.default`."
+msgstr "Standardbeteendet för det här kommandot när ingen _<referensspecifikation>_ anges kan konfigureras genom att ställa in alternativet `push` på fjärren eller konfigurationsvariabeln `push.default`."
 
 #. type: Plain text
 #: en/git-push.adoc:655
@@ -3206,9 +3206,9 @@ msgstr "`git push origin +dev:master`"
 
 #. type: Plain text
 #: en/git-push.adoc:714
-#, fuzzy, priority:220
+#, priority:220
 msgid "Update the origin repository's master branch with the dev branch, allowing non-fast-forward updates. *This can leave unreferenced commits dangling in the origin repository.* Consider the following situation, where a fast-forward is not possible:"
-msgstr "Uppdatera ursprungsförvaret (origin's) master-gren med dev-grenen, vilket möjliggör uppdateringar som inte spolas framåt. *Detta kan lämna orefererade incheckningar diglande i ursprungsförvaret.* Tänk dig följande situation, där en spolning framåt inte är möjlig:"
+msgstr "Uppdatera ursprungsförvaret (origin:s) master-gren med dev-grenen, vilket möjliggör icke-snabbspolnings uppdateringar. *Detta kan lämna orefererade incheckningar diglande i ursprungsförvaret.* Tänk dig följande situation, där en snabbspoling inte är möjlig:"
 
 #. type: delimited block -
 #: en/git-push.adoc:719
@@ -3845,9 +3845,9 @@ msgstr "Skapar ett arkiv i det angivna formatet som innehåller trädstrukturen 
 # ERROR: git get-tar-commit-id not found in translation
 #. type: Plain text
 #: en/git-archive.adoc:32
-#, fuzzy, placeholders:'git get-tar-commit-id', priority:100
+#, placeholders:'git get-tar-commit-id', priority:100
 msgid "'git archive' behaves differently when given a tree ID as opposed to a commit ID or tag ID. When a tree ID is provided, the current time is used as the modification time of each file in the archive. On the other hand, when a commit ID or tag ID is provided, the commit time as recorded in the referenced commit object is used instead. Additionally the commit ID is stored in a global extended pax header if the tar format is used; it can be extracted using 'git get-tar-commit-id'. In ZIP files it is stored as a file comment."
-msgstr "'git archive' beter sig annorlunda när det ges ett träd-ID jämfört med ett inchecknings-ID eller tagg-ID. När ett träd-ID anges används aktuell tid som ändringstid för varje fil i arkivet. Å andra sidan, när ett inchecknings-ID eller tagg-ID anges, används inchecknings-tiden som registrerats i det refererade inchecknings-objektet istället. Dessutom lagras inchecknings-ID:t i en global utökad pax-header om tar-formatet används; det kan extraheras med 'git get-tar-inchecknings-id'. I ZIP-filer lagras det som en filkommentar."
+msgstr "'git archive' beter sig annorlunda när det ges ett träd-ID jämfört med ett inchecknings-ID eller tagg-ID. När ett träd-ID anges används aktuell tid som ändringstid för varje fil i arkivet. Å andra sidan, när ett inchecknings-ID eller tagg-ID anges, används inchecknings-tiden som registrerats i det refererade inchecknings-objektet istället. Dessutom lagras inchecknings-ID:t i en global utökad pax-header om tar-formatet används; det kan extraheras med 'git get-tar-commit-id'. I ZIP-filer lagras det som en filkommentar."
 
 #. type: Labeled list
 #: en/git-archive.adoc:36
@@ -3972,9 +3972,9 @@ msgstr "--worktree-attributes"
 # ERROR: <<ATTRIBUTES>> not found in translation
 #. type: Plain text
 #: en/git-archive.adoc:90
-#, fuzzy, placeholders:'.gitattributes':'<<ATTRIBUTES>>', priority:100
+#, placeholders:'.gitattributes':'<<ATTRIBUTES>>', priority:100
 msgid "Look for attributes in .gitattributes files in the working tree as well (see <<ATTRIBUTES>>)."
-msgstr "Leta även efter attribut i .gitattributes-filer i arbetskatalogen (se <<ATTRIBUT>>)."
+msgstr "Leta även efter attribut i .gitattributes-filer i arbetskatalogen (se <<ATTRIBUTES>>)."
 
 #. type: Labeled list
 #: en/git-archive.adoc:91
@@ -4280,7 +4280,7 @@ msgstr "linkgit:gitattributes[5]"
 #: en/pull-fetch-param.adoc:6
 #, fuzzy, placeholders:'<<URLS,':'<<REMOTES,', priority:220
 msgid "The \"remote\" repository that is the source of a fetch or pull operation. This parameter can be either a URL (see the section <<URLS,GIT URLS>> below) or the name of a remote (see the section <<REMOTES,REMOTES>> below)."
-msgstr "Det \"fjärrlagrade\" förvar som är källan för en hämtnings- eller dra-operation (fetch, pull). Denna parameter kan antingen vara en URL (se avsnittet <<URLS,GIT URLS>> nedan) eller namnet på en fjärren (se avsnittet <<REMOTES,FJÄRR>> nedan)."
+msgstr "Det \"fjärr\" förvar som är källan för en hämtnings- eller dra-operation (fetch, pull). Denna parameter kan antingen vara en URL (se avsnittet <<URLS,GIT URLS>> nedan) eller namnet på en fjärren (se avsnittet <<REMOTES,FJÄRR>> nedan)."
 
 #. type: Labeled list
 #: en/pull-fetch-param.adoc:8
@@ -5973,7 +5973,7 @@ msgstr "Sammanfoga grenen `maint` med den aktuella grenen, men gör inte en ny i
 
 #. type: delimited block -
 #: en/git-merge.adoc:377
-#, fuzzy, no-wrap, placeholders:'--no-commit', priority:240
+#, no-wrap, placeholders:'--no-commit', priority:240
 msgid "$ git merge --no-commit maint\n"
 msgstr "$ git merge --no-commit maint\n"
 
@@ -6701,7 +6701,7 @@ msgstr "maskinB$ git clone -b master /home/mej/tmp/fil.bundle R2\n"
 #: en/git-bundle.adoc:270
 #, placeholders:'$GIT_DIR/config', priority:100
 msgid "This will define a remote called \"origin\" in the resulting repository that lets you fetch and pull from the bundle. The $GIT_DIR/config file in R2 will have an entry like this:"
-msgstr "Detta kommer att definiera en fjärrkontroll som heter \"origin\" i det resulterande arkivet som låter dig hämta och pull från paketet. Filen $GIT_DIR/config i R2 kommer att ha en post som denna:"
+msgstr "Detta kommer att definiera en fjärr som heter \"origin\" i det resulterande arkivet som låter dig hämta och pull från paketet. Filen $GIT_DIR/config i R2 kommer att ha en post som denna:"
 
 #. type: delimited block -
 #: en/git-bundle.adoc:275
@@ -7026,7 +7026,7 @@ msgstr "`git log`, `git show`, `git blame` och vänner tittar på `encoding`-hea
 
 #. type: delimited block -
 #: en/i18n.adoc:62
-#, fuzzy, no-wrap, priority:280
+#, no-wrap, priority:280
 msgid ""
 "[i18n]\n"
 "\tlogOutputEncoding = ISO-8859-1\n"
@@ -9752,9 +9752,9 @@ msgstr "`--create-reflog`"
 # ERROR: {yesterday}` not found in translation
 #. type: Plain text
 #: en/git-branch.adoc:116
-#, fuzzy, placeholders:'{yesterday}`':'core.logAllRefUpdates':'`--no-create-reflog`':'`--create-reflog`':'core.logAllRefUpdates', priority:260
+#, placeholders:'{yesterday}`':'core.logAllRefUpdates':'`--no-create-reflog`':'`--create-reflog`':'core.logAllRefUpdates', priority:260
 msgid "Create the branch's reflog. This activates recording of all changes made to the branch ref, enabling use of date based sha1 expressions such as `<branch-name>@{yesterday}`. Note that in non-bare repositories, reflogs are usually enabled by default by the `core.logAllRefUpdates` config option. The negated form `--no-create-reflog` only overrides an earlier `--create-reflog`, but currently does not negate the setting of `core.logAllRefUpdates`."
-msgstr "Skapa grenens reflog. Detta aktiverar registrering av alla ändringar som gjorts i grenreferensen, vilket möjliggör användning av datumbaserade sha1-uttryck som `<gren-namn>@{igår}`. Observera att i icke-bara förvar reflogs är vanligtvis aktiverade som standard av konfigurationsalternativet `core.logAllRefUpdates`. Den negerade formen `--no-create-reflog` åsidosätter endast en tidigare `--create-reflog`, men negerar för närvarande inte inställningen för `core.logAllRefUpdates`."
+msgstr "Skapa grenens reflog. Detta aktiverar registrering av alla ändringar som gjorts i grenreferensen, vilket möjliggör användning av datumbaserade sha1-uttryck som `<gren-namn>@{yesterday}`. Observera att i icke-bara förvar reflogs är vanligtvis aktiverade som standard av konfigurationsalternativet `core.logAllRefUpdates`. Den negerade formen `--no-create-reflog` åsidosätter endast en tidigare `--create-reflog`, men negerar för närvarande inte inställningen för `core.logAllRefUpdates`."
 
 #. type: Plain text
 #: en/git-branch.adoc:126
@@ -10084,7 +10084,7 @@ msgstr "DETTA ALTERNATIV ÄR EXPERIMENTELLT! Gör att det aktuella kommandot rek
 #: en/git-branch.adoc:277
 #, placeholders:'--recurse-submodules', priority:260
 msgid "When used in branch creation, a new branch _<branch-name>_ will be created in the superproject and all of the submodules in the superproject's _<start-point>_. In submodules, the branch will point to the submodule commit in the superproject's _<start-point>_ but the branch's tracking information will be set up based on the submodule's branches and remotes e.g. `git branch --recurse-submodules topic origin/main` will create the submodule branch \"topic\" that points to the submodule commit in the superproject's \"origin/main\", but tracks the submodule's \"origin/main\"."
-msgstr "När den används vid skapandet av en gren skapas en ny gren _<gren-namn>_ i superprojektet och alla undermoduler i superprojektets _<start-punkt>_. I undermoduler pekar grenen på undermodulens incheckning i superprojektets _<start-punkt>_, men grenens spårningsinformation konfigureras baserat på undermodulens grenar och fjärrkontroller, t.ex. `git branch --recurse-submodules topic origin/main` skapar undermodulens gren \"topic\" som pekar på undermodulens incheckning i superprojektets \"origin/main\", men spårar undermodulens \"origin/main\"."
+msgstr "När den används vid skapandet av en gren skapas en ny gren _<gren-namn>_ i superprojektet och alla undermoduler i superprojektets _<start-punkt>_. I undermoduler pekar grenen på undermodulens incheckning i superprojektets _<start-punkt>_, men grenens spårningsinformation konfigureras baserat på undermodulens grenar och fjärrer, t.ex. `git branch --recurse-submodules topic origin/main` skapar undermodulens gren \"topic\" som pekar på undermodulens incheckning i superprojektets \"origin/main\", men spårar undermodulens \"origin/main\"."
 
 #. type: Plain text
 #: en/git-branch.adoc:281
@@ -10386,9 +10386,9 @@ msgstr "`--no-contains <incheckning>` är motsatsen till det, dvs. grenar som in
 # ERROR: `HEAD` not found in translation
 #. type: Plain text
 #: en/git-branch.adoc:413
-#, fuzzy, placeholders:'`--merged`':'`HEAD`', priority:260
+#, placeholders:'`--merged`':'`HEAD`', priority:260
 msgid "`--merged` is used to find all branches which can be safely deleted, since those branches are fully contained by `HEAD`."
-msgstr "`--no-contains <inchecking>` är motsatsen till det, dvs. grenar som inte innehåller den angivna _<inchecking>_."
+msgstr "`--merged` används för att hitta alla grenar som säkert kan tas bort, eftersom dessa grenar helt och hållet innesluts av `HEAD`."
 
 #. type: Plain text
 #: en/git-branch.adoc:416
@@ -12773,9 +12773,9 @@ msgstr "Om miljövariabeln `GIT_DIR` är satt anger den en sökväg som ska anv�
 
 #. type: Plain text
 #: en/git-init.adoc:35
-#, fuzzy, placeholders:'GIT_OBJECT_DIRECTORY':'`$GIT_DIR/objects`', priority:300
+#, placeholders:'GIT_OBJECT_DIRECTORY':'`$GIT_DIR/objects`', priority:300
 msgid "If the object storage directory is specified via the `GIT_OBJECT_DIRECTORY` environment variable then the sha1 directories are created underneath; otherwise, the default `$GIT_DIR/objects` directory is used."
-msgstr "Om objektlagringskatalogen anges via miljövariabeln `GIT_OBJECT_DIRECTORY` skapas sha1-katalogerna under; annars används standardkatalogen `$GIT_DIR/objects`."
+msgstr "Om objektlagringskatalogen anges via miljövariabeln `GIT_OBJECT_DIRECTORY` sen skapas sha1-katalogerna under; annars används standardkatalogen `$GIT_DIR/objects`."
 
 #. type: Plain text
 #: en/git-init.adoc:40
@@ -12965,9 +12965,9 @@ msgstr "_<behörigheter>_"
 
 #. type: Plain text
 #: en/git-init.adoc:135
-#, fuzzy, priority:300
+#, priority:300
 msgid "_<perm>_ is a 3-digit octal number prefixed with `0` and each file will have mode _<perm>_. _<perm>_ will override users' `umask`(2) value (and not only loosen permissions as `group` and `all` do). `0640` will create a repository which is group-readable, but not group-writable or accessible to others. `0660` will create a repo that is readable and writable to the current user and group, but inaccessible to others (directories and executable files get their `x` bit from the `r` bit for corresponding classes of users)."
-msgstr "<behörigheter> _<perm>_ är ett 3-siffrigt oktalt tal prefixerat med `0` och varje fil kommer att ha läget _<behörigheter>_. _<behörigheter>_ kommer att åsidosätta användarnas `umask`(2) värde (och inte bara lossa behörigheter som `group` och `all` gör). `0640` kommer att skapa ett repo som är gruppläsbart, men inte gruppskrivbart eller tillgängligt för andra. `0660` kommer att skapa ett arkiv som är läsbart och skrivbart för den aktuella användaren och gruppen, men oåtkomligt för andra (kataloger och körbara filer får sin `x` bit från `r` biten för motsvarande klasser av användare)."
+msgstr "<behörigheter> _<perm>_ är ett 3-siffrigt oktalt tal prefixerat med `0` och varje fil kommer att ha läget _<behörigheter>_. _<behörigheter>_ kommer att åsidosätta användarnas `umask`(2) värde (och inte bara lossa behörigheter som `group` och `all` gör). `0640` kommer att skapa ett förvar som är gruppläsbart, men inte gruppskrivbart eller tillgängligt för andra. `0660` kommer att skapa ett förvar som är läsbart och skrivbart för den aktuella användaren och gruppen, men oåtkomligt för andra (kataloger och körbara filer får sin `x` bit från `r` biten för motsvarande klasser av användare)."
 
 #. type: Plain text
 #: en/git-init.adoc:140
@@ -14571,9 +14571,9 @@ msgstr "`--include`"
 
 #. type: Plain text
 #: en/git-commit.adoc:310
-#, fuzzy, priority:280
+#, priority:280
 msgid "Before making a commit out of staged contents so far, stage the contents of paths given on the command line as well. This is usually not what you want unless you are concluding a conflicted merge."
-msgstr "Innan du gör en incheckning från det hittills upplagda innehållet, upplagra även innehållet i de sökvägar som anges på kommandoraden. Detta är vanligtvis inte vad du vill om du inte slutför en konfliktfylld sammanslagning."
+msgstr "Innan du gör en incheckning från det hittills köaded innehållet, köa även innehållet i de sökvägar som anges på kommandoraden. Detta är vanligtvis inte vad du vill om du inte slutför en konfliktfylld sammanslagning."
 
 #. type: Labeled list
 #: en/git-commit.adoc:311
@@ -14895,9 +14895,9 @@ msgstr "Precis som i fallet med att registrera dina egna ändringar kan du anvä
 
 #. type: Title -
 #: en/git-commit.adoc:508
-#, fuzzy, no-wrap, priority:280
+#, no-wrap, priority:280
 msgid "COMMIT INFORMATION"
-msgstr "ÅTGÄRDSINFORMATION"
+msgstr "INCHECKNINGS INFORMATION"
 
 #. type: Plain text
 #: en/git-commit.adoc:512
@@ -15027,9 +15027,9 @@ msgstr "git-stash(1)"
 
 #. type: Plain text
 #: en/git-stash.adoc:7
-#, fuzzy, placeholders:'git-stash', priority:240
+#, placeholders:'git-stash', priority:240
 msgid "git-stash - Stash the changes in a dirty working directory away"
-msgstr "git-stash - Spara undan ändringar i en lortig arbetskatalog"
+msgstr "git-stash - Göm undan ändringar i en lortig arbetskatalog"
 
 #. type: synopsis
 #: en/git-stash.adoc:28
@@ -15384,9 +15384,9 @@ msgstr "Alla ändringar som redan har lagts till i indexet lämnas intakta."
 # ERROR: `--patch` not found in translation
 #. type: Plain text
 #: en/git-stash.adoc:218
-#, fuzzy, placeholders:'linkgit:git-add[1]':'`--patch`', priority:240
+#, placeholders:'linkgit:git-add[1]':'`--patch`', priority:240
 msgid "Interactively select hunks from the diff between HEAD and the working tree to be stashed. The stash entry is constructed such that its index state is the same as the index state of your repository, and its worktree contains only the changes you selected interactively. The selected changes are then rolled back from your worktree. See the ``Interactive Mode'' section of linkgit:git-add[1] to learn how to operate the `--patch` mode."
-msgstr "Välj interaktivt stycken från skillnaden mellan HEAD och arbetskatalogen som ska gömmas. Gömma-posten är konstruerad så att dess indextillstånd är detsamma som indextillståndet för ditt förvar, och dess arbetsträd innehåller endast de ändringar du valde interaktivt. De valda ändringarna rullas sedan tillbaka från ditt arbetsträd. Se avsnittet \"Interaktivt läge\" i linkgit:git-add[1] för att lära dig hur man använder läget \"--patch\"."
+msgstr "Välj interaktivt stycken från skillnaden mellan HEAD och arbetskatalogen som ska gömmas. Gömma-posten är konstruerad så att dess indextillstånd är detsamma som indextillståndet för ditt förvar, och dess arbetsträd innehåller endast de ändringar du valde interaktivt. De valda ändringarna rullas sedan tillbaka från ditt arbetsträd. Se avsnittet ``Interaktivt läge\" i linkgit:git-add[1] för att lära dig hur man använder läget `--patch`."
 
 #. type: Plain text
 #: en/git-stash.adoc:221
@@ -15540,9 +15540,9 @@ msgstr "När du är mitt uppe i något lär du dig att det finns förändringar 
 
 #. type: Plain text
 #: en/git-stash.adoc:325
-#, fuzzy, priority:240
+#, priority:240
 msgid "However, there are cases in which your local changes do conflict with the upstream changes, and `git pull` refuses to overwrite your changes. In such a case, you can stash your changes away, perform a pull, and then unstash, like this:"
-msgstr "Det finns dock fall där dina lokala ändringar står i konflikt med ändringarna uppströms, och `git pull` vägrar att skriva över dina ändringar. I sådana fall kan du lagra dina ändringar, utföra en pull och sedan pocka ur gömman, så här:"
+msgstr "Det finns dock, fall där dina lokala ändringar står i konflikt med ändringarna uppströms, och `git pull` vägrar att skriva över dina ändringar. I sådana fall kan du gömma undan dina ändringar, utföra en pull och sedan pocka ur gömman, så här:"
 
 #. type: delimited block -
 #: en/git-stash.adoc:333
@@ -19294,7 +19294,7 @@ msgstr "`--config` `<key>=<värde>`"
 #: en/git-clone.adoc:253
 #, placeholders:'linkgit:git-config[1]':'core.eol', priority:300
 msgid "Set a configuration variable in the newly-created repository; this takes effect immediately after the repository is initialized, but before the remote history is fetched or any files checked out. The _<key>_ is in the same format as expected by linkgit:git-config[1] (e.g., `core.eol=true`). If multiple values are given for the same key, each value will be written to the config file. This makes it safe, for example, to add additional fetch refspecs to the origin remote."
-msgstr "Ställ in en konfigurationsvariabel i det nyskapade förvaret; denna träder i kraft omedelbart efter att förvaret har initierats, men innan fjärrhistoriken hämtas eller några filer checkas ut. _<nyckeln>_ har samma format som förväntas av linkgit:git-config[1] (t.ex. `core.eol=true`). Om flera värden anges för samma nyckel kommer varje värde att skrivas till konfigurationsfilen. Detta gör det säkert att till exempel lägga till ytterligare hämtningsreferenser till den ursprungliga fjärrkontrollen."
+msgstr "Ställ in en konfigurationsvariabel i det nyskapade förvaret; denna träder i kraft omedelbart efter att förvaret har initierats, men innan fjärrhistoriken hämtas eller några filer checkas ut. _<nyckeln>_ har samma format som förväntas av linkgit:git-config[1] (t.ex. `core.eol=true`). Om flera värden anges för samma nyckel kommer varje värde att skrivas till konfigurationsfilen. Detta gör det säkert att till exempel lägga till ytterligare hämtningsreferenser till den ursprungliga fjärren."
 
 #. type: Plain text
 #: en/git-clone.adoc:259
@@ -19354,7 +19354,7 @@ msgstr "`--no-single-branch`"
 #: en/git-clone.adoc:285
 #, placeholders:'`--branch`':'`HEAD`':'`HEAD`':'`--single-branch`', priority:300
 msgid "Clone only the history leading to the tip of a single branch, either specified by the `--branch` option or the primary branch remote's `HEAD` points at. Further fetches into the resulting repository will only update the remote-tracking branch for the branch this option was used for the initial cloning. If the `HEAD` at the remote did not point at any branch when `--single-branch` clone was made, no remote-tracking branch is created."
-msgstr "Klona endast historiken som leder till toppen av en enskild gren, antingen angiven av `--branch`-alternativet eller så pekar den primära grenens fjärrkontrolls `HEAD` på. Ytterligare hämtningar till det resulterande förvaret kommer endast att uppdatera fjärrspårningsgrenen för den gren som detta alternativ användes för den initiala kloningen. Om `HEAD` på fjärrkontrollen inte pekade på någon gren när `--single-branch`-klonen gjordes, skapas ingen fjärrspårningsgren."
+msgstr "Klona endast historiken som leder till toppen av en enskild gren, antingen angiven av `--branch`-alternativet eller så pekar den primära grenens fjärrens `HEAD` på. Ytterligare hämtningar till det resulterande förvaret kommer endast att uppdatera fjärrspårningsgrenen för den gren som detta alternativ användes för den initiala kloningen. Om `HEAD` på fjärren inte pekade på någon gren när `--single-branch`-klonen gjordes, skapas ingen fjärrspårningsgren."
 
 #. type: Labeled list
 #: en/git-clone.adoc:287 en/fetch-options.adoc:174
@@ -19430,9 +19430,9 @@ msgstr "`--no-remote-submodules`"
 
 #. type: Plain text
 #: en/git-clone.adoc:328
-#, fuzzy, placeholders:'`--remote`', priority:300
+#, placeholders:'`--remote`', priority:300
 msgid "All submodules which are cloned will use the status of the submodule's remote-tracking branch to update the submodule, rather than the superproject's recorded SHA-1. Equivalent to passing `--remote` to `git submodule update`."
-msgstr "Alla undermoduler som klonas kommer att använda statusen för undermodulens fjärrspårningsgren för att uppdatera undermodulen, snarare än superprojektets inspelade SHA-1. Motsvarar att skicka `--remote` till `git submodule update`."
+msgstr "Alla undermoduler som klonas kommer att använda statusen för undermodulens fjärrspårningsgren för att uppdatera undermodulen, snarare än superprojektets registrerade SHA-1. Motsvarar att skicka `--remote` till `git submodule update`."
 
 #. type: Plain text
 #: en/git-clone.adoc:335
@@ -20028,9 +20028,9 @@ msgstr "\"web\" eller \"html\" motsvarar '-w|--web'."
 # ERROR: web.browser not found in translation
 #. type: Title ~
 #: en/git-help.adoc:133
-#, fuzzy, no-wrap, placeholders:'help.browser':'web.browser', priority:100
+#, no-wrap, placeholders:'help.browser':'web.browser', priority:100
 msgid "help.browser, web.browser, and browser.<tool>.path"
-msgstr "hjälp.webbläsare, webb.webbläsare och webbläsare.<verktyg>.sökväg"
+msgstr "help.browser, web.browser, och browser.<verktyg>.path"
 
 #. type: Plain text
 #: en/git-help.adoc:139
@@ -21460,7 +21460,7 @@ msgstr "`incheckare`, incheckningar grupperas efter incheckare (samma som `-c`)"
 #: en/git-shortlog.adoc:67
 #, fuzzy, placeholders:'linkgit:git-interpret-trailers[1]':'--group=trailer', priority:260
 msgid "`trailer:<field>`, the `<field>` is interpreted as a case-insensitive commit message trailer (see linkgit:git-interpret-trailers[1]). For example, if your project uses `Reviewed-by` trailers, you might want to see who has been reviewing with `git shortlog -ns --group=trailer:reviewed-by`."
-msgstr "`trailer:<fält>`, `<fält>` tolkas som en trailer för inchecknings-meddelanden som inte är skiftlägeskänslig (se linkgit:git-interpret-trailers[1]). Om ditt projekt till exempel använder trailers för `Reviewed-by` kanske du vill se vem som har granskat med `git shortlog -ns --group=trailer:reviewed-by`."
+msgstr "`trailer:<fält>`, `<fält>` tolkas som en släprad för inchecknings-meddelanden som inte är skiftlägeskänsliga (se linkgit:git-interpret-trailers[1]). Om ditt projekt till exempel använder släprader för `Reviewed-by` kanske du vill se vem som har granskat med `git shortlog -ns --group=trailer:reviewed-by`."
 
 #. type: Plain text
 #: en/git-shortlog.adoc:70
@@ -21856,9 +21856,9 @@ msgstr "$ git restore .\n"
 
 #. type: Plain text
 #: en/git-restore.adoc:187
-#, fuzzy, placeholders:'linkgit:gitglossary[7]', priority:280
+#, placeholders:'linkgit:gitglossary[7]', priority:280
 msgid "or to restore all working tree files with 'top' pathspec magic (see linkgit:gitglossary[7])"
-msgstr "eller för att återställa alla arbetskatalog filer med 'top' sökvägsuttrycket (se linkgit:gitglossary[7])"
+msgstr "eller för att återställa alla arbetskatalogs-filer med 'top' sökvägsuttrycket (se linkgit:gitglossary[7])"
 
 #. type: delimited block -
 #: en/git-restore.adoc:190
@@ -21952,7 +21952,7 @@ msgstr "När ett namnbyte/kopiering är inblandat visar `fil1` och `fil2` namnet
 
 #. type: Plain text
 #: en/diff-generate-patch.adoc:33
-#, fuzzy, priority:280
+#, priority:280
 msgid "It is followed by one or more extended header lines:"
 msgstr "Den följs av en eller flera utökade rubrikrader:"
 
@@ -23044,7 +23044,7 @@ msgstr "--sort=<nyckel>"
 #: en/git-ls-remote.adoc:76
 #, placeholders:'versionsort.suffix':'linkgit:git-for-each-ref[1]', priority:100
 msgid "Sort based on the key given. Prefix `-` to sort in descending order of the value. Supports \"version:refname\" or \"v:refname\" (tag names are treated as versions). The \"version:refname\" sort order can also be affected by the \"versionsort.suffix\" configuration variable. See linkgit:git-for-each-ref[1] for more sort options, but be aware keys like `committerdate` that require access to the objects themselves will not work for refs whose objects have not yet been fetched from the remote, and will give a `missing object` error."
-msgstr "Sortera baserat på den angivna nyckeln. Prefixet `-` för att sortera i fallande ordning efter värdet. Stöder \"version:refnamn\" eller \"v:refname\" (taggnamn behandlas som versioner). Sorteringsordningen \"version:refnamn\" kan också påverkas av konfigurationsvariabeln \"versionsort.suffix\". Se linkgit:git-for-each-ref[1] för fler sorteringsalternativ, men var medveten om att nycklar som `incheckingsdatum` som kräver åtkomst till själva objekten inte fungerar för referenser vars objekt ännu inte har hämtats från fjärrkontrollen och kommer att ge ett `missing object`-fel."
+msgstr "Sortera baserat på den angivna nyckeln. Prefixet `-` för att sortera i fallande ordning efter värdet. Stöder \"version:refnamn\" eller \"v:refname\" (taggnamn behandlas som versioner). Sorteringsordningen \"version:refnamn\" kan också påverkas av konfigurationsvariabeln \"versionsort.suffix\". Se linkgit:git-for-each-ref[1] för fler sorteringsalternativ, men var medveten om att nycklar som `incheckingsdatum` som kräver åtkomst till själva objekten inte fungerar för referenser vars objekt ännu inte har hämtats från fjärren och kommer att ge ett `missing object`-fel."
 
 #. type: Labeled list
 #: en/git-ls-remote.adoc:77
@@ -23653,9 +23653,9 @@ msgstr "'@'"
 # ERROR: `HEAD` not found in translation
 #. type: Plain text
 #: en/revisions.adoc:88
-#, fuzzy, placeholders:'`HEAD`', priority:100
+#, placeholders:'`HEAD`', priority:100
 msgid "'@' alone is a shortcut for `HEAD`."
-msgstr "Enbart '@' är en genväg för 'HEAD'."
+msgstr "'@' enbart är en genväg för `HEAD`."
 
 #. type: Labeled list
 #: en/revisions.adoc:89
@@ -24376,9 +24376,9 @@ msgstr "--prune=<datum>"
 # ERROR: --prune=now not found in translation
 #. type: Plain text
 #: en/git-gc.adoc:88
-#, fuzzy, placeholders:'gc.pruneExpire':'--prune=now':'--prune', priority:100
+#, placeholders:'gc.pruneExpire':'--prune=now':'--prune', priority:100
 msgid "Prune loose objects older than date (default is 2 weeks ago, overridable by the config variable `gc.pruneExpire`). --prune=now prunes loose objects regardless of their age and increases the risk of corruption if another process is writing to the repository concurrently; see \"NOTES\" below. --prune is on by default."
-msgstr "Rensa lösa objekt äldre än datum (standard är 2 veckor sedan, åsidosättbart av konfigurationsvariabeln `gc.pruneExpire`). --prune=rensar nu lösa objekt oavsett deras ålder och ökar risken för korruption om en annan process skriver till förvaret samtidigt; se \"ANTECKNINGAR\" nedan. --prune är aktiverat som standard."
+msgstr "Rensa lösa objekt äldre än datum (standard är 2 veckor sedan, åsidosättbart av konfigurationsvariabeln `gc.pruneExpire`). --prune=now beskär lösa objekt oavsett deras ålder och ökar risken för korruption om en annan process skriver till förvaret samtidigt; se \"ANTECKNINGAR\" nedan. --prune är aktiverat som standard."
 
 #. type: Labeled list
 #: en/git-gc.adoc:89 en/pack-refs-options.adoc:11
@@ -24766,9 +24766,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/rev-list-options.adoc:105 en/git-grep.adoc:150
-#, fuzzy, priority:260
+#, priority:260
 msgid "Support for these types of regular expressions is an optional compile-time dependency. If Git wasn't compiled with support for them providing this option will cause it to die."
-msgstr "Stöd för den här typen av reguljära uttryck är ett valfritt beroende vid kompilering. Om Git inte kompilerades med stöd för dem kommer det att dö om det här alternativet anges."
+msgstr "Stöd för den här typen av reguljära uttryck är ett valfritt kompilerings-tids beroende. Om Git inte kompilerades med stöd för dem kommer det att dö om det här alternativet anges."
 
 #. type: Labeled list
 #: en/rev-list-options.adoc:106
@@ -26721,7 +26721,7 @@ msgstr "För mer information, se _<sökvägsangivelse>_-posten i linkgit:gitglos
 
 #. type: Plain text
 #: en/git-rm.adoc:51
-#, fuzzy, priority:280
+#, priority:280
 msgid "Override the up-to-date check."
 msgstr "Åsidosätt den àjour-kontrollen."
 
@@ -29913,9 +29913,9 @@ msgstr "git-fetch(1)"
 
 #. type: Plain text
 #: en/git-fetch.adoc:7
-#, fuzzy, placeholders:'git-fetch', priority:220
+#, placeholders:'git-fetch', priority:220
 msgid "git-fetch - Download objects and refs from another repository"
-msgstr "git-fetch - Hämta (ladda ner) objekt och referenser från ett annat repo"
+msgstr "git-fetch - Ladda ner objekt och referenser från ett annat förvar"
 
 #. type: synopsis
 #: en/git-fetch.adoc:16
@@ -30073,19 +30073,19 @@ msgstr "För att rensa referenser som en del av ditt vanliga arbetsflöde utan a
 #: en/git-fetch.adoc:139
 #, placeholders:'<<CRTB,', priority:220
 msgid "Here's where things get tricky and more specific. The pruning feature doesn't actually care about branches, instead it'll prune local <--> remote-references as a function of the refspec of the remote (see `<refspec>` and <<CRTB,CONFIGURED REMOTE-TRACKING BRANCHES>> above)."
-msgstr "Det är här det blir knepigt och mer specifikt. Beskärningsfunktionen bryr sig egentligen inte om grenar, istället beskär den lokala <--> fjärrreferenser som en funktion av fjärrkontrollens referensspecifikation (se `<referensspecifikation>` och <<CRTB,KONFIGURERADE FJÄRSPÅRNINGSFILIER>> ovan)."
+msgstr "Det är här det blir knepigt och mer specifikt. Beskärningsfunktionen bryr sig egentligen inte om grenar, istället beskär den lokala <--> fjärrreferenser som en funktion av fjärrens referensspecifikation (se `<referensspecifikation>` och <<CRTB,KONFIGURERADE FJÄRSPÅRNINGSFILIER>> ovan)."
 
 #. type: Plain text
 #: en/git-fetch.adoc:145
 #, placeholders:'--prune', priority:220
 msgid "Therefore if the refspec for the remote includes e.g. `refs/tags/*:refs/tags/*`, or you manually run e.g. `git fetch --prune <name> \"refs/tags/*:refs/tags/*\"` it won't be stale remote tracking branches that are deleted, but any local tag that doesn't exist on the remote."
-msgstr "Om därför referensspecifikationen för fjärrkontrollen inkluderar t.ex. `refs/tags/*:refs/tags/*`, eller om du manuellt kör t.ex. `git fetch --prune <namn> \"refs/tags/*:refs/tags/*\"`, kommer det inte att vara inaktuella grenar för fjärrspårning som tas bort, utan alla lokala taggar som inte finns på fjärren."
+msgstr "Om därför referensspecifikationen för fjärren inkluderar t.ex. `refs/tags/*:refs/tags/*`, eller om du manuellt kör t.ex. `git fetch --prune <namn> \"refs/tags/*:refs/tags/*\"`, kommer det inte att vara inaktuella grenar för fjärrspårning som tas bort, utan alla lokala taggar som inte finns på fjärren."
 
 #. type: Plain text
 #: en/git-fetch.adoc:150
 #, priority:220
 msgid "This might not be what you expect, i.e. you want to prune remote _<name>_, but also explicitly fetch tags from it, so when you fetch from it you delete all your local tags, most of which may not have come from the _<name>_ remote in the first place."
-msgstr "Det här kanske inte är vad du förväntar dig, d.v.s. du vill rensa fjärren _<namn>_, men också explicit hämta taggar från den, så när du hämtar från den raderar du alla dina lokala taggar, varav de flesta kanske inte kom från fjärrkontrollen _<namn>_ från första början."
+msgstr "Det här kanske inte är vad du förväntar dig, d.v.s. du vill rensa fjärren _<namn>_, men också explicit hämta taggar från den, så när du hämtar från den raderar du alla dina lokala taggar, varav de flesta kanske inte kom från fjärren _<namn>_ från första början."
 
 #. type: Plain text
 #: en/git-fetch.adoc:154
@@ -30169,9 +30169,9 @@ msgstr " <flagga> <sammanfattning> <från> -> <till> [<orsak>]\n"
 
 #. type: Plain text
 #: en/git-fetch.adoc:211
-#, fuzzy, placeholders:'`--porcelain`', priority:220
+#, placeholders:'`--porcelain`', priority:220
 msgid "When using `--porcelain`, the output format is intended to be machine-parseable. In contrast to the human-readable output formats it thus prints to standard output instead of standard error. Each line is of the form:"
-msgstr "När `--porcelain` används, är utdataformatet avsett att vara maskinläsbart. Till skillnad från de mänskligt läsbara utdataformaten skrivs det således ut med standardutdata istället för standardfel. Varje rad har formatet:"
+msgstr "När `--porcelain` används, är utdataformatet avsett att vara maskinläsbart. Till skillnad från de mänskligt läsbara utdataformaten skrivs det således ut med standardut istället för standardfel. Varje rad har formatet:"
 
 #. type: delimited block -
 #: en/git-fetch.adoc:214
@@ -30241,7 +30241,7 @@ msgstr "för en domare som var aktuell och inte behövde hämtas."
 
 #. type: Labeled list
 #: en/git-fetch.adoc:234
-#, fuzzy, no-wrap, priority:220
+#, no-wrap, priority:220
 msgid "summary"
 msgstr "summary"
 
@@ -32335,7 +32335,7 @@ msgstr "$ git switch -c <gren> --track <fjärr>/<gren>\n"
 #: en/git-switch.adoc:107 en/git-checkout.adoc:198
 #, placeholders:'checkout.defaultRemote':'checkout.defaultRemote':'checkout.defaultRemote':'linkgit:git-config[1]', priority:240
 msgid "If the branch exists in multiple remotes and one of them is named by the `checkout.defaultRemote` configuration variable, we'll use that one for the purposes of disambiguation, even if the _<branch>_ isn't unique across all remotes. Set it to e.g. `checkout.defaultRemote=origin` to always checkout remote branches from there if _<branch>_ is ambiguous but exists on the 'origin' remote. See also `checkout.defaultRemote` in linkgit:git-config[1]."
-msgstr "Om grenen finns i flera fjärrer och en av dem namnges av konfigurationsvariabeln `checkout.defaultRemote`, kommer vi att använda den för att göra det tydligare, även om _<gren>_ inte är unik för alla fjärrer. Ställ in den till t.ex. `checkout.defaultRemote=origin` för att alltid checka ut fjärrgrenar därifrån om _<gren>_ är tvetydig men finns på fjärrkontrollen 'origin'. Se även `checkout.defaultRemote` i linkgit:git-config[1]."
+msgstr "Om grenen finns i flera fjärrer och en av dem namnges av konfigurationsvariabeln `checkout.defaultRemote`, kommer vi att använda den för att göra det tydligare, även om _<gren>_ inte är unik för alla fjärrer. Ställ in den till t.ex. `checkout.defaultRemote=origin` för att alltid checka ut fjärrgrenar därifrån om _<gren>_ är tvetydig men finns på fjärren 'origin'. Se även `checkout.defaultRemote` i linkgit:git-config[1]."
 
 #. type: Plain text
 #: en/git-switch.adoc:109 en/git-checkout.adoc:200
@@ -32932,9 +32932,7 @@ msgstr "Detta är vanligtvis inte vad en slutanvändare vill köra direkt. Se li
 #: en/git-commit-tree.adoc:25
 #, placeholders:'`-m`':'`-F`', priority:80
 msgid "Creates a new commit object based on the provided tree object and emits the new commit object id on stdout. The log message is read from the standard input, unless `-m` or `-F` options are given."
-msgstr ""
-"Skapar ett nytt inchecknings-objekt baserat på det angivna trädobjektet och genererar det nya inchecknings-objekt-\n"
-"id:t vid stdout. Loggmeddelandet läses från standardindata, såvida inte alternativen `-m` eller `-F` anges."
+msgstr "Skapar ett nytt inchecknings-objekt baserat på det angivna trädobjektet och genererar det nya inchecknings-objekt-id:t vid stdout. Loggmeddelandet läses från standardindata, såvida inte alternativen `-m` eller `-F` anges."
 
 #. type: Plain text
 #: en/git-commit-tree.adoc:29
@@ -33100,9 +33098,9 @@ msgstr "`ours`"
 
 #. type: Plain text
 #: en/merge-strategies.adoc:39
-#, fuzzy, priority:240
+#, priority:240
 msgid "This option forces conflicting hunks to be auto-resolved cleanly by favoring 'our' version. Changes from the other tree that do not conflict with our side are reflected in the merge result. For a binary file, the entire contents are taken from our side."
-msgstr "Det här alternativet tvingar motstridiga hunks att automatiskt lösas upp på ett snyggt sätt genom att favorisera 'vår' version. Ändringar från det andra trädet som inte står i konflikt med vår sida återspeglas i sammanslagningsresultatet. För en binär fil hämtas hela innehållet från vår sida."
+msgstr "Det här alternativet tvingar motstridiga stycken att automatiskt lösas upp på ett snyggt sätt genom att favorisera 'vår' version. Ändringar från det andra trädet som inte står i konflikt med vår sida återspeglas i sammanslagningsresultatet. För en binär fil hämtas hela innehållet från vår sida."
 
 #. type: Plain text
 #: en/merge-strategies.adoc:43
@@ -33922,9 +33920,9 @@ msgstr "--promisor[=<meddelande>]"
 
 #. type: Plain text
 #: en/git-index-pack.adoc:143
-#, fuzzy, placeholders:'--fix-thin':'link:technical/partial-clone.html[', priority:100
+#, placeholders:'--fix-thin':'link:technical/partial-clone.html[', priority:100
 msgid "Before committing the pack-index, create a .promisor file for this pack. Particularly helpful when writing a promisor pack with --fix-thin since the name of the pack is not final until the pack has been fully written. If a `<message>` is provided, then that content will be written to the .promisor file for future reference. See link:technical/partial-clone.html[partial clone] for more information."
-msgstr "Innan beslutet att spara pack-index, skapa en .promisor-fil för detta paket. Detta är särskilt användbart när du skriver ett promisor-paket med --fix-thin eftersom namnet på paketet inte är slutgiltigt förrän paketet har skrivits helt. Om ett `<meddelande>` anges kommer det innehållet att skrivas till .promisor-filen för framtida referens. Se länk:technical/partial-clone.html[partial clone] för mer information."
+msgstr "Innan beslutet att spara pack-index, skapa en .promisor-fil för detta paket. Detta är särskilt användbart när du skriver ett promisor-paket med --fix-thin eftersom namnet på paketet inte är slutgiltigt förrän paketet har skrivits helt. Om ett `<meddelande>` anges kommer det innehållet att skrivas till .promisor-filen för framtida referens. Se link:technical/partial-clone.html[partial clone] för mer information."
 
 #. type: Plain text
 #: en/git-index-pack.adoc:148
@@ -37475,9 +37473,9 @@ msgstr "en fjärr i Git-konfigurationsfilen: `$GIT_DIR/config`,"
 # ERROR: `$GIT_DIR/remotes` not found in translation
 #. type: Plain text
 #: en/urls-remotes.adoc:11
-#, fuzzy, placeholders:'`$GIT_DIR/remotes`', priority:220
+#, placeholders:'`$GIT_DIR/remotes`', priority:220
 msgid "a file in the `$GIT_DIR/remotes` directory, or"
-msgstr "en fil i Git-konfigurationsfilen: `$GIT_DIR/config`, eller"
+msgstr "en fil i katalogen `$GIT_DIR/remotes`, eller"
 
 #. type: Plain text
 #: en/urls-remotes.adoc:12
@@ -37501,7 +37499,7 @@ msgstr "Namngiven fjärr i konfigurationsfilen"
 #: en/urls-remotes.adoc:26
 #, placeholders:'linkgit:git-remote[1]':'linkgit:git-config[1]':'`$GIT_DIR/config`', priority:220
 msgid "You can choose to provide the name of a remote which you had previously configured using linkgit:git-remote[1], linkgit:git-config[1] or even by a manual edit to the `$GIT_DIR/config` file. The URL of this remote will be used to access the repository. The refspec of this remote will be used by default when you do not provide a refspec on the command line. The entry in the config file would appear like this:"
-msgstr "Du kan välja att ange namnet på en fjärren som du tidigare konfigurerat med hjälp av linkgit:git-remote[1], linkgit:git-config[1] eller till och med genom en manuell redigering av filen `$GIT_DIR/config`. URL:en för denna fjärrkontroll kommer att användas för att komma åt förvaret. Referensspecifikationen för denna fjärr kommer att användas som standard när du inte anger en referensspecifikation på kommandoraden. Posten i konfigurationsfilen skulle se ut så här:"
+msgstr "Du kan välja att ange namnet på en fjärren som du tidigare konfigurerat med hjälp av linkgit:git-remote[1], linkgit:git-config[1] eller till och med genom en manuell redigering av filen `$GIT_DIR/config`. URL:en för denna fjärr kommer att användas för att komma åt förvaret. Referensspecifikationen för denna fjärr kommer att användas som standard när du inte anger en referensspecifikation på kommandoraden. Posten i konfigurationsfilen skulle se ut så här:"
 
 #. type: delimited block -
 #: en/urls-remotes.adoc:33
@@ -37629,9 +37627,9 @@ msgstr "Det är standardvärdet för `git pull` eller `git fetch` utan argument.
 
 #. type: Plain text
 #: en/urls-remotes.adoc:108
-#, fuzzy, placeholders:'push.default', priority:220
+#, placeholders:'push.default', priority:220
 msgid "It's the default for `git push` with no arguments, with some exceptions. For example, you can use the `branch.<name>.pushRemote` option to push to a different remote than you pull from, and by default with `push.default=simple` the upstream branch you configure must have the same name."
-msgstr "Det är standardinställningen för `git push` utan argument, med vissa undantag. Du kan till exempel använda alternativet `branch.<name>.pushRemote` för att pusha till en annan fjärrkontroll än den du hämtar från, och som standard med `push.default=simple` måste den uppströmsgren du konfigurerar ha samma namn."
+msgstr "Det är standardinställningen för `git push` utan argument, med vissa undantag. Du kan till exempel använda alternativet `branch.<namn>.pushRemote` för att pusha till en annan fjärr än den du hämtar från, och som standard med `push.default=simple` måste den uppströmsgren du konfigurerar ha samma namn."
 
 #. type: Plain text
 #: en/urls-remotes.adoc:113
@@ -37708,7 +37706,7 @@ msgstr "[[def_bare_repository]]bart förvar"
 # ERROR: repository.git not found in translation
 #. type: Plain text
 #: en/glossary-content.adoc:16
-#, fuzzy, placeholders:'<<def_directory,':'repository.git', priority:310
+#, ':'repository.git', placeholders:'<<def_directory, priority:310
 msgid "A bare repository is normally an appropriately named <<def_directory,directory>> with a `.git` suffix that does not have a locally checked-out copy of any of the files under revision control. That is, all of the Git administrative and control files that would normally be present in the hidden `.git` sub-directory are directly present in the `repository.git` directory instead, and no other files are present and checked out. Usually publishers of public repositories make bare repositories available."
 msgstr "Ett \"bart förvar\" är normalt ett passande namngivet <<def_directory,katalog>> med suffixet `.git` som inte har en lokalt utcheckad kopia av någon av filerna under revisionskontroll. Det vill säga, alla Git-administrations- och kontrollfiler som normalt skulle finnas i den dolda underkatalogen `.git` finns direkt i katalogen `förvar.git` istället, och inga andra filer finns och är utcheckade. Vanligtvis gör utgivare av publika förvar \"bara förvar\" tillgängliga."
 
@@ -38026,9 +38024,9 @@ msgstr "[[def_file_system]]filsystem"
 
 #. type: Plain text
 #: en/glossary-content.adoc:198
-#, fuzzy, priority:310
+#, priority:310
 msgid "Linus Torvalds originally designed Git to be a user space file system, i.e. the infrastructure to hold files and directories. That ensured the efficiency and speed of Git."
-msgstr "Linus Torvalds designade ursprungligen Git som ett filsystem för användarrymden, d.v.s. infrastrukturen för att lagra filer och kataloger. Det säkerställde Gits effektivitet och hastighet."
+msgstr "Linus Torvalds designade ursprungligen Git som ett filsystem för användarrymden, d.v.s. infrastrukturen för att lagra filer och kataloger. Det säkerställde effektivitet och hastighen för Git."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:199
@@ -38560,9 +38558,9 @@ msgstr "Termen <<def_pickaxe,hacka>> hänvisar till ett alternativ till diffcore
 
 #. type: Labeled list
 #: en/glossary-content.adoc:483
-#, fuzzy, no-wrap, placeholders:'[[def_plumbing]]', priority:310
+#, no-wrap, placeholders:'[[def_plumbing]]', priority:310
 msgid "[[def_plumbing]]plumbing"
-msgstr "[[def_plumbing]]plumbing"
+msgstr "[[def_plumbing]]rörmokeri"
 
 #. type: Plain text
 #: en/glossary-content.adoc:485
@@ -38572,9 +38570,9 @@ msgstr "Sött namn för <<def_core_git,kärnan av Git>>."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:486
-#, fuzzy, no-wrap, placeholders:'[[def_porcelain]]', priority:310
+#, no-wrap, placeholders:'[[def_porcelain]]', priority:310
 msgid "[[def_porcelain]]porcelain"
-msgstr "[[def_porcelain]]porcelain"
+msgstr "[[def_porcelain]]porslin"
 
 #. type: Plain text
 #: en/glossary-content.adoc:491
@@ -39082,9 +39080,9 @@ msgstr "[[def_working_tree]]arbetskatalog"
 
 #. type: Plain text
 #: en/glossary-content.adoc:757
-#, fuzzy, placeholders:'<<def_HEAD,', priority:310
+#, ', placeholders:'<<def_HEAD, priority:310
 msgid "The tree of actual checked out files. The working tree normally contains the contents of the <<def_HEAD,HEAD>> commit's tree, plus any local changes that you have made but not yet committed."
-msgstr "Trädet med faktiska utcheckade filer. Arbete-katalogen innehåller normalt innehållet i inchecknings-katalogen för <<def_HEAD,HEAD>>, plus eventuella lokala ändringar som du har gjort men ännu inte incheckade."
+msgstr "Trädet med faktiska utcheckade filer. Arbetskatalogn innehåller normalt innehållet av <<def_HEAD,HEAD>> i incheckarens-träd, plus eventuella lokala ändringar som du har gjort men ännu inte incheckade."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:758
@@ -39094,9 +39092,9 @@ msgstr "[[def_worktree]]arbetsträd"
 
 #. type: Plain text
 #: en/glossary-content.adoc:765
-#, fuzzy, placeholders:'MERGE_HEAD', priority:310
+#, placeholders:'MERGE_HEAD', priority:310
 msgid "A repository can have zero (i.e. bare repository) or one or more worktrees attached to it. One \"worktree\" consists of a \"working tree\" and repository metadata, most of which are shared among other worktrees of a single repository, and some of which are maintained separately per worktree (e.g. the index, HEAD and pseudorefs like MERGE_HEAD, per-worktree refs and per-worktree configuration file)."
-msgstr "Ett repository kan ha noll (dvs. ett rent repo) eller ett eller flera arbete-katalog kopplade till sig. Ett \"arbete-katalog\" består av ett \"arbetskatalog\" och repo-metadata, varav de flesta delas mellan andra arbete-katalog i ett enda repository, och vissa av vilka underhålls separat per arbete-katalog (t.ex. index, HEAD och pseudorefs som MERGE_HEAD, per-arbete-katalog-referenser och per-arbete-katalog-konfigurationsfil)."
+msgstr "Ett förvar kan ha noll (dvs. ett bart förvar) eller ett eller flera arbetsträd kopplade till sig. Ett \"arbetsträd\" består av ett \"arbetskatalog\" och förvar-metadata, varav de flesta delas mellan andra arbetskatalog i ett enda repository, och vissa av vilka underhålls separat per arbetskatalog (t.ex. index, HEAD och pseudorefs som MERGE_HEAD, per-arbetskatalog-referenser och per-arbetskatalog-konfigurationsfil)."
 
 #. type: Title =
 #: en/git-http-fetch.adoc:2
@@ -39383,9 +39381,9 @@ msgstr "git rev-list --format=medium HEAD\n"
 # ERROR: linkgit:git-log[1] not found in translation
 #. type: Plain text
 #: en/git-rev-list.adoc:59
-#, fuzzy, placeholders:'linkgit:git-log[1]', priority:80
+#, placeholders:'linkgit:git-log[1]', priority:80
 msgid "Format commits along with their diffs (see also the porcelain linkgit:git-log[1], which can do this in a single process)."
-msgstr "Formatera incheckningar tillsammans med deras diffs (se även porslins-länken git:git-log[1], som kan göra detta i en enda process)."
+msgstr "Formatera incheckningar tillsammans med deras diffs (se även porslins-länken linkgit:git-log[1], som kan göra detta i en enda process)."
 
 #. type: delimited block -
 #: en/git-rev-list.adoc:63
@@ -39895,7 +39893,7 @@ msgstr ""
 #: en/git-pull.adoc:222
 #, fuzzy, priority:220
 msgid "If you tried a pull which resulted in complex conflicts and would want to start over, you can recover with `git reset`."
-msgstr "Om du försökte indraging (pull) som resulterade i komplexa konflikter och vill börja om, kan du återställa med `git reset`."
+msgstr "Om du försökte hämta (pull) som resulterade i komplexa konflikter och vill börja om, kan du återställa med `git reset`."
 
 #. type: Plain text
 #: en/git-pull.adoc:234
@@ -42089,9 +42087,9 @@ msgstr "`--intent-to-add`"
 
 #. type: Plain text
 #: en/git-add.adoc:161
-#, fuzzy, priority:300
+#, priority:300
 msgid "Record only the fact that the path will be added later. An entry for the path is placed in the index with no content. This is useful for, among other things, showing the unstaged content of such files with `git diff` and committing them with `git commit -a`."
-msgstr "Registrera endast det faktum att sökvägen kommer att läggas till senare. En post för sökvägen placeras i indexet utan innehåll. Detta är användbart för att bland annat visa det osparade innehållet i sådana filer med `git diff` och incheckning dem med `git commit -a`."
+msgstr "Registrera endast det faktum att sökvägen kommer att läggas till senare. En post för sökvägen placeras i indexet utan innehåll. Detta är användbart för att bland annat visa det ej köat innehåll i sådana filer med `git diff` och incheckning dem med `git commit -a`."
 
 #. type: Labeled list
 #: en/git-add.adoc:162 en/git-reset.adoc:112
@@ -42143,7 +42141,7 @@ msgstr "`--renormalize`"
 
 #. type: Plain text
 #: en/git-add.adoc:194
-#, fuzzy, placeholders:'core.autocrlf':'`-u`', priority:300
+#, placeholders:'core.autocrlf':'`-u`', priority:300
 msgid "Apply the \"clean\" process freshly to all tracked files to forcibly add them again to the index. This is useful after changing `core.autocrlf` configuration or the `text` attribute in order to correct files added with wrong _CRLF/LF_ line endings. This option implies `-u`. Lone CR characters are untouched, thus while a _CRLF_ cleans to _LF_, a _CRCRLF_ sequence is only partially cleaned to _CRLF_."
 msgstr "Använd \"clean\"-processen på nytt på alla spårade filer för att tvångsmässigt lägga till dem i indexet igen. Detta är användbart efter att ha ändrat konfigurationen av `core.autocrlf` eller attributet `text` för att korrigera filer som lagts till med felaktiga _CRLF/LF_-radslut. Detta alternativ innebär `-u`. Ensamma CR-tecken är orörda, så medan en _CRLF_ rensas till _LF_, rensas en _CRCRLF_-sekvens bara delvis till _CRLF_."
 
@@ -46959,9 +46957,9 @@ msgstr "git-describe(1)"
 # ERROR: git-describe not found in translation
 #. type: Plain text
 #: en/git-describe.adoc:7
-#, fuzzy, placeholders:'git-describe', priority:260
+#, placeholders:'git-describe', priority:260
 msgid "git-describe - Give an object a human readable name based on an available ref"
-msgstr "Ge ett objekt människoläsbart namn baserade på en tillgänglig referens"
+msgstr "git-describe - Ge ett objekt ett människoläsbart namn baserat på en tillgänglig referens"
 
 #. type: verse
 #: en/git-describe.adoc:14
@@ -47417,9 +47415,9 @@ msgstr "`repair [<sökväg>...]`"
 
 #. type: Plain text
 #: en/git-worktree.adoc:147
-#, fuzzy, priority:240
+#, priority:240
 msgid "Repair worktree administrative files, if possible, if they have become corrupted or outdated due to external factors."
-msgstr "Reparera om möjligt administrativa filer, om de har blivit skadade eller föråldrade på grund av externa faktorer."
+msgstr "Reparera arbetsträdets administrativa filer, om möjligt , om de har blivit skadade eller föråldrade på grund av externa faktorer."
 
 #. type: Plain text
 #: en/git-worktree.adoc:152
@@ -48019,7 +48017,7 @@ msgstr "Du är mitt uppe i en refaktorerings-session och din chef kommer in och 
 
 #. type: delimited block -
 #: en/git-worktree.adoc:523
-#, fuzzy, ignore-ellipsis, no-wrap, priority:240
+#, ignore-ellipsis, no-wrap, priority:240
 msgid ""
 "$ git worktree add -b emergency-fix ../temp master\n"
 "$ pushd ../temp\n"
@@ -48031,7 +48029,7 @@ msgstr ""
 "$ git worktree add -b kritisk-fix ../temp master\n"
 "$ pushd ../temp\n"
 "# ... hack hack hack ...\n"
-"$ git commit -a -m 'kritisk lösning för chefen'\n"
+"$ git commit -a -m 'nödlösning för chefen'\n"
 "$ popd\n"
 "$ git worktree remove ../temp\n"
 
@@ -48220,9 +48218,9 @@ msgstr "--directory"
 # ERROR: --others not found in translation
 #. type: Plain text
 #: en/git-ls-files.adoc:76
-#, fuzzy, placeholders:'--others', priority:80
+#, placeholders:'--others', priority:80
 msgid "If a whole directory is classified as \"other\", show just its name (with a trailing slash) and not its whole contents. Has no effect without -o/--others."
-msgstr "Om en hel katalog klassificeras som \"annan\", visa bara dess namn (med ett avslutande snedstreck) och inte hela dess innehåll. Har ingen effekt utan -o/--annan."
+msgstr "Om en hel katalog klassificeras som \"annan\", visa bara dess namn (med ett avslutande snedstreck) och inte hela dess innehåll. Har ingen effekt utan -o/--others."
 
 #. type: Labeled list
 #: en/git-ls-files.adoc:77
@@ -49109,9 +49107,9 @@ msgstr "git-diff-files - Jämför filer i arbetskatalog och indexet"
 # ERROR: git diff-files not found in translation
 #. type: verse
 #: en/git-diff-files.adoc:13
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'git diff-files':'--cc]', priority:100
+#, ignore-ellipsis, no-wrap, placeholders:'git diff-files':'--cc]', priority:100
 msgid "'git diff-files' [-q] [-0 | -1 | -2 | -3 | -c | --cc] [<common-diff-options>] [<path>...]\n"
-msgstr "'git diff-filer' [-q] [-0 | -1 | -2 | -3 | -c | --cc] [<gemensamma-diff-alternativ>] [<sökväg>...]\n"
+msgstr "'git diff-files' [-q] [-0 | -1 | -2 | -3 | -c | --cc] [<gemensamma-diff-alternativ>] [<sökväg>...]\n"
 
 #. type: Plain text
 #: en/git-diff-files.adoc:20
@@ -49209,9 +49207,9 @@ msgstr "Till exempel, tänk dig att du har arbetat med grenen `ämne` i den här
 
 #. type: Plain text
 #: en/git-rebase.adoc:37
-#, fuzzy, priority:220
+#, priority:220
 msgid "You want to transplant the commits you made on `topic` since it diverged from `master` (i.e. A, B, and C), on top of the current `master`. You can do this by running `git rebase master` while the `topic` branch is checked out. If you want to rebase `topic` while on another branch, `git rebase master topic` is a shortcut for `git checkout topic && git rebase master`."
-msgstr "Du vill överföra de incheckningar du gjorde på `ämne` eftersom det avvek från `master` (dvs. A, B och C), ovanpå den nuvarande `master`. Du kan göra detta genom att köra `git rebase master` medan `ämne`-grenen är utcheckad. Om du vill om basera `ämne` medan du är på en annan gren, är `git rebase master topic` en genväg för `git checkout topic && git rebase master`."
+msgstr "Du vill transplantera de incheckningar du gjorde på `ämne` eftersom det avvek från `master` (dvs. A, B och C), ovanpå den nuvarande `master`. Du kan göra detta genom att köra `git rebase master` medan `ämne`-grenen är utcheckad. Om du vill om basera `ämne` medan du är på en annan gren, är `git rebase master ämne` en genväg för `git checkout ämne && git rebase master`."
 
 #. type: delimited block -
 #: en/git-rebase.adoc:42
@@ -49753,9 +49751,9 @@ msgstr "Eftersom `git rebase` spelar upp varje incheckning från den fungerande 
 
 #. type: Labeled list
 #: en/git-rebase.adoc:362
-#, fuzzy, no-wrap, priority:220
+#, no-wrap, priority:220
 msgid "-X <strategy-option>"
-msgstr "-X <strategy-option>"
+msgstr "-X <strategi-alternativ>"
 
 #. type: Labeled list
 #: en/git-rebase.adoc:363
@@ -49844,9 +49842,9 @@ msgstr "Spela upp alla ombaserade incheckningar individuellt istället för att 
 # ERROR: link:howto/revert-a-faulty-merge.html[ not found in translation
 #. type: Plain text
 #: en/git-rebase.adoc:425
-#, fuzzy, placeholders:'link:howto/revert-a-faulty-merge.html[', priority:220
+#, placeholders:'link:howto/revert-a-faulty-merge.html[', priority:220
 msgid "You may find this helpful after reverting a topic branch merge, as this option recreates the topic branch with fresh commits so it can be remerged successfully without needing to \"revert the reversion\" (see the link:howto/revert-a-faulty-merge.html[revert-a-faulty-merge How-To] for details)."
-msgstr "Du kan tycka att detta är användbart efter att du har återställt en sammanslagning av ämnesgrenar, eftersom det här alternativet återskapar ämnesgrenen med nya incheckningar så att den kan sammanfogas igen utan att behöva \"återställa återställningen\" (se länken:howto/revert-a-faulty-merge.html[revert-a-faulty-merge How-To] för mer information)."
+msgstr "Du kan tycka att detta är användbart efter att du har återställt en sammanslagning av ämnesgrenar, eftersom det här alternativet återskapar ämnesgrenen med nya incheckningar så att den kan sammanfogas igen utan att behöva \"återställa återställningen\" (se link:howto/revert-a-faulty-merge.html[revert-a-faulty-merge How-To] för mer information)."
 
 #. type: Labeled list
 #: en/git-rebase.adoc:427
@@ -50235,9 +50233,9 @@ msgstr "--[no-]reapply-cherry-picks när det används utan --keep-base"
 # ERROR: --onto not found in translation
 #. type: Plain text
 #: en/git-rebase.adoc:656
-#, fuzzy, placeholders:'--root':'--onto', priority:220
+#, placeholders:'--root':'--onto', priority:220
 msgid "--root when used without --onto"
-msgstr "--root när det används utan -onto"
+msgstr "--root när det används utan --onto"
 
 #. type: Plain text
 #: en/git-rebase.adoc:658
@@ -50301,7 +50299,7 @@ msgstr "I likhet med apply-bakändan tar merge-bakändan som standard bort inche
 
 #. type: Title ~
 #: en/git-rebase.adoc:693
-#, fuzzy, no-wrap, priority:220
+#, no-wrap, priority:220
 msgid "Directory rename detection"
 msgstr "Detektering av katalog-omdöpning"
 
@@ -51410,9 +51408,9 @@ msgstr "Du arbetar glatt med något och upptäcker att ändringarna i dessa file
 
 #. type: Plain text
 #: en/git-reset.adoc:157
-#, fuzzy, priority:280
+#, priority:280
 msgid "Somebody asks you to pull, and the changes sound worthy of merging."
-msgstr "Någon ber dig att hämta (\"pulla\"), och ändringarna låter värda att sammanslås."
+msgstr "Någon ber dig att hämta (pull), och ändringarna låter värda att sammanslås."
 
 #. type: Plain text
 #: en/git-reset.adoc:162
@@ -52068,9 +52066,9 @@ msgstr "`--no-signoff`"
 
 #. type: Plain text
 #: en/signoff-option.adoc:16
-#, fuzzy, placeholders:'developercertificate.org', priority:280
+#, placeholders:'developercertificate.org', priority:280
 msgid "Add a `Signed-off-by` trailer by the committer at the end of the commit log message. The meaning of a signoff depends on the project to which you're committing. For example, it may certify that the committer has the rights to submit the work under the project's license or agrees to some contributor representation, such as a Developer Certificate of Origin. (See https://developercertificate.org for the one used by the Linux kernel and Git projects.) Consult the documentation or leadership of the project to which you're contributing to understand how the signoffs are used in that project."
-msgstr "Lägg till en `Signed-off-by` i slutet av inchecknings-loggmeddelandet. Betydelsen av en signering beror på det projekt du committar till. Det kan till exempel intyga att incheckaren har rätt att skicka in arbetet under projektets licens eller godkänner någon bidragsgivares representation, till exempel ett Developer Certificate of Origin. (Se https://developercertificate.org för det som används av Linuxkärnan och Git-projekten.) Konsultera dokumentationen eller ledningen för projektet du bidrar till för att förstå hur signering används i det projektet."
+msgstr "Lägg till en `Signed-off-by`släprad av incheckaren i slutet av inchecknings-loggmeddelandet. Betydelsen av en signering beror på det projekt du checka-in till. Det kan till exempel intyga att incheckaren har rätt att skicka in arbetet under projektets licens eller godkänner någon bidragsgivares representation, till exempel ett Developer Certificate of Origin. (Se https://developercertificate.org för det som används av Linuxkärnan och Git-projekten.) Konsultera dokumentationen eller ledningen för projektet du bidrar till för att förstå hur signeringarna används i det projektet."
 
 #. type: Plain text
 #: en/signoff-option.adoc:19
@@ -52338,7 +52336,7 @@ msgstr "Tillåter sidindelning av utdata genom att hoppa över referenser upp ti
 
 #. type: Title -
 #: en/diff-format.adoc:2
-#, fuzzy, no-wrap, priority:280
+#, no-wrap, priority:280
 msgid "Raw output format"
 msgstr "Rått utdataformat"
 
@@ -54455,7 +54453,7 @@ msgstr "Lokalisera en bra region av objektgrafen i ett skadat arkiv"
 # ERROR: $GOOD not found in translation
 #. type: delimited block -
 #: en/git-bisect.adoc:490
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'--no-checkout':'git for-each-ref':'--format=':'git rev-list':'--objects':'BISECT_HEAD':'--not':'$GOOD':'git pack-objects':'--stdout':'$rc', priority:100
+#, ignore-ellipsis, no-wrap, placeholders:'--no-checkout':'git for-each-ref':'--format=':'git rev-list':'--objects':'BISECT_HEAD':'--not':'$GOOD':'git pack-objects':'--stdout':'$rc', priority:100
 msgid ""
 "$ git bisect start HEAD <known-good-commit> [ <boundary-commit> ... ] --no-checkout\n"
 "$ git bisect run sh -c '\n"
@@ -54468,8 +54466,8 @@ msgid ""
 msgstr ""
 "$ git bisect start HEAD <känd-bra-incheckning> [ <gräns-incheckning> ... ] --no-checkout\n"
 "$ git bisect run sh -c '\n"
-"\tBRA=$(git for-each-ref \"--format=%(objectname)\" refs/bisect/good-*) &&\n"
-"\tgit rev-list --objects BISECT_HEAD --not $BRA >tmp.$$ &&\n"
+"\tGOOD=$(git for-each-ref \"--format=%(objectname)\" refs/bisect/good-*) &&\n"
+"\tgit rev-list --objects BISECT_HEAD --not $GOOD >tmp.$$ &&\n"
 "\tgit pack-objects --stdout >/dev/null <tmp.$$\n"
 "\trc=$?\n"
 "\trm -f tmp.$$\n"
@@ -54580,9 +54578,9 @@ msgstr "Git är ett snabbt, skalbart, distribuerat revisionskontrollsystem med e
 # ERROR: link:user-manual.html[ not found in translation
 #. type: Plain text
 #: en/git.adoc:29
-#, fuzzy, placeholders:'linkgit:gittutorial[7]':'linkgit:giteveryday[7]':'link:user-manual.html[', priority:100
+#, placeholders:'linkgit:gittutorial[7]':'linkgit:giteveryday[7]':'link:user-manual.html[', priority:100
 msgid "See linkgit:gittutorial[7] to get started, then see linkgit:giteveryday[7] for a useful minimum set of commands. The link:user-manual.html[Git User's Manual] has a more in-depth introduction."
-msgstr "Se linkgit:gittutorial[7] för att komma igång, se sedan linkgit:giteveryday[7] för en användbar minimiuppsättning kommandon. Link:user-manual.html[Git användarmanual] har en mer djupgående introduktion."
+msgstr "Se linkgit:gittutorial[7] för att komma igång, se sedan linkgit:giteveryday[7] för en användbar minimiuppsättning kommandon. link:user-manual.html[Git användarmanual] har en mer djupgående introduktion."
 
 #. type: Plain text
 #: en/git.adoc:34
@@ -55357,9 +55355,9 @@ msgstr "Terminologi"
 # ERROR: linkgit:gitglossary[7] not found in translation
 #. type: Plain text
 #: en/git.adoc:470
-#, fuzzy, placeholders:'linkgit:gitglossary[7]', priority:100
+#, placeholders:'linkgit:gitglossary[7]', priority:100
 msgid "Please see linkgit:gitglossary[7]."
-msgstr "Se länkgit:gitglossary[7]."
+msgstr "Se linkgit:gitglossary[7]."
 
 #. type: Plain text
 #: en/git.adoc:479
@@ -56368,14 +56366,14 @@ msgstr "Om den är satt till `0`, inaktivera alla rådmeddelanden. Dessa meddela
 #: en/git.adoc:1052
 #, fuzzy, no-wrap, placeholders:'[[Discussion]]', priority:100
 msgid "Discussion[[Discussion]]"
-msgstr "Diskussion[[Diskussion]]"
+msgstr "Diskussion[[Discussion]]"
 
 # ERROR: linkgit:gitcore-tutorial[7] not found in translation
 #. type: Plain text
 #: en/git.adoc:1057
-#, fuzzy, placeholders:'link:user-manual.html#git-concepts[':'linkgit:gitcore-tutorial[7]', priority:100
+#, placeholders:'link:user-manual.html#git-concepts[':'linkgit:gitcore-tutorial[7]', priority:100
 msgid "More detail on the following is available from the link:user-manual.html#git-concepts[Git concepts chapter of the user-manual] and linkgit:gitcore-tutorial[7]."
-msgstr "Mer information om följande finns tillgänglig via link:user-manual.html#git-concepts[kapitel om Git-koncept i användarmanualen] och länken:gitcore-tutorial[7]."
+msgstr "Mer information om följande finns tillgänglig via link:user-manual.html#git-concepts[kapitel om Git-koncept i användarmanualen] och linkgit:gitcore-tutorial[7]."
 
 #. type: Plain text
 #: en/git.adoc:1064
@@ -56482,9 +56480,9 @@ msgstr "Se även link:howto-index.html[howto]-dokumenten för några användbara
 # ERROR: link:technical/api-index.html[ not found in translation
 #. type: Plain text
 #: en/git.adoc:1154
-#, fuzzy, placeholders:'link:technical/api-index.html[', priority:100
+#, placeholders:'link:technical/api-index.html[', priority:100
 msgid "The internals are documented in the link:technical/api-index.html[Git API documentation]."
-msgstr "Interna delar finns dokumenterad i länken:technical/api-index.html[Git API-dokumentation]."
+msgstr "Interna delar finns dokumenterad i link:technical/api-index.html[Git API-dokumentation]."
 
 #. type: Plain text
 #: en/git.adoc:1157
@@ -57137,9 +57135,9 @@ msgstr "Det här alternativet är endast giltigt för kommandona add och update.
 # ERROR: linkgit:git-clone[1] not found in translation
 #. type: Plain text
 #: en/git-submodule.adoc:426
-#, fuzzy, placeholders:'linkgit:git-clone[1]':'`--reference`':'`--shared`':'`--dissociate`', priority:220
+#, placeholders:'linkgit:git-clone[1]':'`--reference`':'`--shared`':'`--dissociate`', priority:220
 msgid "*NOTE*: Do *not* use this option unless you have read the note for linkgit:git-clone[1]'s `--reference`, `--shared`, and `--dissociate` options carefully."
-msgstr "*OBS*: Använd *inte* det här alternativet om du inte noggrant har läst igenom anmärkningen för länkgit:git-clone[1]s alternativ `--reference`, `--shared` och `--dissociate`."
+msgstr "*OBS*: Använd *inte* det här alternativet om du inte noggrant har läst igenom anmärkningen för linkgit:git-clone[1]s alternativ `--reference`, `--shared` och `--dissociate`."
 
 #. type: Labeled list
 #: en/git-submodule.adoc:427
@@ -57655,7 +57653,7 @@ msgstr "Detta kommando är avsett som lågnivå-rörmokeri, liknande linkgit:git
 # ERROR: message.txt not found in translation
 #. type: Plain text
 #: en/git-merge-tree.adoc:241
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'message.txt':'git merge-tree':'--write-tree':'$BRANCH1':'$BRANCH2':'git commit-tree':'$NEWTREE':'message.txt':'$BRANCH1':'$BRANCH2':'git update-ref':'$BRANCH1':'$NEWCOMMIT', priority:100
+#, ignore-ellipsis, no-wrap, placeholders:'message.txt':'git merge-tree':'--write-tree':'$BRANCH1':'$BRANCH2':'git commit-tree':'$NEWTREE':'message.txt':'$BRANCH1':'$BRANCH2':'git update-ref':'$BRANCH1':'$NEWCOMMIT', priority:100
 msgid ""
 "       vi message.txt\n"
 "       BRANCH1=refs/heads/test\n"
@@ -59525,9 +59523,9 @@ msgstr "Du kan söka efter/ställa in/ersätta/avaktivera alternativ med det hä
 # ERROR: <<EXAMPLES>> not found in translation
 #. type: Plain text
 #: en/git-config.adoc:36
-#, fuzzy, placeholders:'`--append`':'`--value=':'`--fixed-value`':'<<EXAMPLES>>':'`--fixed-value`', priority:100
+#, placeholders:'`--append`':'`--value=':'`--fixed-value`':'<<EXAMPLES>>':'`--fixed-value`', priority:100
 msgid "Multiple lines can be added to an option by using the `--append` option. If you want to update or unset an option which can occur on multiple lines, `--value=<pattern>` (which is an extended regular expression, unless the `--fixed-value` option is given) needs to be given. Only the existing values that match the pattern are updated or unset. If you want to handle the lines that do *not* match the pattern, just prepend a single exclamation mark in front (see also <<EXAMPLES>>), but note that this only works when the `--fixed-value` option is not in use."
-msgstr "Flera rader kan läggas till i ett alternativ med hjälp av alternativet `--append`. Om du vill uppdatera eller avaktivera ett alternativ som kan förekomma på flera rader, behöver `--value=<mönster>` (vilket är ett utökat reguljärt uttryck, såvida inte alternativet `--fixed-value` anges) anges. Endast de befintliga värden som matchar mönstret uppdateras eller avaktiveras. Om du vill hantera de rader som *inte* matchar mönstret, lägg bara till ett utropstecken framför (se även <<EXEMPEL>>), men observera att detta bara fungerar när alternativet `--fixed-value` inte används."
+msgstr "Flera rader kan läggas till i ett alternativ med hjälp av alternativet `--append`. Om du vill uppdatera eller avaktivera ett alternativ som kan förekomma på flera rader, behöver `--value=<mönster>` (vilket är ett utökat reguljärt uttryck, såvida inte alternativet `--fixed-value` anges) anges. Endast de befintliga värden som matchar mönstret uppdateras eller avaktiveras. Om du vill hantera de rader som *inte* matchar mönstret, lägg bara till ett utropstecken framför (se även <<EXAMPLES>>), men observera att detta bara fungerar när alternativet `--fixed-value` inte används."
 
 #. type: Plain text
 #: en/git-config.adoc:41
@@ -59538,9 +59536,9 @@ msgstr "Alternativet `--type=<typ>` instruerar 'git config' att säkerställa at
 # ERROR: <<FILES>> not found in translation
 #. type: Plain text
 #: en/git-config.adoc:47
-#, fuzzy, placeholders:'`--system`':'`--global`':'`--local`':'`--worktree`':'`--file':'<<FILES>>', priority:100
+#, placeholders:'`--system`':'`--global`':'`--local`':'`--worktree`':'`--file':'<<FILES>>', priority:100
 msgid "When reading, the values are read from the system, global and repository local configuration files by default, and options `--system`, `--global`, `--local`, `--worktree` and `--file <filename>` can be used to tell the command to read from only that location (see <<FILES>>)."
-msgstr "Vid läsning läses värdena som standard från system-, globala och lokala konfigurationsfiler för arkivet, och alternativen `--system`, `--global`, `--local`, `--worktree` och `--file <filnamn>` kan användas för att ange att kommandot ska läsa endast från den platsen (se <<FILER>>)."
+msgstr "Vid läsning läses värdena som standard från system-, globala och lokala konfigurationsfiler för förvaret, och alternativen `--system`, `--global`, `--local`, `--worktree` och `--file <filnamn>` kan användas för att ange att kommandot ska läsa endast från den platsen (se <<FILES>>)."
 
 #. type: Plain text
 #: en/git-config.adoc:53
@@ -59785,9 +59783,9 @@ msgstr "För läsalternativ: läs endast från global `~/.gitconfig` och från `
 # ERROR: <<FILES>> not found in translation
 #. type: Plain text
 #: en/git-config.adoc:157 en/git-config.adoc:167 en/git-config.adoc:176 en/git-config.adoc:195 en/git-config.adoc:478
-#, fuzzy, placeholders:'<<FILES>>', priority:100
+#, placeholders:'<<FILES>>', priority:100
 msgid "See also <<FILES>>."
-msgstr "Se även <<FILER>>."
+msgstr "Se även <<FILES>>."
 
 #. type: Labeled list
 #: en/git-config.adoc:158
@@ -60368,9 +60366,9 @@ msgstr "Som standard, skrivs alternativ endast till den specifika konfigurations
 # ERROR: <<OPTIONS>> not found in translation
 #. type: Plain text
 #: en/git-config.adoc:412
-#, fuzzy, placeholders:'`--file`':'`--system`':'`--global`':'`--local`':'`--worktree`':'<<OPTIONS>>', priority:100
+#, placeholders:'`--file`':'`--system`':'`--global`':'`--local`':'`--worktree`':'<<OPTIONS>>', priority:100
 msgid "You can limit which configuration sources are read from or written to by specifying the path of a file with the `--file` option, or by specifying a configuration scope with `--system`, `--global`, `--local`, or `--worktree`. For more, see <<OPTIONS>> above."
-msgstr "Du kan begränsa vilka konfigurationskällor som läses från eller skrivs till genom att ange sökvägen till en fil med alternativet `--file`, eller genom att ange ett konfigurationsomfång med `--system`, `--global`, `--local` eller `--worktree`. För mer information, se <<ALTERNATIV>> ovan."
+msgstr "Du kan begränsa vilka konfigurationskällor som läses från eller skrivs till genom att ange sökvägen till en fil med alternativet `--file`, eller genom att ange ett konfigurationsomfång med `--system`, `--global`, `--local` eller `--worktree`. För mer information, se <<OPTIONS>> ovan."
 
 #. type: Title -
 #: en/git-config.adoc:415
@@ -60435,9 +60433,9 @@ msgstr "Med undantag för 'command' motsvarar varje omfång ett kommandoradsalte
 # ERROR: <<OPTIONS>> not found in translation
 #. type: Plain text
 #: en/git-config.adoc:447
-#, fuzzy, placeholders:'<<OPTIONS>>', priority:100
+#, placeholders:'<<OPTIONS>>', priority:100
 msgid "When reading options, specifying a scope will only read options from the files within that scope. When writing options, specifying a scope will write to the files within that scope (instead of the repository specific configuration file). See <<OPTIONS>> above for a complete description."
-msgstr "När man läser alternativ och anger ett scope, läses endast alternativ från filerna inom det omfånget. När man skriver alternativ och anger ett omfång, skrivs det till filerna inom det omfånget (istället för till den databasspecifika konfigurationsfilen). Se <<ALTERNATIV>> ovan för en fullständig beskrivning."
+msgstr "När man läser alternativ och anger ett scope, läses endast alternativ från filerna inom det omfånget. När man skriver alternativ och anger ett omfång, skrivs det till filerna inom det omfånget (istället för till den databasspecifika konfigurationsfilen). Se <<OPTIONS>> ovan för en fullständig beskrivning."
 
 #. type: Plain text
 #: en/git-config.adoc:451
@@ -61400,7 +61398,7 @@ msgstr "När du hämtar referenser som listas på kommandoraden, använd den ang
 #: en/fetch-options.adoc:210
 #, placeholders:'`--prune`':'`--prune`', priority:220
 msgid "Fetch all tags from the remote (i.e., fetch remote tags `refs/tags/*` into local tags with the same name), in addition to whatever else would otherwise be fetched. Using this option alone does not subject tags to pruning, even if `--prune` is used (though tags may be pruned anyway if they are also the destination of an explicit refspec; see `--prune`)."
-msgstr "Hämta alla taggar från fjärrkontrollen (dvs. hämta fjärrtaggar `refs/tags/*` till lokala taggar med samma namn), utöver vad som annars skulle hämtas. Att använda det här alternativet ensamt utsätter inte taggar för beskärning, även om `--prune` används (även om taggar kan beskäras ändå om de också är destinationen för en explicit referensspecifikation; se `--prune`)."
+msgstr "Hämta alla taggar från fjärren (dvs. hämta fjärrtaggar `refs/tags/*` till lokala taggar med samma namn), utöver vad som annars skulle hämtas. Att använda det här alternativet ensamt utsätter inte taggar för beskärning, även om `--prune` används (även om taggar kan beskäras ändå om de också är destinationen för en explicit referensspecifikation; se `--prune`)."
 
 #. type: Plain text
 #: en/fetch-options.adoc:222
@@ -61982,7 +61980,7 @@ msgstr "När du checkar ut sökvägar från indexet, misslyckas inte med osamman
 #: en/git-checkout.adoc:135
 #, fuzzy, priority:240
 msgid "When checking out paths from the index, check out stage #2 (`ours`) or #3 (`theirs`) for unmerged paths."
-msgstr "När du checka ut sökvägar från indexet, kontrollera steg #2 (`vår`) eller #3 (`deras`) för osammanslagna sökvägar."
+msgstr "När du checka ut sökvägar från indexet, kontrollera steg #2 (`ours` vår) eller #3 (`theirs` deras) för osammanslagna sökvägar."
 
 #. type: Plain text
 #: en/git-checkout.adoc:140
@@ -62955,23 +62953,23 @@ msgstr "\"basversionen\" (steg nr1) när `-1` eller `--base` används,"
 # ERROR: `--ours` not found in translation
 #. type: Plain text
 #: en/git-diff.adoc:143
-#, fuzzy, placeholders:'`--ours`', priority:280
+#, placeholders:'`--ours`', priority:280
 msgid "\"our branch\" (stage #2) when using `-2` or `--ours`, or"
-msgstr "\"vår gren\" (steg nr2) när man använder `-2` eller `--vår`, eller"
+msgstr "\"vår gren\" (steg nr2) när man använder `-2` eller `--ours`, eller"
 
 # ERROR: `--theirs` not found in translation
 #. type: Plain text
 #: en/git-diff.adoc:144
-#, fuzzy, placeholders:'`--theirs`', priority:280
+#, placeholders:'`--theirs`', priority:280
 msgid "\"their branch\" (stage #3) when using `-3` or `--theirs`."
-msgstr "\"deras gren\" (steg nr3) när `-3` eller `--deras` används."
+msgstr "\"deras gren\" (steg nr3) när `-3` eller `--theirs` används."
 
 # ERROR: linkgit:git-read-tree[1] not found in translation
 #. type: Plain text
 #: en/git-diff.adoc:149
-#, fuzzy, placeholders:'linkgit:git-read-tree[1]', priority:280
+#, placeholders:'linkgit:git-read-tree[1]', priority:280
 msgid "The index contains these stages only for unmerged entries i.e. while resolving conflicts. See linkgit:git-read-tree[1] section \"3-Way Merge\" for detailed information."
-msgstr "Indexet innehåller dessa steg endast för osammanfogade poster, dvs. vid lösning av konflikter. Se länkgit:git-read-tree[1] avsnittet \"3-vägs sammanslagning\" för detaljerad information."
+msgstr "Indexet innehåller dessa steg endast för osammanfogade poster, dvs. vid lösning av konflikter. Se linkgit:git-read-tree[1] avsnittet \"3-vägs sammanslagning\" för detaljerad information."
 
 #. type: Labeled list
 #: en/git-diff.adoc:150
@@ -63749,7 +63747,9 @@ msgstr "När det används med `--textconv` eller `--filters` måste inmatningsra
 msgid ""
 "specify the path, separated by whitespace. See the section\n"
 "`BATCH OUTPUT` below for details.\n"
-msgstr "Ange sökvägen, separerad med blanktecken. Se avsnittet `SATS UTMATNING` nedan för mer information.\n"
+msgstr ""
+"ange sökvägen, separerad med blanktecken. Se avsnittet \n"
+"`SATS UTMATNING` nedan för mer information.\n"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:141
@@ -64345,9 +64345,9 @@ msgstr "Generera vanliga patchar utan några diffstatistik."
 # ERROR: <<generate_patch_text_with_p>> not found in translation
 #. type: Plain text
 #: en/diff-options.adoc:26
-#, fuzzy, placeholders:'<<generate_patch_text_with_p>>', priority:280
+#, placeholders:'<<generate_patch_text_with_p>>', priority:280
 msgid "Generate patch (see <<generate_patch_text_with_p>>)."
-msgstr "Generera patch (se <<generera_patch_text_med_p>>)."
+msgstr "Generera patch (se <<generate_patch_text_with_p>>)."
 
 #. type: Plain text
 #: en/diff-options.adoc:28 en/diff-options.adoc:152
@@ -64411,9 +64411,9 @@ msgstr "`--remerge-diff`"
 
 #. type: Plain text
 #: en/diff-options.adoc:61
-#, fuzzy, placeholders:'`--diff-merges=remerge', priority:280
+#, placeholders:'`--diff-merges=remerge', priority:280
 msgid "Produce remerge-diff output for merge commits. Shortcut for `--diff-merges=remerge -p`."
-msgstr "Producera remerge-diff-utdata för sammanslagnings-incheckningar. Genväg för `--diff-merges=remerge -p`."
+msgstr "Producera remerge-diff utdata för sammanslagnings-incheckningar. Genväg för `--diff-merges=remerge -p`."
 
 #. type: Labeled list
 #: en/diff-options.adoc:62
@@ -65521,9 +65521,9 @@ msgstr "Markera endast filer som är Tillagda (`A`), Kopierade (`C`), Borttagna 
 
 #. type: Plain text
 #: en/diff-options.adoc:636
-#, fuzzy, placeholders:'`--diff-filter=ad`', priority:280
+#, placeholders:'`--diff-filter=ad`', priority:280
 msgid "Also, these upper-case letters can be downcased to exclude. E.g. `--diff-filter=ad` excludes added and deleted paths."
-msgstr "Även dessa versaler kan nedshiftas för att exkludera. T.ex. exkluderar `--diff-filter=ad` tillagda och borttagna sökvägar."
+msgstr "Även, dessa versaler kan ändras till gemener för att exkludera. T.ex. exkluderar `--diff-filter=ad` tillagda och borttagna sökvägar."
 
 #. type: Plain text
 #: en/diff-options.adoc:639
@@ -66001,7 +66001,7 @@ msgstr "`--max-depth=0 -- foo`: `foo`"
 
 #. type: Plain text
 #: en/diff-options.adoc:889
-#, fuzzy, placeholders:'`--max-depth=1', priority:280
+#, placeholders:'`--max-depth=1', priority:280
 msgid "`--max-depth=1 -- foo`: `foo/bar`"
 msgstr "`--max-depth=1 -- foo`: `foo/bar`"
 
@@ -66654,15 +66654,15 @@ msgstr "Om `-b` används föregås kortformatstatusen av en rad"
 # ERROR: {empty} not found in translation
 #. type: synopsis
 #: en/git-status.adoc:265
-#, fuzzy, no-wrap, placeholders:'{empty}', priority:280
+#, no-wrap, placeholders:'{empty}', priority:280
 msgid "{empty}## <branchname> <tracking-info>\n"
-msgstr "{tom}## <gren-namn> <spårningsinformation>\n"
+msgstr "{empty}## <gren-namn> <spårningsinformation>\n"
 
 #. type: Title ~
 #: en/git-status.adoc:268
-#, fuzzy, no-wrap, priority:280
+#, no-wrap, priority:280
 msgid "Porcelain Format Version 1"
-msgstr "Porcelain Format Version 1"
+msgstr "Porslins Format Version 1"
 
 #. type: Plain text
 #: en/git-status.adoc:275
@@ -66746,7 +66746,7 @@ msgstr ""
 #: en/git-status.adoc:322
 #, fuzzy, no-wrap, priority:280
 msgid "Stash Information"
-msgstr "”Stash” Information"
+msgstr "Gömma Information"
 
 #. type: Plain text
 #: en/git-status.adoc:326
@@ -67037,9 +67037,9 @@ msgstr "`status.showUntrackedFiles=no` konfiguration (se ovan för båda): indik
 # ERROR: linkgit:git-config[1] not found in translation
 #. type: Plain text
 #: en/git-status.adoc:492
-#, fuzzy, placeholders:'advice.statusUoption':'linkgit:git-config[1]', priority:280
+#, placeholders:'advice.statusUoption':'linkgit:git-config[1]', priority:280
 msgid "`advice.statusUoption=false` (see linkgit:git-config[1]):"
-msgstr "`advice.statusUoption=false` (se länkgit:git-config[1]):"
+msgstr "`advice.statusUoption=false` (se linkgit:git-config[1]):"
 
 #. type: Plain text
 #: en/git-status.adoc:499
@@ -67050,9 +67050,9 @@ msgstr "om man ställer in variabeln till `false` inaktiveras varningsmeddelande
 # ERROR: linkgit:git-update-index[1] not found in translation
 #. type: Plain text
 #: en/git-status.adoc:501
-#, fuzzy, placeholders:'core.untrackedCache':'linkgit:git-update-index[1]', priority:280
+#, placeholders:'core.untrackedCache':'linkgit:git-update-index[1]', priority:280
 msgid "`core.untrackedCache=true` (see linkgit:git-update-index[1]):"
-msgstr "`core.untrackedCache=true` (se länkgit:git-update-index[1]):"
+msgstr "`core.untrackedCache=true` (se linkgit:git-update-index[1]):"
 
 #. type: Plain text
 #: en/git-status.adoc:513
@@ -76834,9 +76834,9 @@ msgstr "--file=<sökväg>"
 # ERROR: <<FILES>> not found in translation
 #. type: Plain text
 #: en/git-credential-store.adoc:42
-#, fuzzy, placeholders:'git-credentials`':'`$XDG_CONFIG_HOME/git/credentials`':'git-credentials`':'`$XDG_CONFIG_HOME/git/credentials`':'<<FILES>>', priority:100
+#, placeholders:'git-credentials`':'`$XDG_CONFIG_HOME/git/credentials`':'git-credentials`':'`$XDG_CONFIG_HOME/git/credentials`':'<<FILES>>', priority:100
 msgid "Use `<path>` to lookup and store credentials. The file will have its filesystem permissions set to prevent other users on the system from reading it, but it will not be encrypted or otherwise protected. If not specified, credentials will be searched for from `~/.git-credentials` and `$XDG_CONFIG_HOME/git/credentials`, and credentials will be written to `~/.git-credentials` if it exists, or `$XDG_CONFIG_HOME/git/credentials` if it exists and the former does not. See also <<FILES>>."
-msgstr "Använd `<sökväg>` för att slå upp och lagra inloggningsuppgifter. Filens filsystembehörigheter kommer att vara inställda för att förhindra att andra användare på systemet läser den, men den kommer inte att krypteras eller på annat sätt skyddas. Om inget anges kommer inloggningsuppgifter att sökas efter från `~/.git-credentials` och `$XDG_CONFIG_HOME/git/credentials`, och inloggningsuppgifter kommer att skrivas till `~/.git-credentials` om den finns, eller `$XDG_CONFIG_HOME/git/credentials` om den finns och den förra inte finns. Se även <<FILER>>."
+msgstr "Använd `<sökväg>` för att slå upp och lagra inloggningsuppgifter. Filens filsystembehörigheter kommer att vara inställda för att förhindra att andra användare på systemet läser den, men den kommer inte att krypteras eller på annat sätt skyddas. Om inget anges kommer inloggningsuppgifter att sökas efter från `~/.git-credentials` och `$XDG_CONFIG_HOME/git/credentials`, och inloggningsuppgifter kommer att skrivas till `~/.git-credentials` om den finns, eller `$XDG_CONFIG_HOME/git/credentials` om den finns och den förra inte finns. Se även <<FILES>>."
 
 #. type: Plain text
 #: en/git-credential-store.adoc:49
@@ -77260,7 +77260,7 @@ msgstr "Med alternativet `-n` frågas inte fjärr kommandon först med `git ls-r
 #: en/git-remote.adoc:182
 #, placeholders:'--prune', priority:220
 msgid "Delete stale references associated with _<name>_. By default, stale remote-tracking branches under _<name>_ are deleted, but depending on global configuration and the configuration of the remote we might even prune local tags that haven't been pushed there. Equivalent to `git fetch --prune <name>`, except that no new references will be fetched."
-msgstr "Ta bort inaktuella referenser associerade med _<namn>_. Som standard tas inaktuella fjärrspårningsgrenar under _<namn>_ bort, men beroende på global konfiguration och fjärrkontrollens konfiguration kan vi till och med rensa bort lokala taggar som inte har skickats dit. Motsvarande `git fetch --prune <namn>`, förutom att inga nya referenser kommer att hämtas."
+msgstr "Ta bort inaktuella referenser associerade med _<namn>_. Som standard tas inaktuella fjärrspårningsgrenar under _<namn>_ bort, men beroende på global konfiguration och fjärrens konfiguration kan vi till och med rensa bort lokala taggar som inte har skickats dit. Motsvarande `git fetch --prune <namn>`, förutom att inga nya referenser kommer att hämtas."
 
 #. type: Plain text
 #: en/git-remote.adoc:185
@@ -77996,10 +77996,9 @@ msgstr "Om ett partiellt klonfilter tillhandahålls (se `--filter` i linkgit:git
 
 #. type: Labeled list
 #: en/config/notes.adoc:1
-#, fuzzy, no-wrap, placeholders:'notes.mergeStrategy', priority:280
-#| msgid "`merge.stat`"
+#, no-wrap, placeholders:'notes.mergeStrategy', priority:280
 msgid "`notes.mergeStrategy`"
-msgstr "`merge.stat`"
+msgstr "`notes.mergeStrategy`"
 
 #. type: Plain text
 #: en/config/notes.adoc:6
@@ -78009,14 +78008,9 @@ msgstr "Vilken sammanslagningsstrategi som ska väljas som standard vid lösande
 
 #. type: Plain text
 #: en/config/notes.adoc:9
-#, fuzzy, placeholders:'`--strategy`':'linkgit:git-notes[1]', priority:280
-#| msgid ""
-#| "\tIt can be overridden by passing the `--origin` command-line\n"
-#| "\toption to linkgit:git-clone[1].\n"
+#, placeholders:'`--strategy`':'linkgit:git-notes[1]', priority:280
 msgid "This setting can be overridden by passing the `--strategy` option to linkgit:git-notes[1]."
-msgstr ""
-"\tDen kan åsidosättas genom att skicka\n"
-"\tkommandoradsalternativet `--origin` till linkgit:git-clone[1].\n"
+msgstr "Den här inställningen kan åsidosättas genom att skicka `--strategy`-alternativet till linkgit:git-notes[1]."
 
 #. type: Labeled list
 #: en/config/notes.adoc:10
@@ -78033,10 +78027,9 @@ msgstr "Vilken sammanslagningsstrategi man ska välja när man sammanfogar antec
 
 #. type: Labeled list
 #: en/config/notes.adoc:16
-#, fuzzy, no-wrap, placeholders:'notes.displayRef', priority:280
-#| msgid "`notemodify`"
+#, no-wrap, placeholders:'notes.displayRef', priority:280
 msgid "`notes.displayRef`"
-msgstr "`notemodify`"
+msgstr "`notes.displayRef`"
 
 #. type: Plain text
 #: en/config/notes.adoc:21
@@ -78082,10 +78075,9 @@ msgstr "Den här inställningen kan åsidosättas med miljövariabeln `GIT_NOTES
 
 #. type: Labeled list
 #: en/config/notes.adoc:47
-#, fuzzy, no-wrap, placeholders:'notes.rewriteMode', priority:280
-#| msgid "`--no-post-rewrite`"
+#, no-wrap, placeholders:'notes.rewriteMode', priority:280
 msgid "`notes.rewriteMode`"
-msgstr "`--no-post-rewrite`"
+msgstr "`notes.rewriteMode`"
 
 #. type: Plain text
 #: en/config/notes.adoc:53
@@ -78095,17 +78087,15 @@ msgstr "När anteckningar kopieras under en omskrivning (se alternativet `notes.
 
 #. type: Plain text
 #: en/config/notes.adoc:56
-#, fuzzy, placeholders:'GIT_NOTES_REWRITE_MODE', priority:280
-#| msgid "the contents of the `$GIT_TEMPLATE_DIR` environment variable;"
+#, placeholders:'GIT_NOTES_REWRITE_MODE', priority:280
 msgid "This setting can be overridden with the `GIT_NOTES_REWRITE_MODE` environment variable."
-msgstr "innehållet i miljövariabeln `$GIT_TEMPLATE_DIR`;"
+msgstr "Den här inställningen kan åsidosättas med miljövariabeln `GIT_NOTES_REWRITE_MODE`."
 
 #. type: Labeled list
 #: en/config/notes.adoc:57
-#, fuzzy, no-wrap, placeholders:'notes.rewriteRef', priority:280
-#| msgid "`--no-post-rewrite`"
+#, no-wrap, placeholders:'notes.rewriteRef', priority:280
 msgid "`notes.rewriteRef`"
-msgstr "`--no-post-rewrite`"
+msgstr "`notes.rewriteRef`"
 
 #. type: Plain text
 #: en/config/notes.adoc:62
@@ -78158,10 +78148,9 @@ msgstr "`stash.showIncludeUntracked`"
 
 #. type: Plain text
 #: en/config/stash.adoc:23
-#, fuzzy, placeholders:'{see-show}', priority:240
-#| msgid "When used with the `show` command, show the untracked files in the stash entry as part of the diff."
+#, placeholders:'{see-show}', priority:240
 msgid "If this is set to true, the `git stash show` command will show the untracked files of a stash entry. Defaults to false. {see-show}"
-msgstr "När det används med kommandot `show`, visas de ospårade filerna i gömma-posten som en del av diff."
+msgstr "Om detta är satt till sant, kommer kommandot `git stash show` att visa de ospårade filerna från en gömma-post. Standardvärdet är falskt. {see-show}"
 
 #. type: Labeled list
 #: en/config/stash.adoc:24
@@ -78352,10 +78341,9 @@ msgstr "`remote`"
 
 #. type: Plain text
 #: en/config/branch.adoc:26
-#, fuzzy, priority:260
-#| msgid "[[def_remote_tracking_branch]]remote-tracking branch"
+#, priority:260
 msgid "rebase is set to true for tracked branches of remote-tracking branches."
-msgstr "[[def_remote_tracking_branch]]rfjärrspårade gren"
+msgstr "rebase är satt till sant för spårade grenar av fjärrspårande grenar."
 
 #. type: Plain text
 #: en/config/branch.adoc:27
@@ -78422,10 +78410,9 @@ msgstr "Definierar, tillsammans med `branch.<namn>.remote`, uppströmsgrenen fö
 
 #. type: Plain text
 #: en/config/branch.adoc:82
-#, fuzzy, placeholders:'linkgit:git-merge[1]', priority:260
-#| msgid "Sets default options for merging into branch _<name>_. The syntax and supported options are the same as those of `git merge`, but option values containing whitespace characters are currently not supported."
+#, placeholders:'linkgit:git-merge[1]', priority:260
 msgid "Sets default options for merging into branch _<name>_. The syntax and supported options are the same as those of linkgit:git-merge[1], but option values containing whitespace characters are currently not supported."
-msgstr "Ställer in standardalternativ för sammanslagning till grenen _<namn>_. Syntaxen och de alternativ som stöds är desamma som för `git merge`, men alternativvärden som innehåller blanksteg stöds för närvarande inte."
+msgstr "Ställer in standardalternativ för sammanslagning till grenen _<namn>_. Syntaxen och de alternativ som stöds är desamma som för linkgit:git-merge[1], men alternativvärden som innehåller blanksteg stöds för närvarande inte."
 
 #. type: Labeled list
 #: en/config/branch.adoc:83
@@ -78442,10 +78429,9 @@ msgstr "När det är sant, ombasera grenen _<namn>_ ovanpå den hämtade grenen,
 
 #. type: Plain text
 #: en/config/branch.adoc:92
-#, fuzzy, placeholders:'`--rebase-merges`':'linkgit:git-rebase[1]', priority:260
-#| msgid "rebase using `git rebase --rebase-merges` so that the local merge commits are included in the rebase (see linkgit:git-rebase[1] for details)."
+#, placeholders:'`--rebase-merges`':'linkgit:git-rebase[1]', priority:260
 msgid "When `merges` (or just `m`), pass the `--rebase-merges` option to `git rebase` so that the local merge commits are included in the rebase (see linkgit:git-rebase[1] for details)."
-msgstr "ombasering med `git rebase --rebase-merges` så att de lokala sammanslagnings-incheckningar inkluderas i rebasen (se linkgit:git-rebase[1] för detaljer)."
+msgstr "När `merges` (eller bara `m`) används, skicka `--rebase-merges`-alternativet till `git rebase` så att de lokala sammanslagnings-incheckningen inkluderas i ombaseringen (se linkgit:git-rebase[1] för detaljer)."
 
 #. type: Plain text
 #: en/config/branch.adoc:95
@@ -78517,10 +78503,9 @@ msgstr "rebase.autoStash"
 
 #. type: Plain text
 #: en/config/rebase.adoc:25
-#, fuzzy, placeholders:'`--no-autostash`':'`--autostash`':'linkgit:git-rebase[1]', priority:220
-#| msgid "When set to `true`, automatically create a temporary stash entry before the operation begins, and apply it after the operation ends. This means that you can run merge on a dirty worktree. However, use with care: the final stash application after a successful merge might result in non-trivial conflicts. This option can be overridden by the `--no-autostash` and `--autostash` options of linkgit:git-merge[1]. Defaults to `false`."
+#, placeholders:'`--no-autostash`':'`--autostash`':'linkgit:git-rebase[1]', priority:220
 msgid "When set to true, automatically create a temporary stash entry before the operation begins, and apply it after the operation ends. This means that you can run rebase on a dirty worktree. However, use with care: the final stash application after a successful rebase might result in non-trivial conflicts. This option can be overridden by the `--no-autostash` and `--autostash` options of linkgit:git-rebase[1]. Defaults to false."
-msgstr "När den är satt till `true` skapas automatiskt en tillfällig gömma-post innan operationen börjar och tillämpas efter att operationen är avslutad. Detta innebär att du kan köra merge på ett smutsigt arbetsträd. Använd dock med försiktighet: den slutliga stash-applikationen efter en lyckad merge kan resultera i icke-triviala konflikter. Detta alternativ kan åsidosättas av alternativen `--no-autostash` och `--autostash` i linkgit:git-merge[1]. Standardvärdet är `false`."
+msgstr "När den är satt till sant, skapas automatiskt en tillfällig gömma-post innan operationen börjar, och tillämpas efter att operationen är avslutad. Detta innebär att du kan köra rebase på ett smutsigt arbetsträd. Använd dock försiktigt: den slutliga gömma-applikationen efter en lyckad ombasering kan resultera i icke-triviala konflikter. Detta alternativ kan åsidosättas av alternativen `--no-autostash` och `--autostash` i linkgit:git-rebase[1]. Standardvärdet är falskt."
 
 #. type: Labeled list
 #: en/config/rebase.adoc:26
@@ -78554,10 +78539,9 @@ msgstr "rebase.instructionFormat"
 
 #. type: Plain text
 #: en/config/rebase.adoc:44
-#, fuzzy, placeholders:'linkgit:git-log[1]', priority:220
-#| msgid "The commit list format can be changed by setting the configuration option rebase.instructionFormat. A customized instruction format will automatically have the commit hash prepended to the format."
+#, placeholders:'linkgit:git-log[1]', priority:220
 msgid "A format string, as specified in linkgit:git-log[1], to be used for the todo list during an interactive rebase. The format will automatically have the commit hash prepended to the format."
-msgstr "Inchecknings-listans format kan ändras genom att ställa in konfigurationsalternativet rebase.instructionFormat. Ett anpassat instruktionsformat kommer automatiskt att lägga till inchecknings-hashen före formatet."
+msgstr "En formatsträng, som specificerad i linkgit:git-log[1], som ska användas för att-göra-listan under en interaktiv ombasering. Formatet kommer automatiskt att ha inchecknings-hashen till formatet."
 
 #. type: Labeled list
 #: en/config/rebase.adoc:45
@@ -78585,10 +78569,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/config/rebase.adoc:56
-#, fuzzy, priority:220
-#| msgid "instead."
+#, priority:220
 msgid "instead of:"
-msgstr "i stället."
+msgstr "i stället för:"
 
 #. type: delimited block -
 #: en/config/rebase.adoc:61
@@ -78616,10 +78599,9 @@ msgstr "rebase.rescheduleFailedExec"
 
 #. type: Plain text
 #: en/config/rebase.adoc:69
-#, fuzzy, placeholders:'`--exec`':'`--reschedule-failed-exec`', priority:220
-#| msgid "Automatically reschedule `exec` commands that failed. This only makes sense in interactive mode (or when an `--exec` option was provided)."
+#, placeholders:'`--exec`':'`--reschedule-failed-exec`', priority:220
 msgid "Automatically reschedule `exec` commands that failed. This only makes sense in interactive mode (or when an `--exec` option was provided). This is the same as specifying the `--reschedule-failed-exec` option."
-msgstr "Planera automatiskt om `exec`-kommandon som misslyckades. Detta är bara logiskt i interaktivt läge (eller när ett `--exec`-alternativ tillhandahölls)."
+msgstr "Schemalägg automatiskt `exec`-kommandon som misslyckades. Detta är bara logiskt i interaktivt läge (eller när ett `--exec`-alternativ angavs). Detta är samma sak som att ange `--reschedule-failed-exec`-alternativet."
 
 #. type: Labeled list
 #: en/config/rebase.adoc:70
@@ -78805,10 +78787,9 @@ msgstr "Detta är en variabel med flera värden, och ett tomt värde kan använd
 
 #. type: delimited block -
 #: en/config/push.adoc:101
-#, fuzzy, no-wrap, priority:220
-#| msgid "Example:"
+#, no-wrap, priority:220
 msgid "Example:\n"
-msgstr "Exempel:"
+msgstr "Exempel:\n"
 
 #. type: delimited block -
 #: en/config/push.adoc:105
@@ -78994,10 +78975,9 @@ msgstr "\tsektion.\n"
 
 #. type: Plain text
 #: en/config/mergetool.adoc:62
-#, fuzzy, no-wrap, placeholders:'linkgit:git-mergetool[1]', priority:240
-#| msgid "linkgit:git-mergetool[1]"
+#, no-wrap, placeholders:'linkgit:git-mergetool[1]', priority:240
 msgid "\tsection in linkgit:git-mergetool[1].\n"
-msgstr "linkgit:git-mergetool[1]"
+msgstr "\tavsnitt i linkgit:git-mergetool[1].\n"
 
 #. type: Labeled list
 #: en/config/mergetool.adoc:64
@@ -79194,10 +79174,9 @@ msgstr "Styr hur information om incheckningar i det lokala förvaret skickas vid
 
 #. type: Plain text
 #: en/config/fetch.adoc:81
-#, fuzzy, placeholders:'`--negotiate-only`':'`--negotiation-tip`':'linkgit:git-fetch[1]', priority:220
-#| msgid "See also the `--amend` option to linkgit:git-commit[1]."
+#, placeholders:'`--negotiate-only`':'`--negotiation-tip`':'linkgit:git-fetch[1]', priority:220
 msgid "See also the `--negotiate-only` and `--negotiation-tip` options to linkgit:git-fetch[1]."
-msgstr "Se även alternativet `--amend` till linkgit:git-commit[1]."
+msgstr "Se även alternativen `--negotiate-only` och `--negotiation-tip` för linkgit:git-fetch[1]."
 
 #. type: Labeled list
 #: en/config/fetch.adoc:82
@@ -79292,10 +79271,9 @@ msgstr "sequence.editor"
 
 #. type: Plain text
 #: en/config/sequencer.adoc:5
-#, fuzzy, placeholders:'GIT_SEQUENCE_EDITOR', priority:220
-#| msgid "Text editor used to edit the 'todo' file while running `git rebase -i`. Like `GIT_EDITOR`, the value is meant to be interpreted by the shell when it is used. The order of preference is `$GIT_SEQUENCE_EDITOR`, then `sequence.editor` configuration value, and then the value of `git var GIT_EDITOR`."
+#, placeholders:'GIT_SEQUENCE_EDITOR', priority:220
 msgid "Text editor used by `git rebase -i` for editing the rebase instruction file. The value is meant to be interpreted by the shell when it is used. It can be overridden by the `GIT_SEQUENCE_EDITOR` environment variable. When not configured, the default commit message editor is used instead."
-msgstr "Textredigerare som används för att redigera 'todo'-filen när `git rebase -i` körs. Precis som `GIT_EDITOR` är värdet avsett att tolkas av skalet när det används. Preferensordningen är `$GIT_SEQUENCE_EDITOR`, sedan konfigurationsvärdet `sequence.editor` och sedan värdet för `git var GIT_EDITOR`."
+msgstr "Textredigerare som används av `git rebase -i` för att redigera instruktionsfilen för ombasering. Värdet är avsett att tolkas av skalet när det används. Det kan åsidosättas av miljövariabeln `GIT_SEQUENCE_EDITOR`. När den inte är konfigurerad, används standardredigeraren för inchecknings-meddelanden istället."
 
 #. type: Labeled list
 #: en/config/tag.adoc:1
@@ -79311,10 +79289,9 @@ msgstr "Ett booleskt värde som anger om skapade annoterade taggar ska vara GPG-
 
 #. type: Labeled list
 #: en/config/tag.adoc:6
-#, fuzzy, no-wrap, placeholders:'tag.sort', priority:240
-#| msgid "`short`"
+#, no-wrap, placeholders:'tag.sort', priority:240
 msgid "`tag.sort`"
-msgstr "`short`"
+msgstr "`tag.sort`"
 
 #. type: Plain text
 #: en/config/tag.adoc:9
@@ -79336,17 +79313,15 @@ msgstr "Utan alternativet `--sort=<value>` anges, kommer värdet på denna varia
 
 #. type: Labeled list
 #: en/config/tag.adoc:17
-#, fuzzy, no-wrap, placeholders:'tag.gpgSign', priority:240
-#| msgid "`commit.gpgSign`"
+#, no-wrap, placeholders:'tag.gpgSign', priority:240
 msgid "`tag.gpgSign`"
-msgstr "`commit.gpgSign`"
+msgstr "`tag.gpgSign`"
 
 #. type: Plain text
 #: en/config/tag.adoc:23
-#, fuzzy, placeholders:'`--local-user=', priority:240
-#| msgid "A boolean to specify whether all commits should be GPG signed. Use of this option when doing operations such as rebase can result in a large number of commits being signed. It may be convenient to use an agent to avoid typing your GPG passphrase several times."
+#, placeholders:'`--local-user=', priority:240
 msgid "A boolean to specify whether all tags should be GPG signed. Use of this option when running in an automated script can result in a large number of tags being signed. It is therefore convenient to use an agent to avoid typing your GPG passphrase several times. Note that this option doesn't affect tag signing behavior enabled by `-u <keyid>` or `--local-user=<keyid>` options."
-msgstr "En boolesk kod som anger om alla incheckningar ska GPG-signeras. Användning av det här alternativet vid operationer som ombasering kan resultera i att ett stort antal incheckningar signeras. Det kan vara praktiskt att använda en agent för att undvika att skriva in din GPG-lösenfras flera gånger."
+msgstr "En booleskt värde som anger om alla taggar ska GPG-signeras. Användning av det här alternativet när du kör i ett automatiserat skript kan resultera i att ett stort antal taggar signeras. Det är därför bekvämt att använda en agent för att undvika att skriva in din GPG-lösenfras flera gånger. Observera att det här alternativet inte påverkar taggsigneringsbeteendet som aktiveras av alternativen `-u <keyid>` eller `--local-user=<keyid>`."
 
 #. type: Labeled list
 #: en/config/diff.adoc:1
@@ -79868,10 +79843,9 @@ msgstr "När flyttade linjer färgläggs med t.ex. inställningen `diff.colorMov
 
 #. type: Labeled list
 #: en/config/checkout.adoc:1
-#, fuzzy, no-wrap, placeholders:'checkout.defaultRemote', priority:240
-#| msgid "`clone.defaultRemoteName`"
+#, no-wrap, placeholders:'checkout.defaultRemote', priority:240
 msgid "`checkout.defaultRemote`"
-msgstr "`clone.defaultRemoteName`"
+msgstr "`checkout.defaultRemote`"
 
 #. type: Plain text
 #: en/config/checkout.adoc:11
@@ -79887,10 +79861,9 @@ msgstr "För närvarande används detta av linkgit:git-switch[1] och linkgit:git
 
 #. type: Labeled list
 #: en/config/checkout.adoc:20
-#, fuzzy, no-wrap, placeholders:'checkout.guess', priority:240
-#| msgid "`--checkout`"
+#, no-wrap, placeholders:'checkout.guess', priority:240
 msgid "`checkout.guess`"
-msgstr "`--checkout`"
+msgstr "`checkout.guess`"
 
 #. type: Plain text
 #: en/config/checkout.adoc:24
@@ -79900,10 +79873,9 @@ msgstr "Anger standardvärdet för alternativen `--guess` eller `--no-guess` i `
 
 #. type: Labeled list
 #: en/config/checkout.adoc:25
-#, fuzzy, no-wrap, placeholders:'checkout.workers', priority:240
-#| msgid "`--checkout`"
+#, no-wrap, placeholders:'checkout.workers', priority:240
 msgid "`checkout.workers`"
-msgstr "`--checkout`"
+msgstr "`checkout.workers`"
 
 #. type: Plain text
 #: en/config/checkout.adoc:32
@@ -80237,19 +80209,19 @@ msgstr "Om `sant`, gör"
 
 #. type: Plain text
 #: en/config/log.adoc:6
-#, fuzzy, no-wrap, placeholders:'linkgit:git-log[1]':'linkgit:git-show[1]':'linkgit:git-whatchanged[1]', priority:260
-#| msgid "linkgit:git-rev-list[1], linkgit:git-show-branch[1], linkgit:git-merge[1]"
+#, no-wrap, placeholders:'linkgit:git-log[1]':'linkgit:git-show[1]':'linkgit:git-whatchanged[1]', priority:260
 msgid ""
 "\tlinkgit:git-log[1], linkgit:git-show[1], and\n"
 "\tlinkgit:git-whatchanged[1]\n"
-msgstr "linkgit:git-rev-list[1], linkgit:git-show-branch[1], linkgit:git-merge[1]"
+msgstr ""
+"\tlinkgit:git-log[1], linkgit:git-show[1], och\n"
+"\tlinkgit:git-whatchanged[1]\n"
 
 #. type: Plain text
 #: en/config/log.adoc:9
-#, fuzzy, no-wrap, placeholders:'linkgit:git-log[1]':'linkgit:git-show[1]', priority:260
-#| msgid "linkgit:git-switch[1], linkgit:git-restore[1]"
+#, no-wrap, placeholders:'linkgit:git-log[1]':'linkgit:git-show[1]', priority:260
 msgid "\tlinkgit:git-log[1] and linkgit:git-show[1]\n"
-msgstr "linkgit:git-switch[1], linkgit:git-restore[1]"
+msgstr "\tlinkgit:git-log[1] och linkgit:git-show[1]\n"
 
 #. type: Plain text
 #: en/config/log.adoc:12
@@ -80402,10 +80374,9 @@ msgstr "`log.showSignature`"
 
 #. type: Plain text
 #: en/config/log.adoc:72
-#, fuzzy, placeholders:'linkgit:git-log[1]':'linkgit:git-show[1]':'linkgit:git-whatchanged[1]':'`--show-signature`', priority:260
-#| msgid "linkgit:git-rev-list[1], linkgit:git-show-branch[1], linkgit:git-merge[1]"
+#, placeholders:'linkgit:git-log[1]':'linkgit:git-show[1]':'linkgit:git-whatchanged[1]':'`--show-signature`', priority:260
 msgid "If true, makes linkgit:git-log[1], linkgit:git-show[1], and linkgit:git-whatchanged[1] assume `--show-signature`."
-msgstr "linkgit:git-rev-list[1], linkgit:git-show-branch[1], linkgit:git-merge[1]"
+msgstr "Om sant, gör att linkgit:git-log[1], linkgit:git-show[1] och linkgit:git-whatchanged[1] antar `--show-signature`."
 
 #. type: Labeled list
 #: en/config/log.adoc:73
@@ -80421,10 +80392,9 @@ msgstr "Om sant, gör att linkgit:git-log[1], linkgit:git-show[1] och linkgit:gi
 
 #. type: Labeled list
 #: en/config/worktree.adoc:1
-#, fuzzy, no-wrap, placeholders:'worktree.guessRemote', priority:240
-#| msgid "`--no-guess-remote`"
+#, no-wrap, placeholders:'worktree.guessRemote', priority:240
 msgid "`worktree.guessRemote`"
-msgstr "`--no-guess-remote`"
+msgstr "`worktree.guessRemote`"
 
 #. type: Plain text
 #: en/config/worktree.adoc:10
@@ -80434,10 +80404,9 @@ msgstr "Om ingen gren anges och varken `-b`, `-B` eller `--detach` används, ska
 
 #. type: Labeled list
 #: en/config/worktree.adoc:11
-#, fuzzy, no-wrap, placeholders:'worktree.useRelativePaths', priority:240
-#| msgid "`worktreepath`"
+#, no-wrap, placeholders:'worktree.useRelativePaths', priority:240
 msgid "`worktree.useRelativePaths`"
-msgstr "`worktreepath`"
+msgstr "`worktree.useRelativePaths`"
 
 #. type: Plain text
 #: en/config/worktree.adoc:16
