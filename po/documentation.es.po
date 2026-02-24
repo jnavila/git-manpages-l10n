@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-02-18 21:42+0100\n"
-"PO-Revision-Date: 2026-02-10 21:09+0000\n"
+"PO-Revision-Date: 2026-02-24 20:46+0000\n"
 "Last-Translator: Salvador Peña <salvadorp74@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16-dev\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
 #. type: Title =
 #: en/git-var.adoc:2
@@ -2206,7 +2206,7 @@ msgstr ""
 # ERROR: git-receive-pack not found in translation
 #. type: Labeled list
 #: en/git-push.adoc:211
-#, fuzzy, no-wrap, placeholders:'`--exec=':'git-receive-pack', priority:220
+#, no-wrap, placeholders:'`--exec=':'git-receive-pack', priority:220
 msgid "`--exec=<git-receive-pack>`"
 msgstr "`--exec=<paquete-de-recepción-git>`"
 
@@ -6783,43 +6783,43 @@ msgstr "linkgit:git-pack-objects[1] linkgit:git-repack[1] linkgit:git-prune-pack
 #: en/i18n.adoc:2
 #, priority:280
 msgid "Git is to some extent character encoding agnostic."
-msgstr ""
+msgstr "Git es hasta cierto punto agnóstico de codificación de caracteres."
 
 #. type: Plain text
 #: en/i18n.adoc:6
 #, priority:280
 msgid "The contents of the blob objects are uninterpreted sequences of bytes. There is no encoding translation at the core level."
-msgstr ""
+msgstr "El contenido de objetos blob son secuencias de bytes sin interpretar. No hay traducción de codificación a nivel núcleo."
 
 #. type: Plain text
 #: en/i18n.adoc:13
 #, placeholders:'linkgit:git-config[1]':'linkgit:gitignore[5]':'linkgit:gitattributes[5]':'linkgit:gitmodules[5]', priority:280
 msgid "Path names are encoded in UTF-8 normalization form C. This applies to tree objects, the index file, ref names, as well as path names in command line arguments, environment variables and config files (`.git/config` (see linkgit:git-config[1]), linkgit:gitignore[5], linkgit:gitattributes[5] and linkgit:gitmodules[5])."
-msgstr ""
+msgstr "Los nombres de rutas están codificadas en normalización UTF-8 desde C. Esto aplica a objetos árbol, el fichero índice, nombres de referencias, así como los nombres de rutas en argumentos de línea de comandos, variables de ambiente y ficheros de configuración (`.git/config` (ver linkgit:git-config[1]), linkgit:gitignore[5], linkgit:gitattributes[5] y linkgit:gitmodules[5])."
 
 #. type: Plain text
 #: en/i18n.adoc:23
 #, priority:280
 msgid "Note that Git at the core level treats path names simply as sequences of non-NUL bytes, there are no path name encoding conversions (except on Mac and Windows). Therefore, using non-ASCII path names will mostly work even on platforms and file systems that use legacy extended ASCII encodings. However, repositories created on such systems will not work properly on UTF-8-based systems (e.g. Linux, Mac, Windows) and vice versa. Additionally, many Git-based tools simply assume path names to be UTF-8 and will fail to display other encodings correctly."
-msgstr ""
+msgstr "Nótese que Git, al nivel de núcleo, trata los nombres de rutas simplemente como secuencias de bytes no nulos; no hay conversión de codificación de nombre de ruta (exceptuando Mac y Windows). Por lo tanto, usar nombres de rutas no-ASCII funcionará en la mayoría de las plataformas, incluso en sistemas de ficheros que usan codificaciones extendidas de ASCII legadas. Sin embargo, los repositorios creados en tales sistemas no funcionarán apropiadamente en sistemas basados en UTF-8 (p. ej. Linux, Mac, Windows) y viceversa. Además, muchas herramientas basadas en Git simplemente asumen que los nombres están en UTF-8 y mostrarán incorrectamente otras codificaciones."
 
 #. type: Plain text
 #: en/i18n.adoc:29
 #, priority:280
 msgid "Commit log messages are typically encoded in UTF-8, but other extended ASCII encodings are also supported. This includes ISO-8859-x, CP125x and many others, but _not_ UTF-16/32, EBCDIC and CJK multi-byte encodings (GBK, Shift-JIS, Big5, EUC-x, CP9xx etc.)."
-msgstr ""
+msgstr "Los mensajes de confirmación están típicamente codificados en UTF-8, pero también se soportan otras codificaciones ASCII extendidas. Esto incluye a ISO-8859-x, CP125x y muchas otras, pero _no_ UTF-16/32, EBCDIC y codificaciones multibyte CJK (GBK, Swift-JIS, Big5, EUC-x, CP9xx, etc.)."
 
 #. type: Plain text
 #: en/i18n.adoc:36
 #, priority:280
 msgid "Although we encourage that the commit log messages are encoded in UTF-8, both the core and Git Porcelain are designed not to force UTF-8 on projects. If all participants of a particular project find it more convenient to use legacy encodings, Git does not forbid it. However, there are a few things to keep in mind."
-msgstr ""
+msgstr "Aunque alentamos que los mensajes de confirmación estén codificados en UTF-8, tanto el núcleo como porcelanas de Git están diseñados para no forzar UTF-8 en los proyectos. Si todos los participantes de un proyecto en particular encuentran más conveniente usar codificaciones legadas, Git no lo prohibe. Sin embargo, hay algunas cosas a tener en mente."
 
 #. type: Plain text
 #: en/i18n.adoc:42
 #, placeholders:'git commit-tree`', priority:280
 msgid "`git commit` and `git commit-tree` issue a warning if the commit log message given to it does not look like a valid UTF-8 string, unless you explicitly say your project uses a legacy encoding. The way to say this is to have `i18n.commitEncoding` in `.git/config` file, like this:"
-msgstr ""
+msgstr "`git commit` y `git commit-tree` emiten una advertencia si el mensaje de registro de confirmación no parece una cadena UTF-8 válida, a menos que digas explícitamente que tu proyecto usa una codificación legada. La forma de hacerlo es poniendo `i18n.commitEncoding` en el fichero `.git/config`, así:"
 
 #. type: delimited block -
 #: en/i18n.adoc:46
@@ -6828,18 +6828,20 @@ msgid ""
 "[i18n]\n"
 "\tcommitEncoding = ISO-8859-1\n"
 msgstr ""
+"[i18n]\n"
+"\tcommitEncoding = ISO-8859-1\n"
 
 #. type: Plain text
 #: en/i18n.adoc:52
 #, priority:280
 msgid "Commit objects created with the above setting record the value of `i18n.commitEncoding` in their `encoding` header. This is to help other people who look at them later. Lack of this header implies that the commit log message is encoded in UTF-8."
-msgstr ""
+msgstr "Los objetos de confirmación creados con la configuración de arriba registran el valor de `i18n.commitEncoding` en su encabezado `encoding`. Esto para ayudar a otras personas que lo verán después. La falta de este encabezado implica que el mensaje de registro de confirmación está codificado en UTF-8."
 
 #. type: Plain text
 #: en/i18n.adoc:58
 #, priority:280
 msgid "`git log`, `git show`, `git blame` and friends look at the `encoding` header of a commit object, and try to re-code the log message into UTF-8 unless otherwise specified. You can specify the desired output encoding with `i18n.logOutputEncoding` in `.git/config` file, like this:"
-msgstr ""
+msgstr "`git log`, `git show`, `git blame` y sus amigos buscan el encabezado `encoding` de un objeto confirmación, e intentan re-codificar el mensaje de registro a UTF-8 a menos que se especifique lo contrario. Se puede especificar la codificación de salida deseada con `i18n.logOutputEncoding` en el fichero `.git/config`, así:"
 
 #. type: delimited block -
 #: en/i18n.adoc:62
@@ -6848,18 +6850,20 @@ msgid ""
 "[i18n]\n"
 "\tlogOutputEncoding = ISO-8859-1\n"
 msgstr ""
+"[i18n]\n"
+"\tlogOutputEncoding = ISO-8859-1\n"
 
 #. type: Plain text
 #: en/i18n.adoc:66
 #, priority:280
 msgid "If you do not have this configuration variable, the value of `i18n.commitEncoding` is used instead."
-msgstr ""
+msgstr "Si no se tiene esta variable de configuración se usa en su lugar el valor de `i18n.commitEncoding`."
 
 #. type: Plain text
 #: en/i18n.adoc:70
 #, priority:280
 msgid "Note that we deliberately chose not to re-code the commit log message when a commit is made to force UTF-8 at the commit object level, because re-coding to UTF-8 is not necessarily a reversible operation."
-msgstr ""
+msgstr "Nótese que deliberadamente decidimos no recodificar los mensajes de registro de confirmación para forzar UTF-8 a nivel de objeto de confirmación, porque recodificar a UTF-8 no es siempre una operación reversible."
 
 #. type: Title =
 #: en/git-notes.adoc:2
@@ -26177,7 +26181,7 @@ msgstr "Salir con estado cero incluso si ningún fichero coincide."
 #: en/git-rm.adoc:80
 #, placeholders:'linkgit:git-sparse-checkout[1]', priority:280
 msgid "Allow updating index entries outside of the sparse-checkout cone. Normally, `git rm` refuses to update index entries whose paths do not fit within the sparse-checkout cone. See linkgit:git-sparse-checkout[1] for more."
-msgstr ""
+msgstr "Permite actualizar entradas del índice fuera del cono de checkout escaso. Normalmente `git rm` se niega a actualizar entradas del índice cuyas rutas no caen dentro del cono de checkout escaso. Ver linkgit:git-sparse-checkout[1] para más información."
 
 #. type: Plain text
 #: en/git-rm.adoc:85
@@ -50983,7 +50987,7 @@ msgstr ""
 #: en/signoff-option.adoc:19
 #, placeholders:'`--no-signoff`':'`--signoff`', priority:280
 msgid "The `--no-signoff` option can be used to countermand an earlier `--signoff` option on the command line."
-msgstr ""
+msgstr "La opción `--no-signoff` puede usarse para contraordenar una opción `--signoff` previa en la línea de comandos."
 
 #. type: Plain text
 #: en/signoff-option.adoc:22
@@ -76331,28 +76335,21 @@ msgstr "Si se proporciona un filtro de clonación parcial (ver `--filter` en lin
 
 #. type: Labeled list
 #: en/config/notes.adoc:1
-#, fuzzy, no-wrap, placeholders:'notes.mergeStrategy', priority:280
-#| msgid "`merge.stat`"
+#, no-wrap, placeholders:'notes.mergeStrategy', priority:280
 msgid "`notes.mergeStrategy`"
-msgstr "`merge.stat`"
+msgstr "`notes.mergeStrategy`"
 
 #. type: Plain text
 #: en/config/notes.adoc:6
-#, fuzzy, placeholders:'cat_sort_uniq':'linkgit:git-notes[1]', priority:280
-#| msgid "When merging notes, resolve notes conflicts using the given strategy. The following strategies are recognized: `manual` (default), `ours`, `theirs`, `union` and `cat_sort_uniq`. This option overrides the `notes.mergeStrategy` configuration setting. See the \"NOTES MERGE STRATEGIES\" section below for more information on each notes merge strategy."
+#, placeholders:'cat_sort_uniq':'linkgit:git-notes[1]', priority:280
 msgid "Which merge strategy to choose by default when resolving notes conflicts. Must be one of `manual`, `ours`, `theirs`, `union`, or `cat_sort_uniq`. Defaults to `manual`. See the \"NOTES MERGE STRATEGIES\" section of linkgit:git-notes[1] for more information on each strategy."
-msgstr "Cuando se fusionan notas, resuelve conflictos de notas usando la estrategia dada. Se reconocen las estrategias siguientes: `manual` (predeterminada), `ours`, `theirs`, `union` y `cat_sort_uniq`. Esta opción anula la configuración `notes.mergeStrategy`. Ver la sección \"ESTRATEGIAS DE FUSIÓN DE NOTAS\" mas abajo para mayor información sobre cada estrategia."
+msgstr "Cuál estrategia de fusión a elegir predeterminadamente al resolver conflictos de notas. Debe ser una de `manual`, `ours`, `theirs`, `union` o `cat_sort_uniq`. Predeterminada a `manual`. Ver la sección \"ESTRATEGIAS DE FUSIÓN DE NOTAS\" de linkgit:git-notes[1] para mayor información sobre cada estrategia."
 
 #. type: Plain text
 #: en/config/notes.adoc:9
-#, fuzzy, placeholders:'`--strategy`':'linkgit:git-notes[1]', priority:280
-#| msgid ""
-#| "\tIt can be overridden by passing the `--origin` command-line\n"
-#| "\toption to linkgit:git-clone[1].\n"
+#, placeholders:'`--strategy`':'linkgit:git-notes[1]', priority:280
 msgid "This setting can be overridden by passing the `--strategy` option to linkgit:git-notes[1]."
-msgstr ""
-"\tPuede anularse pasando a linkgit:git-clone[1] \n"
-"\tla opción de línea de comandos `--origin`.\n"
+msgstr "Esta configuración puede anularse pasando la opción `--strategy` a linkgit:git-notes[1]."
 
 #. type: Labeled list
 #: en/config/notes.adoc:10
@@ -76368,17 +76365,15 @@ msgstr ""
 
 #. type: Labeled list
 #: en/config/notes.adoc:16
-#, fuzzy, no-wrap, placeholders:'notes.displayRef', priority:280
-#| msgid "`core.notesRef`"
+#, no-wrap, placeholders:'notes.displayRef', priority:280
 msgid "`notes.displayRef`"
-msgstr "`core.notesRef`"
+msgstr "`notes.displayRef`"
 
 #. type: Plain text
 #: en/config/notes.adoc:21
-#, fuzzy, placeholders:'core.notesRef':'GIT_NOTES_REF', priority:280
-#| msgid "Colon-delimited list of refs or globs indicating which refs, in addition to the default from `core.notesRef` or `GIT_NOTES_REF`, to read notes from when showing commit messages. This overrides the `notes.displayRef` setting."
+#, placeholders:'core.notesRef':'GIT_NOTES_REF', priority:280
 msgid "Which ref (or refs, if a glob or specified more than once), in addition to the default set by `core.notesRef` or `GIT_NOTES_REF`, to read notes from when showing commit messages with the `git log` family of commands."
-msgstr "Lista de referencias o globs separadas por dos puntos, adicionales a lo predeterminado desde `core.notesRef` o `GIT_NOTES_REF`, desde las cuales se leerán las notas cuando se muestren los mensajes de confirmación. Esto anula la configuración `notes.displayRef`."
+msgstr "Cuál referencia (o referencias, si se especifica más de una vez o un glob), además de lo predeterminado por `core.notesRef` o `GIT_NOTES_REF`, desde las cuales se leerán las notas cuando se muestren los mensajes de confirmación con la familia de comandos `git log`."
 
 #. type: Plain text
 #: en/config/notes.adoc:25
@@ -76418,31 +76413,27 @@ msgstr ""
 
 #. type: Labeled list
 #: en/config/notes.adoc:47
-#, fuzzy, no-wrap, placeholders:'notes.rewriteMode', priority:280
-#| msgid "`--no-post-rewrite`"
+#, no-wrap, placeholders:'notes.rewriteMode', priority:280
 msgid "`notes.rewriteMode`"
-msgstr "`--no-post-rewrite`"
+msgstr "`notes.rewriteMode`"
 
 #. type: Plain text
 #: en/config/notes.adoc:53
-#, fuzzy, placeholders:'notes.rewrite':'cat_sort_uniq', priority:280
-#| msgid "When copying notes during a rewrite, what to do if the target commit already has a note. Must be one of `overwrite`, `concatenate`, `cat_sort_uniq`, or `ignore`. This overrides the `core.rewriteMode` setting."
+#, placeholders:'notes.rewrite':'cat_sort_uniq', priority:280
 msgid "When copying notes during a rewrite (see the `notes.rewrite.<command>` option), determines what to do if the target commit already has a note. Must be one of `overwrite`, `concatenate`, `cat_sort_uniq`, or `ignore`. Defaults to `concatenate`."
-msgstr "Lo que se debe hacer cuando se copian notas durante una re-escritura y la confirmación destino ya tiene una nota. Debe ser una de `overwrite`, `concatenate`, `cat_sort_uniq` o `ignore`. Esto anula la configuración `core.rewriteMode`."
+msgstr "Al copiar notas durante una re-escritura (ver la opción `notes.rewrite.<comando>`), determina lo que se debe hacer si la confirmación destino ya tiene una nota. Debe ser una de `overwrite`, `concatenate`, `cat_sort_uniq` o `ignore`. Predeterminada a `concatenate`."
 
 #. type: Plain text
 #: en/config/notes.adoc:56
-#, fuzzy, placeholders:'GIT_NOTES_REWRITE_MODE', priority:280
-#| msgid "the contents of the `$GIT_TEMPLATE_DIR` environment variable;"
+#, placeholders:'GIT_NOTES_REWRITE_MODE', priority:280
 msgid "This setting can be overridden with the `GIT_NOTES_REWRITE_MODE` environment variable."
-msgstr "el contenido de la variable de entorno `$GIT_TEMPLATE_DIR`;"
+msgstr "Esta configuración puede anularse con la variable de ambiente `GIT_NOTES_REWRITE_MODE`."
 
 #. type: Labeled list
 #: en/config/notes.adoc:57
-#, fuzzy, no-wrap, placeholders:'notes.rewriteRef', priority:280
-#| msgid "`--no-post-rewrite`"
+#, no-wrap, placeholders:'notes.rewriteRef', priority:280
 msgid "`notes.rewriteRef`"
-msgstr "`--no-post-rewrite`"
+msgstr "`notes.rewriteRef`"
 
 #. type: Plain text
 #: en/config/notes.adoc:62
@@ -76476,10 +76467,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/config/stash.adoc:14
-#, fuzzy, placeholders:'linkgit:git-stash[1]', priority:240
-#| msgid "See also linkgit:git-stash[1]."
+#, placeholders:'linkgit:git-stash[1]', priority:240
 msgid "See the descriptions in linkgit:git-stash[1]."
-msgstr "Ver también linkgit:git-stash[1]."
+msgstr "Ver las descripciones en linkgit:git-stash[1]."
 
 #. type: Plain text
 #: en/config/stash.adoc:18
@@ -76687,10 +76677,9 @@ msgstr "`remote`"
 
 #. type: Plain text
 #: en/config/branch.adoc:26
-#, fuzzy, priority:260
-#| msgid "[[def_remote_tracking_branch]]remote-tracking branch"
+#, priority:260
 msgid "rebase is set to true for tracked branches of remote-tracking branches."
-msgstr "[[def_remote_tracking_branch]]rama de seguimiento-remoto"
+msgstr "rebase esta en verdadero para ramas con seguimiento de las ramas de seguimiento remoto."
 
 #. type: Plain text
 #: en/config/branch.adoc:27
@@ -76718,10 +76707,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/config/branch.adoc:38
-#, fuzzy, no-wrap, priority:260
-#| msgid "`-b <branch-name>`"
+#, no-wrap, priority:260
 msgid "`branch.<name>.remote`"
-msgstr "`-b<nombre-de-rama>`"
+msgstr "`branch.<nombre>.remote`"
 
 #. type: Plain text
 #: en/config/branch.adoc:49
@@ -76743,10 +76731,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/config/branch.adoc:59
-#, fuzzy, no-wrap, priority:260
-#| msgid "`-b <branch-name>`"
+#, no-wrap, priority:260
 msgid "`branch.<name>.merge`"
-msgstr "`-b<nombre-de-rama>`"
+msgstr "`branch.<nombre>.merge`"
 
 #. type: Plain text
 #: en/config/branch.adoc:76
@@ -76762,10 +76749,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/config/branch.adoc:83
-#, fuzzy, no-wrap, priority:260
-#| msgid "`-b <branch-name>`"
+#, no-wrap, priority:260
 msgid "`branch.<name>.rebase`"
-msgstr "`-b<nombre-de-rama>`"
+msgstr "`branch.<nombre>.rebase`"
 
 #. type: Plain text
 #: en/config/branch.adoc:88
@@ -76925,10 +76911,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/config/rebase.adoc:64
-#, fuzzy, priority:220
-#| msgid "`Default mode`"
+#, priority:220
 msgid "Defaults to false."
-msgstr "`Default mode`"
+msgstr "Predeterminado a false."
 
 #. type: Labeled list
 #: en/config/rebase.adoc:65
@@ -77124,10 +77109,9 @@ msgstr ""
 
 #. type: delimited block -
 #: en/config/push.adoc:101
-#, fuzzy, no-wrap, priority:220
-#| msgid "Example:"
+#, no-wrap, priority:220
 msgid "Example:\n"
-msgstr "Ejemplo:"
+msgstr "Ejemplo:\n"
 
 #. type: delimited block -
 #: en/config/push.adoc:105
@@ -77211,10 +77195,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/config/mergetool.adoc:1
-#, fuzzy, no-wrap, priority:240
-#| msgid "`merge.tool`"
+#, no-wrap, priority:240
 msgid "`mergetool.<tool>.path`"
-msgstr "`merge.tool`"
+msgstr "`mergetool.<herramienta>.path`"
 
 #. type: Plain text
 #: en/config/mergetool.adoc:4
@@ -77224,10 +77207,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/config/mergetool.adoc:5
-#, fuzzy, no-wrap, priority:240
-#| msgid "`merge.tool`"
+#, no-wrap, priority:240
 msgid "`mergetool.<tool>.cmd`"
-msgstr "`merge.tool`"
+msgstr "`mergetool.<herramienta>.cmd`"
 
 #. type: Plain text
 #: en/config/mergetool.adoc:15
@@ -77249,10 +77231,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/config/mergetool.adoc:21
-#, fuzzy, no-wrap, priority:240
-#| msgid "`diff.<driver>.trustExitCode`"
+#, no-wrap, priority:240
 msgid "`mergetool.<tool>.trustExitCode`"
-msgstr "`diff.<controlador>. trustExitCode`"
+msgstr "`mergetool.<herramienta>.trustExitCode`"
 
 #. type: Plain text
 #: en/config/mergetool.adoc:28
@@ -77304,10 +77285,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/config/mergetool.adoc:62
-#, fuzzy, no-wrap, placeholders:'linkgit:git-mergetool[1]', priority:240
-#| msgid "linkgit:git-mergetool[1]"
+#, no-wrap, placeholders:'linkgit:git-mergetool[1]', priority:240
 msgid "\tsection in linkgit:git-mergetool[1].\n"
-msgstr "linkgit:git-mergetool[1]"
+msgstr "\tsección en linkgit:git-mergetool[1].\n"
 
 #. type: Labeled list
 #: en/config/mergetool.adoc:64
@@ -77503,10 +77483,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/config/fetch.adoc:81
-#, fuzzy, placeholders:'`--negotiate-only`':'`--negotiation-tip`':'linkgit:git-fetch[1]', priority:220
-#| msgid "See also the `--amend` option to linkgit:git-commit[1]."
+#, placeholders:'`--negotiate-only`':'`--negotiation-tip`':'linkgit:git-fetch[1]', priority:220
 msgid "See also the `--negotiate-only` and `--negotiation-tip` options to linkgit:git-fetch[1]."
-msgstr "Ve también la opción `--amend` de linkgit:git-commit[1]."
+msgstr "Ver también las opciones `--negotiate-only` y `--negotiation-tip` de linkgit:git-fetch[1]."
 
 #. type: Labeled list
 #: en/config/fetch.adoc:82
@@ -77540,10 +77519,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/config/fetch.adoc:96
-#, fuzzy, placeholders:'submodule.fetchJobs', priority:220
-#| msgid "The number of submodules fetched at the same time. Defaults to the `submodule.fetchJobs` option."
+#, placeholders:'submodule.fetchJobs', priority:220
 msgid "For submodules, this setting can be overridden using the `submodule.fetchJobs` config setting."
-msgstr "La cantidad de submódulos obtenidos al mismo tiempo. Por defecto usa el valor de la opción `submodule.fetchJobs`."
+msgstr "Para submódulos, esta configuración puede ser anulada con la configuración `submodule.fetchJobs`."
 
 #. type: Labeled list
 #: en/config/fetch.adoc:97
@@ -77619,10 +77597,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/config/tag.adoc:6
-#, fuzzy, no-wrap, placeholders:'tag.sort', priority:240
-#| msgid "`short`"
+#, no-wrap, placeholders:'tag.sort', priority:240
 msgid "`tag.sort`"
-msgstr "`short`"
+msgstr "`tag.sort`"
 
 #. type: Plain text
 #: en/config/tag.adoc:9
@@ -77644,17 +77621,15 @@ msgstr ""
 
 #. type: Labeled list
 #: en/config/tag.adoc:17
-#, fuzzy, no-wrap, placeholders:'tag.gpgSign', priority:240
-#| msgid "`commit.gpgSign`"
+#, no-wrap, placeholders:'tag.gpgSign', priority:240
 msgid "`tag.gpgSign`"
-msgstr "`commit.gpgSign`"
+msgstr "`tag.gpgSign`"
 
 #. type: Plain text
 #: en/config/tag.adoc:23
-#, fuzzy, placeholders:'`--local-user=', priority:240
-#| msgid "A boolean to specify whether all commits should be GPG signed. Use of this option when doing operations such as rebase can result in a large number of commits being signed. It may be convenient to use an agent to avoid typing your GPG passphrase several times."
+#, placeholders:'`--local-user=', priority:240
 msgid "A boolean to specify whether all tags should be GPG signed. Use of this option when running in an automated script can result in a large number of tags being signed. It is therefore convenient to use an agent to avoid typing your GPG passphrase several times. Note that this option doesn't affect tag signing behavior enabled by `-u <keyid>` or `--local-user=<keyid>` options."
-msgstr "Un booleano para especificar si todas las confirmaciones deben ser firmadas con GPG. Usar esta opción cuando se hagan operaciones como rebase que puedan resultar en un número elevado de confirmaciones a firmar. Puede ser conveniente usar un agente para evitar teclear tu contraseña GPG varias veces."
+msgstr "Un booleano para especificar si todas las etiquetas deben ser firmadas con GPG. Usar esta opción cuando se ejecute una secuencia de comandos automatizada que puedan resultar en un número elevado de etiquetas a firmar. Por lo tanto es conveniente usar un agente para evitar teclear tu contraseña GPG varias veces. Nótese que esta opción no afecta el comportamiento de firma de etiqueta habilitado por las opciones `-u <identificador-de-llave>` o `--local-user=<identificador-de-llave>`."
 
 #. type: Labeled list
 #: en/config/diff.adoc:1
@@ -78176,10 +78151,9 @@ msgstr "Cuando las líneas movidas son coloreadas, usando por ejemplo la configu
 
 #. type: Labeled list
 #: en/config/checkout.adoc:1
-#, fuzzy, no-wrap, placeholders:'checkout.defaultRemote', priority:240
-#| msgid "`clone.defaultRemoteName`"
+#, no-wrap, placeholders:'checkout.defaultRemote', priority:240
 msgid "`checkout.defaultRemote`"
-msgstr "`clone.defaultRemoteName`"
+msgstr "`checkout.defaultRemote`"
 
 #. type: Plain text
 #: en/config/checkout.adoc:11
@@ -78195,10 +78169,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/config/checkout.adoc:20
-#, fuzzy, no-wrap, placeholders:'checkout.guess', priority:240
-#| msgid "`--checkout`"
+#, no-wrap, placeholders:'checkout.guess', priority:240
 msgid "`checkout.guess`"
-msgstr "`--checkout`"
+msgstr "`checkout.guess`"
 
 #. type: Plain text
 #: en/config/checkout.adoc:24
@@ -78208,10 +78181,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/config/checkout.adoc:25
-#, fuzzy, no-wrap, placeholders:'checkout.workers', priority:240
-#| msgid "`--checkout`"
+#, no-wrap, placeholders:'checkout.workers', priority:240
 msgid "`checkout.workers`"
-msgstr "`--checkout`"
+msgstr "`checkout.workers`"
 
 #. type: Plain text
 #: en/config/checkout.adoc:32
@@ -78545,19 +78517,19 @@ msgstr ""
 
 #. type: Plain text
 #: en/config/log.adoc:6
-#, fuzzy, no-wrap, placeholders:'linkgit:git-log[1]':'linkgit:git-show[1]':'linkgit:git-whatchanged[1]', priority:260
-#| msgid "linkgit:git-log[1], linkgit:git-show[1], and linkgit:git-whatchanged[1]."
+#, no-wrap, placeholders:'linkgit:git-log[1]':'linkgit:git-show[1]':'linkgit:git-whatchanged[1]', priority:260
 msgid ""
 "\tlinkgit:git-log[1], linkgit:git-show[1], and\n"
 "\tlinkgit:git-whatchanged[1]\n"
-msgstr "linkgit:git-log[1], linkgit:git-show[1], y linkgit:git-whatchanged[1]."
+msgstr ""
+"\tlinkgit:git-log[1], linkgit:git-show[1], y\n"
+"\tlinkgit:git-whatchanged[1]\n"
 
 #. type: Plain text
 #: en/config/log.adoc:9
-#, fuzzy, no-wrap, placeholders:'linkgit:git-log[1]':'linkgit:git-show[1]', priority:260
-#| msgid "linkgit:git-log[1] and linkgit:git-show[1]."
+#, no-wrap, placeholders:'linkgit:git-log[1]':'linkgit:git-show[1]', priority:260
 msgid "\tlinkgit:git-log[1] and linkgit:git-show[1]\n"
-msgstr "linkgit:git-log[1] y linkgit:git-show[1]."
+msgstr "\tlinkgit:git-log[1] y linkgit:git-show[1]\n"
 
 #. type: Plain text
 #: en/config/log.adoc:12
@@ -78707,10 +78679,9 @@ msgstr "`log.showSignature`"
 
 #. type: Plain text
 #: en/config/log.adoc:72
-#, fuzzy, placeholders:'linkgit:git-log[1]':'linkgit:git-show[1]':'linkgit:git-whatchanged[1]':'`--show-signature`', priority:260
-#| msgid "linkgit:git-log[1], linkgit:git-show[1], and linkgit:git-whatchanged[1]."
+#, placeholders:'linkgit:git-log[1]':'linkgit:git-show[1]':'linkgit:git-whatchanged[1]':'`--show-signature`', priority:260
 msgid "If true, makes linkgit:git-log[1], linkgit:git-show[1], and linkgit:git-whatchanged[1] assume `--show-signature`."
-msgstr "linkgit:git-log[1], linkgit:git-show[1], y linkgit:git-whatchanged[1]."
+msgstr "Si es verdadero hace que linkgit:git-log[1], linkgit:git-show[1] y linkgit:git-whatchanged[1] asuman `--show-signature`."
 
 #. type: Labeled list
 #: en/config/log.adoc:73
@@ -78720,17 +78691,15 @@ msgstr "`log.mailmap`"
 
 #. type: Plain text
 #: en/config/log.adoc:76
-#, fuzzy, placeholders:'linkgit:git-log[1]':'linkgit:git-show[1]':'linkgit:git-whatchanged[1]':'`--use-mailmap`':'`--no-use-mailmap`', priority:260
-#| msgid "linkgit:git-log[1], linkgit:git-show[1], and linkgit:git-whatchanged[1]."
+#, placeholders:'linkgit:git-log[1]':'linkgit:git-show[1]':'linkgit:git-whatchanged[1]':'`--use-mailmap`':'`--no-use-mailmap`', priority:260
 msgid "If true, makes linkgit:git-log[1], linkgit:git-show[1], and linkgit:git-whatchanged[1] assume `--use-mailmap`, otherwise assume `--no-use-mailmap`. True by default."
-msgstr "linkgit:git-log[1], linkgit:git-show[1], y linkgit:git-whatchanged[1]."
+msgstr "Si es verdadero hace que linkgit:git-log[1], linkgit:git-show[1] y linkgit:git-whatchanged[1] asuman `--use-mailmap`, de lo contrario asumen `--no-use-mailmap`. Predeterminado a True."
 
 #. type: Labeled list
 #: en/config/worktree.adoc:1
-#, fuzzy, no-wrap, placeholders:'worktree.guessRemote', priority:240
-#| msgid "`--no-guess-remote`"
+#, no-wrap, placeholders:'worktree.guessRemote', priority:240
 msgid "`worktree.guessRemote`"
-msgstr "`--no-guess-remote`"
+msgstr "`worktree.guessRemote`"
 
 #. type: Plain text
 #: en/config/worktree.adoc:10
@@ -78740,10 +78709,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/config/worktree.adoc:11
-#, fuzzy, no-wrap, placeholders:'worktree.useRelativePaths', priority:240
-#| msgid "`worktreepath`"
+#, no-wrap, placeholders:'worktree.useRelativePaths', priority:240
 msgid "`worktree.useRelativePaths`"
-msgstr "`worktreepath`"
+msgstr "`worktree.useRelativePaths`"
 
 #. type: Plain text
 #: en/config/worktree.adoc:16
