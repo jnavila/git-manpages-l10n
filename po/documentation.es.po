@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-02-18 21:42+0100\n"
-"PO-Revision-Date: 2026-02-24 20:46+0000\n"
+"PO-Revision-Date: 2026-03-01 10:09+0000\n"
 "Last-Translator: Salvador Peña <salvadorp74@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: es\n"
@@ -38199,13 +38199,13 @@ msgstr "Una <<def_branch,rama>> Git regular que es usada por un desarrollador pa
 #: en/glossary-content.adoc:698
 #, no-wrap, placeholders:'[[def_trailer]]', priority:310
 msgid "[[def_trailer]]trailer"
-msgstr "[[def_trailer]]remolque"
+msgstr "[[def_trailer]]colofón"
 
 #. type: Plain text
 #: en/glossary-content.adoc:702
 #, placeholders:'linkgit:git-interpret-trailers[1]', priority:310
 msgid "Key-value metadata. Trailers are optionally found at the end of a commit message. Might be called \"footers\" or \"tags\" in other communities. See linkgit:git-interpret-trailers[1]."
-msgstr "Metadatos clave-valor. Los remolques se encuentran opcionalmente al final del mensaje de confirmación. También se les conoce como \"pies de página\" o \"etiquetas\" en otras comunidades. Ver linkgit:git-interpret-trailers[1]."
+msgstr "Metadatos clave-valor. Los colofones se encuentran opcionalmente al final del mensaje de confirmación. También se les conoce como \"pies de página\" o \"etiquetas\" en otras comunidades. Ver linkgit:git-interpret-trailers[1]."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:703
@@ -50981,7 +50981,7 @@ msgstr "`--no-signoff`"
 #: en/signoff-option.adoc:16
 #, placeholders:'developercertificate.org', priority:280
 msgid "Add a `Signed-off-by` trailer by the committer at the end of the commit log message. The meaning of a signoff depends on the project to which you're committing. For example, it may certify that the committer has the rights to submit the work under the project's license or agrees to some contributor representation, such as a Developer Certificate of Origin. (See https://developercertificate.org for the one used by the Linux kernel and Git projects.) Consult the documentation or leadership of the project to which you're contributing to understand how the signoffs are used in that project."
-msgstr ""
+msgstr "Agrega un colofón `Signed-off by` por el confirmante al final del mensaje de registro de confirmación. El significado de una aprobación depende del proyecto al que se confirma. Por ejemplo, puede certificar que el confirmante tiene derecho a enviar el trabajo bajo la licencia del proyecto, o acepta alguna representación del contribuyente, como un certificado de origen del desarrollador. (Ver https://developercertificate.org para el usado por los proyectos del kernel de Linux y Git.) Consulte la documentación o los líderes del proyecto al que contribuye para entender cómo se usan las aprobaciones en ese proyecto."
 
 #. type: Plain text
 #: en/signoff-option.adoc:19
@@ -50993,7 +50993,7 @@ msgstr "La opción `--no-signoff` puede usarse para contraordenar una opción `-
 #: en/signoff-option.adoc:22
 #, placeholders:'`--signoff`':'commit.signoff':'linkgit:gitfaq[7]', priority:280
 msgid "Git does not (and will not) have a configuration variable to enable the `--signoff` command line option by default; see the `commit.signoff` entry in linkgit:gitfaq[7] for more details."
-msgstr ""
+msgstr "Git no tiene (ni tendrá) una variable de configuración para habilitar la opción de línea de comando `--signoff` predeterminadamente; ver la entrada `commit.signoff` en linkgit:gitfaq[7] para más detalles."
 
 #. type: Title =
 #: en/git-write-tree.adoc:2
@@ -65127,18 +65127,41 @@ msgid ""
 "|?        |?       |untracked\n"
 "|!        |!       |ignored\n"
 msgstr ""
+"|X        |  Y     |Significado\n"
+"|         |[AMD]   |no actualizado\n"
+"|M        |[ MTD]  |actualizado en el índice\n"
+"|T        |[ MTD]  |tipo modificado en el índice\n"
+"|A        |[ MTD]  |agregado al índice\n"
+"|D        |        |eliminado del índice\n"
+"|R        |[ MTD]  |renombrado en el índice\n"
+"|C        |[ MTD]  |copiado en el índice\n"
+"|[MTARC]  |        |índice y árbol de trabajo coinciden\n"
+"|[ MTARC] |M       |árbol de trabajo cambió desde el índice\n"
+"|[ MTARC] |T       |el tipo cambió en el árbol de trabajo desde el índice\n"
+"|[ MTARC] |D       |eliminado en el árbol de trabajo\n"
+"|         |R       |renombrado en el árbol de trabajo\n"
+"|         |C       |copiado en el árbol de trabajo\n"
+"|D        |D       |sin fusionar, ambos eliminados\n"
+"|A        |U       |sin fusionar, agregado por nosotros\n"
+"|U        |D       |sin fusionar, eliminado por ellos\n"
+"|U        |A       |sin fusionar, agregado por ellos\n"
+"|D        |U       |sin fusionar, eliminado por nosotros\n"
+"|A        |A       |sin fusionar, agregado por ambos\n"
+"|U        |U       |sin fusionar, modificado por ambos\n"
+"|?        |?       |sin seguimiento\n"
+"|!        |!       |ignorado\n"
 
 #. type: Plain text
 #: en/git-status.adoc:250
 #, priority:280
 msgid "Submodules have more state and instead report"
-msgstr ""
+msgstr "Los submódulos tienen más estado y en su lugar reportan"
 
 #. type: Plain text
 #: en/git-status.adoc:252
 #, priority:280
 msgid "the submodule has a different HEAD than recorded in the index"
-msgstr ""
+msgstr "el submódulo tiene una HEAD diferente a la registrada en el índice"
 
 #. type: Plain text
 #: en/git-status.adoc:253
@@ -65162,31 +65185,31 @@ msgstr "el submódulo tiene ficheros sin seguimiento"
 #: en/git-status.adoc:257
 #, priority:280
 msgid "This is since modified content or untracked files in a submodule cannot be added via `git add` in the superproject to prepare a commit."
-msgstr ""
+msgstr "Esto es porque el contenido modificado o los ficheros sin seguimiento en un submódulo no pueden ser agregados por medio de `git add` al superproyecto para preparar una confirmación."
 
 #. type: Plain text
 #: en/git-status.adoc:260
 #, priority:280
 msgid "`m` and `?` are applied recursively. For example if a nested submodule in a submodule contains an untracked file, this is reported as `?` as well."
-msgstr ""
+msgstr "`m` y `?` se aplican recursivamente. Por ejemplo, si un submódulo anidado en un submódulo contiene un fichero sin seguimiento, se reporta también como `?`."
 
 #. type: Plain text
 #: en/git-status.adoc:262
 #, placeholders:'`-b`', priority:280
 msgid "If `-b` is used the short-format status is preceded by a line"
-msgstr ""
+msgstr "Si se usa `-b` el estado en formato corto es precedido por una línea"
 
 #. type: synopsis
 #: en/git-status.adoc:265
 #, no-wrap, placeholders:'{empty}', priority:280
 msgid "{empty}## <branchname> <tracking-info>\n"
-msgstr ""
+msgstr "{empty}## <nombre-de-rama> <información-de-seguimiento>\n"
 
 #. type: Title ~
 #: en/git-status.adoc:268
 #, no-wrap, priority:280
 msgid "Porcelain Format Version 1"
-msgstr ""
+msgstr "Formato porcelana versión 1"
 
 #. type: Plain text
 #: en/git-status.adoc:275
