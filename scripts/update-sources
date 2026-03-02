@@ -8,19 +8,21 @@ from sources import SECTIONS
 MIN_PRIORITY_INCLUDE_SECTION = 200
 
 ## get the relative path of the files from the env var SOURCE_PATH
-relative_path = os.getenv('SOURCE_PATH')
-if relative_path is None:
+relative_path_env = os.getenv('SOURCE_PATH')
+if relative_path_env is None:
     relative_path = '..'
+else:
+    relative_path = relative_path_env
 
 INCLUDE_REGEX = re.compile('''include::(.*)\\[\\]\n''')
 
 def copy_file(source: str) -> bool:
+    path = join(relative_path, source)
     try:
-        print(f"Copying {source} from {relative_path} to en")
-        shutil.copy2(join(relative_path, source), join("en", source))
+        shutil.copy2(path, join("en", source))
         return True
     except FileNotFoundError:
-        print(f"File not found: {source}")
+        print(f"File not found: {path}")
     except shutil.SameFileError:
         print(f"File is the same: {source}")
     return False
@@ -31,7 +33,11 @@ def process_file(dirname: str, filename: str) -> None:
                 match = INCLUDE_REGEX.fullmatch(line)
                 if match:
                     full_filename = match.group(1)
-                    full_dirname = join(dirname, os.path.dirname(full_filename))
+                    if full_filename.startswith('{build_dir}/'):
+                        full_dirname = ""
+                        filename = full_filename.replace('{build_dir}/', '')
+                    else:
+                        full_dirname = join(dirname, os.path.dirname(full_filename))
                     filename = os.path.basename(full_filename)
                     if copy_file(join(full_dirname, filename)):
                         process_file(full_dirname, filename)
@@ -40,6 +46,6 @@ def process_file(dirname: str, filename: str) -> None:
 for section in SECTIONS:
     for source in SECTIONS[section]:
         if copy_file(source) and section >= MIN_PRIORITY_INCLUDE_SECTION:
-            process_file('.', source)
+            process_file('', source)
 
 shutil.copy2(os.path.join(relative_path, "..", "GIT-VERSION-FILE"), ".")
