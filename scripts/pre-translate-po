@@ -84,10 +84,6 @@ def main (f: str, d:Optional[str]=None):
                     placeholders.append(g)
                     if entry.msgstr != "" and not entry.obsolete and not entry.fuzzy and matched.group(0) not in entry.msgstr:
                         print(f"ERROR {f}: {entry.msgid}, {entry.msgstr}:\n  {matched.group(0)} not found in translation")
-                        if entry.tcomment != "":
-                            entry.tcomment += "\n"
-                        entry.tcomment += f"ERROR: {matched.group(0)} not found in translation"
-                        flags.add("fuzzy")
 
             if len(placeholders) > 0:
                 flags.add("placeholders:'" + "':'".join(placeholders) + "'")
