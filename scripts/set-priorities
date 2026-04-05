@@ -7,7 +7,7 @@ from os.path import join, dirname
 from sources import SECTIONS
 
 INCLUDE_REGEX = re.compile('''include::(.*)\\[\\]\n''')
-
+DEFAULT_PRIORITY = 10
 
 def process_file(filename, priority, priorities):
     basedirname = dirname(filename)
@@ -33,7 +33,7 @@ def main(f_list):
         for entry in po:
             if not entry.obsolete:
                 flags = [f for f in entry.flags if not (f.startswith("priority") or f.isdigit())]
-                p = max(priorities.get(filename, 100) for (filename, _) in entry.occurrences)
+                p = max(priorities.get(filename, DEFAULT_PRIORITY) for (filename, _) in entry.occurrences)
                 flags.append("priority:{}".format(p))
                 entry.flags = flags
         po.save(source)
