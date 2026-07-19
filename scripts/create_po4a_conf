@@ -12,7 +12,7 @@ with open('po4a.conf.new', 'w') as f:
     for source in glob.glob('en/**/*.adoc', recursive=True):
         source = source[3:]
         f.write(f"[type: asciidoc] en/{source} $lang:./$lang/{source}")
-        if source.startswith('git'):
+        if source.startswith('git') and not source.startswith('git-bisect-lk2009'):
             f.write(' add_$lang:?addenda/addendum.$lang.txt\n')
         else:
             f.write('\n')
