@@ -1,0 +1,17 @@
+name: Check signed commits in PR
+on: pull_request_target
+
+jobs:
+  check-signed-commits:
+    name: Check signed commits in PR
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Check signed commits in PR
+        uses: 1Password/check-signed-commits-action@v1
+	with:
+	  comment: |
+	    This repository requires that you acknowledge that the PR is you work by adding a
+	    Signed-off-by: line at the end of your commit message
