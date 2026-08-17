@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-06-20 17:30+0200\n"
-"PO-Revision-Date: 2026-07-03 21:01+0000\n"
-"Last-Translator: Salvador Peña <salvadorp74@hotmail.com>\n"
+"PO-Revision-Date: 2026-08-17 20:51+0000\n"
+"Last-Translator: Javi <weblate@javierlopezgonzalez.es>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.7.1.dev0\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 #. type: Title =
 #: en/git-var.adoc:2
@@ -3787,7 +3787,7 @@ msgstr ""
 #: en/rev-list-description.adoc:14
 #, priority:260
 msgid "Thus, the following command:"
-msgstr ""
+msgstr "De este modo, el siguiente comando:"
 
 #. type: delimited block -
 #: en/rev-list-description.adoc:18
@@ -3805,51 +3805,59 @@ msgstr "$ git log foo bar ^baz\n"
 #: en/rev-list-description.adoc:28
 #, priority:260
 msgid "means \"list all the commits which are reachable from 'foo' or 'bar', but not from 'baz'\"."
-msgstr ""
+msgstr "significa \"lista de todos los commits que son alcanzables desde 'foo' o 'bar', pero no desde 'baz'\"."
 
 #. type: Plain text
 #: en/rev-list-description.adoc:32
 #, priority:260
 msgid "A special notation \"`<commit1>..<commit2>`\" can be used as a short-hand for \"`^<commit1> <commit2>`\". For example, either of the following may be used interchangeably:"
-msgstr ""
+msgstr "Se puede usar la notación especial \"`<commit1>..<commit2>`\" como una forma abreviada de \"`^<commit1> <commit2>`\". Por ejemplo, cualquiera de las siguientes se puede usar porque son intercambiables:"
 
 #. type: delimited block -
 #: en/rev-list-description.adoc:37
-#, no-wrap, placeholders:'git rev-list':'git rev-list', priority:260
+#, fuzzy, no-wrap, placeholders:'git rev-list':'git rev-list', priority:260
 msgid ""
 "$ git rev-list origin..HEAD\n"
 "$ git rev-list HEAD ^origin\n"
 msgstr ""
+"$ git rev-list origin..HEAD\n"
+"$ git rev-list HEAD ^origin\n"
 
 #. type: delimited block -
 #: en/rev-list-description.adoc:43
-#, no-wrap, priority:260
+#, fuzzy, no-wrap, priority:260
 msgid ""
 "$ git log origin..HEAD\n"
 "$ git log HEAD ^origin\n"
 msgstr ""
+"$ git log origin..HEAD\n"
+"$ git log HEAD ^origin\n"
 
 #. type: Plain text
 #: en/rev-list-description.adoc:49
 #, ignore-ellipsis, priority:260
 msgid "Another special notation is \"`<commit1>...<commit2>`\" which is useful for merges. The resulting set of commits is the symmetric difference between the two operands. The following two commands are equivalent:"
-msgstr ""
+msgstr "Otra notación especial es \"`<commit1>...<commit2>`\" el que es útil para merges. El grupo de commits resultante es la diferencia simétrica los dos operandos. Los siguientes dos comandos son equivalentes:"
 
 #. type: delimited block -
 #: en/rev-list-description.adoc:54
-#, ignore-ellipsis, no-wrap, placeholders:'git rev-list':'--not':'git merge-base':'--all':'git rev-list', priority:260
+#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'git rev-list':'--not':'git merge-base':'--all':'git rev-list', priority:260
 msgid ""
 "$ git rev-list A B --not $(git merge-base --all A B)\n"
 "$ git rev-list A...B\n"
 msgstr ""
+"$ git rev-list A B --not $(git merge-base --all A B)\n"
+"$ git rev-list A...B\n"
 
 #. type: delimited block -
 #: en/rev-list-description.adoc:60
-#, ignore-ellipsis, no-wrap, placeholders:'--not':'git merge-base':'--all', priority:260
+#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'--not':'git merge-base':'--all', priority:260
 msgid ""
 "$ git log A B --not $(git merge-base --all A B)\n"
 "$ git log A...B\n"
 msgstr ""
+"$ git log A B --not $(git merge-base --all A B)\n"
+"$ git log A...B\n"
 
 #. type: Title =
 #: en/git-archive.adoc:2
@@ -5953,9 +5961,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-merge.adoc:392 en/config/branch.adoc:77
-#, no-wrap, priority:260
+#, fuzzy, no-wrap, priority:260
 msgid "`branch.<name>.mergeOptions`"
-msgstr ""
+msgstr "`branch.<name>.mergeOptions`"
 
 #. type: Plain text
 #: en/git-merge.adoc:396
@@ -9260,7 +9268,7 @@ msgstr ""
 #: en/git-pack-objects.adoc:330 en/rev-list-options.adoc:1045
 #, priority:260
 msgid "A debug option to help with future \"partial clone\" development. This option specifies how missing objects are handled."
-msgstr ""
+msgstr "Una opción de debug para ayudar con el desarrollo futuro de \"clonado parcial\". Esta opción especifica cómo los objetos desaparecidos son manejados."
 
 #. type: Plain text
 #: en/git-pack-objects.adoc:335
@@ -9507,11 +9515,11 @@ msgstr "git-branch(1)"
 #: en/git-branch.adoc:7
 #, priority:260
 msgid "git-branch - List, create, or delete branches"
-msgstr ""
+msgstr "git branch - Lista, crea o borra ramas"
 
 #. type: synopsis
 #: en/git-branch.adoc:27
-#, ignore-ellipsis, no-wrap, placeholders:'[--color':'--no-color]':'[--show-current]':'[--abbrev=':'--no-abbrev]':'[--column':'--no-column]':'[--sort=':'[--merged':'[--no-merged':'[--contains':'[--no-contains':'[--points-at':'[--format=':'--remotes':'--all':'[--list]':'[--track[=(direct|inherit)]':'--no-track]':'[--recurse-submodules]':'--set-upstream-to=':'--unset-upstream':'--edit-description', priority:260
+#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'[--color':'--no-color]':'[--show-current]':'[--abbrev=':'--no-abbrev]':'[--column':'--no-column]':'[--sort=':'[--merged':'[--no-merged':'[--contains':'[--no-contains':'[--points-at':'[--format=':'--remotes':'--all':'[--list]':'[--track[=(direct|inherit)]':'--no-track]':'[--recurse-submodules]':'--set-upstream-to=':'--unset-upstream':'--edit-description', priority:260
 msgid ""
 "git branch [--color[=<when>] | --no-color] [--show-current]\n"
 "\t   [-v [--abbrev=<n> | --no-abbrev]]\n"
@@ -9530,24 +9538,40 @@ msgid ""
 "git branch (-d|-D) [-r] <branch-name>...\n"
 "git branch --edit-description [<branch-name>]\n"
 msgstr ""
+"git branch [--color[=<when>] | --no-color] [--show-current]\n"
+"\t   [-v [--abbrev=<n> | --no-abbrev]]\n"
+"\t   [--column[=<options>] | --no-column] [--sort=<key>]\n"
+"\t   [--merged [<commit>]] [--no-merged [<commit>]]\n"
+"\t   [--contains [<commit>]] [--no-contains [<commit>]]\n"
+"\t   [--points-at <object>] [--format=<format>]\n"
+"\t   [(-r|--remotes) | (-a|--all)]\n"
+"\t   [--list] [<pattern>...]\n"
+"git branch [--track[=(direct|inherit)] | --no-track] [-f]\n"
+"\t   [--recurse-submodules] <branch-name> [<start-point>]\n"
+"git branch (--set-upstream-to=<upstream>|-u <upstream>) [<branch-name>]\n"
+"git branch --unset-upstream [<branch-name>]\n"
+"git branch (-m|-M) [<old-branch>] <new-branch>\n"
+"git branch (-c|-C) [<old-branch>] <new-branch>\n"
+"git branch (-d|-D) [-r] <branch-name>...\n"
+"git branch --edit-description [<branch-name>]\n"
 
 #. type: Plain text
 #: en/git-branch.adoc:37
 #, placeholders:'`--list`':'`-r`':'`-a`', priority:260
 msgid "If `--list` is given, or if there are no non-option arguments, existing branches are listed; the current branch will be highlighted in green and marked with an asterisk. Any branches checked out in linked worktrees will be highlighted in cyan and marked with a plus sign. Option `-r` causes the remote-tracking branches to be listed, and option `-a` shows both local and remote branches."
-msgstr ""
+msgstr "Si `--list` se establece, o si no hay argumentos que no sean opciones, se listan las ramas existe tes; la rama actual se resaltará en verde y un asterisco. Cualquier rama comprobada en los árboles de trabajo enlazados será resaltada en cían y un signo más. La opción `-r` causa que las ramas del remoto que se sigue se listen, y la opción `-a` muestra las dos locales y remotas."
 
 #. type: Plain text
 #: en/git-branch.adoc:42
 #, priority:260
 msgid "If a `<pattern>` is given, it is used as a shell wildcard to restrict the output to matching branches. If multiple patterns are given, a branch is shown if it matches any of the patterns."
-msgstr ""
+msgstr "Si se establece un `<patrón>`, se usa como un comodín del shell para restringir la salida de las ramas que coinciden. Si se establecen múltiples patrone, una rama se muestra si coincide con cualquiera de los patrones."
 
 #. type: Plain text
 #: en/git-branch.adoc:46
 #, placeholders:'`--list`', priority:260
 msgid "Note that when providing a `<pattern>`, you must use `--list`; otherwise the command may be interpreted as branch creation."
-msgstr ""
+msgstr "Nota que cuando proporcionas un `<patrón>`, debes usar `--list`; de otro modo el comando se puede interpretar como la creación de una rama."
 
 #. type: Plain text
 #: en/git-branch.adoc:55
@@ -9565,7 +9589,7 @@ msgstr "La segunda forma del comando crea una rama nueva llamada _<nombre-de-ram
 #: en/git-branch.adoc:66
 #, priority:260
 msgid "Note that this will create the new branch, but it will not switch the working tree to it; use `git switch <new-branch>` to switch to the new branch."
-msgstr ""
+msgstr "Fíjate que esto creará una nueva rama, pero no cambiará el árbol de trabajo a esta; usa `git switch <nueva-rama>` para cambiar a la nueva rama."
 
 #. type: Plain text
 #: en/git-branch.adoc:74
@@ -9583,13 +9607,13 @@ msgstr ""
 #: en/git-branch.adoc:84
 #, placeholders:'`-c`':'`-C`':'`-m`':'`-M`', priority:260
 msgid "The `-c` and `-C` options have the exact same semantics as `-m` and `-M`, except instead of the branch being renamed, it will be copied to a new name, along with its config and reflog."
-msgstr ""
+msgstr "Las opciones `-c` y `-C` tienen la misma semántica que `-m` y `-M`, excepto que la rama renombrada será copiada con un nievo mombre, junto con su configuración y reflog."
 
 #. type: Plain text
 #: en/git-branch.adoc:88
 #, placeholders:'`-d`':'`-D`', priority:260
 msgid "With a `-d` or `-D` option, _<branch-name>_ will be deleted. You may specify more than one branch for deletion. If the branch currently has a reflog then the reflog will also be deleted."
-msgstr ""
+msgstr "Con la opción `-d` o `-D`, _<rama>_ será borrada. Puedes especificar más de un nimbre de rama para ser borrado. Si la rama actual tiene un reflog también será borrado."
 
 #. type: Plain text
 #: en/git-branch.adoc:94
@@ -9601,7 +9625,7 @@ msgstr ""
 #: en/git-branch.adoc:103
 #, placeholders:'`HEAD`':'`--track`':'`--set-upstream-to`', priority:260
 msgid "Delete a branch. The branch must be fully merged in its upstream branch, or in `HEAD` if no upstream was set with `--track` or `--set-upstream-to`."
-msgstr ""
+msgstr "Borra una rama. La rama debe ser mergeada en su rama upstream, o en `HEAD` si no hay un upstream establecidoco. `--track` o`--set-upstream-to`."
 
 #. type: Labeled list
 #: en/git-branch.adoc:104 en/diff-options.adoc:605
@@ -9613,7 +9637,7 @@ msgstr "`-D`"
 #: en/git-branch.adoc:106
 #, placeholders:'`--delete':'--force`', priority:260
 msgid "Shortcut for `--delete --force`."
-msgstr ""
+msgstr "Forma acortsda para `--delete --force`."
 
 #. type: Labeled list
 #: en/git-branch.adoc:107 en/git-tag.adoc:212
@@ -9961,7 +9985,7 @@ msgstr ""
 #: en/git-branch.adoc:281
 #, placeholders:'`--track`':'`--set-upstream-to`', priority:260
 msgid "As this option had confusing syntax, it is no longer supported. Please use `--track` or `--set-upstream-to` instead."
-msgstr ""
+msgstr "Como esta opción tuvo una sintaxis confusa, ya no es soportada. Por favor, usa en su lugar `--track` o `--set-upstream-to`."
 
 #. type: Labeled list
 #: en/git-branch.adoc:282
@@ -9979,7 +10003,7 @@ msgstr "`--set-upstream-to=<upstream>`"
 #: en/git-branch.adoc:287
 #, priority:260
 msgid "Set up _<branch-name>_'s tracking information so _<upstream>_ is considered _<branch-name>_'s upstream branch. If no _<branch-name>_ is specified, then it defaults to the current branch."
-msgstr ""
+msgstr "Establece la información de seguimiento de _<nombre-de-rama>_ para que _<upstream>_ sea considerada la rama upstream de _<nombre-de-rama>_. Si no se establece un _<nombre-de-rama>_, se usa por defecto el de la rama actual."
 
 #. type: Labeled list
 #: en/git-branch.adoc:288
@@ -9991,7 +10015,7 @@ msgstr "`--unset-upstream`"
 #: en/git-branch.adoc:291
 #, priority:260
 msgid "Remove the upstream information for _<branch-name>_. If no branch is specified it defaults to the current branch."
-msgstr ""
+msgstr "Elimina la información de upstream para _<nombre-de-rama>_. Si no se establece una rama, se usa por defecto la rama actual."
 
 #. type: Labeled list
 #: en/git-branch.adoc:292
@@ -10003,7 +10027,7 @@ msgstr "`--edit-description`"
 #: en/git-branch.adoc:297
 #, priority:260
 msgid "Open an editor and edit the text to explain what the branch is for, to be used by various other commands (e.g. `format-patch`, `request-pull`, and `merge` (if enabled)). Multi-line explanations may be used."
-msgstr ""
+msgstr "Abre un editor y edita el texto para explicar para qué es la rama, que será usado por varios comandos distintos (por ej. òrmat-patch`, `request-pull`, y `merge` (si habilitados)). Se pueden utilizar explicaciones de varias líneas."
 
 #. type: Labeled list
 #: en/git-branch.adoc:298 en/git-tag.adoc:154
@@ -10015,7 +10039,7 @@ msgstr "`--contains [<confirmación>]`"
 #: en/git-branch.adoc:301
 #, placeholders:'`HEAD`':'`--list`', priority:260
 msgid "Only list branches which contain _<commit>_ (`HEAD` if not specified). Implies `--list`."
-msgstr ""
+msgstr "Sólo lista las ramas que continen _<commit>_ (`HEAD` si no se especifica). Implica `--list`."
 
 #. type: Labeled list
 #: en/git-branch.adoc:302 en/git-tag.adoc:158
@@ -10027,7 +10051,7 @@ msgstr "`--no-contains [<confirmación>]`"
 #: en/git-branch.adoc:305
 #, placeholders:'`HEAD`':'`--list`', priority:260
 msgid "Only list branches which don't contain _<commit>_ (`HEAD` if not specified). Implies `--list`."
-msgstr ""
+msgstr "Sólo lista las ramas que no contienen _<commit>_ (`HEAD`si no se especifica). Implica `--list`."
 
 #. type: Labeled list
 #: en/git-branch.adoc:306 en/git-tag.adoc:162
@@ -10039,7 +10063,7 @@ msgstr "`--merged [<confirmación>]`"
 #: en/git-branch.adoc:309
 #, placeholders:'`HEAD`':'`--list`', priority:260
 msgid "Only list branches whose tips are reachable from _<commit>_ (`HEAD` if not specified). Implies `--list`."
-msgstr ""
+msgstr "Sólo lista las ramas de las que sus puntas son alcanzables desde _<commit>_ (`HEAD` si no se especifica). Impica `--list`."
 
 #. type: Labeled list
 #: en/git-branch.adoc:310 en/git-tag.adoc:166
@@ -10051,7 +10075,7 @@ msgstr "`--no-merged [<confirmación>]`"
 #: en/git-branch.adoc:313
 #, placeholders:'`HEAD`':'`--list`', priority:260
 msgid "Only list branches whose tips are not reachable from _<commit>_ (`HEAD` if not specified). Implies `--list`."
-msgstr ""
+msgstr "Solo lista las ramas de las que sus puntas no son alcanzables desde _<commit>_ (`HEAD` si no se especifica). Implica `--list`."
 
 #. type: Labeled list
 #: en/git-branch.adoc:314
@@ -10063,7 +10087,7 @@ msgstr "`--points-at <objeto>`"
 #: en/git-branch.adoc:316
 #, priority:260
 msgid "Only list branches of _<object>_."
-msgstr ""
+msgstr "Sólo lista las ramas de _<objeto>_."
 
 #. type: Labeled list
 #: en/git-branch.adoc:317
@@ -10075,7 +10099,7 @@ msgstr "`--format <formato>`"
 #: en/git-branch.adoc:321
 #, placeholders:'linkgit:git-for-each-ref[1]', priority:260
 msgid "A string that interpolates `%(fieldname)` from a branch ref being shown and the object it points at. _<format>_ is the same as that of linkgit:git-for-each-ref[1]."
-msgstr ""
+msgstr "Se muestran una cadena que interpola `%(nombre-de-campo)` desde una referencia de rama y el objeto al que apunta. _<formato>_ es el mismo que para linkgit:git-for-each-ref[1]."
 
 #. type: Labeled list
 #: en/git-branch.adoc:322
@@ -10087,7 +10111,7 @@ msgstr "_<nombre-de-rama>_"
 #: en/git-branch.adoc:327
 #, placeholders:'linkgit:git-check-ref-format[1]', priority:260
 msgid "The name of the branch to create or delete. The new branch name must pass all checks defined by linkgit:git-check-ref-format[1]. Some of these checks may restrict the characters allowed in a branch name."
-msgstr ""
+msgstr "El nombre de la rama para crear o borrar. El nombre de la nueva rama debe pasar todas las comprobaciones definidas por linkgit:git-for-each-ref[1]. Alguna de estas comprobaciones pueden restringir los caracteres permitidos en el nombre de la rama."
 
 #. type: Labeled list
 #: en/git-branch.adoc:328 en/git-switch.adoc:40 en/git-checkout.adoc:351
@@ -37524,7 +37548,7 @@ msgstr "Notar que el mecanismo de injertos es obsoleto y puede provocar problema
 #: en/glossary-content.adoc:219
 #, no-wrap, placeholders:'[[def_hash]]', priority:310
 msgid "[[def_hash]]hash"
-msgstr ""
+msgstr "[[def_hash]]hash"
 
 #. type: Plain text
 #: en/glossary-content.adoc:221
@@ -37996,9 +38020,9 @@ msgstr "La acción de <<def_dereference,desreferenciar>> recursivamente un <<def
 
 #. type: Labeled list
 #: en/glossary-content.adoc:478
-#, no-wrap, placeholders:'[[def_pickaxe]]', priority:310
+#, fuzzy, no-wrap, placeholders:'[[def_pickaxe]]', priority:310
 msgid "[[def_pickaxe]]pickaxe"
-msgstr ""
+msgstr "[[def_pickaxe]]pickaxe"
 
 #. type: Plain text
 #: en/glossary-content.adoc:484
@@ -51669,7 +51693,7 @@ msgstr "compara el índice y los ficheros en el sistema de ficheros."
 #: en/diff-format.adoc:25
 #, placeholders:'git diff-files`', priority:280
 msgid "All the commands print one output line per changed file, except `git diff-files` in the case of an unmerged file, which prints both an \"unmerged\" and an \"in-place edit\" line."
-msgstr ""
+msgstr "Todos los comandos imprimen una línea por cada archivo modificado, excepto `git diff-files` en caso de un archivo sin mergear, que imprime ambas la versión sin mergear y la editada \"in situ\"."
 
 #. type: Plain text
 #: en/diff-format.adoc:27
@@ -64289,7 +64313,7 @@ msgstr "Nota que a pesar del nombre del primer modo, el color -si esta habilitad
 #: en/diff-options.adoc:468
 #, placeholders:'`--word-diff`':'`--diff-algorithm`', priority:280
 msgid "The `--word-diff` option operates by taking the same line-by-line diff that is produced without the option and computing word-by-word changes within each hunk. This may produce a larger diff than a dedicated word-diff tool would. If Git acquires a different implementation in the future, the output may change. Note that this is similar to the `--diff-algorithm` option, which may also change the output."
-msgstr ""
+msgstr "La opción `--word-diff`funciona tomando el mismo diff línea a línea que se produce sin la opción y comprueba los cambios palabra a palabraen cada trozo. Esto puede producir un diff más largo que una herramienta de diff basada en palabras de manera expresa. Si Git siguiera una implementación diferente en el futuro , la salida podría cambiar. Notese que esto es similar a la opción `--diff-algorithm`, que también puede cambiar la salida."
 
 #. type: Labeled list
 #: en/diff-options.adoc:469
@@ -66019,67 +66043,67 @@ msgstr ""
 #: en/git-status.adoc:322
 #, no-wrap, priority:280
 msgid "Stash Information"
-msgstr ""
+msgstr "Información de Stash"
 
 #. type: Plain text
 #: en/git-status.adoc:326
 #, placeholders:'`--show-stash`', priority:280
 msgid "If `--show-stash` is given, one line is printed showing the number of stash entries if non-zero:"
-msgstr ""
+msgstr "Si se establece `--show-stash`, se imprime una línea mostrando rl número de entradas stash si no es cero:"
 
 #. type: Plain text
 #: en/git-status.adoc:328
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "    # stash <N>\n"
-msgstr ""
+msgstr "    # stash <N>\n"
 
 #. type: Title ^
 #: en/git-status.adoc:330
 #, no-wrap, priority:280
 msgid "Changed Tracked Entries"
-msgstr ""
+msgstr "Entradas modificadas rastreadas"
 
 #. type: Plain text
 #: en/git-status.adoc:337
 #, priority:280
 msgid "Following the headers, a series of lines are printed for tracked entries. One of three different line formats may be used to describe an entry depending on the type of change. Tracked entries are printed in an undefined order; parsers should allow for a mixture of the 3 line types in any order."
-msgstr ""
+msgstr "Siguiendo las cabeceras, una serie de lineas se imprimen para las entradas rastreadas. Hay tres tipos diferentes de formato que pueden ser usados para describir una entrada dependiendo del tipo de cambio. Las entradas rastreadas son impresas en un orden no definido; los parsers deberían soportar una mezcla de los 3 tipos de línea en cualquier orden."
 
 #. type: Plain text
 #: en/git-status.adoc:339
 #, priority:280
 msgid "Ordinary changed entries have the following format:"
-msgstr ""
+msgstr "Las entradas modificadas ordinarias tienen el siguiente formato:"
 
 #. type: synopsis
 #: en/git-status.adoc:342
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "1 <XY> <sub> <mH> <mI> <mW> <hH> <hI> <path>\n"
-msgstr ""
+msgstr "1 <XY> <sub> <mH> <mI> <mW> <hH> <hI> <path>\n"
 
 #. type: synopsis
 #: en/git-status.adoc:344
 #, priority:280
 msgid "Renamed or copied entries have the following format:"
-msgstr ""
+msgstr "Las entradas renombradas o copiadas tienen el siguiente formato:"
 
 #. type: synopsis
 #: en/git-status.adoc:347
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "2 <XY> <sub> <mH> <mI> <mW> <hH> <hI> <X><score> <path><sep><origPath>\n"
-msgstr ""
+msgstr "2 <XY> <sub> <mH> <mI> <mW> <hH> <hI> <X><score> <path><sep><origPath>\n"
 
 #. type: Table
 #: en/git-status.adoc:350 en/git-status.adoc:393
 #, no-wrap, priority:280
 msgid "Field"
-msgstr ""
+msgstr "Campo"
 
 #. type: Table
 #: en/git-status.adoc:353 en/git-status.adoc:394
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "_<XY>_"
-msgstr ""
+msgstr "_<XY>_"
 
 #. type: Table
 #: en/git-status.adoc:357
@@ -66089,7 +66113,7 @@ msgid ""
 "unstaged XY values described in the short format,\n"
 "with unchanged indicated by a \".\" rather than\n"
 "a space."
-msgstr ""
+msgstr "Un campo de 2 caracteres que contiene los valores XY preparados y desfasados descritos en el formato corto, con cambios indicados por un \".\" en lugar de un espacio."
 
 #. type: Table
 #: en/git-status.adoc:358 en/git-status.adoc:396
@@ -66112,21 +66136,21 @@ msgstr ""
 
 #. type: Table
 #: en/git-status.adoc:365
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "_<mH>_"
-msgstr ""
+msgstr "_<mH>_"
 
 #. type: Table
 #: en/git-status.adoc:366
 #, no-wrap, priority:280
 msgid "The octal file mode in HEAD."
-msgstr ""
+msgstr "El modo de archivo octal en HEAD."
 
 #. type: Table
 #: en/git-status.adoc:366
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "_<mI>_"
-msgstr ""
+msgstr "_<mI>_"
 
 #. type: Table
 #: en/git-status.adoc:367
@@ -66138,7 +66162,7 @@ msgstr "El modo de fichero octal en el índice."
 #: en/git-status.adoc:367 en/git-status.adoc:401
 #, no-wrap, priority:280
 msgid "_<mW>_"
-msgstr ""
+msgstr "_<mW>_"
 
 #. type: Table
 #: en/git-status.adoc:368 en/git-status.adoc:402
@@ -66150,19 +66174,19 @@ msgstr "El modo de fichero octal en el árbol de trabajo."
 #: en/git-status.adoc:368
 #, no-wrap, priority:280
 msgid "_<hH>_"
-msgstr ""
+msgstr "_<hH>_"
 
 #. type: Table
 #: en/git-status.adoc:369
 #, no-wrap, priority:280
 msgid "The object name in HEAD."
-msgstr ""
+msgstr "El nombre del objeto en HEAD."
 
 #. type: Table
 #: en/git-status.adoc:369
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "_<hI>_"
-msgstr ""
+msgstr "_<hI>_"
 
 #. type: Table
 #: en/git-status.adoc:370
@@ -66172,9 +66196,9 @@ msgstr "El nombre del objeto en el índice."
 
 #. type: Table
 #: en/git-status.adoc:370
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "_<X><score>_"
-msgstr ""
+msgstr "_<X><score>_"
 
 #. type: Table
 #: en/git-status.adoc:373
@@ -66195,13 +66219,13 @@ msgstr "_<ruta>_"
 #: en/git-status.adoc:375
 #, no-wrap, priority:280
 msgid "The pathname.  In a renamed/copied entry, this is the target path."
-msgstr ""
+msgstr "La ruta.  En una entrada renombrada/copiada, este es el destino de la ruta."
 
 #. type: Table
 #: en/git-status.adoc:376
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "_<sep>_"
-msgstr ""
+msgstr "_<sep>_"
 
 #. type: Table
 #: en/git-status.adoc:379
@@ -66211,12 +66235,15 @@ msgid ""
 "with a _NUL_ (ASCII 0x00) byte; otherwise, a _TAB_ (ASCII 0x09)\n"
 "byte separates them."
 msgstr ""
+"Cuando la opción `-z` se usa, las 2 rutas se separan\n"
+"Con un _NUL_ (ASCII 0x00) byte; de otro modo, un _TAB_ (ASCII 0x09)\n"
+"byte los separa."
 
 #. type: Table
 #: en/git-status.adoc:380
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "_<origPath>_"
-msgstr ""
+msgstr "_<origPath>_"
 
 #. type: Table
 #: en/git-status.adoc:383
@@ -66226,18 +66253,20 @@ msgid ""
 "This is only present in a renamed/copied entry, and\n"
 "tells where the renamed/copied contents came from."
 msgstr ""
+"La ruta en el commit en HEAD o en el índice.\n"
+"Sólo está presente en una entrada renombrada/copiada, e indica de dónde vienen los contenidos renombrados/copiados."
 
 #. type: Plain text
 #: en/git-status.adoc:387
 #, priority:280
 msgid "Unmerged entries have the following format; the first character is a \"u\" to distinguish from ordinary changed entries."
-msgstr ""
+msgstr "Las entradas sin mergear tienen el siguiente formato; el primer carácter es una \"u\" para diferenciarlo de las entradas de cambios corrientes."
 
 #. type: synopsis
 #: en/git-status.adoc:390
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "u <XY> <sub> <m1> <m2> <m3> <mW> <h1> <h2> <h3> <path>\n"
-msgstr ""
+msgstr "u <XY> <sub> <m1> <m2> <m3> <mW> <h1> <h2> <h3> <path>\n"
 
 #. type: Table
 #: en/git-status.adoc:396
@@ -66246,6 +66275,8 @@ msgid ""
 "A 2 character field describing the conflict type\n"
 "\t    as described in the short format."
 msgstr ""
+"Un campo de 2 caracteres describiendo el tipo de conflicto\n"
+"\t    como se describe en el formato corto."
 
 #. type: Table
 #: en/git-status.adoc:398
@@ -66254,48 +66285,51 @@ msgid ""
 "A 4 character field describing the submodule state\n"
 "\t    as described above."
 msgstr ""
+"Un campo de 4 caracteres describiendo el submódulo de estadl\n"
+"\n"
+"\t    como se describe abajo."
 
 #. type: Table
 #: en/git-status.adoc:398
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "_<m1>_"
-msgstr ""
+msgstr "_<m1>_"
 
 #. type: Table
 #: en/git-status.adoc:399
 #, no-wrap, priority:280
 msgid "The octal file mode in stage 1."
-msgstr ""
+msgstr "El modo de archivo octal en la fase 1."
 
 #. type: Table
 #: en/git-status.adoc:399
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "_<m2>_"
-msgstr ""
+msgstr "_<m2>_"
 
 #. type: Table
 #: en/git-status.adoc:400
 #, no-wrap, priority:280
 msgid "The octal file mode in stage 2."
-msgstr ""
+msgstr "El modo de archivo octal en fase 2."
 
 #. type: Table
 #: en/git-status.adoc:400
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "_<m3>_"
-msgstr ""
+msgstr "_<m3>_"
 
 #. type: Table
 #: en/git-status.adoc:401
 #, no-wrap, priority:280
 msgid "The octal file mode in stage 3."
-msgstr ""
+msgstr "El modo de archivo octal en la fase 3."
 
 #. type: Table
 #: en/git-status.adoc:402
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "_<h1>_"
-msgstr ""
+msgstr "_<h1>_"
 
 #. type: Table
 #: en/git-status.adoc:403
@@ -66305,9 +66339,9 @@ msgstr "El nombre del objeto en presentación 1."
 
 #. type: Table
 #: en/git-status.adoc:403
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "_<h2>_"
-msgstr ""
+msgstr "_<h2>_"
 
 #. type: Table
 #: en/git-status.adoc:404
@@ -66317,9 +66351,9 @@ msgstr "El nombre del objeto en presentación 2."
 
 #. type: Table
 #: en/git-status.adoc:404
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "_<h3>_"
-msgstr ""
+msgstr "_<h3>_"
 
 #. type: Table
 #: en/git-status.adoc:405
@@ -66337,67 +66371,67 @@ msgstr "El nombre de la ruta."
 #: en/git-status.adoc:409
 #, no-wrap, priority:280
 msgid "Other Items"
-msgstr ""
+msgstr "Otros Elementos"
 
 #. type: Plain text
 #: en/git-status.adoc:414
 #, priority:280
 msgid "Following the tracked entries (and if requested), a series of lines will be printed for untracked and then ignored items found in the worktree."
-msgstr ""
+msgstr "Siguiendo las entradas rastreadas (y si solicitadas), una serie de líneas serán impresas para los elementos sin seguimiento y los ignorados en el árbol de trabajo."
 
 #. type: Plain text
 #: en/git-status.adoc:416
 #, priority:280
 msgid "Untracked items have the following format:"
-msgstr ""
+msgstr "Los elementos sin seguimiento tienen el siguiente formato:"
 
 #. type: Plain text
 #: en/git-status.adoc:418
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "    ? <path>\n"
-msgstr ""
+msgstr "    ? <path>\n"
 
 #. type: Plain text
 #: en/git-status.adoc:420
 #, priority:280
 msgid "Ignored items have the following format:"
-msgstr ""
+msgstr "Los elementos ignorados tienen el siguiente formato:"
 
 #. type: Plain text
 #: en/git-status.adoc:422
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "    ! <path>\n"
-msgstr ""
+msgstr "    ! <path>\n"
 
 #. type: Title ^
 #: en/git-status.adoc:424
 #, no-wrap, priority:280
 msgid "Pathname Format Notes and -z"
-msgstr ""
+msgstr "Las notas de Formato de Ruta y -z"
 
 #. type: Plain text
 #: en/git-status.adoc:429
 #, placeholders:'`-z`', priority:280
 msgid "When the `-z` option is given, pathnames are printed as is and without any quoting and lines are terminated with a _NUL_ (ASCII 0x00) byte."
-msgstr ""
+msgstr "Cuando la opción `-z` se establece, las rutas se imprimen tal cual y sin ningún entrecomillado y las líneas se finalizan con un byte _NUL_ (ASCII 0x00)."
 
 #. type: Plain text
 #: en/git-status.adoc:433
 #, placeholders:'`-z`':'core.quotePath':'linkgit:git-config[1]', priority:280
 msgid "Without the `-z` option, pathnames with \"unusual\" characters are quoted as explained for the configuration variable `core.quotePath` (see linkgit:git-config[1])."
-msgstr ""
+msgstr "Sin la opción `-z`, las rutas con carácteres \"inusuales\" son entrecomilladas como se especifique en la varoable de configuración `core.quotePath` (ver linkgit:git-config[1])."
 
 #. type: Plain text
 #: en/git-status.adoc:442
 #, placeholders:'color.status':'status.color':'color.status', priority:280
 msgid "The command honors `color.status` (or `status.color` -- they mean the same thing and the latter is kept for backward compatibility) and `color.status.<slot>` configuration variables to colorize its output."
-msgstr ""
+msgstr "El comando respeta las variables de configuración `color.status` (o `status.color` -- significa lo mismo y la última se mantiene por retrocompatibilidad) y `color.status <slot>` para coloresr la salida."
 
 #. type: Plain text
 #: en/git-status.adoc:446
 #, placeholders:'status.relativePaths', priority:280
 msgid "If the config variable `status.relativePaths` is set to false, then all paths shown are relative to the repository root, not to the current directory."
-msgstr ""
+msgstr "Si la variable de configuración `status.relativePaths` se establece a falso, todas las rutas mostradas son relativas a la raíz del repositorio, no del directorio actual."
 
 #. type: Plain text
 #: en/git-status.adoc:457
@@ -66409,7 +66443,7 @@ msgstr ""
 #: en/git-status.adoc:459
 #, no-wrap, priority:280
 msgid "BACKGROUND REFRESH"
-msgstr ""
+msgstr "REFRESCO EN SEGUNDO PLANO"
 
 #. type: Plain text
 #: en/git-status.adoc:470
@@ -66421,7 +66455,7 @@ msgstr ""
 #: en/git-status.adoc:472
 #, no-wrap, priority:280
 msgid "UNTRACKED FILES AND PERFORMANCE"
-msgstr ""
+msgstr "ARCHIVOS SIN SEGUIMIENTO Y DESEMPEÑO"
 
 #. type: Plain text
 #: en/git-status.adoc:483
@@ -66433,25 +66467,25 @@ msgstr ""
 #: en/git-status.adoc:485
 #, placeholders:'`--untracked-files=no`', priority:280
 msgid "The `--untracked-files=no` flag or the"
-msgstr ""
+msgstr "El glag `--untracked-files=no` o el"
 
 #. type: Plain text
 #: en/git-status.adoc:490
 #, placeholders:'status.showUntrackedFiles', priority:280
 msgid "`status.showUntrackedFiles=no` config (see above for both): indicate that `git status` should not report untracked files. This is the fastest option. `git status` will not list the untracked files, so you need to be careful to remember if you create any new files and manually `git add` them."
-msgstr ""
+msgstr "configuración `status.showUntrackedFiles=no` (ver abajo ambos): indica que `git status` no debería reportar archivos sin seguimiento. Esta es la opción más rápida. `git status` no listará los archivos sin seguimiento, por lo que debes estar atento y recordar si has añadido algún archivo nuevo y manualmente hacerles `git add`."
 
 #. type: Plain text
 #: en/git-status.adoc:492
 #, placeholders:'advice.statusUoption':'linkgit:git-config[1]', priority:280
 msgid "`advice.statusUoption=false` (see linkgit:git-config[1]):"
-msgstr ""
+msgstr "`advice.statusUoption=false` (ver linkgit:git-config[1]):"
 
 #. type: Plain text
 #: en/git-status.adoc:499
 #, priority:280
 msgid "setting this variable to `false` disables the warning message given when enumerating untracked files takes more than 2 seconds. In a large project, it may take longer and the user may have already accepted the trade off (e.g. using `-uno` may not be an acceptable option for the user), in which case, there is no point issuing the warning message, and in such a case, disabling the warning may be the best."
-msgstr ""
+msgstr "establecer esta variable a `false` deshabilita el mensaje de aviso que se lanza cuando enumerar archivos sin seguimiento tarda más de 2 segundos. En un proyecto grande, puede llevar más tiempo y el usuario puede que ya haya aceptado la compensación (por ej. usando `-uno` puede no ser una opción aceptable para el usuario), en cuyo caso, no tiene sentido entregar el aviso, y en ese caso, deshabilitar el aviso puede ser lo mejor,"
 
 #. type: Plain text
 #: en/git-status.adoc:501
@@ -66469,7 +66503,7 @@ msgstr ""
 #: en/git-status.adoc:515
 #, placeholders:'core.untrackedCache':'core.fsmonitor', priority:280
 msgid "`core.untrackedCache=true` and `core.fsmonitor=true` or"
-msgstr ""
+msgstr "`core.untrackedCache=true` y `core.fsmonitor=true` o"
 
 #. type: Plain text
 #: en/git-status.adoc:525
@@ -66481,7 +66515,7 @@ msgstr ""
 #: en/git-status.adoc:530
 #, priority:280
 msgid "Note that after you turn on the untracked cache and/or FSMonitor features it may take a few `git status` commands for the various caches to warm up before you see improved command times. This is normal."
-msgstr ""
+msgstr "Fíjate que tras tu turno en la cahé sin seguimiento y/o las características de FSMonitor toma varios comandos `git status` para las distintas caches para activarse antes de que notes los tiempos de comandos mejorados. Esto es normal."
 
 #. type: Title =
 #: en/git-am.adoc:2
@@ -77130,9 +77164,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-upload-pack.adoc:89
-#, ignore-ellipsis, no-wrap, placeholders:'--no-local':'--upload-pack=':'git-upload-pack', priority:10
+#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'--no-local':'--upload-pack=':'git-upload-pack', priority:10
 msgid "    git clone --no-local --upload-pack='sudo -u nobody git-upload-pack' ...\n"
-msgstr ""
+msgstr "    git clone --no-local --upload-pack='sudo -u nobody git-upload-pack' ...\n"
 
 #. type: Labeled list
 #: en/config/init.adoc:6
@@ -77316,15 +77350,15 @@ msgstr "Esta configuración puede anularse pasando la opción `--strategy` a lin
 
 #. type: Labeled list
 #: en/config/notes.adoc:10
-#, no-wrap, priority:280
+#, fuzzy, no-wrap, priority:280
 msgid "`notes.<name>.mergeStrategy`"
-msgstr ""
+msgstr "`notes.<name>.mergeStrategy`"
 
 #. type: Plain text
 #: en/config/notes.adoc:15
 #, placeholders:'notes.mergeStrategy':'linkgit:git-notes[1]', priority:280
 msgid "Which merge strategy to choose when doing a notes merge into `refs/notes/<name>`. This overrides the more general `notes.mergeStrategy`. See the \"NOTES MERGE STRATEGIES\" section in linkgit:git-notes[1] for more information on the available strategies."
-msgstr ""
+msgstr "Qué estrategia de merge elegir cuando se mergean notas en `refs/notes/<name>`. Sobreescribe la más general `notes.mergeStrategy`. Ver las \"ESTRATEGIAS DE MERGE DE NOTAS\" sección en linkgit:git-notes[1]para la información sobre las estrategias disponibles."
 
 #. type: Labeled list
 #: en/config/notes.adoc:16
@@ -77342,25 +77376,25 @@ msgstr "Cuál referencia (o referencias, si se especifica más de una vez o un g
 #: en/config/notes.adoc:25
 #, placeholders:'GIT_NOTES_DISPLAY_REF', priority:280
 msgid "This setting can be overridden with the `GIT_NOTES_DISPLAY_REF` environment variable, which must be a colon separated list of refs or globs."
-msgstr ""
+msgstr "Esta configuración se puede sobreescribir con la variable de entorno `GIT_NOTES_DISPLAY_REF`, que debe ser una lista de refs o globa separados por punto y coma."
 
 #. type: Plain text
 #: en/config/notes.adoc:32
 #, placeholders:'`--no-notes`':'linkgit:git-log[1]':'`--notes=', priority:280
 msgid "This setting can be disabled by the `--no-notes` option to the linkgit:git-log[1] family of commands, or by the `--notes=<ref>` option accepted by those commands."
-msgstr ""
+msgstr "Esta configuración se puede deshabilitar usando la opción `--no-notes`de la familia de comandos linkgit:git-log[1, o de la opción `--notes=<ref>` aceptada por esos comandos."
 
 #. type: Plain text
 #: en/config/notes.adoc:36
 #, placeholders:'core.notesRef':'GIT_NOTES_REF', priority:280
 msgid "The effective value of `core.notesRef` (possibly overridden by `GIT_NOTES_REF`) is also implicitly added to the list of refs to be displayed."
-msgstr ""
+msgstr "El valor efectivo de `core.notesRef`(posiblemente sobrescrita por `GIT_NOTES_REF`) es implícitamente añadida a la lista de referencias a ser mostrada."
 
 #. type: Labeled list
 #: en/config/notes.adoc:37
-#, no-wrap, placeholders:'notes.rewrite', priority:280
+#, fuzzy, no-wrap, placeholders:'notes.rewrite', priority:280
 msgid "`notes.rewrite.<command>`"
-msgstr ""
+msgstr "`notes.rewrite.<command>`"
 
 #. type: Plain text
 #: en/config/notes.adoc:42
