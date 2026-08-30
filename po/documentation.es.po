@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-06-20 17:30+0200\n"
-"PO-Revision-Date: 2026-08-26 04:51+0000\n"
-"Last-Translator: Salvador Peña <salvadorp74@hotmail.com>\n"
+"PO-Revision-Date: 2026-08-31 18:51+0000\n"
+"Last-Translator: Sergi De Federico <sergidefe@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -66511,7 +66511,7 @@ msgstr "`core.untrackedCache=true` (ver linkgit:git-update-index[1]):"
 #: en/git-status.adoc:513
 #, priority:280
 msgid "enable the untracked cache feature and only search directories that have been modified since the previous `git status` command. Git remembers the set of untracked files within each directory and assumes that if a directory has not been modified, then the set of untracked files within has not changed. This is much faster than enumerating the contents of every directory, but still not without cost, because Git still has to search for the set of modified directories. The untracked cache is stored in the `.git/index` file. The reduced cost of searching for untracked files is offset slightly by the increased size of the index and the cost of keeping it up-to-date. That reduced search time is usually worth the additional size."
-msgstr ""
+msgstr "activar la función de caché no rastreada y buscar únicamente en los directorios que se hayan modificado desde el último comando `git status`. Git recuerda el conjunto de archivos sin seguimiento que hay en cada directorio y da por hecho que, si un directorio no se ha modificado, el conjunto de archivos sin seguimiento que contiene tampoco ha cambiado."
 
 #. type: Plain text
 #: en/git-status.adoc:515
@@ -66523,7 +66523,7 @@ msgstr "`core.untrackedCache=true` y `core.fsmonitor=true` o"
 #: en/git-status.adoc:525
 #, placeholders:'core.fsmonitor':'linkgit:git-update-index[1]', priority:280
 msgid "`core.fsmonitor=<hook-command-pathname>` (see linkgit:git-update-index[1]): enable both the untracked cache and FSMonitor features and only search directories that have been modified since the previous `git status` command. This is faster than using just the untracked cache alone because Git can also avoid searching for modified directories. Git only has to enumerate the exact set of directories that have changed recently. While the FSMonitor feature can be enabled without the untracked cache, the benefits are greatly reduced in that case."
-msgstr ""
+msgstr "`core.fsmonitor=<hook-command-pathname>` (véase linkgit:git-update-index[1]): activa tanto la caché de archivos sin seguimiento como las funciones FSMonitor, y busca únicamente en los directorios que se hayan modificado desde la última ejecución del comando `git status`. Esto es más rápido que utilizar únicamente la caché de sin seguimiento, ya que Git también puede evitar buscar en los directorios modificados. Git solo tiene que enumerar el conjunto exacto de directorios que han cambiado recientemente. Aunque la función FSMonitor se puede activar sin la caché de archivos sin seguimiento, en ese caso las ventajas se reducen considerablemente."
 
 #. type: Plain text
 #: en/git-status.adoc:530
@@ -77416,13 +77416,13 @@ msgstr "`notes.rewrite.<comando>`"
 #: en/config/notes.adoc:42
 #, placeholders:'notes.rewriteRef', priority:280
 msgid "When rewriting commits with _<command>_ (currently `amend` or `rebase`), if this variable is `false`, git will not copy notes from the original to the rewritten commit. Defaults to `true`. See also `notes.rewriteRef` below."
-msgstr ""
+msgstr "Al reescribir confirmaciones con _<command>_ (actualmente `amend` o `rebase`), si esta variable es `false`, git no copiará las notas del original en la confirmación reescrita. El valor por defecto es `true`. Véase también `notes.rewriteRef` más abajo."
 
 #. type: Plain text
 #: en/config/notes.adoc:46
 #, placeholders:'GIT_NOTES_REWRITE_REF', priority:280
 msgid "This setting can be overridden with the `GIT_NOTES_REWRITE_REF` environment variable, which must be a colon separated list of refs or globs."
-msgstr ""
+msgstr "Esta configuración se puede anular mediante la variable de entorno `GIT_NOTES_REWRITE_REF`, que debe ser una lista de referencias o expresiones generales separadas por dos puntos."
 
 #. type: Labeled list
 #: en/config/notes.adoc:47
@@ -77452,19 +77452,19 @@ msgstr "`notes.rewriteRef`"
 #: en/config/notes.adoc:62
 #, priority:280
 msgid "When copying notes during a rewrite, specifies the (fully qualified) ref whose notes should be copied. May be a glob, in which case notes in all matching refs will be copied. You may also specify this configuration several times."
-msgstr ""
+msgstr "Al copiar notas durante una reescritura, especifica la referencia (completa) cuyas notas deben copiarse. Puede ser un patrón de coincidencia, en ese caso, se copiarán las notas de todas las referencias que coincidan. También puedes especificar esta configuración varias veces."
 
 #. type: Plain text
 #: en/config/notes.adoc:66
 #, priority:280
 msgid "Does not have a default value; you must configure this variable to enable note rewriting. Set it to `refs/notes/commits` to enable rewriting for the default commit notes."
-msgstr ""
+msgstr "No tiene un valor por defecto; debes configurar esta variable para habilitar la reescritura de notas. Establece su valor en `refs/notes/commits` para habilitar la reescritura de las notas de confirmación predeterminadas."
 
 #. type: Plain text
 #: en/config/notes.adoc:68
 #, placeholders:'GIT_NOTES_REWRITE_REF':'notes.rewrite', priority:280
 msgid "Can be overridden with the `GIT_NOTES_REWRITE_REF` environment variable. See `notes.rewrite.<command>` above for a further description of its format."
-msgstr ""
+msgstr "Se pueden sobreescribir mediante la variable de entorno `GIT_NOTES_REWRITE_REF`. Consulta `notes.rewrite.<command>` más arriba para obtener una descripción más detallada de su formato."
 
 #. type: Labeled list
 #: en/config/stash.adoc:9
