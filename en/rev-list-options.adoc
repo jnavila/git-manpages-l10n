@@ -16,7 +16,10 @@ ordering and formatting options, such as `--reverse`.
 `-<number>`::
 `-n <number>`::
 `--max-count=<number>`::
-	Limit the output to _<number>_ commits.
+	Limit the output to the first _<number>_ commits that would be shown.
+
+`--max-count-oldest=<number>`::
+	Limit the output to the last _<number>_ commits that would be shown.
 
 `--skip=<number>`::
 	Skip _<number>_ commits before starting to show the commit output.
@@ -1265,6 +1268,14 @@ This implies the `--topo-order` option by default, but the
 	Lanes over the limit are replaced with a truncation mark '~'.
 	By default it is set to 0 (no limit), zero and negative values
 	are ignored and treated as no limit.
+
+`--no-graph-indent`::
+`--graph-indent`::
+	When used with `--graph`, indent visual roots (commits with no parents
+	or whose parents are not shown) to differentiate them from commits that
+	are vertically adjacent but unrelated. Enabled by default. Use
+	`--no-graph-indent` to disable or set `log.graphIndent` to set a
+	default preference.
 
 ifdef::git-rev-list[]
 `--count`::
