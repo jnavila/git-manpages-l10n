@@ -1857,10 +1857,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-push.adoc:24
-#, fuzzy, priority:220
-#| msgid "Updates one or more branches, tags, or other references in a remote repository from your local repository, and sends all necessary data that isn't already on the remote."
+#, priority:220
 msgid "Updates one or more branches, tags, or other references in one or more remote repositories from your local repository, and sends all necessary data that isn't already on the remote."
-msgstr "将本地仓库中的一个或多个分支、标签或其他引用更新到远程仓库，并发送远程端尚不存在的所有必要数据。"
+msgstr "将本地仓库中的一个或多个分支、标签或其他引用更新到一个或多个远程仓库，并发送远程端尚不存在的所有必要数据。"
 
 #. type: Plain text
 #: en/git-push.adoc:28
@@ -1872,19 +1871,19 @@ msgstr "最简单的推送方式是 `git push <remote> <branch>`。例如，`git
 #: en/git-push.adoc:32
 #, priority:220
 msgid "You can also push to multiple remotes at once by using a remote group. A remote group is a named list of remotes configured via `remotes.<name>` in your git config:"
-msgstr ""
+msgstr "你也可以使用远程组一次推送到多个远程。远程组是在 Git 配置中通过 `remotes.<name>` 配置的具名远程列表："
 
 #. type: Plain text
 #: en/git-push.adoc:34
 #, no-wrap, placeholders:'remotes.all', priority:220
 msgid "\t$ git config remotes.all-remotes \"origin gitlab backup\"\n"
-msgstr ""
+msgstr "\t$ git config remotes.all-remotes \"origin gitlab backup\"\n"
 
 #. type: Plain text
 #: en/git-push.adoc:40
 #, placeholders:'linkgit:git-config[1]', priority:220
 msgid "Then `git push all-remotes` will push to `origin`, `gitlab`, and `backup` in turn, as if you had run `git push` against each one individually. Each remote is pushed independently using its own push mapping configuration. There is a `remotes.<group>` entry in the configuration file. (See linkgit:git-config[1])."
-msgstr ""
+msgstr "然后，`git push all-remotes` 会依次推送到 `origin`、`gitlab` 和 `backup`，就像分别对每个远程运行 `git push` 一样。每个远程都使用自己的推送映射配置独立推送。配置文件中包含一个 `remotes.<group>` 条目。（参见 linkgit:git-config[1]）。"
 
 #. type: Plain text
 #: en/git-push.adoc:43
@@ -1936,10 +1935,9 @@ msgstr "_<仓库>_"
 
 #. type: Plain text
 #: en/git-push.adoc:73
-#, fuzzy, placeholders:'<<URLS,':'<<REMOTES,', priority:220
-#| msgid "The \"remote\" repository that is the destination of a push operation. This parameter can be either a URL (see the section <<URLS,GIT URLS>> below) or the name of a remote (see the section <<REMOTES,REMOTES>> below)."
+#, placeholders:'<<URLS,':'<<REMOTES,', priority:220
 msgid "The \"remote\" repository that is the destination of a push operation. This parameter can be either a URL (see the section <<URLS,GIT URLS>> below), the name of a remote (see the section <<REMOTES,REMOTES>> below), or the name of a remote group (see the section <<REMOTE-GROUPS,REMOTE GROUPS>> below)."
-msgstr "作为推送操作的目的地的 “远程” 仓库。 这个参数可以是一个网址（见下面 <<URLS,GIT 地址>> 一节），也可以是一个远程库的名称（见下面 <<REMOTES,远程仓库>> 一节）。"
+msgstr "作为推送操作目的地的“远程”仓库。该参数可以是 URL（参见下文 <<URLS,GIT 地址>> 一节）、远程名称（参见下文 <<REMOTES,远程仓库>> 一节），或者远程组名称（参见下文 <<REMOTE-GROUPS,远程组>> 一节）。"
 
 #. type: Labeled list
 #: en/git-push.adoc:74
@@ -2717,42 +2715,39 @@ msgstr "仅使用 IPv6 地址，忽略 IPv4 地址。"
 
 #. type: Title -
 #: en/git-push.adoc:448
-#, fuzzy, no-wrap, priority:220
-#| msgid "REMOTE_USER"
+#, no-wrap, priority:220
 msgid "REMOTE GROUPS"
-msgstr "REMOTE_USER"
+msgstr "远程组"
 
 #. type: Plain text
 #: en/git-push.adoc:452
 #, priority:220
 msgid "A remote group is a named list of remotes configured via `remotes.<name>` in your git config:"
-msgstr ""
+msgstr "远程组是在 Git 配置中通过 `remotes.<name>` 配置的具名远程列表："
 
 #. type: Plain text
 #: en/git-push.adoc:454
 #, no-wrap, placeholders:'remotes.all', priority:220
 msgid "\t$ git config remotes.all-remotes \"r1 r2 r3\"\n"
-msgstr ""
+msgstr "\t$ git config remotes.all-remotes \"r1 r2 r3\"\n"
 
 #. type: Plain text
 #: en/git-push.adoc:457
 #, priority:220
 msgid "When a group name is given as the `<repository>` argument, the push is performed to each member remote in turn. The defining principle is:"
-msgstr ""
+msgstr "将组名作为 `<repository>` 参数给出时，会依次向组内的每个远程执行推送。其基本原则是："
 
 #. type: Plain text
 #: en/git-push.adoc:459
-#, fuzzy, no-wrap, priority:220
-#| msgid "'git mv' <options>... <args>...\n"
+#, no-wrap, priority:220
 msgid "\tgit push <options> all-remotes <args>\n"
-msgstr "'git mv' <options>...<args>...\n"
+msgstr "\tgit push <选项> all-remotes <参数>\n"
 
 #. type: Plain text
 #: en/git-push.adoc:461
-#, fuzzy, priority:220
-#| msgid "It is a rough equivalent for:"
+#, priority:220
 msgid "is exactly equivalent to:"
-msgstr "它大致相当于："
+msgstr "完全等同于："
 
 #. type: Plain text
 #: en/git-push.adoc:466
@@ -2763,36 +2758,40 @@ msgid ""
 "\t...\n"
 "\tgit push <options> rN <args>\n"
 msgstr ""
+"\tgit push <选项> r1 <参数>\n"
+"\tgit push <选项> r2 <参数>\n"
+"\t...\n"
+"\tgit push <选项> rN <参数>\n"
 
 #. type: Plain text
 #: en/git-push.adoc:470
 #, ignore-ellipsis, priority:220
 msgid "where r1, r2, ..., rN are the members of `all-remotes`. No special behaviour is added or removed — the group is purely a shorthand for running the same push command against each member remote individually."
-msgstr ""
+msgstr "其中 r1、r2、……、rN 是 `all-remotes` 的成员。远程组不会增加或移除任何特殊行为，它只是分别对每个成员远程运行同一推送命令的简写。"
 
 #. type: Plain text
 #: en/git-push.adoc:478
 #, priority:220
 msgid "When pushing to a group of more than one remote, Git spawns a separate `git push` subprocess for each member remote in sequence. Each subprocess receives the same flags and refspecs as the original invocation. This means that per-remote push mappings configured via `remote.<name>.push` and mirror mode (`remote.<name>.mirror`) are evaluated independently for each remote, and a mirror remote in the group cannot affect the push behaviour of other non-mirror remotes in the same group."
-msgstr ""
+msgstr "向包含多个远程的组推送时，Git 会依次为每个成员远程启动一个单独的 `git push` 子进程。每个子进程都会收到与原始调用相同的标志和引用规范。这意味着，通过 `remote.<name>.push` 配置的各远程推送映射以及镜像模式（`remote.<name>.mirror`）都会针对每个远程独立求值，组中的镜像远程不会影响同组其他非镜像远程的推送行为。"
 
 #. type: Plain text
 #: en/git-push.adoc:483
 #, placeholders:'`--atomic`':'`--atomic`', priority:220
 msgid "The `--atomic` option is not supported for group pushes, because atomicity can only be guaranteed within a single transport connection to a single remote. Git will refuse the invocation with an error if `--atomic` is combined with a group name."
-msgstr ""
+msgstr "组推送不支持 `--atomic` 选项，因为原子性只能在连接单个远程的一条传输连接内得到保证。如果将 `--atomic` 与组名组合使用，Git 会报错并拒绝该调用。"
 
 #. type: Plain text
 #: en/git-push.adoc:490
 #, priority:220
 msgid "If any member remote fails whether due to a push rejection (e.g. a non-fast-forward update, a server-side hook refusing a ref) or a connection error (e.g. the repository does not exist, authentication fails, or the network is unreachable), Git reports the error and continues pushing to the remaining remotes in the group. The overall exit code is non-zero if any member push fails."
-msgstr ""
+msgstr "如果任何成员远程失败，无论是由于推送被拒绝（例如非快进更新、服务器端钩子拒绝某个引用），还是连接错误（例如仓库不存在、身份验证失败或网络不可达），Git 都会报告错误并继续向组内其余远程推送。只要有任一成员推送失败，整体退出码就为非零值。"
 
 #. type: Plain text
 #: en/git-push.adoc:496
 #, priority:220
 msgid "This means the user is responsible for ensuring that the sequence of individual pushes makes sense. If `git push r1`` would fail for a given set of options and arguments, then `git push all-remotes` will fail in the same way when it reaches r1. The group push does not do anything special to make a failing individual push succeed."
-msgstr ""
+msgstr "这意味着用户需要负责确保这一系列独立推送是合理的。如果对给定的一组选项和参数执行 `git push r1` 会失败，那么 `git push all-remotes` 在处理到 r1 时也会以相同方式失败。组推送不会采取任何特殊措施来让原本失败的单次推送成功。"
 
 #. type: Title -
 #: en/git-push.adoc:498 en/git-check-attr.adoc:54 en/git-show-ref.adoc:113 en/git-ls-remote.adoc:105 en/git-fetch.adoc:194 en/git-show-branch.adoc:133 en/git-cvsimport.adoc:188 en/git-ls-files.adoc:235 en/git-check-ignore.adoc:69 en/git-merge-tree.adoc:101 en/git-cat-file.adoc:279 en/git-check-mailmap.adoc:42 en/git-update-server-info.adoc:29 en/git-status.adoc:161
@@ -3730,7 +3729,7 @@ msgstr "--merge-base"
 #: en/git-diff-tree.adoc:50
 #, priority:80
 msgid "Instead of comparing the <tree-ish>s directly, use the merge base between the two <tree-ish>s as the \"before\" side. There must be two <tree-ish>s given and they must both be commits."
-msgstr "不要直接比较 <树对象>，而是使用两个 <树对象> 之间的合并基数作为 \"before\" 边。 必须有两个 <树对象>，而且必须都是提交。"
+msgstr "不要直接比较 <树对象>，而是使用两个 <树对象> 之间的合并基础作为 \"before\" 边。 必须有两个 <树对象>，而且必须都是提交。"
 
 #. type: Labeled list
 #: en/git-diff-tree.adoc:51 en/git-check-attr.adoc:31 en/git-svn.adoc:595 en/git-index-pack.adoc:47 en/git-checkout-index.adoc:68 en/git-update-index.adoc:158 en/git-http-fetch.adoc:40 en/git-check-ignore.adoc:45 en/git-merge-tree.adoc:43 en/git-send-pack.adoc:42 en/git-check-mailmap.adoc:26 en/git-fetch-pack.adoc:38 en/git-hash-object.adoc:34
@@ -4646,7 +4645,7 @@ msgstr "--aggressive"
 #: en/git-read-tree.adoc:78
 #, placeholders:'git read-tree', priority:80
 msgid "Usually a three-way merge by 'git read-tree' resolves the merge for really trivial cases and leaves other cases unresolved in the index, so that porcelains can implement different merge policies. This flag makes the command resolve a few more cases internally:"
-msgstr "通常情况下，通过 'git read-tree' 进行的三方合并会解决真正琐碎的合并问题，而将其他问题保留在索引中不予解决，这样就可以实现不同的合并策略。 这个标签会让命令在内部解决更多情况："
+msgstr "通常情况下，通过 'git read-tree' 进行的三方合并只会解决非常简单的情况，并将其他情况以未解决状态留在索引中，以便不同的上层命令实现各自的合并策略。 这个标志会让命令在内部多解决几种情况："
 
 #. type: Plain text
 #: en/git-read-tree.adoc:81
@@ -4952,7 +4951,7 @@ msgstr "当这种形式的 'git read-tree' 成功返回时，你可以通过运�
 #: en/git-read-tree.adoc:235
 #, priority:80
 msgid "Case 3 is slightly tricky and needs explanation. The result from this rule logically should be to remove the path if the user staged the removal of the path and then switching to a new branch. That however will prevent the initial checkout from happening, so the rule is modified to use M (new tree) only when the content of the index is empty. Otherwise the removal of the path is kept as long as $H and $M are the same."
-msgstr "情况 3 稍显棘手，需要解释一下。 如果用户分阶段删除路径，然后切换到新的分支，那么从逻辑上讲，这条规则的结果应该是删除路径。 然而，这将阻止初始检出的发生，因此该规则被修改为只有在索引内容为空时才使用 M（新目录树）。 否则，只要 $H 和 $M 相同，就会保留路径的删除。"
+msgstr "情况 3 稍显棘手，需要解释一下。 如果用户暂存了路径删除，然后切换到新的分支，那么从逻辑上讲，这条规则的结果应该是删除路径。 然而，这将阻止初始检出的发生，因此该规则被修改为只有在索引内容为空时才使用 M（新目录树）。 否则，只要 $H 和 $M 相同，就会保留路径的删除。"
 
 #. type: Title ~
 #: en/git-read-tree.adoc:237
@@ -5254,7 +5253,7 @@ msgstr ""
 #: en/git-sh-i18n--envsubst.adoc:24
 #, priority:90
 msgid "This is not a command the end user would want to run. Ever. This documentation is meant for people who are studying the plumbing scripts and/or are writing new ones."
-msgstr "这不是最终用户想要运行的命令。 永远不会 本文档是为研究管道脚本和/或编写新脚本的人员准备的。"
+msgstr "这不是最终用户会想运行的命令，永远都不是。本文档面向研究底层脚本或编写新脚本的人。"
 
 #. type: Plain text
 #: en/git-sh-i18n--envsubst.adoc:29
@@ -5724,7 +5723,7 @@ msgstr "如果合并开始时有未提交的工作区变化，`git merge --abort
 #: en/git-merge.adoc:116
 #, placeholders:'--abort`':'--merge`':'MERGE_HEAD':'MERGE_AUTOSTASH':'--abort`':'--merge`', priority:240
 msgid "`git merge --abort` is equivalent to `git reset --merge` when `MERGE_HEAD` is present unless `MERGE_AUTOSTASH` is also present in which case `git merge --abort` applies the stash entry to the worktree whereas `git reset --merge` will save the stashed changes in the stash list."
-msgstr "当 `MERGE_HEAD` 存在时，`git merge --abort` 等同于 `git reset --merge` ，除非 `MERGE_AUTOSTASH` 也存在，在这种情况下 `git merge --abort` 会将暂存项应用到工作区重，而 `git reset --merge` 则会将暂存的改动保存在暂存列表中。"
+msgstr "当 `MERGE_HEAD` 存在时，`git merge --abort` 等同于 `git reset --merge` ，除非 `MERGE_AUTOSTASH` 也存在，在这种情况下 `git merge --abort` 会将贮藏条目应用到工作区，而 `git reset --merge` 则会将已贮藏的改动保存在贮藏列表中。"
 
 #. type: Labeled list
 #: en/git-merge.adoc:117
@@ -6584,7 +6583,7 @@ msgstr "unbundle <文件>"
 #: en/git-bundle.adoc:94
 #, placeholders:'git index-pack', priority:10
 msgid "Passes the objects in the bundle to 'git index-pack' for storage in the repository, then prints the names of all defined references. If a list of references is given, only references matching those in the list are printed. This command is really plumbing, intended to be called only by 'git fetch'. If 'file' is `-`, the bundle is read from stdin."
-msgstr "将捆绑包中的对象传递给 'git index-pack' 以存储在仓库中，然后打印出所有定义的引用的名称。如果给了一个引用列表，则只打印列表中匹配的引用。这个命令是真正的管道，只打算由 'git fetch' 调用。 如果 'file' 是 `-`，则从标准输入流读取捆绑包文件。"
+msgstr "将捆绑包中的对象传递给 'git index-pack' 以存储在仓库中，然后打印所有已定义引用的名称。如果给出引用列表，则只打印与列表匹配的引用。这实际上是一个底层命令，只应由 'git fetch' 调用。如果 'file' 为 `-`，则从标准输入读取捆绑包。"
 
 #. type: Labeled list
 #: en/git-bundle.adoc:95
@@ -7160,7 +7159,7 @@ msgstr "提交日志信息通常以UTF-8编码，但也支持其他扩展ASCII�
 #: en/i18n.adoc:36
 #, priority:280
 msgid "Although we encourage that the commit log messages are encoded in UTF-8, both the core and Git Porcelain are designed not to force UTF-8 on projects. If all participants of a particular project find it more convenient to use legacy encodings, Git does not forbid it. However, there are a few things to keep in mind."
-msgstr "尽管我们鼓励提交日志信息使用UTF-8编码，但核心系统和Git Porcelain的设计并不强制要求项目使用UTF-8。 如果某个项目的所有参与者都认为使用传统编码更方便，Git也不会禁止。 然而，有几件事需要注意。"
+msgstr "尽管我们鼓励提交日志信息使用 UTF-8 编码，但 Git 核心和上层命令都不会强制项目使用 UTF-8。如果某个项目的所有参与者都认为使用传统编码更方便，Git 也不会禁止。不过，有几件事需要注意。"
 
 #. type: Plain text
 #: en/i18n.adoc:42
@@ -9190,26 +9189,25 @@ msgstr "从标准输入中读取 packfiles（例如：`pack-1234abcd.pack`）的
 #: en/git-pack-objects.adoc:101
 #, priority:80
 msgid "When `mode` is \"follow\" packs may additionally be prefixed with `!`, indicating that they are excluded but not necessarily closed under reachability. In addition to objects in included packs, the resulting pack may include additional objects based on the following:"
-msgstr ""
+msgstr "当 `mode` 为 \"follow\" 时，还可以在包名前加上 `!`，表示该包被排除，但不一定在可达性上闭合。除已包含包中的对象外，结果包还可能根据以下规则包含其他对象："
 
 #. type: Plain text
 #: en/git-pack-objects.adoc:107
 #, priority:80
 msgid "If any packs are marked with `!`, then objects reachable from such packs or included ones via objects outside of excluded-closed packs will be included. In this case, all `^` packs are treated as closed under reachability."
-msgstr ""
+msgstr "如果有任何包标有 `!`，则从这些包或已包含包出发、经由不属于可达性闭合排除包的对象而可达的对象都将被包含。在这种情况下，所有以 `^` 标记的包都被视为在可达性上闭合。"
 
 #. type: Plain text
 #: en/git-pack-objects.adoc:110
 #, priority:80
 msgid "Otherwise (if there are no `!` packs), objects within unlisted packs will be included if those objects are (1) reachable from the included packs, and (2) not found in any excluded packs."
-msgstr ""
+msgstr "否则（即没有以 `!` 标记的包时），未列出包中的对象如果同时满足以下条件就会被包含：(1) 可从已包含包到达；(2) 不存在于任何已排除包中。"
 
 #. type: Plain text
 #: en/git-pack-objects.adoc:115
-#, fuzzy, priority:80
-#| msgid "When `mode` is \"follow\", objects from packs not listed on stdin receive special treatment. Objects within unlisted packs will be included if those objects are (1) reachable from the included packs, and (2) not found in any excluded packs. This mode is useful, for example, to resurrect once-unreachable objects found in cruft packs to generate packs which are closed under reachability up to the boundary set by the excluded packs."
+#, priority:80
 msgid "This mode is useful, for example, to resurrect once-unreachable objects found in cruft packs to generate packs which are closed under reachability up to the boundary set by the excluded packs."
-msgstr "当 `mode` 为 \"follow\" 时，未在标准输入中列出的包中的对象会受到特殊处理。若未列出包中的对象 (1) 可从被包含的包到达，且 (2) 不存在于任何被排除的包中，则这些对象也会被包含。该模式例如可用于\"复活\"在 cruft 包中发现的曾经不可达对象，以生成在可达性意义上闭合的包，其边界由被排除的包所限定。"
+msgstr "例如，该模式可用于“复活”在 cruft 包中发现的曾经不可达对象，从而生成在可达性上闭合的包，其边界由已排除包限定。"
 
 #. type: Plain text
 #: en/git-pack-objects.adoc:118
@@ -9677,7 +9675,7 @@ msgstr "通过先按路径组织对象来进行压缩，然后再进行第二遍
 #: en/git-pack-objects.adoc:410
 #, placeholders:'`--delta-islands`':'`--use-bitmap-index`':'`--path-walk`':'`--path-walk`':'`--filter=', priority:80
 msgid "Incompatible with `--delta-islands`. The `--use-bitmap-index` option is ignored in the presence of `--path-walk`. The `--path-walk` option supports the `--filter=<spec>` forms `blob:none`, `blob:limit=<n>`, `tree:0`, `object:type=<type>`, and `sparse:<oid>`. These supported filter types can be combined with the `combine:<spec>+<spec>` form."
-msgstr ""
+msgstr "与 `--delta-islands` 不兼容。存在 `--path-walk` 时会忽略 `--use-bitmap-index` 选项。`--path-walk` 选项支持 `--filter=<spec>` 的 `blob:none`、`blob:limit=<n>`、`tree:0`、`object:type=<type>` 和 `sparse:<oid>` 形式。这些受支持的过滤器类型可以用 `combine:<spec>+<spec>` 形式组合。"
 
 #. type: Title -
 #: en/git-pack-objects.adoc:413
@@ -11947,13 +11945,13 @@ msgstr "$ git bisect start dev main\n"
 #: en/git-bisect-lk2009.adoc:823
 #, priority:10
 msgid "To enable that additional nice feature, when a bisection is started and when some good commits are not ancestors of the bad commit, we first compute the merge bases between the bad and the good commits and we chose these merge bases as the first commits that will be checked out and tested."
-msgstr "为了实现这个额外的功能，当一个分界开始，一些好的提交不是坏的提交的祖先时，我们首先计算坏的提交和好的提交之间的合并基数，我们选择这些合并基数作为第一个将被检查和测试的提交。"
+msgstr "为了实现这个额外的功能，当一个分界开始，一些好的提交不是坏的提交的祖先时，我们首先计算坏的提交和好的提交之间的合并基础，我们选择这些合并基础作为第一个将被检查和测试的提交。"
 
 #. type: Plain text
 #: en/git-bisect-lk2009.adoc:826
 #, priority:10
 msgid "If it happens that one merge base is bad, then the bisection process is stopped with a message like:"
-msgstr "如果有一个合并基数是坏的，那么二分过程就会停止，并发出类似的信息："
+msgstr "如果有一个合并基础是坏的，那么二分过程就会停止，并发出类似的信息："
 
 #. type: delimited block -
 #: en/git-bisect-lk2009.adoc:830
@@ -11975,7 +11973,7 @@ msgstr "其中BBBBBB是坏合并基础的sha1哈希值，[GGGGG,...]是好提交
 #: en/git-bisect-lk2009.adoc:838
 #, priority:10
 msgid "If some of the merge bases are skipped, then the bisection process continues, but the following message is printed for each skipped merge base:"
-msgstr "如果一些合并基点被跳过，那么二分过程将继续进行，但对于每一个被跳过的合并基点都会打印出以下信息："
+msgstr "如果一些合并基础被跳过，那么二分过程将继续进行，但对于每一个被跳过的合并基础都会打印出以下信息："
 
 #. type: delimited block -
 #: en/git-bisect-lk2009.adoc:843
@@ -11985,7 +11983,7 @@ msgid ""
 "So we cannot be sure the first bad commit is between MMMMMM and BBBBBB.\n"
 "We continue anyway.\n"
 msgstr ""
-"警告：BBBBB和[GGGGG,...]之间的合并基数必须被跳过。\n"
+"警告：BBBBB和[GGGGG,...]之间的合并基础必须被跳过。\n"
 "所以我们不能确定第一个坏提交是在MMMMMM和BBBBB之间。\n"
 "我们会继续操作。\n"
 
@@ -13555,7 +13553,7 @@ msgstr "Git 配置文件包含了一些影响 Git 命令行为的变量。每个
 #: en/config.adoc:21
 #, priority:10
 msgid "The configuration variables are used by both the Git plumbing and the porcelain commands. The variables are divided into sections, wherein the fully qualified variable name of the variable itself is the last dot-separated segment and the section name is everything before the last dot. The variable names are case-insensitive, allow only alphanumeric characters and `-`, and must start with an alphabetic character. Some variables may appear multiple times; we say then that the variable is multivalued."
-msgstr "配置变量同时被 Git 底层和上层命令使用。变量被分为几个部分，其中变量本身的完全合格的变量名是最后一个点分隔的部分，而部分名称是最后一个点之前的所有内容。变量名称不区分大小写，只允许使用字母数字字符和 `-`，并且必须以字母字符开头。 有些变量可能会出现多次；那么我们就说这个变量是多值的。"
+msgstr "配置变量同时被 Git 的底层命令和上层命令使用。变量被分为几个部分，其中变量本身的完全合格的变量名是最后一个点分隔的部分，而部分名称是最后一个点之前的所有内容。变量名称不区分大小写，只允许使用字母数字字符和 `-`，并且必须以字母字符开头。 有些变量可能会出现多次；那么我们就说这个变量是多值的。"
 
 #. type: Title ~
 #: en/config.adoc:23
@@ -14607,7 +14605,7 @@ msgstr "即使在短格式输出中也显示分支和跟踪信息。详见 linkg
 #: en/git-commit.adoc:156
 #, placeholders:'linkgit:git-status[1]':'`--dry-run`', priority:280
 msgid "When doing a dry-run, give the output in a porcelain-ready format. See linkgit:git-status[1] for details. Implies `--dry-run`."
-msgstr "在做干运行的时候，要把输出结果以可瓷器的格式给出。详见 linkgit:git-status[1]。意味着 `--dry-run`。"
+msgstr "试运行时，以适合上层命令处理的格式输出结果。详情见 linkgit:git-status[1]。暗含 `--dry-run`。"
 
 #. type: Labeled list
 #: en/git-commit.adoc:157 en/git-describe.adoc:88 en/git-status.adoc:48
@@ -14733,7 +14731,7 @@ msgstr "`--allow-empty-message`"
 #: en/git-commit.adoc:234
 #, placeholders:'linkgit:git-commit-tree[1]':'`--allow-empty`', priority:280
 msgid "Create a commit with an empty commit message without using plumbing commands like linkgit:git-commit-tree[1]. Like `--allow-empty`, this command is primarily for use by foreign SCM interface scripts."
-msgstr "无需使用 linkgit:git-commit-tree[1] 之类的底层（plumbing）命令，就能创建一个提交说明为空的提交。与 `--allow-empty` 类似，此命令主要供外部 SCM 接口脚本使用。"
+msgstr "无需使用 linkgit:git-commit-tree[1] 之类的底层命令，就能创建一个提交说明为空的提交。与 `--allow-empty` 类似，此命令主要供外部 SCM 接口脚本使用。"
 
 #. type: Labeled list
 #: en/git-commit.adoc:235 en/git-tag.adoc:205 en/merge-options.adoc:38
@@ -15027,7 +15025,7 @@ msgstr "在提交信息模板的底部显示 `HEAD` 提交和将要提交的内�
 #: en/git-commit.adoc:373
 #, priority:280
 msgid "If specified twice, show in addition the unified diff between what would be committed and the worktree files, i.e. the unstaged changes to tracked files."
-msgstr "如果指定了两次，则另外显示将被提交的文件和工作区文件之间的统一差异，即对已跟踪文件的非阶段性修改。"
+msgstr "如果指定了两次，则另外显示将被提交的文件和工作区文件之间的统一差异，即对已跟踪文件的未暂存修改。"
 
 #. type: Plain text
 #: en/git-commit.adoc:377
@@ -15123,7 +15121,7 @@ msgstr "更多细节请参见 linkgit:gitglossary[7] 中的 '路径规范' 条�
 #: en/git-commit.adoc:427
 #, placeholders:'--staged', priority:280
 msgid "When recording your own work, the contents of modified files in your working tree are temporarily stored to a staging area called the \"index\" with `git add`. A file can be reverted back, only in the index but not in the working tree, to that of the last commit with `git restore --staged <file>`, which effectively reverts `git add` and prevents the changes to this file from participating in the next commit. After building the state to be committed incrementally with these commands, `git commit` (without any pathname parameter) is used to record what has been staged so far. This is the most basic form of the command. An example:"
-msgstr "在记录自己的工作时，工作区中修改过的文件的内容会通过 `git add` 暂时存储到一个叫做 \"index\" 的暂存区域。 一个文件可以用 `git restore --staged <问价>` 恢复到上次提交时的状态，只是在索引中，而不是在工作区树中，这实际上是恢复了 `git add`，并阻止这个文件的修改参与下一次提交。 在用这些命令建立了要增量提交的状态后，`git commit`（没有任何路径名参数）被用来记录到目前为止已经分阶段提交的内容。 这是该命令最基本的形式。例如："
+msgstr "在记录自己的工作时，工作区中修改过的文件的内容会通过 `git add` 暂时存储到一个叫做 \"index\" 的暂存区域。 一个文件可以用 `git restore --staged <文件>` 恢复到上次提交时的状态，只是在索引中，而不是在工作区树中，这实际上是恢复了 `git add`，并阻止这个文件的修改参与下一次提交。 在用这些命令建立了要增量提交的状态后，`git commit`（没有任何路径名参数）被用来记录到目前为止已经暂存的内容。 这是该命令最基本的形式。例如："
 
 #. type: delimited block -
 #: en/git-commit.adoc:433
@@ -15205,7 +15203,7 @@ msgstr "第二次提交会记录下对 `hello.c` 和 `hello.h` 的修改，正�
 #: en/git-commit.adoc:484
 #, priority:280
 msgid "After a merge (initiated by `git merge` or `git pull`) stops because of conflicts, cleanly merged paths are already staged to be committed for you, and paths that conflicted are left in unmerged state. You would have to first check which paths are conflicting with `git status` and after fixing them manually in your working tree, you would stage the result as usual with `git add`:"
-msgstr "在一次合并（由 `git merge` 或 `git pull` 发起）因冲突而停止后，干净的合并路径已经被分阶段提交给你了，而发生冲突的路径则被留在未合并状态。 你必须先用 `git status` 检查哪些路径有冲突，然后在工作区树上手动修复它们，再像往常一样用 `git add` 将结果分阶段："
+msgstr "在一次合并（由 `git merge` 或 `git pull` 发起）因冲突而停止后，干净合并的路径已经替你暂存，发生冲突的路径则留在未合并状态。 你必须先用 `git status` 检查哪些路径有冲突，然后在工作区树上手动修复它们，再像往常一样用 `git add` 将结果暂存："
 
 #. type: delimited block -
 #: en/git-commit.adoc:490
@@ -15373,25 +15371,7 @@ msgstr "git-stash - 贮藏脏工作区中的更改"
 
 #. type: synopsis
 #: en/git-stash.adoc:28
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'--include-untracked':'--only-untracked]':'--quiet]':'[--index]':'--quiet]':'[--index]':'--quiet]':'[--label-ours=':'[--label-theirs=':'[--label-base=':'--patch]':'--staged]':'--quiet]':'--include-untracked]':'--all]':'--message':'[--pathspec-from-file=':'[--pathspec-file-nul]':'--patch]':'--staged]':'--quiet]':'--include-untracked]':'--all]':'--message':'--quiet]':'--print':'--to-ref', priority:240
-#| msgid ""
-#| "git stash list [<log-options>]\n"
-#| "git stash show [-u | --include-untracked | --only-untracked] [<diff-options>] [<stash>]\n"
-#| "git stash drop [-q | --quiet] [<stash>]\n"
-#| "git stash pop [--index] [-q | --quiet] [<stash>]\n"
-#| "git stash apply [--index] [-q | --quiet] [<stash>]\n"
-#| "git stash branch <branchname> [<stash>]\n"
-#| "git stash [push [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-q | --quiet]\n"
-#| "\t     [-u | --include-untracked] [-a | --all] [(-m | --message) <message>]\n"
-#| "\t     [--pathspec-from-file=<file> [--pathspec-file-nul]]\n"
-#| "\t     [--] [<pathspec>...]]\n"
-#| "git stash save [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-q | --quiet]\n"
-#| "           [-u | --include-untracked] [-a | --all] [<message>]\n"
-#| "git stash clear\n"
-#| "git stash create [<message>]\n"
-#| "git stash store [(-m | --message) <message>] [-q | --quiet] <commit>\n"
-#| "git stash export (--print | --to-ref <ref>) [<stash>...]\n"
-#| "git stash import <commit>\n"
+#, ignore-ellipsis, no-wrap, placeholders:'--include-untracked':'--only-untracked]':'--quiet]':'[--index]':'--quiet]':'[--index]':'--quiet]':'[--label-ours=':'[--label-theirs=':'[--label-base=':'--patch]':'--staged]':'--quiet]':'--include-untracked]':'--all]':'--message':'[--pathspec-from-file=':'[--pathspec-file-nul]':'--patch]':'--staged]':'--quiet]':'--include-untracked]':'--all]':'--message':'--quiet]':'--print':'--to-ref', priority:240
 msgid ""
 "git stash list [<log-options>]\n"
 "git stash show [-u | --include-untracked | --only-untracked] [<diff-options>] [<stash>]\n"
@@ -15412,21 +15392,21 @@ msgid ""
 "git stash import <commit>\n"
 msgstr ""
 "git stash list [<日志选项>]\n"
-"git stash show [-u | --include-untracked | --only-untracked] [<差异选项>] [<暂存>]\n"
-"git stash drop [-q | --quiet] [<暂存>]\n"
-"git stash pop [--index] [-q | --quiet] [<暂存>]\n"
-"git stash apply [--index] [-q | --quiet] [<暂存>]\n"
-"git stash branch <分支名> [<暂存>]\n"
-"git stash [push [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-q | --quiet]\n"
+"git stash show [-u | --include-untracked | --only-untracked] [<差异选项>] [<贮藏>]\n"
+"git stash drop [-q | --quiet] [<贮藏>]\n"
+"git stash pop [--index] [-q | --quiet] [<贮藏>]\n"
+"git stash apply [--index] [-q | --quiet] [--label-ours=<标签>] [--label-theirs=<标签>] [--label-base=<标签>] [<贮藏>]\n"
+"git stash branch <分支名> [<贮藏>]\n"
+"git stash [push] [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-q | --quiet]\n"
 "\t     [-u | --include-untracked] [-a | --all] [(-m | --message) <信息>]\n"
 "\t     [--pathspec-from-file=<文件> [--pathspec-file-nul]]\n"
-"\t     [--] [<路径规范>...]]\n"
+"\t     [--] [<路径规范>...]\n"
 "git stash save [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-q | --quiet]\n"
 "           [-u | --include-untracked] [-a | --all] [<信息>]\n"
 "git stash clear\n"
 "git stash create [<信息>]\n"
 "git stash store [(-m | --message) <信息>] [-q | --quiet] <提交>\n"
-"git stash export (--print | --to-ref <引用>) [<暂��>...]\n"
+"git stash export (--print | --to-ref <引用>) [<贮藏>...]\n"
 "git stash import <提交>\n"
 
 #. type: Plain text
@@ -15469,7 +15449,7 @@ msgstr "将你的本地修改保存到一个新的 \"贮藏条目 \"中，并将
 #: en/git-stash.adoc:65
 #, priority:240
 msgid "For quickly making a snapshot, you can omit \"push\". In this mode, pathspec elements are only allowed after a double hyphen `--` to prevent a misspelled subcommand from making an unwanted stash entry."
-msgstr ""
+msgstr "如果只是想快速创建快照，可以省略 \"push\"。在这种模式下，路径规范元素只能出现在双连字符 `--` 之后，以防因子命令拼写错误而意外创建贮藏条目。"
 
 #. type: Labeled list
 #: en/git-stash.adoc:66
@@ -15515,55 +15495,55 @@ msgstr "该命令采用适用于 'git log' 命令的选项来控制显示的内�
 #: en/git-stash.adoc:89
 #, no-wrap, placeholders:'--include-untracked':'--only-untracked]', priority:240
 msgid "`show [-u | --include-untracked | --only-untracked] [<diff-options>] [<stash>]`"
-msgstr "show [-u|--include-untracked|--only-untracked] [<diff选项>] [<贮藏目录>]"
+msgstr "`show [-u | --include-untracked | --only-untracked] [<差异选项>] [<贮藏>]`"
 
 #. type: Plain text
 #: en/git-stash.adoc:101
 #, placeholders:'{1}`':'stash.showStat':'stash.showPatch':'stash.showIncludeUntracked':'`--include-untracked`', priority:240
 msgid "Show the changes recorded in the stash entry as a diff between the stashed contents and the commit back when the stash entry was first created. By default, the command shows the diffstat, but it will accept any format known to 'git diff' (e.g., `git stash show -p stash@{1}` to view the second most recent entry in patch form). If no _<diff-option>_ is provided, the default behavior will be given by the `stash.showStat`, and `stash.showPatch` config variables. You can also use `stash.showIncludeUntracked` to set whether `--include-untracked` is enabled by default."
-msgstr "显示贮藏中记录的修改，作为贮藏内容与贮藏库条目首次创建时的提交之间的差异。 默认情况下，该命令显示diff统计，但它会接受 \"git diff \"已知的任何格式（例如，`git stash show -p stash@{1}` 以补丁形式查看第二条最新条目）。 如果没有提供 `<diff选项>`，默认行为将由 `stash.showStat` 和 `stash.showPatch` 配置变量给出。你也可以使用 `stash.showIncludeUntracked` 来设置是否默认启用 `--include-untracked`。"
+msgstr "显示贮藏条目中记录的修改，即贮藏内容与首次创建该贮藏条目时的提交之间的差异。 默认情况下，该命令显示差异统计，但它会接受 `git diff` 已知的任何格式（例如，`git stash show -p stash@{1}` 以补丁形式查看第二条最新条目）。 如果没有提供 `<差异选项>`，默认行为将由 `stash.showStat` 和 `stash.showPatch` 配置变量给出。你也可以使用 `stash.showIncludeUntracked` 来设置是否默认启用 `--include-untracked`。"
 
 #. type: Labeled list
 #: en/git-stash.adoc:102
 #, no-wrap, placeholders:'[--index]':'--quiet]', priority:240
 msgid "`pop [--index] [-q | --quiet] [<stash>]`"
-msgstr "pop [--index] [-q|--quiet] [<暂存>]"
+msgstr "`pop [--index] [-q | --quiet] [<贮藏>]`"
 
 #. type: Plain text
 #: en/git-stash.adoc:108
 #, priority:240
 msgid "Remove a single stashed state from the stash list and apply it on top of the current working tree state, i.e., do the inverse operation of `git stash push`. The working directory must match the index."
-msgstr "从贮藏库列表中移除一个单一的贮藏状态，并将其应用于当前工作区状态之上，也就是做 `git stash push` 的逆向操作。工作区必须与索引匹配。"
+msgstr "从贮藏列表中移除一个贮藏状态，并将其应用于当前工作区状态之上，也就是执行 `git stash push` 的逆向操作。工作区必须与索引匹配。"
 
 #. type: Plain text
 #: en/git-stash.adoc:112
 #, priority:240
 msgid "Applying the state can fail with conflicts; in this case, it is not removed from the stash list. You need to resolve the conflicts by hand and call `git stash drop` manually afterwards."
-msgstr "应用状态可能会因为冲突而失败；在这种情况下，它不会被从贮藏库列表中删除。你需要手动解决冲突，并在之后调用 `git stash drop`。"
+msgstr "应用状态可能会因为冲突而失败；在这种情况下，它不会从贮藏列表中删除。你需要手动解决冲突，并在之后调用 `git stash drop`。"
 
 #. type: Labeled list
 #: en/git-stash.adoc:113
 #, no-wrap, placeholders:'[--index]':'--quiet]', priority:240
 msgid "`apply [--index] [-q | --quiet] [<stash>]`"
-msgstr "apply [--index] [-q|--quiet] [<暂存>]"
+msgstr "`apply [--index] [-q | --quiet] [<贮藏>]`"
 
 #. type: Plain text
 #: en/git-stash.adoc:118
 #, priority:240
 msgid "Like `pop`, but do not remove the state from the stash list. Unlike `pop`, `<stash>` may be any commit that looks like a commit created by `stash push` or `stash create`."
-msgstr "和 `pop` 一样，但不从贮藏库列表中删除该状态。与 `pop` 不同，`<贮藏项>` 可以是任何看起来像由 `stash push` 或 `stash create` 创建的提交。"
+msgstr "和 `pop` 一样，但不从贮藏列表中删除该状态。与 `pop` 不同，`<贮藏>` 可以是任何看起来像由 `stash push` 或 `stash create` 创建的提交。"
 
 #. type: Labeled list
 #: en/git-stash.adoc:119
 #, no-wrap, priority:240
 msgid "`branch <branchname> [<stash>]`"
-msgstr "branch <分支名> [<贮藏项>]"
+msgstr "`branch <分支名> [<贮藏>]`"
 
 #. type: Plain text
 #: en/git-stash.adoc:126
 #, priority:240
 msgid "Creates and checks out a new branch named _<branchname>_ starting from the commit at which the _<stash>_ was originally created, applies the changes recorded in _<stash>_ to the new working tree and index. If that succeeds, and _<stash>_ is a reference of the form `stash@{<revision>}`, it then drops the _<stash>_."
-msgstr "创建并检查一个名为 `<分支名>` 的新分支，从最初创建 `<贮藏项>` 的提交开始，将 `<贮藏项>` 中记录的修改应用到新的工作区和索引。 如果成功了，并且 `<贮藏项>` 是 `stash@{<版本>}` 形式的引用，那么它将删除 `<贮藏项>`。"
+msgstr "创建并检出一个名为 _<分支名>_ 的新分支，从最初创建 _<贮藏>_ 的提交开始，将 _<贮藏>_ 中记录的修改应用到新的工作区和索引。 如果成功，并且 _<贮藏>_ 是 `stash@{<版本>}` 形式的引用，则删除 _<贮藏>_。"
 
 #. type: Plain text
 #: en/git-stash.adoc:132
@@ -15587,7 +15567,7 @@ msgstr "删除所有的贮藏条目。直接切断任何联系，而且可能无
 #: en/git-stash.adoc:138
 #, no-wrap, placeholders:'--quiet]', priority:240
 msgid "`drop [-q | --quiet] [<stash>]`"
-msgstr "Drop [-q|--quiet] [<贮藏项>]"
+msgstr "`drop [-q | --quiet] [<贮藏>]`"
 
 #. type: Plain text
 #: en/git-stash.adoc:140
@@ -15617,25 +15597,25 @@ msgstr "`store`"
 #: en/git-stash.adoc:154
 #, priority:240
 msgid "Store a given stash created via 'git stash create' (which is a dangling merge commit) in the stash ref, updating the stash reflog. This is intended to be useful for scripts. It is probably not the command you want to use; see \"push\" above."
-msgstr "将通过 'git stash create'（这是一个悬空的合并提交）创建的特定贮藏库存储在贮藏库引用中，更新贮藏库参考文件。 这是为了对脚本有用。 这条命令可能不是你想要的；见上文\"push\"。"
+msgstr "将通过 'git stash create'（这是一个悬空的合并提交）创建的特定贮藏存储到贮藏引用中，并更新贮藏引用日志。 这是为了对脚本有用。 这条命令可能不是你想要的；见上文 \"push\"。"
 
 #. type: Labeled list
 #: en/git-stash.adoc:155
 #, ignore-ellipsis, no-wrap, placeholders:'--print':'--to-ref', priority:240
 msgid "`export ( --print | --to-ref <ref> ) [<stash>...]`"
-msgstr "`export ( --print | --to-ref <ref> ) [<stash>...]`"
+msgstr "`export ( --print | --to-ref <引用> ) [<贮藏>...]`"
 
 #. type: Plain text
 #: en/git-stash.adoc:160
 #, priority:240
 msgid "Export the specified stashes, or all of them if none are specified, to a chain of commits which can be transferred using the normal fetch and push mechanisms, then imported using the `import` subcommand."
-msgstr "将指定的 stash 导出为一个提交链；如果未指定 stash，则导出全部。这个提交链可以通过常规的 fetch 和 push 机制传输，然后再用 `import` 子命令导入。"
+msgstr "将指定的贮藏导出为一个提交链；如果未指定贮藏，则导出全部。这个提交链可以通过常规的获取和推送机制传输，然后再用 `import` 子命令导入。"
 
 #. type: Labeled list
 #: en/git-stash.adoc:161
 #, no-wrap, priority:240
 msgid "`import <commit>`"
-msgstr "`import <commit>`"
+msgstr "`import <提交>`"
 
 #. type: Plain text
 #: en/git-stash.adoc:165
@@ -15717,36 +15697,33 @@ msgstr "不仅试图恢复工作区的变化，而且恢复索引的变化。然
 
 #. type: Labeled list
 #: en/git-stash.adoc:198
-#, fuzzy, no-wrap, placeholders:'`--label-ours=', priority:240
-#| msgid "`--local-user=<key-id>`"
+#, no-wrap, placeholders:'`--label-ours=', priority:240
 msgid "`--label-ours=<label>`"
-msgstr "--local-user=<键 ID>"
+msgstr "`--label-ours=<标签>`"
 
 #. type: Labeled list
 #: en/git-stash.adoc:199
 #, no-wrap, placeholders:'`--label-theirs=', priority:240
 msgid "`--label-theirs=<label>`"
-msgstr ""
+msgstr "`--label-theirs=<标签>`"
 
 #. type: Labeled list
 #: en/git-stash.adoc:200
-#, fuzzy, no-wrap, placeholders:'`--label-base=', priority:240
-#| msgid "`--local-user=<key-id>`"
+#, no-wrap, placeholders:'`--label-base=', priority:240
 msgid "`--label-base=<label>`"
-msgstr "--local-user=<键 ID>"
+msgstr "`--label-base=<标签>`"
 
 #. type: Plain text
 #: en/git-stash.adoc:202
-#, fuzzy, priority:240
-#| msgid "This option is only valid for the `export` command."
+#, priority:240
 msgid "These options are only valid for the `apply` command."
-msgstr "这个选项只对 `export` 命令有效。"
+msgstr "这些选项仅对 `apply` 命令有效。"
 
 #. type: Plain text
 #: en/git-stash.adoc:206
 #, placeholders:'`--label-base`':'merge.conflictStyle', priority:240
 msgid "Use the given labels in conflict markers instead of the default \"Updated upstream\", \"Stashed changes\", and \"Stash base\". `--label-base` only has an effect with merge.conflictStyle=diff3."
-msgstr ""
+msgstr "在冲突标记中使用给定标签，而不使用默认的 \"Updated upstream\"、\"Stashed changes\" 和 \"Stash base\"。`--label-base` 仅在 `merge.conflictStyle=diff3` 时有效。"
 
 #. type: Labeled list
 #: en/git-stash.adoc:207 en/git-mv.adoc:33 en/fetch-options.adoc:161
@@ -15800,7 +15777,7 @@ msgstr "`--staged`"
 #: en/git-stash.adoc:238
 #, priority:240
 msgid "Stash only the changes that are currently staged. This is similar to basic `git commit` except the state is committed to the stash instead of current branch."
-msgstr "只存放当前分阶段的修改。这类似于基本的 `git commit`，只不过是将状态提交到贮藏室而不是当前分支。"
+msgstr "只贮藏当前已暂存的修改。这类似于基本的 `git commit`，只不过是将状态提交到贮藏而不是当前分支。"
 
 #. type: Plain text
 #: en/git-stash.adoc:240
@@ -15878,25 +15855,25 @@ msgstr "新的贮藏条目只记录了符合路径规范文件的修改状态。
 #: en/git-stash.adoc:293
 #, no-wrap, priority:240
 msgid "_<stash>_"
-msgstr "<暂存>"
+msgstr "_<贮藏>_"
 
 #. type: Plain text
 #: en/git-stash.adoc:296
 #, priority:240
 msgid "This option is only valid for `apply`, `branch`, `drop`, `pop`, `show`, and `export` commands."
-msgstr "这个选项只对 `apply`、`branch`、`drop`、`pop`、`show` 命令有效。"
+msgstr "这个选项只对 `apply`、`branch`、`drop`、`pop`、`show` 和 `export` 命令有效。"
 
 #. type: Plain text
 #: en/git-stash.adoc:299
 #, placeholders:'{0}`', priority:240
 msgid "A reference of the form `stash@{<revision>}`. When no _<stash>_ is given, the latest stash is assumed (that is, `stash@{0}`)."
-msgstr "一个形式为 `stash@{<版本>}` 的引用。如果没有给出 `<贮藏项>`，则假定是最新的贮藏库（即 `stash@{0}`）。"
+msgstr "一个形式为 `stash@{<版本>}` 的引用。如果没有给出 _<贮藏>_，则假定是最新的贮藏（即 `stash@{0}`）。"
 
 #. type: Plain text
 #: en/git-stash.adoc:308
 #, placeholders:'`HEAD`':'`HEAD`', priority:240
 msgid "A stash entry is represented as a commit whose tree records the state of the working directory, and its first parent is the commit at `HEAD` when the entry was created. The tree of the second parent records the state of the index when the entry is made, and it is made a child of the `HEAD` commit. The ancestry graph looks like this:"
-msgstr "一个贮藏库条目被表示为一个提交，它的目录树记录了工作区的状态，它的第一个父节点是创建该条目时在 `HEAD` 的提交。 第二个父节点的树记录了条目生成时索引的状态，它是 `HEAD` 提交的一个子节点。 祖先图看起来像这样："
+msgstr "一个贮藏条目被表示为一个提交，它的目录树记录了工作区的状态，它的第一个父节点是创建该条目时在 `HEAD` 的提交。 第二个父节点的树记录了条目生成时索引的状态，它是 `HEAD` 提交的一个子节点。 祖先图看起来像这样："
 
 #. type: Plain text
 #: en/git-stash.adoc:312
@@ -16040,7 +16017,7 @@ msgid ""
 msgstr ""
 "# ... 嗨骇害 ...\n"
 "$ git add --patch foo # 仅将第一部分添加到索引中\n"
-"$ git stash push --keep-index # 将所有其他改动保存到贮藏室中\n"
+"$ git stash push --keep-index # 将所有其他改动保存到贮藏中\n"
 "$ edit/build/test first part\n"
 "$ git commit -m '第一个部分' # 提交完全测试过的改动\n"
 "$ git stash pop # 准备处理所有其他改动\n"
@@ -16058,7 +16035,7 @@ msgstr "保存不相关的变化供将来使用"
 #: en/git-stash.adoc:397
 #, placeholders:'--staged`', priority:240
 msgid "When you are in the middle of massive changes and you find some unrelated issue that you don't want to forget to fix, you can do the change(s), stage them, and use `git stash push --staged` to stash them out for future use. This is similar to committing the staged changes, only the commit ends-up being in the stash and not on the current branch."
-msgstr "当你在进行大规模修改时，发现一些不相关的问题，你不想忘记修复，你可以进行修改，将其分阶段，然后使用 `git stash push --staged` 将其存放起来，以便将来使用。这类似于提交阶段性修改，只是提交的结果是在贮藏库而不是在当前分支。"
+msgstr "当你在进行大规模修改时，发现一些不相关的问题，又不想忘记修复，可以完成这些修改并将其暂存，然后使用 `git stash push --staged` 将它们贮藏起来供以后使用。这类似于提交已暂存的修改，只是提交最终位于贮藏中，而不在当前分支上。"
 
 #. type: delimited block -
 #: en/git-stash.adoc:406
@@ -16454,7 +16431,7 @@ msgstr "运行模式"
 #: en/git-merge-base.adoc:33
 #, priority:80
 msgid "In the most common special case, specifying only two commits on the command line means computing the merge base between the given two commits."
-msgstr "在最常见的特殊情况下，在命令行中只指定两个提交，意味着要计算给定的两个提交之间的合并基数。"
+msgstr "在最常见的特殊情况下，在命令行中只指定两个提交，意味着要计算给定的两个提交之间的合并基础。"
 
 #. type: Plain text
 #: en/git-merge-base.adoc:38
@@ -16550,7 +16527,7 @@ msgstr ""
 #: en/git-merge-base.adoc:90
 #, priority:80
 msgid "the merge base between 'A' and 'B' is '1'."
-msgstr "'A' 和 'B' 之间的合并基数为 '1'。"
+msgstr "'A' 和 'B' 之间的合并基础为 '1'。"
 
 #. type: Plain text
 #: en/git-merge-base.adoc:94
@@ -16640,7 +16617,7 @@ msgstr "'1' 和 '2' 都是 A 和 B 的合并基础。 如果没有给出 `--all`
 #: en/git-merge-base.adoc:141
 #, priority:80
 msgid "A common idiom to check \"fast-forward-ness\" between two commits A and B is (or at least used to be) to compute the merge base between A and B, and check if it is the same as A, in which case, A is an ancestor of B. You will see this idiom used often in older scripts."
-msgstr "检查两个提交 A 和 B 之间的 “快进性” 的一个常见习语是（或至少曾经是）计算 A 和 B 之间的合并基数，并检查它是否与 A 相同，在这种情况下，A 就是 B 的祖先。"
+msgstr "检查两个提交 A 和 B 之间的 “快进性” 的一个常见习语是（或至少曾经是）计算 A 和 B 之间的合并基础，并检查它是否与 A 相同，在这种情况下，A 就是 B 的祖先。"
 
 #. type: delimited block .
 #: en/git-merge-base.adoc:148
@@ -21836,30 +21813,25 @@ msgstr "git-shortlog(1)"
 
 #. type: Plain text
 #: en/git-shortlog.adoc:7
-#, fuzzy, placeholders:'git-shortlog', priority:260
-#| msgid "git-shortlog - Summarize 'git log' output"
+#, placeholders:'git-shortlog', priority:260
 msgid "git-shortlog - Summarize `git log` output"
-msgstr "git-shortlog - 汇总 'git log' 输出"
+msgstr "git-shortlog - 汇总 `git log` 输出"
 
 #. type: synopsis
 #: en/git-shortlog.adoc:13
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'--pretty=short', priority:260
-#| msgid ""
-#| "'git shortlog' [<options>] [<revision-range>] [[--] <path>...]\n"
-#| "git log --pretty=short | 'git shortlog' [<options>]\n"
+#, ignore-ellipsis, no-wrap, placeholders:'--pretty=short', priority:260
 msgid ""
 "git shortlog [<options>] [<revision-range>] [[--] <path>...]\n"
 "git log --pretty=short | git shortlog [<options>]\n"
 msgstr ""
-"'git shortlog' [<选项>] [<修订范围>] [[--] <路径>...] 。\n"
-"git log --pretty=short | 'git shortlog' [<多个选项>] 。\n"
+"git shortlog [<选项>] [<修订范围>] [[--] <路径>...]\n"
+"git log --pretty=short | git shortlog [<选项>]\n"
 
 #. type: Plain text
 #: en/git-shortlog.adoc:18
-#, fuzzy, priority:260
-#| msgid "Summarizes 'git log' output in a format suitable for inclusion in release announcements. Each commit will be grouped by author and title."
+#, priority:260
 msgid "Summarizes `git log` output in a format suitable for inclusion in release announcements. Each commit will be grouped by author and title."
-msgstr "将 'git log' 输出总结为适合纳入发布公告的格式。每个提交将按作者和标题分组。"
+msgstr "将 `git log` 输出总结为适合纳入发布公告的格式。每个提交将按作者和标题分组。"
 
 #. type: Plain text
 #: en/git-shortlog.adoc:20
@@ -21869,10 +21841,9 @@ msgstr "此外，\"[PATCH]\"将从提交描述中被剥离。"
 
 #. type: Plain text
 #: en/git-shortlog.adoc:25
-#, fuzzy, priority:260
-#| msgid "If no revisions are passed on the command line and either standard input is not a terminal or there is no current branch, 'git shortlog' will output a summary of the log read from standard input, without reference to the current repository."
+#, priority:260
 msgid "If no revisions are passed on the command line and either standard input is not a terminal or there is no current branch, `git shortlog` will output a summary of the log read from standard input, without reference to the current repository."
-msgstr "如果命令行上没有传递修订版，而且标准输入不是终端，或者没有当前分支，'git shortlog' 将输出从标准输入读取的日志摘要，而不参考当前仓库。"
+msgstr "如果命令行上没有传递修订版，而且标准输入不是终端，或者没有当前分支，`git shortlog` 将输出从标准输入读取的日志摘要，而不参考当前仓库。"
 
 #. type: Labeled list
 #: en/git-shortlog.adoc:30
@@ -21918,10 +21889,9 @@ msgstr "--format[=<格式>]"
 
 #. type: Plain text
 #: en/git-shortlog.adoc:47
-#, fuzzy, placeholders:'`--format`':'linkgit:git-log[1]', priority:260
-#| msgid "Instead of the commit subject, use some other information to describe each commit. '<format>' can be any string accepted by the `--format` option of 'git log', such as '* [%h] %s'. (See the \"PRETTY FORMATS\" section of linkgit:git-log[1].)"
+#, placeholders:'`--format`':'linkgit:git-log[1]', priority:260
 msgid "Instead of the commit subject, use some other information to describe each commit. _<format>_ can be any string accepted by the `--format` option of `git log`, such as '* [%h] %s'. (See the 'PRETTY FORMATS' section of linkgit:git-log[1].)"
-msgstr "代替提交主题，使用一些其他信息来描述每个提交。 '<格式>' 可以是任何被 'git log' 的 `--format` 选项接受的字符串，比如 '* [%h] %s'。 参见 linkgit:git-log[1] 的 “漂亮的格式” 部分。）"
+msgstr "代替提交主题，使用一些其他信息来描述每个提交。_<格式>_ 可以是任何被 `git log` 的 `--format` 选项接受的字符串，比如 '* [%h] %s'。（参见 linkgit:git-log[1] 的“漂亮的格式”部分。）"
 
 #. type: Plain text
 #: en/git-shortlog.adoc:49
@@ -21937,24 +21907,21 @@ msgstr "--date=<格式>"
 
 #. type: Plain text
 #: en/git-shortlog.adoc:54
-#, fuzzy, placeholders:'`--date`':'linkgit:git-log[1]':'`--group=format', priority:260
-#| msgid "Show dates formatted according to the given date string. (See the `--date` option in the \"Commit Formatting\" section of linkgit:git-log[1]). Useful with `--group=format:<format>`."
+#, placeholders:'`--date`':'linkgit:git-log[1]':'`--group=format', priority:260
 msgid "Show dates formatted according to the given date string. (See the `--date` option in the 'Commit Formatting' section of linkgit:git-log[1]). Useful with `--group=format:<format>`."
-msgstr "显示根据给定日期字符串格式化的日期。(参见linkgit:git-log[1]中 \"提交格式化\"部分的 `--date` 选项）。与 `--group=format:<format>` 一起使用会非常有用。"
+msgstr "显示根据给定日期字符串格式化的日期。（参见 linkgit:git-log[1] 中“提交格式化”部分的 `--date` 选项。）与 `--group=format:<格式>` 一起使用会非常有用。"
 
 #. type: Labeled list
 #: en/git-shortlog.adoc:55
-#, fuzzy, no-wrap, placeholders:'`--group=', priority:260
-#| msgid "--group=<type>"
+#, no-wrap, placeholders:'`--group=', priority:260
 msgid "`--group=<type>`"
-msgstr "--group=<类型>"
+msgstr "`--group=<类型>`"
 
 #. type: Plain text
 #: en/git-shortlog.adoc:58
-#, fuzzy, placeholders:'`--group`', priority:260
-#| msgid "Group commits based on `<type>`. If no `--group` option is specified, the default is `author`. `<type>` is one of:"
+#, placeholders:'`--group`', priority:260
 msgid "Group commits based on _<type>_. If no `--group` option is specified, the default is `author`. _<type>_ is one of:"
-msgstr "根据 `<类型>` 对提交进行分组。如果没有指定 `--group` 选项，默认为 `作者` 。`<类型>` 是以下之一："
+msgstr "根据 _<类型>_ 对提交进行分组。如果没有指定 `--group` 选项，默认为 `author`。_<类型>_ 是以下之一："
 
 #. type: Plain text
 #: en/git-shortlog.adoc:61
@@ -21970,10 +21937,9 @@ msgstr "`提交者` ，提交内容按提交人分组（与 `-c` 相同）"
 
 #. type: Plain text
 #: en/git-shortlog.adoc:67
-#, fuzzy, placeholders:'linkgit:git-interpret-trailers[1]':'--group=trailer', priority:260
-#| msgid "`trailer:<field>`, the `<field>` is interpreted as a case-insensitive commit message trailer (see linkgit:git-interpret-trailers[1]). For example, if your project uses `Reviewed-by` trailers, you might want to see who has been reviewing with `git shortlog -ns --group=trailer:reviewed-by`."
+#, placeholders:'linkgit:git-interpret-trailers[1]':'--group=trailer', priority:260
 msgid "`trailer:<field>`, the _<field>_ is interpreted as a case-insensitive commit message trailer (see linkgit:git-interpret-trailers[1]). For example, if your project uses `Reviewed-by` trailers, you might want to see who has been reviewing with `git shortlog -ns --group=trailer:reviewed-by`."
-msgstr "`trailer:<field>`，`<field>` 被解释为不区分大小写的提交消息预告片（见 linkgit:git-interpret-trailers[1]）。例如，如果你的项目使用 `Reviewed-by` 拖车，你可能想用 `git shortlog -ns --group=trailer:reviewed-by` 来查看谁在审核。"
+msgstr "`trailer:<字段>`，_<字段>_ 被解释为不区分大小写的提交消息尾注（见 linkgit:git-interpret-trailers[1]）。例如，如果你的项目使用 `Reviewed-by` 尾注，你可能想用 `git shortlog -ns --group=trailer:reviewed-by` 来查看谁在审核。"
 
 #. type: Plain text
 #: en/git-shortlog.adoc:72
@@ -21989,10 +21955,9 @@ msgstr "Shortlog将尝试把每个拖车值解析为 `name <email>` 的身份。
 
 #. type: Plain text
 #: en/git-shortlog.adoc:81
-#, fuzzy, placeholders:'`--format`':'linkgit:git-log[1]', priority:260
-#| msgid "`format:<format>`, any string accepted by the `--format` option of 'git log'. (See the \"PRETTY FORMATS\" section of linkgit:git-log[1].)"
+#, placeholders:'`--format`':'linkgit:git-log[1]', priority:260
 msgid "`format:<format>`, any string accepted by the `--format` option of `git log`. (See the 'PRETTY FORMATS' section of linkgit:git-log[1].)"
-msgstr "`格式：<format>` 可以是任何被 'git log' 的 `--format` 选项接受的字符串。（参见 linkgit:git-log[1] 的 \"PRETTY FORMATS\" 部分）。"
+msgstr "`format:<格式>`，可以是任何被 `git log` 的 `--format` 选项接受的字符串。（参见 linkgit:git-log[1] 的“漂亮的格式”部分。）"
 
 #. type: Plain text
 #: en/git-shortlog.adoc:87
@@ -22014,10 +21979,9 @@ msgstr "这是 `--group=committer` 的一个别名。"
 
 #. type: Labeled list
 #: en/git-shortlog.adoc:92
-#, fuzzy, no-wrap, priority:260
-#| msgid "-w[<width>[,<indent1>[,<indent2>]]]"
+#, no-wrap, priority:260
 msgid "`-w[<width>[,<indent1>[,<indent2>]]]`"
-msgstr "-w[<width>[,<indent1>[,<indent2>]]]"
+msgstr "`-w[<宽度>[,<缩进1>[,<缩进2>]]]`"
 
 #. type: Plain text
 #: en/git-shortlog.adoc:97
@@ -22033,10 +21997,9 @@ msgstr "如果宽度为 `0`（零），则缩进输出的行数而不包裹它�
 
 #. type: Labeled list
 #: en/git-shortlog.adoc:101
-#, fuzzy, no-wrap, priority:260
-#| msgid "<revision-range>"
+#, no-wrap, priority:260
 msgid "`<revision-range>`"
-msgstr "<revision-range>"
+msgstr "`<修订范围>`"
 
 #. type: Plain text
 #: en/git-shortlog.adoc:109 en/git-log.adoc:110
@@ -22154,10 +22117,9 @@ msgstr "如果没有指定，如果给了 `--staged`，则从 `HEAD` 恢复内�
 
 #. type: Plain text
 #: en/git-restore.adoc:45
-#, fuzzy, ignore-ellipsis, placeholders:'`HEAD`', priority:280
-#| msgid "As a special case, you may use `\"<rev-A>...<rev-B>\"` as a shortcut for the merge base of _<rev-A>_ and _<rev-B>_ if there is exactly one merge base. You can leave out at most one of _<rev-A>__ and _<rev-B>_, in which case it defaults to `HEAD`."
+#, ignore-ellipsis, placeholders:'`HEAD`', priority:280
 msgid "As a special case, you may use `\"<rev-A>...<rev-B>\"` as a shortcut for the merge base of _<rev-A>_ and _<rev-B>_ if there is exactly one merge base. You can leave out at most one of _<rev-A>_ and _<rev-B>_, in which case it defaults to `HEAD`."
-msgstr "作为一种特殊情况，如果 A 和 B 的合并库只有一个，则可以使用 \"A\\...B \"作为合并库的快捷方式。您最多可以省略 A 和 B 中的一个，在这种情况下，它默认为 `HEAD`。"
+msgstr "作为一种特殊情况，如果 _<rev-A>_ 与 _<rev-B>_ 恰好只有一个合并基础，可以使用 `\"<rev-A>...<rev-B>\"` 作为该合并基础的简写。最多可以省略 _<rev-A>_ 和 _<rev-B>_ 中的一个，此时被省略者默认为 `HEAD`。"
 
 #. type: Plain text
 #: en/git-restore.adoc:52
@@ -24791,7 +24753,7 @@ msgstr "在当前仓库中执行一些内务管理任务，比如压缩文件修
 #: en/git-gc.adoc:27
 #, placeholders:'gc.auto', priority:10
 msgid "When common porcelain operations that create objects are run, they will check whether the repository has grown substantially since the last maintenance, and if so run `git gc` automatically. See `gc.auto` below for how to disable this behavior."
-msgstr "当运行创建对象的普通上层命令操作时，它们会检查仓库在上次维护后是否有大幅增长，如果有，就自动运行 `git gc`。参见下面的 `gc.auto` 以了解如何禁用这一行为。"
+msgstr "运行会创建对象的常见上层命令时，它们会检查仓库自上次维护以来是否有大幅增长；如果有，就自动运行 `git gc`。如何禁用这一行为，请参见下面的 `gc.auto`。"
 
 #. type: Plain text
 #: en/git-gc.adoc:33
@@ -25077,10 +25039,9 @@ msgstr "--after=<日期>"
 
 #. type: Plain text
 #: en/rev-list-options.adoc:28
-#, fuzzy, priority:260
-#| msgid "Show commits more recent than _<date>_."
+#, priority:260
 msgid "Show commits more recent than _<date>_. As a special case, 'today' means the last midnight."
-msgstr "显示比某一特定日期更近的提交。"
+msgstr "显示比 _<日期>_ 更新的提交。特殊情况下，'today' 表示最近一次午夜。"
 
 #. type: Labeled list
 #: en/rev-list-options.adoc:29
@@ -27254,16 +27215,15 @@ msgstr "如果不使用 --graph，所有的历史分支都会被压扁，这就�
 
 #. type: Labeled list
 #: en/rev-list-options.adoc:1263
-#, fuzzy, no-wrap, placeholders:'`--graph-lane-limit=', priority:260
-#| msgid "`--summary-limit=<n>`"
+#, no-wrap, placeholders:'`--graph-lane-limit=', priority:260
 msgid "`--graph-lane-limit=<n>`"
-msgstr "--summary-limit"
+msgstr "`--graph-lane-limit=<n>`"
 
 #. type: Plain text
 #: en/rev-list-options.adoc:1268
 #, placeholders:'`--graph`', priority:260
 msgid "When `--graph` is used, limit the number of graph lanes to be shown. Lanes over the limit are replaced with a truncation mark '~'. By default it is set to 0 (no limit), zero and negative values are ignored and treated as no limit."
-msgstr ""
+msgstr "使用 `--graph` 时，限制显示的图线数量。超出限制的图线会替换为截断标记 '~'。默认值为 0（不限制）；零值和负值都会被忽略并视为不限制。"
 
 #. type: Labeled list
 #: en/rev-list-options.adoc:1270
@@ -27573,10 +27533,9 @@ msgstr "`reftable`"
 
 #. type: Plain text
 #: en/ref-storage-format.adoc:6
-#, fuzzy, priority:300
-#| msgid "The bundle file format."
+#, priority:300
 msgid "for the reftable format."
-msgstr "捆绑文件格式。"
+msgstr "使用 reftable 格式。"
 
 #. type: Title =
 #: en/git-instaweb.adoc:2
@@ -30601,7 +30560,7 @@ msgstr "`--no-autostash`"
 #: en/merge-options.adoc:203
 #, placeholders:'MERGE_AUTOSTASH', priority:240
 msgid "Automatically create a temporary stash entry before the operation begins, record it in the ref `MERGE_AUTOSTASH` and apply it after the operation ends. This means that you can run the operation on a dirty worktree. However, use with care: the final stash application after a successful merge might result in non-trivial conflicts."
-msgstr "在操作开始前自动创建临时贮藏条目，将其记录在特殊引用 `MERGE_AUTOSTASH` 中，并在操作结束后应用。 这意味着可以在脏工作区上运行操作。 但是，请谨慎使用：成功合并后的最终暂存应用可能会导致非实质性冲突。"
+msgstr "在操作开始前自动创建临时贮藏条目，将其记录在特殊引用 `MERGE_AUTOSTASH` 中，并在操作结束后应用。 这意味着可以在脏工作区上运行操作。 但是，请谨慎使用：成功合并后最终应用贮藏可能会导致非平凡冲突。"
 
 #. type: Labeled list
 #: en/merge-options.adoc:204
@@ -34117,7 +34076,7 @@ msgstr "这是一个修正的 `ort` 策略。当合并树A和B时，如果B对�
 #: en/merge-strategies.adoc:152
 #, priority:240
 msgid "With the strategies that use 3-way merge (including the default, `ort`), if a change is made on both branches, but later reverted on one of the branches, that change will be present in the merged result; some people find this behavior confusing. It occurs because only the heads and the merge base are considered when performing a merge, not the individual commits. The merge algorithm therefore considers the reverted change as no change at all, and substitutes the changed version instead."
-msgstr "对于使用三方合并的策略（包括默认的 `ort` 策略），如果在两个分支上都做了修改，但后来在其中一个分支上被撤销，那么这个修改就会出现在合并后的结果中；有些人觉得这种行为令人困惑。 出现这种情况是因为在执行合并时只考虑头部和合并基数，而不是单个提交。 因此，合并算法认为被恢复的修改根本就没有变化，而是用被修改的版本来代替。"
+msgstr "对于使用三方合并的策略（包括默认的 `ort` 策略），如果在两个分支上都做了修改，但后来在其中一个分支上被撤销，那么这个修改就会出现在合并后的结果中；有些人觉得这种行为令人困惑。 出现这种情况是因为在执行合并时只考虑头部和合并基础，而不是单个提交。 因此，合并算法认为被恢复的修改根本就没有变化，而是用被修改的版本来代替。"
 
 #. type: Title =
 #: en/git-log.adoc:2
@@ -34199,8 +34158,7 @@ msgstr "`full`"
 
 #. type: Plain text
 #: en/git-log.adoc:43
-#, fuzzy, priority:260
-#| msgid "the full ref name (including prefix) are printed."
+#, priority:260
 msgid "the full ref name (including prefix) is printed."
 msgstr "打印完整的 ref 名称（包括前缀）。"
 
@@ -34964,7 +34922,7 @@ msgstr "在这两种格式中，RS（记录分隔符）默认都是换行符，�
 #: en/git-checkout-index.adoc:146
 #, priority:80
 msgid "If the object being copied out to a temporary file is a symbolic link the content of the link will be written to a normal file. It is up to the end-user or the Porcelain to make use of this information."
-msgstr "如果被复制到临时文件中的对象是一个符号链接，那么该链接的内容将被写入一个普通文件。 最终用户或 Porcelain 可自行决定是否使用这些信息。"
+msgstr "如果被复制到临时文件中的对象是一个符号链接，那么该链接的内容将被写入一个普通文件。最终用户或上层命令可自行决定如何使用这些信息。"
 
 #. type: Labeled list
 #: en/git-checkout-index.adoc:150
@@ -36048,7 +36006,7 @@ msgstr "在该行内容之前。"
 #: en/git-blame.adoc:112
 #, no-wrap, priority:10
 msgid "THE PORCELAIN FORMAT"
-msgstr "上层命令格式"
+msgstr "Porcelain 格式"
 
 #. type: Plain text
 #: en/git-blame.adoc:116
@@ -36114,7 +36072,7 @@ msgstr "实际行的内容会在上述标题之后输出，前缀为 TAB。这�
 #: en/git-blame.adoc:145
 #, placeholders:'`--line-porcelain`', priority:10
 msgid "The porcelain format generally suppresses commit information that has already been seen. For example, two lines that are blamed to the same commit will both be shown, but the details for that commit will be shown only once. Information which is specific to individual lines will not be grouped together, like revs to be marked 'ignored' or 'unblamable'. This is more efficient, but may require more state be kept by the reader. The `--line-porcelain` option can be used to output full commit information for each line, allowing simpler (but less efficient) usage like:"
-msgstr "上层命令的格式通常会抑制已被查看过的提交信息。例如，归咎于同一提交的两行内容都会显示，但该提交的详细信息只显示一次。这样效率更高，但可能需要读者保留更多状态。可以使用 `--line-porcelain` 选项来输出每一行的完整提交信息，这样的用法更简单（但效率较低），例如："
+msgstr "Porcelain 格式通常会省略已经出现过的提交信息。例如，归咎于同一提交的两行内容都会显示，但该提交的详细信息只显示一次。这样效率更高，但可能需要读取方保留更多状态。可以使用 `--line-porcelain` 选项输出每一行的完整提交信息，从而简化用法（但效率较低），例如："
 
 #. type: Plain text
 #: en/git-blame.adoc:150
@@ -36232,7 +36190,7 @@ msgstr "当调用 `--incremental` 选项时，该命令在构建过程中输出�
 #: en/git-blame.adoc:213
 #, priority:10
 msgid "The output format is similar to the Porcelain format, but it does not contain the actual lines from the file that is being annotated."
-msgstr "输出格式类似于上层命令格式，但它不包含被注释的文件的实际行数。"
+msgstr "输出格式类似于 Porcelain 格式，但不包含被注释文件的实际内容行。"
 
 #. type: Plain text
 #: en/git-blame.adoc:215
@@ -36262,7 +36220,7 @@ msgstr "当一个提交首次出现在数据流中时，它的各种其他信息
 #: en/git-blame.adoc:227
 #, priority:10
 msgid "Unlike the Porcelain format, the filename information is always given and terminates the entry:"
-msgstr "与上层命令格式不同，文件名信息总是给定的，并终止条目："
+msgstr "与 Porcelain 格式不同，文件名信息总会给出，并位于条目末尾："
 
 #. type: Plain text
 #: en/git-blame.adoc:229
@@ -39388,7 +39346,7 @@ msgstr "术语<<def_pickaxe,挖掘>>指的是 diff 核心例程 (diffcore) 的�
 #: en/glossary-content.adoc:485
 #, no-wrap, placeholders:'[[def_plumbing]]', priority:310
 msgid "[[def_plumbing]]plumbing"
-msgstr "[[def_plumbing]]管件 (plumbing)"
+msgstr "[[def_plumbing]]底层命令（plumbing）"
 
 #. type: Plain text
 #: en/glossary-content.adoc:487
@@ -39400,13 +39358,13 @@ msgstr "<<def_core_git,Git 核心>>的昵称。"
 #: en/glossary-content.adoc:488
 #, no-wrap, placeholders:'[[def_porcelain]]', priority:310
 msgid "[[def_porcelain]]porcelain"
-msgstr "[[def_porcelain]]瓷件 (porcelain)"
+msgstr "[[def_porcelain]]上层命令（porcelain）"
 
 #. type: Plain text
 #: en/glossary-content.adoc:493
 #, placeholders:'<<def_core_git,':'<<def_SCM,':'<<def_plumbing,', priority:310
 msgid "Cute name for programs and program suites depending on <<def_core_git,core Git>>, presenting a high level access to core Git. Porcelains expose more of a <<def_SCM,SCM>> interface than the <<def_plumbing,plumbing>>."
-msgstr "依靠<<def_core_git,Git 核心>>的程序和程序套件的昵称，是对Git核心上层封装。与<<def_plumbing,管件>>相比，瓷件暴露了更多 <<def_SCM,SCM>> 接口。"
+msgstr "依赖于 <<def_core_git,Git 核心>>并提供其上层访问接口的程序或程序套件的昵称。与 <<def_plumbing,底层命令>>相比，上层命令提供了更多的 <<def_SCM,SCM>> 接口。"
 
 #. type: Labeled list
 #: en/glossary-content.adoc:494
@@ -39634,7 +39592,7 @@ msgstr "[[def_repository]]仓库 (repository)"
 #: en/glossary-content.adoc:624
 #, placeholders:'<<def_ref,':'<<def_object_database,':'<<def_reachable,':'<<def_porcelain,':'<<def_alternate_object_database,', priority:310
 msgid "A collection of <<def_ref,refs>> together with an <<def_object_database,object database>> containing all objects which are <<def_reachable,reachable>> from the refs, possibly accompanied by meta data from one or more <<def_porcelain,porcelains>>. A repository can share an object database with other repositories via <<def_alternate_object_database,alternates mechanism>>."
-msgstr "一个<<def_ref,引用>>的集合和一个<<def_object_database,对象库>>的集合，包含了引用中所有的<<def_reachable,可达的>>对象，可能还有一个或多个<<def_porcelain,瓷件>>元数据。一个仓库可以通过<<def_alternate_object_database,轮替对象库>>与其他仓库共享对象数据库。"
+msgstr "一个<<def_ref,引用>>的集合和一个<<def_object_database,对象库>>的集合，包含了引用中所有的<<def_reachable,可达的>>对象，可能还有一个或多个<<def_porcelain,上层命令>>的元数据。一个仓库可以通过<<def_alternate_object_database,轮替对象库>>与其他仓库共享对象数据库。"
 
 #. type: Labeled list
 #: en/glossary-content.adoc:625
@@ -44987,7 +44945,7 @@ msgstr ""
 "\t  [--ignore-space-change | --ignore-whitespace]\n"
 "\t  [--whitespace=(nowarn|warn|fix|error|error-all)]\n"
 "\t  [--exclude=<路径>] [--include=<路径>] [--directory=<根目录>]\n"
-"\t  [--verbose | --quiet] [--unsafe-paths] [--allow-empty] [<补���>...]\n"
+"\t  [--verbose | --quiet] [--unsafe-paths] [--allow-empty] [<补丁>...]\n"
 
 #. type: Plain text
 #: en/git-apply.adoc:31
@@ -45491,7 +45449,7 @@ msgstr "'TOOL_MODE=(diff|merge) . \"$(git --exec-path)/git-mergetool{litdd}lib\"
 #: en/git-mergetool--lib.adoc:19 en/git-sh-i18n.adoc:19 en/git-sh-setup.adoc:19
 #, priority:90
 msgid "This is not a command the end user would want to run. Ever. This documentation is meant for people who are studying the Porcelain-ish scripts and/or are writing new ones."
-msgstr "这不是一个终端用户想要运行的命令。 永远不会。 这个文档是为研究 Porcelain-ish 脚本和/或正在编写新脚本的人准备的。"
+msgstr "这不是最终用户会想运行的命令，永远都不是。本文档面向研究类似上层命令的脚本或编写新脚本的人。"
 
 #. type: Plain text
 #: en/git-mergetool--lib.adoc:23
@@ -47979,19 +47937,15 @@ msgstr "git-describe - 根据一个可用的引用，给一个对象起一个人
 
 #. type: synopsis
 #: en/git-describe.adoc:14
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'[--all]':'[--tags]':'[--contains]':'[--abbrev=':'[--all]':'[--tags]':'[--contains]':'[--abbrev=':'--dirty', priority:260
-#| msgid ""
-#| "'git describe' [--all] [--tags] [--contains] [--abbrev=<n>] [<commit-ish>...]\n"
-#| "'git describe' [--all] [--tags] [--contains] [--abbrev=<n>] --dirty[=<mark>]\n"
-#| "'git describe' <blob>\n"
+#, ignore-ellipsis, no-wrap, placeholders:'[--all]':'[--tags]':'[--contains]':'[--abbrev=':'[--all]':'[--tags]':'[--contains]':'[--abbrev=':'--dirty', priority:260
 msgid ""
 "git describe [--all] [--tags] [--contains] [--abbrev=<n>] [<commit-ish>...]\n"
 "git describe [--all] [--tags] [--contains] [--abbrev=<n>] --dirty[=<mark>]\n"
 "git describe <blob>\n"
 msgstr ""
-"'git describe' [--all] [--tags] [--contains] [--abbrev=<n>] [<commit-ish>...]\n"
-"'git describe' [--all] [--tags] [--contains] [--abbrev=<n>] --dirty[=<mark>] 。\n"
-"'git describe' <blob\n"
+"git describe [--all] [--tags] [--contains] [--abbrev=<n>] [<提交号>...]\n"
+"git describe [--all] [--tags] [--contains] [--abbrev=<n>] --dirty[=<标记>]\n"
+"git describe <数据对象>\n"
 
 #. type: Plain text
 #: en/git-describe.adoc:24
@@ -48001,52 +47955,45 @@ msgstr "该命令找到可从提交中获取的最新标签。 如果标签指�
 
 #. type: Plain text
 #: en/git-describe.adoc:28
-#, fuzzy, placeholders:'`--all`':'`--tags`':'`-a`':'`-s`':'linkgit:git-tag[1]', priority:260
-#| msgid "By default (without --all or --tags) `git describe` only shows annotated tags. For more information about creating annotated tags see the -a and -s options to linkgit:git-tag[1]."
+#, placeholders:'`--all`':'`--tags`':'`-a`':'`-s`':'linkgit:git-tag[1]', priority:260
 msgid "By default (without `--all` or `--tags`) `git describe` only shows annotated tags. For more information about creating annotated tags see the `-a` and `-s` options to linkgit:git-tag[1]."
-msgstr "默认情况下（没有 --all 或 --tags）`git describe` 只显示有注释的标签。 关于创建注释标签的更多信息，请参见linkgit:git-tag[1]的-a和-s选项。"
+msgstr "默认情况下（没有 `--all` 或 `--tags`），`git describe` 只显示有注释的标签。关于创建注释标签的更多信息，请参见 linkgit:git-tag[1] 的 `-a` 和 `-s` 选项。"
 
 #. type: Plain text
 #: en/git-describe.adoc:34
-#, fuzzy, placeholders:'`HEAD`', priority:260
-#| msgid "If the given object refers to a blob, it will be described as `<commit-ish>:<path>`, such that the blob can be found at `<path>` in the `<commit-ish>`, which itself describes the first commit in which this blob occurs in a reverse revision walk from HEAD."
+#, placeholders:'`HEAD`', priority:260
 msgid "If the given object refers to a blob, it will be described as `<commit-ish>:<path>`, such that the blob can be found at _<path>_ in the _<commit-ish>_, which itself describes the first commit in which this blob occurs in a reverse revision walk from `HEAD`."
-msgstr "如果给定的对象指的是一个blob，它将被描述为 `<commit-ish>:<path>`，这样就可以在 `<commit-ish>` 中的 `<path>` 找到这个blob，而这个blob本身就描述了从 `HEAD` 反向修订中出现的第一个提交。"
+msgstr "如果给定对象指向一个 blob，它将被描述为 `<提交号>:<路径>`；该 blob 可在 _<提交号>_ 的 _<路径>_ 中找到，而 _<提交号>_ 描述的是从 `HEAD` 开始反向遍历修订时首次出现该 blob 的提交。"
 
 #. type: Labeled list
 #: en/git-describe.adoc:37
-#, fuzzy, ignore-ellipsis, no-wrap, priority:260
-#| msgid "<commit-ish>..."
+#, ignore-ellipsis, no-wrap, priority:260
 msgid "`<commit-ish>...`"
-msgstr "<提交号>..."
+msgstr "`<提交号>...`"
 
 #. type: Plain text
 #: en/git-describe.adoc:39
-#, fuzzy, placeholders:'`HEAD`', priority:260
-#| msgid "Commit-ish object names to describe. Defaults to HEAD if omitted."
+#, placeholders:'`HEAD`', priority:260
 msgid "Commit-ish object names to describe. Defaults to `HEAD` if omitted."
 msgstr "要描述的类提交对象名称。 如果省略，则默认为 `HEAD`。"
 
 #. type: Labeled list
 #: en/git-describe.adoc:40
-#, fuzzy, no-wrap, placeholders:'`--dirty', priority:260
-#| msgid "--dirty[=<mark>]"
+#, no-wrap, placeholders:'`--dirty', priority:260
 msgid "`--dirty[=<mark>]`"
-msgstr "--dirty[=<标记>]"
+msgstr "`--dirty[=<标记>]`"
 
 #. type: Labeled list
 #: en/git-describe.adoc:41
-#, fuzzy, no-wrap, placeholders:'`--broken', priority:260
-#| msgid "--broken[=<mark>]"
+#, no-wrap, placeholders:'`--broken', priority:260
 msgid "`--broken[=<mark>]`"
-msgstr "--broken[=<标记>]"
+msgstr "`--broken[=<标记>]`"
 
 #. type: Plain text
 #: en/git-describe.adoc:49
-#, fuzzy, placeholders:'`HEAD`':'HEAD`':'`--broken`', priority:260
-#| msgid "Describe the state of the working tree. When the working tree matches HEAD, the output is the same as \"git describe HEAD\". If the working tree has local modification \"-dirty\" is appended to it. If a repository is corrupt and Git cannot determine if there is local modification, Git will error out, unless `--broken' is given, which appends the suffix \"-broken\" instead."
+#, placeholders:'`HEAD`':'HEAD`':'`--broken`', priority:260
 msgid "Describe the state of the working tree. When the working tree matches `HEAD`, the output is the same as `git describe HEAD`. If the working tree has local modification, `-dirty` is appended to it. If a repository is corrupt and Git cannot determine if there is local modification, Git will error out, unless `--broken` is given, which appends the suffix `-broken` instead."
-msgstr "描述工作区的状态。 当工作区与 `HEAD` 匹配时，其输出与 \"git describe `HEAD` \"相同。 如果工作区有本地修改，\"-dirty \"会被附加到它上面。 如果一个仓库被破坏了，而Git不能确定是否有本地修改，Git会出错，除非给了`--broken'，它将附加后缀\"-broken\"。"
+msgstr "描述工作区的状态。当工作区与 `HEAD` 匹配时，其输出与 `git describe HEAD` 相同。如果工作区有本地修改，则会附加 `-dirty`。如果仓库损坏且 Git 无法确定是否有本地修改，Git 会报错；除非给出 `--broken`，此时会改为附加后缀 `-broken`。"
 
 #. type: Plain text
 #: en/git-describe.adoc:54
@@ -48068,31 +48015,27 @@ msgstr "`--contains`"
 
 #. type: Plain text
 #: en/git-describe.adoc:64
-#, fuzzy, placeholders:'`--tags`', priority:260
-#| msgid "Instead of finding the tag that predates the commit, find the tag that comes after the commit, and thus contains it. Automatically implies --tags."
+#, placeholders:'`--tags`', priority:260
 msgid "Instead of finding the tag that predates the commit, find the tag that comes after the commit, and thus contains it. Automatically implies `--tags`."
-msgstr "与其寻找提交前的标签，不如寻找提交后的标签，从而包含该标签。 自动暗含 --tags。"
+msgstr "不查找早于该提交的标签，而是查找晚于该提交、因而包含该提交的标签。自动暗含 `--tags`。"
 
 #. type: Plain text
 #: en/git-describe.adoc:71
-#, fuzzy, priority:260
-#| msgid "Instead of using the default number of hexadecimal digits (which will vary according to the number of objects in the repository with a default of 7) of the abbreviated object name, use <n> digits, or as many digits as needed to form a unique object name. An <n> of 0 will suppress long format, only showing the closest tag."
+#, priority:260
 msgid "Instead of using the default number of hexadecimal digits (which will vary according to the number of objects in the repository with a default of 7) of the abbreviated object name, use _<n>_ digits, or as many digits as needed to form a unique object name. An _<n>_ of 0 will suppress long format, only showing the closest tag."
-msgstr "不要使用缩写对象名称的默认十六进制数字（根据仓库中对象的数量而变化，默认为7），而是使用<n>数字，或根据需要使用任意多的数字来形成唯一的对象名称。<n>为0将抑制长格式，仅显示最近的标签。"
+msgstr "不使用对象名缩写的默认十六进制位数（该位数随仓库中的对象数量而变化，默认为 7），而使用 _<n>_ 位，或者形成唯一对象名所需的位数。_<n>_ 为 0 时会抑制长格式，只显示最近的标签。"
 
 #. type: Labeled list
 #: en/git-describe.adoc:72
-#, fuzzy, no-wrap, placeholders:'`--candidates=', priority:260
-#| msgid "--candidates=<n>"
+#, no-wrap, placeholders:'`--candidates=', priority:260
 msgid "`--candidates=<n>`"
-msgstr "--candidates=<n>"
+msgstr "`--candidates=<n>`"
 
 #. type: Plain text
 #: en/git-describe.adoc:78
-#, fuzzy, priority:260
-#| msgid "Instead of considering only the 10 most recent tags as candidates to describe the input commit-ish consider up to <n> candidates. Increasing <n> above 10 will take slightly longer but may produce a more accurate result. An <n> of 0 will cause only exact matches to be output."
+#, priority:260
 msgid "Instead of considering only the 10 most recent tags as candidates to describe the input commit-ish consider up to _<n>_ candidates. Increasing _<n>_ above 10 will take slightly longer but may produce a more accurate result. An _<n>_ of 0 will cause only exact matches to be output."
-msgstr "与其只考虑用最近的10个标签来描述输入的commit-ish，不如考虑最多<n>个候选人。 将<n>增加到10以上会花费更长的时间，但可能会产生一个更准确的结果。 <n>为0将导致只输出完全匹配的结果。"
+msgstr "不只考虑最近的 10 个标签作为描述输入类提交对象的候选项，而是最多考虑 _<n>_ 个候选标签。将 _<n>_ 增加到 10 以上会稍微延长处理时间，但可能产生更准确的结果。_<n>_ 为 0 时只输出完全匹配的结果。"
 
 #. type: Labeled list
 #: en/git-describe.adoc:79
@@ -48102,10 +48045,9 @@ msgstr "`--exact-match`"
 
 #. type: Plain text
 #: en/git-describe.adoc:82
-#, fuzzy, placeholders:'`--candidates=0`', priority:260
-#| msgid "Only output exact matches (a tag directly references the supplied commit). This is a synonym for --candidates=0."
+#, placeholders:'`--candidates=0`', priority:260
 msgid "Only output exact matches (a tag directly references the supplied commit). This is a synonym for `--candidates=0`."
-msgstr "只输出完全匹配的内容（一个标签直接引用所提供的提交）。 这是 --candidates=0 的同义词。"
+msgstr "只输出完全匹配的内容（一个标签直接引用所提供的提交）。这是 `--candidates=0` 的同义词。"
 
 #. type: Labeled list
 #: en/git-describe.adoc:83
@@ -48127,31 +48069,27 @@ msgstr "总是输出长格式（标签、提交数量和提交名称的缩写）
 
 #. type: Labeled list
 #: en/git-describe.adoc:97
-#, fuzzy, no-wrap, placeholders:'`--match', priority:260
-#| msgid "--match <pattern>"
+#, no-wrap, placeholders:'`--match', priority:260
 msgid "`--match <pattern>`"
-msgstr "--match <模式>"
+msgstr "`--match <模式>`"
 
 #. type: Plain text
 #: en/git-describe.adoc:106
-#, fuzzy, placeholders:'`--all`':'`--no-match`', priority:260
-#| msgid "Only consider tags matching the given `glob(7)` pattern, excluding the \"refs/tags/\" prefix. If used with `--all`, it also considers local branches and remote-tracking references matching the pattern, excluding respectively \"refs/heads/\" and \"refs/remotes/\" prefix; references of other types are never considered. If given multiple times, a list of patterns will be accumulated, and tags matching any of the patterns will be considered. Use `--no-match` to clear and reset the list of patterns."
+#, placeholders:'`--all`':'`--no-match`', priority:260
 msgid "Only consider tags matching the given `glob`(7) pattern, excluding the \"refs/tags/\" prefix. If used with `--all`, it also considers local branches and remote-tracking references matching the pattern, excluding respectively \"refs/heads/\" and \"refs/remotes/\" prefix; references of other types are never considered. If given multiple times, a list of patterns will be accumulated, and tags matching any of the patterns will be considered. Use `--no-match` to clear and reset the list of patterns."
-msgstr "只考虑与给定的 `glob(7)` 模式匹配的标签，不包括 \"refs/tags/\" 前缀。如果和 `--all` 一起使用，它也会考虑匹配该模式的本地分支和远程跟踪引用，分别排除 \"refs/heads/\"和 \"refs/remotes/\"前缀；其他类型的引用永远不会被考虑。如果给出多次，将积累一个模式列表，匹配任何模式的标签都会被考虑。 使用 `--no-match` 来清除和重置模式列表。"
+msgstr "只考虑与给定的 `glob`(7) 模式匹配的标签，不包括 \"refs/tags/\" 前缀。如果和 `--all` 一起使用，它也会考虑匹配该模式的本地分支和远程跟踪引用，分别排除 \"refs/heads/\" 和 \"refs/remotes/\" 前缀；其他类型的引用永远不会被考虑。如果给出多次，将积累一个模式列表，匹配任何模式的标签都会被考虑。使用 `--no-match` 来清除和重置模式列表。"
 
 #. type: Labeled list
 #: en/git-describe.adoc:107
-#, fuzzy, no-wrap, placeholders:'`--exclude', priority:260
-#| msgid "--exclude <pattern>"
+#, no-wrap, placeholders:'`--exclude', priority:260
 msgid "`--exclude <pattern>`"
-msgstr "--exclude <模式>"
+msgstr "`--exclude <模式>`"
 
 #. type: Plain text
 #: en/git-describe.adoc:118
-#, fuzzy, placeholders:'`--all`':'`--match`':'`--match`':'`--exclude`':'`--no-exclude`', priority:260
-#| msgid "Do not consider tags matching the given `glob(7)` pattern, excluding the \"refs/tags/\" prefix. If used with `--all`, it also does not consider local branches and remote-tracking references matching the pattern, excluding respectively \"refs/heads/\" and \"refs/remotes/\" prefix; references of other types are never considered. If given multiple times, a list of patterns will be accumulated and tags matching any of the patterns will be excluded. When combined with --match a tag will be considered when it matches at least one --match pattern and does not match any of the --exclude patterns. Use `--no-exclude` to clear and reset the list of patterns."
+#, placeholders:'`--all`':'`--match`':'`--match`':'`--exclude`':'`--no-exclude`', priority:260
 msgid "Do not consider tags matching the given `glob`(7) pattern, excluding the \"refs/tags/\" prefix. If used with `--all`, it also does not consider local branches and remote-tracking references matching the pattern, excluding respectively \"`refs/heads/`\" and \"`refs/remotes/`\" prefix; references of other types are never considered. If given multiple times, a list of patterns will be accumulated and tags matching any of the patterns will be excluded. When combined with `--match` a tag will be considered when it matches at least one `--match` pattern and does not match any of the `--exclude` patterns. Use `--no-exclude` to clear and reset the list of patterns."
-msgstr "不考虑与给定的 `glob(7)` 模式匹配的标签，排除 \"refs/tags/\"前缀。如果和 `--all` 一起使用，也不考虑匹配模式的本地分支和远程跟踪引用，分别排除 \"refs/heads/\"和 \"refs/remotes/\"前缀；其他类型的引用从不考虑。如果给定多次，将积累一个模式列表，匹配任何模式的标签将被排除。当与--match结合时，当一个标签至少匹配一个--match模式且不匹配任何--exclude模式时，将被考虑。使用 `--no-exclude` 来清除和重置模式列表。"
+msgstr "不考虑与给定的 `glob`(7) 模式匹配的标签，排除 \"refs/tags/\" 前缀。如果和 `--all` 一起使用，也不考虑匹配模式的本地分支和远程跟踪引用，分别排除 \"`refs/heads/`\" 和 \"`refs/remotes/`\" 前缀；其他类型的引用从不考虑。如果给定多次，将积累一个模式列表，匹配任何模式的标签将被排除。当与 `--match` 结合时，只有至少匹配一个 `--match` 模式且不匹配任何 `--exclude` 模式的标签才会被考虑。使用 `--no-exclude` 来清除和重置模式列表。"
 
 #. type: Labeled list
 #: en/git-describe.adoc:119
@@ -48189,17 +48127,15 @@ msgstr "也就是说，我的 \"父 \"分支的当前头部是基于v1.0.4的，
 
 #. type: Plain text
 #: en/git-describe.adoc:151
-#, fuzzy, placeholders:'`-g`', priority:260
-#| msgid "The number of additional commits is the number of commits which would be displayed by \"git log v1.0.4..parent\". The hash suffix is \"-g\" + an unambiguous abbreviation for the tip commit of parent (which was `2414721b194453f058079d897d13c4e377f92dc6`). The length of the abbreviation scales as the repository grows, using the approximate number of objects in the repository and a bit of math around the birthday paradox, and defaults to a minimum of 7. The \"g\" prefix stands for \"git\" and is used to allow describing the version of a software depending on the SCM the software is managed with. This is useful in an environment where people may use different SCMs."
+#, placeholders:'`-g`', priority:260
 msgid "The number of additional commits is the number of commits which would be displayed by `git log v1.0.4..parent`. The hash suffix is \"`-g`\" + an unambiguous abbreviation for the tip commit of parent (which was `2414721b194453f058079d897d13c4e377f92dc6`). The length of the abbreviation scales as the repository grows, using the approximate number of objects in the repository and a bit of math around the birthday paradox, and defaults to a minimum of 7. The \"g\" prefix stands for \"git\" and is used to allow describing the version of a software depending on the SCM the software is managed with. This is useful in an environment where people may use different SCMs."
-msgstr "额外提交的次数是 \"git log v1.0.4.parent\" 显示的提交次数。 哈希后缀是\"-g\" + 父提交（即 `2414721b194453f058079d897d13c4e377f92dc6` ）顶端提交的明确缩写。缩写的长度会随着仓库的增长而缩减，使用的是仓库中对象的大致数量和生日悖论的数学计算方法，默认最小长度为 7。\"g\" 前缀代表 \"git\" ，用于根据管理软件的 SCM 来描述软件的版本。这在人们使用不同 SCM 的环境中非常有用。"
+msgstr "额外提交的数量就是 `git log v1.0.4..parent` 会显示的提交数量。哈希后缀由 \"`-g`\" 加上 parent 顶端提交（即 `2414721b194453f058079d897d13c4e377f92dc6`）的无歧义缩写组成。缩写长度会随仓库增长而扩展，它根据仓库中的大致对象数量以及围绕生日悖论的一些数学计算得出，默认最小长度为 7。\"g\" 前缀代表 \"git\"，用于根据管理软件所用的 SCM 来描述软件版本。这在人们可能使用不同 SCM 的环境中很有用。"
 
 #. type: Plain text
 #: en/git-describe.adoc:153
-#, fuzzy, priority:260
-#| msgid "Doing a 'git describe' on a tag-name will just show the tag name:"
+#, priority:260
 msgid "Doing a `git describe` on a tag-name will just show the tag name:"
-msgstr "对一个标签名做 'git describe'，只会显示标签名："
+msgstr "对一个标签名执行 `git describe`，只会显示标签名："
 
 #. type: Plain text
 #: en/git-describe.adoc:156
@@ -48213,10 +48149,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-describe.adoc:159
-#, fuzzy, placeholders:'`--all`', priority:260
-#| msgid "With --all, the command can use branch heads as references, so the output shows the reference path as well:"
+#, placeholders:'`--all`', priority:260
 msgid "With `--all`, the command can use branch heads as references, so the output shows the reference path as well:"
-msgstr "使用 --all 选项，命令可以使用分支头作为参考，所以输出也会显示引用路径："
+msgstr "使用 `--all` 选项，命令可以使用分支头作为引用，所以输出也会显示引用路径："
 
 #. type: Plain text
 #: en/git-describe.adoc:162
@@ -48240,10 +48175,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-describe.adoc:168
-#, fuzzy, placeholders:'`--abbrev`', priority:260
-#| msgid "With --abbrev set to 0, the command can be used to find the closest tagname without any suffix:"
+#, placeholders:'`--abbrev`', priority:260
 msgid "With `--abbrev` set to 0, the command can be used to find the closest tagname without any suffix:"
-msgstr "在 --abbrev 选项设置为0的情况下，该命令可以用来寻找最接近的没有任何后缀的标签名："
+msgstr "将 `--abbrev` 选项设为 0 时，该命令可以用来寻找没有任何后缀的最近标签名："
 
 #. type: Plain text
 #: en/git-describe.adoc:171
@@ -48269,17 +48203,15 @@ msgstr "搜索策略"
 
 #. type: Plain text
 #: en/git-describe.adoc:187
-#, fuzzy, priority:260
-#| msgid "For each commit-ish supplied, 'git describe' will first look for a tag which tags exactly that commit. Annotated tags will always be preferred over lightweight tags, and tags with newer dates will always be preferred over tags with older dates. If an exact match is found, its name will be output and searching will stop."
+#, priority:260
 msgid "For each commit-ish supplied, `git describe` will first look for a tag which tags exactly that commit. Annotated tags will always be preferred over lightweight tags, and tags with newer dates will always be preferred over tags with older dates. If an exact match is found, its name will be output and searching will stop."
-msgstr "对于提供的每个提交，'git describe' 将首先寻找一个标签，该标签正是该提交的标签。 有注释的标签总是比轻量级的标签更受欢迎，日期较新的标签总是比日期较老的标签更受欢迎。 如果找到一个完全匹配的标签，它的名字就会被输出，搜索就会停止。"
+msgstr "对于提供的每个类提交对象，`git describe` 将首先查找恰好标记该提交的标签。注释标签总是优先于轻量级标签，日期较新的标签总是优先于日期较旧的标签。如果找到完全匹配项，就会输出其名称并停止搜索。"
 
 #. type: Plain text
 #: en/git-describe.adoc:194
-#, fuzzy, placeholders:'`--first-parent`', priority:260
-#| msgid "If an exact match was not found, 'git describe' will walk back through the commit history to locate an ancestor commit which has been tagged. The ancestor's tag will be output along with an abbreviation of the input commit-ish's SHA-1. If `--first-parent` was specified then the walk will only consider the first parent of each commit."
+#, placeholders:'`--first-parent`', priority:260
 msgid "If an exact match was not found, `git describe` will walk back through the commit history to locate an ancestor commit which has been tagged. The ancestor's tag will be output along with an abbreviation of the input commit-ish's SHA-1. If `--first-parent` was specified then the walk will only consider the first parent of each commit."
-msgstr "如果没有找到完全匹配的，'git describe' 会回溯提交历史，找到一个已经被标签的祖先提交。 该祖先的标签将与输入的提交的SHA-1的缩写一起被输出。如果指定了 `--first-parent`，那么回溯将只考虑每个提交的第一个父级。"
+msgstr "如果没有找到完全匹配项，`git describe` 会回溯提交历史，查找已被标记的祖先提交。该祖先的标签会与输入类提交对象的 SHA-1 缩写一起输出。如果指定了 `--first-parent`，遍历将只考虑每个提交的第一个父提交。"
 
 #. type: Plain text
 #: en/git-describe.adoc:200
@@ -48289,10 +48221,9 @@ msgstr "如果在行走过程中发现了多个标签，那么将选择与输入
 
 #. type: Plain text
 #: en/git-describe.adoc:208
-#, fuzzy, priority:260
-#| msgid "Tree objects as well as tag objects not pointing at commits, cannot be described. When describing blobs, the lightweight tags pointing at blobs are ignored, but the blob is still described as <commit-ish>:<path> despite the lightweight tag being favorable."
+#, priority:260
 msgid "Tree objects as well as tag objects not pointing at commits, cannot be described. When describing blobs, the lightweight tags pointing at blobs are ignored, but the blob is still described as `<commit-ish>:<path>` despite the lightweight tag being favorable."
-msgstr "树对象以及不指向提交的标签对象，不能被描述。 在描述 blob 时，指向 blob 的轻量级标签会被忽略，但尽管轻量级标签是有利的，blob 仍然被描述为 <提交号>:<路径>。"
+msgstr "树对象以及不指向提交的标签对象无法被描述。在描述 blob 时，会忽略指向 blob 的轻量级标签；即使该轻量级标签更匹配，blob 仍会被描述为 `<提交号>:<路径>`。"
 
 #. type: Title =
 #: en/git-worktree.adoc:2
@@ -48946,13 +48877,13 @@ msgstr "注意，如果有额外的信息，注释将被移到下一行，否则
 #: en/git-worktree.adoc:459
 #, no-wrap, priority:240
 msgid "Porcelain Format"
-msgstr "上层命令格式"
+msgstr "Porcelain 格式"
 
 #. type: Plain text
 #: en/git-worktree.adoc:468
 #, placeholders:'`-z`', priority:240
 msgid "The porcelain format has a line per attribute. If `-z` is given then the lines are terminated with NUL rather than a newline. Attributes are listed with a label and value separated by a single space. Boolean attributes (like `bare` and `detached`) are listed as a label only, and are present only if the value is true. Some attributes (like `locked`) can be listed as a label only or with a value depending upon whether a reason is available. The first attribute of a worktree is always `worktree`, an empty line indicates the end of the record. For example:"
-msgstr "上层命令的每个属性有一行。 如果给了 `-z`，那么这几行将以NUL（空字符）而不是换行来结束。 属性以标签和值的形式列出，用一个空格隔开。 布尔属性（如 `bare` 和 `detached`）仅作为标签列出，并且仅在值为真时出现。 一些属性（如 `locked'）可以只作为标签列出，也可以根据是否有理由列出一个值。 工作区的第一个属性总是` 工作区'，一个空行表示记录的结束。 比如说："
+msgstr "Porcelain 格式的每个属性占一行。如果指定了 `-z`，则各行以 NUL（空字符）而不是换行符终止。属性由标签和值组成，两者之间以一个空格分隔。布尔属性（如 `bare` 和 `detached`）只列出标签，并且仅在值为 true 时出现。某些属性（如 `locked`）可能只列出标签，也可能根据是否提供原因而带有值。工作树的第一个属性总是 `worktree`；空行表示记录结束。例如："
 
 #. type: delimited block -
 #: en/git-worktree.adoc:473
@@ -49202,7 +49133,7 @@ msgstr "--deleted"
 #: en/git-ls-files.adoc:47
 #, priority:80
 msgid "Show files with an unstaged deletion"
-msgstr "显示未分阶段删除的文件"
+msgstr "显示删除操作尚未暂存的文件"
 
 #. type: Labeled list
 #: en/git-ls-files.adoc:49
@@ -49364,7 +49295,7 @@ msgstr "--exclude-per-directory=<文件>"
 #: en/git-ls-files.adoc:126
 #, placeholders:'`--exclude-standard`', priority:80
 msgid "Read additional exclude patterns that apply only to the directory and its subdirectories in <file>. If you are trying to emulate the way Porcelain commands work, using the `--exclude-standard` option instead is easier and more thorough."
-msgstr "读取仅适用于 <文件> 中目录及其子目录的附加排除模式。如果你想模仿 Porcelain 命令的工作方式，使用 `--exclude-standard` 选项会更简单、更彻底。"
+msgstr "读取仅适用于 <文件> 中目录及其子目录的附加排除模式。如果你想模仿上层命令的工作方式，使用 `--exclude-standard` 选项会更简单、更彻底。"
 
 #. type: Plain text
 #: en/git-ls-files.adoc:130
@@ -49454,7 +49385,7 @@ msgstr "R"
 #: en/git-ls-files.adoc:159
 #, priority:80
 msgid "tracked file with unstaged removal/deletion"
-msgstr "未分阶段移除/删除的跟踪文件"
+msgstr "移除/删除操作尚未暂存的跟踪文件"
 
 #. type: Table
 #: en/git-ls-files.adoc:159 en/git-status.adoc:231 en/git-status.adoc:237
@@ -49748,7 +49679,7 @@ msgstr "在命令行中用 --exclude 指定的模式或从用 --exclude-from 指
 #: en/git-ls-files.adoc:330
 #, placeholders:'`--exclude-standard`':'`--exclude-standard`':'`--exclude-per-directory=':'.gitignore`', priority:80
 msgid "Generally, you should be able to use `--exclude-standard` when you want the exclude rules applied the same way as what Porcelain commands do. To emulate what `--exclude-standard` specifies, you can give `--exclude-per-directory=.gitignore`, and then specify:"
-msgstr "一般来说，当你希望排除规则的应用方式与 Porcelain 命令相同时，可以使用 `--exclude-standard`。要模仿 `--exclude-standard` 指定的方式，可以给出 `--exclude-per-directory=.gitignore`，然后指定："
+msgstr "一般来说，当你希望排除规则的应用方式与上层命令相同时，可以使用 `--exclude-standard`。要模仿 `--exclude-standard` 指定的方式，可以给出 `--exclude-per-directory=.gitignore`，然后指定："
 
 #. type: Plain text
 #: en/git-ls-files.adoc:333
@@ -49758,10 +49689,9 @@ msgstr "配置变量 `core.excludesfile` 指定的文件（如果存在），或
 
 #. type: Plain text
 #: en/git-ls-files.adoc:335
-#, fuzzy, placeholders:'`$GIT_COMMON_DIR/info/exclude`', priority:80
-#| msgid "The `$GIT_DIR/info/exclude` file."
+#, placeholders:'`$GIT_COMMON_DIR/info/exclude`', priority:80
 msgid "The `$GIT_COMMON_DIR/info/exclude` file."
-msgstr "`$GIT_DIR/info/exclude` 文件。"
+msgstr "`$GIT_COMMON_DIR/info/exclude` 文件。"
 
 #. type: Plain text
 #: en/git-ls-files.adoc:337
@@ -50635,7 +50565,7 @@ msgstr "该选项适用于在上游分支上开发功能的情况。在开发功
 #: en/git-rebase.adoc:241
 #, placeholders:'`--fork-point`':'`--fork-point`', priority:220
 msgid "Although both this option and `--fork-point` find the merge base between `<upstream>` and `<branch>`, this option uses the merge base as the _starting point_ on which new commits will be created, whereas `--fork-point` uses the merge base to determine the _set of commits_ which will be rebased."
-msgstr "虽然该选项和 `--fork-point` 都能找到 `<upstream>` 和 `<branch>` 之间的合并基数，但该选项使用合并基数作为创建新提交的 _起点_，而 `--fork-point` 则使用合并基数来确定将被重定向的 _提交集_。"
+msgstr "虽然该选项和 `--fork-point` 都能找到 `<upstream>` 和 `<branch>` 之间的合并基础，但该选项使用合并基础作为创建新提交的 _起点_，而 `--fork-point` 则使用合并基础来确定将被重定向的 _提交集_。"
 
 #. type: Plain text
 #: en/git-rebase.adoc:243 en/git-rebase.adoc:258 en/git-rebase.adoc:286 en/git-rebase.adoc:307 en/git-rebase.adoc:329 en/git-rebase.adoc:337 en/git-rebase.adoc:349 en/git-rebase.adoc:361 en/git-rebase.adoc:370 en/git-rebase.adoc:412 en/git-rebase.adoc:447 en/git-rebase.adoc:472 en/git-rebase.adoc:492 en/git-rebase.adoc:499 en/git-rebase.adoc:506 en/git-rebase.adoc:518 en/git-rebase.adoc:571 en/git-rebase.adoc:578 en/git-rebase.adoc:604 en/git-rebase.adoc:639
@@ -53525,7 +53455,7 @@ msgstr "比较索引和文件系统上的文件。"
 #: en/diff-format.adoc:25
 #, placeholders:'git diff-files`', priority:280
 msgid "All the commands print one output line per changed file, except `git diff-files` in the case of an unmerged file, which prints both an \"unmerged\" and an \"in-place edit\" line."
-msgstr ""
+msgstr "所有命令都会为每个已更改文件打印一行输出；但对于未合并文件，`git diff-files` 会同时打印一行“未合并”和一行“原地编辑”。"
 
 #. type: Plain text
 #: en/diff-format.adoc:27
@@ -53565,10 +53495,9 @@ msgstr "冒号。"
 
 #. type: Plain text
 #: en/diff-format.adoc:41
-#, fuzzy, priority:280
-#| msgid "mode for \"src\"; 000000 if creation or unmerged."
+#, priority:280
 msgid "mode for \"src\"; 000000 if creation, or if \"src\" is from the index and is unmerged."
-msgstr "\"src\"（源文件）的模式；如果是新建或是未合并的，则为 000000。"
+msgstr "\"src\"（源文件）的模式；如果是新建文件，或者 \"src\" 来自索引且尚未合并，则为 000000。"
 
 #. type: Plain text
 #: en/diff-format.adoc:42 en/diff-format.adoc:44 en/diff-format.adoc:46 en/diff-format.adoc:48
@@ -53578,24 +53507,21 @@ msgstr "空格。"
 
 #. type: Plain text
 #: en/diff-format.adoc:43
-#, fuzzy, priority:280
-#| msgid "mode for \"dst\"; 000000 if deletion or unmerged."
+#, priority:280
 msgid "mode for \"dst\"; 000000 if deletion, or if \"dst\" is from the index and is unmerged."
-msgstr "\"dst\" (目标文件）的模式；如果被删除或未合并则为 000000。"
+msgstr "\"dst\"（目标文件）的模式；如果是删除文件，或者 \"dst\" 来自索引且尚未合并，则为 000000。"
 
 #. type: Plain text
 #: en/diff-format.adoc:45
-#, fuzzy, priority:280
-#| msgid "sha1 for \"src\"; 0\\{40\\} if creation or unmerged."
+#, priority:280
 msgid "sha1 for \"src\"; 0\\{40\\} if creation, or if \"src\" is from the index and is unmerged."
-msgstr "\"src\"（源文件）的 sha1 值；如果为新建或未合并则为 0\\{40\\}。"
+msgstr "\"src\"（源文件）的 SHA-1；如果是新建文件，或者 \"src\" 来自索引且尚未合并，则为 0\\{40\\}。"
 
 #. type: Plain text
 #: en/diff-format.adoc:47
-#, fuzzy, priority:280
-#| msgid "sha1 for \"dst\"; 0\\{40\\} if deletion, unmerged or \"work tree out of sync with the index\"."
+#, priority:280
 msgid "sha1 for \"dst\"; 0\\{40\\} if deletion, if \"dst\" is from the index and is unmerged, or if \"dst\" is from the work tree and is out of sync with the index."
-msgstr "sha1 表示 \"dst\"（目标文件）；0\\{40\\} 表示删除、未合并或 “工作区树与索引不同步”。"
+msgstr "\"dst\"（目标文件）的 SHA-1；如果是删除文件、\"dst\" 来自索引且尚未合并，或者 \"dst\" 来自工作区且与索引不同步，则为 0\\{40\\}。"
 
 #. type: Plain text
 #: en/diff-format.adoc:49
@@ -55724,7 +55650,7 @@ msgid ""
 "    [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n"
 "    <command> [<args>]\n"
 msgstr ""
-"'git' [-v | --version] [-h | --help] [-C <路径>] [-c <配置名>=<配置���>]\n"
+"'git' [-v | --version] [-h | --help] [-C <路径>] [-c <配置名>=<配置值>]\n"
 "    [--exec-path[=<路径>]] [--html-path] [--man-path] [--info-path]\n"
 "    [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n"
 "    [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<路径>]\n"
@@ -56111,25 +56037,25 @@ msgstr "Git 命令"
 #: en/git.adoc:239
 #, priority:10
 msgid "We divide Git into high level (\"porcelain\") commands and low level (\"plumbing\") commands."
-msgstr "我们把 Git 分为上层封装命令（“瓷件”）和底层核心命令（“管件”）。"
+msgstr "我们把 Git 命令分为上层命令（porcelain）和底层命令（plumbing）。"
 
 #. type: Title -
 #: en/git.adoc:241
 #, no-wrap, priority:10
 msgid "High-level commands (porcelain)"
-msgstr "上层封装命令（瓷件）"
+msgstr "上层命令（porcelain）"
 
 #. type: Plain text
 #: en/git.adoc:245
 #, priority:10
 msgid "We separate the porcelain commands into the main commands and some ancillary user utilities."
-msgstr "我们将瓷件命令分为主要命令和一些辅助性的用户工具。"
+msgstr "我们将上层命令分为主要命令和一些辅助用户工具。"
 
 #. type: Title ~
 #: en/git.adoc:247
 #, no-wrap, priority:10
 msgid "Main porcelain commands"
-msgstr "主要瓷件命令"
+msgstr "主要上层命令"
 
 #. type: Title ~
 #: en/git.adoc:252
@@ -56201,19 +56127,19 @@ msgstr "`git reset` 也可以用来恢复索引，这个功能 `git restore` 的
 #: en/git.adoc:292
 #, no-wrap, priority:10
 msgid "Low-level commands (plumbing)"
-msgstr "底层核心命令（管件）"
+msgstr "底层命令（plumbing）"
 
 #. type: Plain text
 #: en/git.adoc:299
 #, placeholders:'linkgit:git-update-index[1]':'linkgit:git-read-tree[1]', priority:10
 msgid "Although Git includes its own porcelain layer, its low-level commands are sufficient to support development of alternative porcelains. Developers of such porcelains might start by reading about linkgit:git-update-index[1] and linkgit:git-read-tree[1]."
-msgstr "尽管 Git 包含了它自己的上层封装命令，但它的底层核心命令足以支持替代上层封装命令的开发。 上层封装命令开发者可以从阅读 linkgit:git-update-index[1] 和 linkgit:git-read-tree[1] 开始。"
+msgstr "尽管 Git 自带一套上层命令，其底层命令也足以支持开发其他上层命令。开发这类上层命令的人可以先阅读 linkgit:git-update-index[1] 和 linkgit:git-read-tree[1]。"
 
 #. type: Plain text
 #: en/git.adoc:306
 #, priority:10
 msgid "The interface (input, output, set of options and the semantics) to these low-level commands are meant to be a lot more stable than Porcelain level commands, because these commands are primarily for scripted use. The interface to Porcelain commands on the other hand are subject to change in order to improve the end user experience."
-msgstr "这些底层命令的界面（输入、输出、选项集和语义）要比上层封装命令稳定得多，因为这些命令主要是用于脚本的使用。 另一方面，为了改善终端用户的体验，上层封装命令接口是可以改变的。"
+msgstr "这些底层命令的接口（输入、输出、选项集和语义）应比上层命令的接口稳定得多，因为这些命令主要供脚本使用。另一方面，为改善最终用户体验，上层命令的接口可以改变。"
 
 #. type: Plain text
 #: en/git.adoc:312
@@ -57375,7 +57301,7 @@ msgstr "`GIT_REFLOG_ACTION`"
 #: en/git.adoc:947
 #, placeholders:'set_reflog_action':'git-sh-setup`', priority:10
 msgid "When a ref is updated, reflog entries are created to keep track of the reason why the ref was updated (which is typically the name of the high-level command that updated the ref), in addition to the old and new values of the ref. A scripted Porcelain command can use set_reflog_action helper function in `git-sh-setup` to set its name to this variable when it is invoked as the top level command by the end user, to be recorded in the body of the reflog."
-msgstr "更新引用时，会创建引用日志条目来记录更新引用的原因（通常是更新引用的高级命令的名称），以及引用的新旧值。 脚本化的上层命令可以使用 `git-sh-setup` 中的 set_reflog_action 辅助函数，在被最终用户作为顶级命令调用时将其名称设置为该变量，并记录在引用日志的正文中。"
+msgstr "更新引用时，会创建引用日志条目来记录更新原因（通常是更新引用的上层命令名称）以及引用的新旧值。脚本实现的上层命令可使用 `git-sh-setup` 中的 set_reflog_action 辅助函数，在最终用户将其作为顶层命令调用时把名称设置到该变量中，并记录在引用日志正文里。"
 
 #. type: Labeled list
 #: en/git.adoc:948
@@ -58519,7 +58445,7 @@ msgstr "正确处理目录/文件冲突"
 #: en/git-merge-tree.adoc:35
 #, priority:10
 msgid "recursive ancestor consolidation (i.e. when there is more than one merge base, creating a virtual merge base by merging the merge bases)"
-msgstr "递归祖先合并（即当有一个以上的合并基数时，通过合并基础创建一个虚拟合并基础）"
+msgstr "递归祖先合并（即当有一个以上的合并基础时，通过合并基础创建一个虚拟合并基础）"
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:36
@@ -58863,7 +58789,7 @@ msgstr "使用说明"
 #: en/git-merge-tree.adoc:230
 #, placeholders:'linkgit:git-hash-object[1]':'linkgit:git-mktree[1]':'linkgit:git-commit-tree[1]':'linkgit:git-write-tree[1]':'linkgit:git-update-ref[1]':'linkgit:git-mktag[1]', priority:10
 msgid "This command is intended as low-level plumbing, similar to linkgit:git-hash-object[1], linkgit:git-mktree[1], linkgit:git-commit-tree[1], linkgit:git-write-tree[1], linkgit:git-update-ref[1], and linkgit:git-mktag[1]. Thus, it can be used as a part of a series of steps such as:"
-msgstr "这个命令旨在作为低级的底层命令，类似于 linkgit:git-hash-object[1]，linkgit:git-mktree[1]， linkgit:git-commit-tree[1]， linkgit:git-write-tree[1]，linkgit:git-update-ref[1] 和 linkgit:git-mktag[1]。 因此，它可以作为一系列步骤的一部分来使用，比如："
+msgstr "此命令是一个底层命令，类似于 linkgit:git-hash-object[1]、linkgit:git-mktree[1]、linkgit:git-commit-tree[1]、linkgit:git-write-tree[1]、linkgit:git-update-ref[1] 和 linkgit:git-mktag[1]。因此，它可以用于以下一系列步骤："
 
 #. type: Plain text
 #: en/git-merge-tree.adoc:241
@@ -62413,10 +62339,9 @@ msgstr "默认情况下，当从浅层仓库获取时，`git fetch` 会拒绝需
 
 #. type: Labeled list
 #: en/fetch-options.adoc:52
-#, fuzzy, no-wrap, placeholders:'`--negotiation-restrict=(', priority:220
-#| msgid "`--negotiation-tip=(<commit>|<glob>)`"
+#, no-wrap, placeholders:'`--negotiation-restrict=(', priority:220
 msgid "`--negotiation-restrict=(<commit>|<glob>)`"
-msgstr "--negotiation-tip=<提交|通配符>"
+msgstr "`--negotiation-restrict=(<提交>|<通配符>)`"
 
 #. type: Labeled list
 #: en/fetch-options.adoc:53
@@ -62434,7 +62359,7 @@ msgstr "默认情况下，Git 会向服务器报告从所有本地引用中可�
 #: en/fetch-options.adoc:64
 #, placeholders:'`--negotiation-restrict`':'`--negotiation-tip`', priority:220
 msgid "`--negotiation-restrict` is the preferred name for this option; `--negotiation-tip` is accepted as a synonym."
-msgstr ""
+msgstr "`--negotiation-restrict` 是该选项的首选名称；`--negotiation-tip` 也可作为同义词使用。"
 
 #. type: Plain text
 #: en/fetch-options.adoc:67
@@ -62456,41 +62381,39 @@ msgstr "参见 linkgit:git-config[1] 中记录的 `fetch.negotiationAlgorithm` �
 
 #. type: Labeled list
 #: en/fetch-options.adoc:76
-#, fuzzy, no-wrap, placeholders:'`--negotiation-include=(', priority:220
-#| msgid "`--negotiation-tip=(<commit>|<glob>)`"
+#, no-wrap, placeholders:'`--negotiation-include=(', priority:220
 msgid "`--negotiation-include=(<commit>|<glob>)`"
-msgstr "--negotiation-tip=<提交|通配符>"
+msgstr "`--negotiation-include=(<提交>|<通配符>)`"
 
 #. type: Plain text
 #: en/fetch-options.adoc:83
 #, placeholders:'`--negotiation-restrict`', priority:220
 msgid "Ensure that the commits at the given tips are always sent as \"have\" lines during fetch negotiation, regardless of what the negotiation algorithm selects. This is useful to guarantee that common history reachable from specific refs is always considered, even when `--negotiation-restrict` restricts the set of tips or when the negotiation algorithm would otherwise skip them."
-msgstr ""
+msgstr "确保在获取协商期间，给定末端处的提交始终作为 \"have\" 行发送，而不论协商算法选择了什么。这可保证始终考虑从特定引用可达的共同历史，即使 `--negotiation-restrict` 限制了末端集合，或者协商算法原本会跳过它们。"
 
 #. type: Plain text
 #: en/fetch-options.adoc:86
-#, fuzzy, priority:220
-#| msgid "This option may be specified more than once; if so, Git will report commits reachable from any of the given commits."
+#, priority:220
 msgid "This option may be specified more than once; if so, each commit is sent unconditionally."
-msgstr "这个选项可以指定多次；如果是这样，Git将报告从任何一个给定的提交中可达提交。"
+msgstr "该选项可以指定多次；此时每个提交都会无条件发送。"
 
 #. type: Plain text
 #: en/fetch-options.adoc:90
 #, placeholders:'{asterisk}`':'`--negotiation-restrict`', priority:220
 msgid "The argument may be an exact ref name (e.g. `refs/heads/release`), an object hash, or a glob pattern (e.g. `refs/heads/release/{asterisk}`). The pattern syntax is the same as for `--negotiation-restrict`."
-msgstr ""
+msgstr "参数可以是精确的引用名（例如 `refs/heads/release`）、对象哈希，或者通配模式（例如 `refs/heads/release/{asterisk}`）。其模式语法与 `--negotiation-restrict` 相同。"
 
 #. type: Plain text
 #: en/fetch-options.adoc:94
 #, placeholders:'`--negotiation-restrict`':'`--negotiation-include`', priority:220
 msgid "If `--negotiation-restrict` is used, the have set is first restricted by that option and then increased to include the tips specified by `--negotiation-include`."
-msgstr ""
+msgstr "如果使用 `--negotiation-restrict`，会先用该选项限制 have 集合，再将 `--negotiation-include` 指定的末端加入其中。"
 
 #. type: Plain text
 #: en/fetch-options.adoc:98
 #, priority:220
 msgid "If this option is not specified on the command line, then any `remote.<name>.negotiationInclude` config values for the current remote are used instead."
-msgstr ""
+msgstr "如果命令行中未指定该选项，则改用当前远程的所有 `remote.<name>.negotiationInclude` 配置值。"
 
 #. type: Labeled list
 #: en/fetch-options.adoc:99
@@ -62500,10 +62423,9 @@ msgstr "`--negotiate-only`"
 
 #. type: Plain text
 #: en/fetch-options.adoc:103
-#, fuzzy, placeholders:'`--negotiation-restrict=`', priority:220
-#| msgid "Do not fetch anything from the server, and instead print the ancestors of the provided `--negotiation-tip=` arguments, which we have in common with the server."
+#, placeholders:'`--negotiation-restrict=`', priority:220
 msgid "Do not fetch anything from the server, and instead print the ancestors of the provided `--negotiation-restrict=` arguments, which we have in common with the server."
-msgstr "不从服务器获取任何东西，而是打印所提供的 `--negotiation-tip=*` 参数与服务器上的共同祖先。"
+msgstr "不从服务器获取任何内容，而是打印所提供的 `--negotiation-restrict=` 参数中本地与服务器共有的祖先。"
 
 #. type: Plain text
 #: en/fetch-options.adoc:107
@@ -63365,10 +63287,9 @@ msgstr "在稀疏检出模式下，`git checkout -- <路径>` 将只更新由 `<
 
 #. type: Plain text
 #: en/git-checkout.adoc:263
-#, fuzzy, placeholders:'--hard`', priority:240
-#| msgid "When switching branches, if you have local modifications to one or more files that are different between the current branch and the branch to which you are switching, the command refuses to switch branches in order to preserve your modifications in context. However, with this option, a three-way merge between the current branch, your working tree contents, and the new branch is done, and you will be on the new branch."
+#, placeholders:'--hard`', priority:240
 msgid "When switching branches, if you have local modifications to one or more files that are different between the current branch and the branch to which you are switching, the command refuses to switch branches in order to preserve your modifications in context. With this option, the conflicting local changes are automatically stashed before the switch and reapplied afterwards. If the local changes do not overlap with the differences between branches, the switch proceeds without stashing. If reapplying the stash results in conflicts, the entry is saved to the stash list. Resolve the conflicts and run `git stash drop` when done, or clear the working tree (e.g. with `git reset --hard`) before running `git stash pop` later to re-apply your changes."
-msgstr "在切换分支时，如果你对一个或多个文件的本地修改在当前分支和你要切换的分支之间是不同的，命令会拒绝切换分支，以保留你的修改内容。 然而，使用这个选项后，就会在当前分支、你的工作区内容和新的分支之间进行三方合并，之后，你会处于新分支。"
+msgstr "切换分支时，如果你对一个或多个文件的本地修改与当前分支和目标分支之间的差异发生冲突，命令会拒绝切换，以便在原有上下文中保留你的修改。使用该选项后，冲突的本地修改会在切换前自动贮藏，并在切换后重新应用。如果本地修改与分支间差异不重叠，则无需贮藏即可完成切换。如果重新应用贮藏时产生冲突，该条目会保存到贮藏列表中。解决冲突后运行 `git stash drop`；或者先清理工作区（例如使用 `git reset --hard`），以后再运行 `git stash pop` 重新应用修改。"
 
 #. type: Plain text
 #: en/git-checkout.adoc:267
@@ -63814,10 +63735,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-checkout.adoc:582
-#, fuzzy, placeholders:'`-m`', priority:240
-#| msgid "You can give the `-m` flag to the command, which would try a three-way merge:"
+#, placeholders:'`-m`', priority:240
 msgid "You can give the `-m` flag to the command, which will carry your local changes to the new branch:"
-msgstr "你可以给命令加上 `-m` 标志，这样就可以尝试三方合并了："
+msgstr "你可以给命令加上 `-m` 标志，将本地修改带到新分支："
 
 #. type: delimited block -
 #: en/git-checkout.adoc:589
@@ -63829,13 +63749,17 @@ msgid ""
 "The following paths have local changes:\n"
 "M\tfrotz\n"
 msgstr ""
+"$ git checkout -m mytopic\n"
+"已应用自动贮藏。\n"
+"已切换到分支 'mytopic'\n"
+"以下路径存在本地修改：\n"
+"M\tfrotz\n"
 
 #. type: Plain text
 #: en/git-checkout.adoc:594
-#, fuzzy, priority:240
-#| msgid "After this three-way merge, the local modifications are _not_ registered in your index file, so `git diff` would show you what changes you made since the tip of the new branch."
+#, priority:240
 msgid "After the switch, the local modifications are reapplied and are _not_ registered in your index file, so `git diff` would show you what changes you made since the tip of the new branch."
-msgstr "在这个三方合并之后，本地的修改并「没有」登记在你的索引文件中，所以 `git diff` 会显示你在新分支的提示下做了哪些修改。"
+msgstr "切换后会重新应用本地修改，但这些修改并未登记到索引中，因此 `git diff` 会显示你从新分支末端开始所做的修改。"
 
 #. type: Title ===
 #: en/git-checkout.adoc:595
@@ -63847,7 +63771,7 @@ msgstr "3. Merge 冲突"
 #: en/git-checkout.adoc:602
 #, placeholders:'`--merge`':'`-m`', priority:240
 msgid "When the `--merge` (`-m`) option is given and the local changes overlap with the changes in the branch we're switching to, the changes are stashed and reapplied after the switch. If this process results in conflicts, the stash entry is saved and a message is printed:"
-msgstr ""
+msgstr "给出 `--merge`（`-m`）选项且本地修改与目标分支中的修改重叠时，会先贮藏这些修改，并在切换后重新应用。如果该过程产生冲突，则保存贮藏条目并打印一条消息："
 
 #. type: delimited block -
 #: en/git-checkout.adoc:610
@@ -63860,6 +63784,11 @@ msgid ""
 "do not want to resolve them now, run \"git reset --hard\" and\n"
 "apply the local changes later by running \"git stash pop\".\n"
 msgstr ""
+"$ git checkout -m mytopic\n"
+"你的本地修改已被贮藏，但重新应用时产生了冲突。\n"
+"你可以解决冲突，然后用 \"git stash drop\" 丢弃贮藏；\n"
+"如果现在不想解决冲突，则运行 \"git reset --hard\"，\n"
+"以后再运行 \"git stash pop\" 应用本地修改。\n"
 
 #. type: Plain text
 #: en/git-checkout.adoc:623
@@ -64185,7 +64114,7 @@ msgstr "这个表单是用来查看你为下一次提交所做的相对于<commi
 #: en/git-diff.adoc:60
 #, placeholders:'`--merge-base`':'`HEAD`':'--cached':'--merge-base':'--cached':'git merge-base', priority:280
 msgid "If `--merge-base` is given, instead of using _<commit>_, use the merge base of _<commit>_ and `HEAD`. `git diff --cached --merge-base A` is equivalent to `git diff --cached $(git merge-base A HEAD)`."
-msgstr "如果给出 --merge-base，则不使用 <提交>，而使用 <提交> 和 `HEAD` 的合并基数。 `git diff --cached --merge-base A` 等同于 `git diff --cached $(git merge-base A `HEAD`)`。"
+msgstr "如果给出 --merge-base，则不使用 <提交>，而使用 <提交> 和 `HEAD` 的合并基础。 `git diff --cached --merge-base A` 等同于 `git diff --cached $(git merge-base A `HEAD`)`。"
 
 #. type: Labeled list
 #: en/git-diff.adoc:61
@@ -64203,7 +64132,7 @@ msgstr "这个表格是用来查看你的工作区中相对于命名为<commit>�
 #: en/git-diff.adoc:72
 #, placeholders:'`--merge-base`':'`HEAD`':'--merge-base':'git merge-base', priority:280
 msgid "If `--merge-base` is given, instead of using _<commit>_, use the merge base of _<commit>_ and `HEAD`. `git diff --merge-base A` is equivalent to `git diff $(git merge-base A HEAD)`."
-msgstr "如果给出了 --merge-base，则不使用<commit>，而使用<commit>和 `HEAD` 的合并基数。 `git diff --merge-base A` 等同于 `git diff $(git merge-base A `HEAD`)`。"
+msgstr "如果给出了 --merge-base，则不使用<commit>，而使用<commit>和 `HEAD` 的合并基础。 `git diff --merge-base A` 等同于 `git diff $(git merge-base A `HEAD`)`。"
 
 #. type: Labeled list
 #: en/git-diff.adoc:73
@@ -65185,16 +65114,15 @@ msgstr "与 `--buffer` 一起使用时，执行自开始或上次刷新后发出
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:178
-#, fuzzy, no-wrap, priority:80
-#| msgid "`--mailmap`"
+#, no-wrap, priority:80
 msgid "`mailmap (<bool>)`"
-msgstr "`--mailmap`"
+msgstr "`mailmap (<布尔值>)`"
 
 #. type: Plain text
 #: en/git-cat-file.adoc:182
 #, placeholders:'linkgit:git-config[1]', priority:80
 msgid "Enable or disable mailmap for subsequent commands. The `<bool>` argument accepts the same boolean values as linkgit:git-config[1]. The mailmap data is read upon the first use and only once."
-msgstr ""
+msgstr "为后续命令启用或禁用 mailmap。`<布尔值>` 参数接受与 linkgit:git-config[1] 相同的布尔值。mailmap 数据在首次使用时读取，并且只读取一次。"
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:185
@@ -66588,7 +66516,7 @@ msgstr "请注意，无论第一个模式的名称是什么，如果启用该选
 #: en/diff-options.adoc:468
 #, placeholders:'`--word-diff`':'`--diff-algorithm`', priority:280
 msgid "The `--word-diff` option operates by taking the same line-by-line diff that is produced without the option and computing word-by-word changes within each hunk. This may produce a larger diff than a dedicated word-diff tool would. If Git acquires a different implementation in the future, the output may change. Note that this is similar to the `--diff-algorithm` option, which may also change the output."
-msgstr ""
+msgstr "`--word-diff` 选项以不带该选项时产生的逐行差异为基础，在每个差异块内计算逐词更改。它产生的差异可能比专用的逐词差异工具更大。如果 Git 将来采用不同的实现，输出可能会改变。请注意，这与同样可能改变输出的 `--diff-algorithm` 选项类似。"
 
 #. type: Labeled list
 #: en/diff-options.adoc:469
@@ -67254,7 +67182,7 @@ msgstr "`--no-textconv`"
 #: en/diff-options.adoc:848
 #, placeholders:'linkgit:gitattributes[5]':'linkgit:git-diff[1]':'linkgit:git-log[1]':'linkgit:git-format-patch[1]', priority:280
 msgid "Allow (or disallow) external text conversion filters to be run when comparing binary files. See linkgit:gitattributes[5] for details. Because textconv filters are typically a one-way conversion, the resulting diff is suitable for human consumption, but cannot be applied. For this reason, textconv filters are enabled by default only for linkgit:git-diff[1] and linkgit:git-log[1], but not for linkgit:git-format-patch[1] or diff plumbing commands."
-msgstr "允许（或不允许）在比较二进制文件时运行外部文本转换过滤器。详情请参见 linkgit:gitattributes[5] 。由于文本转换过滤器通常是单向转换，因此产生的差异适合人类用户使用，但不能应用（apply）。因此默认情况下，只有 linkgit:git-diff[1] 和 linkgit:git-log[1] 启用文本转换过滤器，而 linkgit:git-format-patch[1] 或 diff plumbing 命令则不启用。"
+msgstr "允许（或不允许）在比较二进制文件时运行外部文本转换过滤器。详情请参见 linkgit:gitattributes[5] 。由于文本转换过滤器通常是单向转换，因此产生的差异适合人类用户使用，但不能应用（apply）。因此默认情况下，只有 linkgit:git-diff[1] 和 linkgit:git-log[1] 启用文本转换过滤器，而 linkgit:git-format-patch[1] 或底层 diff 命令则不启用。"
 
 #. type: Labeled list
 #: en/diff-options.adoc:850
@@ -67546,7 +67474,7 @@ msgstr "给出长格式的输出。这是默认的。"
 #: en/git-status.adoc:58
 #, placeholders:'--cached`':'`-v`', priority:280
 msgid "In addition to the names of files that have been changed, also show the textual changes that are staged to be committed (i.e., like the output of `git diff --cached`). If `-v` is specified twice, then also show the changes in the working tree that have not yet been staged (i.e., like the output of `git diff`)."
-msgstr "除了显示被修改的文件名外，还显示被分阶段提交的文本修改（即，像 `git diff --cached` 的输出）。如果 `-v` 被指定了两次，那么也会显示工作区中尚未分阶段的变化（即，像 `git diff` 的输出）。"
+msgstr "除了显示被修改的文件名外，还显示已暂存、将要提交的文本修改（即，像 `git diff --cached` 的输出）。如果 `-v` 被指定了两次，那么也会显示工作区中尚未暂存的变化（即，像 `git diff` 的输出）。"
 
 #. type: Plain text
 #: en/git-status.adoc:67
@@ -68188,13 +68116,13 @@ msgstr "{empty}## <分支名称> <跟踪信息>\n"
 #: en/git-status.adoc:268
 #, no-wrap, priority:280
 msgid "Porcelain Format Version 1"
-msgstr "瓷器格式版本1"
+msgstr "Porcelain 格式版本 1"
 
 #. type: Plain text
 #: en/git-status.adoc:275
 #, priority:280
 msgid "Version 1 porcelain format is similar to the short format, but is guaranteed not to change in a backwards-incompatible way between Git versions or based on user configuration. This makes it ideal for parsing by scripts. The description of the short format above also describes the porcelain format, with a few exceptions:"
-msgstr "第 1 版的上层命令格式与短格式类似，但保证不会在 Git 版本之间以向后兼容的方式或基于用户配置而改变。这使得它成为脚本解析的理想选择。 上面对短格式的描述也是对瓷器格式的描述，但有一些例外："
+msgstr "第 1 版 Porcelain 格式与短格式类似，但保证不会因 Git 版本或用户配置而发生不向后兼容的变化，因此非常适合脚本解析。上面对短格式的说明也适用于 Porcelain 格式，但有以下例外："
 
 #. type: Plain text
 #: en/git-status.adoc:278
@@ -68224,7 +68152,7 @@ msgstr "任何子模块的变化都被报告为修改的 `M`，而不是 `m` 或
 #: en/git-status.adoc:295
 #, no-wrap, priority:280
 msgid "Porcelain Format Version 2"
-msgstr "瓷器格式版本2"
+msgstr "Porcelain 格式版本 2"
 
 #. type: Plain text
 #: en/git-status.adoc:300
@@ -68264,10 +68192,9 @@ msgstr "备注"
 
 #. type: Table
 #: en/git-status.adoc:314
-#, fuzzy, no-wrap, placeholders:'branch.oid', priority:280
-#| msgid "`# branch.oid <commit> \\"
+#, no-wrap, placeholders:'branch.oid', priority:280
 msgid "`# branch.oid <commit> \\| (initial)`"
-msgstr "`# branch.oid <commit> \\"
+msgstr "`# branch.oid <提交> \\| (initial)`"
 
 #. type: Table
 #: en/git-status.adoc:315
@@ -68277,10 +68204,9 @@ msgstr "当前提交。"
 
 #. type: Table
 #: en/git-status.adoc:315
-#, fuzzy, no-wrap, placeholders:'branch.head', priority:280
-#| msgid "`# branch.head <branch> \\"
+#, no-wrap, placeholders:'branch.head', priority:280
 msgid "`# branch.head <branch> \\| (detached)`"
-msgstr "--branch <分支>"
+msgstr "`# branch.head <分支> \\| (detached)`"
 
 #. type: Table
 #: en/git-status.adoc:316
@@ -68320,19 +68246,19 @@ msgstr ""
 #: en/git-status.adoc:322
 #, no-wrap, priority:280
 msgid "Stash Information"
-msgstr "暂存信息"
+msgstr "贮藏信息"
 
 #. type: Plain text
 #: en/git-status.adoc:326
 #, placeholders:'`--show-stash`', priority:280
 msgid "If `--show-stash` is given, one line is printed showing the number of stash entries if non-zero:"
-msgstr "如果给出了 `--show-stash`，则打印一行，如果非零，则显示暂存条目的数量："
+msgstr "如果给出了 `--show-stash`，则在贮藏条目数量非零时打印一行来显示其数量："
 
 #. type: Plain text
 #: en/git-status.adoc:328
 #, no-wrap, priority:280
 msgid "    # stash <N>\n"
-msgstr "    # 暂存 <N>\n"
+msgstr "    # stash <N>\n"
 
 #. type: Title ^
 #: en/git-status.adoc:330
@@ -69529,7 +69455,7 @@ msgstr "--line-porcelain"
 #: en/blame-options.adoc:54
 #, placeholders:'--porcelain', priority:10
 msgid "Show the porcelain format, but output commit information for each line, not just the first time a commit is referenced. Implies --porcelain."
-msgstr "显示上层命令格式，但输出每一行的提交信息，而不仅仅是第一次引用提交时的信息。 意味着 --porcelain。"
+msgstr "显示 Porcelain 格式，但为每一行输出提交信息，而不是只在首次引用提交时输出。暗含 --porcelain。"
 
 #. type: Plain text
 #: en/blame-options.adoc:58
@@ -69619,7 +69545,7 @@ msgstr "--ignore-rev <修订>"
 #: en/blame-options.adoc:131
 #, placeholders:'blame.markIgnoredLines':'blame.markUnblamableLines', priority:10
 msgid "Ignore changes made by the revision when assigning blame, as if the change never happened. Lines that were changed or added by an ignored commit will be blamed on the previous commit that changed that line or nearby lines. This option may be specified multiple times to ignore more than one revision. If the `blame.markIgnoredLines` config option is set, then lines that were changed by an ignored commit and attributed to another commit will be marked with a `?` in the blame output. If the `blame.markUnblamableLines` config option is set, then those lines touched by an ignored commit that we could not attribute to another revision are marked with a '*'. In the porcelain modes, we print 'ignored' and 'unblamable' on a newline respectively."
-msgstr "在分配责任时忽略修订版所做的修改，就像该修改从未发生过一样。 被忽略的提交所改变或增加的行将被归咎于改变该行或附近行的前一个提交。 这个选项可以多次指定，以忽略一个以上的修订。 如果设置了 `blame.markIgnoredLines` 配置选项，那么被忽略的提交所改变的行将被归咎于另一个提交，在归咎输出中会标上 `?` 如果设置了 `blame.markUnblamableLines` 配置选项，那么那些被忽略的提交所触及的、我们无法归因于另一个修订版的行将被标记为 '*'。"
+msgstr "在分配责任时忽略修订版所做的修改，就像该修改从未发生过一样。 被忽略的提交所改变或增加的行将被归咎于改变该行或附近行的前一个提交。 这个选项可以多次指定，以忽略一个以上的修订。 如果设置了 `blame.markIgnoredLines` 配置选项，那么被忽略的提交所改变的行将被归咎于另一个提交，在归咎输出中会标上 `?`。如果设置了 `blame.markUnblamableLines` 配置选项，那么那些被忽略的提交所触及的、我们无法归因于另一个修订版的行将被标记为 '*'。在 Porcelain 模式下，会分别另起一行打印 'ignored' 和 'unblamable'。"
 
 #. type: Labeled list
 #: en/blame-options.adoc:132
@@ -72399,7 +72325,7 @@ msgstr "'. \"$(git --exec-path)/git-sh-i18n\"'\n"
 #: en/git-sh-i18n.adoc:26
 #, placeholders:'git sh-i':'eval_gettext':'gettext.sh', priority:90
 msgid "The 'git sh-i18n scriptlet is designed to be sourced (using `.`) by Git's porcelain programs implemented in shell script. It provides wrappers for the GNU `gettext` and `eval_gettext` functions accessible through the `gettext.sh` script, and provides pass-through fallbacks on systems without GNU gettext."
-msgstr "’git sh-i18n‘ 脚本小程序是专为 Git 的 shell 脚本实现的瓷器程序而设计的（使用 `.`）。它为通过 `gettext.sh` 脚本访问的 GNU `gettext` 和 `eval_gettext` 函数提供了封装，并为没有 GNU gettext 的系统提供了直通回退。"
+msgstr "'git sh-i18n' 脚本片段供以 shell 脚本实现的 Git 上层命令通过 `.` 引入。它封装了可通过 `gettext.sh` 脚本访问的 GNU `gettext` 和 `eval_gettext` 函数，并在系统没有 GNU gettext 时提供直通式回退。"
 
 #. type: Labeled list
 #: en/git-sh-i18n.adoc:30
@@ -76297,17 +76223,15 @@ msgstr "只有在信任生成快速导入流的程序时，才能启用此选项
 
 #. type: Labeled list
 #: en/git-fast-import.adoc:69
-#, fuzzy, no-wrap, placeholders:'`--signed-tags=', priority:90
-#| msgid "`--signed-commits=<mode>`"
+#, no-wrap, placeholders:'`--signed-tags=', priority:90
 msgid "`--signed-tags=<mode>`"
-msgstr "`--signed-commits=<mode>`"
+msgstr "`--signed-tags=<模式>`"
 
 #. type: Plain text
 #: en/git-fast-import.adoc:73
-#, fuzzy, placeholders:'`--signed-commits=', priority:90
-#| msgid "Specify how to handle signed tags. Behaves in the same way as the `--signed-commits=<mode>` below, except that the `strip-if-invalid` mode is not yet supported. Like for signed commits, the default mode is `verbatim`."
+#, placeholders:'`--signed-commits=', priority:90
 msgid "Specify how to handle signed tags. Behaves in the same way as the `--signed-commits=<mode>` below. Like for signed commits, the default mode is `verbatim`."
-msgstr "指定如何处理带签名的标签。其行为与下文的 `--signed-commits=<mode>` 相同，但尚不支持 `strip-if-invalid` 模式。与带签名的提交一样，默认模式为 `verbatim`。"
+msgstr "指定如何处理带签名的标签。其行为与下文的 `--signed-commits=<模式>` 相同。与带签名的提交一样，默认模式为 `verbatim`。"
 
 #. type: Labeled list
 #: en/git-fast-import.adoc:74
@@ -76365,10 +76289,9 @@ msgstr "`sign-if-invalid[=<keyid>]` 类似于 `strip-if-invalid`，验证提交�
 
 #. type: Plain text
 #: en/git-fast-import.adoc:94
-#, fuzzy, priority:90
-#| msgid "`abort` will make this program die when encountering a signed commit."
+#, priority:90
 msgid "`abort-if-invalid` will make this program die when encountering a signed commit that is unable to be verified."
-msgstr "`abort` 会在遇到带签名的提交时让该程序终止。"
+msgstr "`abort-if-invalid` 会在遇到无法验证的带签名提交时让该程序终止。"
 
 #. type: Title ~
 #: en/git-fast-import.adoc:96
@@ -79043,16 +78966,15 @@ msgstr "-L :<函数名称>:<文件>"
 
 #. type: Plain text
 #: en/line-range-options.adoc:16
-#, fuzzy, placeholders:'`--patch`':'`--no-patch`':'`--raw`':'`--name-only`':'`--name-status`':'`--summary`':'`--stat`':'`--numstat`':'`--shortstat`':'`--dirstat`', priority:260
-#| msgid "Trace the evolution of the line range given by `<start>,<end>`, or by the function name regex _<funcname>_, within the _<file>_. You may not give any pathspec limiters. This is currently limited to a walk starting from a single revision, i.e., you may only give zero or one positive revision arguments, and _<start>_ and _<end>_ (or _<funcname>_) must exist in the starting revision. You can specify this option more than once. Implies `--patch`. Patch output can be suppressed using `--no-patch`, but other diff formats (namely `--raw`, `--numstat`, `--shortstat`, `--dirstat`, `--summary`, `--name-only`, `--name-status`, `--check`) are not currently implemented."
+#, placeholders:'`--patch`':'`--no-patch`':'`--raw`':'`--name-only`':'`--name-status`':'`--summary`':'`--stat`':'`--numstat`':'`--shortstat`':'`--dirstat`', priority:260
 msgid "Trace the evolution of the line range given by `<start>,<end>`, or by the function name regex _<funcname>_, within the _<file>_. You may not give any pathspec limiters. This is currently limited to a walk starting from a single revision, i.e., you may only give zero or one positive revision arguments, and _<start>_ and _<end>_ (or _<funcname>_) must exist in the starting revision. You can specify this option more than once. Implies `--patch`. Patch output can be suppressed using `--no-patch`. Non-patch diff formats `--raw`, `--name-only`, `--name-status`, and `--summary` are supported. Diff stat formats (`--stat`, `--numstat`, `--shortstat`, `--dirstat`) are not currently implemented."
-msgstr "追踪由 '<起始>,<结束>' 给出的行的范围，或由函数名称重合词 '<函数名称>' 给出的行的演变，在 '<文件>' 中 。你不能给出任何路径规范限制条件。 目前这只限于从一个修订版开始的行走，也就是说，你只能给出零或一个正的修订版参数，而且 '<起始>' 和 '<结束>'（或 '<函数名称>'）必须存在于起始修订版中。 你可以多次指定这个选项。包含 `--patch` 选项。 补丁输出可以用 `--no-patch` 来抑制，但其他差异格式（即 `--raw` 、 `--numstat` 、 `--shortstat` 、 `--dirstat` 、 `--summary` 、 `--name-only` 、 `--name-status` 、 `--check`）目前没有实现。"
+msgstr "追踪 _<文件>_ 中由 `<起始>,<结束>` 或函数名正则表达式 _<函数名>_ 指定的行范围如何演变。不能给出任何路径规范限制条件。目前仅限于从单个修订开始遍历，也就是说，只能给出零个或一个正修订参数，并且 _<起始>_ 和 _<结束>_（或 _<函数名>_）必须存在于起始修订中。可以多次指定该选项。暗含 `--patch`。可以使用 `--no-patch` 抑制补丁输出。支持非补丁差异格式 `--raw`、`--name-only`、`--name-status` 和 `--summary`。差异统计格式（`--stat`、`--numstat`、`--shortstat`、`--dirstat`）目前尚未实现。"
 
 #. type: Plain text
 #: en/line-range-options.adoc:20
 #, placeholders:'`--word-diff`':'`--color-moved`':'`--no-prefix`':'`-w`':'`-b`':'`-S`':'`-G`':'`--diff-filter`', priority:260
 msgid "Patch formatting options such as `--word-diff`, `--color-moved`, `--no-prefix`, and whitespace options (`-w`, `-b`) are supported, as are pickaxe options (`-S`, `-G`) and `--diff-filter`."
-msgstr ""
+msgstr "支持 `--word-diff`、`--color-moved`、`--no-prefix` 等补丁格式选项和空白字符选项（`-w`、`-b`），也支持挖掘（pickaxe）选项（`-S`、`-G`）以及 `--diff-filter`。"
 
 #. type: Title =
 #: en/git-remote.adoc:2
@@ -79506,7 +79428,7 @@ msgstr "完全不考虑磁盘文件。"
 #: en/git-diff-index.adoc:36
 #, priority:80
 msgid "Instead of comparing <tree-ish> directly, use the merge base between <tree-ish> and HEAD instead. <tree-ish> must be a commit."
-msgstr "与其直接比较 <目录树对象>，不如使用 <目录树对象> 和 HEAD 之间的合并基数。 <目录树对象> 必须是一个提交。"
+msgstr "与其直接比较 <目录树对象>，不如使用 <目录树对象> 和 HEAD 之间的合并基础。 <目录树对象> 必须是一个提交。"
 
 #. type: Plain text
 #: en/git-diff-index.adoc:42
@@ -80782,7 +80704,7 @@ msgstr "将当前分支推送到远程上的同名分支。"
 #: en/config/push.adoc:48
 #, priority:220
 msgid "This mode requires that the remote repository to be pushed to is known. When pushing back to the same remote you pull from, the current branch must also have an upstream tracking branch with the same name."
-msgstr ""
+msgstr "该模式要求推送目标远程仓库已知。当推送回通常拉取所用的同一远程时，当前分支还必须有一个同名的上游跟踪分支。"
 
 #. type: Plain text
 #: en/config/push.adoc:51
@@ -81024,23 +80946,21 @@ msgstr "`mergetool.<variant>.layout`"
 
 #. type: Plain text
 #: en/config/mergetool.adoc:57
-#, fuzzy, placeholders:'`--tool=':'`--tool`':'merge.tool', priority:240
-#| msgid "Configure the split window layout for vimdiff's _<variant>_, which is any of `vimdiff`, `nvimdiff`, `gvimdiff`. Upon launching `git mergetool` with `--tool=<variant>` (or without `--tool` if `merge.tool` is configured as _<variant>_), Git will consult `mergetool.<variant>.layout` to determine the tool's layout. If the variant-specific configuration is not available, `vimdiff` ' s is used as fallback. If that too is not available, a default layout with 4 windows will be used. To configure the layout, see the 'BACKEND SPECIFIC HINTS'"
+#, placeholders:'`--tool=':'`--tool`':'merge.tool', priority:240
 msgid "Configure the split window layout for vimdiff's _<variant>_, which is any of `vimdiff`, `nvimdiff`, `gvimdiff`. Upon launching `git mergetool` with `--tool=<variant>` (or without `--tool` if `merge.tool` is configured as _<variant>_), Git will consult `mergetool.<variant>.layout` to determine the tool's layout. If the variant-specific configuration is not available, `vimdiff` ' s is used as fallback. If that too is not available, a default layout with 4 windows will be used."
-msgstr "为 vimdiff 的 _<variant>_ 配置分屏窗口布局，_<variant>_ 可以是 `vimdiff`、`nvimdiff`、`gvimdiff` 中的任意一种。以 `--tool=<variant>` 启动 `git mergetool` 时（如果 `merge.tool` 已配置为 _<variant>_，也可不带 `--tool`），Git 会查阅 `mergetool.<variant>.layout` 来确定该工具的布局。如果没有对应 variant 的专用配置，则回退使用 `vimdiff` 的配置；如果这也不可用，则使用一个默认的 4 窗口布局。关于如何配置布局，参见“BACKEND SPECIFIC HINTS”"
+msgstr "为 vimdiff 的 _<variant>_ 配置分屏窗口布局，_<variant>_ 可以是 `vimdiff`、`nvimdiff`、`gvimdiff` 中的任意一种。以 `--tool=<variant>` 启动 `git mergetool` 时（如果 `merge.tool` 已配置为 _<variant>_，也可不带 `--tool`），Git 会查阅 `mergetool.<variant>.layout` 来确定该工具的布局。如果没有对应 variant 的专用配置，则回退使用 `vimdiff` 的配置；如果这也不可用，则使用一个默认的 4 窗口布局。"
 
 #. type: Plain text
 #: en/config/mergetool.adoc:59
-#, fuzzy, priority:240
-#| msgid "Use Neovim with a custom layout (see `git help mergetool`'s `BACKEND SPECIFIC HINTS` section)"
+#, priority:240
 msgid "To configure the layout, see the 'BACKEND SPECIFIC HINTS' section."
-msgstr "使用带有自定义布局的 Neovim（请参阅 `git help mergetool` 的 `BACKEND SPECIFIC HINTS` 部分）"
+msgstr "要配置布局，请参见 'BACKEND SPECIFIC HINTS' 一节。"
 
 #. type: Plain text
 #: en/config/mergetool.adoc:62
 #, placeholders:'linkgit:git-mergetool[1]', priority:240
 msgid "To configure the layout, see the 'BACKEND SPECIFIC HINTS' section in linkgit:git-mergetool[1]."
-msgstr ""
+msgstr "要配置布局，请参见 linkgit:git-mergetool[1] 中的 'BACKEND SPECIFIC HINTS' 一节。"
 
 #. type: Labeled list
 #: en/config/mergetool.adoc:64
@@ -81236,10 +81156,9 @@ msgstr "控制在协商服务器要发送的 packfile 内容时，如何发送�
 
 #. type: Plain text
 #: en/config/fetch.adoc:81
-#, fuzzy, placeholders:'`--negotiate-only`':'`--negotiation-restrict`':'linkgit:git-fetch[1]', priority:220
-#| msgid "See also the `--negotiate-only` and `--negotiation-tip` options to linkgit:git-fetch[1]."
+#, placeholders:'`--negotiate-only`':'`--negotiation-restrict`':'linkgit:git-fetch[1]', priority:220
 msgid "See also the `--negotiate-only` and `--negotiation-restrict` options to linkgit:git-fetch[1]."
-msgstr "另见 linkgit:git-fetch[1] 的 `--negotiate-only` 和 `--negotiation-tip` 选项。"
+msgstr "另见 linkgit:git-fetch[1] 的 `--negotiate-only` 和 `--negotiation-restrict` 选项。"
 
 #. type: Labeled list
 #: en/config/fetch.adoc:82
@@ -81395,7 +81314,7 @@ msgstr "`diff.autoRefreshIndex`"
 #: en/config/diff.adoc:10
 #, placeholders:'git update-index':'--refresh`':'git diff-files`', priority:280
 msgid "When using `git diff` to compare with work tree files, do not consider stat-only changes as changed. Instead, silently run `git update-index --refresh` to update the cached stat information for paths whose contents in the work tree match the contents in the index. This option defaults to `true`. Note that this affects only `git diff` Porcelain, and not lower level `diff` commands such as `git diff-files`."
-msgstr "在使用 `git diff` 与工作区文件进行比较时，不要将仅统计信息的更改视为已更改。取而代之的是静默运行 `git update-index --refresh` 来更新工作区中内容与索引中内容匹配的路径的缓存统计信息。该选项默认为 `true`。请注意，这只会影响 `git diff` 命令，而不会影响更低级的 `diff` 命令，比如 `git diff-files`。"
+msgstr "在使用 `git diff` 与工作区文件进行比较时，不要将仅统计信息的更改视为已更改。取而代之的是静默运行 `git update-index --refresh` 来更新工作区中内容与索引中内容匹配的路径的缓存统计信息。该选项默认为 `true`。请注意，这只会影响上层命令 `git diff`，而不会影响 `git diff-files` 等底层 diff 命令。"
 
 #. type: Labeled list
 #: en/config/diff.adoc:11
@@ -81706,7 +81625,7 @@ msgstr "`diff.renames`"
 #: en/config/diff.adoc:165
 #, placeholders:'linkgit:git-diff[1]':'linkgit:git-log[1]':'linkgit:git-diff-files[1]', priority:280
 msgid "Whether and how Git detects renames. If set to `false`, rename detection is disabled. If set to `true`, basic rename detection is enabled. If set to `copies` or `copy`, Git will detect copies, as well. Defaults to `true`. Note that this affects only `git diff` Porcelain like linkgit:git-diff[1] and linkgit:git-log[1], and not lower level commands such as linkgit:git-diff-files[1]."
-msgstr "Git 是否以及如何检测重命名。如果设为 `false`，则禁用重命名检测；设为 `true`，则启用基础的重命名检测；设为 `copies` 或 `copy` 时，Git 还会检测副本。默认值为 `true`。注意，这只影响如 linkgit:git-diff[1] 和 linkgit:git-log[1] 这样的 `git diff` Porcelain 命令，而不影响如 linkgit:git-diff-files[1] 这样的底层命令。"
+msgstr "Git 是否以及如何检测重命名。如果设为 `false`，则禁用重命名检测；设为 `true`，则启用基础的重命名检测；设为 `copies` 或 `copy` 时，Git 还会检测副本。默认值为 `true`。注意，这只影响 linkgit:git-diff[1] 和 linkgit:git-log[1] 等上层 diff 命令，而不影响 linkgit:git-diff-files[1] 等底层命令。"
 
 #. type: Labeled list
 #: en/config/diff.adoc:166
@@ -82948,7 +82867,7 @@ msgstr "示例：使用 `--tool=gvimdiff2` 将以三列（`LOCAL`、`MERGED` 和
 
 #, placeholders:'`--merge`'
 #~ msgid "When switching branches with `--merge`, staged changes may be lost."
-#~ msgstr "当用 `--merge` 切换分支时，可能会丢失阶段性修改。"
+#~ msgstr "当用 `--merge` 切换分支时，可能会丢失已暂存的修改。"
 
 #, no-wrap
 #~ msgid ""
@@ -84994,7 +84913,7 @@ msgstr "示例：使用 `--tool=gvimdiff2` 将以三列（`LOCAL`、`MERGED` 和
 
 #, ignore-ellipsis, placeholders:'`HEAD`'
 #~ msgid "As a special case, you may use `\"A...B\"` as a shortcut for the merge base of `A` and `B` if there is exactly one merge base. You can leave out at most one of `A` and `B`, in which case it defaults to `HEAD`."
-#~ msgstr "作为一种特殊情况，如果正好有一个合并基数，你可以使用`\"A...B \"作为`A`和`B`的合并基数的快捷方式。你最多可以漏掉`A`和`B`中的一个，在这种情况下，它默认为`HEAD`。"
+#~ msgstr "作为一种特殊情况，如果正好有一个合并基础，你可以使用`\"A...B \"作为`A`和`B`的合并基础的快捷方式。你最多可以漏掉`A`和`B`中的一个，在这种情况下，它默认为`HEAD`。"
 
 #, ignore-ellipsis, placeholders:'`HEAD`'
 #~ msgid "As a special case, you may use `A...B` as a shortcut for the merge base of `A` and `B` if there is exactly one merge base. You can leave out at most one of `A` and `B`, in which case it defaults to `HEAD`."
