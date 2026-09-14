@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-09-13 13:15+0200\n"
-"PO-Revision-Date: 2026-09-03 10:53+0000\n"
+"PO-Revision-Date: 2026-09-14 16:51+0000\n"
 "Last-Translator: Salvador Peña <salvadorp74@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.9\n"
+"X-Generator: Weblate 2026.10.dev0\n"
 
 #. type: Title =
 #: en/git-var.adoc:2
@@ -7444,7 +7444,7 @@ msgstr "Al fusionar notas, ser mas verboso. Al podar notas, reportar todos los n
 #: en/git-notes.adoc:268
 #, ignore-ellipsis, priority:280
 msgid "Commit notes are blobs containing extra information about an object (usually information to supplement a commit's message). These blobs are taken from notes refs. A notes ref is usually a branch which contains \"files\" whose paths are the object names for the objects they describe, with some directory separators included for performance reasons footnote:[Permitted pathnames have the form 'bf'`/`'fe'`/`'30'`/`'...'`/`'680d5a...': a sequence of directory names of two hexadecimal digits each followed by a filename with the rest of the object ID.]."
-msgstr "Las notas de confirmación son blobs que contienen información extra sobre un objeto (usualmente información que complementa un mensaje de confirmación). Esos blobs se toman de las referencias de notas. Una referencia de nota es usualmente una rama que contiene \"ficheros\" cuyas rutas son los nombres de los objetos que describen, con algunos separadores de directorio incluidos por razones de desempeño footnote: [Los nombres de rutas permitidos tienen la forma 'bf'`/`'fe'`/`'30'`/`'...'`/`'680d5a...': una secuencia de nombres de directorio de dos dígitos hexadecimales cada uno seguido de un nombre de fichero con el resto del identificador de objeto.]."
+msgstr "Las notas de confirmación son blobs que contienen información extra sobre un objeto (usualmente información que complementa un mensaje de confirmación). Esos blobs se toman de las referencias de notas. Una referencia de nota es usualmente una rama que contiene \"ficheros\" cuyas rutas son los nombres de los objetos que describen, con algunos separadores de directorio incluidos por razones de desempeño footnote:[Los nombres de rutas permitidos tienen la forma 'bf'`/`'fe'`/`'30'`/`'...'`/`'680d5a...': una secuencia de nombres de directorio de dos dígitos hexadecimales cada uno seguido de un nombre de fichero con el resto del identificador de objeto.]."
 
 #. type: Plain text
 #: en/git-notes.adoc:275
@@ -9519,24 +9519,7 @@ msgstr "git branch - Lista, crea o borra ramas"
 
 #. type: synopsis
 #: en/git-branch.adoc:29
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'[--color':'--no-color]':'[--show-current]':'[--abbrev=':'--no-abbrev]':'[--column':'--no-column]':'[--sort=':'[--merged':'[--no-merged':'[--contains':'[--no-contains':'--forked':'[--points-at':'[--format=':'--remotes':'--all':'[--list]':'[--track[=(direct|inherit)]':'--no-track]':'[--recurse-submodules]':'--set-upstream-to=':'--unset-upstream':'--edit-description':'[--dry-run]':'--delete-merged', priority:260
-#| msgid ""
-#| "git branch [--color[=<when>] | --no-color] [--show-current]\n"
-#| "\t   [-v [--abbrev=<n> | --no-abbrev]]\n"
-#| "\t   [--column[=<options>] | --no-column] [--sort=<key>]\n"
-#| "\t   [--merged [<commit>]] [--no-merged [<commit>]]\n"
-#| "\t   [--contains [<commit>]] [--no-contains [<commit>]]\n"
-#| "\t   [--points-at <object>] [--format=<format>]\n"
-#| "\t   [(-r|--remotes) | (-a|--all)]\n"
-#| "\t   [--list] [<pattern>...]\n"
-#| "git branch [--track[=(direct|inherit)] | --no-track] [-f]\n"
-#| "\t   [--recurse-submodules] <branch-name> [<start-point>]\n"
-#| "git branch (--set-upstream-to=<upstream>|-u <upstream>) [<branch-name>]\n"
-#| "git branch --unset-upstream [<branch-name>]\n"
-#| "git branch (-m|-M) [<old-branch>] <new-branch>\n"
-#| "git branch (-c|-C) [<old-branch>] <new-branch>\n"
-#| "git branch (-d|-D) [-r] <branch-name>...\n"
-#| "git branch --edit-description [<branch-name>]\n"
+#, ignore-ellipsis, no-wrap, placeholders:'[--color':'--no-color]':'[--show-current]':'[--abbrev=':'--no-abbrev]':'[--column':'--no-column]':'[--sort=':'[--merged':'[--no-merged':'[--contains':'[--no-contains':'--forked':'[--points-at':'[--format=':'--remotes':'--all':'[--list]':'[--track[=(direct|inherit)]':'--no-track]':'[--recurse-submodules]':'--set-upstream-to=':'--unset-upstream':'--edit-description':'[--dry-run]':'--delete-merged', priority:260
 msgid ""
 "git branch [--color[=<when>] | --no-color] [--show-current]\n"
 "\t   [-v [--abbrev=<n> | --no-abbrev]]\n"
@@ -9562,6 +9545,7 @@ msgstr ""
 "\t   [--column[=<opciones>] | --no-column] [--sort=<llave>]\n"
 "\t   [--merged [<confirmación>]] [--no-merged [<confirmación>]]\n"
 "\t   [--contains [<confirmación>]] [--no-contains [<confirmación>]]\n"
+"\t   [(--forked <rama>)...]\n"
 "\t   [--points-at <objeto>] [--format=<formato>]\n"
 "\t   [(-r|--remotes) | (-a|--all)]\n"
 "\t   [--list] [<patrón>...]\n"
@@ -9573,6 +9557,7 @@ msgstr ""
 "git branch (-c|-C) [<rama-anterior>] <rama-nueva>\n"
 "git branch (-d|-D) [-r] <nombre-de-rama>...\n"
 "git branch --edit-description [<nombre-de-rama>]\n"
+"git branch [--dry-run] (--delete-merged <patrón>)... [<patrón-de-rama>...]\n"
 
 #. type: Plain text
 #: en/git-branch.adoc:39
@@ -9594,10 +9579,9 @@ msgstr "Nota que cuando proporcionas un `<patrón>`, debes usar `--list`; de otr
 
 #. type: Plain text
 #: en/git-branch.adoc:58
-#, fuzzy, placeholders:'`--contains`':'`--no-contains`':'`--merged`':'`--no-merged`':'`HEAD`':'`--forked`', priority:260
-#| msgid "With `--contains`, shows only the branches that contain the named commit (in other words, the branches whose tip commits are descendants of the named commit), `--no-contains` inverts it. With `--merged`, only branches merged into the named commit (i.e. the branches whose tip commits are reachable from the named commit) will be listed. With `--no-merged` only branches not merged into the named commit will be listed. If the _<commit>_ argument is missing it defaults to `HEAD` (i.e. the tip of the current branch)."
+#, placeholders:'`--contains`':'`--no-contains`':'`--merged`':'`--no-merged`':'`HEAD`':'`--forked`', priority:260
 msgid "With `--contains`, shows only the branches that contain the named commit (in other words, the branches whose tip commits are descendants of the named commit), `--no-contains` inverts it. With `--merged`, only branches merged into the named commit (i.e. the branches whose tip commits are reachable from the named commit) will be listed. With `--no-merged` only branches not merged into the named commit will be listed. If the _<commit>_ argument is missing it defaults to `HEAD` (i.e. the tip of the current branch). With `--forked`, only branches whose configured upstream matches the given branch or pattern will be listed."
-msgstr "Con `--contains`, se muestran únicamente las ramas que contienen la confirmación indicada (es decir, las ramas cuyas confirmaciones finales son descendientes de dicha confirmación), mientras que `--no-contains` invierte este comportamiento. Con `--merged`, solo se mostrarán las ramas fusionadas en la confirmación indicada (es decir, aquellas ramas a las que se puede acceder desde dicha confirmación). Con `--no-merged`, solo se mostrarán las ramas que no se hayan fusionado en la confirmación indicada. Si no se especifica el argumento _<confirmación>_, se utilizará predeterminadamente `HEAD` (es decir, la punta de la rama actual)."
+msgstr "Con `--contains`, se muestran únicamente las ramas que contienen la confirmación indicada (es decir, las ramas cuyas confirmaciones finales son descendientes de dicha confirmación), mientras que `--no-contains` invierte este comportamiento. Con `--merged`, solo se mostrarán las ramas fusionadas en la confirmación indicada (es decir, aquellas ramas a las que se puede acceder desde dicha confirmación). Con `--no-merged`, solo se mostrarán las ramas que no se hayan fusionado en la confirmación indicada. Si no se especifica el argumento _<confirmación>_, se utilizará predeterminadamente `HEAD` (es decir, la punta de la rama actual). Con `--forked`, solo se mostrarán las ramas cuyo río arriba configurado coincida con la rama dada o patrón."
 
 #. type: Plain text
 #: en/git-branch.adoc:65
@@ -9889,10 +9873,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/git-branch.adoc:205
-#, fuzzy, no-wrap, placeholders:'`--delete-merged', priority:260
-#| msgid "`--decorate-refs=<pattern>`"
+#, no-wrap, placeholders:'`--delete-merged', priority:260
 msgid "`--delete-merged <pattern>`"
-msgstr "`--decorate-refs=<patrón>`"
+msgstr "`--delete-merged <patrón>`"
 
 #. type: Plain text
 #: en/git-branch.adoc:216
@@ -9932,10 +9915,9 @@ msgstr ""
 
 #. type: Plain text
 #: en/git-branch.adoc:229
-#, fuzzy, priority:260
-#| msgid "`branch.<name>.mergeOptions`"
+#, priority:260
 msgid "`branch.<name>.deleteMerged` is set to `false`."
-msgstr "`branch.<nombre>.mergeOptions`"
+msgstr "`branch.<nombre>.deleteMerged` es `false`."
 
 #. type: Plain text
 #: en/git-branch.adoc:233
@@ -10167,10 +10149,9 @@ msgstr "Solo lista las ramas de las que sus puntas no son alcanzables desde _<co
 
 #. type: Labeled list
 #: en/git-branch.adoc:356
-#, fuzzy, no-wrap, placeholders:'`--forked', priority:260
-#| msgid "`--into-name <branch>`"
+#, no-wrap, placeholders:'`--forked', priority:260
 msgid "`--forked <branch>`"
-msgstr "`--into-name <rama>`"
+msgstr "`--forked <rama>`"
 
 #. type: Plain text
 #: en/git-branch.adoc:363
@@ -22058,7 +22039,7 @@ msgstr "Un caracter `-` en la columna N significa que la línea aparece en fiche
 #: en/diff-generate-patch.adoc:204
 #, priority:280
 msgid "In the above example output, the function signature was changed from both files (hence two `-` removals from both file1 and file2, plus `++` to mean one line that was added does not appear in either file1 or file2). Also, eight other lines are the same from file1 but do not appear in file2 (hence prefixed with `+`)."
-msgstr "En el ejemplo de salida de arriba, la firma de la función cambió en ambos ficheros (por eso los dos `-` eliminaciones de ambos ficheros fichero1 y fichero2, además `++` que significa que una línea agregada no aparece en ningún fichero de fichero1 o fichero2). Además, otras ocho líneas iguales del fichero1 que no aparecen en fichero2 (por eso prefijadas con `+`)."
+msgstr "En el ejemplo de salida de arriba, la firma de la función cambió en ambos ficheros (por eso las dos `-` eliminaciones de ambos ficheros fichero1 y fichero2, además `++` que significa que una línea agregada no aparece en ningún fichero de fichero1 o fichero2). Además, otras ocho líneas iguales del fichero1 que no aparecen en fichero2 (por eso prefijadas con `+`)."
 
 #. type: synopsis
 #: en/diff-generate-patch.adoc:210
@@ -24250,24 +24231,21 @@ msgstr "`--max-count=<número>`"
 
 #. type: Plain text
 #: en/rev-list-options.adoc:20
-#, fuzzy, priority:260
-#| msgid "Limit the output to _<number>_ commits."
+#, priority:260
 msgid "Limit the output to the first _<number>_ commits that would be shown."
-msgstr "Limita la salida a _<número>_ confirmaciones."
+msgstr "Limita la salida a las primeras _<número>_ confirmaciones a mostrar."
 
 #. type: Labeled list
 #: en/rev-list-options.adoc:21
-#, fuzzy, no-wrap, placeholders:'`--max-count-oldest=', priority:260
-#| msgid "`--max-count=<number>`"
+#, no-wrap, placeholders:'`--max-count-oldest=', priority:260
 msgid "`--max-count-oldest=<number>`"
-msgstr "`--max-count=<número>`"
+msgstr "`--max-count-oldest=<número>`"
 
 #. type: Plain text
 #: en/rev-list-options.adoc:23
-#, fuzzy, priority:260
-#| msgid "Limit the output to _<number>_ commits."
+#, priority:260
 msgid "Limit the output to the last _<number>_ commits that would be shown."
-msgstr "Limita la salida a _<número>_ confirmaciones."
+msgstr "Limita la salida a las últimas _<número>_ confirmaciones a mostrar."
 
 #. type: Labeled list
 #: en/rev-list-options.adoc:24
@@ -31453,10 +31431,9 @@ msgstr ""
 
 #. type: verse
 #: en/git-fast-export.adoc:13
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'git fast-export', priority:90
-#| msgid "git log [<options>] [<revision-range>] [[--] <path>...]\n"
+#, ignore-ellipsis, no-wrap, placeholders:'git fast-export', priority:90
 msgid "'git fast-export' [<options>] [<revision-range>] [[--] <path>...]\n"
-msgstr "git log [<opciones>] [<rango-de-revisiones>] [[--] <ruta>...]\n"
+msgstr "'git fast-export' [<opciones>] [<rango-de-revisiones>] [[--] <ruta>...]\n"
 
 #. type: Plain text
 #: en/git-fast-export.adoc:18
@@ -37413,7 +37390,7 @@ msgstr "[[def_clean]]limpio"
 #: en/glossary-content.adoc:64
 #, placeholders:'<<def_working_tree,':'<<def_revision,':'<<def_head,':'<<def_dirty,', priority:310
 msgid "A <<def_working_tree,working tree>> is clean, if it corresponds to the <<def_revision,revision>> referenced by the current <<def_head,head>>. Also see \"<<def_dirty,dirty>>\"."
-msgstr "A <<def_working_tree,árbol de trabajo>> esta limpio si corresponde a la <<def_revision,revisión>> referenciada por <<def_head,head>> actual. Ver también \"<<def_dirty,sucio>\"."
+msgstr "A <<def_working_tree,árbol de trabajo>> está limpio si corresponde a la <<def_revision,revisión>> referenciada por <<def_head,head>> actual. Ver también \"<<def_dirty,sucio>>\"."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:65
@@ -38265,7 +38242,7 @@ msgstr "[[def_reachable]]alcanzable"
 #: en/glossary-content.adoc:539
 #, placeholders:'<<def_commit,':'<<def_object,':'<<def_chain,':'<<def_tag,':'<<def_commit_object,':'<<def_tree_object,':'<<def_blob_object,', priority:310
 msgid "All of the ancestors of a given <<def_commit,commit>> are said to be \"reachable\" from that commit. More generally, one <<def_object,object>> is reachable from another if we can reach the one from the other by a <<def_chain,chain>> that follows <<def_tag,tags>> to whatever they tag, <<def_commit_object,commits>> to their parents or trees, and <<def_tree_object,trees>> to the trees or <<def_blob_object,blobs>> that they contain."
-msgstr "Todos los ancestros de una <<def_commit,confirmación> dada se dice que son \"alcanzables\" desde esa confirmación. Mas en general, un <<def_object,objeto>> es alcanzable por otro si podemos alcanzar uno desde otro por una <<def_chain,cadena>> que siga <<def_tag,etiquetas>> a lo que sea que etiqueten, <<def_commit_object,confirmaciones>> a sus antecesores o árboles, y <<def_tree_object,árboles>> a los árboles o <<def_blob_object,blobs>> que los contengan."
+msgstr "Todos los ancestros de una <<def_commit,confirmación>> dada se dice que son \"alcanzables\" desde esa confirmación. Mas en general, un <<def_object,objeto>> es alcanzable por otro si podemos alcanzar uno desde otro por una <<def_chain,cadena>> que siga <<def_tag,etiquetas>> a lo que sea que etiqueten, <<def_commit_object,confirmaciones>> a sus antecesores o árboles, y <<def_tree_object,árboles>> a los árboles o <<def_blob_object,blobs>> que los contengan."
 
 #. type: Labeled list
 #: en/glossary-content.adoc:540
@@ -41457,13 +41434,7 @@ msgstr "git-add - Añadir contenido de un fichero al índice"
 
 #. type: synopsis
 #: en/git-add.adoc:16
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'[--verbose':'[--dry-run':'[--force':'[--interactive':'[--patch':'[--edit':'[--update':'[--sparse]':'[--intent-to-add':'[--refresh]':'[--ignore-errors]':'[--ignore-missing]':'[--renormalize]':'[--resolved]':'[--chmod=(+|-)x]':'[--pathspec-from-file=':'[--pathspec-file-nul]', priority:300
-#| msgid ""
-#| "git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]\n"
-#| "\t[--edit | -e] [--[no-]all | -A | --[no-]ignore-removal | [--update | -u]] [--sparse]\n"
-#| "\t[--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]\n"
-#| "\t[--chmod=(+|-)x] [--pathspec-from-file=<file> [--pathspec-file-nul]]\n"
-#| "\t[--] [<pathspec>...]\n"
+#, ignore-ellipsis, no-wrap, placeholders:'[--verbose':'[--dry-run':'[--force':'[--interactive':'[--patch':'[--edit':'[--update':'[--sparse]':'[--intent-to-add':'[--refresh]':'[--ignore-errors]':'[--ignore-missing]':'[--renormalize]':'[--resolved]':'[--chmod=(+|-)x]':'[--pathspec-from-file=':'[--pathspec-file-nul]', priority:300
 msgid ""
 "git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]\n"
 "\t[--edit | -e] [--[no-]all | -A | --[no-]ignore-removal | [--update | -u]] [--sparse]\n"
@@ -41474,7 +41445,7 @@ msgstr ""
 "git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]\n"
 "\t[--edit | -e] [--[no-]all | -A | --[no-]ignore-removal | [--update | -u]] [--sparse]\n"
 "\t[--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]\n"
-"\t[--chmod=(+|-)x] [--pathspec-from-file=<fichero> [--pathspec-file-nul]]\n"
+"[--resolved] [--chmod=(+|-)x] [--pathspec-from-file=<fichero> [--pathspec-file-nul]]\n"
 "\t[--] [<especificación-de-ruta>...]\n"
 
 #. type: Plain text
@@ -65272,17 +65243,15 @@ msgstr "Predeterminadamente las entradas agregadas por `git add -N` aparecen com
 
 #. type: Labeled list
 #: en/diff-options.adoc:896
-#, fuzzy, no-wrap, placeholders:'`--max-depth=', priority:280
-#| msgid "--max-depth=<depth>"
+#, no-wrap, placeholders:'`--max-depth=', priority:280
 msgid "`--max-depth=<depth>`"
-msgstr "--max-depth=<profundidad>"
+msgstr "`--max-depth=<profundidad>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:902
-#, fuzzy, priority:280
-#| msgid "For each pathspec given on command line, descend at most `<depth>` levels of directories. A value of `-1` means no limit. Cannot be combined with wildcards in the pathspec. Given a tree containing `foo/bar/baz`, the following list shows the matches generated by each set of options:"
+#, priority:280
 msgid "For each pathspec given on command line, descend at most _<depth>_ levels of directories. A value of `-1` means no limit. Cannot be combined with wildcards in the pathspec. Given a tree containing `foo/bar/baz`, the following list shows the matches generated by each set of options:"
-msgstr "Para cada especificación de ruta dada en la línea de comandos, desciende a lo mucho `<profundidad>` niveles de directorios. Un valor de `-1` significa sin límite. No puede combinarse con comodines en la especificación de ruta. Dado un árbol conteniendo `foo/bar/baz`, la lista siguiente muestra las coincidencias generadas por cada conjunto de opciones:"
+msgstr "Para cada especificación de ruta dada en la línea de comandos, desciende a lo mucho _<profundidad>_ niveles de directorios. Un valor de `-1` significa sin límite. No puede combinarse con comodines en la especificación de ruta. Dado un árbol conteniendo `foo/bar/baz`, la lista siguiente muestra las coincidencias generadas por cada conjunto de opciones:"
 
 #. type: Plain text
 #: en/diff-options.adoc:905
@@ -73846,10 +73815,9 @@ msgstr ""
 
 #. type: verse
 #: en/git-fast-import.adoc:13
-#, fuzzy, no-wrap, placeholders:'git fast-import', priority:90
-#| msgid "'git rev-parse' [<options>] <arg>...\n"
+#, no-wrap, placeholders:'git fast-import', priority:90
 msgid "'git fast-import' [<options>]\n"
-msgstr "'git rev-parse' [<opciones>] <argumento>...\n"
+msgstr "'git fast-import' [<opciones>]\n"
 
 #. type: Plain text
 #: en/git-fast-import.adoc:20
@@ -77996,10 +77964,9 @@ msgstr ""
 
 #. type: Labeled list
 #: en/config/branch.adoc:107
-#, fuzzy, no-wrap, priority:260
-#| msgid "`branch.<name>.merge`"
+#, no-wrap, priority:260
 msgid "`branch.<name>.deleteMerged`"
-msgstr "`branch.<nombre>.merge`"
+msgstr "`branch.<nombre>.deleteMerged`"
 
 #. type: Plain text
 #: en/config/branch.adoc:112
