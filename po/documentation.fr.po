@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-09-13 13:15+0200\n"
-"PO-Revision-Date: 2026-09-14 16:51+0000\n"
+"PO-Revision-Date: 2026-09-16 22:44+0200\n"
 "Last-Translator: Jean-Noël Avila <jn.avila@free.fr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr\n"
@@ -9673,10 +9673,9 @@ msgstr "Effectuer la compression en organisant d'abord les objets par chemin, pu
 
 #. type: Plain text
 #: en/git-pack-objects.adoc:412
-#, fuzzy, placeholders:'`--use-bitmap-index`':'`--path-walk`':'`--path-walk`':'`--filter=', priority:80
-#| msgid "Incompatible with `--delta-islands`. The `--use-bitmap-index` option is ignored in the presence of `--path-walk`. The `--path-walk` option supports the `--filter=<spec>` forms `blob:none`, `blob:limit=<n>`, `tree:0`, `object:type=<type>`, and `sparse:<oid>`. These supported filter types can be combined with the `combine:<spec>+<spec>` form."
+#, placeholders:'`--use-bitmap-index`':'`--path-walk`':'`--path-walk`':'`--filter=', priority:80
 msgid "When `--use-bitmap-index` is specified with `--path-walk`, a successful bitmap traversal is used for object enumeration, with path-walk remaining as the fallback traversal when the bitmap cannot satisfy the request. The `--path-walk` option supports the `--filter=<spec>` forms `blob:none`, `blob:limit=<n>`, `tree:0`, `object:type=<type>`, and `sparse:<oid>`. These supported filter types can be combined with the `combine:<spec>+<spec>` form."
-msgstr "Incompatible avec `--delta-islands`. L'option `--use-bitmap-index` est ignorée en présence de `--path-walk`. L'option `--path-walk` prend en charge les formes `--filter=<spéc>` : `blob:none`, `blob:limit=<n>`, `tree:0`, `object:type=<type>`, et `sparse:<oid>`. Ces types de filtres pris en charge peuvent être combinés avec la forme `combine:<spéc>+<spéc>`."
+msgstr "Lorsque `--use-bitmap-index` est indiqué avec `--path-walk`, un parcours par bitmap réussi est utilisé pour énumérer les objets, le parcours par chemin restant le parcours de secours lorsque le bitmap ne peut pas satisfaire la requête. L'option `--path-walk` prend en charge les formes `--filter=<spéc>` `blob:none`, `blob:limit=<n>`, `tree:0`, `object:type=<type>` et `sparse:<oid>`. Ces types de filtres pris en charge peuvent être combinés avec la forme `combine:<spéc>+<spéc>`."
 
 #. type: Title -
 #: en/git-pack-objects.adoc:415
@@ -9814,24 +9813,7 @@ msgstr "git-branch - Liste, crée, ou supprime des branches"
 
 #. type: synopsis
 #: en/git-branch.adoc:29
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'[--color':'--no-color]':'[--show-current]':'[--abbrev=':'--no-abbrev]':'[--column':'--no-column]':'[--sort=':'[--merged':'[--no-merged':'[--contains':'[--no-contains':'--forked':'[--points-at':'[--format=':'--remotes':'--all':'[--list]':'[--track[=(direct|inherit)]':'--no-track]':'[--recurse-submodules]':'--set-upstream-to=':'--unset-upstream':'--edit-description':'[--dry-run]':'--delete-merged', priority:260
-#| msgid ""
-#| "git branch [--color[=<when>] | --no-color] [--show-current]\n"
-#| "\t   [-v [--abbrev=<n> | --no-abbrev]]\n"
-#| "\t   [--column[=<options>] | --no-column] [--sort=<key>]\n"
-#| "\t   [--merged [<commit>]] [--no-merged [<commit>]]\n"
-#| "\t   [--contains [<commit>]] [--no-contains [<commit>]]\n"
-#| "\t   [--points-at <object>] [--format=<format>]\n"
-#| "\t   [(-r|--remotes) | (-a|--all)]\n"
-#| "\t   [--list] [<pattern>...]\n"
-#| "git branch [--track[=(direct|inherit)] | --no-track] [-f]\n"
-#| "\t   [--recurse-submodules] <branch-name> [<start-point>]\n"
-#| "git branch (--set-upstream-to=<upstream>|-u <upstream>) [<branch-name>]\n"
-#| "git branch --unset-upstream [<branch-name>]\n"
-#| "git branch (-m|-M) [<old-branch>] <new-branch>\n"
-#| "git branch (-c|-C) [<old-branch>] <new-branch>\n"
-#| "git branch (-d|-D) [-r] <branch-name>...\n"
-#| "git branch --edit-description [<branch-name>]\n"
+#, ignore-ellipsis, no-wrap, placeholders:'[--color':'--no-color]':'[--show-current]':'[--abbrev=':'--no-abbrev]':'[--column':'--no-column]':'[--sort=':'[--merged':'[--no-merged':'[--contains':'[--no-contains':'--forked':'[--points-at':'[--format=':'--remotes':'--all':'[--list]':'[--track[=(direct|inherit)]':'--no-track]':'[--recurse-submodules]':'--set-upstream-to=':'--unset-upstream':'--edit-description':'[--dry-run]':'--delete-merged', priority:260
 msgid ""
 "git branch [--color[=<when>] | --no-color] [--show-current]\n"
 "\t   [-v [--abbrev=<n> | --no-abbrev]]\n"
@@ -9855,8 +9837,9 @@ msgstr ""
 "git branch [--color[=<when>] | --no-color] [--show-current]\n"
 "\t   [-v [--abbrev=<n> | --no-abbrev]]\n"
 "\t   [--column[=<options>] | --no-column] [--sort=<clé>]\n"
-"\t   [--merged [<commit>]] [--no-merged) [<commit>]]\n"
+"\t   [--merged [<commit>]] [--no-merged [<commit>]]\n"
 "\t   [--contains [<commit>]] [--no-contains [<commit>]]\n"
+"\t   [(--forked <branche>)...]\n"
 "\t   [--points-at <objet>] [--format=<format>]\n"
 "\t   [(-r | --remotes) | (-a | --all)]\n"
 "\t   [--list] [<motif>...]\n"
@@ -9868,6 +9851,7 @@ msgstr ""
 "git branch (-c | -C) [<ancienne-branche>] <nouvelle-branche>\n"
 "git branch (-d | -D) [-r] <nom-de-branche>...\n"
 "git branch --edit-description [<nom-de-branche>]\n"
+"git branch [--dry-run] (--delete-merged <motif>)... [<motif-de-branche>...]\n"
 
 #. type: Plain text
 #: en/git-branch.adoc:39
@@ -9889,10 +9873,9 @@ msgstr "Notez que lorsque vous fournissez un `<motif> `, vous devez utiliser `--
 
 #. type: Plain text
 #: en/git-branch.adoc:58
-#, fuzzy, placeholders:'`--contains`':'`--no-contains`':'`--merged`':'`--no-merged`':'`HEAD`':'`--forked`', priority:260
-#| msgid "With `--contains`, shows only the branches that contain the named commit (in other words, the branches whose tip commits are descendants of the named commit), `--no-contains` inverts it. With `--merged`, only branches merged into the named commit (i.e. the branches whose tip commits are reachable from the named commit) will be listed. With `--no-merged` only branches not merged into the named commit will be listed. If the _<commit>_ argument is missing it defaults to `HEAD` (i.e. the tip of the current branch)."
+#, placeholders:'`--contains`':'`--no-contains`':'`--merged`':'`--no-merged`':'`HEAD`':'`--forked`', priority:260
 msgid "With `--contains`, shows only the branches that contain the named commit (in other words, the branches whose tip commits are descendants of the named commit), `--no-contains` inverts it. With `--merged`, only branches merged into the named commit (i.e. the branches whose tip commits are reachable from the named commit) will be listed. With `--no-merged` only branches not merged into the named commit will be listed. If the _<commit>_ argument is missing it defaults to `HEAD` (i.e. the tip of the current branch). With `--forked`, only branches whose configured upstream matches the given branch or pattern will be listed."
-msgstr "Avec `--contains`, montrer seulement les branches qui contiennent le commit indiqué (en d'autres termes, les branches dont les commits sommets sont des descendants du commit indiqué), avec `--no-contains` inverser. Avec `--merged`, seules les branches fusionnées dans le commit indiqué (c'est-à-dire les branches dont les commits sommets sont accessibles depuis le commit indiqué) seront listées. Avec `--no-merged`, seules les branches non fusionnées dans le commit indiqué seront listées. Si l'argument _<commit>_ est manquant, il prend par défaut la valeur `HEAD` (c'est-à-dire le sommet de la branche courante)."
+msgstr "Avec `--contains`, montrer seulement les branches qui contiennent le commit indiqué (en d'autres termes, les branches dont les commits sommets sont des descendants du commit indiqué) ; `--no-contains` inverse ce comportement. Avec `--merged`, seules les branches fusionnées dans le commit indiqué (c'est-à-dire les branches dont les commits sommets sont accessibles depuis le commit indiqué) seront listées. Avec `--no-merged`, seules les branches non fusionnées dans le commit indiqué seront listées. Si l'argument _<commit>_ est manquant, il prend par défaut la valeur `HEAD` (c'est-à-dire le sommet de la branche courante). Avec `--forked`, seules les branches dont l'amont configuré correspond à la branche ou au motif indiqué seront listées."
 
 #. type: Plain text
 #: en/git-branch.adoc:65
@@ -10184,10 +10167,9 @@ msgstr "Afficher le nom de la branche actuelle. En état de `HEAD` détachée, r
 
 #. type: Labeled list
 #: en/git-branch.adoc:205
-#, fuzzy, no-wrap, placeholders:'`--delete-merged', priority:260
-#| msgid "`--decorate-refs=<pattern>`"
+#, no-wrap, placeholders:'`--delete-merged', priority:260
 msgid "`--delete-merged <pattern>`"
-msgstr "`--decorate-refs=<motif>`"
+msgstr "`--delete-merged <motif>`"
 
 #. type: Plain text
 #: en/git-branch.adoc:216
@@ -10223,32 +10205,31 @@ msgstr "La pousser sur le distant configuré par `branch.<nom>.remote` mettrait 
 #: en/git-branch.adoc:228
 #, priority:260
 msgid "it is the local upstream of a branch that is not being deleted, or"
-msgstr ""
+msgstr "il s'agit de l'amont local d'une branche qui n'est pas supprimée, ou"
 
 #. type: Plain text
 #: en/git-branch.adoc:229
-#, fuzzy, priority:260
-#| msgid "`branch.<name>.mergeOptions`"
+#, priority:260
 msgid "`branch.<name>.deleteMerged` is set to `false`."
-msgstr "`branch.<nom>.mergeOptions`"
+msgstr "`branch.<nom>.deleteMerged` est défini à `false`."
 
 #. type: Plain text
 #: en/git-branch.adoc:233
 #, priority:260
 msgid "When such a local upstream branch has its own upstream deleted by the same operation, its upstream configuration is cleared."
-msgstr ""
+msgstr "Lorsque l'amont local d'une telle branche a lui-même été supprimé par la même opération, sa configuration d'amont est effacée."
 
 #. type: Plain text
 #: en/git-branch.adoc:237
 #, priority:260
 msgid "A branch whose work has not yet been merged into its upstream is silently skipped. Delete it with `git branch -D` if you want to remove it anyway."
-msgstr ""
+msgstr "Une branche dont le travail n'a pas encore été fusionné dans son amont est ignorée silencieusement. Supprimez-la avec `git branch -D` si vous souhaitez tout de même la retirer."
 
 #. type: Plain text
 #: en/git-branch.adoc:243
 #, placeholders:'`--delete-merged`', priority:260
 msgid "With `--delete-merged`, print which branches would be deleted and exit without touching any ref. Useful for sanity-checking a wide pattern like `'origin/*'` before committing to the deletion."
-msgstr ""
+msgstr "Avec `--delete-merged`, afficher les branches qui seraient supprimées et quitter sans toucher à aucune réf. Utile pour vérifier un motif étendu tel que `'origin/*'` avant de confirmer la suppression."
 
 #. type: Labeled list
 #: en/git-branch.adoc:245
@@ -10462,16 +10443,15 @@ msgstr "N'indiquer que les branches dont les sommets ne sont pas accessibles dep
 
 #. type: Labeled list
 #: en/git-branch.adoc:356
-#, fuzzy, no-wrap, placeholders:'`--forked', priority:260
-#| msgid "`--into-name <branch>`"
+#, no-wrap, placeholders:'`--forked', priority:260
 msgid "`--forked <branch>`"
-msgstr "`--into-name <branche>`"
+msgstr "`--forked <branche>`"
 
 #. type: Plain text
 #: en/git-branch.adoc:363
 #, placeholders:'HEAD`':'`--list`', priority:260
 msgid "Only list branches whose configured upstream matches _<branch>_. The argument can be a ref (e.g. `origin/main`, `master`), a remote name like `origin` for the branch its `origin/HEAD` points at, or a shell-style glob (e.g. `'origin/*'`). The option can be repeated to widen the filter. Implies `--list`."
-msgstr ""
+msgstr "N'indiquer que les branches dont l'amont configuré correspond à _<branche>_. L'argument peut être une réf (p. ex. `origin/main`, `master`), un nom de distant tel que `origin` pour la branche vers laquelle pointe son `origin/HEAD`, ou un motif de type glob du shell (p. ex. `'origin/*'`). L'option peut être répétée pour élargir le filtre. Implique `--list`."
 
 #. type: Labeled list
 #: en/git-branch.adoc:364
@@ -25102,28 +25082,25 @@ msgstr "`-n <nombre>`"
 #: en/rev-list-options.adoc:18
 #, no-wrap, placeholders:'`--max-count=', priority:260
 msgid "`--max-count=<number>`"
-msgstr "`--max-count==<nombre>`"
+msgstr "`--max-count=<nombre>`"
 
 #. type: Plain text
 #: en/rev-list-options.adoc:20
-#, fuzzy, priority:260
-#| msgid "Limit the output to _<number>_ commits."
+#, priority:260
 msgid "Limit the output to the first _<number>_ commits that would be shown."
-msgstr "Limiter la sortie à _<nombre>_ commits."
+msgstr "Limiter la sortie aux _<nombre>_ premiers commits qui seraient affichés."
 
 #. type: Labeled list
 #: en/rev-list-options.adoc:21
-#, fuzzy, no-wrap, placeholders:'`--max-count-oldest=', priority:260
-#| msgid "`--max-count=<number>`"
+#, no-wrap, placeholders:'`--max-count-oldest=', priority:260
 msgid "`--max-count-oldest=<number>`"
-msgstr "`--max-count==<nombre>`"
+msgstr "`--max-count-oldest=<nombre>`"
 
 #. type: Plain text
 #: en/rev-list-options.adoc:23
-#, fuzzy, priority:260
-#| msgid "Limit the output to _<number>_ commits."
+#, priority:260
 msgid "Limit the output to the last _<number>_ commits that would be shown."
-msgstr "Limiter la sortie à _<nombre>_ commits."
+msgstr "Limiter la sortie aux _<nombre>_ derniers commits qui seraient affichés."
 
 #. type: Labeled list
 #: en/rev-list-options.adoc:24
@@ -27353,7 +27330,7 @@ msgstr "`--graph-indent`"
 #: en/rev-list-options.adoc:1279
 #, placeholders:'`--graph`':'`--no-graph-indent`':'log.graphIndent', priority:260
 msgid "When used with `--graph`, indent visual roots (commits with no parents or whose parents are not shown) to differentiate them from commits that are vertically adjacent but unrelated. Enabled by default. Use `--no-graph-indent` to disable or set `log.graphIndent` to set a default preference."
-msgstr ""
+msgstr "Lorsqu'elle est utilisée avec `--graph`, indenter les racines visuelles (commits sans parent ou dont les parents ne sont pas affichés) pour les différencier des commits adjacents verticalement mais sans lien. Activée par défaut. Utiliser `--no-graph-indent` pour la désactiver ou définir `log.graphIndent` pour établir une préférence par défaut."
 
 #. type: Labeled list
 #: en/rev-list-options.adoc:1281
@@ -32567,10 +32544,9 @@ msgstr "git-fast-export - exportateur de données Git"
 
 #. type: verse
 #: en/git-fast-export.adoc:13
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'git fast-export', priority:90
-#| msgid "git log [<options>] [<revision-range>] [[--] <path>...]\n"
+#, ignore-ellipsis, no-wrap, placeholders:'git fast-export', priority:90
 msgid "'git fast-export' [<options>] [<revision-range>] [[--] <path>...]\n"
-msgstr "git log [<options>] [<plage-de-révision>] [[--] <chemin>...]\n"
+msgstr "'git fast-export' [<options>] [<plage-de-révision>] [[--] <chemin>]...\n"
 
 #. type: Plain text
 #: en/git-fast-export.adoc:18
@@ -42880,13 +42856,7 @@ msgstr "git-add - Ajoute le contenu de fichiers à l'index"
 
 #. type: synopsis
 #: en/git-add.adoc:16
-#, fuzzy, ignore-ellipsis, no-wrap, placeholders:'[--verbose':'[--dry-run':'[--force':'[--interactive':'[--patch':'[--edit':'[--update':'[--sparse]':'[--intent-to-add':'[--refresh]':'[--ignore-errors]':'[--ignore-missing]':'[--renormalize]':'[--resolved]':'[--chmod=(+|-)x]':'[--pathspec-from-file=':'[--pathspec-file-nul]', priority:300
-#| msgid ""
-#| "git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]\n"
-#| "\t[--edit | -e] [--[no-]all | -A | --[no-]ignore-removal | [--update | -u]] [--sparse]\n"
-#| "\t[--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]\n"
-#| "\t[--chmod=(+|-)x] [--pathspec-from-file=<file> [--pathspec-file-nul]]\n"
-#| "\t[--] [<pathspec>...]\n"
+#, ignore-ellipsis, no-wrap, placeholders:'[--verbose':'[--dry-run':'[--force':'[--interactive':'[--patch':'[--edit':'[--update':'[--sparse]':'[--intent-to-add':'[--refresh]':'[--ignore-errors]':'[--ignore-missing]':'[--renormalize]':'[--resolved]':'[--chmod=(+|-)x]':'[--pathspec-from-file=':'[--pathspec-file-nul]', priority:300
 msgid ""
 "git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]\n"
 "\t[--edit | -e] [--[no-]all | -A | --[no-]ignore-removal | [--update | -u]] [--sparse]\n"
@@ -42897,7 +42867,7 @@ msgstr ""
 "git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]\n"
 "\t[--edit | -e] [--[no-]all | -A | --[no-]ignore-removal | [--update | -u]] [--sparse]\n"
 "\t[--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]\n"
-"\t[--chmod=(+|-)x] [--pathspec-from-file=<fichier> [--pathspec-file-nul]]\n"
+"\t[--resolved] [--chmod=(+|-)x] [--pathspec-from-file=<fichier> [--pathspec-file-nul]]\n"
 "\t[--] [<spécificateur-de-chemin>...]\n"
 
 #. type: Plain text
@@ -48653,10 +48623,9 @@ msgstr "`--no-guess-remote`"
 
 #. type: Plain text
 #: en/git-worktree.adoc:225
-#, fuzzy, placeholders:'`HEAD`':'`HEAD`', priority:240
-#| msgid "With `worktree add <path>`, without _<commit-ish>_, instead of creating a new branch from `HEAD`, if there exists a tracking branch in exactly one remote matching the basename of _<path>_, base the new branch on the remote-tracking branch, and mark the remote-tracking branch as \"upstream\" from the new branch."
+#, placeholders:'`HEAD`':'`HEAD`', priority:240
 msgid "With `worktree add <path>`, without _<commit-ish>_, instead of creating a new branch from `HEAD`, if there exists a tracking branch in exactly one remote matching the basename of _<path>_, base the new branch on the remote-tracking branch, and mark the remote-tracking branch as \"upstream\" from the new branch. If there are multiple matches, the command fails. If there is no match, the command falls back to creating a new branch from `HEAD`."
-msgstr "Avec `worktree add <chemin>`, sans _<commit-esque>_, au lieu de créer une nouvelle branche à partir de `HEAD`, s'il existe une branche de suivi d'exactement un distant correspondant au basename de _<chemin>_, baser la nouvelle branche sur la branche de suivi à distance, et marquer la branche de suivi à distance comme étant \"amont\" de la nouvelle branche."
+msgstr "Avec `worktree add <chemin>`, sans _<commit-esque>_, au lieu de créer une nouvelle branche à partir de `HEAD`, s'il existe une branche de suivi sur exactement un distant dont le nom correspond à la base de _<chemin>_, baser la nouvelle branche sur cette branche de suivi à distance et marquer celle-ci comme « amont » de la nouvelle branche. Si plusieurs correspondances sont trouvées, la commande échoue. Si aucune correspondance n'est trouvée, la commande revient à créer une nouvelle branche à partir de `HEAD`."
 
 #. type: Plain text
 #: en/git-worktree.adoc:228
@@ -62414,10 +62383,9 @@ msgstr "En option, un paramètre <réf> peut être préfixé par un signe plus '
 
 #. type: Plain text
 #: en/fetch-options.adoc:6
-#, fuzzy, placeholders:'fetch.all', priority:220
-#| msgid "Fetch all remotes, except for the ones that has the `remote.<name>.skipFetchAll` configuration variable set. This overrides the configuration variable `fetch.all`."
+#, placeholders:'fetch.all', priority:220
 msgid "Fetch all remotes, except for the ones that have the `remote.<name>.skipFetchAll` configuration variable set. This overrides the configuration variable `fetch.all`."
-msgstr "Récupérer tous les distants, à l'exception de ceux qui ont la variable de configuration `remote.<nom>.skipFetchAll` renseignée. Cela surcharge la variable de configuration `fetch.all` ."
+msgstr "Récupérer tous les distants, à l'exception de ceux qui ont défini la variable de configuration `remote.<nom>.skipFetchAll`. Cela remplace la variable de configuration `fetch.all`."
 
 #. type: Labeled list
 #: en/fetch-options.adoc:8
@@ -65271,13 +65239,13 @@ msgstr "Afficher les informations de l'objet pour la référence d'objet `<objet
 #: en/git-cat-file.adoc:172
 #, ignore-ellipsis, no-wrap, priority:80
 msgid "remote-object-info <remote> <object>..."
-msgstr ""
+msgstr "remote-object-info <distant> <objet>..."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:178
 #, placeholders:'`--buffer`', priority:80
 msgid "Print object info for object references `<object>` at specified `<remote>` without downloading objects from the remote. Raise an error when the `object-info` capability is not supported by the remote. Raise an error when no object references are provided. This command may be combined with `--buffer`."
-msgstr ""
+msgstr "Afficher les informations des objets correspondant aux références `<objet>` sur le `<distant>` indiqué sans télécharger les objets depuis le distant. Génère une erreur lorsque la capacité `object-info` n'est pas prise en charge par le distant. Génère une erreur lorsqu'aucune référence d'objet n'est fournie. Cette commande peut être combinée avec `--buffer`."
 
 #. type: Labeled list
 #: en/git-cat-file.adoc:179
@@ -65503,10 +65471,9 @@ msgstr "Si `--batch` ou `--batch-check` est donné, `cat-file` lira les objets d
 
 #. type: Plain text
 #: en/git-cat-file.adoc:313
-#, fuzzy, placeholders:'`--batch-command`':'`--batch-command`':'`--batch-check`':'`--batch`', priority:80
-#| msgid "When `--batch-command` is given, `cat-file` will read commands from stdin, one per line, and print information based on the command given. With `--batch-command`, the `info` command followed by an object will print information about the object the same way `--batch-check` would, and the `contents` command followed by an object prints contents in the same way `--batch` would."
+#, placeholders:'`--batch-command`':'`--batch-command`':'`--batch-check`':'`--batch`', priority:80
 msgid "When `--batch-command` is given, `cat-file` will read commands from stdin, one per line, and print information based on the command given. With `--batch-command`, the `info` command followed by an object will print information about the object the same way `--batch-check` would, and the `contents` command followed by an object prints contents in the same way `--batch` would. The `remote-object-info` command followed by a remote and object IDs prints object info from the remote without downloading the objects."
-msgstr "Lorsque `--batch-command` est donné, `cat-file` lit les commandes de stdin, une par ligne, et affiche les informations basées sur la commande donnée. Avec `--batch-command`, la commande `info` suivie d'un objet affiche des informations sur l'objet de la même manière que `--batch-check`, et la commande `contents` suivie d'un objet afficher le contenu de la même manière que `--batch`."
+msgstr "Lorsque `--batch-command` est donné, `cat-file` lit les commandes depuis stdin, une par ligne, et affiche les informations correspondant à la commande donnée. Avec `--batch-command`, la commande `info` suivie d'un objet affiche des informations sur l'objet de la même manière que `--batch-check`, et la commande `contents` suivie d'un objet affiche son contenu de la même manière que `--batch`. La commande `remote-object-info` suivie d'un distant et d'identifiants d'objets affiche les informations des objets depuis le distant sans télécharger les objets."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:318
@@ -65578,7 +65545,7 @@ msgstr "Si cet atome est utilisé dans la chaîne de sortie, les lignes d'entré
 #: en/git-cat-file.adoc:354
 #, priority:80
 msgid "The command `remote-object-info` only supports the `%(objectname)`, `%(objectsize)` and `%(objecttype)` placeholders. See `CAVEATS` below for more information."
-msgstr ""
+msgstr "La commande `remote-object-info` ne prend en charge que les paramètres substituables `%(objectname)`, `%(objectsize)` et `%(objecttype)`. Voir la section `LIMITATIONS` ci-dessous pour plus d'informations."
 
 #. type: Plain text
 #: en/git-cat-file.adoc:357
@@ -65760,7 +65727,7 @@ msgstr "Alternativement, lorsque `-Z` est passé, les retours à la ligne dans n
 #: en/git-cat-file.adoc:456
 #, priority:80
 msgid "Note that only `%(objectname)`, `%(objectsize)` and `%(objecttype)` are currently supported by the `remote-object-info` command. Using any other placeholder in the format string will return an empty string in its position."
-msgstr ""
+msgstr "Notez que seuls `%(objectname)`, `%(objectsize)` et `%(objecttype)` sont actuellement pris en charge par la commande `remote-object-info`. L'utilisation de tout autre paramètre substituable dans la chaîne de format renverra une chaîne vide à sa place."
 
 #. type: Title =
 #: en/git-check-mailmap.adoc:2
@@ -67484,17 +67451,15 @@ msgstr "Par défaut, une entrée ajoutée par `git add -N` apparaît comme un fi
 
 #. type: Labeled list
 #: en/diff-options.adoc:896
-#, fuzzy, no-wrap, placeholders:'`--max-depth=', priority:280
-#| msgid "--max-depth=<depth>"
+#, no-wrap, placeholders:'`--max-depth=', priority:280
 msgid "`--max-depth=<depth>`"
-msgstr "--max-depth=<profondeur>"
+msgstr "`--max-depth=<profondeur>`"
 
 #. type: Plain text
 #: en/diff-options.adoc:902
-#, fuzzy, priority:280
-#| msgid "For each pathspec given on command line, descend at most `<depth>` levels of directories. A value of `-1` means no limit. Cannot be combined with wildcards in the pathspec. Given a tree containing `foo/bar/baz`, the following list shows the matches generated by each set of options:"
+#, priority:280
 msgid "For each pathspec given on command line, descend at most _<depth>_ levels of directories. A value of `-1` means no limit. Cannot be combined with wildcards in the pathspec. Given a tree containing `foo/bar/baz`, the following list shows the matches generated by each set of options:"
-msgstr "Pour chaque <spéc-de-chemin> donné sur la ligne de commande, descend au maximum _<profondeur>_ niveaux de répertoires. Une valeur de `-1` signifie qu'il n'y a pas de limite. Ne peut pas être combiné avec des caractères génériques dans le spécificateur de chemin. Étant donné un arbre contenant `foo/bar/baz`, la liste suivante indique les correspondances générées par chaque ensemble d'options :"
+msgstr "Pour chaque spécificateur de chemin donné sur la ligne de commande, descendre d'au plus _<profondeur>_ niveaux de répertoires. Une valeur de `-1` signifie qu'il n'y a pas de limite. Ne peut pas être combiné avec des caractères génériques dans le spécificateur de chemin. Pour un arbre contenant `foo/bar/baz`, la liste suivante montre les correspondances générées par chaque ensemble d'options :"
 
 #. type: Plain text
 #: en/diff-options.adoc:905
@@ -76352,10 +76317,9 @@ msgstr "git-fast-import - moteur pour les importateurs de données Git rapides"
 
 #. type: verse
 #: en/git-fast-import.adoc:13
-#, fuzzy, no-wrap, placeholders:'git fast-import', priority:90
-#| msgid "frontend | 'git fast-import' [<options>]\n"
+#, no-wrap, placeholders:'git fast-import', priority:90
 msgid "'git fast-import' [<options>]\n"
-msgstr "frontal | 'git fast-import' [<options>]\n"
+msgstr "'git fast-import' [<options>]\n"
 
 #. type: Plain text
 #: en/git-fast-import.adoc:20
@@ -76421,7 +76385,7 @@ msgstr "N'activez cette option que si vous faites confiance au programme qui gé
 #: en/git-fast-import.adoc:75
 #, placeholders:'`--allow-unsafe`':'`--depth':'--allow-unsafe-features`':'`--allow-unsafe-features':'--depth':'`--depth=5':'--allow-unsafe-features`', priority:90
 msgid "Note that this option has to be spelled in full, and has to appear before any option whose value is separated from it by a space, for the unsafe `feature` commands in the stream to be allowed. So `--allow-unsafe` or `--depth 5 --allow-unsafe-features` still refuse them, while `--allow-unsafe-features --depth 5` and `--depth=5 --allow-unsafe-features` allow them."
-msgstr ""
+msgstr "Notez que cette option doit être écrite en toutes lettres et apparaître avant toute option dont la valeur en est séparée par une espace, pour que les commandes `feature` non sûres du flux soient autorisées. Ainsi, `--allow-unsafe` ou `--depth 5 --allow-unsafe-features` les refusent encore, tandis que `--allow-unsafe-features --depth 5` et `--depth=5 --allow-unsafe-features` les autorisent."
 
 #. type: Labeled list
 #: en/git-fast-import.adoc:76
@@ -80586,10 +80550,9 @@ msgstr "`branch.<nom>.pushRemote`"
 
 #. type: Plain text
 #: en/config/branch.adoc:59
-#, fuzzy, placeholders:'remote.pushDefault':'remote.pushDefault', priority:260
-#| msgid "When on branch _<name>_, it overrides `branch.<name>.remote` for pushing. It also overrides `remote.pushDefault` for pushing from branch _<name>_. When you pull from one place (e.g. your upstream) and push to another place (e.g. your own publishing repository), you would want to set `remote.pushDefault` to specify the remote to push to for all branches, and use this option to override it for a specific branch."
+#, placeholders:'remote.pushDefault':'remote.pushDefault', priority:260
 msgid "When on branch _<name>_, it overrides `branch.<name>.remote` for pushing. It also overrides `remote.pushDefault` for pushing from branch _<name>_. When you pull from one place (e.g. your upstream) and push to another place (e.g. your own publishing repository), you would want to set `remote.pushDefault` to specify the remote to push to for all branches, and use this option to override it for a specific branch. The value may be the name of a configured remote or a repository URL."
-msgstr "Quand la branche _<nom>_ est extraite, surcharge `branch.<nom>.remote` pour pousser. Il remplace aussi `remote.pushDefault` pour pousser depuis la branche _<nom>_. Lorsque vous tirez d'un endroit (p. ex. votre amont) et poussez vers un autre endroit (p. ex. votre propre dépôt de publication), vous voudriez définir `remote.pushDefault` pour spécifier le distant où pousser pour toutes les branches, et utiliser cette option pour la surcharger pour une branche spécifique."
+msgstr "Sur la branche _<nom>_, cette option remplace `branch.<nom>.remote` pour les poussées. Elle remplace également `remote.pushDefault` pour pousser depuis la branche _<nom>_. Lorsque vous récupérez depuis un endroit (p. ex. votre amont) et poussez vers un autre (p. ex. votre propre dépôt de publication), vous pouvez définir `remote.pushDefault` pour indiquer le distant vers lequel pousser pour toutes les branches, puis utiliser cette option pour le remplacer pour une branche donnée. La valeur peut être le nom d'un distant configuré ou l'URL d'un dépôt."
 
 #. type: Labeled list
 #: en/config/branch.adoc:60
@@ -80653,16 +80616,15 @@ msgstr "Description de la branche, peut être modifiée avec `git branch --edit-
 
 #. type: Labeled list
 #: en/config/branch.adoc:107
-#, fuzzy, no-wrap, priority:260
-#| msgid "`branch.<name>.merge`"
+#, no-wrap, priority:260
 msgid "`branch.<name>.deleteMerged`"
-msgstr "`branch.<nom>.merge`"
+msgstr "`branch.<nom>.deleteMerged`"
 
 #. type: Plain text
 #: en/config/branch.adoc:112
 #, placeholders:'--delete-merged`', priority:260
 msgid "If set to `false`, branch _<name>_ is exempt from `git branch --delete-merged`. Useful for a topic branch you intend to develop further after an initial round has been merged upstream. Defaults to true. Explicit deletion via `git branch -d` is unaffected."
-msgstr ""
+msgstr "Si elle est définie à `false`, la branche _<nom>_ est exemptée de `git branch --delete-merged`. Utile pour une branche de fonctionnalité que vous comptez continuer à développer après la fusion d'une première version dans l'amont. Vaut true par défaut. Une suppression explicite via `git branch -d` n'est pas affectée."
 
 #. type: Labeled list
 #: en/config/rebase.adoc:1
@@ -81470,13 +81432,13 @@ msgstr "`fetch.followRemoteHEAD`"
 #: en/config/fetch.adoc:134
 #, placeholders:'`HEAD`':'HEAD`', priority:220
 msgid "When fetching using a default refspec, this setting determines how to handle differences between a fetched remote's `HEAD` and the local `remotes/<name>/HEAD` symbolic-ref. Its value is one of"
-msgstr ""
+msgstr "Lors d'une récupération utilisant un spécificateur de référence par défaut, ce paramètre détermine la manière de gérer les différences entre le `HEAD` du distant récupéré et la réf symbolique locale `remotes/<nom>/HEAD`. Sa valeur est l'une des suivantes :"
 
 #. type: Plain text
 #: en/config/fetch.adoc:139
 #, placeholders:'HEAD`', priority:220
 msgid "Create `remotes/<name>/HEAD` if a ref exists on the remote, but not locally. An existing symbolic-ref will not be touched. This is the default value."
-msgstr ""
+msgstr "Créer `remotes/<nom>/HEAD` si une réf existe sur le distant, mais pas en local. Une réf symbolique existante ne sera pas modifiée. Il s'agit de la valeur par défaut."
 
 #. type: Labeled list
 #: en/config/fetch.adoc:139
@@ -81488,19 +81450,19 @@ msgstr "`warn`"
 #: en/config/fetch.adoc:142
 #, placeholders:'`HEAD`', priority:220
 msgid "Display a warning if the remote advertises a different `HEAD` than what is set locally. Behaves like \"create\" if the local symbolic-ref doesn't exist."
-msgstr ""
+msgstr "Afficher un avertissement si le distant annonce un `HEAD` différent de celui défini localement. Se comporte comme « create » si la réf symbolique locale n'existe pas."
 
 #. type: Plain text
 #: en/config/fetch.adoc:145
 #, placeholders:'HEAD`', priority:220
 msgid "Silently update `remotes/<name>/HEAD` whenever the remote advertises a new value."
-msgstr ""
+msgstr "Mettre silencieusement à jour `remotes/<nom>/HEAD` chaque fois que le distant annonce une nouvelle valeur."
 
 #. type: Plain text
 #: en/config/fetch.adoc:147
 #, placeholders:'HEAD`', priority:220
 msgid "Never create or modify the `remotes/<name>/HEAD` symbolic-ref."
-msgstr ""
+msgstr "Ne jamais créer ni modifier la réf symbolique `remotes/<nom>/HEAD`."
 
 #. type: Labeled list
 #: en/config/sequencer.adoc:1
@@ -82558,10 +82520,9 @@ msgstr "`log.follow`"
 
 #. type: Plain text
 #: en/config/log.adoc:57
-#, fuzzy, placeholders:'`--follow`':'`--follow`', priority:260
-#| msgid "If `true`, `git log` will act as if the `--follow` option was used when a single <path> is given. This has the same limitations as `--follow`, i.e. it cannot be used to follow multiple files and does not work well on non-linear history."
+#, placeholders:'`--follow`':'`--follow`', priority:260
 msgid "If `true`, `git log` will act as if the `--follow` option was used when a single <path> is given. This has the same limitations as `--follow`, i.e. it cannot be used to follow multiple files."
-msgstr "Si `true`, `git log` agira comme si l'option `--follow` a été utilisée lorsqu'un seul _<chemin>_ est fourni. Cela a les mêmes limites que `--follow`, c'est-à-dire que cela ne peut pas être utilisé pour suivre plusieurs fichiers et ne fonctionne pas bien sur un historique non linéaire."
+msgstr "Si `true`, `git log` agira comme si l'option `--follow` avait été utilisée lorsqu'un seul _<chemin>_ est fourni. Cela a les mêmes limites que `--follow`, c'est-à-dire que cette option ne peut pas être utilisée pour suivre plusieurs fichiers."
 
 #. type: Labeled list
 #: en/config/log.adoc:58
@@ -82585,7 +82546,7 @@ msgstr "`log.graphIndent`"
 #: en/config/log.adoc:65
 #, placeholders:'`--graph`', priority:260
 msgid "If `true`, indent visual roots when rendering the graphs with `--graph`. Set true by default. It can be overriden with `--[no-]graph-indent`."
-msgstr ""
+msgstr "Si `true`, indenter les racines visuelles lors du rendu des graphes avec `--graph`. Vaut `true` par défaut. Peut être remplacé par `--[no-]graph-indent`."
 
 #. type: Labeled list
 #: en/config/log.adoc:66
@@ -82631,10 +82592,9 @@ msgstr "`worktree.guessRemote`"
 
 #. type: Plain text
 #: en/config/worktree.adoc:11
-#, fuzzy, placeholders:'`-b`':'`-B`':'`--detach`':'worktree.guessRemote':'`HEAD`', priority:240
-#| msgid "If no branch is specified and neither `-b` nor `-B` nor `--detach` is used, then `git worktree add` defaults to creating a new branch from HEAD. If `worktree.guessRemote` is set to true, `worktree add` tries to find a remote-tracking branch whose name uniquely matches the new branch name. If such a branch exists, it is checked out and set as \"upstream\" for the new branch. If no such match can be found, it falls back to creating a new branch from the current `HEAD`."
+#, placeholders:'`-b`':'`-B`':'`--detach`':'worktree.guessRemote':'`HEAD`', priority:240
 msgid "If no branch is specified and neither `-b` nor `-B` nor `--detach` is used, then `git worktree add` defaults to creating a new branch from HEAD. If `worktree.guessRemote` is set to true, `worktree add` tries to find a remote-tracking branch whose name uniquely matches the new branch name. If such a branch exists, it is checked out and set as \"upstream\" for the new branch. If multiple matches are found, the command fails. If no such match can be found, it falls back to creating a new branch from the current `HEAD`."
-msgstr "Si aucune branche n'est spécifiée et que `-b` ni `-B` ni `--detach` ne sont utilisés, alors `git worktree add` revient par défaut à la création d'une branche depuis HEAD. Si `worktree.guessRemote` est fixé à true, `worktree add` tente de trouver une branche de suivi à distance dont le nom correspond uniquement au nouveau nom de branche. Si une telle branche existe, elle est extraite et définie comme « amont» pour la nouvelle branche. Si aucune telle correspondance n'est trouvée, elle revient à créer une nouvelle branche de la `HEAD` actuelle."
+msgstr "Si aucune branche n'est spécifiée et que ni `-b`, ni `-B`, ni `--detach` ne sont utilisés, `git worktree add` crée par défaut une nouvelle branche à partir de `HEAD`. Si `worktree.guessRemote` vaut true, `worktree add` tente de trouver une branche de suivi à distance dont le nom correspond de manière unique au nouveau nom de branche. Si une telle branche existe, elle est extraite et définie comme « amont » de la nouvelle branche. Si plusieurs correspondances sont trouvées, la commande échoue. Si aucune correspondance n'est trouvée, elle revient à créer une nouvelle branche à partir de la `HEAD` actuelle."
 
 #. type: Labeled list
 #: en/config/worktree.adoc:12
