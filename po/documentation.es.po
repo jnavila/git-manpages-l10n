@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-09-13 13:15+0200\n"
-"PO-Revision-Date: 2026-09-14 16:51+0000\n"
+"PO-Revision-Date: 2026-09-20 00:51+0000\n"
 "Last-Translator: Salvador Peña <salvadorp74@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: es\n"
@@ -14989,7 +14989,7 @@ msgstr ""
 #: en/git-stash.adoc:53 en/git-svn.adoc:29 en/git-worktree.adoc:65 en/git-submodule.adoc:33 en/git-rerere.adoc:32 en/git-config.adoc:71 en/git-shell.adoc:25 en/git-p4.adoc:63 en/git-gui.adoc:31 en/git-remote.adoc:44
 #, no-wrap, priority:240
 msgid "COMMANDS"
-msgstr ""
+msgstr "COMANDOS"
 
 #. type: Labeled list
 #: en/git-stash.adoc:55
@@ -45771,7 +45771,7 @@ msgstr "gitignore - Especifica archivos intencionalmente sin seguimiento a ignor
 #: en/gitignore.adoc:11
 #, placeholders:'$XDG_CONFIG_HOME/git/ignore':'$GIT_DIR/info/exclude':'.gitignore', priority:10
 msgid "$XDG_CONFIG_HOME/git/ignore, $GIT_DIR/info/exclude, .gitignore"
-msgstr ""
+msgstr "$XDG_CONFIG_HOME/git/ignore, $GIT_DIR/info/exclude, .gitignore"
 
 #. type: Plain text
 #: en/gitignore.adoc:19
@@ -58791,42 +58791,50 @@ msgid ""
 "'git config edit' [<file-option>]\n"
 "'git config' [<file-option>] --get-colorbool <name> [<stdout-is-tty>]\n"
 msgstr ""
+"'git config list' [<opción-de-fichero>] [<opción-de-visualización>] [--includes]\n"
+"'git config get' [<opción-de-fichero>] [<opción-de-visualización>] [--includes] [--all] [--regexp] [--value=<patrón>] [--fixed-value] [--default=<predeterminado>] [--url=<url>] <nombre>\n"
+"'git config set' [<opción-de-fichero>] [--type=<tipo>] [--all] [--value=<patrón>] [--fixed-value] <nombre> <valor>\n"
+"'git config unset' [<opción-de-fichero>] [--all] [--value=<patrón>] [--fixed-value] <nombre>\n"
+"'git config rename-section' [<opción-de-fichero>] <nombre-anterior> <nombre-nuevo>\n"
+"'git config remove-section' [<opción-de-fichero>] <nombre>\n"
+"'git config edit' [<opción-de-fichero>]\n"
+"'git config' [<opción-de-fichero>] --get-colorbool <nombre> [<salida-estándar-es-tty>]\n"
 
 #. type: Plain text
 #: en/git-config.adoc:26
 #, priority:10
 msgid "You can query/set/replace/unset options with this command. The name is actually the section and the key separated by a dot, and the value will be escaped."
-msgstr ""
+msgstr "Puedes consultar/asignar/reemplazar/desasignar opciones con este comando. El nombre es realmente la sección y la clave separados por un punto, y el valor será escapado."
 
 #. type: Plain text
 #: en/git-config.adoc:36
 #, placeholders:'`--append`':'`--value=':'`--fixed-value`':'<<EXAMPLES>>':'`--fixed-value`', priority:10
 msgid "Multiple lines can be added to an option by using the `--append` option. If you want to update or unset an option which can occur on multiple lines, `--value=<pattern>` (which is an extended regular expression, unless the `--fixed-value` option is given) needs to be given. Only the existing values that match the pattern are updated or unset. If you want to handle the lines that do *not* match the pattern, just prepend a single exclamation mark in front (see also <<EXAMPLES>>), but note that this only works when the `--fixed-value` option is not in use."
-msgstr ""
+msgstr "Se pueden agregar múltiples líneas a una opción usando la opción `--append`. Si quieres actualizar o desasignar una opción que pueda ocurrir en múltiples líneas se necesita dar `--value=<patrón>` (lo cual es una expresión regular extendida, a menos que se dé la opción `--fixed-value`). Solo los valores existentes que coincidan con el patrón serán actualizados o designados. Si quieres manipular las líneas que *no* coincidan con el patrón solo antepón un solo signo de exclamación (ver también <<EXAMPLES>>, pero nota que esto solo funciona cuando no se usa la opción `--fixed-value`."
 
 #. type: Plain text
 #: en/git-config.adoc:41
 #, placeholders:'`--type=':'`--type=':'`--type`':'`--no-type`', priority:10
 msgid "The `--type=<type>` option instructs 'git config' to ensure that incoming and outgoing values are canonicalize-able under the given <type>. If no `--type=<type>` is given, no canonicalization will be performed. Callers may unset an existing `--type` specifier with `--no-type`."
-msgstr ""
+msgstr "La opción `--type=<tipo>` instruye a 'git config' a asegurarse que los valores entrantes y salientes con canonizables bajo el <tipo> dado. Si no se da `--type=<tipo>` no se realizará canonización. Los invocadores pueden desasignar un especificador `--type` existente con `--no-type`."
 
 #. type: Plain text
 #: en/git-config.adoc:47
 #, placeholders:'`--system`':'`--global`':'`--local`':'`--worktree`':'`--file':'<<FILES>>', priority:10
 msgid "When reading, the values are read from the system, global and repository local configuration files by default, and options `--system`, `--global`, `--local`, `--worktree` and `--file <filename>` can be used to tell the command to read from only that location (see <<FILES>>)."
-msgstr ""
+msgstr "Al leer, los valores son leídos predeterminadamente desde los ficheros de configuración de sistema, global y de repositorio local, y se pueden usar las opciones `--system`, `--global`, `--local`, `--worktree` y `--file <nombre-de-archivo>` para decirle al comando que lea solo desde esa ubicación (ver <<FILES>>)."
 
 #. type: Plain text
 #: en/git-config.adoc:53
 #, placeholders:'`--system`':'`--global`':'`--worktree`':'`--file':'`--local`', priority:10
 msgid "When writing, the new value is written to the repository local configuration file by default, and options `--system`, `--global`, `--worktree`, `--file <filename>` can be used to tell the command to write to that location (you can say `--local` but that is the default)."
-msgstr ""
+msgstr "Al escribir, los nuevos valores son escritos predeterminadamente en el fichero de configuración de repositorio local, y se pueden usar las opciones `--system`, `--global`, `--worktree`, `--file <nombre-de-archivo>` para decirle al comando que escriba en esa ubicación (puedes indicar `--local`, pero esa es la predeterminada)."
 
 #. type: Plain text
 #: en/git-config.adoc:56
 #, priority:10
 msgid "This command will fail with non-zero status upon error. Some exit codes are:"
-msgstr ""
+msgstr "Este comando fallará con un estado no-cero bajo error. Algunos códigos de salida son:"
 
 #. type: Plain text
 #: en/git-config.adoc:58
