@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jn.avila@free.fr\n"
 "POT-Creation-Date: 2026-09-13 13:15+0200\n"
-"PO-Revision-Date: 2026-10-20 10:51+0000\n"
+"PO-Revision-Date: 2026-11-01 21:51+0000\n"
 "Last-Translator: Salvador Peña <sal@users.noreply.hosted.weblate.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: es\n"
@@ -54726,7 +54726,7 @@ msgstr "`HOME`"
 #: en/git.adoc:489
 #, placeholders:'`$HOMEDRIVE':'$HOMEPATH`':'`$HOMEDRIVE`':'`$HOMEPATH`':'`$USERPROFILE`':'`$USERPROFILE`', priority:10
 msgid "Specifies the path to the user's home directory. On Windows, if unset, Git will set a process environment variable equal to: `$HOMEDRIVE$HOMEPATH` if both `$HOMEDRIVE` and `$HOMEPATH` exist; otherwise `$USERPROFILE` if `$USERPROFILE` exists."
-msgstr ""
+msgstr "Especifica la ruta del directorio principal del usuario. En Windows, por omisión, Git establecerá una variable de ambiente de proceso igual a: `$HOMEDRIVE$HOMEPATH` si existe tanto `$HOMEDRIVE` como `$HOMEPATH`; de lo contrario `$USERPROFILE` si existe."
 
 #. type: Title ~
 #: en/git.adoc:491
@@ -55698,7 +55698,7 @@ msgstr "`GIT_ADVICE`"
 #: en/git.adoc:1050
 #, placeholders:'`--no-advice`', priority:10
 msgid "If set to `0`, then disable all advice messages. These messages are intended to provide hints to human users that may help them get out of problematic situations or take advantage of new features. Users can disable individual messages using the `advice.*` config keys. These messages may be disruptive to tools that execute Git processes, so this variable is available to disable the messages. (The `--no-advice` global option is also available, but old Git versions may fail when this option is not understood. The environment variable will be ignored by Git versions that do not understand it.)"
-msgstr ""
+msgstr "Si se asigna `0` se deshabilitan todos los mensajes de sugerencias. Estos mensajes tienen la intención de proporcionar pistas a usuarios humanos que les puedan ayudar a salir de situaciones problemáticas y tomar ventaja de nuevas funcionalidades. Los usuarios pueden deshabilitar mensajes individuales usando las claves de configuración `advice.*`. Estos mensajes pueden ser disruptivos para herramientas que ejecuten procesos Git, es por eso que esta variable está disponible para deshabilitar los mensajes. (La opción global `--no-advice` también está disponible, pero versiones viejas de Git pueden fallar al no entender esta opción. La variable de ambiente será ignorada por versiones de Git que no la comprendan.)"
 
 #. type: Title -
 #: en/git.adoc:1052
@@ -59830,6 +59830,11 @@ msgid ""
 "# a comment\n"
 "#\n"
 msgstr ""
+"#\n"
+"# Este es el fichero de configuración, y\n"
+"# un caracter '#' o ';' indica\n"
+"# un comentario\n"
+"#\n"
 
 #. type: delimited block -
 #: en/git-config.adoc:524
@@ -59840,6 +59845,10 @@ msgid ""
 "\texternal = /usr/local/bin/diff-wrapper\n"
 "\trenames = true\n"
 msgstr ""
+"; Nuestro algoritmo de diferencias\n"
+"[diff]\n"
+"\texternal = /usr/local/bin/diff-wrapper\n"
+"\trenames = true\n"
 
 #. type: delimited block -
 #: en/git-config.adoc:529
@@ -59850,6 +59859,10 @@ msgid ""
 "\tgitproxy=proxy-command for kernel.org\n"
 "\tgitproxy=default-proxy ; for all the rest\n"
 msgstr ""
+"; Configuración de Proxy\n"
+"[core]\n"
+"\tgitproxy=comando-proxy para kernel.org\n"
+"\tgitproxy=proxy-predeterminado ; para el resto\n"
 
 #. type: delimited block -
 #: en/git-config.adoc:536
@@ -59862,144 +59875,150 @@ msgid ""
 "\tsslVerify = false\n"
 "\tcookieFile = /tmp/cookie.txt\n"
 msgstr ""
+"; HTTP\n"
+"[http]\n"
+"\tsslVerify\n"
+"[http \"https://weak.example.com\"]\n"
+"\tsslVerify = false\n"
+"\tcookieFile = /tmp/cookie.txt\n"
 
 #. type: Plain text
 #: en/git-config.adoc:539
 #, priority:10
 msgid "you can set the filemode to true with"
-msgstr ""
+msgstr "puedes establecer el modo de fichero en verdadero con"
 
 #. type: delimited block -
 #: en/git-config.adoc:542
 #, no-wrap, placeholders:'core.filemode', priority:10
 msgid "% git config set core.filemode true\n"
-msgstr ""
+msgstr "% git config set core.filemode true\n"
 
 #. type: Plain text
 #: en/git-config.adoc:547
 #, placeholders:'kernel.org', priority:10
 msgid "The hypothetical proxy command entries actually have a postfix to discern what URL they apply to. Here is how to change the entry for kernel.org to \"ssh\"."
-msgstr ""
+msgstr "Las entradas del comando proxy hipotético tienen en realidad un sufijo para discernir a qué URL aplican. Así se cambia el entrada kernel.org a \"ssh\"."
 
 #. type: delimited block -
 #: en/git-config.adoc:550
 #, no-wrap, placeholders:'--value=':'kernel.org':'core.gitproxy':'kernel.org', priority:10
 msgid "% git config set --value='for kernel.org$' core.gitproxy '\"ssh\" for kernel.org'\n"
-msgstr ""
+msgstr "% git config set --value='para kernel.org$' core.gitproxy '\"ssh\" para kernel.org'\n"
 
 #. type: Plain text
 #: en/git-config.adoc:553
 #, placeholders:'kernel.org', priority:10
 msgid "This makes sure that only the key/value pair for kernel.org is replaced."
-msgstr ""
+msgstr "Esto asegura que solo se reemplace el par clave/valor para kernel.org."
 
 #. type: Plain text
 #: en/git-config.adoc:555
 #, priority:10
 msgid "To delete the entry for renames, do"
-msgstr ""
+msgstr "Para eliminar la entrada de cambios de nombre hacer"
 
 #. type: delimited block -
 #: en/git-config.adoc:558
 #, no-wrap, placeholders:'diff.renames', priority:10
 msgid "% git config unset diff.renames\n"
-msgstr ""
+msgstr "% git config unset diff.renames\n"
 
 #. type: Plain text
 #: en/git-config.adoc:562
 #, placeholders:'core.gitproxy', priority:10
 msgid "If you want to delete an entry for a multivar (like core.gitproxy above), you have to provide a regex matching the value of exactly one line."
-msgstr ""
+msgstr "Si quieres eliminar una entrada para una multivariable (como core.gitproxy arriba), debes proporcionar una expresión regular que coincida con el valor de exactamente una línea."
 
 #. type: Plain text
 #: en/git-config.adoc:564
 #, priority:10
 msgid "To query the value for a given key, do"
-msgstr ""
+msgstr "Para consultar el valor de una clave dada, haz"
 
 #. type: delimited block -
 #: en/git-config.adoc:567
 #, no-wrap, placeholders:'core.filemode', priority:10
 msgid "% git config get core.filemode\n"
-msgstr ""
+msgstr "% git config get core.filemode\n"
 
 #. type: Plain text
 #: en/git-config.adoc:570
 #, priority:10
 msgid "or, to query a multivar:"
-msgstr ""
+msgstr "o, para consultar un multivariable:"
 
 #. type: delimited block -
 #: en/git-config.adoc:573
 #, no-wrap, placeholders:'--value=':'kernel.org':'core.gitproxy', priority:10
 msgid "% git config get --value=\"for kernel.org$\" core.gitproxy\n"
-msgstr ""
+msgstr "% git config get --value=\"for kernel.org$\" core.gitproxy\n"
 
 #. type: Plain text
 #: en/git-config.adoc:576
 #, priority:10
 msgid "If you want to know all the values for a multivar, do:"
-msgstr ""
+msgstr "Si quieres saber todos los valores de una multivariable, haz:"
 
 #. type: delimited block -
 #: en/git-config.adoc:579
 #, no-wrap, placeholders:'--all':'--show-names':'core.gitproxy', priority:10
 msgid "% git config get --all --show-names core.gitproxy\n"
-msgstr ""
+msgstr "% git config get --all --show-names core.gitproxy\n"
 
 #. type: Plain text
 #: en/git-config.adoc:583
 #, placeholders:'core.gitproxy', priority:10
 msgid "If you like to live dangerously, you can replace *all* core.gitproxy by a new one with"
-msgstr ""
+msgstr "Si te gusta el peligro, puedes reemplazar *todos* los core.gitproxy por uno nuevo con"
 
 #. type: delimited block -
 #: en/git-config.adoc:586
 #, no-wrap, placeholders:'--all':'core.gitproxy', priority:10
 msgid "% git config set --all core.gitproxy ssh\n"
-msgstr ""
+msgstr "% git config set --all core.gitproxy ssh\n"
 
 #. type: Plain text
 #: en/git-config.adoc:590
 #, ignore-ellipsis, priority:10
 msgid "However, if you really only want to replace the line for the default proxy, i.e. the one without a \"for ...\" postfix, do something like this:"
-msgstr ""
+msgstr "Sin embargo, si realmente solo quieres cambiar la línea del proxy predeterminado, p. ej. la que no tiene el sufijo \"para ...\", haz algo como:"
 
 #. type: delimited block -
 #: en/git-config.adoc:593
 #, no-wrap, placeholders:'--value=':'core.gitproxy', priority:10
 msgid "% git config set --value='! for ' core.gitproxy ssh\n"
-msgstr ""
+msgstr "% git config set --value='! para ' core.gitproxy ssh\n"
 
 #. type: Plain text
 #: en/git-config.adoc:596
 #, priority:10
 msgid "To actually match only values with an exclamation mark, you have to"
-msgstr ""
+msgstr "Para hacer coincidir, en realidad, solo los valores con un signo de exclamación debes hacer"
 
 #. type: delimited block -
 #: en/git-config.adoc:599
 #, no-wrap, placeholders:'--value=', priority:10
 msgid "% git config set --value='[!]' section.key value\n"
-msgstr ""
+msgstr "% git config set --value='[!]' sección.clave valor\n"
 
 #. type: Plain text
 #: en/git-config.adoc:602
 #, priority:10
 msgid "To add a new proxy, without altering any of the existing ones, use"
-msgstr ""
+msgstr "Para agregar un proxy nuevo sin alterar cualquiera de los existentes usa"
 
 #. type: delimited block -
 #: en/git-config.adoc:605
 #, no-wrap, placeholders:'--append':'core.gitproxy', priority:10
 msgid "% git config set --append core.gitproxy '\"proxy-command\" for example.com'\n"
-msgstr ""
+msgstr "% git config set --append core.gitproxy '\"comando-proxy\" para ejemplo.com'\n"
 
 #. type: Plain text
 #: en/git-config.adoc:609
 #, priority:10
 msgid "An example to use customized color from the configuration in your script:"
-msgstr ""
+msgstr "Un ejemplo para usar color personalizado desde la configuración en tu script:"
 
 #. type: delimited block -
 #: en/git-config.adoc:615
@@ -60010,12 +60029,16 @@ msgid ""
 "RESET=$(git config get --type=color --default=\"reset\" \"\")\n"
 "echo \"${WS}your whitespace color or blue reverse${RESET}\"\n"
 msgstr ""
+"#!/bin/sh\n"
+"WS=$(git config get --type=color --default=\"blue reverse\" color.diff.whitespace)\n"
+"RESET=$(git config get --type=color --default=\"reset\" \"\")\n"
+"echo \"${WS}tu color de espacio en blanco o azul inverso${RESET}\"\n"
 
 #. type: Plain text
 #: en/git-config.adoc:619
 #, placeholders:'http.sslVerify', priority:10
 msgid "For URLs in `https://weak.example.com`, `http.sslVerify` is set to false, while it is set to `true` for all others:"
-msgstr ""
+msgstr "Para URLs en `https://weak.ejemplo.com`, `http.sslVerify` es Falso, mientras que es `true` para todas las demás:"
 
 #. type: delimited block -
 #: en/git-config.adoc:628
@@ -60029,12 +60052,19 @@ msgid ""
 "http.cookieFile /tmp/cookie.txt\n"
 "http.sslverify false\n"
 msgstr ""
+"% git config get --type=bool --url=https://good.ejemplo.com http.sslverify\n"
+"true\n"
+"% git config get --type=bool --url=https://weak.ejemplo.com http.sslverify\n"
+"false\n"
+"% git config get --url=https://weak.ejemplo.com http\n"
+"http.cookieFile /tmp/cookie.txt\n"
+"http.sslverify false\n"
 
 #. type: Plain text
 #: en/git-config.adoc:638
 #, priority:10
 msgid "When using the deprecated `[section.subsection]` syntax, changing a value will result in adding a multi-line key instead of a change, if the subsection is given with at least one uppercase character. For example when the config looks like"
-msgstr ""
+msgstr "Al usar la sintaxis obsoleta `[sección.subsección]`, cambiar un valor resultará en agregar una clave multilínea en lugar de modificarla, si se da la subsección con por lo menos un caracter en mayúscula. Por ejemplo cuando la configuración es como"
 
 #. type: delimited block -
 #: en/git-config.adoc:642
@@ -60043,12 +60073,14 @@ msgid ""
 "  [section.subsection]\n"
 "    key = value1\n"
 msgstr ""
+"  [sección.subsección]\n"
+"    clave = valor1\n"
 
 #. type: Plain text
 #: en/git-config.adoc:645
 #, priority:10
 msgid "and running `git config section.Subsection.key value2` will result in"
-msgstr ""
+msgstr "al ejecutar `git config sección.Subsección.clave valor2` resultará"
 
 #. type: delimited block -
 #: en/git-config.adoc:650
@@ -60058,6 +60090,9 @@ msgid ""
 "    key = value1\n"
 "    key = value2\n"
 msgstr ""
+"  [sección.subsección]\n"
+"    clave = valor1\n"
+"    clave = valor2\n"
 
 #. type: Title =
 #: en/git-send-pack.adoc:2
