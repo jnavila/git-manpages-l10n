@@ -47,6 +47,13 @@ entry = polib.pofile("po/documentation.fr.po").find("Configuration reference.")
 assert "priority:10" in entry.flags, entry.flags'
 grep -Fxq 'Paragraphe imbriqué.' "$work/export/fr/mergetools/vimdiff.adoc"
 
+if make install-translated prefix="$work/l10n/en/staging" >overlap.log 2>&1; then
+    echo 'Expected an installation inside the English sources to fail.' >&2
+    exit 1
+fi
+grep -Fq 'Installation destination is inside the English source tree' overlap.log
+test ! -e en/staging
+
 echo 'Revised paragraph.' >"$docs/mergetools/vimdiff.adoc"
 touch -t 200001010000 "$docs/mergetools/vimdiff.adoc"
 make update-sources

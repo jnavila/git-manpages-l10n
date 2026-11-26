@@ -4,8 +4,11 @@ from pathlib import Path
 import subprocess
 import sys
 
-sources = Path("../en")
-destination = Path(sys.argv[1]).absolute()
+sources = Path("../en").resolve()
+destination = Path(sys.argv[1]).resolve()
+if destination == sources or sources in destination.parents:
+    sys.exit(f"Installation destination is inside the English source tree: {destination}")
+
 for directory, _, filenames in os.walk(sources, onerror=sys.exit):
     relative = Path(directory).relative_to(sources)
     translated_dir = Path.cwd() / relative
