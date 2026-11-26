@@ -1,41 +1,40 @@
 #!/usr/bin/python3
 
-import polib
 import sys
-import re
-from os.path import join, dirname
+from pathlib import Path
+from sources import included_paths
 
-INCLUDE_REGEX = re.compile('''include::(.*)\\[\\]\n''')
 
-def process_file(filename: str, deps:dict[str, list[str]|str]) -> None:
-    basedirname = dirname(filename)
+def process_file(filename, deps):
+    if filename in deps:
+        return
     try:
-        with open(filename, 'rt') as f:
-            for line in f.readlines():
-                match = INCLUDE_REGEX.fullmatch(line)
-                if match:
-                    included_filename = join(basedirname, match.group(1))
-                    if not included_filename in deps:
-                        process_file(included_filename, deps)
-                    if isinstance(deps[included_filename],  list):
-                        deps.setdefault(filename, [])
-                        deps[filename].append(included_filename)
-                        deps[filename].extend(deps[included_filename])
-        deps.setdefault(filename, [])
+        with open(filename, encoding="utf-8") as f:
+            deps[filename] = set()
+            for included in included_paths(filename, f):
+                process_file(included, deps)
+                if deps[included] is not None:
+                    deps[filename].add(included)
+                    deps[filename].update(deps[included])
     except FileNotFoundError:
-        deps.setdefault(filename,'none')
+        # Incomplete translations may fall below the per-file threshold.
+        deps[filename] = None
+
 
 def main(f_list):
     deps = {}
+    rules = []
     for source in f_list:
         process_file(source, deps)
-    with open('make-deps.mk', 'w') as mkfile:
-        for source in f_list:
-            included_files = deps.get(source, [])
-            if included_files and included_files != 'none':
-                for t in ['.html', '.1', '.5', '.7']:
-                    target = source.replace('.adoc', t)
-                    mkfile.write(f"{target}: {source} " + " ".join(included_files) + "\n")
+        if deps[source]:
+            prerequisites = " ".join(sorted(deps[source]))
+            for suffix in (".html", ".1", ".5", ".7"):
+                rules.append(f"{Path(source).with_suffix(suffix)}: {source} {prerequisites}\n")
+
+    makefile = Path("make-deps.mk")
+    content = "".join(rules)
+    if not makefile.exists() or makefile.read_text() != content:
+        makefile.write_text(content)
 
 if __name__ == '__main__':
     if len(sys.argv) > 1:

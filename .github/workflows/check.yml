@@ -24,5 +24,14 @@ jobs:
       run: sudo apt-get -yq install libunicode-linebreak-perl gettext python3-polib libyaml-tiny-perl asciidoctor ruby-parslet
     - name: install required po4a version with asciidoc fixes
       run: sh ci/install_po4a.sh
+    - name: Check source synchronization and translated includes
+      run: sh ci/test-includes.sh
     - name: Run tests
       run: make -j8 all
+    - name: Verify included sources against the recorded Git release
+      run: |
+        . ./GIT-VERSION-FILE
+        git clone --quiet --depth=1 --branch "v$GIT_VERSION" https://github.com/git/git.git "$RUNNER_TEMP/git"
+        make -C "$RUNNER_TEMP/git" GIT-VERSION-FILE
+        make -C "$RUNNER_TEMP/git/Documentation" cmd-list.made mergetools-diff.adoc mergetools-merge.adoc
+        python3 ci/check-source-coverage.py "$RUNNER_TEMP/git/Documentation"

@@ -1,3 +1,27 @@
+import os
+import re
+
+
+INCLUDE = re.compile(r"include::([^\[]+)\[[^\]\n]*\][ \t]*\n?")
+
+
+def included_paths(source, lines):
+    """Yield include paths relative to the documentation root."""
+    for line in lines:
+        match = INCLUDE.fullmatch(line)
+        if not match:
+            continue
+        target = match.group(1)
+        if target.startswith("{build_dir}/"):
+            target = target[len("{build_dir}/"):]
+        else:
+            target = os.path.join(os.path.dirname(source), target)
+        target = os.path.normpath(target)
+        if os.path.isabs(target) or target == ".." or target.startswith("../"):
+            raise SystemExit(f"Include outside the documentation tree in {source}: {target}")
+        yield target
+
+
 SECTIONS = {310: ["gitglossary.adoc"],
             300: ["git-init.adoc",
                   "git-clone.adoc",

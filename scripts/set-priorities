@@ -2,38 +2,35 @@
 
 import polib
 import sys
-import re
-from os.path import join, dirname
-from sources import SECTIONS
+from os.path import join
+from sources import SECTIONS, included_paths
 
-INCLUDE_REGEX = re.compile('''include::(.*)\\[\\]\n''')
 DEFAULT_PRIORITY = 10
 
-def process_file(filename, priority, priorities):
-    basedirname = dirname(filename)
+def process_file(source, priority, priorities, visited):
+    if source in visited:
+        return
+    visited.add(source)
     try:
-        with open(filename, 'r') as f:
-            for line in f.readlines():
-                match = INCLUDE_REGEX.fullmatch(line)
-                if match:
-                    filename = join(basedirname, match.group(1))
-                    priorities[filename] = max(priority, priorities.get(filename, 100))
-                    process_file(filename, priority, priorities)
-    except Exception:
-        print("could not find " + filename)
+        with open(join('en', source), encoding="utf-8") as f:
+            for included in included_paths(source, f):
+                priorities[included] = max(priority, priorities.get(included, 100))
+                process_file(included, priority, priorities, visited)
+    except FileNotFoundError:
+        print("could not find " + join('en', source))
 
 
 def main(f_list):
-    priorities = dict((join('en', source), section) for section in SECTIONS for source in SECTIONS[section])
-    items = list(priorities.items())
-    for source, priority in items:
-        process_file(source, priority, priorities)
+    priorities = {source: section for section, sources in SECTIONS.items() for source in sources}
+    for source, priority in list(priorities.items()):
+        process_file(source, priority, priorities, set())
+    by_filename = {join('en', source): priority for source, priority in priorities.items()}
     for source in f_list:
         po = polib.pofile(source, wrapwidth=0)
         for entry in po:
             if not entry.obsolete:
                 flags = [f for f in entry.flags if not (f.startswith("priority") or f.isdigit())]
-                p = max(priorities.get(filename, DEFAULT_PRIORITY) for (filename, _) in entry.occurrences)
+                p = max(by_filename.get(filename, DEFAULT_PRIORITY) for (filename, _) in entry.occurrences)
                 flags.append("priority:{}".format(p))
                 entry.flags = flags
         po.save(source)

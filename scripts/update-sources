@@ -1,51 +1,50 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
+import filecmp
 import os
 from os.path import join
+from pathlib import Path
 import shutil
-import re
-from sources import SECTIONS
+from sources import SECTIONS, included_paths
 
-MIN_PRIORITY_INCLUDE_SECTION = 200
+relative_path = os.getenv("SOURCE_PATH", "..")
 
-## get the relative path of the files from the env var SOURCE_PATH
-relative_path_env = os.getenv('SOURCE_PATH')
-if relative_path_env is None:
-    relative_path = '..'
-else:
-    relative_path = relative_path_env
+def copy_file(source: str) -> None:
+    path = join(relative_path, source)
+    destination = join("en", source)
+    if os.path.isfile(destination) and filecmp.cmp(path, destination, shallow=False):
+        return
+    os.makedirs(os.path.dirname(destination), exist_ok=True)
+    # po4a uses the local modification time to detect changed inputs.
+    shutil.copy(path, destination)
 
-INCLUDE_REGEX = re.compile('''include::(.*)\\[\\]\n''')
-
-def copy_file(source: str) -> bool:
+def collect_includes(source: str, selected: set) -> None:
+    if source in selected:
+        return
     path = join(relative_path, source)
     try:
-        shutil.copy2(path, join("en", source))
-        return True
+        f = open(path, encoding="utf-8")
     except FileNotFoundError:
-        print(f"File not found: {path}")
-    except shutil.SameFileError:
-        print(f"File is the same: {source}")
-    return False
-
-def process_file(dirname: str, filename: str) -> None:
-    with open(join('en', dirname, filename),'r') as f:
-        for line in f.readlines():
-                match = INCLUDE_REGEX.fullmatch(line)
-                if match:
-                    full_filename = match.group(1)
-                    if full_filename.startswith('{build_dir}/'):
-                        full_dirname = ""
-                        filename = full_filename.replace('{build_dir}/', '')
-                    else:
-                        full_dirname = join(dirname, os.path.dirname(full_filename))
-                    filename = os.path.basename(full_filename)
-                    if copy_file(join(full_dirname, filename)):
-                        process_file(full_dirname, filename)
+        raise SystemExit(f"Required documentation source not found: {path}")
+    selected.add(source)
+    with f:
+        for target in included_paths(source, f):
+            collect_includes(target, selected)
 
 
-for section in SECTIONS:
-    for source in SECTIONS[section]:
-        if copy_file(source) and section >= MIN_PRIORITY_INCLUDE_SECTION:
-            process_file('', source)
+version_file = join(relative_path, "..", "GIT-VERSION-FILE")
+if not os.path.isfile(version_file):
+    raise SystemExit(f"Required version file not found: {version_file}")
 
-shutil.copy2(os.path.join(relative_path, "..", "GIT-VERSION-FILE"), ".")
+english = Path("en")
+# po4a uses every English AsciiDoc input. A newly listed manual may not have
+# a local copy yet, so include explicit selections on their first update too.
+roots = {str(path.relative_to(english)) for path in english.rglob("*.adoc")}
+for sources in SECTIONS.values():
+    roots.update(sources)
+
+selected = set()
+for source in sorted(roots):
+    collect_includes(source, selected)
+for source in sorted(selected):
+    copy_file(source)
+shutil.copy2(version_file, ".")

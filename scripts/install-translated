@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+import os
+from pathlib import Path
+import subprocess
+import sys
+
+sources = Path("../en").resolve()
+destination = Path(sys.argv[1]).resolve()
+if destination == sources or sources in destination.parents:
+    sys.exit(f"Installation destination is inside the English source tree: {destination}")
+
+for directory, _, filenames in os.walk(sources, onerror=sys.exit):
+    relative = Path(directory).relative_to(sources)
+    translated_dir = Path.cwd() / relative
+    target = destination / relative
+    subprocess.run(["install", "-d", "-m", "755", target], check=True)
+
+    translated = []
+    for name in filenames:
+        path = translated_dir / name
+        if name.endswith(".adoc") and path.is_file():
+            translated.append(path)
+    if translated:
+        subprocess.run(["install", "-m", "644", *translated, target], check=True)
