@@ -29,6 +29,8 @@ Configuration reference.
 include::config/example.adoc[]
 EOF
 echo 'include::{build_dir}/mergetools/vimdiff.adoc[]' >"$docs/config/example.adoc"
+echo 'include::config/tool-list.adoc[]' >"$docs/git-merge.adoc"
+echo 'include::{build_dir}/mergetools/vimdiff.adoc[]' >"$docs/config/tool-list.adoc"
 printf 'Updated mailbox manual.\n\ninclude::mailbox-caveats.adoc[]\n' >"$docs/git-am.adoc"
 echo 'Mailbox caveats.' >"$docs/mailbox-caveats.adoc"
 echo 'include::plumbing-options.adoc[]' >"$docs/git-ls-files.adoc"
@@ -66,8 +68,9 @@ grep -Fq 'msgid "Mailbox caveats."' po/documentation.pot
 grep -Fq 'msgid "Plumbing options."' po/documentation.pot
 test ! -e en/git-unselected.adoc
 python3 -c 'import polib
-entry = polib.pofile("po/documentation.fr.po").find("Configuration reference.")
-assert "priority:10" in entry.flags, entry.flags'
+catalog = polib.pofile("po/documentation.fr.po")
+assert "priority:10" in catalog.find("Configuration reference.").flags
+assert "priority:240" in catalog.find("Nested paragraph.").flags'
 grep -Fxq 'Paragraphe imbriqué.' "$work/export/fr/mergetools/vimdiff.adoc"
 
 cp -R en render

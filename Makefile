@@ -23,7 +23,7 @@ endif
 po4a.conf: scripts/create_po4a_conf $(EN_DIRS) po | $(filter update-sources,$(MAKECMDGOALS))
 	@echo '   ' PO4A $@;./scripts/create_po4a_conf
 
-po/documentation.pot: po4a.conf $(EN_SOURCES) Makefile
+po/documentation.pot: po4a.conf $(EN_SOURCES) Makefile scripts/set-priorities scripts/sources.py
 	$(QUIET_PO4A)PERL5LIB=./po4a/lib po4a/po4a -v po4a.conf --no-translations
 	@./scripts/set-priorities po/documentation.*.po
 	@for f in po/documentation.*.po; do ./scripts/pre-translate-po $$f; done
