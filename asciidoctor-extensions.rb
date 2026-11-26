@@ -8,6 +8,21 @@ require 'parslet'
 module Git
   module Documentation
 
+    # Let Asciidoctor report missing translations using a path relative to
+    # the including file, even when {build_dir} expands to an absolute path.
+    class MissingBuildInclude < Asciidoctor::Extensions::IncludeProcessor
+      def handles? target
+        target.start_with?(Dir.pwd + '/') && !File.file?(target)
+      end
+
+      def process document, reader, target, attributes
+        return if attributes['optional-option']
+
+        relative = document.path_resolver.relative_path(target, reader.dir)
+        reader.unshift_line "include::#{relative}[]"
+      end
+    end
+
     class AdocSynopsisQuote < Parslet::Parser
       # parse a string like "git add -p [--root=<path>]" as series of tokens keywords, grammar signs and placeholders
       # where placeholders are UTF-8 words separated by '-', enclosed in '<' and '>'
@@ -224,6 +239,7 @@ end
 
 
 Asciidoctor::Extensions.register do
+  include_processor Git::Documentation::MissingBuildInclude
   inline_macro Git::Documentation::LinkGitProcessor, :linkgit
   block Git::Documentation::SynopsisBlock
   postprocessor Git::Documentation::DocumentPostProcessor

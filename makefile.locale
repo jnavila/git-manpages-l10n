@@ -21,7 +21,7 @@ ASCIIDOC_EXTRA += -amanmanual='Git Manual' \
                   -amansource='Git $(GIT_VERSION)' \
                   -amanversion=$(GIT_VERSION)
 ASCIIDOC_EXTRA += -alitdd='\--'
-ASCIIDOC_EXTRA += -acompat-mode -atabsize=8 -abuild_dir=.
+ASCIIDOC_EXTRA += -acompat-mode -atabsize=8 -abuild_dir="$$PWD"
 
 $(HTML_FILTER): %.html: %.adoc ../GIT-VERSION-FILE ../asciidoctor-extensions.rb ../makefile.locale
 	$(QUIET_ASCIIDOC)asciidoctor -b xhtml5 \
@@ -32,6 +32,9 @@ MAN5_PAGES=$(patsubst %.adoc,%.5,$(MAN5_SOURCE))
 MAN7_PAGES=$(patsubst %.adoc,%.7,$(MAN7_SOURCE))
 
 MANPAGES=$(MAN1_PAGES) $(MAN5_PAGES) $(MAN7_PAGES)
+
+# Re-render if a translated include becomes available or drops below threshold.
+$(MANPAGES) $(HTML_FILTER): $(wildcard make-deps.mk)
 
 $(MAN1_PAGES): %.1: %.adoc ../GIT-VERSION-FILE ../asciidoctor-extensions.rb ../makefile.locale
 	$(QUIET_ASCIIDOC)asciidoctor -b manpage -o $@ \

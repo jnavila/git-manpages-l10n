@@ -39,7 +39,7 @@ update-sources:
 	@./scripts/set-priorities po/documentation.*.po
 
 define PROCESS_LANG
-$(1)/.translated: po/documentation.$(1).po po/documentation.pot
+$(1)/.translated: po/documentation.$(1).po po/documentation.pot scripts/generate-make-deps scripts/sources.py
 	@mkdir -p $(1)
 	$(QUIET_PO4A)PERL5LIB=./po4a/lib po4a/po4a -f ./po4a.conf --target-lang=$(1) --no-update
 	@$(QUIET_DEPS)cd $(1) && ../scripts/generate-make-deps $(DOCS)

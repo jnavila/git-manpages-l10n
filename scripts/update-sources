@@ -2,76 +2,49 @@
 import filecmp
 import os
 from os.path import join
+from pathlib import Path
 import shutil
-import re
-from sources import EXTRA_INCLUDE_ROOTS, SECTIONS
-
-MIN_PRIORITY_INCLUDE_SECTION = 200
+from sources import SECTIONS, included_paths
 
 relative_path = os.getenv("SOURCE_PATH", "..")
 
-INCLUDE_REGEX = re.compile(r"include::(.+)\[\][ \t]*\n?")
-
-def copy_file(source: str, *, required: bool = False) -> None:
+def copy_file(source: str) -> None:
     path = join(relative_path, source)
     destination = join("en", source)
-    try:
-        if os.path.isfile(destination) and filecmp.cmp(path, destination, shallow=False):
-            return
-        os.makedirs(os.path.dirname(destination), exist_ok=True)
-        # po4a uses the local modification time to detect changed inputs.
-        shutil.copy(path, destination)
-    except FileNotFoundError:
-        if required:
-            raise SystemExit(f"Required documentation source not found: {path}")
-        print(f"File not found: {path}")
-    except shutil.SameFileError:
-        print(f"File is the same: {source}")
+    if os.path.isfile(destination) and filecmp.cmp(path, destination, shallow=False):
+        return
+    os.makedirs(os.path.dirname(destination), exist_ok=True)
+    # po4a uses the local modification time to detect changed inputs.
+    shutil.copy(path, destination)
 
-def collect_includes(source: str, selected: set, *, required: bool = False) -> None:
+def collect_includes(source: str, selected: set) -> None:
     if source in selected:
         return
     path = join(relative_path, source)
     try:
-        f = open(path)
+        f = open(path, encoding="utf-8")
     except FileNotFoundError:
-        if required:
-            raise SystemExit(f"Required documentation source not found: {path}")
-        print(f"File not found: {path}")
-        return
+        raise SystemExit(f"Required documentation source not found: {path}")
     selected.add(source)
     with f:
-        for line in f:
-            match = INCLUDE_REGEX.fullmatch(line)
-            if match:
-                target = match.group(1)
-                if target.startswith("{build_dir}/"):
-                    target = target[len("{build_dir}/"):]
-                else:
-                    target = join(os.path.dirname(source), target)
-                target = os.path.normpath(target)
-                if os.path.isabs(target) or target == ".." or target.startswith("../"):
-                    raise SystemExit(f"Include outside the documentation tree in {source}: {target}")
-                collect_includes(target, selected, required=required)
+        for target in included_paths(source, f):
+            collect_includes(target, selected)
 
 
 version_file = join(relative_path, "..", "GIT-VERSION-FILE")
 if not os.path.isfile(version_file):
     raise SystemExit(f"Required version file not found: {version_file}")
 
-required_sources = set()
-for source in EXTRA_INCLUDE_ROOTS:
-    collect_includes(source, required_sources, required=True)
+english = Path("en")
+# po4a uses every English AsciiDoc input. A newly listed manual may not have
+# a local copy yet, so include explicit selections on their first update too.
+roots = {str(path.relative_to(english)) for path in english.rglob("*.adoc")}
+for sources in SECTIONS.values():
+    roots.update(sources)
 
-recursive_sources = required_sources.copy()
-direct_sources = set()
-for section, sources in SECTIONS.items():
-    if section >= MIN_PRIORITY_INCLUDE_SECTION:
-        for source in sources:
-            collect_includes(source, recursive_sources)
-    else:
-        direct_sources.update(sources)
-
-for source in sorted(recursive_sources | direct_sources):
-    copy_file(source, required=source in required_sources)
+selected = set()
+for source in sorted(roots):
+    collect_includes(source, selected)
+for source in sorted(selected):
+    copy_file(source)
 shutil.copy2(version_file, ".")

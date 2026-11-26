@@ -217,11 +217,14 @@ the messages from, the l10n coordinator is expected to pull from the
 main git repository at strategic point in history (e.g. when a major
 release and release candidates are tagged). In the Git checkout, run
 `make GIT-VERSION-FILE` and
-`make -C Documentation mergetools-diff.adoc mergetools-merge.adoc` to
-prepare the version file and the tool lists used by the configuration
-reference. Then run
+`make -C Documentation cmd-list.made mergetools-diff.adoc mergetools-merge.adoc`
+to prepare the version file, command lists and merge tool lists. Then run
 `make update-sources SOURCE_PATH=/path/to/git/Documentation` at the
-top level of this repository.
+top level of this repository. This updates every AsciiDoc source already
+in `en/`, newly selected manuals from `scripts/sources.py`, and their
+nested includes. A missing source is reported before any file is copied.
+When Git retires a source, review its removal or replacement in `en/`
+as part of the release update.
 
 Language contributors use this file to prepare translations for their
 language, but they are not expected to modify it.
