@@ -215,8 +215,13 @@ coordinator maintains it by adding new translations or update existing
 ones with po4a(1).  In order to update the document sources to extract
 the messages from, the l10n coordinator is expected to pull from the
 main git repository at strategic point in history (e.g. when a major
-release and release candidates are tagged), and then run "make
-update-sources" at the top-level directory.
+release and release candidates are tagged). In the Git checkout, run
+`make GIT-VERSION-FILE` and
+`make -C Documentation mergetools-diff.adoc mergetools-merge.adoc` to
+prepare the version file and the tool lists used by the configuration
+reference. Then run
+`make update-sources SOURCE_PATH=/path/to/git/Documentation` at the
+top level of this repository.
 
 Language contributors use this file to prepare translations for their
 language, but they are not expected to modify it.

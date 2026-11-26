@@ -1,51 +1,77 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
+import filecmp
 import os
 from os.path import join
 import shutil
 import re
-from sources import SECTIONS
+from sources import EXTRA_INCLUDE_ROOTS, SECTIONS
 
 MIN_PRIORITY_INCLUDE_SECTION = 200
 
-## get the relative path of the files from the env var SOURCE_PATH
-relative_path_env = os.getenv('SOURCE_PATH')
-if relative_path_env is None:
-    relative_path = '..'
-else:
-    relative_path = relative_path_env
+relative_path = os.getenv("SOURCE_PATH", "..")
 
-INCLUDE_REGEX = re.compile('''include::(.*)\\[\\]\n''')
+INCLUDE_REGEX = re.compile(r"include::(.+)\[\][ \t]*\n?")
 
-def copy_file(source: str) -> bool:
+def copy_file(source: str, *, required: bool = False) -> None:
     path = join(relative_path, source)
+    destination = join("en", source)
     try:
-        shutil.copy2(path, join("en", source))
-        return True
+        if os.path.isfile(destination) and filecmp.cmp(path, destination, shallow=False):
+            return
+        os.makedirs(os.path.dirname(destination), exist_ok=True)
+        # po4a uses the local modification time to detect changed inputs.
+        shutil.copy(path, destination)
     except FileNotFoundError:
+        if required:
+            raise SystemExit(f"Required documentation source not found: {path}")
         print(f"File not found: {path}")
     except shutil.SameFileError:
         print(f"File is the same: {source}")
-    return False
 
-def process_file(dirname: str, filename: str) -> None:
-    with open(join('en', dirname, filename),'r') as f:
-        for line in f.readlines():
-                match = INCLUDE_REGEX.fullmatch(line)
-                if match:
-                    full_filename = match.group(1)
-                    if full_filename.startswith('{build_dir}/'):
-                        full_dirname = ""
-                        filename = full_filename.replace('{build_dir}/', '')
-                    else:
-                        full_dirname = join(dirname, os.path.dirname(full_filename))
-                    filename = os.path.basename(full_filename)
-                    if copy_file(join(full_dirname, filename)):
-                        process_file(full_dirname, filename)
+def collect_includes(source: str, selected: set, *, required: bool = False) -> None:
+    if source in selected:
+        return
+    path = join(relative_path, source)
+    try:
+        f = open(path)
+    except FileNotFoundError:
+        if required:
+            raise SystemExit(f"Required documentation source not found: {path}")
+        print(f"File not found: {path}")
+        return
+    selected.add(source)
+    with f:
+        for line in f:
+            match = INCLUDE_REGEX.fullmatch(line)
+            if match:
+                target = match.group(1)
+                if target.startswith("{build_dir}/"):
+                    target = target[len("{build_dir}/"):]
+                else:
+                    target = join(os.path.dirname(source), target)
+                target = os.path.normpath(target)
+                if os.path.isabs(target) or target == ".." or target.startswith("../"):
+                    raise SystemExit(f"Include outside the documentation tree in {source}: {target}")
+                collect_includes(target, selected, required=required)
 
 
-for section in SECTIONS:
-    for source in SECTIONS[section]:
-        if copy_file(source) and section >= MIN_PRIORITY_INCLUDE_SECTION:
-            process_file('', source)
+version_file = join(relative_path, "..", "GIT-VERSION-FILE")
+if not os.path.isfile(version_file):
+    raise SystemExit(f"Required version file not found: {version_file}")
 
-shutil.copy2(os.path.join(relative_path, "..", "GIT-VERSION-FILE"), ".")
+required_sources = set()
+for source in EXTRA_INCLUDE_ROOTS:
+    collect_includes(source, required_sources, required=True)
+
+recursive_sources = required_sources.copy()
+direct_sources = set()
+for section, sources in SECTIONS.items():
+    if section >= MIN_PRIORITY_INCLUDE_SECTION:
+        for source in sources:
+            collect_includes(source, recursive_sources)
+    else:
+        direct_sources.update(sources)
+
+for source in sorted(recursive_sources | direct_sources):
+    copy_file(source, required=source in required_sources)
+shutil.copy2(version_file, ".")

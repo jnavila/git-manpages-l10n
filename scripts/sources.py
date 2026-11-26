@@ -1,3 +1,6 @@
+# Manuals to synchronize recursively at the default translation priority.
+EXTRA_INCLUDE_ROOTS = ["git-config.adoc"]
+
 SECTIONS = {310: ["gitglossary.adoc"],
             300: ["git-init.adoc",
                   "git-clone.adoc",

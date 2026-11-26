@@ -1,4 +1,5 @@
-EN_SOURCES = $(wildcard en/*.adoc) $(wildcard en/config/*.adoc) $(wildcard en/includes/*.adoc)
+EN_DIRS := $(shell find -H en -type d)
+EN_SOURCES := $(wildcard $(addsuffix /*.adoc,$(EN_DIRS)))
 DOC_SOURCES = $(wildcard en/git*.adoc)
 DOCS = $(patsubst en/%.adoc,%.adoc,$(DOC_SOURCES))
 LANGUAGE_PO = $(wildcard po/documentation.*.po)
@@ -18,7 +19,8 @@ ifndef V
 endif
 endif
 
-po4a.conf: scripts/create_po4a_conf en/*.adoc en/config/*.adoc en/includes/*.adoc
+# A parallel build requested with update-sources must read the refreshed catalogs.
+po4a.conf: scripts/create_po4a_conf $(EN_DIRS) po | $(filter update-sources,$(MAKECMDGOALS))
 	@echo '   ' PO4A $@;./scripts/create_po4a_conf
 
 po/documentation.pot: po4a.conf $(EN_SOURCES) Makefile
@@ -31,6 +33,7 @@ update-pot: po/documentation.pot
 
 update-sources:
 	@./scripts/update-sources
+	@./scripts/create_po4a_conf
 	$(QUIET_PO4A)PERL5LIB=./po4a/lib po4a/po4a -v --no-translations po4a.conf
 	@for f in po/documentation.*.po; do ./scripts/pre-translate-po $$f; done
 	@./scripts/set-priorities po/documentation.*.po
@@ -68,7 +71,7 @@ PHONY: $(2)/.install-$(1)
 endef
 
 
-.PHONY: $(L10N_BUILD_TARGETS) $(L10N_CLEAN_TARGETS) update-pot
+.PHONY: $(L10N_BUILD_TARGETS) $(L10N_CLEAN_TARGETS) update-pot update-sources
 
 man all html doc-l10n : po/documentation.pot
 

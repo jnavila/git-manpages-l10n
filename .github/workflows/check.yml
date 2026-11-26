@@ -24,5 +24,7 @@ jobs:
       run: sudo apt-get -yq install libunicode-linebreak-perl gettext python3-polib libyaml-tiny-perl asciidoctor ruby-parslet
     - name: install required po4a version with asciidoc fixes
       run: sh ci/install_po4a.sh
+    - name: Check source synchronization and translated includes
+      run: sh ci/test-includes.sh
     - name: Run tests
       run: make -j8 all
